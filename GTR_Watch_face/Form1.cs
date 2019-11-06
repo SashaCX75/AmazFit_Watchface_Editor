@@ -229,6 +229,7 @@ namespace GTR_Watch_face
                 ListImages.Clear();
                 ListImagesFullName.Clear();
                 int i;
+                Image loadedImage = null;
                 foreach (String file in openFileDialog.FileNames)
                 {
                     try
@@ -237,7 +238,11 @@ namespace GTR_Watch_face
                         //string fileNameOnly = Path.GetFileName(file);
                         if (int.TryParse(fileNameOnly, out i))
                         {
-                            Image loadedImage = Image.FromFile(file);
+                            //Image loadedImage = Image.FromFile(file);
+                            using (FileStream stream = new FileStream(file, FileMode.Open, FileAccess.Read))
+                            {
+                                loadedImage = Image.FromStream(stream);
+                            }
                             var RowNew = new DataGridViewRow();
                             DataGridViewImageCellLayout ZoomType = DataGridViewImageCellLayout.Zoom;
                             if ((loadedImage.Height < 45) && (loadedImage.Width < 110))
@@ -264,6 +269,7 @@ namespace GTR_Watch_face
                             + ". У Вас нет прав на чтение файла, или изображение повреждено.");
                     }
                 }
+                loadedImage.Dispose();
                 PreviewView = false;
                 JSON_read();
                 PreviewView = true;
@@ -278,7 +284,7 @@ namespace GTR_Watch_face
             if (!Directory.Exists(subPath)) Directory.CreateDirectory(subPath);
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            //openFileDialog.InitialDirectory = subPath;
+            openFileDialog.InitialDirectory = subPath;
             openFileDialog.Filter = "Json files (*.json) | *.json";
             //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
             ////openFileDialog1.FilterIndex = 2;
@@ -292,6 +298,59 @@ namespace GTR_Watch_face
                 FullFileDir = Path.GetDirectoryName(fullfilename);
                 string text = File.ReadAllText(fullfilename);
                 //richTextBox_JSON.Text = text;
+
+                DirectoryInfo Folder;
+                FileInfo[] Images;
+                Folder = new DirectoryInfo(FullFileDir);
+                Images = Folder.GetFiles("*.png");
+                int count = 0;
+                Image loadedImage = null;
+                foreach (FileInfo file in Images)
+                {
+                    try
+                    {
+                        string fileNameOnly = Path.GetFileNameWithoutExtension(file.Name);
+                        //string fileNameOnly = Path.GetFileName(file);
+                        int i;
+                        if (int.TryParse(fileNameOnly, out i))
+                        {
+                            //loadedImage = Image.FromFile(file.FullName);
+                            using (FileStream stream = new FileStream(file.FullName, FileMode.Open, FileAccess.Read))
+                            {
+                                loadedImage = Image.FromStream(stream);
+                            }
+                            var RowNew = new DataGridViewRow();
+                            DataGridViewImageCellLayout ZoomType = DataGridViewImageCellLayout.Zoom;
+                            if ((loadedImage.Height < 45) && (loadedImage.Width < 110))
+                                ZoomType = DataGridViewImageCellLayout.Normal;
+                            RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = i.ToString() });
+                            RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = fileNameOnly });
+                            //RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = file });
+                            RowNew.Cells.Add(new DataGridViewImageCell()
+                            {
+                                Value = loadedImage,
+                                ImageLayout = ZoomType
+                            });
+                            //loadedImage.Dispose();
+                            RowNew.Height = 45;
+                            dataGridView1.Rows.Add(RowNew);
+                            count++;
+                            ListImages.Add(i.ToString());
+                            ListImagesFullName.Add(file.FullName);
+                        }
+                    }
+                    catch
+                    {
+                        // Could not load the image - probably related to Windows file system permissions.
+                        MessageBox.Show("Невозможно открыть изображение: " + file.FullName.Substring(file.FullName.LastIndexOf('\\'))
+                            + ". У Вас нет прав на чтение файла, или изображение повреждено.");
+                    }
+                }
+
+                loadedImage.Dispose();
+                int LastImage = Int32.Parse(ListImages.Last())+1;
+                if (count!= LastImage) MessageBox.Show("PNG файлы идут не по порядку или часть файлов отсутствует.\r\n"+
+                    "Присвойте имена PNG файлам в порядке возрастания.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
 
                 try
@@ -313,6 +372,8 @@ namespace GTR_Watch_face
                     //DefaultValueHandling = DefaultValueHandling.Ignore,
                     NullValueHandling = NullValueHandling.Ignore
                 });
+                
+
                 PreviewView = false;
                 JSON_read();
                 PreviewView = true;
@@ -1097,6 +1158,7 @@ namespace GTR_Watch_face
                 i = comboBox_Background.SelectedIndex;
                 src = new Bitmap(ListImagesFullName[i]);
                 gPanel.DrawImage(src, new Rectangle(0, 0, src.Width, src.Height));
+                src.Dispose();
             }
             #region Time
             if (checkBox_Time.Checked)
@@ -1111,6 +1173,7 @@ namespace GTR_Watch_face
                             src = new Bitmap(ListImagesFullName[i]);
                             gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Hours_Tens_X.Value,
                                 (int)numericUpDown_Hours_Tens_Y.Value, src.Width, src.Height));
+                            src.Dispose();
                         }
                         if (comboBox_Hours_Ones_Image.SelectedIndex >= 0)
                         {
@@ -1118,6 +1181,7 @@ namespace GTR_Watch_face
                             src = new Bitmap(ListImagesFullName[i]);
                             gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Hours_Ones_X.Value,
                                 (int)numericUpDown_Hours_Ones_Y.Value, src.Width, src.Height));
+                            src.Dispose();
                         }
                     }
 
@@ -1129,6 +1193,7 @@ namespace GTR_Watch_face
                             src = new Bitmap(ListImagesFullName[i]);
                             gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Min_Tens_X.Value,
                                 (int)numericUpDown_Min_Tens_Y.Value, src.Width, src.Height));
+                            src.Dispose();
                         }
                         if (comboBox_Min_Ones_Image.SelectedIndex >= 0)
                         {
@@ -1136,6 +1201,7 @@ namespace GTR_Watch_face
                             src = new Bitmap(ListImagesFullName[i]);
                             gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Min_Ones_X.Value,
                                 (int)numericUpDown_Min_Ones_Y.Value, src.Width, src.Height));
+                            src.Dispose();
                         }
                     }
 
@@ -1147,6 +1213,7 @@ namespace GTR_Watch_face
                             src = new Bitmap(ListImagesFullName[i]);
                             gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Sec_Tens_X.Value,
                                 (int)numericUpDown_Sec_Tens_Y.Value, src.Width, src.Height));
+                            src.Dispose();
                         }
                         if (comboBox_Sec_Ones_Image.SelectedIndex >= 0)
                         {
@@ -1154,6 +1221,7 @@ namespace GTR_Watch_face
                             src = new Bitmap(ListImagesFullName[i]);
                             gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Sec_Ones_X.Value,
                                 (int)numericUpDown_Sec_Ones_Y.Value, src.Width, src.Height));
+                            src.Dispose();
                         }
                     }
 
@@ -1165,6 +1233,7 @@ namespace GTR_Watch_face
                             src = new Bitmap(ListImagesFullName[i]);
                             gPanel.DrawImage(src, new Rectangle((int)numericUpDown_AmPm_X.Value,
                                 (int)numericUpDown_AmPm_Y.Value, src.Width, src.Height));
+                            src.Dispose();
                         }
                     }
                     else
@@ -1175,6 +1244,7 @@ namespace GTR_Watch_face
                             src = new Bitmap(ListImagesFullName[i]);
                             gPanel.DrawImage(src, new Rectangle((int)numericUpDown_AmPm_X.Value,
                                 (int)numericUpDown_AmPm_Y.Value, src.Width, src.Height));
+                            src.Dispose();
                         }
                     }
 
@@ -1186,6 +1256,7 @@ namespace GTR_Watch_face
                             src = new Bitmap(ListImagesFullName[i]);
                             gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Delimiter_X.Value,
                                 (int)numericUpDown_Delimiter_Y.Value, src.Width, src.Height));
+                            src.Dispose();
                         }
                     }
                 }
@@ -1199,6 +1270,7 @@ namespace GTR_Watch_face
                             src = new Bitmap(ListImagesFullName[i]);
                             gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Hours_Tens_X.Value,
                                 (int)numericUpDown_Hours_Tens_Y.Value, src.Width, src.Height));
+                            src.Dispose();
                         }
                         if (comboBox_Hours_Ones_Image.SelectedIndex >= 0)
                         {
@@ -1206,6 +1278,7 @@ namespace GTR_Watch_face
                             src = new Bitmap(ListImagesFullName[i]);
                             gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Hours_Ones_X.Value,
                                 (int)numericUpDown_Hours_Ones_Y.Value, src.Width, src.Height));
+                            src.Dispose();
                         }
                     }
 
@@ -1217,6 +1290,7 @@ namespace GTR_Watch_face
                             src = new Bitmap(ListImagesFullName[i]);
                             gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Min_Tens_X.Value,
                                 (int)numericUpDown_Min_Tens_Y.Value, src.Width, src.Height));
+                            src.Dispose();
                         }
                         if (comboBox_Min_Ones_Image.SelectedIndex >= 0)
                         {
@@ -1224,6 +1298,7 @@ namespace GTR_Watch_face
                             src = new Bitmap(ListImagesFullName[i]);
                             gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Min_Ones_X.Value,
                                 (int)numericUpDown_Min_Ones_Y.Value, src.Width, src.Height));
+                            src.Dispose();
                         }
                     }
 
@@ -1235,6 +1310,7 @@ namespace GTR_Watch_face
                             src = new Bitmap(ListImagesFullName[i]);
                             gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Sec_Tens_X.Value,
                                 (int)numericUpDown_Sec_Tens_Y.Value, src.Width, src.Height));
+                            src.Dispose();
                         }
                         if (comboBox_Sec_Ones_Image.SelectedIndex >= 0)
                         {
@@ -1242,6 +1318,7 @@ namespace GTR_Watch_face
                             src = new Bitmap(ListImagesFullName[i]);
                             gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Sec_Ones_X.Value,
                                 (int)numericUpDown_Sec_Ones_Y.Value, src.Width, src.Height));
+                            src.Dispose();
                         }
                     }
 
@@ -1253,6 +1330,7 @@ namespace GTR_Watch_face
                             src = new Bitmap(ListImagesFullName[i]);
                             gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Delimiter_X.Value,
                                 (int)numericUpDown_Delimiter_Y.Value, src.Width, src.Height));
+                            src.Dispose();
                         }
                     }
                 }
@@ -1319,10 +1397,13 @@ namespace GTR_Watch_face
                         src = new Bitmap(ListImagesFullName[i]);
                         gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                         PointX = PointX + Dagit.Width + (int)numericUpDown_MonthAndDayM_Spacing.Value;
+                        src.Dispose();
                     }
                     i = comboBox_MonthAndDayM_Image.SelectedIndex + Watch_Face_Preview.Date.Month.Ones;
                     src = new Bitmap(ListImagesFullName[i]);
                     gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                    src.Dispose();
+                    Dagit.Dispose();
                 }
 
                 if ((checkBox_MonthAndDayD.Checked) && (comboBox_MonthAndDayD_Image.SelectedIndex >= 0))
@@ -1382,10 +1463,13 @@ namespace GTR_Watch_face
                         src = new Bitmap(ListImagesFullName[i]);
                         gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                         PointX = PointX + Dagit.Width + (int)numericUpDown_MonthAndDayD_Spacing.Value;
+                        src.Dispose();
                     }
                     i = comboBox_MonthAndDayD_Image.SelectedIndex + Watch_Face_Preview.Date.Day.Ones;
                     src = new Bitmap(ListImagesFullName[i]);
                     gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                    src.Dispose();
+                    Dagit.Dispose();
                 }
 
                 if ((checkBox_MonthName.Checked) && (comboBox_MonthName_Image.SelectedIndex >= 0))
@@ -1394,6 +1478,7 @@ namespace GTR_Watch_face
                     src = new Bitmap(ListImagesFullName[i]);
                     gPanel.DrawImage(src, new Rectangle((int)numericUpDown_MonthName_X.Value,
                         (int)numericUpDown_MonthName_Y.Value, src.Width, src.Height));
+                    src.Dispose();
                 }
 
                 if ((checkBox_OneLine.Checked) && (comboBox_OneLine_Image.SelectedIndex >= 0))
@@ -1461,11 +1546,13 @@ namespace GTR_Watch_face
                         src = new Bitmap(ListImagesFullName[i]);
                         gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                         PointX = PointX + Dagit.Width + (int)numericUpDown_OneLine_Spacing.Value;
+                        src.Dispose();
                     }
                     i = comboBox_OneLine_Image.SelectedIndex + Watch_Face_Preview.Date.Month.Ones;
                     src = new Bitmap(ListImagesFullName[i]);
                     gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                     PointX = PointX + Dagit.Width + (int)numericUpDown_OneLine_Spacing.Value;
+                    src.Dispose();
 
                     if (comboBox_OneLine_Delimiter.SelectedIndex >= 0)
                     {
@@ -1473,6 +1560,7 @@ namespace GTR_Watch_face
                         src = new Bitmap(ListImagesFullName[i]);
                         gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                         PointX = PointX + Dagit.Width + (int)numericUpDown_OneLine_Spacing.Value;
+                        src.Dispose();
                     }
 
                     if ((checkBox_TwoDigitsDay.Checked) || (Watch_Face_Preview.Date.Day.Tens > 0))
@@ -1485,6 +1573,9 @@ namespace GTR_Watch_face
                     i = comboBox_OneLine_Image.SelectedIndex + Watch_Face_Preview.Date.Day.Ones;
                     src = new Bitmap(ListImagesFullName[i]);
                     gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                    src.Dispose();
+                    Dagit.Dispose();
+                    Delimit.Dispose();
                 }
 
                 if ((checkBox_WeekDay.Checked) && (comboBox_WeekDay_Image.SelectedIndex >= 0))
@@ -1493,6 +1584,7 @@ namespace GTR_Watch_face
                     src = new Bitmap(ListImagesFullName[i]);
                     gPanel.DrawImage(src, new Rectangle((int)numericUpDown_WeekDay_X.Value,
                         (int)numericUpDown_WeekDay_Y.Value, src.Width, src.Height));
+                    src.Dispose();
                 }
             }
             #endregion
@@ -1713,6 +1805,7 @@ namespace GTR_Watch_face
                         src = new Bitmap(ListImagesFullName[comboBox_Bluetooth_On.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Bluetooth_X.Value,
                             (int)numericUpDown_Bluetooth_Y.Value, src.Width, src.Height));
+                        src.Dispose();
                     }
                 }
                 else
@@ -1722,6 +1815,7 @@ namespace GTR_Watch_face
                         src = new Bitmap(ListImagesFullName[comboBox_Bluetooth_Off.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Bluetooth_X.Value,
                             (int)numericUpDown_Bluetooth_Y.Value, src.Width, src.Height));
+                        src.Dispose();
                     }
                 }
             }
@@ -1735,6 +1829,7 @@ namespace GTR_Watch_face
                         src = new Bitmap(ListImagesFullName[comboBox_Alarm_On.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Alarm_X.Value,
                             (int)numericUpDown_Alarm_Y.Value, src.Width, src.Height));
+                        src.Dispose();
                     }
                 }
                 else
@@ -1744,6 +1839,7 @@ namespace GTR_Watch_face
                         src = new Bitmap(ListImagesFullName[comboBox_Alarm_Off.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Alarm_X.Value,
                             (int)numericUpDown_Alarm_Y.Value, src.Width, src.Height));
+                        src.Dispose();
                     }
                 }
             }
@@ -1757,6 +1853,7 @@ namespace GTR_Watch_face
                         src = new Bitmap(ListImagesFullName[comboBox_Lock_On.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Lock_X.Value,
                             (int)numericUpDown_Lock_Y.Value, src.Width, src.Height));
+                        src.Dispose();
                     }
                 }
                 else
@@ -1766,6 +1863,7 @@ namespace GTR_Watch_face
                         src = new Bitmap(ListImagesFullName[comboBox_Lock_Off.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Lock_X.Value,
                             (int)numericUpDown_Lock_Y.Value, src.Width, src.Height));
+                        src.Dispose();
                     }
                 }
             }
@@ -1779,6 +1877,7 @@ namespace GTR_Watch_face
                         src = new Bitmap(ListImagesFullName[comboBox_DND_On.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_DND_X.Value,
                             (int)numericUpDown_DND_Y.Value, src.Width, src.Height));
+                        src.Dispose();
                     }
                 }
                 else
@@ -1788,6 +1887,7 @@ namespace GTR_Watch_face
                         src = new Bitmap(ListImagesFullName[comboBox_DND_Off.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_DND_X.Value,
                             (int)numericUpDown_DND_Y.Value, src.Width, src.Height));
+                        src.Dispose();
                     }
                 }
             }
@@ -1816,6 +1916,7 @@ namespace GTR_Watch_face
                         src = new Bitmap(ListImagesFullName[comboBox_Battery_Percent_Image.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Battery_Percent_X.Value,
                             (int)numericUpDown_Battery_Percent_Y.Value, src.Width, src.Height));
+                        src.Dispose();
                     }
 
                     if ((checkBox_Battery_Img.Checked) && (comboBox_Battery_Img_Image.SelectedIndex >= 0))
@@ -1826,6 +1927,7 @@ namespace GTR_Watch_face
                         src = new Bitmap(ListImagesFullName[i]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Battery_Img_X.Value,
                             (int)numericUpDown_Battery_Img_Y.Value, src.Width, src.Height));
+                        src.Dispose();
                     }
 
                     if (checkBox_Battery_Scale.Checked)
@@ -1932,6 +2034,7 @@ namespace GTR_Watch_face
                 }
             }
             #endregion
+            src.Dispose();
         }
 
         /// <summary>Рисует стрелки</summary>
@@ -1949,6 +2052,7 @@ namespace GTR_Watch_face
             graphics.DrawImage(src, new Rectangle(-x1, -y1, src.Width, src.Height));
             graphics.RotateTransform(-angle);
             graphics.TranslateTransform(-227, -227);
+            src.Dispose();
         }
 
         /// <summary>Рисует число</summary>
@@ -1979,6 +2083,7 @@ namespace GTR_Watch_face
                     i = image_index + _number;
                     src = new Bitmap(ListImagesFullName[i]);
                     DateLengh = DateLengh + src.Width + spacing;
+                    src.Dispose();
                 }
 
             }
@@ -2035,9 +2140,11 @@ namespace GTR_Watch_face
                     src = new Bitmap(ListImagesFullName[i]);
                     graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                     PointX = PointX + src.Width + spacing;
+                    src.Dispose();
                 }
 
             }
+            Dagit.Dispose();
         }
 
         /// <summary>Рисует число</summary>
@@ -2074,6 +2181,7 @@ namespace GTR_Watch_face
                     i = image_index + _number;
                     src = new Bitmap(ListImagesFullName[i]);
                     DateLenght = DateLenght + src.Width + spacing;
+                    src.Dispose();
                 }
                 else
                 {
@@ -2081,6 +2189,7 @@ namespace GTR_Watch_face
                     {
                         src = new Bitmap(ListImagesFullName[dec]);
                         DateLenght = DateLenght + src.Width + spacing;
+                        src.Dispose();
                     }
                 }
 
@@ -2089,6 +2198,7 @@ namespace GTR_Watch_face
             {
                 src = new Bitmap(ListImagesFullName[suffix]);
                 DateLenght = DateLenght + src.Width + spacing;
+                src.Dispose();
             }
             DateLenght = DateLenght - spacing;
             //if ((data_number != (int)data_number) && (dec >= 0))
@@ -2151,6 +2261,7 @@ namespace GTR_Watch_face
                     src = new Bitmap(ListImagesFullName[i]);
                     graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                     PointX = PointX + src.Width + spacing;
+                    src.Dispose();
                 }
                 else
                 {
@@ -2159,6 +2270,7 @@ namespace GTR_Watch_face
                         src = new Bitmap(ListImagesFullName[dec]);
                         graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                         PointX = PointX + src.Width + spacing;
+                        src.Dispose();
                     }
                 }
 
@@ -2167,7 +2279,9 @@ namespace GTR_Watch_face
             {
                 src = new Bitmap(ListImagesFullName[suffix]);
                 graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+
             }
+            Dagit.Dispose();
         }
 
         /// <summary>Рисует погоду</summary>
@@ -2207,6 +2321,7 @@ namespace GTR_Watch_face
                         i = image_index + _number;
                         src = new Bitmap(ListImagesFullName[i]);
                         DateLenght = DateLenght + src.Width + spacing;
+                        src.Dispose();
                     }
                     else
                     {
@@ -2214,6 +2329,7 @@ namespace GTR_Watch_face
                         {
                             src = new Bitmap(ListImagesFullName[minus]);
                             DateLenght = DateLenght + src.Width + spacing;
+                            src.Dispose();
                         }
                     }
 
@@ -2222,6 +2338,7 @@ namespace GTR_Watch_face
                 {
                     src = new Bitmap(ListImagesFullName[degris]);
                     DateLenght = DateLenght + src.Width + spacing;
+                    src.Dispose();
                 }
                 DateLenght = DateLenght - spacing; 
             }
@@ -2231,6 +2348,7 @@ namespace GTR_Watch_face
                 {
                     src = new Bitmap(ListImagesFullName[error]);
                     DateLenght = DateLenght + src.Width;
+                    src.Dispose();
                 }
             }
             //if ((data_number != (int)data_number) && (dec >= 0))
@@ -2295,6 +2413,7 @@ namespace GTR_Watch_face
                         src = new Bitmap(ListImagesFullName[i]);
                         graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                         PointX = PointX + src.Width + spacing;
+                        src.Dispose();
                     }
                     else
                     {
@@ -2303,6 +2422,7 @@ namespace GTR_Watch_face
                             src = new Bitmap(ListImagesFullName[minus]);
                             graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                             PointX = PointX + src.Width + spacing;
+                            src.Dispose();
                         }
                     }
 
@@ -2311,6 +2431,7 @@ namespace GTR_Watch_face
                 {
                     src = new Bitmap(ListImagesFullName[degris]);
                     graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                    src.Dispose();
                 } 
             }
             else
@@ -2319,8 +2440,10 @@ namespace GTR_Watch_face
                 {
                     src = new Bitmap(ListImagesFullName[error]);
                     graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                    src.Dispose();
                 }
             }
+            Dagit.Dispose();
         }
 
 
@@ -3550,6 +3673,17 @@ namespace GTR_Watch_face
 
         private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ComboBox comboBox = (ComboBox)(sender);
+            try
+            {
+                using (FileStream stream = new FileStream(ListImagesFullName[comboBox.SelectedIndex], FileMode.Open, FileAccess.Read))
+                {
+                    pictureBox1.Image = Image.FromStream(stream);
+                    timer1.Enabled = true;
+                }
+            }
+            catch { }
+            //pictureBox1.Image = null;
             JSON_write();
             PreviewImage();
         }
@@ -3601,12 +3735,12 @@ namespace GTR_Watch_face
                 if(comboBox_Background.SelectedIndex >= 0)
                 {
                     Watch_Face.Background.Image = new ImageW();
-                    Watch_Face.Background.Image.ImageIndex = comboBox_Background.SelectedIndex;
+                    Watch_Face.Background.Image.ImageIndex = Int32.Parse(comboBox_Background.Text);
                 }
                 if (comboBox_Preview.SelectedIndex >= 0)
                 {
                     Watch_Face.Background.Preview = new ImageW();
-                    Watch_Face.Background.Preview.ImageIndex = comboBox_Preview.SelectedIndex;
+                    Watch_Face.Background.Preview.ImageIndex = Int32.Parse(comboBox_Preview.Text);
                 }
             }
 
@@ -3619,7 +3753,7 @@ namespace GTR_Watch_face
                     if (Watch_Face.Time.Hours == null) Watch_Face.Time.Hours = new TwoDigits();
 
                     Watch_Face.Time.Hours.Tens = new ImageSet();
-                    Watch_Face.Time.Hours.Tens.ImageIndex = comboBox_Hours_Tens_Image.SelectedIndex;
+                    Watch_Face.Time.Hours.Tens.ImageIndex = Int32.Parse(comboBox_Hours_Tens_Image.Text);
                     Watch_Face.Time.Hours.Tens.ImagesCount = (int)numericUpDown_Hours_Tens_Count.Value;
                     Watch_Face.Time.Hours.Tens.X = (int)numericUpDown_Hours_Tens_X.Value;
                     Watch_Face.Time.Hours.Tens.Y = (int)numericUpDown_Hours_Tens_Y.Value;
@@ -3630,7 +3764,7 @@ namespace GTR_Watch_face
                     if (Watch_Face.Time.Hours == null) Watch_Face.Time.Hours = new TwoDigits();
 
                     Watch_Face.Time.Hours.Ones = new ImageSet();
-                    Watch_Face.Time.Hours.Ones.ImageIndex = comboBox_Hours_Ones_Image.SelectedIndex;
+                    Watch_Face.Time.Hours.Ones.ImageIndex = Int32.Parse(comboBox_Hours_Ones_Image.Text);
                     Watch_Face.Time.Hours.Ones.ImagesCount = (int)numericUpDown_Hours_Ones_Count.Value;
                     Watch_Face.Time.Hours.Ones.X = (int)numericUpDown_Hours_Ones_X.Value;
                     Watch_Face.Time.Hours.Ones.Y = (int)numericUpDown_Hours_Ones_Y.Value;
@@ -3642,7 +3776,7 @@ namespace GTR_Watch_face
                     if (Watch_Face.Time.Minutes == null) Watch_Face.Time.Minutes = new TwoDigits();
 
                     Watch_Face.Time.Minutes.Tens = new ImageSet();
-                    Watch_Face.Time.Minutes.Tens.ImageIndex = comboBox_Min_Tens_Image.SelectedIndex;
+                    Watch_Face.Time.Minutes.Tens.ImageIndex = Int32.Parse(comboBox_Min_Tens_Image.Text);
                     Watch_Face.Time.Minutes.Tens.ImagesCount = (int)numericUpDown_Min_Tens_Count.Value;
                     Watch_Face.Time.Minutes.Tens.X = (int)numericUpDown_Min_Tens_X.Value;
                     Watch_Face.Time.Minutes.Tens.Y = (int)numericUpDown_Min_Tens_Y.Value;
@@ -3653,7 +3787,7 @@ namespace GTR_Watch_face
                     if (Watch_Face.Time.Minutes == null) Watch_Face.Time.Minutes = new TwoDigits();
 
                     Watch_Face.Time.Minutes.Ones = new ImageSet();
-                    Watch_Face.Time.Minutes.Ones.ImageIndex = comboBox_Min_Ones_Image.SelectedIndex;
+                    Watch_Face.Time.Minutes.Ones.ImageIndex = Int32.Parse(comboBox_Min_Ones_Image.Text);
                     Watch_Face.Time.Minutes.Ones.ImagesCount = (int)numericUpDown_Min_Ones_Count.Value;
                     Watch_Face.Time.Minutes.Ones.X = (int)numericUpDown_Min_Ones_X.Value;
                     Watch_Face.Time.Minutes.Ones.Y = (int)numericUpDown_Min_Ones_Y.Value;
@@ -3665,7 +3799,7 @@ namespace GTR_Watch_face
                     if (Watch_Face.Time.Seconds == null) Watch_Face.Time.Seconds = new TwoDigits();
 
                     Watch_Face.Time.Seconds.Tens = new ImageSet();
-                    Watch_Face.Time.Seconds.Tens.ImageIndex = comboBox_Sec_Tens_Image.SelectedIndex;
+                    Watch_Face.Time.Seconds.Tens.ImageIndex = Int32.Parse(comboBox_Sec_Tens_Image.Text);
                     Watch_Face.Time.Seconds.Tens.ImagesCount = (int)numericUpDown_Sec_Tens_Count.Value;
                     Watch_Face.Time.Seconds.Tens.X = (int)numericUpDown_Sec_Tens_X.Value;
                     Watch_Face.Time.Seconds.Tens.Y = (int)numericUpDown_Sec_Tens_Y.Value;
@@ -3676,7 +3810,7 @@ namespace GTR_Watch_face
                     if (Watch_Face.Time.Seconds == null) Watch_Face.Time.Seconds = new TwoDigits();
 
                     Watch_Face.Time.Seconds.Ones = new ImageSet();
-                    Watch_Face.Time.Seconds.Ones.ImageIndex = comboBox_Sec_Ones_Image.SelectedIndex;
+                    Watch_Face.Time.Seconds.Ones.ImageIndex = Int32.Parse(comboBox_Sec_Ones_Image.Text);
                     Watch_Face.Time.Seconds.Ones.ImagesCount = (int)numericUpDown_Sec_Ones_Count.Value;
                     Watch_Face.Time.Seconds.Ones.X = (int)numericUpDown_Sec_Ones_X.Value;
                     Watch_Face.Time.Seconds.Ones.Y = (int)numericUpDown_Sec_Ones_Y.Value;
@@ -3688,10 +3822,10 @@ namespace GTR_Watch_face
                     if (Watch_Face.Time == null) Watch_Face.Time = new TimeW();
                     if (Watch_Face.Time.AmPm == null) Watch_Face.Time.AmPm = new AmPm();
 
-                    Watch_Face.Time.AmPm.ImageIndexAMCN = comboBox_Image_Am.SelectedIndex;
-                    Watch_Face.Time.AmPm.ImageIndexAMEN = comboBox_Image_Am.SelectedIndex;
-                    Watch_Face.Time.AmPm.ImageIndexPMCN = comboBox_Image_Pm.SelectedIndex;
-                    Watch_Face.Time.AmPm.ImageIndexPMEN = comboBox_Image_Pm.SelectedIndex;
+                    Watch_Face.Time.AmPm.ImageIndexAMCN = Int32.Parse(comboBox_Image_Am.Text);
+                    Watch_Face.Time.AmPm.ImageIndexAMEN = Int32.Parse(comboBox_Image_Am.Text);
+                    Watch_Face.Time.AmPm.ImageIndexPMCN = Int32.Parse(comboBox_Image_Pm.Text);
+                    Watch_Face.Time.AmPm.ImageIndexPMEN = Int32.Parse(comboBox_Image_Pm.Text);
                     Watch_Face.Time.AmPm.X = (int)numericUpDown_AmPm_X.Value;
                     Watch_Face.Time.AmPm.Y = (int)numericUpDown_AmPm_Y.Value;
                 }
@@ -3701,7 +3835,7 @@ namespace GTR_Watch_face
                     if (Watch_Face.Time == null) Watch_Face.Time = new TimeW();
                     if (Watch_Face.Time.Delimiter == null) Watch_Face.Time.Delimiter = new ImageW();
 
-                    Watch_Face.Time.Delimiter.ImageIndex = comboBox_Delimiter_Image.SelectedIndex;
+                    Watch_Face.Time.Delimiter.ImageIndex = Int32.Parse(comboBox_Delimiter_Image.Text);
                     Watch_Face.Time.Delimiter.X = (int)numericUpDown_Delimiter_X.Value;
                     Watch_Face.Time.Delimiter.Y = (int)numericUpDown_Delimiter_Y.Value;
                 }
@@ -3715,7 +3849,7 @@ namespace GTR_Watch_face
                     if (Watch_Face.Activity == null) Watch_Face.Activity = new Activity();
                     if (Watch_Face.Activity.StepsGoal == null) Watch_Face.Activity.StepsGoal = new Number();
 
-                    Watch_Face.Activity.StepsGoal.ImageIndex = comboBox_ActivityGoal_Image.SelectedIndex;
+                    Watch_Face.Activity.StepsGoal.ImageIndex = Int32.Parse(comboBox_ActivityGoal_Image.Text);
                     Watch_Face.Activity.StepsGoal.ImagesCount = (int)numericUpDown_ActivityGoal_Count.Value;
                     Watch_Face.Activity.StepsGoal.TopLeftX = (int)numericUpDown_ActivityGoal_StartCorner_X.Value;
                     Watch_Face.Activity.StepsGoal.TopLeftY = (int)numericUpDown_ActivityGoal_StartCorner_Y.Value;
@@ -3733,7 +3867,7 @@ namespace GTR_Watch_face
                     if (Watch_Face.Activity.Steps == null) Watch_Face.Activity.Steps = new FormattedNumber();
                     if (Watch_Face.Activity.Steps.Step == null) Watch_Face.Activity.Steps.Step = new Number();
 
-                    Watch_Face.Activity.Steps.Step.ImageIndex = comboBox_ActivitySteps_Image.SelectedIndex;
+                    Watch_Face.Activity.Steps.Step.ImageIndex = Int32.Parse(comboBox_ActivitySteps_Image.Text);
                     Watch_Face.Activity.Steps.Step.ImagesCount = (int)numericUpDown_ActivitySteps_Count.Value;
                     Watch_Face.Activity.Steps.Step.TopLeftX = (int)numericUpDown_ActivitySteps_StartCorner_X.Value;
                     Watch_Face.Activity.Steps.Step.TopLeftY = (int)numericUpDown_ActivitySteps_StartCorner_Y.Value;
@@ -3751,7 +3885,7 @@ namespace GTR_Watch_face
                     if (Watch_Face.Activity.Distance == null) Watch_Face.Activity.Distance = new Distance();
                     if (Watch_Face.Activity.Distance.Number == null) Watch_Face.Activity.Distance.Number = new Number();
 
-                    Watch_Face.Activity.Distance.Number.ImageIndex = comboBox_ActivityDistance_Image.SelectedIndex;
+                    Watch_Face.Activity.Distance.Number.ImageIndex = Int32.Parse(comboBox_ActivityDistance_Image.Text);
                     Watch_Face.Activity.Distance.Number.ImagesCount = (int)numericUpDown_ActivityDistance_Count.Value;
                     Watch_Face.Activity.Distance.Number.TopLeftX = (int)numericUpDown_ActivityDistance_StartCorner_X.Value;
                     Watch_Face.Activity.Distance.Number.TopLeftY = (int)numericUpDown_ActivityDistance_StartCorner_Y.Value;
@@ -3764,10 +3898,10 @@ namespace GTR_Watch_face
 
                     if ((comboBox_ActivityDistance_Suffix.SelectedIndex >= 0) && 
                         (comboBox_ActivityDistance_Suffix.Text.Length > 0))
-                        Watch_Face.Activity.Distance.SuffixImageIndex = comboBox_ActivityDistance_Suffix.SelectedIndex;
+                        Watch_Face.Activity.Distance.SuffixImageIndex = Int32.Parse(comboBox_ActivityDistance_Suffix.Text);
                     if ((comboBox_ActivityDistance_Decimal.SelectedIndex >= 0) &&
                         (comboBox_ActivityDistance_Decimal.Text.Length > 0))
-                        Watch_Face.Activity.Distance.DecimalPointImageIndex = comboBox_ActivityDistance_Decimal.SelectedIndex;
+                        Watch_Face.Activity.Distance.DecimalPointImageIndex = Int32.Parse(comboBox_ActivityDistance_Decimal.Text);
                 }
                 
                 if ((checkBox_ActivityPuls.Checked) && (comboBox_ActivityPuls_Image.SelectedIndex >= 0))
@@ -3775,7 +3909,7 @@ namespace GTR_Watch_face
                     if (Watch_Face.Activity == null) Watch_Face.Activity = new Activity();
                     if (Watch_Face.Activity.Pulse == null) Watch_Face.Activity.Pulse = new Number();
 
-                    Watch_Face.Activity.Pulse.ImageIndex = comboBox_ActivityPuls_Image.SelectedIndex;
+                    Watch_Face.Activity.Pulse.ImageIndex = Int32.Parse(comboBox_ActivityPuls_Image.Text);
                     Watch_Face.Activity.Pulse.ImagesCount = (int)numericUpDown_ActivityPuls_Count.Value;
                     Watch_Face.Activity.Pulse.TopLeftX = (int)numericUpDown_ActivityPuls_StartCorner_X.Value;
                     Watch_Face.Activity.Pulse.TopLeftY = (int)numericUpDown_ActivityPuls_StartCorner_Y.Value;
@@ -3792,7 +3926,7 @@ namespace GTR_Watch_face
                     if (Watch_Face.Activity == null) Watch_Face.Activity = new Activity();
                     if (Watch_Face.Activity.Calories == null) Watch_Face.Activity.Calories = new Number();
 
-                    Watch_Face.Activity.Calories.ImageIndex = comboBox_ActivityCalories_Image.SelectedIndex;
+                    Watch_Face.Activity.Calories.ImageIndex = Int32.Parse(comboBox_ActivityCalories_Image.Text);
                     Watch_Face.Activity.Calories.ImagesCount = (int)numericUpDown_ActivityCalories_Count.Value;
                     Watch_Face.Activity.Calories.TopLeftX = (int)numericUpDown_ActivityCalories_StartCorner_X.Value;
                     Watch_Face.Activity.Calories.TopLeftY = (int)numericUpDown_ActivityCalories_StartCorner_Y.Value;
@@ -3809,7 +3943,7 @@ namespace GTR_Watch_face
                     if (Watch_Face.Activity == null) Watch_Face.Activity = new Activity();
                     if (Watch_Face.Activity.StarImage == null) Watch_Face.Activity.StarImage = new ImageW();
 
-                    Watch_Face.Activity.StarImage.ImageIndex = comboBox_ActivityStar_Image.SelectedIndex;
+                    Watch_Face.Activity.StarImage.ImageIndex = Int32.Parse(comboBox_ActivityStar_Image.Text);
                     Watch_Face.Activity.StarImage.X = (int)numericUpDown_ActivityStar_X.Value;
                     Watch_Face.Activity.StarImage.Y = (int)numericUpDown_ActivityStar_Y.Value;
                 }
@@ -3823,7 +3957,7 @@ namespace GTR_Watch_face
                     if (Watch_Face.Date == null) Watch_Face.Date = new Date();
                     if (Watch_Face.Date.WeekDay == null) Watch_Face.Date.WeekDay = new ImageSet();
 
-                    Watch_Face.Date.WeekDay.ImageIndex = comboBox_WeekDay_Image.SelectedIndex;
+                    Watch_Face.Date.WeekDay.ImageIndex = Int32.Parse(comboBox_WeekDay_Image.Text);
                     Watch_Face.Date.WeekDay.ImagesCount = (int)numericUpDown_WeekDay_Count.Value;
                     Watch_Face.Date.WeekDay.X = (int)numericUpDown_WeekDay_X.Value;
                     Watch_Face.Date.WeekDay.Y = (int)numericUpDown_WeekDay_Y.Value;
@@ -3838,7 +3972,7 @@ namespace GTR_Watch_face
                     if (Watch_Face.Date.MonthAndDay.Separate.MonthName == null)
                         Watch_Face.Date.MonthAndDay.Separate.MonthName = new ImageSet();
 
-                    Watch_Face.Date.MonthAndDay.Separate.MonthName.ImageIndex = comboBox_MonthName_Image.SelectedIndex;
+                    Watch_Face.Date.MonthAndDay.Separate.MonthName.ImageIndex = Int32.Parse(comboBox_MonthName_Image.Text);
                     Watch_Face.Date.MonthAndDay.Separate.MonthName.ImagesCount = (int)numericUpDown_MonthName_Count.Value;
                     Watch_Face.Date.MonthAndDay.Separate.MonthName.X = (int)numericUpDown_MonthName_X.Value;
                     Watch_Face.Date.MonthAndDay.Separate.MonthName.Y = (int)numericUpDown_MonthName_Y.Value;
@@ -3852,7 +3986,7 @@ namespace GTR_Watch_face
                     if (Watch_Face.Date.MonthAndDay.Separate.Day == null)
                         Watch_Face.Date.MonthAndDay.Separate.Day = new Number();
 
-                    Watch_Face.Date.MonthAndDay.Separate.Day.ImageIndex = comboBox_MonthAndDayD_Image.SelectedIndex;
+                    Watch_Face.Date.MonthAndDay.Separate.Day.ImageIndex = Int32.Parse(comboBox_MonthAndDayD_Image.Text);
                     Watch_Face.Date.MonthAndDay.Separate.Day.ImagesCount = (int)numericUpDown_MonthAndDayD_Count.Value;
                     Watch_Face.Date.MonthAndDay.Separate.Day.TopLeftX = (int)numericUpDown_MonthAndDayD_StartCorner_X.Value;
                     Watch_Face.Date.MonthAndDay.Separate.Day.TopLeftY = (int)numericUpDown_MonthAndDayD_StartCorner_Y.Value;
@@ -3872,7 +4006,7 @@ namespace GTR_Watch_face
                     if (Watch_Face.Date.MonthAndDay.Separate.Month == null)
                         Watch_Face.Date.MonthAndDay.Separate.Month = new Number();
 
-                    Watch_Face.Date.MonthAndDay.Separate.Month.ImageIndex = comboBox_MonthAndDayM_Image.SelectedIndex;
+                    Watch_Face.Date.MonthAndDay.Separate.Month.ImageIndex = Int32.Parse(comboBox_MonthAndDayM_Image.Text);
                     Watch_Face.Date.MonthAndDay.Separate.Month.ImagesCount = (int)numericUpDown_MonthAndDayM_Count.Value;
                     Watch_Face.Date.MonthAndDay.Separate.Month.TopLeftX = (int)numericUpDown_MonthAndDayM_StartCorner_X.Value;
                     Watch_Face.Date.MonthAndDay.Separate.Month.TopLeftY = (int)numericUpDown_MonthAndDayM_StartCorner_Y.Value;
@@ -3893,7 +4027,7 @@ namespace GTR_Watch_face
                     if (Watch_Face.Date.MonthAndDay.OneLine.Number == null)
                         Watch_Face.Date.MonthAndDay.OneLine.Number = new Number();
 
-                    Watch_Face.Date.MonthAndDay.OneLine.Number.ImageIndex = comboBox_OneLine_Image.SelectedIndex;
+                    Watch_Face.Date.MonthAndDay.OneLine.Number.ImageIndex = Int32.Parse(comboBox_OneLine_Image.Text);
                     Watch_Face.Date.MonthAndDay.OneLine.Number.ImagesCount = (int)numericUpDown_OneLine_Count.Value;
                     Watch_Face.Date.MonthAndDay.OneLine.Number.TopLeftX = (int)numericUpDown_OneLine_StartCorner_X.Value;
                     Watch_Face.Date.MonthAndDay.OneLine.Number.TopLeftY = (int)numericUpDown_OneLine_StartCorner_Y.Value;
@@ -3904,7 +4038,7 @@ namespace GTR_Watch_face
                     string Alignment = StringToAlignment(comboBox_OneLine_Alignment.Text);
                     Watch_Face.Date.MonthAndDay.OneLine.Number.Alignment = Alignment;
 
-                    Watch_Face.Date.MonthAndDay.OneLine.DelimiterImageIndex = comboBox_OneLine_Delimiter.SelectedIndex;
+                    Watch_Face.Date.MonthAndDay.OneLine.DelimiterImageIndex = Int32.Parse(comboBox_OneLine_Delimiter.Text);
                 }
 
                 if ((Watch_Face.Date != null) && (Watch_Face.Date.MonthAndDay != null))
@@ -3944,9 +4078,9 @@ namespace GTR_Watch_face
                 if (Watch_Face.Status.Bluetooth.Coordinates == null)
                     Watch_Face.Status.Bluetooth.Coordinates = new Coordinates();
 
-                Watch_Face.Status.Bluetooth.ImageIndexOn = comboBox_Bluetooth_On.SelectedIndex;
+                Watch_Face.Status.Bluetooth.ImageIndexOn = Int32.Parse(comboBox_Bluetooth_On.Text);
                 if (comboBox_Bluetooth_Off.SelectedIndex>=0)
-                    Watch_Face.Status.Bluetooth.ImageIndexOff = comboBox_Bluetooth_Off.SelectedIndex;
+                    Watch_Face.Status.Bluetooth.ImageIndexOff = Int32.Parse(comboBox_Bluetooth_Off.Text);
                 Watch_Face.Status.Bluetooth.Coordinates.X = (int)numericUpDown_Bluetooth_X.Value;
                 Watch_Face.Status.Bluetooth.Coordinates.Y = (int)numericUpDown_Bluetooth_Y.Value;
             }
@@ -3956,10 +4090,11 @@ namespace GTR_Watch_face
                 if (Watch_Face.Status.Alarm == null) Watch_Face.Status.Alarm = new SwitchW();
                 if (Watch_Face.Status.Alarm.Coordinates == null)
                     Watch_Face.Status.Alarm.Coordinates = new Coordinates();
+                    Watch_Face.Status.Alarm.Coordinates = new Coordinates();
 
-                Watch_Face.Status.Alarm.ImageIndexOn = comboBox_Alarm_On.SelectedIndex;
+                Watch_Face.Status.Alarm.ImageIndexOn = Int32.Parse(comboBox_Alarm_On.Text);
                 if (comboBox_Alarm_Off.SelectedIndex >= 0)
-                    Watch_Face.Status.Alarm.ImageIndexOff = comboBox_Alarm_Off.SelectedIndex;
+                    Watch_Face.Status.Alarm.ImageIndexOff = Int32.Parse(comboBox_Alarm_Off.Text);
                 Watch_Face.Status.Alarm.Coordinates.X = (int)numericUpDown_Alarm_X.Value;
                 Watch_Face.Status.Alarm.Coordinates.Y = (int)numericUpDown_Alarm_Y.Value;
             }
@@ -3970,9 +4105,9 @@ namespace GTR_Watch_face
                 if (Watch_Face.Status.Lock.Coordinates == null)
                     Watch_Face.Status.Lock.Coordinates = new Coordinates();
 
-                Watch_Face.Status.Lock.ImageIndexOn = comboBox_Lock_On.SelectedIndex;
+                Watch_Face.Status.Lock.ImageIndexOn = Int32.Parse(comboBox_Lock_On.Text);
                 if (comboBox_Lock_Off.SelectedIndex >= 0)
-                    Watch_Face.Status.Lock.ImageIndexOff = comboBox_Lock_Off.SelectedIndex;
+                    Watch_Face.Status.Lock.ImageIndexOff = Int32.Parse(comboBox_Lock_Off.Text);
                 Watch_Face.Status.Lock.Coordinates.X = (int)numericUpDown_Lock_X.Value;
                 Watch_Face.Status.Lock.Coordinates.Y = (int)numericUpDown_Lock_Y.Value;
             }
@@ -3983,9 +4118,9 @@ namespace GTR_Watch_face
                 if (Watch_Face.Status.DoNotDisturb.Coordinates == null)
                     Watch_Face.Status.DoNotDisturb.Coordinates = new Coordinates();
 
-                Watch_Face.Status.DoNotDisturb.ImageIndexOn = comboBox_DND_On.SelectedIndex;
+                Watch_Face.Status.DoNotDisturb.ImageIndexOn = Int32.Parse(comboBox_DND_On.Text);
                 if (comboBox_DND_Off.SelectedIndex >= 0)
-                    Watch_Face.Status.DoNotDisturb.ImageIndexOff = comboBox_DND_Off.SelectedIndex;
+                    Watch_Face.Status.DoNotDisturb.ImageIndexOff = Int32.Parse(comboBox_DND_Off.Text);
                 Watch_Face.Status.DoNotDisturb.Coordinates.X = (int)numericUpDown_DND_X.Value;
                 Watch_Face.Status.DoNotDisturb.Coordinates.Y = (int)numericUpDown_DND_Y.Value;
             }
@@ -3998,7 +4133,7 @@ namespace GTR_Watch_face
                     if (Watch_Face.Battery == null) Watch_Face.Battery = new Battery();
                     if (Watch_Face.Battery.Text == null) Watch_Face.Battery.Text = new Number();
 
-                    Watch_Face.Battery.Text.ImageIndex = comboBox_Battery_Text_Image.SelectedIndex;
+                    Watch_Face.Battery.Text.ImageIndex = Int32.Parse(comboBox_Battery_Text_Image.Text);
                     Watch_Face.Battery.Text.ImagesCount = (int)numericUpDown_Battery_Text_Count.Value;
                     Watch_Face.Battery.Text.TopLeftX = (int)numericUpDown_Battery_Text_StartCorner_X.Value;
                     Watch_Face.Battery.Text.TopLeftY = (int)numericUpDown_Battery_Text_StartCorner_Y.Value;
@@ -4015,7 +4150,7 @@ namespace GTR_Watch_face
                     if (Watch_Face.Battery == null) Watch_Face.Battery = new Battery();
                     if (Watch_Face.Battery.Percent == null) Watch_Face.Battery.Percent = new ImageW();
 
-                    Watch_Face.Battery.Percent.ImageIndex = comboBox_Battery_Percent_Image.SelectedIndex;
+                    Watch_Face.Battery.Percent.ImageIndex = Int32.Parse(comboBox_Battery_Percent_Image.Text);
                     Watch_Face.Battery.Percent.X = (int)numericUpDown_Battery_Percent_X.Value;
                     Watch_Face.Battery.Percent.Y = (int)numericUpDown_Battery_Percent_Y.Value;
                 }
@@ -4025,7 +4160,7 @@ namespace GTR_Watch_face
                     if (Watch_Face.Battery == null) Watch_Face.Battery = new Battery();
                     if (Watch_Face.Battery.Images == null) Watch_Face.Battery.Images = new ImageSet();
 
-                    Watch_Face.Battery.Images.ImageIndex = comboBox_Battery_Img_Image.SelectedIndex;
+                    Watch_Face.Battery.Images.ImageIndex = Int32.Parse(comboBox_Battery_Img_Image.Text);
                     Watch_Face.Battery.Images.ImagesCount = (int)numericUpDown_Battery_Img_Count.Value;
                     Watch_Face.Battery.Images.X = (int)numericUpDown_Battery_Img_X.Value;
                     Watch_Face.Battery.Images.Y = (int)numericUpDown_Battery_Img_Y.Value;
@@ -4067,7 +4202,7 @@ namespace GTR_Watch_face
                     if (Watch_Face.AnalogDialFace.Hours.Image == null)
                         Watch_Face.AnalogDialFace.Hours.Image = new ImageW();
 
-                    Watch_Face.AnalogDialFace.Hours.Image.ImageIndex = comboBox_AnalogClock_Hour_Image.SelectedIndex;
+                    Watch_Face.AnalogDialFace.Hours.Image.ImageIndex = Int32.Parse(comboBox_AnalogClock_Hour_Image.Text);
                     Watch_Face.AnalogDialFace.Hours.Image.X = (int)numericUpDown_AnalogClock_Hour_X.Value;
                     Watch_Face.AnalogDialFace.Hours.Image.Y = (int)numericUpDown_AnalogClock_Hour_Y.Value;
 
@@ -4086,7 +4221,7 @@ namespace GTR_Watch_face
                     if (Watch_Face.AnalogDialFace.Minutes.Image == null)
                         Watch_Face.AnalogDialFace.Minutes.Image = new ImageW();
 
-                    Watch_Face.AnalogDialFace.Minutes.Image.ImageIndex = comboBox_AnalogClock_Min_Image.SelectedIndex;
+                    Watch_Face.AnalogDialFace.Minutes.Image.ImageIndex = Int32.Parse(comboBox_AnalogClock_Min_Image.Text);
                     Watch_Face.AnalogDialFace.Minutes.Image.X = (int)numericUpDown_AnalogClock_Min_X.Value;
                     Watch_Face.AnalogDialFace.Minutes.Image.Y = (int)numericUpDown_AnalogClock_Min_Y.Value;
 
@@ -4105,7 +4240,7 @@ namespace GTR_Watch_face
                     if (Watch_Face.AnalogDialFace.Seconds.Image == null)
                         Watch_Face.AnalogDialFace.Seconds.Image = new ImageW();
 
-                    Watch_Face.AnalogDialFace.Seconds.Image.ImageIndex = comboBox_AnalogClock_Sec_Image.SelectedIndex;
+                    Watch_Face.AnalogDialFace.Seconds.Image.ImageIndex = Int32.Parse(comboBox_AnalogClock_Sec_Image.Text);
                     Watch_Face.AnalogDialFace.Seconds.Image.X = (int)numericUpDown_AnalogClock_Sec_X.Value;
                     Watch_Face.AnalogDialFace.Seconds.Image.Y = (int)numericUpDown_AnalogClock_Sec_Y.Value;
 
@@ -4124,7 +4259,7 @@ namespace GTR_Watch_face
                     if (Watch_Face.Weather.Temperature.Current == null)
                         Watch_Face.Weather.Temperature.Current = new Number();
 
-                    Watch_Face.Weather.Temperature.Current.ImageIndex = comboBox_Weather_Text_Image.SelectedIndex;
+                    Watch_Face.Weather.Temperature.Current.ImageIndex = Int32.Parse(comboBox_Weather_Text_Image.Text);
                     Watch_Face.Weather.Temperature.Current.ImagesCount = (int)numericUpDown_Weather_Text_Count.Value;
                     Watch_Face.Weather.Temperature.Current.TopLeftX = (int)numericUpDown_Weather_Text_StartCorner_X.Value;
                     Watch_Face.Weather.Temperature.Current.TopLeftY = (int)numericUpDown_Weather_Text_StartCorner_Y.Value;
@@ -4144,13 +4279,13 @@ namespace GTR_Watch_face
                         Watch_Face.Weather.Temperature.Symbols.Unknown0800 = 0;
                         if (comboBox_Weather_Text_MinusImage.SelectedIndex >= 0)
                             Watch_Face.Weather.Temperature.Symbols.MinusImageIndex =
-                                    comboBox_Weather_Text_MinusImage.SelectedIndex;
+                                    Int32.Parse(comboBox_Weather_Text_MinusImage.Text);
                         if (comboBox_Weather_Text_DegImage.SelectedIndex >= 0)
                             Watch_Face.Weather.Temperature.Symbols.DegreesImageIndex =
-                                    comboBox_Weather_Text_DegImage.SelectedIndex;
+                                    Int32.Parse(comboBox_Weather_Text_DegImage.Text);
                         if (comboBox_Weather_Text_NDImage.SelectedIndex >= 0)
                             Watch_Face.Weather.Temperature.Symbols.NoDataImageIndex =
-                                    comboBox_Weather_Text_NDImage.SelectedIndex;
+                                    Int32.Parse(comboBox_Weather_Text_NDImage.Text);
                     }
                 }
 
@@ -4166,7 +4301,7 @@ namespace GTR_Watch_face
                         Watch_Face.Weather.Temperature.Today.Separate.Day = new Number();
 
                     Watch_Face.Weather.Temperature.Today.Separate.Day.ImageIndex =
-                        comboBox_Weather_Day_Image.SelectedIndex;
+                        Int32.Parse(comboBox_Weather_Day_Image.Text);
                     Watch_Face.Weather.Temperature.Today.Separate.Day.ImagesCount = 
                         (int)numericUpDown_Weather_Day_Count.Value;
                     Watch_Face.Weather.Temperature.Today.Separate.Day.TopLeftX = 
@@ -4193,13 +4328,13 @@ namespace GTR_Watch_face
                         Watch_Face.Weather.Temperature.Symbols.Unknown0800 = 0;
                         if (comboBox_Weather_Text_MinusImage.SelectedIndex >= 0)
                             Watch_Face.Weather.Temperature.Symbols.MinusImageIndex =
-                                    comboBox_Weather_Text_MinusImage.SelectedIndex;
+                                    Int32.Parse(comboBox_Weather_Text_MinusImage.Text);
                         if (comboBox_Weather_Text_DegImage.SelectedIndex >= 0)
                             Watch_Face.Weather.Temperature.Symbols.DegreesImageIndex =
-                                    comboBox_Weather_Text_DegImage.SelectedIndex;
+                                    Int32.Parse(comboBox_Weather_Text_DegImage.Text);
                         if (comboBox_Weather_Text_NDImage.SelectedIndex >= 0)
                             Watch_Face.Weather.Temperature.Symbols.NoDataImageIndex =
-                                    comboBox_Weather_Text_NDImage.SelectedIndex;
+                                    Int32.Parse(comboBox_Weather_Text_NDImage.Text);
                     }
                 }
 
@@ -4215,7 +4350,7 @@ namespace GTR_Watch_face
                         Watch_Face.Weather.Temperature.Today.Separate.Night = new Number();
 
                     Watch_Face.Weather.Temperature.Today.Separate.Night.ImageIndex =
-                        comboBox_Weather_Night_Image.SelectedIndex;
+                        Int32.Parse(comboBox_Weather_Night_Image.Text);
                     Watch_Face.Weather.Temperature.Today.Separate.Night.ImagesCount =
                         (int)numericUpDown_Weather_Night_Count.Value;
                     Watch_Face.Weather.Temperature.Today.Separate.Night.TopLeftX =
@@ -4242,13 +4377,13 @@ namespace GTR_Watch_face
                         Watch_Face.Weather.Temperature.Symbols.Unknown0800 = 0;
                         if (comboBox_Weather_Text_MinusImage.SelectedIndex >= 0)
                             Watch_Face.Weather.Temperature.Symbols.MinusImageIndex =
-                                    comboBox_Weather_Text_MinusImage.SelectedIndex;
+                                    Int32.Parse(comboBox_Weather_Text_MinusImage.Text);
                         if (comboBox_Weather_Text_DegImage.SelectedIndex >= 0)
                             Watch_Face.Weather.Temperature.Symbols.DegreesImageIndex =
-                                    comboBox_Weather_Text_DegImage.SelectedIndex;
+                                    Int32.Parse(comboBox_Weather_Text_DegImage.Text);
                         if (comboBox_Weather_Text_NDImage.SelectedIndex >= 0)
                             Watch_Face.Weather.Temperature.Symbols.NoDataImageIndex =
-                                    comboBox_Weather_Text_NDImage.SelectedIndex;
+                                    Int32.Parse(comboBox_Weather_Text_NDImage.Text);
                     }
                 }
 
@@ -4262,8 +4397,8 @@ namespace GTR_Watch_face
                     Watch_Face.Weather.Icon.Images.X = (int)numericUpDown_Weather_Icon_X.Value;
                     Watch_Face.Weather.Icon.Images.Y = (int)numericUpDown_Weather_Icon_Y.Value;
                     Watch_Face.Weather.Icon.Images.ImagesCount = (int)numericUpDown_Weather_Icon_Count.Value;
-                    Watch_Face.Weather.Icon.Images.ImageIndex = comboBox_Weather_Icon_Image.SelectedIndex;
-                    Watch_Face.Weather.Icon.NoWeatherImageIndex = comboBox_Weather_Icon_NDImage.SelectedIndex;
+                    Watch_Face.Weather.Icon.Images.ImageIndex = Int32.Parse(comboBox_Weather_Icon_Image.Text);
+                    Watch_Face.Weather.Icon.NoWeatherImageIndex = Int32.Parse(comboBox_Weather_Icon_NDImage.Text);
                 }
             }
 
@@ -4616,14 +4751,12 @@ namespace GTR_Watch_face
         {
             e.Handled = true;
         }
-
-
+        
         private void numericUpDown_StepsProgress_Radius_X_ValueChanged(object sender, EventArgs e)
         {
             numericUpDown_StepsProgress_Radius_Y.Value = numericUpDown_StepsProgress_Radius_X.Value;
             PreviewImage();
         }
-
         
         private void comboBox_Battery_Scale_Color_Click(object sender, EventArgs e)
         {
@@ -5380,7 +5513,12 @@ namespace GTR_Watch_face
             numericUpDown_WeatherSet_NightTemp.Enabled = checkBox_WeatherSet_DayTemp.Checked;
             numericUpDown_WeatherSet_DayTemp.Enabled = checkBox_WeatherSet_DayTemp.Checked;
         }
-        
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Enabled = false;
+            pictureBox1.Image = null;
+        }
     }
 
 
