@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTR_Watch_face", "GTR_Watch_face\GTR_Watch_face.csproj", "{60CD7E95-9507-42E3-869F-5A677ECCE917}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60CD7E95-9507-42E3-869F-5A677ECCE917}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60CD7E95-9507-42E3-869F-5A677ECCE917}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60CD7E95-9507-42E3-869F-5A677ECCE917}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60CD7E95-9507-42E3-869F-5A677ECCE917}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84052B5C-E147-4BD8-94AC-0D548B4D4F26}
+	EndGlobalSection
+EndGlobal
