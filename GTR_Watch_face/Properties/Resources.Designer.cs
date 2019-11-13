@@ -65,7 +65,7 @@ namespace GTR_Watch_face.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap watch_icon {
             get {
-                object obj = ResourceManager.GetObject("watch-icon", resourceCulture);
+                object obj = ResourceManager.GetObject("watch_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

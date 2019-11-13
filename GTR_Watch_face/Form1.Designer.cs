@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button_unpack = new System.Windows.Forms.Button();
@@ -830,6 +829,13 @@
             this.checkBox_WebB = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button_SavePNG = new System.Windows.Forms.Button();
+            this.panel_Preview = new System.Windows.Forms.Panel();
+            this.button_SaveGIF = new System.Windows.Forms.Button();
+            this.radioButton_47 = new System.Windows.Forms.RadioButton();
+            this.radioButton42 = new System.Windows.Forms.RadioButton();
+            this.button_PreviewSmall_42 = new System.Windows.Forms.Button();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -1108,15 +1114,6 @@
             this.panel_Background.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(5, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(229, 229);
-            this.panel1.TabIndex = 0;
-            this.panel1.DoubleClick += new System.EventHandler(this.panel1_DoubleClick);
             // 
             // tabControl1
             // 
@@ -4514,7 +4511,7 @@
             this.panel_Weather.Controls.Add(this.tabControl_Weather);
             this.panel_Weather.Controls.Add(this.checkBox_Weather);
             this.panel_Weather.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Weather.Location = new System.Drawing.Point(0, 325);
+            this.panel_Weather.Location = new System.Drawing.Point(0, 215);
             this.panel_Weather.Name = "panel_Weather";
             this.panel_Weather.Size = new System.Drawing.Size(392, 1);
             this.panel_Weather.TabIndex = 17;
@@ -5565,7 +5562,7 @@
             // button_Weather
             // 
             this.button_Weather.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_Weather.Location = new System.Drawing.Point(0, 302);
+            this.button_Weather.Location = new System.Drawing.Point(0, 192);
             this.button_Weather.Name = "button_Weather";
             this.button_Weather.Size = new System.Drawing.Size(392, 23);
             this.button_Weather.TabIndex = 16;
@@ -5581,7 +5578,7 @@
             this.panel_AnalogClock.Controls.Add(this.groupBox_AnalogClock_Hour);
             this.panel_AnalogClock.Controls.Add(this.checkBox_AnalogClock);
             this.panel_AnalogClock.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_AnalogClock.Location = new System.Drawing.Point(0, 301);
+            this.panel_AnalogClock.Location = new System.Drawing.Point(0, 191);
             this.panel_AnalogClock.Name = "panel_AnalogClock";
             this.panel_AnalogClock.Size = new System.Drawing.Size(392, 1);
             this.panel_AnalogClock.TabIndex = 15;
@@ -5899,7 +5896,7 @@
             // button_AnalogClock
             // 
             this.button_AnalogClock.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_AnalogClock.Location = new System.Drawing.Point(0, 278);
+            this.button_AnalogClock.Location = new System.Drawing.Point(0, 168);
             this.button_AnalogClock.Name = "button_AnalogClock";
             this.button_AnalogClock.Size = new System.Drawing.Size(392, 23);
             this.button_AnalogClock.TabIndex = 14;
@@ -5913,7 +5910,7 @@
             this.panel_Battery.Controls.Add(this.tabControl4);
             this.panel_Battery.Controls.Add(this.checkBox_Battery);
             this.panel_Battery.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Battery.Location = new System.Drawing.Point(0, 277);
+            this.panel_Battery.Location = new System.Drawing.Point(0, 167);
             this.panel_Battery.Name = "panel_Battery";
             this.panel_Battery.Size = new System.Drawing.Size(392, 1);
             this.panel_Battery.TabIndex = 13;
@@ -5998,6 +5995,11 @@
             this.numericUpDown_Battery_Text_Count.Name = "numericUpDown_Battery_Text_Count";
             this.numericUpDown_Battery_Text_Count.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Battery_Text_Count.TabIndex = 69;
+            this.numericUpDown_Battery_Text_Count.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.numericUpDown_Battery_Text_Count.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // numericUpDown_Battery_Text_StartCorner_Y
@@ -6339,6 +6341,11 @@
             this.numericUpDown_Battery_Img_Count.Name = "numericUpDown_Battery_Img_Count";
             this.numericUpDown_Battery_Img_Count.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Battery_Img_Count.TabIndex = 80;
+            this.numericUpDown_Battery_Img_Count.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.numericUpDown_Battery_Img_Count.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // label198
@@ -6475,6 +6482,11 @@
             this.numericUpDown_Battery_Scale_EndAngle.Name = "numericUpDown_Battery_Scale_EndAngle";
             this.numericUpDown_Battery_Scale_EndAngle.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Battery_Scale_EndAngle.TabIndex = 52;
+            this.numericUpDown_Battery_Scale_EndAngle.Value = new decimal(new int[] {
+            495,
+            0,
+            0,
+            0});
             this.numericUpDown_Battery_Scale_EndAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // label199
@@ -6504,6 +6516,11 @@
             this.numericUpDown_Battery_Scale_StartAngle.Name = "numericUpDown_Battery_Scale_StartAngle";
             this.numericUpDown_Battery_Scale_StartAngle.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Battery_Scale_StartAngle.TabIndex = 50;
+            this.numericUpDown_Battery_Scale_StartAngle.Value = new decimal(new int[] {
+            225,
+            0,
+            0,
+            0});
             this.numericUpDown_Battery_Scale_StartAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // label200
@@ -6552,6 +6569,11 @@
             this.numericUpDown_Battery_Scale_Width.Name = "numericUpDown_Battery_Scale_Width";
             this.numericUpDown_Battery_Scale_Width.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Battery_Scale_Width.TabIndex = 46;
+            this.numericUpDown_Battery_Scale_Width.Value = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
             this.numericUpDown_Battery_Scale_Width.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // label202
@@ -6689,7 +6711,7 @@
             // button_Battery
             // 
             this.button_Battery.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_Battery.Location = new System.Drawing.Point(0, 254);
+            this.button_Battery.Location = new System.Drawing.Point(0, 144);
             this.button_Battery.Name = "button_Battery";
             this.button_Battery.Size = new System.Drawing.Size(392, 23);
             this.button_Battery.TabIndex = 12;
@@ -6702,7 +6724,7 @@
             this.panel_Status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_Status.Controls.Add(this.tabControl2);
             this.panel_Status.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Status.Location = new System.Drawing.Point(0, 253);
+            this.panel_Status.Location = new System.Drawing.Point(0, 143);
             this.panel_Status.Name = "panel_Status";
             this.panel_Status.Size = new System.Drawing.Size(392, 1);
             this.panel_Status.TabIndex = 11;
@@ -7209,7 +7231,7 @@
             // button_Status
             // 
             this.button_Status.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_Status.Location = new System.Drawing.Point(0, 230);
+            this.button_Status.Location = new System.Drawing.Point(0, 120);
             this.button_Status.Name = "button_Status";
             this.button_Status.Size = new System.Drawing.Size(392, 23);
             this.button_Status.TabIndex = 10;
@@ -7223,7 +7245,7 @@
             this.panel_Activity.Controls.Add(this.tabControl_Activity);
             this.panel_Activity.Controls.Add(this.checkBox_Activity);
             this.panel_Activity.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Activity.Location = new System.Drawing.Point(0, 229);
+            this.panel_Activity.Location = new System.Drawing.Point(0, 119);
             this.panel_Activity.Name = "panel_Activity";
             this.panel_Activity.Size = new System.Drawing.Size(392, 1);
             this.panel_Activity.TabIndex = 9;
@@ -8723,7 +8745,7 @@
             // button_Activity
             // 
             this.button_Activity.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_Activity.Location = new System.Drawing.Point(0, 206);
+            this.button_Activity.Location = new System.Drawing.Point(0, 96);
             this.button_Activity.Name = "button_Activity";
             this.button_Activity.Size = new System.Drawing.Size(392, 23);
             this.button_Activity.TabIndex = 8;
@@ -8752,7 +8774,7 @@
             this.panel_StepsProgress.Controls.Add(this.label104);
             this.panel_StepsProgress.Controls.Add(this.checkBox_StepsProgress);
             this.panel_StepsProgress.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_StepsProgress.Location = new System.Drawing.Point(0, 205);
+            this.panel_StepsProgress.Location = new System.Drawing.Point(0, 95);
             this.panel_StepsProgress.Name = "panel_StepsProgress";
             this.panel_StepsProgress.Size = new System.Drawing.Size(392, 1);
             this.panel_StepsProgress.TabIndex = 7;
@@ -8990,7 +9012,7 @@
             // button_StepsProgress
             // 
             this.button_StepsProgress.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_StepsProgress.Location = new System.Drawing.Point(0, 182);
+            this.button_StepsProgress.Location = new System.Drawing.Point(0, 72);
             this.button_StepsProgress.Name = "button_StepsProgress";
             this.button_StepsProgress.Size = new System.Drawing.Size(392, 23);
             this.button_StepsProgress.TabIndex = 6;
@@ -9007,7 +9029,7 @@
             this.panel_Date.Controls.Add(this.checkBox_TwoDigitsMonth);
             this.panel_Date.Controls.Add(this.groupBox__WeekDay);
             this.panel_Date.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Date.Location = new System.Drawing.Point(0, 181);
+            this.panel_Date.Location = new System.Drawing.Point(0, 71);
             this.panel_Date.Name = "panel_Date";
             this.panel_Date.Size = new System.Drawing.Size(392, 1);
             this.panel_Date.TabIndex = 5;
@@ -9350,6 +9372,11 @@
             this.numericUpDown_MonthAndDayM_Count.Name = "numericUpDown_MonthAndDayM_Count";
             this.numericUpDown_MonthAndDayM_Count.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_MonthAndDayM_Count.TabIndex = 31;
+            this.numericUpDown_MonthAndDayM_Count.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.numericUpDown_MonthAndDayM_Count.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // numericUpDown_MonthAndDayM_StartCorner_Y
@@ -10056,7 +10083,7 @@
             this.numericUpDown_WeekDay_Count.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_WeekDay_Count.TabIndex = 12;
             this.numericUpDown_WeekDay_Count.Value = new decimal(new int[] {
-            10,
+            7,
             0,
             0,
             0});
@@ -10155,7 +10182,7 @@
             // button_Date
             // 
             this.button_Date.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_Date.Location = new System.Drawing.Point(0, 158);
+            this.button_Date.Location = new System.Drawing.Point(0, 48);
             this.button_Date.Name = "button_Date";
             this.button_Date.Size = new System.Drawing.Size(392, 23);
             this.button_Date.TabIndex = 4;
@@ -10172,7 +10199,7 @@
             this.panel_Time.Controls.Add(this.tabControl_Time);
             this.panel_Time.Controls.Add(this.checkBox_Time);
             this.panel_Time.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Time.Location = new System.Drawing.Point(0, 157);
+            this.panel_Time.Location = new System.Drawing.Point(0, 47);
             this.panel_Time.Name = "panel_Time";
             this.panel_Time.Size = new System.Drawing.Size(392, 1);
             this.panel_Time.TabIndex = 3;
@@ -11156,7 +11183,7 @@
             // button_Time
             // 
             this.button_Time.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_Time.Location = new System.Drawing.Point(0, 134);
+            this.button_Time.Location = new System.Drawing.Point(0, 24);
             this.button_Time.Name = "button_Time";
             this.button_Time.Size = new System.Drawing.Size(392, 23);
             this.button_Time.TabIndex = 2;
@@ -11174,7 +11201,7 @@
             this.panel_Background.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_Background.Location = new System.Drawing.Point(0, 23);
             this.panel_Background.Name = "panel_Background";
-            this.panel_Background.Size = new System.Drawing.Size(392, 111);
+            this.panel_Background.Size = new System.Drawing.Size(392, 1);
             this.panel_Background.TabIndex = 1;
             // 
             // comboBox_Preview
@@ -11252,7 +11279,7 @@
             // 
             // button_PreviewBig
             // 
-            this.button_PreviewBig.Location = new System.Drawing.Point(5, 263);
+            this.button_PreviewBig.Location = new System.Drawing.Point(5, 286);
             this.button_PreviewBig.Name = "button_PreviewBig";
             this.button_PreviewBig.Size = new System.Drawing.Size(75, 23);
             this.button_PreviewBig.TabIndex = 18;
@@ -11274,7 +11301,7 @@
             // checkBox_WebW
             // 
             this.checkBox_WebW.AutoSize = true;
-            this.checkBox_WebW.Location = new System.Drawing.Point(5, 240);
+            this.checkBox_WebW.Location = new System.Drawing.Point(5, 263);
             this.checkBox_WebW.Name = "checkBox_WebW";
             this.checkBox_WebW.Size = new System.Drawing.Size(89, 17);
             this.checkBox_WebW.TabIndex = 20;
@@ -11285,7 +11312,7 @@
             // checkBox_WebB
             // 
             this.checkBox_WebB.AutoSize = true;
-            this.checkBox_WebB.Location = new System.Drawing.Point(114, 240);
+            this.checkBox_WebB.Location = new System.Drawing.Point(114, 263);
             this.checkBox_WebB.Name = "checkBox_WebB";
             this.checkBox_WebB.Size = new System.Drawing.Size(96, 17);
             this.checkBox_WebB.TabIndex = 21;
@@ -11307,26 +11334,103 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // button_SavePNG
+            // 
+            this.button_SavePNG.Location = new System.Drawing.Point(135, 533);
+            this.button_SavePNG.Name = "button_SavePNG";
+            this.button_SavePNG.Size = new System.Drawing.Size(97, 23);
+            this.button_SavePNG.TabIndex = 23;
+            this.button_SavePNG.Text = "Сохранить PNG";
+            this.button_SavePNG.UseVisualStyleBackColor = true;
+            this.button_SavePNG.Click += new System.EventHandler(this.button_SavePNG_Click);
+            // 
+            // panel_Preview
+            // 
+            this.panel_Preview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Preview.Location = new System.Drawing.Point(5, 5);
+            this.panel_Preview.Name = "panel_Preview";
+            this.panel_Preview.Size = new System.Drawing.Size(229, 229);
+            this.panel_Preview.TabIndex = 24;
+            this.panel_Preview.DoubleClick += new System.EventHandler(this.panel_Preview_DoubleClick);
+            // 
+            // button_SaveGIF
+            // 
+            this.button_SaveGIF.Location = new System.Drawing.Point(135, 504);
+            this.button_SaveGIF.Name = "button_SaveGIF";
+            this.button_SaveGIF.Size = new System.Drawing.Size(97, 23);
+            this.button_SaveGIF.TabIndex = 25;
+            this.button_SaveGIF.Text = "Сохранить GIF";
+            this.button_SaveGIF.UseVisualStyleBackColor = true;
+            this.button_SaveGIF.Click += new System.EventHandler(this.button_SaveGIF_Click);
+            // 
+            // radioButton_47
+            // 
+            this.radioButton_47.AutoSize = true;
+            this.radioButton_47.Checked = true;
+            this.radioButton_47.Location = new System.Drawing.Point(5, 240);
+            this.radioButton_47.Name = "radioButton_47";
+            this.radioButton_47.Size = new System.Drawing.Size(56, 17);
+            this.radioButton_47.TabIndex = 26;
+            this.radioButton_47.TabStop = true;
+            this.radioButton_47.Text = "47 мм";
+            this.radioButton_47.UseVisualStyleBackColor = true;
+            this.radioButton_47.CheckedChanged += new System.EventHandler(this.radioButton_47_CheckedChanged);
+            // 
+            // radioButton42
+            // 
+            this.radioButton42.AutoSize = true;
+            this.radioButton42.Location = new System.Drawing.Point(114, 240);
+            this.radioButton42.Name = "radioButton42";
+            this.radioButton42.Size = new System.Drawing.Size(56, 17);
+            this.radioButton42.TabIndex = 27;
+            this.radioButton42.Text = "42 мм";
+            this.radioButton42.UseVisualStyleBackColor = true;
+            // 
+            // button_PreviewSmall_42
+            // 
+            this.button_PreviewSmall_42.Location = new System.Drawing.Point(5, 403);
+            this.button_PreviewSmall_42.Name = "button_PreviewSmall_42";
+            this.button_PreviewSmall_42.Size = new System.Drawing.Size(75, 23);
+            this.button_PreviewSmall_42.TabIndex = 28;
+            this.button_PreviewSmall_42.Text = "Уменьшить";
+            this.button_PreviewSmall_42.UseVisualStyleBackColor = true;
+            this.button_PreviewSmall_42.Visible = false;
+            this.button_PreviewSmall_42.Click += new System.EventHandler(this.panel1_DoubleClick);
+            // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "C:\\Users\\Администратор\\Documents\\readme.chm";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 562);
+            this.Controls.Add(this.panel_Preview);
+            this.Controls.Add(this.button_PreviewSmall_42);
+            this.Controls.Add(this.radioButton42);
+            this.Controls.Add(this.radioButton_47);
+            this.Controls.Add(this.button_SaveGIF);
+            this.Controls.Add(this.button_SavePNG);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.checkBox_WebB);
             this.Controls.Add(this.checkBox_WebW);
             this.Controls.Add(this.button_PreviewSmall);
             this.Controls.Add(this.button_PreviewBig);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.HelpButton = true;
+            this.helpProvider1.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.TableOfContents);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
+            this.helpProvider1.SetShowHelp(this, true);
             this.Text = "GTR watch face editor";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.Form1_HelpButtonClicked);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Shown += new System.EventHandler(this.Form1_Shown);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -11664,8 +11768,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TextBox textBox_pack_unpack_dir;
@@ -12464,6 +12566,13 @@
         private System.Windows.Forms.Label label303;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button_SavePNG;
+        private System.Windows.Forms.Panel panel_Preview;
+        private System.Windows.Forms.Button button_SaveGIF;
+        private System.Windows.Forms.RadioButton radioButton_47;
+        private System.Windows.Forms.RadioButton radioButton42;
+        private System.Windows.Forms.Button button_PreviewSmall_42;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }
 

@@ -14,6 +14,7 @@ using Newtonsoft.Json;
 using System.Drawing.Imaging;
 using System.Globalization;
 using System.Drawing.Drawing2D;
+using ImageMagick;
 
 namespace GTR_Watch_face
 {
@@ -27,8 +28,9 @@ namespace GTR_Watch_face
         bool PreviewView;
         string FileName;
         string FullFileDir;
+        string StartFileName;
 
-        public Form1()
+        public Form1(string[] args)
         {
             InitializeComponent();
 
@@ -54,6 +56,16 @@ namespace GTR_Watch_face
             Watch_Face_Preview.TimePm.Seconds = new TwoDigitsP();
 
             PreviewView = true;
+            
+            if (args.Length == 1)
+            {
+                string fileName = args[0].ToString();
+                if ((File.Exists(fileName)) && (Path.GetExtension(fileName)==".json"))
+                {
+                    //LoadJsonAndImage(fileName);
+                    StartFileName = fileName;
+                }
+            }
 
         }
 
@@ -81,14 +93,23 @@ namespace GTR_Watch_face
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Properties.Settings.Default.pack_unpack_dir = textBox_pack_unpack_dir.Text;
-            Properties.Settings.Default.unpack_command = textBox_unpack_command.Text;
-            Properties.Settings.Default.pack_command = textBox_pack_command.Text;
+            if (radioButton_47.Checked)
+            {
+                Properties.Settings.Default.unpack_command = textBox_unpack_command.Text;
+                Properties.Settings.Default.pack_command = textBox_pack_command.Text; 
+            }
+            else
+            {
+                Properties.Settings.Default.unpack_command_42 = textBox_unpack_command.Text;
+                Properties.Settings.Default.pack_command_42 = textBox_pack_command.Text;
+            }
             Properties.Settings.Default.Save();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string subPath = Application.StartupPath + @"\py_amazfit_tools-dev_gtr\main.py";
+            helpProvider1.HelpNamespace = Application.StartupPath + @"\readme.chm";
+            string subPath = Application.StartupPath + @"\py_amazfit_tools -dev_gtr\main.py";
             textBox_pack_unpack_dir.Text = subPath;
             if (Properties.Settings.Default.pack_unpack_dir.Length > 1)
                 textBox_pack_unpack_dir.Text = Properties.Settings.Default.pack_unpack_dir;
@@ -216,7 +237,7 @@ namespace GTR_Watch_face
             if (!Directory.Exists(subPath)) Directory.CreateDirectory(subPath);
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = subPath;
+            //openFileDialog.InitialDirectory = subPath;
             openFileDialog.Filter = "PNG Files: (*.png)|*.png";
             //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
             ////openFileDialog1.FilterIndex = 2;
@@ -269,7 +290,7 @@ namespace GTR_Watch_face
                             + ". У Вас нет прав на чтение файла, или изображение повреждено.");
                     }
                 }
-                loadedImage.Dispose();
+                //loadedImage.Dispose();
                 PreviewView = false;
                 JSON_read();
                 PreviewView = true;
@@ -284,7 +305,7 @@ namespace GTR_Watch_face
             if (!Directory.Exists(subPath)) Directory.CreateDirectory(subPath);
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = subPath;
+            //openFileDialog.InitialDirectory = subPath;
             openFileDialog.Filter = "Json files (*.json) | *.json";
             //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
             ////openFileDialog1.FilterIndex = 2;
@@ -293,92 +314,100 @@ namespace GTR_Watch_face
             openFileDialog.Title = "Выбор файла настроек циферблата";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                string fullfilename = openFileDialog.FileName;
-                FileName = Path.GetFileName(fullfilename);
-                FullFileDir = Path.GetDirectoryName(fullfilename);
-                string text = File.ReadAllText(fullfilename);
-                //richTextBox_JSON.Text = text;
+                //string fullfilename = openFileDialog.FileName;
+                LoadJsonAndImage(openFileDialog.FileName);
+            }
+        }
 
-                DirectoryInfo Folder;
-                FileInfo[] Images;
-                Folder = new DirectoryInfo(FullFileDir);
-                Images = Folder.GetFiles("*.png");
-                int count = 0;
-                Image loadedImage = null;
-                foreach (FileInfo file in Images)
-                {
-                    try
-                    {
-                        string fileNameOnly = Path.GetFileNameWithoutExtension(file.Name);
-                        //string fileNameOnly = Path.GetFileName(file);
-                        int i;
-                        if (int.TryParse(fileNameOnly, out i))
-                        {
-                            //loadedImage = Image.FromFile(file.FullName);
-                            using (FileStream stream = new FileStream(file.FullName, FileMode.Open, FileAccess.Read))
-                            {
-                                loadedImage = Image.FromStream(stream);
-                            }
-                            var RowNew = new DataGridViewRow();
-                            DataGridViewImageCellLayout ZoomType = DataGridViewImageCellLayout.Zoom;
-                            if ((loadedImage.Height < 45) && (loadedImage.Width < 110))
-                                ZoomType = DataGridViewImageCellLayout.Normal;
-                            RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = i.ToString() });
-                            RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = fileNameOnly });
-                            //RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = file });
-                            RowNew.Cells.Add(new DataGridViewImageCell()
-                            {
-                                Value = loadedImage,
-                                ImageLayout = ZoomType
-                            });
-                            //loadedImage.Dispose();
-                            RowNew.Height = 45;
-                            dataGridView1.Rows.Add(RowNew);
-                            count++;
-                            ListImages.Add(i.ToString());
-                            ListImagesFullName.Add(file.FullName);
-                        }
-                    }
-                    catch
-                    {
-                        // Could not load the image - probably related to Windows file system permissions.
-                        MessageBox.Show("Невозможно открыть изображение: " + file.FullName.Substring(file.FullName.LastIndexOf('\\'))
-                            + ". У Вас нет прав на чтение файла, или изображение повреждено.");
-                    }
-                }
+        private void LoadJsonAndImage(string fullfilename)
+        {
+            FileName = Path.GetFileName(fullfilename);
+            FullFileDir = Path.GetDirectoryName(fullfilename);
+            string text = File.ReadAllText(fullfilename);
+            //richTextBox_JSON.Text = text;
+            ListImages.Clear();
+            ListImagesFullName.Clear();
+            dataGridView1.Rows.Clear();
 
-                loadedImage.Dispose();
-                int LastImage = Int32.Parse(ListImages.Last())+1;
-                if (count!= LastImage) MessageBox.Show("PNG файлы идут не по порядку или часть файлов отсутствует.\r\n"+
-                    "Присвойте имена PNG файлам в порядке возрастания.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-
+            DirectoryInfo Folder;
+            FileInfo[] Images;
+            Folder = new DirectoryInfo(FullFileDir);
+            Images = Folder.GetFiles("*.png");
+            int count = 0;
+            Image loadedImage = null;
+            foreach (FileInfo file in Images)
+            {
                 try
                 {
-                    Watch_Face = JsonConvert.DeserializeObject<WATCH_FACE_JSON>(text, new JsonSerializerSettings
+                    string fileNameOnly = Path.GetFileNameWithoutExtension(file.Name);
+                    //string fileNameOnly = Path.GetFileName(file);
+                    int i;
+                    if (int.TryParse(fileNameOnly, out i))
                     {
-                        DefaultValueHandling = DefaultValueHandling.Ignore,
-                        NullValueHandling = NullValueHandling.Ignore
-                    });
+                        //loadedImage = Image.FromFile(file.FullName);
+                        using (FileStream stream = new FileStream(file.FullName, FileMode.Open, FileAccess.Read))
+                        {
+                            loadedImage = Image.FromStream(stream);
+                        }
+                        var RowNew = new DataGridViewRow();
+                        DataGridViewImageCellLayout ZoomType = DataGridViewImageCellLayout.Zoom;
+                        if ((loadedImage.Height < 45) && (loadedImage.Width < 110))
+                            ZoomType = DataGridViewImageCellLayout.Normal;
+                        RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = i.ToString() });
+                        RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = fileNameOnly });
+                        //RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = file });
+                        RowNew.Cells.Add(new DataGridViewImageCell()
+                        {
+                            Value = loadedImage,
+                            ImageLayout = ZoomType
+                        });
+                        //loadedImage.Dispose();
+                        RowNew.Height = 45;
+                        dataGridView1.Rows.Add(RowNew);
+                        count++;
+                        ListImages.Add(i.ToString());
+                        ListImagesFullName.Add(file.FullName);
+                    }
                 }
-                catch (Exception)
+                catch
                 {
-
-                    MessageBox.Show("Неверный JSON файл.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    // Could not load the image - probably related to Windows file system permissions.
+                    MessageBox.Show("Невозможно открыть изображение: " + file.FullName.Substring(file.FullName.LastIndexOf('\\'))
+                        + ". У Вас нет прав на чтение файла, или изображение повреждено.");
                 }
+            }
 
-                richTextBox_JSON.Text = JsonConvert.SerializeObject(Watch_Face, Formatting.Indented, new JsonSerializerSettings
+            //loadedImage.Dispose();
+            int LastImage = Int32.Parse(ListImages.Last()) + 1;
+            if (count != LastImage) MessageBox.Show("PNG файлы идут не по порядку или часть файлов отсутствует.\r\n" +
+                 "Присвойте имена PNG файлам в порядке возрастания.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+
+            try
+            {
+                Watch_Face = JsonConvert.DeserializeObject<WATCH_FACE_JSON>(text, new JsonSerializerSettings
                 {
-                    //DefaultValueHandling = DefaultValueHandling.Ignore,
+                    DefaultValueHandling = DefaultValueHandling.Ignore,
                     NullValueHandling = NullValueHandling.Ignore
                 });
-                
-
-                PreviewView = false;
-                JSON_read();
-                PreviewView = true;
-                PreviewImage();
             }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Неверный JSON файл.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            richTextBox_JSON.Text = JsonConvert.SerializeObject(Watch_Face, Formatting.Indented, new JsonSerializerSettings
+            {
+                //DefaultValueHandling = DefaultValueHandling.Ignore,
+                NullValueHandling = NullValueHandling.Ignore
+            });
+
+
+            PreviewView = false;
+            JSON_read();
+            PreviewView = true;
+            PreviewImage();
         }
 
         // заполняем поля с настройками из JSON файла
@@ -1147,11 +1176,11 @@ namespace GTR_Watch_face
         private void PreviewImage()
         {
             if (!PreviewView) return;
-            Graphics gPanel = panel1.CreateGraphics();
-            gPanel.Clear(panel1.BackColor);
+            Graphics gPanel = panel_Preview.CreateGraphics();
+            gPanel.Clear(panel_Preview.BackColor);
             var src = new Bitmap(100, 100);
             //gPanel.ScaleTransform(0.5f, 0.5f);
-            if (panel1.Height < 300) gPanel.ScaleTransform(0.5f, 0.5f);
+            if (panel_Preview.Height < 300) gPanel.ScaleTransform(0.5f, 0.5f);
             int i;
             if (comboBox_Background.SelectedIndex >= 0)
             {
@@ -2004,18 +2033,21 @@ namespace GTR_Watch_face
             #endregion
 
             #region Mesh
+            int center = 227;
+            if (radioButton42.Checked) center = 195;
+
             if (checkBox_WebW.Checked)
             {
                 Pen pen = new Pen(Color.White, 1);
                 int LineDistance = 30;
-                if (panel1.Height > 300) LineDistance = 15;
+                if (panel_Preview.Height > 300) LineDistance = 15;
                 for (i = 0; i < 30; i++)
                 {
-                    gPanel.DrawLine(pen, new Point(227 + i * LineDistance, 0), new Point(227 + i * LineDistance, 454));
-                    gPanel.DrawLine(pen, new Point(227 - i * LineDistance, 0), new Point(227 - i * LineDistance, 454));
+                    gPanel.DrawLine(pen, new Point(center + i * LineDistance, 0), new Point(center + i * LineDistance, 454));
+                    gPanel.DrawLine(pen, new Point(center - i * LineDistance, 0), new Point(center - i * LineDistance, 454));
 
-                    gPanel.DrawLine(pen, new Point(0, 227 + i * LineDistance), new Point(454, 227 + i * LineDistance));
-                    gPanel.DrawLine(pen, new Point(0, 227 - i * LineDistance), new Point(454, 227 - i * LineDistance));
+                    gPanel.DrawLine(pen, new Point(0, center + i * LineDistance), new Point(454, center + i * LineDistance));
+                    gPanel.DrawLine(pen, new Point(0, center - i * LineDistance), new Point(454, center - i * LineDistance));
                 }
             }
 
@@ -2023,14 +2055,14 @@ namespace GTR_Watch_face
             {
                 Pen pen = new Pen(Color.Black, 1);
                 int LineDistance = 30;
-                if (panel1.Height > 300) LineDistance = 15;
+                if (panel_Preview.Height > 300) LineDistance = 15;
                 for (i = 0; i < 30; i++)
                 {
-                    gPanel.DrawLine(pen, new Point(227 + i * LineDistance, 0), new Point(227 + i * LineDistance, 454));
-                    gPanel.DrawLine(pen, new Point(227 - i * LineDistance, 0), new Point(227 - i * LineDistance, 454));
+                    gPanel.DrawLine(pen, new Point(center + i * LineDistance, 0), new Point(center + i * LineDistance, 454));
+                    gPanel.DrawLine(pen, new Point(center - i * LineDistance, 0), new Point(center - i * LineDistance, 454));
 
-                    gPanel.DrawLine(pen, new Point(0, 227 + i * LineDistance), new Point(454, 227 + i * LineDistance));
-                    gPanel.DrawLine(pen, new Point(0, 227 - i * LineDistance), new Point(454, 227 - i * LineDistance));
+                    gPanel.DrawLine(pen, new Point(0, center + i * LineDistance), new Point(454, center + i * LineDistance));
+                    gPanel.DrawLine(pen, new Point(0, center - i * LineDistance), new Point(454, center - i * LineDistance));
                 }
             }
             #endregion
@@ -2047,11 +2079,13 @@ namespace GTR_Watch_face
             //graphics.RotateTransform(angle);
             var src = new Bitmap(ListImagesFullName[image_index]);
             //graphics.DrawImage(src, new Rectangle(227 - x1, 227 - y1, src.Width, src.Height));
-            graphics.TranslateTransform(227, 227);
+            int offSet = 227;
+            if (radioButton42.Checked) offSet = 195;
+            graphics.TranslateTransform(offSet, offSet);
             graphics.RotateTransform(angle);
             graphics.DrawImage(src, new Rectangle(-x1, -y1, src.Width, src.Height));
             graphics.RotateTransform(-angle);
-            graphics.TranslateTransform(-227, -227);
+            graphics.TranslateTransform(-offSet, -offSet);
             src.Dispose();
         }
 
@@ -4771,18 +4805,37 @@ namespace GTR_Watch_face
 
         private void panel1_DoubleClick(object sender, EventArgs e)
         {
-            if (panel1.Height == 229)
+            if (panel_Preview.Height < 300)
             {
-                panel1.Height = 456;
-                panel1.Width = 456;
-                button_PreviewSmall.Visible = true;
+                if (radioButton_47.Checked)
+                {
+                    panel_Preview.Height = 456;
+                    panel_Preview.Width = 456;
+                    button_PreviewSmall.Visible = true;
+                }
+                else
+                {
+                    panel_Preview.Height = 392;
+                    panel_Preview.Width = 392;
+                    button_PreviewSmall_42.Visible = true;
+                }
+                //button_PreviewSmall.Visible = true;
                 button_PreviewBig.Visible = false;
             }
             else
             {
-                panel1.Height = 229;
-                panel1.Width = 229;
+                if (radioButton_47.Checked)
+                {
+                    panel_Preview.Height = 229;
+                    panel_Preview.Width = 229;
+                }
+                else
+                {
+                    panel_Preview.Height = 197;
+                    panel_Preview.Width = 197;
+                }
                 button_PreviewSmall.Visible = false;
+                button_PreviewSmall_42.Visible = false;
                 button_PreviewBig.Visible = true;
             }
             PreviewImage();
@@ -5517,7 +5570,1162 @@ namespace GTR_Watch_face
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Enabled = false;
+            //pictureBox1.Image.Save(@"C:\test.png");
             pictureBox1.Image = null;
+        }
+        
+        private void panel_Preview_DoubleClick(object sender, EventArgs e)
+        {
+            if (panel_Preview.Height < 300) button_PreviewBig.PerformClick();
+            else
+            {
+                if (radioButton_47.Checked) button_PreviewSmall.PerformClick();
+                else button_PreviewSmall_42.PerformClick();
+            }
+        }
+
+        private void button_SavePNG_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            //openFileDialog.InitialDirectory = subPath;
+            saveFileDialog.Filter = "PNG Files: (*.png)|*.png";
+            saveFileDialog.FileName = "Preview.png";
+            //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
+            ////openFileDialog1.FilterIndex = 2;
+            saveFileDialog.RestoreDirectory = true;
+            saveFileDialog.Title = "Сохранить предпросмотр";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
+                if(radioButton42.Checked) bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
+                Graphics gPanel = Graphics.FromImage(bitmap);
+                PreviewToFile(gPanel);
+                bitmap.Save(saveFileDialog.FileName, ImageFormat.Png);
+            }
+        }
+
+        private void button_SaveGIF_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            //openFileDialog.InitialDirectory = subPath;
+            saveFileDialog.Filter = "GIF Files: (*.gif)|*.gif";
+            saveFileDialog.FileName = "Preview.gif";
+            //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
+            ////openFileDialog1.FilterIndex = 2;
+            saveFileDialog.RestoreDirectory = true;
+            saveFileDialog.Title = "Сохранить анимированный предпросмотр";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
+                if (radioButton42.Checked) bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
+                Graphics gPanel = Graphics.FromImage(bitmap);
+                bool save = false;
+
+                using (MagickImageCollection collection = new MagickImageCollection())
+                {
+                    for (int i = 0; i < 10; i++)
+                    {
+                        switch (i)
+                        {
+                            case 0:
+                                button_Set1.PerformClick();
+                                save = true;
+                                break;
+                            case 1:
+                                if (numericUpDown_Calories_Set2.Value != 1234)
+                                {
+                                    button_Set2.PerformClick();
+                                    save = true;
+                                }
+                                break;
+                            case 2:
+                                if (numericUpDown_Calories_Set3.Value != 1234)
+                                {
+                                    button_Set3.PerformClick();
+                                    save = true;
+                                }
+                                break;
+                            case 3:
+                                if (numericUpDown_Calories_Set4.Value != 1234)
+                                {
+                                    button_Set4.PerformClick();
+                                    save = true;
+                                }
+                                break;
+                            case 4:
+                                if (numericUpDown_Calories_Set5.Value != 1234)
+                                {
+                                    button_Set5.PerformClick();
+                                    save = true;
+                                }
+                                break;
+                            case 5:
+                                if (numericUpDown_Calories_Set6.Value != 1234)
+                                {
+                                    button_Set6.PerformClick();
+                                    save = true;
+                                }
+                                break;
+                            case 6:
+                                if (numericUpDown_Calories_Set7.Value != 1234)
+                                {
+                                    button_Set7.PerformClick();
+                                    save = true;
+                                }
+                                break;
+                            case 7:
+                                if (numericUpDown_Calories_Set8.Value != 1234)
+                                {
+                                    button_Set8.PerformClick();
+                                    save = true;
+                                }
+                                break;
+                            case 8:
+                                if (numericUpDown_Calories_Set9.Value != 1234)
+                                {
+                                    button_Set9.PerformClick();
+                                    save = true;
+                                }
+                                break;
+                            case 9:
+                                if (numericUpDown_Calories_Set10.Value != 1234)
+                                {
+                                    button_Set10.PerformClick();
+                                    save = true;
+                                }
+                                break;
+                        }
+
+                        if (save)
+                        {
+                            PreviewToFile(gPanel);
+                            // Add first image and set the animation delay to 100ms
+                            MagickImage item = new MagickImage(bitmap);
+                            collection.Add(item);
+                            collection[collection.Count - 1].AnimationDelay = 100;
+                        }
+                    }
+
+
+
+                    // Optionally reduce colors
+                    //QuantizeSettings settings = new QuantizeSettings();
+                    //settings.Colors = 256;
+                    //collection.Quantize(settings);
+
+                    // Optionally optimize the images (images should have the same size).
+                    collection.OptimizeTransparency();
+                    //collection.Optimize();
+
+                    // Save gif
+                    collection.Write(saveFileDialog.FileName);
+                }
+
+                //System.Windows.Media.Imaging.GifBitmapEncoder gEnc = new System.Windows.Media.Imaging.GifBitmapEncoder();
+                //for (int i = 0; i < 10; i++)
+                //{
+                //    switch (i)
+                //    {
+                //        case 0:
+                //            button_Set1.PerformClick();
+                //            save = true;
+                //            break;
+                //        case 1:
+                //            if (numericUpDown_Calories_Set2.Value != 1234)
+                //            {
+                //                button_Set2.PerformClick();
+                //                save = true;
+                //            }
+                //            break;
+                //        case 2:
+                //            if (numericUpDown_Calories_Set3.Value != 1234)
+                //            {
+                //                button_Set3.PerformClick();
+                //                save = true;
+                //            }
+                //            break;
+                //        case 3:
+                //            if (numericUpDown_Calories_Set4.Value != 1234)
+                //            {
+                //                button_Set4.PerformClick();
+                //                save = true;
+                //            }
+                //            break;
+                //        case 4:
+                //            if (numericUpDown_Calories_Set5.Value != 1234)
+                //            {
+                //                button_Set5.PerformClick();
+                //                save = true;
+                //            }
+                //            break;
+                //        case 5:
+                //            if (numericUpDown_Calories_Set6.Value != 1234)
+                //            {
+                //                button_Set6.PerformClick();
+                //                save = true;
+                //            }
+                //            break;
+                //        case 6:
+                //            if (numericUpDown_Calories_Set7.Value != 1234)
+                //            {
+                //                button_Set7.PerformClick();
+                //                save = true;
+                //            }
+                //            break;
+                //        case 7:
+                //            if (numericUpDown_Calories_Set8.Value != 1234)
+                //            {
+                //                button_Set8.PerformClick();
+                //                save = true;
+                //            }
+                //            break;
+                //        case 8:
+                //            if (numericUpDown_Calories_Set9.Value != 1234)
+                //            {
+                //                button_Set9.PerformClick();
+                //                save = true;
+                //            }
+                //            break;
+                //        case 9:
+                //            if (numericUpDown_Calories_Set10.Value != 1234)
+                //            {
+                //                button_Set10.PerformClick();
+                //                save = true;
+                //            }
+                //            break;
+                //    }
+
+                //    if (save)
+                //    {
+                //        PreviewToFile(gPanel);
+                //        var bmp = bitmap.GetHbitmap();
+                //        var src = System.Windows.Interop.Imaging.CreateBitmapSourceFromHBitmap(
+                //            bmp,
+                //            IntPtr.Zero,
+                //            System.Windows.Int32Rect.Empty,
+                //            System.Windows.Media.Imaging.BitmapSizeOptions.FromEmptyOptions());
+                //        gEnc.Frames.Add(System.Windows.Media.Imaging.BitmapFrame.Create(src));
+                //    }
+                //}
+                
+                //using (FileStream fs = new FileStream(saveFileDialog.FileName, FileMode.Create))
+                //{
+                //    gEnc.Save(fs);
+                //}
+            }
+        }
+
+        // формируем изображение для сохранения в файл
+        private void PreviewToFile(Graphics gPanel)
+        {
+            var src = new Bitmap(100, 100);
+            //gPanel.ScaleTransform(0.5f, 0.5f);
+            //if (panel_Preview.Height < 300) gPanel.ScaleTransform(0.5f, 0.5f);
+            int i;
+            if (comboBox_Background.SelectedIndex >= 0)
+            {
+                i = comboBox_Background.SelectedIndex;
+                src = new Bitmap(ListImagesFullName[i]);
+                gPanel.DrawImage(src, new Rectangle(0, 0, src.Width, src.Height));
+                src.Dispose();
+            }
+            #region Time
+            if (checkBox_Time.Checked)
+            {
+                if (checkBox_AmPm.Checked)
+                {
+                    if (checkBox_Hours.Checked)
+                    {
+                        if (comboBox_Hours_Tens_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Hours_Tens_Image.SelectedIndex + Watch_Face_Preview.TimePm.Hours.Tens;
+                            src = new Bitmap(ListImagesFullName[i]);
+                            gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Hours_Tens_X.Value,
+                                (int)numericUpDown_Hours_Tens_Y.Value, src.Width, src.Height));
+                            src.Dispose();
+                        }
+                        if (comboBox_Hours_Ones_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Hours_Ones_Image.SelectedIndex + Watch_Face_Preview.TimePm.Hours.Ones;
+                            src = new Bitmap(ListImagesFullName[i]);
+                            gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Hours_Ones_X.Value,
+                                (int)numericUpDown_Hours_Ones_Y.Value, src.Width, src.Height));
+                            src.Dispose();
+                        }
+                    }
+
+                    if (checkBox_Minutes.Checked)
+                    {
+                        if (comboBox_Min_Tens_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Min_Tens_Image.SelectedIndex + Watch_Face_Preview.TimePm.Minutes.Tens;
+                            src = new Bitmap(ListImagesFullName[i]);
+                            gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Min_Tens_X.Value,
+                                (int)numericUpDown_Min_Tens_Y.Value, src.Width, src.Height));
+                            src.Dispose();
+                        }
+                        if (comboBox_Min_Ones_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Min_Ones_Image.SelectedIndex + Watch_Face_Preview.TimePm.Minutes.Ones;
+                            src = new Bitmap(ListImagesFullName[i]);
+                            gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Min_Ones_X.Value,
+                                (int)numericUpDown_Min_Ones_Y.Value, src.Width, src.Height));
+                            src.Dispose();
+                        }
+                    }
+
+                    if (checkBox_Seconds.Checked)
+                    {
+                        if (comboBox_Sec_Tens_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Sec_Tens_Image.SelectedIndex + Watch_Face_Preview.TimePm.Seconds.Tens;
+                            src = new Bitmap(ListImagesFullName[i]);
+                            gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Sec_Tens_X.Value,
+                                (int)numericUpDown_Sec_Tens_Y.Value, src.Width, src.Height));
+                            src.Dispose();
+                        }
+                        if (comboBox_Sec_Ones_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Sec_Ones_Image.SelectedIndex + Watch_Face_Preview.TimePm.Seconds.Ones;
+                            src = new Bitmap(ListImagesFullName[i]);
+                            gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Sec_Ones_X.Value,
+                                (int)numericUpDown_Sec_Ones_Y.Value, src.Width, src.Height));
+                            src.Dispose();
+                        }
+                    }
+
+                    if (Watch_Face_Preview.TimePm.Pm)
+                    {
+                        if (comboBox_Image_Pm.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Image_Pm.SelectedIndex;
+                            src = new Bitmap(ListImagesFullName[i]);
+                            gPanel.DrawImage(src, new Rectangle((int)numericUpDown_AmPm_X.Value,
+                                (int)numericUpDown_AmPm_Y.Value, src.Width, src.Height));
+                            src.Dispose();
+                        }
+                    }
+                    else
+                    {
+                        if (comboBox_Image_Am.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Image_Am.SelectedIndex;
+                            src = new Bitmap(ListImagesFullName[i]);
+                            gPanel.DrawImage(src, new Rectangle((int)numericUpDown_AmPm_X.Value,
+                                (int)numericUpDown_AmPm_Y.Value, src.Width, src.Height));
+                            src.Dispose();
+                        }
+                    }
+
+                    if (checkBox_Delimiter.Checked)
+                    {
+                        if (comboBox_Delimiter_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Delimiter_Image.SelectedIndex;
+                            src = new Bitmap(ListImagesFullName[i]);
+                            gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Delimiter_X.Value,
+                                (int)numericUpDown_Delimiter_Y.Value, src.Width, src.Height));
+                            src.Dispose();
+                        }
+                    }
+                }
+                else
+                {
+                    if (checkBox_Hours.Checked)
+                    {
+                        if (comboBox_Hours_Tens_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Hours_Tens_Image.SelectedIndex + Watch_Face_Preview.Time.Hours.Tens;
+                            src = new Bitmap(ListImagesFullName[i]);
+                            gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Hours_Tens_X.Value,
+                                (int)numericUpDown_Hours_Tens_Y.Value, src.Width, src.Height));
+                            src.Dispose();
+                        }
+                        if (comboBox_Hours_Ones_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Hours_Ones_Image.SelectedIndex + Watch_Face_Preview.Time.Hours.Ones;
+                            src = new Bitmap(ListImagesFullName[i]);
+                            gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Hours_Ones_X.Value,
+                                (int)numericUpDown_Hours_Ones_Y.Value, src.Width, src.Height));
+                            src.Dispose();
+                        }
+                    }
+
+                    if (checkBox_Minutes.Checked)
+                    {
+                        if (comboBox_Min_Tens_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Min_Tens_Image.SelectedIndex + Watch_Face_Preview.Time.Minutes.Tens;
+                            src = new Bitmap(ListImagesFullName[i]);
+                            gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Min_Tens_X.Value,
+                                (int)numericUpDown_Min_Tens_Y.Value, src.Width, src.Height));
+                            src.Dispose();
+                        }
+                        if (comboBox_Min_Ones_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Min_Ones_Image.SelectedIndex + Watch_Face_Preview.Time.Minutes.Ones;
+                            src = new Bitmap(ListImagesFullName[i]);
+                            gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Min_Ones_X.Value,
+                                (int)numericUpDown_Min_Ones_Y.Value, src.Width, src.Height));
+                            src.Dispose();
+                        }
+                    }
+
+                    if (checkBox_Seconds.Checked)
+                    {
+                        if (comboBox_Sec_Tens_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Sec_Tens_Image.SelectedIndex + Watch_Face_Preview.Time.Seconds.Tens;
+                            src = new Bitmap(ListImagesFullName[i]);
+                            gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Sec_Tens_X.Value,
+                                (int)numericUpDown_Sec_Tens_Y.Value, src.Width, src.Height));
+                            src.Dispose();
+                        }
+                        if (comboBox_Sec_Ones_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Sec_Ones_Image.SelectedIndex + Watch_Face_Preview.Time.Seconds.Ones;
+                            src = new Bitmap(ListImagesFullName[i]);
+                            gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Sec_Ones_X.Value,
+                                (int)numericUpDown_Sec_Ones_Y.Value, src.Width, src.Height));
+                            src.Dispose();
+                        }
+                    }
+
+                    if (checkBox_Delimiter.Checked)
+                    {
+                        if (comboBox_Delimiter_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Delimiter_Image.SelectedIndex;
+                            src = new Bitmap(ListImagesFullName[i]);
+                            gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Delimiter_X.Value,
+                                (int)numericUpDown_Delimiter_Y.Value, src.Width, src.Height));
+                            src.Dispose();
+                        }
+                    }
+                }
+            }
+            #endregion
+
+            #region Date
+            if (checkBox_Date.Checked)
+            {
+                if ((checkBox_MonthAndDayM.Checked) && (comboBox_MonthAndDayM_Image.SelectedIndex >= 0))
+                {
+                    int x1 = (int)numericUpDown_MonthAndDayM_StartCorner_X.Value;
+                    int y1 = (int)numericUpDown_MonthAndDayM_StartCorner_Y.Value;
+                    int x2 = (int)numericUpDown_MonthAndDayM_EndCorner_X.Value;
+                    int y2 = (int)numericUpDown_MonthAndDayM_EndCorner_Y.Value;
+                    var Dagit = new Bitmap(ListImagesFullName[comboBox_MonthAndDayM_Image.SelectedIndex]);
+                    int DateLenght = Dagit.Width;
+                    int DateHeight = Dagit.Height;
+                    if ((checkBox_TwoDigitsMonth.Checked) || (Watch_Face_Preview.Date.Month.Tens > 0))
+                        DateLenght = DateLenght + Dagit.Width + (int)numericUpDown_MonthAndDayM_Spacing.Value;
+
+                    int PointX = 0;
+                    int PointY = 0;
+                    switch (comboBox_MonthAndDayM_Alignment.SelectedIndex)
+                    {
+                        case 0:
+                        case 1:
+                        case 2:
+                            PointY = y1;
+                            break;
+                        case 3:
+                        case 4:
+                        case 5:
+                            PointY = (y1 + y2) / 2 - DateHeight / 2;
+                            break;
+                        case 6:
+                        case 7:
+                        case 8:
+                            PointY = y2 - DateHeight;
+                            break;
+                    }
+                    switch (comboBox_MonthAndDayM_Alignment.SelectedIndex)
+                    {
+                        case 0:
+                        case 3:
+                        case 6:
+                            PointX = x1;
+                            break;
+                        case 1:
+                        case 4:
+                        case 7:
+                            PointX = (x1 + x2) / 2 - DateLenght / 2;
+                            break;
+                        case 2:
+                        case 5:
+                        case 8:
+                            PointX = x2 - DateLenght;
+                            break;
+                    }
+
+                    if ((checkBox_TwoDigitsMonth.Checked) || (Watch_Face_Preview.Date.Month.Tens > 0))
+                    {
+                        i = comboBox_MonthAndDayM_Image.SelectedIndex + Watch_Face_Preview.Date.Month.Tens;
+                        src = new Bitmap(ListImagesFullName[i]);
+                        gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                        PointX = PointX + Dagit.Width + (int)numericUpDown_MonthAndDayM_Spacing.Value;
+                        src.Dispose();
+                    }
+                    i = comboBox_MonthAndDayM_Image.SelectedIndex + Watch_Face_Preview.Date.Month.Ones;
+                    src = new Bitmap(ListImagesFullName[i]);
+                    gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                    src.Dispose();
+                    Dagit.Dispose();
+                }
+
+                if ((checkBox_MonthAndDayD.Checked) && (comboBox_MonthAndDayD_Image.SelectedIndex >= 0))
+                {
+                    int x1 = (int)numericUpDown_MonthAndDayD_StartCorner_X.Value;
+                    int y1 = (int)numericUpDown_MonthAndDayD_StartCorner_Y.Value;
+                    int x2 = (int)numericUpDown_MonthAndDayD_EndCorner_X.Value;
+                    int y2 = (int)numericUpDown_MonthAndDayD_EndCorner_Y.Value;
+                    var Dagit = new Bitmap(ListImagesFullName[comboBox_MonthAndDayD_Image.SelectedIndex]);
+                    int DateLenght = Dagit.Width;
+                    int DateHeight = Dagit.Height;
+                    if ((checkBox_TwoDigitsDay.Checked) || (Watch_Face_Preview.Date.Day.Tens > 0))
+                        DateLenght = DateLenght + Dagit.Width + (int)numericUpDown_MonthAndDayD_Spacing.Value;
+
+                    int PointX = 0;
+                    int PointY = 0;
+                    switch (comboBox_MonthAndDayD_Alignment.SelectedIndex)
+                    {
+                        case 0:
+                        case 1:
+                        case 2:
+                            PointY = y1;
+                            break;
+                        case 3:
+                        case 4:
+                        case 5:
+                            PointY = (y1 + y2) / 2 - DateHeight / 2;
+                            break;
+                        case 6:
+                        case 7:
+                        case 8:
+                            PointY = y2 - DateHeight;
+                            break;
+                    }
+                    switch (comboBox_MonthAndDayD_Alignment.SelectedIndex)
+                    {
+                        case 0:
+                        case 3:
+                        case 6:
+                            PointX = x1;
+                            break;
+                        case 1:
+                        case 4:
+                        case 7:
+                            PointX = (x1 + x2) / 2 - DateLenght / 2;
+                            break;
+                        case 2:
+                        case 5:
+                        case 8:
+                            PointX = x2 - DateLenght;
+                            break;
+                    }
+
+                    if ((checkBox_TwoDigitsDay.Checked) || (Watch_Face_Preview.Date.Day.Tens > 0))
+                    {
+                        i = comboBox_MonthAndDayD_Image.SelectedIndex + Watch_Face_Preview.Date.Day.Tens;
+                        src = new Bitmap(ListImagesFullName[i]);
+                        gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                        PointX = PointX + Dagit.Width + (int)numericUpDown_MonthAndDayD_Spacing.Value;
+                        src.Dispose();
+                    }
+                    i = comboBox_MonthAndDayD_Image.SelectedIndex + Watch_Face_Preview.Date.Day.Ones;
+                    src = new Bitmap(ListImagesFullName[i]);
+                    gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                    src.Dispose();
+                    Dagit.Dispose();
+                }
+
+                if ((checkBox_MonthName.Checked) && (comboBox_MonthName_Image.SelectedIndex >= 0))
+                {
+                    i = comboBox_MonthName_Image.SelectedIndex + Watch_Face_Preview_Set.Date.Month - 1;
+                    src = new Bitmap(ListImagesFullName[i]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_MonthName_X.Value,
+                        (int)numericUpDown_MonthName_Y.Value, src.Width, src.Height));
+                    src.Dispose();
+                }
+
+                if ((checkBox_OneLine.Checked) && (comboBox_OneLine_Image.SelectedIndex >= 0))
+                {
+                    int x1 = (int)numericUpDown_OneLine_StartCorner_X.Value;
+                    int y1 = (int)numericUpDown_OneLine_StartCorner_Y.Value;
+                    int x2 = (int)numericUpDown_OneLine_EndCorner_X.Value;
+                    int y2 = (int)numericUpDown_OneLine_EndCorner_Y.Value;
+                    var Dagit = new Bitmap(ListImagesFullName[comboBox_OneLine_Image.SelectedIndex]);
+                    var Delimit = new Bitmap(1, 1);
+                    if (comboBox_OneLine_Delimiter.SelectedIndex >= 0)
+                        Delimit = new Bitmap(ListImagesFullName[comboBox_OneLine_Delimiter.SelectedIndex]);
+                    int DelimitW = Delimit.Width;
+                    if (comboBox_OneLine_Delimiter.SelectedIndex < 0) DelimitW = 0;
+
+                    int DateLenght = Dagit.Width * 4 + (int)numericUpDown_OneLine_Spacing.Value * 4 + DelimitW;
+                    int DateHeight = Dagit.Height;
+                    if (comboBox_OneLine_Delimiter.SelectedIndex < 0) DateLenght = DateLenght - DelimitW;
+                    if ((!checkBox_TwoDigitsMonth.Checked) && (Watch_Face_Preview.Date.Month.Tens == 0))
+                        DateLenght = DateLenght - Dagit.Width - (int)numericUpDown_OneLine_Spacing.Value;
+                    if ((!checkBox_TwoDigitsDay.Checked) && (Watch_Face_Preview.Date.Day.Tens == 0))
+                        DateLenght = DateLenght - Dagit.Width - (int)numericUpDown_OneLine_Spacing.Value;
+                    int PointX = 0;
+                    int PointY = 0;
+                    switch (comboBox_OneLine_Alignment.SelectedIndex)
+                    {
+                        case 0:
+                        case 1:
+                        case 2:
+                            PointY = y1;
+                            break;
+                        case 3:
+                        case 4:
+                        case 5:
+                            PointY = (y1 + y2) / 2 - DateHeight / 2;
+                            break;
+                        case 6:
+                        case 7:
+                        case 8:
+                            PointY = y2 - DateHeight;
+                            break;
+                    }
+                    switch (comboBox_OneLine_Alignment.SelectedIndex)
+                    {
+                        case 0:
+                        case 3:
+                        case 6:
+                            PointX = x1;
+                            break;
+                        case 1:
+                        case 4:
+                        case 7:
+                            PointX = (x1 + x2) / 2 - DateLenght / 2;
+                            break;
+                        case 2:
+                        case 5:
+                        case 8:
+                            PointX = x2 - DateLenght;
+                            break;
+                    }
+
+                    if ((checkBox_TwoDigitsMonth.Checked) || (Watch_Face_Preview.Date.Month.Tens > 0))
+                    {
+                        i = comboBox_OneLine_Image.SelectedIndex + Watch_Face_Preview.Date.Month.Tens;
+                        src = new Bitmap(ListImagesFullName[i]);
+                        gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                        PointX = PointX + Dagit.Width + (int)numericUpDown_OneLine_Spacing.Value;
+                        src.Dispose();
+                    }
+                    i = comboBox_OneLine_Image.SelectedIndex + Watch_Face_Preview.Date.Month.Ones;
+                    src = new Bitmap(ListImagesFullName[i]);
+                    gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                    PointX = PointX + Dagit.Width + (int)numericUpDown_OneLine_Spacing.Value;
+                    src.Dispose();
+
+                    if (comboBox_OneLine_Delimiter.SelectedIndex >= 0)
+                    {
+                        i = comboBox_OneLine_Delimiter.SelectedIndex;
+                        src = new Bitmap(ListImagesFullName[i]);
+                        gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                        PointX = PointX + Dagit.Width + (int)numericUpDown_OneLine_Spacing.Value;
+                        src.Dispose();
+                    }
+
+                    if ((checkBox_TwoDigitsDay.Checked) || (Watch_Face_Preview.Date.Day.Tens > 0))
+                    {
+                        i = comboBox_OneLine_Image.SelectedIndex + Watch_Face_Preview.Date.Day.Tens;
+                        src = new Bitmap(ListImagesFullName[i]);
+                        gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                        PointX = PointX + Dagit.Width + (int)numericUpDown_OneLine_Spacing.Value;
+                    }
+                    i = comboBox_OneLine_Image.SelectedIndex + Watch_Face_Preview.Date.Day.Ones;
+                    src = new Bitmap(ListImagesFullName[i]);
+                    gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                    src.Dispose();
+                    Dagit.Dispose();
+                    Delimit.Dispose();
+                }
+
+                if ((checkBox_WeekDay.Checked) && (comboBox_WeekDay_Image.SelectedIndex >= 0))
+                {
+                    i = comboBox_WeekDay_Image.SelectedIndex + Watch_Face_Preview_Set.Date.WeekDay - 1;
+                    src = new Bitmap(ListImagesFullName[i]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_WeekDay_X.Value,
+                        (int)numericUpDown_WeekDay_Y.Value, src.Width, src.Height));
+                    src.Dispose();
+                }
+            }
+            #endregion
+
+            #region Weather
+            if (checkBox_Weather.Checked)
+            {
+                if ((checkBox_Weather_Icon.Checked) && (comboBox_Weather_Icon_Image.SelectedIndex >= 0))
+                {
+                    //int x1 = (int)numericUpDown_ActivityDistance_StartCorner_X.Value;
+                    //int y1 = (int)numericUpDown_ActivityDistance_StartCorner_Y.Value;
+                    //int x2 = (int)numericUpDown_ActivityDistance_EndCorner_X.Value;
+                    //int y2 = (int)numericUpDown_ActivityDistance_EndCorner_Y.Value;
+                    //int image_index = comboBox_ActivityDistance_Image.SelectedIndex;
+                    //int spacing = (int)numericUpDown_ActivityDistance_Spacing.Value;
+                    //int alignment = comboBox_ActivityDistance_Alignment.SelectedIndex;
+                    //double data_number = Watch_Face_Preview_Set.Activity.Distance / 1000.0;
+                    //int suffix = comboBox_ActivityDistance_Suffix.SelectedIndex;
+                    //int dec = comboBox_ActivityDistance_Decimal.SelectedIndex;
+                    //DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, suffix, dec);
+
+                    if (comboBox_WeatherSet_Icon.SelectedIndex >= 0)
+                    {
+                        i = comboBox_Weather_Icon_Image.SelectedIndex + comboBox_WeatherSet_Icon.SelectedIndex;
+                        src = new Bitmap(ListImagesFullName[i]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Weather_Icon_X.Value,
+                            (int)numericUpDown_Weather_Icon_Y.Value, src.Width, src.Height));
+                    }
+                    else
+                    {
+                        if (comboBox_Weather_Icon_NDImage.SelectedIndex >= 0)
+                        {
+                            src = new Bitmap(ListImagesFullName[comboBox_Weather_Icon_NDImage.SelectedIndex]);
+                            gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Weather_Icon_X.Value,
+                                (int)numericUpDown_Weather_Icon_Y.Value, src.Width, src.Height));
+                        }
+                    }
+                }
+
+                if ((checkBox_Weather_Text.Checked) && (comboBox_Weather_Text_Image.SelectedIndex >= 0))
+                {
+                    int x1 = (int)numericUpDown_Weather_Text_StartCorner_X.Value;
+                    int y1 = (int)numericUpDown_Weather_Text_StartCorner_Y.Value;
+                    int x2 = (int)numericUpDown_Weather_Text_EndCorner_X.Value;
+                    int y2 = (int)numericUpDown_Weather_Text_EndCorner_Y.Value;
+                    int image_index = comboBox_Weather_Text_Image.SelectedIndex;
+                    int spacing = (int)numericUpDown_Weather_Text_Spacing.Value;
+                    int alignment = comboBox_Weather_Text_Alignment.SelectedIndex;
+                    int data_number = (int)numericUpDown_WeatherSet_Temp.Value;
+                    int minus = comboBox_Weather_Text_MinusImage.SelectedIndex;
+                    int degris = comboBox_Weather_Text_DegImage.SelectedIndex;
+                    int error = comboBox_Weather_Text_NDImage.SelectedIndex;
+                    bool ND = !checkBox_WeatherSet_Temp.Checked;
+                    DrawWeather(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, minus, degris, error, ND);
+
+                }
+
+                if ((checkBox_Weather_Day.Checked) && (comboBox_Weather_Day_Image.SelectedIndex >= 0))
+                {
+                    int x1 = (int)numericUpDown_Weather_Day_StartCorner_X.Value;
+                    int y1 = (int)numericUpDown_Weather_Day_StartCorner_Y.Value;
+                    int x2 = (int)numericUpDown_Weather_Day_EndCorner_X.Value;
+                    int y2 = (int)numericUpDown_Weather_Day_EndCorner_Y.Value;
+                    int image_index = comboBox_Weather_Day_Image.SelectedIndex;
+                    int spacing = (int)numericUpDown_Weather_Day_Spacing.Value;
+                    int alignment = comboBox_Weather_Day_Alignment.SelectedIndex;
+
+                    int data_number = (int)numericUpDown_WeatherSet_DayTemp.Value;
+                    int minus = comboBox_Weather_Text_MinusImage.SelectedIndex;
+                    bool ND = !checkBox_WeatherSet_DayTemp.Checked;
+
+                    int degris = comboBox_Weather_Text_DegImage.SelectedIndex;
+                    int error = comboBox_Weather_Text_NDImage.SelectedIndex;
+                    DrawWeather(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, minus, degris, error, ND);
+
+                }
+                if ((checkBox_Weather_Night.Checked) && (comboBox_Weather_Night_Image.SelectedIndex >= 0))
+                {
+                    int x1 = (int)numericUpDown_Weather_Night_StartCorner_X.Value;
+                    int y1 = (int)numericUpDown_Weather_Night_StartCorner_Y.Value;
+                    int x2 = (int)numericUpDown_Weather_Night_EndCorner_X.Value;
+                    int y2 = (int)numericUpDown_Weather_Night_EndCorner_Y.Value;
+                    int image_index = comboBox_Weather_Night_Image.SelectedIndex;
+                    int spacing = (int)numericUpDown_Weather_Night_Spacing.Value;
+                    int alignment = comboBox_Weather_Night_Alignment.SelectedIndex;
+
+                    int data_number = (int)numericUpDown_WeatherSet_NightTemp.Value;
+                    int minus = comboBox_Weather_Text_MinusImage.SelectedIndex;
+                    bool ND = !checkBox_WeatherSet_DayTemp.Checked;
+
+                    int degris = comboBox_Weather_Text_DegImage.SelectedIndex;
+                    int error = comboBox_Weather_Text_NDImage.SelectedIndex;
+                    DrawWeather(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, minus, degris, error, ND);
+
+                }
+            }
+            #endregion
+
+            gPanel.SmoothingMode = SmoothingMode.AntiAlias;
+
+            #region StepsProgress
+            if (checkBox_StepsProgress.Checked)
+            {
+                Pen pen = new Pen(comboBox_StepsProgress_Color.BackColor,
+                    (float)numericUpDown_StepsProgress_Width.Value);
+                int x = (int)numericUpDown_StepsProgress_Center_X.Value -
+                    (int)numericUpDown_StepsProgress_Radius_X.Value;
+                int y = (int)numericUpDown_StepsProgress_Center_Y.Value -
+                    (int)numericUpDown_StepsProgress_Radius_Y.Value;
+                int width = (int)numericUpDown_StepsProgress_Radius_X.Value * 2;
+                int height = (int)numericUpDown_StepsProgress_Radius_Y.Value * 2;
+                float StartAngle = (float)numericUpDown_StepsProgress_StartAngle.Value - 90;
+                float EndAngle = (float)(numericUpDown_StepsProgress_EndAngle.Value -
+                    numericUpDown_StepsProgress_StartAngle.Value);
+                float AngleScale = (float)Watch_Face_Preview_Set.Activity.Steps / Watch_Face_Preview_Set.Activity.StepsGoal;
+                if (AngleScale > 1) AngleScale = 1;
+                EndAngle = EndAngle * AngleScale;
+                try
+                {
+                    if ((width > 0) && (height > 0)) gPanel.DrawArc(pen, x, y, width, height, StartAngle, EndAngle);
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+            #endregion
+
+            #region Activity
+            if (checkBox_Activity.Checked)
+            {
+                if ((checkBox_ActivityGoal.Checked) && (comboBox_ActivityGoal_Image.SelectedIndex >= 0))
+                {
+                    int x1 = (int)numericUpDown_ActivityGoal_StartCorner_X.Value;
+                    int y1 = (int)numericUpDown_ActivityGoal_StartCorner_Y.Value;
+                    int x2 = (int)numericUpDown_ActivityGoal_EndCorner_X.Value;
+                    int y2 = (int)numericUpDown_ActivityGoal_EndCorner_Y.Value;
+                    int image_index = comboBox_ActivityGoal_Image.SelectedIndex;
+                    int spacing = (int)numericUpDown_ActivityGoal_Spacing.Value;
+                    int alignment = comboBox_ActivityGoal_Alignment.SelectedIndex;
+                    int data_number = Watch_Face_Preview_Set.Activity.StepsGoal;
+                    DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number);
+                }
+
+                if ((checkBox_ActivitySteps.Checked) && (comboBox_ActivitySteps_Image.SelectedIndex >= 0))
+                {
+                    int x1 = (int)numericUpDown_ActivitySteps_StartCorner_X.Value;
+                    int y1 = (int)numericUpDown_ActivitySteps_StartCorner_Y.Value;
+                    int x2 = (int)numericUpDown_ActivitySteps_EndCorner_X.Value;
+                    int y2 = (int)numericUpDown_ActivitySteps_EndCorner_Y.Value;
+                    int image_index = comboBox_ActivitySteps_Image.SelectedIndex;
+                    int spacing = (int)numericUpDown_ActivitySteps_Spacing.Value;
+                    int alignment = comboBox_ActivitySteps_Alignment.SelectedIndex;
+                    int data_number = Watch_Face_Preview_Set.Activity.Steps;
+                    DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number);
+                }
+
+                if ((checkBox_ActivityDistance.Checked) && (comboBox_ActivityDistance_Image.SelectedIndex >= 0))
+                {
+                    int x1 = (int)numericUpDown_ActivityDistance_StartCorner_X.Value;
+                    int y1 = (int)numericUpDown_ActivityDistance_StartCorner_Y.Value;
+                    int x2 = (int)numericUpDown_ActivityDistance_EndCorner_X.Value;
+                    int y2 = (int)numericUpDown_ActivityDistance_EndCorner_Y.Value;
+                    int image_index = comboBox_ActivityDistance_Image.SelectedIndex;
+                    int spacing = (int)numericUpDown_ActivityDistance_Spacing.Value;
+                    int alignment = comboBox_ActivityDistance_Alignment.SelectedIndex;
+                    double data_number = Watch_Face_Preview_Set.Activity.Distance / 1000.0;
+                    int suffix = comboBox_ActivityDistance_Suffix.SelectedIndex;
+                    int dec = comboBox_ActivityDistance_Decimal.SelectedIndex;
+                    DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, suffix, dec);
+                }
+
+                if ((checkBox_ActivityPuls.Checked) && (comboBox_ActivityPuls_Image.SelectedIndex >= 0))
+                {
+                    int x1 = (int)numericUpDown_ActivityPuls_StartCorner_X.Value;
+                    int y1 = (int)numericUpDown_ActivityPuls_StartCorner_Y.Value;
+                    int x2 = (int)numericUpDown_ActivityPuls_EndCorner_X.Value;
+                    int y2 = (int)numericUpDown_ActivityPuls_EndCorner_Y.Value;
+                    int image_index = comboBox_ActivityPuls_Image.SelectedIndex;
+                    int spacing = (int)numericUpDown_ActivityPuls_Spacing.Value;
+                    int alignment = comboBox_ActivityPuls_Alignment.SelectedIndex;
+                    int data_number = Watch_Face_Preview_Set.Activity.Pulse;
+                    DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number);
+                }
+
+                if ((checkBox_ActivityCalories.Checked) && (comboBox_ActivityCalories_Image.SelectedIndex >= 0))
+                {
+                    int x1 = (int)numericUpDown_ActivityCalories_StartCorner_X.Value;
+                    int y1 = (int)numericUpDown_ActivityCalories_StartCorner_Y.Value;
+                    int x2 = (int)numericUpDown_ActivityCalories_EndCorner_X.Value;
+                    int y2 = (int)numericUpDown_ActivityCalories_EndCorner_Y.Value;
+                    int image_index = comboBox_ActivityCalories_Image.SelectedIndex;
+                    int spacing = (int)numericUpDown_ActivityCalories_Spacing.Value;
+                    int alignment = comboBox_ActivityCalories_Alignment.SelectedIndex;
+                    int data_number = Watch_Face_Preview_Set.Activity.Calories;
+                    DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number);
+                }
+
+                if ((checkBox_ActivityStar.Checked) && (comboBox_ActivityStar_Image.SelectedIndex >= 0))
+                {
+                    if (Watch_Face_Preview_Set.Activity.Steps >= Watch_Face_Preview_Set.Activity.StepsGoal)
+                    {
+                        src = new Bitmap(ListImagesFullName[comboBox_ActivityStar_Image.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_ActivityStar_X.Value,
+                            (int)numericUpDown_ActivityStar_Y.Value, src.Width, src.Height));
+                    }
+                }
+            }
+            #endregion
+
+            #region Status
+            if (checkBox_Bluetooth.Checked)
+            {
+                if (Watch_Face_Preview_Set.Status.Bluetooth)
+                {
+                    if (comboBox_Bluetooth_On.SelectedIndex >= 0)
+                    {
+                        src = new Bitmap(ListImagesFullName[comboBox_Bluetooth_On.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Bluetooth_X.Value,
+                            (int)numericUpDown_Bluetooth_Y.Value, src.Width, src.Height));
+                        src.Dispose();
+                    }
+                }
+                else
+                {
+                    if (comboBox_Bluetooth_Off.SelectedIndex >= 0)
+                    {
+                        src = new Bitmap(ListImagesFullName[comboBox_Bluetooth_Off.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Bluetooth_X.Value,
+                            (int)numericUpDown_Bluetooth_Y.Value, src.Width, src.Height));
+                        src.Dispose();
+                    }
+                }
+            }
+
+            if (checkBox_Alarm.Checked)
+            {
+                if (Watch_Face_Preview_Set.Status.Alarm)
+                {
+                    if (comboBox_Alarm_On.SelectedIndex >= 0)
+                    {
+                        src = new Bitmap(ListImagesFullName[comboBox_Alarm_On.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Alarm_X.Value,
+                            (int)numericUpDown_Alarm_Y.Value, src.Width, src.Height));
+                        src.Dispose();
+                    }
+                }
+                else
+                {
+                    if (comboBox_Alarm_Off.SelectedIndex >= 0)
+                    {
+                        src = new Bitmap(ListImagesFullName[comboBox_Alarm_Off.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Alarm_X.Value,
+                            (int)numericUpDown_Alarm_Y.Value, src.Width, src.Height));
+                        src.Dispose();
+                    }
+                }
+            }
+
+            if (checkBox_Lock.Checked)
+            {
+                if (Watch_Face_Preview_Set.Status.Lock)
+                {
+                    if (comboBox_Lock_On.SelectedIndex >= 0)
+                    {
+                        src = new Bitmap(ListImagesFullName[comboBox_Lock_On.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Lock_X.Value,
+                            (int)numericUpDown_Lock_Y.Value, src.Width, src.Height));
+                        src.Dispose();
+                    }
+                }
+                else
+                {
+                    if (comboBox_Lock_Off.SelectedIndex >= 0)
+                    {
+                        src = new Bitmap(ListImagesFullName[comboBox_Lock_Off.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Lock_X.Value,
+                            (int)numericUpDown_Lock_Y.Value, src.Width, src.Height));
+                        src.Dispose();
+                    }
+                }
+            }
+
+            if (checkBox_DND.Checked)
+            {
+                if (Watch_Face_Preview_Set.Status.DoNotDisturb)
+                {
+                    if (comboBox_DND_On.SelectedIndex >= 0)
+                    {
+                        src = new Bitmap(ListImagesFullName[comboBox_DND_On.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_DND_X.Value,
+                            (int)numericUpDown_DND_Y.Value, src.Width, src.Height));
+                        src.Dispose();
+                    }
+                }
+                else
+                {
+                    if (comboBox_DND_Off.SelectedIndex >= 0)
+                    {
+                        src = new Bitmap(ListImagesFullName[comboBox_DND_Off.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_DND_X.Value,
+                            (int)numericUpDown_DND_Y.Value, src.Width, src.Height));
+                        src.Dispose();
+                    }
+                }
+            }
+            #endregion
+
+            #region Battery
+            if (checkBox_Battery.Checked)
+            {
+                if (checkBox_Battery.Checked)
+                {
+                    if ((checkBox_Battery_Text.Checked) && (comboBox_Battery_Text_Image.SelectedIndex >= 0))
+                    {
+                        int x1 = (int)numericUpDown_Battery_Text_StartCorner_X.Value;
+                        int y1 = (int)numericUpDown_Battery_Text_StartCorner_Y.Value;
+                        int x2 = (int)numericUpDown_Battery_Text_EndCorner_X.Value;
+                        int y2 = (int)numericUpDown_Battery_Text_EndCorner_Y.Value;
+                        int image_index = comboBox_Battery_Text_Image.SelectedIndex;
+                        int spacing = (int)numericUpDown_Battery_Text_Spacing.Value;
+                        int alignment = comboBox_Battery_Text_Alignment.SelectedIndex;
+                        int data_number = Watch_Face_Preview_Set.Battery;
+                        DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number);
+                    }
+
+                    if ((checkBox_Battery_Percent.Checked) && (comboBox_Battery_Percent_Image.SelectedIndex >= 0))
+                    {
+                        src = new Bitmap(ListImagesFullName[comboBox_Battery_Percent_Image.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Battery_Percent_X.Value,
+                            (int)numericUpDown_Battery_Percent_Y.Value, src.Width, src.Height));
+                        src.Dispose();
+                    }
+
+                    if ((checkBox_Battery_Img.Checked) && (comboBox_Battery_Img_Image.SelectedIndex >= 0))
+                    {
+                        float count = (float)numericUpDown_Battery_Img_Count.Value - 1;
+                        int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
+                        i = comboBox_Battery_Img_Image.SelectedIndex + offSet;
+                        src = new Bitmap(ListImagesFullName[i]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Battery_Img_X.Value,
+                            (int)numericUpDown_Battery_Img_Y.Value, src.Width, src.Height));
+                        src.Dispose();
+                    }
+
+                    if (checkBox_Battery_Scale.Checked)
+                    {
+                        Pen pen = new Pen(comboBox_Battery_Scale_Color.BackColor,
+                            (float)numericUpDown_Battery_Scale_Width.Value);
+                        int x = (int)numericUpDown_Battery_Scale_Center_X.Value -
+                            (int)numericUpDown_Battery_Scale_Radius_X.Value;
+                        int y = (int)numericUpDown_Battery_Scale_Center_Y.Value -
+                            (int)numericUpDown_Battery_Scale_Radius_Y.Value;
+                        int width = (int)numericUpDown_Battery_Scale_Radius_X.Value * 2;
+                        int height = (int)numericUpDown_Battery_Scale_Radius_Y.Value * 2;
+                        float StartAngle = (float)numericUpDown_Battery_Scale_StartAngle.Value - 90;
+                        float EndAngle = (float)(numericUpDown_Battery_Scale_EndAngle.Value -
+                            numericUpDown_Battery_Scale_StartAngle.Value);
+                        float AngleScale = (float)Watch_Face_Preview_Set.Battery / 100f;
+                        if (AngleScale > 1) AngleScale = 1;
+                        EndAngle = EndAngle * AngleScale;
+                        try
+                        {
+                            if ((width > 0) && (height > 0)) gPanel.DrawArc(pen, x, y, width, height, StartAngle, EndAngle);
+                        }
+                        catch (Exception)
+                        {
+
+                        }
+                    }
+                }
+            }
+            #endregion
+
+            #region AnalogDialFace
+            if (checkBox_AnalogClock.Checked)
+            {
+                if ((checkBox_AnalogClock_Hour.Checked) && (comboBox_AnalogClock_Hour_Image.SelectedIndex >= 0))
+                {
+                    int x1 = (int)numericUpDown_AnalogClock_Hour_X.Value;
+                    int y1 = (int)numericUpDown_AnalogClock_Hour_Y.Value;
+                    int image_inde = comboBox_AnalogClock_Hour_Image.SelectedIndex;
+                    int hour = Watch_Face_Preview_Set.Time.Hours;
+                    int min = Watch_Face_Preview_Set.Time.Minutes;
+                    //int sec = Watch_Face_Preview_Set.TimeW.Seconds;
+                    if (hour >= 12) hour = hour - 12;
+                    float angle = 360 * hour / 12 + 360 * min / (60 * 12);
+                    DrawAnalogClock(gPanel, x1, y1, image_inde, angle);
+                }
+
+                if ((checkBox_AnalogClock_Min.Checked) && (comboBox_AnalogClock_Min_Image.SelectedIndex >= 0))
+                {
+                    int x1 = (int)numericUpDown_AnalogClock_Min_X.Value;
+                    int y1 = (int)numericUpDown_AnalogClock_Min_Y.Value;
+                    int image_inde = comboBox_AnalogClock_Min_Image.SelectedIndex;
+                    //int hour = Watch_Face_Preview_Set.TimeW.Hours;
+                    int min = Watch_Face_Preview_Set.Time.Minutes;
+                    //int sec = Watch_Face_Preview_Set.TimeW.Seconds;
+                    //if (hour >= 12) hour = hour - 12;
+                    float angle = 360 * min / 60;
+                    DrawAnalogClock(gPanel, x1, y1, image_inde, angle);
+                }
+
+                if ((checkBox_AnalogClock_Sec.Checked) && (comboBox_AnalogClock_Sec_Image.SelectedIndex >= 0))
+                {
+                    int x1 = (int)numericUpDown_AnalogClock_Sec_X.Value;
+                    int y1 = (int)numericUpDown_AnalogClock_Sec_Y.Value;
+                    int image_inde = comboBox_AnalogClock_Sec_Image.SelectedIndex;
+                    //int hour = Watch_Face_Preview_Set.TimeW.Hours;
+                    //int min = Watch_Face_Preview_Set.TimeW.Minutes;
+                    int sec = Watch_Face_Preview_Set.Time.Seconds;
+                    //if (hour >= 12) hour = hour - 12;
+                    float angle = 360 * sec / 60;
+                    DrawAnalogClock(gPanel, x1, y1, image_inde, angle);
+                }
+            }
+            #endregion
+            
+            src.Dispose();
+        }
+
+        private void radioButton_47_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton_47.Checked)
+            {
+                panel_Preview.Height = 229;
+                panel_Preview.Width = 229;
+
+                Properties.Settings.Default.unpack_command_42 = textBox_unpack_command.Text;
+                Properties.Settings.Default.pack_command_42 = textBox_pack_command.Text;
+                Properties.Settings.Default.Save();
+
+                textBox_unpack_command.Text = "--gtr 47 --file";
+                textBox_pack_command.Text = "--gtr 47 --file";
+                if (Properties.Settings.Default.unpack_command.Length > 1)
+                    textBox_unpack_command.Text = Properties.Settings.Default.unpack_command;
+                if (Properties.Settings.Default.pack_command.Length > 1)
+                    textBox_pack_command.Text = Properties.Settings.Default.pack_command;
+            }
+            else
+            {
+                panel_Preview.Height = 197;
+                panel_Preview.Width = 197;
+
+                Properties.Settings.Default.unpack_command = textBox_unpack_command.Text;
+                Properties.Settings.Default.pack_command = textBox_pack_command.Text;
+                Properties.Settings.Default.Save();
+
+                textBox_unpack_command.Text = "--gtr 42 --file";
+                textBox_pack_command.Text = "--gtr 42 --file";
+                if (Properties.Settings.Default.unpack_command_42.Length > 1)
+                    textBox_unpack_command.Text = Properties.Settings.Default.unpack_command_42;
+                if (Properties.Settings.Default.pack_command_42.Length > 1)
+                    textBox_pack_command.Text = Properties.Settings.Default.pack_command_42;
+            }
+
+            PreviewImage();
+        }
+
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+            if ((StartFileName != null) && (StartFileName.Length > 0)) LoadJsonAndImage(StartFileName);
+        }
+
+        private void Form1_HelpButtonClicked(object sender, CancelEventArgs e)
+        {
+            //FormFileExists f = new FormFileExists();
+            //f.ShowDialog();
+            SendKeys.Send("{F1}");
+
+
+            e.Cancel = true;
         }
     }
 

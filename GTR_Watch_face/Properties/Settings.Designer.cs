@@ -58,5 +58,29 @@ namespace GTR_Watch_face.Properties {
                 this["pack_command"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string unpack_command_42 {
+            get {
+                return ((string)(this["unpack_command_42"]));
+            }
+            set {
+                this["unpack_command_42"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pack_command_42 {
+            get {
+                return ((string)(this["pack_command_42"]));
+            }
+            set {
+                this["pack_command_42"] = value;
+            }
+        }
     }
 }
