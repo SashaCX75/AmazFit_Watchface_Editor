@@ -836,6 +836,7 @@
             this.radioButton42 = new System.Windows.Forms.RadioButton();
             this.button_PreviewSmall_42 = new System.Windows.Forms.Button();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -4702,6 +4703,11 @@
             0,
             0,
             0});
+            this.numericUpDown_Weather_Text_Spacing.Minimum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            -2147483648});
             this.numericUpDown_Weather_Text_Spacing.Name = "numericUpDown_Weather_Text_Spacing";
             this.numericUpDown_Weather_Text_Spacing.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Weather_Text_Spacing.TabIndex = 41;
@@ -4981,6 +4987,11 @@
             0,
             0,
             0});
+            this.numericUpDown_Weather_Day_Spacing.Minimum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            -2147483648});
             this.numericUpDown_Weather_Day_Spacing.Name = "numericUpDown_Weather_Day_Spacing";
             this.numericUpDown_Weather_Day_Spacing.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Weather_Day_Spacing.TabIndex = 81;
@@ -6039,6 +6050,11 @@
             0,
             0,
             0});
+            this.numericUpDown_Battery_Text_Spacing.Minimum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            -2147483648});
             this.numericUpDown_Battery_Text_Spacing.Name = "numericUpDown_Battery_Text_Spacing";
             this.numericUpDown_Battery_Text_Spacing.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Battery_Text_Spacing.TabIndex = 79;
@@ -7365,6 +7381,11 @@
             0,
             0,
             0});
+            this.numericUpDown_ActivityGoal_Spacing.Minimum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            -2147483648});
             this.numericUpDown_ActivityGoal_Spacing.Name = "numericUpDown_ActivityGoal_Spacing";
             this.numericUpDown_ActivityGoal_Spacing.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityGoal_Spacing.TabIndex = 60;
@@ -7627,6 +7648,11 @@
             0,
             0,
             0});
+            this.numericUpDown_ActivitySteps_Spacing.Minimum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            -2147483648});
             this.numericUpDown_ActivitySteps_Spacing.Name = "numericUpDown_ActivitySteps_Spacing";
             this.numericUpDown_ActivitySteps_Spacing.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivitySteps_Spacing.TabIndex = 79;
@@ -7936,6 +7962,11 @@
             0,
             0,
             0});
+            this.numericUpDown_ActivityDistance_Spacing.Minimum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            -2147483648});
             this.numericUpDown_ActivityDistance_Spacing.Name = "numericUpDown_ActivityDistance_Spacing";
             this.numericUpDown_ActivityDistance_Spacing.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityDistance_Spacing.TabIndex = 79;
@@ -8197,6 +8228,11 @@
             0,
             0,
             0});
+            this.numericUpDown_ActivityPuls_Spacing.Minimum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            -2147483648});
             this.numericUpDown_ActivityPuls_Spacing.Name = "numericUpDown_ActivityPuls_Spacing";
             this.numericUpDown_ActivityPuls_Spacing.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityPuls_Spacing.TabIndex = 79;
@@ -8458,6 +8494,11 @@
             0,
             0,
             0});
+            this.numericUpDown_ActivityCalories_Spacing.Minimum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            -2147483648});
             this.numericUpDown_ActivityCalories_Spacing.Name = "numericUpDown_ActivityCalories_Spacing";
             this.numericUpDown_ActivityCalories_Spacing.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityCalories_Spacing.TabIndex = 79;
@@ -9054,7 +9095,7 @@
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(382, 169);
+            this.tabPage8.Size = new System.Drawing.Size(365, 169);
             this.tabPage8.TabIndex = 1;
             this.tabPage8.Text = "День и месяц отдельными блоками";
             // 
@@ -9167,6 +9208,11 @@
             0,
             0,
             0});
+            this.numericUpDown_MonthAndDayD_Spacing.Minimum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            -2147483648});
             this.numericUpDown_MonthAndDayD_Spacing.Name = "numericUpDown_MonthAndDayD_Spacing";
             this.numericUpDown_MonthAndDayD_Spacing.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_MonthAndDayD_Spacing.TabIndex = 22;
@@ -9416,6 +9462,11 @@
             0,
             0,
             0});
+            this.numericUpDown_MonthAndDayM_Spacing.Minimum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            -2147483648});
             this.numericUpDown_MonthAndDayM_Spacing.Name = "numericUpDown_MonthAndDayM_Spacing";
             this.numericUpDown_MonthAndDayM_Spacing.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_MonthAndDayM_Spacing.TabIndex = 41;
@@ -9845,6 +9896,11 @@
             0,
             0,
             0});
+            this.numericUpDown_OneLine_Spacing.Minimum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            -2147483648});
             this.numericUpDown_OneLine_Spacing.Name = "numericUpDown_OneLine_Spacing";
             this.numericUpDown_OneLine_Spacing.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_OneLine_Spacing.TabIndex = 60;
@@ -10448,7 +10504,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(382, 150);
+            this.tabPage4.Size = new System.Drawing.Size(365, 150);
             this.tabPage4.TabIndex = 0;
             this.tabPage4.Text = "Часы";
             // 
@@ -10691,7 +10747,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(382, 150);
+            this.tabPage5.Size = new System.Drawing.Size(365, 150);
             this.tabPage5.TabIndex = 1;
             this.tabPage5.Text = "Минуты";
             // 
@@ -11400,6 +11456,10 @@
             // helpProvider1
             // 
             this.helpProvider1.HelpNamespace = "C:\\Users\\Администратор\\Documents\\readme.chm";
+            // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // Form1
             // 
@@ -12573,6 +12633,7 @@
         private System.Windows.Forms.RadioButton radioButton42;
         private System.Windows.Forms.Button button_PreviewSmall_42;
         private System.Windows.Forms.HelpProvider helpProvider1;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 
