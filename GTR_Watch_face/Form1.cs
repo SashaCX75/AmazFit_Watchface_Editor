@@ -152,6 +152,14 @@ namespace GTR_Watch_face
             openFileDialog.Multiselect = false;
             openFileDialog.Title = "Путь к файлу циферблата";
 
+            if (!File.Exists(textBox_pack_unpack_dir.Text))
+            {
+                MessageBox.Show("Путь к утилите распаковки/запаковки указан неверно.\r\n" +
+                    "Укажите верный путь к утилите распаковки/запаковки.",
+                    "Файл не найден", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string fullfilename = openFileDialog.FileName;
@@ -211,13 +219,21 @@ namespace GTR_Watch_face
             if (!Directory.Exists(subPath)) Directory.CreateDirectory(subPath);
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = subPath;
+            //openFileDialog.InitialDirectory = subPath;
             openFileDialog.Filter = "Json files (*.json) | *.json";
             //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
             ////openFileDialog1.FilterIndex = 2;
             openFileDialog.RestoreDirectory = true;
             openFileDialog.Multiselect = false;
             openFileDialog.Title = "Путь к файлу настроек циферблата";
+
+            if (!File.Exists(textBox_pack_unpack_dir.Text))
+            {
+                MessageBox.Show("Путь к утилите распаковки/запаковки указан неверно.\r\n" +
+                    "Укажите верный путь к утилите распаковки/запаковки.",
+                    "Файл не найден", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -461,6 +477,10 @@ namespace GTR_Watch_face
             comboBox_AnalogClock_Hour_Image.Items.AddRange(ListImages.ToArray());
             comboBox_AnalogClock_Min_Image.Items.AddRange(ListImages.ToArray());
             comboBox_AnalogClock_Sec_Image.Items.AddRange(ListImages.ToArray());
+
+            comboBox_HourCenterImage_Image.Items.AddRange(ListImages.ToArray());
+            comboBox_MinCenterImage_Image.Items.AddRange(ListImages.ToArray());
+            comboBox_SecCenterImage_Image.Items.AddRange(ListImages.ToArray());
 
             comboBox_Weather_Text_Image.Items.AddRange(ListImages.ToArray());
             comboBox_Weather_Text_DegImage.Items.AddRange(ListImages.ToArray());
@@ -958,6 +978,33 @@ namespace GTR_Watch_face
                     comboBox_AnalogClock_Sec_Image.Text = Watch_Face.AnalogDialFace.Seconds.Image.ImageIndex.ToString();
                 }
                 else checkBox_AnalogClock_Sec.Checked = false;
+
+                if (Watch_Face.AnalogDialFace.HourCenterImage != null)
+                {
+                    checkBox_HourCenterImage.Checked = true;
+                    numericUpDown_HourCenterImage_X.Value = Watch_Face.AnalogDialFace.HourCenterImage.X;
+                    numericUpDown_HourCenterImage_Y.Value = Watch_Face.AnalogDialFace.HourCenterImage.Y;
+                    comboBox_HourCenterImage_Image.Text = Watch_Face.AnalogDialFace.HourCenterImage.ImageIndex.ToString();
+                }
+                else checkBox_HourCenterImage.Checked = false;
+
+                if (Watch_Face.AnalogDialFace.MinCenterImage != null)
+                {
+                    checkBox_MinCenterImage.Checked = true;
+                    numericUpDown_MinCenterImage_X.Value = Watch_Face.AnalogDialFace.MinCenterImage.X;
+                    numericUpDown_MinCenterImage_Y.Value = Watch_Face.AnalogDialFace.MinCenterImage.Y;
+                    comboBox_MinCenterImage_Image.Text = Watch_Face.AnalogDialFace.MinCenterImage.ImageIndex.ToString();
+                }
+                else checkBox_MinCenterImage.Checked = false;
+
+                if (Watch_Face.AnalogDialFace.SecCenterImage != null)
+                {
+                    checkBox_SecCenterImage.Checked = true;
+                    numericUpDown_SecCenterImage_X.Value = Watch_Face.AnalogDialFace.SecCenterImage.X;
+                    numericUpDown_SecCenterImage_Y.Value = Watch_Face.AnalogDialFace.SecCenterImage.Y;
+                    comboBox_SecCenterImage_Image.Text = Watch_Face.AnalogDialFace.SecCenterImage.ImageIndex.ToString();
+                }
+                else checkBox_SecCenterImage.Checked = false;
             }
             else
             {
@@ -965,6 +1012,10 @@ namespace GTR_Watch_face
                 checkBox_AnalogClock_Hour.Checked = false;
                 checkBox_AnalogClock_Min.Checked = false;
                 checkBox_AnalogClock_Sec.Checked = false;
+
+                checkBox_HourCenterImage.Checked = false;
+                checkBox_MinCenterImage.Checked = false;
+                checkBox_SecCenterImage.Checked = false;
             }
             #endregion
 
@@ -1239,7 +1290,7 @@ namespace GTR_Watch_face
             int i;
             var src = new Bitmap(1, 1);
             //int DateLenght = Dagit.Width * data_numberS.Length + spacing * (data_numberS.Length - 1);
-            int DateLengh = 0;
+            int DateLenght = 0;
             foreach (char ch in CH)
             {
                 _number = 0;
@@ -1247,12 +1298,16 @@ namespace GTR_Watch_face
                 {
                     i = image_index + _number;
                     src = new Bitmap(ListImagesFullName[i]);
-                    DateLengh = DateLengh + src.Width + spacing;
+                    DateLenght = DateLenght + src.Width + spacing;
                     src.Dispose();
                 }
 
             }
-            DateLengh = DateLengh - spacing;
+            DateLenght = DateLenght - spacing;
+            src = new Bitmap(ListImagesFullName[image_index]);
+            if (DateLenght < src.Width) DateLenght = src.Width;
+            src.Dispose();
+
             int DateHeight = Dagit.Height;
 
             int PointX = 0;
@@ -1285,12 +1340,12 @@ namespace GTR_Watch_face
                 case 1:
                 case 4:
                 case 7:
-                    PointX = (x1 + x2) / 2 - DateLengh / 2;
+                    PointX = (x1 + x2) / 2 - DateLenght / 2;
                     break;
                 case 2:
                 case 5:
                 case 8:
-                    PointX = x2 - DateLengh;
+                    PointX = x2 - DateLenght;
                     break;
             }
             if (PointX < x1) PointX = x1;
@@ -1366,6 +1421,9 @@ namespace GTR_Watch_face
                 src.Dispose();
             }
             DateLenght = DateLenght - spacing;
+            src = new Bitmap(ListImagesFullName[image_index]);
+            if (DateLenght < src.Width) DateLenght = src.Width;
+            src.Dispose();
             //if ((data_number != (int)data_number) && (dec >= 0))
             //{
             //    DateLenght = Dagit.Width * (data_numberS.Length - 1) + spacing * (data_numberS.Length - 2);
@@ -1706,6 +1764,13 @@ namespace GTR_Watch_face
             comboBox_AnalogClock_Min_Image.Items.Clear();
             comboBox_AnalogClock_Sec_Image.Text = "";
             comboBox_AnalogClock_Sec_Image.Items.Clear();
+
+            comboBox_HourCenterImage_Image.Text = "";
+            comboBox_HourCenterImage_Image.Items.Clear();
+            comboBox_MinCenterImage_Image.Text = "";
+            comboBox_MinCenterImage_Image.Items.Clear();
+            comboBox_SecCenterImage_Image.Text = "";
+            comboBox_SecCenterImage_Image.Items.Clear();
 
             comboBox_Weather_Text_Image.Text = "";
             comboBox_Weather_Text_Image.Items.Clear();
@@ -2226,7 +2291,7 @@ namespace GTR_Watch_face
             panel_Activity.Height = 1;
             panel_Status.Height = 1;
             panel_Battery.Height = 1;
-            panel_AnalogClock.Height = 150;
+            panel_AnalogClock.Height = 178;
             panel_Weather.Height = 1;
         }
 
@@ -2679,9 +2744,46 @@ namespace GTR_Watch_face
         private void checkBox_AnalogClock_CheckedChanged(object sender, EventArgs e)
         {
             bool b = checkBox_AnalogClock.Checked;
-            groupBox_AnalogClock_Hour.Enabled = b;
-            groupBox_AnalogClock_Min.Enabled = b;
-            groupBox_AnalogClock_Sec.Enabled = b;
+            //groupBox_AnalogClock_Hour.Enabled = b;
+            //groupBox_AnalogClock_Min.Enabled = b;
+            //groupBox_AnalogClock_Sec.Enabled = b;
+            tabControl_AnalogClock.Enabled = b;
+        }
+
+        private void checkBox_HourCenterImage_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_HourCenterImage.Checked;
+            numericUpDown_HourCenterImage_X.Enabled = b;
+            numericUpDown_HourCenterImage_Y.Enabled = b;
+            comboBox_HourCenterImage_Image.Enabled = b;
+
+            label310.Enabled = b;
+            label311.Enabled = b;
+            label312.Enabled = b;
+        }
+
+        private void checkBox_MinCenterImage_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_MinCenterImage.Checked;
+            numericUpDown_MinCenterImage_X.Enabled = b;
+            numericUpDown_MinCenterImage_Y.Enabled = b;
+            comboBox_MinCenterImage_Image.Enabled = b;
+
+            label307.Enabled = b;
+            label308.Enabled = b;
+            label309.Enabled = b;
+        }
+
+        private void checkBox_SecCenterImage_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_SecCenterImage.Checked;
+            numericUpDown_SecCenterImage_X.Enabled = b;
+            numericUpDown_SecCenterImage_Y.Enabled = b;
+            comboBox_SecCenterImage_Image.Enabled = b;
+
+            label304.Enabled = b;
+            label305.Enabled = b;
+            label306.Enabled = b;
         }
 
         private void checkBox_AnalogClock_Sec_CheckedChanged(object sender, EventArgs e)
@@ -2690,6 +2792,10 @@ namespace GTR_Watch_face
             comboBox_AnalogClock_Sec_Image.Enabled = b;
             numericUpDown_AnalogClock_Sec_X.Enabled = b;
             numericUpDown_AnalogClock_Sec_Y.Enabled = b;
+
+            label210.Enabled = b;
+            label211.Enabled = b;
+            label212.Enabled = b;
         }
 
         private void checkBox_AnalogClock_Min_CheckedChanged(object sender, EventArgs e)
@@ -2698,6 +2804,10 @@ namespace GTR_Watch_face
             comboBox_AnalogClock_Min_Image.Enabled = b;
             numericUpDown_AnalogClock_Min_X.Enabled = b;
             numericUpDown_AnalogClock_Min_Y.Enabled = b;
+
+            label207.Enabled = b;
+            label208.Enabled = b;
+            label209.Enabled = b;
         }
 
         private void checkBox_AnalogClock_Hour_CheckedChanged(object sender, EventArgs e)
@@ -2706,6 +2816,10 @@ namespace GTR_Watch_face
             comboBox_AnalogClock_Hour_Image.Enabled = b;
             numericUpDown_AnalogClock_Hour_X.Enabled = b;
             numericUpDown_AnalogClock_Hour_Y.Enabled = b;
+
+            label215.Enabled = b;
+            label216.Enabled = b;
+            label217.Enabled = b;
         }
 
         private void checkBox_Weather_Text_CheckedChanged(object sender, EventArgs e)
@@ -3412,6 +3526,39 @@ namespace GTR_Watch_face
                     Watch_Face.AnalogDialFace.Seconds.Color = "0x00000000";
                     Watch_Face.AnalogDialFace.Seconds.OnlyBorder = false;
                 }
+
+                if ((checkBox_HourCenterImage.Checked) && (comboBox_HourCenterImage_Image.SelectedIndex >= 0))
+                {
+                    if (Watch_Face.AnalogDialFace == null) Watch_Face.AnalogDialFace = new Analogdialface();
+                    if (Watch_Face.AnalogDialFace.HourCenterImage == null)
+                        Watch_Face.AnalogDialFace.HourCenterImage = new ImageW();
+
+                    Watch_Face.AnalogDialFace.HourCenterImage.ImageIndex = Int32.Parse(comboBox_HourCenterImage_Image.Text);
+                    Watch_Face.AnalogDialFace.HourCenterImage.X = (int)numericUpDown_HourCenterImage_X.Value;
+                    Watch_Face.AnalogDialFace.HourCenterImage.Y = (int)numericUpDown_HourCenterImage_Y.Value;
+                }
+
+                if ((checkBox_MinCenterImage.Checked) && (comboBox_MinCenterImage_Image.SelectedIndex >= 0))
+                {
+                    if (Watch_Face.AnalogDialFace == null) Watch_Face.AnalogDialFace = new Analogdialface();
+                    if (Watch_Face.AnalogDialFace.MinCenterImage == null)
+                        Watch_Face.AnalogDialFace.MinCenterImage = new ImageW();
+
+                    Watch_Face.AnalogDialFace.MinCenterImage.ImageIndex = Int32.Parse(comboBox_MinCenterImage_Image.Text);
+                    Watch_Face.AnalogDialFace.MinCenterImage.X = (int)numericUpDown_MinCenterImage_X.Value;
+                    Watch_Face.AnalogDialFace.MinCenterImage.Y = (int)numericUpDown_MinCenterImage_Y.Value;
+                }
+
+                if ((checkBox_SecCenterImage.Checked) && (comboBox_SecCenterImage_Image.SelectedIndex >= 0))
+                {
+                    if (Watch_Face.AnalogDialFace == null) Watch_Face.AnalogDialFace = new Analogdialface();
+                    if (Watch_Face.AnalogDialFace.SecCenterImage == null)
+                        Watch_Face.AnalogDialFace.SecCenterImage = new ImageW();
+
+                    Watch_Face.AnalogDialFace.SecCenterImage.ImageIndex = Int32.Parse(comboBox_SecCenterImage_Image.Text);
+                    Watch_Face.AnalogDialFace.SecCenterImage.X = (int)numericUpDown_SecCenterImage_X.Value;
+                    Watch_Face.AnalogDialFace.SecCenterImage.Y = (int)numericUpDown_SecCenterImage_Y.Value;
+                }
             }
 
             // погода 
@@ -3567,9 +3714,7 @@ namespace GTR_Watch_face
                 }
             }
 
-
-
-
+            
                 richTextBox_JSON.Text = JsonConvert.SerializeObject(Watch_Face, Formatting.Indented, new JsonSerializerSettings
             {
                 //DefaultValueHandling = DefaultValueHandling.Ignore,
@@ -5106,6 +5251,7 @@ namespace GTR_Watch_face
                     int DateHeight = Dagit.Height;
                     if ((checkBox_TwoDigitsMonth.Checked) || (Watch_Face_Preview.Date.Month.Tens > 0))
                         DateLenght = DateLenght + Dagit.Width + (int)numericUpDown_MonthAndDayM_Spacing.Value;
+                    if (DateLenght < Dagit.Width) DateLenght = Dagit.Width;
 
                     int PointX = 0;
                     int PointY = 0;
@@ -5145,6 +5291,8 @@ namespace GTR_Watch_face
                             PointX = x2 - DateLenght;
                             break;
                     }
+                    if (PointX < x1) PointX = x1;
+                    if (PointY < y1) PointY = y1;
 
                     if ((checkBox_TwoDigitsMonth.Checked) || (Watch_Face_Preview.Date.Month.Tens > 0))
                     {
@@ -5172,6 +5320,7 @@ namespace GTR_Watch_face
                     int DateHeight = Dagit.Height;
                     if ((checkBox_TwoDigitsDay.Checked) || (Watch_Face_Preview.Date.Day.Tens > 0))
                         DateLenght = DateLenght + Dagit.Width + (int)numericUpDown_MonthAndDayD_Spacing.Value;
+                    if (DateLenght < Dagit.Width) DateLenght = Dagit.Width;
 
                     int PointX = 0;
                     int PointY = 0;
@@ -5211,6 +5360,8 @@ namespace GTR_Watch_face
                             PointX = x2 - DateLenght;
                             break;
                     }
+                    if (PointX < x1) PointX = x1;
+                    if (PointY < y1) PointY = y1;
 
                     if ((checkBox_TwoDigitsDay.Checked) || (Watch_Face_Preview.Date.Day.Tens > 0))
                     {
@@ -5256,6 +5407,8 @@ namespace GTR_Watch_face
                         DateLenght = DateLenght - Dagit.Width - (int)numericUpDown_OneLine_Spacing.Value;
                     if ((!checkBox_TwoDigitsDay.Checked) && (Watch_Face_Preview.Date.Day.Tens == 0))
                         DateLenght = DateLenght - Dagit.Width - (int)numericUpDown_OneLine_Spacing.Value;
+                    if (DateLenght < Dagit.Width) DateLenght = Dagit.Width;
+
                     int PointX = 0;
                     int PointY = 0;
                     switch (comboBox_OneLine_Alignment.SelectedIndex)
@@ -5294,6 +5447,8 @@ namespace GTR_Watch_face
                             PointX = x2 - DateLenght;
                             break;
                     }
+                    if (PointX < x1) PointX = x1;
+                    if (PointY < y1) PointY = y1;
 
                     if ((checkBox_TwoDigitsMonth.Checked) || (Watch_Face_Preview.Date.Month.Tens > 0))
                     {
@@ -5717,6 +5872,7 @@ namespace GTR_Watch_face
             #region AnalogDialFace
             if (checkBox_AnalogClock.Checked)
             {
+                // часы
                 if ((checkBox_AnalogClock_Hour.Checked) && (comboBox_AnalogClock_Hour_Image.SelectedIndex >= 0))
                 {
                     int x1 = (int)numericUpDown_AnalogClock_Hour_X.Value;
@@ -5729,7 +5885,15 @@ namespace GTR_Watch_face
                     float angle = 360 * hour / 12 + 360 * min / (60 * 12);
                     DrawAnalogClock(gPanel, x1, y1, image_inde, angle, model_47);
                 }
+                if ((checkBox_HourCenterImage.Checked) && (comboBox_HourCenterImage_Image.SelectedIndex >= 0))
+                {
+                    src = new Bitmap(ListImagesFullName[comboBox_HourCenterImage_Image.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_HourCenterImage_X.Value,
+                        (int)numericUpDown_HourCenterImage_Y.Value, src.Width, src.Height));
+                    src.Dispose();
+                }
 
+                // минуты
                 if ((checkBox_AnalogClock_Min.Checked) && (comboBox_AnalogClock_Min_Image.SelectedIndex >= 0))
                 {
                     int x1 = (int)numericUpDown_AnalogClock_Min_X.Value;
@@ -5742,7 +5906,15 @@ namespace GTR_Watch_face
                     float angle = 360 * min / 60;
                     DrawAnalogClock(gPanel, x1, y1, image_inde, angle, model_47);
                 }
+                if ((checkBox_MinCenterImage.Checked) && (comboBox_MinCenterImage_Image.SelectedIndex >= 0))
+                {
+                    src = new Bitmap(ListImagesFullName[comboBox_MinCenterImage_Image.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_MinCenterImage_X.Value,
+                        (int)numericUpDown_MinCenterImage_Y.Value, src.Width, src.Height));
+                    src.Dispose();
+                }
 
+                // секунды
                 if ((checkBox_AnalogClock_Sec.Checked) && (comboBox_AnalogClock_Sec_Image.SelectedIndex >= 0))
                 {
                     int x1 = (int)numericUpDown_AnalogClock_Sec_X.Value;
@@ -5754,6 +5926,13 @@ namespace GTR_Watch_face
                     //if (hour >= 12) hour = hour - 12;
                     float angle = 360 * sec / 60;
                     DrawAnalogClock(gPanel, x1, y1, image_inde, angle, model_47);
+                }
+                if ((checkBox_SecCenterImage.Checked) && (comboBox_SecCenterImage_Image.SelectedIndex >= 0))
+                {
+                    src = new Bitmap(ListImagesFullName[comboBox_SecCenterImage_Image.SelectedIndex]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_SecCenterImage_X.Value,
+                        (int)numericUpDown_SecCenterImage_Y.Value, src.Width, src.Height));
+                    src.Dispose();
                 }
             }
             #endregion
@@ -5983,8 +6162,11 @@ namespace GTR_Watch_face
     public class Analogdialface
     {
         public ClockHand Hours { get; set; }
+        public ImageW HourCenterImage { get; set; }
         public ClockHand Minutes { get; set; }
+        public ImageW MinCenterImage { get; set; }
         public ClockHand Seconds { get; set; }
+        public ImageW SecCenterImage { get; set; }
     }
 
     public class Weather

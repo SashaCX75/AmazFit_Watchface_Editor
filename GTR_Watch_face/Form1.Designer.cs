@@ -374,22 +374,8 @@
             this.checkBox_Weather = new System.Windows.Forms.CheckBox();
             this.button_Weather = new System.Windows.Forms.Button();
             this.panel_AnalogClock = new System.Windows.Forms.Panel();
-            this.groupBox_AnalogClock_Sec = new System.Windows.Forms.GroupBox();
-            this.comboBox_AnalogClock_Sec_Image = new System.Windows.Forms.ComboBox();
-            this.label210 = new System.Windows.Forms.Label();
-            this.numericUpDown_AnalogClock_Sec_Y = new System.Windows.Forms.NumericUpDown();
-            this.label211 = new System.Windows.Forms.Label();
-            this.numericUpDown_AnalogClock_Sec_X = new System.Windows.Forms.NumericUpDown();
-            this.label212 = new System.Windows.Forms.Label();
-            this.checkBox_AnalogClock_Sec = new System.Windows.Forms.CheckBox();
-            this.groupBox_AnalogClock_Min = new System.Windows.Forms.GroupBox();
-            this.comboBox_AnalogClock_Min_Image = new System.Windows.Forms.ComboBox();
-            this.label207 = new System.Windows.Forms.Label();
-            this.numericUpDown_AnalogClock_Min_Y = new System.Windows.Forms.NumericUpDown();
-            this.label208 = new System.Windows.Forms.Label();
-            this.numericUpDown_AnalogClock_Min_X = new System.Windows.Forms.NumericUpDown();
-            this.label209 = new System.Windows.Forms.Label();
-            this.checkBox_AnalogClock_Min = new System.Windows.Forms.CheckBox();
+            this.tabControl_AnalogClock = new System.Windows.Forms.TabControl();
+            this.tabPage29 = new System.Windows.Forms.TabPage();
             this.groupBox_AnalogClock_Hour = new System.Windows.Forms.GroupBox();
             this.comboBox_AnalogClock_Hour_Image = new System.Windows.Forms.ComboBox();
             this.label217 = new System.Windows.Forms.Label();
@@ -398,6 +384,48 @@
             this.numericUpDown_AnalogClock_Hour_X = new System.Windows.Forms.NumericUpDown();
             this.label216 = new System.Windows.Forms.Label();
             this.checkBox_AnalogClock_Hour = new System.Windows.Forms.CheckBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.comboBox_HourCenterImage_Image = new System.Windows.Forms.ComboBox();
+            this.label310 = new System.Windows.Forms.Label();
+            this.numericUpDown_HourCenterImage_Y = new System.Windows.Forms.NumericUpDown();
+            this.label311 = new System.Windows.Forms.Label();
+            this.numericUpDown_HourCenterImage_X = new System.Windows.Forms.NumericUpDown();
+            this.label312 = new System.Windows.Forms.Label();
+            this.checkBox_HourCenterImage = new System.Windows.Forms.CheckBox();
+            this.tabPage31 = new System.Windows.Forms.TabPage();
+            this.groupBox_AnalogClock_Min = new System.Windows.Forms.GroupBox();
+            this.comboBox_AnalogClock_Min_Image = new System.Windows.Forms.ComboBox();
+            this.label207 = new System.Windows.Forms.Label();
+            this.numericUpDown_AnalogClock_Min_Y = new System.Windows.Forms.NumericUpDown();
+            this.label208 = new System.Windows.Forms.Label();
+            this.numericUpDown_AnalogClock_Min_X = new System.Windows.Forms.NumericUpDown();
+            this.label209 = new System.Windows.Forms.Label();
+            this.checkBox_AnalogClock_Min = new System.Windows.Forms.CheckBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.comboBox_MinCenterImage_Image = new System.Windows.Forms.ComboBox();
+            this.label307 = new System.Windows.Forms.Label();
+            this.numericUpDown_MinCenterImage_Y = new System.Windows.Forms.NumericUpDown();
+            this.label308 = new System.Windows.Forms.Label();
+            this.numericUpDown_MinCenterImage_X = new System.Windows.Forms.NumericUpDown();
+            this.label309 = new System.Windows.Forms.Label();
+            this.checkBox_MinCenterImage = new System.Windows.Forms.CheckBox();
+            this.tabPage32 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBox_SecCenterImage_Image = new System.Windows.Forms.ComboBox();
+            this.label304 = new System.Windows.Forms.Label();
+            this.numericUpDown_SecCenterImage_Y = new System.Windows.Forms.NumericUpDown();
+            this.label305 = new System.Windows.Forms.Label();
+            this.numericUpDown_SecCenterImage_X = new System.Windows.Forms.NumericUpDown();
+            this.label306 = new System.Windows.Forms.Label();
+            this.checkBox_SecCenterImage = new System.Windows.Forms.CheckBox();
+            this.groupBox_AnalogClock_Sec = new System.Windows.Forms.GroupBox();
+            this.comboBox_AnalogClock_Sec_Image = new System.Windows.Forms.ComboBox();
+            this.label210 = new System.Windows.Forms.Label();
+            this.numericUpDown_AnalogClock_Sec_Y = new System.Windows.Forms.NumericUpDown();
+            this.label211 = new System.Windows.Forms.Label();
+            this.numericUpDown_AnalogClock_Sec_X = new System.Windows.Forms.NumericUpDown();
+            this.label212 = new System.Windows.Forms.Label();
+            this.checkBox_AnalogClock_Sec = new System.Windows.Forms.CheckBox();
             this.checkBox_AnalogClock = new System.Windows.Forms.CheckBox();
             this.button_AnalogClock = new System.Windows.Forms.Button();
             this.panel_Battery = new System.Windows.Forms.Panel();
@@ -949,15 +977,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Icon_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Icon_X)).BeginInit();
             this.panel_AnalogClock.SuspendLayout();
-            this.groupBox_AnalogClock_Sec.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Sec_Y)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Sec_X)).BeginInit();
-            this.groupBox_AnalogClock_Min.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Min_Y)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Min_X)).BeginInit();
+            this.tabControl_AnalogClock.SuspendLayout();
+            this.tabPage29.SuspendLayout();
             this.groupBox_AnalogClock_Hour.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Hour_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Hour_X)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_HourCenterImage_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_HourCenterImage_X)).BeginInit();
+            this.tabPage31.SuspendLayout();
+            this.groupBox_AnalogClock_Min.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Min_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Min_X)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MinCenterImage_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MinCenterImage_X)).BeginInit();
+            this.tabPage32.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_SecCenterImage_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_SecCenterImage_X)).BeginInit();
+            this.groupBox_AnalogClock_Sec.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Sec_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Sec_X)).BeginInit();
             this.panel_Battery.SuspendLayout();
             this.tabControl4.SuspendLayout();
             this.tabPage21.SuspendLayout();
@@ -5584,9 +5625,7 @@
             // panel_AnalogClock
             // 
             this.panel_AnalogClock.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_AnalogClock.Controls.Add(this.groupBox_AnalogClock_Sec);
-            this.panel_AnalogClock.Controls.Add(this.groupBox_AnalogClock_Min);
-            this.panel_AnalogClock.Controls.Add(this.groupBox_AnalogClock_Hour);
+            this.panel_AnalogClock.Controls.Add(this.tabControl_AnalogClock);
             this.panel_AnalogClock.Controls.Add(this.checkBox_AnalogClock);
             this.panel_AnalogClock.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_AnalogClock.Location = new System.Drawing.Point(0, 191);
@@ -5594,104 +5633,239 @@
             this.panel_AnalogClock.Size = new System.Drawing.Size(392, 1);
             this.panel_AnalogClock.TabIndex = 15;
             // 
-            // groupBox_AnalogClock_Sec
+            // tabControl_AnalogClock
             // 
-            this.groupBox_AnalogClock_Sec.Controls.Add(this.comboBox_AnalogClock_Sec_Image);
-            this.groupBox_AnalogClock_Sec.Controls.Add(this.label210);
-            this.groupBox_AnalogClock_Sec.Controls.Add(this.numericUpDown_AnalogClock_Sec_Y);
-            this.groupBox_AnalogClock_Sec.Controls.Add(this.label211);
-            this.groupBox_AnalogClock_Sec.Controls.Add(this.numericUpDown_AnalogClock_Sec_X);
-            this.groupBox_AnalogClock_Sec.Controls.Add(this.label212);
-            this.groupBox_AnalogClock_Sec.Controls.Add(this.checkBox_AnalogClock_Sec);
-            this.groupBox_AnalogClock_Sec.Enabled = false;
-            this.groupBox_AnalogClock_Sec.Location = new System.Drawing.Point(262, 23);
-            this.groupBox_AnalogClock_Sec.Name = "groupBox_AnalogClock_Sec";
-            this.groupBox_AnalogClock_Sec.Size = new System.Drawing.Size(116, 120);
-            this.groupBox_AnalogClock_Sec.TabIndex = 65;
-            this.groupBox_AnalogClock_Sec.TabStop = false;
-            this.groupBox_AnalogClock_Sec.Text = "Секунды";
-            this.groupBox_AnalogClock_Sec.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            this.tabControl_AnalogClock.Controls.Add(this.tabPage29);
+            this.tabControl_AnalogClock.Controls.Add(this.tabPage31);
+            this.tabControl_AnalogClock.Controls.Add(this.tabPage32);
+            this.tabControl_AnalogClock.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tabControl_AnalogClock.Enabled = false;
+            this.tabControl_AnalogClock.Location = new System.Drawing.Point(0, 20);
+            this.tabControl_AnalogClock.Name = "tabControl_AnalogClock";
+            this.tabControl_AnalogClock.SelectedIndex = 0;
+            this.tabControl_AnalogClock.Size = new System.Drawing.Size(390, 155);
+            this.tabControl_AnalogClock.TabIndex = 54;
+            this.tabControl_AnalogClock.MouseClick += new System.Windows.Forms.MouseEventHandler(this.checkBox_Click);
             // 
-            // comboBox_AnalogClock_Sec_Image
+            // tabPage29
             // 
-            this.comboBox_AnalogClock_Sec_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_AnalogClock_Sec_Image.Enabled = false;
-            this.comboBox_AnalogClock_Sec_Image.FormattingEnabled = true;
-            this.comboBox_AnalogClock_Sec_Image.Location = new System.Drawing.Point(65, 93);
-            this.comboBox_AnalogClock_Sec_Image.Name = "comboBox_AnalogClock_Sec_Image";
-            this.comboBox_AnalogClock_Sec_Image.Size = new System.Drawing.Size(45, 21);
-            this.comboBox_AnalogClock_Sec_Image.TabIndex = 63;
-            this.comboBox_AnalogClock_Sec_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.tabPage29.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage29.Controls.Add(this.groupBox_AnalogClock_Hour);
+            this.tabPage29.Controls.Add(this.groupBox4);
+            this.tabPage29.Location = new System.Drawing.Point(4, 22);
+            this.tabPage29.Name = "tabPage29";
+            this.tabPage29.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage29.Size = new System.Drawing.Size(382, 129);
+            this.tabPage29.TabIndex = 0;
+            this.tabPage29.Text = "Часы";
             // 
-            // label210
+            // groupBox_AnalogClock_Hour
             // 
-            this.label210.AutoSize = true;
-            this.label210.Enabled = false;
-            this.label210.Location = new System.Drawing.Point(2, 96);
-            this.label210.Name = "label210";
-            this.label210.Size = new System.Drawing.Size(65, 13);
-            this.label210.TabIndex = 62;
-            this.label210.Text = "ImageIndex:";
+            this.groupBox_AnalogClock_Hour.Controls.Add(this.comboBox_AnalogClock_Hour_Image);
+            this.groupBox_AnalogClock_Hour.Controls.Add(this.label217);
+            this.groupBox_AnalogClock_Hour.Controls.Add(this.numericUpDown_AnalogClock_Hour_Y);
+            this.groupBox_AnalogClock_Hour.Controls.Add(this.label215);
+            this.groupBox_AnalogClock_Hour.Controls.Add(this.numericUpDown_AnalogClock_Hour_X);
+            this.groupBox_AnalogClock_Hour.Controls.Add(this.label216);
+            this.groupBox_AnalogClock_Hour.Controls.Add(this.checkBox_AnalogClock_Hour);
+            this.groupBox_AnalogClock_Hour.Location = new System.Drawing.Point(4, 7);
+            this.groupBox_AnalogClock_Hour.Name = "groupBox_AnalogClock_Hour";
+            this.groupBox_AnalogClock_Hour.Size = new System.Drawing.Size(116, 120);
+            this.groupBox_AnalogClock_Hour.TabIndex = 2;
+            this.groupBox_AnalogClock_Hour.TabStop = false;
+            this.groupBox_AnalogClock_Hour.Text = "Стрелка";
+            this.groupBox_AnalogClock_Hour.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
             // 
-            // numericUpDown_AnalogClock_Sec_Y
+            // comboBox_AnalogClock_Hour_Image
             // 
-            this.numericUpDown_AnalogClock_Sec_Y.Enabled = false;
-            this.numericUpDown_AnalogClock_Sec_Y.Location = new System.Drawing.Point(65, 67);
-            this.numericUpDown_AnalogClock_Sec_Y.Maximum = new decimal(new int[] {
+            this.comboBox_AnalogClock_Hour_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_AnalogClock_Hour_Image.Enabled = false;
+            this.comboBox_AnalogClock_Hour_Image.FormattingEnabled = true;
+            this.comboBox_AnalogClock_Hour_Image.Location = new System.Drawing.Point(65, 93);
+            this.comboBox_AnalogClock_Hour_Image.Name = "comboBox_AnalogClock_Hour_Image";
+            this.comboBox_AnalogClock_Hour_Image.Size = new System.Drawing.Size(45, 21);
+            this.comboBox_AnalogClock_Hour_Image.TabIndex = 63;
+            this.comboBox_AnalogClock_Hour_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            // 
+            // label217
+            // 
+            this.label217.AutoSize = true;
+            this.label217.Enabled = false;
+            this.label217.Location = new System.Drawing.Point(2, 96);
+            this.label217.Name = "label217";
+            this.label217.Size = new System.Drawing.Size(65, 13);
+            this.label217.TabIndex = 62;
+            this.label217.Text = "ImageIndex:";
+            // 
+            // numericUpDown_AnalogClock_Hour_Y
+            // 
+            this.numericUpDown_AnalogClock_Hour_Y.Enabled = false;
+            this.numericUpDown_AnalogClock_Hour_Y.Location = new System.Drawing.Point(65, 67);
+            this.numericUpDown_AnalogClock_Hour_Y.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown_AnalogClock_Sec_Y.Name = "numericUpDown_AnalogClock_Sec_Y";
-            this.numericUpDown_AnalogClock_Sec_Y.Size = new System.Drawing.Size(45, 20);
-            this.numericUpDown_AnalogClock_Sec_Y.TabIndex = 61;
-            this.numericUpDown_AnalogClock_Sec_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_AnalogClock_Hour_Y.Name = "numericUpDown_AnalogClock_Hour_Y";
+            this.numericUpDown_AnalogClock_Hour_Y.Size = new System.Drawing.Size(45, 20);
+            this.numericUpDown_AnalogClock_Hour_Y.TabIndex = 61;
+            this.numericUpDown_AnalogClock_Hour_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // label211
+            // label215
             // 
-            this.label211.AutoSize = true;
-            this.label211.Enabled = false;
-            this.label211.Location = new System.Drawing.Point(9, 69);
-            this.label211.Name = "label211";
-            this.label211.Size = new System.Drawing.Size(57, 13);
-            this.label211.TabIndex = 60;
-            this.label211.Text = "Центр (Y):";
+            this.label215.AutoSize = true;
+            this.label215.Enabled = false;
+            this.label215.Location = new System.Drawing.Point(9, 69);
+            this.label215.Name = "label215";
+            this.label215.Size = new System.Drawing.Size(57, 13);
+            this.label215.TabIndex = 60;
+            this.label215.Text = "Центр (Y):";
             // 
-            // numericUpDown_AnalogClock_Sec_X
+            // numericUpDown_AnalogClock_Hour_X
             // 
-            this.numericUpDown_AnalogClock_Sec_X.Enabled = false;
-            this.numericUpDown_AnalogClock_Sec_X.Location = new System.Drawing.Point(65, 41);
-            this.numericUpDown_AnalogClock_Sec_X.Maximum = new decimal(new int[] {
+            this.numericUpDown_AnalogClock_Hour_X.Enabled = false;
+            this.numericUpDown_AnalogClock_Hour_X.Location = new System.Drawing.Point(65, 41);
+            this.numericUpDown_AnalogClock_Hour_X.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown_AnalogClock_Sec_X.Name = "numericUpDown_AnalogClock_Sec_X";
-            this.numericUpDown_AnalogClock_Sec_X.Size = new System.Drawing.Size(45, 20);
-            this.numericUpDown_AnalogClock_Sec_X.TabIndex = 59;
-            this.numericUpDown_AnalogClock_Sec_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_AnalogClock_Hour_X.Name = "numericUpDown_AnalogClock_Hour_X";
+            this.numericUpDown_AnalogClock_Hour_X.Size = new System.Drawing.Size(45, 20);
+            this.numericUpDown_AnalogClock_Hour_X.TabIndex = 59;
+            this.numericUpDown_AnalogClock_Hour_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // label212
+            // label216
             // 
-            this.label212.AutoSize = true;
-            this.label212.Enabled = false;
-            this.label212.Location = new System.Drawing.Point(9, 43);
-            this.label212.Name = "label212";
-            this.label212.Size = new System.Drawing.Size(57, 13);
-            this.label212.TabIndex = 58;
-            this.label212.Text = "Центр (X):";
+            this.label216.AutoSize = true;
+            this.label216.Enabled = false;
+            this.label216.Location = new System.Drawing.Point(9, 43);
+            this.label216.Name = "label216";
+            this.label216.Size = new System.Drawing.Size(57, 13);
+            this.label216.TabIndex = 58;
+            this.label216.Text = "Центр (X):";
             // 
-            // checkBox_AnalogClock_Sec
+            // checkBox_AnalogClock_Hour
             // 
-            this.checkBox_AnalogClock_Sec.AutoSize = true;
-            this.checkBox_AnalogClock_Sec.Location = new System.Drawing.Point(8, 18);
-            this.checkBox_AnalogClock_Sec.Name = "checkBox_AnalogClock_Sec";
-            this.checkBox_AnalogClock_Sec.Size = new System.Drawing.Size(88, 17);
-            this.checkBox_AnalogClock_Sec.TabIndex = 30;
-            this.checkBox_AnalogClock_Sec.Text = "Отображать";
-            this.checkBox_AnalogClock_Sec.UseVisualStyleBackColor = true;
-            this.checkBox_AnalogClock_Sec.CheckedChanged += new System.EventHandler(this.checkBox_AnalogClock_Sec_CheckedChanged);
-            this.checkBox_AnalogClock_Sec.Click += new System.EventHandler(this.checkBox_Click);
+            this.checkBox_AnalogClock_Hour.AutoSize = true;
+            this.checkBox_AnalogClock_Hour.Location = new System.Drawing.Point(8, 18);
+            this.checkBox_AnalogClock_Hour.Name = "checkBox_AnalogClock_Hour";
+            this.checkBox_AnalogClock_Hour.Size = new System.Drawing.Size(88, 17);
+            this.checkBox_AnalogClock_Hour.TabIndex = 30;
+            this.checkBox_AnalogClock_Hour.Text = "Отображать";
+            this.checkBox_AnalogClock_Hour.UseVisualStyleBackColor = true;
+            this.checkBox_AnalogClock_Hour.CheckedChanged += new System.EventHandler(this.checkBox_AnalogClock_Hour_CheckedChanged);
+            this.checkBox_AnalogClock_Hour.MouseClick += new System.Windows.Forms.MouseEventHandler(this.checkBox_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.comboBox_HourCenterImage_Image);
+            this.groupBox4.Controls.Add(this.label310);
+            this.groupBox4.Controls.Add(this.numericUpDown_HourCenterImage_Y);
+            this.groupBox4.Controls.Add(this.label311);
+            this.groupBox4.Controls.Add(this.numericUpDown_HourCenterImage_X);
+            this.groupBox4.Controls.Add(this.label312);
+            this.groupBox4.Controls.Add(this.checkBox_HourCenterImage);
+            this.groupBox4.Location = new System.Drawing.Point(130, 7);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(116, 120);
+            this.groupBox4.TabIndex = 66;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "CenterImage";
+            this.groupBox4.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            // 
+            // comboBox_HourCenterImage_Image
+            // 
+            this.comboBox_HourCenterImage_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_HourCenterImage_Image.Enabled = false;
+            this.comboBox_HourCenterImage_Image.FormattingEnabled = true;
+            this.comboBox_HourCenterImage_Image.Location = new System.Drawing.Point(65, 93);
+            this.comboBox_HourCenterImage_Image.Name = "comboBox_HourCenterImage_Image";
+            this.comboBox_HourCenterImage_Image.Size = new System.Drawing.Size(45, 21);
+            this.comboBox_HourCenterImage_Image.TabIndex = 63;
+            this.comboBox_HourCenterImage_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            // 
+            // label310
+            // 
+            this.label310.AutoSize = true;
+            this.label310.Enabled = false;
+            this.label310.Location = new System.Drawing.Point(2, 96);
+            this.label310.Name = "label310";
+            this.label310.Size = new System.Drawing.Size(65, 13);
+            this.label310.TabIndex = 62;
+            this.label310.Text = "ImageIndex:";
+            // 
+            // numericUpDown_HourCenterImage_Y
+            // 
+            this.numericUpDown_HourCenterImage_Y.Enabled = false;
+            this.numericUpDown_HourCenterImage_Y.Location = new System.Drawing.Point(65, 67);
+            this.numericUpDown_HourCenterImage_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_HourCenterImage_Y.Name = "numericUpDown_HourCenterImage_Y";
+            this.numericUpDown_HourCenterImage_Y.Size = new System.Drawing.Size(45, 20);
+            this.numericUpDown_HourCenterImage_Y.TabIndex = 61;
+            this.numericUpDown_HourCenterImage_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label311
+            // 
+            this.label311.AutoSize = true;
+            this.label311.Enabled = false;
+            this.label311.Location = new System.Drawing.Point(49, 69);
+            this.label311.Name = "label311";
+            this.label311.Size = new System.Drawing.Size(17, 13);
+            this.label311.TabIndex = 60;
+            this.label311.Text = "Y:";
+            // 
+            // numericUpDown_HourCenterImage_X
+            // 
+            this.numericUpDown_HourCenterImage_X.Enabled = false;
+            this.numericUpDown_HourCenterImage_X.Location = new System.Drawing.Point(65, 41);
+            this.numericUpDown_HourCenterImage_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_HourCenterImage_X.Name = "numericUpDown_HourCenterImage_X";
+            this.numericUpDown_HourCenterImage_X.Size = new System.Drawing.Size(45, 20);
+            this.numericUpDown_HourCenterImage_X.TabIndex = 59;
+            this.numericUpDown_HourCenterImage_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label312
+            // 
+            this.label312.AutoSize = true;
+            this.label312.Enabled = false;
+            this.label312.Location = new System.Drawing.Point(49, 43);
+            this.label312.Name = "label312";
+            this.label312.Size = new System.Drawing.Size(17, 13);
+            this.label312.TabIndex = 58;
+            this.label312.Text = "X:";
+            // 
+            // checkBox_HourCenterImage
+            // 
+            this.checkBox_HourCenterImage.AutoSize = true;
+            this.checkBox_HourCenterImage.Location = new System.Drawing.Point(8, 18);
+            this.checkBox_HourCenterImage.Name = "checkBox_HourCenterImage";
+            this.checkBox_HourCenterImage.Size = new System.Drawing.Size(88, 17);
+            this.checkBox_HourCenterImage.TabIndex = 30;
+            this.checkBox_HourCenterImage.Text = "Отображать";
+            this.checkBox_HourCenterImage.UseVisualStyleBackColor = true;
+            this.checkBox_HourCenterImage.CheckedChanged += new System.EventHandler(this.checkBox_HourCenterImage_CheckedChanged);
+            this.checkBox_HourCenterImage.Click += new System.EventHandler(this.checkBox_Click);
+            // 
+            // tabPage31
+            // 
+            this.tabPage31.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage31.Controls.Add(this.groupBox_AnalogClock_Min);
+            this.tabPage31.Controls.Add(this.groupBox3);
+            this.tabPage31.Location = new System.Drawing.Point(4, 22);
+            this.tabPage31.Name = "tabPage31";
+            this.tabPage31.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage31.Size = new System.Drawing.Size(382, 129);
+            this.tabPage31.TabIndex = 1;
+            this.tabPage31.Text = "Минуты";
             // 
             // groupBox_AnalogClock_Min
             // 
@@ -5702,13 +5876,12 @@
             this.groupBox_AnalogClock_Min.Controls.Add(this.numericUpDown_AnalogClock_Min_X);
             this.groupBox_AnalogClock_Min.Controls.Add(this.label209);
             this.groupBox_AnalogClock_Min.Controls.Add(this.checkBox_AnalogClock_Min);
-            this.groupBox_AnalogClock_Min.Enabled = false;
-            this.groupBox_AnalogClock_Min.Location = new System.Drawing.Point(134, 23);
+            this.groupBox_AnalogClock_Min.Location = new System.Drawing.Point(4, 7);
             this.groupBox_AnalogClock_Min.Name = "groupBox_AnalogClock_Min";
             this.groupBox_AnalogClock_Min.Size = new System.Drawing.Size(116, 120);
             this.groupBox_AnalogClock_Min.TabIndex = 64;
             this.groupBox_AnalogClock_Min.TabStop = false;
-            this.groupBox_AnalogClock_Min.Text = "Минуты";
+            this.groupBox_AnalogClock_Min.Text = "Стрелка";
             this.groupBox_AnalogClock_Min.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
             // 
             // comboBox_AnalogClock_Min_Image
@@ -5792,104 +5965,310 @@
             this.checkBox_AnalogClock_Min.CheckedChanged += new System.EventHandler(this.checkBox_AnalogClock_Min_CheckedChanged);
             this.checkBox_AnalogClock_Min.Click += new System.EventHandler(this.checkBox_Click);
             // 
-            // groupBox_AnalogClock_Hour
+            // groupBox3
             // 
-            this.groupBox_AnalogClock_Hour.Controls.Add(this.comboBox_AnalogClock_Hour_Image);
-            this.groupBox_AnalogClock_Hour.Controls.Add(this.label217);
-            this.groupBox_AnalogClock_Hour.Controls.Add(this.numericUpDown_AnalogClock_Hour_Y);
-            this.groupBox_AnalogClock_Hour.Controls.Add(this.label215);
-            this.groupBox_AnalogClock_Hour.Controls.Add(this.numericUpDown_AnalogClock_Hour_X);
-            this.groupBox_AnalogClock_Hour.Controls.Add(this.label216);
-            this.groupBox_AnalogClock_Hour.Controls.Add(this.checkBox_AnalogClock_Hour);
-            this.groupBox_AnalogClock_Hour.Enabled = false;
-            this.groupBox_AnalogClock_Hour.Location = new System.Drawing.Point(5, 23);
-            this.groupBox_AnalogClock_Hour.Name = "groupBox_AnalogClock_Hour";
-            this.groupBox_AnalogClock_Hour.Size = new System.Drawing.Size(116, 120);
-            this.groupBox_AnalogClock_Hour.TabIndex = 2;
-            this.groupBox_AnalogClock_Hour.TabStop = false;
-            this.groupBox_AnalogClock_Hour.Text = "Часы";
-            this.groupBox_AnalogClock_Hour.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            this.groupBox3.Controls.Add(this.comboBox_MinCenterImage_Image);
+            this.groupBox3.Controls.Add(this.label307);
+            this.groupBox3.Controls.Add(this.numericUpDown_MinCenterImage_Y);
+            this.groupBox3.Controls.Add(this.label308);
+            this.groupBox3.Controls.Add(this.numericUpDown_MinCenterImage_X);
+            this.groupBox3.Controls.Add(this.label309);
+            this.groupBox3.Controls.Add(this.checkBox_MinCenterImage);
+            this.groupBox3.Location = new System.Drawing.Point(130, 7);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(116, 120);
+            this.groupBox3.TabIndex = 67;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "CenterImage";
+            this.groupBox3.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
             // 
-            // comboBox_AnalogClock_Hour_Image
+            // comboBox_MinCenterImage_Image
             // 
-            this.comboBox_AnalogClock_Hour_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_AnalogClock_Hour_Image.Enabled = false;
-            this.comboBox_AnalogClock_Hour_Image.FormattingEnabled = true;
-            this.comboBox_AnalogClock_Hour_Image.Location = new System.Drawing.Point(65, 93);
-            this.comboBox_AnalogClock_Hour_Image.Name = "comboBox_AnalogClock_Hour_Image";
-            this.comboBox_AnalogClock_Hour_Image.Size = new System.Drawing.Size(45, 21);
-            this.comboBox_AnalogClock_Hour_Image.TabIndex = 63;
-            this.comboBox_AnalogClock_Hour_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_MinCenterImage_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_MinCenterImage_Image.Enabled = false;
+            this.comboBox_MinCenterImage_Image.FormattingEnabled = true;
+            this.comboBox_MinCenterImage_Image.Location = new System.Drawing.Point(65, 93);
+            this.comboBox_MinCenterImage_Image.Name = "comboBox_MinCenterImage_Image";
+            this.comboBox_MinCenterImage_Image.Size = new System.Drawing.Size(45, 21);
+            this.comboBox_MinCenterImage_Image.TabIndex = 63;
+            this.comboBox_MinCenterImage_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
-            // label217
+            // label307
             // 
-            this.label217.AutoSize = true;
-            this.label217.Enabled = false;
-            this.label217.Location = new System.Drawing.Point(2, 96);
-            this.label217.Name = "label217";
-            this.label217.Size = new System.Drawing.Size(65, 13);
-            this.label217.TabIndex = 62;
-            this.label217.Text = "ImageIndex:";
+            this.label307.AutoSize = true;
+            this.label307.Enabled = false;
+            this.label307.Location = new System.Drawing.Point(2, 96);
+            this.label307.Name = "label307";
+            this.label307.Size = new System.Drawing.Size(65, 13);
+            this.label307.TabIndex = 62;
+            this.label307.Text = "ImageIndex:";
             // 
-            // numericUpDown_AnalogClock_Hour_Y
+            // numericUpDown_MinCenterImage_Y
             // 
-            this.numericUpDown_AnalogClock_Hour_Y.Enabled = false;
-            this.numericUpDown_AnalogClock_Hour_Y.Location = new System.Drawing.Point(65, 67);
-            this.numericUpDown_AnalogClock_Hour_Y.Maximum = new decimal(new int[] {
+            this.numericUpDown_MinCenterImage_Y.Enabled = false;
+            this.numericUpDown_MinCenterImage_Y.Location = new System.Drawing.Point(65, 67);
+            this.numericUpDown_MinCenterImage_Y.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown_AnalogClock_Hour_Y.Name = "numericUpDown_AnalogClock_Hour_Y";
-            this.numericUpDown_AnalogClock_Hour_Y.Size = new System.Drawing.Size(45, 20);
-            this.numericUpDown_AnalogClock_Hour_Y.TabIndex = 61;
-            this.numericUpDown_AnalogClock_Hour_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_MinCenterImage_Y.Name = "numericUpDown_MinCenterImage_Y";
+            this.numericUpDown_MinCenterImage_Y.Size = new System.Drawing.Size(45, 20);
+            this.numericUpDown_MinCenterImage_Y.TabIndex = 61;
+            this.numericUpDown_MinCenterImage_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // label215
+            // label308
             // 
-            this.label215.AutoSize = true;
-            this.label215.Enabled = false;
-            this.label215.Location = new System.Drawing.Point(9, 69);
-            this.label215.Name = "label215";
-            this.label215.Size = new System.Drawing.Size(57, 13);
-            this.label215.TabIndex = 60;
-            this.label215.Text = "Центр (Y):";
+            this.label308.AutoSize = true;
+            this.label308.Enabled = false;
+            this.label308.Location = new System.Drawing.Point(49, 69);
+            this.label308.Name = "label308";
+            this.label308.Size = new System.Drawing.Size(17, 13);
+            this.label308.TabIndex = 60;
+            this.label308.Text = "Y:";
             // 
-            // numericUpDown_AnalogClock_Hour_X
+            // numericUpDown_MinCenterImage_X
             // 
-            this.numericUpDown_AnalogClock_Hour_X.Enabled = false;
-            this.numericUpDown_AnalogClock_Hour_X.Location = new System.Drawing.Point(65, 41);
-            this.numericUpDown_AnalogClock_Hour_X.Maximum = new decimal(new int[] {
+            this.numericUpDown_MinCenterImage_X.Enabled = false;
+            this.numericUpDown_MinCenterImage_X.Location = new System.Drawing.Point(65, 41);
+            this.numericUpDown_MinCenterImage_X.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown_AnalogClock_Hour_X.Name = "numericUpDown_AnalogClock_Hour_X";
-            this.numericUpDown_AnalogClock_Hour_X.Size = new System.Drawing.Size(45, 20);
-            this.numericUpDown_AnalogClock_Hour_X.TabIndex = 59;
-            this.numericUpDown_AnalogClock_Hour_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_MinCenterImage_X.Name = "numericUpDown_MinCenterImage_X";
+            this.numericUpDown_MinCenterImage_X.Size = new System.Drawing.Size(45, 20);
+            this.numericUpDown_MinCenterImage_X.TabIndex = 59;
+            this.numericUpDown_MinCenterImage_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // label216
+            // label309
             // 
-            this.label216.AutoSize = true;
-            this.label216.Enabled = false;
-            this.label216.Location = new System.Drawing.Point(9, 43);
-            this.label216.Name = "label216";
-            this.label216.Size = new System.Drawing.Size(57, 13);
-            this.label216.TabIndex = 58;
-            this.label216.Text = "Центр (X):";
+            this.label309.AutoSize = true;
+            this.label309.Enabled = false;
+            this.label309.Location = new System.Drawing.Point(49, 43);
+            this.label309.Name = "label309";
+            this.label309.Size = new System.Drawing.Size(17, 13);
+            this.label309.TabIndex = 58;
+            this.label309.Text = "X:";
             // 
-            // checkBox_AnalogClock_Hour
+            // checkBox_MinCenterImage
             // 
-            this.checkBox_AnalogClock_Hour.AutoSize = true;
-            this.checkBox_AnalogClock_Hour.Location = new System.Drawing.Point(8, 18);
-            this.checkBox_AnalogClock_Hour.Name = "checkBox_AnalogClock_Hour";
-            this.checkBox_AnalogClock_Hour.Size = new System.Drawing.Size(88, 17);
-            this.checkBox_AnalogClock_Hour.TabIndex = 30;
-            this.checkBox_AnalogClock_Hour.Text = "Отображать";
-            this.checkBox_AnalogClock_Hour.UseVisualStyleBackColor = true;
-            this.checkBox_AnalogClock_Hour.CheckedChanged += new System.EventHandler(this.checkBox_AnalogClock_Hour_CheckedChanged);
-            this.checkBox_AnalogClock_Hour.MouseClick += new System.Windows.Forms.MouseEventHandler(this.checkBox_Click);
+            this.checkBox_MinCenterImage.AutoSize = true;
+            this.checkBox_MinCenterImage.Location = new System.Drawing.Point(8, 18);
+            this.checkBox_MinCenterImage.Name = "checkBox_MinCenterImage";
+            this.checkBox_MinCenterImage.Size = new System.Drawing.Size(88, 17);
+            this.checkBox_MinCenterImage.TabIndex = 30;
+            this.checkBox_MinCenterImage.Text = "Отображать";
+            this.checkBox_MinCenterImage.UseVisualStyleBackColor = true;
+            this.checkBox_MinCenterImage.CheckedChanged += new System.EventHandler(this.checkBox_MinCenterImage_CheckedChanged);
+            this.checkBox_MinCenterImage.Click += new System.EventHandler(this.checkBox_Click);
+            // 
+            // tabPage32
+            // 
+            this.tabPage32.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage32.Controls.Add(this.groupBox2);
+            this.tabPage32.Controls.Add(this.groupBox_AnalogClock_Sec);
+            this.tabPage32.Location = new System.Drawing.Point(4, 22);
+            this.tabPage32.Name = "tabPage32";
+            this.tabPage32.Size = new System.Drawing.Size(382, 129);
+            this.tabPage32.TabIndex = 2;
+            this.tabPage32.Text = "Секунды";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.comboBox_SecCenterImage_Image);
+            this.groupBox2.Controls.Add(this.label304);
+            this.groupBox2.Controls.Add(this.numericUpDown_SecCenterImage_Y);
+            this.groupBox2.Controls.Add(this.label305);
+            this.groupBox2.Controls.Add(this.numericUpDown_SecCenterImage_X);
+            this.groupBox2.Controls.Add(this.label306);
+            this.groupBox2.Controls.Add(this.checkBox_SecCenterImage);
+            this.groupBox2.Location = new System.Drawing.Point(130, 7);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(116, 120);
+            this.groupBox2.TabIndex = 68;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "CenterImage";
+            this.groupBox2.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            // 
+            // comboBox_SecCenterImage_Image
+            // 
+            this.comboBox_SecCenterImage_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_SecCenterImage_Image.Enabled = false;
+            this.comboBox_SecCenterImage_Image.FormattingEnabled = true;
+            this.comboBox_SecCenterImage_Image.Location = new System.Drawing.Point(65, 93);
+            this.comboBox_SecCenterImage_Image.Name = "comboBox_SecCenterImage_Image";
+            this.comboBox_SecCenterImage_Image.Size = new System.Drawing.Size(45, 21);
+            this.comboBox_SecCenterImage_Image.TabIndex = 63;
+            this.comboBox_SecCenterImage_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            // 
+            // label304
+            // 
+            this.label304.AutoSize = true;
+            this.label304.Enabled = false;
+            this.label304.Location = new System.Drawing.Point(2, 96);
+            this.label304.Name = "label304";
+            this.label304.Size = new System.Drawing.Size(65, 13);
+            this.label304.TabIndex = 62;
+            this.label304.Text = "ImageIndex:";
+            // 
+            // numericUpDown_SecCenterImage_Y
+            // 
+            this.numericUpDown_SecCenterImage_Y.Enabled = false;
+            this.numericUpDown_SecCenterImage_Y.Location = new System.Drawing.Point(65, 67);
+            this.numericUpDown_SecCenterImage_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_SecCenterImage_Y.Name = "numericUpDown_SecCenterImage_Y";
+            this.numericUpDown_SecCenterImage_Y.Size = new System.Drawing.Size(45, 20);
+            this.numericUpDown_SecCenterImage_Y.TabIndex = 61;
+            this.numericUpDown_SecCenterImage_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label305
+            // 
+            this.label305.AutoSize = true;
+            this.label305.Enabled = false;
+            this.label305.Location = new System.Drawing.Point(49, 69);
+            this.label305.Name = "label305";
+            this.label305.Size = new System.Drawing.Size(17, 13);
+            this.label305.TabIndex = 60;
+            this.label305.Text = "Y:";
+            // 
+            // numericUpDown_SecCenterImage_X
+            // 
+            this.numericUpDown_SecCenterImage_X.Enabled = false;
+            this.numericUpDown_SecCenterImage_X.Location = new System.Drawing.Point(65, 41);
+            this.numericUpDown_SecCenterImage_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_SecCenterImage_X.Name = "numericUpDown_SecCenterImage_X";
+            this.numericUpDown_SecCenterImage_X.Size = new System.Drawing.Size(45, 20);
+            this.numericUpDown_SecCenterImage_X.TabIndex = 59;
+            this.numericUpDown_SecCenterImage_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label306
+            // 
+            this.label306.AutoSize = true;
+            this.label306.Enabled = false;
+            this.label306.Location = new System.Drawing.Point(49, 43);
+            this.label306.Name = "label306";
+            this.label306.Size = new System.Drawing.Size(17, 13);
+            this.label306.TabIndex = 58;
+            this.label306.Text = "X:";
+            // 
+            // checkBox_SecCenterImage
+            // 
+            this.checkBox_SecCenterImage.AutoSize = true;
+            this.checkBox_SecCenterImage.Location = new System.Drawing.Point(8, 18);
+            this.checkBox_SecCenterImage.Name = "checkBox_SecCenterImage";
+            this.checkBox_SecCenterImage.Size = new System.Drawing.Size(88, 17);
+            this.checkBox_SecCenterImage.TabIndex = 30;
+            this.checkBox_SecCenterImage.Text = "Отображать";
+            this.checkBox_SecCenterImage.UseVisualStyleBackColor = true;
+            this.checkBox_SecCenterImage.CheckedChanged += new System.EventHandler(this.checkBox_SecCenterImage_CheckedChanged);
+            this.checkBox_SecCenterImage.Click += new System.EventHandler(this.checkBox_Click);
+            // 
+            // groupBox_AnalogClock_Sec
+            // 
+            this.groupBox_AnalogClock_Sec.Controls.Add(this.comboBox_AnalogClock_Sec_Image);
+            this.groupBox_AnalogClock_Sec.Controls.Add(this.label210);
+            this.groupBox_AnalogClock_Sec.Controls.Add(this.numericUpDown_AnalogClock_Sec_Y);
+            this.groupBox_AnalogClock_Sec.Controls.Add(this.label211);
+            this.groupBox_AnalogClock_Sec.Controls.Add(this.numericUpDown_AnalogClock_Sec_X);
+            this.groupBox_AnalogClock_Sec.Controls.Add(this.label212);
+            this.groupBox_AnalogClock_Sec.Controls.Add(this.checkBox_AnalogClock_Sec);
+            this.groupBox_AnalogClock_Sec.Location = new System.Drawing.Point(4, 7);
+            this.groupBox_AnalogClock_Sec.Name = "groupBox_AnalogClock_Sec";
+            this.groupBox_AnalogClock_Sec.Size = new System.Drawing.Size(116, 120);
+            this.groupBox_AnalogClock_Sec.TabIndex = 65;
+            this.groupBox_AnalogClock_Sec.TabStop = false;
+            this.groupBox_AnalogClock_Sec.Text = "Стрелка";
+            this.groupBox_AnalogClock_Sec.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            // 
+            // comboBox_AnalogClock_Sec_Image
+            // 
+            this.comboBox_AnalogClock_Sec_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_AnalogClock_Sec_Image.Enabled = false;
+            this.comboBox_AnalogClock_Sec_Image.FormattingEnabled = true;
+            this.comboBox_AnalogClock_Sec_Image.Location = new System.Drawing.Point(65, 93);
+            this.comboBox_AnalogClock_Sec_Image.Name = "comboBox_AnalogClock_Sec_Image";
+            this.comboBox_AnalogClock_Sec_Image.Size = new System.Drawing.Size(45, 21);
+            this.comboBox_AnalogClock_Sec_Image.TabIndex = 63;
+            this.comboBox_AnalogClock_Sec_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            // 
+            // label210
+            // 
+            this.label210.AutoSize = true;
+            this.label210.Enabled = false;
+            this.label210.Location = new System.Drawing.Point(2, 96);
+            this.label210.Name = "label210";
+            this.label210.Size = new System.Drawing.Size(65, 13);
+            this.label210.TabIndex = 62;
+            this.label210.Text = "ImageIndex:";
+            // 
+            // numericUpDown_AnalogClock_Sec_Y
+            // 
+            this.numericUpDown_AnalogClock_Sec_Y.Enabled = false;
+            this.numericUpDown_AnalogClock_Sec_Y.Location = new System.Drawing.Point(65, 67);
+            this.numericUpDown_AnalogClock_Sec_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_AnalogClock_Sec_Y.Name = "numericUpDown_AnalogClock_Sec_Y";
+            this.numericUpDown_AnalogClock_Sec_Y.Size = new System.Drawing.Size(45, 20);
+            this.numericUpDown_AnalogClock_Sec_Y.TabIndex = 61;
+            this.numericUpDown_AnalogClock_Sec_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label211
+            // 
+            this.label211.AutoSize = true;
+            this.label211.Enabled = false;
+            this.label211.Location = new System.Drawing.Point(9, 69);
+            this.label211.Name = "label211";
+            this.label211.Size = new System.Drawing.Size(57, 13);
+            this.label211.TabIndex = 60;
+            this.label211.Text = "Центр (Y):";
+            // 
+            // numericUpDown_AnalogClock_Sec_X
+            // 
+            this.numericUpDown_AnalogClock_Sec_X.Enabled = false;
+            this.numericUpDown_AnalogClock_Sec_X.Location = new System.Drawing.Point(65, 41);
+            this.numericUpDown_AnalogClock_Sec_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_AnalogClock_Sec_X.Name = "numericUpDown_AnalogClock_Sec_X";
+            this.numericUpDown_AnalogClock_Sec_X.Size = new System.Drawing.Size(45, 20);
+            this.numericUpDown_AnalogClock_Sec_X.TabIndex = 59;
+            this.numericUpDown_AnalogClock_Sec_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label212
+            // 
+            this.label212.AutoSize = true;
+            this.label212.Enabled = false;
+            this.label212.Location = new System.Drawing.Point(9, 43);
+            this.label212.Name = "label212";
+            this.label212.Size = new System.Drawing.Size(57, 13);
+            this.label212.TabIndex = 58;
+            this.label212.Text = "Центр (X):";
+            // 
+            // checkBox_AnalogClock_Sec
+            // 
+            this.checkBox_AnalogClock_Sec.AutoSize = true;
+            this.checkBox_AnalogClock_Sec.Location = new System.Drawing.Point(8, 18);
+            this.checkBox_AnalogClock_Sec.Name = "checkBox_AnalogClock_Sec";
+            this.checkBox_AnalogClock_Sec.Size = new System.Drawing.Size(88, 17);
+            this.checkBox_AnalogClock_Sec.TabIndex = 30;
+            this.checkBox_AnalogClock_Sec.Text = "Отображать";
+            this.checkBox_AnalogClock_Sec.UseVisualStyleBackColor = true;
+            this.checkBox_AnalogClock_Sec.CheckedChanged += new System.EventHandler(this.checkBox_AnalogClock_Sec_CheckedChanged);
+            this.checkBox_AnalogClock_Sec.Click += new System.EventHandler(this.checkBox_Click);
             // 
             // checkBox_AnalogClock
             // 
@@ -9095,7 +9474,7 @@
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(365, 169);
+            this.tabPage8.Size = new System.Drawing.Size(382, 169);
             this.tabPage8.TabIndex = 1;
             this.tabPage8.Text = "День и месяц отдельными блоками";
             // 
@@ -10504,7 +10883,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(365, 150);
+            this.tabPage4.Size = new System.Drawing.Size(382, 150);
             this.tabPage4.TabIndex = 0;
             this.tabPage4.Text = "Часы";
             // 
@@ -10747,7 +11126,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(365, 150);
+            this.tabPage5.Size = new System.Drawing.Size(382, 150);
             this.tabPage5.TabIndex = 1;
             this.tabPage5.Text = "Минуты";
             // 
@@ -11621,18 +12000,34 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Icon_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Icon_X)).EndInit();
             this.panel_AnalogClock.ResumeLayout(false);
-            this.groupBox_AnalogClock_Sec.ResumeLayout(false);
-            this.groupBox_AnalogClock_Sec.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Sec_Y)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Sec_X)).EndInit();
-            this.groupBox_AnalogClock_Min.ResumeLayout(false);
-            this.groupBox_AnalogClock_Min.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Min_Y)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Min_X)).EndInit();
+            this.tabControl_AnalogClock.ResumeLayout(false);
+            this.tabPage29.ResumeLayout(false);
             this.groupBox_AnalogClock_Hour.ResumeLayout(false);
             this.groupBox_AnalogClock_Hour.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Hour_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Hour_X)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_HourCenterImage_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_HourCenterImage_X)).EndInit();
+            this.tabPage31.ResumeLayout(false);
+            this.groupBox_AnalogClock_Min.ResumeLayout(false);
+            this.groupBox_AnalogClock_Min.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Min_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Min_X)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MinCenterImage_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MinCenterImage_X)).EndInit();
+            this.tabPage32.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_SecCenterImage_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_SecCenterImage_X)).EndInit();
+            this.groupBox_AnalogClock_Sec.ResumeLayout(false);
+            this.groupBox_AnalogClock_Sec.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Sec_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Sec_X)).EndInit();
             this.panel_Battery.ResumeLayout(false);
             this.tabControl4.ResumeLayout(false);
             this.tabPage21.ResumeLayout(false);
@@ -12634,6 +13029,34 @@
         private System.Windows.Forms.Button button_PreviewSmall_42;
         private System.Windows.Forms.HelpProvider helpProvider1;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.TabControl tabControl_AnalogClock;
+        private System.Windows.Forms.TabPage tabPage29;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.ComboBox comboBox_HourCenterImage_Image;
+        private System.Windows.Forms.Label label310;
+        private System.Windows.Forms.NumericUpDown numericUpDown_HourCenterImage_Y;
+        private System.Windows.Forms.Label label311;
+        private System.Windows.Forms.NumericUpDown numericUpDown_HourCenterImage_X;
+        private System.Windows.Forms.Label label312;
+        private System.Windows.Forms.CheckBox checkBox_HourCenterImage;
+        private System.Windows.Forms.TabPage tabPage31;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ComboBox comboBox_MinCenterImage_Image;
+        private System.Windows.Forms.Label label307;
+        private System.Windows.Forms.NumericUpDown numericUpDown_MinCenterImage_Y;
+        private System.Windows.Forms.Label label308;
+        private System.Windows.Forms.NumericUpDown numericUpDown_MinCenterImage_X;
+        private System.Windows.Forms.Label label309;
+        private System.Windows.Forms.CheckBox checkBox_MinCenterImage;
+        private System.Windows.Forms.TabPage tabPage32;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ComboBox comboBox_SecCenterImage_Image;
+        private System.Windows.Forms.Label label304;
+        private System.Windows.Forms.NumericUpDown numericUpDown_SecCenterImage_Y;
+        private System.Windows.Forms.Label label305;
+        private System.Windows.Forms.NumericUpDown numericUpDown_SecCenterImage_X;
+        private System.Windows.Forms.Label label306;
+        private System.Windows.Forms.CheckBox checkBox_SecCenterImage;
     }
 }
 
