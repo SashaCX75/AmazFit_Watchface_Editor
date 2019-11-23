@@ -110,7 +110,11 @@ namespace GTR_Watch_face
         private void Form1_Load(object sender, EventArgs e)
         {
             helpProvider1.HelpNamespace = Application.StartupPath + @"\readme.chm";
+#if Puthon
             string subPath = Application.StartupPath + @"\py_amazfit_tools-dev_gtr\main.py";
+#else
+            string subPath = Application.StartupPath + @"\main\main.exe";
+#endif
             textBox_pack_unpack_dir.Text = subPath;
             if (Properties.Settings.Default.pack_unpack_dir.Length > 1)
                 textBox_pack_unpack_dir.Text = Properties.Settings.Default.pack_unpack_dir;
@@ -139,6 +143,19 @@ namespace GTR_Watch_face
             PreviewView = true;
         }
 
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+            if ((StartFileName != null) && (StartFileName.Length > 0)) LoadJsonAndImage(StartFileName);
+        }
+
+        private void Form1_HelpButtonClicked(object sender, CancelEventArgs e)
+        {
+            //FormFileExists f = new FormFileExists();
+            //f.ShowDialog();
+            SendKeys.Send("{F1}");
+            e.Cancel = true;
+        }
+
         private void button_unpack_Click(object sender, EventArgs e)
         {
             string subPath = Application.StartupPath + @"\Watch_face\";
@@ -154,7 +171,8 @@ namespace GTR_Watch_face
 
             if (!File.Exists(textBox_pack_unpack_dir.Text))
             {
-                MessageBox.Show("Путь к утилите распаковки/запаковки указан неверно.\r\n" +
+                MessageBox.Show("Путь [" + textBox_pack_unpack_dir.Text +
+                    "] к утилите распаковки/запаковки указан неверно.\r\n\r\n" +
                     "Укажите верный путь к утилите распаковки/запаковки.",
                     "Файл не найден", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -229,7 +247,8 @@ namespace GTR_Watch_face
 
             if (!File.Exists(textBox_pack_unpack_dir.Text))
             {
-                MessageBox.Show("Путь к утилите распаковки/запаковки указан неверно.\r\n" +
+                MessageBox.Show("Путь [" + textBox_pack_unpack_dir.Text +
+                    "] к утилите распаковки/запаковки указан неверно.\r\n\r\n" +
                     "Укажите верный путь к утилите распаковки/запаковки.",
                     "Файл не найден", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -434,7 +453,7 @@ namespace GTR_Watch_face
             comboBox_Background.Items.AddRange(ListImages.ToArray());
             comboBox_Preview.Items.AddRange(ListImages.ToArray());
 
-            #region выпадающие списки с картинками
+#region выпадающие списки с картинками
             comboBox_Hours_Tens_Image.Items.AddRange(ListImages.ToArray());
             comboBox_Hours_Ones_Image.Items.AddRange(ListImages.ToArray());
             comboBox_Min_Tens_Image.Items.AddRange(ListImages.ToArray());
@@ -491,7 +510,7 @@ namespace GTR_Watch_face
             comboBox_Weather_Day_Image.Items.AddRange(ListImages.ToArray());
             comboBox_Weather_Night_Image.Items.AddRange(ListImages.ToArray());
 
-            #endregion
+#endregion
 
             if (Watch_Face == null) return;
             if (Watch_Face.Background != null)
@@ -502,7 +521,7 @@ namespace GTR_Watch_face
                     comboBox_Preview.Text = Watch_Face.Background.Preview.ImageIndex.ToString();
             }
 
-            #region Time
+#region Time
             if (Watch_Face.Time != null)
             {
                 checkBox_Time.Checked = true;
@@ -585,9 +604,9 @@ namespace GTR_Watch_face
                 checkBox_Delimiter.Checked = false;
                 checkBox_AmPm.Checked = false;
             }
-            #endregion
+#endregion
 
-            #region Date
+#region Date
             if (Watch_Face.Date != null)
             {
                 checkBox_Date.Checked = true;
@@ -685,9 +704,9 @@ namespace GTR_Watch_face
                 checkBox_MonthAndDayM.Checked = false;
                 checkBox_MonthName.Checked = false;
             }
-            #endregion
+#endregion
 
-            #region StepsProgress
+#region StepsProgress
             if ((Watch_Face.StepsProgress != null) && (Watch_Face.StepsProgress.Circle != null))
             {
                 checkBox_StepsProgress.Checked = true;
@@ -706,9 +725,9 @@ namespace GTR_Watch_face
                 colorDialog1.Color = new_color;
             }
             else checkBox_StepsProgress.Checked = false;
-            #endregion
+#endregion
 
-            #region Activity
+#region Activity
             if (Watch_Face.Activity != null)
             {
                 checkBox_Activity.Checked = true;
@@ -815,9 +834,9 @@ namespace GTR_Watch_face
                 checkBox_ActivityCalories.Checked = false;
                 checkBox_ActivityStar.Checked = false;
             }
-            #endregion
+#endregion
 
-            #region Status
+#region Status
             if (Watch_Face.Status != null)
             {
                 if (Watch_Face.Status.Bluetooth != null)
@@ -880,9 +899,9 @@ namespace GTR_Watch_face
                 }
                 else checkBox_DND.Checked = false;
             }
-            #endregion
+#endregion
 
-            #region Battery
+#region Battery
             if (Watch_Face.Battery != null)
             {
                 checkBox_Battery.Checked = true;
@@ -946,9 +965,9 @@ namespace GTR_Watch_face
                 checkBox_Battery_Img.Checked = false;
                 checkBox_Battery_Scale.Checked = false;
             }
-            #endregion
+#endregion
 
-            #region AnalogDialFace
+#region AnalogDialFace
             if (Watch_Face.AnalogDialFace != null)
             {
                 checkBox_AnalogClock.Checked = true;
@@ -1017,9 +1036,9 @@ namespace GTR_Watch_face
                 checkBox_MinCenterImage.Checked = false;
                 checkBox_SecCenterImage.Checked = false;
             }
-            #endregion
+#endregion
 
-            #region Weather
+#region Weather
             if (Watch_Face.Weather != null)
             {
                 checkBox_Weather.Checked = true;
@@ -1122,7 +1141,7 @@ namespace GTR_Watch_face
                 checkBox_Weather_Icon.Checked = false;
                 checkBox_Weather.Checked = false;
             }
-            #endregion
+#endregion
         }
 
         private string AlignmentToString(string Alignment)
@@ -1791,7 +1810,7 @@ namespace GTR_Watch_face
 
         }
 
-        #region выбираем данные для предпросмотра
+#region выбираем данные для предпросмотра
         private void SetPreferences1()
         {
             Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set1.Value.Month;
@@ -2051,7 +2070,7 @@ namespace GTR_Watch_face
 
             SetDigitForPrewiev();
         }
-        #endregion
+#endregion
 
         // определяем отдельные цифры для даты и времени
         private void SetDigitForPrewiev()
@@ -2192,7 +2211,7 @@ namespace GTR_Watch_face
             }
         }
 
-        #region сворачиваем и разварачиваем панели с настройками
+#region сворачиваем и разварачиваем панели с настройками
         private void button_Background_Click(object sender, EventArgs e)
         {
             panel_Background.Height = 30;
@@ -2307,9 +2326,9 @@ namespace GTR_Watch_face
             panel_AnalogClock.Height = 1;
             panel_Weather.Height = 240;
         }
-        #endregion
+#endregion
 
-        #region активируем и деактивируем настройки
+#region активируем и деактивируем настройки
         private void checkBox_Minutes_CheckedChanged(object sender, EventArgs e)
         {
             bool b = checkBox_Minutes.Checked;
@@ -2948,20 +2967,23 @@ namespace GTR_Watch_face
                 groupBox_Symbols.Enabled = false;
             }
         }
-        #endregion
+#endregion
 
         private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox comboBox = (ComboBox)(sender);
-            try
+            if (comboBox.Name != "comboBox_WeatherSet_Icon")
             {
-                using (FileStream stream = new FileStream(ListImagesFullName[comboBox.SelectedIndex], FileMode.Open, FileAccess.Read))
+                try
                 {
-                    pictureBox1.Image = Image.FromStream(stream);
-                    timer1.Enabled = true;
+                    using (FileStream stream = new FileStream(ListImagesFullName[comboBox.SelectedIndex], FileMode.Open, FileAccess.Read))
+                    {
+                        pictureBox1.Image = Image.FromStream(stream);
+                        timer1.Enabled = true;
+                    }
                 }
+                catch { }
             }
-            catch { }
             //pictureBox1.Image = null;
             JSON_write();
             PreviewImage();
@@ -3723,7 +3745,7 @@ namespace GTR_Watch_face
         }
 
 
-        #region сворачиваем и разварачиваем панели с предустановками
+#region сворачиваем и разварачиваем панели с предустановками
         private void button_Set1_Click(object sender, EventArgs e)
         {
             panel_Set1.Height = 125;
@@ -3875,9 +3897,9 @@ namespace GTR_Watch_face
             SetPreferences10();
             PreviewImage();
         }
-        #endregion
+#endregion
 
-        #region поменялись предустановки
+#region поменялись предустановки
         private void dateTimePicker_Time_Set1_ValueChanged(object sender, EventArgs e)
         {
             SetPreferences1();
@@ -4030,7 +4052,7 @@ namespace GTR_Watch_face
             SetPreferences10();
             PreviewImage();
         }
-        #endregion
+#endregion
 
         // переключаем цвет фона в таблице с картинками
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -5050,7 +5072,7 @@ namespace GTR_Watch_face
             gPanel.ScaleTransform(scale, scale);
             int i;
 
-            #region Background
+#region Background
             if (comboBox_Background.SelectedIndex >= 0)
             {
                 i = comboBox_Background.SelectedIndex;
@@ -5058,9 +5080,9 @@ namespace GTR_Watch_face
                 gPanel.DrawImage(src, new Rectangle(0, 0, src.Width, src.Height));
                 src.Dispose();
             }
-            #endregion
+#endregion
 
-            #region Time
+#region Time
             if (checkBox_Time.Checked)
             {
                 if (checkBox_AmPm.Checked)
@@ -5235,9 +5257,9 @@ namespace GTR_Watch_face
                     }
                 }
             }
-            #endregion
+#endregion
 
-            #region Date
+#region Date
             if (checkBox_Date.Checked)
             {
                 if ((checkBox_MonthAndDayM.Checked) && (comboBox_MonthAndDayM_Image.SelectedIndex >= 0))
@@ -5497,9 +5519,9 @@ namespace GTR_Watch_face
                     src.Dispose();
                 }
             }
-            #endregion
+#endregion
 
-            #region Weather
+#region Weather
             if (checkBox_Weather.Checked)
             {
                 if ((checkBox_Weather_Icon.Checked) && (comboBox_Weather_Icon_Image.SelectedIndex >= 0))
@@ -5591,11 +5613,11 @@ namespace GTR_Watch_face
 
                 }
             }
-            #endregion
+#endregion
 
             gPanel.SmoothingMode = SmoothingMode.AntiAlias;
 
-            #region StepsProgress
+#region StepsProgress
             if (checkBox_StepsProgress.Checked)
             {
                 Pen pen = new Pen(comboBox_StepsProgress_Color.BackColor,
@@ -5621,9 +5643,9 @@ namespace GTR_Watch_face
 
                 }
             }
-            #endregion
+#endregion
 
-            #region Activity
+#region Activity
             if (checkBox_Activity.Checked)
             {
                 if ((checkBox_ActivityGoal.Checked) && (comboBox_ActivityGoal_Image.SelectedIndex >= 0))
@@ -5703,9 +5725,9 @@ namespace GTR_Watch_face
                     }
                 }
             }
-            #endregion
+#endregion
 
-            #region Status
+#region Status
             if (checkBox_Bluetooth.Checked)
             {
                 if (Watch_Face_Preview_Set.Status.Bluetooth)
@@ -5801,9 +5823,9 @@ namespace GTR_Watch_face
                     }
                 }
             }
-            #endregion
+#endregion
 
-            #region Battery
+#region Battery
             if (checkBox_Battery.Checked)
             {
                 if (checkBox_Battery.Checked)
@@ -5867,9 +5889,9 @@ namespace GTR_Watch_face
                     }
                 }
             }
-            #endregion
+#endregion
 
-            #region AnalogDialFace
+#region AnalogDialFace
             if (checkBox_AnalogClock.Checked)
             {
                 // часы
@@ -5935,9 +5957,9 @@ namespace GTR_Watch_face
                     src.Dispose();
                 }
             }
-            #endregion
+#endregion
 
-            #region Mesh
+#region Mesh
             int center = 227;
             if (!model_47) center = 195;
 
@@ -5970,7 +5992,7 @@ namespace GTR_Watch_face
                     gPanel.DrawLine(pen, new Point(0, center - i * LineDistance), new Point(454, center - i * LineDistance));
                 }
             }
-            #endregion
+#endregion
 
             src.Dispose();
         }
@@ -6019,19 +6041,6 @@ namespace GTR_Watch_face
             PreviewImage();
         }
 
-        private void Form1_Shown(object sender, EventArgs e)
-        {
-            if ((StartFileName != null) && (StartFileName.Length > 0)) LoadJsonAndImage(StartFileName);
-        }
-
-        private void Form1_HelpButtonClicked(object sender, CancelEventArgs e)
-        {
-            //FormFileExists f = new FormFileExists();
-            //f.ShowDialog();
-            SendKeys.Send("{F1}");
-            e.Cancel = true;
-        }
-
         private void timer2_Tick(object sender, EventArgs e)
         {
             timer2.Enabled = false;
@@ -6047,19 +6056,22 @@ namespace GTR_Watch_face
                 if (formPreview.radioButton_xlarge.Checked) scalePreviewPaint = 2.0f;
                 if (formPreview.radioButton_xxlarge.Checked) scalePreviewPaint = 2.5f;
                 PreviewToBitmap(gPanelPreviewPaint, scalePreviewPaint, radioButton_47.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked);
-                gPanelPreviewPaint.Dispose(); 
+                gPanelPreviewPaint.Dispose();
             }
         }
     }
+}
 
 
 
 
 
-    #region WATCH_FACE_JSON
 
-    /// <summary>Корневая структура JSON файла</summary>
-    public class WATCH_FACE_JSON
+
+#region WATCH_FACE_JSON
+
+/// <summary>Корневая структура JSON файла</summary>
+public class WATCH_FACE_JSON
     {
         /// <summary>Задний фон</summary>
         public Background Background { get; set; }
@@ -6371,9 +6383,9 @@ namespace GTR_Watch_face
         public Sector Sector { get; set; }
     }
 
-    #endregion
+#endregion
 
-    #region WATCH_FACE_PREWIEV
+#region WATCH_FACE_PREWIEV
     /// <summary>отдельные цифры для даты и времени</summary>
     public class WATCH_FACE_PREWIEV
     {
@@ -6408,9 +6420,9 @@ namespace GTR_Watch_face
         public int Tens { get; set; }
         public int Ones { get; set; }
     }
-    #endregion
+#endregion
 
-    #region WATCH_FACE_PREWIEV_SET
+#region WATCH_FACE_PREWIEV_SET
     /// <summary>набор настроек для предпросмотра</summary>
     public class WATCH_FACE_PREWIEV_SET
     {
@@ -6451,9 +6463,9 @@ namespace GTR_Watch_face
         public bool Lock { get; set; }
         public bool DoNotDisturb { get; set; }
     }
-    #endregion
+#endregion
 
-    #region PreviewStates
+#region PreviewStates
     public class PREWIEV_STATES
     {
         public ClassPreview[] Property1 { get; set; }
@@ -6483,5 +6495,5 @@ namespace GTR_Watch_face
         public int Minute { get; set; }
         public int Second { get; set; }
     }
-    #endregion
-}
+#endregion
+

@@ -4555,7 +4555,7 @@
             this.panel_Weather.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_Weather.Location = new System.Drawing.Point(0, 215);
             this.panel_Weather.Name = "panel_Weather";
-            this.panel_Weather.Size = new System.Drawing.Size(392, 1);
+            this.panel_Weather.Size = new System.Drawing.Size(392, 190);
             this.panel_Weather.TabIndex = 17;
             // 
             // groupBox_Symbols
