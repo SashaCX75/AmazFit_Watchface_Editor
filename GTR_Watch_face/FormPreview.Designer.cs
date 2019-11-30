@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Preview));
             this.panel_Preview = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -36,6 +37,7 @@
             this.radioButton_large = new System.Windows.Forms.RadioButton();
             this.radioButton_normal = new System.Windows.Forms.RadioButton();
             this.radioButton_small = new System.Windows.Forms.RadioButton();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,8 +46,11 @@
             this.panel_Preview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_Preview.Location = new System.Drawing.Point(3, 3);
             this.panel_Preview.Name = "panel_Preview";
-            this.panel_Preview.Size = new System.Drawing.Size(454, 454);
+            this.panel_Preview.Size = new System.Drawing.Size(457, 457);
             this.panel_Preview.TabIndex = 0;
+            this.panel_Preview.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.panel_Preview_MouseDoubleClick);
+            this.panel_Preview.MouseLeave += new System.EventHandler(this.panel_Preview_MouseLeave);
+            this.panel_Preview.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_Preview_MouseMove);
             // 
             // panel1
             // 
@@ -55,9 +60,9 @@
             this.panel1.Controls.Add(this.radioButton_normal);
             this.panel1.Controls.Add(this.radioButton_small);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 458);
+            this.panel1.Location = new System.Drawing.Point(0, 461);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(460, 24);
+            this.panel1.Size = new System.Drawing.Size(463, 24);
             this.panel1.TabIndex = 1;
             // 
             // radioButton_xxlarge
@@ -117,12 +122,19 @@
             this.radioButton_small.UseVisualStyleBackColor = true;
             this.radioButton_small.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
             // 
+            // toolTip1
+            // 
+            this.toolTip1.AutoPopDelay = 3000;
+            this.toolTip1.InitialDelay = 500;
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.ReshowDelay = 100;
+            // 
             // Form_Preview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(460, 482);
+            this.ClientSize = new System.Drawing.Size(463, 485);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel_Preview);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -146,5 +158,6 @@
         public System.Windows.Forms.RadioButton radioButton_large;
         public System.Windows.Forms.RadioButton radioButton_xxlarge;
         public System.Windows.Forms.RadioButton radioButton_xlarge;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

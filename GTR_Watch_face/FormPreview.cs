@@ -12,6 +12,7 @@ namespace GTR_Watch_face
 {
     public partial class Form_Preview : Form
     {
+        float scale = 1;
         public Form_Preview()
         {
             InitializeComponent();
@@ -25,56 +26,60 @@ namespace GTR_Watch_face
             {
                 if (Model_47.model_47)
                 {
-                    panel_Preview.Size = new Size(227, 227);
-                    this.Size = new Size(227 + 22, 227 + 66); 
+                    panel_Preview.Size = new Size(230, 230);
+                    this.Size = new Size(230 + 22, 230 + 66); 
                 }
                 else
                 {
-                    panel_Preview.Size = new Size(195, 195);
-                    this.Size = new Size(195 + 22, 195 + 66);
+                    panel_Preview.Size = new Size(198, 198);
+                    this.Size = new Size(198 + 22, 198 + 66);
                 }
+                scale = 0.5f;
             }
 
             if (radioButton_normal.Checked)
             {
                 if (Model_47.model_47)
                 {
-                    panel_Preview.Size = new Size(454, 454);
-                    this.Size = new Size(454 + 22, 454 + 66);
+                    panel_Preview.Size = new Size(456, 456);
+                    this.Size = new Size(456 + 22, 456 + 66);
                 }
                 else
                 {
-                    panel_Preview.Size = new Size(390, 390);
-                    this.Size = new Size(390 + 22, 390 + 66);
+                    panel_Preview.Size = new Size(392, 392);
+                    this.Size = new Size(392 + 22, 392 + 66);
                 }
+                scale = 1f;
             }
 
             if (radioButton_large.Checked)
             {
                 if (Model_47.model_47)
                 {
-                    panel_Preview.Size = new Size(681, 681);
-                    this.Size = new Size(681 + 22, 681 + 66);
+                    panel_Preview.Size = new Size(683, 683);
+                    this.Size = new Size(683 + 22, 683 + 66);
                 }
                 else
                 {
-                    panel_Preview.Size = new Size(585, 585);
-                    this.Size = new Size(585 + 22, 585 + 66);
+                    panel_Preview.Size = new Size(586, 586);
+                    this.Size = new Size(586 + 22, 586 + 66);
                 }
+                scale = 1.5f;
             }
 
             if (radioButton_xlarge.Checked)
             {
                 if (Model_47.model_47)
                 {
-                    panel_Preview.Size = new Size(908, 908);
-                    this.Size = new Size(908 + 22, 908 + 66);
+                    panel_Preview.Size = new Size(909, 909);
+                    this.Size = new Size(909 + 22, 909 + 66);
                 }
                 else
                 {
-                    panel_Preview.Size = new Size(780, 780);
-                    this.Size = new Size(780 + 22, 780 + 66);
+                    panel_Preview.Size = new Size(781, 781);
+                    this.Size = new Size(781 + 22, 781 + 66);
                 }
+                scale = 2f;
             }
 
             if (radioButton_xxlarge.Checked)
@@ -87,14 +92,35 @@ namespace GTR_Watch_face
                 else
                 {
                     panel_Preview.Size = new Size(975, 975);
-                    this.Size = new Size(975 + 22, 975 + 66);
+                    this.Size = new Size(975 + 22, 97 + 66);
                 }
+                scale = 2.5f;
             }
         }
 
         public class Model_47
         {
             public static bool model_47 { get; set; }
+        }
+
+        private void panel_Preview_MouseMove(object sender, MouseEventArgs e)
+        {
+            int CursorX = (int)Math.Round(e.X / scale, 0);
+            int CursorY = (int)Math.Round(e.Y / scale, 0);
+
+            this.Text = "Предпросмотр [X=" + CursorX.ToString() +
+                ";  Y=" + CursorY.ToString() + "]";
+        }
+
+        private void panel_Preview_MouseLeave(object sender, EventArgs e)
+        {
+            this.Text = "Предпросмотр";
+        }
+        private void panel_Preview_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            MouseСoordinates.X = (int)Math.Round(e.X / scale, 0);
+            MouseСoordinates.Y = (int)Math.Round(e.Y / scale, 0);
+            toolTip1.Show("Координаты скопированны", this, e.X-5, e.Y-7, 2000);
         }
     }
     

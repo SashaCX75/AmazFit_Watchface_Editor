@@ -15,6 +15,7 @@ using System.Drawing.Imaging;
 using System.Globalization;
 using System.Drawing.Drawing2D;
 using ImageMagick;
+using LineCap = System.Drawing.Drawing2D.LineCap;
 
 namespace GTR_Watch_face
 {
@@ -30,6 +31,7 @@ namespace GTR_Watch_face
         string FullFileDir;
         string StartFileName;
         Form_Preview formPreview;
+        
 
         public Form1(string[] args)
         {
@@ -138,6 +140,9 @@ namespace GTR_Watch_face
             comboBox_Weather_Text_Alignment.Text = "Вверх влево";
             comboBox_Weather_Day_Alignment.Text = "Вверх влево";
             comboBox_Weather_Night_Alignment.Text = "Вверх влево";
+
+            comboBox_Battery_Flatness.Text = "Круглое";
+            comboBox_StepsProgress_Flatness.Text = "Круглое";
 
             SetPreferences1();
             PreviewView = true;
@@ -415,9 +420,10 @@ namespace GTR_Watch_face
 
             //loadedImage.Dispose();
             int LastImage = Int32.Parse(ListImages.Last()) + 1;
+#if !DEBUG
             if (count != LastImage) MessageBox.Show("PNG файлы идут не по порядку или часть файлов отсутствует.\r\n" +
                  "Присвойте имена PNG файлам в порядке возрастания.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+#endif
 
             try
             {
@@ -723,6 +729,18 @@ namespace GTR_Watch_face
                 Color new_color = Color.FromArgb(255, color.R, color.G, color.B);
                 comboBox_StepsProgress_Color.BackColor = new_color;
                 colorDialog1.Color = new_color;
+                switch (Watch_Face.StepsProgress.Circle.Flatness)
+                {
+                    case 90:
+                        comboBox_StepsProgress_Flatness.Text = "Треугольное";
+                        break;
+                    case 180:
+                        comboBox_StepsProgress_Flatness.Text = "Плоское";
+                        break;
+                    default:
+                        comboBox_StepsProgress_Flatness.Text = "Круглое";
+                        break;
+                }
             }
             else checkBox_StepsProgress.Checked = false;
 #endregion
@@ -955,6 +973,19 @@ namespace GTR_Watch_face
                     Color new_color = Color.FromArgb(255, color.R, color.G, color.B);
                     comboBox_Battery_Scale_Color.BackColor = new_color;
                     colorDialog2.Color = new_color;
+
+                    switch (Watch_Face.Battery.Scale.Flatness)
+                    {
+                        case 90:
+                            comboBox_Battery_Flatness.Text = "Треугольное";
+                            break;
+                        case 180:
+                            comboBox_Battery_Flatness.Text = "Плоское";
+                            break;
+                        default:
+                            comboBox_Battery_Flatness.Text = "Круглое";
+                            break;
+                    }
                 }
                 else checkBox_Battery_Scale.Checked = false;
             }
@@ -977,6 +1008,13 @@ namespace GTR_Watch_face
                     numericUpDown_AnalogClock_Hour_X.Value = Watch_Face.AnalogDialFace.Hours.Image.X;
                     numericUpDown_AnalogClock_Hour_Y.Value = Watch_Face.AnalogDialFace.Hours.Image.Y;
                     comboBox_AnalogClock_Hour_Image.Text = Watch_Face.AnalogDialFace.Hours.Image.ImageIndex.ToString();
+
+                    if (Watch_Face.AnalogDialFace.Hours.CenterOffset != null)
+                    {
+                        numericUpDown_AnalogClock_Hour_Offset_X.Value = Watch_Face.AnalogDialFace.Hours.CenterOffset.X;
+                        numericUpDown_AnalogClock_Hour_Offset_Y.Value = Watch_Face.AnalogDialFace.Hours.CenterOffset.Y;
+
+                    }
                 }
                 else checkBox_AnalogClock_Hour.Checked = false;
 
@@ -986,6 +1024,13 @@ namespace GTR_Watch_face
                     numericUpDown_AnalogClock_Min_X.Value = Watch_Face.AnalogDialFace.Minutes.Image.X;
                     numericUpDown_AnalogClock_Min_Y.Value = Watch_Face.AnalogDialFace.Minutes.Image.Y;
                     comboBox_AnalogClock_Min_Image.Text = Watch_Face.AnalogDialFace.Minutes.Image.ImageIndex.ToString();
+
+                    if (Watch_Face.AnalogDialFace.Minutes.CenterOffset != null)
+                    {
+                        numericUpDown_AnalogClock_Min_Offset_X.Value = Watch_Face.AnalogDialFace.Minutes.CenterOffset.X;
+                        numericUpDown_AnalogClock_Min_Offset_Y.Value = Watch_Face.AnalogDialFace.Minutes.CenterOffset.Y;
+
+                    }
                 }
                 else checkBox_AnalogClock_Min.Checked = false;
 
@@ -995,6 +1040,13 @@ namespace GTR_Watch_face
                     numericUpDown_AnalogClock_Sec_X.Value = Watch_Face.AnalogDialFace.Seconds.Image.X;
                     numericUpDown_AnalogClock_Sec_Y.Value = Watch_Face.AnalogDialFace.Seconds.Image.Y;
                     comboBox_AnalogClock_Sec_Image.Text = Watch_Face.AnalogDialFace.Seconds.Image.ImageIndex.ToString();
+
+                    if (Watch_Face.AnalogDialFace.Seconds.CenterOffset != null)
+                    {
+                        numericUpDown_AnalogClock_Sec_Offset_X.Value = Watch_Face.AnalogDialFace.Seconds.CenterOffset.X;
+                        numericUpDown_AnalogClock_Sec_Offset_Y.Value = Watch_Face.AnalogDialFace.Seconds.CenterOffset.Y;
+
+                    }
                 }
                 else checkBox_AnalogClock_Sec.Checked = false;
 
@@ -1251,7 +1303,7 @@ namespace GTR_Watch_face
             gPanel.Clear(panel_Preview.BackColor);
             float scale = 1.0f;
             if (panel_Preview.Height < 300) scale = 0.5f;
-            PreviewToBitmap(gPanel, scale, radioButton_47.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked);
+            PreviewToBitmap(gPanel, scale, radioButton_47.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked);
             gPanel.Dispose();
 
             if ((formPreview != null) && (formPreview.Visible))
@@ -1263,7 +1315,8 @@ namespace GTR_Watch_face
                 if (formPreview.radioButton_large.Checked) scalePreview = 1.5f;
                 if (formPreview.radioButton_xlarge.Checked) scalePreview = 2.0f;
                 if (formPreview.radioButton_xxlarge.Checked) scalePreview = 2.5f;
-                PreviewToBitmap(gPanelPreview, scalePreview, radioButton_47.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked);
+                PreviewToBitmap(gPanelPreview, scalePreview, radioButton_47.Checked, checkBox_WebW.Checked, 
+                    checkBox_WebB.Checked, checkBox_border.Checked);
                 gPanelPreview.Dispose();
             }
         }
@@ -1272,21 +1325,23 @@ namespace GTR_Watch_face
         /// <param name="graphics">Поверхность для рисования</param>
         /// <param name="x1">Центр стрелки X</param>
         /// <param name="y1">Центр стрелки Y</param>
+        /// <param name="offsetX">Смещение от центра по X</param>
+        /// <param name="offsetY">Смещение от центра по Y</param>
         /// <param name="image_index">Номер изображения</param>
         /// <param name="angle">Угол поворота стрелки в градусах</param>
         /// <param name="model_47">Модель 47мм</param>
-        public void DrawAnalogClock(Graphics graphics, int x1, int y1, int image_index, float angle, bool model_47)
+        public void DrawAnalogClock(Graphics graphics, int x1, int y1, int offsetX, int offsetY, int image_index, float angle, bool model_47)
         {
             //graphics.RotateTransform(angle);
             var src = new Bitmap(ListImagesFullName[image_index]);
             //graphics.DrawImage(src, new Rectangle(227 - x1, 227 - y1, src.Width, src.Height));
             int offSet = 227;
             if (!model_47) offSet = 195;
-            graphics.TranslateTransform(offSet, offSet);
+            graphics.TranslateTransform(offSet + offsetX, offSet + offsetY);
             graphics.RotateTransform(angle);
             graphics.DrawImage(src, new Rectangle(-x1, -y1, src.Width, src.Height));
             graphics.RotateTransform(-angle);
-            graphics.TranslateTransform(-offSet, -offSet);
+            graphics.TranslateTransform(-offSet - offsetX, -offSet - offsetY);
             src.Dispose();
         }
 
@@ -1300,7 +1355,9 @@ namespace GTR_Watch_face
         /// <param name="spacing">Величина отступа</param>
         /// <param name="alignment">Новер выравнивания</param>
         /// <param name="data_number">Отображаемая величина</param>
-        public void DrawNumber(Graphics graphics, int x1, int y1, int x2, int y2, int image_index, int spacing, int alignment, int data_number)
+        /// <param name="BBorder">Рисовать рамку по координатам, вокруг элементов с выравниванием</param>
+        public void DrawNumber(Graphics graphics, int x1, int y1, int x2, int y2, 
+            int image_index, int spacing, int alignment, int data_number, bool BBorder)
         {
             var Dagit = new Bitmap(ListImagesFullName[image_index]);
             string data_numberS = data_number.ToString();
@@ -1369,7 +1426,6 @@ namespace GTR_Watch_face
             }
             if (PointX < x1) PointX = x1;
             if (PointY < y1) PointY = y1;
-
             foreach (char ch in CH)
             {
                 _number = 0;
@@ -1384,6 +1440,20 @@ namespace GTR_Watch_face
 
             }
             Dagit.Dispose();
+
+            if (BBorder)
+            {
+                Rectangle rect = new Rectangle(x1, y1, x2 - x1 - 1, y2 - y1 - 1);
+                using (Pen pen1 = new Pen(Color.White, 1))
+                {
+                    graphics.DrawRectangle(pen1, rect);
+                }
+                using (Pen pen2 = new Pen(Color.Black, 1))
+                {
+                    pen2.DashStyle = DashStyle.Dot;
+                    graphics.DrawRectangle(pen2, rect);
+                }
+            }
         }
 
         /// <summary>Рисует число</summary>
@@ -1398,8 +1468,9 @@ namespace GTR_Watch_face
         /// <param name="data_number">Отображаемая величина</param>
         /// <param name="suffix">Номер изображения суфикса</param>
         /// <param name="dec">Номер изображения разделителя</param>
+        /// <param name="BBorder">Рисовать рамку по координатам, вокруг элементов с выравниванием</param>
         public void DrawNumber(Graphics graphics, int x1, int y1, int x2, int y2, int image_index, int spacing,
-            int alignment, double data_number, int suffix, int dec)
+            int alignment, double data_number, int suffix, int dec, bool BBorder)
         {
             data_number = Math.Round(data_number, 2);
             var Dagit = new Bitmap(ListImagesFullName[image_index]);
@@ -1521,9 +1592,24 @@ namespace GTR_Watch_face
             {
                 src = new Bitmap(ListImagesFullName[suffix]);
                 graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                src.Dispose();
 
             }
             Dagit.Dispose();
+
+            if (BBorder)
+            {
+                Rectangle rect = new Rectangle(x1, y1, x2 - x1 - 1, y2 - y1 - 1);
+                using (Pen pen1 = new Pen(Color.White, 1))
+                {
+                    graphics.DrawRectangle(pen1, rect);
+                }
+                using (Pen pen2 = new Pen(Color.Black, 1))
+                {
+                    pen2.DashStyle = DashStyle.Dot;
+                    graphics.DrawRectangle(pen2, rect);
+                }
+            }
         }
 
         /// <summary>Рисует погоду</summary>
@@ -1540,8 +1626,9 @@ namespace GTR_Watch_face
         /// <param name="degris">Номер изображения градуса</param>
         /// <param name="error">Номер изображения ошибки</param>
         /// <param name="ND">Показывать ошибку</param>
+        /// <param name="BBorder">Рисовать рамку по координатам, вокруг элементов с выравниванием</param>
         public void DrawWeather(Graphics graphics, int x1, int y1, int x2, int y2, int image_index, int spacing,
-            int alignment, int data_number, int minus, int degris, int error, bool ND)
+            int alignment, int data_number, int minus, int degris, int error, bool ND, bool BBorder)
         {
             //data_number = Math.Round(data_number, 2);
             var Dagit = new Bitmap(ListImagesFullName[image_index]);
@@ -1686,6 +1773,20 @@ namespace GTR_Watch_face
                 }
             }
             Dagit.Dispose();
+
+            if (BBorder)
+            {
+                Rectangle rect = new Rectangle(x1, y1, x2 - x1 - 1, y2 - y1 - 1);
+                using (Pen pen1 = new Pen(Color.White, 1))
+                {
+                    graphics.DrawRectangle(pen1, rect);
+                }
+                using (Pen pen2 = new Pen(Color.Black, 1))
+                {
+                    pen2.DashStyle = DashStyle.Dot;
+                    graphics.DrawRectangle(pen2, rect);
+                }
+            }
         }
 
 
@@ -2070,7 +2171,85 @@ namespace GTR_Watch_face
 
             SetDigitForPrewiev();
         }
-#endregion
+
+        private void SetPreferences11()
+        {
+            Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set11.Value.Month;
+            Watch_Face_Preview_Set.Date.Day = dateTimePicker_Date_Set11.Value.Day;
+            Watch_Face_Preview_Set.Date.WeekDay = (int)dateTimePicker_Date_Set11.Value.DayOfWeek;
+            if (Watch_Face_Preview_Set.Date.WeekDay == 0) Watch_Face_Preview_Set.Date.WeekDay = 7;
+
+            Watch_Face_Preview_Set.Time.Hours = dateTimePicker_Time_Set11.Value.Hour;
+            Watch_Face_Preview_Set.Time.Minutes = dateTimePicker_Time_Set11.Value.Minute;
+            Watch_Face_Preview_Set.Time.Seconds = dateTimePicker_Time_Set11.Value.Second;
+
+            Watch_Face_Preview_Set.Battery = (int)numericUpDown_Battery_Set11.Value;
+            Watch_Face_Preview_Set.Activity.Calories = (int)numericUpDown_Calories_Set11.Value;
+            Watch_Face_Preview_Set.Activity.Pulse = (int)numericUpDown_Pulse_Set11.Value;
+            Watch_Face_Preview_Set.Activity.Distance = (int)numericUpDown_Distance_Set11.Value;
+            Watch_Face_Preview_Set.Activity.Steps = (int)numericUpDown_Steps_Set11.Value;
+            Watch_Face_Preview_Set.Activity.StepsGoal = (int)numericUpDown_Goal_Set11.Value;
+
+            Watch_Face_Preview_Set.Status.Bluetooth = check_BoxBluetooth_Set11.Checked;
+            Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set11.Checked;
+            Watch_Face_Preview_Set.Status.Lock = checkBox_Lock_Set11.Checked;
+            Watch_Face_Preview_Set.Status.DoNotDisturb = checkBox_DoNotDisturb_Set11.Checked;
+
+            SetDigitForPrewiev();
+        }
+
+        private void SetPreferences12()
+        {
+            Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set12.Value.Month;
+            Watch_Face_Preview_Set.Date.Day = dateTimePicker_Date_Set12.Value.Day;
+            Watch_Face_Preview_Set.Date.WeekDay = (int)dateTimePicker_Date_Set12.Value.DayOfWeek;
+            if (Watch_Face_Preview_Set.Date.WeekDay == 0) Watch_Face_Preview_Set.Date.WeekDay = 7;
+
+            Watch_Face_Preview_Set.Time.Hours = dateTimePicker_Time_Set12.Value.Hour;
+            Watch_Face_Preview_Set.Time.Minutes = dateTimePicker_Time_Set12.Value.Minute;
+            Watch_Face_Preview_Set.Time.Seconds = dateTimePicker_Time_Set12.Value.Second;
+
+            Watch_Face_Preview_Set.Battery = (int)numericUpDown_Battery_Set12.Value;
+            Watch_Face_Preview_Set.Activity.Calories = (int)numericUpDown_Calories_Set12.Value;
+            Watch_Face_Preview_Set.Activity.Pulse = (int)numericUpDown_Pulse_Set12.Value;
+            Watch_Face_Preview_Set.Activity.Distance = (int)numericUpDown_Distance_Set12.Value;
+            Watch_Face_Preview_Set.Activity.Steps = (int)numericUpDown_Steps_Set12.Value;
+            Watch_Face_Preview_Set.Activity.StepsGoal = (int)numericUpDown_Goal_Set12.Value;
+
+            Watch_Face_Preview_Set.Status.Bluetooth = check_BoxBluetooth_Set12.Checked;
+            Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set12.Checked;
+            Watch_Face_Preview_Set.Status.Lock = checkBox_Lock_Set12.Checked;
+            Watch_Face_Preview_Set.Status.DoNotDisturb = checkBox_DoNotDisturb_Set12.Checked;
+
+            SetDigitForPrewiev();
+        }
+
+        private void SetPreferences13()
+        {
+            Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set13.Value.Month;
+            Watch_Face_Preview_Set.Date.Day = dateTimePicker_Date_Set13.Value.Day;
+            Watch_Face_Preview_Set.Date.WeekDay = (int)dateTimePicker_Date_Set13.Value.DayOfWeek;
+            if (Watch_Face_Preview_Set.Date.WeekDay == 0) Watch_Face_Preview_Set.Date.WeekDay = 7;
+
+            Watch_Face_Preview_Set.Time.Hours = dateTimePicker_Time_Set13.Value.Hour;
+            Watch_Face_Preview_Set.Time.Minutes = dateTimePicker_Time_Set13.Value.Minute;
+            Watch_Face_Preview_Set.Time.Seconds = dateTimePicker_Time_Set13.Value.Second;
+
+            Watch_Face_Preview_Set.Battery = (int)numericUpDown_Battery_Set13.Value;
+            Watch_Face_Preview_Set.Activity.Calories = (int)numericUpDown_Calories_Set13.Value;
+            Watch_Face_Preview_Set.Activity.Pulse = (int)numericUpDown_Pulse_Set13.Value;
+            Watch_Face_Preview_Set.Activity.Distance = (int)numericUpDown_Distance_Set13.Value;
+            Watch_Face_Preview_Set.Activity.Steps = (int)numericUpDown_Steps_Set13.Value;
+            Watch_Face_Preview_Set.Activity.StepsGoal = (int)numericUpDown_Goal_Set13.Value;
+
+            Watch_Face_Preview_Set.Status.Bluetooth = check_BoxBluetooth_Set13.Checked;
+            Watch_Face_Preview_Set.Status.Alarm = checkBox_Alarm_Set13.Checked;
+            Watch_Face_Preview_Set.Status.Lock = checkBox_Lock_Set13.Checked;
+            Watch_Face_Preview_Set.Status.DoNotDisturb = checkBox_DoNotDisturb_Set13.Checked;
+
+            SetDigitForPrewiev();
+        }
+        #endregion
 
         // определяем отдельные цифры для даты и времени
         private void SetDigitForPrewiev()
@@ -2244,6 +2423,7 @@ namespace GTR_Watch_face
             panel_Date.Height = 350;
             panel_StepsProgress.Height = 1;
             panel_Activity.Height = 1;
+            panel_Status.Height = 1;
             panel_Battery.Height = 1;
             panel_AnalogClock.Height = 1;
             panel_Weather.Height = 1;
@@ -2254,7 +2434,7 @@ namespace GTR_Watch_face
             panel_Background.Height = 1;
             panel_Time.Height = 1;
             panel_Date.Height = 1;
-            panel_StepsProgress.Height = 103;
+            panel_StepsProgress.Height = 105;
             panel_Activity.Height = 1;
             panel_Status.Height = 1;
             panel_Battery.Height = 1;
@@ -2310,7 +2490,7 @@ namespace GTR_Watch_face
             panel_Activity.Height = 1;
             panel_Status.Height = 1;
             panel_Battery.Height = 1;
-            panel_AnalogClock.Height = 178;
+            panel_AnalogClock.Height = 193;
             panel_Weather.Height = 1;
         }
 
@@ -2324,7 +2504,7 @@ namespace GTR_Watch_face
             panel_Status.Height = 1;
             panel_Battery.Height = 1;
             panel_AnalogClock.Height = 1;
-            panel_Weather.Height = 240;
+            panel_Weather.Height = 230;
         }
 #endregion
 
@@ -2470,6 +2650,7 @@ namespace GTR_Watch_face
             comboBox_StepsProgress_Color.Enabled = b;
             numericUpDown_StepsProgress_StartAngle.Enabled = b;
             numericUpDown_StepsProgress_EndAngle.Enabled = b;
+            comboBox_Battery_Flatness.Enabled = b;
 
             label104.Enabled = b;
             label105.Enabled = b;
@@ -2479,6 +2660,7 @@ namespace GTR_Watch_face
             label109.Enabled = b;
             label110.Enabled = b;
             label111.Enabled = b;
+            label348.Enabled = b;
         }
 
         private void checkBox_ActivityStar_CheckedChanged(object sender, EventArgs e)
@@ -2748,7 +2930,7 @@ namespace GTR_Watch_face
             comboBox_Battery_Scale_Color.Enabled = b;
             numericUpDown_Battery_Scale_EndAngle.Enabled = b;
             numericUpDown_Battery_Scale_StartAngle.Enabled = b;
-
+            comboBox_Battery_Flatness.Enabled = b;
 
             label199.Enabled = b;
             label200.Enabled = b;
@@ -2758,6 +2940,7 @@ namespace GTR_Watch_face
             label204.Enabled = b;
             label205.Enabled = b;
             label206.Enabled = b;
+            label347.Enabled = b;
         }
 
         private void checkBox_AnalogClock_CheckedChanged(object sender, EventArgs e)
@@ -2811,10 +2994,14 @@ namespace GTR_Watch_face
             comboBox_AnalogClock_Sec_Image.Enabled = b;
             numericUpDown_AnalogClock_Sec_X.Enabled = b;
             numericUpDown_AnalogClock_Sec_Y.Enabled = b;
+            numericUpDown_AnalogClock_Sec_Offset_X.Enabled = b;
+            numericUpDown_AnalogClock_Sec_Offset_Y.Enabled = b;
 
             label210.Enabled = b;
             label211.Enabled = b;
             label212.Enabled = b;
+            label353.Enabled = b;
+            label354.Enabled = b;
         }
 
         private void checkBox_AnalogClock_Min_CheckedChanged(object sender, EventArgs e)
@@ -2823,10 +3010,14 @@ namespace GTR_Watch_face
             comboBox_AnalogClock_Min_Image.Enabled = b;
             numericUpDown_AnalogClock_Min_X.Enabled = b;
             numericUpDown_AnalogClock_Min_Y.Enabled = b;
+            numericUpDown_AnalogClock_Min_Offset_X.Enabled = b;
+            numericUpDown_AnalogClock_Min_Offset_Y.Enabled = b;
 
             label207.Enabled = b;
             label208.Enabled = b;
             label209.Enabled = b;
+            label351.Enabled = b;
+            label352.Enabled = b;
         }
 
         private void checkBox_AnalogClock_Hour_CheckedChanged(object sender, EventArgs e)
@@ -2835,10 +3026,14 @@ namespace GTR_Watch_face
             comboBox_AnalogClock_Hour_Image.Enabled = b;
             numericUpDown_AnalogClock_Hour_X.Enabled = b;
             numericUpDown_AnalogClock_Hour_Y.Enabled = b;
+            numericUpDown_AnalogClock_Hour_Offset_X.Enabled = b;
+            numericUpDown_AnalogClock_Hour_Offset_Y.Enabled = b;
 
             label215.Enabled = b;
             label216.Enabled = b;
             label217.Enabled = b;
+            label349.Enabled = b;
+            label350.Enabled = b;
         }
 
         private void checkBox_Weather_Text_CheckedChanged(object sender, EventArgs e)
@@ -2972,7 +3167,20 @@ namespace GTR_Watch_face
         private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox comboBox = (ComboBox)(sender);
-            if (comboBox.Name != "comboBox_WeatherSet_Icon")
+            //if (comboBox.Name != "comboBox_WeatherSet_Icon")
+            //{
+            //    try
+            //    {
+            //        using (FileStream stream = new FileStream(ListImagesFullName[comboBox.SelectedIndex], FileMode.Open, FileAccess.Read))
+            //        {
+            //            pictureBox1.Image = Image.FromStream(stream);
+            //            timer1.Enabled = true;
+            //        }
+            //    }
+            //    catch { }
+            //}
+            int i = 0;
+            if(Int32.TryParse(comboBox.Text, out i))
             {
                 try
                 {
@@ -3369,6 +3577,19 @@ namespace GTR_Watch_face
                 string colorStr = ColorTranslator.ToHtml(new_color);
                 colorStr = colorStr.Replace("#", "0x00");
                 Watch_Face.StepsProgress.Circle.Color = colorStr;
+
+                switch (comboBox_StepsProgress_Flatness.Text)
+                {
+                    case "Треугольное":
+                        Watch_Face.StepsProgress.Circle.Flatness = 90;
+                        break;
+                    case "Плоское":
+                        Watch_Face.StepsProgress.Circle.Flatness = 180;
+                        break;
+                    default:
+                        Watch_Face.StepsProgress.Circle.Flatness = 0;
+                        break;
+                }
             }
 
             // статусы
@@ -3486,6 +3707,19 @@ namespace GTR_Watch_face
                     string colorStr = ColorTranslator.ToHtml(new_color);
                     colorStr = colorStr.Replace("#", "0x00");
                     Watch_Face.Battery.Scale.Color = colorStr;
+
+                    switch (comboBox_Battery_Flatness.Text)
+                    {
+                        case "Треугольное":
+                            Watch_Face.Battery.Scale.Flatness = 90;
+                            break;
+                        case "Плоское":
+                            Watch_Face.Battery.Scale.Flatness = 180;
+                            break;
+                        default:
+                            Watch_Face.Battery.Scale.Flatness = 0;
+                            break;
+                    }
                 }
             }
 
@@ -3509,6 +3743,9 @@ namespace GTR_Watch_face
 
                     Watch_Face.AnalogDialFace.Hours.Color = "0x00000000";
                     Watch_Face.AnalogDialFace.Hours.OnlyBorder = false;
+
+                    Watch_Face.AnalogDialFace.Hours.CenterOffset.X = (int)numericUpDown_AnalogClock_Hour_Offset_X.Value;
+                    Watch_Face.AnalogDialFace.Hours.CenterOffset.Y = (int)numericUpDown_AnalogClock_Hour_Offset_Y.Value;
                 }
 
                 if ((checkBox_AnalogClock_Min.Checked) && (comboBox_AnalogClock_Min_Image.SelectedIndex >= 0))
@@ -3528,6 +3765,9 @@ namespace GTR_Watch_face
 
                     Watch_Face.AnalogDialFace.Minutes.Color = "0x00000000";
                     Watch_Face.AnalogDialFace.Minutes.OnlyBorder = false;
+
+                    Watch_Face.AnalogDialFace.Minutes.CenterOffset.X = (int)numericUpDown_AnalogClock_Min_Offset_X.Value;
+                    Watch_Face.AnalogDialFace.Minutes.CenterOffset.Y = (int)numericUpDown_AnalogClock_Min_Offset_Y.Value;
                 }
 
                 if ((checkBox_AnalogClock_Sec.Checked) && (comboBox_AnalogClock_Sec_Image.SelectedIndex >= 0))
@@ -3547,6 +3787,9 @@ namespace GTR_Watch_face
 
                     Watch_Face.AnalogDialFace.Seconds.Color = "0x00000000";
                     Watch_Face.AnalogDialFace.Seconds.OnlyBorder = false;
+
+                    Watch_Face.AnalogDialFace.Seconds.CenterOffset.X = (int)numericUpDown_AnalogClock_Sec_Offset_X.Value;
+                    Watch_Face.AnalogDialFace.Seconds.CenterOffset.Y = (int)numericUpDown_AnalogClock_Sec_Offset_Y.Value;
                 }
 
                 if ((checkBox_HourCenterImage.Checked) && (comboBox_HourCenterImage_Image.SelectedIndex >= 0))
@@ -3748,6 +3991,7 @@ namespace GTR_Watch_face
 #region сворачиваем и разварачиваем панели с предустановками
         private void button_Set1_Click(object sender, EventArgs e)
         {
+            panel_SetWeather.Height = 1;
             panel_Set1.Height = 125;
             panel_Set2.Height = 1;
             panel_Set3.Height = 1;
@@ -3758,12 +4002,16 @@ namespace GTR_Watch_face
             panel_Set8.Height = 1;
             panel_Set9.Height = 1;
             panel_Set10.Height = 1;
+            panel_Set11.Height = 1;
+            panel_Set12.Height = 1;
+            panel_Set13.Height = 1;
             SetPreferences1();
             PreviewImage();
         }
 
         private void button_Set2_Click(object sender, EventArgs e)
         {
+            panel_SetWeather.Height = 1;
             panel_Set1.Height = 1;
             panel_Set2.Height = 125;
             panel_Set3.Height = 1;
@@ -3774,11 +4022,15 @@ namespace GTR_Watch_face
             panel_Set8.Height = 1;
             panel_Set9.Height = 1;
             panel_Set10.Height = 1;
+            panel_Set11.Height = 1;
+            panel_Set12.Height = 1;
+            panel_Set13.Height = 1;
             SetPreferences2();
             PreviewImage();
         }
         private void button_Set3_Click(object sender, EventArgs e)
         {
+            panel_SetWeather.Height = 1;
             panel_Set1.Height = 1;
             panel_Set2.Height = 1;
             panel_Set3.Height = 125;
@@ -3789,26 +4041,34 @@ namespace GTR_Watch_face
             panel_Set8.Height = 1;
             panel_Set9.Height = 1;
             panel_Set10.Height = 1;
+            panel_Set11.Height = 1;
+            panel_Set12.Height = 1;
+            panel_Set13.Height = 1;
             SetPreferences3();
             PreviewImage();
         }
         private void button_Set4_Click(object sender, EventArgs e)
         {
+            panel_SetWeather.Height = 1;
             panel_Set1.Height = 1;
             panel_Set2.Height = 1;
             panel_Set3.Height = 1;
             panel_Set4.Height = 125;
+            panel_Set5.Height = 1;
             panel_Set6.Height = 1;
             panel_Set7.Height = 1;
             panel_Set8.Height = 1;
             panel_Set9.Height = 1;
             panel_Set10.Height = 1;
-            panel_Set5.Height = 1;
+            panel_Set11.Height = 1;
+            panel_Set12.Height = 1;
+            panel_Set13.Height = 1;
             SetPreferences4();
             PreviewImage();
         }
         private void button_Set5_Click(object sender, EventArgs e)
         {
+            panel_SetWeather.Height = 1;
             panel_Set1.Height = 1;
             panel_Set2.Height = 1;
             panel_Set3.Height = 1;
@@ -3819,11 +4079,15 @@ namespace GTR_Watch_face
             panel_Set8.Height = 1;
             panel_Set9.Height = 1;
             panel_Set10.Height = 1;
+            panel_Set11.Height = 1;
+            panel_Set12.Height = 1;
+            panel_Set13.Height = 1;
             SetPreferences5();
             PreviewImage();
         }
         private void button_Set6_Click(object sender, EventArgs e)
         {
+            panel_SetWeather.Height = 1;
             panel_Set1.Height = 1;
             panel_Set2.Height = 1;
             panel_Set3.Height = 1;
@@ -3834,11 +4098,15 @@ namespace GTR_Watch_face
             panel_Set8.Height = 1;
             panel_Set9.Height = 1;
             panel_Set10.Height = 1;
+            panel_Set11.Height = 1;
+            panel_Set12.Height = 1;
+            panel_Set13.Height = 1;
             SetPreferences6();
             PreviewImage();
         }
         private void button_Set7_Click(object sender, EventArgs e)
         {
+            panel_SetWeather.Height = 1;
             panel_Set1.Height = 1;
             panel_Set2.Height = 1;
             panel_Set3.Height = 1;
@@ -3849,11 +4117,15 @@ namespace GTR_Watch_face
             panel_Set8.Height = 1;
             panel_Set9.Height = 1;
             panel_Set10.Height = 1;
+            panel_Set11.Height = 1;
+            panel_Set12.Height = 1;
+            panel_Set13.Height = 1;
             SetPreferences7();
             PreviewImage();
         }
         private void button_Set8_Click(object sender, EventArgs e)
         {
+            panel_SetWeather.Height = 1;
             panel_Set1.Height = 1;
             panel_Set2.Height = 1;
             panel_Set3.Height = 1;
@@ -3864,11 +4136,15 @@ namespace GTR_Watch_face
             panel_Set8.Height = 125;
             panel_Set9.Height = 1;
             panel_Set10.Height = 1;
+            panel_Set11.Height = 1;
+            panel_Set12.Height = 1;
+            panel_Set13.Height = 1;
             SetPreferences8();
             PreviewImage();
         }
         private void button_Set9_Click(object sender, EventArgs e)
         {
+            panel_SetWeather.Height = 1;
             panel_Set1.Height = 1;
             panel_Set2.Height = 1;
             panel_Set3.Height = 1;
@@ -3879,11 +4155,15 @@ namespace GTR_Watch_face
             panel_Set8.Height = 1;
             panel_Set9.Height = 125;
             panel_Set10.Height = 1;
+            panel_Set11.Height = 1;
+            panel_Set12.Height = 1;
+            panel_Set13.Height = 1;
             SetPreferences9();
             PreviewImage();
         }
         private void button_Set10_Click(object sender, EventArgs e)
         {
+            panel_SetWeather.Height = 1;
             panel_Set1.Height = 1;
             panel_Set2.Height = 1;
             panel_Set3.Height = 1;
@@ -3894,12 +4174,90 @@ namespace GTR_Watch_face
             panel_Set8.Height = 1;
             panel_Set9.Height = 1;
             panel_Set10.Height = 125;
+            panel_Set11.Height = 1;
+            panel_Set12.Height = 1;
+            panel_Set13.Height = 1;
             SetPreferences10();
             PreviewImage();
         }
-#endregion
+        private void button_Set11_Click(object sender, EventArgs e)
+        {
+            panel_SetWeather.Height = 1;
+            panel_Set1.Height = 1;
+            panel_Set2.Height = 1;
+            panel_Set3.Height = 1;
+            panel_Set4.Height = 1;
+            panel_Set5.Height = 1;
+            panel_Set6.Height = 1;
+            panel_Set7.Height = 1;
+            panel_Set8.Height = 1;
+            panel_Set9.Height = 1;
+            panel_Set10.Height = 1;
+            panel_Set11.Height = 125;
+            panel_Set12.Height = 1;
+            panel_Set13.Height = 1;
+            SetPreferences11();
+            PreviewImage();
+        }
+        private void button_Set12_Click(object sender, EventArgs e)
+        {
+            panel_SetWeather.Height = 1;
+            panel_Set1.Height = 1;
+            panel_Set2.Height = 1;
+            panel_Set3.Height = 1;
+            panel_Set4.Height = 1;
+            panel_Set5.Height = 1;
+            panel_Set6.Height = 1;
+            panel_Set7.Height = 1;
+            panel_Set8.Height = 1;
+            panel_Set9.Height = 1;
+            panel_Set10.Height = 1;
+            panel_Set11.Height = 1;
+            panel_Set12.Height = 125;
+            panel_Set13.Height = 1;
+            SetPreferences12();
+            PreviewImage();
+        }
+        private void button_Set13_Click(object sender, EventArgs e)
+        {
+            panel_SetWeather.Height = 1;
+            panel_Set1.Height = 1;
+            panel_Set2.Height = 1;
+            panel_Set3.Height = 1;
+            panel_Set4.Height = 1;
+            panel_Set5.Height = 1;
+            panel_Set6.Height = 1;
+            panel_Set7.Height = 1;
+            panel_Set8.Height = 1;
+            panel_Set9.Height = 1;
+            panel_Set10.Height = 1;
+            panel_Set11.Height = 1;
+            panel_Set12.Height = 1;
+            panel_Set13.Height = 125;
+            SetPreferences13();
+            PreviewImage();
+        }
 
-#region поменялись предустановки
+        private void button_SetWeather_Click(object sender, EventArgs e)
+        {
+            panel_SetWeather.Height = 60;
+            panel_Set1.Height = 1;
+            panel_Set2.Height = 1;
+            panel_Set3.Height = 1;
+            panel_Set4.Height = 1;
+            panel_Set5.Height = 1;
+            panel_Set6.Height = 1;
+            panel_Set7.Height = 1;
+            panel_Set8.Height = 1;
+            panel_Set9.Height = 1;
+            panel_Set10.Height = 1;
+            panel_Set11.Height = 1;
+            panel_Set12.Height = 1;
+            panel_Set13.Height = 1;
+        }
+        #endregion
+
+        #region поменялись предустановки
         private void dateTimePicker_Time_Set1_ValueChanged(object sender, EventArgs e)
         {
             SetPreferences1();
@@ -3948,6 +4306,21 @@ namespace GTR_Watch_face
         private void dateTimePicker_Time_Set10_ValueChanged(object sender, EventArgs e)
         {
             SetPreferences10();
+            PreviewImage();
+        }
+        private void dateTimePicker_Time_Set11_ValueChanged(object sender, EventArgs e)
+        {
+            SetPreferences11();
+            PreviewImage();
+        }
+        private void dateTimePicker_Time_Set12_ValueChanged(object sender, EventArgs e)
+        {
+            SetPreferences12();
+            PreviewImage();
+        }
+        private void dateTimePicker_Time_Set13_ValueChanged(object sender, EventArgs e)
+        {
+            SetPreferences13();
             PreviewImage();
         }
         //////////////////////////////
@@ -4001,6 +4374,21 @@ namespace GTR_Watch_face
             SetPreferences10();
             PreviewImage();
         }
+        private void numericUpDown_Battery_Set11_ValueChanged(object sender, EventArgs e)
+        {
+            SetPreferences11();
+            PreviewImage();
+        }
+        private void numericUpDown_Battery_Set12_ValueChanged(object sender, EventArgs e)
+        {
+            SetPreferences12();
+            PreviewImage();
+        }
+        private void numericUpDown_Battery_Set13_ValueChanged(object sender, EventArgs e)
+        {
+            SetPreferences13();
+            PreviewImage();
+        }
         //////////////////////////////
         private void check_BoxBluetooth_Set1_CheckedChanged(object sender, EventArgs e)
         {
@@ -4052,7 +4440,22 @@ namespace GTR_Watch_face
             SetPreferences10();
             PreviewImage();
         }
-#endregion
+        private void check_BoxBluetooth_Set11_CheckedChanged(object sender, EventArgs e)
+        {
+            SetPreferences11();
+            PreviewImage();
+        }
+        private void check_BoxBluetooth_Set12_CheckedChanged(object sender, EventArgs e)
+        {
+            SetPreferences12();
+            PreviewImage();
+        }
+        private void check_BoxBluetooth_Set13_CheckedChanged(object sender, EventArgs e)
+        {
+            SetPreferences13();
+            PreviewImage();
+        }
+        #endregion
 
         // переключаем цвет фона в таблице с картинками
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -4120,7 +4523,8 @@ namespace GTR_Watch_face
                     if (formPreview.radioButton_large.Checked) scalePreviewResize = 1.5f;
                     if (formPreview.radioButton_xlarge.Checked) scalePreviewResize = 2.0f;
                     if (formPreview.radioButton_xxlarge.Checked) scalePreviewResize = 2.5f;
-                    PreviewToBitmap(gPanelPreviewResize, scalePreviewResize, radioButton_47.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked);
+                    PreviewToBitmap(gPanelPreviewResize, scalePreviewResize, radioButton_47.Checked, 
+                        checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked);
                     gPanelPreviewResize.Dispose();
                 };
 
@@ -4160,7 +4564,7 @@ namespace GTR_Watch_face
             if (formPreview.radioButton_large.Checked) scale = 1.5f;
             if (formPreview.radioButton_xlarge.Checked) scale = 2.0f;
             if (formPreview.radioButton_xxlarge.Checked) scale = 2.5f;
-            PreviewToBitmap(gPanel, scale, radioButton_47.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked);
+            PreviewToBitmap(gPanel, scale, radioButton_47.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked);
             gPanel.Dispose();
 
             button_PreviewBig.Enabled = false;
@@ -4194,15 +4598,15 @@ namespace GTR_Watch_face
 
                     int count = objson.Count();
 
-                    string text3 = JsonConvert.SerializeObject(objson, Formatting.Indented, new JsonSerializerSettings
+                    string JSON_Text = JsonConvert.SerializeObject(objson, Formatting.Indented, new JsonSerializerSettings
                     {
                         //DefaultValueHandling = DefaultValueHandling.Ignore,
                         NullValueHandling = NullValueHandling.Ignore
                     });
-                    richTextBox_JSON.Text = text3;
+                    richTextBox_JSON.Text = JSON_Text;
 
                     if (count == 0) return;
-                    if (count > 10) count = 10;
+                    if (count > 13) count = 13;
                     for (int i = 0; i < count; i++)
                     {
                         ps = JsonConvert.DeserializeObject<ClassPreview>(objson[i].ToString(), new JsonSerializerSettings
@@ -4379,6 +4783,51 @@ namespace GTR_Watch_face
                                 checkBox_DoNotDisturb_Set10.Checked = dnd;
                                 button_Set10.PerformClick();
                                 break;
+                            case 10:
+                                dateTimePicker_Date_Set11.Value = new DateTime(year, month, day, hour, min, sec);
+                                dateTimePicker_Time_Set11.Value = new DateTime(year, month, day, hour, min, sec);
+                                numericUpDown_Battery_Set11.Value = battery;
+                                numericUpDown_Calories_Set11.Value = calories;
+                                numericUpDown_Pulse_Set11.Value = pulse;
+                                numericUpDown_Distance_Set11.Value = distance;
+                                numericUpDown_Steps_Set11.Value = steps;
+                                numericUpDown_Goal_Set11.Value = goal;
+                                check_BoxBluetooth_Set11.Checked = bluetooth;
+                                checkBox_Alarm_Set11.Checked = alarm;
+                                checkBox_Lock_Set11.Checked = unlocked;
+                                checkBox_DoNotDisturb_Set11.Checked = dnd;
+                                button_Set11.PerformClick();
+                                break;
+                            case 11:
+                                dateTimePicker_Date_Set12.Value = new DateTime(year, month, day, hour, min, sec);
+                                dateTimePicker_Time_Set12.Value = new DateTime(year, month, day, hour, min, sec);
+                                numericUpDown_Battery_Set12.Value = battery;
+                                numericUpDown_Calories_Set12.Value = calories;
+                                numericUpDown_Pulse_Set12.Value = pulse;
+                                numericUpDown_Distance_Set12.Value = distance;
+                                numericUpDown_Steps_Set12.Value = steps;
+                                numericUpDown_Goal_Set12.Value = goal;
+                                check_BoxBluetooth_Set12.Checked = bluetooth;
+                                checkBox_Alarm_Set12.Checked = alarm;
+                                checkBox_Lock_Set12.Checked = unlocked;
+                                checkBox_DoNotDisturb_Set12.Checked = dnd;
+                                button_Set12.PerformClick();
+                                break;
+                            case 12:
+                                dateTimePicker_Date_Set13.Value = new DateTime(year, month, day, hour, min, sec);
+                                dateTimePicker_Time_Set13.Value = new DateTime(year, month, day, hour, min, sec);
+                                numericUpDown_Battery_Set13.Value = battery;
+                                numericUpDown_Calories_Set13.Value = calories;
+                                numericUpDown_Pulse_Set13.Value = pulse;
+                                numericUpDown_Distance_Set13.Value = distance;
+                                numericUpDown_Steps_Set13.Value = steps;
+                                numericUpDown_Goal_Set13.Value = goal;
+                                check_BoxBluetooth_Set13.Checked = bluetooth;
+                                checkBox_Alarm_Set13.Checked = alarm;
+                                checkBox_Lock_Set13.Checked = unlocked;
+                                checkBox_DoNotDisturb_Set13.Checked = dnd;
+                                button_Set13.PerformClick();
+                                break;
                         }
                     }
                     
@@ -4406,7 +4855,7 @@ namespace GTR_Watch_face
             
             object[] objson = new object[] { };
             int count = 0;
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 13; i++)
             {
                 ClassPreview ps = new ClassPreview();
                 ps.Time = new TimePreview();
@@ -4662,6 +5111,81 @@ namespace GTR_Watch_face
                             count++;
                         }
                         break;
+                    case 10:
+                        ps.Time.Year = dateTimePicker_Date_Set11.Value.Year;
+                        ps.Time.Month = dateTimePicker_Date_Set11.Value.Month;
+                        ps.Time.Day = dateTimePicker_Date_Set11.Value.Day;
+                        ps.Time.Hour = dateTimePicker_Date_Set11.Value.Hour;
+                        ps.Time.Minute = dateTimePicker_Date_Set11.Value.Minute;
+                        ps.Time.Second = dateTimePicker_Date_Set11.Value.Second;
+                        ps.BatteryLevel = (int)numericUpDown_Battery_Set11.Value;
+                        ps.Calories = (int)numericUpDown_Calories_Set11.Value;
+                        ps.Pulse = (int)numericUpDown_Pulse_Set11.Value;
+                        ps.Distance = (int)numericUpDown_Distance_Set11.Value;
+                        ps.Steps = (int)numericUpDown_Steps_Set11.Value;
+                        ps.Goal = (int)numericUpDown_Goal_Set11.Value;
+                        ps.Bluetooth = check_BoxBluetooth_Set11.Checked;
+                        ps.Alarm = checkBox_Alarm_Set10.Checked;
+                        ps.Unlocked = checkBox_Lock_Set11.Checked;
+                        ps.DoNotDisturb = checkBox_DoNotDisturb_Set11.Checked;
+
+                        if (numericUpDown_Calories_Set11.Value != 1234)
+                        {
+                            Array.Resize(ref objson, objson.Length + 1);
+                            objson[count] = ps;
+                            count++;
+                        }
+                        break;
+                    case 11:
+                        ps.Time.Year = dateTimePicker_Date_Set12.Value.Year;
+                        ps.Time.Month = dateTimePicker_Date_Set12.Value.Month;
+                        ps.Time.Day = dateTimePicker_Date_Set12.Value.Day;
+                        ps.Time.Hour = dateTimePicker_Date_Set12.Value.Hour;
+                        ps.Time.Minute = dateTimePicker_Date_Set12.Value.Minute;
+                        ps.Time.Second = dateTimePicker_Date_Set12.Value.Second;
+                        ps.BatteryLevel = (int)numericUpDown_Battery_Set12.Value;
+                        ps.Calories = (int)numericUpDown_Calories_Set12.Value;
+                        ps.Pulse = (int)numericUpDown_Pulse_Set12.Value;
+                        ps.Distance = (int)numericUpDown_Distance_Set12.Value;
+                        ps.Steps = (int)numericUpDown_Steps_Set12.Value;
+                        ps.Goal = (int)numericUpDown_Goal_Set12.Value;
+                        ps.Bluetooth = check_BoxBluetooth_Set12.Checked;
+                        ps.Alarm = checkBox_Alarm_Set12.Checked;
+                        ps.Unlocked = checkBox_Lock_Set12.Checked;
+                        ps.DoNotDisturb = checkBox_DoNotDisturb_Set12.Checked;
+
+                        if (numericUpDown_Calories_Set12.Value != 1234)
+                        {
+                            Array.Resize(ref objson, objson.Length + 1);
+                            objson[count] = ps;
+                            count++;
+                        }
+                        break;
+                    case 12:
+                        ps.Time.Year = dateTimePicker_Date_Set13.Value.Year;
+                        ps.Time.Month = dateTimePicker_Date_Set13.Value.Month;
+                        ps.Time.Day = dateTimePicker_Date_Set13.Value.Day;
+                        ps.Time.Hour = dateTimePicker_Date_Set13.Value.Hour;
+                        ps.Time.Minute = dateTimePicker_Date_Set13.Value.Minute;
+                        ps.Time.Second = dateTimePicker_Date_Set13.Value.Second;
+                        ps.BatteryLevel = (int)numericUpDown_Battery_Set13.Value;
+                        ps.Calories = (int)numericUpDown_Calories_Set13.Value;
+                        ps.Pulse = (int)numericUpDown_Pulse_Set13.Value;
+                        ps.Distance = (int)numericUpDown_Distance_Set13.Value;
+                        ps.Steps = (int)numericUpDown_Steps_Set13.Value;
+                        ps.Goal = (int)numericUpDown_Goal_Set13.Value;
+                        ps.Bluetooth = check_BoxBluetooth_Set13.Checked;
+                        ps.Alarm = checkBox_Alarm_Set13.Checked;
+                        ps.Unlocked = checkBox_Lock_Set13.Checked;
+                        ps.DoNotDisturb = checkBox_DoNotDisturb_Set13.Checked;
+
+                        if (numericUpDown_Calories_Set13.Value != 1234)
+                        {
+                            Array.Resize(ref objson, objson.Length + 1);
+                            objson[count] = ps;
+                            count++;
+                        }
+                        break;
                 }
             }
 
@@ -4707,6 +5231,233 @@ namespace GTR_Watch_face
                 richTextBox_JSON.Text = formatted;
                 File.WriteAllText(fullfilename, formatted, Encoding.Default);
             }
+        }
+
+        // случайные значения ностроек
+        private void button_JsonPreview_Random_Click(object sender, EventArgs e)
+        {
+            PreviewView = false;
+            for (int i = 0; i < 13; i++)
+            {
+                DateTime now = DateTime.Now;
+                Random rnd = new Random();
+                int year = now.Year;
+                int month = rnd.Next(0, 12)+1;
+                int day = rnd.Next(0, 28)+1;
+                int hour = rnd.Next(0, 24);
+                int min = rnd.Next(0, 60);
+                int sec = rnd.Next(0, 60);
+                int battery = rnd.Next(0, 101);
+                int calories = rnd.Next(0, 2500);
+                int pulse = rnd.Next(45, 150);
+                int distance = rnd.Next(0, 15000);
+                int steps = rnd.Next(0, 15000);
+                int goal = rnd.Next(0, 15000);
+                bool bluetooth = rnd.Next(2) == 0 ? false : true;
+                bool alarm = rnd.Next(2) == 0 ? false : true;
+                bool unlocked = rnd.Next(2) == 0 ? false : true;
+                bool dnd = rnd.Next(2) == 0 ? false : true;
+                switch (i)
+                {
+                    case 0:
+                        dateTimePicker_Date_Set1.Value = new DateTime(year, month, day, hour, min, sec);
+                        dateTimePicker_Time_Set1.Value = new DateTime(year, month, day, hour, min, sec);
+                        numericUpDown_Battery_Set1.Value = battery;
+                        numericUpDown_Calories_Set1.Value = calories;
+                        numericUpDown_Pulse_Set1.Value = pulse;
+                        numericUpDown_Distance_Set1.Value = distance;
+                        numericUpDown_Steps_Set1.Value = steps;
+                        numericUpDown_Goal_Set1.Value = goal;
+                        check_BoxBluetooth_Set1.Checked = bluetooth;
+                        checkBox_Alarm_Set1.Checked = alarm;
+                        checkBox_Lock_Set1.Checked = unlocked;
+                        checkBox_DoNotDisturb_Set1.Checked = dnd;
+                        //button_Set1.PerformClick();
+                        break;
+                    case 1:
+                        dateTimePicker_Date_Set2.Value = new DateTime(year, month, day, hour, min, sec);
+                        dateTimePicker_Time_Set2.Value = new DateTime(year, month, day, hour, min, sec);
+                        numericUpDown_Battery_Set2.Value = battery;
+                        numericUpDown_Calories_Set2.Value = calories;
+                        numericUpDown_Pulse_Set2.Value = pulse;
+                        numericUpDown_Distance_Set2.Value = distance;
+                        numericUpDown_Steps_Set2.Value = steps;
+                        numericUpDown_Goal_Set2.Value = goal;
+                        check_BoxBluetooth_Set2.Checked = bluetooth;
+                        checkBox_Alarm_Set2.Checked = alarm;
+                        checkBox_Lock_Set2.Checked = unlocked;
+                        checkBox_DoNotDisturb_Set2.Checked = dnd;
+                        //button_Set2.PerformClick();
+                        break;
+                    case 2:
+                        dateTimePicker_Date_Set3.Value = new DateTime(year, month, day, hour, min, sec);
+                        dateTimePicker_Time_Set3.Value = new DateTime(year, month, day, hour, min, sec);
+                        numericUpDown_Battery_Set3.Value = battery;
+                        numericUpDown_Calories_Set3.Value = calories;
+                        numericUpDown_Pulse_Set3.Value = pulse;
+                        numericUpDown_Distance_Set3.Value = distance;
+                        numericUpDown_Steps_Set3.Value = steps;
+                        numericUpDown_Goal_Set3.Value = goal;
+                        check_BoxBluetooth_Set3.Checked = bluetooth;
+                        checkBox_Alarm_Set3.Checked = alarm;
+                        checkBox_Lock_Set3.Checked = unlocked;
+                        checkBox_DoNotDisturb_Set3.Checked = dnd;
+                        //button_Set3.PerformClick();
+                        break;
+                    case 3:
+                        dateTimePicker_Date_Set4.Value = new DateTime(year, month, day, hour, min, sec);
+                        dateTimePicker_Time_Set4.Value = new DateTime(year, month, day, hour, min, sec);
+                        numericUpDown_Battery_Set4.Value = battery;
+                        numericUpDown_Calories_Set4.Value = calories;
+                        numericUpDown_Pulse_Set4.Value = pulse;
+                        numericUpDown_Distance_Set4.Value = distance;
+                        numericUpDown_Steps_Set4.Value = steps;
+                        numericUpDown_Goal_Set4.Value = goal;
+                        check_BoxBluetooth_Set4.Checked = bluetooth;
+                        checkBox_Alarm_Set4.Checked = alarm;
+                        checkBox_Lock_Set4.Checked = unlocked;
+                        checkBox_DoNotDisturb_Set4.Checked = dnd;
+                        //button_Set4.PerformClick();
+                        break;
+                    case 4:
+                        dateTimePicker_Date_Set5.Value = new DateTime(year, month, day, hour, min, sec);
+                        dateTimePicker_Time_Set5.Value = new DateTime(year, month, day, hour, min, sec);
+                        numericUpDown_Battery_Set5.Value = battery;
+                        numericUpDown_Calories_Set5.Value = calories;
+                        numericUpDown_Pulse_Set5.Value = pulse;
+                        numericUpDown_Distance_Set5.Value = distance;
+                        numericUpDown_Steps_Set5.Value = steps;
+                        numericUpDown_Goal_Set5.Value = goal;
+                        check_BoxBluetooth_Set5.Checked = bluetooth;
+                        checkBox_Alarm_Set5.Checked = alarm;
+                        checkBox_Lock_Set5.Checked = unlocked;
+                        checkBox_DoNotDisturb_Set5.Checked = dnd;
+                        //button_Set5.PerformClick();
+                        break;
+                    case 5:
+                        dateTimePicker_Date_Set6.Value = new DateTime(year, month, day, hour, min, sec);
+                        dateTimePicker_Time_Set6.Value = new DateTime(year, month, day, hour, min, sec);
+                        numericUpDown_Battery_Set6.Value = battery;
+                        numericUpDown_Calories_Set6.Value = calories;
+                        numericUpDown_Pulse_Set6.Value = pulse;
+                        numericUpDown_Distance_Set6.Value = distance;
+                        numericUpDown_Steps_Set6.Value = steps;
+                        numericUpDown_Goal_Set6.Value = goal;
+                        check_BoxBluetooth_Set6.Checked = bluetooth;
+                        checkBox_Alarm_Set6.Checked = alarm;
+                        checkBox_Lock_Set6.Checked = unlocked;
+                        checkBox_DoNotDisturb_Set6.Checked = dnd;
+                        //button_Set6.PerformClick();
+                        break;
+                    case 6:
+                        dateTimePicker_Date_Set7.Value = new DateTime(year, month, day, hour, min, sec);
+                        dateTimePicker_Time_Set7.Value = new DateTime(year, month, day, hour, min, sec);
+                        numericUpDown_Battery_Set7.Value = battery;
+                        numericUpDown_Calories_Set7.Value = calories;
+                        numericUpDown_Pulse_Set7.Value = pulse;
+                        numericUpDown_Distance_Set7.Value = distance;
+                        numericUpDown_Steps_Set7.Value = steps;
+                        numericUpDown_Goal_Set7.Value = goal;
+                        check_BoxBluetooth_Set7.Checked = bluetooth;
+                        checkBox_Alarm_Set7.Checked = alarm;
+                        checkBox_Lock_Set7.Checked = unlocked;
+                        checkBox_DoNotDisturb_Set7.Checked = dnd;
+                        //button_Set7.PerformClick();
+                        break;
+                    case 7:
+                        dateTimePicker_Date_Set8.Value = new DateTime(year, month, day, hour, min, sec);
+                        dateTimePicker_Time_Set8.Value = new DateTime(year, month, day, hour, min, sec);
+                        numericUpDown_Battery_Set8.Value = battery;
+                        numericUpDown_Calories_Set8.Value = calories;
+                        numericUpDown_Pulse_Set8.Value = pulse;
+                        numericUpDown_Distance_Set8.Value = distance;
+                        numericUpDown_Steps_Set8.Value = steps;
+                        numericUpDown_Goal_Set8.Value = goal;
+                        check_BoxBluetooth_Set8.Checked = bluetooth;
+                        checkBox_Alarm_Set8.Checked = alarm;
+                        checkBox_Lock_Set8.Checked = unlocked;
+                        checkBox_DoNotDisturb_Set8.Checked = dnd;
+                        //button_Set8.PerformClick();
+                        break;
+                    case 8:
+                        dateTimePicker_Date_Set9.Value = new DateTime(year, month, day, hour, min, sec);
+                        dateTimePicker_Time_Set9.Value = new DateTime(year, month, day, hour, min, sec);
+                        numericUpDown_Battery_Set9.Value = battery;
+                        numericUpDown_Calories_Set9.Value = calories;
+                        numericUpDown_Pulse_Set9.Value = pulse;
+                        numericUpDown_Distance_Set9.Value = distance;
+                        numericUpDown_Steps_Set9.Value = steps;
+                        numericUpDown_Goal_Set9.Value = goal;
+                        check_BoxBluetooth_Set9.Checked = bluetooth;
+                        checkBox_Alarm_Set9.Checked = alarm;
+                        checkBox_Lock_Set9.Checked = unlocked;
+                        checkBox_DoNotDisturb_Set9.Checked = dnd;
+                        //button_Set9.PerformClick();
+                        break;
+                    case 9:
+                        dateTimePicker_Date_Set10.Value = new DateTime(year, month, day, hour, min, sec);
+                        dateTimePicker_Time_Set10.Value = new DateTime(year, month, day, hour, min, sec);
+                        numericUpDown_Battery_Set10.Value = battery;
+                        numericUpDown_Calories_Set10.Value = calories;
+                        numericUpDown_Pulse_Set10.Value = pulse;
+                        numericUpDown_Distance_Set10.Value = distance;
+                        numericUpDown_Steps_Set10.Value = steps;
+                        numericUpDown_Goal_Set10.Value = goal;
+                        check_BoxBluetooth_Set10.Checked = bluetooth;
+                        checkBox_Alarm_Set10.Checked = alarm;
+                        checkBox_Lock_Set10.Checked = unlocked;
+                        checkBox_DoNotDisturb_Set10.Checked = dnd;
+                        //button_Set10.PerformClick();
+                        break;
+                    case 10:
+                        dateTimePicker_Date_Set11.Value = new DateTime(year, month, day, hour, min, sec);
+                        dateTimePicker_Time_Set11.Value = new DateTime(year, month, day, hour, min, sec);
+                        numericUpDown_Battery_Set11.Value = battery;
+                        numericUpDown_Calories_Set11.Value = calories;
+                        numericUpDown_Pulse_Set11.Value = pulse;
+                        numericUpDown_Distance_Set11.Value = distance;
+                        numericUpDown_Steps_Set11.Value = steps;
+                        numericUpDown_Goal_Set11.Value = goal;
+                        check_BoxBluetooth_Set11.Checked = bluetooth;
+                        checkBox_Alarm_Set11.Checked = alarm;
+                        checkBox_Lock_Set11.Checked = unlocked;
+                        checkBox_DoNotDisturb_Set11.Checked = dnd;
+                        //button_Set11.PerformClick();
+                        break;
+                    case 11:
+                        dateTimePicker_Date_Set12.Value = new DateTime(year, month, day, hour, min, sec);
+                        dateTimePicker_Time_Set12.Value = new DateTime(year, month, day, hour, min, sec);
+                        numericUpDown_Battery_Set12.Value = battery;
+                        numericUpDown_Calories_Set12.Value = calories;
+                        numericUpDown_Pulse_Set12.Value = pulse;
+                        numericUpDown_Distance_Set12.Value = distance;
+                        numericUpDown_Steps_Set12.Value = steps;
+                        numericUpDown_Goal_Set12.Value = goal;
+                        check_BoxBluetooth_Set12.Checked = bluetooth;
+                        checkBox_Alarm_Set12.Checked = alarm;
+                        checkBox_Lock_Set12.Checked = unlocked;
+                        checkBox_DoNotDisturb_Set12.Checked = dnd;
+                        //button_Set12.PerformClick();
+                        break;
+                    case 12:
+                        dateTimePicker_Date_Set13.Value = new DateTime(year, month, day, hour, min, sec);
+                        dateTimePicker_Time_Set13.Value = new DateTime(year, month, day, hour, min, sec);
+                        numericUpDown_Battery_Set13.Value = battery;
+                        numericUpDown_Calories_Set13.Value = calories;
+                        numericUpDown_Pulse_Set13.Value = pulse;
+                        numericUpDown_Distance_Set13.Value = distance;
+                        numericUpDown_Steps_Set13.Value = steps;
+                        numericUpDown_Goal_Set13.Value = goal;
+                        check_BoxBluetooth_Set13.Checked = bluetooth;
+                        checkBox_Alarm_Set13.Checked = alarm;
+                        checkBox_Lock_Set13.Checked = unlocked;
+                        checkBox_DoNotDisturb_Set13.Checked = dnd;
+                        button_Set13.PerformClick();
+                        break;
+                }
+            }
+            PreviewView = true;
+            PreviewImage();
         }
 
         private void checkBox_WebW_CheckedChanged(object sender, EventArgs e)
@@ -4929,7 +5680,7 @@ namespace GTR_Watch_face
                 //if (formPreview.radioButton_large.Checked) scale = 1.5f;
                 //if (formPreview.radioButton_xlarge.Checked) scale = 2.0f;
                 //if (formPreview.radioButton_xxlarge.Checked) scale = 2.5f;
-                PreviewToBitmap(gPanel, 1.0f, radioButton_47.Checked, false, false);
+                PreviewToBitmap(gPanel, 1.0f, radioButton_47.Checked, false, false, false);
                 bitmap.Save(saveFileDialog.FileName, ImageFormat.Png);
             }
         }
@@ -4953,7 +5704,7 @@ namespace GTR_Watch_face
 
                 using (MagickImageCollection collection = new MagickImageCollection())
                 {
-                    for (int i = 0; i < 10; i++)
+                    for (int i = 0; i < 13; i++)
                     {
                         switch (i)
                         {
@@ -5024,6 +5775,27 @@ namespace GTR_Watch_face
                                     save = true;
                                 }
                                 break;
+                            case 10:
+                                if (numericUpDown_Calories_Set11.Value != 1234)
+                                {
+                                    button_Set11.PerformClick();
+                                    save = true;
+                                }
+                                break;
+                            case 11:
+                                if (numericUpDown_Calories_Set10.Value != 1234)
+                                {
+                                    button_Set12.PerformClick();
+                                    save = true;
+                                }
+                                break;
+                            case 12:
+                                if (numericUpDown_Calories_Set10.Value != 1234)
+                                {
+                                    button_Set12.PerformClick();
+                                    save = true;
+                                }
+                                break;
                         }
 
                         if (save)
@@ -5033,7 +5805,7 @@ namespace GTR_Watch_face
                             //if (formPreview.radioButton_large.Checked) scale = 1.5f;
                             //if (formPreview.radioButton_xlarge.Checked) scale = 2.0f;
                             //if (formPreview.radioButton_xxlarge.Checked) scale = 2.5f;
-                            PreviewToBitmap(gPanel, 1.0f, radioButton_47.Checked, false, false);
+                            PreviewToBitmap(gPanel, 1.0f, radioButton_47.Checked, false, false, false);
                             // Add first image and set the animation delay to 100ms
                             MagickImage item = new MagickImage(bitmap);
                             collection.Add(item);
@@ -5066,13 +5838,15 @@ namespace GTR_Watch_face
         /// <param name="model_47">Модель 47мм</param>
         /// <param name="WMesh">Рисовать белую сетку</param>
         /// <param name="BMesh">Рисовать черную сетку</param>
-        private void PreviewToBitmap(Graphics gPanel, float scale, bool model_47, bool WMesh, bool BMesh)
+        /// <param name="BBorder">Рисовать рамку по координатам, вокруг элементов с выравниванием</param>
+        private void PreviewToBitmap(Graphics gPanel, float scale, bool model_47, bool WMesh, bool BMesh, bool BBorder)
         {
             var src = new Bitmap(1, 1);
-            gPanel.ScaleTransform(scale, scale);
+            gPanel.ScaleTransform(scale, scale, MatrixOrder.Prepend);
             int i;
+            //gPanel.SmoothingMode = SmoothingMode.AntiAlias;
 
-#region Background
+            #region Background
             if (comboBox_Background.SelectedIndex >= 0)
             {
                 i = comboBox_Background.SelectedIndex;
@@ -5080,9 +5854,10 @@ namespace GTR_Watch_face
                 gPanel.DrawImage(src, new Rectangle(0, 0, src.Width, src.Height));
                 src.Dispose();
             }
-#endregion
+            #endregion
+            if (scale == 0.5) gPanel.SmoothingMode = SmoothingMode.AntiAlias;
 
-#region Time
+            #region Time
             if (checkBox_Time.Checked)
             {
                 if (checkBox_AmPm.Checked)
@@ -5257,17 +6032,17 @@ namespace GTR_Watch_face
                     }
                 }
             }
-#endregion
+            #endregion
 
-#region Date
+            #region Date
             if (checkBox_Date.Checked)
             {
                 if ((checkBox_MonthAndDayM.Checked) && (comboBox_MonthAndDayM_Image.SelectedIndex >= 0))
                 {
                     int x1 = (int)numericUpDown_MonthAndDayM_StartCorner_X.Value;
                     int y1 = (int)numericUpDown_MonthAndDayM_StartCorner_Y.Value;
-                    int x2 = (int)numericUpDown_MonthAndDayM_EndCorner_X.Value;
-                    int y2 = (int)numericUpDown_MonthAndDayM_EndCorner_Y.Value;
+                    int x2 = (int)numericUpDown_MonthAndDayM_EndCorner_X.Value + 1;
+                    int y2 = (int)numericUpDown_MonthAndDayM_EndCorner_Y.Value + 1;
                     var Dagit = new Bitmap(ListImagesFullName[comboBox_MonthAndDayM_Image.SelectedIndex]);
                     int DateLenght = Dagit.Width;
                     int DateHeight = Dagit.Height;
@@ -5329,14 +6104,28 @@ namespace GTR_Watch_face
                     gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                     src.Dispose();
                     Dagit.Dispose();
+
+                    if (BBorder)
+                    {
+                        Rectangle rect = new Rectangle(x1, y1, x2 - x1 - 1, y2 - y1 - 1);
+                        using (Pen pen1 = new Pen(Color.White, 1))
+                        {
+                            gPanel.DrawRectangle(pen1, rect);
+                        }
+                        using (Pen pen2 = new Pen(Color.Black, 1))
+                        {
+                            pen2.DashStyle = DashStyle.Dot;
+                            gPanel.DrawRectangle(pen2, rect);
+                        }
+                    }
                 }
 
                 if ((checkBox_MonthAndDayD.Checked) && (comboBox_MonthAndDayD_Image.SelectedIndex >= 0))
                 {
                     int x1 = (int)numericUpDown_MonthAndDayD_StartCorner_X.Value;
                     int y1 = (int)numericUpDown_MonthAndDayD_StartCorner_Y.Value;
-                    int x2 = (int)numericUpDown_MonthAndDayD_EndCorner_X.Value;
-                    int y2 = (int)numericUpDown_MonthAndDayD_EndCorner_Y.Value;
+                    int x2 = (int)numericUpDown_MonthAndDayD_EndCorner_X.Value + 1;
+                    int y2 = (int)numericUpDown_MonthAndDayD_EndCorner_Y.Value + 1;
                     var Dagit = new Bitmap(ListImagesFullName[comboBox_MonthAndDayD_Image.SelectedIndex]);
                     int DateLenght = Dagit.Width;
                     int DateHeight = Dagit.Height;
@@ -5398,6 +6187,20 @@ namespace GTR_Watch_face
                     gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                     src.Dispose();
                     Dagit.Dispose();
+
+                    if (BBorder)
+                    {
+                        Rectangle rect = new Rectangle(x1, y1, x2 - x1 - 1, y2 - y1 - 1);
+                        using (Pen pen1 = new Pen(Color.White, 1))
+                        {
+                            gPanel.DrawRectangle(pen1, rect);
+                        }
+                        using (Pen pen2 = new Pen(Color.Black, 1))
+                        {
+                            pen2.DashStyle = DashStyle.Dot;
+                            gPanel.DrawRectangle(pen2, rect);
+                        }
+                    }
                 }
 
                 if ((checkBox_MonthName.Checked) && (comboBox_MonthName_Image.SelectedIndex >= 0))
@@ -5413,8 +6216,8 @@ namespace GTR_Watch_face
                 {
                     int x1 = (int)numericUpDown_OneLine_StartCorner_X.Value;
                     int y1 = (int)numericUpDown_OneLine_StartCorner_Y.Value;
-                    int x2 = (int)numericUpDown_OneLine_EndCorner_X.Value;
-                    int y2 = (int)numericUpDown_OneLine_EndCorner_Y.Value;
+                    int x2 = (int)numericUpDown_OneLine_EndCorner_X.Value + 1;
+                    int y2 = (int)numericUpDown_OneLine_EndCorner_Y.Value + 1;
                     var Dagit = new Bitmap(ListImagesFullName[comboBox_OneLine_Image.SelectedIndex]);
                     var Delimit = new Bitmap(1, 1);
                     if (comboBox_OneLine_Delimiter.SelectedIndex >= 0)
@@ -5508,6 +6311,20 @@ namespace GTR_Watch_face
                     src.Dispose();
                     Dagit.Dispose();
                     Delimit.Dispose();
+
+                    if (BBorder)
+                    {
+                        Rectangle rect = new Rectangle(x1, y1, x2 - x1 - 1, y2 - y1 - 1);
+                        using (Pen pen1 = new Pen(Color.White, 1))
+                        {
+                            gPanel.DrawRectangle(pen1, rect);
+                        }
+                        using (Pen pen2 = new Pen(Color.Black, 1))
+                        {
+                            pen2.DashStyle = DashStyle.Dot;
+                            gPanel.DrawRectangle(pen2, rect);
+                        }
+                    }
                 }
 
                 if ((checkBox_WeekDay.Checked) && (comboBox_WeekDay_Image.SelectedIndex >= 0))
@@ -5519,9 +6336,9 @@ namespace GTR_Watch_face
                     src.Dispose();
                 }
             }
-#endregion
+            #endregion
 
-#region Weather
+            #region Weather
             if (checkBox_Weather.Checked)
             {
                 if ((checkBox_Weather_Icon.Checked) && (comboBox_Weather_Icon_Image.SelectedIndex >= 0))
@@ -5544,6 +6361,7 @@ namespace GTR_Watch_face
                         src = new Bitmap(ListImagesFullName[i]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Weather_Icon_X.Value,
                             (int)numericUpDown_Weather_Icon_Y.Value, src.Width, src.Height));
+                        src.Dispose();
                     }
                     else
                     {
@@ -5552,6 +6370,7 @@ namespace GTR_Watch_face
                             src = new Bitmap(ListImagesFullName[comboBox_Weather_Icon_NDImage.SelectedIndex]);
                             gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Weather_Icon_X.Value,
                                 (int)numericUpDown_Weather_Icon_Y.Value, src.Width, src.Height));
+                            src.Dispose();
                         }
                     }
                 }
@@ -5560,8 +6379,8 @@ namespace GTR_Watch_face
                 {
                     int x1 = (int)numericUpDown_Weather_Text_StartCorner_X.Value;
                     int y1 = (int)numericUpDown_Weather_Text_StartCorner_Y.Value;
-                    int x2 = (int)numericUpDown_Weather_Text_EndCorner_X.Value;
-                    int y2 = (int)numericUpDown_Weather_Text_EndCorner_Y.Value;
+                    int x2 = (int)numericUpDown_Weather_Text_EndCorner_X.Value+1;
+                    int y2 = (int)numericUpDown_Weather_Text_EndCorner_Y.Value+1;
                     int image_index = comboBox_Weather_Text_Image.SelectedIndex;
                     int spacing = (int)numericUpDown_Weather_Text_Spacing.Value;
                     int alignment = comboBox_Weather_Text_Alignment.SelectedIndex;
@@ -5570,7 +6389,8 @@ namespace GTR_Watch_face
                     int degris = comboBox_Weather_Text_DegImage.SelectedIndex;
                     int error = comboBox_Weather_Text_NDImage.SelectedIndex;
                     bool ND = !checkBox_WeatherSet_Temp.Checked;
-                    DrawWeather(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, minus, degris, error, ND);
+                    DrawWeather(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, minus, degris, error, ND, BBorder);
+
 
                 }
 
@@ -5578,8 +6398,8 @@ namespace GTR_Watch_face
                 {
                     int x1 = (int)numericUpDown_Weather_Day_StartCorner_X.Value;
                     int y1 = (int)numericUpDown_Weather_Day_StartCorner_Y.Value;
-                    int x2 = (int)numericUpDown_Weather_Day_EndCorner_X.Value;
-                    int y2 = (int)numericUpDown_Weather_Day_EndCorner_Y.Value;
+                    int x2 = (int)numericUpDown_Weather_Day_EndCorner_X.Value+1;
+                    int y2 = (int)numericUpDown_Weather_Day_EndCorner_Y.Value+1;
                     int image_index = comboBox_Weather_Day_Image.SelectedIndex;
                     int spacing = (int)numericUpDown_Weather_Day_Spacing.Value;
                     int alignment = comboBox_Weather_Day_Alignment.SelectedIndex;
@@ -5590,15 +6410,16 @@ namespace GTR_Watch_face
 
                     int degris = comboBox_Weather_Text_DegImage.SelectedIndex;
                     int error = comboBox_Weather_Text_NDImage.SelectedIndex;
-                    DrawWeather(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, minus, degris, error, ND);
+                    DrawWeather(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, 
+                        minus, degris, error, ND, BBorder);
 
                 }
                 if ((checkBox_Weather_Night.Checked) && (comboBox_Weather_Night_Image.SelectedIndex >= 0))
                 {
                     int x1 = (int)numericUpDown_Weather_Night_StartCorner_X.Value;
                     int y1 = (int)numericUpDown_Weather_Night_StartCorner_Y.Value;
-                    int x2 = (int)numericUpDown_Weather_Night_EndCorner_X.Value;
-                    int y2 = (int)numericUpDown_Weather_Night_EndCorner_Y.Value;
+                    int x2 = (int)numericUpDown_Weather_Night_EndCorner_X.Value+1;
+                    int y2 = (int)numericUpDown_Weather_Night_EndCorner_Y.Value+1;
                     int image_index = comboBox_Weather_Night_Image.SelectedIndex;
                     int spacing = (int)numericUpDown_Weather_Night_Spacing.Value;
                     int alignment = comboBox_Weather_Night_Alignment.SelectedIndex;
@@ -5609,19 +6430,36 @@ namespace GTR_Watch_face
 
                     int degris = comboBox_Weather_Text_DegImage.SelectedIndex;
                     int error = comboBox_Weather_Text_NDImage.SelectedIndex;
-                    DrawWeather(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, minus, degris, error, ND);
+                    DrawWeather(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, 
+                        minus, degris, error, ND, BBorder);
 
                 }
             }
-#endregion
+            #endregion
 
             gPanel.SmoothingMode = SmoothingMode.AntiAlias;
 
-#region StepsProgress
+            #region StepsProgress
             if (checkBox_StepsProgress.Checked)
             {
                 Pen pen = new Pen(comboBox_StepsProgress_Color.BackColor,
                     (float)numericUpDown_StepsProgress_Width.Value);
+                switch (comboBox_StepsProgress_Flatness.Text)
+                {
+                    case "Треугольное":
+                        pen.EndCap = LineCap.Triangle;
+                        pen.StartCap = LineCap.Triangle;
+                        break;
+                    case "Плоское":
+                        pen.EndCap = LineCap.Flat;
+                        pen.StartCap = LineCap.Flat;
+                        break;
+                    default:
+                        pen.EndCap = LineCap.Round;
+                        pen.StartCap = LineCap.Round;
+                        break;
+                }
+
                 int x = (int)numericUpDown_StepsProgress_Center_X.Value -
                     (int)numericUpDown_StepsProgress_Radius_X.Value;
                 int y = (int)numericUpDown_StepsProgress_Center_Y.Value -
@@ -5643,9 +6481,11 @@ namespace GTR_Watch_face
 
                 }
             }
-#endregion
+            #endregion
 
-#region Activity
+            if (scale != 0.5) gPanel.SmoothingMode = SmoothingMode.Default;
+
+            #region Activity
             if (checkBox_Activity.Checked)
             {
                 if ((checkBox_ActivityGoal.Checked) && (comboBox_ActivityGoal_Image.SelectedIndex >= 0))
@@ -5654,11 +6494,13 @@ namespace GTR_Watch_face
                     int y1 = (int)numericUpDown_ActivityGoal_StartCorner_Y.Value;
                     int x2 = (int)numericUpDown_ActivityGoal_EndCorner_X.Value;
                     int y2 = (int)numericUpDown_ActivityGoal_EndCorner_Y.Value;
+                    x2++;
+                    y2++;
                     int image_index = comboBox_ActivityGoal_Image.SelectedIndex;
                     int spacing = (int)numericUpDown_ActivityGoal_Spacing.Value;
                     int alignment = comboBox_ActivityGoal_Alignment.SelectedIndex;
                     int data_number = Watch_Face_Preview_Set.Activity.StepsGoal;
-                    DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number);
+                    DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
                 }
 
                 if ((checkBox_ActivitySteps.Checked) && (comboBox_ActivitySteps_Image.SelectedIndex >= 0))
@@ -5667,11 +6509,13 @@ namespace GTR_Watch_face
                     int y1 = (int)numericUpDown_ActivitySteps_StartCorner_Y.Value;
                     int x2 = (int)numericUpDown_ActivitySteps_EndCorner_X.Value;
                     int y2 = (int)numericUpDown_ActivitySteps_EndCorner_Y.Value;
+                    x2++;
+                    y2++;
                     int image_index = comboBox_ActivitySteps_Image.SelectedIndex;
                     int spacing = (int)numericUpDown_ActivitySteps_Spacing.Value;
                     int alignment = comboBox_ActivitySteps_Alignment.SelectedIndex;
                     int data_number = Watch_Face_Preview_Set.Activity.Steps;
-                    DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number);
+                    DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
                 }
 
                 if ((checkBox_ActivityDistance.Checked) && (comboBox_ActivityDistance_Image.SelectedIndex >= 0))
@@ -5680,13 +6524,15 @@ namespace GTR_Watch_face
                     int y1 = (int)numericUpDown_ActivityDistance_StartCorner_Y.Value;
                     int x2 = (int)numericUpDown_ActivityDistance_EndCorner_X.Value;
                     int y2 = (int)numericUpDown_ActivityDistance_EndCorner_Y.Value;
+                    x2++;
+                    y2++;
                     int image_index = comboBox_ActivityDistance_Image.SelectedIndex;
                     int spacing = (int)numericUpDown_ActivityDistance_Spacing.Value;
                     int alignment = comboBox_ActivityDistance_Alignment.SelectedIndex;
                     double data_number = Watch_Face_Preview_Set.Activity.Distance / 1000.0;
                     int suffix = comboBox_ActivityDistance_Suffix.SelectedIndex;
                     int dec = comboBox_ActivityDistance_Decimal.SelectedIndex;
-                    DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, suffix, dec);
+                    DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, suffix, dec, BBorder);
                 }
 
                 if ((checkBox_ActivityPuls.Checked) && (comboBox_ActivityPuls_Image.SelectedIndex >= 0))
@@ -5695,11 +6541,13 @@ namespace GTR_Watch_face
                     int y1 = (int)numericUpDown_ActivityPuls_StartCorner_Y.Value;
                     int x2 = (int)numericUpDown_ActivityPuls_EndCorner_X.Value;
                     int y2 = (int)numericUpDown_ActivityPuls_EndCorner_Y.Value;
+                    x2++;
+                    y2++;
                     int image_index = comboBox_ActivityPuls_Image.SelectedIndex;
                     int spacing = (int)numericUpDown_ActivityPuls_Spacing.Value;
                     int alignment = comboBox_ActivityPuls_Alignment.SelectedIndex;
                     int data_number = Watch_Face_Preview_Set.Activity.Pulse;
-                    DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number);
+                    DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
                 }
 
                 if ((checkBox_ActivityCalories.Checked) && (comboBox_ActivityCalories_Image.SelectedIndex >= 0))
@@ -5708,11 +6556,13 @@ namespace GTR_Watch_face
                     int y1 = (int)numericUpDown_ActivityCalories_StartCorner_Y.Value;
                     int x2 = (int)numericUpDown_ActivityCalories_EndCorner_X.Value;
                     int y2 = (int)numericUpDown_ActivityCalories_EndCorner_Y.Value;
+                    x2++;
+                    y2++;
                     int image_index = comboBox_ActivityCalories_Image.SelectedIndex;
                     int spacing = (int)numericUpDown_ActivityCalories_Spacing.Value;
                     int alignment = comboBox_ActivityCalories_Alignment.SelectedIndex;
                     int data_number = Watch_Face_Preview_Set.Activity.Calories;
-                    DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number);
+                    DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
                 }
 
                 if ((checkBox_ActivityStar.Checked) && (comboBox_ActivityStar_Image.SelectedIndex >= 0))
@@ -5725,9 +6575,9 @@ namespace GTR_Watch_face
                     }
                 }
             }
-#endregion
+            #endregion
 
-#region Status
+            #region Status
             if (checkBox_Bluetooth.Checked)
             {
                 if (Watch_Face_Preview_Set.Status.Bluetooth)
@@ -5823,9 +6673,9 @@ namespace GTR_Watch_face
                     }
                 }
             }
-#endregion
+            #endregion
 
-#region Battery
+            #region Battery
             if (checkBox_Battery.Checked)
             {
                 if (checkBox_Battery.Checked)
@@ -5836,11 +6686,13 @@ namespace GTR_Watch_face
                         int y1 = (int)numericUpDown_Battery_Text_StartCorner_Y.Value;
                         int x2 = (int)numericUpDown_Battery_Text_EndCorner_X.Value;
                         int y2 = (int)numericUpDown_Battery_Text_EndCorner_Y.Value;
+                        x2++;
+                        y2++;
                         int image_index = comboBox_Battery_Text_Image.SelectedIndex;
                         int spacing = (int)numericUpDown_Battery_Text_Spacing.Value;
                         int alignment = comboBox_Battery_Text_Alignment.SelectedIndex;
                         int data_number = Watch_Face_Preview_Set.Battery;
-                        DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number);
+                        DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
                     }
 
                     if ((checkBox_Battery_Percent.Checked) && (comboBox_Battery_Percent_Image.SelectedIndex >= 0))
@@ -5864,8 +6716,29 @@ namespace GTR_Watch_face
 
                     if (checkBox_Battery_Scale.Checked)
                     {
+                        gPanel.SmoothingMode = SmoothingMode.AntiAlias;
                         Pen pen = new Pen(comboBox_Battery_Scale_Color.BackColor,
                             (float)numericUpDown_Battery_Scale_Width.Value);
+
+
+                        //pen.EndCap = LineCap.Flat;
+                        //pen.StartCap = LineCap.Triangle;
+                        switch (comboBox_Battery_Flatness.Text)
+                        {
+                            case "Треугольное":
+                                pen.EndCap = LineCap.Triangle;
+                                pen.StartCap = LineCap.Triangle;
+                                break;
+                            case "Плоское":
+                                pen.EndCap = LineCap.Flat;
+                                pen.StartCap = LineCap.Flat;
+                                break;
+                            default:
+                                pen.EndCap = LineCap.Round;
+                                pen.StartCap = LineCap.Round;
+                                break;
+                        }
+
                         int x = (int)numericUpDown_Battery_Scale_Center_X.Value -
                             (int)numericUpDown_Battery_Scale_Radius_X.Value;
                         int y = (int)numericUpDown_Battery_Scale_Center_Y.Value -
@@ -5889,9 +6762,9 @@ namespace GTR_Watch_face
                     }
                 }
             }
-#endregion
+            #endregion
 
-#region AnalogDialFace
+            #region AnalogDialFace
             if (checkBox_AnalogClock.Checked)
             {
                 // часы
@@ -5899,13 +6772,15 @@ namespace GTR_Watch_face
                 {
                     int x1 = (int)numericUpDown_AnalogClock_Hour_X.Value;
                     int y1 = (int)numericUpDown_AnalogClock_Hour_Y.Value;
-                    int image_inde = comboBox_AnalogClock_Hour_Image.SelectedIndex;
+                    int offsetX = (int)numericUpDown_AnalogClock_Hour_Offset_X.Value;
+                    int offsetY = (int)numericUpDown_AnalogClock_Hour_Offset_Y.Value;
+                    int image_index = comboBox_AnalogClock_Hour_Image.SelectedIndex;
                     int hour = Watch_Face_Preview_Set.Time.Hours;
                     int min = Watch_Face_Preview_Set.Time.Minutes;
                     //int sec = Watch_Face_Preview_Set.TimeW.Seconds;
                     if (hour >= 12) hour = hour - 12;
                     float angle = 360 * hour / 12 + 360 * min / (60 * 12);
-                    DrawAnalogClock(gPanel, x1, y1, image_inde, angle, model_47);
+                    DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle, model_47);
                 }
                 if ((checkBox_HourCenterImage.Checked) && (comboBox_HourCenterImage_Image.SelectedIndex >= 0))
                 {
@@ -5920,13 +6795,15 @@ namespace GTR_Watch_face
                 {
                     int x1 = (int)numericUpDown_AnalogClock_Min_X.Value;
                     int y1 = (int)numericUpDown_AnalogClock_Min_Y.Value;
-                    int image_inde = comboBox_AnalogClock_Min_Image.SelectedIndex;
+                    int offsetX = (int)numericUpDown_AnalogClock_Min_Offset_X.Value;
+                    int offsetY = (int)numericUpDown_AnalogClock_Min_Offset_Y.Value;
+                    int image_index = comboBox_AnalogClock_Min_Image.SelectedIndex;
                     //int hour = Watch_Face_Preview_Set.TimeW.Hours;
                     int min = Watch_Face_Preview_Set.Time.Minutes;
                     //int sec = Watch_Face_Preview_Set.TimeW.Seconds;
                     //if (hour >= 12) hour = hour - 12;
                     float angle = 360 * min / 60;
-                    DrawAnalogClock(gPanel, x1, y1, image_inde, angle, model_47);
+                    DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle, model_47);
                 }
                 if ((checkBox_MinCenterImage.Checked) && (comboBox_MinCenterImage_Image.SelectedIndex >= 0))
                 {
@@ -5941,13 +6818,15 @@ namespace GTR_Watch_face
                 {
                     int x1 = (int)numericUpDown_AnalogClock_Sec_X.Value;
                     int y1 = (int)numericUpDown_AnalogClock_Sec_Y.Value;
-                    int image_inde = comboBox_AnalogClock_Sec_Image.SelectedIndex;
+                    int offsetX = (int)numericUpDown_AnalogClock_Sec_Offset_X.Value;
+                    int offsetY = (int)numericUpDown_AnalogClock_Sec_Offset_Y.Value;
+                    int image_index = comboBox_AnalogClock_Sec_Image.SelectedIndex;
                     //int hour = Watch_Face_Preview_Set.TimeW.Hours;
                     //int min = Watch_Face_Preview_Set.TimeW.Minutes;
                     int sec = Watch_Face_Preview_Set.Time.Seconds;
                     //if (hour >= 12) hour = hour - 12;
                     float angle = 360 * sec / 60;
-                    DrawAnalogClock(gPanel, x1, y1, image_inde, angle, model_47);
+                    DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle, model_47);
                 }
                 if ((checkBox_SecCenterImage.Checked) && (comboBox_SecCenterImage_Image.SelectedIndex >= 0))
                 {
@@ -5957,9 +6836,9 @@ namespace GTR_Watch_face
                     src.Dispose();
                 }
             }
-#endregion
+            #endregion
 
-#region Mesh
+            #region Mesh
             int center = 227;
             if (!model_47) center = 195;
 
@@ -5992,7 +6871,7 @@ namespace GTR_Watch_face
                     gPanel.DrawLine(pen, new Point(0, center - i * LineDistance), new Point(454, center - i * LineDistance));
                 }
             }
-#endregion
+            #endregion
 
             src.Dispose();
         }
@@ -6001,8 +6880,8 @@ namespace GTR_Watch_face
         {
             if (radioButton_47.Checked)
             {
-                panel_Preview.Height = 229;
-                panel_Preview.Width = 229;
+                panel_Preview.Height = 230;
+                panel_Preview.Width = 230;
 
                 Properties.Settings.Default.unpack_command_42 = textBox_unpack_command.Text;
                 Properties.Settings.Default.pack_command_42 = textBox_pack_command.Text;
@@ -6017,8 +6896,8 @@ namespace GTR_Watch_face
             }
             else
             {
-                panel_Preview.Height = 197;
-                panel_Preview.Width = 197;
+                panel_Preview.Height = 198;
+                panel_Preview.Width = 198;
 
                 Properties.Settings.Default.unpack_command = textBox_unpack_command.Text;
                 Properties.Settings.Default.pack_command = textBox_pack_command.Text;
@@ -6055,9 +6934,56 @@ namespace GTR_Watch_face
                 if (formPreview.radioButton_large.Checked) scalePreviewPaint = 1.5f;
                 if (formPreview.radioButton_xlarge.Checked) scalePreviewPaint = 2.0f;
                 if (formPreview.radioButton_xxlarge.Checked) scalePreviewPaint = 2.5f;
-                PreviewToBitmap(gPanelPreviewPaint, scalePreviewPaint, radioButton_47.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked);
+                PreviewToBitmap(gPanelPreviewPaint, scalePreviewPaint, radioButton_47.Checked, 
+                    checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked);
                 gPanelPreviewPaint.Dispose();
             }
+        }
+
+        private void panel_Preview_MouseMove(object sender, MouseEventArgs e)
+        {
+            int CursorX = e.X;
+            int CursorY = e.Y;
+
+            label_preview_X.Text = "X=" + (CursorX * 2).ToString();
+            label_preview_Y.Text = "Y=" + (CursorY * 2).ToString();
+
+            label_preview_X.Visible = true;
+            label_preview_Y.Visible = true;
+        }
+
+        private void panel_Preview_MouseLeave(object sender, EventArgs e)
+        {
+            label_preview_X.Visible = false;
+            label_preview_Y.Visible = false;
+
+        }
+
+        private void comboBox_Preview_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyCode == Keys.Delete) || (e.KeyCode == Keys.Back))
+            {
+                comboBox_Preview.Text = "";
+                comboBox_Preview.SelectedIndex = -1;
+                JSON_write();
+            }
+        }
+
+        private void comboBox_Preview_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void numericUpDown_X_DoubleClick(object sender, EventArgs e)
+        {
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            numericUpDown.Value = MouseСoordinates.X;
+        }
+
+        private void numericUpDown_Y_DoubleClick(object sender, EventArgs e)
+        {
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            numericUpDown.Value = MouseСoordinates.Y;
         }
     }
 }
@@ -6065,6 +6991,12 @@ namespace GTR_Watch_face
 
 
 
+
+public static class MouseСoordinates
+{
+    public static int X { get; set; }
+    public static int Y { get; set; }
+}
 
 
 
