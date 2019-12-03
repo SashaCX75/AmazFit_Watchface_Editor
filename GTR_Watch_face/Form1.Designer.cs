@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -369,8 +369,13 @@
             this.tabPage24 = new System.Windows.Forms.TabPage();
             this.comboBox_Weather_Text_Image = new System.Windows.Forms.ComboBox();
             this.numericUpDown_Weather_Text_EndCorner_X = new System.Windows.Forms.NumericUpDown();
+            this.contextMenuStrip_X = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.numericUpDown_Weather_Text_Count = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_Weather_Text_StartCorner_Y = new System.Windows.Forms.NumericUpDown();
+            this.contextMenuStrip_Y = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.копироватьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.вставитьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.numericUpDown_Weather_Text_StartCorner_X = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_Weather_Text_Spacing = new System.Windows.Forms.NumericUpDown();
             this.checkBox_Weather_Text = new System.Windows.Forms.CheckBox();
@@ -940,7 +945,6 @@
             this.button_PreviewSmall = new System.Windows.Forms.Button();
             this.checkBox_WebW = new System.Windows.Forms.CheckBox();
             this.checkBox_WebB = new System.Windows.Forms.CheckBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button_SavePNG = new System.Windows.Forms.Button();
             this.panel_Preview = new System.Windows.Forms.Panel();
@@ -953,6 +957,10 @@
             this.label_preview_X = new System.Windows.Forms.Label();
             this.label_preview_Y = new System.Windows.Forms.Label();
             this.checkBox_border = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.вставитьКоординатуХToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.копироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вставитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -1061,8 +1069,10 @@
             this.tabControl_Weather.SuspendLayout();
             this.tabPage24.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Text_EndCorner_X)).BeginInit();
+            this.contextMenuStrip_X.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Text_Count)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Text_StartCorner_Y)).BeginInit();
+            this.contextMenuStrip_Y.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Text_StartCorner_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Text_Spacing)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Text_EndCorner_Y)).BeginInit();
@@ -5448,8 +5458,8 @@
             // Number
             // 
             this.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Number.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Number.DefaultCellStyle = dataGridViewCellStyle5;
             this.Number.HeaderText = "№";
             this.Number.Name = "Number";
             this.Number.ReadOnly = true;
@@ -5709,6 +5719,7 @@
             // 
             // numericUpDown_Weather_Text_EndCorner_X
             // 
+            this.numericUpDown_Weather_Text_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_Weather_Text_EndCorner_X.Enabled = false;
             this.numericUpDown_Weather_Text_EndCorner_X.Location = new System.Drawing.Point(135, 43);
             this.numericUpDown_Weather_Text_EndCorner_X.Maximum = new decimal(new int[] {
@@ -5724,7 +5735,17 @@
             this.numericUpDown_Weather_Text_EndCorner_X.Name = "numericUpDown_Weather_Text_EndCorner_X";
             this.numericUpDown_Weather_Text_EndCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Weather_Text_EndCorner_X.TabIndex = 36;
-            this.numericUpDown_Weather_Text_EndCorner_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
+            this.numericUpDown_Weather_Text_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // contextMenuStrip_X
+            // 
+            this.contextMenuStrip_X.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.вставитьКоординатуХToolStripMenuItem,
+            this.копироватьToolStripMenuItem,
+            this.вставитьToolStripMenuItem});
+            this.contextMenuStrip_X.Name = "contextMenuStrip_X";
+            this.contextMenuStrip_X.Size = new System.Drawing.Size(200, 70);
+            this.contextMenuStrip_X.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_X_Opening);
             // 
             // numericUpDown_Weather_Text_Count
             // 
@@ -5747,6 +5768,7 @@
             // 
             // numericUpDown_Weather_Text_StartCorner_Y
             // 
+            this.numericUpDown_Weather_Text_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_Weather_Text_StartCorner_Y.Enabled = false;
             this.numericUpDown_Weather_Text_StartCorner_Y.Location = new System.Drawing.Point(74, 43);
             this.numericUpDown_Weather_Text_StartCorner_Y.Maximum = new decimal(new int[] {
@@ -5763,10 +5785,44 @@
             this.numericUpDown_Weather_Text_StartCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Weather_Text_StartCorner_Y.TabIndex = 28;
             this.numericUpDown_Weather_Text_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_Text_StartCorner_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
+            // 
+            // contextMenuStrip_Y
+            // 
+            this.contextMenuStrip_Y.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.копироватьToolStripMenuItem1,
+            this.вставитьToolStripMenuItem1});
+            this.contextMenuStrip_Y.Name = "contextMenuStrip_X";
+            this.contextMenuStrip_Y.Size = new System.Drawing.Size(200, 70);
+            this.contextMenuStrip_Y.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Y_Opening);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Image = global::GTR_Watch_face.Properties.Resources.Actions_insert_text_icon;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(199, 22);
+            this.toolStripMenuItem1.Text = "Вставить координату Y";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.вставитьКоординатуYToolStripMenuItem_Click);
+            // 
+            // копироватьToolStripMenuItem1
+            // 
+            this.копироватьToolStripMenuItem1.Image = global::GTR_Watch_face.Properties.Resources.Files_Copy_File_icon;
+            this.копироватьToolStripMenuItem1.Name = "копироватьToolStripMenuItem1";
+            this.копироватьToolStripMenuItem1.Size = new System.Drawing.Size(199, 22);
+            this.копироватьToolStripMenuItem1.Text = "Копировать";
+            this.копироватьToolStripMenuItem1.Click += new System.EventHandler(this.копироватьToolStripMenuItem_Click);
+            // 
+            // вставитьToolStripMenuItem1
+            // 
+            this.вставитьToolStripMenuItem1.Image = global::GTR_Watch_face.Properties.Resources.Files_Clipboard_icon;
+            this.вставитьToolStripMenuItem1.Name = "вставитьToolStripMenuItem1";
+            this.вставитьToolStripMenuItem1.Size = new System.Drawing.Size(199, 22);
+            this.вставитьToolStripMenuItem1.Text = "Вставить";
+            this.вставитьToolStripMenuItem1.Click += new System.EventHandler(this.вставитьToolStripMenuItem_Click);
             // 
             // numericUpDown_Weather_Text_StartCorner_X
             // 
+            this.numericUpDown_Weather_Text_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_Weather_Text_StartCorner_X.Enabled = false;
             this.numericUpDown_Weather_Text_StartCorner_X.Location = new System.Drawing.Point(16, 43);
             this.numericUpDown_Weather_Text_StartCorner_X.Maximum = new decimal(new int[] {
@@ -5783,7 +5839,6 @@
             this.numericUpDown_Weather_Text_StartCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Weather_Text_StartCorner_X.TabIndex = 27;
             this.numericUpDown_Weather_Text_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_Text_StartCorner_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // numericUpDown_Weather_Text_Spacing
             // 
@@ -5889,6 +5944,7 @@
             // 
             // numericUpDown_Weather_Text_EndCorner_Y
             // 
+            this.numericUpDown_Weather_Text_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_Weather_Text_EndCorner_Y.Enabled = false;
             this.numericUpDown_Weather_Text_EndCorner_Y.Location = new System.Drawing.Point(195, 43);
             this.numericUpDown_Weather_Text_EndCorner_Y.Maximum = new decimal(new int[] {
@@ -5905,7 +5961,6 @@
             this.numericUpDown_Weather_Text_EndCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Weather_Text_EndCorner_Y.TabIndex = 37;
             this.numericUpDown_Weather_Text_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_Text_EndCorner_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // label275
             // 
@@ -6019,6 +6074,7 @@
             // 
             // numericUpDown_Weather_Day_EndCorner_X
             // 
+            this.numericUpDown_Weather_Day_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_Weather_Day_EndCorner_X.Enabled = false;
             this.numericUpDown_Weather_Day_EndCorner_X.Location = new System.Drawing.Point(143, 43);
             this.numericUpDown_Weather_Day_EndCorner_X.Maximum = new decimal(new int[] {
@@ -6034,7 +6090,7 @@
             this.numericUpDown_Weather_Day_EndCorner_X.Name = "numericUpDown_Weather_Day_EndCorner_X";
             this.numericUpDown_Weather_Day_EndCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Weather_Day_EndCorner_X.TabIndex = 76;
-            this.numericUpDown_Weather_Day_EndCorner_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
+            this.numericUpDown_Weather_Day_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // numericUpDown_Weather_Day_Count
             // 
@@ -6053,9 +6109,11 @@
             0,
             0,
             0});
+            this.numericUpDown_Weather_Day_Count.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // numericUpDown_Weather_Day_StartCorner_Y
             // 
+            this.numericUpDown_Weather_Day_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_Weather_Day_StartCorner_Y.Enabled = false;
             this.numericUpDown_Weather_Day_StartCorner_Y.Location = new System.Drawing.Point(79, 43);
             this.numericUpDown_Weather_Day_StartCorner_Y.Maximum = new decimal(new int[] {
@@ -6066,10 +6124,11 @@
             this.numericUpDown_Weather_Day_StartCorner_Y.Name = "numericUpDown_Weather_Day_StartCorner_Y";
             this.numericUpDown_Weather_Day_StartCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Weather_Day_StartCorner_Y.TabIndex = 68;
-            this.numericUpDown_Weather_Day_StartCorner_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
+            this.numericUpDown_Weather_Day_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // numericUpDown_Weather_Day_StartCorner_X
             // 
+            this.numericUpDown_Weather_Day_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_Weather_Day_StartCorner_X.Enabled = false;
             this.numericUpDown_Weather_Day_StartCorner_X.Location = new System.Drawing.Point(19, 43);
             this.numericUpDown_Weather_Day_StartCorner_X.Maximum = new decimal(new int[] {
@@ -6085,7 +6144,7 @@
             this.numericUpDown_Weather_Day_StartCorner_X.Name = "numericUpDown_Weather_Day_StartCorner_X";
             this.numericUpDown_Weather_Day_StartCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Weather_Day_StartCorner_X.TabIndex = 67;
-            this.numericUpDown_Weather_Day_StartCorner_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
+            this.numericUpDown_Weather_Day_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // numericUpDown_Weather_Day_Spacing
             // 
@@ -6104,6 +6163,7 @@
             this.numericUpDown_Weather_Day_Spacing.Name = "numericUpDown_Weather_Day_Spacing";
             this.numericUpDown_Weather_Day_Spacing.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Weather_Day_Spacing.TabIndex = 81;
+            this.numericUpDown_Weather_Day_Spacing.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // checkBox_Weather_Day
             // 
@@ -6189,6 +6249,7 @@
             // 
             // numericUpDown_Weather_Day_EndCorner_Y
             // 
+            this.numericUpDown_Weather_Day_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_Weather_Day_EndCorner_Y.Enabled = false;
             this.numericUpDown_Weather_Day_EndCorner_Y.Location = new System.Drawing.Point(205, 43);
             this.numericUpDown_Weather_Day_EndCorner_Y.Maximum = new decimal(new int[] {
@@ -6204,7 +6265,7 @@
             this.numericUpDown_Weather_Day_EndCorner_Y.Name = "numericUpDown_Weather_Day_EndCorner_Y";
             this.numericUpDown_Weather_Day_EndCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Weather_Day_EndCorner_Y.TabIndex = 77;
-            this.numericUpDown_Weather_Day_EndCorner_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
+            this.numericUpDown_Weather_Day_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // label294
             // 
@@ -6294,9 +6355,11 @@
             this.comboBox_Weather_Night_Image.Name = "comboBox_Weather_Night_Image";
             this.comboBox_Weather_Night_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Weather_Night_Image.TabIndex = 45;
+            this.comboBox_Weather_Night_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
             // numericUpDown_Weather_Night_EndCorner_X
             // 
+            this.numericUpDown_Weather_Night_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_Weather_Night_EndCorner_X.Enabled = false;
             this.numericUpDown_Weather_Night_EndCorner_X.Location = new System.Drawing.Point(143, 43);
             this.numericUpDown_Weather_Night_EndCorner_X.Maximum = new decimal(new int[] {
@@ -6312,7 +6375,7 @@
             this.numericUpDown_Weather_Night_EndCorner_X.Name = "numericUpDown_Weather_Night_EndCorner_X";
             this.numericUpDown_Weather_Night_EndCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Weather_Night_EndCorner_X.TabIndex = 55;
-            this.numericUpDown_Weather_Night_EndCorner_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
+            this.numericUpDown_Weather_Night_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // numericUpDown_Weather_Night_Count
             // 
@@ -6331,9 +6394,11 @@
             0,
             0,
             0});
+            this.numericUpDown_Weather_Night_Count.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // numericUpDown_Weather_Night_StartCorner_Y
             // 
+            this.numericUpDown_Weather_Night_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_Weather_Night_StartCorner_Y.Enabled = false;
             this.numericUpDown_Weather_Night_StartCorner_Y.Location = new System.Drawing.Point(79, 43);
             this.numericUpDown_Weather_Night_StartCorner_Y.Maximum = new decimal(new int[] {
@@ -6349,10 +6414,11 @@
             this.numericUpDown_Weather_Night_StartCorner_Y.Name = "numericUpDown_Weather_Night_StartCorner_Y";
             this.numericUpDown_Weather_Night_StartCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Weather_Night_StartCorner_Y.TabIndex = 47;
-            this.numericUpDown_Weather_Night_StartCorner_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
+            this.numericUpDown_Weather_Night_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // numericUpDown_Weather_Night_StartCorner_X
             // 
+            this.numericUpDown_Weather_Night_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_Weather_Night_StartCorner_X.Enabled = false;
             this.numericUpDown_Weather_Night_StartCorner_X.Location = new System.Drawing.Point(19, 43);
             this.numericUpDown_Weather_Night_StartCorner_X.Maximum = new decimal(new int[] {
@@ -6368,7 +6434,7 @@
             this.numericUpDown_Weather_Night_StartCorner_X.Name = "numericUpDown_Weather_Night_StartCorner_X";
             this.numericUpDown_Weather_Night_StartCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Weather_Night_StartCorner_X.TabIndex = 46;
-            this.numericUpDown_Weather_Night_StartCorner_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
+            this.numericUpDown_Weather_Night_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // numericUpDown_Weather_Night_Spacing
             // 
@@ -6387,6 +6453,7 @@
             this.numericUpDown_Weather_Night_Spacing.Name = "numericUpDown_Weather_Night_Spacing";
             this.numericUpDown_Weather_Night_Spacing.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Weather_Night_Spacing.TabIndex = 60;
+            this.numericUpDown_Weather_Night_Spacing.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // checkBox_Weather_Night
             // 
@@ -6439,6 +6506,7 @@
             this.comboBox_Weather_Night_Alignment.Name = "comboBox_Weather_Night_Alignment";
             this.comboBox_Weather_Night_Alignment.Size = new System.Drawing.Size(111, 21);
             this.comboBox_Weather_Night_Alignment.TabIndex = 58;
+            this.comboBox_Weather_Night_Alignment.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
             // label315
             // 
@@ -6472,6 +6540,7 @@
             // 
             // numericUpDown_Weather_Night_EndCorner_Y
             // 
+            this.numericUpDown_Weather_Night_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_Weather_Night_EndCorner_Y.Enabled = false;
             this.numericUpDown_Weather_Night_EndCorner_Y.Location = new System.Drawing.Point(205, 43);
             this.numericUpDown_Weather_Night_EndCorner_Y.Maximum = new decimal(new int[] {
@@ -6487,7 +6556,7 @@
             this.numericUpDown_Weather_Night_EndCorner_Y.Name = "numericUpDown_Weather_Night_EndCorner_Y";
             this.numericUpDown_Weather_Night_EndCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Weather_Night_EndCorner_Y.TabIndex = 56;
-            this.numericUpDown_Weather_Night_EndCorner_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
+            this.numericUpDown_Weather_Night_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // label318
             // 
@@ -6624,6 +6693,7 @@
             // 
             // numericUpDown_Weather_Icon_Y
             // 
+            this.numericUpDown_Weather_Icon_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_Weather_Icon_Y.Enabled = false;
             this.numericUpDown_Weather_Icon_Y.Location = new System.Drawing.Point(23, 55);
             this.numericUpDown_Weather_Icon_Y.Maximum = new decimal(new int[] {
@@ -6640,10 +6710,10 @@
             this.numericUpDown_Weather_Icon_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Weather_Icon_Y.TabIndex = 18;
             this.numericUpDown_Weather_Icon_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_Icon_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // numericUpDown_Weather_Icon_X
             // 
+            this.numericUpDown_Weather_Icon_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_Weather_Icon_X.Enabled = false;
             this.numericUpDown_Weather_Icon_X.Location = new System.Drawing.Point(23, 29);
             this.numericUpDown_Weather_Icon_X.Maximum = new decimal(new int[] {
@@ -6660,7 +6730,6 @@
             this.numericUpDown_Weather_Icon_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Weather_Icon_X.TabIndex = 17;
             this.numericUpDown_Weather_Icon_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Weather_Icon_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // comboBox_Weather_Icon_Image
             // 
@@ -6973,6 +7042,7 @@
             // 
             // numericUpDown_HourCenterImage_Y
             // 
+            this.numericUpDown_HourCenterImage_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_HourCenterImage_Y.Enabled = false;
             this.numericUpDown_HourCenterImage_Y.Location = new System.Drawing.Point(65, 67);
             this.numericUpDown_HourCenterImage_Y.Maximum = new decimal(new int[] {
@@ -6984,7 +7054,6 @@
             this.numericUpDown_HourCenterImage_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_HourCenterImage_Y.TabIndex = 61;
             this.numericUpDown_HourCenterImage_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_HourCenterImage_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // label311
             // 
@@ -6998,6 +7067,7 @@
             // 
             // numericUpDown_HourCenterImage_X
             // 
+            this.numericUpDown_HourCenterImage_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_HourCenterImage_X.Enabled = false;
             this.numericUpDown_HourCenterImage_X.Location = new System.Drawing.Point(65, 41);
             this.numericUpDown_HourCenterImage_X.Maximum = new decimal(new int[] {
@@ -7014,7 +7084,6 @@
             this.numericUpDown_HourCenterImage_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_HourCenterImage_X.TabIndex = 59;
             this.numericUpDown_HourCenterImage_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_HourCenterImage_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // label312
             // 
@@ -7260,6 +7329,7 @@
             // 
             // numericUpDown_MinCenterImage_Y
             // 
+            this.numericUpDown_MinCenterImage_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_MinCenterImage_Y.Enabled = false;
             this.numericUpDown_MinCenterImage_Y.Location = new System.Drawing.Point(65, 67);
             this.numericUpDown_MinCenterImage_Y.Maximum = new decimal(new int[] {
@@ -7276,7 +7346,6 @@
             this.numericUpDown_MinCenterImage_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_MinCenterImage_Y.TabIndex = 61;
             this.numericUpDown_MinCenterImage_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_MinCenterImage_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // label308
             // 
@@ -7290,6 +7359,7 @@
             // 
             // numericUpDown_MinCenterImage_X
             // 
+            this.numericUpDown_MinCenterImage_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_MinCenterImage_X.Enabled = false;
             this.numericUpDown_MinCenterImage_X.Location = new System.Drawing.Point(65, 41);
             this.numericUpDown_MinCenterImage_X.Maximum = new decimal(new int[] {
@@ -7306,7 +7376,6 @@
             this.numericUpDown_MinCenterImage_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_MinCenterImage_X.TabIndex = 59;
             this.numericUpDown_MinCenterImage_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_MinCenterImage_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // label309
             // 
@@ -7381,6 +7450,7 @@
             // 
             // numericUpDown_SecCenterImage_Y
             // 
+            this.numericUpDown_SecCenterImage_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_SecCenterImage_Y.Enabled = false;
             this.numericUpDown_SecCenterImage_Y.Location = new System.Drawing.Point(65, 67);
             this.numericUpDown_SecCenterImage_Y.Maximum = new decimal(new int[] {
@@ -7392,7 +7462,6 @@
             this.numericUpDown_SecCenterImage_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_SecCenterImage_Y.TabIndex = 61;
             this.numericUpDown_SecCenterImage_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_SecCenterImage_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // label305
             // 
@@ -7406,6 +7475,7 @@
             // 
             // numericUpDown_SecCenterImage_X
             // 
+            this.numericUpDown_SecCenterImage_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_SecCenterImage_X.Enabled = false;
             this.numericUpDown_SecCenterImage_X.Location = new System.Drawing.Point(65, 41);
             this.numericUpDown_SecCenterImage_X.Maximum = new decimal(new int[] {
@@ -7417,7 +7487,6 @@
             this.numericUpDown_SecCenterImage_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_SecCenterImage_X.TabIndex = 59;
             this.numericUpDown_SecCenterImage_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_SecCenterImage_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // label306
             // 
@@ -7702,6 +7771,7 @@
             // 
             // numericUpDown_Battery_Text_EndCorner_X
             // 
+            this.numericUpDown_Battery_Text_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_Battery_Text_EndCorner_X.Enabled = false;
             this.numericUpDown_Battery_Text_EndCorner_X.Location = new System.Drawing.Point(140, 43);
             this.numericUpDown_Battery_Text_EndCorner_X.Maximum = new decimal(new int[] {
@@ -7718,7 +7788,6 @@
             this.numericUpDown_Battery_Text_EndCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Battery_Text_EndCorner_X.TabIndex = 74;
             this.numericUpDown_Battery_Text_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Battery_Text_EndCorner_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // numericUpDown_Battery_Text_Count
             // 
@@ -7741,6 +7810,7 @@
             // 
             // numericUpDown_Battery_Text_StartCorner_Y
             // 
+            this.numericUpDown_Battery_Text_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_Battery_Text_StartCorner_Y.Enabled = false;
             this.numericUpDown_Battery_Text_StartCorner_Y.Location = new System.Drawing.Point(79, 43);
             this.numericUpDown_Battery_Text_StartCorner_Y.Maximum = new decimal(new int[] {
@@ -7757,10 +7827,10 @@
             this.numericUpDown_Battery_Text_StartCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Battery_Text_StartCorner_Y.TabIndex = 66;
             this.numericUpDown_Battery_Text_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Battery_Text_StartCorner_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // numericUpDown_Battery_Text_StartCorner_X
             // 
+            this.numericUpDown_Battery_Text_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_Battery_Text_StartCorner_X.Enabled = false;
             this.numericUpDown_Battery_Text_StartCorner_X.Location = new System.Drawing.Point(19, 43);
             this.numericUpDown_Battery_Text_StartCorner_X.Maximum = new decimal(new int[] {
@@ -7777,7 +7847,6 @@
             this.numericUpDown_Battery_Text_StartCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Battery_Text_StartCorner_X.TabIndex = 65;
             this.numericUpDown_Battery_Text_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Battery_Text_StartCorner_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // numericUpDown_Battery_Text_Spacing
             // 
@@ -7883,6 +7952,7 @@
             // 
             // numericUpDown_Battery_Text_EndCorner_Y
             // 
+            this.numericUpDown_Battery_Text_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_Battery_Text_EndCorner_Y.Enabled = false;
             this.numericUpDown_Battery_Text_EndCorner_Y.Location = new System.Drawing.Point(200, 43);
             this.numericUpDown_Battery_Text_EndCorner_Y.Maximum = new decimal(new int[] {
@@ -7899,7 +7969,6 @@
             this.numericUpDown_Battery_Text_EndCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Battery_Text_EndCorner_Y.TabIndex = 75;
             this.numericUpDown_Battery_Text_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Battery_Text_EndCorner_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // label189
             // 
@@ -7981,6 +8050,7 @@
             // 
             // numericUpDown_Battery_Percent_Y
             // 
+            this.numericUpDown_Battery_Percent_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_Battery_Percent_Y.Enabled = false;
             this.numericUpDown_Battery_Percent_Y.Location = new System.Drawing.Point(79, 43);
             this.numericUpDown_Battery_Percent_Y.Maximum = new decimal(new int[] {
@@ -7997,10 +8067,10 @@
             this.numericUpDown_Battery_Percent_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Battery_Percent_Y.TabIndex = 84;
             this.numericUpDown_Battery_Percent_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Battery_Percent_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // numericUpDown_Battery_Percent_X
             // 
+            this.numericUpDown_Battery_Percent_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_Battery_Percent_X.Enabled = false;
             this.numericUpDown_Battery_Percent_X.Location = new System.Drawing.Point(19, 43);
             this.numericUpDown_Battery_Percent_X.Maximum = new decimal(new int[] {
@@ -8017,7 +8087,6 @@
             this.numericUpDown_Battery_Percent_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Battery_Percent_X.TabIndex = 83;
             this.numericUpDown_Battery_Percent_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Battery_Percent_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // checkBox_Battery_Percent
             // 
@@ -8133,6 +8202,7 @@
             // 
             // numericUpDown_Battery_Img_Y
             // 
+            this.numericUpDown_Battery_Img_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_Battery_Img_Y.Enabled = false;
             this.numericUpDown_Battery_Img_Y.Location = new System.Drawing.Point(79, 43);
             this.numericUpDown_Battery_Img_Y.Maximum = new decimal(new int[] {
@@ -8149,10 +8219,10 @@
             this.numericUpDown_Battery_Img_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Battery_Img_Y.TabIndex = 76;
             this.numericUpDown_Battery_Img_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Battery_Img_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // numericUpDown_Battery_Img_X
             // 
+            this.numericUpDown_Battery_Img_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_Battery_Img_X.Enabled = false;
             this.numericUpDown_Battery_Img_X.Location = new System.Drawing.Point(19, 43);
             this.numericUpDown_Battery_Img_X.Maximum = new decimal(new int[] {
@@ -8169,7 +8239,6 @@
             this.numericUpDown_Battery_Img_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Battery_Img_X.TabIndex = 75;
             this.numericUpDown_Battery_Img_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Battery_Img_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // checkBox_Battery_Img
             // 
@@ -8447,6 +8516,7 @@
             // 
             // numericUpDown_Battery_Scale_Center_Y
             // 
+            this.numericUpDown_Battery_Scale_Center_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_Battery_Scale_Center_Y.Enabled = false;
             this.numericUpDown_Battery_Scale_Center_Y.Location = new System.Drawing.Point(65, 50);
             this.numericUpDown_Battery_Scale_Center_Y.Maximum = new decimal(new int[] {
@@ -8463,7 +8533,6 @@
             this.numericUpDown_Battery_Scale_Center_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Battery_Scale_Center_Y.TabIndex = 40;
             this.numericUpDown_Battery_Scale_Center_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Battery_Scale_Center_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // label205
             // 
@@ -8477,6 +8546,7 @@
             // 
             // numericUpDown_Battery_Scale_Center_X
             // 
+            this.numericUpDown_Battery_Scale_Center_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_Battery_Scale_Center_X.Enabled = false;
             this.numericUpDown_Battery_Scale_Center_X.Location = new System.Drawing.Point(65, 24);
             this.numericUpDown_Battery_Scale_Center_X.Maximum = new decimal(new int[] {
@@ -8493,7 +8563,6 @@
             this.numericUpDown_Battery_Scale_Center_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Battery_Scale_Center_X.TabIndex = 38;
             this.numericUpDown_Battery_Scale_Center_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Battery_Scale_Center_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // label206
             // 
@@ -8620,6 +8689,7 @@
             // 
             // numericUpDown_Bluetooth_Y
             // 
+            this.numericUpDown_Bluetooth_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_Bluetooth_Y.Enabled = false;
             this.numericUpDown_Bluetooth_Y.Location = new System.Drawing.Point(92, 30);
             this.numericUpDown_Bluetooth_Y.Maximum = new decimal(new int[] {
@@ -8631,10 +8701,10 @@
             this.numericUpDown_Bluetooth_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Bluetooth_Y.TabIndex = 16;
             this.numericUpDown_Bluetooth_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Bluetooth_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // numericUpDown_Bluetooth_X
             // 
+            this.numericUpDown_Bluetooth_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_Bluetooth_X.Enabled = false;
             this.numericUpDown_Bluetooth_X.Location = new System.Drawing.Point(22, 29);
             this.numericUpDown_Bluetooth_X.Maximum = new decimal(new int[] {
@@ -8646,7 +8716,6 @@
             this.numericUpDown_Bluetooth_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Bluetooth_X.TabIndex = 15;
             this.numericUpDown_Bluetooth_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Bluetooth_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // comboBox_Bluetooth_On
             // 
@@ -8744,6 +8813,7 @@
             // 
             // numericUpDown_Alarm_Y
             // 
+            this.numericUpDown_Alarm_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_Alarm_Y.Enabled = false;
             this.numericUpDown_Alarm_Y.Location = new System.Drawing.Point(92, 30);
             this.numericUpDown_Alarm_Y.Maximum = new decimal(new int[] {
@@ -8755,10 +8825,10 @@
             this.numericUpDown_Alarm_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Alarm_Y.TabIndex = 25;
             this.numericUpDown_Alarm_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Alarm_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // numericUpDown_Alarm_X
             // 
+            this.numericUpDown_Alarm_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_Alarm_X.Enabled = false;
             this.numericUpDown_Alarm_X.Location = new System.Drawing.Point(22, 29);
             this.numericUpDown_Alarm_X.Maximum = new decimal(new int[] {
@@ -8770,7 +8840,6 @@
             this.numericUpDown_Alarm_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Alarm_X.TabIndex = 24;
             this.numericUpDown_Alarm_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Alarm_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // comboBox_Alarm_On
             // 
@@ -8867,6 +8936,7 @@
             // 
             // numericUpDown_Lock_Y
             // 
+            this.numericUpDown_Lock_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_Lock_Y.Enabled = false;
             this.numericUpDown_Lock_Y.Location = new System.Drawing.Point(92, 30);
             this.numericUpDown_Lock_Y.Maximum = new decimal(new int[] {
@@ -8878,10 +8948,10 @@
             this.numericUpDown_Lock_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Lock_Y.TabIndex = 25;
             this.numericUpDown_Lock_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Lock_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // numericUpDown_Lock_X
             // 
+            this.numericUpDown_Lock_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_Lock_X.Enabled = false;
             this.numericUpDown_Lock_X.Location = new System.Drawing.Point(22, 29);
             this.numericUpDown_Lock_X.Maximum = new decimal(new int[] {
@@ -8893,7 +8963,6 @@
             this.numericUpDown_Lock_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Lock_X.TabIndex = 24;
             this.numericUpDown_Lock_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Lock_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // comboBox_Lock_On
             // 
@@ -8990,6 +9059,7 @@
             // 
             // numericUpDown_DND_Y
             // 
+            this.numericUpDown_DND_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_DND_Y.Enabled = false;
             this.numericUpDown_DND_Y.Location = new System.Drawing.Point(92, 30);
             this.numericUpDown_DND_Y.Maximum = new decimal(new int[] {
@@ -9001,10 +9071,10 @@
             this.numericUpDown_DND_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_DND_Y.TabIndex = 25;
             this.numericUpDown_DND_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_DND_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // numericUpDown_DND_X
             // 
+            this.numericUpDown_DND_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_DND_X.Enabled = false;
             this.numericUpDown_DND_X.Location = new System.Drawing.Point(22, 29);
             this.numericUpDown_DND_X.Maximum = new decimal(new int[] {
@@ -9016,7 +9086,6 @@
             this.numericUpDown_DND_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_DND_X.TabIndex = 24;
             this.numericUpDown_DND_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_DND_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // comboBox_DND_On
             // 
@@ -9128,6 +9197,7 @@
             // 
             // numericUpDown_ActivityGoal_EndCorner_X
             // 
+            this.numericUpDown_ActivityGoal_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_ActivityGoal_EndCorner_X.Enabled = false;
             this.numericUpDown_ActivityGoal_EndCorner_X.Location = new System.Drawing.Point(140, 43);
             this.numericUpDown_ActivityGoal_EndCorner_X.Maximum = new decimal(new int[] {
@@ -9144,7 +9214,6 @@
             this.numericUpDown_ActivityGoal_EndCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityGoal_EndCorner_X.TabIndex = 55;
             this.numericUpDown_ActivityGoal_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_ActivityGoal_EndCorner_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // numericUpDown_ActivityGoal_Count
             // 
@@ -9167,6 +9236,7 @@
             // 
             // numericUpDown_ActivityGoal_StartCorner_Y
             // 
+            this.numericUpDown_ActivityGoal_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_ActivityGoal_StartCorner_Y.Enabled = false;
             this.numericUpDown_ActivityGoal_StartCorner_Y.Location = new System.Drawing.Point(79, 43);
             this.numericUpDown_ActivityGoal_StartCorner_Y.Maximum = new decimal(new int[] {
@@ -9183,10 +9253,10 @@
             this.numericUpDown_ActivityGoal_StartCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityGoal_StartCorner_Y.TabIndex = 47;
             this.numericUpDown_ActivityGoal_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_ActivityGoal_StartCorner_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // numericUpDown_ActivityGoal_StartCorner_X
             // 
+            this.numericUpDown_ActivityGoal_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_ActivityGoal_StartCorner_X.Enabled = false;
             this.numericUpDown_ActivityGoal_StartCorner_X.Location = new System.Drawing.Point(19, 43);
             this.numericUpDown_ActivityGoal_StartCorner_X.Maximum = new decimal(new int[] {
@@ -9203,7 +9273,6 @@
             this.numericUpDown_ActivityGoal_StartCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityGoal_StartCorner_X.TabIndex = 46;
             this.numericUpDown_ActivityGoal_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_ActivityGoal_StartCorner_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // numericUpDown_ActivityGoal_Spacing
             // 
@@ -9309,6 +9378,7 @@
             // 
             // numericUpDown_ActivityGoal_EndCorner_Y
             // 
+            this.numericUpDown_ActivityGoal_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_ActivityGoal_EndCorner_Y.Enabled = false;
             this.numericUpDown_ActivityGoal_EndCorner_Y.Location = new System.Drawing.Point(200, 43);
             this.numericUpDown_ActivityGoal_EndCorner_Y.Maximum = new decimal(new int[] {
@@ -9325,7 +9395,6 @@
             this.numericUpDown_ActivityGoal_EndCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityGoal_EndCorner_Y.TabIndex = 56;
             this.numericUpDown_ActivityGoal_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_ActivityGoal_EndCorner_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // comboBox_ActivityGoal_Image
             // 
@@ -9419,6 +9488,7 @@
             // 
             // numericUpDown_ActivitySteps_EndCorner_X
             // 
+            this.numericUpDown_ActivitySteps_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_ActivitySteps_EndCorner_X.Enabled = false;
             this.numericUpDown_ActivitySteps_EndCorner_X.Location = new System.Drawing.Point(140, 43);
             this.numericUpDown_ActivitySteps_EndCorner_X.Maximum = new decimal(new int[] {
@@ -9435,7 +9505,6 @@
             this.numericUpDown_ActivitySteps_EndCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivitySteps_EndCorner_X.TabIndex = 74;
             this.numericUpDown_ActivitySteps_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_ActivitySteps_EndCorner_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // numericUpDown_ActivitySteps_Count
             // 
@@ -9458,6 +9527,7 @@
             // 
             // numericUpDown_ActivitySteps_StartCorner_Y
             // 
+            this.numericUpDown_ActivitySteps_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_ActivitySteps_StartCorner_Y.Enabled = false;
             this.numericUpDown_ActivitySteps_StartCorner_Y.Location = new System.Drawing.Point(79, 43);
             this.numericUpDown_ActivitySteps_StartCorner_Y.Maximum = new decimal(new int[] {
@@ -9474,10 +9544,10 @@
             this.numericUpDown_ActivitySteps_StartCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivitySteps_StartCorner_Y.TabIndex = 66;
             this.numericUpDown_ActivitySteps_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_ActivitySteps_StartCorner_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // numericUpDown_ActivitySteps_StartCorner_X
             // 
+            this.numericUpDown_ActivitySteps_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_ActivitySteps_StartCorner_X.Enabled = false;
             this.numericUpDown_ActivitySteps_StartCorner_X.Location = new System.Drawing.Point(19, 43);
             this.numericUpDown_ActivitySteps_StartCorner_X.Maximum = new decimal(new int[] {
@@ -9494,7 +9564,6 @@
             this.numericUpDown_ActivitySteps_StartCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivitySteps_StartCorner_X.TabIndex = 65;
             this.numericUpDown_ActivitySteps_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_ActivitySteps_StartCorner_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // numericUpDown_ActivitySteps_Spacing
             // 
@@ -9600,6 +9669,7 @@
             // 
             // numericUpDown_ActivitySteps_EndCorner_Y
             // 
+            this.numericUpDown_ActivitySteps_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_ActivitySteps_EndCorner_Y.Enabled = false;
             this.numericUpDown_ActivitySteps_EndCorner_Y.Location = new System.Drawing.Point(200, 43);
             this.numericUpDown_ActivitySteps_EndCorner_Y.Maximum = new decimal(new int[] {
@@ -9616,7 +9686,6 @@
             this.numericUpDown_ActivitySteps_EndCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivitySteps_EndCorner_Y.TabIndex = 75;
             this.numericUpDown_ActivitySteps_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_ActivitySteps_EndCorner_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // comboBox_ActivitySteps_Image
             // 
@@ -9757,6 +9826,7 @@
             // 
             // numericUpDown_ActivityDistance_EndCorner_X
             // 
+            this.numericUpDown_ActivityDistance_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_ActivityDistance_EndCorner_X.Enabled = false;
             this.numericUpDown_ActivityDistance_EndCorner_X.Location = new System.Drawing.Point(140, 43);
             this.numericUpDown_ActivityDistance_EndCorner_X.Maximum = new decimal(new int[] {
@@ -9773,7 +9843,6 @@
             this.numericUpDown_ActivityDistance_EndCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityDistance_EndCorner_X.TabIndex = 74;
             this.numericUpDown_ActivityDistance_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_ActivityDistance_EndCorner_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // numericUpDown_ActivityDistance_Count
             // 
@@ -9796,6 +9865,7 @@
             // 
             // numericUpDown_ActivityDistance_StartCorner_Y
             // 
+            this.numericUpDown_ActivityDistance_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_ActivityDistance_StartCorner_Y.Enabled = false;
             this.numericUpDown_ActivityDistance_StartCorner_Y.Location = new System.Drawing.Point(79, 43);
             this.numericUpDown_ActivityDistance_StartCorner_Y.Maximum = new decimal(new int[] {
@@ -9812,10 +9882,10 @@
             this.numericUpDown_ActivityDistance_StartCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityDistance_StartCorner_Y.TabIndex = 66;
             this.numericUpDown_ActivityDistance_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_ActivityDistance_StartCorner_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // numericUpDown_ActivityDistance_StartCorner_X
             // 
+            this.numericUpDown_ActivityDistance_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_ActivityDistance_StartCorner_X.Enabled = false;
             this.numericUpDown_ActivityDistance_StartCorner_X.Location = new System.Drawing.Point(19, 43);
             this.numericUpDown_ActivityDistance_StartCorner_X.Maximum = new decimal(new int[] {
@@ -9832,7 +9902,6 @@
             this.numericUpDown_ActivityDistance_StartCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityDistance_StartCorner_X.TabIndex = 65;
             this.numericUpDown_ActivityDistance_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_ActivityDistance_StartCorner_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // numericUpDown_ActivityDistance_Spacing
             // 
@@ -9938,6 +10007,7 @@
             // 
             // numericUpDown_ActivityDistance_EndCorner_Y
             // 
+            this.numericUpDown_ActivityDistance_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_ActivityDistance_EndCorner_Y.Enabled = false;
             this.numericUpDown_ActivityDistance_EndCorner_Y.Location = new System.Drawing.Point(200, 43);
             this.numericUpDown_ActivityDistance_EndCorner_Y.Maximum = new decimal(new int[] {
@@ -9954,7 +10024,6 @@
             this.numericUpDown_ActivityDistance_EndCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityDistance_EndCorner_Y.TabIndex = 75;
             this.numericUpDown_ActivityDistance_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_ActivityDistance_EndCorner_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // comboBox_ActivityDistance_Image
             // 
@@ -10047,6 +10116,7 @@
             // 
             // numericUpDown_ActivityPuls_EndCorner_X
             // 
+            this.numericUpDown_ActivityPuls_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_ActivityPuls_EndCorner_X.Enabled = false;
             this.numericUpDown_ActivityPuls_EndCorner_X.Location = new System.Drawing.Point(140, 43);
             this.numericUpDown_ActivityPuls_EndCorner_X.Maximum = new decimal(new int[] {
@@ -10063,7 +10133,6 @@
             this.numericUpDown_ActivityPuls_EndCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityPuls_EndCorner_X.TabIndex = 74;
             this.numericUpDown_ActivityPuls_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_ActivityPuls_EndCorner_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // numericUpDown_ActivityPuls_Count
             // 
@@ -10086,6 +10155,7 @@
             // 
             // numericUpDown_ActivityPuls_StartCorner_Y
             // 
+            this.numericUpDown_ActivityPuls_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_ActivityPuls_StartCorner_Y.Enabled = false;
             this.numericUpDown_ActivityPuls_StartCorner_Y.Location = new System.Drawing.Point(79, 43);
             this.numericUpDown_ActivityPuls_StartCorner_Y.Maximum = new decimal(new int[] {
@@ -10102,10 +10172,10 @@
             this.numericUpDown_ActivityPuls_StartCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityPuls_StartCorner_Y.TabIndex = 66;
             this.numericUpDown_ActivityPuls_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_ActivityPuls_StartCorner_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // numericUpDown_ActivityPuls_StartCorner_X
             // 
+            this.numericUpDown_ActivityPuls_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_ActivityPuls_StartCorner_X.Enabled = false;
             this.numericUpDown_ActivityPuls_StartCorner_X.Location = new System.Drawing.Point(19, 43);
             this.numericUpDown_ActivityPuls_StartCorner_X.Maximum = new decimal(new int[] {
@@ -10122,7 +10192,6 @@
             this.numericUpDown_ActivityPuls_StartCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityPuls_StartCorner_X.TabIndex = 65;
             this.numericUpDown_ActivityPuls_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_ActivityPuls_StartCorner_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // numericUpDown_ActivityPuls_Spacing
             // 
@@ -10228,6 +10297,7 @@
             // 
             // numericUpDown_ActivityPuls_EndCorner_Y
             // 
+            this.numericUpDown_ActivityPuls_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_ActivityPuls_EndCorner_Y.Enabled = false;
             this.numericUpDown_ActivityPuls_EndCorner_Y.Location = new System.Drawing.Point(200, 43);
             this.numericUpDown_ActivityPuls_EndCorner_Y.Maximum = new decimal(new int[] {
@@ -10244,7 +10314,6 @@
             this.numericUpDown_ActivityPuls_EndCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityPuls_EndCorner_Y.TabIndex = 75;
             this.numericUpDown_ActivityPuls_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_ActivityPuls_EndCorner_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // comboBox_ActivityPuls_Image
             // 
@@ -10337,6 +10406,7 @@
             // 
             // numericUpDown_ActivityCalories_EndCorner_X
             // 
+            this.numericUpDown_ActivityCalories_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_ActivityCalories_EndCorner_X.Enabled = false;
             this.numericUpDown_ActivityCalories_EndCorner_X.Location = new System.Drawing.Point(140, 43);
             this.numericUpDown_ActivityCalories_EndCorner_X.Maximum = new decimal(new int[] {
@@ -10353,7 +10423,6 @@
             this.numericUpDown_ActivityCalories_EndCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityCalories_EndCorner_X.TabIndex = 74;
             this.numericUpDown_ActivityCalories_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_ActivityCalories_EndCorner_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // numericUpDown_ActivityCalories_Count
             // 
@@ -10376,6 +10445,7 @@
             // 
             // numericUpDown_ActivityCalories_StartCorner_Y
             // 
+            this.numericUpDown_ActivityCalories_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_ActivityCalories_StartCorner_Y.Enabled = false;
             this.numericUpDown_ActivityCalories_StartCorner_Y.Location = new System.Drawing.Point(79, 43);
             this.numericUpDown_ActivityCalories_StartCorner_Y.Maximum = new decimal(new int[] {
@@ -10392,10 +10462,10 @@
             this.numericUpDown_ActivityCalories_StartCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityCalories_StartCorner_Y.TabIndex = 66;
             this.numericUpDown_ActivityCalories_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_ActivityCalories_StartCorner_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // numericUpDown_ActivityCalories_StartCorner_X
             // 
+            this.numericUpDown_ActivityCalories_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_ActivityCalories_StartCorner_X.Enabled = false;
             this.numericUpDown_ActivityCalories_StartCorner_X.Location = new System.Drawing.Point(19, 43);
             this.numericUpDown_ActivityCalories_StartCorner_X.Maximum = new decimal(new int[] {
@@ -10412,7 +10482,6 @@
             this.numericUpDown_ActivityCalories_StartCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityCalories_StartCorner_X.TabIndex = 65;
             this.numericUpDown_ActivityCalories_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_ActivityCalories_StartCorner_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // numericUpDown_ActivityCalories_Spacing
             // 
@@ -10518,6 +10587,7 @@
             // 
             // numericUpDown_ActivityCalories_EndCorner_Y
             // 
+            this.numericUpDown_ActivityCalories_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_ActivityCalories_EndCorner_Y.Enabled = false;
             this.numericUpDown_ActivityCalories_EndCorner_Y.Location = new System.Drawing.Point(200, 43);
             this.numericUpDown_ActivityCalories_EndCorner_Y.Maximum = new decimal(new int[] {
@@ -10534,7 +10604,6 @@
             this.numericUpDown_ActivityCalories_EndCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityCalories_EndCorner_Y.TabIndex = 75;
             this.numericUpDown_ActivityCalories_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_ActivityCalories_EndCorner_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // comboBox_ActivityCalories_Image
             // 
@@ -10616,6 +10685,7 @@
             // 
             // numericUpDown_ActivityStar_Y
             // 
+            this.numericUpDown_ActivityStar_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_ActivityStar_Y.Enabled = false;
             this.numericUpDown_ActivityStar_Y.Location = new System.Drawing.Point(79, 43);
             this.numericUpDown_ActivityStar_Y.Maximum = new decimal(new int[] {
@@ -10627,10 +10697,10 @@
             this.numericUpDown_ActivityStar_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityStar_Y.TabIndex = 66;
             this.numericUpDown_ActivityStar_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_ActivityStar_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // numericUpDown_ActivityStar_X
             // 
+            this.numericUpDown_ActivityStar_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_ActivityStar_X.Enabled = false;
             this.numericUpDown_ActivityStar_X.Location = new System.Drawing.Point(19, 43);
             this.numericUpDown_ActivityStar_X.Maximum = new decimal(new int[] {
@@ -10642,7 +10712,6 @@
             this.numericUpDown_ActivityStar_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityStar_X.TabIndex = 65;
             this.numericUpDown_ActivityStar_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_ActivityStar_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // checkBox_ActivityStar
             // 
@@ -10954,6 +11023,7 @@
             // 
             // numericUpDown_StepsProgress_Center_Y
             // 
+            this.numericUpDown_StepsProgress_Center_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_StepsProgress_Center_Y.Enabled = false;
             this.numericUpDown_StepsProgress_Center_Y.Location = new System.Drawing.Point(65, 50);
             this.numericUpDown_StepsProgress_Center_Y.Maximum = new decimal(new int[] {
@@ -10970,7 +11040,6 @@
             this.numericUpDown_StepsProgress_Center_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_StepsProgress_Center_Y.TabIndex = 23;
             this.numericUpDown_StepsProgress_Center_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_StepsProgress_Center_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // label105
             // 
@@ -10984,6 +11053,7 @@
             // 
             // numericUpDown_StepsProgress_Center_X
             // 
+            this.numericUpDown_StepsProgress_Center_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_StepsProgress_Center_X.Enabled = false;
             this.numericUpDown_StepsProgress_Center_X.Location = new System.Drawing.Point(65, 24);
             this.numericUpDown_StepsProgress_Center_X.Maximum = new decimal(new int[] {
@@ -11000,7 +11070,6 @@
             this.numericUpDown_StepsProgress_Center_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_StepsProgress_Center_X.TabIndex = 21;
             this.numericUpDown_StepsProgress_Center_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_StepsProgress_Center_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // label104
             // 
@@ -11070,7 +11139,7 @@
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(365, 169);
+            this.tabPage8.Size = new System.Drawing.Size(382, 169);
             this.tabPage8.TabIndex = 1;
             this.tabPage8.Text = "День и месяц отдельными блоками";
             // 
@@ -11115,6 +11184,7 @@
             // 
             // numericUpDown_MonthAndDayD_EndCorner_X
             // 
+            this.numericUpDown_MonthAndDayD_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_MonthAndDayD_EndCorner_X.Enabled = false;
             this.numericUpDown_MonthAndDayD_EndCorner_X.Location = new System.Drawing.Point(134, 44);
             this.numericUpDown_MonthAndDayD_EndCorner_X.Maximum = new decimal(new int[] {
@@ -11131,7 +11201,6 @@
             this.numericUpDown_MonthAndDayD_EndCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_MonthAndDayD_EndCorner_X.TabIndex = 17;
             this.numericUpDown_MonthAndDayD_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_MonthAndDayD_EndCorner_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // numericUpDown_MonthAndDayD_Count
             // 
@@ -11154,6 +11223,7 @@
             // 
             // numericUpDown_MonthAndDayD_StartCorner_Y
             // 
+            this.numericUpDown_MonthAndDayD_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_MonthAndDayD_StartCorner_Y.Enabled = false;
             this.numericUpDown_MonthAndDayD_StartCorner_Y.Location = new System.Drawing.Point(73, 44);
             this.numericUpDown_MonthAndDayD_StartCorner_Y.Maximum = new decimal(new int[] {
@@ -11170,10 +11240,10 @@
             this.numericUpDown_MonthAndDayD_StartCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_MonthAndDayD_StartCorner_Y.TabIndex = 9;
             this.numericUpDown_MonthAndDayD_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_MonthAndDayD_StartCorner_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // numericUpDown_MonthAndDayD_StartCorner_X
             // 
+            this.numericUpDown_MonthAndDayD_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_MonthAndDayD_StartCorner_X.Enabled = false;
             this.numericUpDown_MonthAndDayD_StartCorner_X.Location = new System.Drawing.Point(15, 44);
             this.numericUpDown_MonthAndDayD_StartCorner_X.Maximum = new decimal(new int[] {
@@ -11190,7 +11260,6 @@
             this.numericUpDown_MonthAndDayD_StartCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_MonthAndDayD_StartCorner_X.TabIndex = 8;
             this.numericUpDown_MonthAndDayD_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_MonthAndDayD_StartCorner_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // numericUpDown_MonthAndDayD_Spacing
             // 
@@ -11297,6 +11366,7 @@
             // 
             // numericUpDown_MonthAndDayD_EndCorner_Y
             // 
+            this.numericUpDown_MonthAndDayD_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_MonthAndDayD_EndCorner_Y.Enabled = false;
             this.numericUpDown_MonthAndDayD_EndCorner_Y.Location = new System.Drawing.Point(194, 44);
             this.numericUpDown_MonthAndDayD_EndCorner_Y.Maximum = new decimal(new int[] {
@@ -11313,7 +11383,6 @@
             this.numericUpDown_MonthAndDayD_EndCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_MonthAndDayD_EndCorner_Y.TabIndex = 18;
             this.numericUpDown_MonthAndDayD_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_MonthAndDayD_EndCorner_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // comboBox_MonthAndDayD_Image
             // 
@@ -11426,6 +11495,7 @@
             // 
             // numericUpDown_MonthAndDayM_StartCorner_Y
             // 
+            this.numericUpDown_MonthAndDayM_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_MonthAndDayM_StartCorner_Y.Enabled = false;
             this.numericUpDown_MonthAndDayM_StartCorner_Y.Location = new System.Drawing.Point(73, 44);
             this.numericUpDown_MonthAndDayM_StartCorner_Y.Maximum = new decimal(new int[] {
@@ -11442,10 +11512,10 @@
             this.numericUpDown_MonthAndDayM_StartCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_MonthAndDayM_StartCorner_Y.TabIndex = 28;
             this.numericUpDown_MonthAndDayM_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_MonthAndDayM_StartCorner_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // numericUpDown_MonthAndDayM_StartCorner_X
             // 
+            this.numericUpDown_MonthAndDayM_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_MonthAndDayM_StartCorner_X.Enabled = false;
             this.numericUpDown_MonthAndDayM_StartCorner_X.Location = new System.Drawing.Point(15, 44);
             this.numericUpDown_MonthAndDayM_StartCorner_X.Maximum = new decimal(new int[] {
@@ -11462,7 +11532,6 @@
             this.numericUpDown_MonthAndDayM_StartCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_MonthAndDayM_StartCorner_X.TabIndex = 27;
             this.numericUpDown_MonthAndDayM_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_MonthAndDayM_StartCorner_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // numericUpDown_MonthAndDayM_Spacing
             // 
@@ -11568,6 +11637,7 @@
             // 
             // numericUpDown_MonthAndDayM_EndCorner_Y
             // 
+            this.numericUpDown_MonthAndDayM_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_MonthAndDayM_EndCorner_Y.Enabled = false;
             this.numericUpDown_MonthAndDayM_EndCorner_Y.Location = new System.Drawing.Point(194, 44);
             this.numericUpDown_MonthAndDayM_EndCorner_Y.Maximum = new decimal(new int[] {
@@ -11584,7 +11654,6 @@
             this.numericUpDown_MonthAndDayM_EndCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_MonthAndDayM_EndCorner_Y.TabIndex = 37;
             this.numericUpDown_MonthAndDayM_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_MonthAndDayM_EndCorner_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // comboBox_MonthAndDayM_Image
             // 
@@ -11599,6 +11668,7 @@
             // 
             // numericUpDown_MonthAndDayM_EndCorner_X
             // 
+            this.numericUpDown_MonthAndDayM_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_MonthAndDayM_EndCorner_X.Enabled = false;
             this.numericUpDown_MonthAndDayM_EndCorner_X.Location = new System.Drawing.Point(134, 44);
             this.numericUpDown_MonthAndDayM_EndCorner_X.Maximum = new decimal(new int[] {
@@ -11615,7 +11685,6 @@
             this.numericUpDown_MonthAndDayM_EndCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_MonthAndDayM_EndCorner_X.TabIndex = 36;
             this.numericUpDown_MonthAndDayM_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_MonthAndDayM_EndCorner_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // label78
             // 
@@ -11731,6 +11800,7 @@
             // 
             // numericUpDown_MonthName_Y
             // 
+            this.numericUpDown_MonthName_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_MonthName_Y.Enabled = false;
             this.numericUpDown_MonthName_Y.Location = new System.Drawing.Point(66, 71);
             this.numericUpDown_MonthName_Y.Maximum = new decimal(new int[] {
@@ -11747,10 +11817,10 @@
             this.numericUpDown_MonthName_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_MonthName_Y.TabIndex = 9;
             this.numericUpDown_MonthName_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_MonthName_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // numericUpDown_MonthName_X
             // 
+            this.numericUpDown_MonthName_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_MonthName_X.Enabled = false;
             this.numericUpDown_MonthName_X.Location = new System.Drawing.Point(66, 45);
             this.numericUpDown_MonthName_X.Maximum = new decimal(new int[] {
@@ -11767,7 +11837,6 @@
             this.numericUpDown_MonthName_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_MonthName_X.TabIndex = 8;
             this.numericUpDown_MonthName_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_MonthName_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // comboBox_MonthName_Image
             // 
@@ -11838,7 +11907,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(382, 169);
+            this.tabPage7.Size = new System.Drawing.Size(365, 169);
             this.tabPage7.TabIndex = 0;
             this.tabPage7.Text = "Дата в одну линию";
             // 
@@ -11865,6 +11934,7 @@
             // 
             // numericUpDown_OneLine_EndCorner_X
             // 
+            this.numericUpDown_OneLine_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_OneLine_EndCorner_X.Enabled = false;
             this.numericUpDown_OneLine_EndCorner_X.Location = new System.Drawing.Point(143, 42);
             this.numericUpDown_OneLine_EndCorner_X.Maximum = new decimal(new int[] {
@@ -11881,7 +11951,6 @@
             this.numericUpDown_OneLine_EndCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_OneLine_EndCorner_X.TabIndex = 55;
             this.numericUpDown_OneLine_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_OneLine_EndCorner_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // numericUpDown_OneLine_Count
             // 
@@ -11904,6 +11973,7 @@
             // 
             // numericUpDown_OneLine_StartCorner_Y
             // 
+            this.numericUpDown_OneLine_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_OneLine_StartCorner_Y.Enabled = false;
             this.numericUpDown_OneLine_StartCorner_Y.Location = new System.Drawing.Point(79, 42);
             this.numericUpDown_OneLine_StartCorner_Y.Maximum = new decimal(new int[] {
@@ -11920,10 +11990,10 @@
             this.numericUpDown_OneLine_StartCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_OneLine_StartCorner_Y.TabIndex = 47;
             this.numericUpDown_OneLine_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_OneLine_StartCorner_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // numericUpDown_OneLine_StartCorner_X
             // 
+            this.numericUpDown_OneLine_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_OneLine_StartCorner_X.Enabled = false;
             this.numericUpDown_OneLine_StartCorner_X.Location = new System.Drawing.Point(19, 42);
             this.numericUpDown_OneLine_StartCorner_X.Maximum = new decimal(new int[] {
@@ -11940,7 +12010,6 @@
             this.numericUpDown_OneLine_StartCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_OneLine_StartCorner_X.TabIndex = 46;
             this.numericUpDown_OneLine_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_OneLine_StartCorner_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // numericUpDown_OneLine_Spacing
             // 
@@ -12046,6 +12115,7 @@
             // 
             // numericUpDown_OneLine_EndCorner_Y
             // 
+            this.numericUpDown_OneLine_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_OneLine_EndCorner_Y.Enabled = false;
             this.numericUpDown_OneLine_EndCorner_Y.Location = new System.Drawing.Point(205, 42);
             this.numericUpDown_OneLine_EndCorner_Y.Maximum = new decimal(new int[] {
@@ -12062,7 +12132,6 @@
             this.numericUpDown_OneLine_EndCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_OneLine_EndCorner_Y.TabIndex = 56;
             this.numericUpDown_OneLine_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_OneLine_EndCorner_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // comboBox_OneLine_Image
             // 
@@ -12230,6 +12299,7 @@
             // 
             // numericUpDown_WeekDay_Y
             // 
+            this.numericUpDown_WeekDay_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_WeekDay_Y.Enabled = false;
             this.numericUpDown_WeekDay_Y.Location = new System.Drawing.Point(85, 45);
             this.numericUpDown_WeekDay_Y.Maximum = new decimal(new int[] {
@@ -12246,10 +12316,10 @@
             this.numericUpDown_WeekDay_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_WeekDay_Y.TabIndex = 9;
             this.numericUpDown_WeekDay_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_WeekDay_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // numericUpDown_WeekDay_X
             // 
+            this.numericUpDown_WeekDay_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_WeekDay_X.Enabled = false;
             this.numericUpDown_WeekDay_X.Location = new System.Drawing.Point(21, 45);
             this.numericUpDown_WeekDay_X.Maximum = new decimal(new int[] {
@@ -12266,7 +12336,6 @@
             this.numericUpDown_WeekDay_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_WeekDay_X.TabIndex = 8;
             this.numericUpDown_WeekDay_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_WeekDay_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // comboBox_WeekDay_Image
             // 
@@ -12366,6 +12435,7 @@
             // 
             // numericUpDown_Delimiter_Y
             // 
+            this.numericUpDown_Delimiter_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_Delimiter_Y.Enabled = false;
             this.numericUpDown_Delimiter_Y.Location = new System.Drawing.Point(85, 45);
             this.numericUpDown_Delimiter_Y.Maximum = new decimal(new int[] {
@@ -12377,10 +12447,10 @@
             this.numericUpDown_Delimiter_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Delimiter_Y.TabIndex = 9;
             this.numericUpDown_Delimiter_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Delimiter_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // numericUpDown_Delimiter_X
             // 
+            this.numericUpDown_Delimiter_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_Delimiter_X.Enabled = false;
             this.numericUpDown_Delimiter_X.Location = new System.Drawing.Point(21, 45);
             this.numericUpDown_Delimiter_X.Maximum = new decimal(new int[] {
@@ -12392,7 +12462,6 @@
             this.numericUpDown_Delimiter_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Delimiter_X.TabIndex = 8;
             this.numericUpDown_Delimiter_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Delimiter_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // comboBox_Delimiter_Image
             // 
@@ -12480,6 +12549,7 @@
             // 
             // numericUpDown_AmPm_Y
             // 
+            this.numericUpDown_AmPm_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_AmPm_Y.Enabled = false;
             this.numericUpDown_AmPm_Y.Location = new System.Drawing.Point(85, 45);
             this.numericUpDown_AmPm_Y.Maximum = new decimal(new int[] {
@@ -12491,10 +12561,10 @@
             this.numericUpDown_AmPm_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_AmPm_Y.TabIndex = 9;
             this.numericUpDown_AmPm_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_AmPm_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // numericUpDown_AmPm_X
             // 
+            this.numericUpDown_AmPm_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_AmPm_X.Enabled = false;
             this.numericUpDown_AmPm_X.Location = new System.Drawing.Point(21, 45);
             this.numericUpDown_AmPm_X.Maximum = new decimal(new int[] {
@@ -12506,7 +12576,6 @@
             this.numericUpDown_AmPm_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_AmPm_X.TabIndex = 8;
             this.numericUpDown_AmPm_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_AmPm_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // label32
             // 
@@ -12582,7 +12651,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(365, 150);
+            this.tabPage4.Size = new System.Drawing.Size(382, 150);
             this.tabPage4.TabIndex = 0;
             this.tabPage4.Text = "Часы";
             // 
@@ -12638,6 +12707,7 @@
             // 
             // numericUpDown_Hours_Tens_Y
             // 
+            this.numericUpDown_Hours_Tens_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_Hours_Tens_Y.Location = new System.Drawing.Point(67, 46);
             this.numericUpDown_Hours_Tens_Y.Maximum = new decimal(new int[] {
             999,
@@ -12653,10 +12723,10 @@
             this.numericUpDown_Hours_Tens_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Hours_Tens_Y.TabIndex = 9;
             this.numericUpDown_Hours_Tens_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Hours_Tens_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // numericUpDown_Hours_Tens_X
             // 
+            this.numericUpDown_Hours_Tens_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_Hours_Tens_X.Location = new System.Drawing.Point(67, 20);
             this.numericUpDown_Hours_Tens_X.Maximum = new decimal(new int[] {
             999,
@@ -12672,7 +12742,6 @@
             this.numericUpDown_Hours_Tens_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Hours_Tens_X.TabIndex = 8;
             this.numericUpDown_Hours_Tens_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Hours_Tens_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // label11
             // 
@@ -12758,6 +12827,7 @@
             // 
             // numericUpDown_Hours_Ones_Y
             // 
+            this.numericUpDown_Hours_Ones_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_Hours_Ones_Y.Location = new System.Drawing.Point(67, 46);
             this.numericUpDown_Hours_Ones_Y.Maximum = new decimal(new int[] {
             999,
@@ -12773,10 +12843,10 @@
             this.numericUpDown_Hours_Ones_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Hours_Ones_Y.TabIndex = 9;
             this.numericUpDown_Hours_Ones_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Hours_Ones_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // numericUpDown_Hours_Ones_X
             // 
+            this.numericUpDown_Hours_Ones_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_Hours_Ones_X.Location = new System.Drawing.Point(67, 20);
             this.numericUpDown_Hours_Ones_X.Maximum = new decimal(new int[] {
             999,
@@ -12792,7 +12862,6 @@
             this.numericUpDown_Hours_Ones_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Hours_Ones_X.TabIndex = 8;
             this.numericUpDown_Hours_Ones_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Hours_Ones_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // label28
             // 
@@ -12905,6 +12974,7 @@
             // 
             // numericUpDown_Min_Tens_Y
             // 
+            this.numericUpDown_Min_Tens_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_Min_Tens_Y.Location = new System.Drawing.Point(67, 46);
             this.numericUpDown_Min_Tens_Y.Maximum = new decimal(new int[] {
             999,
@@ -12923,6 +12993,7 @@
             // 
             // numericUpDown_Min_Tens_X
             // 
+            this.numericUpDown_Min_Tens_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_Min_Tens_X.Location = new System.Drawing.Point(67, 20);
             this.numericUpDown_Min_Tens_X.Maximum = new decimal(new int[] {
             999,
@@ -12938,7 +13009,6 @@
             this.numericUpDown_Min_Tens_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Min_Tens_X.TabIndex = 8;
             this.numericUpDown_Min_Tens_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Min_Tens_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // label12
             // 
@@ -13024,6 +13094,7 @@
             // 
             // numericUpDown_Min_Ones_Y
             // 
+            this.numericUpDown_Min_Ones_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_Min_Ones_Y.Location = new System.Drawing.Point(67, 46);
             this.numericUpDown_Min_Ones_Y.Maximum = new decimal(new int[] {
             999,
@@ -13042,6 +13113,7 @@
             // 
             // numericUpDown_Min_Ones_X
             // 
+            this.numericUpDown_Min_Ones_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_Min_Ones_X.Location = new System.Drawing.Point(67, 20);
             this.numericUpDown_Min_Ones_X.Maximum = new decimal(new int[] {
             999,
@@ -13057,7 +13129,6 @@
             this.numericUpDown_Min_Ones_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Min_Ones_X.TabIndex = 8;
             this.numericUpDown_Min_Ones_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Min_Ones_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // label24
             // 
@@ -13113,7 +13184,7 @@
             this.tabPage6.Controls.Add(this.groupBox_Seconds_Tens);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(382, 150);
+            this.tabPage6.Size = new System.Drawing.Size(365, 150);
             this.tabPage6.TabIndex = 2;
             this.tabPage6.Text = "Секунды";
             // 
@@ -13156,6 +13227,7 @@
             // 
             // numericUpDown_Sec_Ones_Y
             // 
+            this.numericUpDown_Sec_Ones_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_Sec_Ones_Y.Location = new System.Drawing.Point(67, 46);
             this.numericUpDown_Sec_Ones_Y.Maximum = new decimal(new int[] {
             999,
@@ -13171,10 +13243,10 @@
             this.numericUpDown_Sec_Ones_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Sec_Ones_Y.TabIndex = 9;
             this.numericUpDown_Sec_Ones_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Sec_Ones_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // numericUpDown_Sec_Ones_X
             // 
+            this.numericUpDown_Sec_Ones_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_Sec_Ones_X.Location = new System.Drawing.Point(67, 20);
             this.numericUpDown_Sec_Ones_X.Maximum = new decimal(new int[] {
             999,
@@ -13190,7 +13262,6 @@
             this.numericUpDown_Sec_Ones_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Sec_Ones_X.TabIndex = 8;
             this.numericUpDown_Sec_Ones_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Sec_Ones_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // label20
             // 
@@ -13289,6 +13360,7 @@
             // 
             // numericUpDown_Sec_Tens_Y
             // 
+            this.numericUpDown_Sec_Tens_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             this.numericUpDown_Sec_Tens_Y.Location = new System.Drawing.Point(67, 46);
             this.numericUpDown_Sec_Tens_Y.Maximum = new decimal(new int[] {
             999,
@@ -13304,10 +13376,10 @@
             this.numericUpDown_Sec_Tens_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Sec_Tens_Y.TabIndex = 9;
             this.numericUpDown_Sec_Tens_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Sec_Tens_Y.DoubleClick += new System.EventHandler(this.numericUpDown_Y_DoubleClick);
             // 
             // numericUpDown_Sec_Tens_X
             // 
+            this.numericUpDown_Sec_Tens_X.ContextMenuStrip = this.contextMenuStrip_X;
             this.numericUpDown_Sec_Tens_X.Location = new System.Drawing.Point(67, 20);
             this.numericUpDown_Sec_Tens_X.Maximum = new decimal(new int[] {
             999,
@@ -13323,7 +13395,6 @@
             this.numericUpDown_Sec_Tens_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Sec_Tens_X.TabIndex = 8;
             this.numericUpDown_Sec_Tens_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Sec_Tens_X.DoubleClick += new System.EventHandler(this.numericUpDown_X_DoubleClick);
             // 
             // label16
             // 
@@ -13526,15 +13597,6 @@
             this.checkBox_WebB.UseVisualStyleBackColor = true;
             this.checkBox_WebB.CheckedChanged += new System.EventHandler(this.checkBox_WebB_CheckedChanged);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(5, 506);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 22;
-            this.pictureBox1.TabStop = false;
-            // 
             // timer1
             // 
             this.timer1.Interval = 1000;
@@ -13553,6 +13615,7 @@
             // panel_Preview
             // 
             this.panel_Preview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Preview.Cursor = System.Windows.Forms.Cursors.Cross;
             this.panel_Preview.Location = new System.Drawing.Point(5, 5);
             this.panel_Preview.Name = "panel_Preview";
             this.panel_Preview.Size = new System.Drawing.Size(230, 230);
@@ -13642,6 +13705,39 @@
             this.checkBox_border.Text = "Рамка по координатам, вокруг элементов с выравниванием";
             this.checkBox_border.UseVisualStyleBackColor = true;
             this.checkBox_border.Click += new System.EventHandler(this.checkBox_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(5, 506);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
+            // 
+            // вставитьКоординатуХToolStripMenuItem
+            // 
+            this.вставитьКоординатуХToolStripMenuItem.Image = global::GTR_Watch_face.Properties.Resources.Actions_insert_text_icon;
+            this.вставитьКоординатуХToolStripMenuItem.Name = "вставитьКоординатуХToolStripMenuItem";
+            this.вставитьКоординатуХToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.вставитьКоординатуХToolStripMenuItem.Text = "Вставить координату Х";
+            this.вставитьКоординатуХToolStripMenuItem.Click += new System.EventHandler(this.вставитьКоординатуХToolStripMenuItem_Click);
+            // 
+            // копироватьToolStripMenuItem
+            // 
+            this.копироватьToolStripMenuItem.Image = global::GTR_Watch_face.Properties.Resources.Files_Copy_File_icon;
+            this.копироватьToolStripMenuItem.Name = "копироватьToolStripMenuItem";
+            this.копироватьToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.копироватьToolStripMenuItem.Text = "Копировать";
+            this.копироватьToolStripMenuItem.Click += new System.EventHandler(this.копироватьToolStripMenuItem_Click);
+            // 
+            // вставитьToolStripMenuItem
+            // 
+            this.вставитьToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("вставитьToolStripMenuItem.Image")));
+            this.вставитьToolStripMenuItem.Name = "вставитьToolStripMenuItem";
+            this.вставитьToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.вставитьToolStripMenuItem.Text = "Вставить";
+            this.вставитьToolStripMenuItem.Click += new System.EventHandler(this.вставитьToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -13802,8 +13898,10 @@
             this.tabPage24.ResumeLayout(false);
             this.tabPage24.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Text_EndCorner_X)).EndInit();
+            this.contextMenuStrip_X.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Text_Count)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Text_StartCorner_Y)).EndInit();
+            this.contextMenuStrip_Y.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Text_StartCorner_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Text_Spacing)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Text_EndCorner_Y)).EndInit();
@@ -14982,6 +15080,14 @@
         private System.Windows.Forms.NumericUpDown numericUpDown_AnalogClock_Sec_Offset_X;
         private System.Windows.Forms.Label label354;
         private System.Windows.Forms.Button button_JsonPreview_Random;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip_X;
+        private System.Windows.Forms.ToolStripMenuItem вставитьКоординатуХToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip_Y;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem копироватьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem вставитьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem копироватьToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem вставитьToolStripMenuItem1;
     }
 }
 

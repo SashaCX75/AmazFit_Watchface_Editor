@@ -144,6 +144,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\watch_icon.png" />
+    <None Include="Resources\Files-Clipboard-icon.png" />
+    <None Include="Resources\Files-Clipboard-icon1.png" />
+    <None Include="Resources\Files-Clipboard-icon2.png" />
+    <None Include="Resources\Actions_insert_text_icon.png" />
+    <None Include="Resources\Files_Copy_File_icon.png" />
+    <None Include="Resources\Files_Clipboard_icon.png" />
     <Content Include="watch.ico" />
   </ItemGroup>
   <ItemGroup>

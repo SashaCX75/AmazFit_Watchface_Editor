@@ -31,7 +31,7 @@ namespace GTR_Watch_face
         string FullFileDir;
         string StartFileName;
         Form_Preview formPreview;
-        
+
 
         public Form1(string[] args)
         {
@@ -4603,7 +4603,7 @@ namespace GTR_Watch_face
                         //DefaultValueHandling = DefaultValueHandling.Ignore,
                         NullValueHandling = NullValueHandling.Ignore
                     });
-                    richTextBox_JSON.Text = JSON_Text;
+                    //richTextBox_JSON.Text = JSON_Text;
 
                     if (count == 0) return;
                     if (count > 13) count = 13;
@@ -6985,6 +6985,149 @@ namespace GTR_Watch_face
             NumericUpDown numericUpDown = sender as NumericUpDown;
             numericUpDown.Value = MouseСoordinates.Y;
         }
+
+        //private void contextMenuStrip_X_Click(object sender, EventArgs e)
+        //{
+        //    ContextMenuStrip menu = sender as ContextMenuStrip;
+        //    Control sourceControl = menu.SourceControl;
+        //    NumericUpDown numericUpDown = sourceControl as NumericUpDown;
+        //    numericUpDown.Value = MouseСoordinates.X;
+        //}
+
+        //private void contextMenuStrip_Y_Click(object sender, EventArgs e)
+        //{
+        //    ContextMenuStrip menu = sender as ContextMenuStrip;
+        //    Control sourceControl = menu.SourceControl;
+        //    NumericUpDown numericUpDown = sourceControl as NumericUpDown;
+        //    numericUpDown.Value = MouseСoordinates.Y;
+        //}
+
+        private void contextMenuStrip_X_Opening(object sender, CancelEventArgs e)
+        {
+            if ((MouseСoordinates.X == 0) && (MouseСoordinates.Y == 0))
+            {
+                contextMenuStrip_X.Items[0].Enabled = false;
+            }
+            else
+            {
+                contextMenuStrip_X.Items[0].Enabled = true;
+            }
+            decimal i = 0;
+            if ((Clipboard.ContainsText() == true) && (decimal.TryParse(Clipboard.GetText(), out i)))
+            { 
+                contextMenuStrip_X.Items[2].Enabled = true;
+            }
+            else
+            {
+                contextMenuStrip_X.Items[2].Enabled = false;
+            }
+        }
+
+        private void contextMenuStrip_Y_Opening(object sender, CancelEventArgs e)
+        {
+            if ((MouseСoordinates.X == 0) && (MouseСoordinates.Y == 0))
+            {
+                contextMenuStrip_Y.Items[0].Enabled = false;
+            }
+            else
+            {
+                contextMenuStrip_Y.Items[0].Enabled = true;
+            }
+            decimal i = 0;
+            if ((Clipboard.ContainsText() == true) && (decimal.TryParse(Clipboard.GetText(), out i)))
+            {
+                contextMenuStrip_Y.Items[2].Enabled = true;
+            }
+            else
+            {
+                contextMenuStrip_Y.Items[2].Enabled = false;
+            }
+        }
+
+        private void вставитьКоординатуХToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Try to cast the sender to a ToolStripItem
+            ToolStripItem menuItem = sender as ToolStripItem;
+            if (menuItem != null)
+            {
+                // Retrieve the ContextMenuStrip that owns this ToolStripItem
+                ContextMenuStrip owner = menuItem.Owner as ContextMenuStrip;
+                if (owner != null)
+                {
+                    // Get the control that is displaying this context menu
+                    Control sourceControl = owner.SourceControl;
+                    NumericUpDown numericUpDown = sourceControl as NumericUpDown;
+                    numericUpDown.Value = MouseСoordinates.X;
+                }
+            }
+        }
+
+        private void вставитьКоординатуYToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Try to cast the sender to a ToolStripItem
+            ToolStripItem menuItem = sender as ToolStripItem;
+            if (menuItem != null)
+            {
+                // Retrieve the ContextMenuStrip that owns this ToolStripItem
+                ContextMenuStrip owner = menuItem.Owner as ContextMenuStrip;
+                if (owner != null)
+                {
+                    // Get the control that is displaying this context menu
+                    Control sourceControl = owner.SourceControl;
+                    NumericUpDown numericUpDown = sourceControl as NumericUpDown;
+                    numericUpDown.Value = MouseСoordinates.Y;
+                }
+            }
+        }
+
+        private void копироватьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Try to cast the sender to a ToolStripItem
+            ToolStripItem menuItem = sender as ToolStripItem;
+            if (menuItem != null)
+            {
+                // Retrieve the ContextMenuStrip that owns this ToolStripItem
+                ContextMenuStrip owner = menuItem.Owner as ContextMenuStrip;
+                if (owner != null)
+                {
+                    // Get the control that is displaying this context menu
+                    Control sourceControl = owner.SourceControl;
+                    NumericUpDown numericUpDown = sourceControl as NumericUpDown;
+                    Clipboard.SetText(numericUpDown.Value.ToString());
+                }
+            }
+        }
+
+        private void вставитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ToolStripItem menuItem = sender as ToolStripItem;
+            if (menuItem != null)
+            {
+                // Retrieve the ContextMenuStrip that owns this ToolStripItem
+                ContextMenuStrip owner = menuItem.Owner as ContextMenuStrip;
+                if (owner != null)
+                {
+                    // Get the control that is displaying this context menu
+                    Control sourceControl = owner.SourceControl;
+                    NumericUpDown numericUpDown = sourceControl as NumericUpDown;
+                    //Если в буфере обмен содержится текст
+                    if (Clipboard.ContainsText() == true)
+                    {
+                        //Извлекаем (точнее копируем) его и сохраняем в переменную
+                        decimal i = 0;
+                        if (decimal.TryParse(Clipboard.GetText(), out i))
+                        {
+                            if (i > numericUpDown.Maximum) i = numericUpDown.Maximum;
+                            if (i < numericUpDown.Minimum) i = numericUpDown.Minimum;
+                            numericUpDown.Value = i;
+                        } 
+                    }
+
+                }
+            }
+        }
+
+
     }
 }
 

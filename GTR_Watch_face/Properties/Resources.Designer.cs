@@ -63,6 +63,36 @@ namespace GTR_Watch_face.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Actions_insert_text_icon {
+            get {
+                object obj = ResourceManager.GetObject("Actions_insert_text_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Files_Clipboard_icon {
+            get {
+                object obj = ResourceManager.GetObject("Files_Clipboard_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Files_Copy_File_icon {
+            get {
+                object obj = ResourceManager.GetObject("Files_Copy_File_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap watch_icon {
             get {
                 object obj = ResourceManager.GetObject("watch_icon", resourceCulture);

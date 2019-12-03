@@ -44,6 +44,7 @@
             // panel_Preview
             // 
             this.panel_Preview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Preview.Cursor = System.Windows.Forms.Cursors.Cross;
             this.panel_Preview.Location = new System.Drawing.Point(3, 3);
             this.panel_Preview.Name = "panel_Preview";
             this.panel_Preview.Size = new System.Drawing.Size(457, 457);
@@ -142,6 +143,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form_Preview";
+            this.ShowInTaskbar = false;
             this.Text = "Предпросмотр";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
