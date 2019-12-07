@@ -174,6 +174,7 @@ namespace GTR_Watch_face
             openFileDialog.Multiselect = false;
             openFileDialog.Title = "Путь к файлу циферблата";
 
+#if !DEBUG
             if (!File.Exists(textBox_pack_unpack_dir.Text))
             {
                 MessageBox.Show("Путь [" + textBox_pack_unpack_dir.Text +
@@ -182,6 +183,7 @@ namespace GTR_Watch_face
                     "Файл не найден", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+#endif
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -227,12 +229,80 @@ namespace GTR_Watch_face
                 }
                 else File.Copy(fullfilename, fullPath);
 
-                Process _process = new Process();
-                ProcessStartInfo startInfo = new ProcessStartInfo();
-                startInfo.FileName = textBox_pack_unpack_dir.Text;
-                startInfo.Arguments = textBox_unpack_command.Text + "   " + fullPath;
-                _process.StartInfo = startInfo;
-                _process.Start();
+#if !DEBUG
+
+                try
+                {
+                    ProcessStartInfo startInfo = new ProcessStartInfo();
+                    startInfo.FileName = textBox_pack_unpack_dir.Text;
+                    startInfo.Arguments = textBox_unpack_command.Text + "   " + fullPath;
+                    using (Process exeProcess = Process.Start(startInfo))
+                    {
+                        exeProcess.WaitForExit();//ждем 
+                    };
+                    // этот блок закончится только после окончания работы программы 
+                    //сюда писать команды после успешного завершения программы
+                    string fileNameOnly = Path.GetFileNameWithoutExtension(fullPath);
+                    //string extension = Path.GetExtension(fullPath);
+                    string path = Path.GetDirectoryName(fullPath);
+                    path = Path.Combine(path, fileNameOnly);
+                    string newFullName = Path.Combine(path, fileNameOnly + ".json");
+
+                    //MessageBox.Show(newFullName);
+                    if (File.Exists(newFullName))
+                    {
+                        this.BringToFront();
+                        if (MessageBox.Show("Открыть распакованный проект?", "Открытие проекта",
+                                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            LoadJsonAndImage(newFullName);
+                            //newFullName = Path.Combine(path, "PreviewStates.json");
+                            //if (File.Exists(newFullName))
+                            //{
+                            //    JsonPreview_Read(newFullName);
+                            //}
+                        }
+                    }
+                }
+                catch
+                {
+                    // сюда писать команды при ошибке вызова 
+                }
+
+                /* try
+                {
+                    //Process _process = new Process();
+                    //ProcessStartInfo startInfo = new ProcessStartInfo();
+                    //startInfo.FileName = textBox_pack_unpack_dir.Text;
+                    //startInfo.Arguments = textBox_unpack_command.Text + "   " + fullPath;
+                    //_process.StartInfo = startInfo;
+                    //_process.Start();
+
+                    do
+                    {
+                        if (!myProcess.HasExited)
+                        {
+                            if (myProcess.Responding)
+                            {
+                                Console.WriteLine("Status = Running");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Status = Not Responding");
+                            }
+                        }
+                    }
+                    while (!myProcess.WaitForExit(1000));
+                }
+                finally
+                {
+                    if (_process != null)
+                    {
+                        _process.Close();
+                    }
+                }
+                */
+#endif
             }
         }
 
@@ -242,7 +312,8 @@ namespace GTR_Watch_face
             if (!Directory.Exists(subPath)) Directory.CreateDirectory(subPath);
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            //openFileDialog.InitialDirectory = subPath;
+            openFileDialog.InitialDirectory = FullFileDir;
+            openFileDialog.FileName = FileName;
             openFileDialog.Filter = "Json files (*.json) | *.json";
             //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
             ////openFileDialog1.FilterIndex = 2;
@@ -250,6 +321,7 @@ namespace GTR_Watch_face
             openFileDialog.Multiselect = false;
             openFileDialog.Title = "Путь к файлу настроек циферблата";
 
+#if !DEBUG
             if (!File.Exists(textBox_pack_unpack_dir.Text))
             {
                 MessageBox.Show("Путь [" + textBox_pack_unpack_dir.Text +
@@ -261,14 +333,58 @@ namespace GTR_Watch_face
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                string fullfilename = openFileDialog.FileName;
+                try
+                {
+                    string fullfilename = openFileDialog.FileName;
+                    ProcessStartInfo startInfo = new ProcessStartInfo();
+                    startInfo.FileName = textBox_pack_unpack_dir.Text;
+                    startInfo.Arguments = textBox_pack_command.Text + "   " + fullfilename;
+                    using (Process exeProcess = Process.Start(startInfo))
+                    {
+                        exeProcess.WaitForExit();//ждем 
+                    };
+                    // этот блок закончится только после окончания работы программы 
+                    //сюда писать команды после успешного завершения программы
+                    string fileNameOnly = Path.GetFileNameWithoutExtension(fullfilename);
+                    //string extension = Path.GetExtension(fullPath);
+                    string path = Path.GetDirectoryName(fullfilename);
+                    string newFullName = Path.Combine(path, fileNameOnly + "_packed.bin");
+
+                    //MessageBox.Show(newFullName);
+                    if (File.Exists(newFullName))
+                    {
+                        this.BringToFront();
+                        //if (MessageBox.Show("Копировать файл циферблата в буфер обмена?", "Копировать циферблат",
+                        //                            MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        //{
+                        if (MessageBox.Show("Перейти к файлу?", "Перейти к файлу",
+                                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            Process.Start(new ProcessStartInfo("explorer.exe", " /select, " + newFullName));
+                            //StringCollection paths = new StringCollection();
+                            //paths.Add(newFullName);
+                            //Clipboard.SetFileDropList(paths);
+
+                            //FileStream fs = new FileStream(newFullName, FileMode.Open);
+                            //Clipboard.SetDataObject(fs, true);
+                            //fs.Close();
+                        }
+                    }
+                }
+                catch
+                {
+                    // сюда писать команды при ошибке вызова 
+                }
+
+                /*string fullfilename = openFileDialog.FileName;
                 Process _process = new Process();
                 ProcessStartInfo startInfo = new ProcessStartInfo();
                 startInfo.FileName = textBox_pack_unpack_dir.Text;
                 startInfo.Arguments = textBox_pack_command.Text + "   " + fullfilename;
                 _process.StartInfo = startInfo;
-                _process.Start();
+                _process.Start();*/
             }
+#endif
         }
 
         // загружаем перечень картинок
@@ -346,7 +462,8 @@ namespace GTR_Watch_face
             if (!Directory.Exists(subPath)) Directory.CreateDirectory(subPath);
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            //openFileDialog.InitialDirectory = subPath;
+            openFileDialog.InitialDirectory = FullFileDir;
+            openFileDialog.FileName = FileName;
             openFileDialog.Filter = "Json files (*.json) | *.json";
             //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
             ////openFileDialog1.FilterIndex = 2;
@@ -445,9 +562,17 @@ namespace GTR_Watch_face
                 NullValueHandling = NullValueHandling.Ignore
             });
 
+            
 
             PreviewView = false;
             JSON_read();
+
+            string path = Path.GetDirectoryName(fullfilename);
+            string newFullName = Path.Combine(path, "PreviewStates.json");
+            if (File.Exists(newFullName))
+            {
+                JsonPreview_Read(newFullName);
+            }
             PreviewView = true;
             PreviewImage();
         }
@@ -2249,7 +2374,7 @@ namespace GTR_Watch_face
 
             SetDigitForPrewiev();
         }
-        #endregion
+#endregion
 
         // определяем отдельные цифры для даты и времени
         private void SetDigitForPrewiev()
@@ -4255,9 +4380,9 @@ namespace GTR_Watch_face
             panel_Set12.Height = 1;
             panel_Set13.Height = 1;
         }
-        #endregion
+#endregion
 
-        #region поменялись предустановки
+#region поменялись предустановки
         private void dateTimePicker_Time_Set1_ValueChanged(object sender, EventArgs e)
         {
             SetPreferences1();
@@ -4455,7 +4580,7 @@ namespace GTR_Watch_face
             SetPreferences13();
             PreviewImage();
         }
-        #endregion
+#endregion
 
         // переключаем цвет фона в таблице с картинками
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -4573,11 +4698,11 @@ namespace GTR_Watch_face
         // считываем параметры из JsonPreview
         private void button_JsonPreview_Read_Click(object sender, EventArgs e)
         {
-            string subPath = Application.StartupPath + @"\Watch_face\";
-            if (!Directory.Exists(subPath)) Directory.CreateDirectory(subPath);
+            //string subPath = Application.StartupPath + @"\Watch_face\";
+            //if (!Directory.Exists(subPath)) Directory.CreateDirectory(subPath);
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            //openFileDialog.InitialDirectory = subPath;
+            openFileDialog.InitialDirectory = FullFileDir;
             openFileDialog.Filter = "Json files (*.json) | *.json";
             openFileDialog.FileName = "PreviewStates.json";
             //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
@@ -4588,265 +4713,271 @@ namespace GTR_Watch_face
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string fullfilename = openFileDialog.FileName;
-                string text = File.ReadAllText(fullfilename);
+                JsonPreview_Read(fullfilename);
+            }
+        }
 
-                PreviewView = false;
-                ClassPreview ps = new ClassPreview();
-                try
+        // считываем параметры из JsonPreview
+        private void JsonPreview_Read (string fullfilename)
+        {
+            string text = File.ReadAllText(fullfilename);
+
+            PreviewView = false;
+            ClassPreview ps = new ClassPreview();
+            try
+            {
+                var objson = JsonConvert.DeserializeObject<object[]>(text);
+
+                int count = objson.Count();
+
+                string JSON_Text = JsonConvert.SerializeObject(objson, Formatting.Indented, new JsonSerializerSettings
                 {
-                    var objson = JsonConvert.DeserializeObject<object[]>(text);
+                    //DefaultValueHandling = DefaultValueHandling.Ignore,
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+                //richTextBox_JSON.Text = JSON_Text;
 
-                    int count = objson.Count();
-
-                    string JSON_Text = JsonConvert.SerializeObject(objson, Formatting.Indented, new JsonSerializerSettings
+                if (count == 0) return;
+                if (count > 13) count = 13;
+                for (int i = 0; i < count; i++)
+                {
+                    ps = JsonConvert.DeserializeObject<ClassPreview>(objson[i].ToString(), new JsonSerializerSettings
                     {
-                        //DefaultValueHandling = DefaultValueHandling.Ignore,
+                        DefaultValueHandling = DefaultValueHandling.Ignore,
                         NullValueHandling = NullValueHandling.Ignore
                     });
-                    //richTextBox_JSON.Text = JSON_Text;
 
-                    if (count == 0) return;
-                    if (count > 13) count = 13;
-                    for (int i = 0; i < count; i++)
+                    int year = ps.Time.Year;
+                    int month = ps.Time.Month;
+                    int day = ps.Time.Day;
+                    int hour = ps.Time.Hour;
+                    int min = ps.Time.Minute;
+                    int sec = ps.Time.Second;
+                    int battery = ps.BatteryLevel;
+                    int calories = ps.Calories;
+                    int pulse = ps.Pulse;
+                    int distance = ps.Distance;
+                    int steps = ps.Steps;
+                    int goal = ps.Goal;
+                    bool bluetooth = ps.Bluetooth;
+                    bool alarm = ps.Alarm;
+                    bool unlocked = ps.Unlocked;
+                    bool dnd = ps.DoNotDisturb;
+                    switch (i)
                     {
-                        ps = JsonConvert.DeserializeObject<ClassPreview>(objson[i].ToString(), new JsonSerializerSettings
-                        {
-                            DefaultValueHandling = DefaultValueHandling.Ignore,
-                            NullValueHandling = NullValueHandling.Ignore
-                        });
-
-                        int year = ps.Time.Year;
-                        int month = ps.Time.Month;
-                        int day = ps.Time.Day;
-                        int hour = ps.Time.Hour;
-                        int min = ps.Time.Minute;
-                        int sec = ps.Time.Second;
-                        int battery = ps.BatteryLevel;
-                        int calories = ps.Calories;
-                        int pulse = ps.Pulse;
-                        int distance = ps.Distance;
-                        int steps = ps.Steps;
-                        int goal = ps.Goal;
-                        bool bluetooth = ps.Bluetooth;
-                        bool alarm = ps.Alarm;
-                        bool unlocked = ps.Unlocked;
-                        bool dnd = ps.DoNotDisturb;
-                        switch (i)
-                        {
-                            case 0:
-                                dateTimePicker_Date_Set1.Value = new DateTime(year, month, day, hour, min, sec);
-                                dateTimePicker_Time_Set1.Value = new DateTime(year, month, day, hour, min, sec);
-                                numericUpDown_Battery_Set1.Value = battery;
-                                numericUpDown_Calories_Set1.Value = calories;
-                                numericUpDown_Pulse_Set1.Value = pulse;
-                                numericUpDown_Distance_Set1.Value = distance;
-                                numericUpDown_Steps_Set1.Value = steps;
-                                numericUpDown_Goal_Set1.Value = goal;
-                                check_BoxBluetooth_Set1.Checked = bluetooth;
-                                checkBox_Alarm_Set1.Checked = alarm;
-                                checkBox_Lock_Set1.Checked = unlocked;
-                                checkBox_DoNotDisturb_Set1.Checked = dnd;
-                                button_Set1.PerformClick();
-                                break;
-                            case 1:
-                                dateTimePicker_Date_Set2.Value = new DateTime(year, month, day, hour, min, sec);
-                                dateTimePicker_Time_Set2.Value = new DateTime(year, month, day, hour, min, sec);
-                                numericUpDown_Battery_Set2.Value = battery;
-                                numericUpDown_Calories_Set2.Value = calories;
-                                numericUpDown_Pulse_Set2.Value = pulse;
-                                numericUpDown_Distance_Set2.Value = distance;
-                                numericUpDown_Steps_Set2.Value = steps;
-                                numericUpDown_Goal_Set2.Value = goal;
-                                check_BoxBluetooth_Set2.Checked = bluetooth;
-                                checkBox_Alarm_Set2.Checked = alarm;
-                                checkBox_Lock_Set2.Checked = unlocked;
-                                checkBox_DoNotDisturb_Set2.Checked = dnd;
-                                button_Set2.PerformClick();
-                                break;
-                            case 2:
-                                dateTimePicker_Date_Set3.Value = new DateTime(year, month, day, hour, min, sec);
-                                dateTimePicker_Time_Set3.Value = new DateTime(year, month, day, hour, min, sec);
-                                numericUpDown_Battery_Set3.Value = battery;
-                                numericUpDown_Calories_Set3.Value = calories;
-                                numericUpDown_Pulse_Set3.Value = pulse;
-                                numericUpDown_Distance_Set3.Value = distance;
-                                numericUpDown_Steps_Set3.Value = steps;
-                                numericUpDown_Goal_Set3.Value = goal;
-                                check_BoxBluetooth_Set3.Checked = bluetooth;
-                                checkBox_Alarm_Set3.Checked = alarm;
-                                checkBox_Lock_Set3.Checked = unlocked;
-                                checkBox_DoNotDisturb_Set3.Checked = dnd;
-                                button_Set3.PerformClick();
-                                break;
-                            case 3:
-                                dateTimePicker_Date_Set4.Value = new DateTime(year, month, day, hour, min, sec);
-                                dateTimePicker_Time_Set4.Value = new DateTime(year, month, day, hour, min, sec);
-                                numericUpDown_Battery_Set4.Value = battery;
-                                numericUpDown_Calories_Set4.Value = calories;
-                                numericUpDown_Pulse_Set4.Value = pulse;
-                                numericUpDown_Distance_Set4.Value = distance;
-                                numericUpDown_Steps_Set4.Value = steps;
-                                numericUpDown_Goal_Set4.Value = goal;
-                                check_BoxBluetooth_Set4.Checked = bluetooth;
-                                checkBox_Alarm_Set4.Checked = alarm;
-                                checkBox_Lock_Set4.Checked = unlocked;
-                                checkBox_DoNotDisturb_Set4.Checked = dnd;
-                                button_Set4.PerformClick();
-                                break;
-                            case 4:
-                                dateTimePicker_Date_Set5.Value = new DateTime(year, month, day, hour, min, sec);
-                                dateTimePicker_Time_Set5.Value = new DateTime(year, month, day, hour, min, sec);
-                                numericUpDown_Battery_Set5.Value = battery;
-                                numericUpDown_Calories_Set5.Value = calories;
-                                numericUpDown_Pulse_Set5.Value = pulse;
-                                numericUpDown_Distance_Set5.Value = distance;
-                                numericUpDown_Steps_Set5.Value = steps;
-                                numericUpDown_Goal_Set5.Value = goal;
-                                check_BoxBluetooth_Set5.Checked = bluetooth;
-                                checkBox_Alarm_Set5.Checked = alarm;
-                                checkBox_Lock_Set5.Checked = unlocked;
-                                checkBox_DoNotDisturb_Set5.Checked = dnd;
-                                button_Set5.PerformClick();
-                                break;
-                            case 5:
-                                dateTimePicker_Date_Set6.Value = new DateTime(year, month, day, hour, min, sec);
-                                dateTimePicker_Time_Set6.Value = new DateTime(year, month, day, hour, min, sec);
-                                numericUpDown_Battery_Set6.Value = battery;
-                                numericUpDown_Calories_Set6.Value = calories;
-                                numericUpDown_Pulse_Set6.Value = pulse;
-                                numericUpDown_Distance_Set6.Value = distance;
-                                numericUpDown_Steps_Set6.Value = steps;
-                                numericUpDown_Goal_Set6.Value = goal;
-                                check_BoxBluetooth_Set6.Checked = bluetooth;
-                                checkBox_Alarm_Set6.Checked = alarm;
-                                checkBox_Lock_Set6.Checked = unlocked;
-                                checkBox_DoNotDisturb_Set6.Checked = dnd;
-                                button_Set6.PerformClick();
-                                break;
-                            case 6:
-                                dateTimePicker_Date_Set7.Value = new DateTime(year, month, day, hour, min, sec);
-                                dateTimePicker_Time_Set7.Value = new DateTime(year, month, day, hour, min, sec);
-                                numericUpDown_Battery_Set7.Value = battery;
-                                numericUpDown_Calories_Set7.Value = calories;
-                                numericUpDown_Pulse_Set7.Value = pulse;
-                                numericUpDown_Distance_Set7.Value = distance;
-                                numericUpDown_Steps_Set7.Value = steps;
-                                numericUpDown_Goal_Set7.Value = goal;
-                                check_BoxBluetooth_Set7.Checked = bluetooth;
-                                checkBox_Alarm_Set7.Checked = alarm;
-                                checkBox_Lock_Set7.Checked = unlocked;
-                                checkBox_DoNotDisturb_Set7.Checked = dnd;
-                                button_Set7.PerformClick();
-                                break;
-                            case 7:
-                                dateTimePicker_Date_Set8.Value = new DateTime(year, month, day, hour, min, sec);
-                                dateTimePicker_Time_Set8.Value = new DateTime(year, month, day, hour, min, sec);
-                                numericUpDown_Battery_Set8.Value = battery;
-                                numericUpDown_Calories_Set8.Value = calories;
-                                numericUpDown_Pulse_Set8.Value = pulse;
-                                numericUpDown_Distance_Set8.Value = distance;
-                                numericUpDown_Steps_Set8.Value = steps;
-                                numericUpDown_Goal_Set8.Value = goal;
-                                check_BoxBluetooth_Set8.Checked = bluetooth;
-                                checkBox_Alarm_Set8.Checked = alarm;
-                                checkBox_Lock_Set8.Checked = unlocked;
-                                checkBox_DoNotDisturb_Set8.Checked = dnd;
-                                button_Set8.PerformClick();
-                                break;
-                            case 8:
-                                dateTimePicker_Date_Set9.Value = new DateTime(year, month, day, hour, min, sec);
-                                dateTimePicker_Time_Set9.Value = new DateTime(year, month, day, hour, min, sec);
-                                numericUpDown_Battery_Set9.Value = battery;
-                                numericUpDown_Calories_Set9.Value = calories;
-                                numericUpDown_Pulse_Set9.Value = pulse;
-                                numericUpDown_Distance_Set9.Value = distance;
-                                numericUpDown_Steps_Set9.Value = steps;
-                                numericUpDown_Goal_Set9.Value = goal;
-                                check_BoxBluetooth_Set9.Checked = bluetooth;
-                                checkBox_Alarm_Set9.Checked = alarm;
-                                checkBox_Lock_Set9.Checked = unlocked;
-                                checkBox_DoNotDisturb_Set9.Checked = dnd;
-                                button_Set9.PerformClick();
-                                break;
-                            case 9:
-                                dateTimePicker_Date_Set10.Value = new DateTime(year, month, day, hour, min, sec);
-                                dateTimePicker_Time_Set10.Value = new DateTime(year, month, day, hour, min, sec);
-                                numericUpDown_Battery_Set10.Value = battery;
-                                numericUpDown_Calories_Set10.Value = calories;
-                                numericUpDown_Pulse_Set10.Value = pulse;
-                                numericUpDown_Distance_Set10.Value = distance;
-                                numericUpDown_Steps_Set10.Value = steps;
-                                numericUpDown_Goal_Set10.Value = goal;
-                                check_BoxBluetooth_Set10.Checked = bluetooth;
-                                checkBox_Alarm_Set10.Checked = alarm;
-                                checkBox_Lock_Set10.Checked = unlocked;
-                                checkBox_DoNotDisturb_Set10.Checked = dnd;
-                                button_Set10.PerformClick();
-                                break;
-                            case 10:
-                                dateTimePicker_Date_Set11.Value = new DateTime(year, month, day, hour, min, sec);
-                                dateTimePicker_Time_Set11.Value = new DateTime(year, month, day, hour, min, sec);
-                                numericUpDown_Battery_Set11.Value = battery;
-                                numericUpDown_Calories_Set11.Value = calories;
-                                numericUpDown_Pulse_Set11.Value = pulse;
-                                numericUpDown_Distance_Set11.Value = distance;
-                                numericUpDown_Steps_Set11.Value = steps;
-                                numericUpDown_Goal_Set11.Value = goal;
-                                check_BoxBluetooth_Set11.Checked = bluetooth;
-                                checkBox_Alarm_Set11.Checked = alarm;
-                                checkBox_Lock_Set11.Checked = unlocked;
-                                checkBox_DoNotDisturb_Set11.Checked = dnd;
-                                button_Set11.PerformClick();
-                                break;
-                            case 11:
-                                dateTimePicker_Date_Set12.Value = new DateTime(year, month, day, hour, min, sec);
-                                dateTimePicker_Time_Set12.Value = new DateTime(year, month, day, hour, min, sec);
-                                numericUpDown_Battery_Set12.Value = battery;
-                                numericUpDown_Calories_Set12.Value = calories;
-                                numericUpDown_Pulse_Set12.Value = pulse;
-                                numericUpDown_Distance_Set12.Value = distance;
-                                numericUpDown_Steps_Set12.Value = steps;
-                                numericUpDown_Goal_Set12.Value = goal;
-                                check_BoxBluetooth_Set12.Checked = bluetooth;
-                                checkBox_Alarm_Set12.Checked = alarm;
-                                checkBox_Lock_Set12.Checked = unlocked;
-                                checkBox_DoNotDisturb_Set12.Checked = dnd;
-                                button_Set12.PerformClick();
-                                break;
-                            case 12:
-                                dateTimePicker_Date_Set13.Value = new DateTime(year, month, day, hour, min, sec);
-                                dateTimePicker_Time_Set13.Value = new DateTime(year, month, day, hour, min, sec);
-                                numericUpDown_Battery_Set13.Value = battery;
-                                numericUpDown_Calories_Set13.Value = calories;
-                                numericUpDown_Pulse_Set13.Value = pulse;
-                                numericUpDown_Distance_Set13.Value = distance;
-                                numericUpDown_Steps_Set13.Value = steps;
-                                numericUpDown_Goal_Set13.Value = goal;
-                                check_BoxBluetooth_Set13.Checked = bluetooth;
-                                checkBox_Alarm_Set13.Checked = alarm;
-                                checkBox_Lock_Set13.Checked = unlocked;
-                                checkBox_DoNotDisturb_Set13.Checked = dnd;
-                                button_Set13.PerformClick();
-                                break;
-                        }
+                        case 0:
+                            dateTimePicker_Date_Set1.Value = new DateTime(year, month, day, hour, min, sec);
+                            dateTimePicker_Time_Set1.Value = new DateTime(year, month, day, hour, min, sec);
+                            numericUpDown_Battery_Set1.Value = battery;
+                            numericUpDown_Calories_Set1.Value = calories;
+                            numericUpDown_Pulse_Set1.Value = pulse;
+                            numericUpDown_Distance_Set1.Value = distance;
+                            numericUpDown_Steps_Set1.Value = steps;
+                            numericUpDown_Goal_Set1.Value = goal;
+                            check_BoxBluetooth_Set1.Checked = bluetooth;
+                            checkBox_Alarm_Set1.Checked = alarm;
+                            checkBox_Lock_Set1.Checked = unlocked;
+                            checkBox_DoNotDisturb_Set1.Checked = dnd;
+                            button_Set1.PerformClick();
+                            break;
+                        case 1:
+                            dateTimePicker_Date_Set2.Value = new DateTime(year, month, day, hour, min, sec);
+                            dateTimePicker_Time_Set2.Value = new DateTime(year, month, day, hour, min, sec);
+                            numericUpDown_Battery_Set2.Value = battery;
+                            numericUpDown_Calories_Set2.Value = calories;
+                            numericUpDown_Pulse_Set2.Value = pulse;
+                            numericUpDown_Distance_Set2.Value = distance;
+                            numericUpDown_Steps_Set2.Value = steps;
+                            numericUpDown_Goal_Set2.Value = goal;
+                            check_BoxBluetooth_Set2.Checked = bluetooth;
+                            checkBox_Alarm_Set2.Checked = alarm;
+                            checkBox_Lock_Set2.Checked = unlocked;
+                            checkBox_DoNotDisturb_Set2.Checked = dnd;
+                            button_Set2.PerformClick();
+                            break;
+                        case 2:
+                            dateTimePicker_Date_Set3.Value = new DateTime(year, month, day, hour, min, sec);
+                            dateTimePicker_Time_Set3.Value = new DateTime(year, month, day, hour, min, sec);
+                            numericUpDown_Battery_Set3.Value = battery;
+                            numericUpDown_Calories_Set3.Value = calories;
+                            numericUpDown_Pulse_Set3.Value = pulse;
+                            numericUpDown_Distance_Set3.Value = distance;
+                            numericUpDown_Steps_Set3.Value = steps;
+                            numericUpDown_Goal_Set3.Value = goal;
+                            check_BoxBluetooth_Set3.Checked = bluetooth;
+                            checkBox_Alarm_Set3.Checked = alarm;
+                            checkBox_Lock_Set3.Checked = unlocked;
+                            checkBox_DoNotDisturb_Set3.Checked = dnd;
+                            button_Set3.PerformClick();
+                            break;
+                        case 3:
+                            dateTimePicker_Date_Set4.Value = new DateTime(year, month, day, hour, min, sec);
+                            dateTimePicker_Time_Set4.Value = new DateTime(year, month, day, hour, min, sec);
+                            numericUpDown_Battery_Set4.Value = battery;
+                            numericUpDown_Calories_Set4.Value = calories;
+                            numericUpDown_Pulse_Set4.Value = pulse;
+                            numericUpDown_Distance_Set4.Value = distance;
+                            numericUpDown_Steps_Set4.Value = steps;
+                            numericUpDown_Goal_Set4.Value = goal;
+                            check_BoxBluetooth_Set4.Checked = bluetooth;
+                            checkBox_Alarm_Set4.Checked = alarm;
+                            checkBox_Lock_Set4.Checked = unlocked;
+                            checkBox_DoNotDisturb_Set4.Checked = dnd;
+                            button_Set4.PerformClick();
+                            break;
+                        case 4:
+                            dateTimePicker_Date_Set5.Value = new DateTime(year, month, day, hour, min, sec);
+                            dateTimePicker_Time_Set5.Value = new DateTime(year, month, day, hour, min, sec);
+                            numericUpDown_Battery_Set5.Value = battery;
+                            numericUpDown_Calories_Set5.Value = calories;
+                            numericUpDown_Pulse_Set5.Value = pulse;
+                            numericUpDown_Distance_Set5.Value = distance;
+                            numericUpDown_Steps_Set5.Value = steps;
+                            numericUpDown_Goal_Set5.Value = goal;
+                            check_BoxBluetooth_Set5.Checked = bluetooth;
+                            checkBox_Alarm_Set5.Checked = alarm;
+                            checkBox_Lock_Set5.Checked = unlocked;
+                            checkBox_DoNotDisturb_Set5.Checked = dnd;
+                            button_Set5.PerformClick();
+                            break;
+                        case 5:
+                            dateTimePicker_Date_Set6.Value = new DateTime(year, month, day, hour, min, sec);
+                            dateTimePicker_Time_Set6.Value = new DateTime(year, month, day, hour, min, sec);
+                            numericUpDown_Battery_Set6.Value = battery;
+                            numericUpDown_Calories_Set6.Value = calories;
+                            numericUpDown_Pulse_Set6.Value = pulse;
+                            numericUpDown_Distance_Set6.Value = distance;
+                            numericUpDown_Steps_Set6.Value = steps;
+                            numericUpDown_Goal_Set6.Value = goal;
+                            check_BoxBluetooth_Set6.Checked = bluetooth;
+                            checkBox_Alarm_Set6.Checked = alarm;
+                            checkBox_Lock_Set6.Checked = unlocked;
+                            checkBox_DoNotDisturb_Set6.Checked = dnd;
+                            button_Set6.PerformClick();
+                            break;
+                        case 6:
+                            dateTimePicker_Date_Set7.Value = new DateTime(year, month, day, hour, min, sec);
+                            dateTimePicker_Time_Set7.Value = new DateTime(year, month, day, hour, min, sec);
+                            numericUpDown_Battery_Set7.Value = battery;
+                            numericUpDown_Calories_Set7.Value = calories;
+                            numericUpDown_Pulse_Set7.Value = pulse;
+                            numericUpDown_Distance_Set7.Value = distance;
+                            numericUpDown_Steps_Set7.Value = steps;
+                            numericUpDown_Goal_Set7.Value = goal;
+                            check_BoxBluetooth_Set7.Checked = bluetooth;
+                            checkBox_Alarm_Set7.Checked = alarm;
+                            checkBox_Lock_Set7.Checked = unlocked;
+                            checkBox_DoNotDisturb_Set7.Checked = dnd;
+                            button_Set7.PerformClick();
+                            break;
+                        case 7:
+                            dateTimePicker_Date_Set8.Value = new DateTime(year, month, day, hour, min, sec);
+                            dateTimePicker_Time_Set8.Value = new DateTime(year, month, day, hour, min, sec);
+                            numericUpDown_Battery_Set8.Value = battery;
+                            numericUpDown_Calories_Set8.Value = calories;
+                            numericUpDown_Pulse_Set8.Value = pulse;
+                            numericUpDown_Distance_Set8.Value = distance;
+                            numericUpDown_Steps_Set8.Value = steps;
+                            numericUpDown_Goal_Set8.Value = goal;
+                            check_BoxBluetooth_Set8.Checked = bluetooth;
+                            checkBox_Alarm_Set8.Checked = alarm;
+                            checkBox_Lock_Set8.Checked = unlocked;
+                            checkBox_DoNotDisturb_Set8.Checked = dnd;
+                            button_Set8.PerformClick();
+                            break;
+                        case 8:
+                            dateTimePicker_Date_Set9.Value = new DateTime(year, month, day, hour, min, sec);
+                            dateTimePicker_Time_Set9.Value = new DateTime(year, month, day, hour, min, sec);
+                            numericUpDown_Battery_Set9.Value = battery;
+                            numericUpDown_Calories_Set9.Value = calories;
+                            numericUpDown_Pulse_Set9.Value = pulse;
+                            numericUpDown_Distance_Set9.Value = distance;
+                            numericUpDown_Steps_Set9.Value = steps;
+                            numericUpDown_Goal_Set9.Value = goal;
+                            check_BoxBluetooth_Set9.Checked = bluetooth;
+                            checkBox_Alarm_Set9.Checked = alarm;
+                            checkBox_Lock_Set9.Checked = unlocked;
+                            checkBox_DoNotDisturb_Set9.Checked = dnd;
+                            button_Set9.PerformClick();
+                            break;
+                        case 9:
+                            dateTimePicker_Date_Set10.Value = new DateTime(year, month, day, hour, min, sec);
+                            dateTimePicker_Time_Set10.Value = new DateTime(year, month, day, hour, min, sec);
+                            numericUpDown_Battery_Set10.Value = battery;
+                            numericUpDown_Calories_Set10.Value = calories;
+                            numericUpDown_Pulse_Set10.Value = pulse;
+                            numericUpDown_Distance_Set10.Value = distance;
+                            numericUpDown_Steps_Set10.Value = steps;
+                            numericUpDown_Goal_Set10.Value = goal;
+                            check_BoxBluetooth_Set10.Checked = bluetooth;
+                            checkBox_Alarm_Set10.Checked = alarm;
+                            checkBox_Lock_Set10.Checked = unlocked;
+                            checkBox_DoNotDisturb_Set10.Checked = dnd;
+                            button_Set10.PerformClick();
+                            break;
+                        case 10:
+                            dateTimePicker_Date_Set11.Value = new DateTime(year, month, day, hour, min, sec);
+                            dateTimePicker_Time_Set11.Value = new DateTime(year, month, day, hour, min, sec);
+                            numericUpDown_Battery_Set11.Value = battery;
+                            numericUpDown_Calories_Set11.Value = calories;
+                            numericUpDown_Pulse_Set11.Value = pulse;
+                            numericUpDown_Distance_Set11.Value = distance;
+                            numericUpDown_Steps_Set11.Value = steps;
+                            numericUpDown_Goal_Set11.Value = goal;
+                            check_BoxBluetooth_Set11.Checked = bluetooth;
+                            checkBox_Alarm_Set11.Checked = alarm;
+                            checkBox_Lock_Set11.Checked = unlocked;
+                            checkBox_DoNotDisturb_Set11.Checked = dnd;
+                            button_Set11.PerformClick();
+                            break;
+                        case 11:
+                            dateTimePicker_Date_Set12.Value = new DateTime(year, month, day, hour, min, sec);
+                            dateTimePicker_Time_Set12.Value = new DateTime(year, month, day, hour, min, sec);
+                            numericUpDown_Battery_Set12.Value = battery;
+                            numericUpDown_Calories_Set12.Value = calories;
+                            numericUpDown_Pulse_Set12.Value = pulse;
+                            numericUpDown_Distance_Set12.Value = distance;
+                            numericUpDown_Steps_Set12.Value = steps;
+                            numericUpDown_Goal_Set12.Value = goal;
+                            check_BoxBluetooth_Set12.Checked = bluetooth;
+                            checkBox_Alarm_Set12.Checked = alarm;
+                            checkBox_Lock_Set12.Checked = unlocked;
+                            checkBox_DoNotDisturb_Set12.Checked = dnd;
+                            button_Set12.PerformClick();
+                            break;
+                        case 12:
+                            dateTimePicker_Date_Set13.Value = new DateTime(year, month, day, hour, min, sec);
+                            dateTimePicker_Time_Set13.Value = new DateTime(year, month, day, hour, min, sec);
+                            numericUpDown_Battery_Set13.Value = battery;
+                            numericUpDown_Calories_Set13.Value = calories;
+                            numericUpDown_Pulse_Set13.Value = pulse;
+                            numericUpDown_Distance_Set13.Value = distance;
+                            numericUpDown_Steps_Set13.Value = steps;
+                            numericUpDown_Goal_Set13.Value = goal;
+                            check_BoxBluetooth_Set13.Checked = bluetooth;
+                            checkBox_Alarm_Set13.Checked = alarm;
+                            checkBox_Lock_Set13.Checked = unlocked;
+                            checkBox_DoNotDisturb_Set13.Checked = dnd;
+                            button_Set13.PerformClick();
+                            break;
                     }
-                    
-                }
-                catch (Exception)
-                {
-
-                    MessageBox.Show("Ошибка чтения JSON файла.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
-                //richTextBox_JSON.Text = JsonConvert.SerializeObject(objson, Formatting.Indented, new JsonSerializerSettings
-                //{
-                //    //DefaultValueHandling = DefaultValueHandling.Ignore,
-                //    NullValueHandling = NullValueHandling.Ignore
-                //});
-                //PreviewView = false;
-                PreviewView = true;
-                PreviewImage();
             }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Ошибка чтения JSON файла.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            //richTextBox_JSON.Text = JsonConvert.SerializeObject(objson, Formatting.Indented, new JsonSerializerSettings
+            //{
+            //    //DefaultValueHandling = DefaultValueHandling.Ignore,
+            //    NullValueHandling = NullValueHandling.Ignore
+            //});
+            //PreviewView = false;
+            PreviewView = true;
+            PreviewImage();
         }
 
         // записываем параметры в JsonPreview
@@ -5237,10 +5368,10 @@ namespace GTR_Watch_face
         private void button_JsonPreview_Random_Click(object sender, EventArgs e)
         {
             PreviewView = false;
+            DateTime now = DateTime.Now;
+            Random rnd = new Random();
             for (int i = 0; i < 13; i++)
             {
-                DateTime now = DateTime.Now;
-                Random rnd = new Random();
                 int year = now.Year;
                 int month = rnd.Next(0, 12)+1;
                 int day = rnd.Next(0, 28)+1;
@@ -5452,12 +5583,13 @@ namespace GTR_Watch_face
                         checkBox_Alarm_Set13.Checked = alarm;
                         checkBox_Lock_Set13.Checked = unlocked;
                         checkBox_DoNotDisturb_Set13.Checked = dnd;
-                        button_Set13.PerformClick();
+                        //button_Set13.PerformClick();
                         break;
                 }
             }
             PreviewView = true;
-            PreviewImage();
+            //PreviewImage();
+            button_Set13.PerformClick();
         }
 
         private void checkBox_WebW_CheckedChanged(object sender, EventArgs e)
@@ -5589,8 +5721,8 @@ namespace GTR_Watch_face
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.InitialDirectory = FullFileDir;
-            saveFileDialog.Filter = "Json files (*.json) | *.json";
             saveFileDialog.FileName = FileName;
+            saveFileDialog.Filter = "Json files (*.json) | *.json";
 
             //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
             ////openFileDialog1.FilterIndex = 2;
@@ -5600,6 +5732,9 @@ namespace GTR_Watch_face
             {
                 string fullfilename = saveFileDialog.FileName;
                 File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.Default);
+
+                FileName = Path.GetFileName(fullfilename);
+                FullFileDir = Path.GetDirectoryName(fullfilename);
             }
         }
 
@@ -5846,7 +5981,7 @@ namespace GTR_Watch_face
             int i;
             //gPanel.SmoothingMode = SmoothingMode.AntiAlias;
 
-            #region Background
+#region Background
             if (comboBox_Background.SelectedIndex >= 0)
             {
                 i = comboBox_Background.SelectedIndex;
@@ -5854,10 +5989,10 @@ namespace GTR_Watch_face
                 gPanel.DrawImage(src, new Rectangle(0, 0, src.Width, src.Height));
                 src.Dispose();
             }
-            #endregion
+#endregion
             if (scale == 0.5) gPanel.SmoothingMode = SmoothingMode.AntiAlias;
 
-            #region Time
+#region Time
             if (checkBox_Time.Checked)
             {
                 if (checkBox_AmPm.Checked)
@@ -6032,9 +6167,9 @@ namespace GTR_Watch_face
                     }
                 }
             }
-            #endregion
+#endregion
 
-            #region Date
+#region Date
             if (checkBox_Date.Checked)
             {
                 if ((checkBox_MonthAndDayM.Checked) && (comboBox_MonthAndDayM_Image.SelectedIndex >= 0))
@@ -6336,9 +6471,9 @@ namespace GTR_Watch_face
                     src.Dispose();
                 }
             }
-            #endregion
+#endregion
 
-            #region Weather
+#region Weather
             if (checkBox_Weather.Checked)
             {
                 if ((checkBox_Weather_Icon.Checked) && (comboBox_Weather_Icon_Image.SelectedIndex >= 0))
@@ -6435,11 +6570,11 @@ namespace GTR_Watch_face
 
                 }
             }
-            #endregion
+#endregion
 
             gPanel.SmoothingMode = SmoothingMode.AntiAlias;
 
-            #region StepsProgress
+#region StepsProgress
             if (checkBox_StepsProgress.Checked)
             {
                 Pen pen = new Pen(comboBox_StepsProgress_Color.BackColor,
@@ -6465,7 +6600,8 @@ namespace GTR_Watch_face
                 int y = (int)numericUpDown_StepsProgress_Center_Y.Value -
                     (int)numericUpDown_StepsProgress_Radius_Y.Value;
                 int width = (int)numericUpDown_StepsProgress_Radius_X.Value * 2;
-                int height = (int)numericUpDown_StepsProgress_Radius_Y.Value * 2;
+                //int height = (int)numericUpDown_StepsProgress_Radius_Y.Value * 2;
+                int height = width;
                 float StartAngle = (float)numericUpDown_StepsProgress_StartAngle.Value - 90;
                 float EndAngle = (float)(numericUpDown_StepsProgress_EndAngle.Value -
                     numericUpDown_StepsProgress_StartAngle.Value);
@@ -6481,11 +6617,11 @@ namespace GTR_Watch_face
 
                 }
             }
-            #endregion
+#endregion
 
             if (scale != 0.5) gPanel.SmoothingMode = SmoothingMode.Default;
 
-            #region Activity
+#region Activity
             if (checkBox_Activity.Checked)
             {
                 if ((checkBox_ActivityGoal.Checked) && (comboBox_ActivityGoal_Image.SelectedIndex >= 0))
@@ -6575,9 +6711,9 @@ namespace GTR_Watch_face
                     }
                 }
             }
-            #endregion
+#endregion
 
-            #region Status
+#region Status
             if (checkBox_Bluetooth.Checked)
             {
                 if (Watch_Face_Preview_Set.Status.Bluetooth)
@@ -6673,9 +6809,9 @@ namespace GTR_Watch_face
                     }
                 }
             }
-            #endregion
+#endregion
 
-            #region Battery
+#region Battery
             if (checkBox_Battery.Checked)
             {
                 if (checkBox_Battery.Checked)
@@ -6744,7 +6880,8 @@ namespace GTR_Watch_face
                         int y = (int)numericUpDown_Battery_Scale_Center_Y.Value -
                             (int)numericUpDown_Battery_Scale_Radius_Y.Value;
                         int width = (int)numericUpDown_Battery_Scale_Radius_X.Value * 2;
-                        int height = (int)numericUpDown_Battery_Scale_Radius_Y.Value * 2;
+                        //int height = (int)numericUpDown_Battery_Scale_Radius_Y.Value * 2;
+                        int height = width;
                         float StartAngle = (float)numericUpDown_Battery_Scale_StartAngle.Value - 90;
                         float EndAngle = (float)(numericUpDown_Battery_Scale_EndAngle.Value -
                             numericUpDown_Battery_Scale_StartAngle.Value);
@@ -6762,11 +6899,34 @@ namespace GTR_Watch_face
                     }
                 }
             }
-            #endregion
+#endregion
 
-            #region AnalogDialFace
+#region AnalogDialFace
             if (checkBox_AnalogClock.Checked)
             {
+                bool SecondsOffSet = false;
+                if ((numericUpDown_AnalogClock_Sec_Offset_X.Value != 0) ||
+                    (numericUpDown_AnalogClock_Sec_Offset_Y.Value != 0)) SecondsOffSet = true;
+
+                if (SecondsOffSet)
+                {
+                    // секунды
+                    if ((checkBox_AnalogClock_Sec.Checked) && (comboBox_AnalogClock_Sec_Image.SelectedIndex >= 0))
+                    {
+                        int x1 = (int)numericUpDown_AnalogClock_Sec_X.Value;
+                        int y1 = (int)numericUpDown_AnalogClock_Sec_Y.Value;
+                        int offsetX = (int)numericUpDown_AnalogClock_Sec_Offset_X.Value;
+                        int offsetY = (int)numericUpDown_AnalogClock_Sec_Offset_Y.Value;
+                        int image_index = comboBox_AnalogClock_Sec_Image.SelectedIndex;
+                        //int hour = Watch_Face_Preview_Set.TimeW.Hours;
+                        //int min = Watch_Face_Preview_Set.TimeW.Minutes;
+                        int sec = Watch_Face_Preview_Set.Time.Seconds;
+                        //if (hour >= 12) hour = hour - 12;
+                        float angle = 360 * sec / 60;
+                        DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle, model_47);
+                    }
+                }
+
                 // часы
                 if ((checkBox_AnalogClock_Hour.Checked) && (comboBox_AnalogClock_Hour_Image.SelectedIndex >= 0))
                 {
@@ -6814,19 +6974,23 @@ namespace GTR_Watch_face
                 }
 
                 // секунды
-                if ((checkBox_AnalogClock_Sec.Checked) && (comboBox_AnalogClock_Sec_Image.SelectedIndex >= 0))
+                if (!SecondsOffSet)
                 {
-                    int x1 = (int)numericUpDown_AnalogClock_Sec_X.Value;
-                    int y1 = (int)numericUpDown_AnalogClock_Sec_Y.Value;
-                    int offsetX = (int)numericUpDown_AnalogClock_Sec_Offset_X.Value;
-                    int offsetY = (int)numericUpDown_AnalogClock_Sec_Offset_Y.Value;
-                    int image_index = comboBox_AnalogClock_Sec_Image.SelectedIndex;
-                    //int hour = Watch_Face_Preview_Set.TimeW.Hours;
-                    //int min = Watch_Face_Preview_Set.TimeW.Minutes;
-                    int sec = Watch_Face_Preview_Set.Time.Seconds;
-                    //if (hour >= 12) hour = hour - 12;
-                    float angle = 360 * sec / 60;
-                    DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle, model_47);
+                    // секунды
+                    if ((checkBox_AnalogClock_Sec.Checked) && (comboBox_AnalogClock_Sec_Image.SelectedIndex >= 0))
+                    {
+                        int x1 = (int)numericUpDown_AnalogClock_Sec_X.Value;
+                        int y1 = (int)numericUpDown_AnalogClock_Sec_Y.Value;
+                        int offsetX = (int)numericUpDown_AnalogClock_Sec_Offset_X.Value;
+                        int offsetY = (int)numericUpDown_AnalogClock_Sec_Offset_Y.Value;
+                        int image_index = comboBox_AnalogClock_Sec_Image.SelectedIndex;
+                        //int hour = Watch_Face_Preview_Set.TimeW.Hours;
+                        //int min = Watch_Face_Preview_Set.TimeW.Minutes;
+                        int sec = Watch_Face_Preview_Set.Time.Seconds;
+                        //if (hour >= 12) hour = hour - 12;
+                        float angle = 360 * sec / 60;
+                        DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle, model_47);
+                    }
                 }
                 if ((checkBox_SecCenterImage.Checked) && (comboBox_SecCenterImage_Image.SelectedIndex >= 0))
                 {
@@ -6836,9 +7000,9 @@ namespace GTR_Watch_face
                     src.Dispose();
                 }
             }
-            #endregion
+#endregion
 
-            #region Mesh
+#region Mesh
             int center = 227;
             if (!model_47) center = 195;
 
@@ -6871,7 +7035,7 @@ namespace GTR_Watch_face
                     gPanel.DrawLine(pen, new Point(0, center - i * LineDistance), new Point(454, center - i * LineDistance));
                 }
             }
-            #endregion
+#endregion
 
             src.Dispose();
         }
@@ -6974,17 +7138,17 @@ namespace GTR_Watch_face
             e.Handled = true;
         }
 
-        private void numericUpDown_X_DoubleClick(object sender, EventArgs e)
-        {
-            NumericUpDown numericUpDown = sender as NumericUpDown;
-            numericUpDown.Value = MouseСoordinates.X;
-        }
+        //private void numericUpDown_X_DoubleClick(object sender, EventArgs e)
+        //{
+        //    NumericUpDown numericUpDown = sender as NumericUpDown;
+        //    numericUpDown.Value = MouseСoordinates.X;
+        //}
 
-        private void numericUpDown_Y_DoubleClick(object sender, EventArgs e)
-        {
-            NumericUpDown numericUpDown = sender as NumericUpDown;
-            numericUpDown.Value = MouseСoordinates.Y;
-        }
+        //private void numericUpDown_Y_DoubleClick(object sender, EventArgs e)
+        //{
+        //    NumericUpDown numericUpDown = sender as NumericUpDown;
+        //    numericUpDown.Value = MouseСoordinates.Y;
+        //}
 
         //private void contextMenuStrip_X_Click(object sender, EventArgs e)
         //{
@@ -7004,7 +7168,7 @@ namespace GTR_Watch_face
 
         private void contextMenuStrip_X_Opening(object sender, CancelEventArgs e)
         {
-            if ((MouseСoordinates.X == 0) && (MouseСoordinates.Y == 0))
+            if ((MouseСoordinates.X < 0) || (MouseСoordinates.Y < 0))
             {
                 contextMenuStrip_X.Items[0].Enabled = false;
             }
@@ -7025,7 +7189,7 @@ namespace GTR_Watch_face
 
         private void contextMenuStrip_Y_Opening(object sender, CancelEventArgs e)
         {
-            if ((MouseСoordinates.X == 0) && (MouseСoordinates.Y == 0))
+            if ((MouseСoordinates.X < 0) || (MouseСoordinates.Y < 0))
             {
                 contextMenuStrip_Y.Items[0].Enabled = false;
             }
@@ -7126,6 +7290,49 @@ namespace GTR_Watch_face
                 }
             }
         }
+        
+        private void numericUpDown_X_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if (e.X <= numericUpDown.Controls[1].Width + 1)
+            {
+                // Click is in text area
+                numericUpDown.Value = MouseСoordinates.X;
+            }
+            else
+            {
+                if (e.Y <= numericUpDown.Controls[1].Height / 2)
+                {
+                    // Click is on Up arrow
+                }
+                else
+                {
+                    // Click is on Down arrow
+                }
+            }
+        }
+
+        private void numericUpDown_Y_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if (e.X <= numericUpDown.Controls[1].Width + 1)
+            {
+                // Click is in text area
+                numericUpDown.Value = MouseСoordinates.Y;
+            }
+            else
+            {
+                if (e.Y <= numericUpDown.Controls[1].Height / 2)
+                {
+                    // Click is on Up arrow
+                }
+                else
+                {
+                    // Click is on Down arrow
+                }
+            }
+        }
+
 
 
     }
@@ -7137,8 +7344,10 @@ namespace GTR_Watch_face
 
 public static class MouseСoordinates
 {
-    public static int X { get; set; }
-    public static int Y { get; set; }
+    //public static int X { get; set; }
+    //public static int Y { get; set; }
+    public static int X = -1;
+    public static int Y = -1;
 }
 
 
