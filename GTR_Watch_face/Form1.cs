@@ -1,20 +1,18 @@
-﻿using System;
+﻿using ImageMagick;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json;
-using System.Drawing.Imaging;
-using System.Globalization;
-using System.Drawing.Drawing2D;
-using ImageMagick;
 using LineCap = System.Drawing.Drawing2D.LineCap;
 
 namespace GTR_Watch_face
@@ -27,10 +25,12 @@ namespace GTR_Watch_face
         List<string> ListImages = new List<string>();
         List<string> ListImagesFullName = new List<string>();
         bool PreviewView;
+        bool Settings_Load;
         string FileName;
         string FullFileDir;
         string StartFileName;
         Form_Preview formPreview;
+        PROGRAM_SETTINGS Program_Settings;
 
 
         public Form1(string[] args)
@@ -58,8 +58,12 @@ namespace GTR_Watch_face
             Watch_Face_Preview.TimePm.Minutes = new TwoDigitsP();
             Watch_Face_Preview.TimePm.Seconds = new TwoDigitsP();
 
+            Program_Settings = new PROGRAM_SETTINGS();
+
             PreviewView = true;
-            
+            Settings_Load = false;
+
+
             if (args.Length == 1)
             {
                 string fileName = args[0].ToString();
@@ -90,6 +94,14 @@ namespace GTR_Watch_face
                 //string text = File.ReadAllText(filename);
                 //richTextBox1.Text = text;
                 textBox_pack_unpack_dir.Text = openFileDialog.FileName;
+
+                Program_Settings.pack_unpack_dir = openFileDialog.FileName;
+                string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+                {
+                    //DefaultValueHandling = DefaultValueHandling.Ignore,
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+                File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
             }
         }
 
@@ -99,7 +111,7 @@ namespace GTR_Watch_face
             if (radioButton_47.Checked)
             {
                 Properties.Settings.Default.unpack_command = textBox_unpack_command.Text;
-                Properties.Settings.Default.pack_command = textBox_pack_command.Text; 
+                Properties.Settings.Default.pack_command = textBox_pack_command.Text;
             }
             else
             {
@@ -117,15 +129,54 @@ namespace GTR_Watch_face
 #else
             string subPath = Application.StartupPath + @"\main\main.exe";
 #endif
-            textBox_pack_unpack_dir.Text = subPath;
-            if (Properties.Settings.Default.pack_unpack_dir.Length > 1)
-                textBox_pack_unpack_dir.Text = Properties.Settings.Default.pack_unpack_dir;
-            if (Properties.Settings.Default.unpack_command.Length > 1)
-                textBox_unpack_command.Text = Properties.Settings.Default.unpack_command;
-            if (Properties.Settings.Default.pack_command.Length > 1)
-                textBox_pack_command.Text = Properties.Settings.Default.pack_command;
+            //textBox_pack_unpack_dir.Text = subPath;
+            //if (Properties.Settings.Default.pack_unpack_dir.Length > 1)
+            //    textBox_pack_unpack_dir.Text = Properties.Settings.Default.pack_unpack_dir;
+            //if (Properties.Settings.Default.unpack_command.Length > 1)
+            //    textBox_unpack_command.Text = Properties.Settings.Default.unpack_command;
+            //if (Properties.Settings.Default.pack_command.Length > 1)
+            //    textBox_pack_command.Text = Properties.Settings.Default.pack_command;
+
+            try
+            {
+                Program_Settings = JsonConvert.DeserializeObject<PROGRAM_SETTINGS>
+                    (File.ReadAllText("Settings.json"), new JsonSerializerSettings
+                    {
+                        //DefaultValueHandling = DefaultValueHandling.Ignore,
+                        NullValueHandling = NullValueHandling.Ignore
+                    });
+            }
+            catch (Exception)
+            {
+
+            }
+
+            if (Program_Settings.pack_unpack_dir == null)
+            {
+                Program_Settings.pack_unpack_dir = subPath;
+                string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+                {
+                    //DefaultValueHandling = DefaultValueHandling.Ignore,
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+                File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
+            }
+            textBox_pack_unpack_dir.Text = Program_Settings.pack_unpack_dir;
+            if (Program_Settings.Model_47)
+            {
+                radioButton_47.Checked = Program_Settings.Model_47;
+                textBox_unpack_command.Text = Program_Settings.unpack_command_47;
+                textBox_pack_command.Text = Program_Settings.pack_command_47;
+            }
+            else
+            {
+                radioButton_42.Checked = Program_Settings.Model_42;
+                textBox_unpack_command.Text = Program_Settings.unpack_command_42;
+                textBox_pack_command.Text = Program_Settings.pack_command_42;
+            }
 
             PreviewView = false;
+            checkBox_border.Checked = Program_Settings.ShowBorder;
             comboBox_MonthAndDayD_Alignment.Text = "Вверх влево";
             comboBox_MonthAndDayM_Alignment.Text = "Вверх влево";
             comboBox_OneLine_Alignment.Text = "Вверх влево";
@@ -143,6 +194,30 @@ namespace GTR_Watch_face
 
             comboBox_Battery_Flatness.Text = "Круглое";
             comboBox_StepsProgress_Flatness.Text = "Круглое";
+
+            Version www = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
+            label_version.Text = "v " +
+                System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Major.ToString() + "." +
+                System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Minor.ToString();
+
+            Settings_Load = true;
+            radioButton_Settings_AfterUnpack_Dialog.Checked = Program_Settings.Settings_AfterUnpack_Dialog;
+            radioButton_Settings_AfterUnpack_DoNothing.Checked = Program_Settings.Settings_AfterUnpack_DoNothing;
+            radioButton_Settings_AfterUnpack_Download.Checked = Program_Settings.Settings_AfterUnpack_Download;
+
+            radioButton_Settings_Open_Dialog.Checked = Program_Settings.Settings_Open_Dialog;
+            radioButton_Settings_Open_DoNotning.Checked = Program_Settings.Settings_Open_DoNotning;
+            radioButton_Settings_Open_Download.Checked = Program_Settings.Settings_Open_Download;
+
+            radioButton_Settings_Pack_Copy.Checked = Program_Settings.Settings_Pack_Copy;
+            radioButton_Settings_Pack_Dialog.Checked = Program_Settings.Settings_Pack_Dialog;
+            radioButton_Settings_Pack_DoNotning.Checked = Program_Settings.Settings_Pack_DoNotning;
+            radioButton_Settings_Pack_GoToFile.Checked = Program_Settings.Settings_Pack_GoToFile;
+
+            radioButton_Settings_Unpack_Dialog.Checked = Program_Settings.Settings_Unpack_Dialog;
+            radioButton_Settings_Unpack_Replace.Checked = Program_Settings.Settings_Unpack_Replace;
+            radioButton_Settings_Unpack_Save.Checked = Program_Settings.Settings_Unpack_Save;
+            Settings_Load = false;
 
             SetPreferences1();
             PreviewView = true;
@@ -192,39 +267,66 @@ namespace GTR_Watch_face
                 string fullPath = subPath + filename;
                 if (File.Exists(fullPath))
                 {
-                    FormFileExists f = new FormFileExists();
-                    f.ShowDialog();
-                    int dialogResult = f.Data;
-
                     string fileNameOnly = Path.GetFileNameWithoutExtension(fullPath);
                     string extension = Path.GetExtension(fullPath);
                     string path = Path.GetDirectoryName(fullPath);
                     string newFullPath = fullPath;
-                    switch (dialogResult)
+                    //if (radioButton_Settings_Unpack_Dialog.Checked)
+                    if (Program_Settings.Settings_Unpack_Dialog)
                     {
-                        case 0:
-                            return;
-                            break;
-                        case 1:
-                            File.Copy(fullfilename, fullPath, true);
-                            newFullPath = Path.Combine(path, fileNameOnly);
-                            if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
-                            break;
-                        case 2:
-                            int count = 1;
+                        FormFileExists f = new FormFileExists();
+                        f.ShowDialog();
+                        int dialogResult = f.Data;
+                        switch (dialogResult)
+                        {
+                            case 0:
+                                return;
+                                break;
+                            case 1:
+                                File.Copy(fullfilename, fullPath, true);
+                                newFullPath = Path.Combine(path, fileNameOnly);
+                                if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
+                                break;
+                            case 2:
+                                int count = 1;
 
-                            while (File.Exists(newFullPath))
-                            {
-                                string tempFileName = string.Format("{0}({1})", fileNameOnly, count++);
-                                newFullPath = Path.Combine(path, tempFileName + extension);
-                            }
-                            File.Copy(fullfilename, newFullPath);
-                            fullPath = newFullPath;
-                            fileNameOnly = Path.GetFileNameWithoutExtension(newFullPath);
-                            path = Path.GetDirectoryName(newFullPath);
-                            newFullPath = Path.Combine(path, fileNameOnly);
-                            if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
-                            break;
+                                while (File.Exists(newFullPath))
+                                {
+                                    string tempFileName = string.Format("{0}({1})", fileNameOnly, count++);
+                                    newFullPath = Path.Combine(path, tempFileName + extension);
+                                }
+                                File.Copy(fullfilename, newFullPath);
+                                fullPath = newFullPath;
+                                fileNameOnly = Path.GetFileNameWithoutExtension(newFullPath);
+                                path = Path.GetDirectoryName(newFullPath);
+                                newFullPath = Path.Combine(path, fileNameOnly);
+                                if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
+                                break;
+                        } 
+                    }
+                    //else if (radioButton_Settings_Unpack_Save.Checked)
+                    else if (Program_Settings.Settings_Unpack_Save)
+                    {
+                        int count = 1;
+
+                        while (File.Exists(newFullPath))
+                        {
+                            string tempFileName = string.Format("{0}({1})", fileNameOnly, count++);
+                            newFullPath = Path.Combine(path, tempFileName + extension);
+                        }
+                        File.Copy(fullfilename, newFullPath);
+                        fullPath = newFullPath;
+                        fileNameOnly = Path.GetFileNameWithoutExtension(newFullPath);
+                        path = Path.GetDirectoryName(newFullPath);
+                        newFullPath = Path.Combine(path, fileNameOnly);
+                        if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
+                    }
+                    //else if (radioButton_Settings_Unpack_Replace.Checked)
+                    else if (Program_Settings.Settings_Unpack_Replace)
+                    {
+                        File.Copy(fullfilename, fullPath, true);
+                        newFullPath = Path.Combine(path, fileNameOnly);
+                        if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
                     }
                 }
                 else File.Copy(fullfilename, fullPath);
@@ -249,19 +351,26 @@ namespace GTR_Watch_face
                     string newFullName = Path.Combine(path, fileNameOnly + ".json");
 
                     //MessageBox.Show(newFullName);
-                    if (File.Exists(newFullName))
+                    if (Program_Settings.Settings_AfterUnpack_Dialog)
                     {
-                        this.BringToFront();
-                        if (MessageBox.Show("Открыть распакованный проект?", "Открытие проекта",
-                                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        if (File.Exists(newFullName))
                         {
-                            LoadJsonAndImage(newFullName);
-                            //newFullName = Path.Combine(path, "PreviewStates.json");
-                            //if (File.Exists(newFullName))
-                            //{
-                            //    JsonPreview_Read(newFullName);
-                            //}
-                        }
+                            this.BringToFront();
+                            if (MessageBox.Show("Открыть распакованный проект?", "Открытие проекта",
+                                                        MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                LoadJsonAndImage(newFullName);
+                                //newFullName = Path.Combine(path, "PreviewStates.json");
+                                //if (File.Exists(newFullName))
+                                //{
+                                //    JsonPreview_Read(newFullName);
+                                //}
+                            }
+                        } 
+                    }
+                    else if (Program_Settings.Settings_AfterUnpack_Download)
+                    {
+                        LoadJsonAndImage(newFullName);
                     }
                 }
                 catch
@@ -354,20 +463,31 @@ namespace GTR_Watch_face
                     if (File.Exists(newFullName))
                     {
                         this.BringToFront();
-                        //if (MessageBox.Show("Копировать файл циферблата в буфер обмена?", "Копировать циферблат",
-                        //                            MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                        //{
-                        if (MessageBox.Show("Перейти к файлу?", "Перейти к файлу",
-                                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        //if (radioButton_Settings_Pack_Dialog.Checked)
+                        if (Program_Settings.Settings_Pack_Dialog)
+                        {
+                            if (MessageBox.Show("Перейти к файлу?", "Перейти к файлу",
+                                                                        MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                Process.Start(new ProcessStartInfo("explorer.exe", " /select, " + newFullName));
+                                //StringCollection paths = new StringCollection();
+                                //paths.Add(newFullName);
+                                //Clipboard.SetFileDropList(paths);
+
+                                //FileStream fs = new FileStream(newFullName, FileMode.Open);
+                                //Clipboard.SetDataObject(fs, true);
+                                //fs.Close();
+                            }
+                        }
+                        else if (Program_Settings.Settings_Pack_Copy)
+                        {
+                            StringCollection paths = new StringCollection();
+                            paths.Add(newFullName);
+                            Clipboard.SetFileDropList(paths);
+                        }
+                        else if (Program_Settings.Settings_Pack_GoToFile)
                         {
                             Process.Start(new ProcessStartInfo("explorer.exe", " /select, " + newFullName));
-                            //StringCollection paths = new StringCollection();
-                            //paths.Add(newFullName);
-                            //Clipboard.SetFileDropList(paths);
-
-                            //FileStream fs = new FileStream(newFullName, FileMode.Open);
-                            //Clipboard.SetDataObject(fs, true);
-                            //fs.Close();
                         }
                     }
                 }
@@ -571,7 +691,18 @@ namespace GTR_Watch_face
             string newFullName = Path.Combine(path, "PreviewStates.json");
             if (File.Exists(newFullName))
             {
-                JsonPreview_Read(newFullName);
+                if (Program_Settings.Settings_Open_Download)
+                {
+                    JsonPreview_Read(newFullName); 
+                }
+                else if (Program_Settings.Settings_Open_Dialog)
+                {
+                    if (MessageBox.Show("Загрузить имеющийся файл настроек предпросмотра PreviewStates.json?", 
+                        "Загрузка настроек предпросмотра", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        JsonPreview_Read(newFullName);
+                    }
+                }
             }
             PreviewView = true;
             PreviewImage();
@@ -3242,6 +3373,8 @@ namespace GTR_Watch_face
             label297.Enabled = b;
             label298.Enabled = b;
 
+            checkBox_Weather_Night.Checked = b;
+
             if ((checkBox_Weather_Text.Checked) || (checkBox_Weather_Day.Checked) || (checkBox_Weather_Night.Checked))
             {
                 groupBox_Symbols.Enabled = true;
@@ -3277,6 +3410,8 @@ namespace GTR_Watch_face
             label320.Enabled = b;
             label321.Enabled = b;
             label322.Enabled = b;
+
+            checkBox_Weather_Day.Checked = b;
 
             if ((checkBox_Weather_Text.Checked) || (checkBox_Weather_Day.Checked) || (checkBox_Weather_Night.Checked))
             {
@@ -4089,7 +4224,8 @@ namespace GTR_Watch_face
                     }
                 }
 
-                if ((checkBox_Weather_Icon.Checked) && (comboBox_Weather_Icon_Image.SelectedIndex >= 0))
+                if ((checkBox_Weather_Icon.Checked) && (comboBox_Weather_Icon_Image.SelectedIndex >= 0) 
+                    && (comboBox_Weather_Icon_NDImage.SelectedIndex >= 0))
                 {
                     // numericUpDown_Weather_Icon_X
                     if (Watch_Face.Weather == null) Watch_Face.Weather = new Weather();
@@ -4637,6 +4773,26 @@ namespace GTR_Watch_face
                 formPreview.Show(this);
                 //formPreview.Show();
 
+                switch (Program_Settings.Scale)
+                {
+                    case 0.5f:
+                        formPreview.radioButton_small.Checked = true;
+                        break;
+                    case 1.5f:
+                        formPreview.radioButton_large.Checked = true;
+                        break;
+                    case 2.0f:
+                        formPreview.radioButton_xlarge.Checked = true;
+                        break;
+                    case 2.5f:
+                        formPreview.radioButton_xxlarge.Checked = true;
+                        break;
+                    default:
+                        formPreview.radioButton_normal.Checked = true;
+                        break;
+
+                }
+
                 formPreview.panel_Preview.Resize += (object senderResize, EventArgs eResize) =>
                 {
                     Form_Preview.Model_47.model_47 = radioButton_47.Checked;
@@ -4648,6 +4804,15 @@ namespace GTR_Watch_face
                     if (formPreview.radioButton_large.Checked) scalePreviewResize = 1.5f;
                     if (formPreview.radioButton_xlarge.Checked) scalePreviewResize = 2.0f;
                     if (formPreview.radioButton_xxlarge.Checked) scalePreviewResize = 2.5f;
+
+                    Program_Settings.Scale = scalePreviewResize;
+                    string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+                    {
+                        //DefaultValueHandling = DefaultValueHandling.Ignore,
+                        NullValueHandling = NullValueHandling.Ignore
+                    });
+                    File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
+
                     PreviewToBitmap(gPanelPreviewResize, scalePreviewResize, radioButton_47.Checked, 
                         checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked);
                     gPanelPreviewResize.Dispose();
@@ -4689,6 +4854,7 @@ namespace GTR_Watch_face
             if (formPreview.radioButton_large.Checked) scale = 1.5f;
             if (formPreview.radioButton_xlarge.Checked) scale = 2.0f;
             if (formPreview.radioButton_xxlarge.Checked) scale = 2.5f;
+
             PreviewToBitmap(gPanel, scale, radioButton_47.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked);
             gPanel.Dispose();
 
@@ -5360,7 +5526,7 @@ namespace GTR_Watch_face
             {
                 string fullfilename = saveFileDialog.FileName;
                 richTextBox_JSON.Text = formatted;
-                File.WriteAllText(fullfilename, formatted, Encoding.Default);
+                File.WriteAllText(fullfilename, formatted, Encoding.UTF8);
             }
         }
 
@@ -5587,6 +5753,12 @@ namespace GTR_Watch_face
                         break;
                 }
             }
+
+            numericUpDown_WeatherSet_Temp.Value = rnd.Next(-25, 35) + 1;
+            numericUpDown_WeatherSet_DayTemp.Value = numericUpDown_WeatherSet_Temp.Value;
+            numericUpDown_WeatherSet_NightTemp.Value = numericUpDown_WeatherSet_Temp.Value - rnd.Next(3, 10);
+            comboBox_WeatherSet_Icon.SelectedIndex = rnd.Next(0, 25);
+
             PreviewView = true;
             //PreviewImage();
             button_Set13.PerformClick();
@@ -5731,7 +5903,7 @@ namespace GTR_Watch_face
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string fullfilename = saveFileDialog.FileName;
-                File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.Default);
+                File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
 
                 FileName = Path.GetFileName(fullfilename);
                 FullFileDir = Path.GetDirectoryName(fullfilename);
@@ -5808,7 +5980,7 @@ namespace GTR_Watch_face
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
-                if(radioButton42.Checked) bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
+                if(radioButton_42.Checked) bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 //float scale = 1.0f;
                 //if (formPreview.radioButton_small.Checked) scale = 0.5f;
@@ -5833,9 +6005,11 @@ namespace GTR_Watch_face
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
-                if (radioButton42.Checked) bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
+                if (radioButton_42.Checked) bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 bool save = false;
+                Random rnd = new Random();
+                PreviewView = false;
 
                 using (MagickImageCollection collection = new MagickImageCollection())
                 {
@@ -5935,16 +6109,26 @@ namespace GTR_Watch_face
 
                         if (save)
                         {
-                            //float scale = 1.0f;
-                            //if (formPreview.radioButton_small.Checked) scale = 0.5f;
-                            //if (formPreview.radioButton_large.Checked) scale = 1.5f;
-                            //if (formPreview.radioButton_xlarge.Checked) scale = 2.0f;
-                            //if (formPreview.radioButton_xxlarge.Checked) scale = 2.5f;
+                            int WeatherSet_Temp = (int)numericUpDown_WeatherSet_Temp.Value;
+                            int WeatherSet_DayTemp = (int)numericUpDown_WeatherSet_DayTemp.Value;
+                            int WeatherSet_NightTemp = (int)numericUpDown_WeatherSet_NightTemp.Value;
+                            int WeatherSet_Icon = comboBox_WeatherSet_Icon.SelectedIndex;
+
+                            numericUpDown_WeatherSet_Temp.Value = rnd.Next(-25, 35) + 1;
+                            numericUpDown_WeatherSet_DayTemp.Value = numericUpDown_WeatherSet_Temp.Value;
+                            numericUpDown_WeatherSet_NightTemp.Value = numericUpDown_WeatherSet_Temp.Value - rnd.Next(3, 10);
+                            comboBox_WeatherSet_Icon.SelectedIndex = rnd.Next(0, 25);
+
                             PreviewToBitmap(gPanel, 1.0f, radioButton_47.Checked, false, false, false);
                             // Add first image and set the animation delay to 100ms
                             MagickImage item = new MagickImage(bitmap);
                             collection.Add(item);
                             collection[collection.Count - 1].AnimationDelay = 100;
+
+                            numericUpDown_WeatherSet_Temp.Value = WeatherSet_Temp;
+                            numericUpDown_WeatherSet_DayTemp.Value = WeatherSet_DayTemp;
+                            numericUpDown_WeatherSet_NightTemp.Value = WeatherSet_NightTemp;
+                            comboBox_WeatherSet_Icon.SelectedIndex = WeatherSet_Icon;
                         }
                     }
 
@@ -5962,7 +6146,7 @@ namespace GTR_Watch_face
                     // Save gif
                     collection.Write(saveFileDialog.FileName);
                 }
-                
+                PreviewView = true;
             }
         }
 
@@ -7047,32 +7231,40 @@ namespace GTR_Watch_face
                 panel_Preview.Height = 230;
                 panel_Preview.Width = 230;
 
-                Properties.Settings.Default.unpack_command_42 = textBox_unpack_command.Text;
-                Properties.Settings.Default.pack_command_42 = textBox_pack_command.Text;
-                Properties.Settings.Default.Save();
+                //Properties.Settings.Default.unpack_command_42 = textBox_unpack_command.Text;
+                //Properties.Settings.Default.pack_command_42 = textBox_pack_command.Text;
+                //Properties.Settings.Default.Save();
+                Program_Settings.unpack_command_42 = textBox_unpack_command.Text;
+                Program_Settings.pack_command_42 = textBox_pack_command.Text;
 
-                textBox_unpack_command.Text = "--gtr 47 --file";
-                textBox_pack_command.Text = "--gtr 47 --file";
-                if (Properties.Settings.Default.unpack_command.Length > 1)
-                    textBox_unpack_command.Text = Properties.Settings.Default.unpack_command;
-                if (Properties.Settings.Default.pack_command.Length > 1)
-                    textBox_pack_command.Text = Properties.Settings.Default.pack_command;
+                //textBox_unpack_command.Text = "--gtr 47 --file";
+                //textBox_pack_command.Text = "--gtr 47 --file";
+                //if (Properties.Settings.Default.unpack_command.Length > 1)
+                //    textBox_unpack_command.Text = Properties.Settings.Default.unpack_command;
+                //if (Properties.Settings.Default.pack_command.Length > 1)
+                //    textBox_pack_command.Text = Properties.Settings.Default.pack_command;
+                textBox_unpack_command.Text = Program_Settings.unpack_command_47;
+                textBox_pack_command.Text = Program_Settings.pack_command_47;
             }
             else
             {
                 panel_Preview.Height = 198;
                 panel_Preview.Width = 198;
 
-                Properties.Settings.Default.unpack_command = textBox_unpack_command.Text;
-                Properties.Settings.Default.pack_command = textBox_pack_command.Text;
-                Properties.Settings.Default.Save();
+                //Properties.Settings.Default.unpack_command = textBox_unpack_command.Text;
+                //Properties.Settings.Default.pack_command = textBox_pack_command.Text;
+                //Properties.Settings.Default.Save();
+                Program_Settings.unpack_command_47 = textBox_unpack_command.Text;
+                Program_Settings.pack_command_47 = textBox_pack_command.Text;
 
-                textBox_unpack_command.Text = "--gtr 42 --file";
-                textBox_pack_command.Text = "--gtr 42 --file";
-                if (Properties.Settings.Default.unpack_command_42.Length > 1)
-                    textBox_unpack_command.Text = Properties.Settings.Default.unpack_command_42;
-                if (Properties.Settings.Default.pack_command_42.Length > 1)
-                    textBox_pack_command.Text = Properties.Settings.Default.pack_command_42;
+                //textBox_unpack_command.Text = "--gtr 42 --file";
+                //textBox_pack_command.Text = "--gtr 42 --file";
+                //if (Properties.Settings.Default.unpack_command_42.Length > 1)
+                //    textBox_unpack_command.Text = Properties.Settings.Default.unpack_command_42;
+                //if (Properties.Settings.Default.pack_command_42.Length > 1)
+                //    textBox_pack_command.Text = Properties.Settings.Default.pack_command_42;
+                textBox_unpack_command.Text = Program_Settings.unpack_command_42;
+                textBox_pack_command.Text = Program_Settings.pack_command_42;
             }
 
             if ((formPreview != null) && (formPreview.Visible))
@@ -7081,7 +7273,16 @@ namespace GTR_Watch_face
                 formPreview.radioButton_CheckedChanged(sender, e);
             }
 
-            PreviewImage();
+            Program_Settings.Model_47 = radioButton_47.Checked;
+            Program_Settings.Model_42 = radioButton_42.Checked;
+            string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+            {
+                //DefaultValueHandling = DefaultValueHandling.Ignore,
+                NullValueHandling = NullValueHandling.Ignore
+            });
+            File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
+
+        PreviewImage();
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -7333,8 +7534,67 @@ namespace GTR_Watch_face
             }
         }
 
+        private void radioButton_Settings_Unpack_Dialog_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Settings_Load) return;
+            Program_Settings.Settings_AfterUnpack_Dialog = radioButton_Settings_AfterUnpack_Dialog.Checked;
+            Program_Settings.Settings_AfterUnpack_DoNothing = radioButton_Settings_AfterUnpack_DoNothing.Checked;
+            Program_Settings.Settings_AfterUnpack_Download = radioButton_Settings_AfterUnpack_Download.Checked;
 
+            Program_Settings.Settings_Open_Dialog = radioButton_Settings_Open_Dialog.Checked;
+            Program_Settings.Settings_Open_DoNotning = radioButton_Settings_Open_DoNotning.Checked;
+            Program_Settings.Settings_Open_Download = radioButton_Settings_Open_Download.Checked;
 
+            Program_Settings.Settings_Pack_Copy = radioButton_Settings_Pack_Copy.Checked;
+            Program_Settings.Settings_Pack_Dialog = radioButton_Settings_Pack_Dialog.Checked;
+            Program_Settings.Settings_Pack_DoNotning = radioButton_Settings_Pack_DoNotning.Checked;
+            Program_Settings.Settings_Pack_GoToFile = radioButton_Settings_Pack_GoToFile.Checked;
+
+            Program_Settings.Settings_Unpack_Dialog = radioButton_Settings_Unpack_Dialog.Checked;
+            Program_Settings.Settings_Unpack_Replace = radioButton_Settings_Unpack_Replace.Checked;
+            Program_Settings.Settings_Unpack_Save = radioButton_Settings_Unpack_Save.Checked;
+
+            //string JSON_String = JObject.FromObject(Program_Settings).ToString();
+            string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+            {
+                //DefaultValueHandling = DefaultValueHandling.Ignore,
+                NullValueHandling = NullValueHandling.Ignore
+            });
+            File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
+            //File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+        }
+
+        private void checkBox_border_CheckedChanged(object sender, EventArgs e)
+        {
+            Program_Settings.ShowBorder = checkBox_border.Checked;
+            string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+            {
+                //DefaultValueHandling = DefaultValueHandling.Ignore,
+                NullValueHandling = NullValueHandling.Ignore
+            });
+            File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
+        }
+
+        private void textBox_unpack_command_Leave(object sender, EventArgs e)
+        {
+            if (radioButton_47.Checked)
+            {
+                Program_Settings.unpack_command_47 = textBox_unpack_command.Text;
+                Program_Settings.pack_command_47 = textBox_pack_command.Text;
+            }
+            else
+            {
+                Program_Settings.unpack_command_42 = textBox_unpack_command.Text;
+                Program_Settings.pack_command_42 = textBox_pack_command.Text;
+            }
+
+            string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+            {
+                //DefaultValueHandling = DefaultValueHandling.Ignore,
+                NullValueHandling = NullValueHandling.Ignore
+            });
+            File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
+        }
     }
 }
 
@@ -7350,328 +7610,44 @@ public static class MouseСoordinates
     public static int Y = -1;
 }
 
+public class PROGRAM_SETTINGS
+{
+    public bool Settings_Unpack_Dialog = true;
+    public bool Settings_Unpack_Save = false;
+    public bool Settings_Unpack_Replace = false;
+    
+    public bool Settings_Pack_Dialog = false;
+    public bool Settings_Pack_GoToFile = true;
+    public bool Settings_Pack_Copy = false;
+    public bool Settings_Pack_DoNotning = false;
+
+    public bool Settings_AfterUnpack_Dialog = false;
+    public bool Settings_AfterUnpack_Download = true;
+    public bool Settings_AfterUnpack_DoNothing = false;
+
+    public bool Settings_Open_Dialog = false;
+    public bool Settings_Open_Download = true;
+    public bool Settings_Open_DoNotning = false;
+
+    public bool Model_47 = true;
+    public bool Model_42 = false;
+
+    public bool ShowBorder = false;
+    public float Scale = 1f;
+
+    public string pack_unpack_dir { get; set; }
+    public string unpack_command_47 = "--gtr 47 --file";
+    public string pack_command_47 = "--gtr 47 --file";
+    public string unpack_command_42 = "--gtr 42 --file";
+    public string pack_command_42 = "--gtr 42 --file";
+}
 
 
-#region WATCH_FACE_JSON
 
-/// <summary>Корневая структура JSON файла</summary>
-public class WATCH_FACE_JSON
-    {
-        /// <summary>Задний фон</summary>
-        public Background Background { get; set; }
-        /// <summary>Фремя в цифровом формате</summary>
-        public TimeW Time { get; set; }
-        /// <summary>Активности (спорт)</summary>
-        public Activity Activity { get; set; }
-        /// <summary>Дата</summary>
-        public Date Date { get; set; }
-        /// <summary>Погода</summary>
-        public Weather Weather { get; set; }
-        /// <summary>Прогресс шагов</summary>
-        public StepsProgress StepsProgress { get; set; }
-        /// <summary>Статусы</summary>
-        public Status Status { get; set; }
-        /// <summary>Батарея</summary>
-        public Battery Battery { get; set; }
-        /// <summary>Аналоговык часы</summary>
-        public Analogdialface AnalogDialFace { get; set; }
-        
-    }
-
-    public class Background
-    {
-        public ImageW Image { get; set; }
-        public ImageW Preview { get; set; }
-        public ImageW FrontImage { get; set; }
-    }
-
-    public class TimeW
-    {
-        /// <summary>Часы</summary>
-        public TwoDigits Hours { get; set; }
-        /// <summary>Минуты</summary>
-        public TwoDigits Minutes { get; set; }
-        /// <summary>Секунды</summary>
-        public TwoDigits Seconds { get; set; }
-        public AmPm AmPm { get; set; }
-        public long? DrawingOrder { get; set; }
-        public long? Unknown9 { get; set; }
-        /// <summary>Разделитель</summary>
-        public ImageW Delimiter { get; set; }
-    }
-
-    public class Activity
-    {
-        /// <summary>Цель шагов</summary>
-        public Number StepsGoal { get; set; }
-        /// <summary>Калории</summary>
-        public Number Calories { get; set; }
-        /// <summary>Пульс</summary>
-        public Number Pulse { get; set; }
-        /// <summary>Растояние</summary>
-        public Distance Distance { get; set; }
-        /// <summary>Шаги</summary>
-        public FormattedNumber Steps { get; set; }
-        /// <summary>Шаги</summary>
-        public ImageW StarImage { get; set; }
-    }
-
-    public class Date
-    {
-        /// <summary>Дни и месяцы</summary>
-        public Monthandday MonthAndDay { get; set; }
-        /// <summary>Номер дня недели</summary>
-        public ImageSet WeekDay { get; set; }
-        public DateUnknown3 Unknown3 { get; set; }
-        public Coordinates Unknown4 { get; set; }
-    }
-
-    public class StepsProgress
-    {
-        public ImageSet Images1 { get; set; }
-        public ImageSet Images2 { get; set; }
-        public ImageSet Images4 { get; set; }
-        public CircleScale Circle { get; set; }
-    }
-
-    public class Status
-    {
-        /// <summary>Bluetooth</summary>
-        public SwitchW Bluetooth { get; set; }
-        /// <summary>Будильник</summary>
-        public SwitchW Alarm { get; set; }
-        /// <summary>Блокировка</summary>
-        public SwitchW Lock { get; set; }
-        /// <summary>Не беспокоить</summary>
-        public SwitchW DoNotDisturb { get; set; }
-    }
-
-    public class Battery
-    {
-        public Number Text { get; set; }
-        public ImageSet Images { get; set; }
-        public IconSet Icons { get; set; }
-        public ImageW Percent { get; set; }
-        public CircleScale Scale { get; set; }
-    }
-
-    public class Analogdialface
-    {
-        public ClockHand Hours { get; set; }
-        public ImageW HourCenterImage { get; set; }
-        public ClockHand Minutes { get; set; }
-        public ImageW MinCenterImage { get; set; }
-        public ClockHand Seconds { get; set; }
-        public ImageW SecCenterImage { get; set; }
-    }
-
-    public class Weather
-    {
-        public IconW Icon { get; set; }
-        public Temperature Temperature { get; set; }
-    }
-
-    public class ImageW
-    {
-        public long X { get; set; }
-        public long Y { get; set; }
-        public long ImageIndex { get; set; }
-    }
-
-    public class Preview
-    {
-        public long X { get; set; }
-        public long Y { get; set; }
-        public long ImageIndex { get; set; }
-    }
-
-    public class CircleScale
-    {
-        public long CenterX { get; set; }
-        public long CenterY { get; set; }
-        public long RadiusX { get; set; }
-        public long RadiusY { get; set; }
-        public long StartAngle { get; set; }
-        public long EndAngle { get; set; }
-        public long Width { get; set; }
-        public string Color { get; set; }
-        public long Flatness { get; set; }
-    }
-
-    public class Coordinates
-    {
-        public long X { get; set; }
-        public long Y { get; set; }
-    }
-
-    public class Sector
-    {
-        public long StartAngle { get; set; }
-        public long EndAngle { get; set; }
-    }
-
-    public class ImageSet
-    {
-        public long X { get; set; }
-        public long Y { get; set; }
-        public long ImageIndex { get; set; }
-        public long ImagesCount { get; set; }
-    }
-
-
-    public class IconSet
-    {
-        public long FirtsImageIndex { get; set; }
-        public Coordinates Coordinates { get; set; }
-    }
-
-    public class IconW
-    {
-        public ImageSet Images { get; set; }
-        public long NoWeatherImageIndex { get; set; }
-    }
-
-    public class Temperature
-    {
-        public Number Current { get; set; }
-        public Today Today { get; set; }
-        public Symbols Symbols { get; set; }
-    }
-
-    public class Today
-    {
-        public Separate Separate { get; set; }
-        public bool AppendDegreesForBoth { get; set; }
-    }
-
-    public class Separate
-    {
-        public Number Day { get; set; }
-        public Number Night { get; set; }
-    }
-
-    public class Symbols
-    {
-        public long Unknown0800 { get; set; }
-        public long MinusImageIndex { get; set; }
-        public long DegreesImageIndex { get; set; }
-        public long NoDataImageIndex { get; set; }
-    }
-
-    //public class TemperatureImages
-    //{
-    //    public long Unknown0800 { get; set; }
-    //    public long MinusImageIndex { get; set; }
-    //    public long DegreesImageIndex { get; set; }
-    //    public long NoDataImageIndex { get; set; }
-    //}
-
-    public class Number
-    {
-        public long TopLeftX { get; set; }
-        public long TopLeftY { get; set; }
-        public long BottomRightX { get; set; }
-        public long BottomRightY { get; set; }
-        public string Alignment { get; set; }
-        public long Spacing { get; set; }
-        public long ImageIndex { get; set; }
-        public long ImagesCount { get; set; }
-    }
-
-    public class UnknownType
-    {
-        public long TopLeftX { get; set; }
-        public long TopLeftY { get; set; }
-        public long BottomRightX { get; set; }
-        public long BottomRightY { get; set; }
-        public string Alignment { get; set; }
-        public long Spacing { get; set; }
-        public long ImageIndex { get; set; }
-        public long ImagesCount { get; set; }
-    }
-
-    public class AmPm
-    {
-        public long X { get; set; }
-        public long Y { get; set; }
-        public long ImageIndexAMCN { get; set; }
-        public long ImageIndexPMCN { get; set; }
-        public long ImageIndexAMEN { get; set; }
-        public long ImageIndexPMEN { get; set; }
-    }
-
-    public class TwoDigits
-    {
-        public ImageSet Tens { get; set; }
-        public ImageSet Ones { get; set; }
-    }
-
-    public class Distance
-    {
-        public Number Number { get; set; }
-        public long? SuffixImageIndex { get; set; }
-        public long? DecimalPointImageIndex { get; set; }
-        public string Color { get; set; }
-    }
-
-    public class FormattedNumber
-    {
-        public Number Step { get; set; }
-        public long? SuffixImageIndex { get; set; }
-        public long? DecimalPointImageIndex { get; set; }
-        public string Color { get; set; }
-    }
-
-    public class Monthandday
-    {
-        /// <summary>Отдельно число и месяц</summary>
-        public SeparateMonthAndDay Separate { get; set; }
-        /// <summary>Дата одной строкой</summary>
-        public OneLineMonthAndDay OneLine { get; set; }
-        public bool TwoDigitsMonth { get; set; }
-        public bool TwoDigitsDay { get; set; }
-    }
-
-    public class SeparateMonthAndDay
-    {
-        public Number Month { get; set; }
-        public ImageSet MonthName { get; set; }
-        public Number Day { get; set; }
-    }
-
-    public class OneLineMonthAndDay
-    {
-        public Number Number { get; set; }
-        public long DelimiterImageIndex { get; set; }
-    }
-
-    public class DateUnknown3
-    {
-        public UnknownType Unknown2 { get; set; }
-    }
-
-    public class SwitchW
-    {
-        public Coordinates Coordinates { get; set; }
-        public long? ImageIndexOn { get; set; }
-        public long? ImageIndexOff { get; set; }
-    }
-
-    public class ClockHand
-    {
-        public bool OnlyBorder { get; set; }
-        public string Color { get; set; }
-        public Coordinates CenterOffset { get; set; }
-        public Coordinates Shape { get; set; }
-        public ImageW Image { get; set; }
-        public Sector Sector { get; set; }
-    }
-
-#endregion
 
 #region WATCH_FACE_PREWIEV
-    /// <summary>отдельные цифры для даты и времени</summary>
-    public class WATCH_FACE_PREWIEV
+/// <summary>отдельные цифры для даты и времени</summary>
+public class WATCH_FACE_PREWIEV
     {
         public DateP Date { get; set; }
         public TimeP Time { get; set; }

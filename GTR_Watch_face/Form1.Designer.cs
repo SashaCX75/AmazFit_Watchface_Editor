@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -941,6 +941,24 @@
             this.label6 = new System.Windows.Forms.Label();
             this.button_Background = new System.Windows.Forms.Button();
             this.richTextBox_JSON = new System.Windows.Forms.RichTextBox();
+            this.tabPage33 = new System.Windows.Forms.TabPage();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.radioButton_Settings_Pack_DoNotning = new System.Windows.Forms.RadioButton();
+            this.radioButton_Settings_Pack_Copy = new System.Windows.Forms.RadioButton();
+            this.radioButton_Settings_Pack_GoToFile = new System.Windows.Forms.RadioButton();
+            this.radioButton_Settings_Pack_Dialog = new System.Windows.Forms.RadioButton();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.radioButton_Settings_Open_DoNotning = new System.Windows.Forms.RadioButton();
+            this.radioButton_Settings_Open_Download = new System.Windows.Forms.RadioButton();
+            this.radioButton_Settings_Open_Dialog = new System.Windows.Forms.RadioButton();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.radioButton_Settings_AfterUnpack_DoNothing = new System.Windows.Forms.RadioButton();
+            this.radioButton_Settings_AfterUnpack_Download = new System.Windows.Forms.RadioButton();
+            this.radioButton_Settings_AfterUnpack_Dialog = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton_Settings_Unpack_Replace = new System.Windows.Forms.RadioButton();
+            this.radioButton_Settings_Unpack_Save = new System.Windows.Forms.RadioButton();
+            this.radioButton_Settings_Unpack_Dialog = new System.Windows.Forms.RadioButton();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
@@ -953,7 +971,7 @@
             this.panel_Preview = new System.Windows.Forms.Panel();
             this.button_SaveGIF = new System.Windows.Forms.Button();
             this.radioButton_47 = new System.Windows.Forms.RadioButton();
-            this.radioButton42 = new System.Windows.Forms.RadioButton();
+            this.radioButton_42 = new System.Windows.Forms.RadioButton();
             this.button_PreviewSmall_42 = new System.Windows.Forms.Button();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
@@ -961,6 +979,7 @@
             this.label_preview_Y = new System.Windows.Forms.Label();
             this.checkBox_border = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label_version = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -1280,6 +1299,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Sec_Tens_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Sec_Tens_X)).BeginInit();
             this.panel_Background.SuspendLayout();
+            this.tabPage33.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -1288,6 +1312,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage33);
             this.tabControl1.Location = new System.Drawing.Point(238, 5);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -1340,6 +1365,7 @@
             this.textBox_pack_command.Size = new System.Drawing.Size(577, 20);
             this.textBox_pack_command.TabIndex = 6;
             this.textBox_pack_command.Text = "--gtr 47 --file";
+            this.textBox_pack_command.Leave += new System.EventHandler(this.textBox_unpack_command_Leave);
             // 
             // label3
             // 
@@ -1357,6 +1383,7 @@
             this.textBox_unpack_command.Size = new System.Drawing.Size(577, 20);
             this.textBox_unpack_command.TabIndex = 4;
             this.textBox_unpack_command.Text = "--gtr 47 --file";
+            this.textBox_unpack_command.Leave += new System.EventHandler(this.textBox_unpack_command_Leave);
             // 
             // label2
             // 
@@ -2329,7 +2356,7 @@
             // button_SetWeather
             // 
             this.button_SetWeather.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button_SetWeather.Location = new System.Drawing.Point(0, 469);
+            this.button_SetWeather.Location = new System.Drawing.Point(0, 379);
             this.button_SetWeather.Name = "button_SetWeather";
             this.button_SetWeather.Size = new System.Drawing.Size(350, 23);
             this.button_SetWeather.TabIndex = 27;
@@ -2349,9 +2376,9 @@
             this.panel_SetWeather.Controls.Add(this.numericUpDown_WeatherSet_Temp);
             this.panel_SetWeather.Controls.Add(this.checkBox_WeatherSet_DayTemp);
             this.panel_SetWeather.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel_SetWeather.Location = new System.Drawing.Point(0, 492);
+            this.panel_SetWeather.Location = new System.Drawing.Point(0, 402);
             this.panel_SetWeather.Name = "panel_SetWeather";
-            this.panel_SetWeather.Size = new System.Drawing.Size(350, 1);
+            this.panel_SetWeather.Size = new System.Drawing.Size(350, 91);
             this.panel_SetWeather.TabIndex = 25;
             // 
             // numericUpDown_WeatherSet_NightTemp
@@ -5458,8 +5485,8 @@
             // Number
             // 
             this.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Number.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Number.DefaultCellStyle = dataGridViewCellStyle1;
             this.Number.HeaderText = "№";
             this.Number.Name = "Number";
             this.Number.ReadOnly = true;
@@ -5736,6 +5763,7 @@
             this.numericUpDown_Weather_Text_EndCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Weather_Text_EndCorner_X.TabIndex = 36;
             this.numericUpDown_Weather_Text_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_Text_EndCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // contextMenuStrip_X
             // 
@@ -5809,6 +5837,7 @@
             this.numericUpDown_Weather_Text_StartCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Weather_Text_StartCorner_Y.TabIndex = 28;
             this.numericUpDown_Weather_Text_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_Text_StartCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // contextMenuStrip_Y
             // 
@@ -5863,6 +5892,7 @@
             this.numericUpDown_Weather_Text_StartCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Weather_Text_StartCorner_X.TabIndex = 27;
             this.numericUpDown_Weather_Text_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_Text_StartCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // numericUpDown_Weather_Text_Spacing
             // 
@@ -5985,6 +6015,7 @@
             this.numericUpDown_Weather_Text_EndCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Weather_Text_EndCorner_Y.TabIndex = 37;
             this.numericUpDown_Weather_Text_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_Text_EndCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // label275
             // 
@@ -6095,6 +6126,7 @@
             this.comboBox_Weather_Day_Image.Name = "comboBox_Weather_Day_Image";
             this.comboBox_Weather_Day_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Weather_Day_Image.TabIndex = 66;
+            this.comboBox_Weather_Day_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
             // numericUpDown_Weather_Day_EndCorner_X
             // 
@@ -6115,6 +6147,7 @@
             this.numericUpDown_Weather_Day_EndCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Weather_Day_EndCorner_X.TabIndex = 76;
             this.numericUpDown_Weather_Day_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_Day_EndCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // numericUpDown_Weather_Day_Count
             // 
@@ -6149,6 +6182,7 @@
             this.numericUpDown_Weather_Day_StartCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Weather_Day_StartCorner_Y.TabIndex = 68;
             this.numericUpDown_Weather_Day_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_Day_StartCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_Weather_Day_StartCorner_X
             // 
@@ -6169,6 +6203,7 @@
             this.numericUpDown_Weather_Day_StartCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Weather_Day_StartCorner_X.TabIndex = 67;
             this.numericUpDown_Weather_Day_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_Day_StartCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // numericUpDown_Weather_Day_Spacing
             // 
@@ -6240,6 +6275,7 @@
             this.comboBox_Weather_Day_Alignment.Name = "comboBox_Weather_Day_Alignment";
             this.comboBox_Weather_Day_Alignment.Size = new System.Drawing.Size(111, 21);
             this.comboBox_Weather_Day_Alignment.TabIndex = 79;
+            this.comboBox_Weather_Day_Alignment.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
             // label291
             // 
@@ -6290,6 +6326,7 @@
             this.numericUpDown_Weather_Day_EndCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Weather_Day_EndCorner_Y.TabIndex = 77;
             this.numericUpDown_Weather_Day_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_Day_EndCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // label294
             // 
@@ -6400,6 +6437,7 @@
             this.numericUpDown_Weather_Night_EndCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Weather_Night_EndCorner_X.TabIndex = 55;
             this.numericUpDown_Weather_Night_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_Night_EndCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // numericUpDown_Weather_Night_Count
             // 
@@ -6439,6 +6477,7 @@
             this.numericUpDown_Weather_Night_StartCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Weather_Night_StartCorner_Y.TabIndex = 47;
             this.numericUpDown_Weather_Night_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_Night_StartCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_Weather_Night_StartCorner_X
             // 
@@ -6459,6 +6498,7 @@
             this.numericUpDown_Weather_Night_StartCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Weather_Night_StartCorner_X.TabIndex = 46;
             this.numericUpDown_Weather_Night_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_Night_StartCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // numericUpDown_Weather_Night_Spacing
             // 
@@ -6581,6 +6621,7 @@
             this.numericUpDown_Weather_Night_EndCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Weather_Night_EndCorner_Y.TabIndex = 56;
             this.numericUpDown_Weather_Night_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_Night_EndCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // label318
             // 
@@ -6734,6 +6775,7 @@
             this.numericUpDown_Weather_Icon_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Weather_Icon_Y.TabIndex = 18;
             this.numericUpDown_Weather_Icon_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_Icon_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_Weather_Icon_X
             // 
@@ -6754,6 +6796,7 @@
             this.numericUpDown_Weather_Icon_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Weather_Icon_X.TabIndex = 17;
             this.numericUpDown_Weather_Icon_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Weather_Icon_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // comboBox_Weather_Icon_Image
             // 
@@ -7078,6 +7121,7 @@
             this.numericUpDown_HourCenterImage_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_HourCenterImage_Y.TabIndex = 61;
             this.numericUpDown_HourCenterImage_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_HourCenterImage_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // label311
             // 
@@ -7108,6 +7152,7 @@
             this.numericUpDown_HourCenterImage_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_HourCenterImage_X.TabIndex = 59;
             this.numericUpDown_HourCenterImage_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_HourCenterImage_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // label312
             // 
@@ -7370,6 +7415,7 @@
             this.numericUpDown_MinCenterImage_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_MinCenterImage_Y.TabIndex = 61;
             this.numericUpDown_MinCenterImage_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_MinCenterImage_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // label308
             // 
@@ -7400,6 +7446,7 @@
             this.numericUpDown_MinCenterImage_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_MinCenterImage_X.TabIndex = 59;
             this.numericUpDown_MinCenterImage_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_MinCenterImage_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // label309
             // 
@@ -7486,6 +7533,7 @@
             this.numericUpDown_SecCenterImage_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_SecCenterImage_Y.TabIndex = 61;
             this.numericUpDown_SecCenterImage_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_SecCenterImage_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // label305
             // 
@@ -7511,6 +7559,7 @@
             this.numericUpDown_SecCenterImage_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_SecCenterImage_X.TabIndex = 59;
             this.numericUpDown_SecCenterImage_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_SecCenterImage_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // label306
             // 
@@ -7812,6 +7861,7 @@
             this.numericUpDown_Battery_Text_EndCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Battery_Text_EndCorner_X.TabIndex = 74;
             this.numericUpDown_Battery_Text_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Battery_Text_EndCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // numericUpDown_Battery_Text_Count
             // 
@@ -7851,6 +7901,7 @@
             this.numericUpDown_Battery_Text_StartCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Battery_Text_StartCorner_Y.TabIndex = 66;
             this.numericUpDown_Battery_Text_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Battery_Text_StartCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_Battery_Text_StartCorner_X
             // 
@@ -7871,6 +7922,7 @@
             this.numericUpDown_Battery_Text_StartCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Battery_Text_StartCorner_X.TabIndex = 65;
             this.numericUpDown_Battery_Text_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Battery_Text_StartCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // numericUpDown_Battery_Text_Spacing
             // 
@@ -7993,6 +8045,7 @@
             this.numericUpDown_Battery_Text_EndCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Battery_Text_EndCorner_Y.TabIndex = 75;
             this.numericUpDown_Battery_Text_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Battery_Text_EndCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // label189
             // 
@@ -8091,6 +8144,7 @@
             this.numericUpDown_Battery_Percent_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Battery_Percent_Y.TabIndex = 84;
             this.numericUpDown_Battery_Percent_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Battery_Percent_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_Battery_Percent_X
             // 
@@ -8111,6 +8165,7 @@
             this.numericUpDown_Battery_Percent_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Battery_Percent_X.TabIndex = 83;
             this.numericUpDown_Battery_Percent_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Battery_Percent_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // checkBox_Battery_Percent
             // 
@@ -8243,6 +8298,7 @@
             this.numericUpDown_Battery_Img_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Battery_Img_Y.TabIndex = 76;
             this.numericUpDown_Battery_Img_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Battery_Img_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_Battery_Img_X
             // 
@@ -8263,6 +8319,7 @@
             this.numericUpDown_Battery_Img_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_Battery_Img_X.TabIndex = 75;
             this.numericUpDown_Battery_Img_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Battery_Img_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // checkBox_Battery_Img
             // 
@@ -8557,6 +8614,7 @@
             this.numericUpDown_Battery_Scale_Center_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Battery_Scale_Center_Y.TabIndex = 40;
             this.numericUpDown_Battery_Scale_Center_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Battery_Scale_Center_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // label205
             // 
@@ -8587,6 +8645,7 @@
             this.numericUpDown_Battery_Scale_Center_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Battery_Scale_Center_X.TabIndex = 38;
             this.numericUpDown_Battery_Scale_Center_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Battery_Scale_Center_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // label206
             // 
@@ -8725,6 +8784,7 @@
             this.numericUpDown_Bluetooth_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Bluetooth_Y.TabIndex = 16;
             this.numericUpDown_Bluetooth_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Bluetooth_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_Bluetooth_X
             // 
@@ -8740,6 +8800,7 @@
             this.numericUpDown_Bluetooth_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Bluetooth_X.TabIndex = 15;
             this.numericUpDown_Bluetooth_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Bluetooth_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // comboBox_Bluetooth_On
             // 
@@ -8849,6 +8910,7 @@
             this.numericUpDown_Alarm_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Alarm_Y.TabIndex = 25;
             this.numericUpDown_Alarm_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Alarm_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_Alarm_X
             // 
@@ -8864,6 +8926,7 @@
             this.numericUpDown_Alarm_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Alarm_X.TabIndex = 24;
             this.numericUpDown_Alarm_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Alarm_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // comboBox_Alarm_On
             // 
@@ -8972,6 +9035,7 @@
             this.numericUpDown_Lock_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Lock_Y.TabIndex = 25;
             this.numericUpDown_Lock_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Lock_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_Lock_X
             // 
@@ -8987,6 +9051,7 @@
             this.numericUpDown_Lock_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Lock_X.TabIndex = 24;
             this.numericUpDown_Lock_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Lock_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // comboBox_Lock_On
             // 
@@ -9095,6 +9160,7 @@
             this.numericUpDown_DND_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_DND_Y.TabIndex = 25;
             this.numericUpDown_DND_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_DND_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_DND_X
             // 
@@ -9110,6 +9176,7 @@
             this.numericUpDown_DND_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_DND_X.TabIndex = 24;
             this.numericUpDown_DND_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_DND_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // comboBox_DND_On
             // 
@@ -9238,6 +9305,7 @@
             this.numericUpDown_ActivityGoal_EndCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityGoal_EndCorner_X.TabIndex = 55;
             this.numericUpDown_ActivityGoal_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityGoal_EndCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // numericUpDown_ActivityGoal_Count
             // 
@@ -9277,6 +9345,7 @@
             this.numericUpDown_ActivityGoal_StartCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityGoal_StartCorner_Y.TabIndex = 47;
             this.numericUpDown_ActivityGoal_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityGoal_StartCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_ActivityGoal_StartCorner_X
             // 
@@ -9297,6 +9366,7 @@
             this.numericUpDown_ActivityGoal_StartCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityGoal_StartCorner_X.TabIndex = 46;
             this.numericUpDown_ActivityGoal_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityGoal_StartCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // numericUpDown_ActivityGoal_Spacing
             // 
@@ -9419,6 +9489,7 @@
             this.numericUpDown_ActivityGoal_EndCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityGoal_EndCorner_Y.TabIndex = 56;
             this.numericUpDown_ActivityGoal_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityGoal_EndCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // comboBox_ActivityGoal_Image
             // 
@@ -9529,6 +9600,7 @@
             this.numericUpDown_ActivitySteps_EndCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivitySteps_EndCorner_X.TabIndex = 74;
             this.numericUpDown_ActivitySteps_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivitySteps_EndCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // numericUpDown_ActivitySteps_Count
             // 
@@ -9568,6 +9640,7 @@
             this.numericUpDown_ActivitySteps_StartCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivitySteps_StartCorner_Y.TabIndex = 66;
             this.numericUpDown_ActivitySteps_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivitySteps_StartCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_ActivitySteps_StartCorner_X
             // 
@@ -9588,6 +9661,7 @@
             this.numericUpDown_ActivitySteps_StartCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivitySteps_StartCorner_X.TabIndex = 65;
             this.numericUpDown_ActivitySteps_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivitySteps_StartCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // numericUpDown_ActivitySteps_Spacing
             // 
@@ -9710,6 +9784,7 @@
             this.numericUpDown_ActivitySteps_EndCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivitySteps_EndCorner_Y.TabIndex = 75;
             this.numericUpDown_ActivitySteps_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivitySteps_EndCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // comboBox_ActivitySteps_Image
             // 
@@ -9867,6 +9942,7 @@
             this.numericUpDown_ActivityDistance_EndCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityDistance_EndCorner_X.TabIndex = 74;
             this.numericUpDown_ActivityDistance_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityDistance_EndCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // numericUpDown_ActivityDistance_Count
             // 
@@ -9906,6 +9982,7 @@
             this.numericUpDown_ActivityDistance_StartCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityDistance_StartCorner_Y.TabIndex = 66;
             this.numericUpDown_ActivityDistance_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityDistance_StartCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_ActivityDistance_StartCorner_X
             // 
@@ -9926,6 +10003,7 @@
             this.numericUpDown_ActivityDistance_StartCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityDistance_StartCorner_X.TabIndex = 65;
             this.numericUpDown_ActivityDistance_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityDistance_StartCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // numericUpDown_ActivityDistance_Spacing
             // 
@@ -10048,6 +10126,7 @@
             this.numericUpDown_ActivityDistance_EndCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityDistance_EndCorner_Y.TabIndex = 75;
             this.numericUpDown_ActivityDistance_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityDistance_EndCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // comboBox_ActivityDistance_Image
             // 
@@ -10157,6 +10236,7 @@
             this.numericUpDown_ActivityPuls_EndCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityPuls_EndCorner_X.TabIndex = 74;
             this.numericUpDown_ActivityPuls_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityPuls_EndCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // numericUpDown_ActivityPuls_Count
             // 
@@ -10196,6 +10276,7 @@
             this.numericUpDown_ActivityPuls_StartCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityPuls_StartCorner_Y.TabIndex = 66;
             this.numericUpDown_ActivityPuls_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityPuls_StartCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_ActivityPuls_StartCorner_X
             // 
@@ -10216,6 +10297,7 @@
             this.numericUpDown_ActivityPuls_StartCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityPuls_StartCorner_X.TabIndex = 65;
             this.numericUpDown_ActivityPuls_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityPuls_StartCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // numericUpDown_ActivityPuls_Spacing
             // 
@@ -10338,6 +10420,7 @@
             this.numericUpDown_ActivityPuls_EndCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityPuls_EndCorner_Y.TabIndex = 75;
             this.numericUpDown_ActivityPuls_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityPuls_EndCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // comboBox_ActivityPuls_Image
             // 
@@ -10447,6 +10530,7 @@
             this.numericUpDown_ActivityCalories_EndCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityCalories_EndCorner_X.TabIndex = 74;
             this.numericUpDown_ActivityCalories_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityCalories_EndCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // numericUpDown_ActivityCalories_Count
             // 
@@ -10486,6 +10570,7 @@
             this.numericUpDown_ActivityCalories_StartCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityCalories_StartCorner_Y.TabIndex = 66;
             this.numericUpDown_ActivityCalories_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityCalories_StartCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_ActivityCalories_StartCorner_X
             // 
@@ -10506,6 +10591,7 @@
             this.numericUpDown_ActivityCalories_StartCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityCalories_StartCorner_X.TabIndex = 65;
             this.numericUpDown_ActivityCalories_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityCalories_StartCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // numericUpDown_ActivityCalories_Spacing
             // 
@@ -10628,6 +10714,7 @@
             this.numericUpDown_ActivityCalories_EndCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityCalories_EndCorner_Y.TabIndex = 75;
             this.numericUpDown_ActivityCalories_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityCalories_EndCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // comboBox_ActivityCalories_Image
             // 
@@ -10721,6 +10808,7 @@
             this.numericUpDown_ActivityStar_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityStar_Y.TabIndex = 66;
             this.numericUpDown_ActivityStar_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityStar_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_ActivityStar_X
             // 
@@ -10736,6 +10824,7 @@
             this.numericUpDown_ActivityStar_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_ActivityStar_X.TabIndex = 65;
             this.numericUpDown_ActivityStar_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityStar_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // checkBox_ActivityStar
             // 
@@ -11064,6 +11153,7 @@
             this.numericUpDown_StepsProgress_Center_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_StepsProgress_Center_Y.TabIndex = 23;
             this.numericUpDown_StepsProgress_Center_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_StepsProgress_Center_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // label105
             // 
@@ -11094,6 +11184,7 @@
             this.numericUpDown_StepsProgress_Center_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_StepsProgress_Center_X.TabIndex = 21;
             this.numericUpDown_StepsProgress_Center_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_StepsProgress_Center_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // label104
             // 
@@ -11225,6 +11316,7 @@
             this.numericUpDown_MonthAndDayD_EndCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_MonthAndDayD_EndCorner_X.TabIndex = 17;
             this.numericUpDown_MonthAndDayD_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_MonthAndDayD_EndCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // numericUpDown_MonthAndDayD_Count
             // 
@@ -11264,6 +11356,7 @@
             this.numericUpDown_MonthAndDayD_StartCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_MonthAndDayD_StartCorner_Y.TabIndex = 9;
             this.numericUpDown_MonthAndDayD_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_MonthAndDayD_StartCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_MonthAndDayD_StartCorner_X
             // 
@@ -11284,6 +11377,7 @@
             this.numericUpDown_MonthAndDayD_StartCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_MonthAndDayD_StartCorner_X.TabIndex = 8;
             this.numericUpDown_MonthAndDayD_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_MonthAndDayD_StartCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // numericUpDown_MonthAndDayD_Spacing
             // 
@@ -11407,6 +11501,7 @@
             this.numericUpDown_MonthAndDayD_EndCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_MonthAndDayD_EndCorner_Y.TabIndex = 18;
             this.numericUpDown_MonthAndDayD_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_MonthAndDayD_EndCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // comboBox_MonthAndDayD_Image
             // 
@@ -11536,6 +11631,7 @@
             this.numericUpDown_MonthAndDayM_StartCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_MonthAndDayM_StartCorner_Y.TabIndex = 28;
             this.numericUpDown_MonthAndDayM_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_MonthAndDayM_StartCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_MonthAndDayM_StartCorner_X
             // 
@@ -11556,6 +11652,7 @@
             this.numericUpDown_MonthAndDayM_StartCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_MonthAndDayM_StartCorner_X.TabIndex = 27;
             this.numericUpDown_MonthAndDayM_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_MonthAndDayM_StartCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // numericUpDown_MonthAndDayM_Spacing
             // 
@@ -11678,6 +11775,7 @@
             this.numericUpDown_MonthAndDayM_EndCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_MonthAndDayM_EndCorner_Y.TabIndex = 37;
             this.numericUpDown_MonthAndDayM_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_MonthAndDayM_EndCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // comboBox_MonthAndDayM_Image
             // 
@@ -11709,6 +11807,7 @@
             this.numericUpDown_MonthAndDayM_EndCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_MonthAndDayM_EndCorner_X.TabIndex = 36;
             this.numericUpDown_MonthAndDayM_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_MonthAndDayM_EndCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // label78
             // 
@@ -11841,6 +11940,7 @@
             this.numericUpDown_MonthName_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_MonthName_Y.TabIndex = 9;
             this.numericUpDown_MonthName_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_MonthName_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_MonthName_X
             // 
@@ -11861,6 +11961,7 @@
             this.numericUpDown_MonthName_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_MonthName_X.TabIndex = 8;
             this.numericUpDown_MonthName_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_MonthName_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // comboBox_MonthName_Image
             // 
@@ -11975,6 +12076,7 @@
             this.numericUpDown_OneLine_EndCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_OneLine_EndCorner_X.TabIndex = 55;
             this.numericUpDown_OneLine_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_OneLine_EndCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // numericUpDown_OneLine_Count
             // 
@@ -12014,6 +12116,7 @@
             this.numericUpDown_OneLine_StartCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_OneLine_StartCorner_Y.TabIndex = 47;
             this.numericUpDown_OneLine_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_OneLine_StartCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_OneLine_StartCorner_X
             // 
@@ -12034,6 +12137,7 @@
             this.numericUpDown_OneLine_StartCorner_X.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_OneLine_StartCorner_X.TabIndex = 46;
             this.numericUpDown_OneLine_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_OneLine_StartCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // numericUpDown_OneLine_Spacing
             // 
@@ -12156,6 +12260,7 @@
             this.numericUpDown_OneLine_EndCorner_Y.Size = new System.Drawing.Size(40, 20);
             this.numericUpDown_OneLine_EndCorner_Y.TabIndex = 56;
             this.numericUpDown_OneLine_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_OneLine_EndCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // comboBox_OneLine_Image
             // 
@@ -12340,6 +12445,7 @@
             this.numericUpDown_WeekDay_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_WeekDay_Y.TabIndex = 9;
             this.numericUpDown_WeekDay_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_WeekDay_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_WeekDay_X
             // 
@@ -12360,6 +12466,7 @@
             this.numericUpDown_WeekDay_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_WeekDay_X.TabIndex = 8;
             this.numericUpDown_WeekDay_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_WeekDay_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // comboBox_WeekDay_Image
             // 
@@ -12471,6 +12578,7 @@
             this.numericUpDown_Delimiter_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Delimiter_Y.TabIndex = 9;
             this.numericUpDown_Delimiter_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Delimiter_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_Delimiter_X
             // 
@@ -12486,6 +12594,7 @@
             this.numericUpDown_Delimiter_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Delimiter_X.TabIndex = 8;
             this.numericUpDown_Delimiter_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Delimiter_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // comboBox_Delimiter_Image
             // 
@@ -12585,6 +12694,7 @@
             this.numericUpDown_AmPm_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_AmPm_Y.TabIndex = 9;
             this.numericUpDown_AmPm_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_AmPm_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_AmPm_X
             // 
@@ -12600,6 +12710,7 @@
             this.numericUpDown_AmPm_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_AmPm_X.TabIndex = 8;
             this.numericUpDown_AmPm_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_AmPm_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // label32
             // 
@@ -12747,6 +12858,7 @@
             this.numericUpDown_Hours_Tens_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Hours_Tens_Y.TabIndex = 9;
             this.numericUpDown_Hours_Tens_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Hours_Tens_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_Hours_Tens_X
             // 
@@ -12766,6 +12878,7 @@
             this.numericUpDown_Hours_Tens_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Hours_Tens_X.TabIndex = 8;
             this.numericUpDown_Hours_Tens_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Hours_Tens_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // label11
             // 
@@ -12867,6 +12980,7 @@
             this.numericUpDown_Hours_Ones_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Hours_Ones_Y.TabIndex = 9;
             this.numericUpDown_Hours_Ones_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Hours_Ones_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_Hours_Ones_X
             // 
@@ -12886,6 +13000,7 @@
             this.numericUpDown_Hours_Ones_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Hours_Ones_X.TabIndex = 8;
             this.numericUpDown_Hours_Ones_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Hours_Ones_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // label28
             // 
@@ -13014,6 +13129,7 @@
             this.numericUpDown_Min_Tens_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Min_Tens_Y.TabIndex = 9;
             this.numericUpDown_Min_Tens_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Min_Tens_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_Min_Tens_X
             // 
@@ -13033,6 +13149,7 @@
             this.numericUpDown_Min_Tens_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Min_Tens_X.TabIndex = 8;
             this.numericUpDown_Min_Tens_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Min_Tens_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // label12
             // 
@@ -13134,6 +13251,7 @@
             this.numericUpDown_Min_Ones_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Min_Ones_Y.TabIndex = 9;
             this.numericUpDown_Min_Ones_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Min_Ones_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_Min_Ones_X
             // 
@@ -13153,6 +13271,7 @@
             this.numericUpDown_Min_Ones_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Min_Ones_X.TabIndex = 8;
             this.numericUpDown_Min_Ones_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Min_Ones_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // label24
             // 
@@ -13267,6 +13386,7 @@
             this.numericUpDown_Sec_Ones_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Sec_Ones_Y.TabIndex = 9;
             this.numericUpDown_Sec_Ones_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Sec_Ones_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_Sec_Ones_X
             // 
@@ -13286,6 +13406,7 @@
             this.numericUpDown_Sec_Ones_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Sec_Ones_X.TabIndex = 8;
             this.numericUpDown_Sec_Ones_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Sec_Ones_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // label20
             // 
@@ -13400,6 +13521,7 @@
             this.numericUpDown_Sec_Tens_Y.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Sec_Tens_Y.TabIndex = 9;
             this.numericUpDown_Sec_Tens_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Sec_Tens_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_Sec_Tens_X
             // 
@@ -13419,6 +13541,7 @@
             this.numericUpDown_Sec_Tens_X.Size = new System.Drawing.Size(45, 20);
             this.numericUpDown_Sec_Tens_X.TabIndex = 8;
             this.numericUpDown_Sec_Tens_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Sec_Tens_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // label16
             // 
@@ -13570,6 +13693,225 @@
             this.richTextBox_JSON.TabIndex = 0;
             this.richTextBox_JSON.Text = "";
             // 
+            // tabPage33
+            // 
+            this.tabPage33.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage33.Controls.Add(this.groupBox7);
+            this.tabPage33.Controls.Add(this.groupBox6);
+            this.tabPage33.Controls.Add(this.groupBox5);
+            this.tabPage33.Controls.Add(this.groupBox1);
+            this.tabPage33.Location = new System.Drawing.Point(4, 22);
+            this.tabPage33.Name = "tabPage33";
+            this.tabPage33.Size = new System.Drawing.Size(683, 525);
+            this.tabPage33.TabIndex = 3;
+            this.tabPage33.Text = "Настройки";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.radioButton_Settings_Pack_DoNotning);
+            this.groupBox7.Controls.Add(this.radioButton_Settings_Pack_Copy);
+            this.groupBox7.Controls.Add(this.radioButton_Settings_Pack_GoToFile);
+            this.groupBox7.Controls.Add(this.radioButton_Settings_Pack_Dialog);
+            this.groupBox7.Location = new System.Drawing.Point(3, 115);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(335, 115);
+            this.groupBox7.TabIndex = 3;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Действие после запаковки проекта в .bin файл";
+            this.groupBox7.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            // 
+            // radioButton_Settings_Pack_DoNotning
+            // 
+            this.radioButton_Settings_Pack_DoNotning.AutoSize = true;
+            this.radioButton_Settings_Pack_DoNotning.Location = new System.Drawing.Point(7, 91);
+            this.radioButton_Settings_Pack_DoNotning.Name = "radioButton_Settings_Pack_DoNotning";
+            this.radioButton_Settings_Pack_DoNotning.Size = new System.Drawing.Size(158, 17);
+            this.radioButton_Settings_Pack_DoNotning.TabIndex = 3;
+            this.radioButton_Settings_Pack_DoNotning.Text = "Ничего не предпринимать";
+            this.radioButton_Settings_Pack_DoNotning.UseVisualStyleBackColor = true;
+            this.radioButton_Settings_Pack_DoNotning.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
+            // 
+            // radioButton_Settings_Pack_Copy
+            // 
+            this.radioButton_Settings_Pack_Copy.AutoSize = true;
+            this.radioButton_Settings_Pack_Copy.Location = new System.Drawing.Point(7, 68);
+            this.radioButton_Settings_Pack_Copy.Name = "radioButton_Settings_Pack_Copy";
+            this.radioButton_Settings_Pack_Copy.Size = new System.Drawing.Size(291, 17);
+            this.radioButton_Settings_Pack_Copy.TabIndex = 2;
+            this.radioButton_Settings_Pack_Copy.Text = "Скопировать получившейся .bin  файл в буфер (beta)";
+            this.radioButton_Settings_Pack_Copy.UseVisualStyleBackColor = true;
+            this.radioButton_Settings_Pack_Copy.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
+            // 
+            // radioButton_Settings_Pack_GoToFile
+            // 
+            this.radioButton_Settings_Pack_GoToFile.AutoSize = true;
+            this.radioButton_Settings_Pack_GoToFile.Checked = true;
+            this.radioButton_Settings_Pack_GoToFile.Location = new System.Drawing.Point(7, 44);
+            this.radioButton_Settings_Pack_GoToFile.Name = "radioButton_Settings_Pack_GoToFile";
+            this.radioButton_Settings_Pack_GoToFile.Size = new System.Drawing.Size(216, 17);
+            this.radioButton_Settings_Pack_GoToFile.TabIndex = 1;
+            this.radioButton_Settings_Pack_GoToFile.TabStop = true;
+            this.radioButton_Settings_Pack_GoToFile.Text = "Перейти к получившемуся .bin  файлу";
+            this.radioButton_Settings_Pack_GoToFile.UseVisualStyleBackColor = true;
+            this.radioButton_Settings_Pack_GoToFile.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
+            // 
+            // radioButton_Settings_Pack_Dialog
+            // 
+            this.radioButton_Settings_Pack_Dialog.AutoSize = true;
+            this.radioButton_Settings_Pack_Dialog.Location = new System.Drawing.Point(7, 20);
+            this.radioButton_Settings_Pack_Dialog.Name = "radioButton_Settings_Pack_Dialog";
+            this.radioButton_Settings_Pack_Dialog.Size = new System.Drawing.Size(120, 17);
+            this.radioButton_Settings_Pack_Dialog.TabIndex = 0;
+            this.radioButton_Settings_Pack_Dialog.Text = "Предлагать выбор";
+            this.radioButton_Settings_Pack_Dialog.UseVisualStyleBackColor = true;
+            this.radioButton_Settings_Pack_Dialog.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.radioButton_Settings_Open_DoNotning);
+            this.groupBox6.Controls.Add(this.radioButton_Settings_Open_Download);
+            this.groupBox6.Controls.Add(this.radioButton_Settings_Open_Dialog);
+            this.groupBox6.Location = new System.Drawing.Point(345, 115);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(335, 90);
+            this.groupBox6.TabIndex = 2;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Действие после открытия проекта";
+            this.groupBox6.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            // 
+            // radioButton_Settings_Open_DoNotning
+            // 
+            this.radioButton_Settings_Open_DoNotning.AutoSize = true;
+            this.radioButton_Settings_Open_DoNotning.Location = new System.Drawing.Point(7, 68);
+            this.radioButton_Settings_Open_DoNotning.Name = "radioButton_Settings_Open_DoNotning";
+            this.radioButton_Settings_Open_DoNotning.Size = new System.Drawing.Size(158, 17);
+            this.radioButton_Settings_Open_DoNotning.TabIndex = 2;
+            this.radioButton_Settings_Open_DoNotning.Text = "Ничего не предпринимать";
+            this.radioButton_Settings_Open_DoNotning.UseVisualStyleBackColor = true;
+            this.radioButton_Settings_Open_DoNotning.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
+            // 
+            // radioButton_Settings_Open_Download
+            // 
+            this.radioButton_Settings_Open_Download.AutoSize = true;
+            this.radioButton_Settings_Open_Download.Checked = true;
+            this.radioButton_Settings_Open_Download.Location = new System.Drawing.Point(7, 44);
+            this.radioButton_Settings_Open_Download.Name = "radioButton_Settings_Open_Download";
+            this.radioButton_Settings_Open_Download.Size = new System.Drawing.Size(241, 17);
+            this.radioButton_Settings_Open_Download.TabIndex = 1;
+            this.radioButton_Settings_Open_Download.TabStop = true;
+            this.radioButton_Settings_Open_Download.Text = "Загрузить PreviewStates.json (при наличии)";
+            this.radioButton_Settings_Open_Download.UseVisualStyleBackColor = true;
+            this.radioButton_Settings_Open_Download.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
+            // 
+            // radioButton_Settings_Open_Dialog
+            // 
+            this.radioButton_Settings_Open_Dialog.AutoSize = true;
+            this.radioButton_Settings_Open_Dialog.Location = new System.Drawing.Point(7, 20);
+            this.radioButton_Settings_Open_Dialog.Name = "radioButton_Settings_Open_Dialog";
+            this.radioButton_Settings_Open_Dialog.Size = new System.Drawing.Size(120, 17);
+            this.radioButton_Settings_Open_Dialog.TabIndex = 0;
+            this.radioButton_Settings_Open_Dialog.Text = "Предлагать выбор";
+            this.radioButton_Settings_Open_Dialog.UseVisualStyleBackColor = true;
+            this.radioButton_Settings_Open_Dialog.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.radioButton_Settings_AfterUnpack_DoNothing);
+            this.groupBox5.Controls.Add(this.radioButton_Settings_AfterUnpack_Download);
+            this.groupBox5.Controls.Add(this.radioButton_Settings_AfterUnpack_Dialog);
+            this.groupBox5.Location = new System.Drawing.Point(345, 10);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(335, 90);
+            this.groupBox5.TabIndex = 1;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Действие после распаковки .bin файла";
+            this.groupBox5.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            // 
+            // radioButton_Settings_AfterUnpack_DoNothing
+            // 
+            this.radioButton_Settings_AfterUnpack_DoNothing.AutoSize = true;
+            this.radioButton_Settings_AfterUnpack_DoNothing.Location = new System.Drawing.Point(7, 68);
+            this.radioButton_Settings_AfterUnpack_DoNothing.Name = "radioButton_Settings_AfterUnpack_DoNothing";
+            this.radioButton_Settings_AfterUnpack_DoNothing.Size = new System.Drawing.Size(158, 17);
+            this.radioButton_Settings_AfterUnpack_DoNothing.TabIndex = 2;
+            this.radioButton_Settings_AfterUnpack_DoNothing.Text = "Ничего не предпринимать";
+            this.radioButton_Settings_AfterUnpack_DoNothing.UseVisualStyleBackColor = true;
+            this.radioButton_Settings_AfterUnpack_DoNothing.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
+            // 
+            // radioButton_Settings_AfterUnpack_Download
+            // 
+            this.radioButton_Settings_AfterUnpack_Download.AutoSize = true;
+            this.radioButton_Settings_AfterUnpack_Download.Checked = true;
+            this.radioButton_Settings_AfterUnpack_Download.Location = new System.Drawing.Point(7, 44);
+            this.radioButton_Settings_AfterUnpack_Download.Name = "radioButton_Settings_AfterUnpack_Download";
+            this.radioButton_Settings_AfterUnpack_Download.Size = new System.Drawing.Size(198, 17);
+            this.radioButton_Settings_AfterUnpack_Download.TabIndex = 1;
+            this.radioButton_Settings_AfterUnpack_Download.TabStop = true;
+            this.radioButton_Settings_AfterUnpack_Download.Text = "Загрузить распакованный проект";
+            this.radioButton_Settings_AfterUnpack_Download.UseVisualStyleBackColor = true;
+            this.radioButton_Settings_AfterUnpack_Download.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
+            // 
+            // radioButton_Settings_AfterUnpack_Dialog
+            // 
+            this.radioButton_Settings_AfterUnpack_Dialog.AutoSize = true;
+            this.radioButton_Settings_AfterUnpack_Dialog.Location = new System.Drawing.Point(7, 20);
+            this.radioButton_Settings_AfterUnpack_Dialog.Name = "radioButton_Settings_AfterUnpack_Dialog";
+            this.radioButton_Settings_AfterUnpack_Dialog.Size = new System.Drawing.Size(120, 17);
+            this.radioButton_Settings_AfterUnpack_Dialog.TabIndex = 0;
+            this.radioButton_Settings_AfterUnpack_Dialog.Text = "Предлагать выбор";
+            this.radioButton_Settings_AfterUnpack_Dialog.UseVisualStyleBackColor = true;
+            this.radioButton_Settings_AfterUnpack_Dialog.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton_Settings_Unpack_Replace);
+            this.groupBox1.Controls.Add(this.radioButton_Settings_Unpack_Save);
+            this.groupBox1.Controls.Add(this.radioButton_Settings_Unpack_Dialog);
+            this.groupBox1.Location = new System.Drawing.Point(3, 10);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(335, 90);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Действие при совпадении имен распаковываемых файлов";
+            this.groupBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            // 
+            // radioButton_Settings_Unpack_Replace
+            // 
+            this.radioButton_Settings_Unpack_Replace.AutoSize = true;
+            this.radioButton_Settings_Unpack_Replace.Location = new System.Drawing.Point(7, 68);
+            this.radioButton_Settings_Unpack_Replace.Name = "radioButton_Settings_Unpack_Replace";
+            this.radioButton_Settings_Unpack_Replace.Size = new System.Drawing.Size(75, 17);
+            this.radioButton_Settings_Unpack_Replace.TabIndex = 2;
+            this.radioButton_Settings_Unpack_Replace.TabStop = true;
+            this.radioButton_Settings_Unpack_Replace.Text = "Заменить";
+            this.radioButton_Settings_Unpack_Replace.UseVisualStyleBackColor = true;
+            this.radioButton_Settings_Unpack_Replace.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
+            // 
+            // radioButton_Settings_Unpack_Save
+            // 
+            this.radioButton_Settings_Unpack_Save.AutoSize = true;
+            this.radioButton_Settings_Unpack_Save.Location = new System.Drawing.Point(7, 44);
+            this.radioButton_Settings_Unpack_Save.Name = "radioButton_Settings_Unpack_Save";
+            this.radioButton_Settings_Unpack_Save.Size = new System.Drawing.Size(99, 17);
+            this.radioButton_Settings_Unpack_Save.TabIndex = 1;
+            this.radioButton_Settings_Unpack_Save.TabStop = true;
+            this.radioButton_Settings_Unpack_Save.Text = "Сохранить оба";
+            this.radioButton_Settings_Unpack_Save.UseVisualStyleBackColor = true;
+            this.radioButton_Settings_Unpack_Save.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
+            // 
+            // radioButton_Settings_Unpack_Dialog
+            // 
+            this.radioButton_Settings_Unpack_Dialog.AutoSize = true;
+            this.radioButton_Settings_Unpack_Dialog.Checked = true;
+            this.radioButton_Settings_Unpack_Dialog.Location = new System.Drawing.Point(7, 20);
+            this.radioButton_Settings_Unpack_Dialog.Name = "radioButton_Settings_Unpack_Dialog";
+            this.radioButton_Settings_Unpack_Dialog.Size = new System.Drawing.Size(120, 17);
+            this.radioButton_Settings_Unpack_Dialog.TabIndex = 0;
+            this.radioButton_Settings_Unpack_Dialog.TabStop = true;
+            this.radioButton_Settings_Unpack_Dialog.Text = "Предлагать выбор";
+            this.radioButton_Settings_Unpack_Dialog.UseVisualStyleBackColor = true;
+            this.radioButton_Settings_Unpack_Dialog.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
+            // 
             // colorDialog1
             // 
             this.colorDialog1.FullOpen = true;
@@ -13671,15 +14013,15 @@
             this.radioButton_47.UseVisualStyleBackColor = true;
             this.radioButton_47.CheckedChanged += new System.EventHandler(this.radioButton_47_CheckedChanged);
             // 
-            // radioButton42
+            // radioButton_42
             // 
-            this.radioButton42.AutoSize = true;
-            this.radioButton42.Location = new System.Drawing.Point(114, 240);
-            this.radioButton42.Name = "radioButton42";
-            this.radioButton42.Size = new System.Drawing.Size(56, 17);
-            this.radioButton42.TabIndex = 27;
-            this.radioButton42.Text = "42 мм";
-            this.radioButton42.UseVisualStyleBackColor = true;
+            this.radioButton_42.AutoSize = true;
+            this.radioButton_42.Location = new System.Drawing.Point(114, 240);
+            this.radioButton_42.Name = "radioButton_42";
+            this.radioButton_42.Size = new System.Drawing.Size(56, 17);
+            this.radioButton_42.TabIndex = 27;
+            this.radioButton_42.Text = "42 мм";
+            this.radioButton_42.UseVisualStyleBackColor = true;
             // 
             // button_PreviewSmall_42
             // 
@@ -13728,6 +14070,7 @@
             this.checkBox_border.TabIndex = 31;
             this.checkBox_border.Text = "Рамка по координатам, вокруг элементов с выравниванием";
             this.checkBox_border.UseVisualStyleBackColor = true;
+            this.checkBox_border.CheckedChanged += new System.EventHandler(this.checkBox_border_CheckedChanged);
             this.checkBox_border.Click += new System.EventHandler(this.checkBox_Click);
             // 
             // pictureBox1
@@ -13739,17 +14082,29 @@
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
             // 
+            // label_version
+            // 
+            this.label_version.AutoSize = true;
+            this.label_version.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_version.Location = new System.Drawing.Point(905, 555);
+            this.label_version.Margin = new System.Windows.Forms.Padding(0);
+            this.label_version.Name = "label_version";
+            this.label_version.Size = new System.Drawing.Size(20, 7);
+            this.label_version.TabIndex = 32;
+            this.label_version.Text = "v 0.0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 562);
+            this.Controls.Add(this.label_version);
             this.Controls.Add(this.checkBox_border);
             this.Controls.Add(this.label_preview_Y);
             this.Controls.Add(this.label_preview_X);
             this.Controls.Add(this.panel_Preview);
             this.Controls.Add(this.button_PreviewSmall_42);
-            this.Controls.Add(this.radioButton42);
+            this.Controls.Add(this.radioButton_42);
             this.Controls.Add(this.radioButton_47);
             this.Controls.Add(this.button_SaveGIF);
             this.Controls.Add(this.button_SavePNG);
@@ -14151,6 +14506,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Sec_Tens_X)).EndInit();
             this.panel_Background.ResumeLayout(false);
             this.panel_Background.PerformLayout();
+            this.tabPage33.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -14959,7 +15323,7 @@
         private System.Windows.Forms.Panel panel_Preview;
         private System.Windows.Forms.Button button_SaveGIF;
         private System.Windows.Forms.RadioButton radioButton_47;
-        private System.Windows.Forms.RadioButton radioButton42;
+        private System.Windows.Forms.RadioButton radioButton_42;
         private System.Windows.Forms.Button button_PreviewSmall_42;
         private System.Windows.Forms.HelpProvider helpProvider1;
         private System.Windows.Forms.Timer timer2;
@@ -15088,6 +15452,25 @@
         private System.Windows.Forms.ToolStripMenuItem вставитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem копироватьToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem вставитьToolStripMenuItem1;
+        private System.Windows.Forms.TabPage tabPage33;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton_Settings_Unpack_Replace;
+        private System.Windows.Forms.RadioButton radioButton_Settings_Unpack_Save;
+        private System.Windows.Forms.RadioButton radioButton_Settings_Unpack_Dialog;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.RadioButton radioButton_Settings_Pack_DoNotning;
+        private System.Windows.Forms.RadioButton radioButton_Settings_Pack_Copy;
+        private System.Windows.Forms.RadioButton radioButton_Settings_Pack_GoToFile;
+        private System.Windows.Forms.RadioButton radioButton_Settings_Pack_Dialog;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.RadioButton radioButton_Settings_Open_DoNotning;
+        private System.Windows.Forms.RadioButton radioButton_Settings_Open_Download;
+        private System.Windows.Forms.RadioButton radioButton_Settings_Open_Dialog;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.RadioButton radioButton_Settings_AfterUnpack_DoNothing;
+        private System.Windows.Forms.RadioButton radioButton_Settings_AfterUnpack_Download;
+        private System.Windows.Forms.RadioButton radioButton_Settings_AfterUnpack_Dialog;
+        private System.Windows.Forms.Label label_version;
     }
 }
 

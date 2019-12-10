@@ -21,6 +21,7 @@ namespace WatchFace_PackUnpack
 
         private void button_unpack_Click(object sender, EventArgs e)
         {
+            // если копируем в папку
             if(checkBox_Watchface_Path.Checked)
             {
                 string subPath = Application.StartupPath + @"\Watch_face\";
@@ -51,6 +52,7 @@ namespace WatchFace_PackUnpack
                     string fullfilename = openFileDialog.FileName;
                     string filename = Path.GetFileName(fullfilename);
                     string fullPath = subPath + filename;
+                    // если файл существует
                     if (File.Exists(fullPath))
                     {
                         FormFileExists f = new FormFileExists();
