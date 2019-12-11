@@ -2458,7 +2458,7 @@
             this.comboBox_WeatherSet_Icon.TabIndex = 1;
             this.comboBox_WeatherSet_Icon.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             this.comboBox_WeatherSet_Icon.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_WeatherSet_Icon_KeyDown);
-            this.comboBox_WeatherSet_Icon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_WeatherSet_Icon_KeyPress);
+            this.comboBox_WeatherSet_Icon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // numericUpDown_WeatherSet_DayTemp
             // 
@@ -5636,23 +5636,35 @@
             // 
             // comboBox_Weather_Text_NDImage
             // 
-            this.comboBox_Weather_Text_NDImage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Weather_Text_NDImage.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_Text_NDImage.DropDownWidth = 75;
             this.comboBox_Weather_Text_NDImage.FormattingEnabled = true;
             this.comboBox_Weather_Text_NDImage.Location = new System.Drawing.Point(336, 17);
+            this.comboBox_Weather_Text_NDImage.MaxDropDownItems = 25;
             this.comboBox_Weather_Text_NDImage.Name = "comboBox_Weather_Text_NDImage";
             this.comboBox_Weather_Text_NDImage.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Weather_Text_NDImage.TabIndex = 47;
+            this.comboBox_Weather_Text_NDImage.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_Text_NDImage.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Weather_Text_NDImage.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_Text_NDImage.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_Text_NDImage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // comboBox_Weather_Text_MinusImage
             // 
-            this.comboBox_Weather_Text_MinusImage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Weather_Text_MinusImage.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_Text_MinusImage.DropDownWidth = 75;
             this.comboBox_Weather_Text_MinusImage.FormattingEnabled = true;
             this.comboBox_Weather_Text_MinusImage.Location = new System.Drawing.Point(70, 17);
+            this.comboBox_Weather_Text_MinusImage.MaxDropDownItems = 25;
             this.comboBox_Weather_Text_MinusImage.Name = "comboBox_Weather_Text_MinusImage";
             this.comboBox_Weather_Text_MinusImage.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Weather_Text_MinusImage.TabIndex = 43;
+            this.comboBox_Weather_Text_MinusImage.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_Text_MinusImage.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Weather_Text_MinusImage.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_Text_MinusImage.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_Text_MinusImage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label286
             // 
@@ -5665,13 +5677,19 @@
             // 
             // comboBox_Weather_Text_DegImage
             // 
-            this.comboBox_Weather_Text_DegImage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Weather_Text_DegImage.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_Text_DegImage.DropDownWidth = 75;
             this.comboBox_Weather_Text_DegImage.FormattingEnabled = true;
             this.comboBox_Weather_Text_DegImage.Location = new System.Drawing.Point(190, 17);
+            this.comboBox_Weather_Text_DegImage.MaxDropDownItems = 25;
             this.comboBox_Weather_Text_DegImage.Name = "comboBox_Weather_Text_DegImage";
             this.comboBox_Weather_Text_DegImage.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Weather_Text_DegImage.TabIndex = 45;
+            this.comboBox_Weather_Text_DegImage.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_Text_DegImage.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Weather_Text_DegImage.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_Text_DegImage.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_Text_DegImage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label284
             // 
@@ -5735,14 +5753,21 @@
             // 
             // comboBox_Weather_Text_Image
             // 
-            this.comboBox_Weather_Text_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Weather_Text_Image.BackColor = System.Drawing.SystemColors.Window;
+            this.comboBox_Weather_Text_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_Text_Image.DropDownWidth = 75;
             this.comboBox_Weather_Text_Image.Enabled = false;
             this.comboBox_Weather_Text_Image.FormattingEnabled = true;
             this.comboBox_Weather_Text_Image.Location = new System.Drawing.Point(190, 82);
+            this.comboBox_Weather_Text_Image.MaxDropDownItems = 25;
             this.comboBox_Weather_Text_Image.Name = "comboBox_Weather_Text_Image";
             this.comboBox_Weather_Text_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Weather_Text_Image.TabIndex = 26;
+            this.comboBox_Weather_Text_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_Text_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Weather_Text_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_Text_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_Text_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // numericUpDown_Weather_Text_EndCorner_X
             // 
@@ -6073,7 +6098,7 @@
             this.tabPage26.Controls.Add(this.tabControl5);
             this.tabPage26.Location = new System.Drawing.Point(4, 22);
             this.tabPage26.Name = "tabPage26";
-            this.tabPage26.Size = new System.Drawing.Size(382, 129);
+            this.tabPage26.Size = new System.Drawing.Size(365, 129);
             this.tabPage26.TabIndex = 2;
             this.tabPage26.Text = "Дневная температура";
             // 
@@ -6085,7 +6110,7 @@
             this.tabControl5.Location = new System.Drawing.Point(0, 0);
             this.tabControl5.Name = "tabControl5";
             this.tabControl5.SelectedIndex = 0;
-            this.tabControl5.Size = new System.Drawing.Size(382, 130);
+            this.tabControl5.Size = new System.Drawing.Size(365, 130);
             this.tabControl5.TabIndex = 1;
             // 
             // tabPage27
@@ -6113,20 +6138,26 @@
             this.tabPage27.Location = new System.Drawing.Point(4, 22);
             this.tabPage27.Name = "tabPage27";
             this.tabPage27.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage27.Size = new System.Drawing.Size(374, 104);
+            this.tabPage27.Size = new System.Drawing.Size(357, 104);
             this.tabPage27.TabIndex = 1;
             this.tabPage27.Text = "День";
             // 
             // comboBox_Weather_Day_Image
             // 
-            this.comboBox_Weather_Day_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Weather_Day_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_Day_Image.DropDownWidth = 75;
             this.comboBox_Weather_Day_Image.Enabled = false;
             this.comboBox_Weather_Day_Image.FormattingEnabled = true;
             this.comboBox_Weather_Day_Image.Location = new System.Drawing.Point(200, 81);
+            this.comboBox_Weather_Day_Image.MaxDropDownItems = 25;
             this.comboBox_Weather_Day_Image.Name = "comboBox_Weather_Day_Image";
             this.comboBox_Weather_Day_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Weather_Day_Image.TabIndex = 66;
+            this.comboBox_Weather_Day_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_Day_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Weather_Day_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_Day_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_Day_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // numericUpDown_Weather_Day_EndCorner_X
             // 
@@ -6403,20 +6434,26 @@
             this.tabPage30.Location = new System.Drawing.Point(4, 22);
             this.tabPage30.Name = "tabPage30";
             this.tabPage30.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage30.Size = new System.Drawing.Size(374, 104);
+            this.tabPage30.Size = new System.Drawing.Size(357, 104);
             this.tabPage30.TabIndex = 0;
             this.tabPage30.Text = "Ночь";
             // 
             // comboBox_Weather_Night_Image
             // 
-            this.comboBox_Weather_Night_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Weather_Night_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_Night_Image.DropDownWidth = 75;
             this.comboBox_Weather_Night_Image.Enabled = false;
             this.comboBox_Weather_Night_Image.FormattingEnabled = true;
             this.comboBox_Weather_Night_Image.Location = new System.Drawing.Point(200, 81);
+            this.comboBox_Weather_Night_Image.MaxDropDownItems = 25;
             this.comboBox_Weather_Night_Image.Name = "comboBox_Weather_Night_Image";
             this.comboBox_Weather_Night_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Weather_Night_Image.TabIndex = 45;
+            this.comboBox_Weather_Night_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_Night_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Weather_Night_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_Night_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_Night_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // numericUpDown_Weather_Night_EndCorner_X
             // 
@@ -6690,20 +6727,26 @@
             this.tabPage25.Location = new System.Drawing.Point(4, 22);
             this.tabPage25.Name = "tabPage25";
             this.tabPage25.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage25.Size = new System.Drawing.Size(382, 129);
+            this.tabPage25.Size = new System.Drawing.Size(365, 129);
             this.tabPage25.TabIndex = 1;
             this.tabPage25.Text = "Иконка";
             // 
             // comboBox_Weather_Icon_NDImage
             // 
-            this.comboBox_Weather_Icon_NDImage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Weather_Icon_NDImage.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_Icon_NDImage.DropDownWidth = 75;
             this.comboBox_Weather_Icon_NDImage.Enabled = false;
             this.comboBox_Weather_Icon_NDImage.FormattingEnabled = true;
             this.comboBox_Weather_Icon_NDImage.Location = new System.Drawing.Point(307, 28);
+            this.comboBox_Weather_Icon_NDImage.MaxDropDownItems = 25;
             this.comboBox_Weather_Icon_NDImage.Name = "comboBox_Weather_Icon_NDImage";
             this.comboBox_Weather_Icon_NDImage.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Weather_Icon_NDImage.TabIndex = 23;
+            this.comboBox_Weather_Icon_NDImage.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_Icon_NDImage.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Weather_Icon_NDImage.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_Icon_NDImage.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_Icon_NDImage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label287
             // 
@@ -6800,14 +6843,20 @@
             // 
             // comboBox_Weather_Icon_Image
             // 
-            this.comboBox_Weather_Icon_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Weather_Icon_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Weather_Icon_Image.DropDownWidth = 75;
             this.comboBox_Weather_Icon_Image.Enabled = false;
             this.comboBox_Weather_Icon_Image.FormattingEnabled = true;
             this.comboBox_Weather_Icon_Image.Location = new System.Drawing.Point(148, 28);
+            this.comboBox_Weather_Icon_Image.MaxDropDownItems = 25;
             this.comboBox_Weather_Icon_Image.Name = "comboBox_Weather_Icon_Image";
             this.comboBox_Weather_Icon_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Weather_Icon_Image.TabIndex = 16;
+            this.comboBox_Weather_Icon_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Weather_Icon_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Weather_Icon_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Weather_Icon_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Weather_Icon_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label281
             // 
@@ -6980,14 +7029,20 @@
             // 
             // comboBox_AnalogClock_Hour_Image
             // 
-            this.comboBox_AnalogClock_Hour_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_AnalogClock_Hour_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_AnalogClock_Hour_Image.DropDownWidth = 75;
             this.comboBox_AnalogClock_Hour_Image.Enabled = false;
             this.comboBox_AnalogClock_Hour_Image.FormattingEnabled = true;
             this.comboBox_AnalogClock_Hour_Image.Location = new System.Drawing.Point(65, 107);
+            this.comboBox_AnalogClock_Hour_Image.MaxDropDownItems = 25;
             this.comboBox_AnalogClock_Hour_Image.Name = "comboBox_AnalogClock_Hour_Image";
             this.comboBox_AnalogClock_Hour_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_AnalogClock_Hour_Image.TabIndex = 63;
+            this.comboBox_AnalogClock_Hour_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_AnalogClock_Hour_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_AnalogClock_Hour_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_AnalogClock_Hour_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_AnalogClock_Hour_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label217
             // 
@@ -7088,14 +7143,20 @@
             // 
             // comboBox_HourCenterImage_Image
             // 
-            this.comboBox_HourCenterImage_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_HourCenterImage_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_HourCenterImage_Image.DropDownWidth = 75;
             this.comboBox_HourCenterImage_Image.Enabled = false;
             this.comboBox_HourCenterImage_Image.FormattingEnabled = true;
             this.comboBox_HourCenterImage_Image.Location = new System.Drawing.Point(65, 94);
+            this.comboBox_HourCenterImage_Image.MaxDropDownItems = 25;
             this.comboBox_HourCenterImage_Image.Name = "comboBox_HourCenterImage_Image";
             this.comboBox_HourCenterImage_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_HourCenterImage_Image.TabIndex = 63;
+            this.comboBox_HourCenterImage_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_HourCenterImage_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_HourCenterImage_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_HourCenterImage_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_HourCenterImage_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label310
             // 
@@ -7184,7 +7245,7 @@
             this.tabPage31.Location = new System.Drawing.Point(4, 22);
             this.tabPage31.Name = "tabPage31";
             this.tabPage31.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage31.Size = new System.Drawing.Size(382, 144);
+            this.tabPage31.Size = new System.Drawing.Size(365, 144);
             this.tabPage31.TabIndex = 1;
             this.tabPage31.Text = "Минуты";
             // 
@@ -7269,14 +7330,20 @@
             // 
             // comboBox_AnalogClock_Min_Image
             // 
-            this.comboBox_AnalogClock_Min_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_AnalogClock_Min_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_AnalogClock_Min_Image.DropDownWidth = 75;
             this.comboBox_AnalogClock_Min_Image.Enabled = false;
             this.comboBox_AnalogClock_Min_Image.FormattingEnabled = true;
             this.comboBox_AnalogClock_Min_Image.Location = new System.Drawing.Point(65, 107);
+            this.comboBox_AnalogClock_Min_Image.MaxDropDownItems = 25;
             this.comboBox_AnalogClock_Min_Image.Name = "comboBox_AnalogClock_Min_Image";
             this.comboBox_AnalogClock_Min_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_AnalogClock_Min_Image.TabIndex = 63;
+            this.comboBox_AnalogClock_Min_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_AnalogClock_Min_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_AnalogClock_Min_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_AnalogClock_Min_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_AnalogClock_Min_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label207
             // 
@@ -7377,14 +7444,20 @@
             // 
             // comboBox_MinCenterImage_Image
             // 
-            this.comboBox_MinCenterImage_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_MinCenterImage_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_MinCenterImage_Image.DropDownWidth = 75;
             this.comboBox_MinCenterImage_Image.Enabled = false;
             this.comboBox_MinCenterImage_Image.FormattingEnabled = true;
             this.comboBox_MinCenterImage_Image.Location = new System.Drawing.Point(65, 93);
+            this.comboBox_MinCenterImage_Image.MaxDropDownItems = 25;
             this.comboBox_MinCenterImage_Image.Name = "comboBox_MinCenterImage_Image";
             this.comboBox_MinCenterImage_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_MinCenterImage_Image.TabIndex = 63;
+            this.comboBox_MinCenterImage_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_MinCenterImage_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_MinCenterImage_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_MinCenterImage_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_MinCenterImage_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label307
             // 
@@ -7477,7 +7550,7 @@
             this.tabPage32.Controls.Add(this.groupBox_AnalogClock_Sec);
             this.tabPage32.Location = new System.Drawing.Point(4, 22);
             this.tabPage32.Name = "tabPage32";
-            this.tabPage32.Size = new System.Drawing.Size(382, 144);
+            this.tabPage32.Size = new System.Drawing.Size(365, 144);
             this.tabPage32.TabIndex = 2;
             this.tabPage32.Text = "Секунды";
             // 
@@ -7500,14 +7573,20 @@
             // 
             // comboBox_SecCenterImage_Image
             // 
-            this.comboBox_SecCenterImage_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_SecCenterImage_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_SecCenterImage_Image.DropDownWidth = 75;
             this.comboBox_SecCenterImage_Image.Enabled = false;
             this.comboBox_SecCenterImage_Image.FormattingEnabled = true;
             this.comboBox_SecCenterImage_Image.Location = new System.Drawing.Point(65, 93);
+            this.comboBox_SecCenterImage_Image.MaxDropDownItems = 25;
             this.comboBox_SecCenterImage_Image.Name = "comboBox_SecCenterImage_Image";
             this.comboBox_SecCenterImage_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_SecCenterImage_Image.TabIndex = 63;
+            this.comboBox_SecCenterImage_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_SecCenterImage_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_SecCenterImage_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_SecCenterImage_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_SecCenterImage_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label304
             // 
@@ -7664,14 +7743,20 @@
             // 
             // comboBox_AnalogClock_Sec_Image
             // 
-            this.comboBox_AnalogClock_Sec_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_AnalogClock_Sec_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_AnalogClock_Sec_Image.DropDownWidth = 75;
             this.comboBox_AnalogClock_Sec_Image.Enabled = false;
             this.comboBox_AnalogClock_Sec_Image.FormattingEnabled = true;
             this.comboBox_AnalogClock_Sec_Image.Location = new System.Drawing.Point(65, 107);
+            this.comboBox_AnalogClock_Sec_Image.MaxDropDownItems = 25;
             this.comboBox_AnalogClock_Sec_Image.Name = "comboBox_AnalogClock_Sec_Image";
             this.comboBox_AnalogClock_Sec_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_AnalogClock_Sec_Image.TabIndex = 63;
+            this.comboBox_AnalogClock_Sec_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_AnalogClock_Sec_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_AnalogClock_Sec_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_AnalogClock_Sec_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_AnalogClock_Sec_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label210
             // 
@@ -7833,14 +7918,20 @@
             // 
             // comboBox_Battery_Text_Image
             // 
-            this.comboBox_Battery_Text_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Battery_Text_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Battery_Text_Image.DropDownWidth = 75;
             this.comboBox_Battery_Text_Image.Enabled = false;
             this.comboBox_Battery_Text_Image.FormattingEnabled = true;
             this.comboBox_Battery_Text_Image.Location = new System.Drawing.Point(321, 42);
+            this.comboBox_Battery_Text_Image.MaxDropDownItems = 25;
             this.comboBox_Battery_Text_Image.Name = "comboBox_Battery_Text_Image";
             this.comboBox_Battery_Text_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Battery_Text_Image.TabIndex = 64;
+            this.comboBox_Battery_Text_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Battery_Text_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Battery_Text_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Battery_Text_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Battery_Text_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // numericUpDown_Battery_Text_EndCorner_X
             // 
@@ -8110,20 +8201,26 @@
             this.tabPage28.Controls.Add(this.label303);
             this.tabPage28.Location = new System.Drawing.Point(4, 22);
             this.tabPage28.Name = "tabPage28";
-            this.tabPage28.Size = new System.Drawing.Size(382, 107);
+            this.tabPage28.Size = new System.Drawing.Size(365, 107);
             this.tabPage28.TabIndex = 3;
             this.tabPage28.Text = "Иконка \"%\"";
             // 
             // comboBox_Battery_Percent_Image
             // 
-            this.comboBox_Battery_Percent_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Battery_Percent_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Battery_Percent_Image.DropDownWidth = 75;
             this.comboBox_Battery_Percent_Image.Enabled = false;
             this.comboBox_Battery_Percent_Image.FormattingEnabled = true;
             this.comboBox_Battery_Percent_Image.Location = new System.Drawing.Point(199, 42);
+            this.comboBox_Battery_Percent_Image.MaxDropDownItems = 25;
             this.comboBox_Battery_Percent_Image.Name = "comboBox_Battery_Percent_Image";
             this.comboBox_Battery_Percent_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Battery_Percent_Image.TabIndex = 82;
+            this.comboBox_Battery_Percent_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Battery_Percent_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Battery_Percent_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Battery_Percent_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Battery_Percent_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // numericUpDown_Battery_Percent_Y
             // 
@@ -8235,20 +8332,26 @@
             this.tabPage22.Location = new System.Drawing.Point(4, 22);
             this.tabPage22.Name = "tabPage22";
             this.tabPage22.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage22.Size = new System.Drawing.Size(382, 107);
+            this.tabPage22.Size = new System.Drawing.Size(365, 107);
             this.tabPage22.TabIndex = 1;
             this.tabPage22.Text = "Иконка";
             // 
             // comboBox_Battery_Img_Image
             // 
-            this.comboBox_Battery_Img_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Battery_Img_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Battery_Img_Image.DropDownWidth = 75;
             this.comboBox_Battery_Img_Image.Enabled = false;
             this.comboBox_Battery_Img_Image.FormattingEnabled = true;
             this.comboBox_Battery_Img_Image.Location = new System.Drawing.Point(199, 42);
+            this.comboBox_Battery_Img_Image.MaxDropDownItems = 25;
             this.comboBox_Battery_Img_Image.Name = "comboBox_Battery_Img_Image";
             this.comboBox_Battery_Img_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Battery_Img_Image.TabIndex = 74;
+            this.comboBox_Battery_Img_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Battery_Img_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Battery_Img_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Battery_Img_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Battery_Img_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // numericUpDown_Battery_Img_Count
             // 
@@ -8398,13 +8501,14 @@
             this.tabPage23.Controls.Add(this.checkBox_Battery_Scale);
             this.tabPage23.Location = new System.Drawing.Point(4, 22);
             this.tabPage23.Name = "tabPage23";
-            this.tabPage23.Size = new System.Drawing.Size(382, 107);
+            this.tabPage23.Size = new System.Drawing.Size(365, 107);
             this.tabPage23.TabIndex = 2;
             this.tabPage23.Text = "Шкала";
             // 
             // comboBox_Battery_Flatness
             // 
             this.comboBox_Battery_Flatness.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Battery_Flatness.Enabled = false;
             this.comboBox_Battery_Flatness.FormattingEnabled = true;
             this.comboBox_Battery_Flatness.Items.AddRange(new object[] {
             "Круглое",
@@ -8506,7 +8610,7 @@
             this.comboBox_Battery_Scale_Color.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Battery_Scale_Color.TabIndex = 47;
             this.comboBox_Battery_Scale_Color.Click += new System.EventHandler(this.comboBox_Battery_Scale_Color_Click);
-            this.comboBox_Battery_Scale_Color.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
+            this.comboBox_Battery_Scale_Color.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label201
             // 
@@ -8663,7 +8767,7 @@
             this.checkBox_Battery_Scale.Location = new System.Drawing.Point(0, 0);
             this.checkBox_Battery_Scale.Name = "checkBox_Battery_Scale";
             this.checkBox_Battery_Scale.Padding = new System.Windows.Forms.Padding(10, 3, 0, 0);
-            this.checkBox_Battery_Scale.Size = new System.Drawing.Size(380, 20);
+            this.checkBox_Battery_Scale.Size = new System.Drawing.Size(363, 20);
             this.checkBox_Battery_Scale.TabIndex = 36;
             this.checkBox_Battery_Scale.Text = "Использовать";
             this.checkBox_Battery_Scale.UseVisualStyleBackColor = true;
@@ -8738,15 +8842,20 @@
             // 
             // comboBox_Bluetooth_Off
             // 
+            this.comboBox_Bluetooth_Off.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Bluetooth_Off.DropDownWidth = 75;
             this.comboBox_Bluetooth_Off.Enabled = false;
             this.comboBox_Bluetooth_Off.FormattingEnabled = true;
             this.comboBox_Bluetooth_Off.Location = new System.Drawing.Point(330, 29);
+            this.comboBox_Bluetooth_Off.MaxDropDownItems = 25;
             this.comboBox_Bluetooth_Off.Name = "comboBox_Bluetooth_Off";
             this.comboBox_Bluetooth_Off.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Bluetooth_Off.TabIndex = 19;
+            this.comboBox_Bluetooth_Off.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Bluetooth_Off.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Bluetooth_Off.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Bluetooth_Off.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_Bluetooth_Off_KeyDown);
-            this.comboBox_Bluetooth_Off.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_ActivityDistance_Decimal_KeyPress);
+            this.comboBox_Bluetooth_Off.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Bluetooth_Off.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label168
             // 
@@ -8804,14 +8913,20 @@
             // 
             // comboBox_Bluetooth_On
             // 
-            this.comboBox_Bluetooth_On.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Bluetooth_On.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Bluetooth_On.DropDownWidth = 75;
             this.comboBox_Bluetooth_On.Enabled = false;
             this.comboBox_Bluetooth_On.FormattingEnabled = true;
             this.comboBox_Bluetooth_On.Location = new System.Drawing.Point(208, 29);
+            this.comboBox_Bluetooth_On.MaxDropDownItems = 25;
             this.comboBox_Bluetooth_On.Name = "comboBox_Bluetooth_On";
             this.comboBox_Bluetooth_On.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Bluetooth_On.TabIndex = 14;
+            this.comboBox_Bluetooth_On.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Bluetooth_On.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Bluetooth_On.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Bluetooth_On.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Bluetooth_On.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label162
             // 
@@ -8858,21 +8973,26 @@
             this.tabPage18.Location = new System.Drawing.Point(4, 22);
             this.tabPage18.Name = "tabPage18";
             this.tabPage18.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage18.Size = new System.Drawing.Size(382, 54);
+            this.tabPage18.Size = new System.Drawing.Size(365, 54);
             this.tabPage18.TabIndex = 1;
             this.tabPage18.Text = "Будильник";
             // 
             // comboBox_Alarm_Off
             // 
+            this.comboBox_Alarm_Off.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Alarm_Off.DropDownWidth = 75;
             this.comboBox_Alarm_Off.Enabled = false;
             this.comboBox_Alarm_Off.FormattingEnabled = true;
             this.comboBox_Alarm_Off.Location = new System.Drawing.Point(330, 29);
+            this.comboBox_Alarm_Off.MaxDropDownItems = 25;
             this.comboBox_Alarm_Off.Name = "comboBox_Alarm_Off";
             this.comboBox_Alarm_Off.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Alarm_Off.TabIndex = 28;
+            this.comboBox_Alarm_Off.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Alarm_Off.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Alarm_Off.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Alarm_Off.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_Alarm_Off_KeyDown);
-            this.comboBox_Alarm_Off.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_ActivityDistance_Decimal_KeyPress);
+            this.comboBox_Alarm_Off.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Alarm_Off.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label169
             // 
@@ -8930,14 +9050,20 @@
             // 
             // comboBox_Alarm_On
             // 
-            this.comboBox_Alarm_On.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Alarm_On.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Alarm_On.DropDownWidth = 75;
             this.comboBox_Alarm_On.Enabled = false;
             this.comboBox_Alarm_On.FormattingEnabled = true;
             this.comboBox_Alarm_On.Location = new System.Drawing.Point(208, 29);
+            this.comboBox_Alarm_On.MaxDropDownItems = 25;
             this.comboBox_Alarm_On.Name = "comboBox_Alarm_On";
             this.comboBox_Alarm_On.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Alarm_On.TabIndex = 23;
+            this.comboBox_Alarm_On.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Alarm_On.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Alarm_On.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Alarm_On.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Alarm_On.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label170
             // 
@@ -8983,21 +9109,26 @@
             this.tabPage19.Controls.Add(this.label179);
             this.tabPage19.Location = new System.Drawing.Point(4, 22);
             this.tabPage19.Name = "tabPage19";
-            this.tabPage19.Size = new System.Drawing.Size(382, 54);
+            this.tabPage19.Size = new System.Drawing.Size(365, 54);
             this.tabPage19.TabIndex = 2;
             this.tabPage19.Text = "Блокировка";
             // 
             // comboBox_Lock_Off
             // 
+            this.comboBox_Lock_Off.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Lock_Off.DropDownWidth = 75;
             this.comboBox_Lock_Off.Enabled = false;
             this.comboBox_Lock_Off.FormattingEnabled = true;
             this.comboBox_Lock_Off.Location = new System.Drawing.Point(330, 29);
+            this.comboBox_Lock_Off.MaxDropDownItems = 25;
             this.comboBox_Lock_Off.Name = "comboBox_Lock_Off";
             this.comboBox_Lock_Off.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Lock_Off.TabIndex = 28;
+            this.comboBox_Lock_Off.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Lock_Off.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Lock_Off.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Lock_Off.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_Lock_Off_KeyDown);
-            this.comboBox_Lock_Off.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_ActivityDistance_Decimal_KeyPress);
+            this.comboBox_Lock_Off.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Lock_Off.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label176
             // 
@@ -9055,14 +9186,20 @@
             // 
             // comboBox_Lock_On
             // 
-            this.comboBox_Lock_On.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Lock_On.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Lock_On.DropDownWidth = 75;
             this.comboBox_Lock_On.Enabled = false;
             this.comboBox_Lock_On.FormattingEnabled = true;
             this.comboBox_Lock_On.Location = new System.Drawing.Point(208, 29);
+            this.comboBox_Lock_On.MaxDropDownItems = 25;
             this.comboBox_Lock_On.Name = "comboBox_Lock_On";
             this.comboBox_Lock_On.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Lock_On.TabIndex = 23;
+            this.comboBox_Lock_On.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Lock_On.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Lock_On.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Lock_On.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Lock_On.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label177
             // 
@@ -9108,21 +9245,26 @@
             this.tabPage20.Controls.Add(this.label183);
             this.tabPage20.Location = new System.Drawing.Point(4, 22);
             this.tabPage20.Name = "tabPage20";
-            this.tabPage20.Size = new System.Drawing.Size(382, 54);
+            this.tabPage20.Size = new System.Drawing.Size(365, 54);
             this.tabPage20.TabIndex = 3;
             this.tabPage20.Text = "Не беспокоить";
             // 
             // comboBox_DND_Off
             // 
+            this.comboBox_DND_Off.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_DND_Off.DropDownWidth = 75;
             this.comboBox_DND_Off.Enabled = false;
             this.comboBox_DND_Off.FormattingEnabled = true;
             this.comboBox_DND_Off.Location = new System.Drawing.Point(330, 29);
+            this.comboBox_DND_Off.MaxDropDownItems = 25;
             this.comboBox_DND_Off.Name = "comboBox_DND_Off";
             this.comboBox_DND_Off.Size = new System.Drawing.Size(45, 21);
             this.comboBox_DND_Off.TabIndex = 28;
+            this.comboBox_DND_Off.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_DND_Off.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_DND_Off.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_DND_Off.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_DND_Off_KeyDown);
-            this.comboBox_DND_Off.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_ActivityDistance_Decimal_KeyPress);
+            this.comboBox_DND_Off.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_DND_Off.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label180
             // 
@@ -9180,14 +9322,20 @@
             // 
             // comboBox_DND_On
             // 
-            this.comboBox_DND_On.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_DND_On.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_DND_On.DropDownWidth = 75;
             this.comboBox_DND_On.Enabled = false;
             this.comboBox_DND_On.FormattingEnabled = true;
             this.comboBox_DND_On.Location = new System.Drawing.Point(208, 29);
+            this.comboBox_DND_On.MaxDropDownItems = 25;
             this.comboBox_DND_On.Name = "comboBox_DND_On";
             this.comboBox_DND_On.Size = new System.Drawing.Size(45, 21);
             this.comboBox_DND_On.TabIndex = 23;
+            this.comboBox_DND_On.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_DND_On.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_DND_On.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_DND_On.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_DND_On.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label181
             // 
@@ -9493,14 +9641,20 @@
             // 
             // comboBox_ActivityGoal_Image
             // 
-            this.comboBox_ActivityGoal_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_ActivityGoal_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_ActivityGoal_Image.DropDownWidth = 75;
             this.comboBox_ActivityGoal_Image.Enabled = false;
             this.comboBox_ActivityGoal_Image.FormattingEnabled = true;
             this.comboBox_ActivityGoal_Image.Location = new System.Drawing.Point(321, 42);
+            this.comboBox_ActivityGoal_Image.MaxDropDownItems = 25;
             this.comboBox_ActivityGoal_Image.Name = "comboBox_ActivityGoal_Image";
             this.comboBox_ActivityGoal_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_ActivityGoal_Image.TabIndex = 45;
+            this.comboBox_ActivityGoal_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_ActivityGoal_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_ActivityGoal_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_ActivityGoal_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_ActivityGoal_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label117
             // 
@@ -9577,7 +9731,7 @@
             this.tabPage12.Location = new System.Drawing.Point(4, 22);
             this.tabPage12.Name = "tabPage12";
             this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage12.Size = new System.Drawing.Size(382, 141);
+            this.tabPage12.Size = new System.Drawing.Size(365, 141);
             this.tabPage12.TabIndex = 1;
             this.tabPage12.Text = "Шаги";
             // 
@@ -9788,14 +9942,20 @@
             // 
             // comboBox_ActivitySteps_Image
             // 
-            this.comboBox_ActivitySteps_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_ActivitySteps_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_ActivitySteps_Image.DropDownWidth = 75;
             this.comboBox_ActivitySteps_Image.Enabled = false;
             this.comboBox_ActivitySteps_Image.FormattingEnabled = true;
             this.comboBox_ActivitySteps_Image.Location = new System.Drawing.Point(321, 42);
+            this.comboBox_ActivitySteps_Image.MaxDropDownItems = 25;
             this.comboBox_ActivitySteps_Image.Name = "comboBox_ActivitySteps_Image";
             this.comboBox_ActivitySteps_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_ActivitySteps_Image.TabIndex = 64;
+            this.comboBox_ActivitySteps_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_ActivitySteps_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_ActivitySteps_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_ActivitySteps_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_ActivitySteps_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label127
             // 
@@ -9875,7 +10035,7 @@
             this.tabPage13.Controls.Add(this.label141);
             this.tabPage13.Location = new System.Drawing.Point(4, 22);
             this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Size = new System.Drawing.Size(382, 141);
+            this.tabPage13.Size = new System.Drawing.Size(365, 141);
             this.tabPage13.TabIndex = 2;
             this.tabPage13.Text = "Расстояние";
             // 
@@ -9891,15 +10051,20 @@
             // 
             // comboBox_ActivityDistance_Decimal
             // 
+            this.comboBox_ActivityDistance_Decimal.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_ActivityDistance_Decimal.DropDownWidth = 75;
             this.comboBox_ActivityDistance_Decimal.Enabled = false;
             this.comboBox_ActivityDistance_Decimal.FormattingEnabled = true;
             this.comboBox_ActivityDistance_Decimal.Location = new System.Drawing.Point(258, 114);
+            this.comboBox_ActivityDistance_Decimal.MaxDropDownItems = 25;
             this.comboBox_ActivityDistance_Decimal.Name = "comboBox_ActivityDistance_Decimal";
             this.comboBox_ActivityDistance_Decimal.Size = new System.Drawing.Size(45, 21);
             this.comboBox_ActivityDistance_Decimal.TabIndex = 83;
+            this.comboBox_ActivityDistance_Decimal.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_ActivityDistance_Decimal.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_ActivityDistance_Decimal.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_ActivityDistance_Decimal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_ActivityDistance_Decimal_KeyDown);
-            this.comboBox_ActivityDistance_Decimal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_ActivityDistance_Decimal_KeyPress);
+            this.comboBox_ActivityDistance_Decimal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_ActivityDistance_Decimal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label172
             // 
@@ -9913,15 +10078,20 @@
             // 
             // comboBox_ActivityDistance_Suffix
             // 
+            this.comboBox_ActivityDistance_Suffix.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_ActivityDistance_Suffix.DropDownWidth = 75;
             this.comboBox_ActivityDistance_Suffix.Enabled = false;
             this.comboBox_ActivityDistance_Suffix.FormattingEnabled = true;
             this.comboBox_ActivityDistance_Suffix.Location = new System.Drawing.Point(75, 114);
+            this.comboBox_ActivityDistance_Suffix.MaxDropDownItems = 25;
             this.comboBox_ActivityDistance_Suffix.Name = "comboBox_ActivityDistance_Suffix";
             this.comboBox_ActivityDistance_Suffix.Size = new System.Drawing.Size(45, 21);
             this.comboBox_ActivityDistance_Suffix.TabIndex = 81;
+            this.comboBox_ActivityDistance_Suffix.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_ActivityDistance_Suffix.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_ActivityDistance_Suffix.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_ActivityDistance_Suffix.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_ActivityDistance_Suffix_KeyDown);
-            this.comboBox_ActivityDistance_Suffix.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_ActivityDistance_Suffix_KeyPress);
+            this.comboBox_ActivityDistance_Suffix.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_ActivityDistance_Suffix.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // numericUpDown_ActivityDistance_EndCorner_X
             // 
@@ -10130,14 +10300,20 @@
             // 
             // comboBox_ActivityDistance_Image
             // 
-            this.comboBox_ActivityDistance_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_ActivityDistance_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_ActivityDistance_Image.DropDownWidth = 75;
             this.comboBox_ActivityDistance_Image.Enabled = false;
             this.comboBox_ActivityDistance_Image.FormattingEnabled = true;
             this.comboBox_ActivityDistance_Image.Location = new System.Drawing.Point(321, 42);
+            this.comboBox_ActivityDistance_Image.MaxDropDownItems = 25;
             this.comboBox_ActivityDistance_Image.Name = "comboBox_ActivityDistance_Image";
             this.comboBox_ActivityDistance_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_ActivityDistance_Image.TabIndex = 64;
+            this.comboBox_ActivityDistance_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_ActivityDistance_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_ActivityDistance_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_ActivityDistance_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_ActivityDistance_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label137
             // 
@@ -10213,7 +10389,7 @@
             this.tabPage14.Controls.Add(this.label151);
             this.tabPage14.Location = new System.Drawing.Point(4, 22);
             this.tabPage14.Name = "tabPage14";
-            this.tabPage14.Size = new System.Drawing.Size(382, 141);
+            this.tabPage14.Size = new System.Drawing.Size(365, 141);
             this.tabPage14.TabIndex = 3;
             this.tabPage14.Text = "Пульс";
             // 
@@ -10424,14 +10600,20 @@
             // 
             // comboBox_ActivityPuls_Image
             // 
-            this.comboBox_ActivityPuls_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_ActivityPuls_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_ActivityPuls_Image.DropDownWidth = 75;
             this.comboBox_ActivityPuls_Image.Enabled = false;
             this.comboBox_ActivityPuls_Image.FormattingEnabled = true;
             this.comboBox_ActivityPuls_Image.Location = new System.Drawing.Point(321, 42);
+            this.comboBox_ActivityPuls_Image.MaxDropDownItems = 25;
             this.comboBox_ActivityPuls_Image.Name = "comboBox_ActivityPuls_Image";
             this.comboBox_ActivityPuls_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_ActivityPuls_Image.TabIndex = 64;
+            this.comboBox_ActivityPuls_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_ActivityPuls_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_ActivityPuls_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_ActivityPuls_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_ActivityPuls_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label147
             // 
@@ -10507,7 +10689,7 @@
             this.tabPage15.Controls.Add(this.label161);
             this.tabPage15.Location = new System.Drawing.Point(4, 22);
             this.tabPage15.Name = "tabPage15";
-            this.tabPage15.Size = new System.Drawing.Size(382, 141);
+            this.tabPage15.Size = new System.Drawing.Size(365, 141);
             this.tabPage15.TabIndex = 4;
             this.tabPage15.Text = "Калории";
             // 
@@ -10718,14 +10900,20 @@
             // 
             // comboBox_ActivityCalories_Image
             // 
-            this.comboBox_ActivityCalories_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_ActivityCalories_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_ActivityCalories_Image.DropDownWidth = 75;
             this.comboBox_ActivityCalories_Image.Enabled = false;
             this.comboBox_ActivityCalories_Image.FormattingEnabled = true;
             this.comboBox_ActivityCalories_Image.Location = new System.Drawing.Point(321, 42);
+            this.comboBox_ActivityCalories_Image.MaxDropDownItems = 25;
             this.comboBox_ActivityCalories_Image.Name = "comboBox_ActivityCalories_Image";
             this.comboBox_ActivityCalories_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_ActivityCalories_Image.TabIndex = 64;
+            this.comboBox_ActivityCalories_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_ActivityCalories_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_ActivityCalories_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_ActivityCalories_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_ActivityCalories_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label157
             // 
@@ -10790,7 +10978,7 @@
             this.tabPage16.Controls.Add(this.label171);
             this.tabPage16.Location = new System.Drawing.Point(4, 22);
             this.tabPage16.Name = "tabPage16";
-            this.tabPage16.Size = new System.Drawing.Size(382, 141);
+            this.tabPage16.Size = new System.Drawing.Size(365, 141);
             this.tabPage16.TabIndex = 5;
             this.tabPage16.Text = "Достижение цели";
             // 
@@ -10870,14 +11058,20 @@
             // 
             // comboBox_ActivityStar_Image
             // 
-            this.comboBox_ActivityStar_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_ActivityStar_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_ActivityStar_Image.DropDownWidth = 75;
             this.comboBox_ActivityStar_Image.Enabled = false;
             this.comboBox_ActivityStar_Image.FormattingEnabled = true;
             this.comboBox_ActivityStar_Image.Location = new System.Drawing.Point(201, 42);
+            this.comboBox_ActivityStar_Image.MaxDropDownItems = 25;
             this.comboBox_ActivityStar_Image.Name = "comboBox_ActivityStar_Image";
             this.comboBox_ActivityStar_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_ActivityStar_Image.TabIndex = 64;
+            this.comboBox_ActivityStar_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_ActivityStar_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_ActivityStar_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_ActivityStar_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_ActivityStar_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label171
             // 
@@ -10944,6 +11138,7 @@
             // comboBox_StepsProgress_Flatness
             // 
             this.comboBox_StepsProgress_Flatness.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_StepsProgress_Flatness.Enabled = false;
             this.comboBox_StepsProgress_Flatness.FormattingEnabled = true;
             this.comboBox_StepsProgress_Flatness.Items.AddRange(new object[] {
             "Круглое",
@@ -11045,7 +11240,7 @@
             this.comboBox_StepsProgress_Color.Size = new System.Drawing.Size(45, 21);
             this.comboBox_StepsProgress_Color.TabIndex = 30;
             this.comboBox_StepsProgress_Color.Click += new System.EventHandler(this.comboBox_StepsProgress_Color_Click);
-            this.comboBox_StepsProgress_Color.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
+            this.comboBox_StepsProgress_Color.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label109
             // 
@@ -11505,14 +11700,20 @@
             // 
             // comboBox_MonthAndDayD_Image
             // 
-            this.comboBox_MonthAndDayD_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_MonthAndDayD_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_MonthAndDayD_Image.DropDownWidth = 75;
             this.comboBox_MonthAndDayD_Image.Enabled = false;
             this.comboBox_MonthAndDayD_Image.FormattingEnabled = true;
             this.comboBox_MonthAndDayD_Image.Location = new System.Drawing.Point(191, 70);
+            this.comboBox_MonthAndDayD_Image.MaxDropDownItems = 25;
             this.comboBox_MonthAndDayD_Image.Name = "comboBox_MonthAndDayD_Image";
             this.comboBox_MonthAndDayD_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_MonthAndDayD_Image.TabIndex = 5;
+            this.comboBox_MonthAndDayD_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_MonthAndDayD_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_MonthAndDayD_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_MonthAndDayD_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_MonthAndDayD_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label69
             // 
@@ -11779,14 +11980,20 @@
             // 
             // comboBox_MonthAndDayM_Image
             // 
-            this.comboBox_MonthAndDayM_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_MonthAndDayM_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_MonthAndDayM_Image.DropDownWidth = 75;
             this.comboBox_MonthAndDayM_Image.Enabled = false;
             this.comboBox_MonthAndDayM_Image.FormattingEnabled = true;
             this.comboBox_MonthAndDayM_Image.Location = new System.Drawing.Point(191, 70);
+            this.comboBox_MonthAndDayM_Image.MaxDropDownItems = 25;
             this.comboBox_MonthAndDayM_Image.Name = "comboBox_MonthAndDayM_Image";
             this.comboBox_MonthAndDayM_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_MonthAndDayM_Image.TabIndex = 26;
+            this.comboBox_MonthAndDayM_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_MonthAndDayM_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_MonthAndDayM_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_MonthAndDayM_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_MonthAndDayM_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // numericUpDown_MonthAndDayM_EndCorner_X
             // 
@@ -11965,14 +12172,20 @@
             // 
             // comboBox_MonthName_Image
             // 
-            this.comboBox_MonthName_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_MonthName_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_MonthName_Image.DropDownWidth = 75;
             this.comboBox_MonthName_Image.Enabled = false;
             this.comboBox_MonthName_Image.FormattingEnabled = true;
             this.comboBox_MonthName_Image.Location = new System.Drawing.Point(66, 97);
+            this.comboBox_MonthName_Image.MaxDropDownItems = 25;
             this.comboBox_MonthName_Image.Name = "comboBox_MonthName_Image";
             this.comboBox_MonthName_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_MonthName_Image.TabIndex = 5;
+            this.comboBox_MonthName_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_MonthName_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_MonthName_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_MonthName_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_MonthName_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label60
             // 
@@ -12032,20 +12245,26 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(382, 169);
+            this.tabPage7.Size = new System.Drawing.Size(365, 169);
             this.tabPage7.TabIndex = 0;
             this.tabPage7.Text = "Дата в одну линию";
             // 
             // comboBox_OneLine_Delimiter
             // 
-            this.comboBox_OneLine_Delimiter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_OneLine_Delimiter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_OneLine_Delimiter.DropDownWidth = 75;
             this.comboBox_OneLine_Delimiter.Enabled = false;
             this.comboBox_OneLine_Delimiter.FormattingEnabled = true;
             this.comboBox_OneLine_Delimiter.Location = new System.Drawing.Point(200, 95);
+            this.comboBox_OneLine_Delimiter.MaxDropDownItems = 25;
             this.comboBox_OneLine_Delimiter.Name = "comboBox_OneLine_Delimiter";
             this.comboBox_OneLine_Delimiter.Size = new System.Drawing.Size(45, 21);
             this.comboBox_OneLine_Delimiter.TabIndex = 62;
+            this.comboBox_OneLine_Delimiter.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_OneLine_Delimiter.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_OneLine_Delimiter.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_OneLine_Delimiter.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_OneLine_Delimiter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label103
             // 
@@ -12264,14 +12483,20 @@
             // 
             // comboBox_OneLine_Image
             // 
-            this.comboBox_OneLine_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_OneLine_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_OneLine_Image.DropDownWidth = 75;
             this.comboBox_OneLine_Image.Enabled = false;
             this.comboBox_OneLine_Image.FormattingEnabled = true;
             this.comboBox_OneLine_Image.Location = new System.Drawing.Point(200, 68);
+            this.comboBox_OneLine_Image.MaxDropDownItems = 25;
             this.comboBox_OneLine_Image.Name = "comboBox_OneLine_Image";
             this.comboBox_OneLine_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_OneLine_Image.TabIndex = 45;
+            this.comboBox_OneLine_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_OneLine_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_OneLine_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_OneLine_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_OneLine_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label98
             // 
@@ -12470,14 +12695,20 @@
             // 
             // comboBox_WeekDay_Image
             // 
-            this.comboBox_WeekDay_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_WeekDay_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_WeekDay_Image.DropDownWidth = 75;
             this.comboBox_WeekDay_Image.Enabled = false;
             this.comboBox_WeekDay_Image.FormattingEnabled = true;
             this.comboBox_WeekDay_Image.Location = new System.Drawing.Point(85, 71);
+            this.comboBox_WeekDay_Image.MaxDropDownItems = 25;
             this.comboBox_WeekDay_Image.Name = "comboBox_WeekDay_Image";
             this.comboBox_WeekDay_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_WeekDay_Image.TabIndex = 5;
+            this.comboBox_WeekDay_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_WeekDay_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_WeekDay_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_WeekDay_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_WeekDay_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label55
             // 
@@ -12598,14 +12829,20 @@
             // 
             // comboBox_Delimiter_Image
             // 
-            this.comboBox_Delimiter_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Delimiter_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Delimiter_Image.DropDownWidth = 75;
             this.comboBox_Delimiter_Image.Enabled = false;
             this.comboBox_Delimiter_Image.FormattingEnabled = true;
             this.comboBox_Delimiter_Image.Location = new System.Drawing.Point(72, 71);
+            this.comboBox_Delimiter_Image.MaxDropDownItems = 25;
             this.comboBox_Delimiter_Image.Name = "comboBox_Delimiter_Image";
             this.comboBox_Delimiter_Image.Size = new System.Drawing.Size(58, 21);
             this.comboBox_Delimiter_Image.TabIndex = 5;
+            this.comboBox_Delimiter_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Delimiter_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Delimiter_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Delimiter_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Delimiter_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label37
             // 
@@ -12659,14 +12896,20 @@
             // 
             // comboBox_Image_Pm
             // 
-            this.comboBox_Image_Pm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Image_Pm.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Image_Pm.DropDownWidth = 75;
             this.comboBox_Image_Pm.Enabled = false;
             this.comboBox_Image_Pm.FormattingEnabled = true;
             this.comboBox_Image_Pm.Location = new System.Drawing.Point(85, 98);
+            this.comboBox_Image_Pm.MaxDropDownItems = 25;
             this.comboBox_Image_Pm.Name = "comboBox_Image_Pm";
             this.comboBox_Image_Pm.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Image_Pm.TabIndex = 11;
+            this.comboBox_Image_Pm.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Image_Pm.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Image_Pm.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Image_Pm.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Image_Pm.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // checkBox_AmPm
             // 
@@ -12724,14 +12967,20 @@
             // 
             // comboBox_Image_Am
             // 
-            this.comboBox_Image_Am.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Image_Am.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Image_Am.DropDownWidth = 75;
             this.comboBox_Image_Am.Enabled = false;
             this.comboBox_Image_Am.FormattingEnabled = true;
             this.comboBox_Image_Am.Location = new System.Drawing.Point(85, 71);
+            this.comboBox_Image_Am.MaxDropDownItems = 25;
             this.comboBox_Image_Am.Name = "comboBox_Image_Am";
             this.comboBox_Image_Am.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Image_Am.TabIndex = 5;
+            this.comboBox_Image_Am.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Image_Am.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Image_Am.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Image_Am.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Image_Am.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label33
             // 
@@ -12891,13 +13140,19 @@
             // 
             // comboBox_Hours_Tens_Image
             // 
-            this.comboBox_Hours_Tens_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Hours_Tens_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Hours_Tens_Image.DropDownWidth = 75;
             this.comboBox_Hours_Tens_Image.FormattingEnabled = true;
             this.comboBox_Hours_Tens_Image.Location = new System.Drawing.Point(67, 71);
+            this.comboBox_Hours_Tens_Image.MaxDropDownItems = 25;
             this.comboBox_Hours_Tens_Image.Name = "comboBox_Hours_Tens_Image";
             this.comboBox_Hours_Tens_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Hours_Tens_Image.TabIndex = 5;
+            this.comboBox_Hours_Tens_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Hours_Tens_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Hours_Tens_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Hours_Tens_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Hours_Tens_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label8
             // 
@@ -13013,13 +13268,19 @@
             // 
             // comboBox_Hours_Ones_Image
             // 
-            this.comboBox_Hours_Ones_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Hours_Ones_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Hours_Ones_Image.DropDownWidth = 75;
             this.comboBox_Hours_Ones_Image.FormattingEnabled = true;
             this.comboBox_Hours_Ones_Image.Location = new System.Drawing.Point(67, 71);
+            this.comboBox_Hours_Ones_Image.MaxDropDownItems = 25;
             this.comboBox_Hours_Ones_Image.Name = "comboBox_Hours_Ones_Image";
             this.comboBox_Hours_Ones_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Hours_Ones_Image.TabIndex = 5;
+            this.comboBox_Hours_Ones_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Hours_Ones_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Hours_Ones_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Hours_Ones_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Hours_Ones_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label29
             // 
@@ -13057,7 +13318,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(382, 150);
+            this.tabPage5.Size = new System.Drawing.Size(365, 150);
             this.tabPage5.TabIndex = 1;
             this.tabPage5.Text = "Минуты";
             // 
@@ -13162,13 +13423,19 @@
             // 
             // comboBox_Min_Tens_Image
             // 
-            this.comboBox_Min_Tens_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Min_Tens_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Min_Tens_Image.DropDownWidth = 75;
             this.comboBox_Min_Tens_Image.FormattingEnabled = true;
             this.comboBox_Min_Tens_Image.Location = new System.Drawing.Point(67, 71);
+            this.comboBox_Min_Tens_Image.MaxDropDownItems = 25;
             this.comboBox_Min_Tens_Image.Name = "comboBox_Min_Tens_Image";
             this.comboBox_Min_Tens_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Min_Tens_Image.TabIndex = 5;
+            this.comboBox_Min_Tens_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Min_Tens_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Min_Tens_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Min_Tens_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Min_Tens_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label13
             // 
@@ -13284,13 +13551,19 @@
             // 
             // comboBox_Min_Ones_Image
             // 
-            this.comboBox_Min_Ones_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Min_Ones_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Min_Ones_Image.DropDownWidth = 75;
             this.comboBox_Min_Ones_Image.FormattingEnabled = true;
             this.comboBox_Min_Ones_Image.Location = new System.Drawing.Point(67, 71);
+            this.comboBox_Min_Ones_Image.MaxDropDownItems = 25;
             this.comboBox_Min_Ones_Image.Name = "comboBox_Min_Ones_Image";
             this.comboBox_Min_Ones_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Min_Ones_Image.TabIndex = 5;
+            this.comboBox_Min_Ones_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Min_Ones_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Min_Ones_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Min_Ones_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Min_Ones_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label25
             // 
@@ -13327,7 +13600,7 @@
             this.tabPage6.Controls.Add(this.groupBox_Seconds_Tens);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(382, 150);
+            this.tabPage6.Size = new System.Drawing.Size(365, 150);
             this.tabPage6.TabIndex = 2;
             this.tabPage6.Text = "Секунды";
             // 
@@ -13419,13 +13692,19 @@
             // 
             // comboBox_Sec_Ones_Image
             // 
-            this.comboBox_Sec_Ones_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Sec_Ones_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Sec_Ones_Image.DropDownWidth = 75;
             this.comboBox_Sec_Ones_Image.FormattingEnabled = true;
             this.comboBox_Sec_Ones_Image.Location = new System.Drawing.Point(67, 71);
+            this.comboBox_Sec_Ones_Image.MaxDropDownItems = 25;
             this.comboBox_Sec_Ones_Image.Name = "comboBox_Sec_Ones_Image";
             this.comboBox_Sec_Ones_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Sec_Ones_Image.TabIndex = 5;
+            this.comboBox_Sec_Ones_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Sec_Ones_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Sec_Ones_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Sec_Ones_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Sec_Ones_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label21
             // 
@@ -13554,13 +13833,19 @@
             // 
             // comboBox_Sec_Tens_Image
             // 
-            this.comboBox_Sec_Tens_Image.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Sec_Tens_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Sec_Tens_Image.DropDownWidth = 75;
             this.comboBox_Sec_Tens_Image.FormattingEnabled = true;
             this.comboBox_Sec_Tens_Image.Location = new System.Drawing.Point(67, 71);
+            this.comboBox_Sec_Tens_Image.MaxDropDownItems = 25;
             this.comboBox_Sec_Tens_Image.Name = "comboBox_Sec_Tens_Image";
             this.comboBox_Sec_Tens_Image.Size = new System.Drawing.Size(45, 21);
             this.comboBox_Sec_Tens_Image.TabIndex = 5;
+            this.comboBox_Sec_Tens_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Sec_Tens_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Sec_Tens_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Sec_Tens_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Sec_Tens_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label17
             // 
@@ -13628,32 +13913,43 @@
             // 
             // comboBox_Preview
             // 
+            this.comboBox_Preview.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Preview.DropDownWidth = 75;
             this.comboBox_Preview.FormattingEnabled = true;
             this.comboBox_Preview.Items.AddRange(new object[] {
             "414",
             "52",
             "825"});
             this.comboBox_Preview.Location = new System.Drawing.Point(232, 3);
+            this.comboBox_Preview.MaxDropDownItems = 25;
             this.comboBox_Preview.Name = "comboBox_Preview";
             this.comboBox_Preview.Size = new System.Drawing.Size(56, 21);
             this.comboBox_Preview.TabIndex = 3;
+            this.comboBox_Preview.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Preview.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Preview.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Preview.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_Preview_KeyDown);
-            this.comboBox_Preview.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_Preview_KeyPress);
+            this.comboBox_Preview.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Preview.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // comboBox_Background
             // 
-            this.comboBox_Background.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Background.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Background.DropDownWidth = 75;
             this.comboBox_Background.FormattingEnabled = true;
             this.comboBox_Background.Items.AddRange(new object[] {
             "421",
             "42",
             "42"});
             this.comboBox_Background.Location = new System.Drawing.Point(43, 3);
+            this.comboBox_Background.MaxDropDownItems = 25;
             this.comboBox_Background.Name = "comboBox_Background";
             this.comboBox_Background.Size = new System.Drawing.Size(56, 21);
             this.comboBox_Background.TabIndex = 2;
+            this.comboBox_Background.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Background.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Background.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Background.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Background.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label7
             // 
