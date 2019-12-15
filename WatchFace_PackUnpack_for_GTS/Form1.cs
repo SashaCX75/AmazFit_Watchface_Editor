@@ -15,11 +15,11 @@ namespace WatchFace_PackUnpack_for_GTS
 {
     public partial class Form1 : Form
     {
-        static bool Is64Bit
-        {
+        //static bool Is64Bit
+        //{
 
-            get { return Marshal.SizeOf(typeof(IntPtr)) == 8; }
-        }
+        //    get { return Marshal.SizeOf(typeof(IntPtr)) == 8; }
+        //}
 
         public Form1()
         {
@@ -261,7 +261,10 @@ namespace WatchFace_PackUnpack_for_GTS
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            if (Is64Bit) radioButton_64.Checked=true; else radioButton_32.Checked=true;
+            if (Is64Bit()) radioButton_64.Checked=true; else radioButton_32.Checked=true;
+#if DEBUG
+            MessageBox.Show(GetOSBit());
+#endif
         }
 
         private void button_pack_Click(object sender, EventArgs e)
@@ -310,6 +313,10 @@ namespace WatchFace_PackUnpack_for_GTS
                     //MessageBox.Show(newFullName);
                     if (File.Exists(newFullName))
                     {
+                        double fileSize = (GetFileSizeMB(new FileInfo(newFullName)));
+                        if (fileSize > 1.95) MessageBox.Show("Размер несжатого файла превышает 1,95МБ.\r\n\r\n" + "Циферблат может не работать.",
+                            "Большой размер файла", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                         _pack_unpack_dir = Application.StartupPath + @"\Res_Packer_Unpacker\x86_64\respacker.exe";
                         if (radioButton_32.Checked)
                             _pack_unpack_dir = Application.StartupPath + @"\Res_Packer_Unpacker\x86\respacker.exe";
@@ -342,5 +349,35 @@ namespace WatchFace_PackUnpack_for_GTS
                 }
             }
         }
+
+        public static string GetOSBit()
+        {
+            bool is64bit = Is64Bit();
+            if (is64bit)
+                return "x64";
+            else
+                return "x32";
+        }
+        
+
+        public static bool Is64Bit()
+        {
+            if (Environment.Is64BitOperatingSystem) return true;
+            else return false;
+        }
+
+        public double GetFileSizeMB(FileInfo file)
+        {
+            try
+            {
+                double sizeinbytes = file.Length;
+                double sizeinkbytes = Math.Round((sizeinbytes / 1024), 2);
+                double sizeinmbytes = Math.Round((sizeinkbytes / 1024), 2);
+                double sizeingbytes = Math.Round((sizeinmbytes / 1024), 2);
+                return sizeinmbytes;
+            }
+            catch { return 0; } //перехват ошибок и возврат сообщения об ошибке
+        }
+
     }
 }

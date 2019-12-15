@@ -33,6 +33,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button_zip_unpack = new System.Windows.Forms.Button();
+            this.button_pack_zip = new System.Windows.Forms.Button();
+            this.button_zip = new System.Windows.Forms.Button();
             this.button_unpack = new System.Windows.Forms.Button();
             this.button_pack = new System.Windows.Forms.Button();
             this.textBox_pack_command = new System.Windows.Forms.TextBox();
@@ -942,6 +945,10 @@
             this.button_Background = new System.Windows.Forms.Button();
             this.richTextBox_JSON = new System.Windows.Forms.RichTextBox();
             this.tabPage33 = new System.Windows.Forms.TabPage();
+            this.comboBox_Language = new System.Windows.Forms.ComboBox();
+            this.label356 = new System.Windows.Forms.Label();
+            this.numericUpDown_Gif_Speed = new System.Windows.Forms.NumericUpDown();
+            this.label355 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.radioButton_Settings_Pack_DoNotning = new System.Windows.Forms.RadioButton();
             this.radioButton_Settings_Pack_Copy = new System.Windows.Forms.RadioButton();
@@ -1300,6 +1307,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Sec_Tens_X)).BeginInit();
             this.panel_Background.SuspendLayout();
             this.tabPage33.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Gif_Speed)).BeginInit();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -1322,6 +1330,9 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Controls.Add(this.button_zip_unpack);
+            this.tabPage1.Controls.Add(this.button_pack_zip);
+            this.tabPage1.Controls.Add(this.button_zip);
             this.tabPage1.Controls.Add(this.button_unpack);
             this.tabPage1.Controls.Add(this.button_pack);
             this.tabPage1.Controls.Add(this.textBox_pack_command);
@@ -1338,23 +1349,53 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Распаковать/запаковать";
             // 
+            // button_zip_unpack
+            // 
+            this.button_zip_unpack.Location = new System.Drawing.Point(10, 138);
+            this.button_zip_unpack.Name = "button_zip_unpack";
+            this.button_zip_unpack.Size = new System.Drawing.Size(145, 23);
+            this.button_zip_unpack.TabIndex = 11;
+            this.button_zip_unpack.Text = "Распаковать сжатый bin";
+            this.button_zip_unpack.UseVisualStyleBackColor = true;
+            this.button_zip_unpack.Click += new System.EventHandler(this.button_zip_unpack_Click);
+            // 
+            // button_pack_zip
+            // 
+            this.button_pack_zip.Location = new System.Drawing.Point(10, 254);
+            this.button_pack_zip.Name = "button_pack_zip";
+            this.button_pack_zip.Size = new System.Drawing.Size(145, 23);
+            this.button_pack_zip.TabIndex = 10;
+            this.button_pack_zip.Text = "Запаковать и сжать bin";
+            this.button_pack_zip.UseVisualStyleBackColor = true;
+            this.button_pack_zip.Click += new System.EventHandler(this.button_pack_zip_Click);
+            // 
+            // button_zip
+            // 
+            this.button_zip.Location = new System.Drawing.Point(10, 225);
+            this.button_zip.Name = "button_zip";
+            this.button_zip.Size = new System.Drawing.Size(145, 23);
+            this.button_zip.TabIndex = 9;
+            this.button_zip.Text = "Сжать bin";
+            this.button_zip.UseVisualStyleBackColor = true;
+            this.button_zip.Click += new System.EventHandler(this.button_zip_Click);
+            // 
             // button_unpack
             // 
-            this.button_unpack.Location = new System.Drawing.Point(10, 138);
+            this.button_unpack.Location = new System.Drawing.Point(10, 167);
             this.button_unpack.Name = "button_unpack";
-            this.button_unpack.Size = new System.Drawing.Size(82, 23);
+            this.button_unpack.Size = new System.Drawing.Size(145, 23);
             this.button_unpack.TabIndex = 8;
-            this.button_unpack.Text = "Распаковать";
+            this.button_unpack.Text = "Распаковать bin";
             this.button_unpack.UseVisualStyleBackColor = true;
             this.button_unpack.Click += new System.EventHandler(this.button_unpack_Click);
             // 
             // button_pack
             // 
-            this.button_pack.Location = new System.Drawing.Point(98, 138);
+            this.button_pack.Location = new System.Drawing.Point(10, 196);
             this.button_pack.Name = "button_pack";
-            this.button_pack.Size = new System.Drawing.Size(75, 23);
+            this.button_pack.Size = new System.Drawing.Size(145, 23);
             this.button_pack.TabIndex = 7;
-            this.button_pack.Text = "Запаковать";
+            this.button_pack.Text = "Запаковать bin";
             this.button_pack.UseVisualStyleBackColor = true;
             this.button_pack.Click += new System.EventHandler(this.button_pack_Click);
             // 
@@ -2356,7 +2397,7 @@
             // button_SetWeather
             // 
             this.button_SetWeather.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button_SetWeather.Location = new System.Drawing.Point(0, 379);
+            this.button_SetWeather.Location = new System.Drawing.Point(0, 469);
             this.button_SetWeather.Name = "button_SetWeather";
             this.button_SetWeather.Size = new System.Drawing.Size(350, 23);
             this.button_SetWeather.TabIndex = 27;
@@ -2376,9 +2417,9 @@
             this.panel_SetWeather.Controls.Add(this.numericUpDown_WeatherSet_Temp);
             this.panel_SetWeather.Controls.Add(this.checkBox_WeatherSet_DayTemp);
             this.panel_SetWeather.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel_SetWeather.Location = new System.Drawing.Point(0, 402);
+            this.panel_SetWeather.Location = new System.Drawing.Point(0, 492);
             this.panel_SetWeather.Name = "panel_SetWeather";
-            this.panel_SetWeather.Size = new System.Drawing.Size(350, 91);
+            this.panel_SetWeather.Size = new System.Drawing.Size(350, 1);
             this.panel_SetWeather.TabIndex = 25;
             // 
             // numericUpDown_WeatherSet_NightTemp
@@ -2439,17 +2480,17 @@
             "Сильный снег",
             "Сильный дождь",
             "Ветрено",
-            "Дождь со снегом",
+            "Снег с дождем",
             "Туман",
-            "Временами туман",
+            "Мгла",
             "Гроза",
             "Снегопад",
-            "Жара",
+            "Пыльно",
             "Ливень",
-            "Снег с дождем",
-            "Гроза с дождем и снегом",
+            "Град",
+            "Гроза с градом",
             "Сильный ливень",
-            "Сильный ветер",
+            "Пыльная буря",
             "Ураган",
             "Потоп"});
             this.comboBox_WeatherSet_Icon.Location = new System.Drawing.Point(94, 4);
@@ -6098,7 +6139,7 @@
             this.tabPage26.Controls.Add(this.tabControl5);
             this.tabPage26.Location = new System.Drawing.Point(4, 22);
             this.tabPage26.Name = "tabPage26";
-            this.tabPage26.Size = new System.Drawing.Size(365, 129);
+            this.tabPage26.Size = new System.Drawing.Size(382, 129);
             this.tabPage26.TabIndex = 2;
             this.tabPage26.Text = "Дневная температура";
             // 
@@ -6110,7 +6151,7 @@
             this.tabControl5.Location = new System.Drawing.Point(0, 0);
             this.tabControl5.Name = "tabControl5";
             this.tabControl5.SelectedIndex = 0;
-            this.tabControl5.Size = new System.Drawing.Size(365, 130);
+            this.tabControl5.Size = new System.Drawing.Size(382, 130);
             this.tabControl5.TabIndex = 1;
             // 
             // tabPage27
@@ -6138,7 +6179,7 @@
             this.tabPage27.Location = new System.Drawing.Point(4, 22);
             this.tabPage27.Name = "tabPage27";
             this.tabPage27.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage27.Size = new System.Drawing.Size(357, 104);
+            this.tabPage27.Size = new System.Drawing.Size(374, 104);
             this.tabPage27.TabIndex = 1;
             this.tabPage27.Text = "День";
             // 
@@ -6434,7 +6475,7 @@
             this.tabPage30.Location = new System.Drawing.Point(4, 22);
             this.tabPage30.Name = "tabPage30";
             this.tabPage30.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage30.Size = new System.Drawing.Size(357, 104);
+            this.tabPage30.Size = new System.Drawing.Size(374, 104);
             this.tabPage30.TabIndex = 0;
             this.tabPage30.Text = "Ночь";
             // 
@@ -6727,7 +6768,7 @@
             this.tabPage25.Location = new System.Drawing.Point(4, 22);
             this.tabPage25.Name = "tabPage25";
             this.tabPage25.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage25.Size = new System.Drawing.Size(365, 129);
+            this.tabPage25.Size = new System.Drawing.Size(382, 129);
             this.tabPage25.TabIndex = 1;
             this.tabPage25.Text = "Иконка";
             // 
@@ -7245,7 +7286,7 @@
             this.tabPage31.Location = new System.Drawing.Point(4, 22);
             this.tabPage31.Name = "tabPage31";
             this.tabPage31.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage31.Size = new System.Drawing.Size(365, 144);
+            this.tabPage31.Size = new System.Drawing.Size(382, 144);
             this.tabPage31.TabIndex = 1;
             this.tabPage31.Text = "Минуты";
             // 
@@ -7550,7 +7591,7 @@
             this.tabPage32.Controls.Add(this.groupBox_AnalogClock_Sec);
             this.tabPage32.Location = new System.Drawing.Point(4, 22);
             this.tabPage32.Name = "tabPage32";
-            this.tabPage32.Size = new System.Drawing.Size(365, 144);
+            this.tabPage32.Size = new System.Drawing.Size(382, 144);
             this.tabPage32.TabIndex = 2;
             this.tabPage32.Text = "Секунды";
             // 
@@ -8201,7 +8242,7 @@
             this.tabPage28.Controls.Add(this.label303);
             this.tabPage28.Location = new System.Drawing.Point(4, 22);
             this.tabPage28.Name = "tabPage28";
-            this.tabPage28.Size = new System.Drawing.Size(365, 107);
+            this.tabPage28.Size = new System.Drawing.Size(382, 107);
             this.tabPage28.TabIndex = 3;
             this.tabPage28.Text = "Иконка \"%\"";
             // 
@@ -8332,7 +8373,7 @@
             this.tabPage22.Location = new System.Drawing.Point(4, 22);
             this.tabPage22.Name = "tabPage22";
             this.tabPage22.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage22.Size = new System.Drawing.Size(365, 107);
+            this.tabPage22.Size = new System.Drawing.Size(382, 107);
             this.tabPage22.TabIndex = 1;
             this.tabPage22.Text = "Иконка";
             // 
@@ -8501,7 +8542,7 @@
             this.tabPage23.Controls.Add(this.checkBox_Battery_Scale);
             this.tabPage23.Location = new System.Drawing.Point(4, 22);
             this.tabPage23.Name = "tabPage23";
-            this.tabPage23.Size = new System.Drawing.Size(365, 107);
+            this.tabPage23.Size = new System.Drawing.Size(382, 107);
             this.tabPage23.TabIndex = 2;
             this.tabPage23.Text = "Шкала";
             // 
@@ -8767,7 +8808,7 @@
             this.checkBox_Battery_Scale.Location = new System.Drawing.Point(0, 0);
             this.checkBox_Battery_Scale.Name = "checkBox_Battery_Scale";
             this.checkBox_Battery_Scale.Padding = new System.Windows.Forms.Padding(10, 3, 0, 0);
-            this.checkBox_Battery_Scale.Size = new System.Drawing.Size(363, 20);
+            this.checkBox_Battery_Scale.Size = new System.Drawing.Size(380, 20);
             this.checkBox_Battery_Scale.TabIndex = 36;
             this.checkBox_Battery_Scale.Text = "Использовать";
             this.checkBox_Battery_Scale.UseVisualStyleBackColor = true;
@@ -8973,7 +9014,7 @@
             this.tabPage18.Location = new System.Drawing.Point(4, 22);
             this.tabPage18.Name = "tabPage18";
             this.tabPage18.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage18.Size = new System.Drawing.Size(365, 54);
+            this.tabPage18.Size = new System.Drawing.Size(382, 54);
             this.tabPage18.TabIndex = 1;
             this.tabPage18.Text = "Будильник";
             // 
@@ -9109,7 +9150,7 @@
             this.tabPage19.Controls.Add(this.label179);
             this.tabPage19.Location = new System.Drawing.Point(4, 22);
             this.tabPage19.Name = "tabPage19";
-            this.tabPage19.Size = new System.Drawing.Size(365, 54);
+            this.tabPage19.Size = new System.Drawing.Size(382, 54);
             this.tabPage19.TabIndex = 2;
             this.tabPage19.Text = "Блокировка";
             // 
@@ -9245,7 +9286,7 @@
             this.tabPage20.Controls.Add(this.label183);
             this.tabPage20.Location = new System.Drawing.Point(4, 22);
             this.tabPage20.Name = "tabPage20";
-            this.tabPage20.Size = new System.Drawing.Size(365, 54);
+            this.tabPage20.Size = new System.Drawing.Size(382, 54);
             this.tabPage20.TabIndex = 3;
             this.tabPage20.Text = "Не беспокоить";
             // 
@@ -9731,7 +9772,7 @@
             this.tabPage12.Location = new System.Drawing.Point(4, 22);
             this.tabPage12.Name = "tabPage12";
             this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage12.Size = new System.Drawing.Size(365, 141);
+            this.tabPage12.Size = new System.Drawing.Size(382, 141);
             this.tabPage12.TabIndex = 1;
             this.tabPage12.Text = "Шаги";
             // 
@@ -10035,7 +10076,7 @@
             this.tabPage13.Controls.Add(this.label141);
             this.tabPage13.Location = new System.Drawing.Point(4, 22);
             this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Size = new System.Drawing.Size(365, 141);
+            this.tabPage13.Size = new System.Drawing.Size(382, 141);
             this.tabPage13.TabIndex = 2;
             this.tabPage13.Text = "Расстояние";
             // 
@@ -10389,7 +10430,7 @@
             this.tabPage14.Controls.Add(this.label151);
             this.tabPage14.Location = new System.Drawing.Point(4, 22);
             this.tabPage14.Name = "tabPage14";
-            this.tabPage14.Size = new System.Drawing.Size(365, 141);
+            this.tabPage14.Size = new System.Drawing.Size(382, 141);
             this.tabPage14.TabIndex = 3;
             this.tabPage14.Text = "Пульс";
             // 
@@ -10689,7 +10730,7 @@
             this.tabPage15.Controls.Add(this.label161);
             this.tabPage15.Location = new System.Drawing.Point(4, 22);
             this.tabPage15.Name = "tabPage15";
-            this.tabPage15.Size = new System.Drawing.Size(365, 141);
+            this.tabPage15.Size = new System.Drawing.Size(382, 141);
             this.tabPage15.TabIndex = 4;
             this.tabPage15.Text = "Калории";
             // 
@@ -10978,7 +11019,7 @@
             this.tabPage16.Controls.Add(this.label171);
             this.tabPage16.Location = new System.Drawing.Point(4, 22);
             this.tabPage16.Name = "tabPage16";
-            this.tabPage16.Size = new System.Drawing.Size(365, 141);
+            this.tabPage16.Size = new System.Drawing.Size(382, 141);
             this.tabPage16.TabIndex = 5;
             this.tabPage16.Text = "Достижение цели";
             // 
@@ -12245,7 +12286,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(365, 169);
+            this.tabPage7.Size = new System.Drawing.Size(382, 169);
             this.tabPage7.TabIndex = 0;
             this.tabPage7.Text = "Дата в одну линию";
             // 
@@ -13318,7 +13359,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(365, 150);
+            this.tabPage5.Size = new System.Drawing.Size(382, 150);
             this.tabPage5.TabIndex = 1;
             this.tabPage5.Text = "Минуты";
             // 
@@ -13600,7 +13641,7 @@
             this.tabPage6.Controls.Add(this.groupBox_Seconds_Tens);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(365, 150);
+            this.tabPage6.Size = new System.Drawing.Size(382, 150);
             this.tabPage6.TabIndex = 2;
             this.tabPage6.Text = "Секунды";
             // 
@@ -13992,6 +14033,10 @@
             // tabPage33
             // 
             this.tabPage33.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage33.Controls.Add(this.comboBox_Language);
+            this.tabPage33.Controls.Add(this.label356);
+            this.tabPage33.Controls.Add(this.numericUpDown_Gif_Speed);
+            this.tabPage33.Controls.Add(this.label355);
             this.tabPage33.Controls.Add(this.groupBox7);
             this.tabPage33.Controls.Add(this.groupBox6);
             this.tabPage33.Controls.Add(this.groupBox5);
@@ -14002,6 +14047,66 @@
             this.tabPage33.TabIndex = 3;
             this.tabPage33.Text = "Настройки";
             // 
+            // comboBox_Language
+            // 
+            this.comboBox_Language.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Language.FormattingEnabled = true;
+            this.comboBox_Language.Items.AddRange(new object[] {
+            "Русский",
+            "English"});
+            this.comboBox_Language.Location = new System.Drawing.Point(47, 234);
+            this.comboBox_Language.Name = "comboBox_Language";
+            this.comboBox_Language.Size = new System.Drawing.Size(92, 21);
+            this.comboBox_Language.TabIndex = 7;
+            this.comboBox_Language.SelectedIndexChanged += new System.EventHandler(this.comboBox_Language_SelectedIndexChanged);
+            // 
+            // label356
+            // 
+            this.label356.AutoSize = true;
+            this.label356.Location = new System.Drawing.Point(7, 240);
+            this.label356.Name = "label356";
+            this.label356.Size = new System.Drawing.Size(35, 13);
+            this.label356.TabIndex = 6;
+            this.label356.Text = "Язык";
+            // 
+            // numericUpDown_Gif_Speed
+            // 
+            this.numericUpDown_Gif_Speed.DecimalPlaces = 1;
+            this.numericUpDown_Gif_Speed.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDown_Gif_Speed.Location = new System.Drawing.Point(179, 213);
+            this.numericUpDown_Gif_Speed.Maximum = new decimal(new int[] {
+            25,
+            0,
+            0,
+            65536});
+            this.numericUpDown_Gif_Speed.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDown_Gif_Speed.Name = "numericUpDown_Gif_Speed";
+            this.numericUpDown_Gif_Speed.Size = new System.Drawing.Size(47, 20);
+            this.numericUpDown_Gif_Speed.TabIndex = 5;
+            this.numericUpDown_Gif_Speed.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown_Gif_Speed.ValueChanged += new System.EventHandler(this.numericUpDown_Gif_Speed_ValueChanged);
+            // 
+            // label355
+            // 
+            this.label355.AutoSize = true;
+            this.label355.Location = new System.Drawing.Point(7, 213);
+            this.label355.Name = "label355";
+            this.label355.Size = new System.Drawing.Size(172, 13);
+            this.label355.TabIndex = 4;
+            this.label355.Text = "Скорость анимации gif файла, с:";
+            // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.radioButton_Settings_Pack_DoNotning);
@@ -14010,16 +14115,16 @@
             this.groupBox7.Controls.Add(this.radioButton_Settings_Pack_Dialog);
             this.groupBox7.Location = new System.Drawing.Point(3, 115);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(335, 115);
+            this.groupBox7.Size = new System.Drawing.Size(335, 90);
             this.groupBox7.TabIndex = 3;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Действие после запаковки проекта в .bin файл";
+            this.groupBox7.Text = "Действие после запаковки проекта или сжатия в .bin файл";
             this.groupBox7.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
             // 
             // radioButton_Settings_Pack_DoNotning
             // 
             this.radioButton_Settings_Pack_DoNotning.AutoSize = true;
-            this.radioButton_Settings_Pack_DoNotning.Location = new System.Drawing.Point(7, 91);
+            this.radioButton_Settings_Pack_DoNotning.Location = new System.Drawing.Point(7, 68);
             this.radioButton_Settings_Pack_DoNotning.Name = "radioButton_Settings_Pack_DoNotning";
             this.radioButton_Settings_Pack_DoNotning.Size = new System.Drawing.Size(158, 17);
             this.radioButton_Settings_Pack_DoNotning.TabIndex = 3;
@@ -14030,12 +14135,13 @@
             // radioButton_Settings_Pack_Copy
             // 
             this.radioButton_Settings_Pack_Copy.AutoSize = true;
-            this.radioButton_Settings_Pack_Copy.Location = new System.Drawing.Point(7, 68);
+            this.radioButton_Settings_Pack_Copy.Location = new System.Drawing.Point(7, 60);
             this.radioButton_Settings_Pack_Copy.Name = "radioButton_Settings_Pack_Copy";
             this.radioButton_Settings_Pack_Copy.Size = new System.Drawing.Size(291, 17);
             this.radioButton_Settings_Pack_Copy.TabIndex = 2;
             this.radioButton_Settings_Pack_Copy.Text = "Скопировать получившейся .bin  файл в буфер (beta)";
             this.radioButton_Settings_Pack_Copy.UseVisualStyleBackColor = true;
+            this.radioButton_Settings_Pack_Copy.Visible = false;
             this.radioButton_Settings_Pack_Copy.CheckedChanged += new System.EventHandler(this.radioButton_Settings_Unpack_Dialog_CheckedChanged);
             // 
             // radioButton_Settings_Pack_GoToFile
@@ -14803,6 +14909,8 @@
             this.panel_Background.ResumeLayout(false);
             this.panel_Background.PerformLayout();
             this.tabPage33.ResumeLayout(false);
+            this.tabPage33.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Gif_Speed)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -15767,6 +15875,13 @@
         private System.Windows.Forms.RadioButton radioButton_Settings_AfterUnpack_Download;
         private System.Windows.Forms.RadioButton radioButton_Settings_AfterUnpack_Dialog;
         private System.Windows.Forms.Label label_version;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Gif_Speed;
+        private System.Windows.Forms.Label label355;
+        private System.Windows.Forms.Button button_zip_unpack;
+        private System.Windows.Forms.Button button_pack_zip;
+        private System.Windows.Forms.Button button_zip;
+        private System.Windows.Forms.ComboBox comboBox_Language;
+        private System.Windows.Forms.Label label356;
     }
 }
 

@@ -11,16 +11,19 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 using LineCap = System.Drawing.Drawing2D.LineCap;
+using System.Globalization;
+using System.Threading;
 
 namespace GTR_Watch_face
 {
     public partial class Form1 : Form
     {
         WATCH_FACE_JSON Watch_Face;
-        WATCH_FACE_PREWIEV Watch_Face_Preview;
+        WATCH_FACE_PREWIEV_TwoDigits Watch_Face_Preview_TwoDigits;
         WATCH_FACE_PREWIEV_SET Watch_Face_Preview_Set;
         List<string> ListImages = new List<string>();
         List<string> ListImagesFullName = new List<string>();
@@ -35,6 +38,35 @@ namespace GTR_Watch_face
 
         public Form1(string[] args)
         {
+            Program_Settings = new PROGRAM_SETTINGS();
+            try
+            {
+                Program_Settings = JsonConvert.DeserializeObject<PROGRAM_SETTINGS>
+                    (File.ReadAllText("Settings.json"), new JsonSerializerSettings
+                    {
+                        //DefaultValueHandling = DefaultValueHandling.Ignore,
+                        NullValueHandling = NullValueHandling.Ignore
+                    });
+            }
+            catch (Exception)
+            {
+
+            }
+
+            if ((Program_Settings.language == null) || (Program_Settings.language.Length < 2))
+            {
+                string language = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+                //int language = System.Globalization.CultureInfo.CurrentCulture.LCID;
+                if (language == "en")
+                {
+                    Program_Settings.language = "English";
+                }
+            }
+            if (Program_Settings.language == "English")
+            {
+                Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en");
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
+            }
             InitializeComponent();
 
             Watch_Face_Preview_Set = new WATCH_FACE_PREWIEV_SET();
@@ -43,22 +75,21 @@ namespace GTR_Watch_face
             Watch_Face_Preview_Set.Status = new StatusS();
             Watch_Face_Preview_Set.Time = new TimeS();
 
-            Watch_Face_Preview = new WATCH_FACE_PREWIEV();
-            Watch_Face_Preview.Date = new DateP();
-            Watch_Face_Preview.Date.Day = new TwoDigitsP();
-            Watch_Face_Preview.Date.Month = new TwoDigitsP();
+            Watch_Face_Preview_TwoDigits = new WATCH_FACE_PREWIEV_TwoDigits();
+            Watch_Face_Preview_TwoDigits.Date = new DateP();
+            Watch_Face_Preview_TwoDigits.Date.Day = new TwoDigitsP();
+            Watch_Face_Preview_TwoDigits.Date.Month = new TwoDigitsP();
 
-            Watch_Face_Preview.Time = new TimeP();
-            Watch_Face_Preview.Time.Hours = new TwoDigitsP();
-            Watch_Face_Preview.Time.Minutes = new TwoDigitsP();
-            Watch_Face_Preview.Time.Seconds = new TwoDigitsP();
+            Watch_Face_Preview_TwoDigits.Time = new TimeP();
+            Watch_Face_Preview_TwoDigits.Time.Hours = new TwoDigitsP();
+            Watch_Face_Preview_TwoDigits.Time.Minutes = new TwoDigitsP();
+            Watch_Face_Preview_TwoDigits.Time.Seconds = new TwoDigitsP();
 
-            Watch_Face_Preview.TimePm = new TimePmP();
-            Watch_Face_Preview.TimePm.Hours = new TwoDigitsP();
-            Watch_Face_Preview.TimePm.Minutes = new TwoDigitsP();
-            Watch_Face_Preview.TimePm.Seconds = new TwoDigitsP();
-
-            Program_Settings = new PROGRAM_SETTINGS();
+            Watch_Face_Preview_TwoDigits.TimePm = new TimePmP();
+            Watch_Face_Preview_TwoDigits.TimePm.Hours = new TwoDigitsP();
+            Watch_Face_Preview_TwoDigits.TimePm.Minutes = new TwoDigitsP();
+            Watch_Face_Preview_TwoDigits.TimePm.Seconds = new TwoDigitsP();
+            
 
             PreviewView = true;
             Settings_Load = false;
@@ -137,19 +168,7 @@ namespace GTR_Watch_face
             //if (Properties.Settings.Default.pack_command.Length > 1)
             //    textBox_pack_command.Text = Properties.Settings.Default.pack_command;
 
-            try
-            {
-                Program_Settings = JsonConvert.DeserializeObject<PROGRAM_SETTINGS>
-                    (File.ReadAllText("Settings.json"), new JsonSerializerSettings
-                    {
-                        //DefaultValueHandling = DefaultValueHandling.Ignore,
-                        NullValueHandling = NullValueHandling.Ignore
-                    });
-            }
-            catch (Exception)
-            {
-
-            }
+            
 
             if (Program_Settings.pack_unpack_dir == null)
             {
@@ -217,6 +236,10 @@ namespace GTR_Watch_face
             radioButton_Settings_Unpack_Dialog.Checked = Program_Settings.Settings_Unpack_Dialog;
             radioButton_Settings_Unpack_Replace.Checked = Program_Settings.Settings_Unpack_Replace;
             radioButton_Settings_Unpack_Save.Checked = Program_Settings.Settings_Unpack_Save;
+            numericUpDown_Gif_Speed.Value = (decimal)Program_Settings.Gif_Speed;
+
+            if(Program_Settings.language.Length>1) comboBox_Language.Text = Program_Settings.language;
+
             Settings_Load = false;
 
             SetPreferences1();
@@ -234,6 +257,171 @@ namespace GTR_Watch_face
             //f.ShowDialog();
             SendKeys.Send("{F1}");
             e.Cancel = true;
+        }
+
+        private void button_zip_unpack_Click(object sender, EventArgs e)
+        {
+            string subPath = Application.StartupPath + @"\Watch_face\";
+            if (!Directory.Exists(subPath)) Directory.CreateDirectory(subPath);
+            string respackerPath = Application.StartupPath + @"\Res_PackerUnpacker\";
+            if (Is64Bit()) respackerPath = respackerPath + @"x64\resunpacker.exe";
+            else respackerPath = respackerPath + @"x86\resunpacker.exe";
+
+#if !DEBUG
+            if (!File.Exists(respackerPath))
+            {
+                MessageBox.Show("Отсутствуют необходимые компоненты программы.\r\n" +
+                    "Не найдена утилита сжатия bin файлов по пути [" + respackerPath + "].\r\n\r\n" +
+                    "Проверьте наличие утилиты сжатия bin файлов.",
+                    "Файл не найден", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+#endif
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            //openFileDialog.Filter = "Json files (*.json) | *.json";
+            openFileDialog.Filter = "Binary File (*.bin)|*.bin";
+            ////openFileDialog1.FilterIndex = 2;
+            openFileDialog.RestoreDirectory = true;
+            openFileDialog.Multiselect = false;
+            openFileDialog.Title = "Путь к файлу циферблата";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string fullfilename = openFileDialog.FileName;
+                string filename = Path.GetFileName(fullfilename);
+                string fullPath = subPath + filename;
+                // если файл существует
+                if (File.Exists(fullPath))
+                {
+                    FormFileExists f = new FormFileExists();
+                    f.ShowDialog();
+                    int dialogResult = f.Data;
+
+                    string fileNameOnly = Path.GetFileNameWithoutExtension(fullPath);
+                    string extension = Path.GetExtension(fullPath);
+                    string path = Path.GetDirectoryName(fullPath);
+                    string newFullPath = fullPath;
+                    switch (dialogResult)
+                    {
+                        case 0:
+                            return;
+                        //break;
+                        case 1:
+                            File.Copy(fullfilename, fullPath, true);
+                            newFullPath = Path.Combine(path, fileNameOnly);
+                            if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
+                            break;
+                        case 2:
+                            int count = 1;
+
+                            while (File.Exists(newFullPath))
+                            {
+                                string tempFileName = string.Format("{0}({1})", fileNameOnly, count++);
+                                newFullPath = Path.Combine(path, tempFileName + extension);
+                            }
+                            File.Copy(fullfilename, newFullPath);
+                            fullPath = newFullPath;
+                            fileNameOnly = Path.GetFileNameWithoutExtension(newFullPath);
+                            path = Path.GetDirectoryName(newFullPath);
+                            newFullPath = Path.Combine(path, fileNameOnly);
+                            if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
+                            break;
+                    }
+                }
+                else File.Copy(fullfilename, fullPath);
+
+                try
+                {
+                    ProcessStartInfo startInfo = new ProcessStartInfo();
+                    startInfo.FileName = respackerPath;
+                    startInfo.Arguments = fullfilename;
+                    using (Process exeProcess = Process.Start(startInfo))
+                    {
+                        exeProcess.WaitForExit();//ждем 
+                    };
+                    // этот блок закончится только после окончания работы программы 
+                    //сюда писать команды после успешного завершения программы
+                    startInfo.FileName = respackerPath;
+                    startInfo.Arguments = fullPath;
+                    using (Process exeProcess = Process.Start(startInfo))
+                    {
+                        exeProcess.WaitForExit();//ждем 
+                    };
+                    // этот блок закончится только после окончания работы программы 
+                    //сюда писать команды после успешного завершения программы
+                    string fileNameOnly = Path.GetFileNameWithoutExtension(fullPath);
+                    //string extension = Path.GetExtension(fullPath);
+                    string path = Path.GetDirectoryName(fullPath);
+                    //path = Path.Combine(path, fileNameOnly);
+                    string newFullName_unp = Path.Combine(path, fileNameOnly + ".bin.unp");
+                    //string newFullName_bin = Path.Combine(path, fileNameOnly + ".unp.bin");
+                    string newFullName_bin = Path.Combine(path, fileNameOnly + ".bin");
+
+                    if (File.Exists(newFullName_unp))
+                    {
+                        File.Copy(newFullName_unp, newFullName_bin, true);
+                        this.BringToFront();
+                        //после декомпресии bin файла
+                        if (File.Exists(newFullName_bin))
+                        {
+                            File.Delete(newFullName_unp);
+#if !DEBUG
+                            if (!File.Exists(textBox_pack_unpack_dir.Text))
+                            {
+                                MessageBox.Show("Путь [" + textBox_pack_unpack_dir.Text +
+                                    "] к утилите распаковки/запаковки указан неверно.\r\n\r\n" +
+                                    "Укажите верный путь к утилите распаковки/запаковки.",
+                                    "Файл не найден", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                return;
+                            }
+#endif
+                            startInfo.FileName = textBox_pack_unpack_dir.Text;
+                            startInfo.Arguments = textBox_unpack_command.Text + "   " + newFullName_bin;
+                            using (Process exeProcess = Process.Start(startInfo))
+                            {
+                                exeProcess.WaitForExit();//ждем 
+                            };
+                            // этот блок закончится только после окончания работы программы 
+                            //сюда писать команды после успешного завершения программы
+                            fileNameOnly = Path.GetFileNameWithoutExtension(newFullName_bin);
+                            //string extension = Path.GetExtension(fullPath);
+                            path = Path.GetDirectoryName(newFullName_bin);
+                            path = Path.Combine(path, fileNameOnly);
+                            string newFullName = Path.Combine(path, fileNameOnly + ".json");
+
+                            //MessageBox.Show(newFullName);
+                            if (Program_Settings.Settings_AfterUnpack_Dialog)
+                            {
+                                if (File.Exists(newFullName))
+                                {
+                                    this.BringToFront();
+                                    if (MessageBox.Show("Открыть распакованный проект?", "Открытие проекта",
+                                                                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                                    {
+                                        LoadJsonAndImage(newFullName);
+                                        //newFullName = Path.Combine(path, "PreviewStates.json");
+                                        //if (File.Exists(newFullName))
+                                        //{
+                                        //    JsonPreview_Read(newFullName);
+                                        //}
+                                    }
+                                }
+                            }
+                            else if (Program_Settings.Settings_AfterUnpack_Download)
+                            {
+                                LoadJsonAndImage(newFullName);
+                            }
+                        }
+                    }
+                }
+                catch
+                {
+                    // сюда писать команды при ошибке вызова 
+                }
+
+
+            }
         }
 
         private void button_unpack_Click(object sender, EventArgs e)
@@ -503,6 +691,200 @@ namespace GTR_Watch_face
                 startInfo.Arguments = textBox_pack_command.Text + "   " + fullfilename;
                 _process.StartInfo = startInfo;
                 _process.Start();*/
+            }
+#endif
+        }
+
+        private void button_zip_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            //openFileDialog.Filter = "Json files (*.json) | *.json";
+            openFileDialog.Filter = "Binary File (*.bin)|*.bin";
+            openFileDialog.FileName = Path.GetFileNameWithoutExtension(FileName) + "_packed";
+            ////openFileDialog1.FilterIndex = 2;
+            openFileDialog.RestoreDirectory = true;
+            openFileDialog.InitialDirectory = FullFileDir;
+            openFileDialog.Multiselect = false;
+            openFileDialog.Title = "Путь к файлу циферблата";
+            string respackerPath = Application.StartupPath + @"\Res_PackerUnpacker\";
+            if (Is64Bit()) respackerPath = respackerPath + @"x64\respacker.exe";
+            else respackerPath = respackerPath + @"x86\respacker.exe";
+
+#if !DEBUG
+            if (!File.Exists(respackerPath))
+            {
+                MessageBox.Show("Отсутствуют необходимые компоненты программы.\r\n" + 
+                    "Не найдена утилита сжатия bin файлов по пути [" + respackerPath + "].\r\n\r\n" +
+                    "Проверьте наличие утилиты сжатия bin файлов.",
+                    "Файл не найден", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+#endif
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string fullfilename = openFileDialog.FileName;
+                try
+                {
+                    ProcessStartInfo startInfo = new ProcessStartInfo();
+                    startInfo.FileName = respackerPath;
+                    startInfo.Arguments = fullfilename;
+                    using (Process exeProcess = Process.Start(startInfo))
+                    {
+                        exeProcess.WaitForExit();//ждем 
+                    };
+                    // этот блок закончится только после окончания работы программы 
+                    //сюда писать команды после успешного завершения программы
+                    string fileNameOnly = Path.GetFileNameWithoutExtension(fullfilename);
+                    //string extension = Path.GetExtension(fullPath);
+                    string path = Path.GetDirectoryName(fullfilename);
+                    //path = Path.Combine(path, fileNameOnly);
+                    string newFullName_cmp = Path.Combine(path, fileNameOnly + ".bin.cmp");
+                    string newFullName_bin = Path.Combine(path, fileNameOnly + "_zip.bin");
+                    File.Copy(newFullName_cmp, newFullName_bin, true);
+                    if (File.Exists(newFullName_bin))
+                    {
+                        File.Delete(newFullName_cmp);
+                        this.BringToFront();
+                        //if (radioButton_Settings_Pack_Dialog.Checked)
+                        //MessageBox.Show(GetFileSize(new FileInfo(newFullName_bin)));
+                        if (Program_Settings.Settings_Pack_Dialog)
+                        {
+                            if (MessageBox.Show("Перейти к файлу?", "Перейти к файлу",
+                                                                        MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                Process.Start(new ProcessStartInfo("explorer.exe", " /select, " + newFullName_bin));
+                            }
+                        }
+                        else if (Program_Settings.Settings_Pack_Copy)
+                        {
+                            StringCollection paths = new StringCollection();
+                            paths.Add(newFullName_bin);
+                            Clipboard.SetFileDropList(paths);
+                        }
+                        else if (Program_Settings.Settings_Pack_GoToFile)
+                        {
+                            Process.Start(new ProcessStartInfo("explorer.exe", " /select, " + newFullName_bin));
+                        }
+                    }
+                }
+                catch
+                {
+                }
+            }
+
+        }
+
+        private void button_pack_zip_Click(object sender, EventArgs e)
+        {
+            string subPath = Application.StartupPath + @"\Watch_face\";
+            if (!Directory.Exists(subPath)) Directory.CreateDirectory(subPath);
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.InitialDirectory = FullFileDir;
+            openFileDialog.FileName = FileName;
+            openFileDialog.Filter = "Json files (*.json) | *.json";
+            //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
+            ////openFileDialog1.FilterIndex = 2;
+            openFileDialog.RestoreDirectory = true;
+            openFileDialog.Multiselect = false;
+            openFileDialog.Title = "Путь к файлу настроек циферблата";
+
+#if !DEBUG
+            if (!File.Exists(textBox_pack_unpack_dir.Text))
+            {
+                MessageBox.Show("Путь [" + textBox_pack_unpack_dir.Text +
+                    "] к утилите распаковки/запаковки указан неверно.\r\n\r\n" +
+                    "Укажите верный путь к утилите распаковки/запаковки.",
+                    "Файл не найден", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    string fullfilename = openFileDialog.FileName;
+                    ProcessStartInfo startInfo = new ProcessStartInfo();
+                    startInfo.FileName = textBox_pack_unpack_dir.Text;
+                    startInfo.Arguments = textBox_pack_command.Text + "   " + fullfilename;
+                    using (Process exeProcess = Process.Start(startInfo))
+                    {
+                        exeProcess.WaitForExit();//ждем 
+                    };
+                    // этот блок закончится только после окончания работы программы 
+                    //сюда писать команды после успешного завершения программы
+                    string fileNameOnly = Path.GetFileNameWithoutExtension(fullfilename);
+                    //string extension = Path.GetExtension(fullPath);
+                    string path = Path.GetDirectoryName(fullfilename);
+                    string newFullName = Path.Combine(path, fileNameOnly + "_packed.bin");
+
+                    //MessageBox.Show(newFullName);
+                    if (File.Exists(newFullName))
+                    {
+                        double fileSize = (GetFileSizeMB(new FileInfo(newFullName)));
+                        if (fileSize > 1.95) MessageBox.Show("Размер несжатого файла превышает 1,95МБ.\r\n\r\n" + "Циферблат может не работать.", 
+                            "Большой размер файла", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //MessageBox.Show(fileSize.ToString());
+                        //MessageBox.Show(GetFileSize(new FileInfo(newFullName)));
+                        string respackerPath = Application.StartupPath + @"\Res_PackerUnpacker\";
+                        if (Is64Bit()) respackerPath = respackerPath + @"x64\respacker.exe";
+                        else respackerPath = respackerPath + @"x86\respacker.exe";
+
+                        if (!File.Exists(respackerPath))
+                        {
+                            MessageBox.Show("Отсутствуют необходимые компоненты программы.\r\n" +
+                                "Не найдена утилита сжатия bin файлов по пути [" + respackerPath + "].\r\n\r\n" +
+                                "Проверьте наличие утилиты сжатия bin файлов.",
+                                "Файл не найден", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            return;
+                        }
+
+                        startInfo = new ProcessStartInfo();
+                        startInfo.FileName = respackerPath;
+                        startInfo.Arguments = newFullName;
+                        using (Process exeProcess = Process.Start(startInfo))
+                        {
+                            exeProcess.WaitForExit();//ждем 
+                        };
+                        // этот блок закончится только после окончания работы программы 
+                        //сюда писать команды после успешного завершения программы
+                        fileNameOnly = Path.GetFileNameWithoutExtension(newFullName);
+                        //string extension = Path.GetExtension(fullPath);
+                        path = Path.GetDirectoryName(newFullName);
+                        //path = Path.Combine(path, fileNameOnly);
+                        string newFullName_cmp = Path.Combine(path, fileNameOnly + ".bin.cmp");
+                        string newFullName_bin = Path.Combine(path, fileNameOnly + "_zip.bin");
+                        File.Copy(newFullName_cmp, newFullName_bin, true);
+                        if (File.Exists(newFullName_bin))
+                        {
+                            File.Delete(newFullName_cmp);
+                            this.BringToFront();
+                            //if (radioButton_Settings_Pack_Dialog.Checked)
+                            if (Program_Settings.Settings_Pack_Dialog)
+                            {
+                                if (MessageBox.Show("Перейти к файлу?", "Перейти к файлу",
+                                                                            MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                                {
+                                    Process.Start(new ProcessStartInfo("explorer.exe", " /select, " + newFullName_bin));
+                                }
+                            }
+                            else if (Program_Settings.Settings_Pack_Copy)
+                            {
+                                StringCollection paths = new StringCollection();
+                                paths.Add(newFullName_bin);
+                                Clipboard.SetFileDropList(paths);
+                            }
+                            else if (Program_Settings.Settings_Pack_GoToFile)
+                            {
+                                Process.Start(new ProcessStartInfo("explorer.exe", " /select, " + newFullName_bin));
+                            }
+                        }
+                    }
+                }
+                catch
+                {
+                    // сюда писать команды при ошибке вызова 
+                }
             }
 #endif
         }
@@ -2599,41 +2981,41 @@ namespace GTR_Watch_face
         // определяем отдельные цифры для даты и времени
         private void SetDigitForPrewiev()
         {
-            Watch_Face_Preview.Date.Month.Tens = (int)Watch_Face_Preview_Set.Date.Month / 10;
-            Watch_Face_Preview.Date.Month.Ones = Watch_Face_Preview_Set.Date.Month -
-                Watch_Face_Preview.Date.Month.Tens * 10;
-            Watch_Face_Preview.Date.Day.Tens = (int)Watch_Face_Preview_Set.Date.Day / 10;
-            Watch_Face_Preview.Date.Day.Ones = Watch_Face_Preview_Set.Date.Day -
-                Watch_Face_Preview.Date.Day.Tens * 10;
+            Watch_Face_Preview_TwoDigits.Date.Month.Tens = (int)Watch_Face_Preview_Set.Date.Month / 10;
+            Watch_Face_Preview_TwoDigits.Date.Month.Ones = Watch_Face_Preview_Set.Date.Month -
+                Watch_Face_Preview_TwoDigits.Date.Month.Tens * 10;
+            Watch_Face_Preview_TwoDigits.Date.Day.Tens = (int)Watch_Face_Preview_Set.Date.Day / 10;
+            Watch_Face_Preview_TwoDigits.Date.Day.Ones = Watch_Face_Preview_Set.Date.Day -
+                Watch_Face_Preview_TwoDigits.Date.Day.Tens * 10;
 
-            Watch_Face_Preview.Time.Hours.Tens = (int)Watch_Face_Preview_Set.Time.Hours / 10;
-            Watch_Face_Preview.Time.Hours.Ones = Watch_Face_Preview_Set.Time.Hours -
-                Watch_Face_Preview.Time.Hours.Tens * 10;
-            Watch_Face_Preview.Time.Minutes.Tens = (int)Watch_Face_Preview_Set.Time.Minutes / 10;
-            Watch_Face_Preview.Time.Minutes.Ones = Watch_Face_Preview_Set.Time.Minutes -
-                Watch_Face_Preview.Time.Minutes.Tens * 10;
-            Watch_Face_Preview.Time.Seconds.Tens = (int)Watch_Face_Preview_Set.Time.Seconds / 10;
-            Watch_Face_Preview.Time.Seconds.Ones = Watch_Face_Preview_Set.Time.Seconds -
-                Watch_Face_Preview.Time.Seconds.Tens * 10;
+            Watch_Face_Preview_TwoDigits.Time.Hours.Tens = (int)Watch_Face_Preview_Set.Time.Hours / 10;
+            Watch_Face_Preview_TwoDigits.Time.Hours.Ones = Watch_Face_Preview_Set.Time.Hours -
+                Watch_Face_Preview_TwoDigits.Time.Hours.Tens * 10;
+            Watch_Face_Preview_TwoDigits.Time.Minutes.Tens = (int)Watch_Face_Preview_Set.Time.Minutes / 10;
+            Watch_Face_Preview_TwoDigits.Time.Minutes.Ones = Watch_Face_Preview_Set.Time.Minutes -
+                Watch_Face_Preview_TwoDigits.Time.Minutes.Tens * 10;
+            Watch_Face_Preview_TwoDigits.Time.Seconds.Tens = (int)Watch_Face_Preview_Set.Time.Seconds / 10;
+            Watch_Face_Preview_TwoDigits.Time.Seconds.Ones = Watch_Face_Preview_Set.Time.Seconds -
+                Watch_Face_Preview_TwoDigits.Time.Seconds.Tens * 10;
 
             int hour = Watch_Face_Preview_Set.Time.Hours;
             if (Watch_Face_Preview_Set.Time.Hours > 12)
             {
                 hour = hour - 12;
-                Watch_Face_Preview.TimePm.Pm = true;
+                Watch_Face_Preview_TwoDigits.TimePm.Pm = true;
             }
             else
             {
-                Watch_Face_Preview.TimePm.Pm = false;
+                Watch_Face_Preview_TwoDigits.TimePm.Pm = false;
             }
-            Watch_Face_Preview.TimePm.Hours.Tens = hour / 10;
-            Watch_Face_Preview.TimePm.Hours.Ones = hour - (int)Watch_Face_Preview.TimePm.Hours.Tens * 10;
-            Watch_Face_Preview.TimePm.Minutes.Tens = (int)Watch_Face_Preview_Set.Time.Minutes / 10;
-            Watch_Face_Preview.TimePm.Minutes.Ones = (int)Watch_Face_Preview_Set.Time.Minutes -
-                (int)Watch_Face_Preview.TimePm.Minutes.Tens * 10;
-            Watch_Face_Preview.TimePm.Seconds.Tens = (int)Watch_Face_Preview_Set.Time.Seconds / 10;
-            Watch_Face_Preview.TimePm.Seconds.Ones = (int)Watch_Face_Preview_Set.Time.Seconds -
-                Watch_Face_Preview.TimePm.Seconds.Tens * 10;
+            Watch_Face_Preview_TwoDigits.TimePm.Hours.Tens = hour / 10;
+            Watch_Face_Preview_TwoDigits.TimePm.Hours.Ones = hour - (int)Watch_Face_Preview_TwoDigits.TimePm.Hours.Tens * 10;
+            Watch_Face_Preview_TwoDigits.TimePm.Minutes.Tens = (int)Watch_Face_Preview_Set.Time.Minutes / 10;
+            Watch_Face_Preview_TwoDigits.TimePm.Minutes.Ones = (int)Watch_Face_Preview_Set.Time.Minutes -
+                (int)Watch_Face_Preview_TwoDigits.TimePm.Minutes.Tens * 10;
+            Watch_Face_Preview_TwoDigits.TimePm.Seconds.Tens = (int)Watch_Face_Preview_Set.Time.Seconds / 10;
+            Watch_Face_Preview_TwoDigits.TimePm.Seconds.Ones = (int)Watch_Face_Preview_Set.Time.Seconds -
+                Watch_Face_Preview_TwoDigits.TimePm.Seconds.Tens * 10;
         }
 
         // меняем цвет текста и рамки для groupBox
@@ -5018,7 +5400,7 @@ namespace GTR_Watch_face
             string text = File.ReadAllText(fullfilename);
 
             PreviewView = false;
-            ClassPreview ps = new ClassPreview();
+            PREWIEV_STATES_Json ps = new PREWIEV_STATES_Json();
             try
             {
                 var objson = JsonConvert.DeserializeObject<object[]>(text);
@@ -5036,7 +5418,7 @@ namespace GTR_Watch_face
                 if (count > 13) count = 13;
                 for (int i = 0; i < count; i++)
                 {
-                    ps = JsonConvert.DeserializeObject<ClassPreview>(objson[i].ToString(), new JsonSerializerSettings
+                    ps = JsonConvert.DeserializeObject<PREWIEV_STATES_Json>(objson[i].ToString(), new JsonSerializerSettings
                     {
                         DefaultValueHandling = DefaultValueHandling.Ignore,
                         NullValueHandling = NullValueHandling.Ignore
@@ -5283,7 +5665,7 @@ namespace GTR_Watch_face
             int count = 0;
             for (int i = 0; i < 13; i++)
             {
-                ClassPreview ps = new ClassPreview();
+                PREWIEV_STATES_Json ps = new PREWIEV_STATES_Json();
                 ps.Time = new TimePreview();
                 switch (i)
                 {
@@ -6066,90 +6448,103 @@ namespace GTR_Watch_face
                         switch (i)
                         {
                             case 0:
-                                button_Set1.PerformClick();
+                                //button_Set1.PerformClick();
+                                SetPreferences1();
                                 save = true;
                                 break;
                             case 1:
                                 if (numericUpDown_Calories_Set2.Value != 1234)
                                 {
-                                    button_Set2.PerformClick();
+                                    //button_Set2.PerformClick();
+                                    SetPreferences2();
                                     save = true;
                                 }
                                 break;
                             case 2:
                                 if (numericUpDown_Calories_Set3.Value != 1234)
                                 {
-                                    button_Set3.PerformClick();
+                                    //button_Set3.PerformClick();
+                                    SetPreferences3();
                                     save = true;
                                 }
                                 break;
                             case 3:
                                 if (numericUpDown_Calories_Set4.Value != 1234)
                                 {
-                                    button_Set4.PerformClick();
+                                    //button_Set4.PerformClick();
+                                    SetPreferences4();
                                     save = true;
                                 }
                                 break;
                             case 4:
                                 if (numericUpDown_Calories_Set5.Value != 1234)
                                 {
-                                    button_Set5.PerformClick();
+                                    //button_Set5.PerformClick();
+                                    SetPreferences5();
                                     save = true;
                                 }
                                 break;
                             case 5:
                                 if (numericUpDown_Calories_Set6.Value != 1234)
                                 {
-                                    button_Set6.PerformClick();
+                                    //button_Set6.PerformClick();
+                                    SetPreferences6();
                                     save = true;
                                 }
                                 break;
                             case 6:
                                 if (numericUpDown_Calories_Set7.Value != 1234)
                                 {
-                                    button_Set7.PerformClick();
+                                    //button_Set7.PerformClick();
+                                    SetPreferences7();
                                     save = true;
                                 }
                                 break;
                             case 7:
                                 if (numericUpDown_Calories_Set8.Value != 1234)
                                 {
-                                    button_Set8.PerformClick();
+                                    //button_Set8.PerformClick();
+                                    SetPreferences8();
                                     save = true;
                                 }
                                 break;
                             case 8:
                                 if (numericUpDown_Calories_Set9.Value != 1234)
                                 {
-                                    button_Set9.PerformClick();
+                                    //button_Set9.PerformClick();
+                                    SetPreferences9();
                                     save = true;
                                 }
                                 break;
                             case 9:
                                 if (numericUpDown_Calories_Set10.Value != 1234)
                                 {
-                                    button_Set10.PerformClick();
+                                    //button_Set10.PerformClick();
+                                    SetPreferences10();
                                     save = true;
                                 }
                                 break;
                             case 10:
                                 if (numericUpDown_Calories_Set11.Value != 1234)
                                 {
-                                    button_Set11.PerformClick();
+                                    //button_Set11.PerformClick();
+                                    SetPreferences11();
                                     save = true;
                                 }
                                 break;
                             case 11:
                                 if (numericUpDown_Calories_Set10.Value != 1234)
                                 {
-                                    button_Set12.PerformClick();
+                                    //button_Set12.PerformClick();
+                                    SetPreferences12();
                                     save = true;
                                 }
                                 break;
                             case 12:
                                 if (numericUpDown_Calories_Set10.Value != 1234)
                                 {
-                                    button_Set12.PerformClick();
+                                    //button_Set13.PerformClick();
+                                    SetPreferences13();
                                     save = true;
                                 }
                                 break;
@@ -6168,10 +6563,11 @@ namespace GTR_Watch_face
                             comboBox_WeatherSet_Icon.SelectedIndex = rnd.Next(0, 25);
 
                             PreviewToBitmap(gPanel, 1.0f, radioButton_47.Checked, false, false, false);
-                            // Add first image and set the animation delay to 100ms
+                            // Add first image and set the animation delay to 100ms 
                             MagickImage item = new MagickImage(bitmap);
                             collection.Add(item);
-                            collection[collection.Count - 1].AnimationDelay = 100;
+                            //collection[collection.Count - 1].AnimationDelay = 100;
+                            collection[collection.Count - 1].AnimationDelay = (int)(100 * numericUpDown_Gif_Speed.Value);
 
                             numericUpDown_WeatherSet_Temp.Value = WeatherSet_Temp;
                             numericUpDown_WeatherSet_DayTemp.Value = WeatherSet_DayTemp;
@@ -6233,7 +6629,7 @@ namespace GTR_Watch_face
                     {
                         if (comboBox_Hours_Tens_Image.SelectedIndex >= 0)
                         {
-                            i = comboBox_Hours_Tens_Image.SelectedIndex + Watch_Face_Preview.TimePm.Hours.Tens;
+                            i = comboBox_Hours_Tens_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.TimePm.Hours.Tens;
                             if (i < ListImagesFullName.Count)
                             {
                                 src = new Bitmap(ListImagesFullName[i]);
@@ -6244,7 +6640,7 @@ namespace GTR_Watch_face
                         }
                         if (comboBox_Hours_Ones_Image.SelectedIndex >= 0)
                         {
-                            i = comboBox_Hours_Ones_Image.SelectedIndex + Watch_Face_Preview.TimePm.Hours.Ones;
+                            i = comboBox_Hours_Ones_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.TimePm.Hours.Ones;
                             if (i < ListImagesFullName.Count)
                             {
                                 src = new Bitmap(ListImagesFullName[i]);
@@ -6259,7 +6655,7 @@ namespace GTR_Watch_face
                     {
                         if (comboBox_Min_Tens_Image.SelectedIndex >= 0)
                         {
-                            i = comboBox_Min_Tens_Image.SelectedIndex + Watch_Face_Preview.TimePm.Minutes.Tens;
+                            i = comboBox_Min_Tens_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.TimePm.Minutes.Tens;
                             if (i < ListImagesFullName.Count)
                             {
                                 src = new Bitmap(ListImagesFullName[i]);
@@ -6270,7 +6666,7 @@ namespace GTR_Watch_face
                         }
                         if (comboBox_Min_Ones_Image.SelectedIndex >= 0)
                         {
-                            i = comboBox_Min_Ones_Image.SelectedIndex + Watch_Face_Preview.TimePm.Minutes.Ones;
+                            i = comboBox_Min_Ones_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.TimePm.Minutes.Ones;
                             if (i < ListImagesFullName.Count)
                             {
                                 src = new Bitmap(ListImagesFullName[i]);
@@ -6285,7 +6681,7 @@ namespace GTR_Watch_face
                     {
                         if (comboBox_Sec_Tens_Image.SelectedIndex >= 0)
                         {
-                            i = comboBox_Sec_Tens_Image.SelectedIndex + Watch_Face_Preview.TimePm.Seconds.Tens;
+                            i = comboBox_Sec_Tens_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.TimePm.Seconds.Tens;
                             if (i < ListImagesFullName.Count)
                             {
                                 src = new Bitmap(ListImagesFullName[i]);
@@ -6296,7 +6692,7 @@ namespace GTR_Watch_face
                         }
                         if (comboBox_Sec_Ones_Image.SelectedIndex >= 0)
                         {
-                            i = comboBox_Sec_Ones_Image.SelectedIndex + Watch_Face_Preview.TimePm.Seconds.Ones;
+                            i = comboBox_Sec_Ones_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.TimePm.Seconds.Ones;
                             if (i < ListImagesFullName.Count)
                             {
                                 src = new Bitmap(ListImagesFullName[i]);
@@ -6307,7 +6703,7 @@ namespace GTR_Watch_face
                         }
                     }
 
-                    if (Watch_Face_Preview.TimePm.Pm)
+                    if (Watch_Face_Preview_TwoDigits.TimePm.Pm)
                     {
                         if (comboBox_Image_Pm.SelectedIndex >= 0)
                         {
@@ -6348,7 +6744,7 @@ namespace GTR_Watch_face
                     {
                         if (comboBox_Hours_Tens_Image.SelectedIndex >= 0)
                         {
-                            i = comboBox_Hours_Tens_Image.SelectedIndex + Watch_Face_Preview.Time.Hours.Tens;
+                            i = comboBox_Hours_Tens_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Time.Hours.Tens;
                             if (i < ListImagesFullName.Count)
                             {
                                 src = new Bitmap(ListImagesFullName[i]);
@@ -6359,7 +6755,7 @@ namespace GTR_Watch_face
                         }
                         if (comboBox_Hours_Ones_Image.SelectedIndex >= 0)
                         {
-                            i = comboBox_Hours_Ones_Image.SelectedIndex + Watch_Face_Preview.Time.Hours.Ones;
+                            i = comboBox_Hours_Ones_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Time.Hours.Ones;
                             if (i < ListImagesFullName.Count)
                             {
                                 src = new Bitmap(ListImagesFullName[i]);
@@ -6374,7 +6770,7 @@ namespace GTR_Watch_face
                     {
                         if (comboBox_Min_Tens_Image.SelectedIndex >= 0)
                         {
-                            i = comboBox_Min_Tens_Image.SelectedIndex + Watch_Face_Preview.Time.Minutes.Tens;
+                            i = comboBox_Min_Tens_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Time.Minutes.Tens;
                             if (i < ListImagesFullName.Count)
                             {
                                 src = new Bitmap(ListImagesFullName[i]);
@@ -6385,7 +6781,7 @@ namespace GTR_Watch_face
                         }
                         if (comboBox_Min_Ones_Image.SelectedIndex >= 0)
                         {
-                            i = comboBox_Min_Ones_Image.SelectedIndex + Watch_Face_Preview.Time.Minutes.Ones;
+                            i = comboBox_Min_Ones_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Time.Minutes.Ones;
                             if (i < ListImagesFullName.Count)
                             {
                                 src = new Bitmap(ListImagesFullName[i]);
@@ -6400,7 +6796,7 @@ namespace GTR_Watch_face
                     {
                         if (comboBox_Sec_Tens_Image.SelectedIndex >= 0)
                         {
-                            i = comboBox_Sec_Tens_Image.SelectedIndex + Watch_Face_Preview.Time.Seconds.Tens;
+                            i = comboBox_Sec_Tens_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Time.Seconds.Tens;
                             if (i < ListImagesFullName.Count)
                             {
                                 src = new Bitmap(ListImagesFullName[i]);
@@ -6411,7 +6807,7 @@ namespace GTR_Watch_face
                         }
                         if (comboBox_Sec_Ones_Image.SelectedIndex >= 0)
                         {
-                            i = comboBox_Sec_Ones_Image.SelectedIndex + Watch_Face_Preview.Time.Seconds.Ones;
+                            i = comboBox_Sec_Ones_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Time.Seconds.Ones;
                             if (i < ListImagesFullName.Count)
                             {
                                 src = new Bitmap(ListImagesFullName[i]);
@@ -6449,7 +6845,7 @@ namespace GTR_Watch_face
                     var Dagit = new Bitmap(ListImagesFullName[comboBox_MonthAndDayM_Image.SelectedIndex]);
                     int DateLenght = Dagit.Width;
                     int DateHeight = Dagit.Height;
-                    if ((checkBox_TwoDigitsMonth.Checked) || (Watch_Face_Preview.Date.Month.Tens > 0))
+                    if ((checkBox_TwoDigitsMonth.Checked) || (Watch_Face_Preview_TwoDigits.Date.Month.Tens > 0))
                         DateLenght = DateLenght + Dagit.Width + (int)numericUpDown_MonthAndDayM_Spacing.Value;
                     if (DateLenght < Dagit.Width) DateLenght = Dagit.Width;
 
@@ -6494,15 +6890,15 @@ namespace GTR_Watch_face
                     if (PointX < x1) PointX = x1;
                     if (PointY < y1) PointY = y1;
 
-                    if ((checkBox_TwoDigitsMonth.Checked) || (Watch_Face_Preview.Date.Month.Tens > 0))
+                    if ((checkBox_TwoDigitsMonth.Checked) || (Watch_Face_Preview_TwoDigits.Date.Month.Tens > 0))
                     {
-                        i = comboBox_MonthAndDayM_Image.SelectedIndex + Watch_Face_Preview.Date.Month.Tens;
+                        i = comboBox_MonthAndDayM_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Date.Month.Tens;
                         src = new Bitmap(ListImagesFullName[i]);
                         gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                         PointX = PointX + Dagit.Width + (int)numericUpDown_MonthAndDayM_Spacing.Value;
                         src.Dispose();
                     }
-                    i = comboBox_MonthAndDayM_Image.SelectedIndex + Watch_Face_Preview.Date.Month.Ones;
+                    i = comboBox_MonthAndDayM_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Date.Month.Ones;
                     src = new Bitmap(ListImagesFullName[i]);
                     gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                     src.Dispose();
@@ -6532,7 +6928,7 @@ namespace GTR_Watch_face
                     var Dagit = new Bitmap(ListImagesFullName[comboBox_MonthAndDayD_Image.SelectedIndex]);
                     int DateLenght = Dagit.Width;
                     int DateHeight = Dagit.Height;
-                    if ((checkBox_TwoDigitsDay.Checked) || (Watch_Face_Preview.Date.Day.Tens > 0))
+                    if ((checkBox_TwoDigitsDay.Checked) || (Watch_Face_Preview_TwoDigits.Date.Day.Tens > 0))
                         DateLenght = DateLenght + Dagit.Width + (int)numericUpDown_MonthAndDayD_Spacing.Value;
                     if (DateLenght < Dagit.Width) DateLenght = Dagit.Width;
 
@@ -6577,15 +6973,15 @@ namespace GTR_Watch_face
                     if (PointX < x1) PointX = x1;
                     if (PointY < y1) PointY = y1;
 
-                    if ((checkBox_TwoDigitsDay.Checked) || (Watch_Face_Preview.Date.Day.Tens > 0))
+                    if ((checkBox_TwoDigitsDay.Checked) || (Watch_Face_Preview_TwoDigits.Date.Day.Tens > 0))
                     {
-                        i = comboBox_MonthAndDayD_Image.SelectedIndex + Watch_Face_Preview.Date.Day.Tens;
+                        i = comboBox_MonthAndDayD_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Date.Day.Tens;
                         src = new Bitmap(ListImagesFullName[i]);
                         gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                         PointX = PointX + Dagit.Width + (int)numericUpDown_MonthAndDayD_Spacing.Value;
                         src.Dispose();
                     }
-                    i = comboBox_MonthAndDayD_Image.SelectedIndex + Watch_Face_Preview.Date.Day.Ones;
+                    i = comboBox_MonthAndDayD_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Date.Day.Ones;
                     src = new Bitmap(ListImagesFullName[i]);
                     gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                     src.Dispose();
@@ -6631,9 +7027,9 @@ namespace GTR_Watch_face
                     int DateLenght = Dagit.Width * 4 + (int)numericUpDown_OneLine_Spacing.Value * 4 + DelimitW;
                     int DateHeight = Dagit.Height;
                     if (comboBox_OneLine_Delimiter.SelectedIndex < 0) DateLenght = DateLenght - DelimitW;
-                    if ((!checkBox_TwoDigitsMonth.Checked) && (Watch_Face_Preview.Date.Month.Tens == 0))
+                    if ((!checkBox_TwoDigitsMonth.Checked) && (Watch_Face_Preview_TwoDigits.Date.Month.Tens == 0))
                         DateLenght = DateLenght - Dagit.Width - (int)numericUpDown_OneLine_Spacing.Value;
-                    if ((!checkBox_TwoDigitsDay.Checked) && (Watch_Face_Preview.Date.Day.Tens == 0))
+                    if ((!checkBox_TwoDigitsDay.Checked) && (Watch_Face_Preview_TwoDigits.Date.Day.Tens == 0))
                         DateLenght = DateLenght - Dagit.Width - (int)numericUpDown_OneLine_Spacing.Value;
                     if (DateLenght < Dagit.Width) DateLenght = Dagit.Width;
 
@@ -6678,15 +7074,15 @@ namespace GTR_Watch_face
                     if (PointX < x1) PointX = x1;
                     if (PointY < y1) PointY = y1;
 
-                    if ((checkBox_TwoDigitsMonth.Checked) || (Watch_Face_Preview.Date.Month.Tens > 0))
+                    if ((checkBox_TwoDigitsMonth.Checked) || (Watch_Face_Preview_TwoDigits.Date.Month.Tens > 0))
                     {
-                        i = comboBox_OneLine_Image.SelectedIndex + Watch_Face_Preview.Date.Month.Tens;
+                        i = comboBox_OneLine_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Date.Month.Tens;
                         src = new Bitmap(ListImagesFullName[i]);
                         gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                         PointX = PointX + Dagit.Width + (int)numericUpDown_OneLine_Spacing.Value;
                         src.Dispose();
                     }
-                    i = comboBox_OneLine_Image.SelectedIndex + Watch_Face_Preview.Date.Month.Ones;
+                    i = comboBox_OneLine_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Date.Month.Ones;
                     src = new Bitmap(ListImagesFullName[i]);
                     gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                     PointX = PointX + Dagit.Width + (int)numericUpDown_OneLine_Spacing.Value;
@@ -6701,14 +7097,14 @@ namespace GTR_Watch_face
                         src.Dispose();
                     }
 
-                    if ((checkBox_TwoDigitsDay.Checked) || (Watch_Face_Preview.Date.Day.Tens > 0))
+                    if ((checkBox_TwoDigitsDay.Checked) || (Watch_Face_Preview_TwoDigits.Date.Day.Tens > 0))
                     {
-                        i = comboBox_OneLine_Image.SelectedIndex + Watch_Face_Preview.Date.Day.Tens;
+                        i = comboBox_OneLine_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Date.Day.Tens;
                         src = new Bitmap(ListImagesFullName[i]);
                         gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                         PointX = PointX + Dagit.Width + (int)numericUpDown_OneLine_Spacing.Value;
                     }
-                    i = comboBox_OneLine_Image.SelectedIndex + Watch_Face_Preview.Date.Day.Ones;
+                    i = comboBox_OneLine_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Date.Day.Ones;
                     src = new Bitmap(ListImagesFullName[i]);
                     gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                     src.Dispose();
@@ -7620,6 +8016,7 @@ namespace GTR_Watch_face
             }
         }
 
+        // сохраняем настройки
         private void radioButton_Settings_Unpack_Dialog_CheckedChanged(object sender, EventArgs e)
         {
             if (Settings_Load) return;
@@ -7649,7 +8046,15 @@ namespace GTR_Watch_face
             File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
             //File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
         }
-
+        private void numericUpDown_Gif_Speed_ValueChanged(object sender, EventArgs e)
+        {
+            Program_Settings.Gif_Speed = (float)numericUpDown_Gif_Speed.Value;
+            string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+            {
+                NullValueHandling = NullValueHandling.Ignore
+            });
+            File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
+        }
         private void checkBox_border_CheckedChanged(object sender, EventArgs e)
         {
             Program_Settings.ShowBorder = checkBox_border.Checked;
@@ -7660,7 +8065,6 @@ namespace GTR_Watch_face
             });
             File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
         }
-
         private void textBox_unpack_command_Leave(object sender, EventArgs e)
         {
             if (radioButton_47.Checked)
@@ -7682,10 +8086,10 @@ namespace GTR_Watch_face
             File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
         }
 
+        // картинки в выпадающем списке
         private void comboBox_Image_DrawItem(object sender, DrawItemEventArgs e)
         {
             ComboBox comboBox = sender as ComboBox;
-            int www = comboBox.SelectedIndex;
             float size = comboBox.Font.Size;
             Font myFont;
             FontFamily family = comboBox.Font.FontFamily;
@@ -7726,11 +8130,61 @@ namespace GTR_Watch_face
             e.DrawFocusRectangle();
 
         }
-
         private void comboBox_Image_MeasureItem(object sender, MeasureItemEventArgs e)
         {
             e.ItemHeight = 35;
             //e.ItemWidth = 560;
+        }
+
+        // проверка разрядности системы
+        public static bool Is64Bit()
+        {
+            if (Environment.Is64BitOperatingSystem) return true;
+            else return false;
+        }
+
+        public string GetFileSize(FileInfo file)
+        {
+            try
+            {
+                double sizeinbytes = file.Length;
+                double sizeinkbytes = Math.Round((sizeinbytes / 1024), 2);
+                double sizeinmbytes = Math.Round((sizeinkbytes / 1024), 2);
+                double sizeingbytes = Math.Round((sizeinmbytes / 1024), 2);
+                if (sizeingbytes > 1)
+                    return string.Format("{0} GB", sizeingbytes); //размер в гигабайтах
+                else if (sizeinmbytes > 1)
+                    return string.Format("{0} MB", sizeinmbytes); //возвращает размер в мегабайтах, если размер файла менее одного гигабайта
+                else if (sizeinkbytes > 1)
+                    return string.Format("{0} KB", sizeinkbytes); //возвращает размер в килобайтах, если размер файла менее одного мегабайта
+                else
+                    return string.Format("{0} B", sizeinbytes); //возвращает размер в байтах, если размер файла менее одного килобайта
+            }
+            catch { return "Ошибка получения размера файла"; } //перехват ошибок и возврат сообщения об ошибке
+        }
+
+        public double GetFileSizeMB(FileInfo file)
+        {
+            try
+            {
+                double sizeinbytes = file.Length;
+                double sizeinkbytes = Math.Round((sizeinbytes / 1024), 2);
+                double sizeinmbytes = Math.Round((sizeinkbytes / 1024), 2);
+                double sizeingbytes = Math.Round((sizeinmbytes / 1024), 2);
+                return sizeinmbytes;
+            }
+            catch { return 0; } //перехват ошибок и возврат сообщения об ошибке
+        }
+
+        private void comboBox_Language_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Program_Settings.language = comboBox_Language.Text;
+            string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+            {
+                NullValueHandling = NullValueHandling.Ignore
+            });
+            File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
+            if(!Settings_Load) MessageBox.Show("Перезапустите программу");
         }
     }
 }
@@ -7746,151 +8200,3 @@ public static class MouseСoordinates
     public static int X = -1;
     public static int Y = -1;
 }
-
-public class PROGRAM_SETTINGS
-{
-    public bool Settings_Unpack_Dialog = true;
-    public bool Settings_Unpack_Save = false;
-    public bool Settings_Unpack_Replace = false;
-    
-    public bool Settings_Pack_Dialog = false;
-    public bool Settings_Pack_GoToFile = true;
-    public bool Settings_Pack_Copy = false;
-    public bool Settings_Pack_DoNotning = false;
-
-    public bool Settings_AfterUnpack_Dialog = false;
-    public bool Settings_AfterUnpack_Download = true;
-    public bool Settings_AfterUnpack_DoNothing = false;
-
-    public bool Settings_Open_Dialog = false;
-    public bool Settings_Open_Download = true;
-    public bool Settings_Open_DoNotning = false;
-
-    public bool Model_47 = true;
-    public bool Model_42 = false;
-
-    public bool ShowBorder = false;
-    public float Scale = 1f;
-
-    public string pack_unpack_dir { get; set; }
-    public string unpack_command_47 = "--gtr 47 --file";
-    public string pack_command_47 = "--gtr 47 --file";
-    public string unpack_command_42 = "--gtr 42 --file";
-    public string pack_command_42 = "--gtr 42 --file";
-}
-
-
-
-
-#region WATCH_FACE_PREWIEV
-/// <summary>отдельные цифры для даты и времени</summary>
-public class WATCH_FACE_PREWIEV
-    {
-        public DateP Date { get; set; }
-        public TimeP Time { get; set; }
-        public TimePmP TimePm { get; set; }
-    }
-
-    public class DateP
-    {
-        public TwoDigitsP Month { get; set; }
-        public TwoDigitsP Day { get; set; }
-    }
-
-    public class TimeP
-    {
-        public TwoDigitsP Hours { get; set; }
-        public TwoDigitsP Minutes { get; set; }
-        public TwoDigitsP Seconds { get; set; }
-    }
-
-    public class TimePmP
-    {
-        public TwoDigitsP Hours { get; set; }
-        public TwoDigitsP Minutes { get; set; }
-        public TwoDigitsP Seconds { get; set; }
-        public bool Pm { get; set; }
-    }
-
-    public class TwoDigitsP
-    {
-        public int Tens { get; set; }
-        public int Ones { get; set; }
-    }
-#endregion
-
-#region WATCH_FACE_PREWIEV_SET
-    /// <summary>набор настроек для предпросмотра</summary>
-    public class WATCH_FACE_PREWIEV_SET
-    {
-        public DateS Date { get; set; }
-        public TimeS Time { get; set; }
-        public ActivityS Activity { get; set; }
-        public StatusS Status { get; set; }
-        public int Battery { get; set; }
-    }
-
-    public class DateS
-    {
-        public int Day { get; set; }
-        public int Month { get; set; }
-        public int WeekDay { get; set; }
-    }
-
-    public class TimeS
-    {
-        public int Hours { get; set; }
-        public int Minutes { get; set; }
-        public int Seconds { get; set; }
-    }
-
-    public class ActivityS
-    {
-        public int Calories { get; set; }
-        public int Pulse { get; set; }
-        public int Distance { get; set; }
-        public int Steps { get; set; }
-        public int StepsGoal { get; set; }
-    }
-
-    public class StatusS
-    {
-        public bool Bluetooth { get; set; }
-        public bool Alarm { get; set; }
-        public bool Lock { get; set; }
-        public bool DoNotDisturb { get; set; }
-    }
-#endregion
-
-#region PreviewStates
-    public class PREWIEV_STATES
-    {
-        public ClassPreview[] Property1 { get; set; }
-    }
-
-    public class ClassPreview
-    {
-        public TimePreview Time { get; set; }
-        public int Steps { get; set; }
-        public int Goal { get; set; }
-        public int Pulse { get; set; }
-        public int BatteryLevel { get; set; }
-        public int Distance { get; set; }
-        public int Calories { get; set; }
-        public bool Bluetooth { get; set; }
-        public bool Unlocked { get; set; }
-        public bool Alarm { get; set; }
-        public bool DoNotDisturb { get; set; }
-    }
-
-    public class TimePreview
-    {
-        public int Year { get; set; }
-        public int Month { get; set; }
-        public int Day { get; set; }
-        public int Hour { get; set; }
-        public int Minute { get; set; }
-        public int Second { get; set; }
-    }
-#endregion
-
