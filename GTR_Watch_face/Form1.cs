@@ -38,6 +38,7 @@ namespace GTR_Watch_face
 
         public Form1(string[] args)
         {
+            if (File.Exists(Application.StartupPath + "\\log.txt")) File.Delete(Application.StartupPath + "\\log.txt");
             Program_Settings = new PROGRAM_SETTINGS();
             try
             {
@@ -47,26 +48,32 @@ namespace GTR_Watch_face
                         //DefaultValueHandling = DefaultValueHandling.Ignore,
                         NullValueHandling = NullValueHandling.Ignore
                     });
+                Logger.WriteLine("Чтение Settings.json");
+
+
+                if ((Program_Settings.language == null) || (Program_Settings.language.Length < 2))
+                {
+                    string language = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+                    //int language = System.Globalization.CultureInfo.CurrentCulture.LCID;
+                    if (language == "en")
+                    {
+                        Program_Settings.language = "English";
+                    }
+                }
+                Logger.WriteLine("Определили язык");
+                if (Program_Settings.language == "English")
+                {
+                    Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en");
+                    Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
+                }
+                Logger.WriteLine("Применили язык");
             }
             catch (Exception)
             {
 
             }
 
-            if ((Program_Settings.language == null) || (Program_Settings.language.Length < 2))
-            {
-                string language = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
-                //int language = System.Globalization.CultureInfo.CurrentCulture.LCID;
-                if (language == "en")
-                {
-                    Program_Settings.language = "English";
-                }
-            }
-            if (Program_Settings.language == "English")
-            {
-                Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en");
-                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
-            }
+            
             InitializeComponent();
 
             Watch_Face_Preview_Set = new WATCH_FACE_PREWIEV_SET();
@@ -93,17 +100,19 @@ namespace GTR_Watch_face
 
             PreviewView = true;
             Settings_Load = false;
+            Logger.WriteLine("Создали переменные");
 
 
-            if (args.Length == 1)
-            {
-                string fileName = args[0].ToString();
-                if ((File.Exists(fileName)) && (Path.GetExtension(fileName)==".json"))
-                {
-                    //LoadJsonAndImage(fileName);
-                    StartFileName = fileName;
-                }
-            }
+            //if (args.Length == 1)
+            //{
+            //    string fileName = args[0].ToString();
+            //    if ((File.Exists(fileName)) && (Path.GetExtension(fileName)==".json"))
+            //    {
+            //        //LoadJsonAndImage(fileName);
+            //        //StartFileName = fileName;
+            //        Logger.WriteLine("Программа запущена с аргументом: " + fileName);
+            //    }
+            //}
 
         }
 
@@ -248,7 +257,9 @@ namespace GTR_Watch_face
 
         private void Form1_Shown(object sender, EventArgs e)
         {
-            if ((StartFileName != null) && (StartFileName.Length > 0)) LoadJsonAndImage(StartFileName);
+            Logger.WriteLine("Загружаем файл из значения аргумента " + StartFileName);
+            //if ((StartFileName != null) && (StartFileName.Length > 0)) LoadJsonAndImage(StartFileName);
+            Logger.WriteLine("Загрузили файл из значения аргумента " + StartFileName);
         }
 
         private void Form1_HelpButtonClicked(object sender, CancelEventArgs e)
@@ -270,10 +281,11 @@ namespace GTR_Watch_face
 #if !DEBUG
             if (!File.Exists(respackerPath))
             {
-                MessageBox.Show("Отсутствуют необходимые компоненты программы.\r\n" +
-                    "Не найдена утилита сжатия bin файлов по пути [" + respackerPath + "].\r\n\r\n" +
-                    "Проверьте наличие утилиты сжатия bin файлов.",
-                    "Файл не найден", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(Properties.FormStrings.Message_error_respackerPath_Text1 + Environment.NewLine +
+                    Properties.FormStrings.Message_error_respackerPath_Text2 + respackerPath + "].\r\n\r\n" +
+                    Properties.FormStrings.Message_error_respackerPath_Text3,
+                    Properties.FormStrings.Message_error_pack_unpack_dir_Caption, 
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 #endif
@@ -335,14 +347,6 @@ namespace GTR_Watch_face
                 {
                     ProcessStartInfo startInfo = new ProcessStartInfo();
                     startInfo.FileName = respackerPath;
-                    startInfo.Arguments = fullfilename;
-                    using (Process exeProcess = Process.Start(startInfo))
-                    {
-                        exeProcess.WaitForExit();//ждем 
-                    };
-                    // этот блок закончится только после окончания работы программы 
-                    //сюда писать команды после успешного завершения программы
-                    startInfo.FileName = respackerPath;
                     startInfo.Arguments = fullPath;
                     using (Process exeProcess = Process.Start(startInfo))
                     {
@@ -350,6 +354,7 @@ namespace GTR_Watch_face
                     };
                     // этот блок закончится только после окончания работы программы 
                     //сюда писать команды после успешного завершения программы
+                    
                     string fileNameOnly = Path.GetFileNameWithoutExtension(fullPath);
                     //string extension = Path.GetExtension(fullPath);
                     string path = Path.GetDirectoryName(fullPath);
@@ -369,10 +374,11 @@ namespace GTR_Watch_face
 #if !DEBUG
                             if (!File.Exists(textBox_pack_unpack_dir.Text))
                             {
-                                MessageBox.Show("Путь [" + textBox_pack_unpack_dir.Text +
-                                    "] к утилите распаковки/запаковки указан неверно.\r\n\r\n" +
-                                    "Укажите верный путь к утилите распаковки/запаковки.",
-                                    "Файл не найден", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show(Properties.FormStrings.Message_error_pack_unpack_dir_Text1 +
+                                    textBox_pack_unpack_dir.Text + Properties.FormStrings.Message_error_pack_unpack_dir_Text2 +
+                                    Environment.NewLine + Environment.NewLine + Properties.FormStrings.Message_error_pack_unpack_dir_Text3,
+                                    Properties.FormStrings.Message_error_pack_unpack_dir_Caption,
+                                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                 return;
                             }
 #endif
@@ -396,8 +402,8 @@ namespace GTR_Watch_face
                                 if (File.Exists(newFullName))
                                 {
                                     this.BringToFront();
-                                    if (MessageBox.Show("Открыть распакованный проект?", "Открытие проекта",
-                                                                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                                    if (MessageBox.Show(Properties.FormStrings.Message_openProject_Text, Properties.FormStrings.
+                                        Message_openProject_Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                                     {
                                         LoadJsonAndImage(newFullName);
                                         //newFullName = Path.Combine(path, "PreviewStates.json");
@@ -440,10 +446,11 @@ namespace GTR_Watch_face
 #if !DEBUG
             if (!File.Exists(textBox_pack_unpack_dir.Text))
             {
-                MessageBox.Show("Путь [" + textBox_pack_unpack_dir.Text +
-                    "] к утилите распаковки/запаковки указан неверно.\r\n\r\n" +
-                    "Укажите верный путь к утилите распаковки/запаковки.",
-                    "Файл не найден", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(Properties.FormStrings.Message_error_pack_unpack_dir_Text1 +
+                    textBox_pack_unpack_dir.Text + Properties.FormStrings.Message_error_pack_unpack_dir_Text2 +
+                    Environment.NewLine + Environment.NewLine + Properties.FormStrings.Message_error_pack_unpack_dir_Text3,
+                    Properties.FormStrings.Message_error_pack_unpack_dir_Caption,
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 #endif
@@ -544,8 +551,9 @@ namespace GTR_Watch_face
                         if (File.Exists(newFullName))
                         {
                             this.BringToFront();
-                            if (MessageBox.Show("Открыть распакованный проект?", "Открытие проекта",
-                                                        MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            if (MessageBox.Show(Properties.FormStrings.Message_openProject_Text,
+                                Properties.FormStrings.Message_openProject_Caption, 
+                                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                             {
                                 LoadJsonAndImage(newFullName);
                                 //newFullName = Path.Combine(path, "PreviewStates.json");
@@ -621,10 +629,11 @@ namespace GTR_Watch_face
 #if !DEBUG
             if (!File.Exists(textBox_pack_unpack_dir.Text))
             {
-                MessageBox.Show("Путь [" + textBox_pack_unpack_dir.Text +
-                    "] к утилите распаковки/запаковки указан неверно.\r\n\r\n" +
-                    "Укажите верный путь к утилите распаковки/запаковки.",
-                    "Файл не найден", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(Properties.FormStrings.Message_error_pack_unpack_dir_Text1 +
+                    textBox_pack_unpack_dir.Text + Properties.FormStrings.Message_error_pack_unpack_dir_Text2 +
+                    Environment.NewLine + Environment.NewLine + Properties.FormStrings.Message_error_pack_unpack_dir_Text3,
+                    Properties.FormStrings.Message_error_pack_unpack_dir_Caption,
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -651,11 +660,17 @@ namespace GTR_Watch_face
                     if (File.Exists(newFullName))
                     {
                         this.BringToFront();
+                        double fileSize = (GetFileSizeMB(new FileInfo(newFullName)));
+                        if (fileSize > 1.95) MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1 + Environment.NewLine + Environment.NewLine +
+                            Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                         //if (radioButton_Settings_Pack_Dialog.Checked)
                         if (Program_Settings.Settings_Pack_Dialog)
                         {
-                            if (MessageBox.Show("Перейти к файлу?", "Перейти к файлу",
-                                                                        MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            if (MessageBox.Show(Properties.FormStrings.Message_GoToFile_Text,
+                                Properties.FormStrings.Message_GoToFile_Caption,
+                                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                             {
                                 Process.Start(new ProcessStartInfo("explorer.exe", " /select, " + newFullName));
                                 //StringCollection paths = new StringCollection();
@@ -713,10 +728,11 @@ namespace GTR_Watch_face
 #if !DEBUG
             if (!File.Exists(respackerPath))
             {
-                MessageBox.Show("Отсутствуют необходимые компоненты программы.\r\n" + 
-                    "Не найдена утилита сжатия bin файлов по пути [" + respackerPath + "].\r\n\r\n" +
-                    "Проверьте наличие утилиты сжатия bin файлов.",
-                    "Файл не найден", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(Properties.FormStrings.Message_error_respackerPath_Text1 + Environment.NewLine +
+                    Properties.FormStrings.Message_error_respackerPath_Text2 + respackerPath + "].\r\n\r\n" +
+                    Properties.FormStrings.Message_error_respackerPath_Text3,
+                    Properties.FormStrings.Message_error_pack_unpack_dir_Caption,
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 #endif
@@ -749,8 +765,9 @@ namespace GTR_Watch_face
                         //MessageBox.Show(GetFileSize(new FileInfo(newFullName_bin)));
                         if (Program_Settings.Settings_Pack_Dialog)
                         {
-                            if (MessageBox.Show("Перейти к файлу?", "Перейти к файлу",
-                                                                        MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            if (MessageBox.Show(Properties.FormStrings.Message_GoToFile_Text,
+                                Properties.FormStrings.Message_GoToFile_Caption,
+                                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                             {
                                 Process.Start(new ProcessStartInfo("explorer.exe", " /select, " + newFullName_bin));
                             }
@@ -792,10 +809,11 @@ namespace GTR_Watch_face
 #if !DEBUG
             if (!File.Exists(textBox_pack_unpack_dir.Text))
             {
-                MessageBox.Show("Путь [" + textBox_pack_unpack_dir.Text +
-                    "] к утилите распаковки/запаковки указан неверно.\r\n\r\n" +
-                    "Укажите верный путь к утилите распаковки/запаковки.",
-                    "Файл не найден", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(Properties.FormStrings.Message_error_pack_unpack_dir_Text1 +
+                    textBox_pack_unpack_dir.Text + Properties.FormStrings.Message_error_pack_unpack_dir_Text2 +
+                    Environment.NewLine + Environment.NewLine + Properties.FormStrings.Message_error_pack_unpack_dir_Text3,
+                    Properties.FormStrings.Message_error_pack_unpack_dir_Caption,
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -822,8 +840,9 @@ namespace GTR_Watch_face
                     if (File.Exists(newFullName))
                     {
                         double fileSize = (GetFileSizeMB(new FileInfo(newFullName)));
-                        if (fileSize > 1.95) MessageBox.Show("Размер несжатого файла превышает 1,95МБ.\r\n\r\n" + "Циферблат может не работать.", 
-                            "Большой размер файла", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (fileSize > 1.95) MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1 + Environment.NewLine + Environment.NewLine +
+                            Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
                         //MessageBox.Show(fileSize.ToString());
                         //MessageBox.Show(GetFileSize(new FileInfo(newFullName)));
                         string respackerPath = Application.StartupPath + @"\Res_PackerUnpacker\";
@@ -832,10 +851,11 @@ namespace GTR_Watch_face
 
                         if (!File.Exists(respackerPath))
                         {
-                            MessageBox.Show("Отсутствуют необходимые компоненты программы.\r\n" +
-                                "Не найдена утилита сжатия bin файлов по пути [" + respackerPath + "].\r\n\r\n" +
-                                "Проверьте наличие утилиты сжатия bin файлов.",
-                                "Файл не найден", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show(Properties.FormStrings.Message_error_respackerPath_Text1 + Environment.NewLine +
+                                Properties.FormStrings.Message_error_respackerPath_Text2 + respackerPath + "].\r\n\r\n" +
+                                Properties.FormStrings.Message_error_respackerPath_Text3,
+                                Properties.FormStrings.Message_error_pack_unpack_dir_Caption,
+                                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             return;
                         }
 
@@ -862,8 +882,9 @@ namespace GTR_Watch_face
                             //if (radioButton_Settings_Pack_Dialog.Checked)
                             if (Program_Settings.Settings_Pack_Dialog)
                             {
-                                if (MessageBox.Show("Перейти к файлу?", "Перейти к файлу",
-                                                                            MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                                if (MessageBox.Show(Properties.FormStrings.Message_GoToFile_Text,
+                                Properties.FormStrings.Message_GoToFile_Caption,
+                                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                                 {
                                     Process.Start(new ProcessStartInfo("explorer.exe", " /select, " + newFullName_bin));
                                 }
@@ -945,8 +966,8 @@ namespace GTR_Watch_face
                     catch
                     {
                         // Could not load the image - probably related to Windows file system permissions.
-                        MessageBox.Show("Невозможно открыть изображение: " + file.Substring(file.LastIndexOf('\\'))
-                            + ". У Вас нет прав на чтение файла, или изображение повреждено.");
+                        MessageBox.Show(Properties.FormStrings.Message_error_Image_Text1 + file.Substring(file.LastIndexOf('\\')+1)
+                            + Properties.FormStrings.Message_error_Image_Text2);
                     }
                 }
                 //loadedImage.Dispose();
@@ -988,6 +1009,7 @@ namespace GTR_Watch_face
             ListImages.Clear();
             ListImagesFullName.Clear();
             dataGridView1.Rows.Clear();
+            Logger.WriteLine("Прочитали текст из json файла " + fullfilename);
 
             DirectoryInfo Folder;
             FileInfo[] Images;
@@ -1032,16 +1054,18 @@ namespace GTR_Watch_face
                 catch
                 {
                     // Could not load the image - probably related to Windows file system permissions.
-                    MessageBox.Show("Невозможно открыть изображение: " + file.FullName.Substring(file.FullName.LastIndexOf('\\'))
-                        + ". У Вас нет прав на чтение файла, или изображение повреждено.");
+                    MessageBox.Show(Properties.FormStrings.Message_error_Image_Text1 + 
+                        file.FullName.Substring(file.FullName.LastIndexOf('\\')+1) + Properties.FormStrings.Message_error_Image_Text2);
                 }
             }
+            Logger.WriteLine("Загрузили все файлы изображений");
 
             //loadedImage.Dispose();
             int LastImage = Int32.Parse(ListImages.Last()) + 1;
 #if !DEBUG
-            if (count != LastImage) MessageBox.Show("PNG файлы идут не по порядку или часть файлов отсутствует.\r\n" +
-                 "Присвойте имена PNG файлам в порядке возрастания.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            if (count != LastImage) MessageBox.Show(Properties.FormStrings.Message_PNGmissing_Text1 + Environment.NewLine +
+                 Properties.FormStrings.Message_PNGmissing_Text2, Properties.FormStrings.Message_Error_Caption, 
+                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
 #endif
 
             try
@@ -1055,8 +1079,10 @@ namespace GTR_Watch_face
             catch (Exception)
             {
 
-                MessageBox.Show("Неверный JSON файл.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(Properties.FormStrings.Message_JsonError_Text, Properties.FormStrings.Message_Error_Caption, 
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            Logger.WriteLine("Распознали json формат");
 
             richTextBox_JSON.Text = JsonConvert.SerializeObject(Watch_Face, Formatting.Indented, new JsonSerializerSettings
             {
@@ -1068,6 +1094,7 @@ namespace GTR_Watch_face
 
             PreviewView = false;
             JSON_read();
+            Logger.WriteLine("Установили значения в соответствии с json файлом");
 
             string path = Path.GetDirectoryName(fullfilename);
             string newFullName = Path.Combine(path, "PreviewStates.json");
@@ -1079,8 +1106,9 @@ namespace GTR_Watch_face
                 }
                 else if (Program_Settings.Settings_Open_Dialog)
                 {
-                    if (MessageBox.Show("Загрузить имеющийся файл настроек предпросмотра PreviewStates.json?", 
-                        "Загрузка настроек предпросмотра", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show(Properties.FormStrings.Message_LoadPreviewStates_Text,
+                        Properties.FormStrings.Message_openProject_Caption, 
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         JsonPreview_Read(newFullName);
                     }
@@ -1089,8 +1117,8 @@ namespace GTR_Watch_face
             PreviewView = true;
             PreviewImage();
         }
-
-        // заполняем поля с настройками из JSON файла
+        
+        /// <summary>заполняем поля с настройками из JSON файла</summary>
         private void JSON_read()
         {
             SettingsClear();
@@ -5643,8 +5671,8 @@ namespace GTR_Watch_face
             }
             catch (Exception)
             {
-
-                MessageBox.Show("Ошибка чтения JSON файла.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(Properties.FormStrings.Message_JsonReadError_Text, Properties.FormStrings.Message_Error_Caption, 
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             //richTextBox_JSON.Text = JsonConvert.SerializeObject(objson, Formatting.Indented, new JsonSerializerSettings
@@ -6010,8 +6038,7 @@ namespace GTR_Watch_face
 
             if (formatted.Length < 10)
             {
-                MessageBox.Show("Для сохранения предустановленных параметром установите хотябы в одном поле" +
-                    " 'Калории' значение отличное от '1234'.");
+                MessageBox.Show(Properties.FormStrings.Message_SaveOnly1234_Text);
                 return;
             }
             //text = text.Replace(@"\", "");
@@ -6310,7 +6337,8 @@ namespace GTR_Watch_face
             catch (Exception)
             {
 
-                MessageBox.Show("Неверный JSON файл.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(Properties.FormStrings.Message_JsonError_Text, Properties.FormStrings.Message_Error_Caption, 
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             richTextBox_JSON.Text = JsonConvert.SerializeObject(Watch_Face, Formatting.Indented, new JsonSerializerSettings
@@ -6342,6 +6370,53 @@ namespace GTR_Watch_face
 
                 FileName = Path.GetFileName(fullfilename);
                 FullFileDir = Path.GetDirectoryName(fullfilename);
+                if (checkBox_JsonWarnings.Checked) jsonWarnings();
+            }
+        }
+
+        private void jsonWarnings()
+        {
+            if (Watch_Face.AnalogDialFace != null)
+            {
+                int i = 0;
+                if ((Watch_Face.AnalogDialFace.Hours != null) && (Watch_Face.AnalogDialFace.Hours.Image != null)) i++;
+                if ((Watch_Face.AnalogDialFace.Minutes != null) && (Watch_Face.AnalogDialFace.Minutes.Image != null)) i++;
+                if ((Watch_Face.AnalogDialFace.Seconds != null) && (Watch_Face.AnalogDialFace.Seconds.Image != null)) i++;
+                if (i < 3) MessageBox.Show(Properties.FormStrings.Message_Warning3clockHand_Text, 
+                    Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            if (Watch_Face.Time != null)
+            {
+                bool err = false;
+                if ((Watch_Face.Time.Hours != null) && (Watch_Face.Time.Hours.Tens != null) && (Watch_Face.Time.Hours.Ones != null))
+                {
+                    if (Watch_Face.Time.Hours.Tens.ImageIndex != Watch_Face.Time.Hours.Ones.ImageIndex) err = true;
+                }
+                if ((Watch_Face.Time.Minutes != null) && (Watch_Face.Time.Minutes.Tens != null) && (Watch_Face.Time.Minutes.Ones != null))
+                {
+                    if (Watch_Face.Time.Minutes.Tens.ImageIndex != Watch_Face.Time.Minutes.Ones.ImageIndex) err = true;
+                }
+                if ((Watch_Face.Time.Seconds != null) && (Watch_Face.Time.Seconds.Tens != null) && (Watch_Face.Time.Seconds.Ones != null))
+                {
+                    if (Watch_Face.Time.Seconds.Tens.ImageIndex != Watch_Face.Time.Seconds.Ones.ImageIndex) err = true;
+                }
+                if (err) MessageBox.Show(Properties.FormStrings.Message_WarningTensOnes_Text,
+                    Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            if (Watch_Face.Time != null)
+            {
+                if ((Watch_Face.Time.Minutes != null) && (Watch_Face.Time.Hours == null))
+                {
+                    MessageBox.Show(Properties.FormStrings.Message_WarningOnlyMin_Text,
+                    Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                if ((Watch_Face.Time.Seconds != null) && ((Watch_Face.Time.Minutes == null) || (Watch_Face.Time.Hours == null)))
+                {
+                    MessageBox.Show(Properties.FormStrings.Message_WarningOnlySec_Text,
+                    Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
 
@@ -8085,6 +8160,24 @@ namespace GTR_Watch_face
             });
             File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
         }
+        private void comboBox_Language_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Program_Settings.language = comboBox_Language.Text;
+            string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+            {
+                NullValueHandling = NullValueHandling.Ignore
+            });
+            File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
+            if (!Settings_Load)
+            {
+                if (MessageBox.Show(Properties.FormStrings.Message_Restart_Text1 + Environment.NewLine +
+                                Properties.FormStrings.Message_Restart_Text2, Properties.FormStrings.Message_Restart_Caption, 
+                                MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    Application.Restart();
+                }
+            }
+        }
 
         // картинки в выпадающем списке
         private void comboBox_Image_DrawItem(object sender, DrawItemEventArgs e)
@@ -8176,16 +8269,8 @@ namespace GTR_Watch_face
             catch { return 0; } //перехват ошибок и возврат сообщения об ошибке
         }
 
-        private void comboBox_Language_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Program_Settings.language = comboBox_Language.Text;
-            string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
-            {
-                NullValueHandling = NullValueHandling.Ignore
-            });
-            File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
-            if(!Settings_Load) MessageBox.Show("Перезапустите программу");
-        }
+        
+
     }
 }
 
@@ -8199,4 +8284,30 @@ public static class MouseСoordinates
     //public static int Y { get; set; }
     public static int X = -1;
     public static int Y = -1;
+}
+
+
+static class Logger
+{
+    //----------------------------------------------------------
+    // Статический метод записи строки в файл лога без переноса
+    //----------------------------------------------------------
+    public static void Write(string text)
+    {
+        using (StreamWriter sw = new StreamWriter(Application.StartupPath + "\\log.txt", true))
+        {
+            sw.Write(text);
+        }
+    }
+
+    //---------------------------------------------------------
+    // Статический метод записи строки в файл лога с переносом
+    //---------------------------------------------------------
+    public static void WriteLine(string message)
+    {
+        using (StreamWriter sw = new StreamWriter(Application.StartupPath + "\\log.txt", true))
+        {
+            sw.WriteLine(String.Format("{0,-23} {1}", DateTime.Now.ToString() + ":", message));
+        }
+    }
 }

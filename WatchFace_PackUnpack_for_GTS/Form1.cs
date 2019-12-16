@@ -99,15 +99,6 @@ namespace WatchFace_PackUnpack_for_GTS
                     }
                     else File.Copy(fullfilename, fullPath);
 
-                    //Process _process = new Process();
-                    //ProcessStartInfo startInfo = new ProcessStartInfo();
-                    //startInfo.FileName = _pack_unpack_dir;
-                    //string _pack_unpack_command = "--gtr 47 --file";
-                    ////if (radioButton_42.Checked) _pack_unpack_command = "--gtr 42 --file";
-                    //startInfo.Arguments = _pack_unpack_command + " " + fullPath;
-                    //_process.StartInfo = startInfo;
-                    //_process.Start();
-
                     try
                     {
                         ProcessStartInfo startInfo = new ProcessStartInfo();
@@ -124,12 +115,14 @@ namespace WatchFace_PackUnpack_for_GTS
                         string path = Path.GetDirectoryName(fullPath);
                         //path = Path.Combine(path, fileNameOnly);
                         string newFullName_unp = Path.Combine(path, fileNameOnly + ".bin.unp");
-                        string newFullName_bin = Path.Combine(path, fileNameOnly + ".unp.bin");
+                        //string newFullName_bin = Path.Combine(path, fileNameOnly + ".unp.bin");
+                        string newFullName_bin = Path.Combine(path, fileNameOnly + ".bin");
 
                         //MessageBox.Show(newFullName);
                         if (File.Exists(newFullName_unp))
                         {
                             File.Copy(newFullName_unp, newFullName_bin, true);
+                            File.Delete(newFullName_unp);
                             //this.BringToFront();
                             //Process.Start(new ProcessStartInfo("explorer.exe", " /select, " + newFullName_bin));
                             if (File.Exists(newFullName_bin))
@@ -214,6 +207,7 @@ namespace WatchFace_PackUnpack_for_GTS
                         if (File.Exists(newFullName_unp))
                         {
                             File.Copy(newFullName_unp, newFullName_bin, true);
+                            File.Delete(newFullName_unp);
                             //this.BringToFront();
                             //Process.Start(new ProcessStartInfo("explorer.exe", " /select, " + newFullName_bin));
                             if (File.Exists(newFullName_bin))
@@ -245,16 +239,6 @@ namespace WatchFace_PackUnpack_for_GTS
                     {
                         // сюда писать команды при ошибке вызова 
                     }
-
-
-                    //string _pack_unpack_command = "--gtr 47 --file";
-                    ////if (radioButton_42.Checked) _pack_unpack_command = "--gtr 42 --file";
-                    //Process _process = new Process();
-                    //ProcessStartInfo startInfo = new ProcessStartInfo();
-                    //startInfo.FileName = _pack_unpack_dir;
-                    //startInfo.Arguments = _pack_unpack_command + " " + fullfilename;
-                    //_process.StartInfo = startInfo;
-                    //_process.Start();
                 }
             }
         }
@@ -314,7 +298,7 @@ namespace WatchFace_PackUnpack_for_GTS
                     if (File.Exists(newFullName))
                     {
                         double fileSize = (GetFileSizeMB(new FileInfo(newFullName)));
-                        if (fileSize > 1.95) MessageBox.Show("Размер несжатого файла превышает 1,95МБ.\r\n\r\n" + "Циферблат может не работать.",
+                        if (fileSize > 1.5) MessageBox.Show("Размер несжатого файла превышает 1,5МБ.\r\n\r\n" + "Циферблат может не работать.",
                             "Большой размер файла", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         _pack_unpack_dir = Application.StartupPath + @"\Res_Packer_Unpacker\x86_64\respacker.exe";
@@ -334,10 +318,11 @@ namespace WatchFace_PackUnpack_for_GTS
                         path = Path.GetDirectoryName(newFullName);
                         //path = Path.Combine(path, fileNameOnly);
                         string newFullName_cmp = Path.Combine(path, fileNameOnly + ".bin.cmp");
-                        string newFullName_bin = Path.Combine(path, fileNameOnly + ".cmp.bin");
+                        string newFullName_bin = Path.Combine(path, fileNameOnly + ".zip.bin");
                         if (File.Exists(newFullName_cmp))
                         {
-                            File.Copy(newFullName_cmp, newFullName_bin);
+                            File.Copy(newFullName_cmp, newFullName_bin, true);
+                            File.Delete(newFullName_cmp);
                             Process.Start(new ProcessStartInfo("explorer.exe", " /select, " + newFullName_bin));
                         }
                             
