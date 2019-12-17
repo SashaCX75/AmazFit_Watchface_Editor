@@ -38,39 +38,44 @@ namespace GTR_Watch_face
 
         public Form1(string[] args)
         {
-            if (File.Exists(Application.StartupPath + "\\log.txt")) File.Delete(Application.StartupPath + "\\log.txt");
+            //Logger.WriteLine("Form1");
+            if (File.Exists(Application.StartupPath + "\\log.txt")) File.Delete(Application.StartupPath + @"\log.txt");
             Program_Settings = new PROGRAM_SETTINGS();
             try
             {
-                Program_Settings = JsonConvert.DeserializeObject<PROGRAM_SETTINGS>
-                    (File.ReadAllText("Settings.json"), new JsonSerializerSettings
-                    {
+                if (File.Exists(Application.StartupPath + @"\Settings.json"))
+                {
+                    Program_Settings = JsonConvert.DeserializeObject<PROGRAM_SETTINGS>
+                                (File.ReadAllText(Application.StartupPath + @"\Settings.json"), new JsonSerializerSettings
+                                {
                         //DefaultValueHandling = DefaultValueHandling.Ignore,
                         NullValueHandling = NullValueHandling.Ignore
-                    });
-                Logger.WriteLine("Чтение Settings.json");
+                                });
+                    //Logger.WriteLine("Чтение Settings.json");
+                }
 
 
                 if ((Program_Settings.language == null) || (Program_Settings.language.Length < 2))
                 {
                     string language = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
                     //int language = System.Globalization.CultureInfo.CurrentCulture.LCID;
+                    Program_Settings.language = "Русский";
                     if (language == "en")
                     {
                         Program_Settings.language = "English";
                     }
                 }
-                Logger.WriteLine("Определили язык");
+                //Logger.WriteLine("Определили язык");
                 if (Program_Settings.language == "English")
                 {
                     Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en");
                     Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
                 }
-                Logger.WriteLine("Применили язык");
+                //Logger.WriteLine("Применили язык");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                //Logger.WriteLine("Ошибка чтения настроек " + ex);
             }
 
             
@@ -100,23 +105,22 @@ namespace GTR_Watch_face
 
             PreviewView = true;
             Settings_Load = false;
-            Logger.WriteLine("Создали переменные");
+            //Logger.WriteLine("Создали переменные");
 
-
-            //if (args.Length == 1)
-            //{
-            //    string fileName = args[0].ToString();
-            //    if ((File.Exists(fileName)) && (Path.GetExtension(fileName)==".json"))
-            //    {
-            //        //LoadJsonAndImage(fileName);
-            //        //StartFileName = fileName;
-            //        Logger.WriteLine("Программа запущена с аргументом: " + fileName);
-            //    }
-            //}
+            if (args.Length == 1)
+            {
+                string fileName = args[0].ToString();
+                if ((File.Exists(fileName)) && (Path.GetExtension(fileName) == ".json"))
+                {
+                    //LoadJsonAndImage(fileName);
+                    StartFileName = fileName;
+                    //Logger.WriteLine("Программа запущена с аргументом: " + fileName);
+                }
+            }
 
         }
 
-        private void button_pack_unpack_Click(object sender, EventArgs e)
+            private void button_pack_unpack_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = textBox_pack_unpack_dir.Text;
@@ -163,6 +167,7 @@ namespace GTR_Watch_face
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //Logger.WriteLine("Form1_Load");
             helpProvider1.HelpNamespace = Application.StartupPath + @"\readme.chm";
 #if Puthon
             string subPath = Application.StartupPath + @"\py_amazfit_tools-dev_gtr\main.py";
@@ -257,9 +262,10 @@ namespace GTR_Watch_face
 
         private void Form1_Shown(object sender, EventArgs e)
         {
-            Logger.WriteLine("Загружаем файл из значения аргумента " + StartFileName);
-            //if ((StartFileName != null) && (StartFileName.Length > 0)) LoadJsonAndImage(StartFileName);
-            Logger.WriteLine("Загрузили файл из значения аргумента " + StartFileName);
+            //Logger.WriteLine("Form1_Shown");
+            //Logger.WriteLine("Загружаем файл из значения аргумента " + StartFileName);
+            if ((StartFileName != null) && (StartFileName.Length > 0)) LoadJsonAndImage(StartFileName);
+            //Logger.WriteLine("Загрузили файл из значения аргумента " + StartFileName);
         }
 
         private void Form1_HelpButtonClicked(object sender, CancelEventArgs e)
@@ -1002,6 +1008,7 @@ namespace GTR_Watch_face
 
         private void LoadJsonAndImage(string fullfilename)
         {
+            //Logger.WriteLine("LoadJsonAndImage");
             FileName = Path.GetFileName(fullfilename);
             FullFileDir = Path.GetDirectoryName(fullfilename);
             string text = File.ReadAllText(fullfilename);
@@ -1009,7 +1016,7 @@ namespace GTR_Watch_face
             ListImages.Clear();
             ListImagesFullName.Clear();
             dataGridView1.Rows.Clear();
-            Logger.WriteLine("Прочитали текст из json файла " + fullfilename);
+            //Logger.WriteLine("Прочитали текст из json файла " + fullfilename);
 
             DirectoryInfo Folder;
             FileInfo[] Images;
@@ -1058,16 +1065,19 @@ namespace GTR_Watch_face
                         file.FullName.Substring(file.FullName.LastIndexOf('\\')+1) + Properties.FormStrings.Message_error_Image_Text2);
                 }
             }
-            Logger.WriteLine("Загрузили все файлы изображений");
+            //Logger.WriteLine("Загрузили все файлы изображений");
 
             //loadedImage.Dispose();
-            int LastImage = Int32.Parse(ListImages.Last()) + 1;
+            int LastImage = 0;
+            Int32.TryParse(ListImages.Last(), out LastImage);
+            LastImage++;
 #if !DEBUG
             if (count != LastImage) MessageBox.Show(Properties.FormStrings.Message_PNGmissing_Text1 + Environment.NewLine +
                  Properties.FormStrings.Message_PNGmissing_Text2, Properties.FormStrings.Message_Error_Caption, 
                  MessageBoxButtons.OK, MessageBoxIcon.Warning);
 #endif
 
+            //Logger.WriteLine("Не верный json формат");
             try
             {
                 Watch_Face = JsonConvert.DeserializeObject<WATCH_FACE_JSON>(text, new JsonSerializerSettings
@@ -1078,11 +1088,10 @@ namespace GTR_Watch_face
             }
             catch (Exception)
             {
-
                 MessageBox.Show(Properties.FormStrings.Message_JsonError_Text, Properties.FormStrings.Message_Error_Caption, 
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            Logger.WriteLine("Распознали json формат");
+            //Logger.WriteLine("Распознали json формат");
 
             richTextBox_JSON.Text = JsonConvert.SerializeObject(Watch_Face, Formatting.Indented, new JsonSerializerSettings
             {
@@ -1094,7 +1103,7 @@ namespace GTR_Watch_face
 
             PreviewView = false;
             JSON_read();
-            Logger.WriteLine("Установили значения в соответствии с json файлом");
+            //Logger.WriteLine("Установили значения в соответствии с json файлом");
 
             string path = Path.GetDirectoryName(fullfilename);
             string newFullName = Path.Combine(path, "PreviewStates.json");
@@ -6654,7 +6663,7 @@ namespace GTR_Watch_face
 
 
                     // Optionally reduce colors
-                    //QuantizeSettings settings = new QuantizeSettings();
+                    QuantizeSettings settings = new QuantizeSettings();
                     //settings.Colors = 256;
                     //collection.Quantize(settings);
 
@@ -8287,7 +8296,7 @@ public static class MouseСoordinates
 }
 
 
-static class Logger
+/*static class Logger
 {
     //----------------------------------------------------------
     // Статический метод записи строки в файл лога без переноса
@@ -8310,4 +8319,4 @@ static class Logger
             sw.WriteLine(String.Format("{0,-23} {1}", DateTime.Now.ToString() + ":", message));
         }
     }
-}
+}*/

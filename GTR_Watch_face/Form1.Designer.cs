@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button_zip_unpack = new System.Windows.Forms.Button();
@@ -945,6 +945,7 @@
             this.button_Background = new System.Windows.Forms.Button();
             this.richTextBox_JSON = new System.Windows.Forms.RichTextBox();
             this.tabPage33 = new System.Windows.Forms.TabPage();
+            this.checkBox_JsonWarnings = new System.Windows.Forms.CheckBox();
             this.comboBox_Language = new System.Windows.Forms.ComboBox();
             this.label356 = new System.Windows.Forms.Label();
             this.numericUpDown_Gif_Speed = new System.Windows.Forms.NumericUpDown();
@@ -987,7 +988,6 @@
             this.label_version = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.checkBox_JsonWarnings = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -4783,8 +4783,8 @@
             // Number
             // 
             this.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Number.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Number.DefaultCellStyle = dataGridViewCellStyle2;
             resources.ApplyResources(this.Number, "Number");
             this.Number.Name = "Number";
             this.Number.ReadOnly = true;
@@ -11554,6 +11554,14 @@
             this.tabPage33.Name = "tabPage33";
             this.helpProvider1.SetShowHelp(this.tabPage33, ((bool)(resources.GetObject("tabPage33.ShowHelp"))));
             // 
+            // checkBox_JsonWarnings
+            // 
+            resources.ApplyResources(this.checkBox_JsonWarnings, "checkBox_JsonWarnings");
+            this.checkBox_JsonWarnings.Checked = true;
+            this.checkBox_JsonWarnings.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_JsonWarnings.Name = "checkBox_JsonWarnings";
+            this.checkBox_JsonWarnings.UseVisualStyleBackColor = true;
+            // 
             // comboBox_Language
             // 
             this.comboBox_Language.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -11903,14 +11911,6 @@
             // timer2
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // checkBox_JsonWarnings
-            // 
-            resources.ApplyResources(this.checkBox_JsonWarnings, "checkBox_JsonWarnings");
-            this.checkBox_JsonWarnings.Checked = true;
-            this.checkBox_JsonWarnings.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_JsonWarnings.Name = "checkBox_JsonWarnings";
-            this.checkBox_JsonWarnings.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
