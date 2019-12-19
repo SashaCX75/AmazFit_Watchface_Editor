@@ -1,4 +1,4 @@
-﻿namespace GTR_Watch_face
+﻿namespace GTS_Watch_face
 {
     class PROGRAM_SETTINGS
     {
@@ -27,10 +27,10 @@
         public float Gif_Speed = 1f;
 
         public string pack_unpack_dir { get; set; }
-        public string unpack_command_47 = "--gtr 47 --file";
-        public string pack_command_47 = "--gtr 47 --file";
-        public string unpack_command_42 = "--gtr 42 --file";
-        public string pack_command_42 = "--gtr 42 --file";
+        public string unpack_command_47 = "--gts --file";
+        public string pack_command_47 = "--gts --file";
+        public string unpack_command_42 = "--gts --file";
+        public string pack_command_42 = "--gts --file";
 
         public string language { get; set; }
     }

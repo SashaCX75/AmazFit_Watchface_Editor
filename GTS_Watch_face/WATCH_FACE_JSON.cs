@@ -1,4 +1,4 @@
-﻿namespace GTR_Watch_face
+﻿namespace GTS_Watch_face
 {
 
     /// <summary>Корневая структура JSON файла</summary>
@@ -309,7 +309,7 @@
         public long? DecimalPointImageIndex { get; set; }
         public string Color { get; set; }
     }
-
+    
     public class Year
     {
         public OneLineYear OneLine { get; set; }
@@ -318,7 +318,7 @@
     public class OneLineYear
     {
         public Number Number { get; set; }
-        public long? DelimiterImageIndex { get; set; }
+        public long DelimiterImageIndex { get; set; }
     }
 
     public class MonthAndDay
@@ -341,7 +341,7 @@
     public class OneLineMonthAndDay
     {
         public Number Number { get; set; }
-        public long? DelimiterImageIndex { get; set; }
+        public long DelimiterImageIndex { get; set; }
     }
 
     public class DateUnknown3

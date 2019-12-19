@@ -1,4 +1,4 @@
-﻿namespace GTR_Watch_face
+﻿namespace GTS_Watch_face
 {
     public class PREWIEV_STATES_Json
     {

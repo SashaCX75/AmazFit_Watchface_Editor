@@ -1,4 +1,4 @@
-﻿namespace GTR_Watch_face
+﻿namespace GTS_Watch_face
 {
     /// <summary>набор настроек для предпросмотра</summary>
     public class WATCH_FACE_PREWIEV_SET
@@ -15,7 +15,6 @@
         public int Day { get; set; }
         public int Month { get; set; }
         public int WeekDay { get; set; }
-        public int Year { get; set; }
     }
 
     public class TimeS

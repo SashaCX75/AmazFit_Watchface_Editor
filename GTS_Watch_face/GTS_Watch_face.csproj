@@ -4,28 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{60CD7E95-9507-42E3-869F-5A677ECCE917}</ProjectGuid>
+    <ProjectGuid>{966FB660-20B2-4B66-9568-32576668A936}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>GTR_Watch_face</RootNamespace>
-    <AssemblyName>GTR_Watch_face</AssemblyName>
+    <RootNamespace>GTS_Watch_face</RootNamespace>
+    <AssemblyName>GTS_Watch_face</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -45,7 +30,6 @@
     <DefineConstants>TRACE;Puthon</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>watch.ico</ApplicationIcon>
@@ -108,20 +92,14 @@
     <Compile Include="FormPreview.Designer.cs">
       <DependentUpon>FormPreview.cs</DependentUpon>
     </Compile>
-    <Compile Include="JSON_ReadWrite.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PreviewToBitmap.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="PREWIEV_STATES_Json.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="PROGRAM_SETTINGS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\FormStrings.Designer.cs">
+      <DependentUpon>FormStrings.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>FormStrings.resx</DependentUpon>
     </Compile>
     <Compile Include="WATCH_FACE_JSON.cs" />
     <Compile Include="WATCH_FACE_PREWIEV_SET.cs" />
@@ -168,21 +146,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\watch_icon.png" />
-    <None Include="Resources\Files-Clipboard-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\Actions_insert_text_icon.png" />
-    <None Include="Resources\Files_Copy_File_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\Files_Clipboard_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Files_Copy_File_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="watch.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

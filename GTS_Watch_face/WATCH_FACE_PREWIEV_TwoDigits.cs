@@ -1,4 +1,4 @@
-﻿namespace GTR_Watch_face
+﻿namespace GTS_Watch_face
 {
     /// <summary>отдельные цифры для даты и времени</summary>
     public class WATCH_FACE_PREWIEV_TwoDigits
@@ -6,7 +6,6 @@
         public DateP Date { get; set; }
         public TimeP Time { get; set; }
         public TimePmP TimePm { get; set; }
-        public YearP Year { get; set; }
     }
 
     public class DateP
@@ -32,14 +31,6 @@
 
     public class TwoDigitsP
     {
-        public int Tens { get; set; }
-        public int Ones { get; set; }
-    }
-
-    public class YearP
-    {
-        public int Thousands { get; set; }
-        public int Hundreds { get; set; }
         public int Tens { get; set; }
         public int Ones { get; set; }
     }

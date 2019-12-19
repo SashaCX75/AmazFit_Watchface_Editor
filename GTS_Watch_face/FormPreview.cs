@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GTR_Watch_face
+namespace GTS_Watch_face
 {
     public partial class Form_Preview : Form
     {
@@ -26,8 +26,8 @@ namespace GTR_Watch_face
             {
                 if (Model_47.model_47)
                 {
-                    panel_Preview.Size = new Size(230, 230);
-                    this.Size = new Size(230 + 22, 230 + 66); 
+                    panel_Preview.Size = new Size(176, 223);
+                    this.Size = new Size(176 + 22, 223 + 66); 
                 }
                 else
                 {
@@ -41,8 +41,8 @@ namespace GTR_Watch_face
             {
                 if (Model_47.model_47)
                 {
-                    panel_Preview.Size = new Size(456, 456);
-                    this.Size = new Size(456 + 22, 456 + 66);
+                    panel_Preview.Size = new Size(350, 444);
+                    this.Size = new Size(350 + 22, 444 + 66);
                 }
                 else
                 {
@@ -56,8 +56,8 @@ namespace GTR_Watch_face
             {
                 if (Model_47.model_47)
                 {
-                    panel_Preview.Size = new Size(683, 683);
-                    this.Size = new Size(683 + 22, 683 + 66);
+                    panel_Preview.Size = new Size(524, 665);
+                    this.Size = new Size(524 + 22, 665 + 66);
                 }
                 else
                 {
@@ -71,8 +71,8 @@ namespace GTR_Watch_face
             {
                 if (Model_47.model_47)
                 {
-                    panel_Preview.Size = new Size(909, 909);
-                    this.Size = new Size(909 + 22, 909 + 66);
+                    panel_Preview.Size = new Size(697, 885);
+                    this.Size = new Size(697 + 22, 885 + 66);
                 }
                 else
                 {
@@ -86,13 +86,13 @@ namespace GTR_Watch_face
             {
                 if (Model_47.model_47)
                 {
-                    panel_Preview.Size = new Size(1135, 1135);
-                    this.Size = new Size(1135 + 22, 1135 + 66);
+                    panel_Preview.Size = new Size(1135, 1105);
+                    this.Size = new Size(870 + 22, 1105 + 66);
                 }
                 else
                 {
                     panel_Preview.Size = new Size(975, 975);
-                    this.Size = new Size(975 + 22, 975 + 66);
+                    this.Size = new Size(975 + 22, 97 + 66);
                 }
                 scale = 2.5f;
             }

@@ -1,4 +1,4 @@
-﻿namespace GTR_Watch_face
+﻿namespace GTS_Watch_face
 {
     partial class Form1
     {
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button_zip_unpack = new System.Windows.Forms.Button();
@@ -4812,8 +4812,8 @@
             // Number
             // 
             this.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Number.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Number.DefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.Number, "Number");
             this.Number.Name = "Number";
             this.Number.ReadOnly = true;
@@ -5078,14 +5078,14 @@
             // 
             // вставитьКоординатуХToolStripMenuItem
             // 
-            this.вставитьКоординатуХToolStripMenuItem.Image = global::GTR_Watch_face.Properties.Resources.Actions_insert_text_icon;
+            this.вставитьКоординатуХToolStripMenuItem.Image = global::GTS_Watch_face.Properties.Resources.Actions_insert_text_icon;
             this.вставитьКоординатуХToolStripMenuItem.Name = "вставитьКоординатуХToolStripMenuItem";
             resources.ApplyResources(this.вставитьКоординатуХToolStripMenuItem, "вставитьКоординатуХToolStripMenuItem");
             this.вставитьКоординатуХToolStripMenuItem.Click += new System.EventHandler(this.вставитьКоординатуХToolStripMenuItem_Click);
             // 
             // копироватьToolStripMenuItem
             // 
-            this.копироватьToolStripMenuItem.Image = global::GTR_Watch_face.Properties.Resources.Files_Copy_File_icon;
+            this.копироватьToolStripMenuItem.Image = global::GTS_Watch_face.Properties.Resources.Files_Copy_File_icon;
             this.копироватьToolStripMenuItem.Name = "копироватьToolStripMenuItem";
             resources.ApplyResources(this.копироватьToolStripMenuItem, "копироватьToolStripMenuItem");
             this.копироватьToolStripMenuItem.Click += new System.EventHandler(this.копироватьToolStripMenuItem_Click);
@@ -5145,21 +5145,21 @@
             // 
             // toolStripMenuItem1
             // 
-            this.toolStripMenuItem1.Image = global::GTR_Watch_face.Properties.Resources.Actions_insert_text_icon;
+            this.toolStripMenuItem1.Image = global::GTS_Watch_face.Properties.Resources.Actions_insert_text_icon;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
             this.toolStripMenuItem1.Click += new System.EventHandler(this.вставитьКоординатуYToolStripMenuItem_Click);
             // 
             // копироватьToolStripMenuItem1
             // 
-            this.копироватьToolStripMenuItem1.Image = global::GTR_Watch_face.Properties.Resources.Files_Copy_File_icon;
+            this.копироватьToolStripMenuItem1.Image = global::GTS_Watch_face.Properties.Resources.Files_Copy_File_icon;
             this.копироватьToolStripMenuItem1.Name = "копироватьToolStripMenuItem1";
             resources.ApplyResources(this.копироватьToolStripMenuItem1, "копироватьToolStripMenuItem1");
             this.копироватьToolStripMenuItem1.Click += new System.EventHandler(this.копироватьToolStripMenuItem_Click);
             // 
             // вставитьToolStripMenuItem1
             // 
-            this.вставитьToolStripMenuItem1.Image = global::GTR_Watch_face.Properties.Resources.Files_Clipboard_icon;
+            this.вставитьToolStripMenuItem1.Image = global::GTS_Watch_face.Properties.Resources.Files_Clipboard_icon;
             this.вставитьToolStripMenuItem1.Name = "вставитьToolStripMenuItem1";
             resources.ApplyResources(this.вставитьToolStripMenuItem1, "вставитьToolStripMenuItem1");
             this.вставитьToolStripMenuItem1.Click += new System.EventHandler(this.вставитьToolStripMenuItem_Click);
@@ -7331,7 +7331,7 @@
             // 
             resources.ApplyResources(this.numericUpDown_Battery_Scale_Radius_Y, "numericUpDown_Battery_Scale_Radius_Y");
             this.numericUpDown_Battery_Scale_Radius_Y.Maximum = new decimal(new int[] {
-            999,
+            99999,
             0,
             0,
             0});
@@ -7349,7 +7349,7 @@
             // 
             resources.ApplyResources(this.numericUpDown_Battery_Scale_Radius_X, "numericUpDown_Battery_Scale_Radius_X");
             this.numericUpDown_Battery_Scale_Radius_X.Maximum = new decimal(new int[] {
-            999,
+            99999,
             0,
             0,
             0});
@@ -7368,12 +7368,12 @@
             this.numericUpDown_Battery_Scale_Center_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_Battery_Scale_Center_Y, "numericUpDown_Battery_Scale_Center_Y");
             this.numericUpDown_Battery_Scale_Center_Y.Maximum = new decimal(new int[] {
-            999,
+            99999,
             0,
             0,
             0});
             this.numericUpDown_Battery_Scale_Center_Y.Minimum = new decimal(new int[] {
-            999,
+            99999,
             0,
             0,
             -2147483648});
@@ -7393,12 +7393,12 @@
             this.numericUpDown_Battery_Scale_Center_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_Battery_Scale_Center_X, "numericUpDown_Battery_Scale_Center_X");
             this.numericUpDown_Battery_Scale_Center_X.Maximum = new decimal(new int[] {
-            999,
+            99999,
             0,
             0,
             0});
             this.numericUpDown_Battery_Scale_Center_X.Minimum = new decimal(new int[] {
-            999,
+            99999,
             0,
             0,
             -2147483648});
@@ -9394,7 +9394,7 @@
             // 
             resources.ApplyResources(this.numericUpDown_StepsProgress_Radius_Y, "numericUpDown_StepsProgress_Radius_Y");
             this.numericUpDown_StepsProgress_Radius_Y.Maximum = new decimal(new int[] {
-            999,
+            99999,
             0,
             0,
             0});
@@ -9412,7 +9412,7 @@
             // 
             resources.ApplyResources(this.numericUpDown_StepsProgress_Radius_X, "numericUpDown_StepsProgress_Radius_X");
             this.numericUpDown_StepsProgress_Radius_X.Maximum = new decimal(new int[] {
-            999,
+            99999,
             0,
             0,
             0});
@@ -9431,12 +9431,12 @@
             this.numericUpDown_StepsProgress_Center_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_StepsProgress_Center_Y, "numericUpDown_StepsProgress_Center_Y");
             this.numericUpDown_StepsProgress_Center_Y.Maximum = new decimal(new int[] {
-            999,
+            99999,
             0,
             0,
             0});
             this.numericUpDown_StepsProgress_Center_Y.Minimum = new decimal(new int[] {
-            999,
+            99999,
             0,
             0,
             -2147483648});
@@ -9456,12 +9456,12 @@
             this.numericUpDown_StepsProgress_Center_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_StepsProgress_Center_X, "numericUpDown_StepsProgress_Center_X");
             this.numericUpDown_StepsProgress_Center_X.Maximum = new decimal(new int[] {
-            999,
+            99999,
             0,
             0,
             0});
             this.numericUpDown_StepsProgress_Center_X.Minimum = new decimal(new int[] {
-            999,
+            99999,
             0,
             0,
             -2147483648});
@@ -10427,11 +10427,7 @@
             this.comboBox_Year_Delimiter.FormattingEnabled = true;
             this.comboBox_Year_Delimiter.Name = "comboBox_Year_Delimiter";
             this.helpProvider1.SetShowHelp(this.comboBox_Year_Delimiter, ((bool)(resources.GetObject("comboBox_Year_Delimiter.ShowHelp"))));
-            this.comboBox_Year_Delimiter.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Year_Delimiter.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Year_Delimiter.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Year_Delimiter.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Year_Delimiter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label357
             // 
@@ -10536,7 +10532,6 @@
             this.checkBox_Year.Name = "checkBox_Year";
             this.helpProvider1.SetShowHelp(this.checkBox_Year, ((bool)(resources.GetObject("checkBox_Year.ShowHelp"))));
             this.checkBox_Year.UseVisualStyleBackColor = true;
-            this.checkBox_Year.CheckedChanged += new System.EventHandler(this.checkBox_Year_CheckedChanged);
             this.checkBox_Year.Click += new System.EventHandler(this.checkBox_Click);
             // 
             // label358
@@ -10615,11 +10610,7 @@
             this.comboBox_Year_Image.FormattingEnabled = true;
             this.comboBox_Year_Image.Name = "comboBox_Year_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_Year_Image, ((bool)(resources.GetObject("comboBox_Year_Image.ShowHelp"))));
-            this.comboBox_Year_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Year_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
             this.comboBox_Year_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Year_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Year_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label363
             // 
@@ -11854,11 +11845,11 @@
             // comboBox_Language
             // 
             this.comboBox_Language.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.comboBox_Language, "comboBox_Language");
             this.comboBox_Language.FormattingEnabled = true;
             this.comboBox_Language.Items.AddRange(new object[] {
             resources.GetString("comboBox_Language.Items"),
             resources.GetString("comboBox_Language.Items1")});
-            resources.ApplyResources(this.comboBox_Language, "comboBox_Language");
             this.comboBox_Language.Name = "comboBox_Language";
             this.helpProvider1.SetShowHelp(this.comboBox_Language, ((bool)(resources.GetObject("comboBox_Language.ShowHelp"))));
             this.comboBox_Language.SelectedIndexChanged += new System.EventHandler(this.comboBox_Language_SelectedIndexChanged);
@@ -12229,6 +12220,7 @@
             this.Name = "Form1";
             this.helpProvider1.SetShowHelp(this, ((bool)(resources.GetObject("$this.ShowHelp"))));
             this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.Form1_HelpButtonClicked);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Shown += new System.EventHandler(this.Form1_Shown);
             this.tabControl1.ResumeLayout(false);

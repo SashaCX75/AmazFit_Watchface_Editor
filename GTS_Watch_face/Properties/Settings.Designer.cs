@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GTR_Watch_face.Properties {
+namespace GTS_Watch_face.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
