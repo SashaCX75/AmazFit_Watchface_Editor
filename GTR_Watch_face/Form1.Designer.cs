@@ -582,6 +582,22 @@
             this.numericUpDown_Battery_Scale_Center_X = new System.Windows.Forms.NumericUpDown();
             this.label206 = new System.Windows.Forms.Label();
             this.checkBox_Battery_Scale = new System.Windows.Forms.CheckBox();
+            this.tabPage35 = new System.Windows.Forms.TabPage();
+            this.numericUpDown_Battery_ClockHand_EndAngle = new System.Windows.Forms.NumericUpDown();
+            this.label374 = new System.Windows.Forms.Label();
+            this.numericUpDown_Battery_ClockHand_StartAngle = new System.Windows.Forms.NumericUpDown();
+            this.label373 = new System.Windows.Forms.Label();
+            this.numericUpDown_Battery_ClockHand_Offset_Y = new System.Windows.Forms.NumericUpDown();
+            this.label368 = new System.Windows.Forms.Label();
+            this.numericUpDown_Battery_ClockHand_Offset_X = new System.Windows.Forms.NumericUpDown();
+            this.label369 = new System.Windows.Forms.Label();
+            this.comboBox_Battery_ClockHand_Image = new System.Windows.Forms.ComboBox();
+            this.label370 = new System.Windows.Forms.Label();
+            this.numericUpDown_Battery_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
+            this.label371 = new System.Windows.Forms.Label();
+            this.numericUpDown_Battery_ClockHand_X = new System.Windows.Forms.NumericUpDown();
+            this.label372 = new System.Windows.Forms.Label();
+            this.checkBox_Battery_ClockHand = new System.Windows.Forms.CheckBox();
             this.checkBox_Battery = new System.Windows.Forms.CheckBox();
             this.button_Battery = new System.Windows.Forms.Button();
             this.panel_Status = new System.Windows.Forms.Panel();
@@ -745,26 +761,95 @@
             this.checkBox_Activity = new System.Windows.Forms.CheckBox();
             this.button_Activity = new System.Windows.Forms.Button();
             this.panel_StepsProgress = new System.Windows.Forms.Panel();
+            this.tabControl6 = new System.Windows.Forms.TabControl();
+            this.tabPage36 = new System.Windows.Forms.TabPage();
+            this.numericUpDown_StepsProgress_Radius_Y = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_StepsProgress_Radius_X = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_StepsProgress_Center_Y = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_StepsProgress_Center_X = new System.Windows.Forms.NumericUpDown();
+            this.checkBox_StepsProgress = new System.Windows.Forms.CheckBox();
             this.comboBox_StepsProgress_Flatness = new System.Windows.Forms.ComboBox();
+            this.label104 = new System.Windows.Forms.Label();
             this.label348 = new System.Windows.Forms.Label();
             this.numericUpDown_StepsProgress_EndAngle = new System.Windows.Forms.NumericUpDown();
+            this.label105 = new System.Windows.Forms.Label();
             this.label111 = new System.Windows.Forms.Label();
             this.numericUpDown_StepsProgress_StartAngle = new System.Windows.Forms.NumericUpDown();
+            this.label107 = new System.Windows.Forms.Label();
             this.label110 = new System.Windows.Forms.Label();
             this.comboBox_StepsProgress_Color = new System.Windows.Forms.ComboBox();
+            this.label106 = new System.Windows.Forms.Label();
             this.label109 = new System.Windows.Forms.Label();
             this.numericUpDown_StepsProgress_Width = new System.Windows.Forms.NumericUpDown();
             this.label108 = new System.Windows.Forms.Label();
-            this.numericUpDown_StepsProgress_Radius_Y = new System.Windows.Forms.NumericUpDown();
-            this.label106 = new System.Windows.Forms.Label();
-            this.numericUpDown_StepsProgress_Radius_X = new System.Windows.Forms.NumericUpDown();
-            this.label107 = new System.Windows.Forms.Label();
-            this.numericUpDown_StepsProgress_Center_Y = new System.Windows.Forms.NumericUpDown();
-            this.label105 = new System.Windows.Forms.Label();
-            this.numericUpDown_StepsProgress_Center_X = new System.Windows.Forms.NumericUpDown();
-            this.label104 = new System.Windows.Forms.Label();
-            this.checkBox_StepsProgress = new System.Windows.Forms.CheckBox();
+            this.tabPage37 = new System.Windows.Forms.TabPage();
+            this.checkBox_StProg_ClockHand = new System.Windows.Forms.CheckBox();
+            this.numericUpDown_StProg_ClockHand_EndAngle = new System.Windows.Forms.NumericUpDown();
+            this.label375 = new System.Windows.Forms.Label();
+            this.numericUpDown_StProg_ClockHand_StartAngle = new System.Windows.Forms.NumericUpDown();
+            this.label376 = new System.Windows.Forms.Label();
+            this.numericUpDown_StProg_ClockHand_Offset_Y = new System.Windows.Forms.NumericUpDown();
+            this.label377 = new System.Windows.Forms.Label();
+            this.numericUpDown_StProg_ClockHand_Offset_X = new System.Windows.Forms.NumericUpDown();
+            this.label378 = new System.Windows.Forms.Label();
+            this.comboBox_StProg_ClockHand_Image = new System.Windows.Forms.ComboBox();
+            this.label379 = new System.Windows.Forms.Label();
+            this.numericUpDown_StProg_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
+            this.label380 = new System.Windows.Forms.Label();
+            this.numericUpDown_StProg_ClockHand_X = new System.Windows.Forms.NumericUpDown();
+            this.label381 = new System.Windows.Forms.Label();
             this.button_StepsProgress = new System.Windows.Forms.Button();
+            this.panel_AnalogDate = new System.Windows.Forms.Panel();
+            this.tabControl7 = new System.Windows.Forms.TabControl();
+            this.tabPage38 = new System.Windows.Forms.TabPage();
+            this.checkBox_ADDay_ClockHand = new System.Windows.Forms.CheckBox();
+            this.numericUpDown_ADDay_ClockHand_EndAngle = new System.Windows.Forms.NumericUpDown();
+            this.label396 = new System.Windows.Forms.Label();
+            this.numericUpDown_ADDay_ClockHand_StartAngle = new System.Windows.Forms.NumericUpDown();
+            this.label397 = new System.Windows.Forms.Label();
+            this.numericUpDown_ADDay_ClockHand_Offset_Y = new System.Windows.Forms.NumericUpDown();
+            this.label398 = new System.Windows.Forms.Label();
+            this.numericUpDown_ADDay_ClockHand_Offset_X = new System.Windows.Forms.NumericUpDown();
+            this.label399 = new System.Windows.Forms.Label();
+            this.comboBox_ADDay_ClockHand_Image = new System.Windows.Forms.ComboBox();
+            this.label400 = new System.Windows.Forms.Label();
+            this.numericUpDown_ADDay_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
+            this.label401 = new System.Windows.Forms.Label();
+            this.numericUpDown_ADDay_ClockHand_X = new System.Windows.Forms.NumericUpDown();
+            this.label402 = new System.Windows.Forms.Label();
+            this.tabPage39 = new System.Windows.Forms.TabPage();
+            this.numericUpDown_ADWeekDay_ClockHand_EndAngle = new System.Windows.Forms.NumericUpDown();
+            this.label389 = new System.Windows.Forms.Label();
+            this.numericUpDown_ADWeekDay_ClockHand_StartAngle = new System.Windows.Forms.NumericUpDown();
+            this.label390 = new System.Windows.Forms.Label();
+            this.numericUpDown_ADWeekDay_ClockHand_Offset_Y = new System.Windows.Forms.NumericUpDown();
+            this.label391 = new System.Windows.Forms.Label();
+            this.numericUpDown_ADWeekDay_ClockHand_Offset_X = new System.Windows.Forms.NumericUpDown();
+            this.label392 = new System.Windows.Forms.Label();
+            this.comboBox_ADWeekDay_ClockHand_Image = new System.Windows.Forms.ComboBox();
+            this.label393 = new System.Windows.Forms.Label();
+            this.numericUpDown_ADWeekDay_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
+            this.label394 = new System.Windows.Forms.Label();
+            this.numericUpDown_ADWeekDay_ClockHand_X = new System.Windows.Forms.NumericUpDown();
+            this.label395 = new System.Windows.Forms.Label();
+            this.checkBox_ADWeekDay_ClockHand = new System.Windows.Forms.CheckBox();
+            this.tabPage40 = new System.Windows.Forms.TabPage();
+            this.numericUpDown_ADMonth_ClockHand_EndAngle = new System.Windows.Forms.NumericUpDown();
+            this.label382 = new System.Windows.Forms.Label();
+            this.numericUpDown_ADMonth_ClockHand_StartAngle = new System.Windows.Forms.NumericUpDown();
+            this.label383 = new System.Windows.Forms.Label();
+            this.numericUpDown_ADMonth_ClockHand_Offset_Y = new System.Windows.Forms.NumericUpDown();
+            this.label384 = new System.Windows.Forms.Label();
+            this.numericUpDown_ADMonth_ClockHand_Offset_X = new System.Windows.Forms.NumericUpDown();
+            this.label385 = new System.Windows.Forms.Label();
+            this.comboBox_ADMonth_ClockHand_Image = new System.Windows.Forms.ComboBox();
+            this.label386 = new System.Windows.Forms.Label();
+            this.numericUpDown_ADMonth_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
+            this.label387 = new System.Windows.Forms.Label();
+            this.numericUpDown_ADMonth_ClockHand_X = new System.Windows.Forms.NumericUpDown();
+            this.label388 = new System.Windows.Forms.Label();
+            this.checkBox_ADMonth_ClockHand = new System.Windows.Forms.CheckBox();
+            this.button_AnalogDate = new System.Windows.Forms.Button();
             this.panel_Date = new System.Windows.Forms.Panel();
             this.tabControl_Date = new System.Windows.Forms.TabControl();
             this.tabPage8 = new System.Windows.Forms.TabPage();
@@ -967,6 +1052,7 @@
             this.button_Background = new System.Windows.Forms.Button();
             this.richTextBox_JSON = new System.Windows.Forms.RichTextBox();
             this.tabPage33 = new System.Windows.Forms.TabPage();
+            this.button_Reset = new System.Windows.Forms.Button();
             this.checkBox_JsonWarnings = new System.Windows.Forms.CheckBox();
             this.comboBox_Language = new System.Windows.Forms.ComboBox();
             this.label356 = new System.Windows.Forms.Label();
@@ -1009,6 +1095,7 @@
             this.checkBox_border = new System.Windows.Forms.CheckBox();
             this.label_version = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.radioButton_gts = new System.Windows.Forms.RadioButton();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -1198,6 +1285,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_Scale_Radius_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_Scale_Center_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_Scale_Center_X)).BeginInit();
+            this.tabPage35.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_EndAngle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_StartAngle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_Offset_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_Offset_X)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_X)).BeginInit();
             this.panel_Status.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage17.SuspendLayout();
@@ -1253,13 +1347,45 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStar_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStar_X)).BeginInit();
             this.panel_StepsProgress.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_EndAngle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_StartAngle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_Width)).BeginInit();
+            this.tabControl6.SuspendLayout();
+            this.tabPage36.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_Radius_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_Radius_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_Center_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_Center_X)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_EndAngle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_StartAngle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_Width)).BeginInit();
+            this.tabPage37.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_EndAngle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_StartAngle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_Offset_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_Offset_X)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_X)).BeginInit();
+            this.panel_AnalogDate.SuspendLayout();
+            this.tabControl7.SuspendLayout();
+            this.tabPage38.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_EndAngle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_StartAngle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_Offset_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_Offset_X)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_X)).BeginInit();
+            this.tabPage39.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_EndAngle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_StartAngle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_Offset_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_Offset_X)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_X)).BeginInit();
+            this.tabPage40.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_EndAngle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_StartAngle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_Offset_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_Offset_X)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_X)).BeginInit();
             this.panel_Date.SuspendLayout();
             this.tabControl_Date.SuspendLayout();
             this.tabPage8.SuspendLayout();
@@ -1347,17 +1473,21 @@
             // 
             // tabControl1
             // 
+            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage33);
-            resources.ApplyResources(this.tabControl1, "tabControl1");
+            this.helpProvider1.SetHelpKeyword(this.tabControl1, resources.GetString("tabControl1.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabControl1, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabControl1.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabControl1, resources.GetString("tabControl1.HelpString"));
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.helpProvider1.SetShowHelp(this.tabControl1, ((bool)(resources.GetObject("tabControl1.ShowHelp"))));
             // 
             // tabPage1
             // 
+            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage1.Controls.Add(this.button_zip_unpack);
             this.tabPage1.Controls.Add(this.button_pack_zip);
@@ -1371,13 +1501,18 @@
             this.tabPage1.Controls.Add(this.button_pack_unpack);
             this.tabPage1.Controls.Add(this.textBox_pack_unpack_dir);
             this.tabPage1.Controls.Add(this.label1);
-            resources.ApplyResources(this.tabPage1, "tabPage1");
+            this.helpProvider1.SetHelpKeyword(this.tabPage1, resources.GetString("tabPage1.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage1, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage1.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage1, resources.GetString("tabPage1.HelpString"));
             this.tabPage1.Name = "tabPage1";
             this.helpProvider1.SetShowHelp(this.tabPage1, ((bool)(resources.GetObject("tabPage1.ShowHelp"))));
             // 
             // button_zip_unpack
             // 
             resources.ApplyResources(this.button_zip_unpack, "button_zip_unpack");
+            this.helpProvider1.SetHelpKeyword(this.button_zip_unpack, resources.GetString("button_zip_unpack.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_zip_unpack, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_zip_unpack.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_zip_unpack, resources.GetString("button_zip_unpack.HelpString"));
             this.button_zip_unpack.Name = "button_zip_unpack";
             this.helpProvider1.SetShowHelp(this.button_zip_unpack, ((bool)(resources.GetObject("button_zip_unpack.ShowHelp"))));
             this.button_zip_unpack.UseVisualStyleBackColor = true;
@@ -1386,6 +1521,9 @@
             // button_pack_zip
             // 
             resources.ApplyResources(this.button_pack_zip, "button_pack_zip");
+            this.helpProvider1.SetHelpKeyword(this.button_pack_zip, resources.GetString("button_pack_zip.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_pack_zip, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_pack_zip.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_pack_zip, resources.GetString("button_pack_zip.HelpString"));
             this.button_pack_zip.Name = "button_pack_zip";
             this.helpProvider1.SetShowHelp(this.button_pack_zip, ((bool)(resources.GetObject("button_pack_zip.ShowHelp"))));
             this.button_pack_zip.UseVisualStyleBackColor = true;
@@ -1394,6 +1532,9 @@
             // button_zip
             // 
             resources.ApplyResources(this.button_zip, "button_zip");
+            this.helpProvider1.SetHelpKeyword(this.button_zip, resources.GetString("button_zip.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_zip, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_zip.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_zip, resources.GetString("button_zip.HelpString"));
             this.button_zip.Name = "button_zip";
             this.helpProvider1.SetShowHelp(this.button_zip, ((bool)(resources.GetObject("button_zip.ShowHelp"))));
             this.button_zip.UseVisualStyleBackColor = true;
@@ -1402,6 +1543,9 @@
             // button_unpack
             // 
             resources.ApplyResources(this.button_unpack, "button_unpack");
+            this.helpProvider1.SetHelpKeyword(this.button_unpack, resources.GetString("button_unpack.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_unpack, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_unpack.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_unpack, resources.GetString("button_unpack.HelpString"));
             this.button_unpack.Name = "button_unpack";
             this.helpProvider1.SetShowHelp(this.button_unpack, ((bool)(resources.GetObject("button_unpack.ShowHelp"))));
             this.button_unpack.UseVisualStyleBackColor = true;
@@ -1410,6 +1554,9 @@
             // button_pack
             // 
             resources.ApplyResources(this.button_pack, "button_pack");
+            this.helpProvider1.SetHelpKeyword(this.button_pack, resources.GetString("button_pack.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_pack, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_pack.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_pack, resources.GetString("button_pack.HelpString"));
             this.button_pack.Name = "button_pack";
             this.helpProvider1.SetShowHelp(this.button_pack, ((bool)(resources.GetObject("button_pack.ShowHelp"))));
             this.button_pack.UseVisualStyleBackColor = true;
@@ -1418,6 +1565,9 @@
             // textBox_pack_command
             // 
             resources.ApplyResources(this.textBox_pack_command, "textBox_pack_command");
+            this.helpProvider1.SetHelpKeyword(this.textBox_pack_command, resources.GetString("textBox_pack_command.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.textBox_pack_command, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("textBox_pack_command.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.textBox_pack_command, resources.GetString("textBox_pack_command.HelpString"));
             this.textBox_pack_command.Name = "textBox_pack_command";
             this.helpProvider1.SetShowHelp(this.textBox_pack_command, ((bool)(resources.GetObject("textBox_pack_command.ShowHelp"))));
             this.textBox_pack_command.Leave += new System.EventHandler(this.textBox_unpack_command_Leave);
@@ -1425,12 +1575,18 @@
             // label3
             // 
             resources.ApplyResources(this.label3, "label3");
+            this.helpProvider1.SetHelpKeyword(this.label3, resources.GetString("label3.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label3, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label3.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label3, resources.GetString("label3.HelpString"));
             this.label3.Name = "label3";
             this.helpProvider1.SetShowHelp(this.label3, ((bool)(resources.GetObject("label3.ShowHelp"))));
             // 
             // textBox_unpack_command
             // 
             resources.ApplyResources(this.textBox_unpack_command, "textBox_unpack_command");
+            this.helpProvider1.SetHelpKeyword(this.textBox_unpack_command, resources.GetString("textBox_unpack_command.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.textBox_unpack_command, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("textBox_unpack_command.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.textBox_unpack_command, resources.GetString("textBox_unpack_command.HelpString"));
             this.textBox_unpack_command.Name = "textBox_unpack_command";
             this.helpProvider1.SetShowHelp(this.textBox_unpack_command, ((bool)(resources.GetObject("textBox_unpack_command.ShowHelp"))));
             this.textBox_unpack_command.Leave += new System.EventHandler(this.textBox_unpack_command_Leave);
@@ -1438,12 +1594,18 @@
             // label2
             // 
             resources.ApplyResources(this.label2, "label2");
+            this.helpProvider1.SetHelpKeyword(this.label2, resources.GetString("label2.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label2, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label2.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label2, resources.GetString("label2.HelpString"));
             this.label2.Name = "label2";
             this.helpProvider1.SetShowHelp(this.label2, ((bool)(resources.GetObject("label2.ShowHelp"))));
             // 
             // button_pack_unpack
             // 
             resources.ApplyResources(this.button_pack_unpack, "button_pack_unpack");
+            this.helpProvider1.SetHelpKeyword(this.button_pack_unpack, resources.GetString("button_pack_unpack.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_pack_unpack, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_pack_unpack.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_pack_unpack, resources.GetString("button_pack_unpack.HelpString"));
             this.button_pack_unpack.Name = "button_pack_unpack";
             this.helpProvider1.SetShowHelp(this.button_pack_unpack, ((bool)(resources.GetObject("button_pack_unpack.ShowHelp"))));
             this.button_pack_unpack.UseVisualStyleBackColor = true;
@@ -1451,8 +1613,11 @@
             // 
             // textBox_pack_unpack_dir
             // 
-            this.textBox_pack_unpack_dir.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.textBox_pack_unpack_dir, "textBox_pack_unpack_dir");
+            this.textBox_pack_unpack_dir.BackColor = System.Drawing.SystemColors.Window;
+            this.helpProvider1.SetHelpKeyword(this.textBox_pack_unpack_dir, resources.GetString("textBox_pack_unpack_dir.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.textBox_pack_unpack_dir, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("textBox_pack_unpack_dir.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.textBox_pack_unpack_dir, resources.GetString("textBox_pack_unpack_dir.HelpString"));
             this.textBox_pack_unpack_dir.Name = "textBox_pack_unpack_dir";
             this.textBox_pack_unpack_dir.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.textBox_pack_unpack_dir, ((bool)(resources.GetObject("textBox_pack_unpack_dir.ShowHelp"))));
@@ -1460,11 +1625,15 @@
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
+            this.helpProvider1.SetHelpKeyword(this.label1, resources.GetString("label1.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label1, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label1.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label1, resources.GetString("label1.HelpString"));
             this.label1.Name = "label1";
             this.helpProvider1.SetShowHelp(this.label1, ((bool)(resources.GetObject("label1.ShowHelp"))));
             // 
             // tabPage2
             // 
+            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage2.Controls.Add(this.checkBox1);
             this.tabPage2.Controls.Add(this.panel3);
@@ -1473,13 +1642,18 @@
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.button_JSON);
             this.tabPage2.Controls.Add(this.label4);
-            resources.ApplyResources(this.tabPage2, "tabPage2");
+            this.helpProvider1.SetHelpKeyword(this.tabPage2, resources.GetString("tabPage2.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage2, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage2.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage2, resources.GetString("tabPage2.HelpString"));
             this.tabPage2.Name = "tabPage2";
             this.helpProvider1.SetShowHelp(this.tabPage2, ((bool)(resources.GetObject("tabPage2.ShowHelp"))));
             // 
             // checkBox1
             // 
             resources.ApplyResources(this.checkBox1, "checkBox1");
+            this.helpProvider1.SetHelpKeyword(this.checkBox1, resources.GetString("checkBox1.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox1, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox1.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox1, resources.GetString("checkBox1.HelpString"));
             this.checkBox1.Name = "checkBox1";
             this.helpProvider1.SetShowHelp(this.checkBox1, ((bool)(resources.GetObject("checkBox1.ShowHelp"))));
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -1487,6 +1661,7 @@
             // 
             // panel3
             // 
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Controls.Add(this.panel_Set13);
             this.panel3.Controls.Add(this.button_Set13);
             this.panel3.Controls.Add(this.panel_Set12);
@@ -1516,12 +1691,15 @@
             this.panel3.Controls.Add(this.button_Set2);
             this.panel3.Controls.Add(this.panel_Set1);
             this.panel3.Controls.Add(this.button_Set1);
-            resources.ApplyResources(this.panel3, "panel3");
+            this.helpProvider1.SetHelpKeyword(this.panel3, resources.GetString("panel3.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel3, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel3.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel3, resources.GetString("panel3.HelpString"));
             this.panel3.Name = "panel3";
             this.helpProvider1.SetShowHelp(this.panel3, ((bool)(resources.GetObject("panel3.ShowHelp"))));
             // 
             // panel_Set13
             // 
+            resources.ApplyResources(this.panel_Set13, "panel_Set13");
             this.panel_Set13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_Set13.Controls.Add(this.checkBox_DoNotDisturb_Set13);
             this.panel_Set13.Controls.Add(this.checkBox_Lock_Set13);
@@ -1543,15 +1721,20 @@
             this.panel_Set13.Controls.Add(this.label344);
             this.panel_Set13.Controls.Add(this.label345);
             this.panel_Set13.Controls.Add(this.label346);
-            resources.ApplyResources(this.panel_Set13, "panel_Set13");
+            this.helpProvider1.SetHelpKeyword(this.panel_Set13, resources.GetString("panel_Set13.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel_Set13, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_Set13.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel_Set13, resources.GetString("panel_Set13.HelpString"));
             this.panel_Set13.Name = "panel_Set13";
             this.helpProvider1.SetShowHelp(this.panel_Set13, ((bool)(resources.GetObject("panel_Set13.ShowHelp"))));
             // 
             // checkBox_DoNotDisturb_Set13
             // 
+            resources.ApplyResources(this.checkBox_DoNotDisturb_Set13, "checkBox_DoNotDisturb_Set13");
             this.checkBox_DoNotDisturb_Set13.Checked = true;
             this.checkBox_DoNotDisturb_Set13.CheckState = System.Windows.Forms.CheckState.Checked;
-            resources.ApplyResources(this.checkBox_DoNotDisturb_Set13, "checkBox_DoNotDisturb_Set13");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_DoNotDisturb_Set13, resources.GetString("checkBox_DoNotDisturb_Set13.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_DoNotDisturb_Set13, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_DoNotDisturb_Set13.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_DoNotDisturb_Set13, resources.GetString("checkBox_DoNotDisturb_Set13.HelpString"));
             this.checkBox_DoNotDisturb_Set13.Name = "checkBox_DoNotDisturb_Set13";
             this.helpProvider1.SetShowHelp(this.checkBox_DoNotDisturb_Set13, ((bool)(resources.GetObject("checkBox_DoNotDisturb_Set13.ShowHelp"))));
             this.checkBox_DoNotDisturb_Set13.UseVisualStyleBackColor = true;
@@ -1562,6 +1745,9 @@
             resources.ApplyResources(this.checkBox_Lock_Set13, "checkBox_Lock_Set13");
             this.checkBox_Lock_Set13.Checked = true;
             this.checkBox_Lock_Set13.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Lock_Set13, resources.GetString("checkBox_Lock_Set13.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Lock_Set13, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Lock_Set13.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Lock_Set13, resources.GetString("checkBox_Lock_Set13.HelpString"));
             this.checkBox_Lock_Set13.Name = "checkBox_Lock_Set13";
             this.helpProvider1.SetShowHelp(this.checkBox_Lock_Set13, ((bool)(resources.GetObject("checkBox_Lock_Set13.ShowHelp"))));
             this.checkBox_Lock_Set13.UseVisualStyleBackColor = true;
@@ -1572,6 +1758,9 @@
             resources.ApplyResources(this.checkBox_Alarm_Set13, "checkBox_Alarm_Set13");
             this.checkBox_Alarm_Set13.Checked = true;
             this.checkBox_Alarm_Set13.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Alarm_Set13, resources.GetString("checkBox_Alarm_Set13.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Alarm_Set13, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Alarm_Set13.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Alarm_Set13, resources.GetString("checkBox_Alarm_Set13.HelpString"));
             this.checkBox_Alarm_Set13.Name = "checkBox_Alarm_Set13";
             this.helpProvider1.SetShowHelp(this.checkBox_Alarm_Set13, ((bool)(resources.GetObject("checkBox_Alarm_Set13.ShowHelp"))));
             this.checkBox_Alarm_Set13.UseVisualStyleBackColor = true;
@@ -1582,6 +1771,9 @@
             resources.ApplyResources(this.check_BoxBluetooth_Set13, "check_BoxBluetooth_Set13");
             this.check_BoxBluetooth_Set13.Checked = true;
             this.check_BoxBluetooth_Set13.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.check_BoxBluetooth_Set13, resources.GetString("check_BoxBluetooth_Set13.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.check_BoxBluetooth_Set13, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("check_BoxBluetooth_Set13.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.check_BoxBluetooth_Set13, resources.GetString("check_BoxBluetooth_Set13.HelpString"));
             this.check_BoxBluetooth_Set13.Name = "check_BoxBluetooth_Set13";
             this.helpProvider1.SetShowHelp(this.check_BoxBluetooth_Set13, ((bool)(resources.GetObject("check_BoxBluetooth_Set13.ShowHelp"))));
             this.check_BoxBluetooth_Set13.UseVisualStyleBackColor = true;
@@ -1590,6 +1782,9 @@
             // numericUpDown_Goal_Set13
             // 
             resources.ApplyResources(this.numericUpDown_Goal_Set13, "numericUpDown_Goal_Set13");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Goal_Set13, resources.GetString("numericUpDown_Goal_Set13.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Goal_Set13, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Goal_Set13.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Goal_Set13, resources.GetString("numericUpDown_Goal_Set13.HelpString"));
             this.numericUpDown_Goal_Set13.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -1607,12 +1802,18 @@
             // label339
             // 
             resources.ApplyResources(this.label339, "label339");
+            this.helpProvider1.SetHelpKeyword(this.label339, resources.GetString("label339.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label339, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label339.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label339, resources.GetString("label339.HelpString"));
             this.label339.Name = "label339";
             this.helpProvider1.SetShowHelp(this.label339, ((bool)(resources.GetObject("label339.ShowHelp"))));
             // 
             // numericUpDown_Steps_Set13
             // 
             resources.ApplyResources(this.numericUpDown_Steps_Set13, "numericUpDown_Steps_Set13");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Steps_Set13, resources.GetString("numericUpDown_Steps_Set13.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Steps_Set13, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Steps_Set13.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Steps_Set13, resources.GetString("numericUpDown_Steps_Set13.HelpString"));
             this.numericUpDown_Steps_Set13.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -1630,12 +1831,18 @@
             // label340
             // 
             resources.ApplyResources(this.label340, "label340");
+            this.helpProvider1.SetHelpKeyword(this.label340, resources.GetString("label340.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label340, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label340.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label340, resources.GetString("label340.HelpString"));
             this.label340.Name = "label340";
             this.helpProvider1.SetShowHelp(this.label340, ((bool)(resources.GetObject("label340.ShowHelp"))));
             // 
             // numericUpDown_Pulse_Set13
             // 
             resources.ApplyResources(this.numericUpDown_Pulse_Set13, "numericUpDown_Pulse_Set13");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Pulse_Set13, resources.GetString("numericUpDown_Pulse_Set13.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Pulse_Set13, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Pulse_Set13.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Pulse_Set13, resources.GetString("numericUpDown_Pulse_Set13.HelpString"));
             this.numericUpDown_Pulse_Set13.Maximum = new decimal(new int[] {
             999,
             0,
@@ -1653,12 +1860,18 @@
             // label341
             // 
             resources.ApplyResources(this.label341, "label341");
+            this.helpProvider1.SetHelpKeyword(this.label341, resources.GetString("label341.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label341, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label341.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label341, resources.GetString("label341.HelpString"));
             this.label341.Name = "label341";
             this.helpProvider1.SetShowHelp(this.label341, ((bool)(resources.GetObject("label341.ShowHelp"))));
             // 
             // numericUpDown_Distance_Set13
             // 
             resources.ApplyResources(this.numericUpDown_Distance_Set13, "numericUpDown_Distance_Set13");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Distance_Set13, resources.GetString("numericUpDown_Distance_Set13.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Distance_Set13, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Distance_Set13.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Distance_Set13, resources.GetString("numericUpDown_Distance_Set13.HelpString"));
             this.numericUpDown_Distance_Set13.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -1676,12 +1889,18 @@
             // label342
             // 
             resources.ApplyResources(this.label342, "label342");
+            this.helpProvider1.SetHelpKeyword(this.label342, resources.GetString("label342.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label342, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label342.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label342, resources.GetString("label342.HelpString"));
             this.label342.Name = "label342";
             this.helpProvider1.SetShowHelp(this.label342, ((bool)(resources.GetObject("label342.ShowHelp"))));
             // 
             // numericUpDown_Calories_Set13
             // 
             resources.ApplyResources(this.numericUpDown_Calories_Set13, "numericUpDown_Calories_Set13");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Calories_Set13, resources.GetString("numericUpDown_Calories_Set13.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Calories_Set13, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Calories_Set13.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Calories_Set13, resources.GetString("numericUpDown_Calories_Set13.HelpString"));
             this.numericUpDown_Calories_Set13.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -1699,12 +1918,18 @@
             // label343
             // 
             resources.ApplyResources(this.label343, "label343");
+            this.helpProvider1.SetHelpKeyword(this.label343, resources.GetString("label343.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label343, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label343.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label343, resources.GetString("label343.HelpString"));
             this.label343.Name = "label343";
             this.helpProvider1.SetShowHelp(this.label343, ((bool)(resources.GetObject("label343.ShowHelp"))));
             // 
             // numericUpDown_Battery_Set13
             // 
             resources.ApplyResources(this.numericUpDown_Battery_Set13, "numericUpDown_Battery_Set13");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Set13, resources.GetString("numericUpDown_Battery_Set13.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Set13, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Set13.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Set13, resources.GetString("numericUpDown_Battery_Set13.HelpString"));
             this.numericUpDown_Battery_Set13.Name = "numericUpDown_Battery_Set13";
             this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_Set13, ((bool)(resources.GetObject("numericUpDown_Battery_Set13.ShowHelp"))));
             this.numericUpDown_Battery_Set13.Value = new decimal(new int[] {
@@ -1716,8 +1941,11 @@
             // 
             // dateTimePicker_Time_Set13
             // 
-            this.dateTimePicker_Time_Set13.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             resources.ApplyResources(this.dateTimePicker_Time_Set13, "dateTimePicker_Time_Set13");
+            this.dateTimePicker_Time_Set13.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.helpProvider1.SetHelpKeyword(this.dateTimePicker_Time_Set13, resources.GetString("dateTimePicker_Time_Set13.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dateTimePicker_Time_Set13, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dateTimePicker_Time_Set13.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dateTimePicker_Time_Set13, resources.GetString("dateTimePicker_Time_Set13.HelpString"));
             this.dateTimePicker_Time_Set13.Name = "dateTimePicker_Time_Set13";
             this.helpProvider1.SetShowHelp(this.dateTimePicker_Time_Set13, ((bool)(resources.GetObject("dateTimePicker_Time_Set13.ShowHelp"))));
             this.dateTimePicker_Time_Set13.ShowUpDown = true;
@@ -1725,8 +1953,11 @@
             // 
             // dateTimePicker_Date_Set13
             // 
-            this.dateTimePicker_Date_Set13.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             resources.ApplyResources(this.dateTimePicker_Date_Set13, "dateTimePicker_Date_Set13");
+            this.dateTimePicker_Date_Set13.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.helpProvider1.SetHelpKeyword(this.dateTimePicker_Date_Set13, resources.GetString("dateTimePicker_Date_Set13.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dateTimePicker_Date_Set13, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dateTimePicker_Date_Set13.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dateTimePicker_Date_Set13, resources.GetString("dateTimePicker_Date_Set13.HelpString"));
             this.dateTimePicker_Date_Set13.Name = "dateTimePicker_Date_Set13";
             this.helpProvider1.SetShowHelp(this.dateTimePicker_Date_Set13, ((bool)(resources.GetObject("dateTimePicker_Date_Set13.ShowHelp"))));
             this.dateTimePicker_Date_Set13.ValueChanged += new System.EventHandler(this.dateTimePicker_Time_Set13_ValueChanged);
@@ -1734,24 +1965,36 @@
             // label344
             // 
             resources.ApplyResources(this.label344, "label344");
+            this.helpProvider1.SetHelpKeyword(this.label344, resources.GetString("label344.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label344, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label344.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label344, resources.GetString("label344.HelpString"));
             this.label344.Name = "label344";
             this.helpProvider1.SetShowHelp(this.label344, ((bool)(resources.GetObject("label344.ShowHelp"))));
             // 
             // label345
             // 
             resources.ApplyResources(this.label345, "label345");
+            this.helpProvider1.SetHelpKeyword(this.label345, resources.GetString("label345.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label345, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label345.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label345, resources.GetString("label345.HelpString"));
             this.label345.Name = "label345";
             this.helpProvider1.SetShowHelp(this.label345, ((bool)(resources.GetObject("label345.ShowHelp"))));
             // 
             // label346
             // 
             resources.ApplyResources(this.label346, "label346");
+            this.helpProvider1.SetHelpKeyword(this.label346, resources.GetString("label346.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label346, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label346.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label346, resources.GetString("label346.HelpString"));
             this.label346.Name = "label346";
             this.helpProvider1.SetShowHelp(this.label346, ((bool)(resources.GetObject("label346.ShowHelp"))));
             // 
             // button_Set13
             // 
             resources.ApplyResources(this.button_Set13, "button_Set13");
+            this.helpProvider1.SetHelpKeyword(this.button_Set13, resources.GetString("button_Set13.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_Set13, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_Set13.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_Set13, resources.GetString("button_Set13.HelpString"));
             this.button_Set13.Name = "button_Set13";
             this.helpProvider1.SetShowHelp(this.button_Set13, ((bool)(resources.GetObject("button_Set13.ShowHelp"))));
             this.button_Set13.UseVisualStyleBackColor = true;
@@ -1759,6 +2002,7 @@
             // 
             // panel_Set12
             // 
+            resources.ApplyResources(this.panel_Set12, "panel_Set12");
             this.panel_Set12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_Set12.Controls.Add(this.checkBox_DoNotDisturb_Set12);
             this.panel_Set12.Controls.Add(this.checkBox_Lock_Set12);
@@ -1780,15 +2024,20 @@
             this.panel_Set12.Controls.Add(this.label336);
             this.panel_Set12.Controls.Add(this.label337);
             this.panel_Set12.Controls.Add(this.label338);
-            resources.ApplyResources(this.panel_Set12, "panel_Set12");
+            this.helpProvider1.SetHelpKeyword(this.panel_Set12, resources.GetString("panel_Set12.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel_Set12, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_Set12.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel_Set12, resources.GetString("panel_Set12.HelpString"));
             this.panel_Set12.Name = "panel_Set12";
             this.helpProvider1.SetShowHelp(this.panel_Set12, ((bool)(resources.GetObject("panel_Set12.ShowHelp"))));
             // 
             // checkBox_DoNotDisturb_Set12
             // 
+            resources.ApplyResources(this.checkBox_DoNotDisturb_Set12, "checkBox_DoNotDisturb_Set12");
             this.checkBox_DoNotDisturb_Set12.Checked = true;
             this.checkBox_DoNotDisturb_Set12.CheckState = System.Windows.Forms.CheckState.Checked;
-            resources.ApplyResources(this.checkBox_DoNotDisturb_Set12, "checkBox_DoNotDisturb_Set12");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_DoNotDisturb_Set12, resources.GetString("checkBox_DoNotDisturb_Set12.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_DoNotDisturb_Set12, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_DoNotDisturb_Set12.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_DoNotDisturb_Set12, resources.GetString("checkBox_DoNotDisturb_Set12.HelpString"));
             this.checkBox_DoNotDisturb_Set12.Name = "checkBox_DoNotDisturb_Set12";
             this.helpProvider1.SetShowHelp(this.checkBox_DoNotDisturb_Set12, ((bool)(resources.GetObject("checkBox_DoNotDisturb_Set12.ShowHelp"))));
             this.checkBox_DoNotDisturb_Set12.UseVisualStyleBackColor = true;
@@ -1799,6 +2048,9 @@
             resources.ApplyResources(this.checkBox_Lock_Set12, "checkBox_Lock_Set12");
             this.checkBox_Lock_Set12.Checked = true;
             this.checkBox_Lock_Set12.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Lock_Set12, resources.GetString("checkBox_Lock_Set12.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Lock_Set12, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Lock_Set12.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Lock_Set12, resources.GetString("checkBox_Lock_Set12.HelpString"));
             this.checkBox_Lock_Set12.Name = "checkBox_Lock_Set12";
             this.helpProvider1.SetShowHelp(this.checkBox_Lock_Set12, ((bool)(resources.GetObject("checkBox_Lock_Set12.ShowHelp"))));
             this.checkBox_Lock_Set12.UseVisualStyleBackColor = true;
@@ -1809,6 +2061,9 @@
             resources.ApplyResources(this.checkBox_Alarm_Set12, "checkBox_Alarm_Set12");
             this.checkBox_Alarm_Set12.Checked = true;
             this.checkBox_Alarm_Set12.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Alarm_Set12, resources.GetString("checkBox_Alarm_Set12.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Alarm_Set12, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Alarm_Set12.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Alarm_Set12, resources.GetString("checkBox_Alarm_Set12.HelpString"));
             this.checkBox_Alarm_Set12.Name = "checkBox_Alarm_Set12";
             this.helpProvider1.SetShowHelp(this.checkBox_Alarm_Set12, ((bool)(resources.GetObject("checkBox_Alarm_Set12.ShowHelp"))));
             this.checkBox_Alarm_Set12.UseVisualStyleBackColor = true;
@@ -1819,6 +2074,9 @@
             resources.ApplyResources(this.check_BoxBluetooth_Set12, "check_BoxBluetooth_Set12");
             this.check_BoxBluetooth_Set12.Checked = true;
             this.check_BoxBluetooth_Set12.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.check_BoxBluetooth_Set12, resources.GetString("check_BoxBluetooth_Set12.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.check_BoxBluetooth_Set12, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("check_BoxBluetooth_Set12.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.check_BoxBluetooth_Set12, resources.GetString("check_BoxBluetooth_Set12.HelpString"));
             this.check_BoxBluetooth_Set12.Name = "check_BoxBluetooth_Set12";
             this.helpProvider1.SetShowHelp(this.check_BoxBluetooth_Set12, ((bool)(resources.GetObject("check_BoxBluetooth_Set12.ShowHelp"))));
             this.check_BoxBluetooth_Set12.UseVisualStyleBackColor = true;
@@ -1827,6 +2085,9 @@
             // numericUpDown_Goal_Set12
             // 
             resources.ApplyResources(this.numericUpDown_Goal_Set12, "numericUpDown_Goal_Set12");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Goal_Set12, resources.GetString("numericUpDown_Goal_Set12.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Goal_Set12, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Goal_Set12.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Goal_Set12, resources.GetString("numericUpDown_Goal_Set12.HelpString"));
             this.numericUpDown_Goal_Set12.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -1844,12 +2105,18 @@
             // label331
             // 
             resources.ApplyResources(this.label331, "label331");
+            this.helpProvider1.SetHelpKeyword(this.label331, resources.GetString("label331.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label331, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label331.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label331, resources.GetString("label331.HelpString"));
             this.label331.Name = "label331";
             this.helpProvider1.SetShowHelp(this.label331, ((bool)(resources.GetObject("label331.ShowHelp"))));
             // 
             // numericUpDown_Steps_Set12
             // 
             resources.ApplyResources(this.numericUpDown_Steps_Set12, "numericUpDown_Steps_Set12");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Steps_Set12, resources.GetString("numericUpDown_Steps_Set12.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Steps_Set12, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Steps_Set12.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Steps_Set12, resources.GetString("numericUpDown_Steps_Set12.HelpString"));
             this.numericUpDown_Steps_Set12.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -1867,12 +2134,18 @@
             // label332
             // 
             resources.ApplyResources(this.label332, "label332");
+            this.helpProvider1.SetHelpKeyword(this.label332, resources.GetString("label332.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label332, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label332.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label332, resources.GetString("label332.HelpString"));
             this.label332.Name = "label332";
             this.helpProvider1.SetShowHelp(this.label332, ((bool)(resources.GetObject("label332.ShowHelp"))));
             // 
             // numericUpDown_Pulse_Set12
             // 
             resources.ApplyResources(this.numericUpDown_Pulse_Set12, "numericUpDown_Pulse_Set12");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Pulse_Set12, resources.GetString("numericUpDown_Pulse_Set12.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Pulse_Set12, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Pulse_Set12.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Pulse_Set12, resources.GetString("numericUpDown_Pulse_Set12.HelpString"));
             this.numericUpDown_Pulse_Set12.Maximum = new decimal(new int[] {
             999,
             0,
@@ -1890,12 +2163,18 @@
             // label333
             // 
             resources.ApplyResources(this.label333, "label333");
+            this.helpProvider1.SetHelpKeyword(this.label333, resources.GetString("label333.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label333, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label333.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label333, resources.GetString("label333.HelpString"));
             this.label333.Name = "label333";
             this.helpProvider1.SetShowHelp(this.label333, ((bool)(resources.GetObject("label333.ShowHelp"))));
             // 
             // numericUpDown_Distance_Set12
             // 
             resources.ApplyResources(this.numericUpDown_Distance_Set12, "numericUpDown_Distance_Set12");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Distance_Set12, resources.GetString("numericUpDown_Distance_Set12.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Distance_Set12, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Distance_Set12.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Distance_Set12, resources.GetString("numericUpDown_Distance_Set12.HelpString"));
             this.numericUpDown_Distance_Set12.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -1913,12 +2192,18 @@
             // label334
             // 
             resources.ApplyResources(this.label334, "label334");
+            this.helpProvider1.SetHelpKeyword(this.label334, resources.GetString("label334.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label334, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label334.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label334, resources.GetString("label334.HelpString"));
             this.label334.Name = "label334";
             this.helpProvider1.SetShowHelp(this.label334, ((bool)(resources.GetObject("label334.ShowHelp"))));
             // 
             // numericUpDown_Calories_Set12
             // 
             resources.ApplyResources(this.numericUpDown_Calories_Set12, "numericUpDown_Calories_Set12");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Calories_Set12, resources.GetString("numericUpDown_Calories_Set12.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Calories_Set12, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Calories_Set12.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Calories_Set12, resources.GetString("numericUpDown_Calories_Set12.HelpString"));
             this.numericUpDown_Calories_Set12.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -1936,12 +2221,18 @@
             // label335
             // 
             resources.ApplyResources(this.label335, "label335");
+            this.helpProvider1.SetHelpKeyword(this.label335, resources.GetString("label335.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label335, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label335.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label335, resources.GetString("label335.HelpString"));
             this.label335.Name = "label335";
             this.helpProvider1.SetShowHelp(this.label335, ((bool)(resources.GetObject("label335.ShowHelp"))));
             // 
             // numericUpDown_Battery_Set12
             // 
             resources.ApplyResources(this.numericUpDown_Battery_Set12, "numericUpDown_Battery_Set12");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Set12, resources.GetString("numericUpDown_Battery_Set12.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Set12, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Set12.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Set12, resources.GetString("numericUpDown_Battery_Set12.HelpString"));
             this.numericUpDown_Battery_Set12.Name = "numericUpDown_Battery_Set12";
             this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_Set12, ((bool)(resources.GetObject("numericUpDown_Battery_Set12.ShowHelp"))));
             this.numericUpDown_Battery_Set12.Value = new decimal(new int[] {
@@ -1953,8 +2244,11 @@
             // 
             // dateTimePicker_Time_Set12
             // 
-            this.dateTimePicker_Time_Set12.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             resources.ApplyResources(this.dateTimePicker_Time_Set12, "dateTimePicker_Time_Set12");
+            this.dateTimePicker_Time_Set12.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.helpProvider1.SetHelpKeyword(this.dateTimePicker_Time_Set12, resources.GetString("dateTimePicker_Time_Set12.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dateTimePicker_Time_Set12, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dateTimePicker_Time_Set12.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dateTimePicker_Time_Set12, resources.GetString("dateTimePicker_Time_Set12.HelpString"));
             this.dateTimePicker_Time_Set12.Name = "dateTimePicker_Time_Set12";
             this.helpProvider1.SetShowHelp(this.dateTimePicker_Time_Set12, ((bool)(resources.GetObject("dateTimePicker_Time_Set12.ShowHelp"))));
             this.dateTimePicker_Time_Set12.ShowUpDown = true;
@@ -1962,8 +2256,11 @@
             // 
             // dateTimePicker_Date_Set12
             // 
-            this.dateTimePicker_Date_Set12.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             resources.ApplyResources(this.dateTimePicker_Date_Set12, "dateTimePicker_Date_Set12");
+            this.dateTimePicker_Date_Set12.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.helpProvider1.SetHelpKeyword(this.dateTimePicker_Date_Set12, resources.GetString("dateTimePicker_Date_Set12.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dateTimePicker_Date_Set12, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dateTimePicker_Date_Set12.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dateTimePicker_Date_Set12, resources.GetString("dateTimePicker_Date_Set12.HelpString"));
             this.dateTimePicker_Date_Set12.Name = "dateTimePicker_Date_Set12";
             this.helpProvider1.SetShowHelp(this.dateTimePicker_Date_Set12, ((bool)(resources.GetObject("dateTimePicker_Date_Set12.ShowHelp"))));
             this.dateTimePicker_Date_Set12.ValueChanged += new System.EventHandler(this.dateTimePicker_Time_Set12_ValueChanged);
@@ -1971,24 +2268,36 @@
             // label336
             // 
             resources.ApplyResources(this.label336, "label336");
+            this.helpProvider1.SetHelpKeyword(this.label336, resources.GetString("label336.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label336, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label336.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label336, resources.GetString("label336.HelpString"));
             this.label336.Name = "label336";
             this.helpProvider1.SetShowHelp(this.label336, ((bool)(resources.GetObject("label336.ShowHelp"))));
             // 
             // label337
             // 
             resources.ApplyResources(this.label337, "label337");
+            this.helpProvider1.SetHelpKeyword(this.label337, resources.GetString("label337.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label337, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label337.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label337, resources.GetString("label337.HelpString"));
             this.label337.Name = "label337";
             this.helpProvider1.SetShowHelp(this.label337, ((bool)(resources.GetObject("label337.ShowHelp"))));
             // 
             // label338
             // 
             resources.ApplyResources(this.label338, "label338");
+            this.helpProvider1.SetHelpKeyword(this.label338, resources.GetString("label338.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label338, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label338.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label338, resources.GetString("label338.HelpString"));
             this.label338.Name = "label338";
             this.helpProvider1.SetShowHelp(this.label338, ((bool)(resources.GetObject("label338.ShowHelp"))));
             // 
             // button_Set12
             // 
             resources.ApplyResources(this.button_Set12, "button_Set12");
+            this.helpProvider1.SetHelpKeyword(this.button_Set12, resources.GetString("button_Set12.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_Set12, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_Set12.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_Set12, resources.GetString("button_Set12.HelpString"));
             this.button_Set12.Name = "button_Set12";
             this.helpProvider1.SetShowHelp(this.button_Set12, ((bool)(resources.GetObject("button_Set12.ShowHelp"))));
             this.button_Set12.UseVisualStyleBackColor = true;
@@ -1996,6 +2305,7 @@
             // 
             // panel_Set11
             // 
+            resources.ApplyResources(this.panel_Set11, "panel_Set11");
             this.panel_Set11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_Set11.Controls.Add(this.checkBox_DoNotDisturb_Set11);
             this.panel_Set11.Controls.Add(this.checkBox_Lock_Set11);
@@ -2017,15 +2327,20 @@
             this.panel_Set11.Controls.Add(this.label328);
             this.panel_Set11.Controls.Add(this.label329);
             this.panel_Set11.Controls.Add(this.label330);
-            resources.ApplyResources(this.panel_Set11, "panel_Set11");
+            this.helpProvider1.SetHelpKeyword(this.panel_Set11, resources.GetString("panel_Set11.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel_Set11, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_Set11.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel_Set11, resources.GetString("panel_Set11.HelpString"));
             this.panel_Set11.Name = "panel_Set11";
             this.helpProvider1.SetShowHelp(this.panel_Set11, ((bool)(resources.GetObject("panel_Set11.ShowHelp"))));
             // 
             // checkBox_DoNotDisturb_Set11
             // 
+            resources.ApplyResources(this.checkBox_DoNotDisturb_Set11, "checkBox_DoNotDisturb_Set11");
             this.checkBox_DoNotDisturb_Set11.Checked = true;
             this.checkBox_DoNotDisturb_Set11.CheckState = System.Windows.Forms.CheckState.Checked;
-            resources.ApplyResources(this.checkBox_DoNotDisturb_Set11, "checkBox_DoNotDisturb_Set11");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_DoNotDisturb_Set11, resources.GetString("checkBox_DoNotDisturb_Set11.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_DoNotDisturb_Set11, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_DoNotDisturb_Set11.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_DoNotDisturb_Set11, resources.GetString("checkBox_DoNotDisturb_Set11.HelpString"));
             this.checkBox_DoNotDisturb_Set11.Name = "checkBox_DoNotDisturb_Set11";
             this.helpProvider1.SetShowHelp(this.checkBox_DoNotDisturb_Set11, ((bool)(resources.GetObject("checkBox_DoNotDisturb_Set11.ShowHelp"))));
             this.checkBox_DoNotDisturb_Set11.UseVisualStyleBackColor = true;
@@ -2036,6 +2351,9 @@
             resources.ApplyResources(this.checkBox_Lock_Set11, "checkBox_Lock_Set11");
             this.checkBox_Lock_Set11.Checked = true;
             this.checkBox_Lock_Set11.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Lock_Set11, resources.GetString("checkBox_Lock_Set11.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Lock_Set11, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Lock_Set11.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Lock_Set11, resources.GetString("checkBox_Lock_Set11.HelpString"));
             this.checkBox_Lock_Set11.Name = "checkBox_Lock_Set11";
             this.helpProvider1.SetShowHelp(this.checkBox_Lock_Set11, ((bool)(resources.GetObject("checkBox_Lock_Set11.ShowHelp"))));
             this.checkBox_Lock_Set11.UseVisualStyleBackColor = true;
@@ -2046,6 +2364,9 @@
             resources.ApplyResources(this.checkBox_Alarm_Set11, "checkBox_Alarm_Set11");
             this.checkBox_Alarm_Set11.Checked = true;
             this.checkBox_Alarm_Set11.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Alarm_Set11, resources.GetString("checkBox_Alarm_Set11.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Alarm_Set11, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Alarm_Set11.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Alarm_Set11, resources.GetString("checkBox_Alarm_Set11.HelpString"));
             this.checkBox_Alarm_Set11.Name = "checkBox_Alarm_Set11";
             this.helpProvider1.SetShowHelp(this.checkBox_Alarm_Set11, ((bool)(resources.GetObject("checkBox_Alarm_Set11.ShowHelp"))));
             this.checkBox_Alarm_Set11.UseVisualStyleBackColor = true;
@@ -2056,6 +2377,9 @@
             resources.ApplyResources(this.check_BoxBluetooth_Set11, "check_BoxBluetooth_Set11");
             this.check_BoxBluetooth_Set11.Checked = true;
             this.check_BoxBluetooth_Set11.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.check_BoxBluetooth_Set11, resources.GetString("check_BoxBluetooth_Set11.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.check_BoxBluetooth_Set11, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("check_BoxBluetooth_Set11.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.check_BoxBluetooth_Set11, resources.GetString("check_BoxBluetooth_Set11.HelpString"));
             this.check_BoxBluetooth_Set11.Name = "check_BoxBluetooth_Set11";
             this.helpProvider1.SetShowHelp(this.check_BoxBluetooth_Set11, ((bool)(resources.GetObject("check_BoxBluetooth_Set11.ShowHelp"))));
             this.check_BoxBluetooth_Set11.UseVisualStyleBackColor = true;
@@ -2064,6 +2388,9 @@
             // numericUpDown_Goal_Set11
             // 
             resources.ApplyResources(this.numericUpDown_Goal_Set11, "numericUpDown_Goal_Set11");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Goal_Set11, resources.GetString("numericUpDown_Goal_Set11.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Goal_Set11, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Goal_Set11.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Goal_Set11, resources.GetString("numericUpDown_Goal_Set11.HelpString"));
             this.numericUpDown_Goal_Set11.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -2081,12 +2408,18 @@
             // label323
             // 
             resources.ApplyResources(this.label323, "label323");
+            this.helpProvider1.SetHelpKeyword(this.label323, resources.GetString("label323.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label323, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label323.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label323, resources.GetString("label323.HelpString"));
             this.label323.Name = "label323";
             this.helpProvider1.SetShowHelp(this.label323, ((bool)(resources.GetObject("label323.ShowHelp"))));
             // 
             // numericUpDown_Steps_Set11
             // 
             resources.ApplyResources(this.numericUpDown_Steps_Set11, "numericUpDown_Steps_Set11");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Steps_Set11, resources.GetString("numericUpDown_Steps_Set11.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Steps_Set11, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Steps_Set11.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Steps_Set11, resources.GetString("numericUpDown_Steps_Set11.HelpString"));
             this.numericUpDown_Steps_Set11.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -2104,12 +2437,18 @@
             // label324
             // 
             resources.ApplyResources(this.label324, "label324");
+            this.helpProvider1.SetHelpKeyword(this.label324, resources.GetString("label324.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label324, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label324.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label324, resources.GetString("label324.HelpString"));
             this.label324.Name = "label324";
             this.helpProvider1.SetShowHelp(this.label324, ((bool)(resources.GetObject("label324.ShowHelp"))));
             // 
             // numericUpDown_Pulse_Set11
             // 
             resources.ApplyResources(this.numericUpDown_Pulse_Set11, "numericUpDown_Pulse_Set11");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Pulse_Set11, resources.GetString("numericUpDown_Pulse_Set11.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Pulse_Set11, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Pulse_Set11.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Pulse_Set11, resources.GetString("numericUpDown_Pulse_Set11.HelpString"));
             this.numericUpDown_Pulse_Set11.Maximum = new decimal(new int[] {
             999,
             0,
@@ -2127,12 +2466,18 @@
             // label325
             // 
             resources.ApplyResources(this.label325, "label325");
+            this.helpProvider1.SetHelpKeyword(this.label325, resources.GetString("label325.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label325, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label325.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label325, resources.GetString("label325.HelpString"));
             this.label325.Name = "label325";
             this.helpProvider1.SetShowHelp(this.label325, ((bool)(resources.GetObject("label325.ShowHelp"))));
             // 
             // numericUpDown_Distance_Set11
             // 
             resources.ApplyResources(this.numericUpDown_Distance_Set11, "numericUpDown_Distance_Set11");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Distance_Set11, resources.GetString("numericUpDown_Distance_Set11.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Distance_Set11, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Distance_Set11.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Distance_Set11, resources.GetString("numericUpDown_Distance_Set11.HelpString"));
             this.numericUpDown_Distance_Set11.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -2150,12 +2495,18 @@
             // label326
             // 
             resources.ApplyResources(this.label326, "label326");
+            this.helpProvider1.SetHelpKeyword(this.label326, resources.GetString("label326.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label326, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label326.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label326, resources.GetString("label326.HelpString"));
             this.label326.Name = "label326";
             this.helpProvider1.SetShowHelp(this.label326, ((bool)(resources.GetObject("label326.ShowHelp"))));
             // 
             // numericUpDown_Calories_Set11
             // 
             resources.ApplyResources(this.numericUpDown_Calories_Set11, "numericUpDown_Calories_Set11");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Calories_Set11, resources.GetString("numericUpDown_Calories_Set11.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Calories_Set11, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Calories_Set11.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Calories_Set11, resources.GetString("numericUpDown_Calories_Set11.HelpString"));
             this.numericUpDown_Calories_Set11.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -2173,12 +2524,18 @@
             // label327
             // 
             resources.ApplyResources(this.label327, "label327");
+            this.helpProvider1.SetHelpKeyword(this.label327, resources.GetString("label327.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label327, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label327.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label327, resources.GetString("label327.HelpString"));
             this.label327.Name = "label327";
             this.helpProvider1.SetShowHelp(this.label327, ((bool)(resources.GetObject("label327.ShowHelp"))));
             // 
             // numericUpDown_Battery_Set11
             // 
             resources.ApplyResources(this.numericUpDown_Battery_Set11, "numericUpDown_Battery_Set11");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Set11, resources.GetString("numericUpDown_Battery_Set11.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Set11, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Set11.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Set11, resources.GetString("numericUpDown_Battery_Set11.HelpString"));
             this.numericUpDown_Battery_Set11.Name = "numericUpDown_Battery_Set11";
             this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_Set11, ((bool)(resources.GetObject("numericUpDown_Battery_Set11.ShowHelp"))));
             this.numericUpDown_Battery_Set11.Value = new decimal(new int[] {
@@ -2190,8 +2547,11 @@
             // 
             // dateTimePicker_Time_Set11
             // 
-            this.dateTimePicker_Time_Set11.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             resources.ApplyResources(this.dateTimePicker_Time_Set11, "dateTimePicker_Time_Set11");
+            this.dateTimePicker_Time_Set11.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.helpProvider1.SetHelpKeyword(this.dateTimePicker_Time_Set11, resources.GetString("dateTimePicker_Time_Set11.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dateTimePicker_Time_Set11, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dateTimePicker_Time_Set11.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dateTimePicker_Time_Set11, resources.GetString("dateTimePicker_Time_Set11.HelpString"));
             this.dateTimePicker_Time_Set11.Name = "dateTimePicker_Time_Set11";
             this.helpProvider1.SetShowHelp(this.dateTimePicker_Time_Set11, ((bool)(resources.GetObject("dateTimePicker_Time_Set11.ShowHelp"))));
             this.dateTimePicker_Time_Set11.ShowUpDown = true;
@@ -2199,8 +2559,11 @@
             // 
             // dateTimePicker_Date_Set11
             // 
-            this.dateTimePicker_Date_Set11.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             resources.ApplyResources(this.dateTimePicker_Date_Set11, "dateTimePicker_Date_Set11");
+            this.dateTimePicker_Date_Set11.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.helpProvider1.SetHelpKeyword(this.dateTimePicker_Date_Set11, resources.GetString("dateTimePicker_Date_Set11.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dateTimePicker_Date_Set11, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dateTimePicker_Date_Set11.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dateTimePicker_Date_Set11, resources.GetString("dateTimePicker_Date_Set11.HelpString"));
             this.dateTimePicker_Date_Set11.Name = "dateTimePicker_Date_Set11";
             this.helpProvider1.SetShowHelp(this.dateTimePicker_Date_Set11, ((bool)(resources.GetObject("dateTimePicker_Date_Set11.ShowHelp"))));
             this.dateTimePicker_Date_Set11.ValueChanged += new System.EventHandler(this.dateTimePicker_Time_Set11_ValueChanged);
@@ -2208,24 +2571,36 @@
             // label328
             // 
             resources.ApplyResources(this.label328, "label328");
+            this.helpProvider1.SetHelpKeyword(this.label328, resources.GetString("label328.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label328, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label328.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label328, resources.GetString("label328.HelpString"));
             this.label328.Name = "label328";
             this.helpProvider1.SetShowHelp(this.label328, ((bool)(resources.GetObject("label328.ShowHelp"))));
             // 
             // label329
             // 
             resources.ApplyResources(this.label329, "label329");
+            this.helpProvider1.SetHelpKeyword(this.label329, resources.GetString("label329.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label329, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label329.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label329, resources.GetString("label329.HelpString"));
             this.label329.Name = "label329";
             this.helpProvider1.SetShowHelp(this.label329, ((bool)(resources.GetObject("label329.ShowHelp"))));
             // 
             // label330
             // 
             resources.ApplyResources(this.label330, "label330");
+            this.helpProvider1.SetHelpKeyword(this.label330, resources.GetString("label330.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label330, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label330.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label330, resources.GetString("label330.HelpString"));
             this.label330.Name = "label330";
             this.helpProvider1.SetShowHelp(this.label330, ((bool)(resources.GetObject("label330.ShowHelp"))));
             // 
             // button_Set11
             // 
             resources.ApplyResources(this.button_Set11, "button_Set11");
+            this.helpProvider1.SetHelpKeyword(this.button_Set11, resources.GetString("button_Set11.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_Set11, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_Set11.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_Set11, resources.GetString("button_Set11.HelpString"));
             this.button_Set11.Name = "button_Set11";
             this.helpProvider1.SetShowHelp(this.button_Set11, ((bool)(resources.GetObject("button_Set11.ShowHelp"))));
             this.button_Set11.UseVisualStyleBackColor = true;
@@ -2234,6 +2609,9 @@
             // button_SetWeather
             // 
             resources.ApplyResources(this.button_SetWeather, "button_SetWeather");
+            this.helpProvider1.SetHelpKeyword(this.button_SetWeather, resources.GetString("button_SetWeather.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_SetWeather, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_SetWeather.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_SetWeather, resources.GetString("button_SetWeather.HelpString"));
             this.button_SetWeather.Name = "button_SetWeather";
             this.helpProvider1.SetShowHelp(this.button_SetWeather, ((bool)(resources.GetObject("button_SetWeather.ShowHelp"))));
             this.button_SetWeather.UseVisualStyleBackColor = true;
@@ -2241,6 +2619,7 @@
             // 
             // panel_SetWeather
             // 
+            resources.ApplyResources(this.panel_SetWeather, "panel_SetWeather");
             this.panel_SetWeather.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_SetWeather.Controls.Add(this.numericUpDown_WeatherSet_NightTemp);
             this.panel_SetWeather.Controls.Add(this.label288);
@@ -2250,13 +2629,18 @@
             this.panel_SetWeather.Controls.Add(this.checkBox_WeatherSet_Temp);
             this.panel_SetWeather.Controls.Add(this.numericUpDown_WeatherSet_Temp);
             this.panel_SetWeather.Controls.Add(this.checkBox_WeatherSet_DayTemp);
-            resources.ApplyResources(this.panel_SetWeather, "panel_SetWeather");
+            this.helpProvider1.SetHelpKeyword(this.panel_SetWeather, resources.GetString("panel_SetWeather.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel_SetWeather, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_SetWeather.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel_SetWeather, resources.GetString("panel_SetWeather.HelpString"));
             this.panel_SetWeather.Name = "panel_SetWeather";
             this.helpProvider1.SetShowHelp(this.panel_SetWeather, ((bool)(resources.GetObject("panel_SetWeather.ShowHelp"))));
             // 
             // numericUpDown_WeatherSet_NightTemp
             // 
             resources.ApplyResources(this.numericUpDown_WeatherSet_NightTemp, "numericUpDown_WeatherSet_NightTemp");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_WeatherSet_NightTemp, resources.GetString("numericUpDown_WeatherSet_NightTemp.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_WeatherSet_NightTemp, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_WeatherSet_NightTemp.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_WeatherSet_NightTemp, resources.GetString("numericUpDown_WeatherSet_NightTemp.HelpString"));
             this.numericUpDown_WeatherSet_NightTemp.Maximum = new decimal(new int[] {
             999,
             0,
@@ -2279,19 +2663,29 @@
             // label288
             // 
             resources.ApplyResources(this.label288, "label288");
+            this.helpProvider1.SetHelpKeyword(this.label288, resources.GetString("label288.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label288, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label288.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label288, resources.GetString("label288.HelpString"));
             this.label288.Name = "label288";
             this.helpProvider1.SetShowHelp(this.label288, ((bool)(resources.GetObject("label288.ShowHelp"))));
             // 
             // label299
             // 
             resources.ApplyResources(this.label299, "label299");
+            this.helpProvider1.SetHelpKeyword(this.label299, resources.GetString("label299.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label299, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label299.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label299, resources.GetString("label299.HelpString"));
             this.label299.Name = "label299";
             this.helpProvider1.SetShowHelp(this.label299, ((bool)(resources.GetObject("label299.ShowHelp"))));
             // 
             // comboBox_WeatherSet_Icon
             // 
+            resources.ApplyResources(this.comboBox_WeatherSet_Icon, "comboBox_WeatherSet_Icon");
             this.comboBox_WeatherSet_Icon.DropDownWidth = 135;
             this.comboBox_WeatherSet_Icon.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_WeatherSet_Icon, resources.GetString("comboBox_WeatherSet_Icon.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_WeatherSet_Icon, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_WeatherSet_Icon.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_WeatherSet_Icon, resources.GetString("comboBox_WeatherSet_Icon.HelpString"));
             this.comboBox_WeatherSet_Icon.Items.AddRange(new object[] {
             resources.GetString("comboBox_WeatherSet_Icon.Items"),
             resources.GetString("comboBox_WeatherSet_Icon.Items1"),
@@ -2318,7 +2712,6 @@
             resources.GetString("comboBox_WeatherSet_Icon.Items22"),
             resources.GetString("comboBox_WeatherSet_Icon.Items23"),
             resources.GetString("comboBox_WeatherSet_Icon.Items24")});
-            resources.ApplyResources(this.comboBox_WeatherSet_Icon, "comboBox_WeatherSet_Icon");
             this.comboBox_WeatherSet_Icon.Name = "comboBox_WeatherSet_Icon";
             this.helpProvider1.SetShowHelp(this.comboBox_WeatherSet_Icon, ((bool)(resources.GetObject("comboBox_WeatherSet_Icon.ShowHelp"))));
             this.comboBox_WeatherSet_Icon.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
@@ -2328,6 +2721,9 @@
             // numericUpDown_WeatherSet_DayTemp
             // 
             resources.ApplyResources(this.numericUpDown_WeatherSet_DayTemp, "numericUpDown_WeatherSet_DayTemp");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_WeatherSet_DayTemp, resources.GetString("numericUpDown_WeatherSet_DayTemp.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_WeatherSet_DayTemp, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_WeatherSet_DayTemp.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_WeatherSet_DayTemp, resources.GetString("numericUpDown_WeatherSet_DayTemp.HelpString"));
             this.numericUpDown_WeatherSet_DayTemp.Maximum = new decimal(new int[] {
             999,
             0,
@@ -2352,6 +2748,9 @@
             resources.ApplyResources(this.checkBox_WeatherSet_Temp, "checkBox_WeatherSet_Temp");
             this.checkBox_WeatherSet_Temp.Checked = true;
             this.checkBox_WeatherSet_Temp.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_WeatherSet_Temp, resources.GetString("checkBox_WeatherSet_Temp.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_WeatherSet_Temp, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_WeatherSet_Temp.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_WeatherSet_Temp, resources.GetString("checkBox_WeatherSet_Temp.HelpString"));
             this.checkBox_WeatherSet_Temp.Name = "checkBox_WeatherSet_Temp";
             this.helpProvider1.SetShowHelp(this.checkBox_WeatherSet_Temp, ((bool)(resources.GetObject("checkBox_WeatherSet_Temp.ShowHelp"))));
             this.checkBox_WeatherSet_Temp.UseVisualStyleBackColor = true;
@@ -2361,6 +2760,9 @@
             // numericUpDown_WeatherSet_Temp
             // 
             resources.ApplyResources(this.numericUpDown_WeatherSet_Temp, "numericUpDown_WeatherSet_Temp");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_WeatherSet_Temp, resources.GetString("numericUpDown_WeatherSet_Temp.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_WeatherSet_Temp, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_WeatherSet_Temp.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_WeatherSet_Temp, resources.GetString("numericUpDown_WeatherSet_Temp.HelpString"));
             this.numericUpDown_WeatherSet_Temp.Maximum = new decimal(new int[] {
             999,
             0,
@@ -2385,6 +2787,9 @@
             resources.ApplyResources(this.checkBox_WeatherSet_DayTemp, "checkBox_WeatherSet_DayTemp");
             this.checkBox_WeatherSet_DayTemp.Checked = true;
             this.checkBox_WeatherSet_DayTemp.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_WeatherSet_DayTemp, resources.GetString("checkBox_WeatherSet_DayTemp.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_WeatherSet_DayTemp, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_WeatherSet_DayTemp.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_WeatherSet_DayTemp, resources.GetString("checkBox_WeatherSet_DayTemp.HelpString"));
             this.checkBox_WeatherSet_DayTemp.Name = "checkBox_WeatherSet_DayTemp";
             this.helpProvider1.SetShowHelp(this.checkBox_WeatherSet_DayTemp, ((bool)(resources.GetObject("checkBox_WeatherSet_DayTemp.ShowHelp"))));
             this.checkBox_WeatherSet_DayTemp.UseVisualStyleBackColor = true;
@@ -2393,16 +2798,22 @@
             // 
             // panel_PreviewStates
             // 
+            resources.ApplyResources(this.panel_PreviewStates, "panel_PreviewStates");
             this.panel_PreviewStates.Controls.Add(this.button_JsonPreview_Random);
             this.panel_PreviewStates.Controls.Add(this.button_JsonPreview_Read);
             this.panel_PreviewStates.Controls.Add(this.button_JsonPreview_Write);
-            resources.ApplyResources(this.panel_PreviewStates, "panel_PreviewStates");
+            this.helpProvider1.SetHelpKeyword(this.panel_PreviewStates, resources.GetString("panel_PreviewStates.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel_PreviewStates, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_PreviewStates.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel_PreviewStates, resources.GetString("panel_PreviewStates.HelpString"));
             this.panel_PreviewStates.Name = "panel_PreviewStates";
             this.helpProvider1.SetShowHelp(this.panel_PreviewStates, ((bool)(resources.GetObject("panel_PreviewStates.ShowHelp"))));
             // 
             // button_JsonPreview_Random
             // 
             resources.ApplyResources(this.button_JsonPreview_Random, "button_JsonPreview_Random");
+            this.helpProvider1.SetHelpKeyword(this.button_JsonPreview_Random, resources.GetString("button_JsonPreview_Random.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_JsonPreview_Random, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_JsonPreview_Random.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_JsonPreview_Random, resources.GetString("button_JsonPreview_Random.HelpString"));
             this.button_JsonPreview_Random.Name = "button_JsonPreview_Random";
             this.helpProvider1.SetShowHelp(this.button_JsonPreview_Random, ((bool)(resources.GetObject("button_JsonPreview_Random.ShowHelp"))));
             this.button_JsonPreview_Random.UseVisualStyleBackColor = true;
@@ -2411,6 +2822,9 @@
             // button_JsonPreview_Read
             // 
             resources.ApplyResources(this.button_JsonPreview_Read, "button_JsonPreview_Read");
+            this.helpProvider1.SetHelpKeyword(this.button_JsonPreview_Read, resources.GetString("button_JsonPreview_Read.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_JsonPreview_Read, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_JsonPreview_Read.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_JsonPreview_Read, resources.GetString("button_JsonPreview_Read.HelpString"));
             this.button_JsonPreview_Read.Name = "button_JsonPreview_Read";
             this.helpProvider1.SetShowHelp(this.button_JsonPreview_Read, ((bool)(resources.GetObject("button_JsonPreview_Read.ShowHelp"))));
             this.button_JsonPreview_Read.UseVisualStyleBackColor = true;
@@ -2419,6 +2833,9 @@
             // button_JsonPreview_Write
             // 
             resources.ApplyResources(this.button_JsonPreview_Write, "button_JsonPreview_Write");
+            this.helpProvider1.SetHelpKeyword(this.button_JsonPreview_Write, resources.GetString("button_JsonPreview_Write.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_JsonPreview_Write, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_JsonPreview_Write.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_JsonPreview_Write, resources.GetString("button_JsonPreview_Write.HelpString"));
             this.button_JsonPreview_Write.Name = "button_JsonPreview_Write";
             this.helpProvider1.SetShowHelp(this.button_JsonPreview_Write, ((bool)(resources.GetObject("button_JsonPreview_Write.ShowHelp"))));
             this.button_JsonPreview_Write.UseVisualStyleBackColor = true;
@@ -2426,6 +2843,7 @@
             // 
             // panel_Set10
             // 
+            resources.ApplyResources(this.panel_Set10, "panel_Set10");
             this.panel_Set10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_Set10.Controls.Add(this.checkBox_DoNotDisturb_Set10);
             this.panel_Set10.Controls.Add(this.checkBox_Lock_Set10);
@@ -2447,15 +2865,20 @@
             this.panel_Set10.Controls.Add(this.label267);
             this.panel_Set10.Controls.Add(this.label268);
             this.panel_Set10.Controls.Add(this.label269);
-            resources.ApplyResources(this.panel_Set10, "panel_Set10");
+            this.helpProvider1.SetHelpKeyword(this.panel_Set10, resources.GetString("panel_Set10.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel_Set10, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_Set10.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel_Set10, resources.GetString("panel_Set10.HelpString"));
             this.panel_Set10.Name = "panel_Set10";
             this.helpProvider1.SetShowHelp(this.panel_Set10, ((bool)(resources.GetObject("panel_Set10.ShowHelp"))));
             // 
             // checkBox_DoNotDisturb_Set10
             // 
+            resources.ApplyResources(this.checkBox_DoNotDisturb_Set10, "checkBox_DoNotDisturb_Set10");
             this.checkBox_DoNotDisturb_Set10.Checked = true;
             this.checkBox_DoNotDisturb_Set10.CheckState = System.Windows.Forms.CheckState.Checked;
-            resources.ApplyResources(this.checkBox_DoNotDisturb_Set10, "checkBox_DoNotDisturb_Set10");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_DoNotDisturb_Set10, resources.GetString("checkBox_DoNotDisturb_Set10.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_DoNotDisturb_Set10, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_DoNotDisturb_Set10.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_DoNotDisturb_Set10, resources.GetString("checkBox_DoNotDisturb_Set10.HelpString"));
             this.checkBox_DoNotDisturb_Set10.Name = "checkBox_DoNotDisturb_Set10";
             this.helpProvider1.SetShowHelp(this.checkBox_DoNotDisturb_Set10, ((bool)(resources.GetObject("checkBox_DoNotDisturb_Set10.ShowHelp"))));
             this.checkBox_DoNotDisturb_Set10.UseVisualStyleBackColor = true;
@@ -2466,6 +2889,9 @@
             resources.ApplyResources(this.checkBox_Lock_Set10, "checkBox_Lock_Set10");
             this.checkBox_Lock_Set10.Checked = true;
             this.checkBox_Lock_Set10.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Lock_Set10, resources.GetString("checkBox_Lock_Set10.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Lock_Set10, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Lock_Set10.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Lock_Set10, resources.GetString("checkBox_Lock_Set10.HelpString"));
             this.checkBox_Lock_Set10.Name = "checkBox_Lock_Set10";
             this.helpProvider1.SetShowHelp(this.checkBox_Lock_Set10, ((bool)(resources.GetObject("checkBox_Lock_Set10.ShowHelp"))));
             this.checkBox_Lock_Set10.UseVisualStyleBackColor = true;
@@ -2476,6 +2902,9 @@
             resources.ApplyResources(this.checkBox_Alarm_Set10, "checkBox_Alarm_Set10");
             this.checkBox_Alarm_Set10.Checked = true;
             this.checkBox_Alarm_Set10.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Alarm_Set10, resources.GetString("checkBox_Alarm_Set10.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Alarm_Set10, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Alarm_Set10.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Alarm_Set10, resources.GetString("checkBox_Alarm_Set10.HelpString"));
             this.checkBox_Alarm_Set10.Name = "checkBox_Alarm_Set10";
             this.helpProvider1.SetShowHelp(this.checkBox_Alarm_Set10, ((bool)(resources.GetObject("checkBox_Alarm_Set10.ShowHelp"))));
             this.checkBox_Alarm_Set10.UseVisualStyleBackColor = true;
@@ -2486,6 +2915,9 @@
             resources.ApplyResources(this.check_BoxBluetooth_Set10, "check_BoxBluetooth_Set10");
             this.check_BoxBluetooth_Set10.Checked = true;
             this.check_BoxBluetooth_Set10.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.check_BoxBluetooth_Set10, resources.GetString("check_BoxBluetooth_Set10.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.check_BoxBluetooth_Set10, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("check_BoxBluetooth_Set10.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.check_BoxBluetooth_Set10, resources.GetString("check_BoxBluetooth_Set10.HelpString"));
             this.check_BoxBluetooth_Set10.Name = "check_BoxBluetooth_Set10";
             this.helpProvider1.SetShowHelp(this.check_BoxBluetooth_Set10, ((bool)(resources.GetObject("check_BoxBluetooth_Set10.ShowHelp"))));
             this.check_BoxBluetooth_Set10.UseVisualStyleBackColor = true;
@@ -2494,6 +2926,9 @@
             // numericUpDown_Goal_Set10
             // 
             resources.ApplyResources(this.numericUpDown_Goal_Set10, "numericUpDown_Goal_Set10");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Goal_Set10, resources.GetString("numericUpDown_Goal_Set10.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Goal_Set10, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Goal_Set10.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Goal_Set10, resources.GetString("numericUpDown_Goal_Set10.HelpString"));
             this.numericUpDown_Goal_Set10.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -2511,12 +2946,18 @@
             // label262
             // 
             resources.ApplyResources(this.label262, "label262");
+            this.helpProvider1.SetHelpKeyword(this.label262, resources.GetString("label262.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label262, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label262.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label262, resources.GetString("label262.HelpString"));
             this.label262.Name = "label262";
             this.helpProvider1.SetShowHelp(this.label262, ((bool)(resources.GetObject("label262.ShowHelp"))));
             // 
             // numericUpDown_Steps_Set10
             // 
             resources.ApplyResources(this.numericUpDown_Steps_Set10, "numericUpDown_Steps_Set10");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Steps_Set10, resources.GetString("numericUpDown_Steps_Set10.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Steps_Set10, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Steps_Set10.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Steps_Set10, resources.GetString("numericUpDown_Steps_Set10.HelpString"));
             this.numericUpDown_Steps_Set10.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -2534,12 +2975,18 @@
             // label263
             // 
             resources.ApplyResources(this.label263, "label263");
+            this.helpProvider1.SetHelpKeyword(this.label263, resources.GetString("label263.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label263, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label263.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label263, resources.GetString("label263.HelpString"));
             this.label263.Name = "label263";
             this.helpProvider1.SetShowHelp(this.label263, ((bool)(resources.GetObject("label263.ShowHelp"))));
             // 
             // numericUpDown_Pulse_Set10
             // 
             resources.ApplyResources(this.numericUpDown_Pulse_Set10, "numericUpDown_Pulse_Set10");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Pulse_Set10, resources.GetString("numericUpDown_Pulse_Set10.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Pulse_Set10, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Pulse_Set10.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Pulse_Set10, resources.GetString("numericUpDown_Pulse_Set10.HelpString"));
             this.numericUpDown_Pulse_Set10.Maximum = new decimal(new int[] {
             999,
             0,
@@ -2557,12 +3004,18 @@
             // label264
             // 
             resources.ApplyResources(this.label264, "label264");
+            this.helpProvider1.SetHelpKeyword(this.label264, resources.GetString("label264.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label264, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label264.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label264, resources.GetString("label264.HelpString"));
             this.label264.Name = "label264";
             this.helpProvider1.SetShowHelp(this.label264, ((bool)(resources.GetObject("label264.ShowHelp"))));
             // 
             // numericUpDown_Distance_Set10
             // 
             resources.ApplyResources(this.numericUpDown_Distance_Set10, "numericUpDown_Distance_Set10");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Distance_Set10, resources.GetString("numericUpDown_Distance_Set10.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Distance_Set10, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Distance_Set10.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Distance_Set10, resources.GetString("numericUpDown_Distance_Set10.HelpString"));
             this.numericUpDown_Distance_Set10.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -2580,12 +3033,18 @@
             // label265
             // 
             resources.ApplyResources(this.label265, "label265");
+            this.helpProvider1.SetHelpKeyword(this.label265, resources.GetString("label265.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label265, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label265.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label265, resources.GetString("label265.HelpString"));
             this.label265.Name = "label265";
             this.helpProvider1.SetShowHelp(this.label265, ((bool)(resources.GetObject("label265.ShowHelp"))));
             // 
             // numericUpDown_Calories_Set10
             // 
             resources.ApplyResources(this.numericUpDown_Calories_Set10, "numericUpDown_Calories_Set10");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Calories_Set10, resources.GetString("numericUpDown_Calories_Set10.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Calories_Set10, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Calories_Set10.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Calories_Set10, resources.GetString("numericUpDown_Calories_Set10.HelpString"));
             this.numericUpDown_Calories_Set10.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -2603,12 +3062,18 @@
             // label266
             // 
             resources.ApplyResources(this.label266, "label266");
+            this.helpProvider1.SetHelpKeyword(this.label266, resources.GetString("label266.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label266, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label266.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label266, resources.GetString("label266.HelpString"));
             this.label266.Name = "label266";
             this.helpProvider1.SetShowHelp(this.label266, ((bool)(resources.GetObject("label266.ShowHelp"))));
             // 
             // numericUpDown_Battery_Set10
             // 
             resources.ApplyResources(this.numericUpDown_Battery_Set10, "numericUpDown_Battery_Set10");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Set10, resources.GetString("numericUpDown_Battery_Set10.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Set10, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Set10.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Set10, resources.GetString("numericUpDown_Battery_Set10.HelpString"));
             this.numericUpDown_Battery_Set10.Name = "numericUpDown_Battery_Set10";
             this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_Set10, ((bool)(resources.GetObject("numericUpDown_Battery_Set10.ShowHelp"))));
             this.numericUpDown_Battery_Set10.Value = new decimal(new int[] {
@@ -2620,8 +3085,11 @@
             // 
             // dateTimePicker_Time_Set10
             // 
-            this.dateTimePicker_Time_Set10.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             resources.ApplyResources(this.dateTimePicker_Time_Set10, "dateTimePicker_Time_Set10");
+            this.dateTimePicker_Time_Set10.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.helpProvider1.SetHelpKeyword(this.dateTimePicker_Time_Set10, resources.GetString("dateTimePicker_Time_Set10.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dateTimePicker_Time_Set10, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dateTimePicker_Time_Set10.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dateTimePicker_Time_Set10, resources.GetString("dateTimePicker_Time_Set10.HelpString"));
             this.dateTimePicker_Time_Set10.Name = "dateTimePicker_Time_Set10";
             this.helpProvider1.SetShowHelp(this.dateTimePicker_Time_Set10, ((bool)(resources.GetObject("dateTimePicker_Time_Set10.ShowHelp"))));
             this.dateTimePicker_Time_Set10.ShowUpDown = true;
@@ -2629,8 +3097,11 @@
             // 
             // dateTimePicker_Date_Set10
             // 
-            this.dateTimePicker_Date_Set10.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             resources.ApplyResources(this.dateTimePicker_Date_Set10, "dateTimePicker_Date_Set10");
+            this.dateTimePicker_Date_Set10.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.helpProvider1.SetHelpKeyword(this.dateTimePicker_Date_Set10, resources.GetString("dateTimePicker_Date_Set10.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dateTimePicker_Date_Set10, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dateTimePicker_Date_Set10.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dateTimePicker_Date_Set10, resources.GetString("dateTimePicker_Date_Set10.HelpString"));
             this.dateTimePicker_Date_Set10.Name = "dateTimePicker_Date_Set10";
             this.helpProvider1.SetShowHelp(this.dateTimePicker_Date_Set10, ((bool)(resources.GetObject("dateTimePicker_Date_Set10.ShowHelp"))));
             this.dateTimePicker_Date_Set10.ValueChanged += new System.EventHandler(this.dateTimePicker_Time_Set10_ValueChanged);
@@ -2638,24 +3109,36 @@
             // label267
             // 
             resources.ApplyResources(this.label267, "label267");
+            this.helpProvider1.SetHelpKeyword(this.label267, resources.GetString("label267.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label267, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label267.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label267, resources.GetString("label267.HelpString"));
             this.label267.Name = "label267";
             this.helpProvider1.SetShowHelp(this.label267, ((bool)(resources.GetObject("label267.ShowHelp"))));
             // 
             // label268
             // 
             resources.ApplyResources(this.label268, "label268");
+            this.helpProvider1.SetHelpKeyword(this.label268, resources.GetString("label268.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label268, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label268.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label268, resources.GetString("label268.HelpString"));
             this.label268.Name = "label268";
             this.helpProvider1.SetShowHelp(this.label268, ((bool)(resources.GetObject("label268.ShowHelp"))));
             // 
             // label269
             // 
             resources.ApplyResources(this.label269, "label269");
+            this.helpProvider1.SetHelpKeyword(this.label269, resources.GetString("label269.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label269, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label269.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label269, resources.GetString("label269.HelpString"));
             this.label269.Name = "label269";
             this.helpProvider1.SetShowHelp(this.label269, ((bool)(resources.GetObject("label269.ShowHelp"))));
             // 
             // button_Set10
             // 
             resources.ApplyResources(this.button_Set10, "button_Set10");
+            this.helpProvider1.SetHelpKeyword(this.button_Set10, resources.GetString("button_Set10.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_Set10, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_Set10.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_Set10, resources.GetString("button_Set10.HelpString"));
             this.button_Set10.Name = "button_Set10";
             this.helpProvider1.SetShowHelp(this.button_Set10, ((bool)(resources.GetObject("button_Set10.ShowHelp"))));
             this.button_Set10.UseVisualStyleBackColor = true;
@@ -2663,6 +3146,7 @@
             // 
             // panel_Set9
             // 
+            resources.ApplyResources(this.panel_Set9, "panel_Set9");
             this.panel_Set9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_Set9.Controls.Add(this.checkBox_DoNotDisturb_Set9);
             this.panel_Set9.Controls.Add(this.checkBox_Lock_Set9);
@@ -2684,15 +3168,20 @@
             this.panel_Set9.Controls.Add(this.label259);
             this.panel_Set9.Controls.Add(this.label260);
             this.panel_Set9.Controls.Add(this.label261);
-            resources.ApplyResources(this.panel_Set9, "panel_Set9");
+            this.helpProvider1.SetHelpKeyword(this.panel_Set9, resources.GetString("panel_Set9.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel_Set9, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_Set9.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel_Set9, resources.GetString("panel_Set9.HelpString"));
             this.panel_Set9.Name = "panel_Set9";
             this.helpProvider1.SetShowHelp(this.panel_Set9, ((bool)(resources.GetObject("panel_Set9.ShowHelp"))));
             // 
             // checkBox_DoNotDisturb_Set9
             // 
+            resources.ApplyResources(this.checkBox_DoNotDisturb_Set9, "checkBox_DoNotDisturb_Set9");
             this.checkBox_DoNotDisturb_Set9.Checked = true;
             this.checkBox_DoNotDisturb_Set9.CheckState = System.Windows.Forms.CheckState.Checked;
-            resources.ApplyResources(this.checkBox_DoNotDisturb_Set9, "checkBox_DoNotDisturb_Set9");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_DoNotDisturb_Set9, resources.GetString("checkBox_DoNotDisturb_Set9.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_DoNotDisturb_Set9, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_DoNotDisturb_Set9.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_DoNotDisturb_Set9, resources.GetString("checkBox_DoNotDisturb_Set9.HelpString"));
             this.checkBox_DoNotDisturb_Set9.Name = "checkBox_DoNotDisturb_Set9";
             this.helpProvider1.SetShowHelp(this.checkBox_DoNotDisturb_Set9, ((bool)(resources.GetObject("checkBox_DoNotDisturb_Set9.ShowHelp"))));
             this.checkBox_DoNotDisturb_Set9.UseVisualStyleBackColor = true;
@@ -2703,6 +3192,9 @@
             resources.ApplyResources(this.checkBox_Lock_Set9, "checkBox_Lock_Set9");
             this.checkBox_Lock_Set9.Checked = true;
             this.checkBox_Lock_Set9.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Lock_Set9, resources.GetString("checkBox_Lock_Set9.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Lock_Set9, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Lock_Set9.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Lock_Set9, resources.GetString("checkBox_Lock_Set9.HelpString"));
             this.checkBox_Lock_Set9.Name = "checkBox_Lock_Set9";
             this.helpProvider1.SetShowHelp(this.checkBox_Lock_Set9, ((bool)(resources.GetObject("checkBox_Lock_Set9.ShowHelp"))));
             this.checkBox_Lock_Set9.UseVisualStyleBackColor = true;
@@ -2713,6 +3205,9 @@
             resources.ApplyResources(this.checkBox_Alarm_Set9, "checkBox_Alarm_Set9");
             this.checkBox_Alarm_Set9.Checked = true;
             this.checkBox_Alarm_Set9.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Alarm_Set9, resources.GetString("checkBox_Alarm_Set9.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Alarm_Set9, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Alarm_Set9.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Alarm_Set9, resources.GetString("checkBox_Alarm_Set9.HelpString"));
             this.checkBox_Alarm_Set9.Name = "checkBox_Alarm_Set9";
             this.helpProvider1.SetShowHelp(this.checkBox_Alarm_Set9, ((bool)(resources.GetObject("checkBox_Alarm_Set9.ShowHelp"))));
             this.checkBox_Alarm_Set9.UseVisualStyleBackColor = true;
@@ -2723,6 +3218,9 @@
             resources.ApplyResources(this.check_BoxBluetooth_Set9, "check_BoxBluetooth_Set9");
             this.check_BoxBluetooth_Set9.Checked = true;
             this.check_BoxBluetooth_Set9.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.check_BoxBluetooth_Set9, resources.GetString("check_BoxBluetooth_Set9.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.check_BoxBluetooth_Set9, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("check_BoxBluetooth_Set9.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.check_BoxBluetooth_Set9, resources.GetString("check_BoxBluetooth_Set9.HelpString"));
             this.check_BoxBluetooth_Set9.Name = "check_BoxBluetooth_Set9";
             this.helpProvider1.SetShowHelp(this.check_BoxBluetooth_Set9, ((bool)(resources.GetObject("check_BoxBluetooth_Set9.ShowHelp"))));
             this.check_BoxBluetooth_Set9.UseVisualStyleBackColor = true;
@@ -2731,6 +3229,9 @@
             // numericUpDown_Goal_Set9
             // 
             resources.ApplyResources(this.numericUpDown_Goal_Set9, "numericUpDown_Goal_Set9");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Goal_Set9, resources.GetString("numericUpDown_Goal_Set9.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Goal_Set9, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Goal_Set9.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Goal_Set9, resources.GetString("numericUpDown_Goal_Set9.HelpString"));
             this.numericUpDown_Goal_Set9.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -2748,12 +3249,18 @@
             // label254
             // 
             resources.ApplyResources(this.label254, "label254");
+            this.helpProvider1.SetHelpKeyword(this.label254, resources.GetString("label254.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label254, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label254.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label254, resources.GetString("label254.HelpString"));
             this.label254.Name = "label254";
             this.helpProvider1.SetShowHelp(this.label254, ((bool)(resources.GetObject("label254.ShowHelp"))));
             // 
             // numericUpDown_Steps_Set9
             // 
             resources.ApplyResources(this.numericUpDown_Steps_Set9, "numericUpDown_Steps_Set9");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Steps_Set9, resources.GetString("numericUpDown_Steps_Set9.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Steps_Set9, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Steps_Set9.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Steps_Set9, resources.GetString("numericUpDown_Steps_Set9.HelpString"));
             this.numericUpDown_Steps_Set9.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -2771,12 +3278,18 @@
             // label255
             // 
             resources.ApplyResources(this.label255, "label255");
+            this.helpProvider1.SetHelpKeyword(this.label255, resources.GetString("label255.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label255, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label255.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label255, resources.GetString("label255.HelpString"));
             this.label255.Name = "label255";
             this.helpProvider1.SetShowHelp(this.label255, ((bool)(resources.GetObject("label255.ShowHelp"))));
             // 
             // numericUpDown_Pulse_Set9
             // 
             resources.ApplyResources(this.numericUpDown_Pulse_Set9, "numericUpDown_Pulse_Set9");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Pulse_Set9, resources.GetString("numericUpDown_Pulse_Set9.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Pulse_Set9, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Pulse_Set9.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Pulse_Set9, resources.GetString("numericUpDown_Pulse_Set9.HelpString"));
             this.numericUpDown_Pulse_Set9.Maximum = new decimal(new int[] {
             999,
             0,
@@ -2794,12 +3307,18 @@
             // label256
             // 
             resources.ApplyResources(this.label256, "label256");
+            this.helpProvider1.SetHelpKeyword(this.label256, resources.GetString("label256.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label256, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label256.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label256, resources.GetString("label256.HelpString"));
             this.label256.Name = "label256";
             this.helpProvider1.SetShowHelp(this.label256, ((bool)(resources.GetObject("label256.ShowHelp"))));
             // 
             // numericUpDown_Distance_Set9
             // 
             resources.ApplyResources(this.numericUpDown_Distance_Set9, "numericUpDown_Distance_Set9");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Distance_Set9, resources.GetString("numericUpDown_Distance_Set9.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Distance_Set9, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Distance_Set9.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Distance_Set9, resources.GetString("numericUpDown_Distance_Set9.HelpString"));
             this.numericUpDown_Distance_Set9.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -2817,12 +3336,18 @@
             // label257
             // 
             resources.ApplyResources(this.label257, "label257");
+            this.helpProvider1.SetHelpKeyword(this.label257, resources.GetString("label257.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label257, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label257.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label257, resources.GetString("label257.HelpString"));
             this.label257.Name = "label257";
             this.helpProvider1.SetShowHelp(this.label257, ((bool)(resources.GetObject("label257.ShowHelp"))));
             // 
             // numericUpDown_Calories_Set9
             // 
             resources.ApplyResources(this.numericUpDown_Calories_Set9, "numericUpDown_Calories_Set9");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Calories_Set9, resources.GetString("numericUpDown_Calories_Set9.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Calories_Set9, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Calories_Set9.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Calories_Set9, resources.GetString("numericUpDown_Calories_Set9.HelpString"));
             this.numericUpDown_Calories_Set9.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -2840,12 +3365,18 @@
             // label258
             // 
             resources.ApplyResources(this.label258, "label258");
+            this.helpProvider1.SetHelpKeyword(this.label258, resources.GetString("label258.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label258, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label258.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label258, resources.GetString("label258.HelpString"));
             this.label258.Name = "label258";
             this.helpProvider1.SetShowHelp(this.label258, ((bool)(resources.GetObject("label258.ShowHelp"))));
             // 
             // numericUpDown_Battery_Set9
             // 
             resources.ApplyResources(this.numericUpDown_Battery_Set9, "numericUpDown_Battery_Set9");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Set9, resources.GetString("numericUpDown_Battery_Set9.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Set9, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Set9.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Set9, resources.GetString("numericUpDown_Battery_Set9.HelpString"));
             this.numericUpDown_Battery_Set9.Name = "numericUpDown_Battery_Set9";
             this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_Set9, ((bool)(resources.GetObject("numericUpDown_Battery_Set9.ShowHelp"))));
             this.numericUpDown_Battery_Set9.Value = new decimal(new int[] {
@@ -2857,8 +3388,11 @@
             // 
             // dateTimePicker_Time_Set9
             // 
-            this.dateTimePicker_Time_Set9.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             resources.ApplyResources(this.dateTimePicker_Time_Set9, "dateTimePicker_Time_Set9");
+            this.dateTimePicker_Time_Set9.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.helpProvider1.SetHelpKeyword(this.dateTimePicker_Time_Set9, resources.GetString("dateTimePicker_Time_Set9.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dateTimePicker_Time_Set9, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dateTimePicker_Time_Set9.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dateTimePicker_Time_Set9, resources.GetString("dateTimePicker_Time_Set9.HelpString"));
             this.dateTimePicker_Time_Set9.Name = "dateTimePicker_Time_Set9";
             this.helpProvider1.SetShowHelp(this.dateTimePicker_Time_Set9, ((bool)(resources.GetObject("dateTimePicker_Time_Set9.ShowHelp"))));
             this.dateTimePicker_Time_Set9.ShowUpDown = true;
@@ -2866,8 +3400,11 @@
             // 
             // dateTimePicker_Date_Set9
             // 
-            this.dateTimePicker_Date_Set9.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             resources.ApplyResources(this.dateTimePicker_Date_Set9, "dateTimePicker_Date_Set9");
+            this.dateTimePicker_Date_Set9.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.helpProvider1.SetHelpKeyword(this.dateTimePicker_Date_Set9, resources.GetString("dateTimePicker_Date_Set9.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dateTimePicker_Date_Set9, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dateTimePicker_Date_Set9.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dateTimePicker_Date_Set9, resources.GetString("dateTimePicker_Date_Set9.HelpString"));
             this.dateTimePicker_Date_Set9.Name = "dateTimePicker_Date_Set9";
             this.helpProvider1.SetShowHelp(this.dateTimePicker_Date_Set9, ((bool)(resources.GetObject("dateTimePicker_Date_Set9.ShowHelp"))));
             this.dateTimePicker_Date_Set9.ValueChanged += new System.EventHandler(this.dateTimePicker_Time_Set9_ValueChanged);
@@ -2875,24 +3412,36 @@
             // label259
             // 
             resources.ApplyResources(this.label259, "label259");
+            this.helpProvider1.SetHelpKeyword(this.label259, resources.GetString("label259.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label259, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label259.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label259, resources.GetString("label259.HelpString"));
             this.label259.Name = "label259";
             this.helpProvider1.SetShowHelp(this.label259, ((bool)(resources.GetObject("label259.ShowHelp"))));
             // 
             // label260
             // 
             resources.ApplyResources(this.label260, "label260");
+            this.helpProvider1.SetHelpKeyword(this.label260, resources.GetString("label260.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label260, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label260.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label260, resources.GetString("label260.HelpString"));
             this.label260.Name = "label260";
             this.helpProvider1.SetShowHelp(this.label260, ((bool)(resources.GetObject("label260.ShowHelp"))));
             // 
             // label261
             // 
             resources.ApplyResources(this.label261, "label261");
+            this.helpProvider1.SetHelpKeyword(this.label261, resources.GetString("label261.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label261, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label261.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label261, resources.GetString("label261.HelpString"));
             this.label261.Name = "label261";
             this.helpProvider1.SetShowHelp(this.label261, ((bool)(resources.GetObject("label261.ShowHelp"))));
             // 
             // button_Set9
             // 
             resources.ApplyResources(this.button_Set9, "button_Set9");
+            this.helpProvider1.SetHelpKeyword(this.button_Set9, resources.GetString("button_Set9.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_Set9, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_Set9.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_Set9, resources.GetString("button_Set9.HelpString"));
             this.button_Set9.Name = "button_Set9";
             this.helpProvider1.SetShowHelp(this.button_Set9, ((bool)(resources.GetObject("button_Set9.ShowHelp"))));
             this.button_Set9.UseVisualStyleBackColor = true;
@@ -2900,6 +3449,7 @@
             // 
             // panel_Set8
             // 
+            resources.ApplyResources(this.panel_Set8, "panel_Set8");
             this.panel_Set8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_Set8.Controls.Add(this.checkBox_DoNotDisturb_Set8);
             this.panel_Set8.Controls.Add(this.checkBox_Lock_Set8);
@@ -2921,15 +3471,20 @@
             this.panel_Set8.Controls.Add(this.label251);
             this.panel_Set8.Controls.Add(this.label252);
             this.panel_Set8.Controls.Add(this.label253);
-            resources.ApplyResources(this.panel_Set8, "panel_Set8");
+            this.helpProvider1.SetHelpKeyword(this.panel_Set8, resources.GetString("panel_Set8.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel_Set8, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_Set8.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel_Set8, resources.GetString("panel_Set8.HelpString"));
             this.panel_Set8.Name = "panel_Set8";
             this.helpProvider1.SetShowHelp(this.panel_Set8, ((bool)(resources.GetObject("panel_Set8.ShowHelp"))));
             // 
             // checkBox_DoNotDisturb_Set8
             // 
+            resources.ApplyResources(this.checkBox_DoNotDisturb_Set8, "checkBox_DoNotDisturb_Set8");
             this.checkBox_DoNotDisturb_Set8.Checked = true;
             this.checkBox_DoNotDisturb_Set8.CheckState = System.Windows.Forms.CheckState.Checked;
-            resources.ApplyResources(this.checkBox_DoNotDisturb_Set8, "checkBox_DoNotDisturb_Set8");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_DoNotDisturb_Set8, resources.GetString("checkBox_DoNotDisturb_Set8.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_DoNotDisturb_Set8, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_DoNotDisturb_Set8.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_DoNotDisturb_Set8, resources.GetString("checkBox_DoNotDisturb_Set8.HelpString"));
             this.checkBox_DoNotDisturb_Set8.Name = "checkBox_DoNotDisturb_Set8";
             this.helpProvider1.SetShowHelp(this.checkBox_DoNotDisturb_Set8, ((bool)(resources.GetObject("checkBox_DoNotDisturb_Set8.ShowHelp"))));
             this.checkBox_DoNotDisturb_Set8.UseVisualStyleBackColor = true;
@@ -2940,6 +3495,9 @@
             resources.ApplyResources(this.checkBox_Lock_Set8, "checkBox_Lock_Set8");
             this.checkBox_Lock_Set8.Checked = true;
             this.checkBox_Lock_Set8.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Lock_Set8, resources.GetString("checkBox_Lock_Set8.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Lock_Set8, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Lock_Set8.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Lock_Set8, resources.GetString("checkBox_Lock_Set8.HelpString"));
             this.checkBox_Lock_Set8.Name = "checkBox_Lock_Set8";
             this.helpProvider1.SetShowHelp(this.checkBox_Lock_Set8, ((bool)(resources.GetObject("checkBox_Lock_Set8.ShowHelp"))));
             this.checkBox_Lock_Set8.UseVisualStyleBackColor = true;
@@ -2950,6 +3508,9 @@
             resources.ApplyResources(this.checkBox_Alarm_Set8, "checkBox_Alarm_Set8");
             this.checkBox_Alarm_Set8.Checked = true;
             this.checkBox_Alarm_Set8.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Alarm_Set8, resources.GetString("checkBox_Alarm_Set8.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Alarm_Set8, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Alarm_Set8.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Alarm_Set8, resources.GetString("checkBox_Alarm_Set8.HelpString"));
             this.checkBox_Alarm_Set8.Name = "checkBox_Alarm_Set8";
             this.helpProvider1.SetShowHelp(this.checkBox_Alarm_Set8, ((bool)(resources.GetObject("checkBox_Alarm_Set8.ShowHelp"))));
             this.checkBox_Alarm_Set8.UseVisualStyleBackColor = true;
@@ -2960,6 +3521,9 @@
             resources.ApplyResources(this.check_BoxBluetooth_Set8, "check_BoxBluetooth_Set8");
             this.check_BoxBluetooth_Set8.Checked = true;
             this.check_BoxBluetooth_Set8.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.check_BoxBluetooth_Set8, resources.GetString("check_BoxBluetooth_Set8.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.check_BoxBluetooth_Set8, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("check_BoxBluetooth_Set8.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.check_BoxBluetooth_Set8, resources.GetString("check_BoxBluetooth_Set8.HelpString"));
             this.check_BoxBluetooth_Set8.Name = "check_BoxBluetooth_Set8";
             this.helpProvider1.SetShowHelp(this.check_BoxBluetooth_Set8, ((bool)(resources.GetObject("check_BoxBluetooth_Set8.ShowHelp"))));
             this.check_BoxBluetooth_Set8.UseVisualStyleBackColor = true;
@@ -2968,6 +3532,9 @@
             // numericUpDown_Goal_Set8
             // 
             resources.ApplyResources(this.numericUpDown_Goal_Set8, "numericUpDown_Goal_Set8");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Goal_Set8, resources.GetString("numericUpDown_Goal_Set8.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Goal_Set8, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Goal_Set8.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Goal_Set8, resources.GetString("numericUpDown_Goal_Set8.HelpString"));
             this.numericUpDown_Goal_Set8.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -2985,12 +3552,18 @@
             // label246
             // 
             resources.ApplyResources(this.label246, "label246");
+            this.helpProvider1.SetHelpKeyword(this.label246, resources.GetString("label246.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label246, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label246.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label246, resources.GetString("label246.HelpString"));
             this.label246.Name = "label246";
             this.helpProvider1.SetShowHelp(this.label246, ((bool)(resources.GetObject("label246.ShowHelp"))));
             // 
             // numericUpDown_Steps_Set8
             // 
             resources.ApplyResources(this.numericUpDown_Steps_Set8, "numericUpDown_Steps_Set8");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Steps_Set8, resources.GetString("numericUpDown_Steps_Set8.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Steps_Set8, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Steps_Set8.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Steps_Set8, resources.GetString("numericUpDown_Steps_Set8.HelpString"));
             this.numericUpDown_Steps_Set8.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -3008,12 +3581,18 @@
             // label247
             // 
             resources.ApplyResources(this.label247, "label247");
+            this.helpProvider1.SetHelpKeyword(this.label247, resources.GetString("label247.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label247, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label247.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label247, resources.GetString("label247.HelpString"));
             this.label247.Name = "label247";
             this.helpProvider1.SetShowHelp(this.label247, ((bool)(resources.GetObject("label247.ShowHelp"))));
             // 
             // numericUpDown_Pulse_Set8
             // 
             resources.ApplyResources(this.numericUpDown_Pulse_Set8, "numericUpDown_Pulse_Set8");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Pulse_Set8, resources.GetString("numericUpDown_Pulse_Set8.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Pulse_Set8, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Pulse_Set8.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Pulse_Set8, resources.GetString("numericUpDown_Pulse_Set8.HelpString"));
             this.numericUpDown_Pulse_Set8.Maximum = new decimal(new int[] {
             999,
             0,
@@ -3031,12 +3610,18 @@
             // label248
             // 
             resources.ApplyResources(this.label248, "label248");
+            this.helpProvider1.SetHelpKeyword(this.label248, resources.GetString("label248.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label248, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label248.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label248, resources.GetString("label248.HelpString"));
             this.label248.Name = "label248";
             this.helpProvider1.SetShowHelp(this.label248, ((bool)(resources.GetObject("label248.ShowHelp"))));
             // 
             // numericUpDown_Distance_Set8
             // 
             resources.ApplyResources(this.numericUpDown_Distance_Set8, "numericUpDown_Distance_Set8");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Distance_Set8, resources.GetString("numericUpDown_Distance_Set8.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Distance_Set8, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Distance_Set8.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Distance_Set8, resources.GetString("numericUpDown_Distance_Set8.HelpString"));
             this.numericUpDown_Distance_Set8.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -3054,12 +3639,18 @@
             // label249
             // 
             resources.ApplyResources(this.label249, "label249");
+            this.helpProvider1.SetHelpKeyword(this.label249, resources.GetString("label249.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label249, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label249.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label249, resources.GetString("label249.HelpString"));
             this.label249.Name = "label249";
             this.helpProvider1.SetShowHelp(this.label249, ((bool)(resources.GetObject("label249.ShowHelp"))));
             // 
             // numericUpDown_Calories_Set8
             // 
             resources.ApplyResources(this.numericUpDown_Calories_Set8, "numericUpDown_Calories_Set8");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Calories_Set8, resources.GetString("numericUpDown_Calories_Set8.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Calories_Set8, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Calories_Set8.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Calories_Set8, resources.GetString("numericUpDown_Calories_Set8.HelpString"));
             this.numericUpDown_Calories_Set8.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -3077,12 +3668,18 @@
             // label250
             // 
             resources.ApplyResources(this.label250, "label250");
+            this.helpProvider1.SetHelpKeyword(this.label250, resources.GetString("label250.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label250, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label250.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label250, resources.GetString("label250.HelpString"));
             this.label250.Name = "label250";
             this.helpProvider1.SetShowHelp(this.label250, ((bool)(resources.GetObject("label250.ShowHelp"))));
             // 
             // numericUpDown_Battery_Set8
             // 
             resources.ApplyResources(this.numericUpDown_Battery_Set8, "numericUpDown_Battery_Set8");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Set8, resources.GetString("numericUpDown_Battery_Set8.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Set8, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Set8.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Set8, resources.GetString("numericUpDown_Battery_Set8.HelpString"));
             this.numericUpDown_Battery_Set8.Name = "numericUpDown_Battery_Set8";
             this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_Set8, ((bool)(resources.GetObject("numericUpDown_Battery_Set8.ShowHelp"))));
             this.numericUpDown_Battery_Set8.Value = new decimal(new int[] {
@@ -3094,8 +3691,11 @@
             // 
             // dateTimePicker_Time_Set8
             // 
-            this.dateTimePicker_Time_Set8.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             resources.ApplyResources(this.dateTimePicker_Time_Set8, "dateTimePicker_Time_Set8");
+            this.dateTimePicker_Time_Set8.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.helpProvider1.SetHelpKeyword(this.dateTimePicker_Time_Set8, resources.GetString("dateTimePicker_Time_Set8.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dateTimePicker_Time_Set8, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dateTimePicker_Time_Set8.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dateTimePicker_Time_Set8, resources.GetString("dateTimePicker_Time_Set8.HelpString"));
             this.dateTimePicker_Time_Set8.Name = "dateTimePicker_Time_Set8";
             this.helpProvider1.SetShowHelp(this.dateTimePicker_Time_Set8, ((bool)(resources.GetObject("dateTimePicker_Time_Set8.ShowHelp"))));
             this.dateTimePicker_Time_Set8.ShowUpDown = true;
@@ -3103,8 +3703,11 @@
             // 
             // dateTimePicker_Date_Set8
             // 
-            this.dateTimePicker_Date_Set8.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             resources.ApplyResources(this.dateTimePicker_Date_Set8, "dateTimePicker_Date_Set8");
+            this.dateTimePicker_Date_Set8.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.helpProvider1.SetHelpKeyword(this.dateTimePicker_Date_Set8, resources.GetString("dateTimePicker_Date_Set8.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dateTimePicker_Date_Set8, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dateTimePicker_Date_Set8.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dateTimePicker_Date_Set8, resources.GetString("dateTimePicker_Date_Set8.HelpString"));
             this.dateTimePicker_Date_Set8.Name = "dateTimePicker_Date_Set8";
             this.helpProvider1.SetShowHelp(this.dateTimePicker_Date_Set8, ((bool)(resources.GetObject("dateTimePicker_Date_Set8.ShowHelp"))));
             this.dateTimePicker_Date_Set8.ValueChanged += new System.EventHandler(this.dateTimePicker_Time_Set8_ValueChanged);
@@ -3112,24 +3715,36 @@
             // label251
             // 
             resources.ApplyResources(this.label251, "label251");
+            this.helpProvider1.SetHelpKeyword(this.label251, resources.GetString("label251.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label251, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label251.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label251, resources.GetString("label251.HelpString"));
             this.label251.Name = "label251";
             this.helpProvider1.SetShowHelp(this.label251, ((bool)(resources.GetObject("label251.ShowHelp"))));
             // 
             // label252
             // 
             resources.ApplyResources(this.label252, "label252");
+            this.helpProvider1.SetHelpKeyword(this.label252, resources.GetString("label252.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label252, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label252.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label252, resources.GetString("label252.HelpString"));
             this.label252.Name = "label252";
             this.helpProvider1.SetShowHelp(this.label252, ((bool)(resources.GetObject("label252.ShowHelp"))));
             // 
             // label253
             // 
             resources.ApplyResources(this.label253, "label253");
+            this.helpProvider1.SetHelpKeyword(this.label253, resources.GetString("label253.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label253, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label253.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label253, resources.GetString("label253.HelpString"));
             this.label253.Name = "label253";
             this.helpProvider1.SetShowHelp(this.label253, ((bool)(resources.GetObject("label253.ShowHelp"))));
             // 
             // button_Set8
             // 
             resources.ApplyResources(this.button_Set8, "button_Set8");
+            this.helpProvider1.SetHelpKeyword(this.button_Set8, resources.GetString("button_Set8.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_Set8, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_Set8.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_Set8, resources.GetString("button_Set8.HelpString"));
             this.button_Set8.Name = "button_Set8";
             this.helpProvider1.SetShowHelp(this.button_Set8, ((bool)(resources.GetObject("button_Set8.ShowHelp"))));
             this.button_Set8.UseVisualStyleBackColor = true;
@@ -3137,6 +3752,7 @@
             // 
             // panel_Set7
             // 
+            resources.ApplyResources(this.panel_Set7, "panel_Set7");
             this.panel_Set7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_Set7.Controls.Add(this.checkBox_DoNotDisturb_Set7);
             this.panel_Set7.Controls.Add(this.checkBox_Lock_Set7);
@@ -3158,15 +3774,20 @@
             this.panel_Set7.Controls.Add(this.label243);
             this.panel_Set7.Controls.Add(this.label244);
             this.panel_Set7.Controls.Add(this.label245);
-            resources.ApplyResources(this.panel_Set7, "panel_Set7");
+            this.helpProvider1.SetHelpKeyword(this.panel_Set7, resources.GetString("panel_Set7.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel_Set7, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_Set7.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel_Set7, resources.GetString("panel_Set7.HelpString"));
             this.panel_Set7.Name = "panel_Set7";
             this.helpProvider1.SetShowHelp(this.panel_Set7, ((bool)(resources.GetObject("panel_Set7.ShowHelp"))));
             // 
             // checkBox_DoNotDisturb_Set7
             // 
+            resources.ApplyResources(this.checkBox_DoNotDisturb_Set7, "checkBox_DoNotDisturb_Set7");
             this.checkBox_DoNotDisturb_Set7.Checked = true;
             this.checkBox_DoNotDisturb_Set7.CheckState = System.Windows.Forms.CheckState.Checked;
-            resources.ApplyResources(this.checkBox_DoNotDisturb_Set7, "checkBox_DoNotDisturb_Set7");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_DoNotDisturb_Set7, resources.GetString("checkBox_DoNotDisturb_Set7.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_DoNotDisturb_Set7, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_DoNotDisturb_Set7.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_DoNotDisturb_Set7, resources.GetString("checkBox_DoNotDisturb_Set7.HelpString"));
             this.checkBox_DoNotDisturb_Set7.Name = "checkBox_DoNotDisturb_Set7";
             this.helpProvider1.SetShowHelp(this.checkBox_DoNotDisturb_Set7, ((bool)(resources.GetObject("checkBox_DoNotDisturb_Set7.ShowHelp"))));
             this.checkBox_DoNotDisturb_Set7.UseVisualStyleBackColor = true;
@@ -3177,6 +3798,9 @@
             resources.ApplyResources(this.checkBox_Lock_Set7, "checkBox_Lock_Set7");
             this.checkBox_Lock_Set7.Checked = true;
             this.checkBox_Lock_Set7.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Lock_Set7, resources.GetString("checkBox_Lock_Set7.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Lock_Set7, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Lock_Set7.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Lock_Set7, resources.GetString("checkBox_Lock_Set7.HelpString"));
             this.checkBox_Lock_Set7.Name = "checkBox_Lock_Set7";
             this.helpProvider1.SetShowHelp(this.checkBox_Lock_Set7, ((bool)(resources.GetObject("checkBox_Lock_Set7.ShowHelp"))));
             this.checkBox_Lock_Set7.UseVisualStyleBackColor = true;
@@ -3187,6 +3811,9 @@
             resources.ApplyResources(this.checkBox_Alarm_Set7, "checkBox_Alarm_Set7");
             this.checkBox_Alarm_Set7.Checked = true;
             this.checkBox_Alarm_Set7.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Alarm_Set7, resources.GetString("checkBox_Alarm_Set7.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Alarm_Set7, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Alarm_Set7.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Alarm_Set7, resources.GetString("checkBox_Alarm_Set7.HelpString"));
             this.checkBox_Alarm_Set7.Name = "checkBox_Alarm_Set7";
             this.helpProvider1.SetShowHelp(this.checkBox_Alarm_Set7, ((bool)(resources.GetObject("checkBox_Alarm_Set7.ShowHelp"))));
             this.checkBox_Alarm_Set7.UseVisualStyleBackColor = true;
@@ -3197,6 +3824,9 @@
             resources.ApplyResources(this.check_BoxBluetooth_Set7, "check_BoxBluetooth_Set7");
             this.check_BoxBluetooth_Set7.Checked = true;
             this.check_BoxBluetooth_Set7.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.check_BoxBluetooth_Set7, resources.GetString("check_BoxBluetooth_Set7.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.check_BoxBluetooth_Set7, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("check_BoxBluetooth_Set7.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.check_BoxBluetooth_Set7, resources.GetString("check_BoxBluetooth_Set7.HelpString"));
             this.check_BoxBluetooth_Set7.Name = "check_BoxBluetooth_Set7";
             this.helpProvider1.SetShowHelp(this.check_BoxBluetooth_Set7, ((bool)(resources.GetObject("check_BoxBluetooth_Set7.ShowHelp"))));
             this.check_BoxBluetooth_Set7.UseVisualStyleBackColor = true;
@@ -3205,6 +3835,9 @@
             // numericUpDown_Goal_Set7
             // 
             resources.ApplyResources(this.numericUpDown_Goal_Set7, "numericUpDown_Goal_Set7");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Goal_Set7, resources.GetString("numericUpDown_Goal_Set7.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Goal_Set7, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Goal_Set7.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Goal_Set7, resources.GetString("numericUpDown_Goal_Set7.HelpString"));
             this.numericUpDown_Goal_Set7.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -3222,12 +3855,18 @@
             // label91
             // 
             resources.ApplyResources(this.label91, "label91");
+            this.helpProvider1.SetHelpKeyword(this.label91, resources.GetString("label91.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label91, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label91.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label91, resources.GetString("label91.HelpString"));
             this.label91.Name = "label91";
             this.helpProvider1.SetShowHelp(this.label91, ((bool)(resources.GetObject("label91.ShowHelp"))));
             // 
             // numericUpDown_Steps_Set7
             // 
             resources.ApplyResources(this.numericUpDown_Steps_Set7, "numericUpDown_Steps_Set7");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Steps_Set7, resources.GetString("numericUpDown_Steps_Set7.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Steps_Set7, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Steps_Set7.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Steps_Set7, resources.GetString("numericUpDown_Steps_Set7.HelpString"));
             this.numericUpDown_Steps_Set7.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -3245,12 +3884,18 @@
             // label92
             // 
             resources.ApplyResources(this.label92, "label92");
+            this.helpProvider1.SetHelpKeyword(this.label92, resources.GetString("label92.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label92, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label92.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label92, resources.GetString("label92.HelpString"));
             this.label92.Name = "label92";
             this.helpProvider1.SetShowHelp(this.label92, ((bool)(resources.GetObject("label92.ShowHelp"))));
             // 
             // numericUpDown_Pulse_Set7
             // 
             resources.ApplyResources(this.numericUpDown_Pulse_Set7, "numericUpDown_Pulse_Set7");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Pulse_Set7, resources.GetString("numericUpDown_Pulse_Set7.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Pulse_Set7, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Pulse_Set7.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Pulse_Set7, resources.GetString("numericUpDown_Pulse_Set7.HelpString"));
             this.numericUpDown_Pulse_Set7.Maximum = new decimal(new int[] {
             999,
             0,
@@ -3268,12 +3913,18 @@
             // label240
             // 
             resources.ApplyResources(this.label240, "label240");
+            this.helpProvider1.SetHelpKeyword(this.label240, resources.GetString("label240.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label240, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label240.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label240, resources.GetString("label240.HelpString"));
             this.label240.Name = "label240";
             this.helpProvider1.SetShowHelp(this.label240, ((bool)(resources.GetObject("label240.ShowHelp"))));
             // 
             // numericUpDown_Distance_Set7
             // 
             resources.ApplyResources(this.numericUpDown_Distance_Set7, "numericUpDown_Distance_Set7");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Distance_Set7, resources.GetString("numericUpDown_Distance_Set7.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Distance_Set7, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Distance_Set7.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Distance_Set7, resources.GetString("numericUpDown_Distance_Set7.HelpString"));
             this.numericUpDown_Distance_Set7.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -3291,12 +3942,18 @@
             // label241
             // 
             resources.ApplyResources(this.label241, "label241");
+            this.helpProvider1.SetHelpKeyword(this.label241, resources.GetString("label241.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label241, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label241.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label241, resources.GetString("label241.HelpString"));
             this.label241.Name = "label241";
             this.helpProvider1.SetShowHelp(this.label241, ((bool)(resources.GetObject("label241.ShowHelp"))));
             // 
             // numericUpDown_Calories_Set7
             // 
             resources.ApplyResources(this.numericUpDown_Calories_Set7, "numericUpDown_Calories_Set7");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Calories_Set7, resources.GetString("numericUpDown_Calories_Set7.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Calories_Set7, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Calories_Set7.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Calories_Set7, resources.GetString("numericUpDown_Calories_Set7.HelpString"));
             this.numericUpDown_Calories_Set7.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -3314,12 +3971,18 @@
             // label242
             // 
             resources.ApplyResources(this.label242, "label242");
+            this.helpProvider1.SetHelpKeyword(this.label242, resources.GetString("label242.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label242, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label242.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label242, resources.GetString("label242.HelpString"));
             this.label242.Name = "label242";
             this.helpProvider1.SetShowHelp(this.label242, ((bool)(resources.GetObject("label242.ShowHelp"))));
             // 
             // numericUpDown_Battery_Set7
             // 
             resources.ApplyResources(this.numericUpDown_Battery_Set7, "numericUpDown_Battery_Set7");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Set7, resources.GetString("numericUpDown_Battery_Set7.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Set7, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Set7.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Set7, resources.GetString("numericUpDown_Battery_Set7.HelpString"));
             this.numericUpDown_Battery_Set7.Name = "numericUpDown_Battery_Set7";
             this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_Set7, ((bool)(resources.GetObject("numericUpDown_Battery_Set7.ShowHelp"))));
             this.numericUpDown_Battery_Set7.Value = new decimal(new int[] {
@@ -3331,8 +3994,11 @@
             // 
             // dateTimePicker_Time_Set7
             // 
-            this.dateTimePicker_Time_Set7.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             resources.ApplyResources(this.dateTimePicker_Time_Set7, "dateTimePicker_Time_Set7");
+            this.dateTimePicker_Time_Set7.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.helpProvider1.SetHelpKeyword(this.dateTimePicker_Time_Set7, resources.GetString("dateTimePicker_Time_Set7.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dateTimePicker_Time_Set7, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dateTimePicker_Time_Set7.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dateTimePicker_Time_Set7, resources.GetString("dateTimePicker_Time_Set7.HelpString"));
             this.dateTimePicker_Time_Set7.Name = "dateTimePicker_Time_Set7";
             this.helpProvider1.SetShowHelp(this.dateTimePicker_Time_Set7, ((bool)(resources.GetObject("dateTimePicker_Time_Set7.ShowHelp"))));
             this.dateTimePicker_Time_Set7.ShowUpDown = true;
@@ -3340,8 +4006,11 @@
             // 
             // dateTimePicker_Date_Set7
             // 
-            this.dateTimePicker_Date_Set7.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             resources.ApplyResources(this.dateTimePicker_Date_Set7, "dateTimePicker_Date_Set7");
+            this.dateTimePicker_Date_Set7.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.helpProvider1.SetHelpKeyword(this.dateTimePicker_Date_Set7, resources.GetString("dateTimePicker_Date_Set7.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dateTimePicker_Date_Set7, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dateTimePicker_Date_Set7.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dateTimePicker_Date_Set7, resources.GetString("dateTimePicker_Date_Set7.HelpString"));
             this.dateTimePicker_Date_Set7.Name = "dateTimePicker_Date_Set7";
             this.helpProvider1.SetShowHelp(this.dateTimePicker_Date_Set7, ((bool)(resources.GetObject("dateTimePicker_Date_Set7.ShowHelp"))));
             this.dateTimePicker_Date_Set7.ValueChanged += new System.EventHandler(this.dateTimePicker_Time_Set7_ValueChanged);
@@ -3349,24 +4018,36 @@
             // label243
             // 
             resources.ApplyResources(this.label243, "label243");
+            this.helpProvider1.SetHelpKeyword(this.label243, resources.GetString("label243.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label243, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label243.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label243, resources.GetString("label243.HelpString"));
             this.label243.Name = "label243";
             this.helpProvider1.SetShowHelp(this.label243, ((bool)(resources.GetObject("label243.ShowHelp"))));
             // 
             // label244
             // 
             resources.ApplyResources(this.label244, "label244");
+            this.helpProvider1.SetHelpKeyword(this.label244, resources.GetString("label244.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label244, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label244.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label244, resources.GetString("label244.HelpString"));
             this.label244.Name = "label244";
             this.helpProvider1.SetShowHelp(this.label244, ((bool)(resources.GetObject("label244.ShowHelp"))));
             // 
             // label245
             // 
             resources.ApplyResources(this.label245, "label245");
+            this.helpProvider1.SetHelpKeyword(this.label245, resources.GetString("label245.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label245, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label245.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label245, resources.GetString("label245.HelpString"));
             this.label245.Name = "label245";
             this.helpProvider1.SetShowHelp(this.label245, ((bool)(resources.GetObject("label245.ShowHelp"))));
             // 
             // button_Set7
             // 
             resources.ApplyResources(this.button_Set7, "button_Set7");
+            this.helpProvider1.SetHelpKeyword(this.button_Set7, resources.GetString("button_Set7.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_Set7, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_Set7.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_Set7, resources.GetString("button_Set7.HelpString"));
             this.button_Set7.Name = "button_Set7";
             this.helpProvider1.SetShowHelp(this.button_Set7, ((bool)(resources.GetObject("button_Set7.ShowHelp"))));
             this.button_Set7.UseVisualStyleBackColor = true;
@@ -3374,6 +4055,7 @@
             // 
             // panel_Set6
             // 
+            resources.ApplyResources(this.panel_Set6, "panel_Set6");
             this.panel_Set6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_Set6.Controls.Add(this.checkBox_DoNotDisturb_Set6);
             this.panel_Set6.Controls.Add(this.checkBox_Lock_Set6);
@@ -3395,15 +4077,20 @@
             this.panel_Set6.Controls.Add(this.label88);
             this.panel_Set6.Controls.Add(this.label89);
             this.panel_Set6.Controls.Add(this.label90);
-            resources.ApplyResources(this.panel_Set6, "panel_Set6");
+            this.helpProvider1.SetHelpKeyword(this.panel_Set6, resources.GetString("panel_Set6.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel_Set6, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_Set6.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel_Set6, resources.GetString("panel_Set6.HelpString"));
             this.panel_Set6.Name = "panel_Set6";
             this.helpProvider1.SetShowHelp(this.panel_Set6, ((bool)(resources.GetObject("panel_Set6.ShowHelp"))));
             // 
             // checkBox_DoNotDisturb_Set6
             // 
+            resources.ApplyResources(this.checkBox_DoNotDisturb_Set6, "checkBox_DoNotDisturb_Set6");
             this.checkBox_DoNotDisturb_Set6.Checked = true;
             this.checkBox_DoNotDisturb_Set6.CheckState = System.Windows.Forms.CheckState.Checked;
-            resources.ApplyResources(this.checkBox_DoNotDisturb_Set6, "checkBox_DoNotDisturb_Set6");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_DoNotDisturb_Set6, resources.GetString("checkBox_DoNotDisturb_Set6.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_DoNotDisturb_Set6, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_DoNotDisturb_Set6.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_DoNotDisturb_Set6, resources.GetString("checkBox_DoNotDisturb_Set6.HelpString"));
             this.checkBox_DoNotDisturb_Set6.Name = "checkBox_DoNotDisturb_Set6";
             this.helpProvider1.SetShowHelp(this.checkBox_DoNotDisturb_Set6, ((bool)(resources.GetObject("checkBox_DoNotDisturb_Set6.ShowHelp"))));
             this.checkBox_DoNotDisturb_Set6.UseVisualStyleBackColor = true;
@@ -3414,6 +4101,9 @@
             resources.ApplyResources(this.checkBox_Lock_Set6, "checkBox_Lock_Set6");
             this.checkBox_Lock_Set6.Checked = true;
             this.checkBox_Lock_Set6.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Lock_Set6, resources.GetString("checkBox_Lock_Set6.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Lock_Set6, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Lock_Set6.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Lock_Set6, resources.GetString("checkBox_Lock_Set6.HelpString"));
             this.checkBox_Lock_Set6.Name = "checkBox_Lock_Set6";
             this.helpProvider1.SetShowHelp(this.checkBox_Lock_Set6, ((bool)(resources.GetObject("checkBox_Lock_Set6.ShowHelp"))));
             this.checkBox_Lock_Set6.UseVisualStyleBackColor = true;
@@ -3424,6 +4114,9 @@
             resources.ApplyResources(this.checkBox_Alarm_Set6, "checkBox_Alarm_Set6");
             this.checkBox_Alarm_Set6.Checked = true;
             this.checkBox_Alarm_Set6.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Alarm_Set6, resources.GetString("checkBox_Alarm_Set6.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Alarm_Set6, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Alarm_Set6.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Alarm_Set6, resources.GetString("checkBox_Alarm_Set6.HelpString"));
             this.checkBox_Alarm_Set6.Name = "checkBox_Alarm_Set6";
             this.helpProvider1.SetShowHelp(this.checkBox_Alarm_Set6, ((bool)(resources.GetObject("checkBox_Alarm_Set6.ShowHelp"))));
             this.checkBox_Alarm_Set6.UseVisualStyleBackColor = true;
@@ -3434,6 +4127,9 @@
             resources.ApplyResources(this.check_BoxBluetooth_Set6, "check_BoxBluetooth_Set6");
             this.check_BoxBluetooth_Set6.Checked = true;
             this.check_BoxBluetooth_Set6.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.check_BoxBluetooth_Set6, resources.GetString("check_BoxBluetooth_Set6.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.check_BoxBluetooth_Set6, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("check_BoxBluetooth_Set6.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.check_BoxBluetooth_Set6, resources.GetString("check_BoxBluetooth_Set6.HelpString"));
             this.check_BoxBluetooth_Set6.Name = "check_BoxBluetooth_Set6";
             this.helpProvider1.SetShowHelp(this.check_BoxBluetooth_Set6, ((bool)(resources.GetObject("check_BoxBluetooth_Set6.ShowHelp"))));
             this.check_BoxBluetooth_Set6.UseVisualStyleBackColor = true;
@@ -3442,6 +4138,9 @@
             // numericUpDown_Goal_Set6
             // 
             resources.ApplyResources(this.numericUpDown_Goal_Set6, "numericUpDown_Goal_Set6");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Goal_Set6, resources.GetString("numericUpDown_Goal_Set6.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Goal_Set6, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Goal_Set6.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Goal_Set6, resources.GetString("numericUpDown_Goal_Set6.HelpString"));
             this.numericUpDown_Goal_Set6.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -3459,12 +4158,18 @@
             // label83
             // 
             resources.ApplyResources(this.label83, "label83");
+            this.helpProvider1.SetHelpKeyword(this.label83, resources.GetString("label83.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label83, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label83.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label83, resources.GetString("label83.HelpString"));
             this.label83.Name = "label83";
             this.helpProvider1.SetShowHelp(this.label83, ((bool)(resources.GetObject("label83.ShowHelp"))));
             // 
             // numericUpDown_Steps_Set6
             // 
             resources.ApplyResources(this.numericUpDown_Steps_Set6, "numericUpDown_Steps_Set6");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Steps_Set6, resources.GetString("numericUpDown_Steps_Set6.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Steps_Set6, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Steps_Set6.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Steps_Set6, resources.GetString("numericUpDown_Steps_Set6.HelpString"));
             this.numericUpDown_Steps_Set6.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -3482,12 +4187,18 @@
             // label84
             // 
             resources.ApplyResources(this.label84, "label84");
+            this.helpProvider1.SetHelpKeyword(this.label84, resources.GetString("label84.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label84, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label84.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label84, resources.GetString("label84.HelpString"));
             this.label84.Name = "label84";
             this.helpProvider1.SetShowHelp(this.label84, ((bool)(resources.GetObject("label84.ShowHelp"))));
             // 
             // numericUpDown_Pulse_Set6
             // 
             resources.ApplyResources(this.numericUpDown_Pulse_Set6, "numericUpDown_Pulse_Set6");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Pulse_Set6, resources.GetString("numericUpDown_Pulse_Set6.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Pulse_Set6, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Pulse_Set6.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Pulse_Set6, resources.GetString("numericUpDown_Pulse_Set6.HelpString"));
             this.numericUpDown_Pulse_Set6.Maximum = new decimal(new int[] {
             999,
             0,
@@ -3505,12 +4216,18 @@
             // label85
             // 
             resources.ApplyResources(this.label85, "label85");
+            this.helpProvider1.SetHelpKeyword(this.label85, resources.GetString("label85.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label85, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label85.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label85, resources.GetString("label85.HelpString"));
             this.label85.Name = "label85";
             this.helpProvider1.SetShowHelp(this.label85, ((bool)(resources.GetObject("label85.ShowHelp"))));
             // 
             // numericUpDown_Distance_Set6
             // 
             resources.ApplyResources(this.numericUpDown_Distance_Set6, "numericUpDown_Distance_Set6");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Distance_Set6, resources.GetString("numericUpDown_Distance_Set6.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Distance_Set6, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Distance_Set6.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Distance_Set6, resources.GetString("numericUpDown_Distance_Set6.HelpString"));
             this.numericUpDown_Distance_Set6.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -3528,12 +4245,18 @@
             // label86
             // 
             resources.ApplyResources(this.label86, "label86");
+            this.helpProvider1.SetHelpKeyword(this.label86, resources.GetString("label86.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label86, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label86.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label86, resources.GetString("label86.HelpString"));
             this.label86.Name = "label86";
             this.helpProvider1.SetShowHelp(this.label86, ((bool)(resources.GetObject("label86.ShowHelp"))));
             // 
             // numericUpDown_Calories_Set6
             // 
             resources.ApplyResources(this.numericUpDown_Calories_Set6, "numericUpDown_Calories_Set6");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Calories_Set6, resources.GetString("numericUpDown_Calories_Set6.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Calories_Set6, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Calories_Set6.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Calories_Set6, resources.GetString("numericUpDown_Calories_Set6.HelpString"));
             this.numericUpDown_Calories_Set6.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -3551,12 +4274,18 @@
             // label87
             // 
             resources.ApplyResources(this.label87, "label87");
+            this.helpProvider1.SetHelpKeyword(this.label87, resources.GetString("label87.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label87, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label87.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label87, resources.GetString("label87.HelpString"));
             this.label87.Name = "label87";
             this.helpProvider1.SetShowHelp(this.label87, ((bool)(resources.GetObject("label87.ShowHelp"))));
             // 
             // numericUpDown_Battery_Set6
             // 
             resources.ApplyResources(this.numericUpDown_Battery_Set6, "numericUpDown_Battery_Set6");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Set6, resources.GetString("numericUpDown_Battery_Set6.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Set6, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Set6.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Set6, resources.GetString("numericUpDown_Battery_Set6.HelpString"));
             this.numericUpDown_Battery_Set6.Name = "numericUpDown_Battery_Set6";
             this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_Set6, ((bool)(resources.GetObject("numericUpDown_Battery_Set6.ShowHelp"))));
             this.numericUpDown_Battery_Set6.Value = new decimal(new int[] {
@@ -3568,8 +4297,11 @@
             // 
             // dateTimePicker_Time_Set6
             // 
-            this.dateTimePicker_Time_Set6.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             resources.ApplyResources(this.dateTimePicker_Time_Set6, "dateTimePicker_Time_Set6");
+            this.dateTimePicker_Time_Set6.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.helpProvider1.SetHelpKeyword(this.dateTimePicker_Time_Set6, resources.GetString("dateTimePicker_Time_Set6.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dateTimePicker_Time_Set6, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dateTimePicker_Time_Set6.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dateTimePicker_Time_Set6, resources.GetString("dateTimePicker_Time_Set6.HelpString"));
             this.dateTimePicker_Time_Set6.Name = "dateTimePicker_Time_Set6";
             this.helpProvider1.SetShowHelp(this.dateTimePicker_Time_Set6, ((bool)(resources.GetObject("dateTimePicker_Time_Set6.ShowHelp"))));
             this.dateTimePicker_Time_Set6.ShowUpDown = true;
@@ -3577,8 +4309,11 @@
             // 
             // dateTimePicker_Date_Set6
             // 
-            this.dateTimePicker_Date_Set6.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             resources.ApplyResources(this.dateTimePicker_Date_Set6, "dateTimePicker_Date_Set6");
+            this.dateTimePicker_Date_Set6.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.helpProvider1.SetHelpKeyword(this.dateTimePicker_Date_Set6, resources.GetString("dateTimePicker_Date_Set6.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dateTimePicker_Date_Set6, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dateTimePicker_Date_Set6.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dateTimePicker_Date_Set6, resources.GetString("dateTimePicker_Date_Set6.HelpString"));
             this.dateTimePicker_Date_Set6.Name = "dateTimePicker_Date_Set6";
             this.helpProvider1.SetShowHelp(this.dateTimePicker_Date_Set6, ((bool)(resources.GetObject("dateTimePicker_Date_Set6.ShowHelp"))));
             this.dateTimePicker_Date_Set6.ValueChanged += new System.EventHandler(this.dateTimePicker_Time_Set6_ValueChanged);
@@ -3586,24 +4321,36 @@
             // label88
             // 
             resources.ApplyResources(this.label88, "label88");
+            this.helpProvider1.SetHelpKeyword(this.label88, resources.GetString("label88.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label88, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label88.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label88, resources.GetString("label88.HelpString"));
             this.label88.Name = "label88";
             this.helpProvider1.SetShowHelp(this.label88, ((bool)(resources.GetObject("label88.ShowHelp"))));
             // 
             // label89
             // 
             resources.ApplyResources(this.label89, "label89");
+            this.helpProvider1.SetHelpKeyword(this.label89, resources.GetString("label89.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label89, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label89.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label89, resources.GetString("label89.HelpString"));
             this.label89.Name = "label89";
             this.helpProvider1.SetShowHelp(this.label89, ((bool)(resources.GetObject("label89.ShowHelp"))));
             // 
             // label90
             // 
             resources.ApplyResources(this.label90, "label90");
+            this.helpProvider1.SetHelpKeyword(this.label90, resources.GetString("label90.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label90, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label90.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label90, resources.GetString("label90.HelpString"));
             this.label90.Name = "label90";
             this.helpProvider1.SetShowHelp(this.label90, ((bool)(resources.GetObject("label90.ShowHelp"))));
             // 
             // button_Set6
             // 
             resources.ApplyResources(this.button_Set6, "button_Set6");
+            this.helpProvider1.SetHelpKeyword(this.button_Set6, resources.GetString("button_Set6.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_Set6, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_Set6.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_Set6, resources.GetString("button_Set6.HelpString"));
             this.button_Set6.Name = "button_Set6";
             this.helpProvider1.SetShowHelp(this.button_Set6, ((bool)(resources.GetObject("button_Set6.ShowHelp"))));
             this.button_Set6.UseVisualStyleBackColor = true;
@@ -3611,6 +4358,7 @@
             // 
             // panel_Set5
             // 
+            resources.ApplyResources(this.panel_Set5, "panel_Set5");
             this.panel_Set5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_Set5.Controls.Add(this.checkBox_DoNotDisturb_Set5);
             this.panel_Set5.Controls.Add(this.checkBox_Lock_Set5);
@@ -3632,15 +4380,20 @@
             this.panel_Set5.Controls.Add(this.label237);
             this.panel_Set5.Controls.Add(this.label238);
             this.panel_Set5.Controls.Add(this.label239);
-            resources.ApplyResources(this.panel_Set5, "panel_Set5");
+            this.helpProvider1.SetHelpKeyword(this.panel_Set5, resources.GetString("panel_Set5.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel_Set5, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_Set5.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel_Set5, resources.GetString("panel_Set5.HelpString"));
             this.panel_Set5.Name = "panel_Set5";
             this.helpProvider1.SetShowHelp(this.panel_Set5, ((bool)(resources.GetObject("panel_Set5.ShowHelp"))));
             // 
             // checkBox_DoNotDisturb_Set5
             // 
+            resources.ApplyResources(this.checkBox_DoNotDisturb_Set5, "checkBox_DoNotDisturb_Set5");
             this.checkBox_DoNotDisturb_Set5.Checked = true;
             this.checkBox_DoNotDisturb_Set5.CheckState = System.Windows.Forms.CheckState.Checked;
-            resources.ApplyResources(this.checkBox_DoNotDisturb_Set5, "checkBox_DoNotDisturb_Set5");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_DoNotDisturb_Set5, resources.GetString("checkBox_DoNotDisturb_Set5.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_DoNotDisturb_Set5, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_DoNotDisturb_Set5.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_DoNotDisturb_Set5, resources.GetString("checkBox_DoNotDisturb_Set5.HelpString"));
             this.checkBox_DoNotDisturb_Set5.Name = "checkBox_DoNotDisturb_Set5";
             this.helpProvider1.SetShowHelp(this.checkBox_DoNotDisturb_Set5, ((bool)(resources.GetObject("checkBox_DoNotDisturb_Set5.ShowHelp"))));
             this.checkBox_DoNotDisturb_Set5.UseVisualStyleBackColor = true;
@@ -3651,6 +4404,9 @@
             resources.ApplyResources(this.checkBox_Lock_Set5, "checkBox_Lock_Set5");
             this.checkBox_Lock_Set5.Checked = true;
             this.checkBox_Lock_Set5.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Lock_Set5, resources.GetString("checkBox_Lock_Set5.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Lock_Set5, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Lock_Set5.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Lock_Set5, resources.GetString("checkBox_Lock_Set5.HelpString"));
             this.checkBox_Lock_Set5.Name = "checkBox_Lock_Set5";
             this.helpProvider1.SetShowHelp(this.checkBox_Lock_Set5, ((bool)(resources.GetObject("checkBox_Lock_Set5.ShowHelp"))));
             this.checkBox_Lock_Set5.UseVisualStyleBackColor = true;
@@ -3661,6 +4417,9 @@
             resources.ApplyResources(this.checkBox_Alarm_Set5, "checkBox_Alarm_Set5");
             this.checkBox_Alarm_Set5.Checked = true;
             this.checkBox_Alarm_Set5.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Alarm_Set5, resources.GetString("checkBox_Alarm_Set5.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Alarm_Set5, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Alarm_Set5.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Alarm_Set5, resources.GetString("checkBox_Alarm_Set5.HelpString"));
             this.checkBox_Alarm_Set5.Name = "checkBox_Alarm_Set5";
             this.helpProvider1.SetShowHelp(this.checkBox_Alarm_Set5, ((bool)(resources.GetObject("checkBox_Alarm_Set5.ShowHelp"))));
             this.checkBox_Alarm_Set5.UseVisualStyleBackColor = true;
@@ -3671,6 +4430,9 @@
             resources.ApplyResources(this.check_BoxBluetooth_Set5, "check_BoxBluetooth_Set5");
             this.check_BoxBluetooth_Set5.Checked = true;
             this.check_BoxBluetooth_Set5.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.check_BoxBluetooth_Set5, resources.GetString("check_BoxBluetooth_Set5.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.check_BoxBluetooth_Set5, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("check_BoxBluetooth_Set5.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.check_BoxBluetooth_Set5, resources.GetString("check_BoxBluetooth_Set5.HelpString"));
             this.check_BoxBluetooth_Set5.Name = "check_BoxBluetooth_Set5";
             this.helpProvider1.SetShowHelp(this.check_BoxBluetooth_Set5, ((bool)(resources.GetObject("check_BoxBluetooth_Set5.ShowHelp"))));
             this.check_BoxBluetooth_Set5.UseVisualStyleBackColor = true;
@@ -3679,6 +4441,9 @@
             // numericUpDown_Goal_Set5
             // 
             resources.ApplyResources(this.numericUpDown_Goal_Set5, "numericUpDown_Goal_Set5");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Goal_Set5, resources.GetString("numericUpDown_Goal_Set5.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Goal_Set5, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Goal_Set5.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Goal_Set5, resources.GetString("numericUpDown_Goal_Set5.HelpString"));
             this.numericUpDown_Goal_Set5.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -3696,12 +4461,18 @@
             // label232
             // 
             resources.ApplyResources(this.label232, "label232");
+            this.helpProvider1.SetHelpKeyword(this.label232, resources.GetString("label232.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label232, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label232.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label232, resources.GetString("label232.HelpString"));
             this.label232.Name = "label232";
             this.helpProvider1.SetShowHelp(this.label232, ((bool)(resources.GetObject("label232.ShowHelp"))));
             // 
             // numericUpDown_Steps_Set5
             // 
             resources.ApplyResources(this.numericUpDown_Steps_Set5, "numericUpDown_Steps_Set5");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Steps_Set5, resources.GetString("numericUpDown_Steps_Set5.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Steps_Set5, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Steps_Set5.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Steps_Set5, resources.GetString("numericUpDown_Steps_Set5.HelpString"));
             this.numericUpDown_Steps_Set5.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -3719,12 +4490,18 @@
             // label233
             // 
             resources.ApplyResources(this.label233, "label233");
+            this.helpProvider1.SetHelpKeyword(this.label233, resources.GetString("label233.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label233, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label233.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label233, resources.GetString("label233.HelpString"));
             this.label233.Name = "label233";
             this.helpProvider1.SetShowHelp(this.label233, ((bool)(resources.GetObject("label233.ShowHelp"))));
             // 
             // numericUpDown_Pulse_Set5
             // 
             resources.ApplyResources(this.numericUpDown_Pulse_Set5, "numericUpDown_Pulse_Set5");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Pulse_Set5, resources.GetString("numericUpDown_Pulse_Set5.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Pulse_Set5, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Pulse_Set5.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Pulse_Set5, resources.GetString("numericUpDown_Pulse_Set5.HelpString"));
             this.numericUpDown_Pulse_Set5.Maximum = new decimal(new int[] {
             999,
             0,
@@ -3742,12 +4519,18 @@
             // label234
             // 
             resources.ApplyResources(this.label234, "label234");
+            this.helpProvider1.SetHelpKeyword(this.label234, resources.GetString("label234.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label234, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label234.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label234, resources.GetString("label234.HelpString"));
             this.label234.Name = "label234";
             this.helpProvider1.SetShowHelp(this.label234, ((bool)(resources.GetObject("label234.ShowHelp"))));
             // 
             // numericUpDown_Distance_Set5
             // 
             resources.ApplyResources(this.numericUpDown_Distance_Set5, "numericUpDown_Distance_Set5");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Distance_Set5, resources.GetString("numericUpDown_Distance_Set5.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Distance_Set5, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Distance_Set5.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Distance_Set5, resources.GetString("numericUpDown_Distance_Set5.HelpString"));
             this.numericUpDown_Distance_Set5.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -3765,12 +4548,18 @@
             // label235
             // 
             resources.ApplyResources(this.label235, "label235");
+            this.helpProvider1.SetHelpKeyword(this.label235, resources.GetString("label235.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label235, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label235.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label235, resources.GetString("label235.HelpString"));
             this.label235.Name = "label235";
             this.helpProvider1.SetShowHelp(this.label235, ((bool)(resources.GetObject("label235.ShowHelp"))));
             // 
             // numericUpDown_Calories_Set5
             // 
             resources.ApplyResources(this.numericUpDown_Calories_Set5, "numericUpDown_Calories_Set5");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Calories_Set5, resources.GetString("numericUpDown_Calories_Set5.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Calories_Set5, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Calories_Set5.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Calories_Set5, resources.GetString("numericUpDown_Calories_Set5.HelpString"));
             this.numericUpDown_Calories_Set5.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -3788,12 +4577,18 @@
             // label236
             // 
             resources.ApplyResources(this.label236, "label236");
+            this.helpProvider1.SetHelpKeyword(this.label236, resources.GetString("label236.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label236, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label236.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label236, resources.GetString("label236.HelpString"));
             this.label236.Name = "label236";
             this.helpProvider1.SetShowHelp(this.label236, ((bool)(resources.GetObject("label236.ShowHelp"))));
             // 
             // numericUpDown_Battery_Set5
             // 
             resources.ApplyResources(this.numericUpDown_Battery_Set5, "numericUpDown_Battery_Set5");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Set5, resources.GetString("numericUpDown_Battery_Set5.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Set5, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Set5.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Set5, resources.GetString("numericUpDown_Battery_Set5.HelpString"));
             this.numericUpDown_Battery_Set5.Name = "numericUpDown_Battery_Set5";
             this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_Set5, ((bool)(resources.GetObject("numericUpDown_Battery_Set5.ShowHelp"))));
             this.numericUpDown_Battery_Set5.Value = new decimal(new int[] {
@@ -3805,8 +4600,11 @@
             // 
             // dateTimePicker_Time_Set5
             // 
-            this.dateTimePicker_Time_Set5.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             resources.ApplyResources(this.dateTimePicker_Time_Set5, "dateTimePicker_Time_Set5");
+            this.dateTimePicker_Time_Set5.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.helpProvider1.SetHelpKeyword(this.dateTimePicker_Time_Set5, resources.GetString("dateTimePicker_Time_Set5.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dateTimePicker_Time_Set5, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dateTimePicker_Time_Set5.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dateTimePicker_Time_Set5, resources.GetString("dateTimePicker_Time_Set5.HelpString"));
             this.dateTimePicker_Time_Set5.Name = "dateTimePicker_Time_Set5";
             this.helpProvider1.SetShowHelp(this.dateTimePicker_Time_Set5, ((bool)(resources.GetObject("dateTimePicker_Time_Set5.ShowHelp"))));
             this.dateTimePicker_Time_Set5.ShowUpDown = true;
@@ -3814,8 +4612,11 @@
             // 
             // dateTimePicker_Date_Set5
             // 
-            this.dateTimePicker_Date_Set5.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             resources.ApplyResources(this.dateTimePicker_Date_Set5, "dateTimePicker_Date_Set5");
+            this.dateTimePicker_Date_Set5.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.helpProvider1.SetHelpKeyword(this.dateTimePicker_Date_Set5, resources.GetString("dateTimePicker_Date_Set5.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dateTimePicker_Date_Set5, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dateTimePicker_Date_Set5.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dateTimePicker_Date_Set5, resources.GetString("dateTimePicker_Date_Set5.HelpString"));
             this.dateTimePicker_Date_Set5.Name = "dateTimePicker_Date_Set5";
             this.helpProvider1.SetShowHelp(this.dateTimePicker_Date_Set5, ((bool)(resources.GetObject("dateTimePicker_Date_Set5.ShowHelp"))));
             this.dateTimePicker_Date_Set5.ValueChanged += new System.EventHandler(this.dateTimePicker_Time_Set5_ValueChanged);
@@ -3823,24 +4624,36 @@
             // label237
             // 
             resources.ApplyResources(this.label237, "label237");
+            this.helpProvider1.SetHelpKeyword(this.label237, resources.GetString("label237.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label237, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label237.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label237, resources.GetString("label237.HelpString"));
             this.label237.Name = "label237";
             this.helpProvider1.SetShowHelp(this.label237, ((bool)(resources.GetObject("label237.ShowHelp"))));
             // 
             // label238
             // 
             resources.ApplyResources(this.label238, "label238");
+            this.helpProvider1.SetHelpKeyword(this.label238, resources.GetString("label238.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label238, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label238.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label238, resources.GetString("label238.HelpString"));
             this.label238.Name = "label238";
             this.helpProvider1.SetShowHelp(this.label238, ((bool)(resources.GetObject("label238.ShowHelp"))));
             // 
             // label239
             // 
             resources.ApplyResources(this.label239, "label239");
+            this.helpProvider1.SetHelpKeyword(this.label239, resources.GetString("label239.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label239, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label239.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label239, resources.GetString("label239.HelpString"));
             this.label239.Name = "label239";
             this.helpProvider1.SetShowHelp(this.label239, ((bool)(resources.GetObject("label239.ShowHelp"))));
             // 
             // button_Set5
             // 
             resources.ApplyResources(this.button_Set5, "button_Set5");
+            this.helpProvider1.SetHelpKeyword(this.button_Set5, resources.GetString("button_Set5.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_Set5, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_Set5.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_Set5, resources.GetString("button_Set5.HelpString"));
             this.button_Set5.Name = "button_Set5";
             this.helpProvider1.SetShowHelp(this.button_Set5, ((bool)(resources.GetObject("button_Set5.ShowHelp"))));
             this.button_Set5.UseVisualStyleBackColor = true;
@@ -3848,6 +4661,7 @@
             // 
             // panel_Set4
             // 
+            resources.ApplyResources(this.panel_Set4, "panel_Set4");
             this.panel_Set4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_Set4.Controls.Add(this.checkBox_DoNotDisturb_Set4);
             this.panel_Set4.Controls.Add(this.checkBox_Lock_Set4);
@@ -3869,15 +4683,20 @@
             this.panel_Set4.Controls.Add(this.label229);
             this.panel_Set4.Controls.Add(this.label230);
             this.panel_Set4.Controls.Add(this.label231);
-            resources.ApplyResources(this.panel_Set4, "panel_Set4");
+            this.helpProvider1.SetHelpKeyword(this.panel_Set4, resources.GetString("panel_Set4.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel_Set4, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_Set4.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel_Set4, resources.GetString("panel_Set4.HelpString"));
             this.panel_Set4.Name = "panel_Set4";
             this.helpProvider1.SetShowHelp(this.panel_Set4, ((bool)(resources.GetObject("panel_Set4.ShowHelp"))));
             // 
             // checkBox_DoNotDisturb_Set4
             // 
+            resources.ApplyResources(this.checkBox_DoNotDisturb_Set4, "checkBox_DoNotDisturb_Set4");
             this.checkBox_DoNotDisturb_Set4.Checked = true;
             this.checkBox_DoNotDisturb_Set4.CheckState = System.Windows.Forms.CheckState.Checked;
-            resources.ApplyResources(this.checkBox_DoNotDisturb_Set4, "checkBox_DoNotDisturb_Set4");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_DoNotDisturb_Set4, resources.GetString("checkBox_DoNotDisturb_Set4.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_DoNotDisturb_Set4, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_DoNotDisturb_Set4.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_DoNotDisturb_Set4, resources.GetString("checkBox_DoNotDisturb_Set4.HelpString"));
             this.checkBox_DoNotDisturb_Set4.Name = "checkBox_DoNotDisturb_Set4";
             this.helpProvider1.SetShowHelp(this.checkBox_DoNotDisturb_Set4, ((bool)(resources.GetObject("checkBox_DoNotDisturb_Set4.ShowHelp"))));
             this.checkBox_DoNotDisturb_Set4.UseVisualStyleBackColor = true;
@@ -3888,6 +4707,9 @@
             resources.ApplyResources(this.checkBox_Lock_Set4, "checkBox_Lock_Set4");
             this.checkBox_Lock_Set4.Checked = true;
             this.checkBox_Lock_Set4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Lock_Set4, resources.GetString("checkBox_Lock_Set4.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Lock_Set4, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Lock_Set4.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Lock_Set4, resources.GetString("checkBox_Lock_Set4.HelpString"));
             this.checkBox_Lock_Set4.Name = "checkBox_Lock_Set4";
             this.helpProvider1.SetShowHelp(this.checkBox_Lock_Set4, ((bool)(resources.GetObject("checkBox_Lock_Set4.ShowHelp"))));
             this.checkBox_Lock_Set4.UseVisualStyleBackColor = true;
@@ -3898,6 +4720,9 @@
             resources.ApplyResources(this.checkBox_Alarm_Set4, "checkBox_Alarm_Set4");
             this.checkBox_Alarm_Set4.Checked = true;
             this.checkBox_Alarm_Set4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Alarm_Set4, resources.GetString("checkBox_Alarm_Set4.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Alarm_Set4, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Alarm_Set4.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Alarm_Set4, resources.GetString("checkBox_Alarm_Set4.HelpString"));
             this.checkBox_Alarm_Set4.Name = "checkBox_Alarm_Set4";
             this.helpProvider1.SetShowHelp(this.checkBox_Alarm_Set4, ((bool)(resources.GetObject("checkBox_Alarm_Set4.ShowHelp"))));
             this.checkBox_Alarm_Set4.UseVisualStyleBackColor = true;
@@ -3908,6 +4733,9 @@
             resources.ApplyResources(this.check_BoxBluetooth_Set4, "check_BoxBluetooth_Set4");
             this.check_BoxBluetooth_Set4.Checked = true;
             this.check_BoxBluetooth_Set4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.check_BoxBluetooth_Set4, resources.GetString("check_BoxBluetooth_Set4.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.check_BoxBluetooth_Set4, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("check_BoxBluetooth_Set4.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.check_BoxBluetooth_Set4, resources.GetString("check_BoxBluetooth_Set4.HelpString"));
             this.check_BoxBluetooth_Set4.Name = "check_BoxBluetooth_Set4";
             this.helpProvider1.SetShowHelp(this.check_BoxBluetooth_Set4, ((bool)(resources.GetObject("check_BoxBluetooth_Set4.ShowHelp"))));
             this.check_BoxBluetooth_Set4.UseVisualStyleBackColor = true;
@@ -3916,6 +4744,9 @@
             // numericUpDown_Goal_Set4
             // 
             resources.ApplyResources(this.numericUpDown_Goal_Set4, "numericUpDown_Goal_Set4");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Goal_Set4, resources.GetString("numericUpDown_Goal_Set4.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Goal_Set4, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Goal_Set4.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Goal_Set4, resources.GetString("numericUpDown_Goal_Set4.HelpString"));
             this.numericUpDown_Goal_Set4.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -3933,12 +4764,18 @@
             // label224
             // 
             resources.ApplyResources(this.label224, "label224");
+            this.helpProvider1.SetHelpKeyword(this.label224, resources.GetString("label224.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label224, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label224.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label224, resources.GetString("label224.HelpString"));
             this.label224.Name = "label224";
             this.helpProvider1.SetShowHelp(this.label224, ((bool)(resources.GetObject("label224.ShowHelp"))));
             // 
             // numericUpDown_Steps_Set4
             // 
             resources.ApplyResources(this.numericUpDown_Steps_Set4, "numericUpDown_Steps_Set4");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Steps_Set4, resources.GetString("numericUpDown_Steps_Set4.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Steps_Set4, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Steps_Set4.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Steps_Set4, resources.GetString("numericUpDown_Steps_Set4.HelpString"));
             this.numericUpDown_Steps_Set4.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -3956,12 +4793,18 @@
             // label225
             // 
             resources.ApplyResources(this.label225, "label225");
+            this.helpProvider1.SetHelpKeyword(this.label225, resources.GetString("label225.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label225, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label225.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label225, resources.GetString("label225.HelpString"));
             this.label225.Name = "label225";
             this.helpProvider1.SetShowHelp(this.label225, ((bool)(resources.GetObject("label225.ShowHelp"))));
             // 
             // numericUpDown_Pulse_Set4
             // 
             resources.ApplyResources(this.numericUpDown_Pulse_Set4, "numericUpDown_Pulse_Set4");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Pulse_Set4, resources.GetString("numericUpDown_Pulse_Set4.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Pulse_Set4, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Pulse_Set4.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Pulse_Set4, resources.GetString("numericUpDown_Pulse_Set4.HelpString"));
             this.numericUpDown_Pulse_Set4.Maximum = new decimal(new int[] {
             999,
             0,
@@ -3979,12 +4822,18 @@
             // label226
             // 
             resources.ApplyResources(this.label226, "label226");
+            this.helpProvider1.SetHelpKeyword(this.label226, resources.GetString("label226.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label226, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label226.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label226, resources.GetString("label226.HelpString"));
             this.label226.Name = "label226";
             this.helpProvider1.SetShowHelp(this.label226, ((bool)(resources.GetObject("label226.ShowHelp"))));
             // 
             // numericUpDown_Distance_Set4
             // 
             resources.ApplyResources(this.numericUpDown_Distance_Set4, "numericUpDown_Distance_Set4");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Distance_Set4, resources.GetString("numericUpDown_Distance_Set4.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Distance_Set4, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Distance_Set4.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Distance_Set4, resources.GetString("numericUpDown_Distance_Set4.HelpString"));
             this.numericUpDown_Distance_Set4.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -4002,12 +4851,18 @@
             // label227
             // 
             resources.ApplyResources(this.label227, "label227");
+            this.helpProvider1.SetHelpKeyword(this.label227, resources.GetString("label227.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label227, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label227.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label227, resources.GetString("label227.HelpString"));
             this.label227.Name = "label227";
             this.helpProvider1.SetShowHelp(this.label227, ((bool)(resources.GetObject("label227.ShowHelp"))));
             // 
             // numericUpDown_Calories_Set4
             // 
             resources.ApplyResources(this.numericUpDown_Calories_Set4, "numericUpDown_Calories_Set4");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Calories_Set4, resources.GetString("numericUpDown_Calories_Set4.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Calories_Set4, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Calories_Set4.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Calories_Set4, resources.GetString("numericUpDown_Calories_Set4.HelpString"));
             this.numericUpDown_Calories_Set4.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -4025,12 +4880,18 @@
             // label228
             // 
             resources.ApplyResources(this.label228, "label228");
+            this.helpProvider1.SetHelpKeyword(this.label228, resources.GetString("label228.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label228, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label228.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label228, resources.GetString("label228.HelpString"));
             this.label228.Name = "label228";
             this.helpProvider1.SetShowHelp(this.label228, ((bool)(resources.GetObject("label228.ShowHelp"))));
             // 
             // numericUpDown_Battery_Set4
             // 
             resources.ApplyResources(this.numericUpDown_Battery_Set4, "numericUpDown_Battery_Set4");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Set4, resources.GetString("numericUpDown_Battery_Set4.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Set4, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Set4.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Set4, resources.GetString("numericUpDown_Battery_Set4.HelpString"));
             this.numericUpDown_Battery_Set4.Name = "numericUpDown_Battery_Set4";
             this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_Set4, ((bool)(resources.GetObject("numericUpDown_Battery_Set4.ShowHelp"))));
             this.numericUpDown_Battery_Set4.Value = new decimal(new int[] {
@@ -4042,8 +4903,11 @@
             // 
             // dateTimePicker_Time_Set4
             // 
-            this.dateTimePicker_Time_Set4.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             resources.ApplyResources(this.dateTimePicker_Time_Set4, "dateTimePicker_Time_Set4");
+            this.dateTimePicker_Time_Set4.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.helpProvider1.SetHelpKeyword(this.dateTimePicker_Time_Set4, resources.GetString("dateTimePicker_Time_Set4.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dateTimePicker_Time_Set4, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dateTimePicker_Time_Set4.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dateTimePicker_Time_Set4, resources.GetString("dateTimePicker_Time_Set4.HelpString"));
             this.dateTimePicker_Time_Set4.Name = "dateTimePicker_Time_Set4";
             this.helpProvider1.SetShowHelp(this.dateTimePicker_Time_Set4, ((bool)(resources.GetObject("dateTimePicker_Time_Set4.ShowHelp"))));
             this.dateTimePicker_Time_Set4.ShowUpDown = true;
@@ -4051,8 +4915,11 @@
             // 
             // dateTimePicker_Date_Set4
             // 
-            this.dateTimePicker_Date_Set4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             resources.ApplyResources(this.dateTimePicker_Date_Set4, "dateTimePicker_Date_Set4");
+            this.dateTimePicker_Date_Set4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.helpProvider1.SetHelpKeyword(this.dateTimePicker_Date_Set4, resources.GetString("dateTimePicker_Date_Set4.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dateTimePicker_Date_Set4, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dateTimePicker_Date_Set4.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dateTimePicker_Date_Set4, resources.GetString("dateTimePicker_Date_Set4.HelpString"));
             this.dateTimePicker_Date_Set4.Name = "dateTimePicker_Date_Set4";
             this.helpProvider1.SetShowHelp(this.dateTimePicker_Date_Set4, ((bool)(resources.GetObject("dateTimePicker_Date_Set4.ShowHelp"))));
             this.dateTimePicker_Date_Set4.ValueChanged += new System.EventHandler(this.dateTimePicker_Time_Set4_ValueChanged);
@@ -4060,24 +4927,36 @@
             // label229
             // 
             resources.ApplyResources(this.label229, "label229");
+            this.helpProvider1.SetHelpKeyword(this.label229, resources.GetString("label229.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label229, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label229.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label229, resources.GetString("label229.HelpString"));
             this.label229.Name = "label229";
             this.helpProvider1.SetShowHelp(this.label229, ((bool)(resources.GetObject("label229.ShowHelp"))));
             // 
             // label230
             // 
             resources.ApplyResources(this.label230, "label230");
+            this.helpProvider1.SetHelpKeyword(this.label230, resources.GetString("label230.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label230, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label230.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label230, resources.GetString("label230.HelpString"));
             this.label230.Name = "label230";
             this.helpProvider1.SetShowHelp(this.label230, ((bool)(resources.GetObject("label230.ShowHelp"))));
             // 
             // label231
             // 
             resources.ApplyResources(this.label231, "label231");
+            this.helpProvider1.SetHelpKeyword(this.label231, resources.GetString("label231.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label231, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label231.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label231, resources.GetString("label231.HelpString"));
             this.label231.Name = "label231";
             this.helpProvider1.SetShowHelp(this.label231, ((bool)(resources.GetObject("label231.ShowHelp"))));
             // 
             // button_Set4
             // 
             resources.ApplyResources(this.button_Set4, "button_Set4");
+            this.helpProvider1.SetHelpKeyword(this.button_Set4, resources.GetString("button_Set4.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_Set4, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_Set4.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_Set4, resources.GetString("button_Set4.HelpString"));
             this.button_Set4.Name = "button_Set4";
             this.helpProvider1.SetShowHelp(this.button_Set4, ((bool)(resources.GetObject("button_Set4.ShowHelp"))));
             this.button_Set4.UseVisualStyleBackColor = true;
@@ -4085,6 +4964,7 @@
             // 
             // panel_Set3
             // 
+            resources.ApplyResources(this.panel_Set3, "panel_Set3");
             this.panel_Set3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_Set3.Controls.Add(this.checkBox_DoNotDisturb_Set3);
             this.panel_Set3.Controls.Add(this.checkBox_Lock_Set3);
@@ -4106,15 +4986,20 @@
             this.panel_Set3.Controls.Add(this.label221);
             this.panel_Set3.Controls.Add(this.label222);
             this.panel_Set3.Controls.Add(this.label223);
-            resources.ApplyResources(this.panel_Set3, "panel_Set3");
+            this.helpProvider1.SetHelpKeyword(this.panel_Set3, resources.GetString("panel_Set3.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel_Set3, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_Set3.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel_Set3, resources.GetString("panel_Set3.HelpString"));
             this.panel_Set3.Name = "panel_Set3";
             this.helpProvider1.SetShowHelp(this.panel_Set3, ((bool)(resources.GetObject("panel_Set3.ShowHelp"))));
             // 
             // checkBox_DoNotDisturb_Set3
             // 
+            resources.ApplyResources(this.checkBox_DoNotDisturb_Set3, "checkBox_DoNotDisturb_Set3");
             this.checkBox_DoNotDisturb_Set3.Checked = true;
             this.checkBox_DoNotDisturb_Set3.CheckState = System.Windows.Forms.CheckState.Checked;
-            resources.ApplyResources(this.checkBox_DoNotDisturb_Set3, "checkBox_DoNotDisturb_Set3");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_DoNotDisturb_Set3, resources.GetString("checkBox_DoNotDisturb_Set3.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_DoNotDisturb_Set3, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_DoNotDisturb_Set3.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_DoNotDisturb_Set3, resources.GetString("checkBox_DoNotDisturb_Set3.HelpString"));
             this.checkBox_DoNotDisturb_Set3.Name = "checkBox_DoNotDisturb_Set3";
             this.helpProvider1.SetShowHelp(this.checkBox_DoNotDisturb_Set3, ((bool)(resources.GetObject("checkBox_DoNotDisturb_Set3.ShowHelp"))));
             this.checkBox_DoNotDisturb_Set3.UseVisualStyleBackColor = true;
@@ -4125,6 +5010,9 @@
             resources.ApplyResources(this.checkBox_Lock_Set3, "checkBox_Lock_Set3");
             this.checkBox_Lock_Set3.Checked = true;
             this.checkBox_Lock_Set3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Lock_Set3, resources.GetString("checkBox_Lock_Set3.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Lock_Set3, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Lock_Set3.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Lock_Set3, resources.GetString("checkBox_Lock_Set3.HelpString"));
             this.checkBox_Lock_Set3.Name = "checkBox_Lock_Set3";
             this.helpProvider1.SetShowHelp(this.checkBox_Lock_Set3, ((bool)(resources.GetObject("checkBox_Lock_Set3.ShowHelp"))));
             this.checkBox_Lock_Set3.UseVisualStyleBackColor = true;
@@ -4135,6 +5023,9 @@
             resources.ApplyResources(this.checkBox_Alarm_Set3, "checkBox_Alarm_Set3");
             this.checkBox_Alarm_Set3.Checked = true;
             this.checkBox_Alarm_Set3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Alarm_Set3, resources.GetString("checkBox_Alarm_Set3.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Alarm_Set3, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Alarm_Set3.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Alarm_Set3, resources.GetString("checkBox_Alarm_Set3.HelpString"));
             this.checkBox_Alarm_Set3.Name = "checkBox_Alarm_Set3";
             this.helpProvider1.SetShowHelp(this.checkBox_Alarm_Set3, ((bool)(resources.GetObject("checkBox_Alarm_Set3.ShowHelp"))));
             this.checkBox_Alarm_Set3.UseVisualStyleBackColor = true;
@@ -4145,6 +5036,9 @@
             resources.ApplyResources(this.check_BoxBluetooth_Set3, "check_BoxBluetooth_Set3");
             this.check_BoxBluetooth_Set3.Checked = true;
             this.check_BoxBluetooth_Set3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.check_BoxBluetooth_Set3, resources.GetString("check_BoxBluetooth_Set3.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.check_BoxBluetooth_Set3, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("check_BoxBluetooth_Set3.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.check_BoxBluetooth_Set3, resources.GetString("check_BoxBluetooth_Set3.HelpString"));
             this.check_BoxBluetooth_Set3.Name = "check_BoxBluetooth_Set3";
             this.helpProvider1.SetShowHelp(this.check_BoxBluetooth_Set3, ((bool)(resources.GetObject("check_BoxBluetooth_Set3.ShowHelp"))));
             this.check_BoxBluetooth_Set3.UseVisualStyleBackColor = true;
@@ -4153,6 +5047,9 @@
             // numericUpDown_Goal_Set3
             // 
             resources.ApplyResources(this.numericUpDown_Goal_Set3, "numericUpDown_Goal_Set3");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Goal_Set3, resources.GetString("numericUpDown_Goal_Set3.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Goal_Set3, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Goal_Set3.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Goal_Set3, resources.GetString("numericUpDown_Goal_Set3.HelpString"));
             this.numericUpDown_Goal_Set3.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -4170,12 +5067,18 @@
             // label213
             // 
             resources.ApplyResources(this.label213, "label213");
+            this.helpProvider1.SetHelpKeyword(this.label213, resources.GetString("label213.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label213, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label213.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label213, resources.GetString("label213.HelpString"));
             this.label213.Name = "label213";
             this.helpProvider1.SetShowHelp(this.label213, ((bool)(resources.GetObject("label213.ShowHelp"))));
             // 
             // numericUpDown_Steps_Set3
             // 
             resources.ApplyResources(this.numericUpDown_Steps_Set3, "numericUpDown_Steps_Set3");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Steps_Set3, resources.GetString("numericUpDown_Steps_Set3.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Steps_Set3, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Steps_Set3.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Steps_Set3, resources.GetString("numericUpDown_Steps_Set3.HelpString"));
             this.numericUpDown_Steps_Set3.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -4193,12 +5096,18 @@
             // label214
             // 
             resources.ApplyResources(this.label214, "label214");
+            this.helpProvider1.SetHelpKeyword(this.label214, resources.GetString("label214.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label214, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label214.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label214, resources.GetString("label214.HelpString"));
             this.label214.Name = "label214";
             this.helpProvider1.SetShowHelp(this.label214, ((bool)(resources.GetObject("label214.ShowHelp"))));
             // 
             // numericUpDown_Pulse_Set3
             // 
             resources.ApplyResources(this.numericUpDown_Pulse_Set3, "numericUpDown_Pulse_Set3");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Pulse_Set3, resources.GetString("numericUpDown_Pulse_Set3.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Pulse_Set3, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Pulse_Set3.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Pulse_Set3, resources.GetString("numericUpDown_Pulse_Set3.HelpString"));
             this.numericUpDown_Pulse_Set3.Maximum = new decimal(new int[] {
             999,
             0,
@@ -4216,12 +5125,18 @@
             // label218
             // 
             resources.ApplyResources(this.label218, "label218");
+            this.helpProvider1.SetHelpKeyword(this.label218, resources.GetString("label218.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label218, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label218.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label218, resources.GetString("label218.HelpString"));
             this.label218.Name = "label218";
             this.helpProvider1.SetShowHelp(this.label218, ((bool)(resources.GetObject("label218.ShowHelp"))));
             // 
             // numericUpDown_Distance_Set3
             // 
             resources.ApplyResources(this.numericUpDown_Distance_Set3, "numericUpDown_Distance_Set3");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Distance_Set3, resources.GetString("numericUpDown_Distance_Set3.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Distance_Set3, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Distance_Set3.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Distance_Set3, resources.GetString("numericUpDown_Distance_Set3.HelpString"));
             this.numericUpDown_Distance_Set3.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -4239,12 +5154,18 @@
             // label219
             // 
             resources.ApplyResources(this.label219, "label219");
+            this.helpProvider1.SetHelpKeyword(this.label219, resources.GetString("label219.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label219, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label219.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label219, resources.GetString("label219.HelpString"));
             this.label219.Name = "label219";
             this.helpProvider1.SetShowHelp(this.label219, ((bool)(resources.GetObject("label219.ShowHelp"))));
             // 
             // numericUpDown_Calories_Set3
             // 
             resources.ApplyResources(this.numericUpDown_Calories_Set3, "numericUpDown_Calories_Set3");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Calories_Set3, resources.GetString("numericUpDown_Calories_Set3.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Calories_Set3, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Calories_Set3.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Calories_Set3, resources.GetString("numericUpDown_Calories_Set3.HelpString"));
             this.numericUpDown_Calories_Set3.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -4262,12 +5183,18 @@
             // label220
             // 
             resources.ApplyResources(this.label220, "label220");
+            this.helpProvider1.SetHelpKeyword(this.label220, resources.GetString("label220.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label220, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label220.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label220, resources.GetString("label220.HelpString"));
             this.label220.Name = "label220";
             this.helpProvider1.SetShowHelp(this.label220, ((bool)(resources.GetObject("label220.ShowHelp"))));
             // 
             // numericUpDown_Battery_Set3
             // 
             resources.ApplyResources(this.numericUpDown_Battery_Set3, "numericUpDown_Battery_Set3");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Set3, resources.GetString("numericUpDown_Battery_Set3.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Set3, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Set3.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Set3, resources.GetString("numericUpDown_Battery_Set3.HelpString"));
             this.numericUpDown_Battery_Set3.Name = "numericUpDown_Battery_Set3";
             this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_Set3, ((bool)(resources.GetObject("numericUpDown_Battery_Set3.ShowHelp"))));
             this.numericUpDown_Battery_Set3.Value = new decimal(new int[] {
@@ -4279,8 +5206,11 @@
             // 
             // dateTimePicker_Time_Set3
             // 
-            this.dateTimePicker_Time_Set3.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             resources.ApplyResources(this.dateTimePicker_Time_Set3, "dateTimePicker_Time_Set3");
+            this.dateTimePicker_Time_Set3.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.helpProvider1.SetHelpKeyword(this.dateTimePicker_Time_Set3, resources.GetString("dateTimePicker_Time_Set3.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dateTimePicker_Time_Set3, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dateTimePicker_Time_Set3.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dateTimePicker_Time_Set3, resources.GetString("dateTimePicker_Time_Set3.HelpString"));
             this.dateTimePicker_Time_Set3.Name = "dateTimePicker_Time_Set3";
             this.helpProvider1.SetShowHelp(this.dateTimePicker_Time_Set3, ((bool)(resources.GetObject("dateTimePicker_Time_Set3.ShowHelp"))));
             this.dateTimePicker_Time_Set3.ShowUpDown = true;
@@ -4288,8 +5218,11 @@
             // 
             // dateTimePicker_Date_Set3
             // 
-            this.dateTimePicker_Date_Set3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             resources.ApplyResources(this.dateTimePicker_Date_Set3, "dateTimePicker_Date_Set3");
+            this.dateTimePicker_Date_Set3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.helpProvider1.SetHelpKeyword(this.dateTimePicker_Date_Set3, resources.GetString("dateTimePicker_Date_Set3.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dateTimePicker_Date_Set3, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dateTimePicker_Date_Set3.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dateTimePicker_Date_Set3, resources.GetString("dateTimePicker_Date_Set3.HelpString"));
             this.dateTimePicker_Date_Set3.Name = "dateTimePicker_Date_Set3";
             this.helpProvider1.SetShowHelp(this.dateTimePicker_Date_Set3, ((bool)(resources.GetObject("dateTimePicker_Date_Set3.ShowHelp"))));
             this.dateTimePicker_Date_Set3.ValueChanged += new System.EventHandler(this.dateTimePicker_Time_Set3_ValueChanged);
@@ -4297,24 +5230,36 @@
             // label221
             // 
             resources.ApplyResources(this.label221, "label221");
+            this.helpProvider1.SetHelpKeyword(this.label221, resources.GetString("label221.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label221, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label221.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label221, resources.GetString("label221.HelpString"));
             this.label221.Name = "label221";
             this.helpProvider1.SetShowHelp(this.label221, ((bool)(resources.GetObject("label221.ShowHelp"))));
             // 
             // label222
             // 
             resources.ApplyResources(this.label222, "label222");
+            this.helpProvider1.SetHelpKeyword(this.label222, resources.GetString("label222.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label222, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label222.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label222, resources.GetString("label222.HelpString"));
             this.label222.Name = "label222";
             this.helpProvider1.SetShowHelp(this.label222, ((bool)(resources.GetObject("label222.ShowHelp"))));
             // 
             // label223
             // 
             resources.ApplyResources(this.label223, "label223");
+            this.helpProvider1.SetHelpKeyword(this.label223, resources.GetString("label223.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label223, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label223.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label223, resources.GetString("label223.HelpString"));
             this.label223.Name = "label223";
             this.helpProvider1.SetShowHelp(this.label223, ((bool)(resources.GetObject("label223.ShowHelp"))));
             // 
             // button_Set3
             // 
             resources.ApplyResources(this.button_Set3, "button_Set3");
+            this.helpProvider1.SetHelpKeyword(this.button_Set3, resources.GetString("button_Set3.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_Set3, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_Set3.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_Set3, resources.GetString("button_Set3.HelpString"));
             this.button_Set3.Name = "button_Set3";
             this.helpProvider1.SetShowHelp(this.button_Set3, ((bool)(resources.GetObject("button_Set3.ShowHelp"))));
             this.button_Set3.UseVisualStyleBackColor = true;
@@ -4322,6 +5267,7 @@
             // 
             // panel_Set2
             // 
+            resources.ApplyResources(this.panel_Set2, "panel_Set2");
             this.panel_Set2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_Set2.Controls.Add(this.checkBox_DoNotDisturb_Set2);
             this.panel_Set2.Controls.Add(this.checkBox_Lock_Set2);
@@ -4343,15 +5289,20 @@
             this.panel_Set2.Controls.Add(this.label52);
             this.panel_Set2.Controls.Add(this.label53);
             this.panel_Set2.Controls.Add(this.label54);
-            resources.ApplyResources(this.panel_Set2, "panel_Set2");
+            this.helpProvider1.SetHelpKeyword(this.panel_Set2, resources.GetString("panel_Set2.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel_Set2, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_Set2.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel_Set2, resources.GetString("panel_Set2.HelpString"));
             this.panel_Set2.Name = "panel_Set2";
             this.helpProvider1.SetShowHelp(this.panel_Set2, ((bool)(resources.GetObject("panel_Set2.ShowHelp"))));
             // 
             // checkBox_DoNotDisturb_Set2
             // 
+            resources.ApplyResources(this.checkBox_DoNotDisturb_Set2, "checkBox_DoNotDisturb_Set2");
             this.checkBox_DoNotDisturb_Set2.Checked = true;
             this.checkBox_DoNotDisturb_Set2.CheckState = System.Windows.Forms.CheckState.Checked;
-            resources.ApplyResources(this.checkBox_DoNotDisturb_Set2, "checkBox_DoNotDisturb_Set2");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_DoNotDisturb_Set2, resources.GetString("checkBox_DoNotDisturb_Set2.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_DoNotDisturb_Set2, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_DoNotDisturb_Set2.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_DoNotDisturb_Set2, resources.GetString("checkBox_DoNotDisturb_Set2.HelpString"));
             this.checkBox_DoNotDisturb_Set2.Name = "checkBox_DoNotDisturb_Set2";
             this.helpProvider1.SetShowHelp(this.checkBox_DoNotDisturb_Set2, ((bool)(resources.GetObject("checkBox_DoNotDisturb_Set2.ShowHelp"))));
             this.checkBox_DoNotDisturb_Set2.UseVisualStyleBackColor = true;
@@ -4362,6 +5313,9 @@
             resources.ApplyResources(this.checkBox_Lock_Set2, "checkBox_Lock_Set2");
             this.checkBox_Lock_Set2.Checked = true;
             this.checkBox_Lock_Set2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Lock_Set2, resources.GetString("checkBox_Lock_Set2.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Lock_Set2, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Lock_Set2.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Lock_Set2, resources.GetString("checkBox_Lock_Set2.HelpString"));
             this.checkBox_Lock_Set2.Name = "checkBox_Lock_Set2";
             this.helpProvider1.SetShowHelp(this.checkBox_Lock_Set2, ((bool)(resources.GetObject("checkBox_Lock_Set2.ShowHelp"))));
             this.checkBox_Lock_Set2.UseVisualStyleBackColor = true;
@@ -4372,6 +5326,9 @@
             resources.ApplyResources(this.checkBox_Alarm_Set2, "checkBox_Alarm_Set2");
             this.checkBox_Alarm_Set2.Checked = true;
             this.checkBox_Alarm_Set2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Alarm_Set2, resources.GetString("checkBox_Alarm_Set2.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Alarm_Set2, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Alarm_Set2.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Alarm_Set2, resources.GetString("checkBox_Alarm_Set2.HelpString"));
             this.checkBox_Alarm_Set2.Name = "checkBox_Alarm_Set2";
             this.helpProvider1.SetShowHelp(this.checkBox_Alarm_Set2, ((bool)(resources.GetObject("checkBox_Alarm_Set2.ShowHelp"))));
             this.checkBox_Alarm_Set2.UseVisualStyleBackColor = true;
@@ -4382,6 +5339,9 @@
             resources.ApplyResources(this.check_BoxBluetooth_Set2, "check_BoxBluetooth_Set2");
             this.check_BoxBluetooth_Set2.Checked = true;
             this.check_BoxBluetooth_Set2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.check_BoxBluetooth_Set2, resources.GetString("check_BoxBluetooth_Set2.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.check_BoxBluetooth_Set2, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("check_BoxBluetooth_Set2.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.check_BoxBluetooth_Set2, resources.GetString("check_BoxBluetooth_Set2.HelpString"));
             this.check_BoxBluetooth_Set2.Name = "check_BoxBluetooth_Set2";
             this.helpProvider1.SetShowHelp(this.check_BoxBluetooth_Set2, ((bool)(resources.GetObject("check_BoxBluetooth_Set2.ShowHelp"))));
             this.check_BoxBluetooth_Set2.UseVisualStyleBackColor = true;
@@ -4390,6 +5350,9 @@
             // numericUpDown_Goal_Set2
             // 
             resources.ApplyResources(this.numericUpDown_Goal_Set2, "numericUpDown_Goal_Set2");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Goal_Set2, resources.GetString("numericUpDown_Goal_Set2.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Goal_Set2, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Goal_Set2.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Goal_Set2, resources.GetString("numericUpDown_Goal_Set2.HelpString"));
             this.numericUpDown_Goal_Set2.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -4407,12 +5370,18 @@
             // label47
             // 
             resources.ApplyResources(this.label47, "label47");
+            this.helpProvider1.SetHelpKeyword(this.label47, resources.GetString("label47.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label47, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label47.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label47, resources.GetString("label47.HelpString"));
             this.label47.Name = "label47";
             this.helpProvider1.SetShowHelp(this.label47, ((bool)(resources.GetObject("label47.ShowHelp"))));
             // 
             // numericUpDown_Steps_Set2
             // 
             resources.ApplyResources(this.numericUpDown_Steps_Set2, "numericUpDown_Steps_Set2");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Steps_Set2, resources.GetString("numericUpDown_Steps_Set2.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Steps_Set2, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Steps_Set2.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Steps_Set2, resources.GetString("numericUpDown_Steps_Set2.HelpString"));
             this.numericUpDown_Steps_Set2.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -4430,12 +5399,18 @@
             // label48
             // 
             resources.ApplyResources(this.label48, "label48");
+            this.helpProvider1.SetHelpKeyword(this.label48, resources.GetString("label48.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label48, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label48.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label48, resources.GetString("label48.HelpString"));
             this.label48.Name = "label48";
             this.helpProvider1.SetShowHelp(this.label48, ((bool)(resources.GetObject("label48.ShowHelp"))));
             // 
             // numericUpDown_Pulse_Set2
             // 
             resources.ApplyResources(this.numericUpDown_Pulse_Set2, "numericUpDown_Pulse_Set2");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Pulse_Set2, resources.GetString("numericUpDown_Pulse_Set2.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Pulse_Set2, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Pulse_Set2.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Pulse_Set2, resources.GetString("numericUpDown_Pulse_Set2.HelpString"));
             this.numericUpDown_Pulse_Set2.Maximum = new decimal(new int[] {
             999,
             0,
@@ -4453,12 +5428,18 @@
             // label49
             // 
             resources.ApplyResources(this.label49, "label49");
+            this.helpProvider1.SetHelpKeyword(this.label49, resources.GetString("label49.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label49, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label49.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label49, resources.GetString("label49.HelpString"));
             this.label49.Name = "label49";
             this.helpProvider1.SetShowHelp(this.label49, ((bool)(resources.GetObject("label49.ShowHelp"))));
             // 
             // numericUpDown_Distance_Set2
             // 
             resources.ApplyResources(this.numericUpDown_Distance_Set2, "numericUpDown_Distance_Set2");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Distance_Set2, resources.GetString("numericUpDown_Distance_Set2.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Distance_Set2, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Distance_Set2.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Distance_Set2, resources.GetString("numericUpDown_Distance_Set2.HelpString"));
             this.numericUpDown_Distance_Set2.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -4476,12 +5457,18 @@
             // label50
             // 
             resources.ApplyResources(this.label50, "label50");
+            this.helpProvider1.SetHelpKeyword(this.label50, resources.GetString("label50.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label50, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label50.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label50, resources.GetString("label50.HelpString"));
             this.label50.Name = "label50";
             this.helpProvider1.SetShowHelp(this.label50, ((bool)(resources.GetObject("label50.ShowHelp"))));
             // 
             // numericUpDown_Calories_Set2
             // 
             resources.ApplyResources(this.numericUpDown_Calories_Set2, "numericUpDown_Calories_Set2");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Calories_Set2, resources.GetString("numericUpDown_Calories_Set2.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Calories_Set2, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Calories_Set2.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Calories_Set2, resources.GetString("numericUpDown_Calories_Set2.HelpString"));
             this.numericUpDown_Calories_Set2.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -4499,12 +5486,18 @@
             // label51
             // 
             resources.ApplyResources(this.label51, "label51");
+            this.helpProvider1.SetHelpKeyword(this.label51, resources.GetString("label51.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label51, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label51.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label51, resources.GetString("label51.HelpString"));
             this.label51.Name = "label51";
             this.helpProvider1.SetShowHelp(this.label51, ((bool)(resources.GetObject("label51.ShowHelp"))));
             // 
             // numericUpDown_Battery_Set2
             // 
             resources.ApplyResources(this.numericUpDown_Battery_Set2, "numericUpDown_Battery_Set2");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Set2, resources.GetString("numericUpDown_Battery_Set2.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Set2, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Set2.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Set2, resources.GetString("numericUpDown_Battery_Set2.HelpString"));
             this.numericUpDown_Battery_Set2.Name = "numericUpDown_Battery_Set2";
             this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_Set2, ((bool)(resources.GetObject("numericUpDown_Battery_Set2.ShowHelp"))));
             this.numericUpDown_Battery_Set2.Value = new decimal(new int[] {
@@ -4516,8 +5509,11 @@
             // 
             // dateTimePicker_Time_Set2
             // 
-            this.dateTimePicker_Time_Set2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             resources.ApplyResources(this.dateTimePicker_Time_Set2, "dateTimePicker_Time_Set2");
+            this.dateTimePicker_Time_Set2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.helpProvider1.SetHelpKeyword(this.dateTimePicker_Time_Set2, resources.GetString("dateTimePicker_Time_Set2.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dateTimePicker_Time_Set2, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dateTimePicker_Time_Set2.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dateTimePicker_Time_Set2, resources.GetString("dateTimePicker_Time_Set2.HelpString"));
             this.dateTimePicker_Time_Set2.Name = "dateTimePicker_Time_Set2";
             this.helpProvider1.SetShowHelp(this.dateTimePicker_Time_Set2, ((bool)(resources.GetObject("dateTimePicker_Time_Set2.ShowHelp"))));
             this.dateTimePicker_Time_Set2.ShowUpDown = true;
@@ -4525,8 +5521,11 @@
             // 
             // dateTimePicker_Date_Set2
             // 
-            this.dateTimePicker_Date_Set2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             resources.ApplyResources(this.dateTimePicker_Date_Set2, "dateTimePicker_Date_Set2");
+            this.dateTimePicker_Date_Set2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.helpProvider1.SetHelpKeyword(this.dateTimePicker_Date_Set2, resources.GetString("dateTimePicker_Date_Set2.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dateTimePicker_Date_Set2, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dateTimePicker_Date_Set2.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dateTimePicker_Date_Set2, resources.GetString("dateTimePicker_Date_Set2.HelpString"));
             this.dateTimePicker_Date_Set2.Name = "dateTimePicker_Date_Set2";
             this.helpProvider1.SetShowHelp(this.dateTimePicker_Date_Set2, ((bool)(resources.GetObject("dateTimePicker_Date_Set2.ShowHelp"))));
             this.dateTimePicker_Date_Set2.ValueChanged += new System.EventHandler(this.dateTimePicker_Time_Set2_ValueChanged);
@@ -4534,24 +5533,36 @@
             // label52
             // 
             resources.ApplyResources(this.label52, "label52");
+            this.helpProvider1.SetHelpKeyword(this.label52, resources.GetString("label52.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label52, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label52.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label52, resources.GetString("label52.HelpString"));
             this.label52.Name = "label52";
             this.helpProvider1.SetShowHelp(this.label52, ((bool)(resources.GetObject("label52.ShowHelp"))));
             // 
             // label53
             // 
             resources.ApplyResources(this.label53, "label53");
+            this.helpProvider1.SetHelpKeyword(this.label53, resources.GetString("label53.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label53, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label53.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label53, resources.GetString("label53.HelpString"));
             this.label53.Name = "label53";
             this.helpProvider1.SetShowHelp(this.label53, ((bool)(resources.GetObject("label53.ShowHelp"))));
             // 
             // label54
             // 
             resources.ApplyResources(this.label54, "label54");
+            this.helpProvider1.SetHelpKeyword(this.label54, resources.GetString("label54.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label54, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label54.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label54, resources.GetString("label54.HelpString"));
             this.label54.Name = "label54";
             this.helpProvider1.SetShowHelp(this.label54, ((bool)(resources.GetObject("label54.ShowHelp"))));
             // 
             // button_Set2
             // 
             resources.ApplyResources(this.button_Set2, "button_Set2");
+            this.helpProvider1.SetHelpKeyword(this.button_Set2, resources.GetString("button_Set2.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_Set2, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_Set2.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_Set2, resources.GetString("button_Set2.HelpString"));
             this.button_Set2.Name = "button_Set2";
             this.helpProvider1.SetShowHelp(this.button_Set2, ((bool)(resources.GetObject("button_Set2.ShowHelp"))));
             this.button_Set2.UseVisualStyleBackColor = true;
@@ -4559,6 +5570,7 @@
             // 
             // panel_Set1
             // 
+            resources.ApplyResources(this.panel_Set1, "panel_Set1");
             this.panel_Set1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_Set1.Controls.Add(this.checkBox_DoNotDisturb_Set1);
             this.panel_Set1.Controls.Add(this.checkBox_Lock_Set1);
@@ -4580,15 +5592,20 @@
             this.panel_Set1.Controls.Add(this.label41);
             this.panel_Set1.Controls.Add(this.label40);
             this.panel_Set1.Controls.Add(this.label36);
-            resources.ApplyResources(this.panel_Set1, "panel_Set1");
+            this.helpProvider1.SetHelpKeyword(this.panel_Set1, resources.GetString("panel_Set1.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel_Set1, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_Set1.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel_Set1, resources.GetString("panel_Set1.HelpString"));
             this.panel_Set1.Name = "panel_Set1";
             this.helpProvider1.SetShowHelp(this.panel_Set1, ((bool)(resources.GetObject("panel_Set1.ShowHelp"))));
             // 
             // checkBox_DoNotDisturb_Set1
             // 
+            resources.ApplyResources(this.checkBox_DoNotDisturb_Set1, "checkBox_DoNotDisturb_Set1");
             this.checkBox_DoNotDisturb_Set1.Checked = true;
             this.checkBox_DoNotDisturb_Set1.CheckState = System.Windows.Forms.CheckState.Checked;
-            resources.ApplyResources(this.checkBox_DoNotDisturb_Set1, "checkBox_DoNotDisturb_Set1");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_DoNotDisturb_Set1, resources.GetString("checkBox_DoNotDisturb_Set1.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_DoNotDisturb_Set1, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_DoNotDisturb_Set1.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_DoNotDisturb_Set1, resources.GetString("checkBox_DoNotDisturb_Set1.HelpString"));
             this.checkBox_DoNotDisturb_Set1.Name = "checkBox_DoNotDisturb_Set1";
             this.helpProvider1.SetShowHelp(this.checkBox_DoNotDisturb_Set1, ((bool)(resources.GetObject("checkBox_DoNotDisturb_Set1.ShowHelp"))));
             this.checkBox_DoNotDisturb_Set1.UseVisualStyleBackColor = true;
@@ -4599,6 +5616,9 @@
             resources.ApplyResources(this.checkBox_Lock_Set1, "checkBox_Lock_Set1");
             this.checkBox_Lock_Set1.Checked = true;
             this.checkBox_Lock_Set1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Lock_Set1, resources.GetString("checkBox_Lock_Set1.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Lock_Set1, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Lock_Set1.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Lock_Set1, resources.GetString("checkBox_Lock_Set1.HelpString"));
             this.checkBox_Lock_Set1.Name = "checkBox_Lock_Set1";
             this.helpProvider1.SetShowHelp(this.checkBox_Lock_Set1, ((bool)(resources.GetObject("checkBox_Lock_Set1.ShowHelp"))));
             this.checkBox_Lock_Set1.UseVisualStyleBackColor = true;
@@ -4609,6 +5629,9 @@
             resources.ApplyResources(this.checkBox_Alarm_Set1, "checkBox_Alarm_Set1");
             this.checkBox_Alarm_Set1.Checked = true;
             this.checkBox_Alarm_Set1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Alarm_Set1, resources.GetString("checkBox_Alarm_Set1.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Alarm_Set1, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Alarm_Set1.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Alarm_Set1, resources.GetString("checkBox_Alarm_Set1.HelpString"));
             this.checkBox_Alarm_Set1.Name = "checkBox_Alarm_Set1";
             this.helpProvider1.SetShowHelp(this.checkBox_Alarm_Set1, ((bool)(resources.GetObject("checkBox_Alarm_Set1.ShowHelp"))));
             this.checkBox_Alarm_Set1.UseVisualStyleBackColor = true;
@@ -4619,6 +5642,9 @@
             resources.ApplyResources(this.check_BoxBluetooth_Set1, "check_BoxBluetooth_Set1");
             this.check_BoxBluetooth_Set1.Checked = true;
             this.check_BoxBluetooth_Set1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.check_BoxBluetooth_Set1, resources.GetString("check_BoxBluetooth_Set1.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.check_BoxBluetooth_Set1, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("check_BoxBluetooth_Set1.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.check_BoxBluetooth_Set1, resources.GetString("check_BoxBluetooth_Set1.HelpString"));
             this.check_BoxBluetooth_Set1.Name = "check_BoxBluetooth_Set1";
             this.helpProvider1.SetShowHelp(this.check_BoxBluetooth_Set1, ((bool)(resources.GetObject("check_BoxBluetooth_Set1.ShowHelp"))));
             this.check_BoxBluetooth_Set1.UseVisualStyleBackColor = true;
@@ -4627,6 +5653,9 @@
             // numericUpDown_Goal_Set1
             // 
             resources.ApplyResources(this.numericUpDown_Goal_Set1, "numericUpDown_Goal_Set1");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Goal_Set1, resources.GetString("numericUpDown_Goal_Set1.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Goal_Set1, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Goal_Set1.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Goal_Set1, resources.GetString("numericUpDown_Goal_Set1.HelpString"));
             this.numericUpDown_Goal_Set1.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -4644,12 +5673,18 @@
             // label46
             // 
             resources.ApplyResources(this.label46, "label46");
+            this.helpProvider1.SetHelpKeyword(this.label46, resources.GetString("label46.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label46, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label46.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label46, resources.GetString("label46.HelpString"));
             this.label46.Name = "label46";
             this.helpProvider1.SetShowHelp(this.label46, ((bool)(resources.GetObject("label46.ShowHelp"))));
             // 
             // numericUpDown_Steps_Set1
             // 
             resources.ApplyResources(this.numericUpDown_Steps_Set1, "numericUpDown_Steps_Set1");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Steps_Set1, resources.GetString("numericUpDown_Steps_Set1.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Steps_Set1, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Steps_Set1.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Steps_Set1, resources.GetString("numericUpDown_Steps_Set1.HelpString"));
             this.numericUpDown_Steps_Set1.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -4667,12 +5702,18 @@
             // label45
             // 
             resources.ApplyResources(this.label45, "label45");
+            this.helpProvider1.SetHelpKeyword(this.label45, resources.GetString("label45.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label45, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label45.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label45, resources.GetString("label45.HelpString"));
             this.label45.Name = "label45";
             this.helpProvider1.SetShowHelp(this.label45, ((bool)(resources.GetObject("label45.ShowHelp"))));
             // 
             // numericUpDown_Pulse_Set1
             // 
             resources.ApplyResources(this.numericUpDown_Pulse_Set1, "numericUpDown_Pulse_Set1");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Pulse_Set1, resources.GetString("numericUpDown_Pulse_Set1.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Pulse_Set1, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Pulse_Set1.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Pulse_Set1, resources.GetString("numericUpDown_Pulse_Set1.HelpString"));
             this.numericUpDown_Pulse_Set1.Maximum = new decimal(new int[] {
             999,
             0,
@@ -4690,12 +5731,18 @@
             // label44
             // 
             resources.ApplyResources(this.label44, "label44");
+            this.helpProvider1.SetHelpKeyword(this.label44, resources.GetString("label44.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label44, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label44.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label44, resources.GetString("label44.HelpString"));
             this.label44.Name = "label44";
             this.helpProvider1.SetShowHelp(this.label44, ((bool)(resources.GetObject("label44.ShowHelp"))));
             // 
             // numericUpDown_Distance_Set1
             // 
             resources.ApplyResources(this.numericUpDown_Distance_Set1, "numericUpDown_Distance_Set1");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Distance_Set1, resources.GetString("numericUpDown_Distance_Set1.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Distance_Set1, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Distance_Set1.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Distance_Set1, resources.GetString("numericUpDown_Distance_Set1.HelpString"));
             this.numericUpDown_Distance_Set1.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -4713,12 +5760,18 @@
             // label43
             // 
             resources.ApplyResources(this.label43, "label43");
+            this.helpProvider1.SetHelpKeyword(this.label43, resources.GetString("label43.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label43, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label43.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label43, resources.GetString("label43.HelpString"));
             this.label43.Name = "label43";
             this.helpProvider1.SetShowHelp(this.label43, ((bool)(resources.GetObject("label43.ShowHelp"))));
             // 
             // numericUpDown_Calories_Set1
             // 
             resources.ApplyResources(this.numericUpDown_Calories_Set1, "numericUpDown_Calories_Set1");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Calories_Set1, resources.GetString("numericUpDown_Calories_Set1.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Calories_Set1, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Calories_Set1.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Calories_Set1, resources.GetString("numericUpDown_Calories_Set1.HelpString"));
             this.numericUpDown_Calories_Set1.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -4736,12 +5789,18 @@
             // label42
             // 
             resources.ApplyResources(this.label42, "label42");
+            this.helpProvider1.SetHelpKeyword(this.label42, resources.GetString("label42.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label42, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label42.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label42, resources.GetString("label42.HelpString"));
             this.label42.Name = "label42";
             this.helpProvider1.SetShowHelp(this.label42, ((bool)(resources.GetObject("label42.ShowHelp"))));
             // 
             // numericUpDown_Battery_Set1
             // 
             resources.ApplyResources(this.numericUpDown_Battery_Set1, "numericUpDown_Battery_Set1");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Set1, resources.GetString("numericUpDown_Battery_Set1.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Set1, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Set1.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Set1, resources.GetString("numericUpDown_Battery_Set1.HelpString"));
             this.numericUpDown_Battery_Set1.Name = "numericUpDown_Battery_Set1";
             this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_Set1, ((bool)(resources.GetObject("numericUpDown_Battery_Set1.ShowHelp"))));
             this.numericUpDown_Battery_Set1.Value = new decimal(new int[] {
@@ -4753,8 +5812,11 @@
             // 
             // dateTimePicker_Time_Set1
             // 
-            this.dateTimePicker_Time_Set1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             resources.ApplyResources(this.dateTimePicker_Time_Set1, "dateTimePicker_Time_Set1");
+            this.dateTimePicker_Time_Set1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.helpProvider1.SetHelpKeyword(this.dateTimePicker_Time_Set1, resources.GetString("dateTimePicker_Time_Set1.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dateTimePicker_Time_Set1, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dateTimePicker_Time_Set1.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dateTimePicker_Time_Set1, resources.GetString("dateTimePicker_Time_Set1.HelpString"));
             this.dateTimePicker_Time_Set1.Name = "dateTimePicker_Time_Set1";
             this.helpProvider1.SetShowHelp(this.dateTimePicker_Time_Set1, ((bool)(resources.GetObject("dateTimePicker_Time_Set1.ShowHelp"))));
             this.dateTimePicker_Time_Set1.ShowUpDown = true;
@@ -4762,8 +5824,11 @@
             // 
             // dateTimePicker_Date_Set1
             // 
-            this.dateTimePicker_Date_Set1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             resources.ApplyResources(this.dateTimePicker_Date_Set1, "dateTimePicker_Date_Set1");
+            this.dateTimePicker_Date_Set1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.helpProvider1.SetHelpKeyword(this.dateTimePicker_Date_Set1, resources.GetString("dateTimePicker_Date_Set1.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dateTimePicker_Date_Set1, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dateTimePicker_Date_Set1.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dateTimePicker_Date_Set1, resources.GetString("dateTimePicker_Date_Set1.HelpString"));
             this.dateTimePicker_Date_Set1.Name = "dateTimePicker_Date_Set1";
             this.helpProvider1.SetShowHelp(this.dateTimePicker_Date_Set1, ((bool)(resources.GetObject("dateTimePicker_Date_Set1.ShowHelp"))));
             this.dateTimePicker_Date_Set1.ValueChanged += new System.EventHandler(this.dateTimePicker_Time_Set1_ValueChanged);
@@ -4771,24 +5836,36 @@
             // label41
             // 
             resources.ApplyResources(this.label41, "label41");
+            this.helpProvider1.SetHelpKeyword(this.label41, resources.GetString("label41.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label41, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label41.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label41, resources.GetString("label41.HelpString"));
             this.label41.Name = "label41";
             this.helpProvider1.SetShowHelp(this.label41, ((bool)(resources.GetObject("label41.ShowHelp"))));
             // 
             // label40
             // 
             resources.ApplyResources(this.label40, "label40");
+            this.helpProvider1.SetHelpKeyword(this.label40, resources.GetString("label40.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label40, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label40.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label40, resources.GetString("label40.HelpString"));
             this.label40.Name = "label40";
             this.helpProvider1.SetShowHelp(this.label40, ((bool)(resources.GetObject("label40.ShowHelp"))));
             // 
             // label36
             // 
             resources.ApplyResources(this.label36, "label36");
+            this.helpProvider1.SetHelpKeyword(this.label36, resources.GetString("label36.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label36, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label36.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label36, resources.GetString("label36.HelpString"));
             this.label36.Name = "label36";
             this.helpProvider1.SetShowHelp(this.label36, ((bool)(resources.GetObject("label36.ShowHelp"))));
             // 
             // button_Set1
             // 
             resources.ApplyResources(this.button_Set1, "button_Set1");
+            this.helpProvider1.SetHelpKeyword(this.button_Set1, resources.GetString("button_Set1.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_Set1, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_Set1.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_Set1, resources.GetString("button_Set1.HelpString"));
             this.button_Set1.Name = "button_Set1";
             this.helpProvider1.SetShowHelp(this.button_Set1, ((bool)(resources.GetObject("button_Set1.ShowHelp"))));
             this.button_Set1.UseVisualStyleBackColor = true;
@@ -4796,6 +5873,7 @@
             // 
             // dataGridView1
             // 
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeRows = false;
@@ -4804,7 +5882,9 @@
             this.Number,
             this.NameFile,
             this.ColumnImage});
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
+            this.helpProvider1.SetHelpKeyword(this.dataGridView1, resources.GetString("dataGridView1.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dataGridView1, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dataGridView1.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dataGridView1, resources.GetString("dataGridView1.HelpString"));
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.helpProvider1.SetShowHelp(this.dataGridView1, ((bool)(resources.GetObject("dataGridView1.ShowHelp"))));
@@ -4835,6 +5915,9 @@
             // button_images
             // 
             resources.ApplyResources(this.button_images, "button_images");
+            this.helpProvider1.SetHelpKeyword(this.button_images, resources.GetString("button_images.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_images, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_images.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_images, resources.GetString("button_images.HelpString"));
             this.button_images.Name = "button_images";
             this.helpProvider1.SetShowHelp(this.button_images, ((bool)(resources.GetObject("button_images.ShowHelp"))));
             this.button_images.UseVisualStyleBackColor = true;
@@ -4843,12 +5926,18 @@
             // label5
             // 
             resources.ApplyResources(this.label5, "label5");
+            this.helpProvider1.SetHelpKeyword(this.label5, resources.GetString("label5.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label5, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label5.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label5, resources.GetString("label5.HelpString"));
             this.label5.Name = "label5";
             this.helpProvider1.SetShowHelp(this.label5, ((bool)(resources.GetObject("label5.ShowHelp"))));
             // 
             // button_JSON
             // 
             resources.ApplyResources(this.button_JSON, "button_JSON");
+            this.helpProvider1.SetHelpKeyword(this.button_JSON, resources.GetString("button_JSON.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_JSON, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_JSON.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_JSON, resources.GetString("button_JSON.HelpString"));
             this.button_JSON.Name = "button_JSON";
             this.helpProvider1.SetShowHelp(this.button_JSON, ((bool)(resources.GetObject("button_JSON.ShowHelp"))));
             this.button_JSON.UseVisualStyleBackColor = true;
@@ -4857,23 +5946,32 @@
             // label4
             // 
             resources.ApplyResources(this.label4, "label4");
+            this.helpProvider1.SetHelpKeyword(this.label4, resources.GetString("label4.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label4, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label4.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label4, resources.GetString("label4.HelpString"));
             this.label4.Name = "label4";
             this.helpProvider1.SetShowHelp(this.label4, ((bool)(resources.GetObject("label4.ShowHelp"))));
             // 
             // tabPage3
             // 
+            resources.ApplyResources(this.tabPage3, "tabPage3");
             this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage3.Controls.Add(this.button_SaveJson);
             this.tabPage3.Controls.Add(this.button_TextToJson);
             this.tabPage3.Controls.Add(this.panel2);
             this.tabPage3.Controls.Add(this.richTextBox_JSON);
-            resources.ApplyResources(this.tabPage3, "tabPage3");
+            this.helpProvider1.SetHelpKeyword(this.tabPage3, resources.GetString("tabPage3.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage3, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage3.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage3, resources.GetString("tabPage3.HelpString"));
             this.tabPage3.Name = "tabPage3";
             this.helpProvider1.SetShowHelp(this.tabPage3, ((bool)(resources.GetObject("tabPage3.ShowHelp"))));
             // 
             // button_SaveJson
             // 
             resources.ApplyResources(this.button_SaveJson, "button_SaveJson");
+            this.helpProvider1.SetHelpKeyword(this.button_SaveJson, resources.GetString("button_SaveJson.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_SaveJson, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_SaveJson.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_SaveJson, resources.GetString("button_SaveJson.HelpString"));
             this.button_SaveJson.Name = "button_SaveJson";
             this.helpProvider1.SetShowHelp(this.button_SaveJson, ((bool)(resources.GetObject("button_SaveJson.ShowHelp"))));
             this.button_SaveJson.UseVisualStyleBackColor = true;
@@ -4882,6 +5980,9 @@
             // button_TextToJson
             // 
             resources.ApplyResources(this.button_TextToJson, "button_TextToJson");
+            this.helpProvider1.SetHelpKeyword(this.button_TextToJson, resources.GetString("button_TextToJson.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_TextToJson, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_TextToJson.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_TextToJson, resources.GetString("button_TextToJson.HelpString"));
             this.button_TextToJson.Name = "button_TextToJson";
             this.helpProvider1.SetShowHelp(this.button_TextToJson, ((bool)(resources.GetObject("button_TextToJson.ShowHelp"))));
             this.button_TextToJson.UseVisualStyleBackColor = true;
@@ -4902,34 +6003,45 @@
             this.panel2.Controls.Add(this.button_Activity);
             this.panel2.Controls.Add(this.panel_StepsProgress);
             this.panel2.Controls.Add(this.button_StepsProgress);
+            this.panel2.Controls.Add(this.panel_AnalogDate);
+            this.panel2.Controls.Add(this.button_AnalogDate);
             this.panel2.Controls.Add(this.panel_Date);
             this.panel2.Controls.Add(this.button_Date);
             this.panel2.Controls.Add(this.panel_Time);
             this.panel2.Controls.Add(this.button_Time);
             this.panel2.Controls.Add(this.panel_Background);
             this.panel2.Controls.Add(this.button_Background);
+            this.helpProvider1.SetHelpKeyword(this.panel2, resources.GetString("panel2.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel2, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel2.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel2, resources.GetString("panel2.HelpString"));
             this.panel2.Name = "panel2";
             this.helpProvider1.SetShowHelp(this.panel2, ((bool)(resources.GetObject("panel2.ShowHelp"))));
             // 
             // panel_Weather
             // 
+            resources.ApplyResources(this.panel_Weather, "panel_Weather");
             this.panel_Weather.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_Weather.Controls.Add(this.groupBox_Symbols);
             this.panel_Weather.Controls.Add(this.tabControl_Weather);
             this.panel_Weather.Controls.Add(this.checkBox_Weather);
-            resources.ApplyResources(this.panel_Weather, "panel_Weather");
+            this.helpProvider1.SetHelpKeyword(this.panel_Weather, resources.GetString("panel_Weather.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel_Weather, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_Weather.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel_Weather, resources.GetString("panel_Weather.HelpString"));
             this.panel_Weather.Name = "panel_Weather";
             this.helpProvider1.SetShowHelp(this.panel_Weather, ((bool)(resources.GetObject("panel_Weather.ShowHelp"))));
             // 
             // groupBox_Symbols
             // 
+            resources.ApplyResources(this.groupBox_Symbols, "groupBox_Symbols");
             this.groupBox_Symbols.Controls.Add(this.comboBox_Weather_Text_NDImage);
             this.groupBox_Symbols.Controls.Add(this.comboBox_Weather_Text_MinusImage);
             this.groupBox_Symbols.Controls.Add(this.label286);
             this.groupBox_Symbols.Controls.Add(this.comboBox_Weather_Text_DegImage);
             this.groupBox_Symbols.Controls.Add(this.label284);
             this.groupBox_Symbols.Controls.Add(this.label285);
-            resources.ApplyResources(this.groupBox_Symbols, "groupBox_Symbols");
+            this.helpProvider1.SetHelpKeyword(this.groupBox_Symbols, resources.GetString("groupBox_Symbols.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.groupBox_Symbols, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("groupBox_Symbols.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.groupBox_Symbols, resources.GetString("groupBox_Symbols.HelpString"));
             this.groupBox_Symbols.Name = "groupBox_Symbols";
             this.helpProvider1.SetShowHelp(this.groupBox_Symbols, ((bool)(resources.GetObject("groupBox_Symbols.ShowHelp"))));
             this.groupBox_Symbols.TabStop = false;
@@ -4937,10 +6049,13 @@
             // 
             // comboBox_Weather_Text_NDImage
             // 
+            resources.ApplyResources(this.comboBox_Weather_Text_NDImage, "comboBox_Weather_Text_NDImage");
             this.comboBox_Weather_Text_NDImage.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Weather_Text_NDImage.DropDownWidth = 75;
             this.comboBox_Weather_Text_NDImage.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox_Weather_Text_NDImage, "comboBox_Weather_Text_NDImage");
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Weather_Text_NDImage, resources.GetString("comboBox_Weather_Text_NDImage.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Weather_Text_NDImage, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Weather_Text_NDImage.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Weather_Text_NDImage, resources.GetString("comboBox_Weather_Text_NDImage.HelpString"));
             this.comboBox_Weather_Text_NDImage.Name = "comboBox_Weather_Text_NDImage";
             this.helpProvider1.SetShowHelp(this.comboBox_Weather_Text_NDImage, ((bool)(resources.GetObject("comboBox_Weather_Text_NDImage.ShowHelp"))));
             this.comboBox_Weather_Text_NDImage.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -4951,10 +6066,13 @@
             // 
             // comboBox_Weather_Text_MinusImage
             // 
+            resources.ApplyResources(this.comboBox_Weather_Text_MinusImage, "comboBox_Weather_Text_MinusImage");
             this.comboBox_Weather_Text_MinusImage.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Weather_Text_MinusImage.DropDownWidth = 75;
             this.comboBox_Weather_Text_MinusImage.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox_Weather_Text_MinusImage, "comboBox_Weather_Text_MinusImage");
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Weather_Text_MinusImage, resources.GetString("comboBox_Weather_Text_MinusImage.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Weather_Text_MinusImage, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Weather_Text_MinusImage.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Weather_Text_MinusImage, resources.GetString("comboBox_Weather_Text_MinusImage.HelpString"));
             this.comboBox_Weather_Text_MinusImage.Name = "comboBox_Weather_Text_MinusImage";
             this.helpProvider1.SetShowHelp(this.comboBox_Weather_Text_MinusImage, ((bool)(resources.GetObject("comboBox_Weather_Text_MinusImage.ShowHelp"))));
             this.comboBox_Weather_Text_MinusImage.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -4966,15 +6084,21 @@
             // label286
             // 
             resources.ApplyResources(this.label286, "label286");
+            this.helpProvider1.SetHelpKeyword(this.label286, resources.GetString("label286.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label286, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label286.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label286, resources.GetString("label286.HelpString"));
             this.label286.Name = "label286";
             this.helpProvider1.SetShowHelp(this.label286, ((bool)(resources.GetObject("label286.ShowHelp"))));
             // 
             // comboBox_Weather_Text_DegImage
             // 
+            resources.ApplyResources(this.comboBox_Weather_Text_DegImage, "comboBox_Weather_Text_DegImage");
             this.comboBox_Weather_Text_DegImage.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Weather_Text_DegImage.DropDownWidth = 75;
             this.comboBox_Weather_Text_DegImage.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox_Weather_Text_DegImage, "comboBox_Weather_Text_DegImage");
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Weather_Text_DegImage, resources.GetString("comboBox_Weather_Text_DegImage.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Weather_Text_DegImage, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Weather_Text_DegImage.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Weather_Text_DegImage, resources.GetString("comboBox_Weather_Text_DegImage.HelpString"));
             this.comboBox_Weather_Text_DegImage.Name = "comboBox_Weather_Text_DegImage";
             this.helpProvider1.SetShowHelp(this.comboBox_Weather_Text_DegImage, ((bool)(resources.GetObject("comboBox_Weather_Text_DegImage.ShowHelp"))));
             this.comboBox_Weather_Text_DegImage.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -4986,27 +6110,37 @@
             // label284
             // 
             resources.ApplyResources(this.label284, "label284");
+            this.helpProvider1.SetHelpKeyword(this.label284, resources.GetString("label284.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label284, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label284.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label284, resources.GetString("label284.HelpString"));
             this.label284.Name = "label284";
             this.helpProvider1.SetShowHelp(this.label284, ((bool)(resources.GetObject("label284.ShowHelp"))));
             // 
             // label285
             // 
             resources.ApplyResources(this.label285, "label285");
+            this.helpProvider1.SetHelpKeyword(this.label285, resources.GetString("label285.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label285, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label285.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label285, resources.GetString("label285.HelpString"));
             this.label285.Name = "label285";
             this.helpProvider1.SetShowHelp(this.label285, ((bool)(resources.GetObject("label285.ShowHelp"))));
             // 
             // tabControl_Weather
             // 
+            resources.ApplyResources(this.tabControl_Weather, "tabControl_Weather");
             this.tabControl_Weather.Controls.Add(this.tabPage24);
             this.tabControl_Weather.Controls.Add(this.tabPage26);
             this.tabControl_Weather.Controls.Add(this.tabPage25);
-            resources.ApplyResources(this.tabControl_Weather, "tabControl_Weather");
+            this.helpProvider1.SetHelpKeyword(this.tabControl_Weather, resources.GetString("tabControl_Weather.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabControl_Weather, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabControl_Weather.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabControl_Weather, resources.GetString("tabControl_Weather.HelpString"));
             this.tabControl_Weather.Name = "tabControl_Weather";
             this.tabControl_Weather.SelectedIndex = 0;
             this.helpProvider1.SetShowHelp(this.tabControl_Weather, ((bool)(resources.GetObject("tabControl_Weather.ShowHelp"))));
             // 
             // tabPage24
             // 
+            resources.ApplyResources(this.tabPage24, "tabPage24");
             this.tabPage24.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage24.Controls.Add(this.comboBox_Weather_Text_Image);
             this.tabPage24.Controls.Add(this.numericUpDown_Weather_Text_EndCorner_X);
@@ -5027,17 +6161,22 @@
             this.tabPage24.Controls.Add(this.label277);
             this.tabPage24.Controls.Add(this.label278);
             this.tabPage24.Controls.Add(this.label279);
-            resources.ApplyResources(this.tabPage24, "tabPage24");
+            this.helpProvider1.SetHelpKeyword(this.tabPage24, resources.GetString("tabPage24.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage24, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage24.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage24, resources.GetString("tabPage24.HelpString"));
             this.tabPage24.Name = "tabPage24";
             this.helpProvider1.SetShowHelp(this.tabPage24, ((bool)(resources.GetObject("tabPage24.ShowHelp"))));
             // 
             // comboBox_Weather_Text_Image
             // 
+            resources.ApplyResources(this.comboBox_Weather_Text_Image, "comboBox_Weather_Text_Image");
             this.comboBox_Weather_Text_Image.BackColor = System.Drawing.SystemColors.Window;
             this.comboBox_Weather_Text_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Weather_Text_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_Text_Image, "comboBox_Weather_Text_Image");
             this.comboBox_Weather_Text_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Weather_Text_Image, resources.GetString("comboBox_Weather_Text_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Weather_Text_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Weather_Text_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Weather_Text_Image, resources.GetString("comboBox_Weather_Text_Image.HelpString"));
             this.comboBox_Weather_Text_Image.Name = "comboBox_Weather_Text_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_Weather_Text_Image, ((bool)(resources.GetObject("comboBox_Weather_Text_Image.ShowHelp"))));
             this.comboBox_Weather_Text_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -5048,8 +6187,11 @@
             // 
             // numericUpDown_Weather_Text_EndCorner_X
             // 
-            this.numericUpDown_Weather_Text_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_Weather_Text_EndCorner_X, "numericUpDown_Weather_Text_EndCorner_X");
+            this.numericUpDown_Weather_Text_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Weather_Text_EndCorner_X, resources.GetString("numericUpDown_Weather_Text_EndCorner_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Weather_Text_EndCorner_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Weather_Text_EndCorner_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Weather_Text_EndCorner_X, resources.GetString("numericUpDown_Weather_Text_EndCorner_X.HelpString"));
             this.numericUpDown_Weather_Text_EndCorner_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -5067,27 +6209,30 @@
             // 
             // contextMenuStrip_X
             // 
+            resources.ApplyResources(this.contextMenuStrip_X, "contextMenuStrip_X");
+            this.helpProvider1.SetHelpKeyword(this.contextMenuStrip_X, resources.GetString("contextMenuStrip_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.contextMenuStrip_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("contextMenuStrip_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.contextMenuStrip_X, resources.GetString("contextMenuStrip_X.HelpString"));
             this.contextMenuStrip_X.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.вставитьКоординатуХToolStripMenuItem,
             this.копироватьToolStripMenuItem,
             this.вставитьToolStripMenuItem});
             this.contextMenuStrip_X.Name = "contextMenuStrip_X";
             this.helpProvider1.SetShowHelp(this.contextMenuStrip_X, ((bool)(resources.GetObject("contextMenuStrip_X.ShowHelp"))));
-            resources.ApplyResources(this.contextMenuStrip_X, "contextMenuStrip_X");
             this.contextMenuStrip_X.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_X_Opening);
             // 
             // вставитьКоординатуХToolStripMenuItem
             // 
+            resources.ApplyResources(this.вставитьКоординатуХToolStripMenuItem, "вставитьКоординатуХToolStripMenuItem");
             this.вставитьКоординатуХToolStripMenuItem.Image = global::GTR_Watch_face.Properties.Resources.Actions_insert_text_icon;
             this.вставитьКоординатуХToolStripMenuItem.Name = "вставитьКоординатуХToolStripMenuItem";
-            resources.ApplyResources(this.вставитьКоординатуХToolStripMenuItem, "вставитьКоординатуХToolStripMenuItem");
             this.вставитьКоординатуХToolStripMenuItem.Click += new System.EventHandler(this.вставитьКоординатуХToolStripMenuItem_Click);
             // 
             // копироватьToolStripMenuItem
             // 
+            resources.ApplyResources(this.копироватьToolStripMenuItem, "копироватьToolStripMenuItem");
             this.копироватьToolStripMenuItem.Image = global::GTR_Watch_face.Properties.Resources.Files_Copy_File_icon;
             this.копироватьToolStripMenuItem.Name = "копироватьToolStripMenuItem";
-            resources.ApplyResources(this.копироватьToolStripMenuItem, "копироватьToolStripMenuItem");
             this.копироватьToolStripMenuItem.Click += new System.EventHandler(this.копироватьToolStripMenuItem_Click);
             // 
             // вставитьToolStripMenuItem
@@ -5099,6 +6244,9 @@
             // numericUpDown_Weather_Text_Count
             // 
             resources.ApplyResources(this.numericUpDown_Weather_Text_Count, "numericUpDown_Weather_Text_Count");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Weather_Text_Count, resources.GetString("numericUpDown_Weather_Text_Count.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Weather_Text_Count, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Weather_Text_Count.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Weather_Text_Count, resources.GetString("numericUpDown_Weather_Text_Count.HelpString"));
             this.numericUpDown_Weather_Text_Count.Maximum = new decimal(new int[] {
             99,
             0,
@@ -5115,8 +6263,11 @@
             // 
             // numericUpDown_Weather_Text_StartCorner_Y
             // 
-            this.numericUpDown_Weather_Text_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_Weather_Text_StartCorner_Y, "numericUpDown_Weather_Text_StartCorner_Y");
+            this.numericUpDown_Weather_Text_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Weather_Text_StartCorner_Y, resources.GetString("numericUpDown_Weather_Text_StartCorner_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Weather_Text_StartCorner_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Weather_Text_StartCorner_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Weather_Text_StartCorner_Y, resources.GetString("numericUpDown_Weather_Text_StartCorner_Y.HelpString"));
             this.numericUpDown_Weather_Text_StartCorner_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -5134,40 +6285,46 @@
             // 
             // contextMenuStrip_Y
             // 
+            resources.ApplyResources(this.contextMenuStrip_Y, "contextMenuStrip_Y");
+            this.helpProvider1.SetHelpKeyword(this.contextMenuStrip_Y, resources.GetString("contextMenuStrip_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.contextMenuStrip_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("contextMenuStrip_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.contextMenuStrip_Y, resources.GetString("contextMenuStrip_Y.HelpString"));
             this.contextMenuStrip_Y.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.копироватьToolStripMenuItem1,
             this.вставитьToolStripMenuItem1});
             this.contextMenuStrip_Y.Name = "contextMenuStrip_X";
             this.helpProvider1.SetShowHelp(this.contextMenuStrip_Y, ((bool)(resources.GetObject("contextMenuStrip_Y.ShowHelp"))));
-            resources.ApplyResources(this.contextMenuStrip_Y, "contextMenuStrip_Y");
             this.contextMenuStrip_Y.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Y_Opening);
             // 
             // toolStripMenuItem1
             // 
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
             this.toolStripMenuItem1.Image = global::GTR_Watch_face.Properties.Resources.Actions_insert_text_icon;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
             this.toolStripMenuItem1.Click += new System.EventHandler(this.вставитьКоординатуYToolStripMenuItem_Click);
             // 
             // копироватьToolStripMenuItem1
             // 
+            resources.ApplyResources(this.копироватьToolStripMenuItem1, "копироватьToolStripMenuItem1");
             this.копироватьToolStripMenuItem1.Image = global::GTR_Watch_face.Properties.Resources.Files_Copy_File_icon;
             this.копироватьToolStripMenuItem1.Name = "копироватьToolStripMenuItem1";
-            resources.ApplyResources(this.копироватьToolStripMenuItem1, "копироватьToolStripMenuItem1");
             this.копироватьToolStripMenuItem1.Click += new System.EventHandler(this.копироватьToolStripMenuItem_Click);
             // 
             // вставитьToolStripMenuItem1
             // 
+            resources.ApplyResources(this.вставитьToolStripMenuItem1, "вставитьToolStripMenuItem1");
             this.вставитьToolStripMenuItem1.Image = global::GTR_Watch_face.Properties.Resources.Files_Clipboard_icon;
             this.вставитьToolStripMenuItem1.Name = "вставитьToolStripMenuItem1";
-            resources.ApplyResources(this.вставитьToolStripMenuItem1, "вставитьToolStripMenuItem1");
             this.вставитьToolStripMenuItem1.Click += new System.EventHandler(this.вставитьToolStripMenuItem_Click);
             // 
             // numericUpDown_Weather_Text_StartCorner_X
             // 
-            this.numericUpDown_Weather_Text_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_Weather_Text_StartCorner_X, "numericUpDown_Weather_Text_StartCorner_X");
+            this.numericUpDown_Weather_Text_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Weather_Text_StartCorner_X, resources.GetString("numericUpDown_Weather_Text_StartCorner_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Weather_Text_StartCorner_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Weather_Text_StartCorner_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Weather_Text_StartCorner_X, resources.GetString("numericUpDown_Weather_Text_StartCorner_X.HelpString"));
             this.numericUpDown_Weather_Text_StartCorner_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -5186,6 +6343,9 @@
             // numericUpDown_Weather_Text_Spacing
             // 
             resources.ApplyResources(this.numericUpDown_Weather_Text_Spacing, "numericUpDown_Weather_Text_Spacing");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Weather_Text_Spacing, resources.GetString("numericUpDown_Weather_Text_Spacing.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Weather_Text_Spacing, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Weather_Text_Spacing.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Weather_Text_Spacing, resources.GetString("numericUpDown_Weather_Text_Spacing.HelpString"));
             this.numericUpDown_Weather_Text_Spacing.Maximum = new decimal(new int[] {
             999,
             0,
@@ -5203,6 +6363,9 @@
             // checkBox_Weather_Text
             // 
             resources.ApplyResources(this.checkBox_Weather_Text, "checkBox_Weather_Text");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Weather_Text, resources.GetString("checkBox_Weather_Text.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Weather_Text, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Weather_Text.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Weather_Text, resources.GetString("checkBox_Weather_Text.HelpString"));
             this.checkBox_Weather_Text.Name = "checkBox_Weather_Text";
             this.helpProvider1.SetShowHelp(this.checkBox_Weather_Text, ((bool)(resources.GetObject("checkBox_Weather_Text.ShowHelp"))));
             this.checkBox_Weather_Text.UseVisualStyleBackColor = true;
@@ -5212,20 +6375,29 @@
             // label270
             // 
             resources.ApplyResources(this.label270, "label270");
+            this.helpProvider1.SetHelpKeyword(this.label270, resources.GetString("label270.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label270, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label270.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label270, resources.GetString("label270.HelpString"));
             this.label270.Name = "label270";
             this.helpProvider1.SetShowHelp(this.label270, ((bool)(resources.GetObject("label270.ShowHelp"))));
             // 
             // label271
             // 
             resources.ApplyResources(this.label271, "label271");
+            this.helpProvider1.SetHelpKeyword(this.label271, resources.GetString("label271.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label271, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label271.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label271, resources.GetString("label271.HelpString"));
             this.label271.Name = "label271";
             this.helpProvider1.SetShowHelp(this.label271, ((bool)(resources.GetObject("label271.ShowHelp"))));
             // 
             // comboBox_Weather_Text_Alignment
             // 
-            this.comboBox_Weather_Text_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.comboBox_Weather_Text_Alignment, "comboBox_Weather_Text_Alignment");
+            this.comboBox_Weather_Text_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_Weather_Text_Alignment.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Weather_Text_Alignment, resources.GetString("comboBox_Weather_Text_Alignment.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Weather_Text_Alignment, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Weather_Text_Alignment.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Weather_Text_Alignment, resources.GetString("comboBox_Weather_Text_Alignment.HelpString"));
             this.comboBox_Weather_Text_Alignment.Items.AddRange(new object[] {
             resources.GetString("comboBox_Weather_Text_Alignment.Items"),
             resources.GetString("comboBox_Weather_Text_Alignment.Items1"),
@@ -5243,25 +6415,37 @@
             // label272
             // 
             resources.ApplyResources(this.label272, "label272");
+            this.helpProvider1.SetHelpKeyword(this.label272, resources.GetString("label272.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label272, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label272.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label272, resources.GetString("label272.HelpString"));
             this.label272.Name = "label272";
             this.helpProvider1.SetShowHelp(this.label272, ((bool)(resources.GetObject("label272.ShowHelp"))));
             // 
             // label273
             // 
             resources.ApplyResources(this.label273, "label273");
+            this.helpProvider1.SetHelpKeyword(this.label273, resources.GetString("label273.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label273, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label273.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label273, resources.GetString("label273.HelpString"));
             this.label273.Name = "label273";
             this.helpProvider1.SetShowHelp(this.label273, ((bool)(resources.GetObject("label273.ShowHelp"))));
             // 
             // label274
             // 
             resources.ApplyResources(this.label274, "label274");
+            this.helpProvider1.SetHelpKeyword(this.label274, resources.GetString("label274.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label274, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label274.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label274, resources.GetString("label274.HelpString"));
             this.label274.Name = "label274";
             this.helpProvider1.SetShowHelp(this.label274, ((bool)(resources.GetObject("label274.ShowHelp"))));
             // 
             // numericUpDown_Weather_Text_EndCorner_Y
             // 
-            this.numericUpDown_Weather_Text_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_Weather_Text_EndCorner_Y, "numericUpDown_Weather_Text_EndCorner_Y");
+            this.numericUpDown_Weather_Text_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Weather_Text_EndCorner_Y, resources.GetString("numericUpDown_Weather_Text_EndCorner_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Weather_Text_EndCorner_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Weather_Text_EndCorner_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Weather_Text_EndCorner_Y, resources.GetString("numericUpDown_Weather_Text_EndCorner_Y.HelpString"));
             this.numericUpDown_Weather_Text_EndCorner_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -5280,52 +6464,74 @@
             // label275
             // 
             resources.ApplyResources(this.label275, "label275");
+            this.helpProvider1.SetHelpKeyword(this.label275, resources.GetString("label275.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label275, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label275.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label275, resources.GetString("label275.HelpString"));
             this.label275.Name = "label275";
             this.helpProvider1.SetShowHelp(this.label275, ((bool)(resources.GetObject("label275.ShowHelp"))));
             // 
             // label276
             // 
             resources.ApplyResources(this.label276, "label276");
+            this.helpProvider1.SetHelpKeyword(this.label276, resources.GetString("label276.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label276, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label276.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label276, resources.GetString("label276.HelpString"));
             this.label276.Name = "label276";
             this.helpProvider1.SetShowHelp(this.label276, ((bool)(resources.GetObject("label276.ShowHelp"))));
             // 
             // label277
             // 
             resources.ApplyResources(this.label277, "label277");
+            this.helpProvider1.SetHelpKeyword(this.label277, resources.GetString("label277.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label277, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label277.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label277, resources.GetString("label277.HelpString"));
             this.label277.Name = "label277";
             this.helpProvider1.SetShowHelp(this.label277, ((bool)(resources.GetObject("label277.ShowHelp"))));
             // 
             // label278
             // 
             resources.ApplyResources(this.label278, "label278");
+            this.helpProvider1.SetHelpKeyword(this.label278, resources.GetString("label278.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label278, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label278.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label278, resources.GetString("label278.HelpString"));
             this.label278.Name = "label278";
             this.helpProvider1.SetShowHelp(this.label278, ((bool)(resources.GetObject("label278.ShowHelp"))));
             // 
             // label279
             // 
             resources.ApplyResources(this.label279, "label279");
+            this.helpProvider1.SetHelpKeyword(this.label279, resources.GetString("label279.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label279, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label279.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label279, resources.GetString("label279.HelpString"));
             this.label279.Name = "label279";
             this.helpProvider1.SetShowHelp(this.label279, ((bool)(resources.GetObject("label279.ShowHelp"))));
             // 
             // tabPage26
             // 
+            resources.ApplyResources(this.tabPage26, "tabPage26");
             this.tabPage26.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage26.Controls.Add(this.tabControl5);
-            resources.ApplyResources(this.tabPage26, "tabPage26");
+            this.helpProvider1.SetHelpKeyword(this.tabPage26, resources.GetString("tabPage26.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage26, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage26.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage26, resources.GetString("tabPage26.HelpString"));
             this.tabPage26.Name = "tabPage26";
             this.helpProvider1.SetShowHelp(this.tabPage26, ((bool)(resources.GetObject("tabPage26.ShowHelp"))));
             // 
             // tabControl5
             // 
+            resources.ApplyResources(this.tabControl5, "tabControl5");
             this.tabControl5.Controls.Add(this.tabPage27);
             this.tabControl5.Controls.Add(this.tabPage30);
-            resources.ApplyResources(this.tabControl5, "tabControl5");
+            this.helpProvider1.SetHelpKeyword(this.tabControl5, resources.GetString("tabControl5.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabControl5, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabControl5.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabControl5, resources.GetString("tabControl5.HelpString"));
             this.tabControl5.Name = "tabControl5";
             this.tabControl5.SelectedIndex = 0;
             this.helpProvider1.SetShowHelp(this.tabControl5, ((bool)(resources.GetObject("tabControl5.ShowHelp"))));
             // 
             // tabPage27
             // 
+            resources.ApplyResources(this.tabPage27, "tabPage27");
             this.tabPage27.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage27.Controls.Add(this.comboBox_Weather_Day_Image);
             this.tabPage27.Controls.Add(this.numericUpDown_Weather_Day_EndCorner_X);
@@ -5346,16 +6552,21 @@
             this.tabPage27.Controls.Add(this.label296);
             this.tabPage27.Controls.Add(this.label297);
             this.tabPage27.Controls.Add(this.label298);
-            resources.ApplyResources(this.tabPage27, "tabPage27");
+            this.helpProvider1.SetHelpKeyword(this.tabPage27, resources.GetString("tabPage27.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage27, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage27.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage27, resources.GetString("tabPage27.HelpString"));
             this.tabPage27.Name = "tabPage27";
             this.helpProvider1.SetShowHelp(this.tabPage27, ((bool)(resources.GetObject("tabPage27.ShowHelp"))));
             // 
             // comboBox_Weather_Day_Image
             // 
+            resources.ApplyResources(this.comboBox_Weather_Day_Image, "comboBox_Weather_Day_Image");
             this.comboBox_Weather_Day_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Weather_Day_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_Day_Image, "comboBox_Weather_Day_Image");
             this.comboBox_Weather_Day_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Weather_Day_Image, resources.GetString("comboBox_Weather_Day_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Weather_Day_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Weather_Day_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Weather_Day_Image, resources.GetString("comboBox_Weather_Day_Image.HelpString"));
             this.comboBox_Weather_Day_Image.Name = "comboBox_Weather_Day_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_Weather_Day_Image, ((bool)(resources.GetObject("comboBox_Weather_Day_Image.ShowHelp"))));
             this.comboBox_Weather_Day_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -5366,8 +6577,11 @@
             // 
             // numericUpDown_Weather_Day_EndCorner_X
             // 
-            this.numericUpDown_Weather_Day_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_Weather_Day_EndCorner_X, "numericUpDown_Weather_Day_EndCorner_X");
+            this.numericUpDown_Weather_Day_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Weather_Day_EndCorner_X, resources.GetString("numericUpDown_Weather_Day_EndCorner_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Weather_Day_EndCorner_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Weather_Day_EndCorner_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Weather_Day_EndCorner_X, resources.GetString("numericUpDown_Weather_Day_EndCorner_X.HelpString"));
             this.numericUpDown_Weather_Day_EndCorner_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -5386,6 +6600,9 @@
             // numericUpDown_Weather_Day_Count
             // 
             resources.ApplyResources(this.numericUpDown_Weather_Day_Count, "numericUpDown_Weather_Day_Count");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Weather_Day_Count, resources.GetString("numericUpDown_Weather_Day_Count.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Weather_Day_Count, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Weather_Day_Count.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Weather_Day_Count, resources.GetString("numericUpDown_Weather_Day_Count.HelpString"));
             this.numericUpDown_Weather_Day_Count.Maximum = new decimal(new int[] {
             99,
             0,
@@ -5402,8 +6619,11 @@
             // 
             // numericUpDown_Weather_Day_StartCorner_Y
             // 
-            this.numericUpDown_Weather_Day_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_Weather_Day_StartCorner_Y, "numericUpDown_Weather_Day_StartCorner_Y");
+            this.numericUpDown_Weather_Day_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Weather_Day_StartCorner_Y, resources.GetString("numericUpDown_Weather_Day_StartCorner_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Weather_Day_StartCorner_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Weather_Day_StartCorner_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Weather_Day_StartCorner_Y, resources.GetString("numericUpDown_Weather_Day_StartCorner_Y.HelpString"));
             this.numericUpDown_Weather_Day_StartCorner_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -5416,8 +6636,11 @@
             // 
             // numericUpDown_Weather_Day_StartCorner_X
             // 
-            this.numericUpDown_Weather_Day_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_Weather_Day_StartCorner_X, "numericUpDown_Weather_Day_StartCorner_X");
+            this.numericUpDown_Weather_Day_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Weather_Day_StartCorner_X, resources.GetString("numericUpDown_Weather_Day_StartCorner_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Weather_Day_StartCorner_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Weather_Day_StartCorner_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Weather_Day_StartCorner_X, resources.GetString("numericUpDown_Weather_Day_StartCorner_X.HelpString"));
             this.numericUpDown_Weather_Day_StartCorner_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -5436,6 +6659,9 @@
             // numericUpDown_Weather_Day_Spacing
             // 
             resources.ApplyResources(this.numericUpDown_Weather_Day_Spacing, "numericUpDown_Weather_Day_Spacing");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Weather_Day_Spacing, resources.GetString("numericUpDown_Weather_Day_Spacing.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Weather_Day_Spacing, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Weather_Day_Spacing.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Weather_Day_Spacing, resources.GetString("numericUpDown_Weather_Day_Spacing.HelpString"));
             this.numericUpDown_Weather_Day_Spacing.Maximum = new decimal(new int[] {
             999,
             0,
@@ -5453,6 +6679,9 @@
             // checkBox_Weather_Day
             // 
             resources.ApplyResources(this.checkBox_Weather_Day, "checkBox_Weather_Day");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Weather_Day, resources.GetString("checkBox_Weather_Day.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Weather_Day, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Weather_Day.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Weather_Day, resources.GetString("checkBox_Weather_Day.HelpString"));
             this.checkBox_Weather_Day.Name = "checkBox_Weather_Day";
             this.helpProvider1.SetShowHelp(this.checkBox_Weather_Day, ((bool)(resources.GetObject("checkBox_Weather_Day.ShowHelp"))));
             this.checkBox_Weather_Day.UseVisualStyleBackColor = true;
@@ -5462,20 +6691,29 @@
             // label289
             // 
             resources.ApplyResources(this.label289, "label289");
+            this.helpProvider1.SetHelpKeyword(this.label289, resources.GetString("label289.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label289, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label289.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label289, resources.GetString("label289.HelpString"));
             this.label289.Name = "label289";
             this.helpProvider1.SetShowHelp(this.label289, ((bool)(resources.GetObject("label289.ShowHelp"))));
             // 
             // label290
             // 
             resources.ApplyResources(this.label290, "label290");
+            this.helpProvider1.SetHelpKeyword(this.label290, resources.GetString("label290.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label290, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label290.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label290, resources.GetString("label290.HelpString"));
             this.label290.Name = "label290";
             this.helpProvider1.SetShowHelp(this.label290, ((bool)(resources.GetObject("label290.ShowHelp"))));
             // 
             // comboBox_Weather_Day_Alignment
             // 
-            this.comboBox_Weather_Day_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.comboBox_Weather_Day_Alignment, "comboBox_Weather_Day_Alignment");
+            this.comboBox_Weather_Day_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_Weather_Day_Alignment.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Weather_Day_Alignment, resources.GetString("comboBox_Weather_Day_Alignment.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Weather_Day_Alignment, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Weather_Day_Alignment.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Weather_Day_Alignment, resources.GetString("comboBox_Weather_Day_Alignment.HelpString"));
             this.comboBox_Weather_Day_Alignment.Items.AddRange(new object[] {
             resources.GetString("comboBox_Weather_Day_Alignment.Items"),
             resources.GetString("comboBox_Weather_Day_Alignment.Items1"),
@@ -5493,25 +6731,37 @@
             // label291
             // 
             resources.ApplyResources(this.label291, "label291");
+            this.helpProvider1.SetHelpKeyword(this.label291, resources.GetString("label291.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label291, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label291.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label291, resources.GetString("label291.HelpString"));
             this.label291.Name = "label291";
             this.helpProvider1.SetShowHelp(this.label291, ((bool)(resources.GetObject("label291.ShowHelp"))));
             // 
             // label292
             // 
             resources.ApplyResources(this.label292, "label292");
+            this.helpProvider1.SetHelpKeyword(this.label292, resources.GetString("label292.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label292, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label292.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label292, resources.GetString("label292.HelpString"));
             this.label292.Name = "label292";
             this.helpProvider1.SetShowHelp(this.label292, ((bool)(resources.GetObject("label292.ShowHelp"))));
             // 
             // label293
             // 
             resources.ApplyResources(this.label293, "label293");
+            this.helpProvider1.SetHelpKeyword(this.label293, resources.GetString("label293.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label293, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label293.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label293, resources.GetString("label293.HelpString"));
             this.label293.Name = "label293";
             this.helpProvider1.SetShowHelp(this.label293, ((bool)(resources.GetObject("label293.ShowHelp"))));
             // 
             // numericUpDown_Weather_Day_EndCorner_Y
             // 
-            this.numericUpDown_Weather_Day_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_Weather_Day_EndCorner_Y, "numericUpDown_Weather_Day_EndCorner_Y");
+            this.numericUpDown_Weather_Day_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Weather_Day_EndCorner_Y, resources.GetString("numericUpDown_Weather_Day_EndCorner_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Weather_Day_EndCorner_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Weather_Day_EndCorner_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Weather_Day_EndCorner_Y, resources.GetString("numericUpDown_Weather_Day_EndCorner_Y.HelpString"));
             this.numericUpDown_Weather_Day_EndCorner_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -5530,35 +6780,51 @@
             // label294
             // 
             resources.ApplyResources(this.label294, "label294");
+            this.helpProvider1.SetHelpKeyword(this.label294, resources.GetString("label294.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label294, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label294.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label294, resources.GetString("label294.HelpString"));
             this.label294.Name = "label294";
             this.helpProvider1.SetShowHelp(this.label294, ((bool)(resources.GetObject("label294.ShowHelp"))));
             // 
             // label295
             // 
             resources.ApplyResources(this.label295, "label295");
+            this.helpProvider1.SetHelpKeyword(this.label295, resources.GetString("label295.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label295, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label295.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label295, resources.GetString("label295.HelpString"));
             this.label295.Name = "label295";
             this.helpProvider1.SetShowHelp(this.label295, ((bool)(resources.GetObject("label295.ShowHelp"))));
             // 
             // label296
             // 
             resources.ApplyResources(this.label296, "label296");
+            this.helpProvider1.SetHelpKeyword(this.label296, resources.GetString("label296.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label296, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label296.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label296, resources.GetString("label296.HelpString"));
             this.label296.Name = "label296";
             this.helpProvider1.SetShowHelp(this.label296, ((bool)(resources.GetObject("label296.ShowHelp"))));
             // 
             // label297
             // 
             resources.ApplyResources(this.label297, "label297");
+            this.helpProvider1.SetHelpKeyword(this.label297, resources.GetString("label297.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label297, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label297.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label297, resources.GetString("label297.HelpString"));
             this.label297.Name = "label297";
             this.helpProvider1.SetShowHelp(this.label297, ((bool)(resources.GetObject("label297.ShowHelp"))));
             // 
             // label298
             // 
             resources.ApplyResources(this.label298, "label298");
+            this.helpProvider1.SetHelpKeyword(this.label298, resources.GetString("label298.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label298, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label298.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label298, resources.GetString("label298.HelpString"));
             this.label298.Name = "label298";
             this.helpProvider1.SetShowHelp(this.label298, ((bool)(resources.GetObject("label298.ShowHelp"))));
             // 
             // tabPage30
             // 
+            resources.ApplyResources(this.tabPage30, "tabPage30");
             this.tabPage30.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage30.Controls.Add(this.comboBox_Weather_Night_Image);
             this.tabPage30.Controls.Add(this.numericUpDown_Weather_Night_EndCorner_X);
@@ -5579,16 +6845,21 @@
             this.tabPage30.Controls.Add(this.label320);
             this.tabPage30.Controls.Add(this.label321);
             this.tabPage30.Controls.Add(this.label322);
-            resources.ApplyResources(this.tabPage30, "tabPage30");
+            this.helpProvider1.SetHelpKeyword(this.tabPage30, resources.GetString("tabPage30.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage30, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage30.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage30, resources.GetString("tabPage30.HelpString"));
             this.tabPage30.Name = "tabPage30";
             this.helpProvider1.SetShowHelp(this.tabPage30, ((bool)(resources.GetObject("tabPage30.ShowHelp"))));
             // 
             // comboBox_Weather_Night_Image
             // 
+            resources.ApplyResources(this.comboBox_Weather_Night_Image, "comboBox_Weather_Night_Image");
             this.comboBox_Weather_Night_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Weather_Night_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_Night_Image, "comboBox_Weather_Night_Image");
             this.comboBox_Weather_Night_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Weather_Night_Image, resources.GetString("comboBox_Weather_Night_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Weather_Night_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Weather_Night_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Weather_Night_Image, resources.GetString("comboBox_Weather_Night_Image.HelpString"));
             this.comboBox_Weather_Night_Image.Name = "comboBox_Weather_Night_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_Weather_Night_Image, ((bool)(resources.GetObject("comboBox_Weather_Night_Image.ShowHelp"))));
             this.comboBox_Weather_Night_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -5599,8 +6870,11 @@
             // 
             // numericUpDown_Weather_Night_EndCorner_X
             // 
-            this.numericUpDown_Weather_Night_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_Weather_Night_EndCorner_X, "numericUpDown_Weather_Night_EndCorner_X");
+            this.numericUpDown_Weather_Night_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Weather_Night_EndCorner_X, resources.GetString("numericUpDown_Weather_Night_EndCorner_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Weather_Night_EndCorner_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Weather_Night_EndCorner_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Weather_Night_EndCorner_X, resources.GetString("numericUpDown_Weather_Night_EndCorner_X.HelpString"));
             this.numericUpDown_Weather_Night_EndCorner_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -5619,6 +6893,9 @@
             // numericUpDown_Weather_Night_Count
             // 
             resources.ApplyResources(this.numericUpDown_Weather_Night_Count, "numericUpDown_Weather_Night_Count");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Weather_Night_Count, resources.GetString("numericUpDown_Weather_Night_Count.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Weather_Night_Count, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Weather_Night_Count.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Weather_Night_Count, resources.GetString("numericUpDown_Weather_Night_Count.HelpString"));
             this.numericUpDown_Weather_Night_Count.Maximum = new decimal(new int[] {
             99,
             0,
@@ -5635,8 +6912,11 @@
             // 
             // numericUpDown_Weather_Night_StartCorner_Y
             // 
-            this.numericUpDown_Weather_Night_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_Weather_Night_StartCorner_Y, "numericUpDown_Weather_Night_StartCorner_Y");
+            this.numericUpDown_Weather_Night_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Weather_Night_StartCorner_Y, resources.GetString("numericUpDown_Weather_Night_StartCorner_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Weather_Night_StartCorner_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Weather_Night_StartCorner_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Weather_Night_StartCorner_Y, resources.GetString("numericUpDown_Weather_Night_StartCorner_Y.HelpString"));
             this.numericUpDown_Weather_Night_StartCorner_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -5654,8 +6934,11 @@
             // 
             // numericUpDown_Weather_Night_StartCorner_X
             // 
-            this.numericUpDown_Weather_Night_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_Weather_Night_StartCorner_X, "numericUpDown_Weather_Night_StartCorner_X");
+            this.numericUpDown_Weather_Night_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Weather_Night_StartCorner_X, resources.GetString("numericUpDown_Weather_Night_StartCorner_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Weather_Night_StartCorner_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Weather_Night_StartCorner_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Weather_Night_StartCorner_X, resources.GetString("numericUpDown_Weather_Night_StartCorner_X.HelpString"));
             this.numericUpDown_Weather_Night_StartCorner_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -5674,6 +6957,9 @@
             // numericUpDown_Weather_Night_Spacing
             // 
             resources.ApplyResources(this.numericUpDown_Weather_Night_Spacing, "numericUpDown_Weather_Night_Spacing");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Weather_Night_Spacing, resources.GetString("numericUpDown_Weather_Night_Spacing.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Weather_Night_Spacing, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Weather_Night_Spacing.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Weather_Night_Spacing, resources.GetString("numericUpDown_Weather_Night_Spacing.HelpString"));
             this.numericUpDown_Weather_Night_Spacing.Maximum = new decimal(new int[] {
             999,
             0,
@@ -5691,6 +6977,9 @@
             // checkBox_Weather_Night
             // 
             resources.ApplyResources(this.checkBox_Weather_Night, "checkBox_Weather_Night");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Weather_Night, resources.GetString("checkBox_Weather_Night.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Weather_Night, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Weather_Night.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Weather_Night, resources.GetString("checkBox_Weather_Night.HelpString"));
             this.checkBox_Weather_Night.Name = "checkBox_Weather_Night";
             this.helpProvider1.SetShowHelp(this.checkBox_Weather_Night, ((bool)(resources.GetObject("checkBox_Weather_Night.ShowHelp"))));
             this.checkBox_Weather_Night.UseVisualStyleBackColor = true;
@@ -5700,20 +6989,29 @@
             // label313
             // 
             resources.ApplyResources(this.label313, "label313");
+            this.helpProvider1.SetHelpKeyword(this.label313, resources.GetString("label313.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label313, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label313.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label313, resources.GetString("label313.HelpString"));
             this.label313.Name = "label313";
             this.helpProvider1.SetShowHelp(this.label313, ((bool)(resources.GetObject("label313.ShowHelp"))));
             // 
             // label314
             // 
             resources.ApplyResources(this.label314, "label314");
+            this.helpProvider1.SetHelpKeyword(this.label314, resources.GetString("label314.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label314, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label314.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label314, resources.GetString("label314.HelpString"));
             this.label314.Name = "label314";
             this.helpProvider1.SetShowHelp(this.label314, ((bool)(resources.GetObject("label314.ShowHelp"))));
             // 
             // comboBox_Weather_Night_Alignment
             // 
-            this.comboBox_Weather_Night_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.comboBox_Weather_Night_Alignment, "comboBox_Weather_Night_Alignment");
+            this.comboBox_Weather_Night_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_Weather_Night_Alignment.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Weather_Night_Alignment, resources.GetString("comboBox_Weather_Night_Alignment.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Weather_Night_Alignment, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Weather_Night_Alignment.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Weather_Night_Alignment, resources.GetString("comboBox_Weather_Night_Alignment.HelpString"));
             this.comboBox_Weather_Night_Alignment.Items.AddRange(new object[] {
             resources.GetString("comboBox_Weather_Night_Alignment.Items"),
             resources.GetString("comboBox_Weather_Night_Alignment.Items1"),
@@ -5731,25 +7029,37 @@
             // label315
             // 
             resources.ApplyResources(this.label315, "label315");
+            this.helpProvider1.SetHelpKeyword(this.label315, resources.GetString("label315.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label315, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label315.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label315, resources.GetString("label315.HelpString"));
             this.label315.Name = "label315";
             this.helpProvider1.SetShowHelp(this.label315, ((bool)(resources.GetObject("label315.ShowHelp"))));
             // 
             // label316
             // 
             resources.ApplyResources(this.label316, "label316");
+            this.helpProvider1.SetHelpKeyword(this.label316, resources.GetString("label316.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label316, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label316.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label316, resources.GetString("label316.HelpString"));
             this.label316.Name = "label316";
             this.helpProvider1.SetShowHelp(this.label316, ((bool)(resources.GetObject("label316.ShowHelp"))));
             // 
             // label317
             // 
             resources.ApplyResources(this.label317, "label317");
+            this.helpProvider1.SetHelpKeyword(this.label317, resources.GetString("label317.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label317, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label317.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label317, resources.GetString("label317.HelpString"));
             this.label317.Name = "label317";
             this.helpProvider1.SetShowHelp(this.label317, ((bool)(resources.GetObject("label317.ShowHelp"))));
             // 
             // numericUpDown_Weather_Night_EndCorner_Y
             // 
-            this.numericUpDown_Weather_Night_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_Weather_Night_EndCorner_Y, "numericUpDown_Weather_Night_EndCorner_Y");
+            this.numericUpDown_Weather_Night_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Weather_Night_EndCorner_Y, resources.GetString("numericUpDown_Weather_Night_EndCorner_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Weather_Night_EndCorner_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Weather_Night_EndCorner_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Weather_Night_EndCorner_Y, resources.GetString("numericUpDown_Weather_Night_EndCorner_Y.HelpString"));
             this.numericUpDown_Weather_Night_EndCorner_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -5768,35 +7078,51 @@
             // label318
             // 
             resources.ApplyResources(this.label318, "label318");
+            this.helpProvider1.SetHelpKeyword(this.label318, resources.GetString("label318.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label318, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label318.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label318, resources.GetString("label318.HelpString"));
             this.label318.Name = "label318";
             this.helpProvider1.SetShowHelp(this.label318, ((bool)(resources.GetObject("label318.ShowHelp"))));
             // 
             // label319
             // 
             resources.ApplyResources(this.label319, "label319");
+            this.helpProvider1.SetHelpKeyword(this.label319, resources.GetString("label319.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label319, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label319.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label319, resources.GetString("label319.HelpString"));
             this.label319.Name = "label319";
             this.helpProvider1.SetShowHelp(this.label319, ((bool)(resources.GetObject("label319.ShowHelp"))));
             // 
             // label320
             // 
             resources.ApplyResources(this.label320, "label320");
+            this.helpProvider1.SetHelpKeyword(this.label320, resources.GetString("label320.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label320, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label320.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label320, resources.GetString("label320.HelpString"));
             this.label320.Name = "label320";
             this.helpProvider1.SetShowHelp(this.label320, ((bool)(resources.GetObject("label320.ShowHelp"))));
             // 
             // label321
             // 
             resources.ApplyResources(this.label321, "label321");
+            this.helpProvider1.SetHelpKeyword(this.label321, resources.GetString("label321.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label321, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label321.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label321, resources.GetString("label321.HelpString"));
             this.label321.Name = "label321";
             this.helpProvider1.SetShowHelp(this.label321, ((bool)(resources.GetObject("label321.ShowHelp"))));
             // 
             // label322
             // 
             resources.ApplyResources(this.label322, "label322");
+            this.helpProvider1.SetHelpKeyword(this.label322, resources.GetString("label322.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label322, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label322.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label322, resources.GetString("label322.HelpString"));
             this.label322.Name = "label322";
             this.helpProvider1.SetShowHelp(this.label322, ((bool)(resources.GetObject("label322.ShowHelp"))));
             // 
             // tabPage25
             // 
+            resources.ApplyResources(this.tabPage25, "tabPage25");
             this.tabPage25.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage25.Controls.Add(this.comboBox_Weather_Icon_NDImage);
             this.tabPage25.Controls.Add(this.label287);
@@ -5809,16 +7135,21 @@
             this.tabPage25.Controls.Add(this.label281);
             this.tabPage25.Controls.Add(this.label282);
             this.tabPage25.Controls.Add(this.label283);
-            resources.ApplyResources(this.tabPage25, "tabPage25");
+            this.helpProvider1.SetHelpKeyword(this.tabPage25, resources.GetString("tabPage25.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage25, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage25.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage25, resources.GetString("tabPage25.HelpString"));
             this.tabPage25.Name = "tabPage25";
             this.helpProvider1.SetShowHelp(this.tabPage25, ((bool)(resources.GetObject("tabPage25.ShowHelp"))));
             // 
             // comboBox_Weather_Icon_NDImage
             // 
+            resources.ApplyResources(this.comboBox_Weather_Icon_NDImage, "comboBox_Weather_Icon_NDImage");
             this.comboBox_Weather_Icon_NDImage.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Weather_Icon_NDImage.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_Icon_NDImage, "comboBox_Weather_Icon_NDImage");
             this.comboBox_Weather_Icon_NDImage.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Weather_Icon_NDImage, resources.GetString("comboBox_Weather_Icon_NDImage.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Weather_Icon_NDImage, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Weather_Icon_NDImage.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Weather_Icon_NDImage, resources.GetString("comboBox_Weather_Icon_NDImage.HelpString"));
             this.comboBox_Weather_Icon_NDImage.Name = "comboBox_Weather_Icon_NDImage";
             this.helpProvider1.SetShowHelp(this.comboBox_Weather_Icon_NDImage, ((bool)(resources.GetObject("comboBox_Weather_Icon_NDImage.ShowHelp"))));
             this.comboBox_Weather_Icon_NDImage.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -5830,12 +7161,18 @@
             // label287
             // 
             resources.ApplyResources(this.label287, "label287");
+            this.helpProvider1.SetHelpKeyword(this.label287, resources.GetString("label287.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label287, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label287.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label287, resources.GetString("label287.HelpString"));
             this.label287.Name = "label287";
             this.helpProvider1.SetShowHelp(this.label287, ((bool)(resources.GetObject("label287.ShowHelp"))));
             // 
             // numericUpDown_Weather_Icon_Count
             // 
             resources.ApplyResources(this.numericUpDown_Weather_Icon_Count, "numericUpDown_Weather_Icon_Count");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Weather_Icon_Count, resources.GetString("numericUpDown_Weather_Icon_Count.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Weather_Icon_Count, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Weather_Icon_Count.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Weather_Icon_Count, resources.GetString("numericUpDown_Weather_Icon_Count.HelpString"));
             this.numericUpDown_Weather_Icon_Count.Maximum = new decimal(new int[] {
             99,
             0,
@@ -5853,12 +7190,18 @@
             // label280
             // 
             resources.ApplyResources(this.label280, "label280");
+            this.helpProvider1.SetHelpKeyword(this.label280, resources.GetString("label280.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label280, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label280.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label280, resources.GetString("label280.HelpString"));
             this.label280.Name = "label280";
             this.helpProvider1.SetShowHelp(this.label280, ((bool)(resources.GetObject("label280.ShowHelp"))));
             // 
             // checkBox_Weather_Icon
             // 
             resources.ApplyResources(this.checkBox_Weather_Icon, "checkBox_Weather_Icon");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Weather_Icon, resources.GetString("checkBox_Weather_Icon.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Weather_Icon, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Weather_Icon.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Weather_Icon, resources.GetString("checkBox_Weather_Icon.HelpString"));
             this.checkBox_Weather_Icon.Name = "checkBox_Weather_Icon";
             this.helpProvider1.SetShowHelp(this.checkBox_Weather_Icon, ((bool)(resources.GetObject("checkBox_Weather_Icon.ShowHelp"))));
             this.checkBox_Weather_Icon.UseVisualStyleBackColor = true;
@@ -5867,8 +7210,11 @@
             // 
             // numericUpDown_Weather_Icon_Y
             // 
-            this.numericUpDown_Weather_Icon_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_Weather_Icon_Y, "numericUpDown_Weather_Icon_Y");
+            this.numericUpDown_Weather_Icon_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Weather_Icon_Y, resources.GetString("numericUpDown_Weather_Icon_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Weather_Icon_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Weather_Icon_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Weather_Icon_Y, resources.GetString("numericUpDown_Weather_Icon_Y.HelpString"));
             this.numericUpDown_Weather_Icon_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -5886,8 +7232,11 @@
             // 
             // numericUpDown_Weather_Icon_X
             // 
-            this.numericUpDown_Weather_Icon_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_Weather_Icon_X, "numericUpDown_Weather_Icon_X");
+            this.numericUpDown_Weather_Icon_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Weather_Icon_X, resources.GetString("numericUpDown_Weather_Icon_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Weather_Icon_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Weather_Icon_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Weather_Icon_X, resources.GetString("numericUpDown_Weather_Icon_X.HelpString"));
             this.numericUpDown_Weather_Icon_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -5905,10 +7254,13 @@
             // 
             // comboBox_Weather_Icon_Image
             // 
+            resources.ApplyResources(this.comboBox_Weather_Icon_Image, "comboBox_Weather_Icon_Image");
             this.comboBox_Weather_Icon_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Weather_Icon_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Weather_Icon_Image, "comboBox_Weather_Icon_Image");
             this.comboBox_Weather_Icon_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Weather_Icon_Image, resources.GetString("comboBox_Weather_Icon_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Weather_Icon_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Weather_Icon_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Weather_Icon_Image, resources.GetString("comboBox_Weather_Icon_Image.HelpString"));
             this.comboBox_Weather_Icon_Image.Name = "comboBox_Weather_Icon_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_Weather_Icon_Image, ((bool)(resources.GetObject("comboBox_Weather_Icon_Image.ShowHelp"))));
             this.comboBox_Weather_Icon_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -5920,24 +7272,36 @@
             // label281
             // 
             resources.ApplyResources(this.label281, "label281");
+            this.helpProvider1.SetHelpKeyword(this.label281, resources.GetString("label281.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label281, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label281.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label281, resources.GetString("label281.HelpString"));
             this.label281.Name = "label281";
             this.helpProvider1.SetShowHelp(this.label281, ((bool)(resources.GetObject("label281.ShowHelp"))));
             // 
             // label282
             // 
             resources.ApplyResources(this.label282, "label282");
+            this.helpProvider1.SetHelpKeyword(this.label282, resources.GetString("label282.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label282, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label282.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label282, resources.GetString("label282.HelpString"));
             this.label282.Name = "label282";
             this.helpProvider1.SetShowHelp(this.label282, ((bool)(resources.GetObject("label282.ShowHelp"))));
             // 
             // label283
             // 
             resources.ApplyResources(this.label283, "label283");
+            this.helpProvider1.SetHelpKeyword(this.label283, resources.GetString("label283.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label283, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label283.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label283, resources.GetString("label283.HelpString"));
             this.label283.Name = "label283";
             this.helpProvider1.SetShowHelp(this.label283, ((bool)(resources.GetObject("label283.ShowHelp"))));
             // 
             // checkBox_Weather
             // 
             resources.ApplyResources(this.checkBox_Weather, "checkBox_Weather");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Weather, resources.GetString("checkBox_Weather.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Weather, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Weather.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Weather, resources.GetString("checkBox_Weather.HelpString"));
             this.checkBox_Weather.Name = "checkBox_Weather";
             this.helpProvider1.SetShowHelp(this.checkBox_Weather, ((bool)(resources.GetObject("checkBox_Weather.ShowHelp"))));
             this.checkBox_Weather.UseVisualStyleBackColor = true;
@@ -5947,6 +7311,9 @@
             // button_Weather
             // 
             resources.ApplyResources(this.button_Weather, "button_Weather");
+            this.helpProvider1.SetHelpKeyword(this.button_Weather, resources.GetString("button_Weather.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_Weather, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_Weather.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_Weather, resources.GetString("button_Weather.HelpString"));
             this.button_Weather.Name = "button_Weather";
             this.helpProvider1.SetShowHelp(this.button_Weather, ((bool)(resources.GetObject("button_Weather.ShowHelp"))));
             this.button_Weather.UseVisualStyleBackColor = true;
@@ -5954,34 +7321,44 @@
             // 
             // panel_AnalogClock
             // 
+            resources.ApplyResources(this.panel_AnalogClock, "panel_AnalogClock");
             this.panel_AnalogClock.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_AnalogClock.Controls.Add(this.tabControl_AnalogClock);
             this.panel_AnalogClock.Controls.Add(this.checkBox_AnalogClock);
-            resources.ApplyResources(this.panel_AnalogClock, "panel_AnalogClock");
+            this.helpProvider1.SetHelpKeyword(this.panel_AnalogClock, resources.GetString("panel_AnalogClock.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel_AnalogClock, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_AnalogClock.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel_AnalogClock, resources.GetString("panel_AnalogClock.HelpString"));
             this.panel_AnalogClock.Name = "panel_AnalogClock";
             this.helpProvider1.SetShowHelp(this.panel_AnalogClock, ((bool)(resources.GetObject("panel_AnalogClock.ShowHelp"))));
             // 
             // tabControl_AnalogClock
             // 
+            resources.ApplyResources(this.tabControl_AnalogClock, "tabControl_AnalogClock");
             this.tabControl_AnalogClock.Controls.Add(this.tabPage29);
             this.tabControl_AnalogClock.Controls.Add(this.tabPage31);
             this.tabControl_AnalogClock.Controls.Add(this.tabPage32);
-            resources.ApplyResources(this.tabControl_AnalogClock, "tabControl_AnalogClock");
+            this.helpProvider1.SetHelpKeyword(this.tabControl_AnalogClock, resources.GetString("tabControl_AnalogClock.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabControl_AnalogClock, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabControl_AnalogClock.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabControl_AnalogClock, resources.GetString("tabControl_AnalogClock.HelpString"));
             this.tabControl_AnalogClock.Name = "tabControl_AnalogClock";
             this.tabControl_AnalogClock.SelectedIndex = 0;
             this.helpProvider1.SetShowHelp(this.tabControl_AnalogClock, ((bool)(resources.GetObject("tabControl_AnalogClock.ShowHelp"))));
             // 
             // tabPage29
             // 
+            resources.ApplyResources(this.tabPage29, "tabPage29");
             this.tabPage29.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage29.Controls.Add(this.groupBox_AnalogClock_Hour);
             this.tabPage29.Controls.Add(this.groupBox4);
-            resources.ApplyResources(this.tabPage29, "tabPage29");
+            this.helpProvider1.SetHelpKeyword(this.tabPage29, resources.GetString("tabPage29.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage29, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage29.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage29, resources.GetString("tabPage29.HelpString"));
             this.tabPage29.Name = "tabPage29";
             this.helpProvider1.SetShowHelp(this.tabPage29, ((bool)(resources.GetObject("tabPage29.ShowHelp"))));
             // 
             // groupBox_AnalogClock_Hour
             // 
+            resources.ApplyResources(this.groupBox_AnalogClock_Hour, "groupBox_AnalogClock_Hour");
             this.groupBox_AnalogClock_Hour.Controls.Add(this.numericUpDown_AnalogClock_Hour_Offset_Y);
             this.groupBox_AnalogClock_Hour.Controls.Add(this.label349);
             this.groupBox_AnalogClock_Hour.Controls.Add(this.numericUpDown_AnalogClock_Hour_Offset_X);
@@ -5993,7 +7370,9 @@
             this.groupBox_AnalogClock_Hour.Controls.Add(this.numericUpDown_AnalogClock_Hour_X);
             this.groupBox_AnalogClock_Hour.Controls.Add(this.label216);
             this.groupBox_AnalogClock_Hour.Controls.Add(this.checkBox_AnalogClock_Hour);
-            resources.ApplyResources(this.groupBox_AnalogClock_Hour, "groupBox_AnalogClock_Hour");
+            this.helpProvider1.SetHelpKeyword(this.groupBox_AnalogClock_Hour, resources.GetString("groupBox_AnalogClock_Hour.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.groupBox_AnalogClock_Hour, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("groupBox_AnalogClock_Hour.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.groupBox_AnalogClock_Hour, resources.GetString("groupBox_AnalogClock_Hour.HelpString"));
             this.groupBox_AnalogClock_Hour.Name = "groupBox_AnalogClock_Hour";
             this.helpProvider1.SetShowHelp(this.groupBox_AnalogClock_Hour, ((bool)(resources.GetObject("groupBox_AnalogClock_Hour.ShowHelp"))));
             this.groupBox_AnalogClock_Hour.TabStop = false;
@@ -6002,6 +7381,9 @@
             // numericUpDown_AnalogClock_Hour_Offset_Y
             // 
             resources.ApplyResources(this.numericUpDown_AnalogClock_Hour_Offset_Y, "numericUpDown_AnalogClock_Hour_Offset_Y");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_AnalogClock_Hour_Offset_Y, resources.GetString("numericUpDown_AnalogClock_Hour_Offset_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_AnalogClock_Hour_Offset_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_AnalogClock_Hour_Offset_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_AnalogClock_Hour_Offset_Y, resources.GetString("numericUpDown_AnalogClock_Hour_Offset_Y.HelpString"));
             this.numericUpDown_AnalogClock_Hour_Offset_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -6015,16 +7397,23 @@
             this.numericUpDown_AnalogClock_Hour_Offset_Y.Name = "numericUpDown_AnalogClock_Hour_Offset_Y";
             this.helpProvider1.SetShowHelp(this.numericUpDown_AnalogClock_Hour_Offset_Y, ((bool)(resources.GetObject("numericUpDown_AnalogClock_Hour_Offset_Y.ShowHelp"))));
             this.numericUpDown_AnalogClock_Hour_Offset_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_AnalogClock_Hour_Offset_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_OffSetY_MouseDoubleClick);
             // 
             // label349
             // 
             resources.ApplyResources(this.label349, "label349");
+            this.helpProvider1.SetHelpKeyword(this.label349, resources.GetString("label349.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label349, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label349.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label349, resources.GetString("label349.HelpString"));
             this.label349.Name = "label349";
             this.helpProvider1.SetShowHelp(this.label349, ((bool)(resources.GetObject("label349.ShowHelp"))));
             // 
             // numericUpDown_AnalogClock_Hour_Offset_X
             // 
             resources.ApplyResources(this.numericUpDown_AnalogClock_Hour_Offset_X, "numericUpDown_AnalogClock_Hour_Offset_X");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_AnalogClock_Hour_Offset_X, resources.GetString("numericUpDown_AnalogClock_Hour_Offset_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_AnalogClock_Hour_Offset_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_AnalogClock_Hour_Offset_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_AnalogClock_Hour_Offset_X, resources.GetString("numericUpDown_AnalogClock_Hour_Offset_X.HelpString"));
             this.numericUpDown_AnalogClock_Hour_Offset_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -6038,19 +7427,26 @@
             this.numericUpDown_AnalogClock_Hour_Offset_X.Name = "numericUpDown_AnalogClock_Hour_Offset_X";
             this.helpProvider1.SetShowHelp(this.numericUpDown_AnalogClock_Hour_Offset_X, ((bool)(resources.GetObject("numericUpDown_AnalogClock_Hour_Offset_X.ShowHelp"))));
             this.numericUpDown_AnalogClock_Hour_Offset_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_AnalogClock_Hour_Offset_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_OffSetX_MouseDoubleClick);
             // 
             // label350
             // 
             resources.ApplyResources(this.label350, "label350");
+            this.helpProvider1.SetHelpKeyword(this.label350, resources.GetString("label350.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label350, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label350.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label350, resources.GetString("label350.HelpString"));
             this.label350.Name = "label350";
             this.helpProvider1.SetShowHelp(this.label350, ((bool)(resources.GetObject("label350.ShowHelp"))));
             // 
             // comboBox_AnalogClock_Hour_Image
             // 
+            resources.ApplyResources(this.comboBox_AnalogClock_Hour_Image, "comboBox_AnalogClock_Hour_Image");
             this.comboBox_AnalogClock_Hour_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_AnalogClock_Hour_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_AnalogClock_Hour_Image, "comboBox_AnalogClock_Hour_Image");
             this.comboBox_AnalogClock_Hour_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_AnalogClock_Hour_Image, resources.GetString("comboBox_AnalogClock_Hour_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_AnalogClock_Hour_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_AnalogClock_Hour_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_AnalogClock_Hour_Image, resources.GetString("comboBox_AnalogClock_Hour_Image.HelpString"));
             this.comboBox_AnalogClock_Hour_Image.Name = "comboBox_AnalogClock_Hour_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_AnalogClock_Hour_Image, ((bool)(resources.GetObject("comboBox_AnalogClock_Hour_Image.ShowHelp"))));
             this.comboBox_AnalogClock_Hour_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -6062,12 +7458,18 @@
             // label217
             // 
             resources.ApplyResources(this.label217, "label217");
+            this.helpProvider1.SetHelpKeyword(this.label217, resources.GetString("label217.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label217, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label217.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label217, resources.GetString("label217.HelpString"));
             this.label217.Name = "label217";
             this.helpProvider1.SetShowHelp(this.label217, ((bool)(resources.GetObject("label217.ShowHelp"))));
             // 
             // numericUpDown_AnalogClock_Hour_Y
             // 
             resources.ApplyResources(this.numericUpDown_AnalogClock_Hour_Y, "numericUpDown_AnalogClock_Hour_Y");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_AnalogClock_Hour_Y, resources.GetString("numericUpDown_AnalogClock_Hour_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_AnalogClock_Hour_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_AnalogClock_Hour_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_AnalogClock_Hour_Y, resources.GetString("numericUpDown_AnalogClock_Hour_Y.HelpString"));
             this.numericUpDown_AnalogClock_Hour_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -6085,12 +7487,18 @@
             // label215
             // 
             resources.ApplyResources(this.label215, "label215");
+            this.helpProvider1.SetHelpKeyword(this.label215, resources.GetString("label215.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label215, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label215.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label215, resources.GetString("label215.HelpString"));
             this.label215.Name = "label215";
             this.helpProvider1.SetShowHelp(this.label215, ((bool)(resources.GetObject("label215.ShowHelp"))));
             // 
             // numericUpDown_AnalogClock_Hour_X
             // 
             resources.ApplyResources(this.numericUpDown_AnalogClock_Hour_X, "numericUpDown_AnalogClock_Hour_X");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_AnalogClock_Hour_X, resources.GetString("numericUpDown_AnalogClock_Hour_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_AnalogClock_Hour_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_AnalogClock_Hour_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_AnalogClock_Hour_X, resources.GetString("numericUpDown_AnalogClock_Hour_X.HelpString"));
             this.numericUpDown_AnalogClock_Hour_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -6108,12 +7516,18 @@
             // label216
             // 
             resources.ApplyResources(this.label216, "label216");
+            this.helpProvider1.SetHelpKeyword(this.label216, resources.GetString("label216.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label216, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label216.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label216, resources.GetString("label216.HelpString"));
             this.label216.Name = "label216";
             this.helpProvider1.SetShowHelp(this.label216, ((bool)(resources.GetObject("label216.ShowHelp"))));
             // 
             // checkBox_AnalogClock_Hour
             // 
             resources.ApplyResources(this.checkBox_AnalogClock_Hour, "checkBox_AnalogClock_Hour");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_AnalogClock_Hour, resources.GetString("checkBox_AnalogClock_Hour.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_AnalogClock_Hour, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_AnalogClock_Hour.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_AnalogClock_Hour, resources.GetString("checkBox_AnalogClock_Hour.HelpString"));
             this.checkBox_AnalogClock_Hour.Name = "checkBox_AnalogClock_Hour";
             this.helpProvider1.SetShowHelp(this.checkBox_AnalogClock_Hour, ((bool)(resources.GetObject("checkBox_AnalogClock_Hour.ShowHelp"))));
             this.checkBox_AnalogClock_Hour.UseVisualStyleBackColor = true;
@@ -6122,6 +7536,7 @@
             // 
             // groupBox4
             // 
+            resources.ApplyResources(this.groupBox4, "groupBox4");
             this.groupBox4.Controls.Add(this.comboBox_HourCenterImage_Image);
             this.groupBox4.Controls.Add(this.label310);
             this.groupBox4.Controls.Add(this.numericUpDown_HourCenterImage_Y);
@@ -6129,7 +7544,9 @@
             this.groupBox4.Controls.Add(this.numericUpDown_HourCenterImage_X);
             this.groupBox4.Controls.Add(this.label312);
             this.groupBox4.Controls.Add(this.checkBox_HourCenterImage);
-            resources.ApplyResources(this.groupBox4, "groupBox4");
+            this.helpProvider1.SetHelpKeyword(this.groupBox4, resources.GetString("groupBox4.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.groupBox4, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("groupBox4.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.groupBox4, resources.GetString("groupBox4.HelpString"));
             this.groupBox4.Name = "groupBox4";
             this.helpProvider1.SetShowHelp(this.groupBox4, ((bool)(resources.GetObject("groupBox4.ShowHelp"))));
             this.groupBox4.TabStop = false;
@@ -6137,10 +7554,13 @@
             // 
             // comboBox_HourCenterImage_Image
             // 
+            resources.ApplyResources(this.comboBox_HourCenterImage_Image, "comboBox_HourCenterImage_Image");
             this.comboBox_HourCenterImage_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_HourCenterImage_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_HourCenterImage_Image, "comboBox_HourCenterImage_Image");
             this.comboBox_HourCenterImage_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_HourCenterImage_Image, resources.GetString("comboBox_HourCenterImage_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_HourCenterImage_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_HourCenterImage_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_HourCenterImage_Image, resources.GetString("comboBox_HourCenterImage_Image.HelpString"));
             this.comboBox_HourCenterImage_Image.Name = "comboBox_HourCenterImage_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_HourCenterImage_Image, ((bool)(resources.GetObject("comboBox_HourCenterImage_Image.ShowHelp"))));
             this.comboBox_HourCenterImage_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -6152,13 +7572,19 @@
             // label310
             // 
             resources.ApplyResources(this.label310, "label310");
+            this.helpProvider1.SetHelpKeyword(this.label310, resources.GetString("label310.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label310, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label310.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label310, resources.GetString("label310.HelpString"));
             this.label310.Name = "label310";
             this.helpProvider1.SetShowHelp(this.label310, ((bool)(resources.GetObject("label310.ShowHelp"))));
             // 
             // numericUpDown_HourCenterImage_Y
             // 
-            this.numericUpDown_HourCenterImage_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_HourCenterImage_Y, "numericUpDown_HourCenterImage_Y");
+            this.numericUpDown_HourCenterImage_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_HourCenterImage_Y, resources.GetString("numericUpDown_HourCenterImage_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_HourCenterImage_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_HourCenterImage_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_HourCenterImage_Y, resources.GetString("numericUpDown_HourCenterImage_Y.HelpString"));
             this.numericUpDown_HourCenterImage_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -6172,13 +7598,19 @@
             // label311
             // 
             resources.ApplyResources(this.label311, "label311");
+            this.helpProvider1.SetHelpKeyword(this.label311, resources.GetString("label311.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label311, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label311.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label311, resources.GetString("label311.HelpString"));
             this.label311.Name = "label311";
             this.helpProvider1.SetShowHelp(this.label311, ((bool)(resources.GetObject("label311.ShowHelp"))));
             // 
             // numericUpDown_HourCenterImage_X
             // 
-            this.numericUpDown_HourCenterImage_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_HourCenterImage_X, "numericUpDown_HourCenterImage_X");
+            this.numericUpDown_HourCenterImage_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_HourCenterImage_X, resources.GetString("numericUpDown_HourCenterImage_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_HourCenterImage_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_HourCenterImage_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_HourCenterImage_X, resources.GetString("numericUpDown_HourCenterImage_X.HelpString"));
             this.numericUpDown_HourCenterImage_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -6197,12 +7629,18 @@
             // label312
             // 
             resources.ApplyResources(this.label312, "label312");
+            this.helpProvider1.SetHelpKeyword(this.label312, resources.GetString("label312.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label312, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label312.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label312, resources.GetString("label312.HelpString"));
             this.label312.Name = "label312";
             this.helpProvider1.SetShowHelp(this.label312, ((bool)(resources.GetObject("label312.ShowHelp"))));
             // 
             // checkBox_HourCenterImage
             // 
             resources.ApplyResources(this.checkBox_HourCenterImage, "checkBox_HourCenterImage");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_HourCenterImage, resources.GetString("checkBox_HourCenterImage.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_HourCenterImage, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_HourCenterImage.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_HourCenterImage, resources.GetString("checkBox_HourCenterImage.HelpString"));
             this.checkBox_HourCenterImage.Name = "checkBox_HourCenterImage";
             this.helpProvider1.SetShowHelp(this.checkBox_HourCenterImage, ((bool)(resources.GetObject("checkBox_HourCenterImage.ShowHelp"))));
             this.checkBox_HourCenterImage.UseVisualStyleBackColor = true;
@@ -6211,15 +7649,19 @@
             // 
             // tabPage31
             // 
+            resources.ApplyResources(this.tabPage31, "tabPage31");
             this.tabPage31.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage31.Controls.Add(this.groupBox_AnalogClock_Min);
             this.tabPage31.Controls.Add(this.groupBox3);
-            resources.ApplyResources(this.tabPage31, "tabPage31");
+            this.helpProvider1.SetHelpKeyword(this.tabPage31, resources.GetString("tabPage31.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage31, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage31.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage31, resources.GetString("tabPage31.HelpString"));
             this.tabPage31.Name = "tabPage31";
             this.helpProvider1.SetShowHelp(this.tabPage31, ((bool)(resources.GetObject("tabPage31.ShowHelp"))));
             // 
             // groupBox_AnalogClock_Min
             // 
+            resources.ApplyResources(this.groupBox_AnalogClock_Min, "groupBox_AnalogClock_Min");
             this.groupBox_AnalogClock_Min.Controls.Add(this.numericUpDown_AnalogClock_Min_Offset_Y);
             this.groupBox_AnalogClock_Min.Controls.Add(this.label351);
             this.groupBox_AnalogClock_Min.Controls.Add(this.numericUpDown_AnalogClock_Min_Offset_X);
@@ -6231,7 +7673,9 @@
             this.groupBox_AnalogClock_Min.Controls.Add(this.numericUpDown_AnalogClock_Min_X);
             this.groupBox_AnalogClock_Min.Controls.Add(this.label209);
             this.groupBox_AnalogClock_Min.Controls.Add(this.checkBox_AnalogClock_Min);
-            resources.ApplyResources(this.groupBox_AnalogClock_Min, "groupBox_AnalogClock_Min");
+            this.helpProvider1.SetHelpKeyword(this.groupBox_AnalogClock_Min, resources.GetString("groupBox_AnalogClock_Min.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.groupBox_AnalogClock_Min, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("groupBox_AnalogClock_Min.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.groupBox_AnalogClock_Min, resources.GetString("groupBox_AnalogClock_Min.HelpString"));
             this.groupBox_AnalogClock_Min.Name = "groupBox_AnalogClock_Min";
             this.helpProvider1.SetShowHelp(this.groupBox_AnalogClock_Min, ((bool)(resources.GetObject("groupBox_AnalogClock_Min.ShowHelp"))));
             this.groupBox_AnalogClock_Min.TabStop = false;
@@ -6240,6 +7684,9 @@
             // numericUpDown_AnalogClock_Min_Offset_Y
             // 
             resources.ApplyResources(this.numericUpDown_AnalogClock_Min_Offset_Y, "numericUpDown_AnalogClock_Min_Offset_Y");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_AnalogClock_Min_Offset_Y, resources.GetString("numericUpDown_AnalogClock_Min_Offset_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_AnalogClock_Min_Offset_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_AnalogClock_Min_Offset_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_AnalogClock_Min_Offset_Y, resources.GetString("numericUpDown_AnalogClock_Min_Offset_Y.HelpString"));
             this.numericUpDown_AnalogClock_Min_Offset_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -6253,16 +7700,23 @@
             this.numericUpDown_AnalogClock_Min_Offset_Y.Name = "numericUpDown_AnalogClock_Min_Offset_Y";
             this.helpProvider1.SetShowHelp(this.numericUpDown_AnalogClock_Min_Offset_Y, ((bool)(resources.GetObject("numericUpDown_AnalogClock_Min_Offset_Y.ShowHelp"))));
             this.numericUpDown_AnalogClock_Min_Offset_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_AnalogClock_Min_Offset_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_OffSetY_MouseDoubleClick);
             // 
             // label351
             // 
             resources.ApplyResources(this.label351, "label351");
+            this.helpProvider1.SetHelpKeyword(this.label351, resources.GetString("label351.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label351, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label351.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label351, resources.GetString("label351.HelpString"));
             this.label351.Name = "label351";
             this.helpProvider1.SetShowHelp(this.label351, ((bool)(resources.GetObject("label351.ShowHelp"))));
             // 
             // numericUpDown_AnalogClock_Min_Offset_X
             // 
             resources.ApplyResources(this.numericUpDown_AnalogClock_Min_Offset_X, "numericUpDown_AnalogClock_Min_Offset_X");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_AnalogClock_Min_Offset_X, resources.GetString("numericUpDown_AnalogClock_Min_Offset_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_AnalogClock_Min_Offset_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_AnalogClock_Min_Offset_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_AnalogClock_Min_Offset_X, resources.GetString("numericUpDown_AnalogClock_Min_Offset_X.HelpString"));
             this.numericUpDown_AnalogClock_Min_Offset_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -6276,19 +7730,26 @@
             this.numericUpDown_AnalogClock_Min_Offset_X.Name = "numericUpDown_AnalogClock_Min_Offset_X";
             this.helpProvider1.SetShowHelp(this.numericUpDown_AnalogClock_Min_Offset_X, ((bool)(resources.GetObject("numericUpDown_AnalogClock_Min_Offset_X.ShowHelp"))));
             this.numericUpDown_AnalogClock_Min_Offset_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_AnalogClock_Min_Offset_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_OffSetX_MouseDoubleClick);
             // 
             // label352
             // 
             resources.ApplyResources(this.label352, "label352");
+            this.helpProvider1.SetHelpKeyword(this.label352, resources.GetString("label352.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label352, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label352.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label352, resources.GetString("label352.HelpString"));
             this.label352.Name = "label352";
             this.helpProvider1.SetShowHelp(this.label352, ((bool)(resources.GetObject("label352.ShowHelp"))));
             // 
             // comboBox_AnalogClock_Min_Image
             // 
+            resources.ApplyResources(this.comboBox_AnalogClock_Min_Image, "comboBox_AnalogClock_Min_Image");
             this.comboBox_AnalogClock_Min_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_AnalogClock_Min_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_AnalogClock_Min_Image, "comboBox_AnalogClock_Min_Image");
             this.comboBox_AnalogClock_Min_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_AnalogClock_Min_Image, resources.GetString("comboBox_AnalogClock_Min_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_AnalogClock_Min_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_AnalogClock_Min_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_AnalogClock_Min_Image, resources.GetString("comboBox_AnalogClock_Min_Image.HelpString"));
             this.comboBox_AnalogClock_Min_Image.Name = "comboBox_AnalogClock_Min_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_AnalogClock_Min_Image, ((bool)(resources.GetObject("comboBox_AnalogClock_Min_Image.ShowHelp"))));
             this.comboBox_AnalogClock_Min_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -6300,12 +7761,18 @@
             // label207
             // 
             resources.ApplyResources(this.label207, "label207");
+            this.helpProvider1.SetHelpKeyword(this.label207, resources.GetString("label207.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label207, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label207.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label207, resources.GetString("label207.HelpString"));
             this.label207.Name = "label207";
             this.helpProvider1.SetShowHelp(this.label207, ((bool)(resources.GetObject("label207.ShowHelp"))));
             // 
             // numericUpDown_AnalogClock_Min_Y
             // 
             resources.ApplyResources(this.numericUpDown_AnalogClock_Min_Y, "numericUpDown_AnalogClock_Min_Y");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_AnalogClock_Min_Y, resources.GetString("numericUpDown_AnalogClock_Min_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_AnalogClock_Min_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_AnalogClock_Min_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_AnalogClock_Min_Y, resources.GetString("numericUpDown_AnalogClock_Min_Y.HelpString"));
             this.numericUpDown_AnalogClock_Min_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -6323,12 +7790,18 @@
             // label208
             // 
             resources.ApplyResources(this.label208, "label208");
+            this.helpProvider1.SetHelpKeyword(this.label208, resources.GetString("label208.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label208, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label208.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label208, resources.GetString("label208.HelpString"));
             this.label208.Name = "label208";
             this.helpProvider1.SetShowHelp(this.label208, ((bool)(resources.GetObject("label208.ShowHelp"))));
             // 
             // numericUpDown_AnalogClock_Min_X
             // 
             resources.ApplyResources(this.numericUpDown_AnalogClock_Min_X, "numericUpDown_AnalogClock_Min_X");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_AnalogClock_Min_X, resources.GetString("numericUpDown_AnalogClock_Min_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_AnalogClock_Min_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_AnalogClock_Min_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_AnalogClock_Min_X, resources.GetString("numericUpDown_AnalogClock_Min_X.HelpString"));
             this.numericUpDown_AnalogClock_Min_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -6346,12 +7819,18 @@
             // label209
             // 
             resources.ApplyResources(this.label209, "label209");
+            this.helpProvider1.SetHelpKeyword(this.label209, resources.GetString("label209.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label209, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label209.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label209, resources.GetString("label209.HelpString"));
             this.label209.Name = "label209";
             this.helpProvider1.SetShowHelp(this.label209, ((bool)(resources.GetObject("label209.ShowHelp"))));
             // 
             // checkBox_AnalogClock_Min
             // 
             resources.ApplyResources(this.checkBox_AnalogClock_Min, "checkBox_AnalogClock_Min");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_AnalogClock_Min, resources.GetString("checkBox_AnalogClock_Min.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_AnalogClock_Min, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_AnalogClock_Min.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_AnalogClock_Min, resources.GetString("checkBox_AnalogClock_Min.HelpString"));
             this.checkBox_AnalogClock_Min.Name = "checkBox_AnalogClock_Min";
             this.helpProvider1.SetShowHelp(this.checkBox_AnalogClock_Min, ((bool)(resources.GetObject("checkBox_AnalogClock_Min.ShowHelp"))));
             this.checkBox_AnalogClock_Min.UseVisualStyleBackColor = true;
@@ -6360,6 +7839,7 @@
             // 
             // groupBox3
             // 
+            resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Controls.Add(this.comboBox_MinCenterImage_Image);
             this.groupBox3.Controls.Add(this.label307);
             this.groupBox3.Controls.Add(this.numericUpDown_MinCenterImage_Y);
@@ -6367,7 +7847,9 @@
             this.groupBox3.Controls.Add(this.numericUpDown_MinCenterImage_X);
             this.groupBox3.Controls.Add(this.label309);
             this.groupBox3.Controls.Add(this.checkBox_MinCenterImage);
-            resources.ApplyResources(this.groupBox3, "groupBox3");
+            this.helpProvider1.SetHelpKeyword(this.groupBox3, resources.GetString("groupBox3.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.groupBox3, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("groupBox3.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.groupBox3, resources.GetString("groupBox3.HelpString"));
             this.groupBox3.Name = "groupBox3";
             this.helpProvider1.SetShowHelp(this.groupBox3, ((bool)(resources.GetObject("groupBox3.ShowHelp"))));
             this.groupBox3.TabStop = false;
@@ -6375,10 +7857,13 @@
             // 
             // comboBox_MinCenterImage_Image
             // 
+            resources.ApplyResources(this.comboBox_MinCenterImage_Image, "comboBox_MinCenterImage_Image");
             this.comboBox_MinCenterImage_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_MinCenterImage_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_MinCenterImage_Image, "comboBox_MinCenterImage_Image");
             this.comboBox_MinCenterImage_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_MinCenterImage_Image, resources.GetString("comboBox_MinCenterImage_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_MinCenterImage_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_MinCenterImage_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_MinCenterImage_Image, resources.GetString("comboBox_MinCenterImage_Image.HelpString"));
             this.comboBox_MinCenterImage_Image.Name = "comboBox_MinCenterImage_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_MinCenterImage_Image, ((bool)(resources.GetObject("comboBox_MinCenterImage_Image.ShowHelp"))));
             this.comboBox_MinCenterImage_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -6390,13 +7875,19 @@
             // label307
             // 
             resources.ApplyResources(this.label307, "label307");
+            this.helpProvider1.SetHelpKeyword(this.label307, resources.GetString("label307.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label307, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label307.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label307, resources.GetString("label307.HelpString"));
             this.label307.Name = "label307";
             this.helpProvider1.SetShowHelp(this.label307, ((bool)(resources.GetObject("label307.ShowHelp"))));
             // 
             // numericUpDown_MinCenterImage_Y
             // 
-            this.numericUpDown_MinCenterImage_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_MinCenterImage_Y, "numericUpDown_MinCenterImage_Y");
+            this.numericUpDown_MinCenterImage_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_MinCenterImage_Y, resources.GetString("numericUpDown_MinCenterImage_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_MinCenterImage_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_MinCenterImage_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_MinCenterImage_Y, resources.GetString("numericUpDown_MinCenterImage_Y.HelpString"));
             this.numericUpDown_MinCenterImage_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -6415,13 +7906,19 @@
             // label308
             // 
             resources.ApplyResources(this.label308, "label308");
+            this.helpProvider1.SetHelpKeyword(this.label308, resources.GetString("label308.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label308, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label308.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label308, resources.GetString("label308.HelpString"));
             this.label308.Name = "label308";
             this.helpProvider1.SetShowHelp(this.label308, ((bool)(resources.GetObject("label308.ShowHelp"))));
             // 
             // numericUpDown_MinCenterImage_X
             // 
-            this.numericUpDown_MinCenterImage_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_MinCenterImage_X, "numericUpDown_MinCenterImage_X");
+            this.numericUpDown_MinCenterImage_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_MinCenterImage_X, resources.GetString("numericUpDown_MinCenterImage_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_MinCenterImage_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_MinCenterImage_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_MinCenterImage_X, resources.GetString("numericUpDown_MinCenterImage_X.HelpString"));
             this.numericUpDown_MinCenterImage_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -6440,12 +7937,18 @@
             // label309
             // 
             resources.ApplyResources(this.label309, "label309");
+            this.helpProvider1.SetHelpKeyword(this.label309, resources.GetString("label309.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label309, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label309.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label309, resources.GetString("label309.HelpString"));
             this.label309.Name = "label309";
             this.helpProvider1.SetShowHelp(this.label309, ((bool)(resources.GetObject("label309.ShowHelp"))));
             // 
             // checkBox_MinCenterImage
             // 
             resources.ApplyResources(this.checkBox_MinCenterImage, "checkBox_MinCenterImage");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_MinCenterImage, resources.GetString("checkBox_MinCenterImage.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_MinCenterImage, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_MinCenterImage.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_MinCenterImage, resources.GetString("checkBox_MinCenterImage.HelpString"));
             this.checkBox_MinCenterImage.Name = "checkBox_MinCenterImage";
             this.helpProvider1.SetShowHelp(this.checkBox_MinCenterImage, ((bool)(resources.GetObject("checkBox_MinCenterImage.ShowHelp"))));
             this.checkBox_MinCenterImage.UseVisualStyleBackColor = true;
@@ -6454,15 +7957,19 @@
             // 
             // tabPage32
             // 
+            resources.ApplyResources(this.tabPage32, "tabPage32");
             this.tabPage32.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage32.Controls.Add(this.groupBox2);
             this.tabPage32.Controls.Add(this.groupBox_AnalogClock_Sec);
-            resources.ApplyResources(this.tabPage32, "tabPage32");
+            this.helpProvider1.SetHelpKeyword(this.tabPage32, resources.GetString("tabPage32.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage32, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage32.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage32, resources.GetString("tabPage32.HelpString"));
             this.tabPage32.Name = "tabPage32";
             this.helpProvider1.SetShowHelp(this.tabPage32, ((bool)(resources.GetObject("tabPage32.ShowHelp"))));
             // 
             // groupBox2
             // 
+            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Controls.Add(this.comboBox_SecCenterImage_Image);
             this.groupBox2.Controls.Add(this.label304);
             this.groupBox2.Controls.Add(this.numericUpDown_SecCenterImage_Y);
@@ -6470,7 +7977,9 @@
             this.groupBox2.Controls.Add(this.numericUpDown_SecCenterImage_X);
             this.groupBox2.Controls.Add(this.label306);
             this.groupBox2.Controls.Add(this.checkBox_SecCenterImage);
-            resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.helpProvider1.SetHelpKeyword(this.groupBox2, resources.GetString("groupBox2.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.groupBox2, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("groupBox2.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.groupBox2, resources.GetString("groupBox2.HelpString"));
             this.groupBox2.Name = "groupBox2";
             this.helpProvider1.SetShowHelp(this.groupBox2, ((bool)(resources.GetObject("groupBox2.ShowHelp"))));
             this.groupBox2.TabStop = false;
@@ -6478,10 +7987,13 @@
             // 
             // comboBox_SecCenterImage_Image
             // 
+            resources.ApplyResources(this.comboBox_SecCenterImage_Image, "comboBox_SecCenterImage_Image");
             this.comboBox_SecCenterImage_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_SecCenterImage_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_SecCenterImage_Image, "comboBox_SecCenterImage_Image");
             this.comboBox_SecCenterImage_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_SecCenterImage_Image, resources.GetString("comboBox_SecCenterImage_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_SecCenterImage_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_SecCenterImage_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_SecCenterImage_Image, resources.GetString("comboBox_SecCenterImage_Image.HelpString"));
             this.comboBox_SecCenterImage_Image.Name = "comboBox_SecCenterImage_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_SecCenterImage_Image, ((bool)(resources.GetObject("comboBox_SecCenterImage_Image.ShowHelp"))));
             this.comboBox_SecCenterImage_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -6493,13 +8005,19 @@
             // label304
             // 
             resources.ApplyResources(this.label304, "label304");
+            this.helpProvider1.SetHelpKeyword(this.label304, resources.GetString("label304.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label304, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label304.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label304, resources.GetString("label304.HelpString"));
             this.label304.Name = "label304";
             this.helpProvider1.SetShowHelp(this.label304, ((bool)(resources.GetObject("label304.ShowHelp"))));
             // 
             // numericUpDown_SecCenterImage_Y
             // 
-            this.numericUpDown_SecCenterImage_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_SecCenterImage_Y, "numericUpDown_SecCenterImage_Y");
+            this.numericUpDown_SecCenterImage_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_SecCenterImage_Y, resources.GetString("numericUpDown_SecCenterImage_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_SecCenterImage_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_SecCenterImage_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_SecCenterImage_Y, resources.GetString("numericUpDown_SecCenterImage_Y.HelpString"));
             this.numericUpDown_SecCenterImage_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -6513,13 +8031,19 @@
             // label305
             // 
             resources.ApplyResources(this.label305, "label305");
+            this.helpProvider1.SetHelpKeyword(this.label305, resources.GetString("label305.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label305, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label305.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label305, resources.GetString("label305.HelpString"));
             this.label305.Name = "label305";
             this.helpProvider1.SetShowHelp(this.label305, ((bool)(resources.GetObject("label305.ShowHelp"))));
             // 
             // numericUpDown_SecCenterImage_X
             // 
-            this.numericUpDown_SecCenterImage_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_SecCenterImage_X, "numericUpDown_SecCenterImage_X");
+            this.numericUpDown_SecCenterImage_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_SecCenterImage_X, resources.GetString("numericUpDown_SecCenterImage_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_SecCenterImage_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_SecCenterImage_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_SecCenterImage_X, resources.GetString("numericUpDown_SecCenterImage_X.HelpString"));
             this.numericUpDown_SecCenterImage_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -6533,12 +8057,18 @@
             // label306
             // 
             resources.ApplyResources(this.label306, "label306");
+            this.helpProvider1.SetHelpKeyword(this.label306, resources.GetString("label306.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label306, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label306.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label306, resources.GetString("label306.HelpString"));
             this.label306.Name = "label306";
             this.helpProvider1.SetShowHelp(this.label306, ((bool)(resources.GetObject("label306.ShowHelp"))));
             // 
             // checkBox_SecCenterImage
             // 
             resources.ApplyResources(this.checkBox_SecCenterImage, "checkBox_SecCenterImage");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_SecCenterImage, resources.GetString("checkBox_SecCenterImage.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_SecCenterImage, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_SecCenterImage.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_SecCenterImage, resources.GetString("checkBox_SecCenterImage.HelpString"));
             this.checkBox_SecCenterImage.Name = "checkBox_SecCenterImage";
             this.helpProvider1.SetShowHelp(this.checkBox_SecCenterImage, ((bool)(resources.GetObject("checkBox_SecCenterImage.ShowHelp"))));
             this.checkBox_SecCenterImage.UseVisualStyleBackColor = true;
@@ -6547,6 +8077,7 @@
             // 
             // groupBox_AnalogClock_Sec
             // 
+            resources.ApplyResources(this.groupBox_AnalogClock_Sec, "groupBox_AnalogClock_Sec");
             this.groupBox_AnalogClock_Sec.Controls.Add(this.numericUpDown_AnalogClock_Sec_Offset_Y);
             this.groupBox_AnalogClock_Sec.Controls.Add(this.label353);
             this.groupBox_AnalogClock_Sec.Controls.Add(this.numericUpDown_AnalogClock_Sec_Offset_X);
@@ -6558,7 +8089,9 @@
             this.groupBox_AnalogClock_Sec.Controls.Add(this.numericUpDown_AnalogClock_Sec_X);
             this.groupBox_AnalogClock_Sec.Controls.Add(this.label212);
             this.groupBox_AnalogClock_Sec.Controls.Add(this.checkBox_AnalogClock_Sec);
-            resources.ApplyResources(this.groupBox_AnalogClock_Sec, "groupBox_AnalogClock_Sec");
+            this.helpProvider1.SetHelpKeyword(this.groupBox_AnalogClock_Sec, resources.GetString("groupBox_AnalogClock_Sec.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.groupBox_AnalogClock_Sec, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("groupBox_AnalogClock_Sec.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.groupBox_AnalogClock_Sec, resources.GetString("groupBox_AnalogClock_Sec.HelpString"));
             this.groupBox_AnalogClock_Sec.Name = "groupBox_AnalogClock_Sec";
             this.helpProvider1.SetShowHelp(this.groupBox_AnalogClock_Sec, ((bool)(resources.GetObject("groupBox_AnalogClock_Sec.ShowHelp"))));
             this.groupBox_AnalogClock_Sec.TabStop = false;
@@ -6567,6 +8100,9 @@
             // numericUpDown_AnalogClock_Sec_Offset_Y
             // 
             resources.ApplyResources(this.numericUpDown_AnalogClock_Sec_Offset_Y, "numericUpDown_AnalogClock_Sec_Offset_Y");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_AnalogClock_Sec_Offset_Y, resources.GetString("numericUpDown_AnalogClock_Sec_Offset_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_AnalogClock_Sec_Offset_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_AnalogClock_Sec_Offset_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_AnalogClock_Sec_Offset_Y, resources.GetString("numericUpDown_AnalogClock_Sec_Offset_Y.HelpString"));
             this.numericUpDown_AnalogClock_Sec_Offset_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -6580,16 +8116,23 @@
             this.numericUpDown_AnalogClock_Sec_Offset_Y.Name = "numericUpDown_AnalogClock_Sec_Offset_Y";
             this.helpProvider1.SetShowHelp(this.numericUpDown_AnalogClock_Sec_Offset_Y, ((bool)(resources.GetObject("numericUpDown_AnalogClock_Sec_Offset_Y.ShowHelp"))));
             this.numericUpDown_AnalogClock_Sec_Offset_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_AnalogClock_Sec_Offset_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_OffSetY_MouseDoubleClick);
             // 
             // label353
             // 
             resources.ApplyResources(this.label353, "label353");
+            this.helpProvider1.SetHelpKeyword(this.label353, resources.GetString("label353.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label353, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label353.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label353, resources.GetString("label353.HelpString"));
             this.label353.Name = "label353";
             this.helpProvider1.SetShowHelp(this.label353, ((bool)(resources.GetObject("label353.ShowHelp"))));
             // 
             // numericUpDown_AnalogClock_Sec_Offset_X
             // 
             resources.ApplyResources(this.numericUpDown_AnalogClock_Sec_Offset_X, "numericUpDown_AnalogClock_Sec_Offset_X");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_AnalogClock_Sec_Offset_X, resources.GetString("numericUpDown_AnalogClock_Sec_Offset_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_AnalogClock_Sec_Offset_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_AnalogClock_Sec_Offset_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_AnalogClock_Sec_Offset_X, resources.GetString("numericUpDown_AnalogClock_Sec_Offset_X.HelpString"));
             this.numericUpDown_AnalogClock_Sec_Offset_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -6603,19 +8146,26 @@
             this.numericUpDown_AnalogClock_Sec_Offset_X.Name = "numericUpDown_AnalogClock_Sec_Offset_X";
             this.helpProvider1.SetShowHelp(this.numericUpDown_AnalogClock_Sec_Offset_X, ((bool)(resources.GetObject("numericUpDown_AnalogClock_Sec_Offset_X.ShowHelp"))));
             this.numericUpDown_AnalogClock_Sec_Offset_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_AnalogClock_Sec_Offset_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_OffSetX_MouseDoubleClick);
             // 
             // label354
             // 
             resources.ApplyResources(this.label354, "label354");
+            this.helpProvider1.SetHelpKeyword(this.label354, resources.GetString("label354.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label354, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label354.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label354, resources.GetString("label354.HelpString"));
             this.label354.Name = "label354";
             this.helpProvider1.SetShowHelp(this.label354, ((bool)(resources.GetObject("label354.ShowHelp"))));
             // 
             // comboBox_AnalogClock_Sec_Image
             // 
+            resources.ApplyResources(this.comboBox_AnalogClock_Sec_Image, "comboBox_AnalogClock_Sec_Image");
             this.comboBox_AnalogClock_Sec_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_AnalogClock_Sec_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_AnalogClock_Sec_Image, "comboBox_AnalogClock_Sec_Image");
             this.comboBox_AnalogClock_Sec_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_AnalogClock_Sec_Image, resources.GetString("comboBox_AnalogClock_Sec_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_AnalogClock_Sec_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_AnalogClock_Sec_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_AnalogClock_Sec_Image, resources.GetString("comboBox_AnalogClock_Sec_Image.HelpString"));
             this.comboBox_AnalogClock_Sec_Image.Name = "comboBox_AnalogClock_Sec_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_AnalogClock_Sec_Image, ((bool)(resources.GetObject("comboBox_AnalogClock_Sec_Image.ShowHelp"))));
             this.comboBox_AnalogClock_Sec_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -6627,12 +8177,18 @@
             // label210
             // 
             resources.ApplyResources(this.label210, "label210");
+            this.helpProvider1.SetHelpKeyword(this.label210, resources.GetString("label210.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label210, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label210.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label210, resources.GetString("label210.HelpString"));
             this.label210.Name = "label210";
             this.helpProvider1.SetShowHelp(this.label210, ((bool)(resources.GetObject("label210.ShowHelp"))));
             // 
             // numericUpDown_AnalogClock_Sec_Y
             // 
             resources.ApplyResources(this.numericUpDown_AnalogClock_Sec_Y, "numericUpDown_AnalogClock_Sec_Y");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_AnalogClock_Sec_Y, resources.GetString("numericUpDown_AnalogClock_Sec_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_AnalogClock_Sec_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_AnalogClock_Sec_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_AnalogClock_Sec_Y, resources.GetString("numericUpDown_AnalogClock_Sec_Y.HelpString"));
             this.numericUpDown_AnalogClock_Sec_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -6650,12 +8206,18 @@
             // label211
             // 
             resources.ApplyResources(this.label211, "label211");
+            this.helpProvider1.SetHelpKeyword(this.label211, resources.GetString("label211.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label211, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label211.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label211, resources.GetString("label211.HelpString"));
             this.label211.Name = "label211";
             this.helpProvider1.SetShowHelp(this.label211, ((bool)(resources.GetObject("label211.ShowHelp"))));
             // 
             // numericUpDown_AnalogClock_Sec_X
             // 
             resources.ApplyResources(this.numericUpDown_AnalogClock_Sec_X, "numericUpDown_AnalogClock_Sec_X");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_AnalogClock_Sec_X, resources.GetString("numericUpDown_AnalogClock_Sec_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_AnalogClock_Sec_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_AnalogClock_Sec_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_AnalogClock_Sec_X, resources.GetString("numericUpDown_AnalogClock_Sec_X.HelpString"));
             this.numericUpDown_AnalogClock_Sec_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -6673,12 +8235,18 @@
             // label212
             // 
             resources.ApplyResources(this.label212, "label212");
+            this.helpProvider1.SetHelpKeyword(this.label212, resources.GetString("label212.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label212, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label212.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label212, resources.GetString("label212.HelpString"));
             this.label212.Name = "label212";
             this.helpProvider1.SetShowHelp(this.label212, ((bool)(resources.GetObject("label212.ShowHelp"))));
             // 
             // checkBox_AnalogClock_Sec
             // 
             resources.ApplyResources(this.checkBox_AnalogClock_Sec, "checkBox_AnalogClock_Sec");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_AnalogClock_Sec, resources.GetString("checkBox_AnalogClock_Sec.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_AnalogClock_Sec, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_AnalogClock_Sec.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_AnalogClock_Sec, resources.GetString("checkBox_AnalogClock_Sec.HelpString"));
             this.checkBox_AnalogClock_Sec.Name = "checkBox_AnalogClock_Sec";
             this.helpProvider1.SetShowHelp(this.checkBox_AnalogClock_Sec, ((bool)(resources.GetObject("checkBox_AnalogClock_Sec.ShowHelp"))));
             this.checkBox_AnalogClock_Sec.UseVisualStyleBackColor = true;
@@ -6688,6 +8256,9 @@
             // checkBox_AnalogClock
             // 
             resources.ApplyResources(this.checkBox_AnalogClock, "checkBox_AnalogClock");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_AnalogClock, resources.GetString("checkBox_AnalogClock.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_AnalogClock, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_AnalogClock.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_AnalogClock, resources.GetString("checkBox_AnalogClock.HelpString"));
             this.checkBox_AnalogClock.Name = "checkBox_AnalogClock";
             this.helpProvider1.SetShowHelp(this.checkBox_AnalogClock, ((bool)(resources.GetObject("checkBox_AnalogClock.ShowHelp"))));
             this.checkBox_AnalogClock.UseVisualStyleBackColor = true;
@@ -6697,6 +8268,9 @@
             // button_AnalogClock
             // 
             resources.ApplyResources(this.button_AnalogClock, "button_AnalogClock");
+            this.helpProvider1.SetHelpKeyword(this.button_AnalogClock, resources.GetString("button_AnalogClock.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_AnalogClock, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_AnalogClock.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_AnalogClock, resources.GetString("button_AnalogClock.HelpString"));
             this.button_AnalogClock.Name = "button_AnalogClock";
             this.helpProvider1.SetShowHelp(this.button_AnalogClock, ((bool)(resources.GetObject("button_AnalogClock.ShowHelp"))));
             this.button_AnalogClock.UseVisualStyleBackColor = true;
@@ -6704,26 +8278,34 @@
             // 
             // panel_Battery
             // 
+            resources.ApplyResources(this.panel_Battery, "panel_Battery");
             this.panel_Battery.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_Battery.Controls.Add(this.tabControl4);
             this.panel_Battery.Controls.Add(this.checkBox_Battery);
-            resources.ApplyResources(this.panel_Battery, "panel_Battery");
+            this.helpProvider1.SetHelpKeyword(this.panel_Battery, resources.GetString("panel_Battery.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel_Battery, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_Battery.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel_Battery, resources.GetString("panel_Battery.HelpString"));
             this.panel_Battery.Name = "panel_Battery";
             this.helpProvider1.SetShowHelp(this.panel_Battery, ((bool)(resources.GetObject("panel_Battery.ShowHelp"))));
             // 
             // tabControl4
             // 
+            resources.ApplyResources(this.tabControl4, "tabControl4");
             this.tabControl4.Controls.Add(this.tabPage21);
             this.tabControl4.Controls.Add(this.tabPage28);
             this.tabControl4.Controls.Add(this.tabPage22);
             this.tabControl4.Controls.Add(this.tabPage23);
-            resources.ApplyResources(this.tabControl4, "tabControl4");
+            this.tabControl4.Controls.Add(this.tabPage35);
+            this.helpProvider1.SetHelpKeyword(this.tabControl4, resources.GetString("tabControl4.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabControl4, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabControl4.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabControl4, resources.GetString("tabControl4.HelpString"));
             this.tabControl4.Name = "tabControl4";
             this.tabControl4.SelectedIndex = 0;
             this.helpProvider1.SetShowHelp(this.tabControl4, ((bool)(resources.GetObject("tabControl4.ShowHelp"))));
             // 
             // tabPage21
             // 
+            resources.ApplyResources(this.tabPage21, "tabPage21");
             this.tabPage21.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage21.Controls.Add(this.comboBox_Battery_Text_Image);
             this.tabPage21.Controls.Add(this.numericUpDown_Battery_Text_EndCorner_X);
@@ -6744,16 +8326,21 @@
             this.tabPage21.Controls.Add(this.label191);
             this.tabPage21.Controls.Add(this.label192);
             this.tabPage21.Controls.Add(this.label193);
-            resources.ApplyResources(this.tabPage21, "tabPage21");
+            this.helpProvider1.SetHelpKeyword(this.tabPage21, resources.GetString("tabPage21.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage21, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage21.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage21, resources.GetString("tabPage21.HelpString"));
             this.tabPage21.Name = "tabPage21";
             this.helpProvider1.SetShowHelp(this.tabPage21, ((bool)(resources.GetObject("tabPage21.ShowHelp"))));
             // 
             // comboBox_Battery_Text_Image
             // 
+            resources.ApplyResources(this.comboBox_Battery_Text_Image, "comboBox_Battery_Text_Image");
             this.comboBox_Battery_Text_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Battery_Text_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Battery_Text_Image, "comboBox_Battery_Text_Image");
             this.comboBox_Battery_Text_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Battery_Text_Image, resources.GetString("comboBox_Battery_Text_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Battery_Text_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Battery_Text_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Battery_Text_Image, resources.GetString("comboBox_Battery_Text_Image.HelpString"));
             this.comboBox_Battery_Text_Image.Name = "comboBox_Battery_Text_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_Battery_Text_Image, ((bool)(resources.GetObject("comboBox_Battery_Text_Image.ShowHelp"))));
             this.comboBox_Battery_Text_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -6764,8 +8351,11 @@
             // 
             // numericUpDown_Battery_Text_EndCorner_X
             // 
-            this.numericUpDown_Battery_Text_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_Battery_Text_EndCorner_X, "numericUpDown_Battery_Text_EndCorner_X");
+            this.numericUpDown_Battery_Text_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Text_EndCorner_X, resources.GetString("numericUpDown_Battery_Text_EndCorner_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Text_EndCorner_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Text_EndCorner_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Text_EndCorner_X, resources.GetString("numericUpDown_Battery_Text_EndCorner_X.HelpString"));
             this.numericUpDown_Battery_Text_EndCorner_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -6784,6 +8374,9 @@
             // numericUpDown_Battery_Text_Count
             // 
             resources.ApplyResources(this.numericUpDown_Battery_Text_Count, "numericUpDown_Battery_Text_Count");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Text_Count, resources.GetString("numericUpDown_Battery_Text_Count.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Text_Count, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Text_Count.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Text_Count, resources.GetString("numericUpDown_Battery_Text_Count.HelpString"));
             this.numericUpDown_Battery_Text_Count.Maximum = new decimal(new int[] {
             99,
             0,
@@ -6800,8 +8393,11 @@
             // 
             // numericUpDown_Battery_Text_StartCorner_Y
             // 
-            this.numericUpDown_Battery_Text_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_Battery_Text_StartCorner_Y, "numericUpDown_Battery_Text_StartCorner_Y");
+            this.numericUpDown_Battery_Text_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Text_StartCorner_Y, resources.GetString("numericUpDown_Battery_Text_StartCorner_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Text_StartCorner_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Text_StartCorner_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Text_StartCorner_Y, resources.GetString("numericUpDown_Battery_Text_StartCorner_Y.HelpString"));
             this.numericUpDown_Battery_Text_StartCorner_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -6819,8 +8415,11 @@
             // 
             // numericUpDown_Battery_Text_StartCorner_X
             // 
-            this.numericUpDown_Battery_Text_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_Battery_Text_StartCorner_X, "numericUpDown_Battery_Text_StartCorner_X");
+            this.numericUpDown_Battery_Text_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Text_StartCorner_X, resources.GetString("numericUpDown_Battery_Text_StartCorner_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Text_StartCorner_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Text_StartCorner_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Text_StartCorner_X, resources.GetString("numericUpDown_Battery_Text_StartCorner_X.HelpString"));
             this.numericUpDown_Battery_Text_StartCorner_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -6839,6 +8438,9 @@
             // numericUpDown_Battery_Text_Spacing
             // 
             resources.ApplyResources(this.numericUpDown_Battery_Text_Spacing, "numericUpDown_Battery_Text_Spacing");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Text_Spacing, resources.GetString("numericUpDown_Battery_Text_Spacing.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Text_Spacing, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Text_Spacing.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Text_Spacing, resources.GetString("numericUpDown_Battery_Text_Spacing.HelpString"));
             this.numericUpDown_Battery_Text_Spacing.Maximum = new decimal(new int[] {
             999,
             0,
@@ -6856,6 +8458,9 @@
             // checkBox_Battery_Text
             // 
             resources.ApplyResources(this.checkBox_Battery_Text, "checkBox_Battery_Text");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Battery_Text, resources.GetString("checkBox_Battery_Text.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Battery_Text, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Battery_Text.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Battery_Text, resources.GetString("checkBox_Battery_Text.HelpString"));
             this.checkBox_Battery_Text.Name = "checkBox_Battery_Text";
             this.helpProvider1.SetShowHelp(this.checkBox_Battery_Text, ((bool)(resources.GetObject("checkBox_Battery_Text.ShowHelp"))));
             this.checkBox_Battery_Text.UseVisualStyleBackColor = true;
@@ -6865,20 +8470,29 @@
             // label184
             // 
             resources.ApplyResources(this.label184, "label184");
+            this.helpProvider1.SetHelpKeyword(this.label184, resources.GetString("label184.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label184, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label184.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label184, resources.GetString("label184.HelpString"));
             this.label184.Name = "label184";
             this.helpProvider1.SetShowHelp(this.label184, ((bool)(resources.GetObject("label184.ShowHelp"))));
             // 
             // label185
             // 
             resources.ApplyResources(this.label185, "label185");
+            this.helpProvider1.SetHelpKeyword(this.label185, resources.GetString("label185.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label185, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label185.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label185, resources.GetString("label185.HelpString"));
             this.label185.Name = "label185";
             this.helpProvider1.SetShowHelp(this.label185, ((bool)(resources.GetObject("label185.ShowHelp"))));
             // 
             // comboBox_Battery_Text_Alignment
             // 
-            this.comboBox_Battery_Text_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.comboBox_Battery_Text_Alignment, "comboBox_Battery_Text_Alignment");
+            this.comboBox_Battery_Text_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_Battery_Text_Alignment.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Battery_Text_Alignment, resources.GetString("comboBox_Battery_Text_Alignment.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Battery_Text_Alignment, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Battery_Text_Alignment.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Battery_Text_Alignment, resources.GetString("comboBox_Battery_Text_Alignment.HelpString"));
             this.comboBox_Battery_Text_Alignment.Items.AddRange(new object[] {
             resources.GetString("comboBox_Battery_Text_Alignment.Items"),
             resources.GetString("comboBox_Battery_Text_Alignment.Items1"),
@@ -6896,25 +8510,37 @@
             // label186
             // 
             resources.ApplyResources(this.label186, "label186");
+            this.helpProvider1.SetHelpKeyword(this.label186, resources.GetString("label186.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label186, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label186.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label186, resources.GetString("label186.HelpString"));
             this.label186.Name = "label186";
             this.helpProvider1.SetShowHelp(this.label186, ((bool)(resources.GetObject("label186.ShowHelp"))));
             // 
             // label187
             // 
             resources.ApplyResources(this.label187, "label187");
+            this.helpProvider1.SetHelpKeyword(this.label187, resources.GetString("label187.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label187, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label187.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label187, resources.GetString("label187.HelpString"));
             this.label187.Name = "label187";
             this.helpProvider1.SetShowHelp(this.label187, ((bool)(resources.GetObject("label187.ShowHelp"))));
             // 
             // label188
             // 
             resources.ApplyResources(this.label188, "label188");
+            this.helpProvider1.SetHelpKeyword(this.label188, resources.GetString("label188.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label188, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label188.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label188, resources.GetString("label188.HelpString"));
             this.label188.Name = "label188";
             this.helpProvider1.SetShowHelp(this.label188, ((bool)(resources.GetObject("label188.ShowHelp"))));
             // 
             // numericUpDown_Battery_Text_EndCorner_Y
             // 
-            this.numericUpDown_Battery_Text_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_Battery_Text_EndCorner_Y, "numericUpDown_Battery_Text_EndCorner_Y");
+            this.numericUpDown_Battery_Text_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Text_EndCorner_Y, resources.GetString("numericUpDown_Battery_Text_EndCorner_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Text_EndCorner_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Text_EndCorner_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Text_EndCorner_Y, resources.GetString("numericUpDown_Battery_Text_EndCorner_Y.HelpString"));
             this.numericUpDown_Battery_Text_EndCorner_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -6933,35 +8559,51 @@
             // label189
             // 
             resources.ApplyResources(this.label189, "label189");
+            this.helpProvider1.SetHelpKeyword(this.label189, resources.GetString("label189.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label189, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label189.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label189, resources.GetString("label189.HelpString"));
             this.label189.Name = "label189";
             this.helpProvider1.SetShowHelp(this.label189, ((bool)(resources.GetObject("label189.ShowHelp"))));
             // 
             // label190
             // 
             resources.ApplyResources(this.label190, "label190");
+            this.helpProvider1.SetHelpKeyword(this.label190, resources.GetString("label190.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label190, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label190.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label190, resources.GetString("label190.HelpString"));
             this.label190.Name = "label190";
             this.helpProvider1.SetShowHelp(this.label190, ((bool)(resources.GetObject("label190.ShowHelp"))));
             // 
             // label191
             // 
             resources.ApplyResources(this.label191, "label191");
+            this.helpProvider1.SetHelpKeyword(this.label191, resources.GetString("label191.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label191, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label191.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label191, resources.GetString("label191.HelpString"));
             this.label191.Name = "label191";
             this.helpProvider1.SetShowHelp(this.label191, ((bool)(resources.GetObject("label191.ShowHelp"))));
             // 
             // label192
             // 
             resources.ApplyResources(this.label192, "label192");
+            this.helpProvider1.SetHelpKeyword(this.label192, resources.GetString("label192.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label192, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label192.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label192, resources.GetString("label192.HelpString"));
             this.label192.Name = "label192";
             this.helpProvider1.SetShowHelp(this.label192, ((bool)(resources.GetObject("label192.ShowHelp"))));
             // 
             // label193
             // 
             resources.ApplyResources(this.label193, "label193");
+            this.helpProvider1.SetHelpKeyword(this.label193, resources.GetString("label193.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label193, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label193.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label193, resources.GetString("label193.HelpString"));
             this.label193.Name = "label193";
             this.helpProvider1.SetShowHelp(this.label193, ((bool)(resources.GetObject("label193.ShowHelp"))));
             // 
             // tabPage28
             // 
+            resources.ApplyResources(this.tabPage28, "tabPage28");
             this.tabPage28.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage28.Controls.Add(this.comboBox_Battery_Percent_Image);
             this.tabPage28.Controls.Add(this.numericUpDown_Battery_Percent_Y);
@@ -6971,16 +8613,21 @@
             this.tabPage28.Controls.Add(this.label301);
             this.tabPage28.Controls.Add(this.label302);
             this.tabPage28.Controls.Add(this.label303);
-            resources.ApplyResources(this.tabPage28, "tabPage28");
+            this.helpProvider1.SetHelpKeyword(this.tabPage28, resources.GetString("tabPage28.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage28, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage28.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage28, resources.GetString("tabPage28.HelpString"));
             this.tabPage28.Name = "tabPage28";
             this.helpProvider1.SetShowHelp(this.tabPage28, ((bool)(resources.GetObject("tabPage28.ShowHelp"))));
             // 
             // comboBox_Battery_Percent_Image
             // 
+            resources.ApplyResources(this.comboBox_Battery_Percent_Image, "comboBox_Battery_Percent_Image");
             this.comboBox_Battery_Percent_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Battery_Percent_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Battery_Percent_Image, "comboBox_Battery_Percent_Image");
             this.comboBox_Battery_Percent_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Battery_Percent_Image, resources.GetString("comboBox_Battery_Percent_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Battery_Percent_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Battery_Percent_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Battery_Percent_Image, resources.GetString("comboBox_Battery_Percent_Image.HelpString"));
             this.comboBox_Battery_Percent_Image.Name = "comboBox_Battery_Percent_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_Battery_Percent_Image, ((bool)(resources.GetObject("comboBox_Battery_Percent_Image.ShowHelp"))));
             this.comboBox_Battery_Percent_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -6991,8 +8638,11 @@
             // 
             // numericUpDown_Battery_Percent_Y
             // 
-            this.numericUpDown_Battery_Percent_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_Battery_Percent_Y, "numericUpDown_Battery_Percent_Y");
+            this.numericUpDown_Battery_Percent_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Percent_Y, resources.GetString("numericUpDown_Battery_Percent_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Percent_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Percent_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Percent_Y, resources.GetString("numericUpDown_Battery_Percent_Y.HelpString"));
             this.numericUpDown_Battery_Percent_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -7010,8 +8660,11 @@
             // 
             // numericUpDown_Battery_Percent_X
             // 
-            this.numericUpDown_Battery_Percent_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_Battery_Percent_X, "numericUpDown_Battery_Percent_X");
+            this.numericUpDown_Battery_Percent_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Percent_X, resources.GetString("numericUpDown_Battery_Percent_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Percent_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Percent_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Percent_X, resources.GetString("numericUpDown_Battery_Percent_X.HelpString"));
             this.numericUpDown_Battery_Percent_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -7030,6 +8683,9 @@
             // checkBox_Battery_Percent
             // 
             resources.ApplyResources(this.checkBox_Battery_Percent, "checkBox_Battery_Percent");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Battery_Percent, resources.GetString("checkBox_Battery_Percent.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Battery_Percent, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Battery_Percent.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Battery_Percent, resources.GetString("checkBox_Battery_Percent.HelpString"));
             this.checkBox_Battery_Percent.Name = "checkBox_Battery_Percent";
             this.helpProvider1.SetShowHelp(this.checkBox_Battery_Percent, ((bool)(resources.GetObject("checkBox_Battery_Percent.ShowHelp"))));
             this.checkBox_Battery_Percent.UseVisualStyleBackColor = true;
@@ -7039,29 +8695,42 @@
             // label300
             // 
             resources.ApplyResources(this.label300, "label300");
+            this.helpProvider1.SetHelpKeyword(this.label300, resources.GetString("label300.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label300, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label300.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label300, resources.GetString("label300.HelpString"));
             this.label300.Name = "label300";
             this.helpProvider1.SetShowHelp(this.label300, ((bool)(resources.GetObject("label300.ShowHelp"))));
             // 
             // label301
             // 
             resources.ApplyResources(this.label301, "label301");
+            this.helpProvider1.SetHelpKeyword(this.label301, resources.GetString("label301.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label301, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label301.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label301, resources.GetString("label301.HelpString"));
             this.label301.Name = "label301";
             this.helpProvider1.SetShowHelp(this.label301, ((bool)(resources.GetObject("label301.ShowHelp"))));
             // 
             // label302
             // 
             resources.ApplyResources(this.label302, "label302");
+            this.helpProvider1.SetHelpKeyword(this.label302, resources.GetString("label302.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label302, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label302.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label302, resources.GetString("label302.HelpString"));
             this.label302.Name = "label302";
             this.helpProvider1.SetShowHelp(this.label302, ((bool)(resources.GetObject("label302.ShowHelp"))));
             // 
             // label303
             // 
             resources.ApplyResources(this.label303, "label303");
+            this.helpProvider1.SetHelpKeyword(this.label303, resources.GetString("label303.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label303, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label303.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label303, resources.GetString("label303.HelpString"));
             this.label303.Name = "label303";
             this.helpProvider1.SetShowHelp(this.label303, ((bool)(resources.GetObject("label303.ShowHelp"))));
             // 
             // tabPage22
             // 
+            resources.ApplyResources(this.tabPage22, "tabPage22");
             this.tabPage22.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage22.Controls.Add(this.comboBox_Battery_Img_Image);
             this.tabPage22.Controls.Add(this.numericUpDown_Battery_Img_Count);
@@ -7073,16 +8742,21 @@
             this.tabPage22.Controls.Add(this.label195);
             this.tabPage22.Controls.Add(this.label196);
             this.tabPage22.Controls.Add(this.label197);
-            resources.ApplyResources(this.tabPage22, "tabPage22");
+            this.helpProvider1.SetHelpKeyword(this.tabPage22, resources.GetString("tabPage22.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage22, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage22.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage22, resources.GetString("tabPage22.HelpString"));
             this.tabPage22.Name = "tabPage22";
             this.helpProvider1.SetShowHelp(this.tabPage22, ((bool)(resources.GetObject("tabPage22.ShowHelp"))));
             // 
             // comboBox_Battery_Img_Image
             // 
+            resources.ApplyResources(this.comboBox_Battery_Img_Image, "comboBox_Battery_Img_Image");
             this.comboBox_Battery_Img_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Battery_Img_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Battery_Img_Image, "comboBox_Battery_Img_Image");
             this.comboBox_Battery_Img_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Battery_Img_Image, resources.GetString("comboBox_Battery_Img_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Battery_Img_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Battery_Img_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Battery_Img_Image, resources.GetString("comboBox_Battery_Img_Image.HelpString"));
             this.comboBox_Battery_Img_Image.Name = "comboBox_Battery_Img_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_Battery_Img_Image, ((bool)(resources.GetObject("comboBox_Battery_Img_Image.ShowHelp"))));
             this.comboBox_Battery_Img_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -7094,6 +8768,9 @@
             // numericUpDown_Battery_Img_Count
             // 
             resources.ApplyResources(this.numericUpDown_Battery_Img_Count, "numericUpDown_Battery_Img_Count");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Img_Count, resources.GetString("numericUpDown_Battery_Img_Count.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Img_Count, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Img_Count.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Img_Count, resources.GetString("numericUpDown_Battery_Img_Count.HelpString"));
             this.numericUpDown_Battery_Img_Count.Maximum = new decimal(new int[] {
             99,
             0,
@@ -7111,13 +8788,19 @@
             // label198
             // 
             resources.ApplyResources(this.label198, "label198");
+            this.helpProvider1.SetHelpKeyword(this.label198, resources.GetString("label198.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label198, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label198.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label198, resources.GetString("label198.HelpString"));
             this.label198.Name = "label198";
             this.helpProvider1.SetShowHelp(this.label198, ((bool)(resources.GetObject("label198.ShowHelp"))));
             // 
             // numericUpDown_Battery_Img_Y
             // 
-            this.numericUpDown_Battery_Img_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_Battery_Img_Y, "numericUpDown_Battery_Img_Y");
+            this.numericUpDown_Battery_Img_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Img_Y, resources.GetString("numericUpDown_Battery_Img_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Img_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Img_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Img_Y, resources.GetString("numericUpDown_Battery_Img_Y.HelpString"));
             this.numericUpDown_Battery_Img_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -7135,8 +8818,11 @@
             // 
             // numericUpDown_Battery_Img_X
             // 
-            this.numericUpDown_Battery_Img_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_Battery_Img_X, "numericUpDown_Battery_Img_X");
+            this.numericUpDown_Battery_Img_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Img_X, resources.GetString("numericUpDown_Battery_Img_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Img_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Img_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Img_X, resources.GetString("numericUpDown_Battery_Img_X.HelpString"));
             this.numericUpDown_Battery_Img_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -7155,6 +8841,9 @@
             // checkBox_Battery_Img
             // 
             resources.ApplyResources(this.checkBox_Battery_Img, "checkBox_Battery_Img");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Battery_Img, resources.GetString("checkBox_Battery_Img.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Battery_Img, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Battery_Img.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Battery_Img, resources.GetString("checkBox_Battery_Img.HelpString"));
             this.checkBox_Battery_Img.Name = "checkBox_Battery_Img";
             this.helpProvider1.SetShowHelp(this.checkBox_Battery_Img, ((bool)(resources.GetObject("checkBox_Battery_Img.ShowHelp"))));
             this.checkBox_Battery_Img.UseVisualStyleBackColor = true;
@@ -7164,31 +8853,43 @@
             // label194
             // 
             resources.ApplyResources(this.label194, "label194");
+            this.helpProvider1.SetHelpKeyword(this.label194, resources.GetString("label194.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label194, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label194.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label194, resources.GetString("label194.HelpString"));
             this.label194.Name = "label194";
             this.helpProvider1.SetShowHelp(this.label194, ((bool)(resources.GetObject("label194.ShowHelp"))));
             // 
             // label195
             // 
             resources.ApplyResources(this.label195, "label195");
+            this.helpProvider1.SetHelpKeyword(this.label195, resources.GetString("label195.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label195, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label195.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label195, resources.GetString("label195.HelpString"));
             this.label195.Name = "label195";
             this.helpProvider1.SetShowHelp(this.label195, ((bool)(resources.GetObject("label195.ShowHelp"))));
             // 
             // label196
             // 
             resources.ApplyResources(this.label196, "label196");
+            this.helpProvider1.SetHelpKeyword(this.label196, resources.GetString("label196.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label196, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label196.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label196, resources.GetString("label196.HelpString"));
             this.label196.Name = "label196";
             this.helpProvider1.SetShowHelp(this.label196, ((bool)(resources.GetObject("label196.ShowHelp"))));
             // 
             // label197
             // 
             resources.ApplyResources(this.label197, "label197");
+            this.helpProvider1.SetHelpKeyword(this.label197, resources.GetString("label197.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label197, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label197.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label197, resources.GetString("label197.HelpString"));
             this.label197.Name = "label197";
             this.helpProvider1.SetShowHelp(this.label197, ((bool)(resources.GetObject("label197.ShowHelp"))));
             // 
             // tabPage23
             // 
+            resources.ApplyResources(this.tabPage23, "tabPage23");
             this.tabPage23.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage23.Controls.Add(this.comboBox_Battery_Flatness);
             this.tabPage23.Controls.Add(this.label347);
             this.tabPage23.Controls.Add(this.numericUpDown_Battery_Scale_EndAngle);
@@ -7208,15 +8909,20 @@
             this.tabPage23.Controls.Add(this.numericUpDown_Battery_Scale_Center_X);
             this.tabPage23.Controls.Add(this.label206);
             this.tabPage23.Controls.Add(this.checkBox_Battery_Scale);
-            resources.ApplyResources(this.tabPage23, "tabPage23");
+            this.helpProvider1.SetHelpKeyword(this.tabPage23, resources.GetString("tabPage23.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage23, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage23.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage23, resources.GetString("tabPage23.HelpString"));
             this.tabPage23.Name = "tabPage23";
             this.helpProvider1.SetShowHelp(this.tabPage23, ((bool)(resources.GetObject("tabPage23.ShowHelp"))));
             // 
             // comboBox_Battery_Flatness
             // 
-            this.comboBox_Battery_Flatness.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.comboBox_Battery_Flatness, "comboBox_Battery_Flatness");
+            this.comboBox_Battery_Flatness.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_Battery_Flatness.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Battery_Flatness, resources.GetString("comboBox_Battery_Flatness.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Battery_Flatness, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Battery_Flatness.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Battery_Flatness, resources.GetString("comboBox_Battery_Flatness.HelpString"));
             this.comboBox_Battery_Flatness.Items.AddRange(new object[] {
             resources.GetString("comboBox_Battery_Flatness.Items"),
             resources.GetString("comboBox_Battery_Flatness.Items1"),
@@ -7228,12 +8934,18 @@
             // label347
             // 
             resources.ApplyResources(this.label347, "label347");
+            this.helpProvider1.SetHelpKeyword(this.label347, resources.GetString("label347.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label347, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label347.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label347, resources.GetString("label347.HelpString"));
             this.label347.Name = "label347";
             this.helpProvider1.SetShowHelp(this.label347, ((bool)(resources.GetObject("label347.ShowHelp"))));
             // 
             // numericUpDown_Battery_Scale_EndAngle
             // 
             resources.ApplyResources(this.numericUpDown_Battery_Scale_EndAngle, "numericUpDown_Battery_Scale_EndAngle");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Scale_EndAngle, resources.GetString("numericUpDown_Battery_Scale_EndAngle.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Scale_EndAngle, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Scale_EndAngle.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Scale_EndAngle, resources.GetString("numericUpDown_Battery_Scale_EndAngle.HelpString"));
             this.numericUpDown_Battery_Scale_EndAngle.Maximum = new decimal(new int[] {
             999,
             0,
@@ -7256,12 +8968,18 @@
             // label199
             // 
             resources.ApplyResources(this.label199, "label199");
+            this.helpProvider1.SetHelpKeyword(this.label199, resources.GetString("label199.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label199, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label199.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label199, resources.GetString("label199.HelpString"));
             this.label199.Name = "label199";
             this.helpProvider1.SetShowHelp(this.label199, ((bool)(resources.GetObject("label199.ShowHelp"))));
             // 
             // numericUpDown_Battery_Scale_StartAngle
             // 
             resources.ApplyResources(this.numericUpDown_Battery_Scale_StartAngle, "numericUpDown_Battery_Scale_StartAngle");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Scale_StartAngle, resources.GetString("numericUpDown_Battery_Scale_StartAngle.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Scale_StartAngle, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Scale_StartAngle.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Scale_StartAngle, resources.GetString("numericUpDown_Battery_Scale_StartAngle.HelpString"));
             this.numericUpDown_Battery_Scale_StartAngle.Maximum = new decimal(new int[] {
             999,
             0,
@@ -7284,15 +9002,21 @@
             // label200
             // 
             resources.ApplyResources(this.label200, "label200");
+            this.helpProvider1.SetHelpKeyword(this.label200, resources.GetString("label200.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label200, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label200.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label200, resources.GetString("label200.HelpString"));
             this.label200.Name = "label200";
             this.helpProvider1.SetShowHelp(this.label200, ((bool)(resources.GetObject("label200.ShowHelp"))));
             // 
             // comboBox_Battery_Scale_Color
             // 
+            resources.ApplyResources(this.comboBox_Battery_Scale_Color, "comboBox_Battery_Scale_Color");
             this.comboBox_Battery_Scale_Color.BackColor = System.Drawing.Color.DarkOrange;
             this.comboBox_Battery_Scale_Color.DropDownHeight = 1;
-            resources.ApplyResources(this.comboBox_Battery_Scale_Color, "comboBox_Battery_Scale_Color");
             this.comboBox_Battery_Scale_Color.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Battery_Scale_Color, resources.GetString("comboBox_Battery_Scale_Color.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Battery_Scale_Color, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Battery_Scale_Color.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Battery_Scale_Color, resources.GetString("comboBox_Battery_Scale_Color.HelpString"));
             this.comboBox_Battery_Scale_Color.Name = "comboBox_Battery_Scale_Color";
             this.helpProvider1.SetShowHelp(this.comboBox_Battery_Scale_Color, ((bool)(resources.GetObject("comboBox_Battery_Scale_Color.ShowHelp"))));
             this.comboBox_Battery_Scale_Color.Click += new System.EventHandler(this.comboBox_Battery_Scale_Color_Click);
@@ -7301,12 +9025,18 @@
             // label201
             // 
             resources.ApplyResources(this.label201, "label201");
+            this.helpProvider1.SetHelpKeyword(this.label201, resources.GetString("label201.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label201, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label201.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label201, resources.GetString("label201.HelpString"));
             this.label201.Name = "label201";
             this.helpProvider1.SetShowHelp(this.label201, ((bool)(resources.GetObject("label201.ShowHelp"))));
             // 
             // numericUpDown_Battery_Scale_Width
             // 
             resources.ApplyResources(this.numericUpDown_Battery_Scale_Width, "numericUpDown_Battery_Scale_Width");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Scale_Width, resources.GetString("numericUpDown_Battery_Scale_Width.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Scale_Width, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Scale_Width.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Scale_Width, resources.GetString("numericUpDown_Battery_Scale_Width.HelpString"));
             this.numericUpDown_Battery_Scale_Width.Maximum = new decimal(new int[] {
             999,
             0,
@@ -7324,12 +9054,18 @@
             // label202
             // 
             resources.ApplyResources(this.label202, "label202");
+            this.helpProvider1.SetHelpKeyword(this.label202, resources.GetString("label202.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label202, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label202.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label202, resources.GetString("label202.HelpString"));
             this.label202.Name = "label202";
             this.helpProvider1.SetShowHelp(this.label202, ((bool)(resources.GetObject("label202.ShowHelp"))));
             // 
             // numericUpDown_Battery_Scale_Radius_Y
             // 
             resources.ApplyResources(this.numericUpDown_Battery_Scale_Radius_Y, "numericUpDown_Battery_Scale_Radius_Y");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Scale_Radius_Y, resources.GetString("numericUpDown_Battery_Scale_Radius_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Scale_Radius_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Scale_Radius_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Scale_Radius_Y, resources.GetString("numericUpDown_Battery_Scale_Radius_Y.HelpString"));
             this.numericUpDown_Battery_Scale_Radius_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -7342,12 +9078,18 @@
             // label203
             // 
             resources.ApplyResources(this.label203, "label203");
+            this.helpProvider1.SetHelpKeyword(this.label203, resources.GetString("label203.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label203, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label203.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label203, resources.GetString("label203.HelpString"));
             this.label203.Name = "label203";
             this.helpProvider1.SetShowHelp(this.label203, ((bool)(resources.GetObject("label203.ShowHelp"))));
             // 
             // numericUpDown_Battery_Scale_Radius_X
             // 
             resources.ApplyResources(this.numericUpDown_Battery_Scale_Radius_X, "numericUpDown_Battery_Scale_Radius_X");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Scale_Radius_X, resources.GetString("numericUpDown_Battery_Scale_Radius_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Scale_Radius_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Scale_Radius_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Scale_Radius_X, resources.GetString("numericUpDown_Battery_Scale_Radius_X.HelpString"));
             this.numericUpDown_Battery_Scale_Radius_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -7360,13 +9102,19 @@
             // label204
             // 
             resources.ApplyResources(this.label204, "label204");
+            this.helpProvider1.SetHelpKeyword(this.label204, resources.GetString("label204.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label204, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label204.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label204, resources.GetString("label204.HelpString"));
             this.label204.Name = "label204";
             this.helpProvider1.SetShowHelp(this.label204, ((bool)(resources.GetObject("label204.ShowHelp"))));
             // 
             // numericUpDown_Battery_Scale_Center_Y
             // 
-            this.numericUpDown_Battery_Scale_Center_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_Battery_Scale_Center_Y, "numericUpDown_Battery_Scale_Center_Y");
+            this.numericUpDown_Battery_Scale_Center_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Scale_Center_Y, resources.GetString("numericUpDown_Battery_Scale_Center_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Scale_Center_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Scale_Center_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Scale_Center_Y, resources.GetString("numericUpDown_Battery_Scale_Center_Y.HelpString"));
             this.numericUpDown_Battery_Scale_Center_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -7385,13 +9133,19 @@
             // label205
             // 
             resources.ApplyResources(this.label205, "label205");
+            this.helpProvider1.SetHelpKeyword(this.label205, resources.GetString("label205.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label205, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label205.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label205, resources.GetString("label205.HelpString"));
             this.label205.Name = "label205";
             this.helpProvider1.SetShowHelp(this.label205, ((bool)(resources.GetObject("label205.ShowHelp"))));
             // 
             // numericUpDown_Battery_Scale_Center_X
             // 
-            this.numericUpDown_Battery_Scale_Center_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_Battery_Scale_Center_X, "numericUpDown_Battery_Scale_Center_X");
+            this.numericUpDown_Battery_Scale_Center_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_Scale_Center_X, resources.GetString("numericUpDown_Battery_Scale_Center_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_Scale_Center_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_Scale_Center_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_Scale_Center_X, resources.GetString("numericUpDown_Battery_Scale_Center_X.HelpString"));
             this.numericUpDown_Battery_Scale_Center_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -7410,21 +9164,277 @@
             // label206
             // 
             resources.ApplyResources(this.label206, "label206");
+            this.helpProvider1.SetHelpKeyword(this.label206, resources.GetString("label206.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label206, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label206.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label206, resources.GetString("label206.HelpString"));
             this.label206.Name = "label206";
             this.helpProvider1.SetShowHelp(this.label206, ((bool)(resources.GetObject("label206.ShowHelp"))));
             // 
             // checkBox_Battery_Scale
             // 
             resources.ApplyResources(this.checkBox_Battery_Scale, "checkBox_Battery_Scale");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Battery_Scale, resources.GetString("checkBox_Battery_Scale.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Battery_Scale, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Battery_Scale.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Battery_Scale, resources.GetString("checkBox_Battery_Scale.HelpString"));
             this.checkBox_Battery_Scale.Name = "checkBox_Battery_Scale";
             this.helpProvider1.SetShowHelp(this.checkBox_Battery_Scale, ((bool)(resources.GetObject("checkBox_Battery_Scale.ShowHelp"))));
             this.checkBox_Battery_Scale.UseVisualStyleBackColor = true;
             this.checkBox_Battery_Scale.CheckedChanged += new System.EventHandler(this.checkBox_Battery_Scale_CheckedChanged);
             this.checkBox_Battery_Scale.Click += new System.EventHandler(this.checkBox_Click);
             // 
+            // tabPage35
+            // 
+            resources.ApplyResources(this.tabPage35, "tabPage35");
+            this.tabPage35.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage35.Controls.Add(this.numericUpDown_Battery_ClockHand_EndAngle);
+            this.tabPage35.Controls.Add(this.label374);
+            this.tabPage35.Controls.Add(this.numericUpDown_Battery_ClockHand_StartAngle);
+            this.tabPage35.Controls.Add(this.label373);
+            this.tabPage35.Controls.Add(this.numericUpDown_Battery_ClockHand_Offset_Y);
+            this.tabPage35.Controls.Add(this.label368);
+            this.tabPage35.Controls.Add(this.numericUpDown_Battery_ClockHand_Offset_X);
+            this.tabPage35.Controls.Add(this.label369);
+            this.tabPage35.Controls.Add(this.comboBox_Battery_ClockHand_Image);
+            this.tabPage35.Controls.Add(this.label370);
+            this.tabPage35.Controls.Add(this.numericUpDown_Battery_ClockHand_Y);
+            this.tabPage35.Controls.Add(this.label371);
+            this.tabPage35.Controls.Add(this.numericUpDown_Battery_ClockHand_X);
+            this.tabPage35.Controls.Add(this.label372);
+            this.tabPage35.Controls.Add(this.checkBox_Battery_ClockHand);
+            this.helpProvider1.SetHelpKeyword(this.tabPage35, resources.GetString("tabPage35.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage35, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage35.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage35, resources.GetString("tabPage35.HelpString"));
+            this.tabPage35.Name = "tabPage35";
+            // 
+            // numericUpDown_Battery_ClockHand_EndAngle
+            // 
+            resources.ApplyResources(this.numericUpDown_Battery_ClockHand_EndAngle, "numericUpDown_Battery_ClockHand_EndAngle");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_ClockHand_EndAngle, resources.GetString("numericUpDown_Battery_ClockHand_EndAngle.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_ClockHand_EndAngle, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_ClockHand_EndAngle.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_ClockHand_EndAngle, resources.GetString("numericUpDown_Battery_ClockHand_EndAngle.HelpString"));
+            this.numericUpDown_Battery_ClockHand_EndAngle.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Battery_ClockHand_EndAngle.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Battery_ClockHand_EndAngle.Name = "numericUpDown_Battery_ClockHand_EndAngle";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_ClockHand_EndAngle, ((bool)(resources.GetObject("numericUpDown_Battery_ClockHand_EndAngle.ShowHelp"))));
+            this.numericUpDown_Battery_ClockHand_EndAngle.Value = new decimal(new int[] {
+            495,
+            0,
+            0,
+            0});
+            this.numericUpDown_Battery_ClockHand_EndAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label374
+            // 
+            resources.ApplyResources(this.label374, "label374");
+            this.helpProvider1.SetHelpKeyword(this.label374, resources.GetString("label374.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label374, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label374.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label374, resources.GetString("label374.HelpString"));
+            this.label374.Name = "label374";
+            this.helpProvider1.SetShowHelp(this.label374, ((bool)(resources.GetObject("label374.ShowHelp"))));
+            // 
+            // numericUpDown_Battery_ClockHand_StartAngle
+            // 
+            resources.ApplyResources(this.numericUpDown_Battery_ClockHand_StartAngle, "numericUpDown_Battery_ClockHand_StartAngle");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_ClockHand_StartAngle, resources.GetString("numericUpDown_Battery_ClockHand_StartAngle.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_ClockHand_StartAngle, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_ClockHand_StartAngle.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_ClockHand_StartAngle, resources.GetString("numericUpDown_Battery_ClockHand_StartAngle.HelpString"));
+            this.numericUpDown_Battery_ClockHand_StartAngle.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Battery_ClockHand_StartAngle.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Battery_ClockHand_StartAngle.Name = "numericUpDown_Battery_ClockHand_StartAngle";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_ClockHand_StartAngle, ((bool)(resources.GetObject("numericUpDown_Battery_ClockHand_StartAngle.ShowHelp"))));
+            this.numericUpDown_Battery_ClockHand_StartAngle.Value = new decimal(new int[] {
+            225,
+            0,
+            0,
+            0});
+            this.numericUpDown_Battery_ClockHand_StartAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label373
+            // 
+            resources.ApplyResources(this.label373, "label373");
+            this.helpProvider1.SetHelpKeyword(this.label373, resources.GetString("label373.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label373, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label373.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label373, resources.GetString("label373.HelpString"));
+            this.label373.Name = "label373";
+            this.helpProvider1.SetShowHelp(this.label373, ((bool)(resources.GetObject("label373.ShowHelp"))));
+            // 
+            // numericUpDown_Battery_ClockHand_Offset_Y
+            // 
+            resources.ApplyResources(this.numericUpDown_Battery_ClockHand_Offset_Y, "numericUpDown_Battery_ClockHand_Offset_Y");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_ClockHand_Offset_Y, resources.GetString("numericUpDown_Battery_ClockHand_Offset_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_ClockHand_Offset_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_ClockHand_Offset_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_ClockHand_Offset_Y, resources.GetString("numericUpDown_Battery_ClockHand_Offset_Y.HelpString"));
+            this.numericUpDown_Battery_ClockHand_Offset_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Battery_ClockHand_Offset_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Battery_ClockHand_Offset_Y.Name = "numericUpDown_Battery_ClockHand_Offset_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_ClockHand_Offset_Y, ((bool)(resources.GetObject("numericUpDown_Battery_ClockHand_Offset_Y.ShowHelp"))));
+            this.numericUpDown_Battery_ClockHand_Offset_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Battery_ClockHand_Offset_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_OffSetY_MouseDoubleClick);
+            // 
+            // label368
+            // 
+            resources.ApplyResources(this.label368, "label368");
+            this.helpProvider1.SetHelpKeyword(this.label368, resources.GetString("label368.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label368, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label368.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label368, resources.GetString("label368.HelpString"));
+            this.label368.Name = "label368";
+            this.helpProvider1.SetShowHelp(this.label368, ((bool)(resources.GetObject("label368.ShowHelp"))));
+            // 
+            // numericUpDown_Battery_ClockHand_Offset_X
+            // 
+            resources.ApplyResources(this.numericUpDown_Battery_ClockHand_Offset_X, "numericUpDown_Battery_ClockHand_Offset_X");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_ClockHand_Offset_X, resources.GetString("numericUpDown_Battery_ClockHand_Offset_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_ClockHand_Offset_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_ClockHand_Offset_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_ClockHand_Offset_X, resources.GetString("numericUpDown_Battery_ClockHand_Offset_X.HelpString"));
+            this.numericUpDown_Battery_ClockHand_Offset_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Battery_ClockHand_Offset_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Battery_ClockHand_Offset_X.Name = "numericUpDown_Battery_ClockHand_Offset_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_ClockHand_Offset_X, ((bool)(resources.GetObject("numericUpDown_Battery_ClockHand_Offset_X.ShowHelp"))));
+            this.numericUpDown_Battery_ClockHand_Offset_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Battery_ClockHand_Offset_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_OffSetX_MouseDoubleClick);
+            // 
+            // label369
+            // 
+            resources.ApplyResources(this.label369, "label369");
+            this.helpProvider1.SetHelpKeyword(this.label369, resources.GetString("label369.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label369, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label369.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label369, resources.GetString("label369.HelpString"));
+            this.label369.Name = "label369";
+            this.helpProvider1.SetShowHelp(this.label369, ((bool)(resources.GetObject("label369.ShowHelp"))));
+            // 
+            // comboBox_Battery_ClockHand_Image
+            // 
+            resources.ApplyResources(this.comboBox_Battery_ClockHand_Image, "comboBox_Battery_ClockHand_Image");
+            this.comboBox_Battery_ClockHand_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Battery_ClockHand_Image.DropDownWidth = 75;
+            this.comboBox_Battery_ClockHand_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Battery_ClockHand_Image, resources.GetString("comboBox_Battery_ClockHand_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Battery_ClockHand_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Battery_ClockHand_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Battery_ClockHand_Image, resources.GetString("comboBox_Battery_ClockHand_Image.HelpString"));
+            this.comboBox_Battery_ClockHand_Image.Name = "comboBox_Battery_ClockHand_Image";
+            this.helpProvider1.SetShowHelp(this.comboBox_Battery_ClockHand_Image, ((bool)(resources.GetObject("comboBox_Battery_ClockHand_Image.ShowHelp"))));
+            this.comboBox_Battery_ClockHand_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Battery_ClockHand_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Battery_ClockHand_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Battery_ClockHand_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Battery_ClockHand_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // label370
+            // 
+            resources.ApplyResources(this.label370, "label370");
+            this.helpProvider1.SetHelpKeyword(this.label370, resources.GetString("label370.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label370, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label370.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label370, resources.GetString("label370.HelpString"));
+            this.label370.Name = "label370";
+            this.helpProvider1.SetShowHelp(this.label370, ((bool)(resources.GetObject("label370.ShowHelp"))));
+            // 
+            // numericUpDown_Battery_ClockHand_Y
+            // 
+            resources.ApplyResources(this.numericUpDown_Battery_ClockHand_Y, "numericUpDown_Battery_ClockHand_Y");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_ClockHand_Y, resources.GetString("numericUpDown_Battery_ClockHand_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_ClockHand_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_ClockHand_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_ClockHand_Y, resources.GetString("numericUpDown_Battery_ClockHand_Y.HelpString"));
+            this.numericUpDown_Battery_ClockHand_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Battery_ClockHand_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Battery_ClockHand_Y.Name = "numericUpDown_Battery_ClockHand_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_Battery_ClockHand_Y.ShowHelp"))));
+            this.numericUpDown_Battery_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label371
+            // 
+            resources.ApplyResources(this.label371, "label371");
+            this.helpProvider1.SetHelpKeyword(this.label371, resources.GetString("label371.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label371, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label371.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label371, resources.GetString("label371.HelpString"));
+            this.label371.Name = "label371";
+            this.helpProvider1.SetShowHelp(this.label371, ((bool)(resources.GetObject("label371.ShowHelp"))));
+            // 
+            // numericUpDown_Battery_ClockHand_X
+            // 
+            resources.ApplyResources(this.numericUpDown_Battery_ClockHand_X, "numericUpDown_Battery_ClockHand_X");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Battery_ClockHand_X, resources.GetString("numericUpDown_Battery_ClockHand_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Battery_ClockHand_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Battery_ClockHand_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Battery_ClockHand_X, resources.GetString("numericUpDown_Battery_ClockHand_X.HelpString"));
+            this.numericUpDown_Battery_ClockHand_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Battery_ClockHand_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Battery_ClockHand_X.Name = "numericUpDown_Battery_ClockHand_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_Battery_ClockHand_X.ShowHelp"))));
+            this.numericUpDown_Battery_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label372
+            // 
+            resources.ApplyResources(this.label372, "label372");
+            this.helpProvider1.SetHelpKeyword(this.label372, resources.GetString("label372.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label372, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label372.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label372, resources.GetString("label372.HelpString"));
+            this.label372.Name = "label372";
+            this.helpProvider1.SetShowHelp(this.label372, ((bool)(resources.GetObject("label372.ShowHelp"))));
+            // 
+            // checkBox_Battery_ClockHand
+            // 
+            resources.ApplyResources(this.checkBox_Battery_ClockHand, "checkBox_Battery_ClockHand");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Battery_ClockHand, resources.GetString("checkBox_Battery_ClockHand.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Battery_ClockHand, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Battery_ClockHand.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Battery_ClockHand, resources.GetString("checkBox_Battery_ClockHand.HelpString"));
+            this.checkBox_Battery_ClockHand.Name = "checkBox_Battery_ClockHand";
+            this.helpProvider1.SetShowHelp(this.checkBox_Battery_ClockHand, ((bool)(resources.GetObject("checkBox_Battery_ClockHand.ShowHelp"))));
+            this.checkBox_Battery_ClockHand.UseVisualStyleBackColor = true;
+            this.checkBox_Battery_ClockHand.CheckedChanged += new System.EventHandler(this.checkBox_Battery_ClockHand_CheckedChanged);
+            // 
             // checkBox_Battery
             // 
             resources.ApplyResources(this.checkBox_Battery, "checkBox_Battery");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Battery, resources.GetString("checkBox_Battery.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Battery, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Battery.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Battery, resources.GetString("checkBox_Battery.HelpString"));
             this.checkBox_Battery.Name = "checkBox_Battery";
             this.helpProvider1.SetShowHelp(this.checkBox_Battery, ((bool)(resources.GetObject("checkBox_Battery.ShowHelp"))));
             this.checkBox_Battery.UseVisualStyleBackColor = true;
@@ -7434,6 +9444,9 @@
             // button_Battery
             // 
             resources.ApplyResources(this.button_Battery, "button_Battery");
+            this.helpProvider1.SetHelpKeyword(this.button_Battery, resources.GetString("button_Battery.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_Battery, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_Battery.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_Battery, resources.GetString("button_Battery.HelpString"));
             this.button_Battery.Name = "button_Battery";
             this.helpProvider1.SetShowHelp(this.button_Battery, ((bool)(resources.GetObject("button_Battery.ShowHelp"))));
             this.button_Battery.UseVisualStyleBackColor = true;
@@ -7441,25 +9454,32 @@
             // 
             // panel_Status
             // 
+            resources.ApplyResources(this.panel_Status, "panel_Status");
             this.panel_Status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_Status.Controls.Add(this.tabControl2);
-            resources.ApplyResources(this.panel_Status, "panel_Status");
+            this.helpProvider1.SetHelpKeyword(this.panel_Status, resources.GetString("panel_Status.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel_Status, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_Status.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel_Status, resources.GetString("panel_Status.HelpString"));
             this.panel_Status.Name = "panel_Status";
             this.helpProvider1.SetShowHelp(this.panel_Status, ((bool)(resources.GetObject("panel_Status.ShowHelp"))));
             // 
             // tabControl2
             // 
+            resources.ApplyResources(this.tabControl2, "tabControl2");
             this.tabControl2.Controls.Add(this.tabPage17);
             this.tabControl2.Controls.Add(this.tabPage18);
             this.tabControl2.Controls.Add(this.tabPage19);
             this.tabControl2.Controls.Add(this.tabPage20);
-            resources.ApplyResources(this.tabControl2, "tabControl2");
+            this.helpProvider1.SetHelpKeyword(this.tabControl2, resources.GetString("tabControl2.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabControl2, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabControl2.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabControl2, resources.GetString("tabControl2.HelpString"));
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
             this.helpProvider1.SetShowHelp(this.tabControl2, ((bool)(resources.GetObject("tabControl2.ShowHelp"))));
             // 
             // tabPage17
             // 
+            resources.ApplyResources(this.tabPage17, "tabPage17");
             this.tabPage17.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage17.Controls.Add(this.comboBox_Bluetooth_Off);
             this.tabPage17.Controls.Add(this.label168);
@@ -7470,16 +9490,21 @@
             this.tabPage17.Controls.Add(this.label162);
             this.tabPage17.Controls.Add(this.label165);
             this.tabPage17.Controls.Add(this.label167);
-            resources.ApplyResources(this.tabPage17, "tabPage17");
+            this.helpProvider1.SetHelpKeyword(this.tabPage17, resources.GetString("tabPage17.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage17, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage17.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage17, resources.GetString("tabPage17.HelpString"));
             this.tabPage17.Name = "tabPage17";
             this.helpProvider1.SetShowHelp(this.tabPage17, ((bool)(resources.GetObject("tabPage17.ShowHelp"))));
             // 
             // comboBox_Bluetooth_Off
             // 
+            resources.ApplyResources(this.comboBox_Bluetooth_Off, "comboBox_Bluetooth_Off");
             this.comboBox_Bluetooth_Off.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Bluetooth_Off.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Bluetooth_Off, "comboBox_Bluetooth_Off");
             this.comboBox_Bluetooth_Off.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Bluetooth_Off, resources.GetString("comboBox_Bluetooth_Off.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Bluetooth_Off, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Bluetooth_Off.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Bluetooth_Off, resources.GetString("comboBox_Bluetooth_Off.HelpString"));
             this.comboBox_Bluetooth_Off.Name = "comboBox_Bluetooth_Off";
             this.helpProvider1.SetShowHelp(this.comboBox_Bluetooth_Off, ((bool)(resources.GetObject("comboBox_Bluetooth_Off.ShowHelp"))));
             this.comboBox_Bluetooth_Off.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -7491,12 +9516,18 @@
             // label168
             // 
             resources.ApplyResources(this.label168, "label168");
+            this.helpProvider1.SetHelpKeyword(this.label168, resources.GetString("label168.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label168, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label168.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label168, resources.GetString("label168.HelpString"));
             this.label168.Name = "label168";
             this.helpProvider1.SetShowHelp(this.label168, ((bool)(resources.GetObject("label168.ShowHelp"))));
             // 
             // checkBox_Bluetooth
             // 
             resources.ApplyResources(this.checkBox_Bluetooth, "checkBox_Bluetooth");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Bluetooth, resources.GetString("checkBox_Bluetooth.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Bluetooth, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Bluetooth.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Bluetooth, resources.GetString("checkBox_Bluetooth.HelpString"));
             this.checkBox_Bluetooth.Name = "checkBox_Bluetooth";
             this.helpProvider1.SetShowHelp(this.checkBox_Bluetooth, ((bool)(resources.GetObject("checkBox_Bluetooth.ShowHelp"))));
             this.checkBox_Bluetooth.UseVisualStyleBackColor = true;
@@ -7505,8 +9536,11 @@
             // 
             // numericUpDown_Bluetooth_Y
             // 
-            this.numericUpDown_Bluetooth_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_Bluetooth_Y, "numericUpDown_Bluetooth_Y");
+            this.numericUpDown_Bluetooth_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Bluetooth_Y, resources.GetString("numericUpDown_Bluetooth_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Bluetooth_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Bluetooth_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Bluetooth_Y, resources.GetString("numericUpDown_Bluetooth_Y.HelpString"));
             this.numericUpDown_Bluetooth_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -7519,8 +9553,11 @@
             // 
             // numericUpDown_Bluetooth_X
             // 
-            this.numericUpDown_Bluetooth_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_Bluetooth_X, "numericUpDown_Bluetooth_X");
+            this.numericUpDown_Bluetooth_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Bluetooth_X, resources.GetString("numericUpDown_Bluetooth_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Bluetooth_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Bluetooth_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Bluetooth_X, resources.GetString("numericUpDown_Bluetooth_X.HelpString"));
             this.numericUpDown_Bluetooth_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -7533,10 +9570,13 @@
             // 
             // comboBox_Bluetooth_On
             // 
+            resources.ApplyResources(this.comboBox_Bluetooth_On, "comboBox_Bluetooth_On");
             this.comboBox_Bluetooth_On.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Bluetooth_On.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Bluetooth_On, "comboBox_Bluetooth_On");
             this.comboBox_Bluetooth_On.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Bluetooth_On, resources.GetString("comboBox_Bluetooth_On.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Bluetooth_On, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Bluetooth_On.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Bluetooth_On, resources.GetString("comboBox_Bluetooth_On.HelpString"));
             this.comboBox_Bluetooth_On.Name = "comboBox_Bluetooth_On";
             this.helpProvider1.SetShowHelp(this.comboBox_Bluetooth_On, ((bool)(resources.GetObject("comboBox_Bluetooth_On.ShowHelp"))));
             this.comboBox_Bluetooth_On.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -7548,23 +9588,33 @@
             // label162
             // 
             resources.ApplyResources(this.label162, "label162");
+            this.helpProvider1.SetHelpKeyword(this.label162, resources.GetString("label162.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label162, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label162.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label162, resources.GetString("label162.HelpString"));
             this.label162.Name = "label162";
             this.helpProvider1.SetShowHelp(this.label162, ((bool)(resources.GetObject("label162.ShowHelp"))));
             // 
             // label165
             // 
             resources.ApplyResources(this.label165, "label165");
+            this.helpProvider1.SetHelpKeyword(this.label165, resources.GetString("label165.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label165, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label165.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label165, resources.GetString("label165.HelpString"));
             this.label165.Name = "label165";
             this.helpProvider1.SetShowHelp(this.label165, ((bool)(resources.GetObject("label165.ShowHelp"))));
             // 
             // label167
             // 
             resources.ApplyResources(this.label167, "label167");
+            this.helpProvider1.SetHelpKeyword(this.label167, resources.GetString("label167.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label167, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label167.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label167, resources.GetString("label167.HelpString"));
             this.label167.Name = "label167";
             this.helpProvider1.SetShowHelp(this.label167, ((bool)(resources.GetObject("label167.ShowHelp"))));
             // 
             // tabPage18
             // 
+            resources.ApplyResources(this.tabPage18, "tabPage18");
             this.tabPage18.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage18.Controls.Add(this.comboBox_Alarm_Off);
             this.tabPage18.Controls.Add(this.label169);
@@ -7575,16 +9625,21 @@
             this.tabPage18.Controls.Add(this.label170);
             this.tabPage18.Controls.Add(this.label174);
             this.tabPage18.Controls.Add(this.label175);
-            resources.ApplyResources(this.tabPage18, "tabPage18");
+            this.helpProvider1.SetHelpKeyword(this.tabPage18, resources.GetString("tabPage18.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage18, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage18.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage18, resources.GetString("tabPage18.HelpString"));
             this.tabPage18.Name = "tabPage18";
             this.helpProvider1.SetShowHelp(this.tabPage18, ((bool)(resources.GetObject("tabPage18.ShowHelp"))));
             // 
             // comboBox_Alarm_Off
             // 
+            resources.ApplyResources(this.comboBox_Alarm_Off, "comboBox_Alarm_Off");
             this.comboBox_Alarm_Off.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Alarm_Off.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Alarm_Off, "comboBox_Alarm_Off");
             this.comboBox_Alarm_Off.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Alarm_Off, resources.GetString("comboBox_Alarm_Off.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Alarm_Off, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Alarm_Off.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Alarm_Off, resources.GetString("comboBox_Alarm_Off.HelpString"));
             this.comboBox_Alarm_Off.Name = "comboBox_Alarm_Off";
             this.helpProvider1.SetShowHelp(this.comboBox_Alarm_Off, ((bool)(resources.GetObject("comboBox_Alarm_Off.ShowHelp"))));
             this.comboBox_Alarm_Off.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -7596,12 +9651,18 @@
             // label169
             // 
             resources.ApplyResources(this.label169, "label169");
+            this.helpProvider1.SetHelpKeyword(this.label169, resources.GetString("label169.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label169, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label169.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label169, resources.GetString("label169.HelpString"));
             this.label169.Name = "label169";
             this.helpProvider1.SetShowHelp(this.label169, ((bool)(resources.GetObject("label169.ShowHelp"))));
             // 
             // checkBox_Alarm
             // 
             resources.ApplyResources(this.checkBox_Alarm, "checkBox_Alarm");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Alarm, resources.GetString("checkBox_Alarm.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Alarm, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Alarm.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Alarm, resources.GetString("checkBox_Alarm.HelpString"));
             this.checkBox_Alarm.Name = "checkBox_Alarm";
             this.helpProvider1.SetShowHelp(this.checkBox_Alarm, ((bool)(resources.GetObject("checkBox_Alarm.ShowHelp"))));
             this.checkBox_Alarm.UseVisualStyleBackColor = true;
@@ -7610,8 +9671,11 @@
             // 
             // numericUpDown_Alarm_Y
             // 
-            this.numericUpDown_Alarm_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_Alarm_Y, "numericUpDown_Alarm_Y");
+            this.numericUpDown_Alarm_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Alarm_Y, resources.GetString("numericUpDown_Alarm_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Alarm_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Alarm_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Alarm_Y, resources.GetString("numericUpDown_Alarm_Y.HelpString"));
             this.numericUpDown_Alarm_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -7624,8 +9688,11 @@
             // 
             // numericUpDown_Alarm_X
             // 
-            this.numericUpDown_Alarm_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_Alarm_X, "numericUpDown_Alarm_X");
+            this.numericUpDown_Alarm_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Alarm_X, resources.GetString("numericUpDown_Alarm_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Alarm_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Alarm_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Alarm_X, resources.GetString("numericUpDown_Alarm_X.HelpString"));
             this.numericUpDown_Alarm_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -7638,10 +9705,13 @@
             // 
             // comboBox_Alarm_On
             // 
+            resources.ApplyResources(this.comboBox_Alarm_On, "comboBox_Alarm_On");
             this.comboBox_Alarm_On.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Alarm_On.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Alarm_On, "comboBox_Alarm_On");
             this.comboBox_Alarm_On.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Alarm_On, resources.GetString("comboBox_Alarm_On.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Alarm_On, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Alarm_On.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Alarm_On, resources.GetString("comboBox_Alarm_On.HelpString"));
             this.comboBox_Alarm_On.Name = "comboBox_Alarm_On";
             this.helpProvider1.SetShowHelp(this.comboBox_Alarm_On, ((bool)(resources.GetObject("comboBox_Alarm_On.ShowHelp"))));
             this.comboBox_Alarm_On.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -7653,23 +9723,33 @@
             // label170
             // 
             resources.ApplyResources(this.label170, "label170");
+            this.helpProvider1.SetHelpKeyword(this.label170, resources.GetString("label170.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label170, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label170.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label170, resources.GetString("label170.HelpString"));
             this.label170.Name = "label170";
             this.helpProvider1.SetShowHelp(this.label170, ((bool)(resources.GetObject("label170.ShowHelp"))));
             // 
             // label174
             // 
             resources.ApplyResources(this.label174, "label174");
+            this.helpProvider1.SetHelpKeyword(this.label174, resources.GetString("label174.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label174, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label174.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label174, resources.GetString("label174.HelpString"));
             this.label174.Name = "label174";
             this.helpProvider1.SetShowHelp(this.label174, ((bool)(resources.GetObject("label174.ShowHelp"))));
             // 
             // label175
             // 
             resources.ApplyResources(this.label175, "label175");
+            this.helpProvider1.SetHelpKeyword(this.label175, resources.GetString("label175.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label175, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label175.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label175, resources.GetString("label175.HelpString"));
             this.label175.Name = "label175";
             this.helpProvider1.SetShowHelp(this.label175, ((bool)(resources.GetObject("label175.ShowHelp"))));
             // 
             // tabPage19
             // 
+            resources.ApplyResources(this.tabPage19, "tabPage19");
             this.tabPage19.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage19.Controls.Add(this.comboBox_Lock_Off);
             this.tabPage19.Controls.Add(this.label176);
@@ -7680,16 +9760,21 @@
             this.tabPage19.Controls.Add(this.label177);
             this.tabPage19.Controls.Add(this.label178);
             this.tabPage19.Controls.Add(this.label179);
-            resources.ApplyResources(this.tabPage19, "tabPage19");
+            this.helpProvider1.SetHelpKeyword(this.tabPage19, resources.GetString("tabPage19.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage19, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage19.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage19, resources.GetString("tabPage19.HelpString"));
             this.tabPage19.Name = "tabPage19";
             this.helpProvider1.SetShowHelp(this.tabPage19, ((bool)(resources.GetObject("tabPage19.ShowHelp"))));
             // 
             // comboBox_Lock_Off
             // 
+            resources.ApplyResources(this.comboBox_Lock_Off, "comboBox_Lock_Off");
             this.comboBox_Lock_Off.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Lock_Off.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Lock_Off, "comboBox_Lock_Off");
             this.comboBox_Lock_Off.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Lock_Off, resources.GetString("comboBox_Lock_Off.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Lock_Off, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Lock_Off.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Lock_Off, resources.GetString("comboBox_Lock_Off.HelpString"));
             this.comboBox_Lock_Off.Name = "comboBox_Lock_Off";
             this.helpProvider1.SetShowHelp(this.comboBox_Lock_Off, ((bool)(resources.GetObject("comboBox_Lock_Off.ShowHelp"))));
             this.comboBox_Lock_Off.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -7701,12 +9786,18 @@
             // label176
             // 
             resources.ApplyResources(this.label176, "label176");
+            this.helpProvider1.SetHelpKeyword(this.label176, resources.GetString("label176.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label176, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label176.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label176, resources.GetString("label176.HelpString"));
             this.label176.Name = "label176";
             this.helpProvider1.SetShowHelp(this.label176, ((bool)(resources.GetObject("label176.ShowHelp"))));
             // 
             // checkBox_Lock
             // 
             resources.ApplyResources(this.checkBox_Lock, "checkBox_Lock");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Lock, resources.GetString("checkBox_Lock.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Lock, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Lock.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Lock, resources.GetString("checkBox_Lock.HelpString"));
             this.checkBox_Lock.Name = "checkBox_Lock";
             this.helpProvider1.SetShowHelp(this.checkBox_Lock, ((bool)(resources.GetObject("checkBox_Lock.ShowHelp"))));
             this.checkBox_Lock.UseVisualStyleBackColor = true;
@@ -7715,8 +9806,11 @@
             // 
             // numericUpDown_Lock_Y
             // 
-            this.numericUpDown_Lock_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_Lock_Y, "numericUpDown_Lock_Y");
+            this.numericUpDown_Lock_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Lock_Y, resources.GetString("numericUpDown_Lock_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Lock_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Lock_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Lock_Y, resources.GetString("numericUpDown_Lock_Y.HelpString"));
             this.numericUpDown_Lock_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -7729,8 +9823,11 @@
             // 
             // numericUpDown_Lock_X
             // 
-            this.numericUpDown_Lock_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_Lock_X, "numericUpDown_Lock_X");
+            this.numericUpDown_Lock_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Lock_X, resources.GetString("numericUpDown_Lock_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Lock_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Lock_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Lock_X, resources.GetString("numericUpDown_Lock_X.HelpString"));
             this.numericUpDown_Lock_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -7743,10 +9840,13 @@
             // 
             // comboBox_Lock_On
             // 
+            resources.ApplyResources(this.comboBox_Lock_On, "comboBox_Lock_On");
             this.comboBox_Lock_On.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Lock_On.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Lock_On, "comboBox_Lock_On");
             this.comboBox_Lock_On.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Lock_On, resources.GetString("comboBox_Lock_On.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Lock_On, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Lock_On.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Lock_On, resources.GetString("comboBox_Lock_On.HelpString"));
             this.comboBox_Lock_On.Name = "comboBox_Lock_On";
             this.helpProvider1.SetShowHelp(this.comboBox_Lock_On, ((bool)(resources.GetObject("comboBox_Lock_On.ShowHelp"))));
             this.comboBox_Lock_On.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -7758,23 +9858,33 @@
             // label177
             // 
             resources.ApplyResources(this.label177, "label177");
+            this.helpProvider1.SetHelpKeyword(this.label177, resources.GetString("label177.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label177, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label177.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label177, resources.GetString("label177.HelpString"));
             this.label177.Name = "label177";
             this.helpProvider1.SetShowHelp(this.label177, ((bool)(resources.GetObject("label177.ShowHelp"))));
             // 
             // label178
             // 
             resources.ApplyResources(this.label178, "label178");
+            this.helpProvider1.SetHelpKeyword(this.label178, resources.GetString("label178.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label178, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label178.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label178, resources.GetString("label178.HelpString"));
             this.label178.Name = "label178";
             this.helpProvider1.SetShowHelp(this.label178, ((bool)(resources.GetObject("label178.ShowHelp"))));
             // 
             // label179
             // 
             resources.ApplyResources(this.label179, "label179");
+            this.helpProvider1.SetHelpKeyword(this.label179, resources.GetString("label179.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label179, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label179.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label179, resources.GetString("label179.HelpString"));
             this.label179.Name = "label179";
             this.helpProvider1.SetShowHelp(this.label179, ((bool)(resources.GetObject("label179.ShowHelp"))));
             // 
             // tabPage20
             // 
+            resources.ApplyResources(this.tabPage20, "tabPage20");
             this.tabPage20.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage20.Controls.Add(this.comboBox_DND_Off);
             this.tabPage20.Controls.Add(this.label180);
@@ -7785,16 +9895,21 @@
             this.tabPage20.Controls.Add(this.label181);
             this.tabPage20.Controls.Add(this.label182);
             this.tabPage20.Controls.Add(this.label183);
-            resources.ApplyResources(this.tabPage20, "tabPage20");
+            this.helpProvider1.SetHelpKeyword(this.tabPage20, resources.GetString("tabPage20.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage20, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage20.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage20, resources.GetString("tabPage20.HelpString"));
             this.tabPage20.Name = "tabPage20";
             this.helpProvider1.SetShowHelp(this.tabPage20, ((bool)(resources.GetObject("tabPage20.ShowHelp"))));
             // 
             // comboBox_DND_Off
             // 
+            resources.ApplyResources(this.comboBox_DND_Off, "comboBox_DND_Off");
             this.comboBox_DND_Off.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_DND_Off.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_DND_Off, "comboBox_DND_Off");
             this.comboBox_DND_Off.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_DND_Off, resources.GetString("comboBox_DND_Off.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_DND_Off, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_DND_Off.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_DND_Off, resources.GetString("comboBox_DND_Off.HelpString"));
             this.comboBox_DND_Off.Name = "comboBox_DND_Off";
             this.helpProvider1.SetShowHelp(this.comboBox_DND_Off, ((bool)(resources.GetObject("comboBox_DND_Off.ShowHelp"))));
             this.comboBox_DND_Off.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -7806,12 +9921,18 @@
             // label180
             // 
             resources.ApplyResources(this.label180, "label180");
+            this.helpProvider1.SetHelpKeyword(this.label180, resources.GetString("label180.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label180, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label180.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label180, resources.GetString("label180.HelpString"));
             this.label180.Name = "label180";
             this.helpProvider1.SetShowHelp(this.label180, ((bool)(resources.GetObject("label180.ShowHelp"))));
             // 
             // checkBox_DND
             // 
             resources.ApplyResources(this.checkBox_DND, "checkBox_DND");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_DND, resources.GetString("checkBox_DND.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_DND, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_DND.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_DND, resources.GetString("checkBox_DND.HelpString"));
             this.checkBox_DND.Name = "checkBox_DND";
             this.helpProvider1.SetShowHelp(this.checkBox_DND, ((bool)(resources.GetObject("checkBox_DND.ShowHelp"))));
             this.checkBox_DND.UseVisualStyleBackColor = true;
@@ -7820,8 +9941,11 @@
             // 
             // numericUpDown_DND_Y
             // 
-            this.numericUpDown_DND_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_DND_Y, "numericUpDown_DND_Y");
+            this.numericUpDown_DND_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_DND_Y, resources.GetString("numericUpDown_DND_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_DND_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_DND_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_DND_Y, resources.GetString("numericUpDown_DND_Y.HelpString"));
             this.numericUpDown_DND_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -7834,8 +9958,11 @@
             // 
             // numericUpDown_DND_X
             // 
-            this.numericUpDown_DND_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_DND_X, "numericUpDown_DND_X");
+            this.numericUpDown_DND_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_DND_X, resources.GetString("numericUpDown_DND_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_DND_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_DND_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_DND_X, resources.GetString("numericUpDown_DND_X.HelpString"));
             this.numericUpDown_DND_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -7848,10 +9975,13 @@
             // 
             // comboBox_DND_On
             // 
+            resources.ApplyResources(this.comboBox_DND_On, "comboBox_DND_On");
             this.comboBox_DND_On.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_DND_On.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_DND_On, "comboBox_DND_On");
             this.comboBox_DND_On.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_DND_On, resources.GetString("comboBox_DND_On.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_DND_On, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_DND_On.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_DND_On, resources.GetString("comboBox_DND_On.HelpString"));
             this.comboBox_DND_On.Name = "comboBox_DND_On";
             this.helpProvider1.SetShowHelp(this.comboBox_DND_On, ((bool)(resources.GetObject("comboBox_DND_On.ShowHelp"))));
             this.comboBox_DND_On.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -7863,24 +9993,36 @@
             // label181
             // 
             resources.ApplyResources(this.label181, "label181");
+            this.helpProvider1.SetHelpKeyword(this.label181, resources.GetString("label181.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label181, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label181.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label181, resources.GetString("label181.HelpString"));
             this.label181.Name = "label181";
             this.helpProvider1.SetShowHelp(this.label181, ((bool)(resources.GetObject("label181.ShowHelp"))));
             // 
             // label182
             // 
             resources.ApplyResources(this.label182, "label182");
+            this.helpProvider1.SetHelpKeyword(this.label182, resources.GetString("label182.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label182, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label182.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label182, resources.GetString("label182.HelpString"));
             this.label182.Name = "label182";
             this.helpProvider1.SetShowHelp(this.label182, ((bool)(resources.GetObject("label182.ShowHelp"))));
             // 
             // label183
             // 
             resources.ApplyResources(this.label183, "label183");
+            this.helpProvider1.SetHelpKeyword(this.label183, resources.GetString("label183.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label183, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label183.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label183, resources.GetString("label183.HelpString"));
             this.label183.Name = "label183";
             this.helpProvider1.SetShowHelp(this.label183, ((bool)(resources.GetObject("label183.ShowHelp"))));
             // 
             // button_Status
             // 
             resources.ApplyResources(this.button_Status, "button_Status");
+            this.helpProvider1.SetHelpKeyword(this.button_Status, resources.GetString("button_Status.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_Status, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_Status.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_Status, resources.GetString("button_Status.HelpString"));
             this.button_Status.Name = "button_Status";
             this.helpProvider1.SetShowHelp(this.button_Status, ((bool)(resources.GetObject("button_Status.ShowHelp"))));
             this.button_Status.UseVisualStyleBackColor = true;
@@ -7888,28 +10030,35 @@
             // 
             // panel_Activity
             // 
+            resources.ApplyResources(this.panel_Activity, "panel_Activity");
             this.panel_Activity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_Activity.Controls.Add(this.tabControl_Activity);
             this.panel_Activity.Controls.Add(this.checkBox_Activity);
-            resources.ApplyResources(this.panel_Activity, "panel_Activity");
+            this.helpProvider1.SetHelpKeyword(this.panel_Activity, resources.GetString("panel_Activity.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel_Activity, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_Activity.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel_Activity, resources.GetString("panel_Activity.HelpString"));
             this.panel_Activity.Name = "panel_Activity";
             this.helpProvider1.SetShowHelp(this.panel_Activity, ((bool)(resources.GetObject("panel_Activity.ShowHelp"))));
             // 
             // tabControl_Activity
             // 
+            resources.ApplyResources(this.tabControl_Activity, "tabControl_Activity");
             this.tabControl_Activity.Controls.Add(this.tabPage11);
             this.tabControl_Activity.Controls.Add(this.tabPage12);
             this.tabControl_Activity.Controls.Add(this.tabPage13);
             this.tabControl_Activity.Controls.Add(this.tabPage14);
             this.tabControl_Activity.Controls.Add(this.tabPage15);
             this.tabControl_Activity.Controls.Add(this.tabPage16);
-            resources.ApplyResources(this.tabControl_Activity, "tabControl_Activity");
+            this.helpProvider1.SetHelpKeyword(this.tabControl_Activity, resources.GetString("tabControl_Activity.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabControl_Activity, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabControl_Activity.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabControl_Activity, resources.GetString("tabControl_Activity.HelpString"));
             this.tabControl_Activity.Name = "tabControl_Activity";
             this.tabControl_Activity.SelectedIndex = 0;
             this.helpProvider1.SetShowHelp(this.tabControl_Activity, ((bool)(resources.GetObject("tabControl_Activity.ShowHelp"))));
             // 
             // tabPage11
             // 
+            resources.ApplyResources(this.tabPage11, "tabPage11");
             this.tabPage11.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage11.Controls.Add(this.numericUpDown_ActivityGoal_EndCorner_X);
             this.tabPage11.Controls.Add(this.numericUpDown_ActivityGoal_Count);
@@ -7930,14 +10079,19 @@
             this.tabPage11.Controls.Add(this.label119);
             this.tabPage11.Controls.Add(this.label120);
             this.tabPage11.Controls.Add(this.label121);
-            resources.ApplyResources(this.tabPage11, "tabPage11");
+            this.helpProvider1.SetHelpKeyword(this.tabPage11, resources.GetString("tabPage11.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage11, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage11.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage11, resources.GetString("tabPage11.HelpString"));
             this.tabPage11.Name = "tabPage11";
             this.helpProvider1.SetShowHelp(this.tabPage11, ((bool)(resources.GetObject("tabPage11.ShowHelp"))));
             // 
             // numericUpDown_ActivityGoal_EndCorner_X
             // 
-            this.numericUpDown_ActivityGoal_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_ActivityGoal_EndCorner_X, "numericUpDown_ActivityGoal_EndCorner_X");
+            this.numericUpDown_ActivityGoal_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivityGoal_EndCorner_X, resources.GetString("numericUpDown_ActivityGoal_EndCorner_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivityGoal_EndCorner_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivityGoal_EndCorner_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivityGoal_EndCorner_X, resources.GetString("numericUpDown_ActivityGoal_EndCorner_X.HelpString"));
             this.numericUpDown_ActivityGoal_EndCorner_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -7956,6 +10110,9 @@
             // numericUpDown_ActivityGoal_Count
             // 
             resources.ApplyResources(this.numericUpDown_ActivityGoal_Count, "numericUpDown_ActivityGoal_Count");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivityGoal_Count, resources.GetString("numericUpDown_ActivityGoal_Count.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivityGoal_Count, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivityGoal_Count.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivityGoal_Count, resources.GetString("numericUpDown_ActivityGoal_Count.HelpString"));
             this.numericUpDown_ActivityGoal_Count.Maximum = new decimal(new int[] {
             99,
             0,
@@ -7972,8 +10129,11 @@
             // 
             // numericUpDown_ActivityGoal_StartCorner_Y
             // 
-            this.numericUpDown_ActivityGoal_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_ActivityGoal_StartCorner_Y, "numericUpDown_ActivityGoal_StartCorner_Y");
+            this.numericUpDown_ActivityGoal_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivityGoal_StartCorner_Y, resources.GetString("numericUpDown_ActivityGoal_StartCorner_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivityGoal_StartCorner_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivityGoal_StartCorner_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivityGoal_StartCorner_Y, resources.GetString("numericUpDown_ActivityGoal_StartCorner_Y.HelpString"));
             this.numericUpDown_ActivityGoal_StartCorner_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -7991,8 +10151,11 @@
             // 
             // numericUpDown_ActivityGoal_StartCorner_X
             // 
-            this.numericUpDown_ActivityGoal_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_ActivityGoal_StartCorner_X, "numericUpDown_ActivityGoal_StartCorner_X");
+            this.numericUpDown_ActivityGoal_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivityGoal_StartCorner_X, resources.GetString("numericUpDown_ActivityGoal_StartCorner_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivityGoal_StartCorner_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivityGoal_StartCorner_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivityGoal_StartCorner_X, resources.GetString("numericUpDown_ActivityGoal_StartCorner_X.HelpString"));
             this.numericUpDown_ActivityGoal_StartCorner_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -8011,6 +10174,9 @@
             // numericUpDown_ActivityGoal_Spacing
             // 
             resources.ApplyResources(this.numericUpDown_ActivityGoal_Spacing, "numericUpDown_ActivityGoal_Spacing");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivityGoal_Spacing, resources.GetString("numericUpDown_ActivityGoal_Spacing.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivityGoal_Spacing, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivityGoal_Spacing.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivityGoal_Spacing, resources.GetString("numericUpDown_ActivityGoal_Spacing.HelpString"));
             this.numericUpDown_ActivityGoal_Spacing.Maximum = new decimal(new int[] {
             999,
             0,
@@ -8028,6 +10194,9 @@
             // checkBox_ActivityGoal
             // 
             resources.ApplyResources(this.checkBox_ActivityGoal, "checkBox_ActivityGoal");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_ActivityGoal, resources.GetString("checkBox_ActivityGoal.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_ActivityGoal, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_ActivityGoal.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_ActivityGoal, resources.GetString("checkBox_ActivityGoal.HelpString"));
             this.checkBox_ActivityGoal.Name = "checkBox_ActivityGoal";
             this.helpProvider1.SetShowHelp(this.checkBox_ActivityGoal, ((bool)(resources.GetObject("checkBox_ActivityGoal.ShowHelp"))));
             this.checkBox_ActivityGoal.UseVisualStyleBackColor = true;
@@ -8037,20 +10206,29 @@
             // label112
             // 
             resources.ApplyResources(this.label112, "label112");
+            this.helpProvider1.SetHelpKeyword(this.label112, resources.GetString("label112.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label112, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label112.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label112, resources.GetString("label112.HelpString"));
             this.label112.Name = "label112";
             this.helpProvider1.SetShowHelp(this.label112, ((bool)(resources.GetObject("label112.ShowHelp"))));
             // 
             // label113
             // 
             resources.ApplyResources(this.label113, "label113");
+            this.helpProvider1.SetHelpKeyword(this.label113, resources.GetString("label113.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label113, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label113.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label113, resources.GetString("label113.HelpString"));
             this.label113.Name = "label113";
             this.helpProvider1.SetShowHelp(this.label113, ((bool)(resources.GetObject("label113.ShowHelp"))));
             // 
             // comboBox_ActivityGoal_Alignment
             // 
-            this.comboBox_ActivityGoal_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.comboBox_ActivityGoal_Alignment, "comboBox_ActivityGoal_Alignment");
+            this.comboBox_ActivityGoal_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_ActivityGoal_Alignment.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_ActivityGoal_Alignment, resources.GetString("comboBox_ActivityGoal_Alignment.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_ActivityGoal_Alignment, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_ActivityGoal_Alignment.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_ActivityGoal_Alignment, resources.GetString("comboBox_ActivityGoal_Alignment.HelpString"));
             this.comboBox_ActivityGoal_Alignment.Items.AddRange(new object[] {
             resources.GetString("comboBox_ActivityGoal_Alignment.Items"),
             resources.GetString("comboBox_ActivityGoal_Alignment.Items1"),
@@ -8068,25 +10246,37 @@
             // label114
             // 
             resources.ApplyResources(this.label114, "label114");
+            this.helpProvider1.SetHelpKeyword(this.label114, resources.GetString("label114.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label114, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label114.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label114, resources.GetString("label114.HelpString"));
             this.label114.Name = "label114";
             this.helpProvider1.SetShowHelp(this.label114, ((bool)(resources.GetObject("label114.ShowHelp"))));
             // 
             // label115
             // 
             resources.ApplyResources(this.label115, "label115");
+            this.helpProvider1.SetHelpKeyword(this.label115, resources.GetString("label115.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label115, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label115.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label115, resources.GetString("label115.HelpString"));
             this.label115.Name = "label115";
             this.helpProvider1.SetShowHelp(this.label115, ((bool)(resources.GetObject("label115.ShowHelp"))));
             // 
             // label116
             // 
             resources.ApplyResources(this.label116, "label116");
+            this.helpProvider1.SetHelpKeyword(this.label116, resources.GetString("label116.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label116, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label116.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label116, resources.GetString("label116.HelpString"));
             this.label116.Name = "label116";
             this.helpProvider1.SetShowHelp(this.label116, ((bool)(resources.GetObject("label116.ShowHelp"))));
             // 
             // numericUpDown_ActivityGoal_EndCorner_Y
             // 
-            this.numericUpDown_ActivityGoal_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_ActivityGoal_EndCorner_Y, "numericUpDown_ActivityGoal_EndCorner_Y");
+            this.numericUpDown_ActivityGoal_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivityGoal_EndCorner_Y, resources.GetString("numericUpDown_ActivityGoal_EndCorner_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivityGoal_EndCorner_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivityGoal_EndCorner_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivityGoal_EndCorner_Y, resources.GetString("numericUpDown_ActivityGoal_EndCorner_Y.HelpString"));
             this.numericUpDown_ActivityGoal_EndCorner_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -8104,10 +10294,13 @@
             // 
             // comboBox_ActivityGoal_Image
             // 
+            resources.ApplyResources(this.comboBox_ActivityGoal_Image, "comboBox_ActivityGoal_Image");
             this.comboBox_ActivityGoal_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_ActivityGoal_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_ActivityGoal_Image, "comboBox_ActivityGoal_Image");
             this.comboBox_ActivityGoal_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_ActivityGoal_Image, resources.GetString("comboBox_ActivityGoal_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_ActivityGoal_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_ActivityGoal_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_ActivityGoal_Image, resources.GetString("comboBox_ActivityGoal_Image.HelpString"));
             this.comboBox_ActivityGoal_Image.Name = "comboBox_ActivityGoal_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_ActivityGoal_Image, ((bool)(resources.GetObject("comboBox_ActivityGoal_Image.ShowHelp"))));
             this.comboBox_ActivityGoal_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -8119,35 +10312,51 @@
             // label117
             // 
             resources.ApplyResources(this.label117, "label117");
+            this.helpProvider1.SetHelpKeyword(this.label117, resources.GetString("label117.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label117, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label117.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label117, resources.GetString("label117.HelpString"));
             this.label117.Name = "label117";
             this.helpProvider1.SetShowHelp(this.label117, ((bool)(resources.GetObject("label117.ShowHelp"))));
             // 
             // label118
             // 
             resources.ApplyResources(this.label118, "label118");
+            this.helpProvider1.SetHelpKeyword(this.label118, resources.GetString("label118.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label118, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label118.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label118, resources.GetString("label118.HelpString"));
             this.label118.Name = "label118";
             this.helpProvider1.SetShowHelp(this.label118, ((bool)(resources.GetObject("label118.ShowHelp"))));
             // 
             // label119
             // 
             resources.ApplyResources(this.label119, "label119");
+            this.helpProvider1.SetHelpKeyword(this.label119, resources.GetString("label119.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label119, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label119.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label119, resources.GetString("label119.HelpString"));
             this.label119.Name = "label119";
             this.helpProvider1.SetShowHelp(this.label119, ((bool)(resources.GetObject("label119.ShowHelp"))));
             // 
             // label120
             // 
             resources.ApplyResources(this.label120, "label120");
+            this.helpProvider1.SetHelpKeyword(this.label120, resources.GetString("label120.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label120, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label120.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label120, resources.GetString("label120.HelpString"));
             this.label120.Name = "label120";
             this.helpProvider1.SetShowHelp(this.label120, ((bool)(resources.GetObject("label120.ShowHelp"))));
             // 
             // label121
             // 
             resources.ApplyResources(this.label121, "label121");
+            this.helpProvider1.SetHelpKeyword(this.label121, resources.GetString("label121.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label121, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label121.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label121, resources.GetString("label121.HelpString"));
             this.label121.Name = "label121";
             this.helpProvider1.SetShowHelp(this.label121, ((bool)(resources.GetObject("label121.ShowHelp"))));
             // 
             // tabPage12
             // 
+            resources.ApplyResources(this.tabPage12, "tabPage12");
             this.tabPage12.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage12.Controls.Add(this.numericUpDown_ActivitySteps_EndCorner_X);
             this.tabPage12.Controls.Add(this.numericUpDown_ActivitySteps_Count);
@@ -8168,14 +10377,19 @@
             this.tabPage12.Controls.Add(this.label129);
             this.tabPage12.Controls.Add(this.label130);
             this.tabPage12.Controls.Add(this.label131);
-            resources.ApplyResources(this.tabPage12, "tabPage12");
+            this.helpProvider1.SetHelpKeyword(this.tabPage12, resources.GetString("tabPage12.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage12, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage12.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage12, resources.GetString("tabPage12.HelpString"));
             this.tabPage12.Name = "tabPage12";
             this.helpProvider1.SetShowHelp(this.tabPage12, ((bool)(resources.GetObject("tabPage12.ShowHelp"))));
             // 
             // numericUpDown_ActivitySteps_EndCorner_X
             // 
-            this.numericUpDown_ActivitySteps_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_ActivitySteps_EndCorner_X, "numericUpDown_ActivitySteps_EndCorner_X");
+            this.numericUpDown_ActivitySteps_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivitySteps_EndCorner_X, resources.GetString("numericUpDown_ActivitySteps_EndCorner_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivitySteps_EndCorner_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivitySteps_EndCorner_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivitySteps_EndCorner_X, resources.GetString("numericUpDown_ActivitySteps_EndCorner_X.HelpString"));
             this.numericUpDown_ActivitySteps_EndCorner_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -8194,6 +10408,9 @@
             // numericUpDown_ActivitySteps_Count
             // 
             resources.ApplyResources(this.numericUpDown_ActivitySteps_Count, "numericUpDown_ActivitySteps_Count");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivitySteps_Count, resources.GetString("numericUpDown_ActivitySteps_Count.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivitySteps_Count, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivitySteps_Count.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivitySteps_Count, resources.GetString("numericUpDown_ActivitySteps_Count.HelpString"));
             this.numericUpDown_ActivitySteps_Count.Maximum = new decimal(new int[] {
             99,
             0,
@@ -8210,8 +10427,11 @@
             // 
             // numericUpDown_ActivitySteps_StartCorner_Y
             // 
-            this.numericUpDown_ActivitySteps_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_ActivitySteps_StartCorner_Y, "numericUpDown_ActivitySteps_StartCorner_Y");
+            this.numericUpDown_ActivitySteps_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivitySteps_StartCorner_Y, resources.GetString("numericUpDown_ActivitySteps_StartCorner_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivitySteps_StartCorner_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivitySteps_StartCorner_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivitySteps_StartCorner_Y, resources.GetString("numericUpDown_ActivitySteps_StartCorner_Y.HelpString"));
             this.numericUpDown_ActivitySteps_StartCorner_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -8229,8 +10449,11 @@
             // 
             // numericUpDown_ActivitySteps_StartCorner_X
             // 
-            this.numericUpDown_ActivitySteps_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_ActivitySteps_StartCorner_X, "numericUpDown_ActivitySteps_StartCorner_X");
+            this.numericUpDown_ActivitySteps_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivitySteps_StartCorner_X, resources.GetString("numericUpDown_ActivitySteps_StartCorner_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivitySteps_StartCorner_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivitySteps_StartCorner_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivitySteps_StartCorner_X, resources.GetString("numericUpDown_ActivitySteps_StartCorner_X.HelpString"));
             this.numericUpDown_ActivitySteps_StartCorner_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -8249,6 +10472,9 @@
             // numericUpDown_ActivitySteps_Spacing
             // 
             resources.ApplyResources(this.numericUpDown_ActivitySteps_Spacing, "numericUpDown_ActivitySteps_Spacing");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivitySteps_Spacing, resources.GetString("numericUpDown_ActivitySteps_Spacing.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivitySteps_Spacing, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivitySteps_Spacing.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivitySteps_Spacing, resources.GetString("numericUpDown_ActivitySteps_Spacing.HelpString"));
             this.numericUpDown_ActivitySteps_Spacing.Maximum = new decimal(new int[] {
             999,
             0,
@@ -8266,6 +10492,9 @@
             // checkBox_ActivitySteps
             // 
             resources.ApplyResources(this.checkBox_ActivitySteps, "checkBox_ActivitySteps");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_ActivitySteps, resources.GetString("checkBox_ActivitySteps.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_ActivitySteps, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_ActivitySteps.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_ActivitySteps, resources.GetString("checkBox_ActivitySteps.HelpString"));
             this.checkBox_ActivitySteps.Name = "checkBox_ActivitySteps";
             this.helpProvider1.SetShowHelp(this.checkBox_ActivitySteps, ((bool)(resources.GetObject("checkBox_ActivitySteps.ShowHelp"))));
             this.checkBox_ActivitySteps.UseVisualStyleBackColor = true;
@@ -8275,20 +10504,29 @@
             // label122
             // 
             resources.ApplyResources(this.label122, "label122");
+            this.helpProvider1.SetHelpKeyword(this.label122, resources.GetString("label122.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label122, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label122.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label122, resources.GetString("label122.HelpString"));
             this.label122.Name = "label122";
             this.helpProvider1.SetShowHelp(this.label122, ((bool)(resources.GetObject("label122.ShowHelp"))));
             // 
             // label123
             // 
             resources.ApplyResources(this.label123, "label123");
+            this.helpProvider1.SetHelpKeyword(this.label123, resources.GetString("label123.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label123, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label123.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label123, resources.GetString("label123.HelpString"));
             this.label123.Name = "label123";
             this.helpProvider1.SetShowHelp(this.label123, ((bool)(resources.GetObject("label123.ShowHelp"))));
             // 
             // comboBox_ActivitySteps_Alignment
             // 
-            this.comboBox_ActivitySteps_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.comboBox_ActivitySteps_Alignment, "comboBox_ActivitySteps_Alignment");
+            this.comboBox_ActivitySteps_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_ActivitySteps_Alignment.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_ActivitySteps_Alignment, resources.GetString("comboBox_ActivitySteps_Alignment.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_ActivitySteps_Alignment, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_ActivitySteps_Alignment.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_ActivitySteps_Alignment, resources.GetString("comboBox_ActivitySteps_Alignment.HelpString"));
             this.comboBox_ActivitySteps_Alignment.Items.AddRange(new object[] {
             resources.GetString("comboBox_ActivitySteps_Alignment.Items"),
             resources.GetString("comboBox_ActivitySteps_Alignment.Items1"),
@@ -8306,25 +10544,37 @@
             // label124
             // 
             resources.ApplyResources(this.label124, "label124");
+            this.helpProvider1.SetHelpKeyword(this.label124, resources.GetString("label124.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label124, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label124.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label124, resources.GetString("label124.HelpString"));
             this.label124.Name = "label124";
             this.helpProvider1.SetShowHelp(this.label124, ((bool)(resources.GetObject("label124.ShowHelp"))));
             // 
             // label125
             // 
             resources.ApplyResources(this.label125, "label125");
+            this.helpProvider1.SetHelpKeyword(this.label125, resources.GetString("label125.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label125, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label125.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label125, resources.GetString("label125.HelpString"));
             this.label125.Name = "label125";
             this.helpProvider1.SetShowHelp(this.label125, ((bool)(resources.GetObject("label125.ShowHelp"))));
             // 
             // label126
             // 
             resources.ApplyResources(this.label126, "label126");
+            this.helpProvider1.SetHelpKeyword(this.label126, resources.GetString("label126.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label126, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label126.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label126, resources.GetString("label126.HelpString"));
             this.label126.Name = "label126";
             this.helpProvider1.SetShowHelp(this.label126, ((bool)(resources.GetObject("label126.ShowHelp"))));
             // 
             // numericUpDown_ActivitySteps_EndCorner_Y
             // 
-            this.numericUpDown_ActivitySteps_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_ActivitySteps_EndCorner_Y, "numericUpDown_ActivitySteps_EndCorner_Y");
+            this.numericUpDown_ActivitySteps_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivitySteps_EndCorner_Y, resources.GetString("numericUpDown_ActivitySteps_EndCorner_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivitySteps_EndCorner_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivitySteps_EndCorner_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivitySteps_EndCorner_Y, resources.GetString("numericUpDown_ActivitySteps_EndCorner_Y.HelpString"));
             this.numericUpDown_ActivitySteps_EndCorner_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -8342,10 +10592,13 @@
             // 
             // comboBox_ActivitySteps_Image
             // 
+            resources.ApplyResources(this.comboBox_ActivitySteps_Image, "comboBox_ActivitySteps_Image");
             this.comboBox_ActivitySteps_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_ActivitySteps_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_ActivitySteps_Image, "comboBox_ActivitySteps_Image");
             this.comboBox_ActivitySteps_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_ActivitySteps_Image, resources.GetString("comboBox_ActivitySteps_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_ActivitySteps_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_ActivitySteps_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_ActivitySteps_Image, resources.GetString("comboBox_ActivitySteps_Image.HelpString"));
             this.comboBox_ActivitySteps_Image.Name = "comboBox_ActivitySteps_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_ActivitySteps_Image, ((bool)(resources.GetObject("comboBox_ActivitySteps_Image.ShowHelp"))));
             this.comboBox_ActivitySteps_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -8357,35 +10610,51 @@
             // label127
             // 
             resources.ApplyResources(this.label127, "label127");
+            this.helpProvider1.SetHelpKeyword(this.label127, resources.GetString("label127.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label127, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label127.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label127, resources.GetString("label127.HelpString"));
             this.label127.Name = "label127";
             this.helpProvider1.SetShowHelp(this.label127, ((bool)(resources.GetObject("label127.ShowHelp"))));
             // 
             // label128
             // 
             resources.ApplyResources(this.label128, "label128");
+            this.helpProvider1.SetHelpKeyword(this.label128, resources.GetString("label128.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label128, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label128.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label128, resources.GetString("label128.HelpString"));
             this.label128.Name = "label128";
             this.helpProvider1.SetShowHelp(this.label128, ((bool)(resources.GetObject("label128.ShowHelp"))));
             // 
             // label129
             // 
             resources.ApplyResources(this.label129, "label129");
+            this.helpProvider1.SetHelpKeyword(this.label129, resources.GetString("label129.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label129, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label129.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label129, resources.GetString("label129.HelpString"));
             this.label129.Name = "label129";
             this.helpProvider1.SetShowHelp(this.label129, ((bool)(resources.GetObject("label129.ShowHelp"))));
             // 
             // label130
             // 
             resources.ApplyResources(this.label130, "label130");
+            this.helpProvider1.SetHelpKeyword(this.label130, resources.GetString("label130.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label130, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label130.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label130, resources.GetString("label130.HelpString"));
             this.label130.Name = "label130";
             this.helpProvider1.SetShowHelp(this.label130, ((bool)(resources.GetObject("label130.ShowHelp"))));
             // 
             // label131
             // 
             resources.ApplyResources(this.label131, "label131");
+            this.helpProvider1.SetHelpKeyword(this.label131, resources.GetString("label131.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label131, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label131.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label131, resources.GetString("label131.HelpString"));
             this.label131.Name = "label131";
             this.helpProvider1.SetShowHelp(this.label131, ((bool)(resources.GetObject("label131.ShowHelp"))));
             // 
             // tabPage13
             // 
+            resources.ApplyResources(this.tabPage13, "tabPage13");
             this.tabPage13.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage13.Controls.Add(this.label173);
             this.tabPage13.Controls.Add(this.comboBox_ActivityDistance_Decimal);
@@ -8410,22 +10679,30 @@
             this.tabPage13.Controls.Add(this.label139);
             this.tabPage13.Controls.Add(this.label140);
             this.tabPage13.Controls.Add(this.label141);
-            resources.ApplyResources(this.tabPage13, "tabPage13");
+            this.helpProvider1.SetHelpKeyword(this.tabPage13, resources.GetString("tabPage13.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage13, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage13.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage13, resources.GetString("tabPage13.HelpString"));
             this.tabPage13.Name = "tabPage13";
             this.helpProvider1.SetShowHelp(this.tabPage13, ((bool)(resources.GetObject("tabPage13.ShowHelp"))));
             // 
             // label173
             // 
             resources.ApplyResources(this.label173, "label173");
+            this.helpProvider1.SetHelpKeyword(this.label173, resources.GetString("label173.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label173, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label173.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label173, resources.GetString("label173.HelpString"));
             this.label173.Name = "label173";
             this.helpProvider1.SetShowHelp(this.label173, ((bool)(resources.GetObject("label173.ShowHelp"))));
             // 
             // comboBox_ActivityDistance_Decimal
             // 
+            resources.ApplyResources(this.comboBox_ActivityDistance_Decimal, "comboBox_ActivityDistance_Decimal");
             this.comboBox_ActivityDistance_Decimal.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_ActivityDistance_Decimal.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_ActivityDistance_Decimal, "comboBox_ActivityDistance_Decimal");
             this.comboBox_ActivityDistance_Decimal.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_ActivityDistance_Decimal, resources.GetString("comboBox_ActivityDistance_Decimal.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_ActivityDistance_Decimal, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_ActivityDistance_Decimal.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_ActivityDistance_Decimal, resources.GetString("comboBox_ActivityDistance_Decimal.HelpString"));
             this.comboBox_ActivityDistance_Decimal.Name = "comboBox_ActivityDistance_Decimal";
             this.helpProvider1.SetShowHelp(this.comboBox_ActivityDistance_Decimal, ((bool)(resources.GetObject("comboBox_ActivityDistance_Decimal.ShowHelp"))));
             this.comboBox_ActivityDistance_Decimal.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -8437,15 +10714,21 @@
             // label172
             // 
             resources.ApplyResources(this.label172, "label172");
+            this.helpProvider1.SetHelpKeyword(this.label172, resources.GetString("label172.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label172, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label172.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label172, resources.GetString("label172.HelpString"));
             this.label172.Name = "label172";
             this.helpProvider1.SetShowHelp(this.label172, ((bool)(resources.GetObject("label172.ShowHelp"))));
             // 
             // comboBox_ActivityDistance_Suffix
             // 
+            resources.ApplyResources(this.comboBox_ActivityDistance_Suffix, "comboBox_ActivityDistance_Suffix");
             this.comboBox_ActivityDistance_Suffix.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_ActivityDistance_Suffix.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_ActivityDistance_Suffix, "comboBox_ActivityDistance_Suffix");
             this.comboBox_ActivityDistance_Suffix.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_ActivityDistance_Suffix, resources.GetString("comboBox_ActivityDistance_Suffix.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_ActivityDistance_Suffix, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_ActivityDistance_Suffix.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_ActivityDistance_Suffix, resources.GetString("comboBox_ActivityDistance_Suffix.HelpString"));
             this.comboBox_ActivityDistance_Suffix.Name = "comboBox_ActivityDistance_Suffix";
             this.helpProvider1.SetShowHelp(this.comboBox_ActivityDistance_Suffix, ((bool)(resources.GetObject("comboBox_ActivityDistance_Suffix.ShowHelp"))));
             this.comboBox_ActivityDistance_Suffix.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -8456,8 +10739,11 @@
             // 
             // numericUpDown_ActivityDistance_EndCorner_X
             // 
-            this.numericUpDown_ActivityDistance_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_ActivityDistance_EndCorner_X, "numericUpDown_ActivityDistance_EndCorner_X");
+            this.numericUpDown_ActivityDistance_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivityDistance_EndCorner_X, resources.GetString("numericUpDown_ActivityDistance_EndCorner_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivityDistance_EndCorner_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivityDistance_EndCorner_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivityDistance_EndCorner_X, resources.GetString("numericUpDown_ActivityDistance_EndCorner_X.HelpString"));
             this.numericUpDown_ActivityDistance_EndCorner_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -8476,6 +10762,9 @@
             // numericUpDown_ActivityDistance_Count
             // 
             resources.ApplyResources(this.numericUpDown_ActivityDistance_Count, "numericUpDown_ActivityDistance_Count");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivityDistance_Count, resources.GetString("numericUpDown_ActivityDistance_Count.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivityDistance_Count, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivityDistance_Count.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivityDistance_Count, resources.GetString("numericUpDown_ActivityDistance_Count.HelpString"));
             this.numericUpDown_ActivityDistance_Count.Maximum = new decimal(new int[] {
             99,
             0,
@@ -8492,8 +10781,11 @@
             // 
             // numericUpDown_ActivityDistance_StartCorner_Y
             // 
-            this.numericUpDown_ActivityDistance_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_ActivityDistance_StartCorner_Y, "numericUpDown_ActivityDistance_StartCorner_Y");
+            this.numericUpDown_ActivityDistance_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivityDistance_StartCorner_Y, resources.GetString("numericUpDown_ActivityDistance_StartCorner_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivityDistance_StartCorner_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivityDistance_StartCorner_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivityDistance_StartCorner_Y, resources.GetString("numericUpDown_ActivityDistance_StartCorner_Y.HelpString"));
             this.numericUpDown_ActivityDistance_StartCorner_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -8511,8 +10803,11 @@
             // 
             // numericUpDown_ActivityDistance_StartCorner_X
             // 
-            this.numericUpDown_ActivityDistance_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_ActivityDistance_StartCorner_X, "numericUpDown_ActivityDistance_StartCorner_X");
+            this.numericUpDown_ActivityDistance_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivityDistance_StartCorner_X, resources.GetString("numericUpDown_ActivityDistance_StartCorner_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivityDistance_StartCorner_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivityDistance_StartCorner_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivityDistance_StartCorner_X, resources.GetString("numericUpDown_ActivityDistance_StartCorner_X.HelpString"));
             this.numericUpDown_ActivityDistance_StartCorner_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -8531,6 +10826,9 @@
             // numericUpDown_ActivityDistance_Spacing
             // 
             resources.ApplyResources(this.numericUpDown_ActivityDistance_Spacing, "numericUpDown_ActivityDistance_Spacing");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivityDistance_Spacing, resources.GetString("numericUpDown_ActivityDistance_Spacing.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivityDistance_Spacing, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivityDistance_Spacing.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivityDistance_Spacing, resources.GetString("numericUpDown_ActivityDistance_Spacing.HelpString"));
             this.numericUpDown_ActivityDistance_Spacing.Maximum = new decimal(new int[] {
             999,
             0,
@@ -8548,6 +10846,9 @@
             // checkBox_ActivityDistance
             // 
             resources.ApplyResources(this.checkBox_ActivityDistance, "checkBox_ActivityDistance");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_ActivityDistance, resources.GetString("checkBox_ActivityDistance.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_ActivityDistance, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_ActivityDistance.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_ActivityDistance, resources.GetString("checkBox_ActivityDistance.HelpString"));
             this.checkBox_ActivityDistance.Name = "checkBox_ActivityDistance";
             this.helpProvider1.SetShowHelp(this.checkBox_ActivityDistance, ((bool)(resources.GetObject("checkBox_ActivityDistance.ShowHelp"))));
             this.checkBox_ActivityDistance.UseVisualStyleBackColor = true;
@@ -8557,20 +10858,29 @@
             // label132
             // 
             resources.ApplyResources(this.label132, "label132");
+            this.helpProvider1.SetHelpKeyword(this.label132, resources.GetString("label132.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label132, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label132.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label132, resources.GetString("label132.HelpString"));
             this.label132.Name = "label132";
             this.helpProvider1.SetShowHelp(this.label132, ((bool)(resources.GetObject("label132.ShowHelp"))));
             // 
             // label133
             // 
             resources.ApplyResources(this.label133, "label133");
+            this.helpProvider1.SetHelpKeyword(this.label133, resources.GetString("label133.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label133, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label133.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label133, resources.GetString("label133.HelpString"));
             this.label133.Name = "label133";
             this.helpProvider1.SetShowHelp(this.label133, ((bool)(resources.GetObject("label133.ShowHelp"))));
             // 
             // comboBox_ActivityDistance_Alignment
             // 
-            this.comboBox_ActivityDistance_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.comboBox_ActivityDistance_Alignment, "comboBox_ActivityDistance_Alignment");
+            this.comboBox_ActivityDistance_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_ActivityDistance_Alignment.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_ActivityDistance_Alignment, resources.GetString("comboBox_ActivityDistance_Alignment.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_ActivityDistance_Alignment, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_ActivityDistance_Alignment.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_ActivityDistance_Alignment, resources.GetString("comboBox_ActivityDistance_Alignment.HelpString"));
             this.comboBox_ActivityDistance_Alignment.Items.AddRange(new object[] {
             resources.GetString("comboBox_ActivityDistance_Alignment.Items"),
             resources.GetString("comboBox_ActivityDistance_Alignment.Items1"),
@@ -8588,25 +10898,37 @@
             // label134
             // 
             resources.ApplyResources(this.label134, "label134");
+            this.helpProvider1.SetHelpKeyword(this.label134, resources.GetString("label134.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label134, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label134.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label134, resources.GetString("label134.HelpString"));
             this.label134.Name = "label134";
             this.helpProvider1.SetShowHelp(this.label134, ((bool)(resources.GetObject("label134.ShowHelp"))));
             // 
             // label135
             // 
             resources.ApplyResources(this.label135, "label135");
+            this.helpProvider1.SetHelpKeyword(this.label135, resources.GetString("label135.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label135, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label135.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label135, resources.GetString("label135.HelpString"));
             this.label135.Name = "label135";
             this.helpProvider1.SetShowHelp(this.label135, ((bool)(resources.GetObject("label135.ShowHelp"))));
             // 
             // label136
             // 
             resources.ApplyResources(this.label136, "label136");
+            this.helpProvider1.SetHelpKeyword(this.label136, resources.GetString("label136.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label136, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label136.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label136, resources.GetString("label136.HelpString"));
             this.label136.Name = "label136";
             this.helpProvider1.SetShowHelp(this.label136, ((bool)(resources.GetObject("label136.ShowHelp"))));
             // 
             // numericUpDown_ActivityDistance_EndCorner_Y
             // 
-            this.numericUpDown_ActivityDistance_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_ActivityDistance_EndCorner_Y, "numericUpDown_ActivityDistance_EndCorner_Y");
+            this.numericUpDown_ActivityDistance_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivityDistance_EndCorner_Y, resources.GetString("numericUpDown_ActivityDistance_EndCorner_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivityDistance_EndCorner_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivityDistance_EndCorner_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivityDistance_EndCorner_Y, resources.GetString("numericUpDown_ActivityDistance_EndCorner_Y.HelpString"));
             this.numericUpDown_ActivityDistance_EndCorner_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -8624,10 +10946,13 @@
             // 
             // comboBox_ActivityDistance_Image
             // 
+            resources.ApplyResources(this.comboBox_ActivityDistance_Image, "comboBox_ActivityDistance_Image");
             this.comboBox_ActivityDistance_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_ActivityDistance_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_ActivityDistance_Image, "comboBox_ActivityDistance_Image");
             this.comboBox_ActivityDistance_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_ActivityDistance_Image, resources.GetString("comboBox_ActivityDistance_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_ActivityDistance_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_ActivityDistance_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_ActivityDistance_Image, resources.GetString("comboBox_ActivityDistance_Image.HelpString"));
             this.comboBox_ActivityDistance_Image.Name = "comboBox_ActivityDistance_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_ActivityDistance_Image, ((bool)(resources.GetObject("comboBox_ActivityDistance_Image.ShowHelp"))));
             this.comboBox_ActivityDistance_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -8639,35 +10964,51 @@
             // label137
             // 
             resources.ApplyResources(this.label137, "label137");
+            this.helpProvider1.SetHelpKeyword(this.label137, resources.GetString("label137.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label137, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label137.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label137, resources.GetString("label137.HelpString"));
             this.label137.Name = "label137";
             this.helpProvider1.SetShowHelp(this.label137, ((bool)(resources.GetObject("label137.ShowHelp"))));
             // 
             // label138
             // 
             resources.ApplyResources(this.label138, "label138");
+            this.helpProvider1.SetHelpKeyword(this.label138, resources.GetString("label138.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label138, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label138.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label138, resources.GetString("label138.HelpString"));
             this.label138.Name = "label138";
             this.helpProvider1.SetShowHelp(this.label138, ((bool)(resources.GetObject("label138.ShowHelp"))));
             // 
             // label139
             // 
             resources.ApplyResources(this.label139, "label139");
+            this.helpProvider1.SetHelpKeyword(this.label139, resources.GetString("label139.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label139, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label139.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label139, resources.GetString("label139.HelpString"));
             this.label139.Name = "label139";
             this.helpProvider1.SetShowHelp(this.label139, ((bool)(resources.GetObject("label139.ShowHelp"))));
             // 
             // label140
             // 
             resources.ApplyResources(this.label140, "label140");
+            this.helpProvider1.SetHelpKeyword(this.label140, resources.GetString("label140.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label140, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label140.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label140, resources.GetString("label140.HelpString"));
             this.label140.Name = "label140";
             this.helpProvider1.SetShowHelp(this.label140, ((bool)(resources.GetObject("label140.ShowHelp"))));
             // 
             // label141
             // 
             resources.ApplyResources(this.label141, "label141");
+            this.helpProvider1.SetHelpKeyword(this.label141, resources.GetString("label141.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label141, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label141.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label141, resources.GetString("label141.HelpString"));
             this.label141.Name = "label141";
             this.helpProvider1.SetShowHelp(this.label141, ((bool)(resources.GetObject("label141.ShowHelp"))));
             // 
             // tabPage14
             // 
+            resources.ApplyResources(this.tabPage14, "tabPage14");
             this.tabPage14.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage14.Controls.Add(this.numericUpDown_ActivityPuls_EndCorner_X);
             this.tabPage14.Controls.Add(this.numericUpDown_ActivityPuls_Count);
@@ -8688,14 +11029,19 @@
             this.tabPage14.Controls.Add(this.label149);
             this.tabPage14.Controls.Add(this.label150);
             this.tabPage14.Controls.Add(this.label151);
-            resources.ApplyResources(this.tabPage14, "tabPage14");
+            this.helpProvider1.SetHelpKeyword(this.tabPage14, resources.GetString("tabPage14.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage14, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage14.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage14, resources.GetString("tabPage14.HelpString"));
             this.tabPage14.Name = "tabPage14";
             this.helpProvider1.SetShowHelp(this.tabPage14, ((bool)(resources.GetObject("tabPage14.ShowHelp"))));
             // 
             // numericUpDown_ActivityPuls_EndCorner_X
             // 
-            this.numericUpDown_ActivityPuls_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_ActivityPuls_EndCorner_X, "numericUpDown_ActivityPuls_EndCorner_X");
+            this.numericUpDown_ActivityPuls_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivityPuls_EndCorner_X, resources.GetString("numericUpDown_ActivityPuls_EndCorner_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivityPuls_EndCorner_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivityPuls_EndCorner_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivityPuls_EndCorner_X, resources.GetString("numericUpDown_ActivityPuls_EndCorner_X.HelpString"));
             this.numericUpDown_ActivityPuls_EndCorner_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -8714,6 +11060,9 @@
             // numericUpDown_ActivityPuls_Count
             // 
             resources.ApplyResources(this.numericUpDown_ActivityPuls_Count, "numericUpDown_ActivityPuls_Count");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivityPuls_Count, resources.GetString("numericUpDown_ActivityPuls_Count.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivityPuls_Count, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivityPuls_Count.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivityPuls_Count, resources.GetString("numericUpDown_ActivityPuls_Count.HelpString"));
             this.numericUpDown_ActivityPuls_Count.Maximum = new decimal(new int[] {
             99,
             0,
@@ -8730,8 +11079,11 @@
             // 
             // numericUpDown_ActivityPuls_StartCorner_Y
             // 
-            this.numericUpDown_ActivityPuls_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_ActivityPuls_StartCorner_Y, "numericUpDown_ActivityPuls_StartCorner_Y");
+            this.numericUpDown_ActivityPuls_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivityPuls_StartCorner_Y, resources.GetString("numericUpDown_ActivityPuls_StartCorner_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivityPuls_StartCorner_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivityPuls_StartCorner_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivityPuls_StartCorner_Y, resources.GetString("numericUpDown_ActivityPuls_StartCorner_Y.HelpString"));
             this.numericUpDown_ActivityPuls_StartCorner_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -8749,8 +11101,11 @@
             // 
             // numericUpDown_ActivityPuls_StartCorner_X
             // 
-            this.numericUpDown_ActivityPuls_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_ActivityPuls_StartCorner_X, "numericUpDown_ActivityPuls_StartCorner_X");
+            this.numericUpDown_ActivityPuls_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivityPuls_StartCorner_X, resources.GetString("numericUpDown_ActivityPuls_StartCorner_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivityPuls_StartCorner_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivityPuls_StartCorner_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivityPuls_StartCorner_X, resources.GetString("numericUpDown_ActivityPuls_StartCorner_X.HelpString"));
             this.numericUpDown_ActivityPuls_StartCorner_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -8769,6 +11124,9 @@
             // numericUpDown_ActivityPuls_Spacing
             // 
             resources.ApplyResources(this.numericUpDown_ActivityPuls_Spacing, "numericUpDown_ActivityPuls_Spacing");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivityPuls_Spacing, resources.GetString("numericUpDown_ActivityPuls_Spacing.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivityPuls_Spacing, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivityPuls_Spacing.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivityPuls_Spacing, resources.GetString("numericUpDown_ActivityPuls_Spacing.HelpString"));
             this.numericUpDown_ActivityPuls_Spacing.Maximum = new decimal(new int[] {
             999,
             0,
@@ -8786,6 +11144,9 @@
             // checkBox_ActivityPuls
             // 
             resources.ApplyResources(this.checkBox_ActivityPuls, "checkBox_ActivityPuls");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_ActivityPuls, resources.GetString("checkBox_ActivityPuls.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_ActivityPuls, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_ActivityPuls.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_ActivityPuls, resources.GetString("checkBox_ActivityPuls.HelpString"));
             this.checkBox_ActivityPuls.Name = "checkBox_ActivityPuls";
             this.helpProvider1.SetShowHelp(this.checkBox_ActivityPuls, ((bool)(resources.GetObject("checkBox_ActivityPuls.ShowHelp"))));
             this.checkBox_ActivityPuls.UseVisualStyleBackColor = true;
@@ -8795,20 +11156,29 @@
             // label142
             // 
             resources.ApplyResources(this.label142, "label142");
+            this.helpProvider1.SetHelpKeyword(this.label142, resources.GetString("label142.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label142, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label142.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label142, resources.GetString("label142.HelpString"));
             this.label142.Name = "label142";
             this.helpProvider1.SetShowHelp(this.label142, ((bool)(resources.GetObject("label142.ShowHelp"))));
             // 
             // label143
             // 
             resources.ApplyResources(this.label143, "label143");
+            this.helpProvider1.SetHelpKeyword(this.label143, resources.GetString("label143.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label143, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label143.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label143, resources.GetString("label143.HelpString"));
             this.label143.Name = "label143";
             this.helpProvider1.SetShowHelp(this.label143, ((bool)(resources.GetObject("label143.ShowHelp"))));
             // 
             // comboBox_ActivityPuls_Alignment
             // 
-            this.comboBox_ActivityPuls_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.comboBox_ActivityPuls_Alignment, "comboBox_ActivityPuls_Alignment");
+            this.comboBox_ActivityPuls_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_ActivityPuls_Alignment.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_ActivityPuls_Alignment, resources.GetString("comboBox_ActivityPuls_Alignment.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_ActivityPuls_Alignment, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_ActivityPuls_Alignment.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_ActivityPuls_Alignment, resources.GetString("comboBox_ActivityPuls_Alignment.HelpString"));
             this.comboBox_ActivityPuls_Alignment.Items.AddRange(new object[] {
             resources.GetString("comboBox_ActivityPuls_Alignment.Items"),
             resources.GetString("comboBox_ActivityPuls_Alignment.Items1"),
@@ -8826,25 +11196,37 @@
             // label144
             // 
             resources.ApplyResources(this.label144, "label144");
+            this.helpProvider1.SetHelpKeyword(this.label144, resources.GetString("label144.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label144, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label144.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label144, resources.GetString("label144.HelpString"));
             this.label144.Name = "label144";
             this.helpProvider1.SetShowHelp(this.label144, ((bool)(resources.GetObject("label144.ShowHelp"))));
             // 
             // label145
             // 
             resources.ApplyResources(this.label145, "label145");
+            this.helpProvider1.SetHelpKeyword(this.label145, resources.GetString("label145.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label145, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label145.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label145, resources.GetString("label145.HelpString"));
             this.label145.Name = "label145";
             this.helpProvider1.SetShowHelp(this.label145, ((bool)(resources.GetObject("label145.ShowHelp"))));
             // 
             // label146
             // 
             resources.ApplyResources(this.label146, "label146");
+            this.helpProvider1.SetHelpKeyword(this.label146, resources.GetString("label146.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label146, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label146.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label146, resources.GetString("label146.HelpString"));
             this.label146.Name = "label146";
             this.helpProvider1.SetShowHelp(this.label146, ((bool)(resources.GetObject("label146.ShowHelp"))));
             // 
             // numericUpDown_ActivityPuls_EndCorner_Y
             // 
-            this.numericUpDown_ActivityPuls_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_ActivityPuls_EndCorner_Y, "numericUpDown_ActivityPuls_EndCorner_Y");
+            this.numericUpDown_ActivityPuls_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivityPuls_EndCorner_Y, resources.GetString("numericUpDown_ActivityPuls_EndCorner_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivityPuls_EndCorner_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivityPuls_EndCorner_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivityPuls_EndCorner_Y, resources.GetString("numericUpDown_ActivityPuls_EndCorner_Y.HelpString"));
             this.numericUpDown_ActivityPuls_EndCorner_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -8862,10 +11244,13 @@
             // 
             // comboBox_ActivityPuls_Image
             // 
+            resources.ApplyResources(this.comboBox_ActivityPuls_Image, "comboBox_ActivityPuls_Image");
             this.comboBox_ActivityPuls_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_ActivityPuls_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_ActivityPuls_Image, "comboBox_ActivityPuls_Image");
             this.comboBox_ActivityPuls_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_ActivityPuls_Image, resources.GetString("comboBox_ActivityPuls_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_ActivityPuls_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_ActivityPuls_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_ActivityPuls_Image, resources.GetString("comboBox_ActivityPuls_Image.HelpString"));
             this.comboBox_ActivityPuls_Image.Name = "comboBox_ActivityPuls_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_ActivityPuls_Image, ((bool)(resources.GetObject("comboBox_ActivityPuls_Image.ShowHelp"))));
             this.comboBox_ActivityPuls_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -8877,35 +11262,51 @@
             // label147
             // 
             resources.ApplyResources(this.label147, "label147");
+            this.helpProvider1.SetHelpKeyword(this.label147, resources.GetString("label147.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label147, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label147.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label147, resources.GetString("label147.HelpString"));
             this.label147.Name = "label147";
             this.helpProvider1.SetShowHelp(this.label147, ((bool)(resources.GetObject("label147.ShowHelp"))));
             // 
             // label148
             // 
             resources.ApplyResources(this.label148, "label148");
+            this.helpProvider1.SetHelpKeyword(this.label148, resources.GetString("label148.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label148, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label148.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label148, resources.GetString("label148.HelpString"));
             this.label148.Name = "label148";
             this.helpProvider1.SetShowHelp(this.label148, ((bool)(resources.GetObject("label148.ShowHelp"))));
             // 
             // label149
             // 
             resources.ApplyResources(this.label149, "label149");
+            this.helpProvider1.SetHelpKeyword(this.label149, resources.GetString("label149.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label149, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label149.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label149, resources.GetString("label149.HelpString"));
             this.label149.Name = "label149";
             this.helpProvider1.SetShowHelp(this.label149, ((bool)(resources.GetObject("label149.ShowHelp"))));
             // 
             // label150
             // 
             resources.ApplyResources(this.label150, "label150");
+            this.helpProvider1.SetHelpKeyword(this.label150, resources.GetString("label150.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label150, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label150.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label150, resources.GetString("label150.HelpString"));
             this.label150.Name = "label150";
             this.helpProvider1.SetShowHelp(this.label150, ((bool)(resources.GetObject("label150.ShowHelp"))));
             // 
             // label151
             // 
             resources.ApplyResources(this.label151, "label151");
+            this.helpProvider1.SetHelpKeyword(this.label151, resources.GetString("label151.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label151, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label151.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label151, resources.GetString("label151.HelpString"));
             this.label151.Name = "label151";
             this.helpProvider1.SetShowHelp(this.label151, ((bool)(resources.GetObject("label151.ShowHelp"))));
             // 
             // tabPage15
             // 
+            resources.ApplyResources(this.tabPage15, "tabPage15");
             this.tabPage15.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage15.Controls.Add(this.numericUpDown_ActivityCalories_EndCorner_X);
             this.tabPage15.Controls.Add(this.numericUpDown_ActivityCalories_Count);
@@ -8926,14 +11327,19 @@
             this.tabPage15.Controls.Add(this.label159);
             this.tabPage15.Controls.Add(this.label160);
             this.tabPage15.Controls.Add(this.label161);
-            resources.ApplyResources(this.tabPage15, "tabPage15");
+            this.helpProvider1.SetHelpKeyword(this.tabPage15, resources.GetString("tabPage15.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage15, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage15.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage15, resources.GetString("tabPage15.HelpString"));
             this.tabPage15.Name = "tabPage15";
             this.helpProvider1.SetShowHelp(this.tabPage15, ((bool)(resources.GetObject("tabPage15.ShowHelp"))));
             // 
             // numericUpDown_ActivityCalories_EndCorner_X
             // 
-            this.numericUpDown_ActivityCalories_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_ActivityCalories_EndCorner_X, "numericUpDown_ActivityCalories_EndCorner_X");
+            this.numericUpDown_ActivityCalories_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivityCalories_EndCorner_X, resources.GetString("numericUpDown_ActivityCalories_EndCorner_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivityCalories_EndCorner_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivityCalories_EndCorner_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivityCalories_EndCorner_X, resources.GetString("numericUpDown_ActivityCalories_EndCorner_X.HelpString"));
             this.numericUpDown_ActivityCalories_EndCorner_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -8952,6 +11358,9 @@
             // numericUpDown_ActivityCalories_Count
             // 
             resources.ApplyResources(this.numericUpDown_ActivityCalories_Count, "numericUpDown_ActivityCalories_Count");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivityCalories_Count, resources.GetString("numericUpDown_ActivityCalories_Count.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivityCalories_Count, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivityCalories_Count.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivityCalories_Count, resources.GetString("numericUpDown_ActivityCalories_Count.HelpString"));
             this.numericUpDown_ActivityCalories_Count.Maximum = new decimal(new int[] {
             99,
             0,
@@ -8968,8 +11377,11 @@
             // 
             // numericUpDown_ActivityCalories_StartCorner_Y
             // 
-            this.numericUpDown_ActivityCalories_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_ActivityCalories_StartCorner_Y, "numericUpDown_ActivityCalories_StartCorner_Y");
+            this.numericUpDown_ActivityCalories_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivityCalories_StartCorner_Y, resources.GetString("numericUpDown_ActivityCalories_StartCorner_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivityCalories_StartCorner_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivityCalories_StartCorner_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivityCalories_StartCorner_Y, resources.GetString("numericUpDown_ActivityCalories_StartCorner_Y.HelpString"));
             this.numericUpDown_ActivityCalories_StartCorner_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -8987,8 +11399,11 @@
             // 
             // numericUpDown_ActivityCalories_StartCorner_X
             // 
-            this.numericUpDown_ActivityCalories_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_ActivityCalories_StartCorner_X, "numericUpDown_ActivityCalories_StartCorner_X");
+            this.numericUpDown_ActivityCalories_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivityCalories_StartCorner_X, resources.GetString("numericUpDown_ActivityCalories_StartCorner_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivityCalories_StartCorner_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivityCalories_StartCorner_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivityCalories_StartCorner_X, resources.GetString("numericUpDown_ActivityCalories_StartCorner_X.HelpString"));
             this.numericUpDown_ActivityCalories_StartCorner_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -9007,6 +11422,9 @@
             // numericUpDown_ActivityCalories_Spacing
             // 
             resources.ApplyResources(this.numericUpDown_ActivityCalories_Spacing, "numericUpDown_ActivityCalories_Spacing");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivityCalories_Spacing, resources.GetString("numericUpDown_ActivityCalories_Spacing.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivityCalories_Spacing, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivityCalories_Spacing.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivityCalories_Spacing, resources.GetString("numericUpDown_ActivityCalories_Spacing.HelpString"));
             this.numericUpDown_ActivityCalories_Spacing.Maximum = new decimal(new int[] {
             999,
             0,
@@ -9024,6 +11442,9 @@
             // checkBox_ActivityCalories
             // 
             resources.ApplyResources(this.checkBox_ActivityCalories, "checkBox_ActivityCalories");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_ActivityCalories, resources.GetString("checkBox_ActivityCalories.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_ActivityCalories, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_ActivityCalories.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_ActivityCalories, resources.GetString("checkBox_ActivityCalories.HelpString"));
             this.checkBox_ActivityCalories.Name = "checkBox_ActivityCalories";
             this.helpProvider1.SetShowHelp(this.checkBox_ActivityCalories, ((bool)(resources.GetObject("checkBox_ActivityCalories.ShowHelp"))));
             this.checkBox_ActivityCalories.UseVisualStyleBackColor = true;
@@ -9033,20 +11454,29 @@
             // label152
             // 
             resources.ApplyResources(this.label152, "label152");
+            this.helpProvider1.SetHelpKeyword(this.label152, resources.GetString("label152.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label152, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label152.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label152, resources.GetString("label152.HelpString"));
             this.label152.Name = "label152";
             this.helpProvider1.SetShowHelp(this.label152, ((bool)(resources.GetObject("label152.ShowHelp"))));
             // 
             // label153
             // 
             resources.ApplyResources(this.label153, "label153");
+            this.helpProvider1.SetHelpKeyword(this.label153, resources.GetString("label153.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label153, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label153.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label153, resources.GetString("label153.HelpString"));
             this.label153.Name = "label153";
             this.helpProvider1.SetShowHelp(this.label153, ((bool)(resources.GetObject("label153.ShowHelp"))));
             // 
             // comboBox_ActivityCalories_Alignment
             // 
-            this.comboBox_ActivityCalories_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.comboBox_ActivityCalories_Alignment, "comboBox_ActivityCalories_Alignment");
+            this.comboBox_ActivityCalories_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_ActivityCalories_Alignment.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_ActivityCalories_Alignment, resources.GetString("comboBox_ActivityCalories_Alignment.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_ActivityCalories_Alignment, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_ActivityCalories_Alignment.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_ActivityCalories_Alignment, resources.GetString("comboBox_ActivityCalories_Alignment.HelpString"));
             this.comboBox_ActivityCalories_Alignment.Items.AddRange(new object[] {
             resources.GetString("comboBox_ActivityCalories_Alignment.Items"),
             resources.GetString("comboBox_ActivityCalories_Alignment.Items1"),
@@ -9064,25 +11494,37 @@
             // label154
             // 
             resources.ApplyResources(this.label154, "label154");
+            this.helpProvider1.SetHelpKeyword(this.label154, resources.GetString("label154.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label154, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label154.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label154, resources.GetString("label154.HelpString"));
             this.label154.Name = "label154";
             this.helpProvider1.SetShowHelp(this.label154, ((bool)(resources.GetObject("label154.ShowHelp"))));
             // 
             // label155
             // 
             resources.ApplyResources(this.label155, "label155");
+            this.helpProvider1.SetHelpKeyword(this.label155, resources.GetString("label155.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label155, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label155.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label155, resources.GetString("label155.HelpString"));
             this.label155.Name = "label155";
             this.helpProvider1.SetShowHelp(this.label155, ((bool)(resources.GetObject("label155.ShowHelp"))));
             // 
             // label156
             // 
             resources.ApplyResources(this.label156, "label156");
+            this.helpProvider1.SetHelpKeyword(this.label156, resources.GetString("label156.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label156, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label156.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label156, resources.GetString("label156.HelpString"));
             this.label156.Name = "label156";
             this.helpProvider1.SetShowHelp(this.label156, ((bool)(resources.GetObject("label156.ShowHelp"))));
             // 
             // numericUpDown_ActivityCalories_EndCorner_Y
             // 
-            this.numericUpDown_ActivityCalories_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_ActivityCalories_EndCorner_Y, "numericUpDown_ActivityCalories_EndCorner_Y");
+            this.numericUpDown_ActivityCalories_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivityCalories_EndCorner_Y, resources.GetString("numericUpDown_ActivityCalories_EndCorner_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivityCalories_EndCorner_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivityCalories_EndCorner_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivityCalories_EndCorner_Y, resources.GetString("numericUpDown_ActivityCalories_EndCorner_Y.HelpString"));
             this.numericUpDown_ActivityCalories_EndCorner_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -9100,10 +11542,13 @@
             // 
             // comboBox_ActivityCalories_Image
             // 
+            resources.ApplyResources(this.comboBox_ActivityCalories_Image, "comboBox_ActivityCalories_Image");
             this.comboBox_ActivityCalories_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_ActivityCalories_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_ActivityCalories_Image, "comboBox_ActivityCalories_Image");
             this.comboBox_ActivityCalories_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_ActivityCalories_Image, resources.GetString("comboBox_ActivityCalories_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_ActivityCalories_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_ActivityCalories_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_ActivityCalories_Image, resources.GetString("comboBox_ActivityCalories_Image.HelpString"));
             this.comboBox_ActivityCalories_Image.Name = "comboBox_ActivityCalories_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_ActivityCalories_Image, ((bool)(resources.GetObject("comboBox_ActivityCalories_Image.ShowHelp"))));
             this.comboBox_ActivityCalories_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -9115,35 +11560,51 @@
             // label157
             // 
             resources.ApplyResources(this.label157, "label157");
+            this.helpProvider1.SetHelpKeyword(this.label157, resources.GetString("label157.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label157, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label157.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label157, resources.GetString("label157.HelpString"));
             this.label157.Name = "label157";
             this.helpProvider1.SetShowHelp(this.label157, ((bool)(resources.GetObject("label157.ShowHelp"))));
             // 
             // label158
             // 
             resources.ApplyResources(this.label158, "label158");
+            this.helpProvider1.SetHelpKeyword(this.label158, resources.GetString("label158.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label158, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label158.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label158, resources.GetString("label158.HelpString"));
             this.label158.Name = "label158";
             this.helpProvider1.SetShowHelp(this.label158, ((bool)(resources.GetObject("label158.ShowHelp"))));
             // 
             // label159
             // 
             resources.ApplyResources(this.label159, "label159");
+            this.helpProvider1.SetHelpKeyword(this.label159, resources.GetString("label159.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label159, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label159.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label159, resources.GetString("label159.HelpString"));
             this.label159.Name = "label159";
             this.helpProvider1.SetShowHelp(this.label159, ((bool)(resources.GetObject("label159.ShowHelp"))));
             // 
             // label160
             // 
             resources.ApplyResources(this.label160, "label160");
+            this.helpProvider1.SetHelpKeyword(this.label160, resources.GetString("label160.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label160, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label160.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label160, resources.GetString("label160.HelpString"));
             this.label160.Name = "label160";
             this.helpProvider1.SetShowHelp(this.label160, ((bool)(resources.GetObject("label160.ShowHelp"))));
             // 
             // label161
             // 
             resources.ApplyResources(this.label161, "label161");
+            this.helpProvider1.SetHelpKeyword(this.label161, resources.GetString("label161.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label161, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label161.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label161, resources.GetString("label161.HelpString"));
             this.label161.Name = "label161";
             this.helpProvider1.SetShowHelp(this.label161, ((bool)(resources.GetObject("label161.ShowHelp"))));
             // 
             // tabPage16
             // 
+            resources.ApplyResources(this.tabPage16, "tabPage16");
             this.tabPage16.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage16.Controls.Add(this.numericUpDown_ActivityStar_Y);
             this.tabPage16.Controls.Add(this.numericUpDown_ActivityStar_X);
@@ -9153,14 +11614,19 @@
             this.tabPage16.Controls.Add(this.label166);
             this.tabPage16.Controls.Add(this.comboBox_ActivityStar_Image);
             this.tabPage16.Controls.Add(this.label171);
-            resources.ApplyResources(this.tabPage16, "tabPage16");
+            this.helpProvider1.SetHelpKeyword(this.tabPage16, resources.GetString("tabPage16.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage16, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage16.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage16, resources.GetString("tabPage16.HelpString"));
             this.tabPage16.Name = "tabPage16";
             this.helpProvider1.SetShowHelp(this.tabPage16, ((bool)(resources.GetObject("tabPage16.ShowHelp"))));
             // 
             // numericUpDown_ActivityStar_Y
             // 
-            this.numericUpDown_ActivityStar_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_ActivityStar_Y, "numericUpDown_ActivityStar_Y");
+            this.numericUpDown_ActivityStar_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivityStar_Y, resources.GetString("numericUpDown_ActivityStar_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivityStar_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivityStar_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivityStar_Y, resources.GetString("numericUpDown_ActivityStar_Y.HelpString"));
             this.numericUpDown_ActivityStar_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -9173,8 +11639,11 @@
             // 
             // numericUpDown_ActivityStar_X
             // 
-            this.numericUpDown_ActivityStar_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_ActivityStar_X, "numericUpDown_ActivityStar_X");
+            this.numericUpDown_ActivityStar_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ActivityStar_X, resources.GetString("numericUpDown_ActivityStar_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ActivityStar_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ActivityStar_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ActivityStar_X, resources.GetString("numericUpDown_ActivityStar_X.HelpString"));
             this.numericUpDown_ActivityStar_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -9188,6 +11657,9 @@
             // checkBox_ActivityStar
             // 
             resources.ApplyResources(this.checkBox_ActivityStar, "checkBox_ActivityStar");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_ActivityStar, resources.GetString("checkBox_ActivityStar.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_ActivityStar, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_ActivityStar.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_ActivityStar, resources.GetString("checkBox_ActivityStar.HelpString"));
             this.checkBox_ActivityStar.Name = "checkBox_ActivityStar";
             this.helpProvider1.SetShowHelp(this.checkBox_ActivityStar, ((bool)(resources.GetObject("checkBox_ActivityStar.ShowHelp"))));
             this.checkBox_ActivityStar.UseVisualStyleBackColor = true;
@@ -9197,27 +11669,39 @@
             // label163
             // 
             resources.ApplyResources(this.label163, "label163");
+            this.helpProvider1.SetHelpKeyword(this.label163, resources.GetString("label163.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label163, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label163.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label163, resources.GetString("label163.HelpString"));
             this.label163.Name = "label163";
             this.helpProvider1.SetShowHelp(this.label163, ((bool)(resources.GetObject("label163.ShowHelp"))));
             // 
             // label164
             // 
             resources.ApplyResources(this.label164, "label164");
+            this.helpProvider1.SetHelpKeyword(this.label164, resources.GetString("label164.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label164, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label164.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label164, resources.GetString("label164.HelpString"));
             this.label164.Name = "label164";
             this.helpProvider1.SetShowHelp(this.label164, ((bool)(resources.GetObject("label164.ShowHelp"))));
             // 
             // label166
             // 
             resources.ApplyResources(this.label166, "label166");
+            this.helpProvider1.SetHelpKeyword(this.label166, resources.GetString("label166.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label166, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label166.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label166, resources.GetString("label166.HelpString"));
             this.label166.Name = "label166";
             this.helpProvider1.SetShowHelp(this.label166, ((bool)(resources.GetObject("label166.ShowHelp"))));
             // 
             // comboBox_ActivityStar_Image
             // 
+            resources.ApplyResources(this.comboBox_ActivityStar_Image, "comboBox_ActivityStar_Image");
             this.comboBox_ActivityStar_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_ActivityStar_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_ActivityStar_Image, "comboBox_ActivityStar_Image");
             this.comboBox_ActivityStar_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_ActivityStar_Image, resources.GetString("comboBox_ActivityStar_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_ActivityStar_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_ActivityStar_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_ActivityStar_Image, resources.GetString("comboBox_ActivityStar_Image.HelpString"));
             this.comboBox_ActivityStar_Image.Name = "comboBox_ActivityStar_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_ActivityStar_Image, ((bool)(resources.GetObject("comboBox_ActivityStar_Image.ShowHelp"))));
             this.comboBox_ActivityStar_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -9229,12 +11713,18 @@
             // label171
             // 
             resources.ApplyResources(this.label171, "label171");
+            this.helpProvider1.SetHelpKeyword(this.label171, resources.GetString("label171.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label171, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label171.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label171, resources.GetString("label171.HelpString"));
             this.label171.Name = "label171";
             this.helpProvider1.SetShowHelp(this.label171, ((bool)(resources.GetObject("label171.ShowHelp"))));
             // 
             // checkBox_Activity
             // 
             resources.ApplyResources(this.checkBox_Activity, "checkBox_Activity");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Activity, resources.GetString("checkBox_Activity.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Activity, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Activity.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Activity, resources.GetString("checkBox_Activity.HelpString"));
             this.checkBox_Activity.Name = "checkBox_Activity";
             this.helpProvider1.SetShowHelp(this.checkBox_Activity, ((bool)(resources.GetObject("checkBox_Activity.ShowHelp"))));
             this.checkBox_Activity.UseVisualStyleBackColor = true;
@@ -9244,6 +11734,9 @@
             // button_Activity
             // 
             resources.ApplyResources(this.button_Activity, "button_Activity");
+            this.helpProvider1.SetHelpKeyword(this.button_Activity, resources.GetString("button_Activity.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_Activity, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_Activity.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_Activity, resources.GetString("button_Activity.HelpString"));
             this.button_Activity.Name = "button_Activity";
             this.helpProvider1.SetShowHelp(this.button_Activity, ((bool)(resources.GetObject("button_Activity.ShowHelp"))));
             this.button_Activity.UseVisualStyleBackColor = true;
@@ -9251,35 +11744,148 @@
             // 
             // panel_StepsProgress
             // 
-            this.panel_StepsProgress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_StepsProgress.Controls.Add(this.comboBox_StepsProgress_Flatness);
-            this.panel_StepsProgress.Controls.Add(this.label348);
-            this.panel_StepsProgress.Controls.Add(this.numericUpDown_StepsProgress_EndAngle);
-            this.panel_StepsProgress.Controls.Add(this.label111);
-            this.panel_StepsProgress.Controls.Add(this.numericUpDown_StepsProgress_StartAngle);
-            this.panel_StepsProgress.Controls.Add(this.label110);
-            this.panel_StepsProgress.Controls.Add(this.comboBox_StepsProgress_Color);
-            this.panel_StepsProgress.Controls.Add(this.label109);
-            this.panel_StepsProgress.Controls.Add(this.numericUpDown_StepsProgress_Width);
-            this.panel_StepsProgress.Controls.Add(this.label108);
-            this.panel_StepsProgress.Controls.Add(this.numericUpDown_StepsProgress_Radius_Y);
-            this.panel_StepsProgress.Controls.Add(this.label106);
-            this.panel_StepsProgress.Controls.Add(this.numericUpDown_StepsProgress_Radius_X);
-            this.panel_StepsProgress.Controls.Add(this.label107);
-            this.panel_StepsProgress.Controls.Add(this.numericUpDown_StepsProgress_Center_Y);
-            this.panel_StepsProgress.Controls.Add(this.label105);
-            this.panel_StepsProgress.Controls.Add(this.numericUpDown_StepsProgress_Center_X);
-            this.panel_StepsProgress.Controls.Add(this.label104);
-            this.panel_StepsProgress.Controls.Add(this.checkBox_StepsProgress);
             resources.ApplyResources(this.panel_StepsProgress, "panel_StepsProgress");
+            this.panel_StepsProgress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_StepsProgress.Controls.Add(this.tabControl6);
+            this.helpProvider1.SetHelpKeyword(this.panel_StepsProgress, resources.GetString("panel_StepsProgress.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel_StepsProgress, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_StepsProgress.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel_StepsProgress, resources.GetString("panel_StepsProgress.HelpString"));
             this.panel_StepsProgress.Name = "panel_StepsProgress";
             this.helpProvider1.SetShowHelp(this.panel_StepsProgress, ((bool)(resources.GetObject("panel_StepsProgress.ShowHelp"))));
             // 
+            // tabControl6
+            // 
+            resources.ApplyResources(this.tabControl6, "tabControl6");
+            this.tabControl6.Controls.Add(this.tabPage36);
+            this.tabControl6.Controls.Add(this.tabPage37);
+            this.helpProvider1.SetHelpKeyword(this.tabControl6, resources.GetString("tabControl6.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabControl6, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabControl6.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabControl6, resources.GetString("tabControl6.HelpString"));
+            this.tabControl6.Name = "tabControl6";
+            this.tabControl6.SelectedIndex = 0;
+            // 
+            // tabPage36
+            // 
+            resources.ApplyResources(this.tabPage36, "tabPage36");
+            this.tabPage36.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage36.Controls.Add(this.numericUpDown_StepsProgress_Radius_Y);
+            this.tabPage36.Controls.Add(this.numericUpDown_StepsProgress_Radius_X);
+            this.tabPage36.Controls.Add(this.numericUpDown_StepsProgress_Center_Y);
+            this.tabPage36.Controls.Add(this.numericUpDown_StepsProgress_Center_X);
+            this.tabPage36.Controls.Add(this.checkBox_StepsProgress);
+            this.tabPage36.Controls.Add(this.comboBox_StepsProgress_Flatness);
+            this.tabPage36.Controls.Add(this.label104);
+            this.tabPage36.Controls.Add(this.label348);
+            this.tabPage36.Controls.Add(this.numericUpDown_StepsProgress_EndAngle);
+            this.tabPage36.Controls.Add(this.label105);
+            this.tabPage36.Controls.Add(this.label111);
+            this.tabPage36.Controls.Add(this.numericUpDown_StepsProgress_StartAngle);
+            this.tabPage36.Controls.Add(this.label107);
+            this.tabPage36.Controls.Add(this.label110);
+            this.tabPage36.Controls.Add(this.comboBox_StepsProgress_Color);
+            this.tabPage36.Controls.Add(this.label106);
+            this.tabPage36.Controls.Add(this.label109);
+            this.tabPage36.Controls.Add(this.numericUpDown_StepsProgress_Width);
+            this.tabPage36.Controls.Add(this.label108);
+            this.helpProvider1.SetHelpKeyword(this.tabPage36, resources.GetString("tabPage36.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage36, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage36.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage36, resources.GetString("tabPage36.HelpString"));
+            this.tabPage36.Name = "tabPage36";
+            // 
+            // numericUpDown_StepsProgress_Radius_Y
+            // 
+            resources.ApplyResources(this.numericUpDown_StepsProgress_Radius_Y, "numericUpDown_StepsProgress_Radius_Y");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_StepsProgress_Radius_Y, resources.GetString("numericUpDown_StepsProgress_Radius_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_StepsProgress_Radius_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_StepsProgress_Radius_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_StepsProgress_Radius_Y, resources.GetString("numericUpDown_StepsProgress_Radius_Y.HelpString"));
+            this.numericUpDown_StepsProgress_Radius_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_StepsProgress_Radius_Y.Name = "numericUpDown_StepsProgress_Radius_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_StepsProgress_Radius_Y, ((bool)(resources.GetObject("numericUpDown_StepsProgress_Radius_Y.ShowHelp"))));
+            this.numericUpDown_StepsProgress_Radius_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // numericUpDown_StepsProgress_Radius_X
+            // 
+            resources.ApplyResources(this.numericUpDown_StepsProgress_Radius_X, "numericUpDown_StepsProgress_Radius_X");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_StepsProgress_Radius_X, resources.GetString("numericUpDown_StepsProgress_Radius_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_StepsProgress_Radius_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_StepsProgress_Radius_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_StepsProgress_Radius_X, resources.GetString("numericUpDown_StepsProgress_Radius_X.HelpString"));
+            this.numericUpDown_StepsProgress_Radius_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_StepsProgress_Radius_X.Name = "numericUpDown_StepsProgress_Radius_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_StepsProgress_Radius_X, ((bool)(resources.GetObject("numericUpDown_StepsProgress_Radius_X.ShowHelp"))));
+            this.numericUpDown_StepsProgress_Radius_X.ValueChanged += new System.EventHandler(this.numericUpDown_StepsProgress_Radius_X_ValueChanged);
+            // 
+            // numericUpDown_StepsProgress_Center_Y
+            // 
+            resources.ApplyResources(this.numericUpDown_StepsProgress_Center_Y, "numericUpDown_StepsProgress_Center_Y");
+            this.numericUpDown_StepsProgress_Center_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_StepsProgress_Center_Y, resources.GetString("numericUpDown_StepsProgress_Center_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_StepsProgress_Center_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_StepsProgress_Center_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_StepsProgress_Center_Y, resources.GetString("numericUpDown_StepsProgress_Center_Y.HelpString"));
+            this.numericUpDown_StepsProgress_Center_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_StepsProgress_Center_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_StepsProgress_Center_Y.Name = "numericUpDown_StepsProgress_Center_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_StepsProgress_Center_Y, ((bool)(resources.GetObject("numericUpDown_StepsProgress_Center_Y.ShowHelp"))));
+            this.numericUpDown_StepsProgress_Center_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_StepsProgress_Center_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
+            // 
+            // numericUpDown_StepsProgress_Center_X
+            // 
+            resources.ApplyResources(this.numericUpDown_StepsProgress_Center_X, "numericUpDown_StepsProgress_Center_X");
+            this.numericUpDown_StepsProgress_Center_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_StepsProgress_Center_X, resources.GetString("numericUpDown_StepsProgress_Center_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_StepsProgress_Center_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_StepsProgress_Center_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_StepsProgress_Center_X, resources.GetString("numericUpDown_StepsProgress_Center_X.HelpString"));
+            this.numericUpDown_StepsProgress_Center_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_StepsProgress_Center_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_StepsProgress_Center_X.Name = "numericUpDown_StepsProgress_Center_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_StepsProgress_Center_X, ((bool)(resources.GetObject("numericUpDown_StepsProgress_Center_X.ShowHelp"))));
+            this.numericUpDown_StepsProgress_Center_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_StepsProgress_Center_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
+            // 
+            // checkBox_StepsProgress
+            // 
+            resources.ApplyResources(this.checkBox_StepsProgress, "checkBox_StepsProgress");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_StepsProgress, resources.GetString("checkBox_StepsProgress.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_StepsProgress, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_StepsProgress.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_StepsProgress, resources.GetString("checkBox_StepsProgress.HelpString"));
+            this.checkBox_StepsProgress.Name = "checkBox_StepsProgress";
+            this.helpProvider1.SetShowHelp(this.checkBox_StepsProgress, ((bool)(resources.GetObject("checkBox_StepsProgress.ShowHelp"))));
+            this.checkBox_StepsProgress.UseVisualStyleBackColor = true;
+            this.checkBox_StepsProgress.CheckedChanged += new System.EventHandler(this.checkBox_CircleScale_CheckedChanged);
+            this.checkBox_StepsProgress.Click += new System.EventHandler(this.checkBox_Click);
+            // 
             // comboBox_StepsProgress_Flatness
             // 
-            this.comboBox_StepsProgress_Flatness.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.comboBox_StepsProgress_Flatness, "comboBox_StepsProgress_Flatness");
+            this.comboBox_StepsProgress_Flatness.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_StepsProgress_Flatness.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_StepsProgress_Flatness, resources.GetString("comboBox_StepsProgress_Flatness.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_StepsProgress_Flatness, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_StepsProgress_Flatness.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_StepsProgress_Flatness, resources.GetString("comboBox_StepsProgress_Flatness.HelpString"));
             this.comboBox_StepsProgress_Flatness.Items.AddRange(new object[] {
             resources.GetString("comboBox_StepsProgress_Flatness.Items"),
             resources.GetString("comboBox_StepsProgress_Flatness.Items1"),
@@ -9288,15 +11894,30 @@
             this.helpProvider1.SetShowHelp(this.comboBox_StepsProgress_Flatness, ((bool)(resources.GetObject("comboBox_StepsProgress_Flatness.ShowHelp"))));
             this.comboBox_StepsProgress_Flatness.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
+            // label104
+            // 
+            resources.ApplyResources(this.label104, "label104");
+            this.helpProvider1.SetHelpKeyword(this.label104, resources.GetString("label104.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label104, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label104.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label104, resources.GetString("label104.HelpString"));
+            this.label104.Name = "label104";
+            this.helpProvider1.SetShowHelp(this.label104, ((bool)(resources.GetObject("label104.ShowHelp"))));
+            // 
             // label348
             // 
             resources.ApplyResources(this.label348, "label348");
+            this.helpProvider1.SetHelpKeyword(this.label348, resources.GetString("label348.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label348, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label348.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label348, resources.GetString("label348.HelpString"));
             this.label348.Name = "label348";
             this.helpProvider1.SetShowHelp(this.label348, ((bool)(resources.GetObject("label348.ShowHelp"))));
             // 
             // numericUpDown_StepsProgress_EndAngle
             // 
             resources.ApplyResources(this.numericUpDown_StepsProgress_EndAngle, "numericUpDown_StepsProgress_EndAngle");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_StepsProgress_EndAngle, resources.GetString("numericUpDown_StepsProgress_EndAngle.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_StepsProgress_EndAngle, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_StepsProgress_EndAngle.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_StepsProgress_EndAngle, resources.GetString("numericUpDown_StepsProgress_EndAngle.HelpString"));
             this.numericUpDown_StepsProgress_EndAngle.Maximum = new decimal(new int[] {
             999,
             0,
@@ -9316,15 +11937,30 @@
             0});
             this.numericUpDown_StepsProgress_EndAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
+            // label105
+            // 
+            resources.ApplyResources(this.label105, "label105");
+            this.helpProvider1.SetHelpKeyword(this.label105, resources.GetString("label105.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label105, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label105.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label105, resources.GetString("label105.HelpString"));
+            this.label105.Name = "label105";
+            this.helpProvider1.SetShowHelp(this.label105, ((bool)(resources.GetObject("label105.ShowHelp"))));
+            // 
             // label111
             // 
             resources.ApplyResources(this.label111, "label111");
+            this.helpProvider1.SetHelpKeyword(this.label111, resources.GetString("label111.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label111, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label111.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label111, resources.GetString("label111.HelpString"));
             this.label111.Name = "label111";
             this.helpProvider1.SetShowHelp(this.label111, ((bool)(resources.GetObject("label111.ShowHelp"))));
             // 
             // numericUpDown_StepsProgress_StartAngle
             // 
             resources.ApplyResources(this.numericUpDown_StepsProgress_StartAngle, "numericUpDown_StepsProgress_StartAngle");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_StepsProgress_StartAngle, resources.GetString("numericUpDown_StepsProgress_StartAngle.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_StepsProgress_StartAngle, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_StepsProgress_StartAngle.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_StepsProgress_StartAngle, resources.GetString("numericUpDown_StepsProgress_StartAngle.HelpString"));
             this.numericUpDown_StepsProgress_StartAngle.Maximum = new decimal(new int[] {
             999,
             0,
@@ -9344,32 +11980,62 @@
             0});
             this.numericUpDown_StepsProgress_StartAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
+            // label107
+            // 
+            resources.ApplyResources(this.label107, "label107");
+            this.helpProvider1.SetHelpKeyword(this.label107, resources.GetString("label107.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label107, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label107.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label107, resources.GetString("label107.HelpString"));
+            this.label107.Name = "label107";
+            this.helpProvider1.SetShowHelp(this.label107, ((bool)(resources.GetObject("label107.ShowHelp"))));
+            // 
             // label110
             // 
             resources.ApplyResources(this.label110, "label110");
+            this.helpProvider1.SetHelpKeyword(this.label110, resources.GetString("label110.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label110, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label110.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label110, resources.GetString("label110.HelpString"));
             this.label110.Name = "label110";
             this.helpProvider1.SetShowHelp(this.label110, ((bool)(resources.GetObject("label110.ShowHelp"))));
             // 
             // comboBox_StepsProgress_Color
             // 
+            resources.ApplyResources(this.comboBox_StepsProgress_Color, "comboBox_StepsProgress_Color");
             this.comboBox_StepsProgress_Color.BackColor = System.Drawing.Color.DarkOrange;
             this.comboBox_StepsProgress_Color.DropDownHeight = 1;
-            resources.ApplyResources(this.comboBox_StepsProgress_Color, "comboBox_StepsProgress_Color");
             this.comboBox_StepsProgress_Color.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_StepsProgress_Color, resources.GetString("comboBox_StepsProgress_Color.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_StepsProgress_Color, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_StepsProgress_Color.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_StepsProgress_Color, resources.GetString("comboBox_StepsProgress_Color.HelpString"));
             this.comboBox_StepsProgress_Color.Name = "comboBox_StepsProgress_Color";
             this.helpProvider1.SetShowHelp(this.comboBox_StepsProgress_Color, ((bool)(resources.GetObject("comboBox_StepsProgress_Color.ShowHelp"))));
             this.comboBox_StepsProgress_Color.Click += new System.EventHandler(this.comboBox_StepsProgress_Color_Click);
             this.comboBox_StepsProgress_Color.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
+            // label106
+            // 
+            resources.ApplyResources(this.label106, "label106");
+            this.helpProvider1.SetHelpKeyword(this.label106, resources.GetString("label106.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label106, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label106.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label106, resources.GetString("label106.HelpString"));
+            this.label106.Name = "label106";
+            this.helpProvider1.SetShowHelp(this.label106, ((bool)(resources.GetObject("label106.ShowHelp"))));
+            // 
             // label109
             // 
             resources.ApplyResources(this.label109, "label109");
+            this.helpProvider1.SetHelpKeyword(this.label109, resources.GetString("label109.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label109, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label109.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label109, resources.GetString("label109.HelpString"));
             this.label109.Name = "label109";
             this.helpProvider1.SetShowHelp(this.label109, ((bool)(resources.GetObject("label109.ShowHelp"))));
             // 
             // numericUpDown_StepsProgress_Width
             // 
             resources.ApplyResources(this.numericUpDown_StepsProgress_Width, "numericUpDown_StepsProgress_Width");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_StepsProgress_Width, resources.GetString("numericUpDown_StepsProgress_Width.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_StepsProgress_Width, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_StepsProgress_Width.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_StepsProgress_Width, resources.GetString("numericUpDown_StepsProgress_Width.HelpString"));
             this.numericUpDown_StepsProgress_Width.Maximum = new decimal(new int[] {
             999,
             0,
@@ -9387,154 +12053,1100 @@
             // label108
             // 
             resources.ApplyResources(this.label108, "label108");
+            this.helpProvider1.SetHelpKeyword(this.label108, resources.GetString("label108.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label108, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label108.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label108, resources.GetString("label108.HelpString"));
             this.label108.Name = "label108";
             this.helpProvider1.SetShowHelp(this.label108, ((bool)(resources.GetObject("label108.ShowHelp"))));
             // 
-            // numericUpDown_StepsProgress_Radius_Y
+            // tabPage37
             // 
-            resources.ApplyResources(this.numericUpDown_StepsProgress_Radius_Y, "numericUpDown_StepsProgress_Radius_Y");
-            this.numericUpDown_StepsProgress_Radius_Y.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.tabPage37, "tabPage37");
+            this.tabPage37.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage37.Controls.Add(this.checkBox_StProg_ClockHand);
+            this.tabPage37.Controls.Add(this.numericUpDown_StProg_ClockHand_EndAngle);
+            this.tabPage37.Controls.Add(this.label375);
+            this.tabPage37.Controls.Add(this.numericUpDown_StProg_ClockHand_StartAngle);
+            this.tabPage37.Controls.Add(this.label376);
+            this.tabPage37.Controls.Add(this.numericUpDown_StProg_ClockHand_Offset_Y);
+            this.tabPage37.Controls.Add(this.label377);
+            this.tabPage37.Controls.Add(this.numericUpDown_StProg_ClockHand_Offset_X);
+            this.tabPage37.Controls.Add(this.label378);
+            this.tabPage37.Controls.Add(this.comboBox_StProg_ClockHand_Image);
+            this.tabPage37.Controls.Add(this.label379);
+            this.tabPage37.Controls.Add(this.numericUpDown_StProg_ClockHand_Y);
+            this.tabPage37.Controls.Add(this.label380);
+            this.tabPage37.Controls.Add(this.numericUpDown_StProg_ClockHand_X);
+            this.tabPage37.Controls.Add(this.label381);
+            this.helpProvider1.SetHelpKeyword(this.tabPage37, resources.GetString("tabPage37.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage37, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage37.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage37, resources.GetString("tabPage37.HelpString"));
+            this.tabPage37.Name = "tabPage37";
+            // 
+            // checkBox_StProg_ClockHand
+            // 
+            resources.ApplyResources(this.checkBox_StProg_ClockHand, "checkBox_StProg_ClockHand");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_StProg_ClockHand, resources.GetString("checkBox_StProg_ClockHand.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_StProg_ClockHand, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_StProg_ClockHand.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_StProg_ClockHand, resources.GetString("checkBox_StProg_ClockHand.HelpString"));
+            this.checkBox_StProg_ClockHand.Name = "checkBox_StProg_ClockHand";
+            this.helpProvider1.SetShowHelp(this.checkBox_StProg_ClockHand, ((bool)(resources.GetObject("checkBox_StProg_ClockHand.ShowHelp"))));
+            this.checkBox_StProg_ClockHand.UseVisualStyleBackColor = true;
+            this.checkBox_StProg_ClockHand.CheckedChanged += new System.EventHandler(this.checkBox_StProg_ClockHand_CheckedChanged);
+            // 
+            // numericUpDown_StProg_ClockHand_EndAngle
+            // 
+            resources.ApplyResources(this.numericUpDown_StProg_ClockHand_EndAngle, "numericUpDown_StProg_ClockHand_EndAngle");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_StProg_ClockHand_EndAngle, resources.GetString("numericUpDown_StProg_ClockHand_EndAngle.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_StProg_ClockHand_EndAngle, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_StProg_ClockHand_EndAngle.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_StProg_ClockHand_EndAngle, resources.GetString("numericUpDown_StProg_ClockHand_EndAngle.HelpString"));
+            this.numericUpDown_StProg_ClockHand_EndAngle.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown_StepsProgress_Radius_Y.Name = "numericUpDown_StepsProgress_Radius_Y";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_StepsProgress_Radius_Y, ((bool)(resources.GetObject("numericUpDown_StepsProgress_Radius_Y.ShowHelp"))));
-            this.numericUpDown_StepsProgress_Radius_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // label106
-            // 
-            resources.ApplyResources(this.label106, "label106");
-            this.label106.Name = "label106";
-            this.helpProvider1.SetShowHelp(this.label106, ((bool)(resources.GetObject("label106.ShowHelp"))));
-            // 
-            // numericUpDown_StepsProgress_Radius_X
-            // 
-            resources.ApplyResources(this.numericUpDown_StepsProgress_Radius_X, "numericUpDown_StepsProgress_Radius_X");
-            this.numericUpDown_StepsProgress_Radius_X.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_StepsProgress_Radius_X.Name = "numericUpDown_StepsProgress_Radius_X";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_StepsProgress_Radius_X, ((bool)(resources.GetObject("numericUpDown_StepsProgress_Radius_X.ShowHelp"))));
-            this.numericUpDown_StepsProgress_Radius_X.ValueChanged += new System.EventHandler(this.numericUpDown_StepsProgress_Radius_X_ValueChanged);
-            // 
-            // label107
-            // 
-            resources.ApplyResources(this.label107, "label107");
-            this.label107.Name = "label107";
-            this.helpProvider1.SetShowHelp(this.label107, ((bool)(resources.GetObject("label107.ShowHelp"))));
-            // 
-            // numericUpDown_StepsProgress_Center_Y
-            // 
-            this.numericUpDown_StepsProgress_Center_Y.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_StepsProgress_Center_Y, "numericUpDown_StepsProgress_Center_Y");
-            this.numericUpDown_StepsProgress_Center_Y.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_StepsProgress_Center_Y.Minimum = new decimal(new int[] {
+            this.numericUpDown_StProg_ClockHand_EndAngle.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown_StepsProgress_Center_Y.Name = "numericUpDown_StepsProgress_Center_Y";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_StepsProgress_Center_Y, ((bool)(resources.GetObject("numericUpDown_StepsProgress_Center_Y.ShowHelp"))));
-            this.numericUpDown_StepsProgress_Center_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_StepsProgress_Center_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
+            this.numericUpDown_StProg_ClockHand_EndAngle.Name = "numericUpDown_StProg_ClockHand_EndAngle";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_StProg_ClockHand_EndAngle, ((bool)(resources.GetObject("numericUpDown_StProg_ClockHand_EndAngle.ShowHelp"))));
+            this.numericUpDown_StProg_ClockHand_EndAngle.Value = new decimal(new int[] {
+            495,
+            0,
+            0,
+            0});
+            this.numericUpDown_StProg_ClockHand_EndAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // label105
+            // label375
             // 
-            resources.ApplyResources(this.label105, "label105");
-            this.label105.Name = "label105";
-            this.helpProvider1.SetShowHelp(this.label105, ((bool)(resources.GetObject("label105.ShowHelp"))));
+            resources.ApplyResources(this.label375, "label375");
+            this.helpProvider1.SetHelpKeyword(this.label375, resources.GetString("label375.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label375, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label375.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label375, resources.GetString("label375.HelpString"));
+            this.label375.Name = "label375";
+            this.helpProvider1.SetShowHelp(this.label375, ((bool)(resources.GetObject("label375.ShowHelp"))));
             // 
-            // numericUpDown_StepsProgress_Center_X
+            // numericUpDown_StProg_ClockHand_StartAngle
             // 
-            this.numericUpDown_StepsProgress_Center_X.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_StepsProgress_Center_X, "numericUpDown_StepsProgress_Center_X");
-            this.numericUpDown_StepsProgress_Center_X.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.numericUpDown_StProg_ClockHand_StartAngle, "numericUpDown_StProg_ClockHand_StartAngle");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_StProg_ClockHand_StartAngle, resources.GetString("numericUpDown_StProg_ClockHand_StartAngle.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_StProg_ClockHand_StartAngle, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_StProg_ClockHand_StartAngle.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_StProg_ClockHand_StartAngle, resources.GetString("numericUpDown_StProg_ClockHand_StartAngle.HelpString"));
+            this.numericUpDown_StProg_ClockHand_StartAngle.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown_StepsProgress_Center_X.Minimum = new decimal(new int[] {
+            this.numericUpDown_StProg_ClockHand_StartAngle.Minimum = new decimal(new int[] {
             999,
             0,
             0,
             -2147483648});
-            this.numericUpDown_StepsProgress_Center_X.Name = "numericUpDown_StepsProgress_Center_X";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_StepsProgress_Center_X, ((bool)(resources.GetObject("numericUpDown_StepsProgress_Center_X.ShowHelp"))));
-            this.numericUpDown_StepsProgress_Center_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_StepsProgress_Center_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
+            this.numericUpDown_StProg_ClockHand_StartAngle.Name = "numericUpDown_StProg_ClockHand_StartAngle";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_StProg_ClockHand_StartAngle, ((bool)(resources.GetObject("numericUpDown_StProg_ClockHand_StartAngle.ShowHelp"))));
+            this.numericUpDown_StProg_ClockHand_StartAngle.Value = new decimal(new int[] {
+            225,
+            0,
+            0,
+            0});
+            this.numericUpDown_StProg_ClockHand_StartAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // label104
+            // label376
             // 
-            resources.ApplyResources(this.label104, "label104");
-            this.label104.Name = "label104";
-            this.helpProvider1.SetShowHelp(this.label104, ((bool)(resources.GetObject("label104.ShowHelp"))));
+            resources.ApplyResources(this.label376, "label376");
+            this.helpProvider1.SetHelpKeyword(this.label376, resources.GetString("label376.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label376, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label376.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label376, resources.GetString("label376.HelpString"));
+            this.label376.Name = "label376";
+            this.helpProvider1.SetShowHelp(this.label376, ((bool)(resources.GetObject("label376.ShowHelp"))));
             // 
-            // checkBox_StepsProgress
+            // numericUpDown_StProg_ClockHand_Offset_Y
             // 
-            resources.ApplyResources(this.checkBox_StepsProgress, "checkBox_StepsProgress");
-            this.checkBox_StepsProgress.Name = "checkBox_StepsProgress";
-            this.helpProvider1.SetShowHelp(this.checkBox_StepsProgress, ((bool)(resources.GetObject("checkBox_StepsProgress.ShowHelp"))));
-            this.checkBox_StepsProgress.UseVisualStyleBackColor = true;
-            this.checkBox_StepsProgress.CheckedChanged += new System.EventHandler(this.checkBox_CircleScale_CheckedChanged);
-            this.checkBox_StepsProgress.Click += new System.EventHandler(this.checkBox_Click);
+            resources.ApplyResources(this.numericUpDown_StProg_ClockHand_Offset_Y, "numericUpDown_StProg_ClockHand_Offset_Y");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_StProg_ClockHand_Offset_Y, resources.GetString("numericUpDown_StProg_ClockHand_Offset_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_StProg_ClockHand_Offset_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_StProg_ClockHand_Offset_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_StProg_ClockHand_Offset_Y, resources.GetString("numericUpDown_StProg_ClockHand_Offset_Y.HelpString"));
+            this.numericUpDown_StProg_ClockHand_Offset_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_StProg_ClockHand_Offset_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_StProg_ClockHand_Offset_Y.Name = "numericUpDown_StProg_ClockHand_Offset_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_StProg_ClockHand_Offset_Y, ((bool)(resources.GetObject("numericUpDown_StProg_ClockHand_Offset_Y.ShowHelp"))));
+            this.numericUpDown_StProg_ClockHand_Offset_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_StProg_ClockHand_Offset_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_OffSetY_MouseDoubleClick);
+            // 
+            // label377
+            // 
+            resources.ApplyResources(this.label377, "label377");
+            this.helpProvider1.SetHelpKeyword(this.label377, resources.GetString("label377.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label377, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label377.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label377, resources.GetString("label377.HelpString"));
+            this.label377.Name = "label377";
+            this.helpProvider1.SetShowHelp(this.label377, ((bool)(resources.GetObject("label377.ShowHelp"))));
+            // 
+            // numericUpDown_StProg_ClockHand_Offset_X
+            // 
+            resources.ApplyResources(this.numericUpDown_StProg_ClockHand_Offset_X, "numericUpDown_StProg_ClockHand_Offset_X");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_StProg_ClockHand_Offset_X, resources.GetString("numericUpDown_StProg_ClockHand_Offset_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_StProg_ClockHand_Offset_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_StProg_ClockHand_Offset_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_StProg_ClockHand_Offset_X, resources.GetString("numericUpDown_StProg_ClockHand_Offset_X.HelpString"));
+            this.numericUpDown_StProg_ClockHand_Offset_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_StProg_ClockHand_Offset_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_StProg_ClockHand_Offset_X.Name = "numericUpDown_StProg_ClockHand_Offset_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_StProg_ClockHand_Offset_X, ((bool)(resources.GetObject("numericUpDown_StProg_ClockHand_Offset_X.ShowHelp"))));
+            this.numericUpDown_StProg_ClockHand_Offset_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_StProg_ClockHand_Offset_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_OffSetX_MouseDoubleClick);
+            // 
+            // label378
+            // 
+            resources.ApplyResources(this.label378, "label378");
+            this.helpProvider1.SetHelpKeyword(this.label378, resources.GetString("label378.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label378, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label378.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label378, resources.GetString("label378.HelpString"));
+            this.label378.Name = "label378";
+            this.helpProvider1.SetShowHelp(this.label378, ((bool)(resources.GetObject("label378.ShowHelp"))));
+            // 
+            // comboBox_StProg_ClockHand_Image
+            // 
+            resources.ApplyResources(this.comboBox_StProg_ClockHand_Image, "comboBox_StProg_ClockHand_Image");
+            this.comboBox_StProg_ClockHand_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_StProg_ClockHand_Image.DropDownWidth = 75;
+            this.comboBox_StProg_ClockHand_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_StProg_ClockHand_Image, resources.GetString("comboBox_StProg_ClockHand_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_StProg_ClockHand_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_StProg_ClockHand_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_StProg_ClockHand_Image, resources.GetString("comboBox_StProg_ClockHand_Image.HelpString"));
+            this.comboBox_StProg_ClockHand_Image.Name = "comboBox_StProg_ClockHand_Image";
+            this.helpProvider1.SetShowHelp(this.comboBox_StProg_ClockHand_Image, ((bool)(resources.GetObject("comboBox_StProg_ClockHand_Image.ShowHelp"))));
+            this.comboBox_StProg_ClockHand_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_StProg_ClockHand_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_StProg_ClockHand_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_StProg_ClockHand_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_StProg_ClockHand_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // label379
+            // 
+            resources.ApplyResources(this.label379, "label379");
+            this.helpProvider1.SetHelpKeyword(this.label379, resources.GetString("label379.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label379, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label379.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label379, resources.GetString("label379.HelpString"));
+            this.label379.Name = "label379";
+            this.helpProvider1.SetShowHelp(this.label379, ((bool)(resources.GetObject("label379.ShowHelp"))));
+            // 
+            // numericUpDown_StProg_ClockHand_Y
+            // 
+            resources.ApplyResources(this.numericUpDown_StProg_ClockHand_Y, "numericUpDown_StProg_ClockHand_Y");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_StProg_ClockHand_Y, resources.GetString("numericUpDown_StProg_ClockHand_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_StProg_ClockHand_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_StProg_ClockHand_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_StProg_ClockHand_Y, resources.GetString("numericUpDown_StProg_ClockHand_Y.HelpString"));
+            this.numericUpDown_StProg_ClockHand_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_StProg_ClockHand_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_StProg_ClockHand_Y.Name = "numericUpDown_StProg_ClockHand_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_StProg_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_StProg_ClockHand_Y.ShowHelp"))));
+            this.numericUpDown_StProg_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label380
+            // 
+            resources.ApplyResources(this.label380, "label380");
+            this.helpProvider1.SetHelpKeyword(this.label380, resources.GetString("label380.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label380, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label380.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label380, resources.GetString("label380.HelpString"));
+            this.label380.Name = "label380";
+            this.helpProvider1.SetShowHelp(this.label380, ((bool)(resources.GetObject("label380.ShowHelp"))));
+            // 
+            // numericUpDown_StProg_ClockHand_X
+            // 
+            resources.ApplyResources(this.numericUpDown_StProg_ClockHand_X, "numericUpDown_StProg_ClockHand_X");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_StProg_ClockHand_X, resources.GetString("numericUpDown_StProg_ClockHand_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_StProg_ClockHand_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_StProg_ClockHand_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_StProg_ClockHand_X, resources.GetString("numericUpDown_StProg_ClockHand_X.HelpString"));
+            this.numericUpDown_StProg_ClockHand_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_StProg_ClockHand_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_StProg_ClockHand_X.Name = "numericUpDown_StProg_ClockHand_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_StProg_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_StProg_ClockHand_X.ShowHelp"))));
+            this.numericUpDown_StProg_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label381
+            // 
+            resources.ApplyResources(this.label381, "label381");
+            this.helpProvider1.SetHelpKeyword(this.label381, resources.GetString("label381.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label381, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label381.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label381, resources.GetString("label381.HelpString"));
+            this.label381.Name = "label381";
+            this.helpProvider1.SetShowHelp(this.label381, ((bool)(resources.GetObject("label381.ShowHelp"))));
             // 
             // button_StepsProgress
             // 
             resources.ApplyResources(this.button_StepsProgress, "button_StepsProgress");
+            this.helpProvider1.SetHelpKeyword(this.button_StepsProgress, resources.GetString("button_StepsProgress.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_StepsProgress, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_StepsProgress.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_StepsProgress, resources.GetString("button_StepsProgress.HelpString"));
             this.button_StepsProgress.Name = "button_StepsProgress";
             this.helpProvider1.SetShowHelp(this.button_StepsProgress, ((bool)(resources.GetObject("button_StepsProgress.ShowHelp"))));
             this.button_StepsProgress.UseVisualStyleBackColor = true;
             this.button_StepsProgress.Click += new System.EventHandler(this.button_StepsProgress_Click);
             // 
+            // panel_AnalogDate
+            // 
+            resources.ApplyResources(this.panel_AnalogDate, "panel_AnalogDate");
+            this.panel_AnalogDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_AnalogDate.Controls.Add(this.tabControl7);
+            this.helpProvider1.SetHelpKeyword(this.panel_AnalogDate, resources.GetString("panel_AnalogDate.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel_AnalogDate, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_AnalogDate.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel_AnalogDate, resources.GetString("panel_AnalogDate.HelpString"));
+            this.panel_AnalogDate.Name = "panel_AnalogDate";
+            // 
+            // tabControl7
+            // 
+            resources.ApplyResources(this.tabControl7, "tabControl7");
+            this.tabControl7.Controls.Add(this.tabPage38);
+            this.tabControl7.Controls.Add(this.tabPage39);
+            this.tabControl7.Controls.Add(this.tabPage40);
+            this.helpProvider1.SetHelpKeyword(this.tabControl7, resources.GetString("tabControl7.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabControl7, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabControl7.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabControl7, resources.GetString("tabControl7.HelpString"));
+            this.tabControl7.Name = "tabControl7";
+            this.tabControl7.SelectedIndex = 0;
+            this.tabControl7.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_OffSetX_MouseDoubleClick);
+            // 
+            // tabPage38
+            // 
+            resources.ApplyResources(this.tabPage38, "tabPage38");
+            this.tabPage38.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage38.Controls.Add(this.checkBox_ADDay_ClockHand);
+            this.tabPage38.Controls.Add(this.numericUpDown_ADDay_ClockHand_EndAngle);
+            this.tabPage38.Controls.Add(this.label396);
+            this.tabPage38.Controls.Add(this.numericUpDown_ADDay_ClockHand_StartAngle);
+            this.tabPage38.Controls.Add(this.label397);
+            this.tabPage38.Controls.Add(this.numericUpDown_ADDay_ClockHand_Offset_Y);
+            this.tabPage38.Controls.Add(this.label398);
+            this.tabPage38.Controls.Add(this.numericUpDown_ADDay_ClockHand_Offset_X);
+            this.tabPage38.Controls.Add(this.label399);
+            this.tabPage38.Controls.Add(this.comboBox_ADDay_ClockHand_Image);
+            this.tabPage38.Controls.Add(this.label400);
+            this.tabPage38.Controls.Add(this.numericUpDown_ADDay_ClockHand_Y);
+            this.tabPage38.Controls.Add(this.label401);
+            this.tabPage38.Controls.Add(this.numericUpDown_ADDay_ClockHand_X);
+            this.tabPage38.Controls.Add(this.label402);
+            this.helpProvider1.SetHelpKeyword(this.tabPage38, resources.GetString("tabPage38.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage38, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage38.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage38, resources.GetString("tabPage38.HelpString"));
+            this.tabPage38.Name = "tabPage38";
+            // 
+            // checkBox_ADDay_ClockHand
+            // 
+            resources.ApplyResources(this.checkBox_ADDay_ClockHand, "checkBox_ADDay_ClockHand");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_ADDay_ClockHand, resources.GetString("checkBox_ADDay_ClockHand.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_ADDay_ClockHand, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_ADDay_ClockHand.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_ADDay_ClockHand, resources.GetString("checkBox_ADDay_ClockHand.HelpString"));
+            this.checkBox_ADDay_ClockHand.Name = "checkBox_ADDay_ClockHand";
+            this.helpProvider1.SetShowHelp(this.checkBox_ADDay_ClockHand, ((bool)(resources.GetObject("checkBox_ADDay_ClockHand.ShowHelp"))));
+            this.checkBox_ADDay_ClockHand.UseVisualStyleBackColor = true;
+            this.checkBox_ADDay_ClockHand.CheckedChanged += new System.EventHandler(this.checkBox_ADDay_ClockHand_CheckedChanged);
+            // 
+            // numericUpDown_ADDay_ClockHand_EndAngle
+            // 
+            resources.ApplyResources(this.numericUpDown_ADDay_ClockHand_EndAngle, "numericUpDown_ADDay_ClockHand_EndAngle");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ADDay_ClockHand_EndAngle, resources.GetString("numericUpDown_ADDay_ClockHand_EndAngle.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ADDay_ClockHand_EndAngle, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ADDay_ClockHand_EndAngle.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ADDay_ClockHand_EndAngle, resources.GetString("numericUpDown_ADDay_ClockHand_EndAngle.HelpString"));
+            this.numericUpDown_ADDay_ClockHand_EndAngle.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADDay_ClockHand_EndAngle.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADDay_ClockHand_EndAngle.Name = "numericUpDown_ADDay_ClockHand_EndAngle";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADDay_ClockHand_EndAngle, ((bool)(resources.GetObject("numericUpDown_ADDay_ClockHand_EndAngle.ShowHelp"))));
+            this.numericUpDown_ADDay_ClockHand_EndAngle.Value = new decimal(new int[] {
+            495,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADDay_ClockHand_EndAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label396
+            // 
+            resources.ApplyResources(this.label396, "label396");
+            this.helpProvider1.SetHelpKeyword(this.label396, resources.GetString("label396.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label396, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label396.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label396, resources.GetString("label396.HelpString"));
+            this.label396.Name = "label396";
+            this.helpProvider1.SetShowHelp(this.label396, ((bool)(resources.GetObject("label396.ShowHelp"))));
+            // 
+            // numericUpDown_ADDay_ClockHand_StartAngle
+            // 
+            resources.ApplyResources(this.numericUpDown_ADDay_ClockHand_StartAngle, "numericUpDown_ADDay_ClockHand_StartAngle");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ADDay_ClockHand_StartAngle, resources.GetString("numericUpDown_ADDay_ClockHand_StartAngle.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ADDay_ClockHand_StartAngle, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ADDay_ClockHand_StartAngle.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ADDay_ClockHand_StartAngle, resources.GetString("numericUpDown_ADDay_ClockHand_StartAngle.HelpString"));
+            this.numericUpDown_ADDay_ClockHand_StartAngle.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADDay_ClockHand_StartAngle.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADDay_ClockHand_StartAngle.Name = "numericUpDown_ADDay_ClockHand_StartAngle";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADDay_ClockHand_StartAngle, ((bool)(resources.GetObject("numericUpDown_ADDay_ClockHand_StartAngle.ShowHelp"))));
+            this.numericUpDown_ADDay_ClockHand_StartAngle.Value = new decimal(new int[] {
+            225,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADDay_ClockHand_StartAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label397
+            // 
+            resources.ApplyResources(this.label397, "label397");
+            this.helpProvider1.SetHelpKeyword(this.label397, resources.GetString("label397.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label397, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label397.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label397, resources.GetString("label397.HelpString"));
+            this.label397.Name = "label397";
+            this.helpProvider1.SetShowHelp(this.label397, ((bool)(resources.GetObject("label397.ShowHelp"))));
+            // 
+            // numericUpDown_ADDay_ClockHand_Offset_Y
+            // 
+            resources.ApplyResources(this.numericUpDown_ADDay_ClockHand_Offset_Y, "numericUpDown_ADDay_ClockHand_Offset_Y");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ADDay_ClockHand_Offset_Y, resources.GetString("numericUpDown_ADDay_ClockHand_Offset_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ADDay_ClockHand_Offset_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ADDay_ClockHand_Offset_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ADDay_ClockHand_Offset_Y, resources.GetString("numericUpDown_ADDay_ClockHand_Offset_Y.HelpString"));
+            this.numericUpDown_ADDay_ClockHand_Offset_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADDay_ClockHand_Offset_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADDay_ClockHand_Offset_Y.Name = "numericUpDown_ADDay_ClockHand_Offset_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADDay_ClockHand_Offset_Y, ((bool)(resources.GetObject("numericUpDown_ADDay_ClockHand_Offset_Y.ShowHelp"))));
+            this.numericUpDown_ADDay_ClockHand_Offset_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ADDay_ClockHand_Offset_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_OffSetY_MouseDoubleClick);
+            // 
+            // label398
+            // 
+            resources.ApplyResources(this.label398, "label398");
+            this.helpProvider1.SetHelpKeyword(this.label398, resources.GetString("label398.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label398, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label398.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label398, resources.GetString("label398.HelpString"));
+            this.label398.Name = "label398";
+            this.helpProvider1.SetShowHelp(this.label398, ((bool)(resources.GetObject("label398.ShowHelp"))));
+            // 
+            // numericUpDown_ADDay_ClockHand_Offset_X
+            // 
+            resources.ApplyResources(this.numericUpDown_ADDay_ClockHand_Offset_X, "numericUpDown_ADDay_ClockHand_Offset_X");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ADDay_ClockHand_Offset_X, resources.GetString("numericUpDown_ADDay_ClockHand_Offset_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ADDay_ClockHand_Offset_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ADDay_ClockHand_Offset_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ADDay_ClockHand_Offset_X, resources.GetString("numericUpDown_ADDay_ClockHand_Offset_X.HelpString"));
+            this.numericUpDown_ADDay_ClockHand_Offset_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADDay_ClockHand_Offset_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADDay_ClockHand_Offset_X.Name = "numericUpDown_ADDay_ClockHand_Offset_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADDay_ClockHand_Offset_X, ((bool)(resources.GetObject("numericUpDown_ADDay_ClockHand_Offset_X.ShowHelp"))));
+            this.numericUpDown_ADDay_ClockHand_Offset_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ADDay_ClockHand_Offset_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_OffSetX_MouseDoubleClick);
+            // 
+            // label399
+            // 
+            resources.ApplyResources(this.label399, "label399");
+            this.helpProvider1.SetHelpKeyword(this.label399, resources.GetString("label399.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label399, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label399.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label399, resources.GetString("label399.HelpString"));
+            this.label399.Name = "label399";
+            this.helpProvider1.SetShowHelp(this.label399, ((bool)(resources.GetObject("label399.ShowHelp"))));
+            // 
+            // comboBox_ADDay_ClockHand_Image
+            // 
+            resources.ApplyResources(this.comboBox_ADDay_ClockHand_Image, "comboBox_ADDay_ClockHand_Image");
+            this.comboBox_ADDay_ClockHand_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_ADDay_ClockHand_Image.DropDownWidth = 75;
+            this.comboBox_ADDay_ClockHand_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_ADDay_ClockHand_Image, resources.GetString("comboBox_ADDay_ClockHand_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_ADDay_ClockHand_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_ADDay_ClockHand_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_ADDay_ClockHand_Image, resources.GetString("comboBox_ADDay_ClockHand_Image.HelpString"));
+            this.comboBox_ADDay_ClockHand_Image.Name = "comboBox_ADDay_ClockHand_Image";
+            this.helpProvider1.SetShowHelp(this.comboBox_ADDay_ClockHand_Image, ((bool)(resources.GetObject("comboBox_ADDay_ClockHand_Image.ShowHelp"))));
+            this.comboBox_ADDay_ClockHand_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_ADDay_ClockHand_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_ADDay_ClockHand_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_ADDay_ClockHand_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_ADDay_ClockHand_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // label400
+            // 
+            resources.ApplyResources(this.label400, "label400");
+            this.helpProvider1.SetHelpKeyword(this.label400, resources.GetString("label400.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label400, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label400.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label400, resources.GetString("label400.HelpString"));
+            this.label400.Name = "label400";
+            this.helpProvider1.SetShowHelp(this.label400, ((bool)(resources.GetObject("label400.ShowHelp"))));
+            // 
+            // numericUpDown_ADDay_ClockHand_Y
+            // 
+            resources.ApplyResources(this.numericUpDown_ADDay_ClockHand_Y, "numericUpDown_ADDay_ClockHand_Y");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ADDay_ClockHand_Y, resources.GetString("numericUpDown_ADDay_ClockHand_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ADDay_ClockHand_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ADDay_ClockHand_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ADDay_ClockHand_Y, resources.GetString("numericUpDown_ADDay_ClockHand_Y.HelpString"));
+            this.numericUpDown_ADDay_ClockHand_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADDay_ClockHand_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADDay_ClockHand_Y.Name = "numericUpDown_ADDay_ClockHand_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADDay_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_ADDay_ClockHand_Y.ShowHelp"))));
+            this.numericUpDown_ADDay_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label401
+            // 
+            resources.ApplyResources(this.label401, "label401");
+            this.helpProvider1.SetHelpKeyword(this.label401, resources.GetString("label401.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label401, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label401.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label401, resources.GetString("label401.HelpString"));
+            this.label401.Name = "label401";
+            this.helpProvider1.SetShowHelp(this.label401, ((bool)(resources.GetObject("label401.ShowHelp"))));
+            // 
+            // numericUpDown_ADDay_ClockHand_X
+            // 
+            resources.ApplyResources(this.numericUpDown_ADDay_ClockHand_X, "numericUpDown_ADDay_ClockHand_X");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ADDay_ClockHand_X, resources.GetString("numericUpDown_ADDay_ClockHand_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ADDay_ClockHand_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ADDay_ClockHand_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ADDay_ClockHand_X, resources.GetString("numericUpDown_ADDay_ClockHand_X.HelpString"));
+            this.numericUpDown_ADDay_ClockHand_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADDay_ClockHand_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADDay_ClockHand_X.Name = "numericUpDown_ADDay_ClockHand_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADDay_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_ADDay_ClockHand_X.ShowHelp"))));
+            this.numericUpDown_ADDay_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label402
+            // 
+            resources.ApplyResources(this.label402, "label402");
+            this.helpProvider1.SetHelpKeyword(this.label402, resources.GetString("label402.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label402, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label402.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label402, resources.GetString("label402.HelpString"));
+            this.label402.Name = "label402";
+            this.helpProvider1.SetShowHelp(this.label402, ((bool)(resources.GetObject("label402.ShowHelp"))));
+            // 
+            // tabPage39
+            // 
+            resources.ApplyResources(this.tabPage39, "tabPage39");
+            this.tabPage39.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage39.Controls.Add(this.numericUpDown_ADWeekDay_ClockHand_EndAngle);
+            this.tabPage39.Controls.Add(this.label389);
+            this.tabPage39.Controls.Add(this.numericUpDown_ADWeekDay_ClockHand_StartAngle);
+            this.tabPage39.Controls.Add(this.label390);
+            this.tabPage39.Controls.Add(this.numericUpDown_ADWeekDay_ClockHand_Offset_Y);
+            this.tabPage39.Controls.Add(this.label391);
+            this.tabPage39.Controls.Add(this.numericUpDown_ADWeekDay_ClockHand_Offset_X);
+            this.tabPage39.Controls.Add(this.label392);
+            this.tabPage39.Controls.Add(this.comboBox_ADWeekDay_ClockHand_Image);
+            this.tabPage39.Controls.Add(this.label393);
+            this.tabPage39.Controls.Add(this.numericUpDown_ADWeekDay_ClockHand_Y);
+            this.tabPage39.Controls.Add(this.label394);
+            this.tabPage39.Controls.Add(this.numericUpDown_ADWeekDay_ClockHand_X);
+            this.tabPage39.Controls.Add(this.label395);
+            this.tabPage39.Controls.Add(this.checkBox_ADWeekDay_ClockHand);
+            this.helpProvider1.SetHelpKeyword(this.tabPage39, resources.GetString("tabPage39.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage39, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage39.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage39, resources.GetString("tabPage39.HelpString"));
+            this.tabPage39.Name = "tabPage39";
+            // 
+            // numericUpDown_ADWeekDay_ClockHand_EndAngle
+            // 
+            resources.ApplyResources(this.numericUpDown_ADWeekDay_ClockHand_EndAngle, "numericUpDown_ADWeekDay_ClockHand_EndAngle");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ADWeekDay_ClockHand_EndAngle, resources.GetString("numericUpDown_ADWeekDay_ClockHand_EndAngle.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ADWeekDay_ClockHand_EndAngle, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ADWeekDay_ClockHand_EndAngle.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ADWeekDay_ClockHand_EndAngle, resources.GetString("numericUpDown_ADWeekDay_ClockHand_EndAngle.HelpString"));
+            this.numericUpDown_ADWeekDay_ClockHand_EndAngle.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADWeekDay_ClockHand_EndAngle.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADWeekDay_ClockHand_EndAngle.Name = "numericUpDown_ADWeekDay_ClockHand_EndAngle";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADWeekDay_ClockHand_EndAngle, ((bool)(resources.GetObject("numericUpDown_ADWeekDay_ClockHand_EndAngle.ShowHelp"))));
+            this.numericUpDown_ADWeekDay_ClockHand_EndAngle.Value = new decimal(new int[] {
+            495,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADWeekDay_ClockHand_EndAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label389
+            // 
+            resources.ApplyResources(this.label389, "label389");
+            this.helpProvider1.SetHelpKeyword(this.label389, resources.GetString("label389.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label389, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label389.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label389, resources.GetString("label389.HelpString"));
+            this.label389.Name = "label389";
+            this.helpProvider1.SetShowHelp(this.label389, ((bool)(resources.GetObject("label389.ShowHelp"))));
+            // 
+            // numericUpDown_ADWeekDay_ClockHand_StartAngle
+            // 
+            resources.ApplyResources(this.numericUpDown_ADWeekDay_ClockHand_StartAngle, "numericUpDown_ADWeekDay_ClockHand_StartAngle");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ADWeekDay_ClockHand_StartAngle, resources.GetString("numericUpDown_ADWeekDay_ClockHand_StartAngle.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ADWeekDay_ClockHand_StartAngle, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ADWeekDay_ClockHand_StartAngle.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ADWeekDay_ClockHand_StartAngle, resources.GetString("numericUpDown_ADWeekDay_ClockHand_StartAngle.HelpString"));
+            this.numericUpDown_ADWeekDay_ClockHand_StartAngle.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADWeekDay_ClockHand_StartAngle.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADWeekDay_ClockHand_StartAngle.Name = "numericUpDown_ADWeekDay_ClockHand_StartAngle";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADWeekDay_ClockHand_StartAngle, ((bool)(resources.GetObject("numericUpDown_ADWeekDay_ClockHand_StartAngle.ShowHelp"))));
+            this.numericUpDown_ADWeekDay_ClockHand_StartAngle.Value = new decimal(new int[] {
+            225,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADWeekDay_ClockHand_StartAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label390
+            // 
+            resources.ApplyResources(this.label390, "label390");
+            this.helpProvider1.SetHelpKeyword(this.label390, resources.GetString("label390.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label390, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label390.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label390, resources.GetString("label390.HelpString"));
+            this.label390.Name = "label390";
+            this.helpProvider1.SetShowHelp(this.label390, ((bool)(resources.GetObject("label390.ShowHelp"))));
+            // 
+            // numericUpDown_ADWeekDay_ClockHand_Offset_Y
+            // 
+            resources.ApplyResources(this.numericUpDown_ADWeekDay_ClockHand_Offset_Y, "numericUpDown_ADWeekDay_ClockHand_Offset_Y");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ADWeekDay_ClockHand_Offset_Y, resources.GetString("numericUpDown_ADWeekDay_ClockHand_Offset_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ADWeekDay_ClockHand_Offset_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ADWeekDay_ClockHand_Offset_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ADWeekDay_ClockHand_Offset_Y, resources.GetString("numericUpDown_ADWeekDay_ClockHand_Offset_Y.HelpString"));
+            this.numericUpDown_ADWeekDay_ClockHand_Offset_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADWeekDay_ClockHand_Offset_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADWeekDay_ClockHand_Offset_Y.Name = "numericUpDown_ADWeekDay_ClockHand_Offset_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADWeekDay_ClockHand_Offset_Y, ((bool)(resources.GetObject("numericUpDown_ADWeekDay_ClockHand_Offset_Y.ShowHelp"))));
+            this.numericUpDown_ADWeekDay_ClockHand_Offset_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ADWeekDay_ClockHand_Offset_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_OffSetY_MouseDoubleClick);
+            // 
+            // label391
+            // 
+            resources.ApplyResources(this.label391, "label391");
+            this.helpProvider1.SetHelpKeyword(this.label391, resources.GetString("label391.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label391, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label391.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label391, resources.GetString("label391.HelpString"));
+            this.label391.Name = "label391";
+            this.helpProvider1.SetShowHelp(this.label391, ((bool)(resources.GetObject("label391.ShowHelp"))));
+            // 
+            // numericUpDown_ADWeekDay_ClockHand_Offset_X
+            // 
+            resources.ApplyResources(this.numericUpDown_ADWeekDay_ClockHand_Offset_X, "numericUpDown_ADWeekDay_ClockHand_Offset_X");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ADWeekDay_ClockHand_Offset_X, resources.GetString("numericUpDown_ADWeekDay_ClockHand_Offset_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ADWeekDay_ClockHand_Offset_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ADWeekDay_ClockHand_Offset_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ADWeekDay_ClockHand_Offset_X, resources.GetString("numericUpDown_ADWeekDay_ClockHand_Offset_X.HelpString"));
+            this.numericUpDown_ADWeekDay_ClockHand_Offset_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADWeekDay_ClockHand_Offset_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADWeekDay_ClockHand_Offset_X.Name = "numericUpDown_ADWeekDay_ClockHand_Offset_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADWeekDay_ClockHand_Offset_X, ((bool)(resources.GetObject("numericUpDown_ADWeekDay_ClockHand_Offset_X.ShowHelp"))));
+            this.numericUpDown_ADWeekDay_ClockHand_Offset_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ADWeekDay_ClockHand_Offset_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_OffSetX_MouseDoubleClick);
+            // 
+            // label392
+            // 
+            resources.ApplyResources(this.label392, "label392");
+            this.helpProvider1.SetHelpKeyword(this.label392, resources.GetString("label392.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label392, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label392.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label392, resources.GetString("label392.HelpString"));
+            this.label392.Name = "label392";
+            this.helpProvider1.SetShowHelp(this.label392, ((bool)(resources.GetObject("label392.ShowHelp"))));
+            // 
+            // comboBox_ADWeekDay_ClockHand_Image
+            // 
+            resources.ApplyResources(this.comboBox_ADWeekDay_ClockHand_Image, "comboBox_ADWeekDay_ClockHand_Image");
+            this.comboBox_ADWeekDay_ClockHand_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_ADWeekDay_ClockHand_Image.DropDownWidth = 75;
+            this.comboBox_ADWeekDay_ClockHand_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_ADWeekDay_ClockHand_Image, resources.GetString("comboBox_ADWeekDay_ClockHand_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_ADWeekDay_ClockHand_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_ADWeekDay_ClockHand_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_ADWeekDay_ClockHand_Image, resources.GetString("comboBox_ADWeekDay_ClockHand_Image.HelpString"));
+            this.comboBox_ADWeekDay_ClockHand_Image.Name = "comboBox_ADWeekDay_ClockHand_Image";
+            this.helpProvider1.SetShowHelp(this.comboBox_ADWeekDay_ClockHand_Image, ((bool)(resources.GetObject("comboBox_ADWeekDay_ClockHand_Image.ShowHelp"))));
+            this.comboBox_ADWeekDay_ClockHand_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_ADWeekDay_ClockHand_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_ADWeekDay_ClockHand_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_ADWeekDay_ClockHand_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_ADWeekDay_ClockHand_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // label393
+            // 
+            resources.ApplyResources(this.label393, "label393");
+            this.helpProvider1.SetHelpKeyword(this.label393, resources.GetString("label393.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label393, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label393.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label393, resources.GetString("label393.HelpString"));
+            this.label393.Name = "label393";
+            this.helpProvider1.SetShowHelp(this.label393, ((bool)(resources.GetObject("label393.ShowHelp"))));
+            // 
+            // numericUpDown_ADWeekDay_ClockHand_Y
+            // 
+            resources.ApplyResources(this.numericUpDown_ADWeekDay_ClockHand_Y, "numericUpDown_ADWeekDay_ClockHand_Y");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ADWeekDay_ClockHand_Y, resources.GetString("numericUpDown_ADWeekDay_ClockHand_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ADWeekDay_ClockHand_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ADWeekDay_ClockHand_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ADWeekDay_ClockHand_Y, resources.GetString("numericUpDown_ADWeekDay_ClockHand_Y.HelpString"));
+            this.numericUpDown_ADWeekDay_ClockHand_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADWeekDay_ClockHand_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADWeekDay_ClockHand_Y.Name = "numericUpDown_ADWeekDay_ClockHand_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADWeekDay_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_ADWeekDay_ClockHand_Y.ShowHelp"))));
+            this.numericUpDown_ADWeekDay_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label394
+            // 
+            resources.ApplyResources(this.label394, "label394");
+            this.helpProvider1.SetHelpKeyword(this.label394, resources.GetString("label394.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label394, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label394.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label394, resources.GetString("label394.HelpString"));
+            this.label394.Name = "label394";
+            this.helpProvider1.SetShowHelp(this.label394, ((bool)(resources.GetObject("label394.ShowHelp"))));
+            // 
+            // numericUpDown_ADWeekDay_ClockHand_X
+            // 
+            resources.ApplyResources(this.numericUpDown_ADWeekDay_ClockHand_X, "numericUpDown_ADWeekDay_ClockHand_X");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ADWeekDay_ClockHand_X, resources.GetString("numericUpDown_ADWeekDay_ClockHand_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ADWeekDay_ClockHand_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ADWeekDay_ClockHand_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ADWeekDay_ClockHand_X, resources.GetString("numericUpDown_ADWeekDay_ClockHand_X.HelpString"));
+            this.numericUpDown_ADWeekDay_ClockHand_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADWeekDay_ClockHand_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADWeekDay_ClockHand_X.Name = "numericUpDown_ADWeekDay_ClockHand_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADWeekDay_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_ADWeekDay_ClockHand_X.ShowHelp"))));
+            this.numericUpDown_ADWeekDay_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label395
+            // 
+            resources.ApplyResources(this.label395, "label395");
+            this.helpProvider1.SetHelpKeyword(this.label395, resources.GetString("label395.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label395, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label395.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label395, resources.GetString("label395.HelpString"));
+            this.label395.Name = "label395";
+            this.helpProvider1.SetShowHelp(this.label395, ((bool)(resources.GetObject("label395.ShowHelp"))));
+            // 
+            // checkBox_ADWeekDay_ClockHand
+            // 
+            resources.ApplyResources(this.checkBox_ADWeekDay_ClockHand, "checkBox_ADWeekDay_ClockHand");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_ADWeekDay_ClockHand, resources.GetString("checkBox_ADWeekDay_ClockHand.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_ADWeekDay_ClockHand, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_ADWeekDay_ClockHand.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_ADWeekDay_ClockHand, resources.GetString("checkBox_ADWeekDay_ClockHand.HelpString"));
+            this.checkBox_ADWeekDay_ClockHand.Name = "checkBox_ADWeekDay_ClockHand";
+            this.helpProvider1.SetShowHelp(this.checkBox_ADWeekDay_ClockHand, ((bool)(resources.GetObject("checkBox_ADWeekDay_ClockHand.ShowHelp"))));
+            this.checkBox_ADWeekDay_ClockHand.UseVisualStyleBackColor = true;
+            this.checkBox_ADWeekDay_ClockHand.CheckedChanged += new System.EventHandler(this.checkBox_ADWeekDay_ClockHand_CheckedChanged);
+            // 
+            // tabPage40
+            // 
+            resources.ApplyResources(this.tabPage40, "tabPage40");
+            this.tabPage40.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage40.Controls.Add(this.numericUpDown_ADMonth_ClockHand_EndAngle);
+            this.tabPage40.Controls.Add(this.label382);
+            this.tabPage40.Controls.Add(this.numericUpDown_ADMonth_ClockHand_StartAngle);
+            this.tabPage40.Controls.Add(this.label383);
+            this.tabPage40.Controls.Add(this.numericUpDown_ADMonth_ClockHand_Offset_Y);
+            this.tabPage40.Controls.Add(this.label384);
+            this.tabPage40.Controls.Add(this.numericUpDown_ADMonth_ClockHand_Offset_X);
+            this.tabPage40.Controls.Add(this.label385);
+            this.tabPage40.Controls.Add(this.comboBox_ADMonth_ClockHand_Image);
+            this.tabPage40.Controls.Add(this.label386);
+            this.tabPage40.Controls.Add(this.numericUpDown_ADMonth_ClockHand_Y);
+            this.tabPage40.Controls.Add(this.label387);
+            this.tabPage40.Controls.Add(this.numericUpDown_ADMonth_ClockHand_X);
+            this.tabPage40.Controls.Add(this.label388);
+            this.tabPage40.Controls.Add(this.checkBox_ADMonth_ClockHand);
+            this.helpProvider1.SetHelpKeyword(this.tabPage40, resources.GetString("tabPage40.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage40, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage40.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage40, resources.GetString("tabPage40.HelpString"));
+            this.tabPage40.Name = "tabPage40";
+            // 
+            // numericUpDown_ADMonth_ClockHand_EndAngle
+            // 
+            resources.ApplyResources(this.numericUpDown_ADMonth_ClockHand_EndAngle, "numericUpDown_ADMonth_ClockHand_EndAngle");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ADMonth_ClockHand_EndAngle, resources.GetString("numericUpDown_ADMonth_ClockHand_EndAngle.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ADMonth_ClockHand_EndAngle, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ADMonth_ClockHand_EndAngle.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ADMonth_ClockHand_EndAngle, resources.GetString("numericUpDown_ADMonth_ClockHand_EndAngle.HelpString"));
+            this.numericUpDown_ADMonth_ClockHand_EndAngle.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADMonth_ClockHand_EndAngle.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADMonth_ClockHand_EndAngle.Name = "numericUpDown_ADMonth_ClockHand_EndAngle";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADMonth_ClockHand_EndAngle, ((bool)(resources.GetObject("numericUpDown_ADMonth_ClockHand_EndAngle.ShowHelp"))));
+            this.numericUpDown_ADMonth_ClockHand_EndAngle.Value = new decimal(new int[] {
+            495,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADMonth_ClockHand_EndAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label382
+            // 
+            resources.ApplyResources(this.label382, "label382");
+            this.helpProvider1.SetHelpKeyword(this.label382, resources.GetString("label382.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label382, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label382.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label382, resources.GetString("label382.HelpString"));
+            this.label382.Name = "label382";
+            this.helpProvider1.SetShowHelp(this.label382, ((bool)(resources.GetObject("label382.ShowHelp"))));
+            // 
+            // numericUpDown_ADMonth_ClockHand_StartAngle
+            // 
+            resources.ApplyResources(this.numericUpDown_ADMonth_ClockHand_StartAngle, "numericUpDown_ADMonth_ClockHand_StartAngle");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ADMonth_ClockHand_StartAngle, resources.GetString("numericUpDown_ADMonth_ClockHand_StartAngle.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ADMonth_ClockHand_StartAngle, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ADMonth_ClockHand_StartAngle.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ADMonth_ClockHand_StartAngle, resources.GetString("numericUpDown_ADMonth_ClockHand_StartAngle.HelpString"));
+            this.numericUpDown_ADMonth_ClockHand_StartAngle.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADMonth_ClockHand_StartAngle.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADMonth_ClockHand_StartAngle.Name = "numericUpDown_ADMonth_ClockHand_StartAngle";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADMonth_ClockHand_StartAngle, ((bool)(resources.GetObject("numericUpDown_ADMonth_ClockHand_StartAngle.ShowHelp"))));
+            this.numericUpDown_ADMonth_ClockHand_StartAngle.Value = new decimal(new int[] {
+            225,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADMonth_ClockHand_StartAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label383
+            // 
+            resources.ApplyResources(this.label383, "label383");
+            this.helpProvider1.SetHelpKeyword(this.label383, resources.GetString("label383.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label383, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label383.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label383, resources.GetString("label383.HelpString"));
+            this.label383.Name = "label383";
+            this.helpProvider1.SetShowHelp(this.label383, ((bool)(resources.GetObject("label383.ShowHelp"))));
+            // 
+            // numericUpDown_ADMonth_ClockHand_Offset_Y
+            // 
+            resources.ApplyResources(this.numericUpDown_ADMonth_ClockHand_Offset_Y, "numericUpDown_ADMonth_ClockHand_Offset_Y");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ADMonth_ClockHand_Offset_Y, resources.GetString("numericUpDown_ADMonth_ClockHand_Offset_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ADMonth_ClockHand_Offset_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ADMonth_ClockHand_Offset_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ADMonth_ClockHand_Offset_Y, resources.GetString("numericUpDown_ADMonth_ClockHand_Offset_Y.HelpString"));
+            this.numericUpDown_ADMonth_ClockHand_Offset_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADMonth_ClockHand_Offset_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADMonth_ClockHand_Offset_Y.Name = "numericUpDown_ADMonth_ClockHand_Offset_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADMonth_ClockHand_Offset_Y, ((bool)(resources.GetObject("numericUpDown_ADMonth_ClockHand_Offset_Y.ShowHelp"))));
+            this.numericUpDown_ADMonth_ClockHand_Offset_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ADMonth_ClockHand_Offset_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_OffSetY_MouseDoubleClick);
+            // 
+            // label384
+            // 
+            resources.ApplyResources(this.label384, "label384");
+            this.helpProvider1.SetHelpKeyword(this.label384, resources.GetString("label384.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label384, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label384.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label384, resources.GetString("label384.HelpString"));
+            this.label384.Name = "label384";
+            this.helpProvider1.SetShowHelp(this.label384, ((bool)(resources.GetObject("label384.ShowHelp"))));
+            // 
+            // numericUpDown_ADMonth_ClockHand_Offset_X
+            // 
+            resources.ApplyResources(this.numericUpDown_ADMonth_ClockHand_Offset_X, "numericUpDown_ADMonth_ClockHand_Offset_X");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ADMonth_ClockHand_Offset_X, resources.GetString("numericUpDown_ADMonth_ClockHand_Offset_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ADMonth_ClockHand_Offset_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ADMonth_ClockHand_Offset_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ADMonth_ClockHand_Offset_X, resources.GetString("numericUpDown_ADMonth_ClockHand_Offset_X.HelpString"));
+            this.numericUpDown_ADMonth_ClockHand_Offset_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADMonth_ClockHand_Offset_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADMonth_ClockHand_Offset_X.Name = "numericUpDown_ADMonth_ClockHand_Offset_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADMonth_ClockHand_Offset_X, ((bool)(resources.GetObject("numericUpDown_ADMonth_ClockHand_Offset_X.ShowHelp"))));
+            this.numericUpDown_ADMonth_ClockHand_Offset_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ADMonth_ClockHand_Offset_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_OffSetX_MouseDoubleClick);
+            // 
+            // label385
+            // 
+            resources.ApplyResources(this.label385, "label385");
+            this.helpProvider1.SetHelpKeyword(this.label385, resources.GetString("label385.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label385, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label385.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label385, resources.GetString("label385.HelpString"));
+            this.label385.Name = "label385";
+            this.helpProvider1.SetShowHelp(this.label385, ((bool)(resources.GetObject("label385.ShowHelp"))));
+            // 
+            // comboBox_ADMonth_ClockHand_Image
+            // 
+            resources.ApplyResources(this.comboBox_ADMonth_ClockHand_Image, "comboBox_ADMonth_ClockHand_Image");
+            this.comboBox_ADMonth_ClockHand_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_ADMonth_ClockHand_Image.DropDownWidth = 75;
+            this.comboBox_ADMonth_ClockHand_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_ADMonth_ClockHand_Image, resources.GetString("comboBox_ADMonth_ClockHand_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_ADMonth_ClockHand_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_ADMonth_ClockHand_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_ADMonth_ClockHand_Image, resources.GetString("comboBox_ADMonth_ClockHand_Image.HelpString"));
+            this.comboBox_ADMonth_ClockHand_Image.Name = "comboBox_ADMonth_ClockHand_Image";
+            this.helpProvider1.SetShowHelp(this.comboBox_ADMonth_ClockHand_Image, ((bool)(resources.GetObject("comboBox_ADMonth_ClockHand_Image.ShowHelp"))));
+            this.comboBox_ADMonth_ClockHand_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_ADMonth_ClockHand_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_ADMonth_ClockHand_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_ADMonth_ClockHand_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_ADMonth_ClockHand_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // label386
+            // 
+            resources.ApplyResources(this.label386, "label386");
+            this.helpProvider1.SetHelpKeyword(this.label386, resources.GetString("label386.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label386, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label386.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label386, resources.GetString("label386.HelpString"));
+            this.label386.Name = "label386";
+            this.helpProvider1.SetShowHelp(this.label386, ((bool)(resources.GetObject("label386.ShowHelp"))));
+            // 
+            // numericUpDown_ADMonth_ClockHand_Y
+            // 
+            resources.ApplyResources(this.numericUpDown_ADMonth_ClockHand_Y, "numericUpDown_ADMonth_ClockHand_Y");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ADMonth_ClockHand_Y, resources.GetString("numericUpDown_ADMonth_ClockHand_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ADMonth_ClockHand_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ADMonth_ClockHand_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ADMonth_ClockHand_Y, resources.GetString("numericUpDown_ADMonth_ClockHand_Y.HelpString"));
+            this.numericUpDown_ADMonth_ClockHand_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADMonth_ClockHand_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADMonth_ClockHand_Y.Name = "numericUpDown_ADMonth_ClockHand_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADMonth_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_ADMonth_ClockHand_Y.ShowHelp"))));
+            this.numericUpDown_ADMonth_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label387
+            // 
+            resources.ApplyResources(this.label387, "label387");
+            this.helpProvider1.SetHelpKeyword(this.label387, resources.GetString("label387.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label387, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label387.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label387, resources.GetString("label387.HelpString"));
+            this.label387.Name = "label387";
+            this.helpProvider1.SetShowHelp(this.label387, ((bool)(resources.GetObject("label387.ShowHelp"))));
+            // 
+            // numericUpDown_ADMonth_ClockHand_X
+            // 
+            resources.ApplyResources(this.numericUpDown_ADMonth_ClockHand_X, "numericUpDown_ADMonth_ClockHand_X");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_ADMonth_ClockHand_X, resources.GetString("numericUpDown_ADMonth_ClockHand_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_ADMonth_ClockHand_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_ADMonth_ClockHand_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_ADMonth_ClockHand_X, resources.GetString("numericUpDown_ADMonth_ClockHand_X.HelpString"));
+            this.numericUpDown_ADMonth_ClockHand_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADMonth_ClockHand_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADMonth_ClockHand_X.Name = "numericUpDown_ADMonth_ClockHand_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADMonth_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_ADMonth_ClockHand_X.ShowHelp"))));
+            this.numericUpDown_ADMonth_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label388
+            // 
+            resources.ApplyResources(this.label388, "label388");
+            this.helpProvider1.SetHelpKeyword(this.label388, resources.GetString("label388.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label388, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label388.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label388, resources.GetString("label388.HelpString"));
+            this.label388.Name = "label388";
+            this.helpProvider1.SetShowHelp(this.label388, ((bool)(resources.GetObject("label388.ShowHelp"))));
+            // 
+            // checkBox_ADMonth_ClockHand
+            // 
+            resources.ApplyResources(this.checkBox_ADMonth_ClockHand, "checkBox_ADMonth_ClockHand");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_ADMonth_ClockHand, resources.GetString("checkBox_ADMonth_ClockHand.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_ADMonth_ClockHand, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_ADMonth_ClockHand.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_ADMonth_ClockHand, resources.GetString("checkBox_ADMonth_ClockHand.HelpString"));
+            this.checkBox_ADMonth_ClockHand.Name = "checkBox_ADMonth_ClockHand";
+            this.helpProvider1.SetShowHelp(this.checkBox_ADMonth_ClockHand, ((bool)(resources.GetObject("checkBox_ADMonth_ClockHand.ShowHelp"))));
+            this.checkBox_ADMonth_ClockHand.UseVisualStyleBackColor = true;
+            this.checkBox_ADMonth_ClockHand.CheckedChanged += new System.EventHandler(this.checkBox_ADMonth_ClockHand_CheckedChanged);
+            // 
+            // button_AnalogDate
+            // 
+            resources.ApplyResources(this.button_AnalogDate, "button_AnalogDate");
+            this.helpProvider1.SetHelpKeyword(this.button_AnalogDate, resources.GetString("button_AnalogDate.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_AnalogDate, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_AnalogDate.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_AnalogDate, resources.GetString("button_AnalogDate.HelpString"));
+            this.button_AnalogDate.Name = "button_AnalogDate";
+            this.helpProvider1.SetShowHelp(this.button_AnalogDate, ((bool)(resources.GetObject("button_AnalogDate.ShowHelp"))));
+            this.button_AnalogDate.UseVisualStyleBackColor = true;
+            this.button_AnalogDate.Click += new System.EventHandler(this.button_AnalogDate_Click);
+            // 
             // panel_Date
             // 
+            resources.ApplyResources(this.panel_Date, "panel_Date");
             this.panel_Date.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_Date.Controls.Add(this.tabControl_Date);
             this.panel_Date.Controls.Add(this.checkBox_Date);
             this.panel_Date.Controls.Add(this.checkBox_TwoDigitsDay);
             this.panel_Date.Controls.Add(this.checkBox_TwoDigitsMonth);
             this.panel_Date.Controls.Add(this.groupBox__WeekDay);
-            resources.ApplyResources(this.panel_Date, "panel_Date");
+            this.helpProvider1.SetHelpKeyword(this.panel_Date, resources.GetString("panel_Date.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel_Date, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_Date.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel_Date, resources.GetString("panel_Date.HelpString"));
             this.panel_Date.Name = "panel_Date";
             this.helpProvider1.SetShowHelp(this.panel_Date, ((bool)(resources.GetObject("panel_Date.ShowHelp"))));
             // 
             // tabControl_Date
             // 
+            resources.ApplyResources(this.tabControl_Date, "tabControl_Date");
             this.tabControl_Date.Controls.Add(this.tabPage8);
             this.tabControl_Date.Controls.Add(this.tabPage7);
             this.tabControl_Date.Controls.Add(this.tabPage34);
-            resources.ApplyResources(this.tabControl_Date, "tabControl_Date");
+            this.helpProvider1.SetHelpKeyword(this.tabControl_Date, resources.GetString("tabControl_Date.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabControl_Date, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabControl_Date.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabControl_Date, resources.GetString("tabControl_Date.HelpString"));
             this.tabControl_Date.Name = "tabControl_Date";
             this.tabControl_Date.SelectedIndex = 0;
             this.helpProvider1.SetShowHelp(this.tabControl_Date, ((bool)(resources.GetObject("tabControl_Date.ShowHelp"))));
             // 
             // tabPage8
             // 
+            resources.ApplyResources(this.tabPage8, "tabPage8");
             this.tabPage8.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage8.Controls.Add(this.tabControl3);
             this.tabPage8.Controls.Add(this.groupBox__MonthName);
-            resources.ApplyResources(this.tabPage8, "tabPage8");
+            this.helpProvider1.SetHelpKeyword(this.tabPage8, resources.GetString("tabPage8.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage8, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage8.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage8, resources.GetString("tabPage8.HelpString"));
             this.tabPage8.Name = "tabPage8";
             this.helpProvider1.SetShowHelp(this.tabPage8, ((bool)(resources.GetObject("tabPage8.ShowHelp"))));
             // 
             // tabControl3
             // 
+            resources.ApplyResources(this.tabControl3, "tabControl3");
             this.tabControl3.Controls.Add(this.tabPage9);
             this.tabControl3.Controls.Add(this.tabPage10);
-            resources.ApplyResources(this.tabControl3, "tabControl3");
+            this.helpProvider1.SetHelpKeyword(this.tabControl3, resources.GetString("tabControl3.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabControl3, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabControl3.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabControl3, resources.GetString("tabControl3.HelpString"));
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
             this.helpProvider1.SetShowHelp(this.tabControl3, ((bool)(resources.GetObject("tabControl3.ShowHelp"))));
             // 
             // tabPage9
             // 
+            resources.ApplyResources(this.tabPage9, "tabPage9");
             this.tabPage9.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage9.Controls.Add(this.numericUpDown_MonthAndDayD_EndCorner_X);
             this.tabPage9.Controls.Add(this.numericUpDown_MonthAndDayD_Count);
@@ -9555,14 +13167,19 @@
             this.tabPage9.Controls.Add(this.label63);
             this.tabPage9.Controls.Add(this.label68);
             this.tabPage9.Controls.Add(this.label67);
-            resources.ApplyResources(this.tabPage9, "tabPage9");
+            this.helpProvider1.SetHelpKeyword(this.tabPage9, resources.GetString("tabPage9.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage9, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage9.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage9, resources.GetString("tabPage9.HelpString"));
             this.tabPage9.Name = "tabPage9";
             this.helpProvider1.SetShowHelp(this.tabPage9, ((bool)(resources.GetObject("tabPage9.ShowHelp"))));
             // 
             // numericUpDown_MonthAndDayD_EndCorner_X
             // 
-            this.numericUpDown_MonthAndDayD_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_MonthAndDayD_EndCorner_X, "numericUpDown_MonthAndDayD_EndCorner_X");
+            this.numericUpDown_MonthAndDayD_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_MonthAndDayD_EndCorner_X, resources.GetString("numericUpDown_MonthAndDayD_EndCorner_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_MonthAndDayD_EndCorner_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_MonthAndDayD_EndCorner_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_MonthAndDayD_EndCorner_X, resources.GetString("numericUpDown_MonthAndDayD_EndCorner_X.HelpString"));
             this.numericUpDown_MonthAndDayD_EndCorner_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -9581,6 +13198,9 @@
             // numericUpDown_MonthAndDayD_Count
             // 
             resources.ApplyResources(this.numericUpDown_MonthAndDayD_Count, "numericUpDown_MonthAndDayD_Count");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_MonthAndDayD_Count, resources.GetString("numericUpDown_MonthAndDayD_Count.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_MonthAndDayD_Count, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_MonthAndDayD_Count.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_MonthAndDayD_Count, resources.GetString("numericUpDown_MonthAndDayD_Count.HelpString"));
             this.numericUpDown_MonthAndDayD_Count.Maximum = new decimal(new int[] {
             99,
             0,
@@ -9597,8 +13217,11 @@
             // 
             // numericUpDown_MonthAndDayD_StartCorner_Y
             // 
-            this.numericUpDown_MonthAndDayD_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_MonthAndDayD_StartCorner_Y, "numericUpDown_MonthAndDayD_StartCorner_Y");
+            this.numericUpDown_MonthAndDayD_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_MonthAndDayD_StartCorner_Y, resources.GetString("numericUpDown_MonthAndDayD_StartCorner_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_MonthAndDayD_StartCorner_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_MonthAndDayD_StartCorner_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_MonthAndDayD_StartCorner_Y, resources.GetString("numericUpDown_MonthAndDayD_StartCorner_Y.HelpString"));
             this.numericUpDown_MonthAndDayD_StartCorner_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -9616,8 +13239,11 @@
             // 
             // numericUpDown_MonthAndDayD_StartCorner_X
             // 
-            this.numericUpDown_MonthAndDayD_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_MonthAndDayD_StartCorner_X, "numericUpDown_MonthAndDayD_StartCorner_X");
+            this.numericUpDown_MonthAndDayD_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_MonthAndDayD_StartCorner_X, resources.GetString("numericUpDown_MonthAndDayD_StartCorner_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_MonthAndDayD_StartCorner_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_MonthAndDayD_StartCorner_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_MonthAndDayD_StartCorner_X, resources.GetString("numericUpDown_MonthAndDayD_StartCorner_X.HelpString"));
             this.numericUpDown_MonthAndDayD_StartCorner_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -9636,6 +13262,9 @@
             // numericUpDown_MonthAndDayD_Spacing
             // 
             resources.ApplyResources(this.numericUpDown_MonthAndDayD_Spacing, "numericUpDown_MonthAndDayD_Spacing");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_MonthAndDayD_Spacing, resources.GetString("numericUpDown_MonthAndDayD_Spacing.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_MonthAndDayD_Spacing, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_MonthAndDayD_Spacing.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_MonthAndDayD_Spacing, resources.GetString("numericUpDown_MonthAndDayD_Spacing.HelpString"));
             this.numericUpDown_MonthAndDayD_Spacing.Maximum = new decimal(new int[] {
             999,
             0,
@@ -9653,6 +13282,9 @@
             // checkBox_MonthAndDayD
             // 
             resources.ApplyResources(this.checkBox_MonthAndDayD, "checkBox_MonthAndDayD");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_MonthAndDayD, resources.GetString("checkBox_MonthAndDayD.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_MonthAndDayD, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_MonthAndDayD.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_MonthAndDayD, resources.GetString("checkBox_MonthAndDayD.HelpString"));
             this.checkBox_MonthAndDayD.Name = "checkBox_MonthAndDayD";
             this.helpProvider1.SetShowHelp(this.checkBox_MonthAndDayD, ((bool)(resources.GetObject("checkBox_MonthAndDayD.ShowHelp"))));
             this.checkBox_MonthAndDayD.UseVisualStyleBackColor = true;
@@ -9662,6 +13294,9 @@
             // label72
             // 
             resources.ApplyResources(this.label72, "label72");
+            this.helpProvider1.SetHelpKeyword(this.label72, resources.GetString("label72.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label72, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label72.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label72, resources.GetString("label72.HelpString"));
             this.label72.Name = "label72";
             this.helpProvider1.SetShowHelp(this.label72, ((bool)(resources.GetObject("label72.ShowHelp"))));
             this.label72.Click += new System.EventHandler(this.numericUpDown_ValueChanged);
@@ -9669,14 +13304,20 @@
             // label66
             // 
             resources.ApplyResources(this.label66, "label66");
+            this.helpProvider1.SetHelpKeyword(this.label66, resources.GetString("label66.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label66, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label66.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label66, resources.GetString("label66.HelpString"));
             this.label66.Name = "label66";
             this.helpProvider1.SetShowHelp(this.label66, ((bool)(resources.GetObject("label66.ShowHelp"))));
             // 
             // comboBox_MonthAndDayD_Alignment
             // 
-            this.comboBox_MonthAndDayD_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.comboBox_MonthAndDayD_Alignment, "comboBox_MonthAndDayD_Alignment");
+            this.comboBox_MonthAndDayD_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_MonthAndDayD_Alignment.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_MonthAndDayD_Alignment, resources.GetString("comboBox_MonthAndDayD_Alignment.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_MonthAndDayD_Alignment, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_MonthAndDayD_Alignment.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_MonthAndDayD_Alignment, resources.GetString("comboBox_MonthAndDayD_Alignment.HelpString"));
             this.comboBox_MonthAndDayD_Alignment.Items.AddRange(new object[] {
             resources.GetString("comboBox_MonthAndDayD_Alignment.Items"),
             resources.GetString("comboBox_MonthAndDayD_Alignment.Items1"),
@@ -9694,25 +13335,37 @@
             // label65
             // 
             resources.ApplyResources(this.label65, "label65");
+            this.helpProvider1.SetHelpKeyword(this.label65, resources.GetString("label65.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label65, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label65.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label65, resources.GetString("label65.HelpString"));
             this.label65.Name = "label65";
             this.helpProvider1.SetShowHelp(this.label65, ((bool)(resources.GetObject("label65.ShowHelp"))));
             // 
             // label71
             // 
             resources.ApplyResources(this.label71, "label71");
+            this.helpProvider1.SetHelpKeyword(this.label71, resources.GetString("label71.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label71, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label71.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label71, resources.GetString("label71.HelpString"));
             this.label71.Name = "label71";
             this.helpProvider1.SetShowHelp(this.label71, ((bool)(resources.GetObject("label71.ShowHelp"))));
             // 
             // label64
             // 
             resources.ApplyResources(this.label64, "label64");
+            this.helpProvider1.SetHelpKeyword(this.label64, resources.GetString("label64.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label64, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label64.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label64, resources.GetString("label64.HelpString"));
             this.label64.Name = "label64";
             this.helpProvider1.SetShowHelp(this.label64, ((bool)(resources.GetObject("label64.ShowHelp"))));
             // 
             // numericUpDown_MonthAndDayD_EndCorner_Y
             // 
-            this.numericUpDown_MonthAndDayD_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_MonthAndDayD_EndCorner_Y, "numericUpDown_MonthAndDayD_EndCorner_Y");
+            this.numericUpDown_MonthAndDayD_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_MonthAndDayD_EndCorner_Y, resources.GetString("numericUpDown_MonthAndDayD_EndCorner_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_MonthAndDayD_EndCorner_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_MonthAndDayD_EndCorner_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_MonthAndDayD_EndCorner_Y, resources.GetString("numericUpDown_MonthAndDayD_EndCorner_Y.HelpString"));
             this.numericUpDown_MonthAndDayD_EndCorner_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -9730,10 +13383,13 @@
             // 
             // comboBox_MonthAndDayD_Image
             // 
+            resources.ApplyResources(this.comboBox_MonthAndDayD_Image, "comboBox_MonthAndDayD_Image");
             this.comboBox_MonthAndDayD_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_MonthAndDayD_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_MonthAndDayD_Image, "comboBox_MonthAndDayD_Image");
             this.comboBox_MonthAndDayD_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_MonthAndDayD_Image, resources.GetString("comboBox_MonthAndDayD_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_MonthAndDayD_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_MonthAndDayD_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_MonthAndDayD_Image, resources.GetString("comboBox_MonthAndDayD_Image.HelpString"));
             this.comboBox_MonthAndDayD_Image.Name = "comboBox_MonthAndDayD_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_MonthAndDayD_Image, ((bool)(resources.GetObject("comboBox_MonthAndDayD_Image.ShowHelp"))));
             this.comboBox_MonthAndDayD_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -9745,35 +13401,51 @@
             // label69
             // 
             resources.ApplyResources(this.label69, "label69");
+            this.helpProvider1.SetHelpKeyword(this.label69, resources.GetString("label69.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label69, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label69.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label69, resources.GetString("label69.HelpString"));
             this.label69.Name = "label69";
             this.helpProvider1.SetShowHelp(this.label69, ((bool)(resources.GetObject("label69.ShowHelp"))));
             // 
             // label70
             // 
             resources.ApplyResources(this.label70, "label70");
+            this.helpProvider1.SetHelpKeyword(this.label70, resources.GetString("label70.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label70, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label70.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label70, resources.GetString("label70.HelpString"));
             this.label70.Name = "label70";
             this.helpProvider1.SetShowHelp(this.label70, ((bool)(resources.GetObject("label70.ShowHelp"))));
             // 
             // label63
             // 
             resources.ApplyResources(this.label63, "label63");
+            this.helpProvider1.SetHelpKeyword(this.label63, resources.GetString("label63.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label63, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label63.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label63, resources.GetString("label63.HelpString"));
             this.label63.Name = "label63";
             this.helpProvider1.SetShowHelp(this.label63, ((bool)(resources.GetObject("label63.ShowHelp"))));
             // 
             // label68
             // 
             resources.ApplyResources(this.label68, "label68");
+            this.helpProvider1.SetHelpKeyword(this.label68, resources.GetString("label68.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label68, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label68.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label68, resources.GetString("label68.HelpString"));
             this.label68.Name = "label68";
             this.helpProvider1.SetShowHelp(this.label68, ((bool)(resources.GetObject("label68.ShowHelp"))));
             // 
             // label67
             // 
             resources.ApplyResources(this.label67, "label67");
+            this.helpProvider1.SetHelpKeyword(this.label67, resources.GetString("label67.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label67, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label67.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label67, resources.GetString("label67.HelpString"));
             this.label67.Name = "label67";
             this.helpProvider1.SetShowHelp(this.label67, ((bool)(resources.GetObject("label67.ShowHelp"))));
             // 
             // tabPage10
             // 
+            resources.ApplyResources(this.tabPage10, "tabPage10");
             this.tabPage10.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage10.Controls.Add(this.numericUpDown_MonthAndDayM_Count);
             this.tabPage10.Controls.Add(this.numericUpDown_MonthAndDayM_StartCorner_Y);
@@ -9794,13 +13466,18 @@
             this.tabPage10.Controls.Add(this.label80);
             this.tabPage10.Controls.Add(this.label81);
             this.tabPage10.Controls.Add(this.label82);
-            resources.ApplyResources(this.tabPage10, "tabPage10");
+            this.helpProvider1.SetHelpKeyword(this.tabPage10, resources.GetString("tabPage10.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage10, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage10.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage10, resources.GetString("tabPage10.HelpString"));
             this.tabPage10.Name = "tabPage10";
             this.helpProvider1.SetShowHelp(this.tabPage10, ((bool)(resources.GetObject("tabPage10.ShowHelp"))));
             // 
             // numericUpDown_MonthAndDayM_Count
             // 
             resources.ApplyResources(this.numericUpDown_MonthAndDayM_Count, "numericUpDown_MonthAndDayM_Count");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_MonthAndDayM_Count, resources.GetString("numericUpDown_MonthAndDayM_Count.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_MonthAndDayM_Count, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_MonthAndDayM_Count.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_MonthAndDayM_Count, resources.GetString("numericUpDown_MonthAndDayM_Count.HelpString"));
             this.numericUpDown_MonthAndDayM_Count.Maximum = new decimal(new int[] {
             99,
             0,
@@ -9817,8 +13494,11 @@
             // 
             // numericUpDown_MonthAndDayM_StartCorner_Y
             // 
-            this.numericUpDown_MonthAndDayM_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_MonthAndDayM_StartCorner_Y, "numericUpDown_MonthAndDayM_StartCorner_Y");
+            this.numericUpDown_MonthAndDayM_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_MonthAndDayM_StartCorner_Y, resources.GetString("numericUpDown_MonthAndDayM_StartCorner_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_MonthAndDayM_StartCorner_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_MonthAndDayM_StartCorner_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_MonthAndDayM_StartCorner_Y, resources.GetString("numericUpDown_MonthAndDayM_StartCorner_Y.HelpString"));
             this.numericUpDown_MonthAndDayM_StartCorner_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -9836,8 +13516,11 @@
             // 
             // numericUpDown_MonthAndDayM_StartCorner_X
             // 
-            this.numericUpDown_MonthAndDayM_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_MonthAndDayM_StartCorner_X, "numericUpDown_MonthAndDayM_StartCorner_X");
+            this.numericUpDown_MonthAndDayM_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_MonthAndDayM_StartCorner_X, resources.GetString("numericUpDown_MonthAndDayM_StartCorner_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_MonthAndDayM_StartCorner_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_MonthAndDayM_StartCorner_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_MonthAndDayM_StartCorner_X, resources.GetString("numericUpDown_MonthAndDayM_StartCorner_X.HelpString"));
             this.numericUpDown_MonthAndDayM_StartCorner_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -9856,6 +13539,9 @@
             // numericUpDown_MonthAndDayM_Spacing
             // 
             resources.ApplyResources(this.numericUpDown_MonthAndDayM_Spacing, "numericUpDown_MonthAndDayM_Spacing");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_MonthAndDayM_Spacing, resources.GetString("numericUpDown_MonthAndDayM_Spacing.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_MonthAndDayM_Spacing, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_MonthAndDayM_Spacing.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_MonthAndDayM_Spacing, resources.GetString("numericUpDown_MonthAndDayM_Spacing.HelpString"));
             this.numericUpDown_MonthAndDayM_Spacing.Maximum = new decimal(new int[] {
             999,
             0,
@@ -9873,6 +13559,9 @@
             // checkBox_MonthAndDayM
             // 
             resources.ApplyResources(this.checkBox_MonthAndDayM, "checkBox_MonthAndDayM");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_MonthAndDayM, resources.GetString("checkBox_MonthAndDayM.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_MonthAndDayM, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_MonthAndDayM.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_MonthAndDayM, resources.GetString("checkBox_MonthAndDayM.HelpString"));
             this.checkBox_MonthAndDayM.Name = "checkBox_MonthAndDayM";
             this.helpProvider1.SetShowHelp(this.checkBox_MonthAndDayM, ((bool)(resources.GetObject("checkBox_MonthAndDayM.ShowHelp"))));
             this.checkBox_MonthAndDayM.UseVisualStyleBackColor = true;
@@ -9882,20 +13571,29 @@
             // label73
             // 
             resources.ApplyResources(this.label73, "label73");
+            this.helpProvider1.SetHelpKeyword(this.label73, resources.GetString("label73.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label73, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label73.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label73, resources.GetString("label73.HelpString"));
             this.label73.Name = "label73";
             this.helpProvider1.SetShowHelp(this.label73, ((bool)(resources.GetObject("label73.ShowHelp"))));
             // 
             // label74
             // 
             resources.ApplyResources(this.label74, "label74");
+            this.helpProvider1.SetHelpKeyword(this.label74, resources.GetString("label74.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label74, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label74.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label74, resources.GetString("label74.HelpString"));
             this.label74.Name = "label74";
             this.helpProvider1.SetShowHelp(this.label74, ((bool)(resources.GetObject("label74.ShowHelp"))));
             // 
             // comboBox_MonthAndDayM_Alignment
             // 
-            this.comboBox_MonthAndDayM_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.comboBox_MonthAndDayM_Alignment, "comboBox_MonthAndDayM_Alignment");
+            this.comboBox_MonthAndDayM_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_MonthAndDayM_Alignment.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_MonthAndDayM_Alignment, resources.GetString("comboBox_MonthAndDayM_Alignment.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_MonthAndDayM_Alignment, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_MonthAndDayM_Alignment.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_MonthAndDayM_Alignment, resources.GetString("comboBox_MonthAndDayM_Alignment.HelpString"));
             this.comboBox_MonthAndDayM_Alignment.Items.AddRange(new object[] {
             resources.GetString("comboBox_MonthAndDayM_Alignment.Items"),
             resources.GetString("comboBox_MonthAndDayM_Alignment.Items1"),
@@ -9913,25 +13611,37 @@
             // label75
             // 
             resources.ApplyResources(this.label75, "label75");
+            this.helpProvider1.SetHelpKeyword(this.label75, resources.GetString("label75.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label75, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label75.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label75, resources.GetString("label75.HelpString"));
             this.label75.Name = "label75";
             this.helpProvider1.SetShowHelp(this.label75, ((bool)(resources.GetObject("label75.ShowHelp"))));
             // 
             // label76
             // 
             resources.ApplyResources(this.label76, "label76");
+            this.helpProvider1.SetHelpKeyword(this.label76, resources.GetString("label76.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label76, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label76.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label76, resources.GetString("label76.HelpString"));
             this.label76.Name = "label76";
             this.helpProvider1.SetShowHelp(this.label76, ((bool)(resources.GetObject("label76.ShowHelp"))));
             // 
             // label77
             // 
             resources.ApplyResources(this.label77, "label77");
+            this.helpProvider1.SetHelpKeyword(this.label77, resources.GetString("label77.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label77, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label77.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label77, resources.GetString("label77.HelpString"));
             this.label77.Name = "label77";
             this.helpProvider1.SetShowHelp(this.label77, ((bool)(resources.GetObject("label77.ShowHelp"))));
             // 
             // numericUpDown_MonthAndDayM_EndCorner_Y
             // 
-            this.numericUpDown_MonthAndDayM_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_MonthAndDayM_EndCorner_Y, "numericUpDown_MonthAndDayM_EndCorner_Y");
+            this.numericUpDown_MonthAndDayM_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_MonthAndDayM_EndCorner_Y, resources.GetString("numericUpDown_MonthAndDayM_EndCorner_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_MonthAndDayM_EndCorner_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_MonthAndDayM_EndCorner_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_MonthAndDayM_EndCorner_Y, resources.GetString("numericUpDown_MonthAndDayM_EndCorner_Y.HelpString"));
             this.numericUpDown_MonthAndDayM_EndCorner_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -9949,10 +13659,13 @@
             // 
             // comboBox_MonthAndDayM_Image
             // 
+            resources.ApplyResources(this.comboBox_MonthAndDayM_Image, "comboBox_MonthAndDayM_Image");
             this.comboBox_MonthAndDayM_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_MonthAndDayM_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_MonthAndDayM_Image, "comboBox_MonthAndDayM_Image");
             this.comboBox_MonthAndDayM_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_MonthAndDayM_Image, resources.GetString("comboBox_MonthAndDayM_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_MonthAndDayM_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_MonthAndDayM_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_MonthAndDayM_Image, resources.GetString("comboBox_MonthAndDayM_Image.HelpString"));
             this.comboBox_MonthAndDayM_Image.Name = "comboBox_MonthAndDayM_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_MonthAndDayM_Image, ((bool)(resources.GetObject("comboBox_MonthAndDayM_Image.ShowHelp"))));
             this.comboBox_MonthAndDayM_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -9963,8 +13676,11 @@
             // 
             // numericUpDown_MonthAndDayM_EndCorner_X
             // 
-            this.numericUpDown_MonthAndDayM_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_MonthAndDayM_EndCorner_X, "numericUpDown_MonthAndDayM_EndCorner_X");
+            this.numericUpDown_MonthAndDayM_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_MonthAndDayM_EndCorner_X, resources.GetString("numericUpDown_MonthAndDayM_EndCorner_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_MonthAndDayM_EndCorner_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_MonthAndDayM_EndCorner_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_MonthAndDayM_EndCorner_X, resources.GetString("numericUpDown_MonthAndDayM_EndCorner_X.HelpString"));
             this.numericUpDown_MonthAndDayM_EndCorner_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -9983,35 +13699,51 @@
             // label78
             // 
             resources.ApplyResources(this.label78, "label78");
+            this.helpProvider1.SetHelpKeyword(this.label78, resources.GetString("label78.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label78, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label78.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label78, resources.GetString("label78.HelpString"));
             this.label78.Name = "label78";
             this.helpProvider1.SetShowHelp(this.label78, ((bool)(resources.GetObject("label78.ShowHelp"))));
             // 
             // label79
             // 
             resources.ApplyResources(this.label79, "label79");
+            this.helpProvider1.SetHelpKeyword(this.label79, resources.GetString("label79.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label79, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label79.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label79, resources.GetString("label79.HelpString"));
             this.label79.Name = "label79";
             this.helpProvider1.SetShowHelp(this.label79, ((bool)(resources.GetObject("label79.ShowHelp"))));
             // 
             // label80
             // 
             resources.ApplyResources(this.label80, "label80");
+            this.helpProvider1.SetHelpKeyword(this.label80, resources.GetString("label80.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label80, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label80.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label80, resources.GetString("label80.HelpString"));
             this.label80.Name = "label80";
             this.helpProvider1.SetShowHelp(this.label80, ((bool)(resources.GetObject("label80.ShowHelp"))));
             // 
             // label81
             // 
             resources.ApplyResources(this.label81, "label81");
+            this.helpProvider1.SetHelpKeyword(this.label81, resources.GetString("label81.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label81, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label81.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label81, resources.GetString("label81.HelpString"));
             this.label81.Name = "label81";
             this.helpProvider1.SetShowHelp(this.label81, ((bool)(resources.GetObject("label81.ShowHelp"))));
             // 
             // label82
             // 
             resources.ApplyResources(this.label82, "label82");
+            this.helpProvider1.SetHelpKeyword(this.label82, resources.GetString("label82.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label82, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label82.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label82, resources.GetString("label82.HelpString"));
             this.label82.Name = "label82";
             this.helpProvider1.SetShowHelp(this.label82, ((bool)(resources.GetObject("label82.ShowHelp"))));
             // 
             // groupBox__MonthName
             // 
+            resources.ApplyResources(this.groupBox__MonthName, "groupBox__MonthName");
             this.groupBox__MonthName.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox__MonthName.Controls.Add(this.numericUpDown_MonthName_Count);
             this.groupBox__MonthName.Controls.Add(this.label59);
@@ -10022,7 +13754,9 @@
             this.groupBox__MonthName.Controls.Add(this.label60);
             this.groupBox__MonthName.Controls.Add(this.label61);
             this.groupBox__MonthName.Controls.Add(this.label62);
-            resources.ApplyResources(this.groupBox__MonthName, "groupBox__MonthName");
+            this.helpProvider1.SetHelpKeyword(this.groupBox__MonthName, resources.GetString("groupBox__MonthName.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.groupBox__MonthName, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("groupBox__MonthName.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.groupBox__MonthName, resources.GetString("groupBox__MonthName.HelpString"));
             this.groupBox__MonthName.Name = "groupBox__MonthName";
             this.helpProvider1.SetShowHelp(this.groupBox__MonthName, ((bool)(resources.GetObject("groupBox__MonthName.ShowHelp"))));
             this.groupBox__MonthName.TabStop = false;
@@ -10031,6 +13765,9 @@
             // numericUpDown_MonthName_Count
             // 
             resources.ApplyResources(this.numericUpDown_MonthName_Count, "numericUpDown_MonthName_Count");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_MonthName_Count, resources.GetString("numericUpDown_MonthName_Count.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_MonthName_Count, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_MonthName_Count.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_MonthName_Count, resources.GetString("numericUpDown_MonthName_Count.HelpString"));
             this.numericUpDown_MonthName_Count.Maximum = new decimal(new int[] {
             99,
             0,
@@ -10049,12 +13786,18 @@
             // 
             resources.ApplyResources(this.label59, "label59");
             this.label59.BackColor = System.Drawing.Color.Transparent;
+            this.helpProvider1.SetHelpKeyword(this.label59, resources.GetString("label59.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label59, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label59.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label59, resources.GetString("label59.HelpString"));
             this.label59.Name = "label59";
             this.helpProvider1.SetShowHelp(this.label59, ((bool)(resources.GetObject("label59.ShowHelp"))));
             // 
             // checkBox_MonthName
             // 
             resources.ApplyResources(this.checkBox_MonthName, "checkBox_MonthName");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_MonthName, resources.GetString("checkBox_MonthName.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_MonthName, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_MonthName.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_MonthName, resources.GetString("checkBox_MonthName.HelpString"));
             this.checkBox_MonthName.Name = "checkBox_MonthName";
             this.helpProvider1.SetShowHelp(this.checkBox_MonthName, ((bool)(resources.GetObject("checkBox_MonthName.ShowHelp"))));
             this.checkBox_MonthName.UseVisualStyleBackColor = true;
@@ -10063,8 +13806,11 @@
             // 
             // numericUpDown_MonthName_Y
             // 
-            this.numericUpDown_MonthName_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_MonthName_Y, "numericUpDown_MonthName_Y");
+            this.numericUpDown_MonthName_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_MonthName_Y, resources.GetString("numericUpDown_MonthName_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_MonthName_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_MonthName_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_MonthName_Y, resources.GetString("numericUpDown_MonthName_Y.HelpString"));
             this.numericUpDown_MonthName_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -10082,8 +13828,11 @@
             // 
             // numericUpDown_MonthName_X
             // 
-            this.numericUpDown_MonthName_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_MonthName_X, "numericUpDown_MonthName_X");
+            this.numericUpDown_MonthName_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_MonthName_X, resources.GetString("numericUpDown_MonthName_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_MonthName_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_MonthName_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_MonthName_X, resources.GetString("numericUpDown_MonthName_X.HelpString"));
             this.numericUpDown_MonthName_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -10101,10 +13850,13 @@
             // 
             // comboBox_MonthName_Image
             // 
+            resources.ApplyResources(this.comboBox_MonthName_Image, "comboBox_MonthName_Image");
             this.comboBox_MonthName_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_MonthName_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_MonthName_Image, "comboBox_MonthName_Image");
             this.comboBox_MonthName_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_MonthName_Image, resources.GetString("comboBox_MonthName_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_MonthName_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_MonthName_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_MonthName_Image, resources.GetString("comboBox_MonthName_Image.HelpString"));
             this.comboBox_MonthName_Image.Name = "comboBox_MonthName_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_MonthName_Image, ((bool)(resources.GetObject("comboBox_MonthName_Image.ShowHelp"))));
             this.comboBox_MonthName_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -10116,6 +13868,9 @@
             // label60
             // 
             resources.ApplyResources(this.label60, "label60");
+            this.helpProvider1.SetHelpKeyword(this.label60, resources.GetString("label60.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label60, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label60.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label60, resources.GetString("label60.HelpString"));
             this.label60.Name = "label60";
             this.helpProvider1.SetShowHelp(this.label60, ((bool)(resources.GetObject("label60.ShowHelp"))));
             // 
@@ -10123,17 +13878,24 @@
             // 
             resources.ApplyResources(this.label61, "label61");
             this.label61.BackColor = System.Drawing.Color.Transparent;
+            this.helpProvider1.SetHelpKeyword(this.label61, resources.GetString("label61.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label61, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label61.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label61, resources.GetString("label61.HelpString"));
             this.label61.Name = "label61";
             this.helpProvider1.SetShowHelp(this.label61, ((bool)(resources.GetObject("label61.ShowHelp"))));
             // 
             // label62
             // 
             resources.ApplyResources(this.label62, "label62");
+            this.helpProvider1.SetHelpKeyword(this.label62, resources.GetString("label62.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label62, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label62.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label62, resources.GetString("label62.HelpString"));
             this.label62.Name = "label62";
             this.helpProvider1.SetShowHelp(this.label62, ((bool)(resources.GetObject("label62.ShowHelp"))));
             // 
             // tabPage7
             // 
+            resources.ApplyResources(this.tabPage7, "tabPage7");
             this.tabPage7.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage7.Controls.Add(this.comboBox_OneLine_Delimiter);
             this.tabPage7.Controls.Add(this.label103);
@@ -10156,16 +13918,21 @@
             this.tabPage7.Controls.Add(this.label100);
             this.tabPage7.Controls.Add(this.label101);
             this.tabPage7.Controls.Add(this.label102);
-            resources.ApplyResources(this.tabPage7, "tabPage7");
+            this.helpProvider1.SetHelpKeyword(this.tabPage7, resources.GetString("tabPage7.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage7, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage7.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage7, resources.GetString("tabPage7.HelpString"));
             this.tabPage7.Name = "tabPage7";
             this.helpProvider1.SetShowHelp(this.tabPage7, ((bool)(resources.GetObject("tabPage7.ShowHelp"))));
             // 
             // comboBox_OneLine_Delimiter
             // 
+            resources.ApplyResources(this.comboBox_OneLine_Delimiter, "comboBox_OneLine_Delimiter");
             this.comboBox_OneLine_Delimiter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_OneLine_Delimiter.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_OneLine_Delimiter, "comboBox_OneLine_Delimiter");
             this.comboBox_OneLine_Delimiter.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_OneLine_Delimiter, resources.GetString("comboBox_OneLine_Delimiter.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_OneLine_Delimiter, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_OneLine_Delimiter.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_OneLine_Delimiter, resources.GetString("comboBox_OneLine_Delimiter.HelpString"));
             this.comboBox_OneLine_Delimiter.Name = "comboBox_OneLine_Delimiter";
             this.helpProvider1.SetShowHelp(this.comboBox_OneLine_Delimiter, ((bool)(resources.GetObject("comboBox_OneLine_Delimiter.ShowHelp"))));
             this.comboBox_OneLine_Delimiter.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -10177,13 +13944,19 @@
             // label103
             // 
             resources.ApplyResources(this.label103, "label103");
+            this.helpProvider1.SetHelpKeyword(this.label103, resources.GetString("label103.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label103, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label103.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label103, resources.GetString("label103.HelpString"));
             this.label103.Name = "label103";
             this.helpProvider1.SetShowHelp(this.label103, ((bool)(resources.GetObject("label103.ShowHelp"))));
             // 
             // numericUpDown_OneLine_EndCorner_X
             // 
-            this.numericUpDown_OneLine_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_OneLine_EndCorner_X, "numericUpDown_OneLine_EndCorner_X");
+            this.numericUpDown_OneLine_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_OneLine_EndCorner_X, resources.GetString("numericUpDown_OneLine_EndCorner_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_OneLine_EndCorner_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_OneLine_EndCorner_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_OneLine_EndCorner_X, resources.GetString("numericUpDown_OneLine_EndCorner_X.HelpString"));
             this.numericUpDown_OneLine_EndCorner_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -10202,6 +13975,9 @@
             // numericUpDown_OneLine_Count
             // 
             resources.ApplyResources(this.numericUpDown_OneLine_Count, "numericUpDown_OneLine_Count");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_OneLine_Count, resources.GetString("numericUpDown_OneLine_Count.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_OneLine_Count, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_OneLine_Count.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_OneLine_Count, resources.GetString("numericUpDown_OneLine_Count.HelpString"));
             this.numericUpDown_OneLine_Count.Maximum = new decimal(new int[] {
             99,
             0,
@@ -10218,8 +13994,11 @@
             // 
             // numericUpDown_OneLine_StartCorner_Y
             // 
-            this.numericUpDown_OneLine_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_OneLine_StartCorner_Y, "numericUpDown_OneLine_StartCorner_Y");
+            this.numericUpDown_OneLine_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_OneLine_StartCorner_Y, resources.GetString("numericUpDown_OneLine_StartCorner_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_OneLine_StartCorner_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_OneLine_StartCorner_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_OneLine_StartCorner_Y, resources.GetString("numericUpDown_OneLine_StartCorner_Y.HelpString"));
             this.numericUpDown_OneLine_StartCorner_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -10237,8 +14016,11 @@
             // 
             // numericUpDown_OneLine_StartCorner_X
             // 
-            this.numericUpDown_OneLine_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_OneLine_StartCorner_X, "numericUpDown_OneLine_StartCorner_X");
+            this.numericUpDown_OneLine_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_OneLine_StartCorner_X, resources.GetString("numericUpDown_OneLine_StartCorner_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_OneLine_StartCorner_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_OneLine_StartCorner_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_OneLine_StartCorner_X, resources.GetString("numericUpDown_OneLine_StartCorner_X.HelpString"));
             this.numericUpDown_OneLine_StartCorner_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -10257,6 +14039,9 @@
             // numericUpDown_OneLine_Spacing
             // 
             resources.ApplyResources(this.numericUpDown_OneLine_Spacing, "numericUpDown_OneLine_Spacing");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_OneLine_Spacing, resources.GetString("numericUpDown_OneLine_Spacing.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_OneLine_Spacing, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_OneLine_Spacing.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_OneLine_Spacing, resources.GetString("numericUpDown_OneLine_Spacing.HelpString"));
             this.numericUpDown_OneLine_Spacing.Maximum = new decimal(new int[] {
             999,
             0,
@@ -10274,6 +14059,9 @@
             // checkBox_OneLine
             // 
             resources.ApplyResources(this.checkBox_OneLine, "checkBox_OneLine");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_OneLine, resources.GetString("checkBox_OneLine.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_OneLine, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_OneLine.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_OneLine, resources.GetString("checkBox_OneLine.HelpString"));
             this.checkBox_OneLine.Name = "checkBox_OneLine";
             this.helpProvider1.SetShowHelp(this.checkBox_OneLine, ((bool)(resources.GetObject("checkBox_OneLine.ShowHelp"))));
             this.checkBox_OneLine.UseVisualStyleBackColor = true;
@@ -10283,20 +14071,29 @@
             // label93
             // 
             resources.ApplyResources(this.label93, "label93");
+            this.helpProvider1.SetHelpKeyword(this.label93, resources.GetString("label93.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label93, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label93.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label93, resources.GetString("label93.HelpString"));
             this.label93.Name = "label93";
             this.helpProvider1.SetShowHelp(this.label93, ((bool)(resources.GetObject("label93.ShowHelp"))));
             // 
             // label94
             // 
             resources.ApplyResources(this.label94, "label94");
+            this.helpProvider1.SetHelpKeyword(this.label94, resources.GetString("label94.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label94, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label94.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label94, resources.GetString("label94.HelpString"));
             this.label94.Name = "label94";
             this.helpProvider1.SetShowHelp(this.label94, ((bool)(resources.GetObject("label94.ShowHelp"))));
             // 
             // comboBox_OneLine_Alignment
             // 
-            this.comboBox_OneLine_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.comboBox_OneLine_Alignment, "comboBox_OneLine_Alignment");
+            this.comboBox_OneLine_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_OneLine_Alignment.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_OneLine_Alignment, resources.GetString("comboBox_OneLine_Alignment.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_OneLine_Alignment, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_OneLine_Alignment.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_OneLine_Alignment, resources.GetString("comboBox_OneLine_Alignment.HelpString"));
             this.comboBox_OneLine_Alignment.Items.AddRange(new object[] {
             resources.GetString("comboBox_OneLine_Alignment.Items"),
             resources.GetString("comboBox_OneLine_Alignment.Items1"),
@@ -10314,25 +14111,37 @@
             // label95
             // 
             resources.ApplyResources(this.label95, "label95");
+            this.helpProvider1.SetHelpKeyword(this.label95, resources.GetString("label95.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label95, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label95.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label95, resources.GetString("label95.HelpString"));
             this.label95.Name = "label95";
             this.helpProvider1.SetShowHelp(this.label95, ((bool)(resources.GetObject("label95.ShowHelp"))));
             // 
             // label96
             // 
             resources.ApplyResources(this.label96, "label96");
+            this.helpProvider1.SetHelpKeyword(this.label96, resources.GetString("label96.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label96, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label96.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label96, resources.GetString("label96.HelpString"));
             this.label96.Name = "label96";
             this.helpProvider1.SetShowHelp(this.label96, ((bool)(resources.GetObject("label96.ShowHelp"))));
             // 
             // label97
             // 
             resources.ApplyResources(this.label97, "label97");
+            this.helpProvider1.SetHelpKeyword(this.label97, resources.GetString("label97.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label97, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label97.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label97, resources.GetString("label97.HelpString"));
             this.label97.Name = "label97";
             this.helpProvider1.SetShowHelp(this.label97, ((bool)(resources.GetObject("label97.ShowHelp"))));
             // 
             // numericUpDown_OneLine_EndCorner_Y
             // 
-            this.numericUpDown_OneLine_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_OneLine_EndCorner_Y, "numericUpDown_OneLine_EndCorner_Y");
+            this.numericUpDown_OneLine_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_OneLine_EndCorner_Y, resources.GetString("numericUpDown_OneLine_EndCorner_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_OneLine_EndCorner_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_OneLine_EndCorner_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_OneLine_EndCorner_Y, resources.GetString("numericUpDown_OneLine_EndCorner_Y.HelpString"));
             this.numericUpDown_OneLine_EndCorner_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -10350,10 +14159,13 @@
             // 
             // comboBox_OneLine_Image
             // 
+            resources.ApplyResources(this.comboBox_OneLine_Image, "comboBox_OneLine_Image");
             this.comboBox_OneLine_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_OneLine_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_OneLine_Image, "comboBox_OneLine_Image");
             this.comboBox_OneLine_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_OneLine_Image, resources.GetString("comboBox_OneLine_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_OneLine_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_OneLine_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_OneLine_Image, resources.GetString("comboBox_OneLine_Image.HelpString"));
             this.comboBox_OneLine_Image.Name = "comboBox_OneLine_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_OneLine_Image, ((bool)(resources.GetObject("comboBox_OneLine_Image.ShowHelp"))));
             this.comboBox_OneLine_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -10365,35 +14177,51 @@
             // label98
             // 
             resources.ApplyResources(this.label98, "label98");
+            this.helpProvider1.SetHelpKeyword(this.label98, resources.GetString("label98.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label98, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label98.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label98, resources.GetString("label98.HelpString"));
             this.label98.Name = "label98";
             this.helpProvider1.SetShowHelp(this.label98, ((bool)(resources.GetObject("label98.ShowHelp"))));
             // 
             // label99
             // 
             resources.ApplyResources(this.label99, "label99");
+            this.helpProvider1.SetHelpKeyword(this.label99, resources.GetString("label99.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label99, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label99.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label99, resources.GetString("label99.HelpString"));
             this.label99.Name = "label99";
             this.helpProvider1.SetShowHelp(this.label99, ((bool)(resources.GetObject("label99.ShowHelp"))));
             // 
             // label100
             // 
             resources.ApplyResources(this.label100, "label100");
+            this.helpProvider1.SetHelpKeyword(this.label100, resources.GetString("label100.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label100, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label100.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label100, resources.GetString("label100.HelpString"));
             this.label100.Name = "label100";
             this.helpProvider1.SetShowHelp(this.label100, ((bool)(resources.GetObject("label100.ShowHelp"))));
             // 
             // label101
             // 
             resources.ApplyResources(this.label101, "label101");
+            this.helpProvider1.SetHelpKeyword(this.label101, resources.GetString("label101.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label101, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label101.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label101, resources.GetString("label101.HelpString"));
             this.label101.Name = "label101";
             this.helpProvider1.SetShowHelp(this.label101, ((bool)(resources.GetObject("label101.ShowHelp"))));
             // 
             // label102
             // 
             resources.ApplyResources(this.label102, "label102");
+            this.helpProvider1.SetHelpKeyword(this.label102, resources.GetString("label102.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label102, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label102.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label102, resources.GetString("label102.HelpString"));
             this.label102.Name = "label102";
             this.helpProvider1.SetShowHelp(this.label102, ((bool)(resources.GetObject("label102.ShowHelp"))));
             // 
             // tabPage34
             // 
+            resources.ApplyResources(this.tabPage34, "tabPage34");
             this.tabPage34.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage34.Controls.Add(this.comboBox_Year_Delimiter);
             this.tabPage34.Controls.Add(this.label357);
@@ -10416,15 +14244,20 @@
             this.tabPage34.Controls.Add(this.label365);
             this.tabPage34.Controls.Add(this.label366);
             this.tabPage34.Controls.Add(this.label367);
-            resources.ApplyResources(this.tabPage34, "tabPage34");
+            this.helpProvider1.SetHelpKeyword(this.tabPage34, resources.GetString("tabPage34.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage34, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage34.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage34, resources.GetString("tabPage34.HelpString"));
             this.tabPage34.Name = "tabPage34";
             // 
             // comboBox_Year_Delimiter
             // 
+            resources.ApplyResources(this.comboBox_Year_Delimiter, "comboBox_Year_Delimiter");
             this.comboBox_Year_Delimiter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Year_Delimiter.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Year_Delimiter, "comboBox_Year_Delimiter");
             this.comboBox_Year_Delimiter.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Year_Delimiter, resources.GetString("comboBox_Year_Delimiter.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Year_Delimiter, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Year_Delimiter.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Year_Delimiter, resources.GetString("comboBox_Year_Delimiter.HelpString"));
             this.comboBox_Year_Delimiter.Name = "comboBox_Year_Delimiter";
             this.helpProvider1.SetShowHelp(this.comboBox_Year_Delimiter, ((bool)(resources.GetObject("comboBox_Year_Delimiter.ShowHelp"))));
             this.comboBox_Year_Delimiter.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -10436,13 +14269,19 @@
             // label357
             // 
             resources.ApplyResources(this.label357, "label357");
+            this.helpProvider1.SetHelpKeyword(this.label357, resources.GetString("label357.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label357, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label357.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label357, resources.GetString("label357.HelpString"));
             this.label357.Name = "label357";
             this.helpProvider1.SetShowHelp(this.label357, ((bool)(resources.GetObject("label357.ShowHelp"))));
             // 
             // numericUpDown_Year_EndCorner_X
             // 
-            this.numericUpDown_Year_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_Year_EndCorner_X, "numericUpDown_Year_EndCorner_X");
+            this.numericUpDown_Year_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Year_EndCorner_X, resources.GetString("numericUpDown_Year_EndCorner_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Year_EndCorner_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Year_EndCorner_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Year_EndCorner_X, resources.GetString("numericUpDown_Year_EndCorner_X.HelpString"));
             this.numericUpDown_Year_EndCorner_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -10461,6 +14300,9 @@
             // numericUpDown_Year_Count
             // 
             resources.ApplyResources(this.numericUpDown_Year_Count, "numericUpDown_Year_Count");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Year_Count, resources.GetString("numericUpDown_Year_Count.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Year_Count, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Year_Count.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Year_Count, resources.GetString("numericUpDown_Year_Count.HelpString"));
             this.numericUpDown_Year_Count.Maximum = new decimal(new int[] {
             99,
             0,
@@ -10477,8 +14319,11 @@
             // 
             // numericUpDown_Year_StartCorner_Y
             // 
-            this.numericUpDown_Year_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_Year_StartCorner_Y, "numericUpDown_Year_StartCorner_Y");
+            this.numericUpDown_Year_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Year_StartCorner_Y, resources.GetString("numericUpDown_Year_StartCorner_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Year_StartCorner_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Year_StartCorner_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Year_StartCorner_Y, resources.GetString("numericUpDown_Year_StartCorner_Y.HelpString"));
             this.numericUpDown_Year_StartCorner_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -10496,8 +14341,11 @@
             // 
             // numericUpDown_Year_StartCorner_X
             // 
-            this.numericUpDown_Year_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_Year_StartCorner_X, "numericUpDown_Year_StartCorner_X");
+            this.numericUpDown_Year_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Year_StartCorner_X, resources.GetString("numericUpDown_Year_StartCorner_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Year_StartCorner_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Year_StartCorner_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Year_StartCorner_X, resources.GetString("numericUpDown_Year_StartCorner_X.HelpString"));
             this.numericUpDown_Year_StartCorner_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -10516,6 +14364,9 @@
             // numericUpDown_Year_Spacing
             // 
             resources.ApplyResources(this.numericUpDown_Year_Spacing, "numericUpDown_Year_Spacing");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Year_Spacing, resources.GetString("numericUpDown_Year_Spacing.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Year_Spacing, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Year_Spacing.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Year_Spacing, resources.GetString("numericUpDown_Year_Spacing.HelpString"));
             this.numericUpDown_Year_Spacing.Maximum = new decimal(new int[] {
             999,
             0,
@@ -10533,6 +14384,9 @@
             // checkBox_Year
             // 
             resources.ApplyResources(this.checkBox_Year, "checkBox_Year");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Year, resources.GetString("checkBox_Year.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Year, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Year.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Year, resources.GetString("checkBox_Year.HelpString"));
             this.checkBox_Year.Name = "checkBox_Year";
             this.helpProvider1.SetShowHelp(this.checkBox_Year, ((bool)(resources.GetObject("checkBox_Year.ShowHelp"))));
             this.checkBox_Year.UseVisualStyleBackColor = true;
@@ -10542,20 +14396,29 @@
             // label358
             // 
             resources.ApplyResources(this.label358, "label358");
+            this.helpProvider1.SetHelpKeyword(this.label358, resources.GetString("label358.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label358, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label358.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label358, resources.GetString("label358.HelpString"));
             this.label358.Name = "label358";
             this.helpProvider1.SetShowHelp(this.label358, ((bool)(resources.GetObject("label358.ShowHelp"))));
             // 
             // label359
             // 
             resources.ApplyResources(this.label359, "label359");
+            this.helpProvider1.SetHelpKeyword(this.label359, resources.GetString("label359.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label359, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label359.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label359, resources.GetString("label359.HelpString"));
             this.label359.Name = "label359";
             this.helpProvider1.SetShowHelp(this.label359, ((bool)(resources.GetObject("label359.ShowHelp"))));
             // 
             // comboBox_Year_Alignment
             // 
-            this.comboBox_Year_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.comboBox_Year_Alignment, "comboBox_Year_Alignment");
+            this.comboBox_Year_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_Year_Alignment.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Year_Alignment, resources.GetString("comboBox_Year_Alignment.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Year_Alignment, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Year_Alignment.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Year_Alignment, resources.GetString("comboBox_Year_Alignment.HelpString"));
             this.comboBox_Year_Alignment.Items.AddRange(new object[] {
             resources.GetString("comboBox_Year_Alignment.Items"),
             resources.GetString("comboBox_Year_Alignment.Items1"),
@@ -10573,25 +14436,37 @@
             // label360
             // 
             resources.ApplyResources(this.label360, "label360");
+            this.helpProvider1.SetHelpKeyword(this.label360, resources.GetString("label360.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label360, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label360.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label360, resources.GetString("label360.HelpString"));
             this.label360.Name = "label360";
             this.helpProvider1.SetShowHelp(this.label360, ((bool)(resources.GetObject("label360.ShowHelp"))));
             // 
             // label361
             // 
             resources.ApplyResources(this.label361, "label361");
+            this.helpProvider1.SetHelpKeyword(this.label361, resources.GetString("label361.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label361, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label361.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label361, resources.GetString("label361.HelpString"));
             this.label361.Name = "label361";
             this.helpProvider1.SetShowHelp(this.label361, ((bool)(resources.GetObject("label361.ShowHelp"))));
             // 
             // label362
             // 
             resources.ApplyResources(this.label362, "label362");
+            this.helpProvider1.SetHelpKeyword(this.label362, resources.GetString("label362.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label362, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label362.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label362, resources.GetString("label362.HelpString"));
             this.label362.Name = "label362";
             this.helpProvider1.SetShowHelp(this.label362, ((bool)(resources.GetObject("label362.ShowHelp"))));
             // 
             // numericUpDown_Year_EndCorner_Y
             // 
-            this.numericUpDown_Year_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_Year_EndCorner_Y, "numericUpDown_Year_EndCorner_Y");
+            this.numericUpDown_Year_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Year_EndCorner_Y, resources.GetString("numericUpDown_Year_EndCorner_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Year_EndCorner_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Year_EndCorner_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Year_EndCorner_Y, resources.GetString("numericUpDown_Year_EndCorner_Y.HelpString"));
             this.numericUpDown_Year_EndCorner_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -10609,10 +14484,13 @@
             // 
             // comboBox_Year_Image
             // 
+            resources.ApplyResources(this.comboBox_Year_Image, "comboBox_Year_Image");
             this.comboBox_Year_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Year_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Year_Image, "comboBox_Year_Image");
             this.comboBox_Year_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Year_Image, resources.GetString("comboBox_Year_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Year_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Year_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Year_Image, resources.GetString("comboBox_Year_Image.HelpString"));
             this.comboBox_Year_Image.Name = "comboBox_Year_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_Year_Image, ((bool)(resources.GetObject("comboBox_Year_Image.ShowHelp"))));
             this.comboBox_Year_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -10624,36 +14502,54 @@
             // label363
             // 
             resources.ApplyResources(this.label363, "label363");
+            this.helpProvider1.SetHelpKeyword(this.label363, resources.GetString("label363.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label363, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label363.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label363, resources.GetString("label363.HelpString"));
             this.label363.Name = "label363";
             this.helpProvider1.SetShowHelp(this.label363, ((bool)(resources.GetObject("label363.ShowHelp"))));
             // 
             // label364
             // 
             resources.ApplyResources(this.label364, "label364");
+            this.helpProvider1.SetHelpKeyword(this.label364, resources.GetString("label364.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label364, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label364.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label364, resources.GetString("label364.HelpString"));
             this.label364.Name = "label364";
             this.helpProvider1.SetShowHelp(this.label364, ((bool)(resources.GetObject("label364.ShowHelp"))));
             // 
             // label365
             // 
             resources.ApplyResources(this.label365, "label365");
+            this.helpProvider1.SetHelpKeyword(this.label365, resources.GetString("label365.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label365, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label365.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label365, resources.GetString("label365.HelpString"));
             this.label365.Name = "label365";
             this.helpProvider1.SetShowHelp(this.label365, ((bool)(resources.GetObject("label365.ShowHelp"))));
             // 
             // label366
             // 
             resources.ApplyResources(this.label366, "label366");
+            this.helpProvider1.SetHelpKeyword(this.label366, resources.GetString("label366.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label366, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label366.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label366, resources.GetString("label366.HelpString"));
             this.label366.Name = "label366";
             this.helpProvider1.SetShowHelp(this.label366, ((bool)(resources.GetObject("label366.ShowHelp"))));
             // 
             // label367
             // 
             resources.ApplyResources(this.label367, "label367");
+            this.helpProvider1.SetHelpKeyword(this.label367, resources.GetString("label367.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label367, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label367.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label367, resources.GetString("label367.HelpString"));
             this.label367.Name = "label367";
             this.helpProvider1.SetShowHelp(this.label367, ((bool)(resources.GetObject("label367.ShowHelp"))));
             // 
             // checkBox_Date
             // 
             resources.ApplyResources(this.checkBox_Date, "checkBox_Date");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Date, resources.GetString("checkBox_Date.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Date, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Date.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Date, resources.GetString("checkBox_Date.HelpString"));
             this.checkBox_Date.Name = "checkBox_Date";
             this.helpProvider1.SetShowHelp(this.checkBox_Date, ((bool)(resources.GetObject("checkBox_Date.ShowHelp"))));
             this.checkBox_Date.UseVisualStyleBackColor = true;
@@ -10665,6 +14561,9 @@
             resources.ApplyResources(this.checkBox_TwoDigitsDay, "checkBox_TwoDigitsDay");
             this.checkBox_TwoDigitsDay.Checked = true;
             this.checkBox_TwoDigitsDay.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_TwoDigitsDay, resources.GetString("checkBox_TwoDigitsDay.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_TwoDigitsDay, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_TwoDigitsDay.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_TwoDigitsDay, resources.GetString("checkBox_TwoDigitsDay.HelpString"));
             this.checkBox_TwoDigitsDay.Name = "checkBox_TwoDigitsDay";
             this.helpProvider1.SetShowHelp(this.checkBox_TwoDigitsDay, ((bool)(resources.GetObject("checkBox_TwoDigitsDay.ShowHelp"))));
             this.checkBox_TwoDigitsDay.UseVisualStyleBackColor = true;
@@ -10675,6 +14574,9 @@
             resources.ApplyResources(this.checkBox_TwoDigitsMonth, "checkBox_TwoDigitsMonth");
             this.checkBox_TwoDigitsMonth.Checked = true;
             this.checkBox_TwoDigitsMonth.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_TwoDigitsMonth, resources.GetString("checkBox_TwoDigitsMonth.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_TwoDigitsMonth, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_TwoDigitsMonth.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_TwoDigitsMonth, resources.GetString("checkBox_TwoDigitsMonth.HelpString"));
             this.checkBox_TwoDigitsMonth.Name = "checkBox_TwoDigitsMonth";
             this.helpProvider1.SetShowHelp(this.checkBox_TwoDigitsMonth, ((bool)(resources.GetObject("checkBox_TwoDigitsMonth.ShowHelp"))));
             this.checkBox_TwoDigitsMonth.UseVisualStyleBackColor = true;
@@ -10682,6 +14584,7 @@
             // 
             // groupBox__WeekDay
             // 
+            resources.ApplyResources(this.groupBox__WeekDay, "groupBox__WeekDay");
             this.groupBox__WeekDay.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox__WeekDay.Controls.Add(this.numericUpDown_WeekDay_Count);
             this.groupBox__WeekDay.Controls.Add(this.label58);
@@ -10692,7 +14595,9 @@
             this.groupBox__WeekDay.Controls.Add(this.label55);
             this.groupBox__WeekDay.Controls.Add(this.label56);
             this.groupBox__WeekDay.Controls.Add(this.label57);
-            resources.ApplyResources(this.groupBox__WeekDay, "groupBox__WeekDay");
+            this.helpProvider1.SetHelpKeyword(this.groupBox__WeekDay, resources.GetString("groupBox__WeekDay.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.groupBox__WeekDay, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("groupBox__WeekDay.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.groupBox__WeekDay, resources.GetString("groupBox__WeekDay.HelpString"));
             this.groupBox__WeekDay.Name = "groupBox__WeekDay";
             this.helpProvider1.SetShowHelp(this.groupBox__WeekDay, ((bool)(resources.GetObject("groupBox__WeekDay.ShowHelp"))));
             this.groupBox__WeekDay.TabStop = false;
@@ -10701,6 +14606,9 @@
             // numericUpDown_WeekDay_Count
             // 
             resources.ApplyResources(this.numericUpDown_WeekDay_Count, "numericUpDown_WeekDay_Count");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_WeekDay_Count, resources.GetString("numericUpDown_WeekDay_Count.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_WeekDay_Count, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_WeekDay_Count.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_WeekDay_Count, resources.GetString("numericUpDown_WeekDay_Count.HelpString"));
             this.numericUpDown_WeekDay_Count.Maximum = new decimal(new int[] {
             99,
             0,
@@ -10718,12 +14626,18 @@
             // label58
             // 
             resources.ApplyResources(this.label58, "label58");
+            this.helpProvider1.SetHelpKeyword(this.label58, resources.GetString("label58.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label58, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label58.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label58, resources.GetString("label58.HelpString"));
             this.label58.Name = "label58";
             this.helpProvider1.SetShowHelp(this.label58, ((bool)(resources.GetObject("label58.ShowHelp"))));
             // 
             // checkBox_WeekDay
             // 
             resources.ApplyResources(this.checkBox_WeekDay, "checkBox_WeekDay");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_WeekDay, resources.GetString("checkBox_WeekDay.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_WeekDay, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_WeekDay.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_WeekDay, resources.GetString("checkBox_WeekDay.HelpString"));
             this.checkBox_WeekDay.Name = "checkBox_WeekDay";
             this.helpProvider1.SetShowHelp(this.checkBox_WeekDay, ((bool)(resources.GetObject("checkBox_WeekDay.ShowHelp"))));
             this.checkBox_WeekDay.UseVisualStyleBackColor = true;
@@ -10732,8 +14646,11 @@
             // 
             // numericUpDown_WeekDay_Y
             // 
-            this.numericUpDown_WeekDay_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_WeekDay_Y, "numericUpDown_WeekDay_Y");
+            this.numericUpDown_WeekDay_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_WeekDay_Y, resources.GetString("numericUpDown_WeekDay_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_WeekDay_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_WeekDay_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_WeekDay_Y, resources.GetString("numericUpDown_WeekDay_Y.HelpString"));
             this.numericUpDown_WeekDay_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -10751,8 +14668,11 @@
             // 
             // numericUpDown_WeekDay_X
             // 
-            this.numericUpDown_WeekDay_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_WeekDay_X, "numericUpDown_WeekDay_X");
+            this.numericUpDown_WeekDay_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_WeekDay_X, resources.GetString("numericUpDown_WeekDay_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_WeekDay_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_WeekDay_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_WeekDay_X, resources.GetString("numericUpDown_WeekDay_X.HelpString"));
             this.numericUpDown_WeekDay_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -10770,10 +14690,13 @@
             // 
             // comboBox_WeekDay_Image
             // 
+            resources.ApplyResources(this.comboBox_WeekDay_Image, "comboBox_WeekDay_Image");
             this.comboBox_WeekDay_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_WeekDay_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_WeekDay_Image, "comboBox_WeekDay_Image");
             this.comboBox_WeekDay_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_WeekDay_Image, resources.GetString("comboBox_WeekDay_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_WeekDay_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_WeekDay_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_WeekDay_Image, resources.GetString("comboBox_WeekDay_Image.HelpString"));
             this.comboBox_WeekDay_Image.Name = "comboBox_WeekDay_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_WeekDay_Image, ((bool)(resources.GetObject("comboBox_WeekDay_Image.ShowHelp"))));
             this.comboBox_WeekDay_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -10785,24 +14708,36 @@
             // label55
             // 
             resources.ApplyResources(this.label55, "label55");
+            this.helpProvider1.SetHelpKeyword(this.label55, resources.GetString("label55.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label55, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label55.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label55, resources.GetString("label55.HelpString"));
             this.label55.Name = "label55";
             this.helpProvider1.SetShowHelp(this.label55, ((bool)(resources.GetObject("label55.ShowHelp"))));
             // 
             // label56
             // 
             resources.ApplyResources(this.label56, "label56");
+            this.helpProvider1.SetHelpKeyword(this.label56, resources.GetString("label56.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label56, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label56.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label56, resources.GetString("label56.HelpString"));
             this.label56.Name = "label56";
             this.helpProvider1.SetShowHelp(this.label56, ((bool)(resources.GetObject("label56.ShowHelp"))));
             // 
             // label57
             // 
             resources.ApplyResources(this.label57, "label57");
+            this.helpProvider1.SetHelpKeyword(this.label57, resources.GetString("label57.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label57, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label57.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label57, resources.GetString("label57.HelpString"));
             this.label57.Name = "label57";
             this.helpProvider1.SetShowHelp(this.label57, ((bool)(resources.GetObject("label57.ShowHelp"))));
             // 
             // button_Date
             // 
             resources.ApplyResources(this.button_Date, "button_Date");
+            this.helpProvider1.SetHelpKeyword(this.button_Date, resources.GetString("button_Date.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_Date, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_Date.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_Date, resources.GetString("button_Date.HelpString"));
             this.button_Date.Name = "button_Date";
             this.helpProvider1.SetShowHelp(this.button_Date, ((bool)(resources.GetObject("button_Date.ShowHelp"))));
             this.button_Date.UseVisualStyleBackColor = true;
@@ -10816,11 +14751,15 @@
             this.panel_Time.Controls.Add(this.groupBox_AmPm);
             this.panel_Time.Controls.Add(this.tabControl_Time);
             this.panel_Time.Controls.Add(this.checkBox_Time);
+            this.helpProvider1.SetHelpKeyword(this.panel_Time, resources.GetString("panel_Time.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel_Time, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_Time.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel_Time, resources.GetString("panel_Time.HelpString"));
             this.panel_Time.Name = "panel_Time";
             this.helpProvider1.SetShowHelp(this.panel_Time, ((bool)(resources.GetObject("panel_Time.ShowHelp"))));
             // 
             // groupBox_Delimiter
             // 
+            resources.ApplyResources(this.groupBox_Delimiter, "groupBox_Delimiter");
             this.groupBox_Delimiter.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox_Delimiter.Controls.Add(this.checkBox_Delimiter);
             this.groupBox_Delimiter.Controls.Add(this.numericUpDown_Delimiter_Y);
@@ -10829,7 +14768,9 @@
             this.groupBox_Delimiter.Controls.Add(this.label37);
             this.groupBox_Delimiter.Controls.Add(this.label38);
             this.groupBox_Delimiter.Controls.Add(this.label39);
-            resources.ApplyResources(this.groupBox_Delimiter, "groupBox_Delimiter");
+            this.helpProvider1.SetHelpKeyword(this.groupBox_Delimiter, resources.GetString("groupBox_Delimiter.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.groupBox_Delimiter, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("groupBox_Delimiter.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.groupBox_Delimiter, resources.GetString("groupBox_Delimiter.HelpString"));
             this.groupBox_Delimiter.Name = "groupBox_Delimiter";
             this.helpProvider1.SetShowHelp(this.groupBox_Delimiter, ((bool)(resources.GetObject("groupBox_Delimiter.ShowHelp"))));
             this.groupBox_Delimiter.TabStop = false;
@@ -10838,6 +14779,9 @@
             // checkBox_Delimiter
             // 
             resources.ApplyResources(this.checkBox_Delimiter, "checkBox_Delimiter");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Delimiter, resources.GetString("checkBox_Delimiter.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Delimiter, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Delimiter.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Delimiter, resources.GetString("checkBox_Delimiter.HelpString"));
             this.checkBox_Delimiter.Name = "checkBox_Delimiter";
             this.helpProvider1.SetShowHelp(this.checkBox_Delimiter, ((bool)(resources.GetObject("checkBox_Delimiter.ShowHelp"))));
             this.checkBox_Delimiter.UseVisualStyleBackColor = true;
@@ -10846,8 +14790,11 @@
             // 
             // numericUpDown_Delimiter_Y
             // 
-            this.numericUpDown_Delimiter_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_Delimiter_Y, "numericUpDown_Delimiter_Y");
+            this.numericUpDown_Delimiter_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Delimiter_Y, resources.GetString("numericUpDown_Delimiter_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Delimiter_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Delimiter_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Delimiter_Y, resources.GetString("numericUpDown_Delimiter_Y.HelpString"));
             this.numericUpDown_Delimiter_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -10860,8 +14807,11 @@
             // 
             // numericUpDown_Delimiter_X
             // 
-            this.numericUpDown_Delimiter_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_Delimiter_X, "numericUpDown_Delimiter_X");
+            this.numericUpDown_Delimiter_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Delimiter_X, resources.GetString("numericUpDown_Delimiter_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Delimiter_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Delimiter_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Delimiter_X, resources.GetString("numericUpDown_Delimiter_X.HelpString"));
             this.numericUpDown_Delimiter_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -10874,10 +14824,13 @@
             // 
             // comboBox_Delimiter_Image
             // 
+            resources.ApplyResources(this.comboBox_Delimiter_Image, "comboBox_Delimiter_Image");
             this.comboBox_Delimiter_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Delimiter_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Delimiter_Image, "comboBox_Delimiter_Image");
             this.comboBox_Delimiter_Image.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Delimiter_Image, resources.GetString("comboBox_Delimiter_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Delimiter_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Delimiter_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Delimiter_Image, resources.GetString("comboBox_Delimiter_Image.HelpString"));
             this.comboBox_Delimiter_Image.Name = "comboBox_Delimiter_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_Delimiter_Image, ((bool)(resources.GetObject("comboBox_Delimiter_Image.ShowHelp"))));
             this.comboBox_Delimiter_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -10889,23 +14842,33 @@
             // label37
             // 
             resources.ApplyResources(this.label37, "label37");
+            this.helpProvider1.SetHelpKeyword(this.label37, resources.GetString("label37.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label37, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label37.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label37, resources.GetString("label37.HelpString"));
             this.label37.Name = "label37";
             this.helpProvider1.SetShowHelp(this.label37, ((bool)(resources.GetObject("label37.ShowHelp"))));
             // 
             // label38
             // 
             resources.ApplyResources(this.label38, "label38");
+            this.helpProvider1.SetHelpKeyword(this.label38, resources.GetString("label38.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label38, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label38.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label38, resources.GetString("label38.HelpString"));
             this.label38.Name = "label38";
             this.helpProvider1.SetShowHelp(this.label38, ((bool)(resources.GetObject("label38.ShowHelp"))));
             // 
             // label39
             // 
             resources.ApplyResources(this.label39, "label39");
+            this.helpProvider1.SetHelpKeyword(this.label39, resources.GetString("label39.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label39, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label39.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label39, resources.GetString("label39.HelpString"));
             this.label39.Name = "label39";
             this.helpProvider1.SetShowHelp(this.label39, ((bool)(resources.GetObject("label39.ShowHelp"))));
             // 
             // groupBox_AmPm
             // 
+            resources.ApplyResources(this.groupBox_AmPm, "groupBox_AmPm");
             this.groupBox_AmPm.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox_AmPm.Controls.Add(this.comboBox_Image_Pm);
             this.groupBox_AmPm.Controls.Add(this.checkBox_AmPm);
@@ -10916,7 +14879,9 @@
             this.groupBox_AmPm.Controls.Add(this.label33);
             this.groupBox_AmPm.Controls.Add(this.label34);
             this.groupBox_AmPm.Controls.Add(this.label35);
-            resources.ApplyResources(this.groupBox_AmPm, "groupBox_AmPm");
+            this.helpProvider1.SetHelpKeyword(this.groupBox_AmPm, resources.GetString("groupBox_AmPm.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.groupBox_AmPm, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("groupBox_AmPm.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.groupBox_AmPm, resources.GetString("groupBox_AmPm.HelpString"));
             this.groupBox_AmPm.Name = "groupBox_AmPm";
             this.helpProvider1.SetShowHelp(this.groupBox_AmPm, ((bool)(resources.GetObject("groupBox_AmPm.ShowHelp"))));
             this.groupBox_AmPm.TabStop = false;
@@ -10924,10 +14889,13 @@
             // 
             // comboBox_Image_Pm
             // 
+            resources.ApplyResources(this.comboBox_Image_Pm, "comboBox_Image_Pm");
             this.comboBox_Image_Pm.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Image_Pm.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Image_Pm, "comboBox_Image_Pm");
             this.comboBox_Image_Pm.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Image_Pm, resources.GetString("comboBox_Image_Pm.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Image_Pm, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Image_Pm.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Image_Pm, resources.GetString("comboBox_Image_Pm.HelpString"));
             this.comboBox_Image_Pm.Name = "comboBox_Image_Pm";
             this.helpProvider1.SetShowHelp(this.comboBox_Image_Pm, ((bool)(resources.GetObject("comboBox_Image_Pm.ShowHelp"))));
             this.comboBox_Image_Pm.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -10939,6 +14907,9 @@
             // checkBox_AmPm
             // 
             resources.ApplyResources(this.checkBox_AmPm, "checkBox_AmPm");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_AmPm, resources.GetString("checkBox_AmPm.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_AmPm, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_AmPm.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_AmPm, resources.GetString("checkBox_AmPm.HelpString"));
             this.checkBox_AmPm.Name = "checkBox_AmPm";
             this.helpProvider1.SetShowHelp(this.checkBox_AmPm, ((bool)(resources.GetObject("checkBox_AmPm.ShowHelp"))));
             this.checkBox_AmPm.UseVisualStyleBackColor = true;
@@ -10947,8 +14918,11 @@
             // 
             // numericUpDown_AmPm_Y
             // 
-            this.numericUpDown_AmPm_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_AmPm_Y, "numericUpDown_AmPm_Y");
+            this.numericUpDown_AmPm_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_AmPm_Y, resources.GetString("numericUpDown_AmPm_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_AmPm_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_AmPm_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_AmPm_Y, resources.GetString("numericUpDown_AmPm_Y.HelpString"));
             this.numericUpDown_AmPm_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -10961,8 +14935,11 @@
             // 
             // numericUpDown_AmPm_X
             // 
-            this.numericUpDown_AmPm_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_AmPm_X, "numericUpDown_AmPm_X");
+            this.numericUpDown_AmPm_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_AmPm_X, resources.GetString("numericUpDown_AmPm_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_AmPm_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_AmPm_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_AmPm_X, resources.GetString("numericUpDown_AmPm_X.HelpString"));
             this.numericUpDown_AmPm_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -10976,15 +14953,21 @@
             // label32
             // 
             resources.ApplyResources(this.label32, "label32");
+            this.helpProvider1.SetHelpKeyword(this.label32, resources.GetString("label32.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label32, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label32.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label32, resources.GetString("label32.HelpString"));
             this.label32.Name = "label32";
             this.helpProvider1.SetShowHelp(this.label32, ((bool)(resources.GetObject("label32.ShowHelp"))));
             // 
             // comboBox_Image_Am
             // 
+            resources.ApplyResources(this.comboBox_Image_Am, "comboBox_Image_Am");
             this.comboBox_Image_Am.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Image_Am.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Image_Am, "comboBox_Image_Am");
             this.comboBox_Image_Am.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Image_Am, resources.GetString("comboBox_Image_Am.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Image_Am, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Image_Am.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Image_Am, resources.GetString("comboBox_Image_Am.HelpString"));
             this.comboBox_Image_Am.Name = "comboBox_Image_Am";
             this.helpProvider1.SetShowHelp(this.comboBox_Image_Am, ((bool)(resources.GetObject("comboBox_Image_Am.ShowHelp"))));
             this.comboBox_Image_Am.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -10996,27 +14979,39 @@
             // label33
             // 
             resources.ApplyResources(this.label33, "label33");
+            this.helpProvider1.SetHelpKeyword(this.label33, resources.GetString("label33.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label33, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label33.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label33, resources.GetString("label33.HelpString"));
             this.label33.Name = "label33";
             this.helpProvider1.SetShowHelp(this.label33, ((bool)(resources.GetObject("label33.ShowHelp"))));
             // 
             // label34
             // 
             resources.ApplyResources(this.label34, "label34");
+            this.helpProvider1.SetHelpKeyword(this.label34, resources.GetString("label34.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label34, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label34.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label34, resources.GetString("label34.HelpString"));
             this.label34.Name = "label34";
             this.helpProvider1.SetShowHelp(this.label34, ((bool)(resources.GetObject("label34.ShowHelp"))));
             // 
             // label35
             // 
             resources.ApplyResources(this.label35, "label35");
+            this.helpProvider1.SetHelpKeyword(this.label35, resources.GetString("label35.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label35, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label35.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label35, resources.GetString("label35.HelpString"));
             this.label35.Name = "label35";
             this.helpProvider1.SetShowHelp(this.label35, ((bool)(resources.GetObject("label35.ShowHelp"))));
             // 
             // tabControl_Time
             // 
+            resources.ApplyResources(this.tabControl_Time, "tabControl_Time");
             this.tabControl_Time.Controls.Add(this.tabPage4);
             this.tabControl_Time.Controls.Add(this.tabPage5);
             this.tabControl_Time.Controls.Add(this.tabPage6);
-            resources.ApplyResources(this.tabControl_Time, "tabControl_Time");
+            this.helpProvider1.SetHelpKeyword(this.tabControl_Time, resources.GetString("tabControl_Time.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabControl_Time, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabControl_Time.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabControl_Time, resources.GetString("tabControl_Time.HelpString"));
             this.tabControl_Time.Name = "tabControl_Time";
             this.tabControl_Time.SelectedIndex = 0;
             this.helpProvider1.SetShowHelp(this.tabControl_Time, ((bool)(resources.GetObject("tabControl_Time.ShowHelp"))));
@@ -11024,11 +15019,14 @@
             // 
             // tabPage4
             // 
+            resources.ApplyResources(this.tabPage4, "tabPage4");
             this.tabPage4.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage4.Controls.Add(this.checkBox_Hours);
             this.tabPage4.Controls.Add(this.groupBox_Hours_Tens);
             this.tabPage4.Controls.Add(this.groupBox_Hours_Ones);
-            resources.ApplyResources(this.tabPage4, "tabPage4");
+            this.helpProvider1.SetHelpKeyword(this.tabPage4, resources.GetString("tabPage4.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage4, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage4.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage4, resources.GetString("tabPage4.HelpString"));
             this.tabPage4.Name = "tabPage4";
             this.helpProvider1.SetShowHelp(this.tabPage4, ((bool)(resources.GetObject("tabPage4.ShowHelp"))));
             // 
@@ -11037,6 +15035,9 @@
             resources.ApplyResources(this.checkBox_Hours, "checkBox_Hours");
             this.checkBox_Hours.Checked = true;
             this.checkBox_Hours.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Hours, resources.GetString("checkBox_Hours.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Hours, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Hours.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Hours, resources.GetString("checkBox_Hours.HelpString"));
             this.checkBox_Hours.Name = "checkBox_Hours";
             this.helpProvider1.SetShowHelp(this.checkBox_Hours, ((bool)(resources.GetObject("checkBox_Hours.ShowHelp"))));
             this.checkBox_Hours.UseVisualStyleBackColor = true;
@@ -11045,6 +15046,7 @@
             // 
             // groupBox_Hours_Tens
             // 
+            resources.ApplyResources(this.groupBox_Hours_Tens, "groupBox_Hours_Tens");
             this.groupBox_Hours_Tens.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox_Hours_Tens.Controls.Add(this.numericUpDown_Hours_Tens_Count);
             this.groupBox_Hours_Tens.Controls.Add(this.numericUpDown_Hours_Tens_Y);
@@ -11054,7 +15056,9 @@
             this.groupBox_Hours_Tens.Controls.Add(this.label8);
             this.groupBox_Hours_Tens.Controls.Add(this.label10);
             this.groupBox_Hours_Tens.Controls.Add(this.label9);
-            resources.ApplyResources(this.groupBox_Hours_Tens, "groupBox_Hours_Tens");
+            this.helpProvider1.SetHelpKeyword(this.groupBox_Hours_Tens, resources.GetString("groupBox_Hours_Tens.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.groupBox_Hours_Tens, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("groupBox_Hours_Tens.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.groupBox_Hours_Tens, resources.GetString("groupBox_Hours_Tens.HelpString"));
             this.groupBox_Hours_Tens.Name = "groupBox_Hours_Tens";
             this.helpProvider1.SetShowHelp(this.groupBox_Hours_Tens, ((bool)(resources.GetObject("groupBox_Hours_Tens.ShowHelp"))));
             this.groupBox_Hours_Tens.TabStop = false;
@@ -11063,6 +15067,9 @@
             // numericUpDown_Hours_Tens_Count
             // 
             resources.ApplyResources(this.numericUpDown_Hours_Tens_Count, "numericUpDown_Hours_Tens_Count");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Hours_Tens_Count, resources.GetString("numericUpDown_Hours_Tens_Count.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Hours_Tens_Count, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Hours_Tens_Count.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Hours_Tens_Count, resources.GetString("numericUpDown_Hours_Tens_Count.HelpString"));
             this.numericUpDown_Hours_Tens_Count.Maximum = new decimal(new int[] {
             99,
             0,
@@ -11078,8 +15085,11 @@
             // 
             // numericUpDown_Hours_Tens_Y
             // 
-            this.numericUpDown_Hours_Tens_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_Hours_Tens_Y, "numericUpDown_Hours_Tens_Y");
+            this.numericUpDown_Hours_Tens_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Hours_Tens_Y, resources.GetString("numericUpDown_Hours_Tens_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Hours_Tens_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Hours_Tens_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Hours_Tens_Y, resources.GetString("numericUpDown_Hours_Tens_Y.HelpString"));
             this.numericUpDown_Hours_Tens_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -11097,8 +15107,11 @@
             // 
             // numericUpDown_Hours_Tens_X
             // 
-            this.numericUpDown_Hours_Tens_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_Hours_Tens_X, "numericUpDown_Hours_Tens_X");
+            this.numericUpDown_Hours_Tens_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Hours_Tens_X, resources.GetString("numericUpDown_Hours_Tens_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Hours_Tens_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Hours_Tens_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Hours_Tens_X, resources.GetString("numericUpDown_Hours_Tens_X.HelpString"));
             this.numericUpDown_Hours_Tens_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -11117,15 +15130,21 @@
             // label11
             // 
             resources.ApplyResources(this.label11, "label11");
+            this.helpProvider1.SetHelpKeyword(this.label11, resources.GetString("label11.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label11, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label11.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label11, resources.GetString("label11.HelpString"));
             this.label11.Name = "label11";
             this.helpProvider1.SetShowHelp(this.label11, ((bool)(resources.GetObject("label11.ShowHelp"))));
             // 
             // comboBox_Hours_Tens_Image
             // 
+            resources.ApplyResources(this.comboBox_Hours_Tens_Image, "comboBox_Hours_Tens_Image");
             this.comboBox_Hours_Tens_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Hours_Tens_Image.DropDownWidth = 75;
             this.comboBox_Hours_Tens_Image.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox_Hours_Tens_Image, "comboBox_Hours_Tens_Image");
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Hours_Tens_Image, resources.GetString("comboBox_Hours_Tens_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Hours_Tens_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Hours_Tens_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Hours_Tens_Image, resources.GetString("comboBox_Hours_Tens_Image.HelpString"));
             this.comboBox_Hours_Tens_Image.Name = "comboBox_Hours_Tens_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_Hours_Tens_Image, ((bool)(resources.GetObject("comboBox_Hours_Tens_Image.ShowHelp"))));
             this.comboBox_Hours_Tens_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -11137,23 +15156,33 @@
             // label8
             // 
             resources.ApplyResources(this.label8, "label8");
+            this.helpProvider1.SetHelpKeyword(this.label8, resources.GetString("label8.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label8, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label8.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label8, resources.GetString("label8.HelpString"));
             this.label8.Name = "label8";
             this.helpProvider1.SetShowHelp(this.label8, ((bool)(resources.GetObject("label8.ShowHelp"))));
             // 
             // label10
             // 
             resources.ApplyResources(this.label10, "label10");
+            this.helpProvider1.SetHelpKeyword(this.label10, resources.GetString("label10.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label10, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label10.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label10, resources.GetString("label10.HelpString"));
             this.label10.Name = "label10";
             this.helpProvider1.SetShowHelp(this.label10, ((bool)(resources.GetObject("label10.ShowHelp"))));
             // 
             // label9
             // 
             resources.ApplyResources(this.label9, "label9");
+            this.helpProvider1.SetHelpKeyword(this.label9, resources.GetString("label9.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label9, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label9.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label9, resources.GetString("label9.HelpString"));
             this.label9.Name = "label9";
             this.helpProvider1.SetShowHelp(this.label9, ((bool)(resources.GetObject("label9.ShowHelp"))));
             // 
             // groupBox_Hours_Ones
             // 
+            resources.ApplyResources(this.groupBox_Hours_Ones, "groupBox_Hours_Ones");
             this.groupBox_Hours_Ones.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox_Hours_Ones.Controls.Add(this.numericUpDown_Hours_Ones_Count);
             this.groupBox_Hours_Ones.Controls.Add(this.numericUpDown_Hours_Ones_Y);
@@ -11163,7 +15192,9 @@
             this.groupBox_Hours_Ones.Controls.Add(this.label29);
             this.groupBox_Hours_Ones.Controls.Add(this.label30);
             this.groupBox_Hours_Ones.Controls.Add(this.label31);
-            resources.ApplyResources(this.groupBox_Hours_Ones, "groupBox_Hours_Ones");
+            this.helpProvider1.SetHelpKeyword(this.groupBox_Hours_Ones, resources.GetString("groupBox_Hours_Ones.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.groupBox_Hours_Ones, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("groupBox_Hours_Ones.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.groupBox_Hours_Ones, resources.GetString("groupBox_Hours_Ones.HelpString"));
             this.groupBox_Hours_Ones.Name = "groupBox_Hours_Ones";
             this.helpProvider1.SetShowHelp(this.groupBox_Hours_Ones, ((bool)(resources.GetObject("groupBox_Hours_Ones.ShowHelp"))));
             this.groupBox_Hours_Ones.TabStop = false;
@@ -11172,6 +15203,9 @@
             // numericUpDown_Hours_Ones_Count
             // 
             resources.ApplyResources(this.numericUpDown_Hours_Ones_Count, "numericUpDown_Hours_Ones_Count");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Hours_Ones_Count, resources.GetString("numericUpDown_Hours_Ones_Count.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Hours_Ones_Count, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Hours_Ones_Count.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Hours_Ones_Count, resources.GetString("numericUpDown_Hours_Ones_Count.HelpString"));
             this.numericUpDown_Hours_Ones_Count.Maximum = new decimal(new int[] {
             99,
             0,
@@ -11187,8 +15221,11 @@
             // 
             // numericUpDown_Hours_Ones_Y
             // 
-            this.numericUpDown_Hours_Ones_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_Hours_Ones_Y, "numericUpDown_Hours_Ones_Y");
+            this.numericUpDown_Hours_Ones_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Hours_Ones_Y, resources.GetString("numericUpDown_Hours_Ones_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Hours_Ones_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Hours_Ones_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Hours_Ones_Y, resources.GetString("numericUpDown_Hours_Ones_Y.HelpString"));
             this.numericUpDown_Hours_Ones_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -11206,8 +15243,11 @@
             // 
             // numericUpDown_Hours_Ones_X
             // 
-            this.numericUpDown_Hours_Ones_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_Hours_Ones_X, "numericUpDown_Hours_Ones_X");
+            this.numericUpDown_Hours_Ones_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Hours_Ones_X, resources.GetString("numericUpDown_Hours_Ones_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Hours_Ones_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Hours_Ones_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Hours_Ones_X, resources.GetString("numericUpDown_Hours_Ones_X.HelpString"));
             this.numericUpDown_Hours_Ones_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -11226,15 +15266,21 @@
             // label28
             // 
             resources.ApplyResources(this.label28, "label28");
+            this.helpProvider1.SetHelpKeyword(this.label28, resources.GetString("label28.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label28, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label28.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label28, resources.GetString("label28.HelpString"));
             this.label28.Name = "label28";
             this.helpProvider1.SetShowHelp(this.label28, ((bool)(resources.GetObject("label28.ShowHelp"))));
             // 
             // comboBox_Hours_Ones_Image
             // 
+            resources.ApplyResources(this.comboBox_Hours_Ones_Image, "comboBox_Hours_Ones_Image");
             this.comboBox_Hours_Ones_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Hours_Ones_Image.DropDownWidth = 75;
             this.comboBox_Hours_Ones_Image.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox_Hours_Ones_Image, "comboBox_Hours_Ones_Image");
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Hours_Ones_Image, resources.GetString("comboBox_Hours_Ones_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Hours_Ones_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Hours_Ones_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Hours_Ones_Image, resources.GetString("comboBox_Hours_Ones_Image.HelpString"));
             this.comboBox_Hours_Ones_Image.Name = "comboBox_Hours_Ones_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_Hours_Ones_Image, ((bool)(resources.GetObject("comboBox_Hours_Ones_Image.ShowHelp"))));
             this.comboBox_Hours_Ones_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -11246,28 +15292,40 @@
             // label29
             // 
             resources.ApplyResources(this.label29, "label29");
+            this.helpProvider1.SetHelpKeyword(this.label29, resources.GetString("label29.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label29, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label29.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label29, resources.GetString("label29.HelpString"));
             this.label29.Name = "label29";
             this.helpProvider1.SetShowHelp(this.label29, ((bool)(resources.GetObject("label29.ShowHelp"))));
             // 
             // label30
             // 
             resources.ApplyResources(this.label30, "label30");
+            this.helpProvider1.SetHelpKeyword(this.label30, resources.GetString("label30.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label30, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label30.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label30, resources.GetString("label30.HelpString"));
             this.label30.Name = "label30";
             this.helpProvider1.SetShowHelp(this.label30, ((bool)(resources.GetObject("label30.ShowHelp"))));
             // 
             // label31
             // 
             resources.ApplyResources(this.label31, "label31");
+            this.helpProvider1.SetHelpKeyword(this.label31, resources.GetString("label31.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label31, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label31.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label31, resources.GetString("label31.HelpString"));
             this.label31.Name = "label31";
             this.helpProvider1.SetShowHelp(this.label31, ((bool)(resources.GetObject("label31.ShowHelp"))));
             // 
             // tabPage5
             // 
+            resources.ApplyResources(this.tabPage5, "tabPage5");
             this.tabPage5.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage5.Controls.Add(this.checkBox_Minutes);
             this.tabPage5.Controls.Add(this.groupBox_Minutes_Tens);
             this.tabPage5.Controls.Add(this.groupBox_Minutes_Ones);
-            resources.ApplyResources(this.tabPage5, "tabPage5");
+            this.helpProvider1.SetHelpKeyword(this.tabPage5, resources.GetString("tabPage5.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage5, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage5.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage5, resources.GetString("tabPage5.HelpString"));
             this.tabPage5.Name = "tabPage5";
             this.helpProvider1.SetShowHelp(this.tabPage5, ((bool)(resources.GetObject("tabPage5.ShowHelp"))));
             // 
@@ -11276,6 +15334,9 @@
             resources.ApplyResources(this.checkBox_Minutes, "checkBox_Minutes");
             this.checkBox_Minutes.Checked = true;
             this.checkBox_Minutes.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Minutes, resources.GetString("checkBox_Minutes.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Minutes, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Minutes.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Minutes, resources.GetString("checkBox_Minutes.HelpString"));
             this.checkBox_Minutes.Name = "checkBox_Minutes";
             this.helpProvider1.SetShowHelp(this.checkBox_Minutes, ((bool)(resources.GetObject("checkBox_Minutes.ShowHelp"))));
             this.checkBox_Minutes.UseVisualStyleBackColor = true;
@@ -11284,6 +15345,7 @@
             // 
             // groupBox_Minutes_Tens
             // 
+            resources.ApplyResources(this.groupBox_Minutes_Tens, "groupBox_Minutes_Tens");
             this.groupBox_Minutes_Tens.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox_Minutes_Tens.Controls.Add(this.numericUpDown_Min_Tens_Count);
             this.groupBox_Minutes_Tens.Controls.Add(this.numericUpDown_Min_Tens_Y);
@@ -11293,7 +15355,9 @@
             this.groupBox_Minutes_Tens.Controls.Add(this.label13);
             this.groupBox_Minutes_Tens.Controls.Add(this.label14);
             this.groupBox_Minutes_Tens.Controls.Add(this.label15);
-            resources.ApplyResources(this.groupBox_Minutes_Tens, "groupBox_Minutes_Tens");
+            this.helpProvider1.SetHelpKeyword(this.groupBox_Minutes_Tens, resources.GetString("groupBox_Minutes_Tens.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.groupBox_Minutes_Tens, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("groupBox_Minutes_Tens.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.groupBox_Minutes_Tens, resources.GetString("groupBox_Minutes_Tens.HelpString"));
             this.groupBox_Minutes_Tens.Name = "groupBox_Minutes_Tens";
             this.helpProvider1.SetShowHelp(this.groupBox_Minutes_Tens, ((bool)(resources.GetObject("groupBox_Minutes_Tens.ShowHelp"))));
             this.groupBox_Minutes_Tens.TabStop = false;
@@ -11302,6 +15366,9 @@
             // numericUpDown_Min_Tens_Count
             // 
             resources.ApplyResources(this.numericUpDown_Min_Tens_Count, "numericUpDown_Min_Tens_Count");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Min_Tens_Count, resources.GetString("numericUpDown_Min_Tens_Count.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Min_Tens_Count, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Min_Tens_Count.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Min_Tens_Count, resources.GetString("numericUpDown_Min_Tens_Count.HelpString"));
             this.numericUpDown_Min_Tens_Count.Maximum = new decimal(new int[] {
             999,
             0,
@@ -11317,8 +15384,11 @@
             // 
             // numericUpDown_Min_Tens_Y
             // 
-            this.numericUpDown_Min_Tens_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_Min_Tens_Y, "numericUpDown_Min_Tens_Y");
+            this.numericUpDown_Min_Tens_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Min_Tens_Y, resources.GetString("numericUpDown_Min_Tens_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Min_Tens_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Min_Tens_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Min_Tens_Y, resources.GetString("numericUpDown_Min_Tens_Y.HelpString"));
             this.numericUpDown_Min_Tens_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -11336,8 +15406,11 @@
             // 
             // numericUpDown_Min_Tens_X
             // 
-            this.numericUpDown_Min_Tens_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_Min_Tens_X, "numericUpDown_Min_Tens_X");
+            this.numericUpDown_Min_Tens_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Min_Tens_X, resources.GetString("numericUpDown_Min_Tens_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Min_Tens_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Min_Tens_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Min_Tens_X, resources.GetString("numericUpDown_Min_Tens_X.HelpString"));
             this.numericUpDown_Min_Tens_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -11356,15 +15429,21 @@
             // label12
             // 
             resources.ApplyResources(this.label12, "label12");
+            this.helpProvider1.SetHelpKeyword(this.label12, resources.GetString("label12.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label12, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label12.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label12, resources.GetString("label12.HelpString"));
             this.label12.Name = "label12";
             this.helpProvider1.SetShowHelp(this.label12, ((bool)(resources.GetObject("label12.ShowHelp"))));
             // 
             // comboBox_Min_Tens_Image
             // 
+            resources.ApplyResources(this.comboBox_Min_Tens_Image, "comboBox_Min_Tens_Image");
             this.comboBox_Min_Tens_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Min_Tens_Image.DropDownWidth = 75;
             this.comboBox_Min_Tens_Image.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox_Min_Tens_Image, "comboBox_Min_Tens_Image");
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Min_Tens_Image, resources.GetString("comboBox_Min_Tens_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Min_Tens_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Min_Tens_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Min_Tens_Image, resources.GetString("comboBox_Min_Tens_Image.HelpString"));
             this.comboBox_Min_Tens_Image.Name = "comboBox_Min_Tens_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_Min_Tens_Image, ((bool)(resources.GetObject("comboBox_Min_Tens_Image.ShowHelp"))));
             this.comboBox_Min_Tens_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -11376,23 +15455,33 @@
             // label13
             // 
             resources.ApplyResources(this.label13, "label13");
+            this.helpProvider1.SetHelpKeyword(this.label13, resources.GetString("label13.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label13, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label13.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label13, resources.GetString("label13.HelpString"));
             this.label13.Name = "label13";
             this.helpProvider1.SetShowHelp(this.label13, ((bool)(resources.GetObject("label13.ShowHelp"))));
             // 
             // label14
             // 
             resources.ApplyResources(this.label14, "label14");
+            this.helpProvider1.SetHelpKeyword(this.label14, resources.GetString("label14.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label14, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label14.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label14, resources.GetString("label14.HelpString"));
             this.label14.Name = "label14";
             this.helpProvider1.SetShowHelp(this.label14, ((bool)(resources.GetObject("label14.ShowHelp"))));
             // 
             // label15
             // 
             resources.ApplyResources(this.label15, "label15");
+            this.helpProvider1.SetHelpKeyword(this.label15, resources.GetString("label15.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label15, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label15.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label15, resources.GetString("label15.HelpString"));
             this.label15.Name = "label15";
             this.helpProvider1.SetShowHelp(this.label15, ((bool)(resources.GetObject("label15.ShowHelp"))));
             // 
             // groupBox_Minutes_Ones
             // 
+            resources.ApplyResources(this.groupBox_Minutes_Ones, "groupBox_Minutes_Ones");
             this.groupBox_Minutes_Ones.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox_Minutes_Ones.Controls.Add(this.numericUpDown_Min_Ones_Count);
             this.groupBox_Minutes_Ones.Controls.Add(this.numericUpDown_Min_Ones_Y);
@@ -11402,7 +15491,9 @@
             this.groupBox_Minutes_Ones.Controls.Add(this.label25);
             this.groupBox_Minutes_Ones.Controls.Add(this.label26);
             this.groupBox_Minutes_Ones.Controls.Add(this.label27);
-            resources.ApplyResources(this.groupBox_Minutes_Ones, "groupBox_Minutes_Ones");
+            this.helpProvider1.SetHelpKeyword(this.groupBox_Minutes_Ones, resources.GetString("groupBox_Minutes_Ones.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.groupBox_Minutes_Ones, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("groupBox_Minutes_Ones.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.groupBox_Minutes_Ones, resources.GetString("groupBox_Minutes_Ones.HelpString"));
             this.groupBox_Minutes_Ones.Name = "groupBox_Minutes_Ones";
             this.helpProvider1.SetShowHelp(this.groupBox_Minutes_Ones, ((bool)(resources.GetObject("groupBox_Minutes_Ones.ShowHelp"))));
             this.groupBox_Minutes_Ones.TabStop = false;
@@ -11411,6 +15502,9 @@
             // numericUpDown_Min_Ones_Count
             // 
             resources.ApplyResources(this.numericUpDown_Min_Ones_Count, "numericUpDown_Min_Ones_Count");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Min_Ones_Count, resources.GetString("numericUpDown_Min_Ones_Count.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Min_Ones_Count, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Min_Ones_Count.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Min_Ones_Count, resources.GetString("numericUpDown_Min_Ones_Count.HelpString"));
             this.numericUpDown_Min_Ones_Count.Maximum = new decimal(new int[] {
             999,
             0,
@@ -11426,8 +15520,11 @@
             // 
             // numericUpDown_Min_Ones_Y
             // 
-            this.numericUpDown_Min_Ones_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_Min_Ones_Y, "numericUpDown_Min_Ones_Y");
+            this.numericUpDown_Min_Ones_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Min_Ones_Y, resources.GetString("numericUpDown_Min_Ones_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Min_Ones_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Min_Ones_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Min_Ones_Y, resources.GetString("numericUpDown_Min_Ones_Y.HelpString"));
             this.numericUpDown_Min_Ones_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -11445,8 +15542,11 @@
             // 
             // numericUpDown_Min_Ones_X
             // 
-            this.numericUpDown_Min_Ones_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_Min_Ones_X, "numericUpDown_Min_Ones_X");
+            this.numericUpDown_Min_Ones_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Min_Ones_X, resources.GetString("numericUpDown_Min_Ones_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Min_Ones_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Min_Ones_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Min_Ones_X, resources.GetString("numericUpDown_Min_Ones_X.HelpString"));
             this.numericUpDown_Min_Ones_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -11465,15 +15565,21 @@
             // label24
             // 
             resources.ApplyResources(this.label24, "label24");
+            this.helpProvider1.SetHelpKeyword(this.label24, resources.GetString("label24.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label24, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label24.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label24, resources.GetString("label24.HelpString"));
             this.label24.Name = "label24";
             this.helpProvider1.SetShowHelp(this.label24, ((bool)(resources.GetObject("label24.ShowHelp"))));
             // 
             // comboBox_Min_Ones_Image
             // 
+            resources.ApplyResources(this.comboBox_Min_Ones_Image, "comboBox_Min_Ones_Image");
             this.comboBox_Min_Ones_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Min_Ones_Image.DropDownWidth = 75;
             this.comboBox_Min_Ones_Image.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox_Min_Ones_Image, "comboBox_Min_Ones_Image");
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Min_Ones_Image, resources.GetString("comboBox_Min_Ones_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Min_Ones_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Min_Ones_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Min_Ones_Image, resources.GetString("comboBox_Min_Ones_Image.HelpString"));
             this.comboBox_Min_Ones_Image.Name = "comboBox_Min_Ones_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_Min_Ones_Image, ((bool)(resources.GetObject("comboBox_Min_Ones_Image.ShowHelp"))));
             this.comboBox_Min_Ones_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -11485,33 +15591,46 @@
             // label25
             // 
             resources.ApplyResources(this.label25, "label25");
+            this.helpProvider1.SetHelpKeyword(this.label25, resources.GetString("label25.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label25, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label25.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label25, resources.GetString("label25.HelpString"));
             this.label25.Name = "label25";
             this.helpProvider1.SetShowHelp(this.label25, ((bool)(resources.GetObject("label25.ShowHelp"))));
             // 
             // label26
             // 
             resources.ApplyResources(this.label26, "label26");
+            this.helpProvider1.SetHelpKeyword(this.label26, resources.GetString("label26.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label26, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label26.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label26, resources.GetString("label26.HelpString"));
             this.label26.Name = "label26";
             this.helpProvider1.SetShowHelp(this.label26, ((bool)(resources.GetObject("label26.ShowHelp"))));
             // 
             // label27
             // 
             resources.ApplyResources(this.label27, "label27");
+            this.helpProvider1.SetHelpKeyword(this.label27, resources.GetString("label27.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label27, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label27.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label27, resources.GetString("label27.HelpString"));
             this.label27.Name = "label27";
             this.helpProvider1.SetShowHelp(this.label27, ((bool)(resources.GetObject("label27.ShowHelp"))));
             // 
             // tabPage6
             // 
+            resources.ApplyResources(this.tabPage6, "tabPage6");
             this.tabPage6.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage6.Controls.Add(this.groupBox_Seconds_Ones);
             this.tabPage6.Controls.Add(this.checkBox_Seconds);
             this.tabPage6.Controls.Add(this.groupBox_Seconds_Tens);
-            resources.ApplyResources(this.tabPage6, "tabPage6");
+            this.helpProvider1.SetHelpKeyword(this.tabPage6, resources.GetString("tabPage6.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage6, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage6.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage6, resources.GetString("tabPage6.HelpString"));
             this.tabPage6.Name = "tabPage6";
             this.helpProvider1.SetShowHelp(this.tabPage6, ((bool)(resources.GetObject("tabPage6.ShowHelp"))));
             // 
             // groupBox_Seconds_Ones
             // 
+            resources.ApplyResources(this.groupBox_Seconds_Ones, "groupBox_Seconds_Ones");
             this.groupBox_Seconds_Ones.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox_Seconds_Ones.Controls.Add(this.numericUpDown_Sec_Ones_Count);
             this.groupBox_Seconds_Ones.Controls.Add(this.numericUpDown_Sec_Ones_Y);
@@ -11521,7 +15640,9 @@
             this.groupBox_Seconds_Ones.Controls.Add(this.label21);
             this.groupBox_Seconds_Ones.Controls.Add(this.label22);
             this.groupBox_Seconds_Ones.Controls.Add(this.label23);
-            resources.ApplyResources(this.groupBox_Seconds_Ones, "groupBox_Seconds_Ones");
+            this.helpProvider1.SetHelpKeyword(this.groupBox_Seconds_Ones, resources.GetString("groupBox_Seconds_Ones.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.groupBox_Seconds_Ones, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("groupBox_Seconds_Ones.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.groupBox_Seconds_Ones, resources.GetString("groupBox_Seconds_Ones.HelpString"));
             this.groupBox_Seconds_Ones.Name = "groupBox_Seconds_Ones";
             this.helpProvider1.SetShowHelp(this.groupBox_Seconds_Ones, ((bool)(resources.GetObject("groupBox_Seconds_Ones.ShowHelp"))));
             this.groupBox_Seconds_Ones.TabStop = false;
@@ -11530,6 +15651,9 @@
             // numericUpDown_Sec_Ones_Count
             // 
             resources.ApplyResources(this.numericUpDown_Sec_Ones_Count, "numericUpDown_Sec_Ones_Count");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Sec_Ones_Count, resources.GetString("numericUpDown_Sec_Ones_Count.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Sec_Ones_Count, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Sec_Ones_Count.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Sec_Ones_Count, resources.GetString("numericUpDown_Sec_Ones_Count.HelpString"));
             this.numericUpDown_Sec_Ones_Count.Maximum = new decimal(new int[] {
             999,
             0,
@@ -11545,8 +15669,11 @@
             // 
             // numericUpDown_Sec_Ones_Y
             // 
-            this.numericUpDown_Sec_Ones_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_Sec_Ones_Y, "numericUpDown_Sec_Ones_Y");
+            this.numericUpDown_Sec_Ones_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Sec_Ones_Y, resources.GetString("numericUpDown_Sec_Ones_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Sec_Ones_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Sec_Ones_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Sec_Ones_Y, resources.GetString("numericUpDown_Sec_Ones_Y.HelpString"));
             this.numericUpDown_Sec_Ones_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -11564,8 +15691,11 @@
             // 
             // numericUpDown_Sec_Ones_X
             // 
-            this.numericUpDown_Sec_Ones_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_Sec_Ones_X, "numericUpDown_Sec_Ones_X");
+            this.numericUpDown_Sec_Ones_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Sec_Ones_X, resources.GetString("numericUpDown_Sec_Ones_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Sec_Ones_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Sec_Ones_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Sec_Ones_X, resources.GetString("numericUpDown_Sec_Ones_X.HelpString"));
             this.numericUpDown_Sec_Ones_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -11584,15 +15714,21 @@
             // label20
             // 
             resources.ApplyResources(this.label20, "label20");
+            this.helpProvider1.SetHelpKeyword(this.label20, resources.GetString("label20.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label20, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label20.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label20, resources.GetString("label20.HelpString"));
             this.label20.Name = "label20";
             this.helpProvider1.SetShowHelp(this.label20, ((bool)(resources.GetObject("label20.ShowHelp"))));
             // 
             // comboBox_Sec_Ones_Image
             // 
+            resources.ApplyResources(this.comboBox_Sec_Ones_Image, "comboBox_Sec_Ones_Image");
             this.comboBox_Sec_Ones_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Sec_Ones_Image.DropDownWidth = 75;
             this.comboBox_Sec_Ones_Image.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox_Sec_Ones_Image, "comboBox_Sec_Ones_Image");
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Sec_Ones_Image, resources.GetString("comboBox_Sec_Ones_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Sec_Ones_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Sec_Ones_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Sec_Ones_Image, resources.GetString("comboBox_Sec_Ones_Image.HelpString"));
             this.comboBox_Sec_Ones_Image.Name = "comboBox_Sec_Ones_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_Sec_Ones_Image, ((bool)(resources.GetObject("comboBox_Sec_Ones_Image.ShowHelp"))));
             this.comboBox_Sec_Ones_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -11604,24 +15740,36 @@
             // label21
             // 
             resources.ApplyResources(this.label21, "label21");
+            this.helpProvider1.SetHelpKeyword(this.label21, resources.GetString("label21.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label21, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label21.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label21, resources.GetString("label21.HelpString"));
             this.label21.Name = "label21";
             this.helpProvider1.SetShowHelp(this.label21, ((bool)(resources.GetObject("label21.ShowHelp"))));
             // 
             // label22
             // 
             resources.ApplyResources(this.label22, "label22");
+            this.helpProvider1.SetHelpKeyword(this.label22, resources.GetString("label22.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label22, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label22.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label22, resources.GetString("label22.HelpString"));
             this.label22.Name = "label22";
             this.helpProvider1.SetShowHelp(this.label22, ((bool)(resources.GetObject("label22.ShowHelp"))));
             // 
             // label23
             // 
             resources.ApplyResources(this.label23, "label23");
+            this.helpProvider1.SetHelpKeyword(this.label23, resources.GetString("label23.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label23, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label23.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label23, resources.GetString("label23.HelpString"));
             this.label23.Name = "label23";
             this.helpProvider1.SetShowHelp(this.label23, ((bool)(resources.GetObject("label23.ShowHelp"))));
             // 
             // checkBox_Seconds
             // 
             resources.ApplyResources(this.checkBox_Seconds, "checkBox_Seconds");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Seconds, resources.GetString("checkBox_Seconds.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Seconds, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Seconds.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Seconds, resources.GetString("checkBox_Seconds.HelpString"));
             this.checkBox_Seconds.Name = "checkBox_Seconds";
             this.helpProvider1.SetShowHelp(this.checkBox_Seconds, ((bool)(resources.GetObject("checkBox_Seconds.ShowHelp"))));
             this.checkBox_Seconds.UseVisualStyleBackColor = true;
@@ -11630,6 +15778,7 @@
             // 
             // groupBox_Seconds_Tens
             // 
+            resources.ApplyResources(this.groupBox_Seconds_Tens, "groupBox_Seconds_Tens");
             this.groupBox_Seconds_Tens.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox_Seconds_Tens.Controls.Add(this.numericUpDown_Sec_Tens_Count);
             this.groupBox_Seconds_Tens.Controls.Add(this.numericUpDown_Sec_Tens_Y);
@@ -11639,7 +15788,9 @@
             this.groupBox_Seconds_Tens.Controls.Add(this.label17);
             this.groupBox_Seconds_Tens.Controls.Add(this.label18);
             this.groupBox_Seconds_Tens.Controls.Add(this.label19);
-            resources.ApplyResources(this.groupBox_Seconds_Tens, "groupBox_Seconds_Tens");
+            this.helpProvider1.SetHelpKeyword(this.groupBox_Seconds_Tens, resources.GetString("groupBox_Seconds_Tens.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.groupBox_Seconds_Tens, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("groupBox_Seconds_Tens.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.groupBox_Seconds_Tens, resources.GetString("groupBox_Seconds_Tens.HelpString"));
             this.groupBox_Seconds_Tens.Name = "groupBox_Seconds_Tens";
             this.helpProvider1.SetShowHelp(this.groupBox_Seconds_Tens, ((bool)(resources.GetObject("groupBox_Seconds_Tens.ShowHelp"))));
             this.groupBox_Seconds_Tens.TabStop = false;
@@ -11648,6 +15799,9 @@
             // numericUpDown_Sec_Tens_Count
             // 
             resources.ApplyResources(this.numericUpDown_Sec_Tens_Count, "numericUpDown_Sec_Tens_Count");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Sec_Tens_Count, resources.GetString("numericUpDown_Sec_Tens_Count.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Sec_Tens_Count, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Sec_Tens_Count.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Sec_Tens_Count, resources.GetString("numericUpDown_Sec_Tens_Count.HelpString"));
             this.numericUpDown_Sec_Tens_Count.Maximum = new decimal(new int[] {
             999,
             0,
@@ -11663,8 +15817,11 @@
             // 
             // numericUpDown_Sec_Tens_Y
             // 
-            this.numericUpDown_Sec_Tens_Y.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_Sec_Tens_Y, "numericUpDown_Sec_Tens_Y");
+            this.numericUpDown_Sec_Tens_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Sec_Tens_Y, resources.GetString("numericUpDown_Sec_Tens_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Sec_Tens_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Sec_Tens_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Sec_Tens_Y, resources.GetString("numericUpDown_Sec_Tens_Y.HelpString"));
             this.numericUpDown_Sec_Tens_Y.Maximum = new decimal(new int[] {
             999,
             0,
@@ -11682,8 +15839,11 @@
             // 
             // numericUpDown_Sec_Tens_X
             // 
-            this.numericUpDown_Sec_Tens_X.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_Sec_Tens_X, "numericUpDown_Sec_Tens_X");
+            this.numericUpDown_Sec_Tens_X.ContextMenuStrip = this.contextMenuStrip_X;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Sec_Tens_X, resources.GetString("numericUpDown_Sec_Tens_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Sec_Tens_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Sec_Tens_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Sec_Tens_X, resources.GetString("numericUpDown_Sec_Tens_X.HelpString"));
             this.numericUpDown_Sec_Tens_X.Maximum = new decimal(new int[] {
             999,
             0,
@@ -11702,15 +15862,21 @@
             // label16
             // 
             resources.ApplyResources(this.label16, "label16");
+            this.helpProvider1.SetHelpKeyword(this.label16, resources.GetString("label16.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label16, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label16.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label16, resources.GetString("label16.HelpString"));
             this.label16.Name = "label16";
             this.helpProvider1.SetShowHelp(this.label16, ((bool)(resources.GetObject("label16.ShowHelp"))));
             // 
             // comboBox_Sec_Tens_Image
             // 
+            resources.ApplyResources(this.comboBox_Sec_Tens_Image, "comboBox_Sec_Tens_Image");
             this.comboBox_Sec_Tens_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Sec_Tens_Image.DropDownWidth = 75;
             this.comboBox_Sec_Tens_Image.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox_Sec_Tens_Image, "comboBox_Sec_Tens_Image");
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Sec_Tens_Image, resources.GetString("comboBox_Sec_Tens_Image.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Sec_Tens_Image, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Sec_Tens_Image.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Sec_Tens_Image, resources.GetString("comboBox_Sec_Tens_Image.HelpString"));
             this.comboBox_Sec_Tens_Image.Name = "comboBox_Sec_Tens_Image";
             this.helpProvider1.SetShowHelp(this.comboBox_Sec_Tens_Image, ((bool)(resources.GetObject("comboBox_Sec_Tens_Image.ShowHelp"))));
             this.comboBox_Sec_Tens_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -11722,24 +15888,36 @@
             // label17
             // 
             resources.ApplyResources(this.label17, "label17");
+            this.helpProvider1.SetHelpKeyword(this.label17, resources.GetString("label17.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label17, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label17.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label17, resources.GetString("label17.HelpString"));
             this.label17.Name = "label17";
             this.helpProvider1.SetShowHelp(this.label17, ((bool)(resources.GetObject("label17.ShowHelp"))));
             // 
             // label18
             // 
             resources.ApplyResources(this.label18, "label18");
+            this.helpProvider1.SetHelpKeyword(this.label18, resources.GetString("label18.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label18, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label18.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label18, resources.GetString("label18.HelpString"));
             this.label18.Name = "label18";
             this.helpProvider1.SetShowHelp(this.label18, ((bool)(resources.GetObject("label18.ShowHelp"))));
             // 
             // label19
             // 
             resources.ApplyResources(this.label19, "label19");
+            this.helpProvider1.SetHelpKeyword(this.label19, resources.GetString("label19.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label19, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label19.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label19, resources.GetString("label19.HelpString"));
             this.label19.Name = "label19";
             this.helpProvider1.SetShowHelp(this.label19, ((bool)(resources.GetObject("label19.ShowHelp"))));
             // 
             // checkBox_Time
             // 
             resources.ApplyResources(this.checkBox_Time, "checkBox_Time");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Time, resources.GetString("checkBox_Time.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Time, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Time.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Time, resources.GetString("checkBox_Time.HelpString"));
             this.checkBox_Time.Name = "checkBox_Time";
             this.helpProvider1.SetShowHelp(this.checkBox_Time, ((bool)(resources.GetObject("checkBox_Time.ShowHelp"))));
             this.checkBox_Time.UseVisualStyleBackColor = true;
@@ -11749,6 +15927,9 @@
             // button_Time
             // 
             resources.ApplyResources(this.button_Time, "button_Time");
+            this.helpProvider1.SetHelpKeyword(this.button_Time, resources.GetString("button_Time.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_Time, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_Time.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_Time, resources.GetString("button_Time.HelpString"));
             this.button_Time.Name = "button_Time";
             this.helpProvider1.SetShowHelp(this.button_Time, ((bool)(resources.GetObject("button_Time.ShowHelp"))));
             this.button_Time.UseVisualStyleBackColor = true;
@@ -11756,25 +15937,31 @@
             // 
             // panel_Background
             // 
+            resources.ApplyResources(this.panel_Background, "panel_Background");
             this.panel_Background.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_Background.Controls.Add(this.comboBox_Preview);
             this.panel_Background.Controls.Add(this.comboBox_Background);
             this.panel_Background.Controls.Add(this.label7);
             this.panel_Background.Controls.Add(this.label6);
-            resources.ApplyResources(this.panel_Background, "panel_Background");
+            this.helpProvider1.SetHelpKeyword(this.panel_Background, resources.GetString("panel_Background.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel_Background, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_Background.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel_Background, resources.GetString("panel_Background.HelpString"));
             this.panel_Background.Name = "panel_Background";
             this.helpProvider1.SetShowHelp(this.panel_Background, ((bool)(resources.GetObject("panel_Background.ShowHelp"))));
             // 
             // comboBox_Preview
             // 
+            resources.ApplyResources(this.comboBox_Preview, "comboBox_Preview");
             this.comboBox_Preview.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Preview.DropDownWidth = 75;
             this.comboBox_Preview.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Preview, resources.GetString("comboBox_Preview.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Preview, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Preview.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Preview, resources.GetString("comboBox_Preview.HelpString"));
             this.comboBox_Preview.Items.AddRange(new object[] {
             resources.GetString("comboBox_Preview.Items"),
             resources.GetString("comboBox_Preview.Items1"),
             resources.GetString("comboBox_Preview.Items2")});
-            resources.ApplyResources(this.comboBox_Preview, "comboBox_Preview");
             this.comboBox_Preview.Name = "comboBox_Preview";
             this.helpProvider1.SetShowHelp(this.comboBox_Preview, ((bool)(resources.GetObject("comboBox_Preview.ShowHelp"))));
             this.comboBox_Preview.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -11785,14 +15972,17 @@
             // 
             // comboBox_Background
             // 
+            resources.ApplyResources(this.comboBox_Background, "comboBox_Background");
             this.comboBox_Background.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBox_Background.DropDownWidth = 75;
             this.comboBox_Background.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Background, resources.GetString("comboBox_Background.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Background, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Background.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Background, resources.GetString("comboBox_Background.HelpString"));
             this.comboBox_Background.Items.AddRange(new object[] {
             resources.GetString("comboBox_Background.Items"),
             resources.GetString("comboBox_Background.Items1"),
             resources.GetString("comboBox_Background.Items2")});
-            resources.ApplyResources(this.comboBox_Background, "comboBox_Background");
             this.comboBox_Background.Name = "comboBox_Background";
             this.helpProvider1.SetShowHelp(this.comboBox_Background, ((bool)(resources.GetObject("comboBox_Background.ShowHelp"))));
             this.comboBox_Background.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
@@ -11804,18 +15994,27 @@
             // label7
             // 
             resources.ApplyResources(this.label7, "label7");
+            this.helpProvider1.SetHelpKeyword(this.label7, resources.GetString("label7.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label7, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label7.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label7, resources.GetString("label7.HelpString"));
             this.label7.Name = "label7";
             this.helpProvider1.SetShowHelp(this.label7, ((bool)(resources.GetObject("label7.ShowHelp"))));
             // 
             // label6
             // 
             resources.ApplyResources(this.label6, "label6");
+            this.helpProvider1.SetHelpKeyword(this.label6, resources.GetString("label6.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label6, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label6.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label6, resources.GetString("label6.HelpString"));
             this.label6.Name = "label6";
             this.helpProvider1.SetShowHelp(this.label6, ((bool)(resources.GetObject("label6.ShowHelp"))));
             // 
             // button_Background
             // 
             resources.ApplyResources(this.button_Background, "button_Background");
+            this.helpProvider1.SetHelpKeyword(this.button_Background, resources.GetString("button_Background.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_Background, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_Background.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_Background, resources.GetString("button_Background.HelpString"));
             this.button_Background.Name = "button_Background";
             this.helpProvider1.SetShowHelp(this.button_Background, ((bool)(resources.GetObject("button_Background.ShowHelp"))));
             this.button_Background.UseVisualStyleBackColor = true;
@@ -11824,12 +16023,17 @@
             // richTextBox_JSON
             // 
             resources.ApplyResources(this.richTextBox_JSON, "richTextBox_JSON");
+            this.helpProvider1.SetHelpKeyword(this.richTextBox_JSON, resources.GetString("richTextBox_JSON.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.richTextBox_JSON, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("richTextBox_JSON.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.richTextBox_JSON, resources.GetString("richTextBox_JSON.HelpString"));
             this.richTextBox_JSON.Name = "richTextBox_JSON";
             this.helpProvider1.SetShowHelp(this.richTextBox_JSON, ((bool)(resources.GetObject("richTextBox_JSON.ShowHelp"))));
             // 
             // tabPage33
             // 
+            resources.ApplyResources(this.tabPage33, "tabPage33");
             this.tabPage33.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage33.Controls.Add(this.button_Reset);
             this.tabPage33.Controls.Add(this.checkBox_JsonWarnings);
             this.tabPage33.Controls.Add(this.comboBox_Language);
             this.tabPage33.Controls.Add(this.label356);
@@ -11839,26 +16043,44 @@
             this.tabPage33.Controls.Add(this.groupBox6);
             this.tabPage33.Controls.Add(this.groupBox5);
             this.tabPage33.Controls.Add(this.groupBox1);
-            resources.ApplyResources(this.tabPage33, "tabPage33");
+            this.helpProvider1.SetHelpKeyword(this.tabPage33, resources.GetString("tabPage33.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.tabPage33, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage33.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.tabPage33, resources.GetString("tabPage33.HelpString"));
             this.tabPage33.Name = "tabPage33";
             this.helpProvider1.SetShowHelp(this.tabPage33, ((bool)(resources.GetObject("tabPage33.ShowHelp"))));
+            // 
+            // button_Reset
+            // 
+            resources.ApplyResources(this.button_Reset, "button_Reset");
+            this.helpProvider1.SetHelpKeyword(this.button_Reset, resources.GetString("button_Reset.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_Reset, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_Reset.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_Reset, resources.GetString("button_Reset.HelpString"));
+            this.button_Reset.Name = "button_Reset";
+            this.button_Reset.UseVisualStyleBackColor = true;
+            this.button_Reset.Click += new System.EventHandler(this.button_Reset_Click);
             // 
             // checkBox_JsonWarnings
             // 
             resources.ApplyResources(this.checkBox_JsonWarnings, "checkBox_JsonWarnings");
             this.checkBox_JsonWarnings.Checked = true;
             this.checkBox_JsonWarnings.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_JsonWarnings, resources.GetString("checkBox_JsonWarnings.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_JsonWarnings, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_JsonWarnings.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_JsonWarnings, resources.GetString("checkBox_JsonWarnings.HelpString"));
             this.checkBox_JsonWarnings.Name = "checkBox_JsonWarnings";
             this.checkBox_JsonWarnings.UseVisualStyleBackColor = true;
             // 
             // comboBox_Language
             // 
+            resources.ApplyResources(this.comboBox_Language, "comboBox_Language");
             this.comboBox_Language.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_Language.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Language, resources.GetString("comboBox_Language.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Language, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Language.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Language, resources.GetString("comboBox_Language.HelpString"));
             this.comboBox_Language.Items.AddRange(new object[] {
             resources.GetString("comboBox_Language.Items"),
             resources.GetString("comboBox_Language.Items1")});
-            resources.ApplyResources(this.comboBox_Language, "comboBox_Language");
             this.comboBox_Language.Name = "comboBox_Language";
             this.helpProvider1.SetShowHelp(this.comboBox_Language, ((bool)(resources.GetObject("comboBox_Language.ShowHelp"))));
             this.comboBox_Language.SelectedIndexChanged += new System.EventHandler(this.comboBox_Language_SelectedIndexChanged);
@@ -11866,18 +16088,24 @@
             // label356
             // 
             resources.ApplyResources(this.label356, "label356");
+            this.helpProvider1.SetHelpKeyword(this.label356, resources.GetString("label356.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label356, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label356.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label356, resources.GetString("label356.HelpString"));
             this.label356.Name = "label356";
             this.helpProvider1.SetShowHelp(this.label356, ((bool)(resources.GetObject("label356.ShowHelp"))));
             // 
             // numericUpDown_Gif_Speed
             // 
+            resources.ApplyResources(this.numericUpDown_Gif_Speed, "numericUpDown_Gif_Speed");
             this.numericUpDown_Gif_Speed.DecimalPlaces = 1;
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_Gif_Speed, resources.GetString("numericUpDown_Gif_Speed.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_Gif_Speed, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_Gif_Speed.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_Gif_Speed, resources.GetString("numericUpDown_Gif_Speed.HelpString"));
             this.numericUpDown_Gif_Speed.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            resources.ApplyResources(this.numericUpDown_Gif_Speed, "numericUpDown_Gif_Speed");
             this.numericUpDown_Gif_Speed.Maximum = new decimal(new int[] {
             25,
             0,
@@ -11900,16 +16128,22 @@
             // label355
             // 
             resources.ApplyResources(this.label355, "label355");
+            this.helpProvider1.SetHelpKeyword(this.label355, resources.GetString("label355.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label355, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label355.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label355, resources.GetString("label355.HelpString"));
             this.label355.Name = "label355";
             this.helpProvider1.SetShowHelp(this.label355, ((bool)(resources.GetObject("label355.ShowHelp"))));
             // 
             // groupBox7
             // 
+            resources.ApplyResources(this.groupBox7, "groupBox7");
             this.groupBox7.Controls.Add(this.radioButton_Settings_Pack_DoNotning);
             this.groupBox7.Controls.Add(this.radioButton_Settings_Pack_Copy);
             this.groupBox7.Controls.Add(this.radioButton_Settings_Pack_GoToFile);
             this.groupBox7.Controls.Add(this.radioButton_Settings_Pack_Dialog);
-            resources.ApplyResources(this.groupBox7, "groupBox7");
+            this.helpProvider1.SetHelpKeyword(this.groupBox7, resources.GetString("groupBox7.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.groupBox7, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("groupBox7.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.groupBox7, resources.GetString("groupBox7.HelpString"));
             this.groupBox7.Name = "groupBox7";
             this.helpProvider1.SetShowHelp(this.groupBox7, ((bool)(resources.GetObject("groupBox7.ShowHelp"))));
             this.groupBox7.TabStop = false;
@@ -11918,6 +16152,9 @@
             // radioButton_Settings_Pack_DoNotning
             // 
             resources.ApplyResources(this.radioButton_Settings_Pack_DoNotning, "radioButton_Settings_Pack_DoNotning");
+            this.helpProvider1.SetHelpKeyword(this.radioButton_Settings_Pack_DoNotning, resources.GetString("radioButton_Settings_Pack_DoNotning.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.radioButton_Settings_Pack_DoNotning, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("radioButton_Settings_Pack_DoNotning.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.radioButton_Settings_Pack_DoNotning, resources.GetString("radioButton_Settings_Pack_DoNotning.HelpString"));
             this.radioButton_Settings_Pack_DoNotning.Name = "radioButton_Settings_Pack_DoNotning";
             this.helpProvider1.SetShowHelp(this.radioButton_Settings_Pack_DoNotning, ((bool)(resources.GetObject("radioButton_Settings_Pack_DoNotning.ShowHelp"))));
             this.radioButton_Settings_Pack_DoNotning.UseVisualStyleBackColor = true;
@@ -11926,6 +16163,9 @@
             // radioButton_Settings_Pack_Copy
             // 
             resources.ApplyResources(this.radioButton_Settings_Pack_Copy, "radioButton_Settings_Pack_Copy");
+            this.helpProvider1.SetHelpKeyword(this.radioButton_Settings_Pack_Copy, resources.GetString("radioButton_Settings_Pack_Copy.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.radioButton_Settings_Pack_Copy, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("radioButton_Settings_Pack_Copy.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.radioButton_Settings_Pack_Copy, resources.GetString("radioButton_Settings_Pack_Copy.HelpString"));
             this.radioButton_Settings_Pack_Copy.Name = "radioButton_Settings_Pack_Copy";
             this.helpProvider1.SetShowHelp(this.radioButton_Settings_Pack_Copy, ((bool)(resources.GetObject("radioButton_Settings_Pack_Copy.ShowHelp"))));
             this.radioButton_Settings_Pack_Copy.UseVisualStyleBackColor = true;
@@ -11935,6 +16175,9 @@
             // 
             resources.ApplyResources(this.radioButton_Settings_Pack_GoToFile, "radioButton_Settings_Pack_GoToFile");
             this.radioButton_Settings_Pack_GoToFile.Checked = true;
+            this.helpProvider1.SetHelpKeyword(this.radioButton_Settings_Pack_GoToFile, resources.GetString("radioButton_Settings_Pack_GoToFile.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.radioButton_Settings_Pack_GoToFile, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("radioButton_Settings_Pack_GoToFile.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.radioButton_Settings_Pack_GoToFile, resources.GetString("radioButton_Settings_Pack_GoToFile.HelpString"));
             this.radioButton_Settings_Pack_GoToFile.Name = "radioButton_Settings_Pack_GoToFile";
             this.helpProvider1.SetShowHelp(this.radioButton_Settings_Pack_GoToFile, ((bool)(resources.GetObject("radioButton_Settings_Pack_GoToFile.ShowHelp"))));
             this.radioButton_Settings_Pack_GoToFile.TabStop = true;
@@ -11944,6 +16187,9 @@
             // radioButton_Settings_Pack_Dialog
             // 
             resources.ApplyResources(this.radioButton_Settings_Pack_Dialog, "radioButton_Settings_Pack_Dialog");
+            this.helpProvider1.SetHelpKeyword(this.radioButton_Settings_Pack_Dialog, resources.GetString("radioButton_Settings_Pack_Dialog.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.radioButton_Settings_Pack_Dialog, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("radioButton_Settings_Pack_Dialog.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.radioButton_Settings_Pack_Dialog, resources.GetString("radioButton_Settings_Pack_Dialog.HelpString"));
             this.radioButton_Settings_Pack_Dialog.Name = "radioButton_Settings_Pack_Dialog";
             this.helpProvider1.SetShowHelp(this.radioButton_Settings_Pack_Dialog, ((bool)(resources.GetObject("radioButton_Settings_Pack_Dialog.ShowHelp"))));
             this.radioButton_Settings_Pack_Dialog.UseVisualStyleBackColor = true;
@@ -11951,10 +16197,13 @@
             // 
             // groupBox6
             // 
+            resources.ApplyResources(this.groupBox6, "groupBox6");
             this.groupBox6.Controls.Add(this.radioButton_Settings_Open_DoNotning);
             this.groupBox6.Controls.Add(this.radioButton_Settings_Open_Download);
             this.groupBox6.Controls.Add(this.radioButton_Settings_Open_Dialog);
-            resources.ApplyResources(this.groupBox6, "groupBox6");
+            this.helpProvider1.SetHelpKeyword(this.groupBox6, resources.GetString("groupBox6.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.groupBox6, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("groupBox6.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.groupBox6, resources.GetString("groupBox6.HelpString"));
             this.groupBox6.Name = "groupBox6";
             this.helpProvider1.SetShowHelp(this.groupBox6, ((bool)(resources.GetObject("groupBox6.ShowHelp"))));
             this.groupBox6.TabStop = false;
@@ -11963,6 +16212,9 @@
             // radioButton_Settings_Open_DoNotning
             // 
             resources.ApplyResources(this.radioButton_Settings_Open_DoNotning, "radioButton_Settings_Open_DoNotning");
+            this.helpProvider1.SetHelpKeyword(this.radioButton_Settings_Open_DoNotning, resources.GetString("radioButton_Settings_Open_DoNotning.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.radioButton_Settings_Open_DoNotning, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("radioButton_Settings_Open_DoNotning.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.radioButton_Settings_Open_DoNotning, resources.GetString("radioButton_Settings_Open_DoNotning.HelpString"));
             this.radioButton_Settings_Open_DoNotning.Name = "radioButton_Settings_Open_DoNotning";
             this.helpProvider1.SetShowHelp(this.radioButton_Settings_Open_DoNotning, ((bool)(resources.GetObject("radioButton_Settings_Open_DoNotning.ShowHelp"))));
             this.radioButton_Settings_Open_DoNotning.UseVisualStyleBackColor = true;
@@ -11972,6 +16224,9 @@
             // 
             resources.ApplyResources(this.radioButton_Settings_Open_Download, "radioButton_Settings_Open_Download");
             this.radioButton_Settings_Open_Download.Checked = true;
+            this.helpProvider1.SetHelpKeyword(this.radioButton_Settings_Open_Download, resources.GetString("radioButton_Settings_Open_Download.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.radioButton_Settings_Open_Download, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("radioButton_Settings_Open_Download.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.radioButton_Settings_Open_Download, resources.GetString("radioButton_Settings_Open_Download.HelpString"));
             this.radioButton_Settings_Open_Download.Name = "radioButton_Settings_Open_Download";
             this.helpProvider1.SetShowHelp(this.radioButton_Settings_Open_Download, ((bool)(resources.GetObject("radioButton_Settings_Open_Download.ShowHelp"))));
             this.radioButton_Settings_Open_Download.TabStop = true;
@@ -11981,6 +16236,9 @@
             // radioButton_Settings_Open_Dialog
             // 
             resources.ApplyResources(this.radioButton_Settings_Open_Dialog, "radioButton_Settings_Open_Dialog");
+            this.helpProvider1.SetHelpKeyword(this.radioButton_Settings_Open_Dialog, resources.GetString("radioButton_Settings_Open_Dialog.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.radioButton_Settings_Open_Dialog, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("radioButton_Settings_Open_Dialog.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.radioButton_Settings_Open_Dialog, resources.GetString("radioButton_Settings_Open_Dialog.HelpString"));
             this.radioButton_Settings_Open_Dialog.Name = "radioButton_Settings_Open_Dialog";
             this.helpProvider1.SetShowHelp(this.radioButton_Settings_Open_Dialog, ((bool)(resources.GetObject("radioButton_Settings_Open_Dialog.ShowHelp"))));
             this.radioButton_Settings_Open_Dialog.UseVisualStyleBackColor = true;
@@ -11988,10 +16246,13 @@
             // 
             // groupBox5
             // 
+            resources.ApplyResources(this.groupBox5, "groupBox5");
             this.groupBox5.Controls.Add(this.radioButton_Settings_AfterUnpack_DoNothing);
             this.groupBox5.Controls.Add(this.radioButton_Settings_AfterUnpack_Download);
             this.groupBox5.Controls.Add(this.radioButton_Settings_AfterUnpack_Dialog);
-            resources.ApplyResources(this.groupBox5, "groupBox5");
+            this.helpProvider1.SetHelpKeyword(this.groupBox5, resources.GetString("groupBox5.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.groupBox5, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("groupBox5.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.groupBox5, resources.GetString("groupBox5.HelpString"));
             this.groupBox5.Name = "groupBox5";
             this.helpProvider1.SetShowHelp(this.groupBox5, ((bool)(resources.GetObject("groupBox5.ShowHelp"))));
             this.groupBox5.TabStop = false;
@@ -12000,6 +16261,9 @@
             // radioButton_Settings_AfterUnpack_DoNothing
             // 
             resources.ApplyResources(this.radioButton_Settings_AfterUnpack_DoNothing, "radioButton_Settings_AfterUnpack_DoNothing");
+            this.helpProvider1.SetHelpKeyword(this.radioButton_Settings_AfterUnpack_DoNothing, resources.GetString("radioButton_Settings_AfterUnpack_DoNothing.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.radioButton_Settings_AfterUnpack_DoNothing, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("radioButton_Settings_AfterUnpack_DoNothing.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.radioButton_Settings_AfterUnpack_DoNothing, resources.GetString("radioButton_Settings_AfterUnpack_DoNothing.HelpString"));
             this.radioButton_Settings_AfterUnpack_DoNothing.Name = "radioButton_Settings_AfterUnpack_DoNothing";
             this.helpProvider1.SetShowHelp(this.radioButton_Settings_AfterUnpack_DoNothing, ((bool)(resources.GetObject("radioButton_Settings_AfterUnpack_DoNothing.ShowHelp"))));
             this.radioButton_Settings_AfterUnpack_DoNothing.UseVisualStyleBackColor = true;
@@ -12009,6 +16273,9 @@
             // 
             resources.ApplyResources(this.radioButton_Settings_AfterUnpack_Download, "radioButton_Settings_AfterUnpack_Download");
             this.radioButton_Settings_AfterUnpack_Download.Checked = true;
+            this.helpProvider1.SetHelpKeyword(this.radioButton_Settings_AfterUnpack_Download, resources.GetString("radioButton_Settings_AfterUnpack_Download.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.radioButton_Settings_AfterUnpack_Download, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("radioButton_Settings_AfterUnpack_Download.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.radioButton_Settings_AfterUnpack_Download, resources.GetString("radioButton_Settings_AfterUnpack_Download.HelpString"));
             this.radioButton_Settings_AfterUnpack_Download.Name = "radioButton_Settings_AfterUnpack_Download";
             this.helpProvider1.SetShowHelp(this.radioButton_Settings_AfterUnpack_Download, ((bool)(resources.GetObject("radioButton_Settings_AfterUnpack_Download.ShowHelp"))));
             this.radioButton_Settings_AfterUnpack_Download.TabStop = true;
@@ -12018,6 +16285,9 @@
             // radioButton_Settings_AfterUnpack_Dialog
             // 
             resources.ApplyResources(this.radioButton_Settings_AfterUnpack_Dialog, "radioButton_Settings_AfterUnpack_Dialog");
+            this.helpProvider1.SetHelpKeyword(this.radioButton_Settings_AfterUnpack_Dialog, resources.GetString("radioButton_Settings_AfterUnpack_Dialog.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.radioButton_Settings_AfterUnpack_Dialog, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("radioButton_Settings_AfterUnpack_Dialog.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.radioButton_Settings_AfterUnpack_Dialog, resources.GetString("radioButton_Settings_AfterUnpack_Dialog.HelpString"));
             this.radioButton_Settings_AfterUnpack_Dialog.Name = "radioButton_Settings_AfterUnpack_Dialog";
             this.helpProvider1.SetShowHelp(this.radioButton_Settings_AfterUnpack_Dialog, ((bool)(resources.GetObject("radioButton_Settings_AfterUnpack_Dialog.ShowHelp"))));
             this.radioButton_Settings_AfterUnpack_Dialog.UseVisualStyleBackColor = true;
@@ -12025,10 +16295,13 @@
             // 
             // groupBox1
             // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.radioButton_Settings_Unpack_Replace);
             this.groupBox1.Controls.Add(this.radioButton_Settings_Unpack_Save);
             this.groupBox1.Controls.Add(this.radioButton_Settings_Unpack_Dialog);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.helpProvider1.SetHelpKeyword(this.groupBox1, resources.GetString("groupBox1.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.groupBox1, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("groupBox1.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.groupBox1, resources.GetString("groupBox1.HelpString"));
             this.groupBox1.Name = "groupBox1";
             this.helpProvider1.SetShowHelp(this.groupBox1, ((bool)(resources.GetObject("groupBox1.ShowHelp"))));
             this.groupBox1.TabStop = false;
@@ -12037,6 +16310,9 @@
             // radioButton_Settings_Unpack_Replace
             // 
             resources.ApplyResources(this.radioButton_Settings_Unpack_Replace, "radioButton_Settings_Unpack_Replace");
+            this.helpProvider1.SetHelpKeyword(this.radioButton_Settings_Unpack_Replace, resources.GetString("radioButton_Settings_Unpack_Replace.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.radioButton_Settings_Unpack_Replace, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("radioButton_Settings_Unpack_Replace.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.radioButton_Settings_Unpack_Replace, resources.GetString("radioButton_Settings_Unpack_Replace.HelpString"));
             this.radioButton_Settings_Unpack_Replace.Name = "radioButton_Settings_Unpack_Replace";
             this.helpProvider1.SetShowHelp(this.radioButton_Settings_Unpack_Replace, ((bool)(resources.GetObject("radioButton_Settings_Unpack_Replace.ShowHelp"))));
             this.radioButton_Settings_Unpack_Replace.TabStop = true;
@@ -12046,6 +16322,9 @@
             // radioButton_Settings_Unpack_Save
             // 
             resources.ApplyResources(this.radioButton_Settings_Unpack_Save, "radioButton_Settings_Unpack_Save");
+            this.helpProvider1.SetHelpKeyword(this.radioButton_Settings_Unpack_Save, resources.GetString("radioButton_Settings_Unpack_Save.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.radioButton_Settings_Unpack_Save, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("radioButton_Settings_Unpack_Save.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.radioButton_Settings_Unpack_Save, resources.GetString("radioButton_Settings_Unpack_Save.HelpString"));
             this.radioButton_Settings_Unpack_Save.Name = "radioButton_Settings_Unpack_Save";
             this.helpProvider1.SetShowHelp(this.radioButton_Settings_Unpack_Save, ((bool)(resources.GetObject("radioButton_Settings_Unpack_Save.ShowHelp"))));
             this.radioButton_Settings_Unpack_Save.TabStop = true;
@@ -12056,6 +16335,9 @@
             // 
             resources.ApplyResources(this.radioButton_Settings_Unpack_Dialog, "radioButton_Settings_Unpack_Dialog");
             this.radioButton_Settings_Unpack_Dialog.Checked = true;
+            this.helpProvider1.SetHelpKeyword(this.radioButton_Settings_Unpack_Dialog, resources.GetString("radioButton_Settings_Unpack_Dialog.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.radioButton_Settings_Unpack_Dialog, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("radioButton_Settings_Unpack_Dialog.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.radioButton_Settings_Unpack_Dialog, resources.GetString("radioButton_Settings_Unpack_Dialog.HelpString"));
             this.radioButton_Settings_Unpack_Dialog.Name = "radioButton_Settings_Unpack_Dialog";
             this.helpProvider1.SetShowHelp(this.radioButton_Settings_Unpack_Dialog, ((bool)(resources.GetObject("radioButton_Settings_Unpack_Dialog.ShowHelp"))));
             this.radioButton_Settings_Unpack_Dialog.TabStop = true;
@@ -12070,9 +16352,16 @@
             // 
             this.colorDialog2.FullOpen = true;
             // 
+            // saveFileDialog1
+            // 
+            resources.ApplyResources(this.saveFileDialog1, "saveFileDialog1");
+            // 
             // button_PreviewBig
             // 
             resources.ApplyResources(this.button_PreviewBig, "button_PreviewBig");
+            this.helpProvider1.SetHelpKeyword(this.button_PreviewBig, resources.GetString("button_PreviewBig.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_PreviewBig, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_PreviewBig.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_PreviewBig, resources.GetString("button_PreviewBig.HelpString"));
             this.button_PreviewBig.Name = "button_PreviewBig";
             this.helpProvider1.SetShowHelp(this.button_PreviewBig, ((bool)(resources.GetObject("button_PreviewBig.ShowHelp"))));
             this.button_PreviewBig.UseVisualStyleBackColor = true;
@@ -12081,6 +16370,9 @@
             // button_PreviewSmall
             // 
             resources.ApplyResources(this.button_PreviewSmall, "button_PreviewSmall");
+            this.helpProvider1.SetHelpKeyword(this.button_PreviewSmall, resources.GetString("button_PreviewSmall.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_PreviewSmall, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_PreviewSmall.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_PreviewSmall, resources.GetString("button_PreviewSmall.HelpString"));
             this.button_PreviewSmall.Name = "button_PreviewSmall";
             this.helpProvider1.SetShowHelp(this.button_PreviewSmall, ((bool)(resources.GetObject("button_PreviewSmall.ShowHelp"))));
             this.button_PreviewSmall.UseVisualStyleBackColor = true;
@@ -12089,6 +16381,9 @@
             // checkBox_WebW
             // 
             resources.ApplyResources(this.checkBox_WebW, "checkBox_WebW");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_WebW, resources.GetString("checkBox_WebW.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_WebW, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_WebW.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_WebW, resources.GetString("checkBox_WebW.HelpString"));
             this.checkBox_WebW.Name = "checkBox_WebW";
             this.helpProvider1.SetShowHelp(this.checkBox_WebW, ((bool)(resources.GetObject("checkBox_WebW.ShowHelp"))));
             this.checkBox_WebW.UseVisualStyleBackColor = true;
@@ -12097,6 +16392,9 @@
             // checkBox_WebB
             // 
             resources.ApplyResources(this.checkBox_WebB, "checkBox_WebB");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_WebB, resources.GetString("checkBox_WebB.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_WebB, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_WebB.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_WebB, resources.GetString("checkBox_WebB.HelpString"));
             this.checkBox_WebB.Name = "checkBox_WebB";
             this.helpProvider1.SetShowHelp(this.checkBox_WebB, ((bool)(resources.GetObject("checkBox_WebB.ShowHelp"))));
             this.checkBox_WebB.UseVisualStyleBackColor = true;
@@ -12110,6 +16408,9 @@
             // button_SavePNG
             // 
             resources.ApplyResources(this.button_SavePNG, "button_SavePNG");
+            this.helpProvider1.SetHelpKeyword(this.button_SavePNG, resources.GetString("button_SavePNG.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_SavePNG, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_SavePNG.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_SavePNG, resources.GetString("button_SavePNG.HelpString"));
             this.button_SavePNG.Name = "button_SavePNG";
             this.helpProvider1.SetShowHelp(this.button_SavePNG, ((bool)(resources.GetObject("button_SavePNG.ShowHelp"))));
             this.button_SavePNG.UseVisualStyleBackColor = true;
@@ -12117,9 +16418,12 @@
             // 
             // panel_Preview
             // 
+            resources.ApplyResources(this.panel_Preview, "panel_Preview");
             this.panel_Preview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_Preview.Cursor = System.Windows.Forms.Cursors.Cross;
-            resources.ApplyResources(this.panel_Preview, "panel_Preview");
+            this.helpProvider1.SetHelpKeyword(this.panel_Preview, resources.GetString("panel_Preview.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.panel_Preview, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_Preview.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.panel_Preview, resources.GetString("panel_Preview.HelpString"));
             this.panel_Preview.Name = "panel_Preview";
             this.helpProvider1.SetShowHelp(this.panel_Preview, ((bool)(resources.GetObject("panel_Preview.ShowHelp"))));
             this.panel_Preview.DoubleClick += new System.EventHandler(this.panel_Preview_DoubleClick);
@@ -12129,6 +16433,9 @@
             // button_SaveGIF
             // 
             resources.ApplyResources(this.button_SaveGIF, "button_SaveGIF");
+            this.helpProvider1.SetHelpKeyword(this.button_SaveGIF, resources.GetString("button_SaveGIF.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_SaveGIF, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_SaveGIF.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_SaveGIF, resources.GetString("button_SaveGIF.HelpString"));
             this.button_SaveGIF.Name = "button_SaveGIF";
             this.helpProvider1.SetShowHelp(this.button_SaveGIF, ((bool)(resources.GetObject("button_SaveGIF.ShowHelp"))));
             this.button_SaveGIF.UseVisualStyleBackColor = true;
@@ -12138,6 +16445,9 @@
             // 
             resources.ApplyResources(this.radioButton_47, "radioButton_47");
             this.radioButton_47.Checked = true;
+            this.helpProvider1.SetHelpKeyword(this.radioButton_47, resources.GetString("radioButton_47.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.radioButton_47, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("radioButton_47.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.radioButton_47, resources.GetString("radioButton_47.HelpString"));
             this.radioButton_47.Name = "radioButton_47";
             this.helpProvider1.SetShowHelp(this.radioButton_47, ((bool)(resources.GetObject("radioButton_47.ShowHelp"))));
             this.radioButton_47.TabStop = true;
@@ -12147,13 +16457,20 @@
             // radioButton_42
             // 
             resources.ApplyResources(this.radioButton_42, "radioButton_42");
+            this.helpProvider1.SetHelpKeyword(this.radioButton_42, resources.GetString("radioButton_42.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.radioButton_42, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("radioButton_42.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.radioButton_42, resources.GetString("radioButton_42.HelpString"));
             this.radioButton_42.Name = "radioButton_42";
             this.helpProvider1.SetShowHelp(this.radioButton_42, ((bool)(resources.GetObject("radioButton_42.ShowHelp"))));
             this.radioButton_42.UseVisualStyleBackColor = true;
+            this.radioButton_42.CheckedChanged += new System.EventHandler(this.radioButton_47_CheckedChanged);
             // 
             // button_PreviewSmall_42
             // 
             resources.ApplyResources(this.button_PreviewSmall_42, "button_PreviewSmall_42");
+            this.helpProvider1.SetHelpKeyword(this.button_PreviewSmall_42, resources.GetString("button_PreviewSmall_42.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.button_PreviewSmall_42, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_PreviewSmall_42.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.button_PreviewSmall_42, resources.GetString("button_PreviewSmall_42.HelpString"));
             this.button_PreviewSmall_42.Name = "button_PreviewSmall_42";
             this.helpProvider1.SetShowHelp(this.button_PreviewSmall_42, ((bool)(resources.GetObject("button_PreviewSmall_42.ShowHelp"))));
             this.button_PreviewSmall_42.UseVisualStyleBackColor = true;
@@ -12166,18 +16483,27 @@
             // label_preview_X
             // 
             resources.ApplyResources(this.label_preview_X, "label_preview_X");
+            this.helpProvider1.SetHelpKeyword(this.label_preview_X, resources.GetString("label_preview_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label_preview_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label_preview_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label_preview_X, resources.GetString("label_preview_X.HelpString"));
             this.label_preview_X.Name = "label_preview_X";
             this.helpProvider1.SetShowHelp(this.label_preview_X, ((bool)(resources.GetObject("label_preview_X.ShowHelp"))));
             // 
             // label_preview_Y
             // 
             resources.ApplyResources(this.label_preview_Y, "label_preview_Y");
+            this.helpProvider1.SetHelpKeyword(this.label_preview_Y, resources.GetString("label_preview_Y.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label_preview_Y, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label_preview_Y.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label_preview_Y, resources.GetString("label_preview_Y.HelpString"));
             this.label_preview_Y.Name = "label_preview_Y";
             this.helpProvider1.SetShowHelp(this.label_preview_Y, ((bool)(resources.GetObject("label_preview_Y.ShowHelp"))));
             // 
             // checkBox_border
             // 
             resources.ApplyResources(this.checkBox_border, "checkBox_border");
+            this.helpProvider1.SetHelpKeyword(this.checkBox_border, resources.GetString("checkBox_border.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_border, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_border.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_border, resources.GetString("checkBox_border.HelpString"));
             this.checkBox_border.Name = "checkBox_border";
             this.helpProvider1.SetShowHelp(this.checkBox_border, ((bool)(resources.GetObject("checkBox_border.ShowHelp"))));
             this.checkBox_border.UseVisualStyleBackColor = true;
@@ -12187,15 +16513,32 @@
             // label_version
             // 
             resources.ApplyResources(this.label_version, "label_version");
+            this.helpProvider1.SetHelpKeyword(this.label_version, resources.GetString("label_version.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label_version, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label_version.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label_version, resources.GetString("label_version.HelpString"));
             this.label_version.Name = "label_version";
             this.helpProvider1.SetShowHelp(this.label_version, ((bool)(resources.GetObject("label_version.ShowHelp"))));
             // 
             // pictureBox1
             // 
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.helpProvider1.SetHelpKeyword(this.pictureBox1, resources.GetString("pictureBox1.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.pictureBox1, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("pictureBox1.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.pictureBox1, resources.GetString("pictureBox1.HelpString"));
             this.pictureBox1.Name = "pictureBox1";
             this.helpProvider1.SetShowHelp(this.pictureBox1, ((bool)(resources.GetObject("pictureBox1.ShowHelp"))));
             this.pictureBox1.TabStop = false;
+            // 
+            // radioButton_gts
+            // 
+            resources.ApplyResources(this.radioButton_gts, "radioButton_gts");
+            this.helpProvider1.SetHelpKeyword(this.radioButton_gts, resources.GetString("radioButton_gts.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.radioButton_gts, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("radioButton_gts.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.radioButton_gts, resources.GetString("radioButton_gts.HelpString"));
+            this.radioButton_gts.Name = "radioButton_gts";
+            this.helpProvider1.SetShowHelp(this.radioButton_gts, ((bool)(resources.GetObject("radioButton_gts.ShowHelp"))));
+            this.radioButton_gts.UseVisualStyleBackColor = true;
+            this.radioButton_gts.CheckedChanged += new System.EventHandler(this.radioButton_47_CheckedChanged);
             // 
             // timer2
             // 
@@ -12205,6 +16548,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.radioButton_gts);
             this.Controls.Add(this.label_version);
             this.Controls.Add(this.checkBox_border);
             this.Controls.Add(this.label_preview_Y);
@@ -12223,7 +16567,9 @@
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HelpButton = true;
+            this.helpProvider1.SetHelpKeyword(this, resources.GetString("$this.HelpKeyword"));
             this.helpProvider1.SetHelpNavigator(this, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("$this.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this, resources.GetString("$this.HelpString"));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
@@ -12450,6 +16796,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_Scale_Radius_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_Scale_Center_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_Scale_Center_X)).EndInit();
+            this.tabPage35.ResumeLayout(false);
+            this.tabPage35.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_EndAngle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_StartAngle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_Offset_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_Offset_X)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_X)).EndInit();
             this.panel_Status.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage17.ResumeLayout(false);
@@ -12515,14 +16869,50 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStar_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStar_X)).EndInit();
             this.panel_StepsProgress.ResumeLayout(false);
-            this.panel_StepsProgress.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_EndAngle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_StartAngle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_Width)).EndInit();
+            this.tabControl6.ResumeLayout(false);
+            this.tabPage36.ResumeLayout(false);
+            this.tabPage36.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_Radius_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_Radius_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_Center_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_Center_X)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_EndAngle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_StartAngle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_Width)).EndInit();
+            this.tabPage37.ResumeLayout(false);
+            this.tabPage37.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_EndAngle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_StartAngle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_Offset_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_Offset_X)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_X)).EndInit();
+            this.panel_AnalogDate.ResumeLayout(false);
+            this.tabControl7.ResumeLayout(false);
+            this.tabPage38.ResumeLayout(false);
+            this.tabPage38.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_EndAngle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_StartAngle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_Offset_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_Offset_X)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_X)).EndInit();
+            this.tabPage39.ResumeLayout(false);
+            this.tabPage39.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_EndAngle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_StartAngle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_Offset_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_Offset_X)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_X)).EndInit();
+            this.tabPage40.ResumeLayout(false);
+            this.tabPage40.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_EndAngle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_StartAngle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_Offset_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_Offset_X)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_X)).EndInit();
             this.panel_Date.ResumeLayout(false);
             this.panel_Date.PerformLayout();
             this.tabControl_Date.ResumeLayout(false);
@@ -13615,6 +18005,93 @@
         private System.Windows.Forms.Label label365;
         private System.Windows.Forms.Label label366;
         private System.Windows.Forms.Label label367;
+        private System.Windows.Forms.TabPage tabPage35;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Battery_ClockHand_Offset_Y;
+        private System.Windows.Forms.Label label368;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Battery_ClockHand_Offset_X;
+        private System.Windows.Forms.Label label369;
+        private System.Windows.Forms.ComboBox comboBox_Battery_ClockHand_Image;
+        private System.Windows.Forms.Label label370;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Battery_ClockHand_Y;
+        private System.Windows.Forms.Label label371;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Battery_ClockHand_X;
+        private System.Windows.Forms.Label label372;
+        private System.Windows.Forms.CheckBox checkBox_Battery_ClockHand;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Battery_ClockHand_EndAngle;
+        private System.Windows.Forms.Label label374;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Battery_ClockHand_StartAngle;
+        private System.Windows.Forms.Label label373;
+        private System.Windows.Forms.TabControl tabControl6;
+        private System.Windows.Forms.TabPage tabPage36;
+        private System.Windows.Forms.TabPage tabPage37;
+        private System.Windows.Forms.CheckBox checkBox_StProg_ClockHand;
+        private System.Windows.Forms.NumericUpDown numericUpDown_StProg_ClockHand_EndAngle;
+        private System.Windows.Forms.Label label375;
+        private System.Windows.Forms.NumericUpDown numericUpDown_StProg_ClockHand_StartAngle;
+        private System.Windows.Forms.Label label376;
+        private System.Windows.Forms.NumericUpDown numericUpDown_StProg_ClockHand_Offset_Y;
+        private System.Windows.Forms.Label label377;
+        private System.Windows.Forms.NumericUpDown numericUpDown_StProg_ClockHand_Offset_X;
+        private System.Windows.Forms.Label label378;
+        private System.Windows.Forms.ComboBox comboBox_StProg_ClockHand_Image;
+        private System.Windows.Forms.Label label379;
+        private System.Windows.Forms.NumericUpDown numericUpDown_StProg_ClockHand_Y;
+        private System.Windows.Forms.Label label380;
+        private System.Windows.Forms.NumericUpDown numericUpDown_StProg_ClockHand_X;
+        private System.Windows.Forms.Label label381;
+        private System.Windows.Forms.Panel panel_AnalogDate;
+        private System.Windows.Forms.Button button_AnalogDate;
+        private System.Windows.Forms.TabControl tabControl7;
+        private System.Windows.Forms.TabPage tabPage38;
+        private System.Windows.Forms.CheckBox checkBox_ADDay_ClockHand;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ADDay_ClockHand_EndAngle;
+        private System.Windows.Forms.Label label396;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ADDay_ClockHand_StartAngle;
+        private System.Windows.Forms.Label label397;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ADDay_ClockHand_Offset_Y;
+        private System.Windows.Forms.Label label398;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ADDay_ClockHand_Offset_X;
+        private System.Windows.Forms.Label label399;
+        private System.Windows.Forms.ComboBox comboBox_ADDay_ClockHand_Image;
+        private System.Windows.Forms.Label label400;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ADDay_ClockHand_Y;
+        private System.Windows.Forms.Label label401;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ADDay_ClockHand_X;
+        private System.Windows.Forms.Label label402;
+        private System.Windows.Forms.TabPage tabPage39;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ADWeekDay_ClockHand_EndAngle;
+        private System.Windows.Forms.Label label389;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ADWeekDay_ClockHand_StartAngle;
+        private System.Windows.Forms.Label label390;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ADWeekDay_ClockHand_Offset_Y;
+        private System.Windows.Forms.Label label391;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ADWeekDay_ClockHand_Offset_X;
+        private System.Windows.Forms.Label label392;
+        private System.Windows.Forms.ComboBox comboBox_ADWeekDay_ClockHand_Image;
+        private System.Windows.Forms.Label label393;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ADWeekDay_ClockHand_Y;
+        private System.Windows.Forms.Label label394;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ADWeekDay_ClockHand_X;
+        private System.Windows.Forms.Label label395;
+        private System.Windows.Forms.CheckBox checkBox_ADWeekDay_ClockHand;
+        private System.Windows.Forms.TabPage tabPage40;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ADMonth_ClockHand_EndAngle;
+        private System.Windows.Forms.Label label382;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ADMonth_ClockHand_StartAngle;
+        private System.Windows.Forms.Label label383;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ADMonth_ClockHand_Offset_Y;
+        private System.Windows.Forms.Label label384;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ADMonth_ClockHand_Offset_X;
+        private System.Windows.Forms.Label label385;
+        private System.Windows.Forms.ComboBox comboBox_ADMonth_ClockHand_Image;
+        private System.Windows.Forms.Label label386;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ADMonth_ClockHand_Y;
+        private System.Windows.Forms.Label label387;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ADMonth_ClockHand_X;
+        private System.Windows.Forms.Label label388;
+        private System.Windows.Forms.CheckBox checkBox_ADMonth_ClockHand;
+        private System.Windows.Forms.RadioButton radioButton_gts;
+        private System.Windows.Forms.Button button_Reset;
     }
 }
 

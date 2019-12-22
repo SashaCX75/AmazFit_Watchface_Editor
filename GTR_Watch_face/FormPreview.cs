@@ -24,83 +24,111 @@ namespace GTR_Watch_face
             //f1.button1.PerformClick();
             if (radioButton_small.Checked)
             {
-                if (Model_47.model_47)
+                if (Model_Wath.model_gtr47)
                 {
                     panel_Preview.Size = new Size(230, 230);
                     this.Size = new Size(230 + 22, 230 + 66); 
                 }
-                else
+                else if (Model_Wath.model_gtr42)
                 {
                     panel_Preview.Size = new Size(198, 198);
                     this.Size = new Size(198 + 22, 198 + 66);
+                }
+                else if (Model_Wath.model_gts)
+                {
+                    panel_Preview.Size = new Size(176, 223);
+                    this.Size = new Size(176 + 22, 223 + 66);
                 }
                 scale = 0.5f;
             }
 
             if (radioButton_normal.Checked)
             {
-                if (Model_47.model_47)
+                if (Model_Wath.model_gtr47)
                 {
                     panel_Preview.Size = new Size(456, 456);
                     this.Size = new Size(456 + 22, 456 + 66);
                 }
-                else
+                else if (Model_Wath.model_gtr42)
                 {
                     panel_Preview.Size = new Size(392, 392);
                     this.Size = new Size(392 + 22, 392 + 66);
+                }
+                else if (Model_Wath.model_gts)
+                {
+                    panel_Preview.Size = new Size(350, 444);
+                    this.Size = new Size(350 + 22, 444 + 66);
                 }
                 scale = 1f;
             }
 
             if (radioButton_large.Checked)
             {
-                if (Model_47.model_47)
+                if (Model_Wath.model_gtr47)
                 {
                     panel_Preview.Size = new Size(683, 683);
                     this.Size = new Size(683 + 22, 683 + 66);
                 }
-                else
+                else if (Model_Wath.model_gtr42)
                 {
                     panel_Preview.Size = new Size(586, 586);
                     this.Size = new Size(586 + 22, 586 + 66);
+                }
+                else if (Model_Wath.model_gts)
+                {
+                    panel_Preview.Size = new Size(524, 665);
+                    this.Size = new Size(524 + 22, 665 + 66);
                 }
                 scale = 1.5f;
             }
 
             if (radioButton_xlarge.Checked)
             {
-                if (Model_47.model_47)
+                if (Model_Wath.model_gtr47)
                 {
                     panel_Preview.Size = new Size(909, 909);
                     this.Size = new Size(909 + 22, 909 + 66);
                 }
-                else
+                else if (Model_Wath.model_gtr42)
                 {
                     panel_Preview.Size = new Size(781, 781);
                     this.Size = new Size(781 + 22, 781 + 66);
+                }
+                else if (Model_Wath.model_gts)
+                {
+                    panel_Preview.Size = new Size(697, 885);
+                    this.Size = new Size(697 + 22, 885 + 66);
                 }
                 scale = 2f;
             }
 
             if (radioButton_xxlarge.Checked)
             {
-                if (Model_47.model_47)
+                if (Model_Wath.model_gtr47)
                 {
                     panel_Preview.Size = new Size(1135, 1135);
                     this.Size = new Size(1135 + 22, 1135 + 66);
                 }
-                else
+                else if (Model_Wath.model_gtr42)
                 {
                     panel_Preview.Size = new Size(975, 975);
                     this.Size = new Size(975 + 22, 975 + 66);
+                }
+                else if (Model_Wath.model_gts)
+                {
+                    panel_Preview.Size = new Size(1135, 1105);
+                    this.Size = new Size(870 + 22, 1105 + 66);
                 }
                 scale = 2.5f;
             }
         }
 
-        public class Model_47
+        public class Model_Wath
         {
-            public static bool model_47 { get; set; }
+            public static bool model_gtr47 { get; set; }
+            public static bool model_gtr42 { get; set; }
+            public static bool model_gts { get; set; }
+
         }
 
         private void panel_Preview_MouseMove(object sender, MouseEventArgs e)

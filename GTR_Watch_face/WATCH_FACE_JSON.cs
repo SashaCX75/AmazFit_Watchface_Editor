@@ -12,6 +12,8 @@
         public Activity Activity { get; set; }
         /// <summary>Дата</summary>
         public Date Date { get; set; }
+        /// <summary>Индикаторы даты</summary>
+        public DaysProgress DaysProgress { get; set; }
         /// <summary>Погода</summary>
         public Weather Weather { get; set; }
         /// <summary>Прогресс шагов</summary>
@@ -75,16 +77,30 @@
         public ImageSet WeekDay { get; set; }
         public DateUnknown3 Unknown3 { get; set; }
         public Coordinates Unknown4 { get; set; }
+        /// <summary>Год</summary>
         public Year Year { get; set; }
+    }
+
+    public class DaysProgress
+    {
+        /// <summary>Стрелка месяца</summary>
+        public ClockHand AnalogMonth { get; set; }
+        /// <summary>Стрелка дней</summary>
+        public ClockHand UnknownField2 { get; set; }
+        /// <summary>Стрелка дня недели</summary>
+        public ClockHand AnalogDOW { get; set; }
     }
 
     public class StepsProgress
     {
         public ImageSet Images1 { get; set; }
-        public ImageSet Images2 { get; set; }
+        /// <summary>Прогресс шагов в виде набора картинок и координат к ним</summary>
+        public IconSet Sliced { get; set; }
         public ImageSet Images4 { get; set; }
         /// <summary>Шкала прогресса</summary>
         public CircleScale Circle { get; set; }
+        /// <summary>Индикатор прогресса шагов</summary>
+        public ClockHand ClockHand { get; set; }
     }
 
     public class Status
@@ -105,7 +121,10 @@
         public Number Text { get; set; }
         /// <summary>Процент заряда в виде набора картинок</summary>
         public ImageSet Images { get; set; }
+        /// <summary>Процент заряда в виде набора картинок и координат к ним</summary>
         public IconSet Icons { get; set; }
+        /// <summary>Индикатор</summary>
+        public ClockHand Unknown4 { get; set; }
         /// <summary>Иконка %</summary>
         public ImageW Percent { get; set; }
         /// <summary>Процент заряда в виде шкалы прогрессы</summary>
@@ -204,9 +223,11 @@
     public class IconSet
     {
         /// <summary>Номер первого изображения</summary>
-        public long FirtsImageIndex { get; set; }
+        public long ImageIndex { get; set; }
         /// <summary>Координаты</summary>
-        public Coordinates Coordinates { get; set; }
+        //public Coordinates Coordinates { get; set; }
+        //public string Coordinates { get; set; }
+        public Coordinates[] Coordinates { get; set; }
     }
 
     public class IconW

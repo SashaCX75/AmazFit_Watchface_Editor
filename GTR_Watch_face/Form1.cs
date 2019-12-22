@@ -36,6 +36,10 @@ namespace GTR_Watch_face
         PROGRAM_SETTINGS Program_Settings;
 
 
+        int offSetX = 227;
+        int offSetY = 227;
+
+
         public Form1(string[] args)
         {
             //Logger.WriteLine("Form1");
@@ -132,8 +136,8 @@ namespace GTR_Watch_face
         //    }
         //    else
         //    {
-        //        Properties.Settings.Default.unpack_command_42 = textBox_unpack_command.Text;
-        //        Properties.Settings.Default.pack_command_42 = textBox_pack_command.Text;
+        //        Properties.Settings.Default.unpack_command_GTR42 = textBox_unpack_command.Text;
+        //        Properties.Settings.Default.pack_command_GTR42 = textBox_pack_command.Text;
         //    }
         //    Properties.Settings.Default.Save();
         //}
@@ -168,17 +172,17 @@ namespace GTR_Watch_face
                 File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
             }
             textBox_pack_unpack_dir.Text = Program_Settings.pack_unpack_dir;
-            if (Program_Settings.Model_47)
+            if (Program_Settings.Model_GTR47)
             {
-                radioButton_47.Checked = Program_Settings.Model_47;
-                textBox_unpack_command.Text = Program_Settings.unpack_command_47;
-                textBox_pack_command.Text = Program_Settings.pack_command_47;
+                radioButton_47.Checked = Program_Settings.Model_GTR47;
+                textBox_unpack_command.Text = Program_Settings.unpack_command_GTR47;
+                textBox_pack_command.Text = Program_Settings.pack_command_GTR47;
             }
             else
             {
-                radioButton_42.Checked = Program_Settings.Model_42;
-                textBox_unpack_command.Text = Program_Settings.unpack_command_42;
-                textBox_pack_command.Text = Program_Settings.pack_command_42;
+                radioButton_42.Checked = Program_Settings.Model_GTR42;
+                textBox_unpack_command.Text = Program_Settings.unpack_command_GTR42;
+                textBox_pack_command.Text = Program_Settings.pack_command_GTR42;
             }
 
             PreviewView = false;
@@ -1088,10 +1092,10 @@ namespace GTR_Watch_face
                     NullValueHandling = NullValueHandling.Ignore
                 });
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show(Properties.FormStrings.Message_JsonError_Text, Properties.FormStrings.Message_Error_Caption, 
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(Properties.FormStrings.Message_JsonError_Text + Environment.NewLine + ex, 
+                    Properties.FormStrings.Message_Error_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             //Logger.WriteLine("Распознали json формат");
 
@@ -1155,129 +1159,6 @@ namespace GTR_Watch_face
             }
         }
         
-
-        // сбрасываем все настройки отображения
-        private void SettingsClear()
-        {
-            comboBox_Background.Items.Clear();
-            comboBox_Background.Text = "";
-            comboBox_Preview.Items.Clear();
-            comboBox_Preview.Text = "";
-
-            comboBox_Hours_Tens_Image.Text = "";
-            comboBox_Hours_Tens_Image.Items.Clear();
-            comboBox_Hours_Ones_Image.Text = "";
-            comboBox_Hours_Ones_Image.Items.Clear();
-
-            comboBox_Min_Tens_Image.Text = "";
-            comboBox_Min_Tens_Image.Items.Clear();
-            comboBox_Min_Ones_Image.Text = "";
-            comboBox_Min_Ones_Image.Items.Clear();
-
-            comboBox_Sec_Tens_Image.Text = "";
-            comboBox_Sec_Tens_Image.Items.Clear();
-            comboBox_Sec_Ones_Image.Text = "";
-            comboBox_Sec_Ones_Image.Items.Clear();
-
-            comboBox_Image_Am.Text = "";
-            comboBox_Image_Am.Items.Clear();
-            comboBox_Image_Pm.Text = "";
-            comboBox_Image_Pm.Items.Clear();
-            comboBox_Delimiter_Image.Text = "";
-            comboBox_Delimiter_Image.Items.Clear();
-
-
-            comboBox_WeekDay_Image.Text = "";
-            comboBox_WeekDay_Image.Items.Clear();
-            comboBox_OneLine_Delimiter.Text = "";
-            comboBox_OneLine_Delimiter.Items.Clear();
-            comboBox_OneLine_Image.Text = "";
-            comboBox_OneLine_Image.Items.Clear();
-            comboBox_MonthName_Image.Text = "";
-            comboBox_MonthName_Image.Items.Clear();
-            comboBox_MonthAndDayM_Image.Text = "";
-            comboBox_MonthAndDayM_Image.Items.Clear();
-            comboBox_MonthAndDayD_Image.Text = "";
-            comboBox_MonthAndDayD_Image.Items.Clear();
-            comboBox_Year_Image.Text = "";
-            comboBox_Year_Image.Items.Clear();
-            comboBox_Year_Delimiter.Text = "";
-            comboBox_Year_Delimiter.Items.Clear();
-
-            comboBox_ActivityGoal_Image.Text = "";
-            comboBox_ActivityGoal_Image.Items.Clear();
-            comboBox_ActivitySteps_Image.Text = "";
-            comboBox_ActivitySteps_Image.Items.Clear();
-            comboBox_ActivityDistance_Image.Text = "";
-            comboBox_ActivityDistance_Image.Items.Clear();
-            comboBox_ActivityDistance_Decimal.Text = "";
-            comboBox_ActivityDistance_Decimal.Items.Clear();
-            comboBox_ActivityDistance_Suffix.Text = "";
-            comboBox_ActivityDistance_Suffix.Items.Clear();
-            comboBox_ActivityPuls_Image.Text = "";
-            comboBox_ActivityPuls_Image.Items.Clear();
-            comboBox_ActivityCalories_Image.Text = "";
-            comboBox_ActivityCalories_Image.Items.Clear();
-            comboBox_ActivityStar_Image.Text = "";
-            comboBox_ActivityStar_Image.Items.Clear();
-
-            comboBox_Bluetooth_On.Text = "";
-            comboBox_Bluetooth_On.Items.Clear();
-            comboBox_Bluetooth_Off.Text = "";
-            comboBox_Bluetooth_Off.Items.Clear();
-            comboBox_Alarm_On.Text = "";
-            comboBox_Alarm_On.Items.Clear();
-            comboBox_Alarm_Off.Text = "";
-            comboBox_Alarm_Off.Items.Clear();
-            comboBox_Lock_On.Text = "";
-            comboBox_Lock_On.Items.Clear();
-            comboBox_Lock_Off.Text = "";
-            comboBox_Lock_Off.Items.Clear();
-            comboBox_DND_On.Text = "";
-            comboBox_DND_On.Items.Clear();
-            comboBox_DND_Off.Text = "";
-            comboBox_DND_Off.Items.Clear();
-
-
-            comboBox_Battery_Text_Image.Text = "";
-            comboBox_Battery_Text_Image.Items.Clear();
-            comboBox_Battery_Img_Image.Text = "";
-            comboBox_Battery_Img_Image.Items.Clear();
-            comboBox_Battery_Percent_Image.Text = "";
-            comboBox_Battery_Percent_Image.Items.Clear();
-
-            comboBox_AnalogClock_Hour_Image.Text = "";
-            comboBox_AnalogClock_Hour_Image.Items.Clear();
-            comboBox_AnalogClock_Min_Image.Text = "";
-            comboBox_AnalogClock_Min_Image.Items.Clear();
-            comboBox_AnalogClock_Sec_Image.Text = "";
-            comboBox_AnalogClock_Sec_Image.Items.Clear();
-
-            comboBox_HourCenterImage_Image.Text = "";
-            comboBox_HourCenterImage_Image.Items.Clear();
-            comboBox_MinCenterImage_Image.Text = "";
-            comboBox_MinCenterImage_Image.Items.Clear();
-            comboBox_SecCenterImage_Image.Text = "";
-            comboBox_SecCenterImage_Image.Items.Clear();
-
-            comboBox_Weather_Text_Image.Text = "";
-            comboBox_Weather_Text_Image.Items.Clear();
-            comboBox_Weather_Text_DegImage.Text = "";
-            comboBox_Weather_Text_DegImage.Items.Clear();
-            comboBox_Weather_Text_MinusImage.Text = "";
-            comboBox_Weather_Text_MinusImage.Items.Clear();
-            comboBox_Weather_Text_NDImage.Text = "";
-            comboBox_Weather_Text_NDImage.Items.Clear();
-            comboBox_Weather_Icon_Image.Text = "";
-            comboBox_Weather_Icon_Image.Items.Clear();
-            comboBox_Weather_Icon_NDImage.Text = "";
-            comboBox_Weather_Icon_NDImage.Items.Clear();
-            comboBox_Weather_Day_Image.Text = "";
-            comboBox_Weather_Day_Image.Items.Clear();
-            comboBox_Weather_Night_Image.Text = "";
-            comboBox_Weather_Night_Image.Items.Clear();
-
-        }
 
 #region выбираем данные для предпросмотра
         private void SetPreferences1()
@@ -1788,6 +1669,7 @@ namespace GTR_Watch_face
                 panel_Background.Height = 30;
                 panel_Time.Height = 1;
                 panel_Date.Height = 1;
+                panel_AnalogDate.Height = 1;
                 panel_StepsProgress.Height = 1;
                 panel_Activity.Height = 1;
                 panel_Status.Height = 1;
@@ -1804,6 +1686,7 @@ namespace GTR_Watch_face
                 panel_Background.Height = 1;
                 panel_Time.Height = 330;
                 panel_Date.Height = 1;
+                panel_AnalogDate.Height = 1;
                 panel_StepsProgress.Height = 1;
                 panel_Activity.Height = 1;
                 panel_Status.Height = 1;
@@ -1821,6 +1704,7 @@ namespace GTR_Watch_face
                 panel_Background.Height = 1;
                 panel_Time.Height = 1;
                 panel_Date.Height = 350;
+                panel_AnalogDate.Height = 1;
                 panel_StepsProgress.Height = 1;
                 panel_Activity.Height = 1;
                 panel_Status.Height = 1;
@@ -1831,6 +1715,24 @@ namespace GTR_Watch_face
             else panel_Date.Height = 1;
         }
 
+        private void button_AnalogDate_Click(object sender, EventArgs e)
+        {
+            if (panel_AnalogDate.Height == 1)
+            {
+                panel_Background.Height = 1;
+                panel_Time.Height = 1;
+                panel_Date.Height = 1;
+                panel_AnalogDate.Height = 145;
+                panel_StepsProgress.Height = 1;
+                panel_Activity.Height = 1;
+                panel_Status.Height = 1;
+                panel_Battery.Height = 1;
+                panel_AnalogClock.Height = 1;
+                panel_Weather.Height = 1;
+            }
+            else panel_AnalogDate.Height = 1;
+        }
+
         private void button_StepsProgress_Click(object sender, EventArgs e)
         {
             if (panel_StepsProgress.Height == 1)
@@ -1838,7 +1740,8 @@ namespace GTR_Watch_face
                 panel_Background.Height = 1;
                 panel_Time.Height = 1;
                 panel_Date.Height = 1;
-                panel_StepsProgress.Height = 105;
+                panel_AnalogDate.Height = 1;
+                panel_StepsProgress.Height = 145;
                 panel_Activity.Height = 1;
                 panel_Status.Height = 1;
                 panel_Battery.Height = 1;
@@ -1855,6 +1758,7 @@ namespace GTR_Watch_face
                 panel_Background.Height = 1;
                 panel_Time.Height = 1;
                 panel_Date.Height = 1;
+                panel_AnalogDate.Height = 1;
                 panel_StepsProgress.Height = 1;
                 panel_Activity.Height = 190;
                 panel_Status.Height = 1;
@@ -1872,6 +1776,7 @@ namespace GTR_Watch_face
                 panel_Background.Height = 1;
                 panel_Time.Height = 1;
                 panel_Date.Height = 1;
+                panel_AnalogDate.Height = 1;
                 panel_StepsProgress.Height = 1;
                 panel_Activity.Height = 1;
                 panel_Status.Height = 82;
@@ -1889,10 +1794,11 @@ namespace GTR_Watch_face
                 panel_Background.Height = 1;
                 panel_Time.Height = 1;
                 panel_Date.Height = 1;
+                panel_AnalogDate.Height = 1;
                 panel_StepsProgress.Height = 1;
                 panel_Activity.Height = 1;
                 panel_Status.Height = 1;
-                panel_Battery.Height = 155;
+                panel_Battery.Height = 165;
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
             }
@@ -1906,6 +1812,7 @@ namespace GTR_Watch_face
                 panel_Background.Height = 1;
                 panel_Time.Height = 1;
                 panel_Date.Height = 1;
+                panel_AnalogDate.Height = 1;
                 panel_StepsProgress.Height = 1;
                 panel_Activity.Height = 1;
                 panel_Status.Height = 1;
@@ -1923,6 +1830,7 @@ namespace GTR_Watch_face
                 panel_Background.Height = 1;
                 panel_Time.Height = 1;
                 panel_Date.Height = 1;
+                panel_AnalogDate.Height = 1;
                 panel_StepsProgress.Height = 1;
                 panel_Activity.Height = 1;
                 panel_Status.Height = 1;
@@ -2086,6 +1994,63 @@ namespace GTR_Watch_face
             label367.Enabled = b;
         }
 
+        private void checkBox_ADDay_ClockHand_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_ADDay_ClockHand.Checked;
+            numericUpDown_ADDay_ClockHand_X.Enabled = b;
+            numericUpDown_ADDay_ClockHand_Y.Enabled = b;
+            numericUpDown_ADDay_ClockHand_Offset_X.Enabled = b;
+            numericUpDown_ADDay_ClockHand_Offset_Y.Enabled = b;
+            comboBox_ADDay_ClockHand_Image.Enabled = b;
+            numericUpDown_ADDay_ClockHand_StartAngle.Enabled = b;
+            numericUpDown_ADDay_ClockHand_EndAngle.Enabled = b;
+            label396.Enabled = b;
+            label397.Enabled = b;
+            label398.Enabled = b;
+            label399.Enabled = b;
+            label400.Enabled = b;
+            label401.Enabled = b;
+            label402.Enabled = b;
+        }
+
+        private void checkBox_ADWeekDay_ClockHand_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_ADWeekDay_ClockHand.Checked;
+            numericUpDown_ADWeekDay_ClockHand_X.Enabled = b;
+            numericUpDown_ADWeekDay_ClockHand_Y.Enabled = b;
+            numericUpDown_ADWeekDay_ClockHand_Offset_X.Enabled = b;
+            numericUpDown_ADWeekDay_ClockHand_Offset_Y.Enabled = b;
+            comboBox_ADWeekDay_ClockHand_Image.Enabled = b;
+            numericUpDown_ADWeekDay_ClockHand_StartAngle.Enabled = b;
+            numericUpDown_ADWeekDay_ClockHand_EndAngle.Enabled = b;
+            label389.Enabled = b;
+            label390.Enabled = b;
+            label391.Enabled = b;
+            label392.Enabled = b;
+            label393.Enabled = b;
+            label394.Enabled = b;
+            label395.Enabled = b;
+        }
+
+        private void checkBox_ADMonth_ClockHand_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_ADMonth_ClockHand.Checked;
+            numericUpDown_ADMonth_ClockHand_X.Enabled = b;
+            numericUpDown_ADMonth_ClockHand_Y.Enabled = b;
+            numericUpDown_ADMonth_ClockHand_Offset_X.Enabled = b;
+            numericUpDown_ADMonth_ClockHand_Offset_Y.Enabled = b;
+            comboBox_ADMonth_ClockHand_Image.Enabled = b;
+            numericUpDown_ADMonth_ClockHand_StartAngle.Enabled = b;
+            numericUpDown_ADMonth_ClockHand_EndAngle.Enabled = b;
+            label382.Enabled = b;
+            label383.Enabled = b;
+            label384.Enabled = b;
+            label385.Enabled = b;
+            label386.Enabled = b;
+            label387.Enabled = b;
+            label388.Enabled = b;
+        }
+
         private void checkBox_Activity_CheckedChanged(object sender, EventArgs e)
         {
             tabControl_Activity.Enabled = checkBox_Activity.Checked;
@@ -2113,6 +2078,26 @@ namespace GTR_Watch_face
             label110.Enabled = b;
             label111.Enabled = b;
             label348.Enabled = b;
+        }
+
+        private void checkBox_StProg_ClockHand_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_StProg_ClockHand.Checked;
+            numericUpDown_StProg_ClockHand_X.Enabled = b;
+            numericUpDown_StProg_ClockHand_Y.Enabled = b;
+            numericUpDown_StProg_ClockHand_Offset_X.Enabled = b;
+            numericUpDown_StProg_ClockHand_Offset_Y.Enabled = b;
+            comboBox_StProg_ClockHand_Image.Enabled = b;
+            numericUpDown_StProg_ClockHand_StartAngle.Enabled = b;
+            numericUpDown_StProg_ClockHand_EndAngle.Enabled = b;
+
+            label375.Enabled = b;
+            label376.Enabled = b;
+            label377.Enabled = b;
+            label378.Enabled = b;
+            label379.Enabled = b;
+            label380.Enabled = b;
+            label381.Enabled = b;
         }
 
         private void checkBox_ActivityStar_CheckedChanged(object sender, EventArgs e)
@@ -2395,6 +2380,25 @@ namespace GTR_Watch_face
             label347.Enabled = b;
         }
 
+        private void checkBox_Battery_ClockHand_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Battery_ClockHand.Checked;
+            numericUpDown_Battery_ClockHand_X.Enabled = b;
+            numericUpDown_Battery_ClockHand_Y.Enabled = b;
+            numericUpDown_Battery_ClockHand_Offset_X.Enabled = b;
+            numericUpDown_Battery_ClockHand_Offset_Y.Enabled = b;
+            comboBox_Battery_ClockHand_Image.Enabled = b;
+            numericUpDown_Battery_ClockHand_StartAngle.Enabled = b;
+            numericUpDown_Battery_ClockHand_EndAngle.Enabled = b;
+            label368.Enabled = b;
+            label369.Enabled = b;
+            label370.Enabled = b;
+            label371.Enabled = b;
+            label372.Enabled = b;
+            label373.Enabled = b;
+            label374.Enabled = b;
+        }
+        
         private void checkBox_AnalogClock_CheckedChanged(object sender, EventArgs e)
         {
             bool b = checkBox_AnalogClock.Checked;
@@ -3231,7 +3235,9 @@ namespace GTR_Watch_face
 
                 formPreview.panel_Preview.Resize += (object senderResize, EventArgs eResize) =>
                 {
-                    Form_Preview.Model_47.model_47 = radioButton_47.Checked;
+                    Form_Preview.Model_Wath.model_gtr47 = radioButton_47.Checked;
+                    Form_Preview.Model_Wath.model_gtr42 = radioButton_42.Checked;
+                    Form_Preview.Model_Wath.model_gts = radioButton_gts.Checked;
                     Graphics gPanelPreviewResize = formPreview.panel_Preview.CreateGraphics();
                     gPanelPreviewResize.Clear(panel_Preview.BackColor);
                     formPreview.radioButton_CheckedChanged(sender, e);
@@ -3256,7 +3262,7 @@ namespace GTR_Watch_face
 
                 formPreview.panel_Preview.Paint += (object senderPaint, PaintEventArgs ePaint) =>
                 {
-                    //Form_Preview.Model_47.model_47 = radioButton_47.Checked;
+                    //Form_Preview.Model_GTR47.model_gtr47 = radioButton_47.Checked;
                     //Graphics gPanelPreviewPaint = formPreview.panel_Preview.CreateGraphics();
                     //gPanelPreviewPaint.Clear(panel_Preview.BackColor);
                     //formPreview.radioButton_CheckedChanged(sender, e);
@@ -3277,13 +3283,15 @@ namespace GTR_Watch_face
                 };
             }
 
-            Form_Preview.Model_47.model_47 = radioButton_47.Checked;
+            Form_Preview.Model_Wath.model_gtr47 = radioButton_47.Checked;
+            Form_Preview.Model_Wath.model_gtr42 = radioButton_42.Checked;
+            Form_Preview.Model_Wath.model_gts = radioButton_gts.Checked;
             Graphics gPanel = formPreview.panel_Preview.CreateGraphics();
             gPanel.Clear(panel_Preview.BackColor);
             //Pen pen = new Pen(Color.Blue, 1);
             //Random rnd = new Random();
             //gPanel.DrawLine(pen, new Point(0, 0), new Point(rnd.Next(0, 450), rnd.Next(0, 450)));
-            //Form_Preview.Model_47.model_47 = radioButton_47.Checked;
+            //Form_Preview.Model_GTR47.model_gtr47 = radioButton_47.Checked;
             formPreview.radioButton_CheckedChanged(sender, e);
             float scale = 1.0f;
             if (formPreview.radioButton_small.Checked) scale = 0.5f;
@@ -4572,12 +4580,14 @@ namespace GTR_Watch_face
             {
                 panel_Preview.Height = 230;
                 panel_Preview.Width = 230;
+                offSetX = 227;
+                offSetY = 227;
 
-                //Properties.Settings.Default.unpack_command_42 = textBox_unpack_command.Text;
-                //Properties.Settings.Default.pack_command_42 = textBox_pack_command.Text;
+                //Properties.Settings.Default.unpack_command_GTR42 = textBox_unpack_command.Text;
+                //Properties.Settings.Default.pack_command_GTR42 = textBox_pack_command.Text;
                 //Properties.Settings.Default.Save();
-                Program_Settings.unpack_command_42 = textBox_unpack_command.Text;
-                Program_Settings.pack_command_42 = textBox_pack_command.Text;
+                //Program_Settings.unpack_command_GTR42 = textBox_unpack_command.Text;
+                //Program_Settings.pack_command_GTR42 = textBox_pack_command.Text;
 
                 //textBox_unpack_command.Text = "--gtr 47 --file";
                 //textBox_pack_command.Text = "--gtr 47 --file";
@@ -4585,38 +4595,52 @@ namespace GTR_Watch_face
                 //    textBox_unpack_command.Text = Properties.Settings.Default.unpack_command;
                 //if (Properties.Settings.Default.pack_command.Length > 1)
                 //    textBox_pack_command.Text = Properties.Settings.Default.pack_command;
-                textBox_unpack_command.Text = Program_Settings.unpack_command_47;
-                textBox_pack_command.Text = Program_Settings.pack_command_47;
+                textBox_unpack_command.Text = Program_Settings.unpack_command_GTR47;
+                textBox_pack_command.Text = Program_Settings.pack_command_GTR47;
+
+                button_unpack.Enabled = true;
+                button_pack.Enabled = true;
+                button_zip.Enabled = true;
             }
-            else
+            else if (radioButton_42.Checked)
             {
                 panel_Preview.Height = 198;
                 panel_Preview.Width = 198;
+                offSetX = 195;
+                offSetY = 195;
+                
+                textBox_unpack_command.Text = Program_Settings.unpack_command_GTR42;
+                textBox_pack_command.Text = Program_Settings.pack_command_GTR42;
 
-                //Properties.Settings.Default.unpack_command = textBox_unpack_command.Text;
-                //Properties.Settings.Default.pack_command = textBox_pack_command.Text;
-                //Properties.Settings.Default.Save();
-                Program_Settings.unpack_command_47 = textBox_unpack_command.Text;
-                Program_Settings.pack_command_47 = textBox_pack_command.Text;
+                button_unpack.Enabled = true;
+                button_pack.Enabled = true;
+                button_zip.Enabled = true;
+            }
+            else
+            {
+                panel_Preview.Height = 223;
+                panel_Preview.Width = 176;
+                offSetX = 174;
+                offSetY = 221;
+                
+                textBox_unpack_command.Text = Program_Settings.unpack_command_GTS;
+                textBox_pack_command.Text = Program_Settings.pack_command_GTS;
 
-                //textBox_unpack_command.Text = "--gtr 42 --file";
-                //textBox_pack_command.Text = "--gtr 42 --file";
-                //if (Properties.Settings.Default.unpack_command_42.Length > 1)
-                //    textBox_unpack_command.Text = Properties.Settings.Default.unpack_command_42;
-                //if (Properties.Settings.Default.pack_command_42.Length > 1)
-                //    textBox_pack_command.Text = Properties.Settings.Default.pack_command_42;
-                textBox_unpack_command.Text = Program_Settings.unpack_command_42;
-                textBox_pack_command.Text = Program_Settings.pack_command_42;
+                button_unpack.Enabled = false;
+                button_pack.Enabled = false;
+                button_zip.Enabled = false;
             }
 
             if ((formPreview != null) && (formPreview.Visible))
             {
-                Form_Preview.Model_47.model_47 = radioButton_47.Checked;
+                Form_Preview.Model_Wath.model_gtr47 = radioButton_47.Checked;
+                Form_Preview.Model_Wath.model_gtr42 = radioButton_42.Checked;
+                Form_Preview.Model_Wath.model_gts = radioButton_gts.Checked;
                 formPreview.radioButton_CheckedChanged(sender, e);
             }
 
-            Program_Settings.Model_47 = radioButton_47.Checked;
-            Program_Settings.Model_42 = radioButton_42.Checked;
+            Program_Settings.Model_GTR47 = radioButton_47.Checked;
+            Program_Settings.Model_GTR42 = radioButton_42.Checked;
             string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
             {
                 //DefaultValueHandling = DefaultValueHandling.Ignore,
@@ -4632,7 +4656,9 @@ namespace GTR_Watch_face
             timer2.Enabled = false;
             if ((formPreview != null) && (formPreview.Visible))
             {
-                Form_Preview.Model_47.model_47 = radioButton_47.Checked;
+                Form_Preview.Model_Wath.model_gtr47 = radioButton_47.Checked;
+                Form_Preview.Model_Wath.model_gtr42 = radioButton_42.Checked;
+                Form_Preview.Model_Wath.model_gts = radioButton_gts.Checked;
                 Graphics gPanelPreviewPaint = formPreview.panel_Preview.CreateGraphics();
                 gPanelPreviewPaint.Clear(panel_Preview.BackColor);
                 formPreview.radioButton_CheckedChanged(sender, e);
@@ -4878,6 +4904,48 @@ namespace GTR_Watch_face
             }
         }
 
+        private void numericUpDown_OffSetX_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if (e.X <= numericUpDown.Controls[1].Width + 1)
+            {
+                // Click is in text area
+                numericUpDown.Value = MouseСoordinates.X - offSetX;
+            }
+            else
+            {
+                if (e.Y <= numericUpDown.Controls[1].Height / 2)
+                {
+                    // Click is on Up arrow
+                }
+                else
+                {
+                    // Click is on Down arrow
+                }
+            }
+        }
+
+        private void numericUpDown_OffSetY_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if (e.X <= numericUpDown.Controls[1].Width + 1)
+            {
+                // Click is in text area
+                numericUpDown.Value = MouseСoordinates.Y - offSetY;
+            }
+            else
+            {
+                if (e.Y <= numericUpDown.Controls[1].Height / 2)
+                {
+                    // Click is on Up arrow
+                }
+                else
+                {
+                    // Click is on Down arrow
+                }
+            }
+        }
+
         // сохраняем настройки
         private void radioButton_Settings_Unpack_Dialog_CheckedChanged(object sender, EventArgs e)
         {
@@ -4931,13 +4999,18 @@ namespace GTR_Watch_face
         {
             if (radioButton_47.Checked)
             {
-                Program_Settings.unpack_command_47 = textBox_unpack_command.Text;
-                Program_Settings.pack_command_47 = textBox_pack_command.Text;
+                Program_Settings.unpack_command_GTR47 = textBox_unpack_command.Text;
+                Program_Settings.pack_command_GTR47 = textBox_pack_command.Text;
             }
-            else
+            else if(radioButton_42.Checked)
             {
-                Program_Settings.unpack_command_42 = textBox_unpack_command.Text;
-                Program_Settings.pack_command_42 = textBox_pack_command.Text;
+                Program_Settings.unpack_command_GTR42 = textBox_unpack_command.Text;
+                Program_Settings.pack_command_GTR42 = textBox_pack_command.Text;
+            }
+            else if (radioButton_gts.Checked)
+            {
+                Program_Settings.unpack_command_GTS = textBox_unpack_command.Text;
+                Program_Settings.pack_command_GTS = textBox_pack_command.Text;
             }
 
             string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
@@ -4959,6 +5032,20 @@ namespace GTR_Watch_face
             {
                 if (MessageBox.Show(Properties.FormStrings.Message_Restart_Text1 + Environment.NewLine +
                                 Properties.FormStrings.Message_Restart_Text2, Properties.FormStrings.Message_Restart_Caption, 
+                                MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    Application.Restart();
+                }
+            }
+        }
+
+        private void button_Reset_Click(object sender, EventArgs e)
+        {
+            if (File.Exists("Settings.json"))
+            {
+                File.Delete("Settings.json");
+                if (MessageBox.Show(Properties.FormStrings.Message_Restart_Text1 + Environment.NewLine +
+                                Properties.FormStrings.Message_Restart_Text2, Properties.FormStrings.Message_Restart_Caption,
                                 MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     Application.Restart();

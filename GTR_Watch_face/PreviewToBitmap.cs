@@ -12,9 +12,6 @@ namespace GTR_Watch_face
     public partial class Form1 : Form
     {
 
-        int offSetX = 227;
-        int offSetY = 227;
-
         /// <summary>формируем изображение на панедли Graphics</summary>
         /// <param name="gPanel">Поверхность для рисования</param>
         /// <param name="scale">Масштаб прорисовки</param>
@@ -667,6 +664,52 @@ namespace GTR_Watch_face
             }
             #endregion
 
+            #region DaysProgress
+            // прогресс числа стрелкой
+            if ((checkBox_ADDay_ClockHand.Checked) && (comboBox_ADDay_ClockHand_Image.SelectedIndex >= 0))
+            {
+                int x1 = (int)numericUpDown_ADDay_ClockHand_X.Value;
+                int y1 = (int)numericUpDown_ADDay_ClockHand_Y.Value;
+                int offsetX = (int)numericUpDown_ADDay_ClockHand_Offset_X.Value;
+                int offsetY = (int)numericUpDown_ADDay_ClockHand_Offset_Y.Value;
+                int image_index = comboBox_ADDay_ClockHand_Image.SelectedIndex;
+                float startAngle = (float)(numericUpDown_ADDay_ClockHand_StartAngle.Value);
+                float endAngle = (float)(numericUpDown_ADDay_ClockHand_EndAngle.Value);
+                int Day = Watch_Face_Preview_Set.Date.Day;
+                Day--;
+                float angle = startAngle + Day * (endAngle - startAngle) / 30;
+                DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle, model_47);
+            }
+
+            // прогресс дней недели стрелкой
+            if ((checkBox_ADWeekDay_ClockHand.Checked) && (comboBox_ADWeekDay_ClockHand_Image.SelectedIndex >= 0))
+            {
+                int x1 = (int)numericUpDown_ADWeekDay_ClockHand_X.Value;
+                int y1 = (int)numericUpDown_ADWeekDay_ClockHand_Y.Value;
+                int offsetX = (int)numericUpDown_ADWeekDay_ClockHand_Offset_X.Value;
+                int offsetY = (int)numericUpDown_ADWeekDay_ClockHand_Offset_Y.Value;
+                int image_index = comboBox_ADWeekDay_ClockHand_Image.SelectedIndex;
+                float startAngle = (float)(numericUpDown_ADWeekDay_ClockHand_StartAngle.Value);
+                float endAngle = (float)(numericUpDown_ADWeekDay_ClockHand_EndAngle.Value);
+                float angle = startAngle + Watch_Face_Preview_Set.Date.WeekDay * (endAngle - startAngle) / 7;
+                DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle, model_47);
+            }
+
+            // прогресс месяца стрелкой
+            if ((checkBox_ADMonth_ClockHand.Checked) && (comboBox_ADMonth_ClockHand_Image.SelectedIndex >= 0))
+            {
+                int x1 = (int)numericUpDown_ADMonth_ClockHand_X.Value;
+                int y1 = (int)numericUpDown_ADMonth_ClockHand_Y.Value;
+                int offsetX = (int)numericUpDown_ADMonth_ClockHand_Offset_X.Value;
+                int offsetY = (int)numericUpDown_ADMonth_ClockHand_Offset_Y.Value;
+                int image_index = comboBox_ADMonth_ClockHand_Image.SelectedIndex;
+                float startAngle = (float)(numericUpDown_ADMonth_ClockHand_StartAngle.Value);
+                float endAngle = (float)(numericUpDown_ADMonth_ClockHand_EndAngle.Value);
+                float angle = startAngle + Watch_Face_Preview_Set.Date.Month * (endAngle - startAngle) / 12;
+                DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle, model_47);
+            }
+            #endregion
+
             #region Weather
             if (checkBox_Weather.Checked)
             {
@@ -848,6 +891,22 @@ namespace GTR_Watch_face
                     DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
                 }
 
+                // прогресс шагов стрелкой
+                if ((checkBox_StProg_ClockHand.Checked) && (comboBox_StProg_ClockHand_Image.SelectedIndex >= 0))
+                {
+                    int x1 = (int)numericUpDown_StProg_ClockHand_X.Value;
+                    int y1 = (int)numericUpDown_StProg_ClockHand_Y.Value;
+                    int offsetX = (int)numericUpDown_StProg_ClockHand_Offset_X.Value;
+                    int offsetY = (int)numericUpDown_StProg_ClockHand_Offset_Y.Value;
+                    int image_index = comboBox_StProg_ClockHand_Image.SelectedIndex;
+                    float startAngle = (float)(numericUpDown_StProg_ClockHand_StartAngle.Value);
+                    float endAngle = (float)(numericUpDown_StProg_ClockHand_EndAngle.Value);
+                    float angle = startAngle + Watch_Face_Preview_Set.Activity.Steps *
+                        (endAngle - startAngle) / Watch_Face_Preview_Set.Activity.StepsGoal;
+                    if (Watch_Face_Preview_Set.Activity.Steps > Watch_Face_Preview_Set.Activity.StepsGoal) angle = endAngle;
+                    DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle, model_47);
+                }
+
                 if ((checkBox_ActivityDistance.Checked) && (comboBox_ActivityDistance_Image.SelectedIndex >= 0))
                 {
                     int x1 = (int)numericUpDown_ActivityDistance_StartCorner_X.Value;
@@ -1010,6 +1069,7 @@ namespace GTR_Watch_face
             {
                 if (checkBox_Battery.Checked)
                 {
+                    // заряд числом
                     if ((checkBox_Battery_Text.Checked) && (comboBox_Battery_Text_Image.SelectedIndex >= 0))
                     {
                         int x1 = (int)numericUpDown_Battery_Text_StartCorner_X.Value;
@@ -1025,14 +1085,7 @@ namespace GTR_Watch_face
                         DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
                     }
 
-                    if ((checkBox_Battery_Percent.Checked) && (comboBox_Battery_Percent_Image.SelectedIndex >= 0))
-                    {
-                        src = new Bitmap(ListImagesFullName[comboBox_Battery_Percent_Image.SelectedIndex]);
-                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Battery_Percent_X.Value,
-                            (int)numericUpDown_Battery_Percent_Y.Value, src.Width, src.Height));
-                        src.Dispose();
-                    }
-
+                    // заряд картинкой
                     if ((checkBox_Battery_Img.Checked) && (comboBox_Battery_Img_Image.SelectedIndex >= 0))
                     {
                         float count = (float)numericUpDown_Battery_Img_Count.Value - 1;
@@ -1041,6 +1094,15 @@ namespace GTR_Watch_face
                         src = new Bitmap(ListImagesFullName[i]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Battery_Img_X.Value,
                             (int)numericUpDown_Battery_Img_Y.Value, src.Width, src.Height));
+                        src.Dispose();
+                    }
+
+                    // значек процентов
+                    if ((checkBox_Battery_Percent.Checked) && (comboBox_Battery_Percent_Image.SelectedIndex >= 0))
+                    {
+                        src = new Bitmap(ListImagesFullName[comboBox_Battery_Percent_Image.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Battery_Percent_X.Value,
+                            (int)numericUpDown_Battery_Percent_Y.Value, src.Width, src.Height));
                         src.Dispose();
                     }
 
@@ -1090,6 +1152,20 @@ namespace GTR_Watch_face
                         {
 
                         }
+                    }
+
+                    // заряд прогрессом
+                    if ((checkBox_Battery_ClockHand.Checked) && (comboBox_Battery_ClockHand_Image.SelectedIndex >= 0))
+                    {
+                        int x1 = (int)numericUpDown_Battery_ClockHand_X.Value;
+                        int y1 = (int)numericUpDown_Battery_ClockHand_Y.Value;
+                        int offsetX = (int)numericUpDown_Battery_ClockHand_Offset_X.Value;
+                        int offsetY = (int)numericUpDown_Battery_ClockHand_Offset_Y.Value;
+                        int image_index = comboBox_Battery_ClockHand_Image.SelectedIndex;
+                        float startAngle = (float)(numericUpDown_Battery_ClockHand_StartAngle.Value);
+                        float endAngle = (float)(numericUpDown_Battery_ClockHand_EndAngle.Value);
+                        float angle = startAngle + Watch_Face_Preview_Set.Battery * (endAngle - startAngle) / 100;
+                        DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle, model_47);
                     }
                 }
             }
@@ -1197,8 +1273,6 @@ namespace GTR_Watch_face
             #endregion
 
             #region Mesh
-            int center = 227;
-            if (!model_47) center = 195;
 
             if (WMesh)
             {
@@ -1207,11 +1281,11 @@ namespace GTR_Watch_face
                 if (panel_Preview.Height > 300) LineDistance = 15;
                 for (i = 0; i < 30; i++)
                 {
-                    gPanel.DrawLine(pen, new Point(center + i * LineDistance, 0), new Point(center + i * LineDistance, 454));
-                    gPanel.DrawLine(pen, new Point(center - i * LineDistance, 0), new Point(center - i * LineDistance, 454));
+                    gPanel.DrawLine(pen, new Point(offSetX + i * LineDistance, 0), new Point(offSetX + i * LineDistance, 454));
+                    gPanel.DrawLine(pen, new Point(offSetX - i * LineDistance, 0), new Point(offSetX - i * LineDistance, 454));
 
-                    gPanel.DrawLine(pen, new Point(0, center + i * LineDistance), new Point(454, center + i * LineDistance));
-                    gPanel.DrawLine(pen, new Point(0, center - i * LineDistance), new Point(454, center - i * LineDistance));
+                    gPanel.DrawLine(pen, new Point(0, offSetY + i * LineDistance), new Point(454, offSetY + i * LineDistance));
+                    gPanel.DrawLine(pen, new Point(0, offSetY - i * LineDistance), new Point(454, offSetY - i * LineDistance));
                 }
             }
 
@@ -1222,11 +1296,11 @@ namespace GTR_Watch_face
                 if (panel_Preview.Height > 300) LineDistance = 15;
                 for (i = 0; i < 30; i++)
                 {
-                    gPanel.DrawLine(pen, new Point(center + i * LineDistance, 0), new Point(center + i * LineDistance, 454));
-                    gPanel.DrawLine(pen, new Point(center - i * LineDistance, 0), new Point(center - i * LineDistance, 454));
+                    gPanel.DrawLine(pen, new Point(offSetX + i * LineDistance, 0), new Point(offSetX + i * LineDistance, 454));
+                    gPanel.DrawLine(pen, new Point(offSetX - i * LineDistance, 0), new Point(offSetX - i * LineDistance, 454));
 
-                    gPanel.DrawLine(pen, new Point(0, center + i * LineDistance), new Point(454, center + i * LineDistance));
-                    gPanel.DrawLine(pen, new Point(0, center - i * LineDistance), new Point(454, center - i * LineDistance));
+                    gPanel.DrawLine(pen, new Point(0, offSetY + i * LineDistance), new Point(454, offSetY + i * LineDistance));
+                    gPanel.DrawLine(pen, new Point(0, offSetY - i * LineDistance), new Point(454, offSetY - i * LineDistance));
                 }
             }
             #endregion
@@ -1711,11 +1785,11 @@ namespace GTR_Watch_face
             //graphics.RotateTransform(angle);
             var src = new Bitmap(ListImagesFullName[image_index]);
             //graphics.DrawImage(src, new Rectangle(227 - x1, 227 - y1, src.Width, src.Height));
-            if (!model_47)
-            {
-                offSetX = 195;
-                offSetY = 195;
-            }
+            //if (!model_gtr47)
+            //{
+            //    offSetX = 195;
+            //    offSetY = 195;
+            //}
             graphics.TranslateTransform(offSetX + offsetX, offSetY + offsetY);
             graphics.RotateTransform(angle);
             graphics.DrawImage(src, new Rectangle(-x1, -y1, src.Width, src.Height));
