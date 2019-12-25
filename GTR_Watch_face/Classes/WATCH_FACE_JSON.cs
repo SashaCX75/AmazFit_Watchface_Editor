@@ -67,6 +67,7 @@
         public FormattedNumber Steps { get; set; }
         /// <summary>Шаги</summary>
         public ImageW StarImage { get; set; }
+        public long? NoDataImageIndex { get; set; }
     }
 
     public class Date

@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button_zip_unpack = new System.Windows.Forms.Button();
@@ -116,13 +116,13 @@
             this.button_Set11 = new System.Windows.Forms.Button();
             this.button_SetWeather = new System.Windows.Forms.Button();
             this.panel_SetWeather = new System.Windows.Forms.Panel();
+            this.numericUpDown_WeatherSet_Temp = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_WeatherSet_NightTemp = new System.Windows.Forms.NumericUpDown();
             this.label288 = new System.Windows.Forms.Label();
             this.label299 = new System.Windows.Forms.Label();
             this.comboBox_WeatherSet_Icon = new System.Windows.Forms.ComboBox();
             this.numericUpDown_WeatherSet_DayTemp = new System.Windows.Forms.NumericUpDown();
             this.checkBox_WeatherSet_Temp = new System.Windows.Forms.CheckBox();
-            this.numericUpDown_WeatherSet_Temp = new System.Windows.Forms.NumericUpDown();
             this.checkBox_WeatherSet_DayTemp = new System.Windows.Forms.CheckBox();
             this.panel_PreviewStates = new System.Windows.Forms.Panel();
             this.button_JsonPreview_Random = new System.Windows.Forms.Button();
@@ -348,7 +348,7 @@
             this.label40 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.button_Set1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView_ImagesList = new System.Windows.Forms.DataGridView();
             this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameFile = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnImage = new System.Windows.Forms.DataGridViewImageColumn();
@@ -644,6 +644,8 @@
             this.label183 = new System.Windows.Forms.Label();
             this.button_Status = new System.Windows.Forms.Button();
             this.panel_Activity = new System.Windows.Forms.Panel();
+            this.comboBox_Activity_NDImage = new System.Windows.Forms.ComboBox();
+            this.label403 = new System.Windows.Forms.Label();
             this.tabControl_Activity = new System.Windows.Forms.TabControl();
             this.tabPage11 = new System.Windows.Forms.TabPage();
             this.numericUpDown_ActivityGoal_EndCorner_X = new System.Windows.Forms.NumericUpDown();
@@ -1123,9 +1125,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_Set11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_Set11)).BeginInit();
             this.panel_SetWeather.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherSet_Temp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherSet_NightTemp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherSet_DayTemp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherSet_Temp)).BeginInit();
             this.panel_PreviewStates.SuspendLayout();
             this.panel_Set10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Goal_Set10)).BeginInit();
@@ -1197,7 +1199,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Distance_Set1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_Set1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_Set1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ImagesList)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel_Weather.SuspendLayout();
@@ -1637,7 +1639,7 @@
             this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage2.Controls.Add(this.checkBox1);
             this.tabPage2.Controls.Add(this.panel3);
-            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Controls.Add(this.dataGridView_ImagesList);
             this.tabPage2.Controls.Add(this.button_images);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.button_JSON);
@@ -2621,19 +2623,44 @@
             // 
             resources.ApplyResources(this.panel_SetWeather, "panel_SetWeather");
             this.panel_SetWeather.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_SetWeather.Controls.Add(this.numericUpDown_WeatherSet_Temp);
             this.panel_SetWeather.Controls.Add(this.numericUpDown_WeatherSet_NightTemp);
             this.panel_SetWeather.Controls.Add(this.label288);
             this.panel_SetWeather.Controls.Add(this.label299);
             this.panel_SetWeather.Controls.Add(this.comboBox_WeatherSet_Icon);
             this.panel_SetWeather.Controls.Add(this.numericUpDown_WeatherSet_DayTemp);
             this.panel_SetWeather.Controls.Add(this.checkBox_WeatherSet_Temp);
-            this.panel_SetWeather.Controls.Add(this.numericUpDown_WeatherSet_Temp);
             this.panel_SetWeather.Controls.Add(this.checkBox_WeatherSet_DayTemp);
             this.helpProvider1.SetHelpKeyword(this.panel_SetWeather, resources.GetString("panel_SetWeather.HelpKeyword"));
             this.helpProvider1.SetHelpNavigator(this.panel_SetWeather, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_SetWeather.HelpNavigator"))));
             this.helpProvider1.SetHelpString(this.panel_SetWeather, resources.GetString("panel_SetWeather.HelpString"));
             this.panel_SetWeather.Name = "panel_SetWeather";
             this.helpProvider1.SetShowHelp(this.panel_SetWeather, ((bool)(resources.GetObject("panel_SetWeather.ShowHelp"))));
+            // 
+            // numericUpDown_WeatherSet_Temp
+            // 
+            resources.ApplyResources(this.numericUpDown_WeatherSet_Temp, "numericUpDown_WeatherSet_Temp");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_WeatherSet_Temp, resources.GetString("numericUpDown_WeatherSet_Temp.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_WeatherSet_Temp, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_WeatherSet_Temp.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_WeatherSet_Temp, resources.GetString("numericUpDown_WeatherSet_Temp.HelpString"));
+            this.numericUpDown_WeatherSet_Temp.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WeatherSet_Temp.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WeatherSet_Temp.Name = "numericUpDown_WeatherSet_Temp";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_WeatherSet_Temp, ((bool)(resources.GetObject("numericUpDown_WeatherSet_Temp.ShowHelp"))));
+            this.numericUpDown_WeatherSet_Temp.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WeatherSet_Temp.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // numericUpDown_WeatherSet_NightTemp
             // 
@@ -2756,31 +2783,6 @@
             this.checkBox_WeatherSet_Temp.UseVisualStyleBackColor = true;
             this.checkBox_WeatherSet_Temp.CheckedChanged += new System.EventHandler(this.checkBox_WeatherSet_Temp_CheckedChanged);
             this.checkBox_WeatherSet_Temp.Click += new System.EventHandler(this.checkBox_Click);
-            // 
-            // numericUpDown_WeatherSet_Temp
-            // 
-            resources.ApplyResources(this.numericUpDown_WeatherSet_Temp, "numericUpDown_WeatherSet_Temp");
-            this.helpProvider1.SetHelpKeyword(this.numericUpDown_WeatherSet_Temp, resources.GetString("numericUpDown_WeatherSet_Temp.HelpKeyword"));
-            this.helpProvider1.SetHelpNavigator(this.numericUpDown_WeatherSet_Temp, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_WeatherSet_Temp.HelpNavigator"))));
-            this.helpProvider1.SetHelpString(this.numericUpDown_WeatherSet_Temp, resources.GetString("numericUpDown_WeatherSet_Temp.HelpString"));
-            this.numericUpDown_WeatherSet_Temp.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WeatherSet_Temp.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WeatherSet_Temp.Name = "numericUpDown_WeatherSet_Temp";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_WeatherSet_Temp, ((bool)(resources.GetObject("numericUpDown_WeatherSet_Temp.ShowHelp"))));
-            this.numericUpDown_WeatherSet_Temp.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WeatherSet_Temp.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // checkBox_WeatherSet_DayTemp
             // 
@@ -5871,29 +5873,29 @@
             this.button_Set1.UseVisualStyleBackColor = true;
             this.button_Set1.Click += new System.EventHandler(this.button_Set1_Click);
             // 
-            // dataGridView1
+            // dataGridView_ImagesList
             // 
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            resources.ApplyResources(this.dataGridView_ImagesList, "dataGridView_ImagesList");
+            this.dataGridView_ImagesList.AllowUserToAddRows = false;
+            this.dataGridView_ImagesList.AllowUserToDeleteRows = false;
+            this.dataGridView_ImagesList.AllowUserToResizeRows = false;
+            this.dataGridView_ImagesList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_ImagesList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Number,
             this.NameFile,
             this.ColumnImage});
-            this.helpProvider1.SetHelpKeyword(this.dataGridView1, resources.GetString("dataGridView1.HelpKeyword"));
-            this.helpProvider1.SetHelpNavigator(this.dataGridView1, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dataGridView1.HelpNavigator"))));
-            this.helpProvider1.SetHelpString(this.dataGridView1, resources.GetString("dataGridView1.HelpString"));
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.helpProvider1.SetShowHelp(this.dataGridView1, ((bool)(resources.GetObject("dataGridView1.ShowHelp"))));
+            this.helpProvider1.SetHelpKeyword(this.dataGridView_ImagesList, resources.GetString("dataGridView_ImagesList.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.dataGridView_ImagesList, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("dataGridView_ImagesList.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.dataGridView_ImagesList, resources.GetString("dataGridView_ImagesList.HelpString"));
+            this.dataGridView_ImagesList.Name = "dataGridView_ImagesList";
+            this.dataGridView_ImagesList.RowHeadersVisible = false;
+            this.helpProvider1.SetShowHelp(this.dataGridView_ImagesList, ((bool)(resources.GetObject("dataGridView_ImagesList.ShowHelp"))));
             // 
             // Number
             // 
             this.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Number.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Number.DefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.Number, "Number");
             this.Number.Name = "Number";
             this.Number.ReadOnly = true;
@@ -6224,14 +6226,12 @@
             // вставитьКоординатуХToolStripMenuItem
             // 
             resources.ApplyResources(this.вставитьКоординатуХToolStripMenuItem, "вставитьКоординатуХToolStripMenuItem");
-            this.вставитьКоординатуХToolStripMenuItem.Image = global::GTR_Watch_face.Properties.Resources.Actions_insert_text_icon;
             this.вставитьКоординатуХToolStripMenuItem.Name = "вставитьКоординатуХToolStripMenuItem";
             this.вставитьКоординатуХToolStripMenuItem.Click += new System.EventHandler(this.вставитьКоординатуХToolStripMenuItem_Click);
             // 
             // копироватьToolStripMenuItem
             // 
             resources.ApplyResources(this.копироватьToolStripMenuItem, "копироватьToolStripMenuItem");
-            this.копироватьToolStripMenuItem.Image = global::GTR_Watch_face.Properties.Resources.Files_Copy_File_icon;
             this.копироватьToolStripMenuItem.Name = "копироватьToolStripMenuItem";
             this.копироватьToolStripMenuItem.Click += new System.EventHandler(this.копироватьToolStripMenuItem_Click);
             // 
@@ -6300,21 +6300,18 @@
             // toolStripMenuItem1
             // 
             resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
-            this.toolStripMenuItem1.Image = global::GTR_Watch_face.Properties.Resources.Actions_insert_text_icon;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.вставитьКоординатуYToolStripMenuItem_Click);
             // 
             // копироватьToolStripMenuItem1
             // 
             resources.ApplyResources(this.копироватьToolStripMenuItem1, "копироватьToolStripMenuItem1");
-            this.копироватьToolStripMenuItem1.Image = global::GTR_Watch_face.Properties.Resources.Files_Copy_File_icon;
             this.копироватьToolStripMenuItem1.Name = "копироватьToolStripMenuItem1";
             this.копироватьToolStripMenuItem1.Click += new System.EventHandler(this.копироватьToolStripMenuItem_Click);
             // 
             // вставитьToolStripMenuItem1
             // 
             resources.ApplyResources(this.вставитьToolStripMenuItem1, "вставитьToolStripMenuItem1");
-            this.вставитьToolStripMenuItem1.Image = global::GTR_Watch_face.Properties.Resources.Files_Clipboard_icon;
             this.вставитьToolStripMenuItem1.Name = "вставитьToolStripMenuItem1";
             this.вставитьToolStripMenuItem1.Click += new System.EventHandler(this.вставитьToolStripMenuItem_Click);
             // 
@@ -9205,6 +9202,7 @@
             this.helpProvider1.SetHelpNavigator(this.tabPage35, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage35.HelpNavigator"))));
             this.helpProvider1.SetHelpString(this.tabPage35, resources.GetString("tabPage35.HelpString"));
             this.tabPage35.Name = "tabPage35";
+            this.helpProvider1.SetShowHelp(this.tabPage35, ((bool)(resources.GetObject("tabPage35.ShowHelp"))));
             // 
             // numericUpDown_Battery_ClockHand_EndAngle
             // 
@@ -10032,6 +10030,8 @@
             // 
             resources.ApplyResources(this.panel_Activity, "panel_Activity");
             this.panel_Activity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Activity.Controls.Add(this.comboBox_Activity_NDImage);
+            this.panel_Activity.Controls.Add(this.label403);
             this.panel_Activity.Controls.Add(this.tabControl_Activity);
             this.panel_Activity.Controls.Add(this.checkBox_Activity);
             this.helpProvider1.SetHelpKeyword(this.panel_Activity, resources.GetString("panel_Activity.HelpKeyword"));
@@ -10039,6 +10039,32 @@
             this.helpProvider1.SetHelpString(this.panel_Activity, resources.GetString("panel_Activity.HelpString"));
             this.panel_Activity.Name = "panel_Activity";
             this.helpProvider1.SetShowHelp(this.panel_Activity, ((bool)(resources.GetObject("panel_Activity.ShowHelp"))));
+            // 
+            // comboBox_Activity_NDImage
+            // 
+            resources.ApplyResources(this.comboBox_Activity_NDImage, "comboBox_Activity_NDImage");
+            this.comboBox_Activity_NDImage.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Activity_NDImage.DropDownWidth = 75;
+            this.comboBox_Activity_NDImage.FormattingEnabled = true;
+            this.helpProvider1.SetHelpKeyword(this.comboBox_Activity_NDImage, resources.GetString("comboBox_Activity_NDImage.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.comboBox_Activity_NDImage, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("comboBox_Activity_NDImage.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.comboBox_Activity_NDImage, resources.GetString("comboBox_Activity_NDImage.HelpString"));
+            this.comboBox_Activity_NDImage.Name = "comboBox_Activity_NDImage";
+            this.helpProvider1.SetShowHelp(this.comboBox_Activity_NDImage, ((bool)(resources.GetObject("comboBox_Activity_NDImage.ShowHelp"))));
+            this.comboBox_Activity_NDImage.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Activity_NDImage.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Activity_NDImage.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Activity_NDImage.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Activity_NDImage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // label403
+            // 
+            resources.ApplyResources(this.label403, "label403");
+            this.helpProvider1.SetHelpKeyword(this.label403, resources.GetString("label403.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label403, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label403.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label403, resources.GetString("label403.HelpString"));
+            this.label403.Name = "label403";
+            this.helpProvider1.SetShowHelp(this.label403, ((bool)(resources.GetObject("label403.ShowHelp"))));
             // 
             // tabControl_Activity
             // 
@@ -11763,6 +11789,7 @@
             this.helpProvider1.SetHelpString(this.tabControl6, resources.GetString("tabControl6.HelpString"));
             this.tabControl6.Name = "tabControl6";
             this.tabControl6.SelectedIndex = 0;
+            this.helpProvider1.SetShowHelp(this.tabControl6, ((bool)(resources.GetObject("tabControl6.ShowHelp"))));
             // 
             // tabPage36
             // 
@@ -11791,6 +11818,7 @@
             this.helpProvider1.SetHelpNavigator(this.tabPage36, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage36.HelpNavigator"))));
             this.helpProvider1.SetHelpString(this.tabPage36, resources.GetString("tabPage36.HelpString"));
             this.tabPage36.Name = "tabPage36";
+            this.helpProvider1.SetShowHelp(this.tabPage36, ((bool)(resources.GetObject("tabPage36.ShowHelp"))));
             // 
             // numericUpDown_StepsProgress_Radius_Y
             // 
@@ -12082,6 +12110,7 @@
             this.helpProvider1.SetHelpNavigator(this.tabPage37, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage37.HelpNavigator"))));
             this.helpProvider1.SetHelpString(this.tabPage37, resources.GetString("tabPage37.HelpString"));
             this.tabPage37.Name = "tabPage37";
+            this.helpProvider1.SetShowHelp(this.tabPage37, ((bool)(resources.GetObject("tabPage37.ShowHelp"))));
             // 
             // checkBox_StProg_ClockHand
             // 
@@ -12326,6 +12355,7 @@
             this.helpProvider1.SetHelpNavigator(this.panel_AnalogDate, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("panel_AnalogDate.HelpNavigator"))));
             this.helpProvider1.SetHelpString(this.panel_AnalogDate, resources.GetString("panel_AnalogDate.HelpString"));
             this.panel_AnalogDate.Name = "panel_AnalogDate";
+            this.helpProvider1.SetShowHelp(this.panel_AnalogDate, ((bool)(resources.GetObject("panel_AnalogDate.ShowHelp"))));
             // 
             // tabControl7
             // 
@@ -12338,6 +12368,7 @@
             this.helpProvider1.SetHelpString(this.tabControl7, resources.GetString("tabControl7.HelpString"));
             this.tabControl7.Name = "tabControl7";
             this.tabControl7.SelectedIndex = 0;
+            this.helpProvider1.SetShowHelp(this.tabControl7, ((bool)(resources.GetObject("tabControl7.ShowHelp"))));
             this.tabControl7.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_OffSetX_MouseDoubleClick);
             // 
             // tabPage38
@@ -12363,6 +12394,7 @@
             this.helpProvider1.SetHelpNavigator(this.tabPage38, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage38.HelpNavigator"))));
             this.helpProvider1.SetHelpString(this.tabPage38, resources.GetString("tabPage38.HelpString"));
             this.tabPage38.Name = "tabPage38";
+            this.helpProvider1.SetShowHelp(this.tabPage38, ((bool)(resources.GetObject("tabPage38.ShowHelp"))));
             // 
             // checkBox_ADDay_ClockHand
             // 
@@ -12394,7 +12426,7 @@
             this.numericUpDown_ADDay_ClockHand_EndAngle.Name = "numericUpDown_ADDay_ClockHand_EndAngle";
             this.helpProvider1.SetShowHelp(this.numericUpDown_ADDay_ClockHand_EndAngle, ((bool)(resources.GetObject("numericUpDown_ADDay_ClockHand_EndAngle.ShowHelp"))));
             this.numericUpDown_ADDay_ClockHand_EndAngle.Value = new decimal(new int[] {
-            495,
+            348,
             0,
             0,
             0});
@@ -12427,11 +12459,6 @@
             -2147483648});
             this.numericUpDown_ADDay_ClockHand_StartAngle.Name = "numericUpDown_ADDay_ClockHand_StartAngle";
             this.helpProvider1.SetShowHelp(this.numericUpDown_ADDay_ClockHand_StartAngle, ((bool)(resources.GetObject("numericUpDown_ADDay_ClockHand_StartAngle.ShowHelp"))));
-            this.numericUpDown_ADDay_ClockHand_StartAngle.Value = new decimal(new int[] {
-            225,
-            0,
-            0,
-            0});
             this.numericUpDown_ADDay_ClockHand_StartAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // label397
@@ -12610,6 +12637,7 @@
             this.helpProvider1.SetHelpNavigator(this.tabPage39, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage39.HelpNavigator"))));
             this.helpProvider1.SetHelpString(this.tabPage39, resources.GetString("tabPage39.HelpString"));
             this.tabPage39.Name = "tabPage39";
+            this.helpProvider1.SetShowHelp(this.tabPage39, ((bool)(resources.GetObject("tabPage39.ShowHelp"))));
             // 
             // numericUpDown_ADWeekDay_ClockHand_EndAngle
             // 
@@ -12630,7 +12658,7 @@
             this.numericUpDown_ADWeekDay_ClockHand_EndAngle.Name = "numericUpDown_ADWeekDay_ClockHand_EndAngle";
             this.helpProvider1.SetShowHelp(this.numericUpDown_ADWeekDay_ClockHand_EndAngle, ((bool)(resources.GetObject("numericUpDown_ADWeekDay_ClockHand_EndAngle.ShowHelp"))));
             this.numericUpDown_ADWeekDay_ClockHand_EndAngle.Value = new decimal(new int[] {
-            495,
+            309,
             0,
             0,
             0});
@@ -12663,11 +12691,6 @@
             -2147483648});
             this.numericUpDown_ADWeekDay_ClockHand_StartAngle.Name = "numericUpDown_ADWeekDay_ClockHand_StartAngle";
             this.helpProvider1.SetShowHelp(this.numericUpDown_ADWeekDay_ClockHand_StartAngle, ((bool)(resources.GetObject("numericUpDown_ADWeekDay_ClockHand_StartAngle.ShowHelp"))));
-            this.numericUpDown_ADWeekDay_ClockHand_StartAngle.Value = new decimal(new int[] {
-            225,
-            0,
-            0,
-            0});
             this.numericUpDown_ADWeekDay_ClockHand_StartAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // label390
@@ -12857,6 +12880,7 @@
             this.helpProvider1.SetHelpNavigator(this.tabPage40, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage40.HelpNavigator"))));
             this.helpProvider1.SetHelpString(this.tabPage40, resources.GetString("tabPage40.HelpString"));
             this.tabPage40.Name = "tabPage40";
+            this.helpProvider1.SetShowHelp(this.tabPage40, ((bool)(resources.GetObject("tabPage40.ShowHelp"))));
             // 
             // numericUpDown_ADMonth_ClockHand_EndAngle
             // 
@@ -12877,7 +12901,7 @@
             this.numericUpDown_ADMonth_ClockHand_EndAngle.Name = "numericUpDown_ADMonth_ClockHand_EndAngle";
             this.helpProvider1.SetShowHelp(this.numericUpDown_ADMonth_ClockHand_EndAngle, ((bool)(resources.GetObject("numericUpDown_ADMonth_ClockHand_EndAngle.ShowHelp"))));
             this.numericUpDown_ADMonth_ClockHand_EndAngle.Value = new decimal(new int[] {
-            495,
+            360,
             0,
             0,
             0});
@@ -12911,7 +12935,7 @@
             this.numericUpDown_ADMonth_ClockHand_StartAngle.Name = "numericUpDown_ADMonth_ClockHand_StartAngle";
             this.helpProvider1.SetShowHelp(this.numericUpDown_ADMonth_ClockHand_StartAngle, ((bool)(resources.GetObject("numericUpDown_ADMonth_ClockHand_StartAngle.ShowHelp"))));
             this.numericUpDown_ADMonth_ClockHand_StartAngle.Value = new decimal(new int[] {
-            225,
+            30,
             0,
             0,
             0});
@@ -14248,6 +14272,7 @@
             this.helpProvider1.SetHelpNavigator(this.tabPage34, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("tabPage34.HelpNavigator"))));
             this.helpProvider1.SetHelpString(this.tabPage34, resources.GetString("tabPage34.HelpString"));
             this.tabPage34.Name = "tabPage34";
+            this.helpProvider1.SetShowHelp(this.tabPage34, ((bool)(resources.GetObject("tabPage34.ShowHelp"))));
             // 
             // comboBox_Year_Delimiter
             // 
@@ -16056,6 +16081,7 @@
             this.helpProvider1.SetHelpNavigator(this.button_Reset, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("button_Reset.HelpNavigator"))));
             this.helpProvider1.SetHelpString(this.button_Reset, resources.GetString("button_Reset.HelpString"));
             this.button_Reset.Name = "button_Reset";
+            this.helpProvider1.SetShowHelp(this.button_Reset, ((bool)(resources.GetObject("button_Reset.ShowHelp"))));
             this.button_Reset.UseVisualStyleBackColor = true;
             this.button_Reset.Click += new System.EventHandler(this.button_Reset_Click);
             // 
@@ -16068,6 +16094,7 @@
             this.helpProvider1.SetHelpNavigator(this.checkBox_JsonWarnings, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_JsonWarnings.HelpNavigator"))));
             this.helpProvider1.SetHelpString(this.checkBox_JsonWarnings, resources.GetString("checkBox_JsonWarnings.HelpString"));
             this.checkBox_JsonWarnings.Name = "checkBox_JsonWarnings";
+            this.helpProvider1.SetShowHelp(this.checkBox_JsonWarnings, ((bool)(resources.GetObject("checkBox_JsonWarnings.ShowHelp"))));
             this.checkBox_JsonWarnings.UseVisualStyleBackColor = true;
             // 
             // comboBox_Language
@@ -16609,9 +16636,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_Set11)).EndInit();
             this.panel_SetWeather.ResumeLayout(false);
             this.panel_SetWeather.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherSet_Temp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherSet_NightTemp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherSet_DayTemp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeatherSet_Temp)).EndInit();
             this.panel_PreviewStates.ResumeLayout(false);
             this.panel_Set10.ResumeLayout(false);
             this.panel_Set10.PerformLayout();
@@ -16693,7 +16720,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Distance_Set1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_Set1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_Set1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ImagesList)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel_Weather.ResumeLayout(false);
@@ -16823,6 +16850,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_DND_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_DND_X)).EndInit();
             this.panel_Activity.ResumeLayout(false);
+            this.panel_Activity.PerformLayout();
             this.tabControl_Activity.ResumeLayout(false);
             this.tabPage11.ResumeLayout(false);
             this.tabPage11.PerformLayout();
@@ -17039,7 +17067,7 @@
         private System.Windows.Forms.Button button_unpack;
         private System.Windows.Forms.Button button_pack;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView_ImagesList;
         private System.Windows.Forms.Button button_images;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button_JSON;
@@ -17270,9 +17298,6 @@
         private System.Windows.Forms.Label label100;
         private System.Windows.Forms.Label label101;
         private System.Windows.Forms.Label label102;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NameFile;
-        private System.Windows.Forms.DataGridViewImageColumn ColumnImage;
         private System.Windows.Forms.Panel panel_StepsProgress;
         private System.Windows.Forms.NumericUpDown numericUpDown_StepsProgress_Center_X;
         private System.Windows.Forms.Label label104;
@@ -18092,6 +18117,11 @@
         private System.Windows.Forms.CheckBox checkBox_ADMonth_ClockHand;
         private System.Windows.Forms.RadioButton radioButton_gts;
         private System.Windows.Forms.Button button_Reset;
+        private System.Windows.Forms.ComboBox comboBox_Activity_NDImage;
+        private System.Windows.Forms.Label label403;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameFile;
+        private System.Windows.Forms.DataGridViewImageColumn ColumnImage;
     }
 }
 

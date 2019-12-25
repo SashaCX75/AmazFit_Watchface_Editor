@@ -924,6 +924,9 @@
   <data name="comboBox_ActivitySteps_Alignment.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
   </data>
+  <data name="tabPage28.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
   <data name="&gt;&gt;numericUpDown_WeatherSet_Temp.Name" xml:space="preserve">
     <value>numericUpDown_WeatherSet_Temp</value>
   </data>
@@ -947,6 +950,9 @@
   </data>
   <data name="groupBox7.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 115</value>
+  </data>
+  <data name="tabPage38.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="radioButton_Settings_Unpack_Dialog.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1271,6 +1277,9 @@
   </data>
   <data name="comboBox_Weather_Icon_Image.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
+  </data>
+  <data name="&gt;&gt;tabPage27.Parent" xml:space="preserve">
+    <value>tabControl5</value>
   </data>
   <data name="label51.Location" type="System.Drawing.Point, System.Drawing">
     <value>273, 4</value>
@@ -1677,6 +1686,9 @@
   <data name="&gt;&gt;numericUpDown_Steps_Set3.Parent" xml:space="preserve">
     <value>panel_Set3</value>
   </data>
+  <data name="comboBox_Lock_On.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="comboBox_Battery_Text_Alignment.Items3" xml:space="preserve">
     <value>Середина влево</value>
   </data>
@@ -1750,7 +1762,7 @@
     <value>5</value>
   </data>
   <data name="&gt;&gt;checkBox_Activity.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="radioButton_Settings_Pack_Copy.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1927,7 +1939,7 @@
     <value>17, 13</value>
   </data>
   <data name="checkBox_WeatherSet_Temp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>212, 6</value>
+    <value>4, 33</value>
   </data>
   <data name="numericUpDown_ADMonth_ClockHand_StartAngle.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -2024,9 +2036,6 @@
   </data>
   <data name="label206.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="label98.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
   </data>
   <data name="label94.Size" type="System.Drawing.Size, System.Drawing">
     <value>17, 13</value>
@@ -2553,8 +2562,8 @@
   <data name="label303.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="checkBox_AnalogClock.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="label403.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>AssociateIndex</value>
   </data>
   <data name="label362.Size" type="System.Drawing.Size, System.Drawing">
     <value>17, 13</value>
@@ -2576,9 +2585,6 @@
   </data>
   <data name="checkBox_Lock_Set13.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 18</value>
-  </data>
-  <data name="comboBox_StProg_ClockHand_Image.TabIndex" type="System.Int32, mscorlib">
-    <value>88</value>
   </data>
   <data name="numericUpDown_Distance_Set2.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -2655,9 +2661,6 @@
   <data name="&gt;&gt;label301.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="comboBox_AnalogClock_Hour_Image.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
   <data name="label402.TabIndex" type="System.Int32, mscorlib">
     <value>84</value>
   </data>
@@ -2690,6 +2693,9 @@
   </data>
   <data name="tabPage24.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
+  </data>
+  <data name="label403.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="panel_AnalogDate.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -2754,8 +2760,14 @@
   <data name="button_Activity.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
+  <data name="comboBox_Activity_NDImage.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
   <data name="panel_Activity.Size" type="System.Drawing.Size, System.Drawing">
     <value>392, 1</value>
+  </data>
+  <data name="&gt;&gt;comboBox_MinCenterImage_Image.Name" xml:space="preserve">
+    <value>comboBox_MinCenterImage_Image</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Min_Ones_Y.Parent" xml:space="preserve">
     <value>groupBox_Minutes_Ones</value>
@@ -2822,6 +2834,9 @@
   </data>
   <data name="label311.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;label53.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label363.Name" xml:space="preserve">
     <value>label363</value>
@@ -2967,6 +2982,9 @@
   <data name="numericUpDown_Min_Tens_Y.Location" type="System.Drawing.Point, System.Drawing">
     <value>67, 46</value>
   </data>
+  <data name="comboBox_Activity_NDImage.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>AssociateIndex</value>
+  </data>
   <data name="numericUpDown_Battery_ClockHand_Offset_X.Location" type="System.Drawing.Point, System.Drawing">
     <value>185, 30</value>
   </data>
@@ -3056,6 +3074,9 @@
   </data>
   <data name="label125.Text" xml:space="preserve">
     <value>Выравнивание</value>
+  </data>
+  <data name="panel_AnalogDate.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="checkBox_Lock_Set11.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -3423,8 +3444,8 @@
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="numericUpDown_MonthName_X.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="tabControl7.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;label324.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -3684,6 +3705,9 @@
   <data name="&gt;&gt;tabPage25.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="button_Reset.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;panel_Set11.Name" xml:space="preserve">
     <value>panel_Set11</value>
   </data>
@@ -3737,6 +3761,9 @@
   </data>
   <data name="numericUpDown_Calories_Set9.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Goal_Set6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="checkBox_Battery_ClockHand.Text" xml:space="preserve">
     <value>Отображать</value>
@@ -4044,6 +4071,9 @@
   <data name="label199.Text" xml:space="preserve">
     <value>Конечный угол</value>
   </data>
+  <data name="numericUpDown_StProg_ClockHand_Offset_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
   <data name="&gt;&gt;label346.Name" xml:space="preserve">
     <value>label346</value>
   </data>
@@ -4111,7 +4141,7 @@
     <value>17, 13</value>
   </data>
   <data name="checkBox_WeatherSet_DayTemp.Text" xml:space="preserve">
-    <value>Дневная температура</value>
+    <value>Дневная темпер.</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Pulse_Set1.ZOrder" xml:space="preserve">
     <value>8</value>
@@ -4539,8 +4569,8 @@
   <data name="label326.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="radioButton_Settings_Open_Dialog.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
+  <data name="&gt;&gt;label324.Parent" xml:space="preserve">
+    <value>panel_Set11</value>
   </data>
   <data name="&gt;&gt;label396.Name" xml:space="preserve">
     <value>label396</value>
@@ -4728,6 +4758,9 @@
   <data name="label321.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="checkBox_ADDay_ClockHand.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="label294.Size" type="System.Drawing.Size, System.Drawing">
     <value>17, 13</value>
   </data>
@@ -4769,6 +4802,9 @@
   </data>
   <data name="label376.Text" xml:space="preserve">
     <value>Начальный угол</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_ImagesList.Name" xml:space="preserve">
+    <value>dataGridView_ImagesList</value>
   </data>
   <data name="label56.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -4971,6 +5007,9 @@
   <data name="numericUpDown_Alarm_Y.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
   </data>
+  <data name="comboBox_ActivityDistance_Decimal.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="comboBox_AnalogClock_Min_Image.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
   </data>
@@ -5091,8 +5130,8 @@
   <data name="numericUpDown_Goal_Set13.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 32</value>
+  <data name="label211.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>AssociateIndex</value>
   </data>
   <data name="numericUpDown_Distance_Set1.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5153,6 +5192,9 @@
   </data>
   <data name="&gt;&gt;numericUpDown_Battery_Text_StartCorner_Y.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="dataGridView_ImagesList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 32</value>
   </data>
   <data name="comboBox_MonthName_Image.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5261,9 +5303,6 @@
   </data>
   <data name="tabPage39.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="label87.Text" xml:space="preserve">
-    <value>Калории</value>
   </data>
   <data name="button_SavePNG.Text" xml:space="preserve">
     <value>Сохранить PNG</value>
@@ -5409,8 +5448,8 @@
   <data name="&gt;&gt;label144.Parent" xml:space="preserve">
     <value>tabPage14</value>
   </data>
-  <data name="&gt;&gt;checkBox_Alarm_Set7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="numericUpDown_Goal_Set10.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="tabPage18.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -5742,6 +5781,9 @@
   <data name="label84.Text" xml:space="preserve">
     <value>Шаги</value>
   </data>
+  <data name="label403.Text" xml:space="preserve">
+    <value>Символ ошибки:</value>
+  </data>
   <data name="&gt;&gt;dateTimePicker_Date_Set9.Parent" xml:space="preserve">
     <value>panel_Set9</value>
   </data>
@@ -5837,6 +5879,9 @@
   </data>
   <data name="numericUpDown_MonthAndDayD_EndCorner_X.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Activity_NDImage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Distance_Set10.ZOrder" xml:space="preserve">
     <value>10</value>
@@ -5964,6 +6009,9 @@
   <data name="numericUpDown_ActivitySteps_StartCorner_X.TabIndex" type="System.Int32, mscorlib">
     <value>65</value>
   </data>
+  <data name="tabPage35.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="numericUpDown_Battery_ClockHand_EndAngle.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -6036,8 +6084,8 @@
   <data name="check_BoxBluetooth_Set3.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
-  <data name="comboBox_Lock_On.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="numericUpDown_Goal_Set12.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
   </data>
   <data name="groupBox2.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -6228,8 +6276,8 @@
   <data name="&gt;&gt;label217.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="dataGridView1.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
+  <data name="comboBox_Weather_Night_Image.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>25</value>
   </data>
   <data name="&gt;&gt;label209.Name" xml:space="preserve">
     <value>label209</value>
@@ -6450,6 +6498,9 @@
   <data name="numericUpDown_Hours_Tens_Y.Location" type="System.Drawing.Point, System.Drawing">
     <value>67, 46</value>
   </data>
+  <data name="label169.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 13</value>
+  </data>
   <data name="&gt;&gt;numericUpDown_MonthAndDayD_Spacing.Name" xml:space="preserve">
     <value>numericUpDown_MonthAndDayD_Spacing</value>
   </data>
@@ -6540,8 +6591,8 @@
   <data name="&gt;&gt;button_pack_zip.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label229.Location" type="System.Drawing.Point, System.Drawing">
-    <value>211, 4</value>
+  <data name="dateTimePicker_Date_Set13.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ActivityCalories_Spacing.Parent" xml:space="preserve">
     <value>tabPage15</value>
@@ -6573,8 +6624,8 @@
   <data name="&gt;&gt;label373.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="numericUpDown_ActivityCalories_StartCorner_Y.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
+  <data name="numericUpDown_Weather_Text_EndCorner_Y.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
   </data>
   <data name="&gt;&gt;tabPage26.Name" xml:space="preserve">
     <value>tabPage26</value>
@@ -6677,9 +6728,6 @@
   </data>
   <data name="checkBox_MinCenterImage.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ADDay_ClockHand_X.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;radioButton_Settings_Open_DoNotning.Name" xml:space="preserve">
     <value>radioButton_Settings_Open_DoNotning</value>
@@ -6840,8 +6888,21 @@
   <data name="comboBox_Battery_Img_Image.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="&gt;&gt;checkBox_ADDay_ClockHand.Parent" xml:space="preserve">
-    <value>tabPage38</value>
+  <data name="копироватьToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAJySURBVDhPpVFLbxJhFB2N0brnkWg37upWSpfqyl2Ji5rUf+DSvbow2ppoqilgfCBDY12oQeVR
+        a9WF0Wo7IC3l/RwKwwDDe4B2fb33gxSS6sqbnMydm3POd777cVSnx8ePaTSaE1qtdkyn043p9fqTOgL2
+        Gq0W57rjjPivstmX/OFoHKLxJCRSGUimswgR4sk00DyC8/MXLl4e0A+Xzc4LRIwhMYkG8UQKhTEIhaOw
+        vROGYCgCMzNXrhsMhonJSePEOYPhrHFq6tRAznEvl18JopiH3G4eCpIMPn8A1n8J4Pu9BYHtHWZC6aLx
+        FIQiMQii8f0HC2sDOce9fvNWkEplkBEVRUFB6ECUTGcgnRUZUng1SkfzhYePPg7kHOd8916oKFWo1urQ
+        aLYgGotDAskiJsoXilAoyiAhClIRcvkCm5st1qHBB5dLICFBbat4UgaFEhTlMpQrCijVGgP1pXKFJX3y
+        9NnQwOX2CK12G1qtNqjdDmQwrozEgiRBvdFE4yZLl8BX+fFzk82e214MDdzMQGUGbbUDWTF3cGoEX2cX
+        Y6udHvR6PdgQ/EBcO88fNmiSAX6zogi1ep39B7aCuLgk7O3vs+csVyqMwzsco1dwC81Gm+2AUtAVKCYl
+        oVkdQQvc2PTBt+/rLCXvWBpJ4PH6mriDYYIc1GqNviHOaUaiPvr/PD+SYH7u3rLHsxJBo7DXuxL5/OWr
+        XKs3WAoypVQtNKOeTGk3d+fmnQM5qyOIowNwJpPpWre310+Ep6qdLgP1ZCyXFJi9OnuHuH8to9F4yWJ9
+        vLa4aF41my2rFov1E4H6GzdvOaenTbeRdqbP/q/iuD+MMmJvZ5TQYgAAAABJRU5ErkJggg==
+</value>
   </data>
   <data name="label347.Location" type="System.Drawing.Point, System.Drawing">
     <value>233, 73</value>
@@ -6866,6 +6927,9 @@
   </data>
   <data name="&gt;&gt;label71.ZOrder" xml:space="preserve">
     <value>10</value>
+  </data>
+  <data name="button_pack_zip.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="label109.Text" xml:space="preserve">
     <value>Цвет:</value>
@@ -7116,6 +7180,9 @@
   <data name="numericUpDown_Distance_Set6.Location" type="System.Drawing.Point, System.Drawing">
     <value>92, 64</value>
   </data>
+  <data name="&gt;&gt;comboBox_Activity_NDImage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="numericUpDown_Calories_Set7.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -7194,6 +7261,9 @@
   <data name="&gt;&gt;checkBox_StProg_ClockHand.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="&gt;&gt;dataGridView_ImagesList.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
   <data name="label314.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
   </data>
@@ -7202,9 +7272,6 @@
   </data>
   <data name="&gt;&gt;label26.Name" xml:space="preserve">
     <value>label26</value>
-  </data>
-  <data name="numericUpDown_ActivityPuls_StartCorner_X.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Calories_Set6.Parent" xml:space="preserve">
     <value>panel_Set6</value>
@@ -7457,6 +7524,9 @@
   </data>
   <data name="label179.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
+  </data>
+  <data name="comboBox_ActivityCalories_Alignment.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="numericUpDown_MinCenterImage_Y.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -8016,6 +8086,9 @@
   <data name="&gt;&gt;label367.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;label66.Parent" xml:space="preserve">
+    <value>tabPage9</value>
+  </data>
   <data name="&gt;&gt;numericUpDown_Weather_Text_Spacing.Name" xml:space="preserve">
     <value>numericUpDown_Weather_Text_Spacing</value>
   </data>
@@ -8075,6 +8148,9 @@
   </data>
   <data name="comboBox_Preview.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
+  </data>
+  <data name="label346.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="tabPage33.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -8270,6 +8346,9 @@
   </data>
   <data name="&gt;&gt;comboBox_Weather_Day_Alignment.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="checkBox_Lock_Set6.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="label73.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -8550,8 +8629,8 @@
   <data name="&gt;&gt;label45.Parent" xml:space="preserve">
     <value>panel_Set1</value>
   </data>
-  <data name="numericUpDown_Goal_Set10.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;dateTimePicker_Date_Set2.Name" xml:space="preserve">
+    <value>dateTimePicker_Date_Set2</value>
   </data>
   <data name="label83.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -8738,9 +8817,6 @@
   </data>
   <data name="&gt;&gt;label234.Name" xml:space="preserve">
     <value>label234</value>
-  </data>
-  <data name="numericUpDown_Weather_Text_EndCorner_Y.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
   </data>
   <data name="label_preview_X.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -9003,6 +9079,9 @@
   <data name="&gt;&gt;checkBox_Battery_Percent.Parent" xml:space="preserve">
     <value>tabPage28</value>
   </data>
+  <data name="&gt;&gt;label403.Name" xml:space="preserve">
+    <value>label403</value>
+  </data>
   <data name="&gt;&gt;tabPage29.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
@@ -9086,6 +9165,9 @@
   </data>
   <data name="label234.Text" xml:space="preserve">
     <value>Пульс</value>
+  </data>
+  <data name="checkBox_JsonWarnings.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Steps_Set3.Name" xml:space="preserve">
     <value>numericUpDown_Steps_Set3</value>
@@ -9306,9 +9388,6 @@
   <data name="numericUpDown_ActivityGoal_EndCorner_Y.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="checkBox_Lock_Set13.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
   <data name="&gt;&gt;checkBox_Battery_Text.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -9435,8 +9514,8 @@
   <data name="&gt;&gt;panel_Status.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="numericUpDown_StProg_ClockHand_Offset_Y.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+  <data name="tabPage39.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="label179.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -9554,6 +9633,9 @@
   </data>
   <data name="&gt;&gt;dateTimePicker_Time_Set4.ZOrder" xml:space="preserve">
     <value>15</value>
+  </data>
+  <data name="&gt;&gt;label403.Parent" xml:space="preserve">
+    <value>panel_Activity</value>
   </data>
   <data name="&gt;&gt;comboBox_Battery_Percent_Image.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -9861,6 +9943,9 @@
   <data name="checkBox_Lock_Set11.Location" type="System.Drawing.Point, System.Drawing">
     <value>179, 96</value>
   </data>
+  <data name="numericUpDown_ADMonth_ClockHand_Y.TabIndex" type="System.Int32, mscorlib">
+    <value>87</value>
+  </data>
   <data name="label4.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
   </data>
@@ -10083,6 +10168,9 @@
   <data name="label80.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
   </data>
+  <data name="comboBox_Activity_NDImage.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="checkBox_Alarm_Set1.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
   </data>
@@ -10137,8 +10225,8 @@
   <data name="label182.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
   </data>
-  <data name="&gt;&gt;tabPage27.Parent" xml:space="preserve">
-    <value>tabControl5</value>
+  <data name="dateTimePicker_Time_Set12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>107, 20</value>
   </data>
   <data name="label146.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -10223,6 +10311,22 @@
   </data>
   <data name="&gt;&gt;label151.Parent" xml:space="preserve">
     <value>tabPage14</value>
+  </data>
+  <data name="копироватьToolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAJySURBVDhPpVFLbxJhFB2N0brnkWg37upWSpfqyl2Ji5rUf+DSvbow2ppoqilgfCBDY12oQeVR
+        a9WF0Wo7IC3l/RwKwwDDe4B2fb33gxSS6sqbnMydm3POd777cVSnx8ePaTSaE1qtdkyn043p9fqTOgL2
+        Gq0W57rjjPivstmX/OFoHKLxJCRSGUimswgR4sk00DyC8/MXLl4e0A+Xzc4LRIwhMYkG8UQKhTEIhaOw
+        vROGYCgCMzNXrhsMhonJSePEOYPhrHFq6tRAznEvl18JopiH3G4eCpIMPn8A1n8J4Pu9BYHtHWZC6aLx
+        FIQiMQii8f0HC2sDOce9fvNWkEplkBEVRUFB6ECUTGcgnRUZUng1SkfzhYePPg7kHOd8916oKFWo1urQ
+        aLYgGotDAskiJsoXilAoyiAhClIRcvkCm5st1qHBB5dLICFBbat4UgaFEhTlMpQrCijVGgP1pXKFJX3y
+        9NnQwOX2CK12G1qtNqjdDmQwrozEgiRBvdFE4yZLl8BX+fFzk82e214MDdzMQGUGbbUDWTF3cGoEX2cX
+        Y6udHvR6PdgQ/EBcO88fNmiSAX6zogi1ep39B7aCuLgk7O3vs+csVyqMwzsco1dwC81Gm+2AUtAVKCYl
+        oVkdQQvc2PTBt+/rLCXvWBpJ4PH6mriDYYIc1GqNviHOaUaiPvr/PD+SYH7u3rLHsxJBo7DXuxL5/OWr
+        XKs3WAoypVQtNKOeTGk3d+fmnQM5qyOIowNwJpPpWre310+Ep6qdLgP1ZCyXFJi9OnuHuH8to9F4yWJ9
+        vLa4aF41my2rFov1E4H6GzdvOaenTbeRdqbP/q/iuD+MMmJvZ5TQYgAAAABJRU5ErkJggg==
+</value>
   </data>
   <data name="checkBox_DoNotDisturb_Set11.Text" xml:space="preserve">
     <value>Не беспокоить</value>
@@ -10878,8 +10982,8 @@
   <data name="label357.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
   </data>
-  <data name="tabPage14.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="tabPage23.Text" xml:space="preserve">
+    <value>Шкала</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Battery_Set11.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -11391,8 +11495,8 @@
   <data name="&gt;&gt;checkBox_Bluetooth.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label277.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
+  <data name="&gt;&gt;dataGridView_ImagesList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label298.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 13</value>
@@ -11700,6 +11804,9 @@
   <data name="label254.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="tabPage9.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="comboBox_WeatherSet_Icon.Items21" xml:space="preserve">
     <value>Сильный ливень</value>
   </data>
@@ -11788,7 +11895,7 @@
     <value>True</value>
   </data>
   <data name="&gt;&gt;checkBox_WeatherSet_Temp.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="&gt;&gt;numericUpDown_AmPm_X.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -12156,8 +12263,8 @@
   <data name="label142.TabIndex" type="System.Int32, mscorlib">
     <value>78</value>
   </data>
-  <data name="label385.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="label154.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="label279.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -12299,9 +12406,6 @@
   </data>
   <data name="&gt;&gt;numericUpDown_ActivityGoal_EndCorner_Y.ZOrder" xml:space="preserve">
     <value>12</value>
-  </data>
-  <data name="checkBox_ActivityCalories.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="comboBox_ActivitySteps_Image.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -12620,6 +12724,9 @@
   </data>
   <data name="numericUpDown_WeekDay_Y.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
+  </data>
+  <data name="comboBox_Activity_NDImage.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="&gt;&gt;comboBox_Weather_Text_DegImage.Name" xml:space="preserve">
     <value>comboBox_Weather_Text_DegImage</value>
@@ -13002,8 +13109,8 @@
   <data name="label81.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 13</value>
   </data>
-  <data name="label66.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="comboBox_Image_Pm.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="label401.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -13107,9 +13214,6 @@
   <data name="numericUpDown_Battery_Percent_X.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="&gt;&gt;label150.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="checkBox_TwoDigitsMonth.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -13136,6 +13240,9 @@
   </data>
   <data name="numericUpDown_MonthName_Y.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 71</value>
+  </data>
+  <data name="checkBox_Seconds.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 6</value>
   </data>
   <data name="&gt;&gt;label329.Name" xml:space="preserve">
     <value>label329</value>
@@ -13572,8 +13679,8 @@
   <data name="&gt;&gt;label185.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="button_pack_zip.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Распаковать/запаковать</value>
   </data>
   <data name="&gt;&gt;label309.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -16839,6 +16946,9 @@
   <data name="pictureBox1.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
+  <data name="checkBox_Alarm_Set8.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="&gt;&gt;numericUpDown_Calories_Set5.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
@@ -16862,6 +16972,9 @@
   </data>
   <data name="&gt;&gt;label3.Name" xml:space="preserve">
     <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label77.ZOrder" xml:space="preserve">
+    <value>10</value>
   </data>
   <data name="&gt;&gt;tabControl7.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -16913,9 +17026,6 @@
   </data>
   <data name="label141.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
-  </data>
-  <data name="numericUpDown_Weather_Day_StartCorner_Y.Location" type="System.Drawing.Point, System.Drawing">
-    <value>79, 43</value>
   </data>
   <data name="&gt;&gt;panel_PreviewStates.Parent" xml:space="preserve">
     <value>panel3</value>
@@ -17177,6 +17287,9 @@
   </data>
   <data name="&gt;&gt;numericUpDown_Steps_Set11.Name" xml:space="preserve">
     <value>numericUpDown_Steps_Set11</value>
+  </data>
+  <data name="label403.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label381.Text" xml:space="preserve">
     <value>Центр стрелки (X)</value>
@@ -17523,8 +17636,8 @@
   <data name="&gt;&gt;label19.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+  <data name="label181.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
   </data>
   <data name="&gt;&gt;checkBox_Year.Name" xml:space="preserve">
     <value>checkBox_Year</value>
@@ -17652,8 +17765,8 @@
   <data name="label326.Location" type="System.Drawing.Point, System.Drawing">
     <value>89, 48</value>
   </data>
-  <data name="comboBox_ActivityCalories_Alignment.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="label311.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
   </data>
   <data name="&gt;&gt;label109.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -17838,6 +17951,9 @@
   <data name="&gt;&gt;label376.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="numericUpDown_Battery_Scale_StartAngle.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="label216.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -17977,7 +18093,7 @@
     <value>70, 17</value>
   </data>
   <data name="&gt;&gt;numericUpDown_WeatherSet_DayTemp.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;tabPage37.Parent" xml:space="preserve">
     <value>tabControl6</value>
@@ -18489,9 +18605,6 @@
   <data name="label369.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
   </data>
-  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
-    <value>dataGridView1</value>
-  </data>
   <data name="numericUpDown_Weather_Icon_X.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>
   </data>
@@ -18807,6 +18920,9 @@
   <data name="label54.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 4</value>
   </data>
+  <data name="label403.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="numericUpDown_ActivityDistance_Spacing.TabIndex" type="System.Int32, mscorlib">
     <value>79</value>
   </data>
@@ -18870,8 +18986,8 @@
   <data name="numericUpDown_ActivityGoal_EndCorner_Y.Location" type="System.Drawing.Point, System.Drawing">
     <value>200, 43</value>
   </data>
-  <data name="check_BoxBluetooth_Set7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 18</value>
+  <data name="label98.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>AssociateIndex</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Battery_Set6.ZOrder" xml:space="preserve">
     <value>14</value>
@@ -18939,6 +19055,9 @@
   <data name="&gt;&gt;numericUpDown_Calories_Set7.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="dataGridView_ImagesList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>315, 464</value>
+  </data>
   <data name="&gt;&gt;label_version.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -18950,6 +19069,9 @@
   </data>
   <data name="&gt;&gt;comboBox_Hours_Ones_Image.Name" xml:space="preserve">
     <value>comboBox_Hours_Ones_Image</value>
+  </data>
+  <data name="tabPage34.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="panel_Set13.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -19227,8 +19349,8 @@
   <data name="&gt;&gt;numericUpDown_Battery_Text_Spacing.Parent" xml:space="preserve">
     <value>tabPage21</value>
   </data>
-  <data name="&gt;&gt;label95.Name" xml:space="preserve">
-    <value>label95</value>
+  <data name="checkBox_SecCenterImage.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
   </data>
   <data name="numericUpDown_Distance_Set6.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -19350,8 +19472,8 @@
   <data name="&gt;&gt;numericUpDown_AnalogClock_Hour_Offset_Y.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="dataGridView1.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="&gt;&gt;label150.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="button_AnalogClock.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 192</value>
@@ -19977,9 +20099,6 @@
   <data name="checkBox_TwoDigitsMonth.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="&gt;&gt;tabPage15.Name" xml:space="preserve">
-    <value>tabPage15</value>
-  </data>
   <data name="checkBox_WeekDay.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -19993,7 +20112,7 @@
     <value>Top</value>
   </data>
   <data name="&gt;&gt;numericUpDown_WeatherSet_Temp.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;label200.Parent" xml:space="preserve">
     <value>tabPage23</value>
@@ -20229,9 +20348,6 @@
   <data name="label23.Text" xml:space="preserve">
     <value>Y:</value>
   </data>
-  <data name="dataGridView1.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label179.Location" type="System.Drawing.Point, System.Drawing">
     <value>75, 32</value>
   </data>
@@ -20292,8 +20408,8 @@
   <data name="label243.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 13</value>
   </data>
-  <data name="tabPage9.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="tabPage37.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;radioButton_Settings_Pack_DoNotning.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -20328,8 +20444,8 @@
   <data name="numericUpDown_Distance_Set11.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
   </data>
-  <data name="comboBox_Weather_Night_Image.MaxDropDownItems" type="System.Int32, mscorlib">
-    <value>25</value>
+  <data name="comboBox_AnalogClock_Hour_Image.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>AssociateIndex</value>
   </data>
   <data name="groupBox_AnalogClock_Sec.Text" xml:space="preserve">
     <value>Стрелка</value>
@@ -20429,9 +20545,6 @@
   </data>
   <data name="label306.Size" type="System.Drawing.Size, System.Drawing">
     <value>17, 13</value>
-  </data>
-  <data name="check_BoxBluetooth_Set1.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
   </data>
   <data name="label208.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -20600,6 +20713,9 @@
   </data>
   <data name="numericUpDown_Calories_Set4.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 20</value>
+  </data>
+  <data name="label277.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>AssociateIndex</value>
   </data>
   <data name="&gt;&gt;panel_AnalogDate.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -20861,9 +20977,6 @@
   </data>
   <data name="label124.Location" type="System.Drawing.Point, System.Drawing">
     <value>255, 45</value>
-  </data>
-  <data name="label186.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="label359.Text" xml:space="preserve">
     <value>Y:</value>
@@ -21273,8 +21386,8 @@
   <data name="numericUpDown_ActivityPuls_Count.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;label53.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="numericUpDown_Battery_ClockHand_StartAngle.TabIndex" type="System.Int32, mscorlib">
+    <value>80</value>
   </data>
   <data name="label11.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -21348,8 +21461,8 @@
   <data name="label203.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label13.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="tabPage36.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="comboBox_AnalogClock_Sec_Image.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 21</value>
@@ -21362,6 +21475,9 @@
   </data>
   <data name="label196.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="comboBox_Activity_NDImage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 189</value>
   </data>
   <data name="checkBox_ActivityStar.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 7</value>
@@ -21557,6 +21673,9 @@
   </data>
   <data name="comboBox_Battery_Scale_Color.IntegralHeight" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="label403.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
   </data>
   <data name="label152.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -21921,8 +22040,8 @@
   <data name="label22.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="checkBox_ADDay_ClockHand.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="comboBox_OneLine_Alignment.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>AssociateIndex</value>
   </data>
   <data name="label15.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -22011,9 +22130,6 @@
   <data name="label145.Text" xml:space="preserve">
     <value>Выравнивание</value>
   </data>
-  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>315, 464</value>
-  </data>
   <data name="label313.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
   </data>
@@ -22076,6 +22192,9 @@
   </data>
   <data name="label230.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivitySteps_Count.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label203.Name" xml:space="preserve">
     <value>label203</value>
@@ -22324,7 +22443,7 @@
     <value>tabPage14</value>
   </data>
   <data name="&gt;&gt;tabControl_Activity.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="label282.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -22812,9 +22931,6 @@
   <data name="checkBox_Lock_Set4.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
   </data>
-  <data name="label211.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
   <data name="&gt;&gt;checkBox_ActivityGoal.Parent" xml:space="preserve">
     <value>tabPage11</value>
   </data>
@@ -23130,8 +23246,8 @@
   <data name="checkBox_TwoDigitsMonth.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
   </data>
-  <data name="&gt;&gt;label100.ZOrder" xml:space="preserve">
-    <value>18</value>
+  <data name="comboBox_StProg_ClockHand_Image.TabIndex" type="System.Int32, mscorlib">
+    <value>88</value>
   </data>
   <data name="dateTimePicker_Date_Set7.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -23178,8 +23294,8 @@
   <data name="&gt;&gt;comboBox_DND_Off.Parent" xml:space="preserve">
     <value>tabPage20</value>
   </data>
-  <data name="numericUpDown_Battery_Scale_StartAngle.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;checkBox_ADDay_ClockHand.Parent" xml:space="preserve">
+    <value>tabPage38</value>
   </data>
   <data name="checkBox_Weather_Text.Text" xml:space="preserve">
     <value>Отображать</value>
@@ -23547,9 +23663,6 @@
   <data name="numericUpDown_Min_Tens_Count.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="numericUpDown_Battery_Scale_StartAngle.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -23574,8 +23687,8 @@
   <data name="&gt;&gt;label207.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label86.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 48</value>
+  <data name="&gt;&gt;label33.Name" xml:space="preserve">
+    <value>label33</value>
   </data>
   <data name="checkBox_DoNotDisturb_Set10.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 34</value>
@@ -23747,9 +23860,6 @@
   </data>
   <data name="&gt;&gt;button_Set2.ZOrder" xml:space="preserve">
     <value>26</value>
-  </data>
-  <data name="checkBox_SecCenterImage.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
   </data>
   <data name="label272.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -24399,8 +24509,8 @@
   <data name="label239.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 4</value>
   </data>
-  <data name="numericUpDown_Goal_Set12.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+  <data name="&gt;&gt;checkBox_Lock_Set10.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="tabPage17.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -24615,8 +24725,8 @@
   <data name="panel2.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="&gt;&gt;checkBox_Alarm_Set7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label270.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -25097,6 +25207,9 @@
   </data>
   <data name="&gt;&gt;label199.Name" xml:space="preserve">
     <value>label199</value>
+  </data>
+  <data name="label403.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="label209.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 30</value>
@@ -25647,6 +25760,9 @@
   <data name="&gt;&gt;label78.Parent" xml:space="preserve">
     <value>tabPage10</value>
   </data>
+  <data name="label255.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="&gt;&gt;numericUpDown_DND_Y.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
@@ -25656,8 +25772,25 @@
   <data name="label100.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="&gt;&gt;label77.ZOrder" xml:space="preserve">
-    <value>10</value>
+  <data name="вставитьToolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAK1SURBVDhPZVJLTxNhFJ22PFrkJT4KtIgaEnSB4KP4IJoYE1+oZAqNsFAKiUWKQIypO3+AO10Y
+        UWhrhBBdUAH9EWx0gRG0RUoLpaW0M9OC6+O9Qw0FJzmZm3PPPfe79/sE/gr0ucamkzU9DbUmh9hyq7ez
+        0+602+3O7u5uFRwz12a902upq3acq6/pKS0uMKrF/BUZdNbHdy149+Ylpid9mJmZgd/vRygUUsExc1+m
+        P2Hc+wp9rRZUlZdZM+VkoNeJ/W0WfJ2dw4RvCsMjbrg9Hng8XhVut0flJnyT+DY7D0fLaVRV7BO3qukr
+        MeSI/baz+D7nx4/5X/AvLOJ3cAmLSyEVHAeI4xxrnHSCQ5X7dxoM2hoRCIawsBhEMBRGaHkF4ZWICo6X
+        iONcIBjGQMd5Msg6QTEZDNgsWI7EECZxZDWKaGwNsbW4Co6Z4xxrBjuacKiiLMuAdvCIdhCLJ7EajWEt
+        vo71RBJJSVLBMXOcY00fjVttOvC/wXpSUYWJpARZVqCk0io4Zk41Jo2zrXHXCPocsVc8BUlJq90SkgxF
+        SSGVTqtQUilIxHGONQ+tdI3ZI9A7EB/cboCc2kCCRf8MqDuDY+Y4x5qu5nqYy7MMCukEXTfqKLmJeOYE
+        6ghUyJAVJctgE/evn+CHtG2wJ18n3rt6HJK8sbU8mlfK7IEhybTMxNYy40kZ7VeOwWzcu21gyNOK7Zdr
+        kZTTiNO1cackdeSuDI6Zi0SimP8ZQLPFBJOxdKeB7VINlPQf6kLdaNNSprss0/w0RjyeoBe5jM9Tk7h5
+        xrTrBLnaVtvFoxj1DmPM8xof3g/DN+7Bx9ERjHnfYtQzhKEXz/HsiQPXGo9AvHAYlQdLWjPlgqARBDNd
+        5dNcjeDK1wouQ47gKs6jv05wMcdgrjBf4yrU61xFpNVpNWZBEIS/oF5M/il8x94AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="comboBox_Activity_NDImage.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>25</value>
   </data>
   <data name="numericUpDown_MonthAndDayD_EndCorner_X.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -25809,8 +25942,8 @@
   <data name="label268.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_Goal_Set6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="checkBox_DoNotDisturb_Set8.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
   </data>
   <data name="numericUpDown_MonthName_Y.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -26502,9 +26635,6 @@
   <data name="label149.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label400.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
   <data name="label372.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -26622,8 +26752,8 @@
   <data name="label220.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
   </data>
-  <data name="&gt;&gt;button_JsonPreview_Write.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label86.Location" type="System.Drawing.Point, System.Drawing">
+    <value>89, 48</value>
   </data>
   <data name="comboBox_OneLine_Alignment.Items2" xml:space="preserve">
     <value>Вверх вправо</value>
@@ -26741,9 +26871,6 @@
   </data>
   <data name="numericUpDown_Pulse_Set3.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
-  </data>
-  <data name="label79.Text" xml:space="preserve">
-    <value>Y:</value>
   </data>
   <data name="&gt;&gt;numericUpDown_StepsProgress_StartAngle.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -27084,8 +27211,8 @@
   <data name="checkBox_Delimiter.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;tabPage6.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="button_Set8.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="&gt;&gt;numericUpDown_Battery_Set10.Parent" xml:space="preserve">
     <value>panel_Set10</value>
@@ -27432,9 +27559,6 @@
   <data name="groupBox5.Location" type="System.Drawing.Point, System.Drawing">
     <value>345, 10</value>
   </data>
-  <data name="button_Set13.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="numericUpDown_ActivitySteps_StartCorner_Y.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -27513,6 +27637,9 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
+  <data name="&gt;&gt;comboBox_Activity_NDImage.Name" xml:space="preserve">
+    <value>comboBox_Activity_NDImage</value>
+  </data>
   <data name="checkBox_Alarm_Set2.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 18</value>
   </data>
@@ -27524,9 +27651,6 @@
   </data>
   <data name="label114.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="&gt;&gt;label33.Name" xml:space="preserve">
-    <value>label33</value>
   </data>
   <data name="groupBox_Seconds_Tens.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -27719,9 +27843,6 @@
   </data>
   <data name="numericUpDown_Alarm_X.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
-  </data>
-  <data name="tabPage23.Text" xml:space="preserve">
-    <value>Шкала</value>
   </data>
   <data name="label51.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -27990,8 +28111,8 @@
   <data name="comboBox_MonthName_Image.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;comboBox_MinCenterImage_Image.Name" xml:space="preserve">
-    <value>comboBox_MinCenterImage_Image</value>
+  <data name="label66.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="label298.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -28056,8 +28177,8 @@
   <data name="comboBox_ActivitySteps_Alignment.Items6" xml:space="preserve">
     <value>Вниз влево</value>
   </data>
-  <data name="numericUpDown_OneLine_StartCorner_Y.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="&gt;&gt;label347.Parent" xml:space="preserve">
+    <value>tabPage23</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Calories_Set8.Name" xml:space="preserve">
     <value>numericUpDown_Calories_Set8</value>
@@ -28134,6 +28255,9 @@
   <data name="label89.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
+  <data name="radioButton_Settings_Open_Dialog.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>AssociateIndex</value>
+  </data>
   <data name="&gt;&gt;comboBox_Weather_Night_Alignment.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -28165,7 +28289,7 @@
     <value>263, 48</value>
   </data>
   <data name="&gt;&gt;label288.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="numericUpDown_ActivityPuls_EndCorner_Y.TabIndex" type="System.Int32, mscorlib">
     <value>75</value>
@@ -28518,8 +28642,8 @@
   <data name="checkBox_Battery_Scale.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="numericUpDown_ADMonth_ClockHand_Y.TabIndex" type="System.Int32, mscorlib">
-    <value>87</value>
+  <data name="checkBox_Lock_Set13.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
   </data>
   <data name="panel_AnalogClock.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -28532,6 +28656,20 @@
   </data>
   <data name="label232.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
+  </data>
+  <data name="вставитьКоординатуХToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAH8SURBVDhPY/DvvvrfovxIPQMWAJKzxCOnXXi8nsG8eE/9rHXH/586fw2MT1+4DsZnLl7/37nx
+        8f/VB+/+P3vpJhifu3wLjM9fuf0/vvvAfo3MXfZg006cvfz/5af/JOHNmzcjXHbizMX/rz//h+MN2/b/
+        L62sR8HI8iC8fv16hAHHT1/4//brfzieMnM+mC6pqEXhI+M1a9ZADDAtOVy/av+N/x++/cfAZZW1WMVB
+        OKJ1z35gINqDQ7Nvy+P/n378x8AVVXVYxUEYHgsgcPTEqf9ff/7HwFU1dVjFQXjy7KWIMDh6/OT/77/+
+        o+Abt+//t7Wz/z9rzny42K8/EAxiz5s3D2HAkWPH4ZK48J+///8vuDb5//Lb0/7//vvv/6xZs5AMOHIU
+        rAAXBqr//w+Ic/bE/i8/mgQU+/v/ypUrayfOX88GDkTvyk37Gxsb65uamuqbm5vrW1pa6qtbJtSD5CZs
+        vvcnf1vuf/8VHv9z98f/LwYakLor5H/ryeL/Vx59rmcAJsd6eJJEAyC5FUeerXSb4frfbKLR/4C19v8j
+        tjr+N1+g9T9+u8//n7//5kOV4gYTJkxg+/nzZ+7fv3/3afXI/rdZpAb0wu8Dv3//zl+4aCEHVBlh8O79
+        uyy3Gcb/HWbZAsPjH2Gb0UF/fz8b0JCcd+/e5SFsZmAAAO6bd5PMUu6IAAAAAElFTkSuQmCC
+</value>
   </data>
   <data name="checkBox_Lock_Set4.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -28772,6 +28910,9 @@
   </data>
   <data name="&gt;&gt;label122.Parent" xml:space="preserve">
     <value>tabPage12</value>
+  </data>
+  <data name="dataGridView_ImagesList.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="tabPage30.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -29148,9 +29289,6 @@
   <data name="comboBox_Bluetooth_Off.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="comboBox_Image_Pm.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="&gt;&gt;check_BoxBluetooth_Set7.Name" xml:space="preserve">
     <value>check_BoxBluetooth_Set7</value>
   </data>
@@ -29299,6 +29437,9 @@
     <value />
   </data>
   <data name="numericUpDown_Sec_Tens_X.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dataGridView_ImagesList.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="&gt;&gt;label267.ZOrder" xml:space="preserve">
@@ -29685,9 +29826,6 @@
   <data name="numericUpDown_Lock_X.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
   </data>
-  <data name="&gt;&gt;label347.Parent" xml:space="preserve">
-    <value>tabPage23</value>
-  </data>
   <data name="numericUpDown_Battery_Set13.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 20</value>
   </data>
@@ -29706,9 +29844,6 @@
   <data name="&gt;&gt;button_Status.Name" xml:space="preserve">
     <value>button_Status</value>
   </data>
-  <data name="&gt;&gt;checkBox_Lock_Set10.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="button_Set5.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
   </data>
@@ -29717,6 +29852,9 @@
   </data>
   <data name="label177.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="numericUpDown_MonthName_X.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
   <data name="numericUpDown_ADMonth_ClockHand_Offset_Y.TabIndex" type="System.Int32, mscorlib">
     <value>93</value>
@@ -29771,9 +29909,6 @@
   </data>
   <data name="label46.Location" type="System.Drawing.Point, System.Drawing">
     <value>263, 48</value>
-  </data>
-  <data name="panel_Weather.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="label227.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -29940,6 +30075,9 @@
   <data name="&gt;&gt;tabPage23.Name" xml:space="preserve">
     <value>tabPage23</value>
   </data>
+  <data name="&gt;&gt;dataGridView_ImagesList.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="label277.Location" type="System.Drawing.Point, System.Drawing">
     <value>253, 85</value>
   </data>
@@ -29993,6 +30131,9 @@
   </data>
   <data name="numericUpDown_OneLine_Count.Location" type="System.Drawing.Point, System.Drawing">
     <value>200, 123</value>
+  </data>
+  <data name="panel_Set4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 1</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ADDay_ClockHand_Y.Name" xml:space="preserve">
     <value>numericUpDown_ADDay_ClockHand_Y</value>
@@ -30543,8 +30684,8 @@
   <data name="&gt;&gt;checkBox_ActivityPuls.Parent" xml:space="preserve">
     <value>tabPage14</value>
   </data>
-  <data name="tabPage28.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+  <data name="&gt;&gt;tabPage15.Name" xml:space="preserve">
+    <value>tabPage15</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ADWeekDay_ClockHand_EndAngle.Name" xml:space="preserve">
     <value>numericUpDown_ADWeekDay_ClockHand_EndAngle</value>
@@ -30823,7 +30964,7 @@
     <value />
   </data>
   <data name="&gt;&gt;numericUpDown_WeatherSet_NightTemp.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="numericUpDown_Steps_Set9.Location" type="System.Drawing.Point, System.Drawing">
     <value>179, 64</value>
@@ -31118,6 +31259,9 @@
   </data>
   <data name="groupBox_Delimiter.Text" xml:space="preserve">
     <value>Разделитель</value>
+  </data>
+  <data name="label403.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;label92.ZOrder" xml:space="preserve">
     <value>7</value>
@@ -31455,9 +31599,6 @@
   <data name="tabPage22.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="numericUpDown_Battery_ClockHand_StartAngle.TabIndex" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
   <data name="label74.Size" type="System.Drawing.Size, System.Drawing">
     <value>17, 13</value>
   </data>
@@ -31557,6 +31698,9 @@
   <data name="label172.Location" type="System.Drawing.Point, System.Drawing">
     <value>27, 117</value>
   </data>
+  <data name="check_BoxBluetooth_Set7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 18</value>
+  </data>
   <data name="numericUpDown_MonthAndDayD_Spacing.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
   </data>
@@ -31593,8 +31737,8 @@
   <data name="&gt;&gt;label225.Name" xml:space="preserve">
     <value>label225</value>
   </data>
-  <data name="comboBox_OneLine_Alignment.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
+  <data name="button_Set13.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="label257.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -31613,6 +31757,9 @@
   </data>
   <data name="comboBox_ActivityDistance_Alignment.TabIndex" type="System.Int32, mscorlib">
     <value>77</value>
+  </data>
+  <data name="numericUpDown_Battery_Text_Count.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
   </data>
   <data name="comboBox_OneLine_Alignment.Items6" xml:space="preserve">
     <value>Вниз влево</value>
@@ -31678,7 +31825,7 @@
     <value>46, 20</value>
   </data>
   <data name="&gt;&gt;comboBox_WeatherSet_Icon.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="comboBox_Weather_Day_Image.Location" type="System.Drawing.Point, System.Drawing">
     <value>200, 81</value>
@@ -31731,8 +31878,8 @@
   <data name="tabPage30.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="checkBox_Alarm_Set8.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="&gt;&gt;label100.ZOrder" xml:space="preserve">
+    <value>18</value>
   </data>
   <data name="&gt;&gt;label208.Parent" xml:space="preserve">
     <value>groupBox_AnalogClock_Min</value>
@@ -31798,7 +31945,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_WeatherSet_DayTemp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 33</value>
+    <value>196, 7</value>
   </data>
   <data name="dateTimePicker_Time_Set9.Location" type="System.Drawing.Point, System.Drawing">
     <value>107, 20</value>
@@ -31932,6 +32079,9 @@
   <data name="comboBox_Sec_Ones_Image.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
+  <data name="&gt;&gt;label67.Parent" xml:space="preserve">
+    <value>tabPage9</value>
+  </data>
   <data name="numericUpDown_Pulse_Set11.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -32025,8 +32175,8 @@
   <data name="label189.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="&gt;&gt;label35.Name" xml:space="preserve">
-    <value>label35</value>
+  <data name="&gt;&gt;tabPage6.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="label185.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -32111,6 +32261,9 @@
   </data>
   <data name="label141.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="label403.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 192</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Battery_Scale_Width.Name" xml:space="preserve">
     <value>numericUpDown_Battery_Scale_Width</value>
@@ -32513,9 +32666,6 @@
   </data>
   <data name="&gt;&gt;checkBox_Alarm_Set4.Parent" xml:space="preserve">
     <value>panel_Set4</value>
-  </data>
-  <data name="label311.TabIndex" type="System.Int32, mscorlib">
-    <value>60</value>
   </data>
   <data name="&gt;&gt;numericUpDown_WeekDay_X.Name" xml:space="preserve">
     <value>numericUpDown_WeekDay_X</value>
@@ -33030,6 +33180,9 @@
   <data name="button_JsonPreview_Read.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
   </data>
+  <data name="tabControl5.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
   <data name="label228.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 13</value>
   </data>
@@ -33150,8 +33303,8 @@
   <data name="comboBox_ActivitySteps_Alignment.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="tabPage40.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="&gt;&gt;comboBox_Image_Am.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="label359.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -33198,8 +33351,8 @@
   <data name="numericUpDown_Bluetooth_Y.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="label391.Text" xml:space="preserve">
-    <value>Смещение по Y</value>
+  <data name="&gt;&gt;numericUpDown_ADDay_ClockHand_X.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="numericUpDown_Calories_Set8.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -33495,8 +33648,8 @@
   <data name="&gt;&gt;label55.Name" xml:space="preserve">
     <value>label55</value>
   </data>
-  <data name="label386.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="numericUpDown_Calories_Set1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 20</value>
   </data>
   <data name="comboBox_DND_Off.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -33584,6 +33737,9 @@
   </data>
   <data name="label258.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
+  </data>
+  <data name="checkBox_AnalogClock.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="numericUpDown_Year_EndCorner_Y.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -33993,6 +34149,9 @@
   <data name="label388.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
+  <data name="tabPage14.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="dateTimePicker_Date_Set1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
@@ -34066,7 +34225,7 @@
     <value>50, 13</value>
   </data>
   <data name="numericUpDown_WeatherSet_DayTemp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>139, 32</value>
+    <value>303, 6</value>
   </data>
   <data name="button_Time.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -34560,6 +34719,9 @@
   <data name="label23.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="label385.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label134.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -34601,9 +34763,6 @@
   </data>
   <data name="&gt;&gt;label352.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="dateTimePicker_Date_Set13.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
   </data>
   <data name="&gt;&gt;checkBox_Lock_Set10.Name" xml:space="preserve">
     <value>checkBox_Lock_Set10</value>
@@ -34821,8 +34980,8 @@
   <data name="panel_PreviewStates.Size" type="System.Drawing.Size, System.Drawing">
     <value>350, 26</value>
   </data>
-  <data name="comboBox_ActivityDistance_Decimal.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="comboBox_ActivitySteps_Alignment.Items5" xml:space="preserve">
+    <value>Середина вправо</value>
   </data>
   <data name="checkBox_Alarm_Set6.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 18</value>
@@ -35103,6 +35262,9 @@
   <data name="comboBox_Sec_Ones_Image.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
+  <data name="checkBox_Alarm_Set7.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="label76.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
   </data>
@@ -35262,8 +35424,8 @@
   <data name="label53.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
   </data>
-  <data name="numericUpDown_Battery_Text_Count.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+  <data name="numericUpDown_Weather_Day_StartCorner_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>79, 43</value>
   </data>
   <data name="panel_Set4.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -35334,8 +35496,8 @@
   <data name="label225.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="checkBox_Lock_Set6.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="label400.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>AssociateIndex</value>
   </data>
   <data name="comboBox_ActivityCalories_Image.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -35628,9 +35790,6 @@
   <data name="label307.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="comboBox_ActivitySteps_Alignment.Items5" xml:space="preserve">
-    <value>Середина вправо</value>
-  </data>
   <data name="&gt;&gt;comboBox_Year_Delimiter.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
@@ -35796,9 +35955,6 @@
   <data name="tabControl_Weather.TabIndex" type="System.Int32, mscorlib">
     <value>54</value>
   </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>Распаковать/запаковать</value>
-  </data>
   <data name="comboBox_MonthAndDayD_Image.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -35870,9 +36026,6 @@
   </data>
   <data name="&gt;&gt;checkBox_Activity.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dateTimePicker_Date_Set2.Name" xml:space="preserve">
-    <value>dateTimePicker_Date_Set2</value>
   </data>
   <data name="&gt;&gt;label235.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -36501,9 +36654,6 @@
   <data name="&gt;&gt;checkBox_OneLine.Name" xml:space="preserve">
     <value>checkBox_OneLine</value>
   </data>
-  <data name="numericUpDown_Weather_Night_EndCorner_Y.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="label354.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
   </data>
@@ -36537,8 +36687,11 @@
   <data name="&gt;&gt;numericUpDown_Pulse_Set12.Parent" xml:space="preserve">
     <value>panel_Set12</value>
   </data>
-  <data name="tabControl5.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="check_BoxBluetooth_Set1.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>AssociateIndex</value>
+  </data>
+  <data name="label13.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="comboBox_Bluetooth_On.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -36596,9 +36749,6 @@
   </data>
   <data name="&gt;&gt;numericUpDown_Distance_Set2.Name" xml:space="preserve">
     <value>numericUpDown_Distance_Set2</value>
-  </data>
-  <data name="&gt;&gt;label324.Parent" xml:space="preserve">
-    <value>panel_Set11</value>
   </data>
   <data name="button_pack.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -36722,6 +36872,9 @@
   </data>
   <data name="numericUpDown_Pulse_Set2.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
+  </data>
+  <data name="panel_Battery.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>AssociateIndex</value>
   </data>
   <data name="checkBox_Alarm_Set11.Location" type="System.Drawing.Point, System.Drawing">
     <value>92, 96</value>
@@ -36951,8 +37104,8 @@
   <data name="&gt;&gt;numericUpDown_StepsProgress_Radius_X.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_ActivitySteps_Count.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="comboBox_Activity_NDImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 21</value>
   </data>
   <data name="tabPage24.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
@@ -37302,6 +37455,9 @@
   <data name="panel_Background.Size" type="System.Drawing.Size, System.Drawing">
     <value>392, 1</value>
   </data>
+  <data name="comboBox_Activity_NDImage.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="&gt;&gt;numericUpDown_ADWeekDay_ClockHand_Y.Name" xml:space="preserve">
     <value>numericUpDown_ADWeekDay_ClockHand_Y</value>
   </data>
@@ -37337,6 +37493,9 @@
   </data>
   <data name="label124.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
+  </data>
+  <data name="label229.Location" type="System.Drawing.Point, System.Drawing">
+    <value>211, 4</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Year_EndCorner_Y.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -38193,6 +38352,20 @@
   <data name="&gt;&gt;numericUpDown_Year_StartCorner_Y.Parent" xml:space="preserve">
     <value>tabPage34</value>
   </data>
+  <data name="toolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAH8SURBVDhPY/DvvvrfovxIPQMWAJKzxCOnXXi8nsG8eE/9rHXH/586fw2MT1+4DsZnLl7/37nx
+        8f/VB+/+P3vpJhifu3wLjM9fuf0/vvvAfo3MXfZg006cvfz/5af/JOHNmzcjXHbizMX/rz//h+MN2/b/
+        L62sR8HI8iC8fv16hAHHT1/4//brfzieMnM+mC6pqEXhI+M1a9ZADDAtOVy/av+N/x++/cfAZZW1WMVB
+        OKJ1z35gINqDQ7Nvy+P/n378x8AVVXVYxUEYHgsgcPTEqf9ff/7HwFU1dVjFQXjy7KWIMDh6/OT/77/+
+        o+Abt+//t7Wz/z9rzny42K8/EAxiz5s3D2HAkWPH4ZK48J+///8vuDb5//Lb0/7//vvv/6xZs5AMOHIU
+        rAAXBqr//w+Ic/bE/i8/mgQU+/v/ypUrayfOX88GDkTvyk37Gxsb65uamuqbm5vrW1pa6qtbJtSD5CZs
+        vvcnf1vuf/8VHv9z98f/LwYakLor5H/ryeL/Vx59rmcAJsd6eJJEAyC5FUeerXSb4frfbKLR/4C19v8j
+        tjr+N1+g9T9+u8//n7//5kOV4gYTJkxg+/nzZ+7fv3/3afXI/rdZpAb0wu8Dv3//zl+4aCEHVBlh8O79
+        uyy3Gcb/HWbZAsPjH2Gb0UF/fz8b0JCcd+/e5SFsZmAAAO6bd5PMUu6IAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="&gt;&gt;label385.Name" xml:space="preserve">
     <value>label385</value>
   </data>
@@ -38742,9 +38915,6 @@
   <data name="&gt;&gt;numericUpDown_Distance_Set8.Parent" xml:space="preserve">
     <value>panel_Set8</value>
   </data>
-  <data name="checkBox_DoNotDisturb_Set8.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>System</value>
-  </data>
   <data name="label363.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -38846,6 +39016,9 @@
   </data>
   <data name="&gt;&gt;numericUpDown_AnalogClock_Hour_Offset_X.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="&gt;&gt;checkBox_ADMonth_ClockHand.ZOrder" xml:space="preserve">
+    <value>14</value>
   </data>
   <data name="dateTimePicker_Date_Set11.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 20</value>
@@ -39125,8 +39298,8 @@
   <data name="&gt;&gt;checkBox_Weather_Night.Name" xml:space="preserve">
     <value>checkBox_Weather_Night</value>
   </data>
-  <data name="&gt;&gt;comboBox_Image_Am.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="numericUpDown_ActivityPuls_StartCorner_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
   </data>
   <data name="dateTimePicker_Date_Set11.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -39290,6 +39463,9 @@
   <data name="label283.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 57</value>
   </data>
+  <data name="&gt;&gt;comboBox_Activity_NDImage.Parent" xml:space="preserve">
+    <value>panel_Activity</value>
+  </data>
   <data name="label57.Text" xml:space="preserve">
     <value>Y:</value>
   </data>
@@ -39334,9 +39510,6 @@
   </data>
   <data name="label185.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="checkBox_DoNotDisturb_Set1.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="tabPage28.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -39536,17 +39709,14 @@
   <data name="label288.Text" xml:space="preserve">
     <value>Иконка погоды</value>
   </data>
-  <data name="panel_Set4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>350, 1</value>
+  <data name="&gt;&gt;button_JsonPreview_Write.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="textBox_unpack_command.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
   </data>
   <data name="numericUpDown_Weather_Night_EndCorner_X.Location" type="System.Drawing.Point, System.Drawing">
     <value>143, 43</value>
-  </data>
-  <data name="dataGridView1.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="comboBox_Battery_Text_Alignment.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 21</value>
@@ -39559,6 +39729,9 @@
   </data>
   <data name="&gt;&gt;comboBox_MonthAndDayM_Alignment.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="label403.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
   </data>
   <data name="numericUpDown_Hours_Ones_Count.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 20</value>
@@ -39650,7 +39823,7 @@
   <data name="label170.Size" type="System.Drawing.Size, System.Drawing">
     <value>17, 13</value>
   </data>
-  <data name="label255.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="checkBox_DoNotDisturb_Set1.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="&gt;&gt;numericUpDown_ActivitySteps_StartCorner_Y.ZOrder" xml:space="preserve">
@@ -39738,7 +39911,7 @@
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="numericUpDown_WeatherSet_Temp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 5</value>
+    <value>95, 32</value>
   </data>
   <data name="label89.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -39875,6 +40048,9 @@
   <data name="label42.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 13</value>
   </data>
+  <data name="dataGridView_ImagesList.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="&gt;&gt;label350.Name" xml:space="preserve">
     <value>label350</value>
   </data>
@@ -40004,9 +40180,6 @@
   <data name="label277.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label154.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="label48.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -40037,8 +40210,8 @@
   <data name="label45.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
   </data>
-  <data name="panel_Battery.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
+  <data name="panel_Weather.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="tabControl_Date.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -40180,6 +40353,9 @@
   </data>
   <data name="label113.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
+  </data>
+  <data name="&gt;&gt;label269.Parent" xml:space="preserve">
+    <value>panel_Set10</value>
   </data>
   <data name="numericUpDown_Battery_ClockHand_Y.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -40403,6 +40579,9 @@
   <data name="tabPage34.Size" type="System.Drawing.Size, System.Drawing">
     <value>382, 169</value>
   </data>
+  <data name="dataGridView_ImagesList.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="&gt;&gt;label204.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -40583,9 +40762,6 @@
   <data name="comboBox_ActivityGoal_Alignment.Items7" xml:space="preserve">
     <value>Вниз по центру</value>
   </data>
-  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="numericUpDown_WeatherSet_NightTemp.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -40676,8 +40852,8 @@
   <data name="label336.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;label66.Parent" xml:space="preserve">
-    <value>tabPage9</value>
+  <data name="label87.Text" xml:space="preserve">
+    <value>Калории</value>
   </data>
   <data name="groupBox__WeekDay.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -40696,6 +40872,9 @@
   </data>
   <data name="&gt;&gt;label207.Name" xml:space="preserve">
     <value>label207</value>
+  </data>
+  <data name="numericUpDown_OneLine_StartCorner_Y.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="label179.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -40724,8 +40903,8 @@
   <data name="&gt;&gt;numericUpDown_Distance_Set1.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label67.Parent" xml:space="preserve">
-    <value>tabPage9</value>
+  <data name="label386.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="label189.Text" xml:space="preserve">
     <value>X:</value>
@@ -40733,11 +40912,14 @@
   <data name="&gt;&gt;label296.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
-  <data name="&gt;&gt;checkBox_ADMonth_ClockHand.ZOrder" xml:space="preserve">
-    <value>14</value>
+  <data name="label391.Text" xml:space="preserve">
+    <value>Смещение по Y</value>
   </data>
   <data name="&gt;&gt;label217.Name" xml:space="preserve">
     <value>label217</value>
+  </data>
+  <data name="&gt;&gt;label95.Name" xml:space="preserve">
+    <value>label95</value>
   </data>
   <data name="numericUpDown_WeekDay_Count.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -40901,8 +41083,8 @@
   <data name="label85.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label346.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;label35.Name" xml:space="preserve">
+    <value>label35</value>
   </data>
   <data name="label197.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -40927,6 +41109,9 @@
   </data>
   <data name="checkBox_Minutes.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
+  </data>
+  <data name="tabControl6.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="label134.Text" xml:space="preserve">
     <value>ImageIndex:</value>
@@ -41078,7 +41263,7 @@
   <data name="numericUpDown_Weather_Text_Spacing.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="checkBox_Alarm_Set7.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="checkBox_ActivityCalories.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="&gt;&gt;label297.Name" xml:space="preserve">
@@ -41381,8 +41566,8 @@
   <data name="comboBox_MonthAndDayM_Image.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="label169.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 13</value>
+  <data name="&gt;&gt;label403.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="label288.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -41413,9 +41598,6 @@
   </data>
   <data name="checkBox_Lock_Set9.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>System</value>
-  </data>
-  <data name="numericUpDown_Calories_Set1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 20</value>
   </data>
   <data name="label123.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
@@ -41907,7 +42089,7 @@
     <value>tabPage24</value>
   </data>
   <data name="&gt;&gt;label299.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="dateTimePicker_Time_Set4.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -42429,7 +42611,7 @@
     <value>18</value>
   </data>
   <data name="checkBox_WeatherSet_DayTemp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 17</value>
+    <value>114, 17</value>
   </data>
   <data name="numericUpDown_ADDay_ClockHand_EndAngle.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -42599,7 +42781,7 @@
   <data name="numericUpDown_Weather_Night_EndCorner_X.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="button_Set8.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="numericUpDown_Weather_Night_EndCorner_Y.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="numericUpDown_AnalogClock_Min_Offset_Y.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
@@ -42818,6 +43000,9 @@
   <data name="&gt;&gt;comboBox_MonthName_Image.Parent" xml:space="preserve">
     <value>groupBox__MonthName</value>
   </data>
+  <data name="tabPage40.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -43010,11 +43195,17 @@
   <data name="label193.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 13</value>
   </data>
+  <data name="&gt;&gt;label403.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="button_SavePNG.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="numericUpDown_Sec_Tens_Y.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
+  </data>
+  <data name="dataGridView_ImagesList.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>AssociateIndex</value>
   </data>
   <data name="label111.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -43196,8 +43387,8 @@
   <data name="label230.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="dateTimePicker_Time_Set12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 20</value>
+  <data name="label186.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="numericUpDown_Calories_Set1.Location" type="System.Drawing.Point, System.Drawing">
     <value>276, 20</value>
@@ -43360,9 +43551,6 @@
   </data>
   <data name="&gt;&gt;comboBox_ActivityGoal_Alignment.ZOrder" xml:space="preserve">
     <value>8</value>
-  </data>
-  <data name="label181.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 13</value>
   </data>
   <data name="label203.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -43631,8 +43819,8 @@
   <data name="&gt;&gt;label65.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="checkBox_Seconds.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 6</value>
+  <data name="label79.Text" xml:space="preserve">
+    <value>Y:</value>
   </data>
   <data name="&gt;&gt;button_Time.Name" xml:space="preserve">
     <value>button_Time</value>
@@ -43658,8 +43846,8 @@
   <data name="label58.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 101</value>
   </data>
-  <data name="&gt;&gt;label269.Parent" xml:space="preserve">
-    <value>panel_Set10</value>
+  <data name="tabPage40.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="&gt;&gt;numericUpDown_ADDay_ClockHand_StartAngle.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -43726,6 +43914,9 @@
   </data>
   <data name="label186.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
+  </data>
+  <data name="numericUpDown_ActivityCalories_StartCorner_Y.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>AssociateIndex</value>
   </data>
   <data name="&gt;&gt;checkBox_Weather.ZOrder" xml:space="preserve">
     <value>2</value>

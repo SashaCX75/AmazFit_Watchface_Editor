@@ -51,6 +51,7 @@ namespace GTR_Watch_face
             comboBox_ActivityPuls_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityCalories_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityStar_Image.Items.AddRange(ListImages.ToArray());
+            comboBox_Activity_NDImage.Items.AddRange(ListImages.ToArray());
 
             comboBox_Bluetooth_On.Items.AddRange(ListImages.ToArray());
             comboBox_Bluetooth_Off.Items.AddRange(ListImages.ToArray());
@@ -420,13 +421,16 @@ namespace GTR_Watch_face
                     switch (Watch_Face.StepsProgress.Circle.Flatness)
                     {
                         case 90:
-                            comboBox_StepsProgress_Flatness.Text = "Треугольное";
+                            //comboBox_StepsProgress_Flatness.Text = "Треугольное";
+                            comboBox_StepsProgress_Flatness.SelectedIndex = 1;
                             break;
                         case 180:
-                            comboBox_StepsProgress_Flatness.Text = "Плоское";
+                            //comboBox_StepsProgress_Flatness.Text = "Плоское";
+                            comboBox_StepsProgress_Flatness.SelectedIndex = 2;
                             break;
                         default:
-                            comboBox_StepsProgress_Flatness.Text = "Круглое";
+                            //comboBox_StepsProgress_Flatness.Text = "Круглое";
+                            comboBox_StepsProgress_Flatness.SelectedIndex = 0;
                             break;
                     } 
                 }
@@ -565,6 +569,11 @@ namespace GTR_Watch_face
                     checkBoxSetText(comboBox_ActivityStar_Image, Watch_Face.Activity.StarImage.ImageIndex);
                 }
                 else checkBox_ActivityStar.Checked = false;
+
+                if (Watch_Face.Activity.NoDataImageIndex != null)
+                {
+                    checkBoxSetText(comboBox_Activity_NDImage, (long)Watch_Face.Activity.NoDataImageIndex);
+                }
 
             }
             else
@@ -734,13 +743,16 @@ namespace GTR_Watch_face
                     switch (Watch_Face.Battery.Scale.Flatness)
                     {
                         case 90:
-                            comboBox_Battery_Flatness.Text = "Треугольное";
+                            //comboBox_Battery_Flatness.Text = "Треугольное";
+                            comboBox_Battery_Flatness.SelectedIndex = 1;
                             break;
                         case 180:
-                            comboBox_Battery_Flatness.Text = "Плоское";
+                            //comboBox_Battery_Flatness.Text = "Плоское";
+                            comboBox_Battery_Flatness.SelectedIndex = 2;
                             break;
                         default:
-                            comboBox_Battery_Flatness.Text = "Круглое";
+                            //comboBox_Battery_Flatness.Text = "Круглое";
+                            comboBox_Battery_Flatness.SelectedIndex = 0;
                             break;
                     }
                 }
@@ -1194,6 +1206,12 @@ namespace GTR_Watch_face
                     Watch_Face.Activity.StarImage.X = (int)numericUpDown_ActivityStar_X.Value;
                     Watch_Face.Activity.StarImage.Y = (int)numericUpDown_ActivityStar_Y.Value;
                 }
+
+                if (comboBox_Activity_NDImage.SelectedIndex >= 0)
+                {
+                    if (Watch_Face.Activity == null) Watch_Face.Activity = new Activity();
+                    Watch_Face.Activity.NoDataImageIndex = Int32.Parse(comboBox_Activity_NDImage.Text);
+                }
             }
 
             // дата 
@@ -1425,12 +1443,24 @@ namespace GTR_Watch_face
                 colorStr = colorStr.Replace("#", "0x00");
                 Watch_Face.StepsProgress.Circle.Color = colorStr;
 
-                switch (comboBox_StepsProgress_Flatness.Text)
+                //switch (comboBox_StepsProgress_Flatness.Text)
+                //{
+                //    case "Треугольное":
+                //        Watch_Face.StepsProgress.Circle.Flatness = 90;
+                //        break;
+                //    case "Плоское":
+                //        Watch_Face.StepsProgress.Circle.Flatness = 180;
+                //        break;
+                //    default:
+                //        Watch_Face.StepsProgress.Circle.Flatness = 0;
+                //        break;
+                //}
+                switch (comboBox_StepsProgress_Flatness.SelectedIndex)
                 {
-                    case "Треугольное":
+                    case 1:
                         Watch_Face.StepsProgress.Circle.Flatness = 90;
                         break;
-                    case "Плоское":
+                    case 2:
                         Watch_Face.StepsProgress.Circle.Flatness = 180;
                         break;
                     default:
@@ -1622,12 +1652,24 @@ namespace GTR_Watch_face
                     colorStr = colorStr.Replace("#", "0x00");
                     Watch_Face.Battery.Scale.Color = colorStr;
 
-                    switch (comboBox_Battery_Flatness.Text)
+                    //switch (comboBox_Battery_Flatness.Text)
+                    //{
+                    //    case "Треугольное":
+                    //        Watch_Face.Battery.Scale.Flatness = 90;
+                    //        break;
+                    //    case "Плоское":
+                    //        Watch_Face.Battery.Scale.Flatness = 180;
+                    //        break;
+                    //    default:
+                    //        Watch_Face.Battery.Scale.Flatness = 0;
+                    //        break;
+                    //}
+                    switch (comboBox_Battery_Flatness.SelectedIndex)
                     {
-                        case "Треугольное":
+                        case 1:
                             Watch_Face.Battery.Scale.Flatness = 90;
                             break;
-                        case "Плоское":
+                        case 2:
                             Watch_Face.Battery.Scale.Flatness = 180;
                             break;
                         default:
@@ -2090,6 +2132,8 @@ namespace GTR_Watch_face
             comboBox_ActivityCalories_Image.Items.Clear();
             comboBox_ActivityStar_Image.Text = "";
             comboBox_ActivityStar_Image.Items.Clear();
+            comboBox_Activity_NDImage.Text = "";
+            comboBox_Activity_NDImage.Items.Clear();
 
             comboBox_Bluetooth_On.Text = "";
             comboBox_Bluetooth_On.Items.Clear();

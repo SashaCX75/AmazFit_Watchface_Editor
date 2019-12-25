@@ -213,4 +213,40 @@
   <data name="Message_Warning_Caption" xml:space="preserve">
     <value>Предупреждение</value>
   </data>
+  <data name="Message_bigFile_Text1_gts" xml:space="preserve">
+    <value>Размер несжатого файла превышает 1,5МБ.</value>
+  </data>
+  <data name="File_ReadMy" xml:space="preserve">
+    <value>\readme.chm</value>
+  </data>
+  <data name="Form_Preview" xml:space="preserve">
+    <value>Предпросмотр</value>
+  </data>
+  <data name="Form_PreviewX" xml:space="preserve">
+    <value>Предпросмотр [X=</value>
+  </data>
+  <data name="Message_CopyCoord" xml:space="preserve">
+    <value>Координаты скопированны</value>
+  </data>
+  <data name="Dialog_Title_Image" xml:space="preserve">
+    <value>Выбор файлов изображений</value>
+  </data>
+  <data name="Dialog_Title_Pack" xml:space="preserve">
+    <value>Выбор файла настроек циферблата</value>
+  </data>
+  <data name="Dialog_Title_PackUnpack" xml:space="preserve">
+    <value>Путь к файлу упаковщика</value>
+  </data>
+  <data name="Dialog_Title_PreviewStates" xml:space="preserve">
+    <value>Выбор файла настроек предпросмотра</value>
+  </data>
+  <data name="Dialog_Title_SaveGIF" xml:space="preserve">
+    <value>Сохранить анимированный предпросмотр</value>
+  </data>
+  <data name="Dialog_Title_SavePNG" xml:space="preserve">
+    <value>Сохранить предпросмотр</value>
+  </data>
+  <data name="Dialog_Title_Unpack" xml:space="preserve">
+    <value>Выбор файла циферблата</value>
+  </data>
 </root>

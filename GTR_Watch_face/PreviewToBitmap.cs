@@ -691,7 +691,10 @@ namespace GTR_Watch_face
                 int image_index = comboBox_ADWeekDay_ClockHand_Image.SelectedIndex;
                 float startAngle = (float)(numericUpDown_ADWeekDay_ClockHand_StartAngle.Value);
                 float endAngle = (float)(numericUpDown_ADWeekDay_ClockHand_EndAngle.Value);
-                float angle = startAngle + Watch_Face_Preview_Set.Date.WeekDay * (endAngle - startAngle) / 7;
+                int WeekDay = Watch_Face_Preview_Set.Date.WeekDay;
+                WeekDay--;
+                if (WeekDay < 0) WeekDay = 6;
+                float angle = startAngle + WeekDay * (endAngle - startAngle) / 6;
                 DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle, model_47);
             }
 
@@ -705,7 +708,9 @@ namespace GTR_Watch_face
                 int image_index = comboBox_ADMonth_ClockHand_Image.SelectedIndex;
                 float startAngle = (float)(numericUpDown_ADMonth_ClockHand_StartAngle.Value);
                 float endAngle = (float)(numericUpDown_ADMonth_ClockHand_EndAngle.Value);
-                float angle = startAngle + Watch_Face_Preview_Set.Date.Month * (endAngle - startAngle) / 12;
+                int Month = Watch_Face_Preview_Set.Date.Month;
+                Month--;
+                float angle = startAngle + Month * (endAngle - startAngle) / 11;
                 DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle, model_47);
             }
             #endregion
@@ -816,13 +821,28 @@ namespace GTR_Watch_face
             {
                 Pen pen = new Pen(comboBox_StepsProgress_Color.BackColor,
                     (float)numericUpDown_StepsProgress_Width.Value);
-                switch (comboBox_StepsProgress_Flatness.Text)
+                //switch (comboBox_StepsProgress_Flatness.Text)
+                //{
+                //    case "Треугольное":
+                //        pen.EndCap = LineCap.Triangle;
+                //        pen.StartCap = LineCap.Triangle;
+                //        break;
+                //    case "Плоское":
+                //        pen.EndCap = LineCap.Flat;
+                //        pen.StartCap = LineCap.Flat;
+                //        break;
+                //    default:
+                //        pen.EndCap = LineCap.Round;
+                //        pen.StartCap = LineCap.Round;
+                //        break;
+                //}
+                switch (comboBox_StepsProgress_Flatness.SelectedIndex)
                 {
-                    case "Треугольное":
+                    case 1:
                         pen.EndCap = LineCap.Triangle;
                         pen.StartCap = LineCap.Triangle;
                         break;
-                    case "Плоское":
+                    case 2:
                         pen.EndCap = LineCap.Flat;
                         pen.StartCap = LineCap.Flat;
                         break;
@@ -918,7 +938,7 @@ namespace GTR_Watch_face
                     int image_index = comboBox_ActivityDistance_Image.SelectedIndex;
                     int spacing = (int)numericUpDown_ActivityDistance_Spacing.Value;
                     int alignment = comboBox_ActivityDistance_Alignment.SelectedIndex;
-                    double data_number = Watch_Face_Preview_Set.Activity.Distance / 1000.0;
+                    double data_number = Watch_Face_Preview_Set.Activity.Distance / 1000f;
                     int suffix = comboBox_ActivityDistance_Suffix.SelectedIndex;
                     int dec = comboBox_ActivityDistance_Decimal.SelectedIndex;
                     DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, suffix, dec, BBorder);
@@ -1115,13 +1135,28 @@ namespace GTR_Watch_face
 
                         //pen.EndCap = LineCap.Flat;
                         //pen.StartCap = LineCap.Triangle;
-                        switch (comboBox_Battery_Flatness.Text)
+                        //switch (comboBox_Battery_Flatness.Text)
+                        //{
+                        //    case "Треугольное":
+                        //        pen.EndCap = LineCap.Triangle;
+                        //        pen.StartCap = LineCap.Triangle;
+                        //        break;
+                        //    case "Плоское":
+                        //        pen.EndCap = LineCap.Flat;
+                        //        pen.StartCap = LineCap.Flat;
+                        //        break;
+                        //    default:
+                        //        pen.EndCap = LineCap.Round;
+                        //        pen.StartCap = LineCap.Round;
+                        //        break;
+                        //}
+                        switch (comboBox_Battery_Flatness.SelectedIndex)
                         {
-                            case "Треугольное":
+                            case 1:
                                 pen.EndCap = LineCap.Triangle;
                                 pen.StartCap = LineCap.Triangle;
                                 break;
-                            case "Плоское":
+                            case 2:
                                 pen.EndCap = LineCap.Flat;
                                 pen.StartCap = LineCap.Flat;
                                 break;
@@ -1446,6 +1481,11 @@ namespace GTR_Watch_face
             //var Delimit = new Bitmap(1, 1);
             //if (dec >= 0) Delimit = new Bitmap(ListImagesFullName[dec]);
             string data_numberS = data_number.ToString();
+            if (data_numberS.IndexOf('.') < 0) data_numberS = data_numberS + ".";
+            while (data_numberS.IndexOf('.') > data_numberS.Length-3)
+            {
+                data_numberS = data_numberS + "0";
+            }
             int DateLenght = 0;
             int _number;
             int i;

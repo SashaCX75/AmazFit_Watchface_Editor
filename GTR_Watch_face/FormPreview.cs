@@ -136,19 +136,24 @@ namespace GTR_Watch_face
             int CursorX = (int)Math.Round(e.X / scale, 0);
             int CursorY = (int)Math.Round(e.Y / scale, 0);
 
-            this.Text = "Предпросмотр [X=" + CursorX.ToString() +
+            this.Text = Properties.FormStrings.Form_PreviewX + CursorX.ToString() +
                 ";  Y=" + CursorY.ToString() + "]";
         }
 
         private void panel_Preview_MouseLeave(object sender, EventArgs e)
         {
-            this.Text = "Предпросмотр";
+            this.Text = Properties.FormStrings.Form_Preview;
         }
         private void panel_Preview_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             MouseСoordinates.X = (int)Math.Round(e.X / scale, 0);
             MouseСoordinates.Y = (int)Math.Round(e.Y / scale, 0);
-            toolTip1.Show("Координаты скопированны", this, e.X-5, e.Y-7, 2000);
+            toolTip1.Show(Properties.FormStrings.Message_CopyCoord, this, e.X-5, e.Y-7, 2000);
+        }
+
+        private void Form_Preview_Load(object sender, EventArgs e)
+        {
+            this.Text = Properties.FormStrings.Form_Preview;
         }
     }
     

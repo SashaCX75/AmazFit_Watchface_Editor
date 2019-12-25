@@ -25,25 +25,24 @@ namespace GTR_Watch_face
         WATCH_FACE_JSON Watch_Face;
         WATCH_FACE_PREWIEV_TwoDigits Watch_Face_Preview_TwoDigits;
         WATCH_FACE_PREWIEV_SET Watch_Face_Preview_Set;
-        List<string> ListImages = new List<string>();
-        List<string> ListImagesFullName = new List<string>();
-        bool PreviewView;
-        bool Settings_Load;
-        string FileName;
-        string FullFileDir;
-        string StartFileName;
+        List<string> ListImages = new List<string>(); // перечень имен файлов с картинками
+        List<string> ListImagesFullName = new List<string>(); // перечень путей к файлам с картинками
+        bool PreviewView; // включает прорисовку предпросмотра
+        bool Settings_Load; // включать при обновлении настроек длу выключения перерисовки
+        string FileName; // Запоминает имя для диалогов
+        string FullFileDir; // Запоминает папку для диалогов
+        string StartFileName; // имя файла из параметров запуска
         Form_Preview formPreview;
         PROGRAM_SETTINGS Program_Settings;
-
-
-        int offSetX = 227;
+        
+        int offSetX = 227; // координаты центра циферблата
         int offSetY = 227;
 
 
         public Form1(string[] args)
         {
             //Logger.WriteLine("Form1");
-            if (File.Exists(Application.StartupPath + "\\log.txt")) File.Delete(Application.StartupPath + @"\log.txt");
+            //if (File.Exists(Application.StartupPath + "\\log.txt")) File.Delete(Application.StartupPath + @"\log.txt");
             Program_Settings = new PROGRAM_SETTINGS();
             try
             {
@@ -145,9 +144,9 @@ namespace GTR_Watch_face
         private void Form1_Load(object sender, EventArgs e)
         {
             //Logger.WriteLine("Form1_Load");
-            helpProvider1.HelpNamespace = Application.StartupPath + @"\readme.chm";
+            helpProvider1.HelpNamespace = Application.StartupPath + Properties.FormStrings.File_ReadMy;
 #if Puthon
-            string subPath = Application.StartupPath + @"\py_amazfit_tools-dev_gtr\main.py";
+            string subPath = Application.StartupPath + @"\py_amazfit_tools-fix_array\main.py";
 #else
             string subPath = Application.StartupPath + @"\main\main.exe";
 #endif
@@ -172,40 +171,65 @@ namespace GTR_Watch_face
                 File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
             }
             textBox_pack_unpack_dir.Text = Program_Settings.pack_unpack_dir;
-            if (Program_Settings.Model_GTR47)
+            if (Program_Settings.Model_GTS)
             {
-                radioButton_47.Checked = Program_Settings.Model_GTR47;
-                textBox_unpack_command.Text = Program_Settings.unpack_command_GTR47;
-                textBox_pack_command.Text = Program_Settings.pack_command_GTR47;
+                radioButton_gts.Checked = Program_Settings.Model_GTS;
+                textBox_unpack_command.Text = Program_Settings.unpack_command_GTS;
+                textBox_pack_command.Text = Program_Settings.pack_command_GTS;
             }
-            else
+            else if (Program_Settings.Model_GTR42)
             {
                 radioButton_42.Checked = Program_Settings.Model_GTR42;
                 textBox_unpack_command.Text = Program_Settings.unpack_command_GTR42;
                 textBox_pack_command.Text = Program_Settings.pack_command_GTR42;
             }
+            else
+            {
+                radioButton_47.Checked = Program_Settings.Model_GTR47;
+                textBox_unpack_command.Text = Program_Settings.unpack_command_GTR47;
+                textBox_pack_command.Text = Program_Settings.pack_command_GTR47;
+            }
 
             PreviewView = false;
+            //checkBox_border.Checked = Program_Settings.ShowBorder;
+            //comboBox_MonthAndDayD_Alignment.Text = "Вверх влево";
+            //comboBox_MonthAndDayM_Alignment.Text = "Вверх влево";
+            //comboBox_OneLine_Alignment.Text = "Вверх влево";
+            //comboBox_Year_Alignment.Text = "Вверх влево";
+
+            //comboBox_ActivityGoal_Alignment.Text = "Вверх влево";
+            //comboBox_ActivitySteps_Alignment.Text = "Вверх влево";
+            //comboBox_ActivityDistance_Alignment.Text = "Вверх влево";
+            //comboBox_ActivityPuls_Alignment.Text = "Вверх влево";
+            //comboBox_ActivityCalories_Alignment.Text = "Вверх влево";
+            //comboBox_Battery_Text_Alignment.Text = "Вверх влево";
+
+            //comboBox_Weather_Text_Alignment.Text = "Вверх влево";
+            //comboBox_Weather_Day_Alignment.Text = "Вверх влево";
+            //comboBox_Weather_Night_Alignment.Text = "Вверх влево";
+
+            //comboBox_Battery_Flatness.Text = "Круглое";
+            //comboBox_StepsProgress_Flatness.Text = "Круглое";
             checkBox_border.Checked = Program_Settings.ShowBorder;
-            comboBox_MonthAndDayD_Alignment.Text = "Вверх влево";
-            comboBox_MonthAndDayM_Alignment.Text = "Вверх влево";
-            comboBox_OneLine_Alignment.Text = "Вверх влево";
-            comboBox_Year_Alignment.Text = "Вверх влево";
+            comboBox_MonthAndDayD_Alignment.SelectedIndex = 0;
+            comboBox_MonthAndDayM_Alignment.SelectedIndex = 0;
+            comboBox_OneLine_Alignment.SelectedIndex = 0;
+            comboBox_Year_Alignment.SelectedIndex = 0;
 
-            comboBox_ActivityGoal_Alignment.Text = "Вверх влево";
-            comboBox_ActivitySteps_Alignment.Text = "Вверх влево";
-            comboBox_ActivityDistance_Alignment.Text = "Вверх влево";
-            comboBox_ActivityPuls_Alignment.Text = "Вверх влево";
-            comboBox_ActivityCalories_Alignment.Text = "Вверх влево";
-            comboBox_Battery_Text_Alignment.Text = "Вверх влево";
+            comboBox_ActivityGoal_Alignment.SelectedIndex = 0; ;
+            comboBox_ActivitySteps_Alignment.SelectedIndex = 0;
+            comboBox_ActivityDistance_Alignment.SelectedIndex = 0;
+            comboBox_ActivityPuls_Alignment.SelectedIndex = 0;
+            comboBox_ActivityCalories_Alignment.SelectedIndex = 0;
+            comboBox_Battery_Text_Alignment.SelectedIndex = 0;
 
-            comboBox_Weather_Text_Alignment.Text = "Вверх влево";
-            comboBox_Weather_Day_Alignment.Text = "Вверх влево";
-            comboBox_Weather_Night_Alignment.Text = "Вверх влево";
+            comboBox_Weather_Text_Alignment.SelectedIndex = 0;
+            comboBox_Weather_Day_Alignment.SelectedIndex = 0;
+            comboBox_Weather_Night_Alignment.SelectedIndex = 0;
 
-            comboBox_Battery_Flatness.Text = "Круглое";
-            comboBox_StepsProgress_Flatness.Text = "Круглое";
-            
+            comboBox_Battery_Flatness.SelectedIndex = 0;
+            comboBox_StepsProgress_Flatness.SelectedIndex = 0;
+
             label_version.Text = "v " +
                 System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Major.ToString() + "." +
                 System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Minor.ToString();
@@ -239,6 +263,7 @@ namespace GTR_Watch_face
 
         private void Form1_Shown(object sender, EventArgs e)
         {
+            
             //Logger.WriteLine("Form1_Shown");
             //Logger.WriteLine("Загружаем файл из значения аргумента " + StartFileName);
             if ((StartFileName != null) && (StartFileName.Length > 0)) LoadJsonAndImage(StartFileName);
@@ -255,7 +280,7 @@ namespace GTR_Watch_face
             ////openFileDialog1.FilterIndex = 2;
             openFileDialog.RestoreDirectory = true;
             openFileDialog.Multiselect = false;
-            openFileDialog.Title = "Путь к файлу упаковщика";
+            openFileDialog.Title = Properties.FormStrings.Dialog_Title_PackUnpack;
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -308,7 +333,7 @@ namespace GTR_Watch_face
             ////openFileDialog1.FilterIndex = 2;
             openFileDialog.RestoreDirectory = true;
             openFileDialog.Multiselect = false;
-            openFileDialog.Title = "Путь к файлу циферблата";
+            openFileDialog.Title = Properties.FormStrings.Dialog_Title_Unpack;
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -453,7 +478,7 @@ namespace GTR_Watch_face
             ////openFileDialog1.FilterIndex = 2;
             openFileDialog.RestoreDirectory = true;
             openFileDialog.Multiselect = false;
-            openFileDialog.Title = "Путь к файлу циферблата";
+            openFileDialog.Title = Properties.FormStrings.Dialog_Title_Unpack;
 
 #if !DEBUG
             if (!File.Exists(textBox_pack_unpack_dir.Text))
@@ -636,7 +661,7 @@ namespace GTR_Watch_face
             ////openFileDialog1.FilterIndex = 2;
             openFileDialog.RestoreDirectory = true;
             openFileDialog.Multiselect = false;
-            openFileDialog.Title = "Путь к файлу настроек циферблата";
+            openFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
 
 #if !DEBUG
             if (!File.Exists(textBox_pack_unpack_dir.Text))
@@ -732,7 +757,7 @@ namespace GTR_Watch_face
             openFileDialog.RestoreDirectory = true;
             openFileDialog.InitialDirectory = FullFileDir;
             openFileDialog.Multiselect = false;
-            openFileDialog.Title = "Путь к файлу циферблата";
+            openFileDialog.Title = Properties.FormStrings.Dialog_Title_Unpack;
             string respackerPath = Application.StartupPath + @"\Res_PackerUnpacker\";
             if (Is64Bit()) respackerPath = respackerPath + @"x64\respacker.exe";
             else respackerPath = respackerPath + @"x86\respacker.exe";
@@ -816,7 +841,7 @@ namespace GTR_Watch_face
             ////openFileDialog1.FilterIndex = 2;
             openFileDialog.RestoreDirectory = true;
             openFileDialog.Multiselect = false;
-            openFileDialog.Title = "Путь к файлу настроек циферблата";
+            openFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
 
 #if !DEBUG
             if (!File.Exists(textBox_pack_unpack_dir.Text))
@@ -852,9 +877,16 @@ namespace GTR_Watch_face
                     if (File.Exists(newFullName))
                     {
                         double fileSize = (GetFileSizeMB(new FileInfo(newFullName)));
-                        if (fileSize > 1.95) MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1 + Environment.NewLine + Environment.NewLine +
+                        if ((fileSize > 1.5) && (radioButton_gts.Checked))
+                        {
+                            MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_gts + Environment.NewLine + Environment.NewLine +
                             Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else if (fileSize > 1.95) MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1 + Environment.NewLine + Environment.NewLine +
+                        Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                         //MessageBox.Show(fileSize.ToString());
                         //MessageBox.Show(GetFileSize(new FileInfo(newFullName)));
                         string respackerPath = Application.StartupPath + @"\Res_PackerUnpacker\";
@@ -935,10 +967,10 @@ namespace GTR_Watch_face
             ////openFileDialog1.FilterIndex = 2;
             openFileDialog.RestoreDirectory = true;
             openFileDialog.Multiselect = true;
-            openFileDialog.Title = "Выбор файлов изображений";
+            openFileDialog.Title = Properties.FormStrings.Dialog_Title_Image;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                dataGridView1.Rows.Clear();
+                dataGridView_ImagesList.Rows.Clear();
                 ListImages.Clear();
                 ListImagesFullName.Clear();
                 int i;
@@ -969,7 +1001,7 @@ namespace GTR_Watch_face
                                 ImageLayout = ZoomType
                             });
                             RowNew.Height = 45;
-                            dataGridView1.Rows.Add(RowNew);
+                            dataGridView_ImagesList.Rows.Add(RowNew);
                             ListImages.Add(i.ToString());
                             ListImagesFullName.Add(file);
                         }
@@ -1004,7 +1036,7 @@ namespace GTR_Watch_face
             ////openFileDialog1.FilterIndex = 2;
             openFileDialog.RestoreDirectory = true;
             openFileDialog.Multiselect = false;
-            openFileDialog.Title = "Выбор файла настроек циферблата";
+            openFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 //string fullfilename = openFileDialog.FileName;
@@ -1021,7 +1053,7 @@ namespace GTR_Watch_face
             //richTextBox_JSON.Text = text;
             ListImages.Clear();
             ListImagesFullName.Clear();
-            dataGridView1.Rows.Clear();
+            dataGridView_ImagesList.Rows.Clear();
             //Logger.WriteLine("Прочитали текст из json файла " + fullfilename);
 
             DirectoryInfo Folder;
@@ -1058,7 +1090,7 @@ namespace GTR_Watch_face
                         });
                         //loadedImage.Dispose();
                         RowNew.Height = 45;
-                        dataGridView1.Rows.Add(RowNew);
+                        dataGridView_ImagesList.Rows.Add(RowNew);
                         count++;
                         ListImages.Add(i.ToString());
                         ListImagesFullName.Add(file.FullName);
@@ -1760,7 +1792,7 @@ namespace GTR_Watch_face
                 panel_Date.Height = 1;
                 panel_AnalogDate.Height = 1;
                 panel_StepsProgress.Height = 1;
-                panel_Activity.Height = 190;
+                panel_Activity.Height = 215;
                 panel_Status.Height = 1;
                 panel_Battery.Height = 1;
                 panel_AnalogClock.Height = 1;
@@ -2053,7 +2085,10 @@ namespace GTR_Watch_face
 
         private void checkBox_Activity_CheckedChanged(object sender, EventArgs e)
         {
-            tabControl_Activity.Enabled = checkBox_Activity.Checked;
+            bool b = checkBox_Activity.Checked;
+            tabControl_Activity.Enabled = b;
+            comboBox_Activity_NDImage.Enabled = b;
+            label403.Enabled = b;
         }
 
         private void checkBox_CircleScale_CheckedChanged(object sender, EventArgs e)
@@ -2627,18 +2662,6 @@ namespace GTR_Watch_face
         private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox comboBox = (ComboBox)(sender);
-            //if (comboBox.Name != "comboBox_WeatherSet_Icon")
-            //{
-            //    try
-            //    {
-            //        using (FileStream stream = new FileStream(ListImagesFullName[comboBox.SelectedIndex], FileMode.Open, FileAccess.Read))
-            //        {
-            //            pictureBox1.Image = Image.FromStream(stream);
-            //            timer1.Enabled = true;
-            //        }
-            //    }
-            //    catch { }
-            //}
             int i = 0;
             if(Int32.TryParse(comboBox.Text, out i))
             {
@@ -3168,13 +3191,13 @@ namespace GTR_Watch_face
         {
             if (checkBox1.Checked)
             {
-                dataGridView1.DefaultCellStyle.BackColor = Color.Black;
-                dataGridView1.DefaultCellStyle.ForeColor = Color.White;
+                dataGridView_ImagesList.DefaultCellStyle.BackColor = Color.Black;
+                dataGridView_ImagesList.DefaultCellStyle.ForeColor = Color.White;
             }
             else
             {
-                dataGridView1.DefaultCellStyle.BackColor = Color.White;
-                dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
+                dataGridView_ImagesList.DefaultCellStyle.BackColor = Color.White;
+                dataGridView_ImagesList.DefaultCellStyle.ForeColor = Color.Black;
             }
         }
 
@@ -3319,7 +3342,7 @@ namespace GTR_Watch_face
             ////openFileDialog1.FilterIndex = 2;
             openFileDialog.RestoreDirectory = true;
             openFileDialog.Multiselect = false;
-            openFileDialog.Title = "Выбор файла настроек циферблата";
+            openFileDialog.Title = Properties.FormStrings.Dialog_Title_PreviewStates;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string fullfilename = openFileDialog.FileName;
@@ -3964,7 +3987,7 @@ namespace GTR_Watch_face
             //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
             ////openFileDialog1.FilterIndex = 2;
             saveFileDialog.RestoreDirectory = true;
-            saveFileDialog.Title = "Выбор файла настроек циферблата";
+            saveFileDialog.Title = Properties.FormStrings.Dialog_Title_PreviewStates;
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string fullfilename = saveFileDialog.FileName;
@@ -4267,7 +4290,7 @@ namespace GTR_Watch_face
             //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
             ////openFileDialog1.FilterIndex = 2;
             saveFileDialog.RestoreDirectory = true;
-            saveFileDialog.Title = "Выбор файла настроек циферблата";
+            saveFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string fullfilename = saveFileDialog.FileName;
@@ -4386,7 +4409,7 @@ namespace GTR_Watch_face
             //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
             ////openFileDialog1.FilterIndex = 2;
             saveFileDialog.RestoreDirectory = true;
-            saveFileDialog.Title = "Сохранить предпросмотр";
+            saveFileDialog.Title = Properties.FormStrings.Dialog_Title_SavePNG;
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
@@ -4411,7 +4434,7 @@ namespace GTR_Watch_face
             //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
             ////openFileDialog1.FilterIndex = 2;
             saveFileDialog.RestoreDirectory = true;
-            saveFileDialog.Title = "Сохранить анимированный предпросмотр";
+            saveFileDialog.Title = Properties.FormStrings.Dialog_Title_SaveGIF;
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
@@ -4578,6 +4601,7 @@ namespace GTR_Watch_face
         {
             if (radioButton_47.Checked)
             {
+                this.Text = "GTR watch face editor";
                 panel_Preview.Height = 230;
                 panel_Preview.Width = 230;
                 offSetX = 227;
@@ -4604,6 +4628,7 @@ namespace GTR_Watch_face
             }
             else if (radioButton_42.Checked)
             {
+                this.Text = "GTR watch face editor";
                 panel_Preview.Height = 198;
                 panel_Preview.Width = 198;
                 offSetX = 195;
@@ -4618,6 +4643,7 @@ namespace GTR_Watch_face
             }
             else
             {
+                this.Text = "GTS watch face editor";
                 panel_Preview.Height = 223;
                 panel_Preview.Width = 176;
                 offSetX = 174;
@@ -4641,6 +4667,7 @@ namespace GTR_Watch_face
 
             Program_Settings.Model_GTR47 = radioButton_47.Checked;
             Program_Settings.Model_GTR42 = radioButton_42.Checked;
+            Program_Settings.Model_GTS = radioButton_gts.Checked;
             string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
             {
                 //DefaultValueHandling = DefaultValueHandling.Ignore,

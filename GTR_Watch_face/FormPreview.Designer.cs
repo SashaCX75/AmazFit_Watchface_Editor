@@ -145,6 +145,7 @@
             this.Name = "Form_Preview";
             this.ShowInTaskbar = false;
             this.Text = "Предпросмотр";
+            this.Load += new System.EventHandler(this.Form_Preview_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

@@ -61,7 +61,97 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Большой размер файла.
+        ///   Ищет локализованную строку, похожую на Выбор файлов изображений.
+        /// </summary>
+        public static string Dialog_Title_Image {
+            get {
+                return ResourceManager.GetString("Dialog_Title_Image", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Выбор файла настроек циферблата.
+        /// </summary>
+        public static string Dialog_Title_Pack {
+            get {
+                return ResourceManager.GetString("Dialog_Title_Pack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Путь к файлу упаковщика.
+        /// </summary>
+        public static string Dialog_Title_PackUnpack {
+            get {
+                return ResourceManager.GetString("Dialog_Title_PackUnpack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Выбор файла настроек предпросмотра.
+        /// </summary>
+        public static string Dialog_Title_PreviewStates {
+            get {
+                return ResourceManager.GetString("Dialog_Title_PreviewStates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Сохранить анимированный предпросмотр.
+        /// </summary>
+        public static string Dialog_Title_SaveGIF {
+            get {
+                return ResourceManager.GetString("Dialog_Title_SaveGIF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Сохранить предпросмотр.
+        /// </summary>
+        public static string Dialog_Title_SavePNG {
+            get {
+                return ResourceManager.GetString("Dialog_Title_SavePNG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Выбор файла циферблата.
+        /// </summary>
+        public static string Dialog_Title_Unpack {
+            get {
+                return ResourceManager.GetString("Dialog_Title_Unpack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на \readme.chm.
+        /// </summary>
+        public static string File_ReadMy {
+            get {
+                return ResourceManager.GetString("File_ReadMy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Предпросмотр.
+        /// </summary>
+        public static string Form_Preview {
+            get {
+                return ResourceManager.GetString("Form_Preview", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Предпросмотр [X=.
+        /// </summary>
+        public static string Form_PreviewX {
+            get {
+                return ResourceManager.GetString("Form_PreviewX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Большой размер файла.
         /// </summary>
         public static string Message_bigFile_Caption {
             get {
@@ -70,7 +160,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Размер несжатого файла превышает 1,95МБ..
+        ///   Ищет локализованную строку, похожую на Размер несжатого файла превышает 1,95МБ..
         /// </summary>
         public static string Message_bigFile_Text1 {
             get {
@@ -79,7 +169,16 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Циферблат может не работать..
+        ///   Ищет локализованную строку, похожую на Размер несжатого файла превышает 1,5МБ..
+        /// </summary>
+        public static string Message_bigFile_Text1_gts {
+            get {
+                return ResourceManager.GetString("Message_bigFile_Text1_gts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Циферблат может не работать..
         /// </summary>
         public static string Message_bigFile_Text2 {
             get {
@@ -88,7 +187,16 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Ошибка.
+        ///   Ищет локализованную строку, похожую на Координаты скопированны.
+        /// </summary>
+        public static string Message_CopyCoord {
+            get {
+                return ResourceManager.GetString("Message_CopyCoord", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Ошибка.
         /// </summary>
         public static string Message_Error_Caption {
             get {
@@ -97,7 +205,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Невозможно открыть изображение: .
+        ///   Ищет локализованную строку, похожую на Невозможно открыть изображение: .
         /// </summary>
         public static string Message_error_Image_Text1 {
             get {
@@ -106,7 +214,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// У Вас нет прав на чтение файла, или изображение повреждено..
+        ///   Ищет локализованную строку, похожую на . У Вас нет прав на чтение файла, или изображение повреждено..
         /// </summary>
         public static string Message_error_Image_Text2 {
             get {
@@ -115,7 +223,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Файл не найден.
+        ///   Ищет локализованную строку, похожую на Файл не найден.
         /// </summary>
         public static string Message_error_pack_unpack_dir_Caption {
             get {
@@ -124,7 +232,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Путь [.
+        ///   Ищет локализованную строку, похожую на Путь [.
         /// </summary>
         public static string Message_error_pack_unpack_dir_Text1 {
             get {
@@ -133,7 +241,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// ] к утилите распаковки/запаковки указан неверно..
+        ///   Ищет локализованную строку, похожую на ] к утилите распаковки/запаковки указан неверно..
         /// </summary>
         public static string Message_error_pack_unpack_dir_Text2 {
             get {
@@ -142,7 +250,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Укажите верный путь к утилите распаковки/запаковки..
+        ///   Ищет локализованную строку, похожую на Укажите верный путь к утилите распаковки/запаковки..
         /// </summary>
         public static string Message_error_pack_unpack_dir_Text3 {
             get {
@@ -151,7 +259,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Отсутствуют необходимые компоненты программы..
+        ///   Ищет локализованную строку, похожую на Отсутствуют необходимые компоненты программы..
         /// </summary>
         public static string Message_error_respackerPath_Text1 {
             get {
@@ -160,7 +268,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Не найдена утилита сжатия bin файлов по пути [.
+        ///   Ищет локализованную строку, похожую на Не найдена утилита сжатия bin файлов по пути [.
         /// </summary>
         public static string Message_error_respackerPath_Text2 {
             get {
@@ -169,7 +277,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Проверьте наличие утилиты сжатия bin файлов..
+        ///   Ищет локализованную строку, похожую на Проверьте наличие утилиты сжатия bin файлов..
         /// </summary>
         public static string Message_error_respackerPath_Text3 {
             get {
@@ -178,7 +286,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Перейти к файлу.
+        ///   Ищет локализованную строку, похожую на Перейти к файлу.
         /// </summary>
         public static string Message_GoToFile_Caption {
             get {
@@ -187,7 +295,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Перейти к файлу?.
+        ///   Ищет локализованную строку, похожую на Перейти к файлу?.
         /// </summary>
         public static string Message_GoToFile_Text {
             get {
@@ -196,7 +304,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Неверный JSON файл..
+        ///   Ищет локализованную строку, похожую на Неверный JSON файл..
         /// </summary>
         public static string Message_JsonError_Text {
             get {
@@ -205,7 +313,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Ошибка чтения JSON файла..
+        ///   Ищет локализованную строку, похожую на Ошибка чтения JSON файла..
         /// </summary>
         public static string Message_JsonReadError_Text {
             get {
@@ -214,7 +322,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Загрузка настроек предпросмотра.
+        ///   Ищет локализованную строку, похожую на Загрузка настроек предпросмотра.
         /// </summary>
         public static string Message_LoadPreviewStates_Caption {
             get {
@@ -223,7 +331,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Загрузить имеющийся файл с набором параметров предпросмотра PreviewStates.json?.
+        ///   Ищет локализованную строку, похожую на Загрузить имеющийся файл с набором параметров предпросмотра PreviewStates.json?.
         /// </summary>
         public static string Message_LoadPreviewStates_Text {
             get {
@@ -232,7 +340,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Открытие проекта.
+        ///   Ищет локализованную строку, похожую на Открытие проекта.
         /// </summary>
         public static string Message_openProject_Caption {
             get {
@@ -241,7 +349,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Открыть распакованный проект?.
+        ///   Ищет локализованную строку, похожую на Открыть распакованный проект?.
         /// </summary>
         public static string Message_openProject_Text {
             get {
@@ -250,7 +358,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// PNG файлы идут не по порядку или часть файлов отсутствует..
+        ///   Ищет локализованную строку, похожую на PNG файлы идут не по порядку или часть файлов отсутствует..
         /// </summary>
         public static string Message_PNGmissing_Text1 {
             get {
@@ -259,7 +367,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Присвойте имена PNG файлам в порядке возрастания..
+        ///   Ищет локализованную строку, похожую на Присвойте имена PNG файлам в порядке возрастания..
         /// </summary>
         public static string Message_PNGmissing_Text2 {
             get {
@@ -268,7 +376,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Перезагрузка.
+        ///   Ищет локализованную строку, похожую на Перезагрузка.
         /// </summary>
         public static string Message_Restart_Caption {
             get {
@@ -277,7 +385,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Для применения настроек необходимо перезагрузить программу..
+        ///   Ищет локализованную строку, похожую на Для применения настроек необходимо перезагрузить программу..
         /// </summary>
         public static string Message_Restart_Text1 {
             get {
@@ -286,7 +394,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Перезапустить программу?.
+        ///   Ищет локализованную строку, похожую на Перезапустить программу?.
         /// </summary>
         public static string Message_Restart_Text2 {
             get {
@@ -295,7 +403,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Для сохранения предустановленных параметром установите хотябы в одном поле &quot;Калории&quot; значение отличное от &quot;1234&quot;..
+        ///   Ищет локализованную строку, похожую на Для сохранения предустановленных параметром установите хотябы в одном поле &quot;Калории&quot; значение отличное от &quot;1234&quot;..
         /// </summary>
         public static string Message_SaveOnly1234_Text {
             get {
@@ -304,7 +412,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Предупреждение.
+        ///   Ищет локализованную строку, похожую на Предупреждение.
         /// </summary>
         public static string Message_Warning_Caption {
             get {
@@ -313,7 +421,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Если использовать не все три стрелки в аналоговых часах, то могут возникнуть проблемы..
+        ///   Ищет локализованную строку, похожую на Если использовать не все три стрелки в аналоговых часах, то могут возникнуть проблемы..
         /// </summary>
         public static string Message_Warning3clockHand_Text {
             get {
@@ -322,7 +430,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Не рекомендуется использовать минуты без использования часов для числового отображения времени..
+        ///   Ищет локализованную строку, похожую на Не рекомендуется использовать минуты без использования часов для числового отображения времени..
         /// </summary>
         public static string Message_WarningOnlyMin_Text {
             get {
@@ -331,7 +439,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Не рекомендуется использовать ctreyls без использования часов и минут для числового отображения времени..
+        ///   Ищет локализованную строку, похожую на Не рекомендуется использовать ctreyls без использования часов и минут для числового отображения времени..
         /// </summary>
         public static string Message_WarningOnlySec_Text {
             get {
@@ -340,7 +448,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        /// Разные значения ImageIndex для десятков и единиц не поддерживаются..
+        ///   Ищет локализованную строку, похожую на Разные значения ImageIndex для десятков и единиц не поддерживаются..
         /// </summary>
         public static string Message_WarningTensOnes_Text {
             get {

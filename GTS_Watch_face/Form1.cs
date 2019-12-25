@@ -1152,6 +1152,8 @@ namespace GTS_Watch_face
             comboBox_MonthAndDayM_Image.Items.AddRange(ListImages.ToArray());
             comboBox_MonthName_Image.Items.AddRange(ListImages.ToArray());
 
+            comboBox_SPSliced_Image.Items.AddRange(ListImages.ToArray());
+
             comboBox_ActivityGoal_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivitySteps_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityDistance_Image.Items.AddRange(ListImages.ToArray());
@@ -1333,7 +1335,8 @@ namespace GTS_Watch_face
                         //comboBox_OneLine_Image.Text = Watch_Face.Date.MonthAndDay.OneLine.Number.ImageIndex.ToString();
                         checkBoxSetText(comboBox_OneLine_Image, Watch_Face.Date.MonthAndDay.OneLine.Number.ImageIndex);
                         //comboBox_OneLine_Delimiter.Text = Watch_Face.Date.MonthAndDay.OneLine.DelimiterImageIndex.ToString();
-                        checkBoxSetText(comboBox_OneLine_Delimiter, Watch_Face.Date.MonthAndDay.OneLine.DelimiterImageIndex);
+                        if (Watch_Face.Date.MonthAndDay.OneLine.DelimiterImageIndex != null)
+                            checkBoxSetText(comboBox_OneLine_Delimiter, (long)Watch_Face.Date.MonthAndDay.OneLine.DelimiterImageIndex);
                         string Alignment = AlignmentToString(Watch_Face.Date.MonthAndDay.OneLine.Number.Alignment);
                         comboBox_OneLine_Alignment.Text = Alignment;
                     }
@@ -1437,10 +1440,24 @@ namespace GTS_Watch_face
                 }
             }
             else checkBox_StepsProgress.Checked = false;
+            if ((Watch_Face.StepsProgress != null) && (Watch_Face.StepsProgress.Sliced != null))
+            {
+                if ((Watch_Face.StepsProgress.Sliced != null) && (Watch_Face.StepsProgress.Sliced.Coordinates != null))
+                {
+                    dataGridView2.Rows.Clear();
+                    checkBoxSetText(comboBox_SPSliced_Image, Watch_Face.StepsProgress.Sliced.ImageIndex);
+                    foreach (Coordinates coordinates in Watch_Face.StepsProgress.Sliced.Coordinates)
+                    {
+                        var RowNew = new DataGridViewRow();
+                        dataGridView2.Rows.Add(coordinates.X, coordinates.Y);
+                    }
+                }
+            }
+
 #endregion
 
-#region Activity
-            if (Watch_Face.Activity != null)
+                #region Activity
+                if (Watch_Face.Activity != null)
             {
                 checkBox_Activity.Checked = true;
                 if (Watch_Face.Activity.StepsGoal != null)
@@ -2600,6 +2617,8 @@ namespace GTS_Watch_face
             comboBox_MonthAndDayD_Image.Text = "";
             comboBox_MonthAndDayD_Image.Items.Clear();
 
+            comboBox_SPSliced_Image.Text = "";
+            comboBox_SPSliced_Image.Items.Clear();
 
             comboBox_ActivityGoal_Image.Text = "";
             comboBox_ActivityGoal_Image.Items.Clear();
@@ -4398,6 +4417,39 @@ namespace GTS_Watch_face
                 }
             }
 
+            if((comboBox_SPSliced_Image.SelectedIndex>=0) && (dataGridView2.Rows.Count > 1))
+            {
+                if (Watch_Face.StepsProgress == null) Watch_Face.StepsProgress = new StepsProgress();
+                if (Watch_Face.StepsProgress.Sliced == null) Watch_Face.StepsProgress.Sliced = new IconSet();
+
+                //object[] objson = new object[] { };
+                Coordinates[] coordinates = new Coordinates[0];
+                int count = 0;
+
+                foreach (DataGridViewRow row in dataGridView2.Rows)
+                {
+                    //whatever you are currently doing
+                    //Coordinates coordinates = new Coordinates();
+                    int x = 0;
+                    int y = 0;
+                    if ((row.Cells[0].Value != null) && (row.Cells[1].Value != null))
+                    {
+                        if ((Int32.TryParse(row.Cells[0].Value.ToString(), out x)) && (Int32.TryParse(row.Cells[1].Value.ToString(), out y)))
+                        {
+
+                            //Array.Resize(ref objson, objson.Length + 1);
+                            Array.Resize(ref coordinates, coordinates.Length + 1);
+                            //objson[count] = coordinates;
+                            coordinates[count] = new Coordinates();
+                            coordinates[count].X = x;
+                            coordinates[count].Y = y;
+                            count++;
+                        } 
+                    }
+                    Watch_Face.StepsProgress.Sliced.Coordinates = coordinates;
+                }
+            }
+
             // статусы
             if ((checkBox_Bluetooth.Checked) &&
                 ((comboBox_Bluetooth_On.SelectedIndex >= 0) || (comboBox_Bluetooth_Off.SelectedIndex >= 0)))
@@ -6043,7 +6095,7 @@ namespace GTS_Watch_face
             var objsontemp = JsonConvert.DeserializeObject<object[]>(string_json_temp);
 
             string formatted = JsonConvert.SerializeObject(objsontemp, Formatting.Indented);
-            richTextBox_JSON.Text = formatted;
+            //richTextBox_JSON.Text = formatted;
 
 
             if (formatted.Length < 10)
@@ -7366,6 +7418,36 @@ namespace GTS_Watch_face
 
                 }
             }
+
+            if((comboBox_SPSliced_Image.SelectedIndex>=0) && (dataGridView2.Rows.Count>0))
+            {
+                //int x = 0;
+                //int y = 0;
+                //int count = 0;
+                int www = dataGridView2.Rows.Count;
+                for (int count = 0; count < dataGridView2.Rows.Count; count++)
+                {
+                    if ((dataGridView2.Rows[count].Cells[0].Value != null) && 
+                        (dataGridView2.Rows[count].Cells[1].Value != null))
+                    {
+                        int x = Int32.Parse(dataGridView2.Rows[count].Cells[0].Value.ToString());
+                        int y = Int32.Parse(dataGridView2.Rows[count].Cells[1].Value.ToString());
+                        i = comboBox_SPSliced_Image.SelectedIndex + count;
+                        if (i < ListImagesFullName.Count)
+                        {
+                            int value = (dataGridView2.Rows.Count-1) * Watch_Face_Preview_Set.Activity.Steps /
+                                Watch_Face_Preview_Set.Activity.StepsGoal;
+                            if (count < value)
+                            {
+                                src = new Bitmap(ListImagesFullName[i]);
+                                gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                //count++;
+                                src.Dispose(); 
+                            }
+                        }
+                    }
+                }
+            }
 #endregion
 
             if (scale != 0.5) gPanel.SmoothingMode = SmoothingMode.Default;
@@ -8277,6 +8359,21 @@ namespace GTS_Watch_face
                 return sizeinmbytes;
             }
             catch { return 0; } //перехват ошибок и возврат сообщения об ошибке
+        }
+
+        private void dataGridView2_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if ((dataGridView2.Rows[e.RowIndex].Cells[0].Value == null) && 
+                (dataGridView2.Rows[e.RowIndex].Cells[1].Value == null) && (e.RowIndex < dataGridView2.Rows.Count - 1))
+                dataGridView2.Rows.RemoveAt(e.RowIndex);
+            JSON_write();
+            PreviewImage(); 
+        }
+
+        private void dataGridView2_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            JSON_write();
+            PreviewImage();
         }
     }
 }

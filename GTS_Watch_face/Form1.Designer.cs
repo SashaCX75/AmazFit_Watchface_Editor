@@ -745,6 +745,11 @@
             this.checkBox_Activity = new System.Windows.Forms.CheckBox();
             this.button_Activity = new System.Windows.Forms.Button();
             this.panel_StepsProgress = new System.Windows.Forms.Panel();
+            this.comboBox_SPSliced_Image = new System.Windows.Forms.ComboBox();
+            this.label368 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.ValueX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ValueY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBox_StepsProgress_Flatness = new System.Windows.Forms.ComboBox();
             this.label348 = new System.Windows.Forms.Label();
             this.numericUpDown_StepsProgress_EndAngle = new System.Windows.Forms.NumericUpDown();
@@ -1253,6 +1258,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStar_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStar_X)).BeginInit();
             this.panel_StepsProgress.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_EndAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_StartAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_Width)).BeginInit();
@@ -9252,6 +9258,9 @@
             // panel_StepsProgress
             // 
             this.panel_StepsProgress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_StepsProgress.Controls.Add(this.comboBox_SPSliced_Image);
+            this.panel_StepsProgress.Controls.Add(this.label368);
+            this.panel_StepsProgress.Controls.Add(this.dataGridView2);
             this.panel_StepsProgress.Controls.Add(this.comboBox_StepsProgress_Flatness);
             this.panel_StepsProgress.Controls.Add(this.label348);
             this.panel_StepsProgress.Controls.Add(this.numericUpDown_StepsProgress_EndAngle);
@@ -9274,6 +9283,50 @@
             resources.ApplyResources(this.panel_StepsProgress, "panel_StepsProgress");
             this.panel_StepsProgress.Name = "panel_StepsProgress";
             this.helpProvider1.SetShowHelp(this.panel_StepsProgress, ((bool)(resources.GetObject("panel_StepsProgress.ShowHelp"))));
+            // 
+            // comboBox_SPSliced_Image
+            // 
+            this.comboBox_SPSliced_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_SPSliced_Image.DropDownWidth = 75;
+            this.comboBox_SPSliced_Image.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBox_SPSliced_Image, "comboBox_SPSliced_Image");
+            this.comboBox_SPSliced_Image.Name = "comboBox_SPSliced_Image";
+            this.helpProvider1.SetShowHelp(this.comboBox_SPSliced_Image, ((bool)(resources.GetObject("comboBox_SPSliced_Image.ShowHelp"))));
+            this.comboBox_SPSliced_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_SPSliced_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_SPSliced_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            // 
+            // label368
+            // 
+            resources.ApplyResources(this.label368, "label368");
+            this.label368.Name = "label368";
+            this.helpProvider1.SetShowHelp(this.label368, ((bool)(resources.GetObject("label368.ShowHelp"))));
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ValueX,
+            this.ValueY});
+            this.dataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            resources.ApplyResources(this.dataGridView2, "dataGridView2");
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellEndEdit);
+            this.dataGridView2.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridView2_RowsRemoved);
+            // 
+            // ValueX
+            // 
+            this.ValueX.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.ValueX, "ValueX");
+            this.ValueX.Name = "ValueX";
+            this.ValueX.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ValueY
+            // 
+            this.ValueY.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.ValueY, "ValueY");
+            this.ValueY.Name = "ValueY";
             // 
             // comboBox_StepsProgress_Flatness
             // 
@@ -12508,6 +12561,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStar_X)).EndInit();
             this.panel_StepsProgress.ResumeLayout(false);
             this.panel_StepsProgress.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_EndAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_StartAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_Width)).EndInit();
@@ -13607,6 +13661,11 @@
         private System.Windows.Forms.Label label365;
         private System.Windows.Forms.Label label366;
         private System.Windows.Forms.Label label367;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ValueX;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ValueY;
+        private System.Windows.Forms.ComboBox comboBox_SPSliced_Image;
+        private System.Windows.Forms.Label label368;
     }
 }
 
