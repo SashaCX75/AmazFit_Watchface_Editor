@@ -1440,6 +1440,7 @@ namespace GTS_Watch_face
                 }
             }
             else checkBox_StepsProgress.Checked = false;
+
             if ((Watch_Face.StepsProgress != null) && (Watch_Face.StepsProgress.Sliced != null))
             {
                 if ((Watch_Face.StepsProgress.Sliced != null) && (Watch_Face.StepsProgress.Sliced.Coordinates != null))

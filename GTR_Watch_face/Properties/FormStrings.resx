@@ -249,4 +249,7 @@
   <data name="Dialog_Title_Unpack" xml:space="preserve">
     <value>Выбор файла циферблата</value>
   </data>
+  <data name="Message_WarningDistanceSuffix" xml:space="preserve">
+    <value>Не рекомендуется использовать отображение расстояния без суффикса.</value>
+  </data>
 </root>

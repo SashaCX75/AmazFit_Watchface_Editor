@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -874,6 +875,42 @@ namespace GTR_Watch_face
 
                 }
             }
+
+            if (checkBox_SPSliced.Checked)
+            {
+                if ((comboBox_SPSliced_Image.SelectedIndex >= 0) && (dataGridView_SPSliced.Rows.Count > 0))
+                {
+                    int x = 0;
+                    int y = 0;
+                    //int count = 0;
+                    for (int count = 0; count < dataGridView_SPSliced.Rows.Count; count++)
+                    {
+                        if ((dataGridView_SPSliced.Rows[count].Cells[0].Value != null) &&
+                            (dataGridView_SPSliced.Rows[count].Cells[1].Value != null))
+                        {
+                            //int x = Int32.Parse(dataGridView_SPSliced.Rows[count].Cells[0].Value.ToString());
+                            //int y = Int32.Parse(dataGridView_SPSliced.Rows[count].Cells[1].Value.ToString());
+                            if (Int32.TryParse(dataGridView_SPSliced.Rows[count].Cells[0].Value.ToString(), out x) &&
+                                Int32.TryParse(dataGridView_SPSliced.Rows[count].Cells[1].Value.ToString(), out y))
+                            {
+                                i = comboBox_SPSliced_Image.SelectedIndex + count;
+                                if (i < ListImagesFullName.Count)
+                                {
+                                    int value = (dataGridView_SPSliced.Rows.Count - 1) * Watch_Face_Preview_Set.Activity.Steps /
+                                        Watch_Face_Preview_Set.Activity.StepsGoal;
+                                    if (count < value)
+                                    {
+                                        src = new Bitmap(ListImagesFullName[i]);
+                                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        //count++;
+                                        src.Dispose();
+                                    }
+                                } 
+                            }
+                        }
+                    }
+                }
+            }
             #endregion
 
             if (scale != 0.5) gPanel.SmoothingMode = SmoothingMode.Default;
@@ -1126,6 +1163,7 @@ namespace GTR_Watch_face
                         src.Dispose();
                     }
 
+                    // шкала
                     if (checkBox_Battery_Scale.Checked)
                     {
                         gPanel.SmoothingMode = SmoothingMode.AntiAlias;
@@ -1189,7 +1227,7 @@ namespace GTR_Watch_face
                         }
                     }
 
-                    // заряд прогрессом
+                    // заряд стрелочный индикатор
                     if ((checkBox_Battery_ClockHand.Checked) && (comboBox_Battery_ClockHand_Image.SelectedIndex >= 0))
                     {
                         int x1 = (int)numericUpDown_Battery_ClockHand_X.Value;
@@ -1202,6 +1240,44 @@ namespace GTR_Watch_face
                         float angle = startAngle + Watch_Face_Preview_Set.Battery * (endAngle - startAngle) / 100;
                         DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle, model_47);
                     }
+
+                    // набор иконок
+                    if (checkBox_Battery_IconSet.Checked)
+                    {
+                        if ((comboBox_Battery_IconSet_Image.SelectedIndex >= 0) && (dataGridView_Battery_IconSet.Rows.Count > 0))
+                        {
+                            int x = 0;
+                            int y = 0;
+                            //int count = 0;
+                            for (int count = 0; count < dataGridView_Battery_IconSet.Rows.Count; count++)
+                            {
+                                if ((dataGridView_Battery_IconSet.Rows[count].Cells[0].Value != null) &&
+                                    (dataGridView_Battery_IconSet.Rows[count].Cells[1].Value != null))
+                                {
+                                    //int x = Int32.Parse(dataGridView_SPSliced.Rows[count].Cells[0].Value.ToString());
+                                    //int y = Int32.Parse(dataGridView_SPSliced.Rows[count].Cells[1].Value.ToString());
+                                    if (Int32.TryParse(dataGridView_Battery_IconSet.Rows[count].Cells[0].Value.ToString(), out x) &&
+                                        Int32.TryParse(dataGridView_Battery_IconSet.Rows[count].Cells[1].Value.ToString(), out y))
+                                    {
+                                        i = comboBox_Battery_IconSet_Image.SelectedIndex + count;
+                                        if (i < ListImagesFullName.Count)
+                                        {
+                                            int value = (dataGridView_Battery_IconSet.Rows.Count - 1) * Watch_Face_Preview_Set.Battery / 100;
+                                            value++;
+                                            if (count < value)
+                                            {
+                                                src = new Bitmap(ListImagesFullName[i]);
+                                                gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                                //count++;
+                                                src.Dispose();
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
                 }
             }
             #endregion
@@ -1480,9 +1556,10 @@ namespace GTR_Watch_face
             var Dagit = new Bitmap(ListImagesFullName[image_index]);
             //var Delimit = new Bitmap(1, 1);
             //if (dec >= 0) Delimit = new Bitmap(ListImagesFullName[dec]);
+            string decimalSeparator = Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator;
             string data_numberS = data_number.ToString();
-            if (data_numberS.IndexOf('.') < 0) data_numberS = data_numberS + ".";
-            while (data_numberS.IndexOf('.') > data_numberS.Length-3)
+            if (data_numberS.IndexOf(decimalSeparator) < 0) data_numberS = data_numberS + decimalSeparator;
+            while (data_numberS.IndexOf(decimalSeparator) > data_numberS.Length-3)
             {
                 data_numberS = data_numberS + "0";
             }

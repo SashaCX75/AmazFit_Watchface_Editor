@@ -42,6 +42,7 @@ namespace GTR_Watch_face
             comboBox_ADMonth_ClockHand_Image.Items.AddRange(ListImages.ToArray());
 
             comboBox_StProg_ClockHand_Image.Items.AddRange(ListImages.ToArray());
+            comboBox_SPSliced_Image.Items.AddRange(ListImages.ToArray());
 
             comboBox_ActivityGoal_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivitySteps_Image.Items.AddRange(ListImages.ToArray());
@@ -66,6 +67,7 @@ namespace GTR_Watch_face
             comboBox_Battery_Img_Image.Items.AddRange(ListImages.ToArray());
             comboBox_Battery_Percent_Image.Items.AddRange(ListImages.ToArray());
             comboBox_Battery_ClockHand_Image.Items.AddRange(ListImages.ToArray());
+            comboBox_Battery_IconSet_Image.Items.AddRange(ListImages.ToArray());
 
             comboBox_AnalogClock_Hour_Image.Items.AddRange(ListImages.ToArray());
             comboBox_AnalogClock_Min_Image.Items.AddRange(ListImages.ToArray());
@@ -456,11 +458,26 @@ namespace GTR_Watch_face
                     }
                 }
                 else checkBox_StProg_ClockHand.Checked = false;
+
+                if ((Watch_Face.StepsProgress.Sliced != null) && (Watch_Face.StepsProgress.Sliced.Coordinates != null))
+                {
+                    checkBox_SPSliced.Checked = true;
+                    dataGridView_SPSliced.Rows.Clear();
+                    checkBoxSetText(comboBox_SPSliced_Image, Watch_Face.StepsProgress.Sliced.ImageIndex);
+                    foreach (Coordinates coordinates in Watch_Face.StepsProgress.Sliced.Coordinates)
+                    {
+                        var RowNew = new DataGridViewRow();
+                        dataGridView_SPSliced.Rows.Add(coordinates.X, coordinates.Y);
+                    }
+                }
+                else checkBox_SPSliced.Checked = false;
+
             }
             else
             {
                 checkBox_StepsProgress.Checked = false;
                 checkBox_StProg_ClockHand.Checked = false;
+                checkBox_SPSliced.Checked = false;
             }
             #endregion
 
@@ -757,6 +774,19 @@ namespace GTR_Watch_face
                     }
                 }
                 else checkBox_Battery_Scale.Checked = false;
+
+                if ((Watch_Face.Battery.Icons != null) && (Watch_Face.Battery.Icons.Coordinates != null))
+                {
+                    checkBox_Battery_IconSet.Checked = true;
+                    dataGridView_Battery_IconSet.Rows.Clear();
+                    checkBoxSetText(comboBox_Battery_IconSet_Image, Watch_Face.Battery.Icons.ImageIndex);
+                    foreach (Coordinates coordinates in Watch_Face.Battery.Icons.Coordinates)
+                    {
+                        var RowNew = new DataGridViewRow();
+                        dataGridView_Battery_IconSet.Rows.Add(coordinates.X, coordinates.Y);
+                    }
+                }
+                else checkBox_Battery_IconSet.Checked = false;
             }
             else
             {
@@ -766,6 +796,7 @@ namespace GTR_Watch_face
                 checkBox_Battery_ClockHand.Checked = false;
                 checkBox_Battery_Percent.Checked = false;
                 checkBox_Battery_Scale.Checked = false;
+                checkBox_Battery_IconSet.Checked = false;
             }
             #endregion
 
@@ -1499,6 +1530,43 @@ namespace GTR_Watch_face
                     (int)(numericUpDown_StProg_ClockHand_EndAngle.Value * 100);
             }
 
+            // прогресc шагов набором иконок
+            if (checkBox_SPSliced.Checked)
+            {
+                if ((comboBox_SPSliced_Image.SelectedIndex >= 0) && (dataGridView_SPSliced.Rows.Count > 1))
+                {
+                    if (Watch_Face.StepsProgress == null) Watch_Face.StepsProgress = new StepsProgress();
+                    if (Watch_Face.StepsProgress.Sliced == null) Watch_Face.StepsProgress.Sliced = new IconSet();
+
+                    Watch_Face.StepsProgress.Sliced.ImageIndex = Int32.Parse(comboBox_SPSliced_Image.Text);
+                    Coordinates[] coordinates = new Coordinates[0];
+                    int count = 0;
+
+                    foreach (DataGridViewRow row in dataGridView_SPSliced.Rows)
+                    {
+                        //whatever you are currently doing
+                        //Coordinates coordinates = new Coordinates();
+                        int x = 0;
+                        int y = 0;
+                        if ((row.Cells[0].Value != null) && (row.Cells[1].Value != null))
+                        {
+                            if ((Int32.TryParse(row.Cells[0].Value.ToString(), out x)) && (Int32.TryParse(row.Cells[1].Value.ToString(), out y)))
+                            {
+
+                                //Array.Resize(ref objson, objson.Length + 1);
+                                Array.Resize(ref coordinates, coordinates.Length + 1);
+                                //objson[count] = coordinates;
+                                coordinates[count] = new Coordinates();
+                                coordinates[count].X = x;
+                                coordinates[count].Y = y;
+                                count++;
+                            }
+                        }
+                        Watch_Face.StepsProgress.Sliced.Coordinates = coordinates;
+                    }
+                }
+            }
+
             // статусы
             if ((checkBox_Bluetooth.Checked) &&
                 ((comboBox_Bluetooth_On.SelectedIndex >= 0) || (comboBox_Bluetooth_Off.SelectedIndex >= 0)))
@@ -1675,6 +1743,43 @@ namespace GTR_Watch_face
                         default:
                             Watch_Face.Battery.Scale.Flatness = 0;
                             break;
+                    }
+                }
+
+                // прогресc шагов набором иконок
+                if (checkBox_Battery_IconSet.Checked)
+                {
+                    if ((comboBox_Battery_IconSet_Image.SelectedIndex >= 0) && (dataGridView_Battery_IconSet.Rows.Count > 1))
+                    {
+                        if (Watch_Face.Battery == null) Watch_Face.Battery = new Battery();
+                        if (Watch_Face.Battery.Icons == null) Watch_Face.Battery.Icons = new IconSet();
+
+                        Watch_Face.Battery.Icons.ImageIndex = Int32.Parse(comboBox_Battery_IconSet_Image.Text);
+                        Coordinates[] coordinates = new Coordinates[0];
+                        int count = 0;
+
+                        foreach (DataGridViewRow row in dataGridView_Battery_IconSet.Rows)
+                        {
+                            //whatever you are currently doing
+                            //Coordinates coordinates = new Coordinates();
+                            int x = 0;
+                            int y = 0;
+                            if ((row.Cells[0].Value != null) && (row.Cells[1].Value != null))
+                            {
+                                if ((Int32.TryParse(row.Cells[0].Value.ToString(), out x)) && (Int32.TryParse(row.Cells[1].Value.ToString(), out y)))
+                                {
+
+                                    //Array.Resize(ref objson, objson.Length + 1);
+                                    Array.Resize(ref coordinates, coordinates.Length + 1);
+                                    //objson[count] = coordinates;
+                                    coordinates[count] = new Coordinates();
+                                    coordinates[count].X = x;
+                                    coordinates[count].Y = y;
+                                    count++;
+                                }
+                            }
+                            Watch_Face.Battery.Icons.Coordinates = coordinates;
+                        }
                     }
                 }
             }
@@ -2115,6 +2220,8 @@ namespace GTR_Watch_face
 
             comboBox_StProg_ClockHand_Image.Text = "";
             comboBox_StProg_ClockHand_Image.Items.Clear();
+            comboBox_SPSliced_Image.Text = "";
+            comboBox_SPSliced_Image.Items.Clear();
 
             comboBox_ActivityGoal_Image.Text = "";
             comboBox_ActivityGoal_Image.Items.Clear();
@@ -2161,6 +2268,8 @@ namespace GTR_Watch_face
             comboBox_Battery_Percent_Image.Items.Clear();
             comboBox_Battery_ClockHand_Image.Text = "";
             comboBox_Battery_ClockHand_Image.Items.Clear();
+            comboBox_Battery_IconSet_Image.Text = "";
+            comboBox_Battery_IconSet_Image.Items.Clear();
 
             comboBox_AnalogClock_Hour_Image.Text = "";
             comboBox_AnalogClock_Hour_Image.Items.Clear();

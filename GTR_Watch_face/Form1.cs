@@ -17,6 +17,7 @@ using System.Windows.Forms;
 using LineCap = System.Drawing.Drawing2D.LineCap;
 using System.Globalization;
 using System.Threading;
+using System.Text.RegularExpressions;
 
 namespace GTR_Watch_face
 {
@@ -2135,6 +2136,14 @@ namespace GTR_Watch_face
             label381.Enabled = b;
         }
 
+        private void checkBox_SPSliced_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_SPSliced.Checked;
+            comboBox_SPSliced_Image.Enabled = b;
+            dataGridView_SPSliced.Enabled = b;
+            label404.Enabled = b;
+        }
+
         private void checkBox_ActivityStar_CheckedChanged(object sender, EventArgs e)
         {
             bool b = checkBox_ActivityStar.Checked;
@@ -2433,7 +2442,15 @@ namespace GTR_Watch_face
             label373.Enabled = b;
             label374.Enabled = b;
         }
-        
+
+        private void checkBox_Battery_IconSet_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Battery_IconSet.Checked;
+            comboBox_Battery_IconSet_Image.Enabled = b;
+            dataGridView_Battery_IconSet.Enabled = b;
+            label405.Enabled = b;
+        }
+
         private void checkBox_AnalogClock_CheckedChanged(object sender, EventArgs e)
         {
             bool b = checkBox_AnalogClock.Checked;
@@ -4346,6 +4363,13 @@ namespace GTR_Watch_face
                     Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
+
+            if ((Watch_Face.Activity != null) && (Watch_Face.Activity.Distance != null))
+            {
+                if(Watch_Face.Activity.Distance.SuffixImageIndex==null)
+                    MessageBox.Show(Properties.FormStrings.Message_WarningDistanceSuffix,
+                    Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void checkBox_Weather_CheckedChanged(object sender, EventArgs e)
@@ -4413,7 +4437,8 @@ namespace GTR_Watch_face
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
-                if(radioButton_42.Checked) bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
+                if (radioButton_42.Checked) bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
+                if (radioButton_gts.Checked) bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 //float scale = 1.0f;
                 //if (formPreview.radioButton_small.Checked) scale = 0.5f;
@@ -4439,6 +4464,7 @@ namespace GTR_Watch_face
             {
                 Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
                 if (radioButton_42.Checked) bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
+                if (radioButton_gts.Checked) bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 bool save = false;
                 Random rnd = new Random();
@@ -5169,6 +5195,90 @@ namespace GTR_Watch_face
             }
             catch { return 0; } //перехват ошибок и возврат сообщения об ошибке
         }
+
+        private void dataGridView_SPSliced_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dataGridView = sender as DataGridView;
+            if (dataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                Regex my_reg = new Regex(@"[^-\d]");
+                string oldValue = dataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                string newValue = my_reg.Replace(oldValue, "");
+                dataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = newValue;
+                if (newValue.Length == 0) dataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = null;
+            }
+
+            try
+            {
+                if ((dataGridView.Rows[e.RowIndex].Cells[0].Value == null) &&
+                        (dataGridView.Rows[e.RowIndex].Cells[1].Value == null) && (e.RowIndex < dataGridView.Rows.Count - 1))
+                    dataGridView.Rows.RemoveAt(e.RowIndex);
+            }
+            catch (Exception )
+            {
+            }
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void dataGridView_SPSliced_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            JSON_write();
+            PreviewImage();
+        }
+        
+        private void dataGridView_SPSliced_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dataGridView = sender as DataGridView;
+            if (e.ColumnIndex == -1)
+            {
+                dataGridView.EditMode = DataGridViewEditMode.EditOnKeystrokeOrF2;
+                dataGridView.EndEdit();
+            }
+            else if (dataGridView.EditMode != DataGridViewEditMode.EditOnEnter)
+            {
+                dataGridView.EditMode = DataGridViewEditMode.EditOnEnter;
+                dataGridView.BeginEdit(false);
+            }
+
+            try
+            {
+                for (int i = dataGridView.Rows.Count - 1; i > -1; i--)
+                {
+                    DataGridViewRow row = dataGridView.Rows[i];
+                    if (!row.IsNewRow && row.Cells[0].Value == null && row.Cells[1].Value == null)
+                    {
+                        dataGridView.Rows.Remove(row);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        private void dataGridView_SPSliced_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            DataGridView dataGridView = sender as DataGridView;
+            object head = dataGridView.Rows[e.RowIndex].HeaderCell.Value;
+            if (head == null || !head.Equals((e.RowIndex + 1).ToString()))
+                dataGridView.Rows[e.RowIndex].HeaderCell.Value = (e.RowIndex + 1).ToString();
+        }
+
+        private void dataGridView_SPSliced_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridView dataGridView = sender as DataGridView;
+            if (e.ColumnIndex == 0 && MouseСoordinates.X >= 0)
+            {
+                dataGridView.Rows[e.RowIndex].Cells[0].Value = MouseСoordinates.X;
+            }
+            if (e.ColumnIndex == 1 && MouseСoordinates.Y >= 0)
+            {
+                dataGridView.Rows[e.RowIndex].Cells[1].Value = MouseСoordinates.Y;
+            }
+        }
+
+
     }
 }
 

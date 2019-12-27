@@ -430,6 +430,15 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Не рекомендуется использовать отображение расстояния без суффикса..
+        /// </summary>
+        public static string Message_WarningDistanceSuffix {
+            get {
+                return ResourceManager.GetString("Message_WarningDistanceSuffix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Не рекомендуется использовать минуты без использования часов для числового отображения времени..
         /// </summary>
         public static string Message_WarningOnlyMin_Text {
