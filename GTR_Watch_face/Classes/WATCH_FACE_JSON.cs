@@ -268,14 +268,6 @@
         public long NoDataImageIndex { get; set; }
     }
 
-    //public class TemperatureImages
-    //{
-    //    public long Unknown0800 { get; set; }
-    //    public long MinusImageIndex { get; set; }
-    //    public long DegreesImageIndex { get; set; }
-    //    public long NoDataImageIndex { get; set; }
-    //}
-
     public class Number
     {
         public long TopLeftX { get; set; }

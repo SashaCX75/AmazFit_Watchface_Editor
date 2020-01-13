@@ -18,6 +18,7 @@ using LineCap = System.Drawing.Drawing2D.LineCap;
 using System.Globalization;
 using System.Threading;
 using System.Text.RegularExpressions;
+using Microsoft.Win32;
 
 namespace GTR_Watch_face
 {
@@ -32,12 +33,14 @@ namespace GTR_Watch_face
         bool Settings_Load; // включать при обновлении настроек длу выключения перерисовки
         string FileName; // Запоминает имя для диалогов
         string FullFileDir; // Запоминает папку для диалогов
-        string StartFileName; // имя файла из параметров запуска
+        string StartFileNameJson; // имя файла из параметров запуска
+        string StartFileNameBin; // имя файла из параметров запуска
+        float currentDPI; // масштаб экрана
         Form_Preview formPreview;
         PROGRAM_SETTINGS Program_Settings;
         
-        int offSetX = 227; // координаты центра циферблата
-        int offSetY = 227;
+        int offSet_X = 227; // координаты центра циферблата
+        int offSet_Y = 227;
 
 
         public Form1(string[] args)
@@ -81,7 +84,6 @@ namespace GTR_Watch_face
             {
                 //Logger.WriteLine("Ошибка чтения настроек " + ex);
             }
-
             
             InitializeComponent();
 
@@ -111,6 +113,7 @@ namespace GTR_Watch_face
 
             PreviewView = true;
             Settings_Load = false;
+            currentDPI = (int)Registry.GetValue("HKEY_CURRENT_USER\\Control Panel\\Desktop", "LogPixels", 96)/96f;
             //Logger.WriteLine("Создали переменные");
 
             if (args.Length == 1)
@@ -118,8 +121,12 @@ namespace GTR_Watch_face
                 string fileName = args[0].ToString();
                 if ((File.Exists(fileName)) && (Path.GetExtension(fileName) == ".json"))
                 {
-                    //LoadJsonAndImage(fileName);
-                    StartFileName = fileName;
+                    StartFileNameJson = fileName;
+                    //Logger.WriteLine("Программа запущена с аргументом: " + fileName);
+                }
+                if ((File.Exists(fileName)) && (Path.GetExtension(fileName) == ".bin"))
+                {
+                    StartFileNameBin = fileName;
                     //Logger.WriteLine("Программа запущена с аргументом: " + fileName);
                 }
             }
@@ -151,16 +158,7 @@ namespace GTR_Watch_face
 #else
             string subPath = Application.StartupPath + @"\main\main.exe";
 #endif
-            //textBox_pack_unpack_dir.Text = subPath;
-            //if (Properties.Settings.Default.pack_unpack_dir.Length > 1)
-            //    textBox_pack_unpack_dir.Text = Properties.Settings.Default.pack_unpack_dir;
-            //if (Properties.Settings.Default.unpack_command.Length > 1)
-            //    textBox_unpack_command.Text = Properties.Settings.Default.unpack_command;
-            //if (Properties.Settings.Default.pack_command.Length > 1)
-            //    textBox_pack_command.Text = Properties.Settings.Default.pack_command;
-
             
-
             if (Program_Settings.pack_unpack_dir == null)
             {
                 Program_Settings.pack_unpack_dir = subPath;
@@ -212,6 +210,7 @@ namespace GTR_Watch_face
             //comboBox_Battery_Flatness.Text = "Круглое";
             //comboBox_StepsProgress_Flatness.Text = "Круглое";
             checkBox_border.Checked = Program_Settings.ShowBorder;
+            checkBox_crop.Checked = Program_Settings.Crop;
             comboBox_MonthAndDayD_Alignment.SelectedIndex = 0;
             comboBox_MonthAndDayM_Alignment.SelectedIndex = 0;
             comboBox_OneLine_Alignment.SelectedIndex = 0;
@@ -264,11 +263,20 @@ namespace GTR_Watch_face
 
         private void Form1_Shown(object sender, EventArgs e)
         {
-            
+
             //Logger.WriteLine("Form1_Shown");
-            //Logger.WriteLine("Загружаем файл из значения аргумента " + StartFileName);
-            if ((StartFileName != null) && (StartFileName.Length > 0)) LoadJsonAndImage(StartFileName);
-            //Logger.WriteLine("Загрузили файл из значения аргумента " + StartFileName);
+            //Logger.WriteLine("Загружаем файл из значения аргумента " + StartFileNameJson);
+            if ((StartFileNameJson != null) && (StartFileNameJson.Length > 0))
+            {
+                LoadJsonAndImage(StartFileNameJson);
+                StartFileNameJson = "";
+            }
+            else if ((StartFileNameBin != null) && (StartFileNameBin.Length > 0))
+            {
+                zip_unpack_bin(StartFileNameBin);
+                StartFileNameBin = "";
+            }
+            //Logger.WriteLine("Загрузили файл из значения аргумента " + StartFileNameJson);
         }
 
         private void button_pack_unpack_Click(object sender, EventArgs e)
@@ -285,9 +293,6 @@ namespace GTR_Watch_face
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                //string filename = openFileDialog1.FileName;
-                //string text = File.ReadAllText(filename);
-                //richTextBox1.Text = text;
                 textBox_pack_unpack_dir.Text = openFileDialog.FileName;
 
                 Program_Settings.pack_unpack_dir = openFileDialog.FileName;
@@ -310,6 +315,23 @@ namespace GTR_Watch_face
 
         private void button_zip_unpack_Click(object sender, EventArgs e)
         {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            //openFileDialog.Filter = "Json files (*.json) | *.json";
+            openFileDialog.Filter = "Binary File (*.bin)|*.bin";
+            ////openFileDialog1.FilterIndex = 2;
+            openFileDialog.RestoreDirectory = true;
+            openFileDialog.Multiselect = false;
+            openFileDialog.Title = Properties.FormStrings.Dialog_Title_Unpack;
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string fullfilename = openFileDialog.FileName;
+                zip_unpack_bin(fullfilename);
+            }
+        }
+
+        private void zip_unpack_bin(string fullfilename)
+        {
             string subPath = Application.StartupPath + @"\Watch_face\";
             if (!Directory.Exists(subPath)) Directory.CreateDirectory(subPath);
             string respackerPath = Application.StartupPath + @"\Res_PackerUnpacker\";
@@ -328,87 +350,76 @@ namespace GTR_Watch_face
             }
 #endif
 
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            //openFileDialog.Filter = "Json files (*.json) | *.json";
-            openFileDialog.Filter = "Binary File (*.bin)|*.bin";
-            ////openFileDialog1.FilterIndex = 2;
-            openFileDialog.RestoreDirectory = true;
-            openFileDialog.Multiselect = false;
-            openFileDialog.Title = Properties.FormStrings.Dialog_Title_Unpack;
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            string filename = Path.GetFileName(fullfilename);
+            string fullPath = subPath + filename;
+            // если файл существует
+            if (File.Exists(fullPath))
             {
-                string fullfilename = openFileDialog.FileName;
-                string filename = Path.GetFileName(fullfilename);
-                string fullPath = subPath + filename;
-                // если файл существует
-                if (File.Exists(fullPath))
+                FormFileExists f = new FormFileExists();
+                f.ShowDialog();
+                int dialogResult = f.Data;
+
+                string fileNameOnly = Path.GetFileNameWithoutExtension(fullPath);
+                string extension = Path.GetExtension(fullPath);
+                string path = Path.GetDirectoryName(fullPath);
+                string newFullPath = fullPath;
+                switch (dialogResult)
                 {
-                    FormFileExists f = new FormFileExists();
-                    f.ShowDialog();
-                    int dialogResult = f.Data;
+                    case 0:
+                        return;
+                    //break;
+                    case 1:
+                        File.Copy(fullfilename, fullPath, true);
+                        newFullPath = Path.Combine(path, fileNameOnly);
+                        if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
+                        break;
+                    case 2:
+                        int count = 1;
 
-                    string fileNameOnly = Path.GetFileNameWithoutExtension(fullPath);
-                    string extension = Path.GetExtension(fullPath);
-                    string path = Path.GetDirectoryName(fullPath);
-                    string newFullPath = fullPath;
-                    switch (dialogResult)
-                    {
-                        case 0:
-                            return;
-                        //break;
-                        case 1:
-                            File.Copy(fullfilename, fullPath, true);
-                            newFullPath = Path.Combine(path, fileNameOnly);
-                            if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
-                            break;
-                        case 2:
-                            int count = 1;
-
-                            while (File.Exists(newFullPath))
-                            {
-                                string tempFileName = string.Format("{0}({1})", fileNameOnly, count++);
-                                newFullPath = Path.Combine(path, tempFileName + extension);
-                            }
-                            File.Copy(fullfilename, newFullPath);
-                            fullPath = newFullPath;
-                            fileNameOnly = Path.GetFileNameWithoutExtension(newFullPath);
-                            path = Path.GetDirectoryName(newFullPath);
-                            newFullPath = Path.Combine(path, fileNameOnly);
-                            if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
-                            break;
-                    }
-                }
-                else File.Copy(fullfilename, fullPath);
-
-                try
-                {
-                    ProcessStartInfo startInfo = new ProcessStartInfo();
-                    startInfo.FileName = respackerPath;
-                    startInfo.Arguments = fullPath;
-                    using (Process exeProcess = Process.Start(startInfo))
-                    {
-                        exeProcess.WaitForExit();//ждем 
-                    };
-                    // этот блок закончится только после окончания работы программы 
-                    //сюда писать команды после успешного завершения программы
-                    
-                    string fileNameOnly = Path.GetFileNameWithoutExtension(fullPath);
-                    //string extension = Path.GetExtension(fullPath);
-                    string path = Path.GetDirectoryName(fullPath);
-                    //path = Path.Combine(path, fileNameOnly);
-                    string newFullName_unp = Path.Combine(path, fileNameOnly + ".bin.unp");
-                    //string newFullName_bin = Path.Combine(path, fileNameOnly + ".unp.bin");
-                    string newFullName_bin = Path.Combine(path, fileNameOnly + ".bin");
-
-                    if (File.Exists(newFullName_unp))
-                    {
-                        File.Copy(newFullName_unp, newFullName_bin, true);
-                        this.BringToFront();
-                        //после декомпресии bin файла
-                        if (File.Exists(newFullName_bin))
+                        while (File.Exists(newFullPath))
                         {
-                            File.Delete(newFullName_unp);
+                            string tempFileName = string.Format("{0}({1})", fileNameOnly, count++);
+                            newFullPath = Path.Combine(path, tempFileName + extension);
+                        }
+                        File.Copy(fullfilename, newFullPath);
+                        fullPath = newFullPath;
+                        fileNameOnly = Path.GetFileNameWithoutExtension(newFullPath);
+                        path = Path.GetDirectoryName(newFullPath);
+                        newFullPath = Path.Combine(path, fileNameOnly);
+                        if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
+                        break;
+                }
+            }
+            else File.Copy(fullfilename, fullPath);
+
+            try
+            {
+                ProcessStartInfo startInfo = new ProcessStartInfo();
+                startInfo.FileName = respackerPath;
+                startInfo.Arguments = fullPath;
+                using (Process exeProcess = Process.Start(startInfo))
+                {
+                    exeProcess.WaitForExit();//ждем 
+                };
+                // этот блок закончится только после окончания работы программы 
+                //сюда писать команды после успешного завершения программы
+
+                string fileNameOnly = Path.GetFileNameWithoutExtension(fullPath);
+                //string extension = Path.GetExtension(fullPath);
+                string path = Path.GetDirectoryName(fullPath);
+                //path = Path.Combine(path, fileNameOnly);
+                string newFullName_unp = Path.Combine(path, fileNameOnly + ".bin.unp");
+                //string newFullName_bin = Path.Combine(path, fileNameOnly + ".unp.bin");
+                string newFullName_bin = Path.Combine(path, fileNameOnly + ".bin");
+
+                if (File.Exists(newFullName_unp))
+                {
+                    File.Copy(newFullName_unp, newFullName_bin, true);
+                    this.BringToFront();
+                    //после декомпресии bin файла
+                    if (File.Exists(newFullName_bin))
+                    {
+                        File.Delete(newFullName_unp);
 #if !DEBUG
                             if (!File.Exists(textBox_pack_unpack_dir.Text))
                             {
@@ -420,51 +431,48 @@ namespace GTR_Watch_face
                                 return;
                             }
 #endif
-                            startInfo.FileName = textBox_pack_unpack_dir.Text;
-                            startInfo.Arguments = textBox_unpack_command.Text + "   " + newFullName_bin;
-                            using (Process exeProcess = Process.Start(startInfo))
-                            {
-                                exeProcess.WaitForExit();//ждем 
-                            };
-                            // этот блок закончится только после окончания работы программы 
-                            //сюда писать команды после успешного завершения программы
-                            fileNameOnly = Path.GetFileNameWithoutExtension(newFullName_bin);
-                            //string extension = Path.GetExtension(fullPath);
-                            path = Path.GetDirectoryName(newFullName_bin);
-                            path = Path.Combine(path, fileNameOnly);
-                            string newFullName = Path.Combine(path, fileNameOnly + ".json");
+                        startInfo.FileName = textBox_pack_unpack_dir.Text;
+                        startInfo.Arguments = textBox_unpack_command.Text + "   " + newFullName_bin;
+                        using (Process exeProcess = Process.Start(startInfo))
+                        {
+                            exeProcess.WaitForExit();//ждем 
+                        };
+                        // этот блок закончится только после окончания работы программы 
+                        //сюда писать команды после успешного завершения программы
+                        fileNameOnly = Path.GetFileNameWithoutExtension(newFullName_bin);
+                        //string extension = Path.GetExtension(fullPath);
+                        path = Path.GetDirectoryName(newFullName_bin);
+                        path = Path.Combine(path, fileNameOnly);
+                        string newFullName = Path.Combine(path, fileNameOnly + ".json");
 
-                            //MessageBox.Show(newFullName);
-                            if (Program_Settings.Settings_AfterUnpack_Dialog)
+                        //MessageBox.Show(newFullName);
+                        if (Program_Settings.Settings_AfterUnpack_Dialog)
+                        {
+                            if (File.Exists(newFullName))
                             {
-                                if (File.Exists(newFullName))
+                                this.BringToFront();
+                                if (MessageBox.Show(Properties.FormStrings.Message_openProject_Text, Properties.FormStrings.
+                                    Message_openProject_Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                                 {
-                                    this.BringToFront();
-                                    if (MessageBox.Show(Properties.FormStrings.Message_openProject_Text, Properties.FormStrings.
-                                        Message_openProject_Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                                    {
-                                        LoadJsonAndImage(newFullName);
-                                        //newFullName = Path.Combine(path, "PreviewStates.json");
-                                        //if (File.Exists(newFullName))
-                                        //{
-                                        //    JsonPreview_Read(newFullName);
-                                        //}
-                                    }
+                                    LoadJsonAndImage(newFullName);
+                                    //newFullName = Path.Combine(path, "PreviewStates.json");
+                                    //if (File.Exists(newFullName))
+                                    //{
+                                    //    JsonPreview_Read(newFullName);
+                                    //}
                                 }
                             }
-                            else if (Program_Settings.Settings_AfterUnpack_Download)
-                            {
-                                LoadJsonAndImage(newFullName);
-                            }
+                        }
+                        else if (Program_Settings.Settings_AfterUnpack_Download)
+                        {
+                            LoadJsonAndImage(newFullName);
                         }
                     }
                 }
-                catch
-                {
-                    // сюда писать команды при ошибке вызова 
-                }
-
-
+            }
+            catch
+            {
+                // сюда писать команды при ошибке вызова 
             }
         }
 
@@ -878,7 +886,7 @@ namespace GTR_Watch_face
                     if (File.Exists(newFullName))
                     {
                         double fileSize = (GetFileSizeMB(new FileInfo(newFullName)));
-                        if ((fileSize > 1.5) && (radioButton_gts.Checked))
+                        if ((fileSize > 1.5) && (!radioButton_47.Checked))
                         {
                             MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_gts + Environment.NewLine + Environment.NewLine +
                             Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
@@ -1174,7 +1182,7 @@ namespace GTR_Watch_face
             gPanel.Clear(panel_Preview.BackColor);
             float scale = 1.0f;
             if (panel_Preview.Height < 300) scale = 0.5f;
-            PreviewToBitmap(gPanel, scale, radioButton_47.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked);
+            PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked);
             gPanel.Dispose();
 
             if ((formPreview != null) && (formPreview.Visible))
@@ -1186,9 +1194,10 @@ namespace GTR_Watch_face
                 if (formPreview.radioButton_large.Checked) scalePreview = 1.5f;
                 if (formPreview.radioButton_xlarge.Checked) scalePreview = 2.0f;
                 if (formPreview.radioButton_xxlarge.Checked) scalePreview = 2.5f;
-                PreviewToBitmap(gPanelPreview, scalePreview, radioButton_47.Checked, checkBox_WebW.Checked, 
+                PreviewToBitmap(gPanelPreview, scalePreview, checkBox_crop.Checked, checkBox_WebW.Checked, 
                     checkBox_WebB.Checked, checkBox_border.Checked);
                 gPanelPreview.Dispose();
+                
             }
         }
         
@@ -1694,12 +1703,13 @@ namespace GTR_Watch_face
             }
         }
 
-#region сворачиваем и разварачиваем панели с настройками
+        #region сворачиваем и разварачиваем панели с настройками
+
         private void button_Background_Click(object sender, EventArgs e)
         {
             if (panel_Background.Height == 1)
             {
-                panel_Background.Height = 30;
+                panel_Background.Height = (int)(30 * currentDPI);
                 panel_Time.Height = 1;
                 panel_Date.Height = 1;
                 panel_AnalogDate.Height = 1;
@@ -1717,7 +1727,7 @@ namespace GTR_Watch_face
             if (panel_Time.Height == 1)
             {
                 panel_Background.Height = 1;
-                panel_Time.Height = 330;
+                panel_Time.Height = (int)(330 * currentDPI);
                 panel_Date.Height = 1;
                 panel_AnalogDate.Height = 1;
                 panel_StepsProgress.Height = 1;
@@ -1736,7 +1746,7 @@ namespace GTR_Watch_face
             {
                 panel_Background.Height = 1;
                 panel_Time.Height = 1;
-                panel_Date.Height = 350;
+                panel_Date.Height = (int)(350 * currentDPI);
                 panel_AnalogDate.Height = 1;
                 panel_StepsProgress.Height = 1;
                 panel_Activity.Height = 1;
@@ -1755,7 +1765,7 @@ namespace GTR_Watch_face
                 panel_Background.Height = 1;
                 panel_Time.Height = 1;
                 panel_Date.Height = 1;
-                panel_AnalogDate.Height = 145;
+                panel_AnalogDate.Height = (int)(145 * currentDPI);
                 panel_StepsProgress.Height = 1;
                 panel_Activity.Height = 1;
                 panel_Status.Height = 1;
@@ -1774,7 +1784,7 @@ namespace GTR_Watch_face
                 panel_Time.Height = 1;
                 panel_Date.Height = 1;
                 panel_AnalogDate.Height = 1;
-                panel_StepsProgress.Height = 145;
+                panel_StepsProgress.Height = (int)(145 * currentDPI);
                 panel_Activity.Height = 1;
                 panel_Status.Height = 1;
                 panel_Battery.Height = 1;
@@ -1793,7 +1803,7 @@ namespace GTR_Watch_face
                 panel_Date.Height = 1;
                 panel_AnalogDate.Height = 1;
                 panel_StepsProgress.Height = 1;
-                panel_Activity.Height = 215;
+                panel_Activity.Height = (int)(215 * currentDPI);
                 panel_Status.Height = 1;
                 panel_Battery.Height = 1;
                 panel_AnalogClock.Height = 1;
@@ -1812,7 +1822,7 @@ namespace GTR_Watch_face
                 panel_AnalogDate.Height = 1;
                 panel_StepsProgress.Height = 1;
                 panel_Activity.Height = 1;
-                panel_Status.Height = 82;
+                panel_Status.Height = (int)(82 * currentDPI);
                 panel_Battery.Height = 1;
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
@@ -1831,7 +1841,7 @@ namespace GTR_Watch_face
                 panel_StepsProgress.Height = 1;
                 panel_Activity.Height = 1;
                 panel_Status.Height = 1;
-                panel_Battery.Height = 165;
+                panel_Battery.Height = (int)(165 * currentDPI);
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
             }
@@ -1850,7 +1860,7 @@ namespace GTR_Watch_face
                 panel_Activity.Height = 1;
                 panel_Status.Height = 1;
                 panel_Battery.Height = 1;
-                panel_AnalogClock.Height = 193;
+                panel_AnalogClock.Height = (int)(193 * currentDPI);
                 panel_Weather.Height = 1;
             }
             else panel_AnalogClock.Height = 1;
@@ -1869,7 +1879,7 @@ namespace GTR_Watch_face
                 panel_Status.Height = 1;
                 panel_Battery.Height = 1;
                 panel_AnalogClock.Height = 1;
-                panel_Weather.Height = 230;
+                panel_Weather.Height = (int)(230 * currentDPI);
             }
             else panel_Weather.Height = 1;
         }
@@ -3295,7 +3305,7 @@ namespace GTR_Watch_face
                     });
                     File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
 
-                    PreviewToBitmap(gPanelPreviewResize, scalePreviewResize, radioButton_47.Checked, 
+                    PreviewToBitmap(gPanelPreviewResize, scalePreviewResize, checkBox_crop.Checked,
                         checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked);
                     gPanelPreviewResize.Dispose();
                 };
@@ -3339,7 +3349,7 @@ namespace GTR_Watch_face
             if (formPreview.radioButton_xlarge.Checked) scale = 2.0f;
             if (formPreview.radioButton_xxlarge.Checked) scale = 2.5f;
 
-            PreviewToBitmap(gPanel, scale, radioButton_47.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked);
+            PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked);
             gPanel.Dispose();
 
             button_PreviewBig.Enabled = false;
@@ -3646,9 +3656,9 @@ namespace GTR_Watch_face
                         ps.Time.Year = dateTimePicker_Date_Set1.Value.Year;
                         ps.Time.Month = dateTimePicker_Date_Set1.Value.Month;
                         ps.Time.Day = dateTimePicker_Date_Set1.Value.Day;
-                        ps.Time.Hour = dateTimePicker_Date_Set1.Value.Hour;
-                        ps.Time.Minute = dateTimePicker_Date_Set1.Value.Minute;
-                        ps.Time.Second = dateTimePicker_Date_Set1.Value.Second;
+                        ps.Time.Hour = dateTimePicker_Time_Set1.Value.Hour;
+                        ps.Time.Minute = dateTimePicker_Time_Set1.Value.Minute;
+                        ps.Time.Second = dateTimePicker_Time_Set1.Value.Second;
                         ps.BatteryLevel = (int)numericUpDown_Battery_Set1.Value;
                         ps.Calories = (int)numericUpDown_Calories_Set1.Value;
                         ps.Pulse = (int)numericUpDown_Pulse_Set1.Value;
@@ -3671,9 +3681,9 @@ namespace GTR_Watch_face
                         ps.Time.Year = dateTimePicker_Date_Set2.Value.Year;
                         ps.Time.Month = dateTimePicker_Date_Set2.Value.Month;
                         ps.Time.Day = dateTimePicker_Date_Set2.Value.Day;
-                        ps.Time.Hour = dateTimePicker_Date_Set2.Value.Hour;
-                        ps.Time.Minute = dateTimePicker_Date_Set2.Value.Minute;
-                        ps.Time.Second = dateTimePicker_Date_Set2.Value.Second;
+                        ps.Time.Hour = dateTimePicker_Time_Set2.Value.Hour;
+                        ps.Time.Minute = dateTimePicker_Time_Set2.Value.Minute;
+                        ps.Time.Second = dateTimePicker_Time_Set2.Value.Second;
                         ps.BatteryLevel = (int)numericUpDown_Battery_Set2.Value;
                         ps.Calories = (int)numericUpDown_Calories_Set2.Value;
                         ps.Pulse = (int)numericUpDown_Pulse_Set2.Value;
@@ -3696,9 +3706,9 @@ namespace GTR_Watch_face
                         ps.Time.Year = dateTimePicker_Date_Set3.Value.Year;
                         ps.Time.Month = dateTimePicker_Date_Set3.Value.Month;
                         ps.Time.Day = dateTimePicker_Date_Set3.Value.Day;
-                        ps.Time.Hour = dateTimePicker_Date_Set3.Value.Hour;
-                        ps.Time.Minute = dateTimePicker_Date_Set3.Value.Minute;
-                        ps.Time.Second = dateTimePicker_Date_Set3.Value.Second;
+                        ps.Time.Hour = dateTimePicker_Time_Set3.Value.Hour;
+                        ps.Time.Minute = dateTimePicker_Time_Set3.Value.Minute;
+                        ps.Time.Second = dateTimePicker_Time_Set3.Value.Second;
                         ps.BatteryLevel = (int)numericUpDown_Battery_Set3.Value;
                         ps.Calories = (int)numericUpDown_Calories_Set3.Value;
                         ps.Pulse = (int)numericUpDown_Pulse_Set3.Value;
@@ -3721,9 +3731,9 @@ namespace GTR_Watch_face
                         ps.Time.Year = dateTimePicker_Date_Set4.Value.Year;
                         ps.Time.Month = dateTimePicker_Date_Set4.Value.Month;
                         ps.Time.Day = dateTimePicker_Date_Set4.Value.Day;
-                        ps.Time.Hour = dateTimePicker_Date_Set4.Value.Hour;
-                        ps.Time.Minute = dateTimePicker_Date_Set4.Value.Minute;
-                        ps.Time.Second = dateTimePicker_Date_Set4.Value.Second;
+                        ps.Time.Hour = dateTimePicker_Time_Set4.Value.Hour;
+                        ps.Time.Minute = dateTimePicker_Time_Set4.Value.Minute;
+                        ps.Time.Second = dateTimePicker_Time_Set4.Value.Second;
                         ps.BatteryLevel = (int)numericUpDown_Battery_Set4.Value;
                         ps.Calories = (int)numericUpDown_Calories_Set4.Value;
                         ps.Pulse = (int)numericUpDown_Pulse_Set4.Value;
@@ -3746,9 +3756,9 @@ namespace GTR_Watch_face
                         ps.Time.Year = dateTimePicker_Date_Set5.Value.Year;
                         ps.Time.Month = dateTimePicker_Date_Set5.Value.Month;
                         ps.Time.Day = dateTimePicker_Date_Set5.Value.Day;
-                        ps.Time.Hour = dateTimePicker_Date_Set5.Value.Hour;
-                        ps.Time.Minute = dateTimePicker_Date_Set5.Value.Minute;
-                        ps.Time.Second = dateTimePicker_Date_Set5.Value.Second;
+                        ps.Time.Hour = dateTimePicker_Time_Set5.Value.Hour;
+                        ps.Time.Minute = dateTimePicker_Time_Set5.Value.Minute;
+                        ps.Time.Second = dateTimePicker_Time_Set5.Value.Second;
                         ps.BatteryLevel = (int)numericUpDown_Battery_Set5.Value;
                         ps.Calories = (int)numericUpDown_Calories_Set5.Value;
                         ps.Pulse = (int)numericUpDown_Pulse_Set5.Value;
@@ -3771,9 +3781,9 @@ namespace GTR_Watch_face
                         ps.Time.Year = dateTimePicker_Date_Set6.Value.Year;
                         ps.Time.Month = dateTimePicker_Date_Set6.Value.Month;
                         ps.Time.Day = dateTimePicker_Date_Set6.Value.Day;
-                        ps.Time.Hour = dateTimePicker_Date_Set6.Value.Hour;
-                        ps.Time.Minute = dateTimePicker_Date_Set6.Value.Minute;
-                        ps.Time.Second = dateTimePicker_Date_Set6.Value.Second;
+                        ps.Time.Hour = dateTimePicker_Time_Set6.Value.Hour;
+                        ps.Time.Minute = dateTimePicker_Time_Set6.Value.Minute;
+                        ps.Time.Second = dateTimePicker_Time_Set6.Value.Second;
                         ps.BatteryLevel = (int)numericUpDown_Battery_Set6.Value;
                         ps.Calories = (int)numericUpDown_Calories_Set6.Value;
                         ps.Pulse = (int)numericUpDown_Pulse_Set6.Value;
@@ -3796,9 +3806,9 @@ namespace GTR_Watch_face
                         ps.Time.Year = dateTimePicker_Date_Set7.Value.Year;
                         ps.Time.Month = dateTimePicker_Date_Set7.Value.Month;
                         ps.Time.Day = dateTimePicker_Date_Set7.Value.Day;
-                        ps.Time.Hour = dateTimePicker_Date_Set7.Value.Hour;
-                        ps.Time.Minute = dateTimePicker_Date_Set7.Value.Minute;
-                        ps.Time.Second = dateTimePicker_Date_Set7.Value.Second;
+                        ps.Time.Hour = dateTimePicker_Time_Set7.Value.Hour;
+                        ps.Time.Minute = dateTimePicker_Time_Set7.Value.Minute;
+                        ps.Time.Second = dateTimePicker_Time_Set7.Value.Second;
                         ps.BatteryLevel = (int)numericUpDown_Battery_Set7.Value;
                         ps.Calories = (int)numericUpDown_Calories_Set7.Value;
                         ps.Pulse = (int)numericUpDown_Pulse_Set7.Value;
@@ -3821,9 +3831,9 @@ namespace GTR_Watch_face
                         ps.Time.Year = dateTimePicker_Date_Set8.Value.Year;
                         ps.Time.Month = dateTimePicker_Date_Set8.Value.Month;
                         ps.Time.Day = dateTimePicker_Date_Set8.Value.Day;
-                        ps.Time.Hour = dateTimePicker_Date_Set8.Value.Hour;
-                        ps.Time.Minute = dateTimePicker_Date_Set8.Value.Minute;
-                        ps.Time.Second = dateTimePicker_Date_Set8.Value.Second;
+                        ps.Time.Hour = dateTimePicker_Time_Set8.Value.Hour;
+                        ps.Time.Minute = dateTimePicker_Time_Set8.Value.Minute;
+                        ps.Time.Second = dateTimePicker_Time_Set8.Value.Second;
                         ps.BatteryLevel = (int)numericUpDown_Battery_Set8.Value;
                         ps.Calories = (int)numericUpDown_Calories_Set8.Value;
                         ps.Pulse = (int)numericUpDown_Pulse_Set8.Value;
@@ -3846,9 +3856,9 @@ namespace GTR_Watch_face
                         ps.Time.Year = dateTimePicker_Date_Set9.Value.Year;
                         ps.Time.Month = dateTimePicker_Date_Set9.Value.Month;
                         ps.Time.Day = dateTimePicker_Date_Set9.Value.Day;
-                        ps.Time.Hour = dateTimePicker_Date_Set9.Value.Hour;
-                        ps.Time.Minute = dateTimePicker_Date_Set9.Value.Minute;
-                        ps.Time.Second = dateTimePicker_Date_Set9.Value.Second;
+                        ps.Time.Hour = dateTimePicker_Time_Set9.Value.Hour;
+                        ps.Time.Minute = dateTimePicker_Time_Set9.Value.Minute;
+                        ps.Time.Second = dateTimePicker_Time_Set9.Value.Second;
                         ps.BatteryLevel = (int)numericUpDown_Battery_Set9.Value;
                         ps.Calories = (int)numericUpDown_Calories_Set9.Value;
                         ps.Pulse = (int)numericUpDown_Pulse_Set9.Value;
@@ -3871,9 +3881,9 @@ namespace GTR_Watch_face
                         ps.Time.Year = dateTimePicker_Date_Set10.Value.Year;
                         ps.Time.Month = dateTimePicker_Date_Set10.Value.Month;
                         ps.Time.Day = dateTimePicker_Date_Set10.Value.Day;
-                        ps.Time.Hour = dateTimePicker_Date_Set10.Value.Hour;
-                        ps.Time.Minute = dateTimePicker_Date_Set10.Value.Minute;
-                        ps.Time.Second = dateTimePicker_Date_Set10.Value.Second;
+                        ps.Time.Hour = dateTimePicker_Time_Set10.Value.Hour;
+                        ps.Time.Minute = dateTimePicker_Time_Set10.Value.Minute;
+                        ps.Time.Second = dateTimePicker_Time_Set10.Value.Second;
                         ps.BatteryLevel = (int)numericUpDown_Battery_Set10.Value;
                         ps.Calories = (int)numericUpDown_Calories_Set10.Value;
                         ps.Pulse = (int)numericUpDown_Pulse_Set10.Value;
@@ -3896,9 +3906,9 @@ namespace GTR_Watch_face
                         ps.Time.Year = dateTimePicker_Date_Set11.Value.Year;
                         ps.Time.Month = dateTimePicker_Date_Set11.Value.Month;
                         ps.Time.Day = dateTimePicker_Date_Set11.Value.Day;
-                        ps.Time.Hour = dateTimePicker_Date_Set11.Value.Hour;
-                        ps.Time.Minute = dateTimePicker_Date_Set11.Value.Minute;
-                        ps.Time.Second = dateTimePicker_Date_Set11.Value.Second;
+                        ps.Time.Hour = dateTimePicker_Time_Set11.Value.Hour;
+                        ps.Time.Minute = dateTimePicker_Time_Set11.Value.Minute;
+                        ps.Time.Second = dateTimePicker_Time_Set11.Value.Second;
                         ps.BatteryLevel = (int)numericUpDown_Battery_Set11.Value;
                         ps.Calories = (int)numericUpDown_Calories_Set11.Value;
                         ps.Pulse = (int)numericUpDown_Pulse_Set11.Value;
@@ -3921,9 +3931,9 @@ namespace GTR_Watch_face
                         ps.Time.Year = dateTimePicker_Date_Set12.Value.Year;
                         ps.Time.Month = dateTimePicker_Date_Set12.Value.Month;
                         ps.Time.Day = dateTimePicker_Date_Set12.Value.Day;
-                        ps.Time.Hour = dateTimePicker_Date_Set12.Value.Hour;
-                        ps.Time.Minute = dateTimePicker_Date_Set12.Value.Minute;
-                        ps.Time.Second = dateTimePicker_Date_Set12.Value.Second;
+                        ps.Time.Hour = dateTimePicker_Time_Set12.Value.Hour;
+                        ps.Time.Minute = dateTimePicker_Time_Set12.Value.Minute;
+                        ps.Time.Second = dateTimePicker_Time_Set12.Value.Second;
                         ps.BatteryLevel = (int)numericUpDown_Battery_Set12.Value;
                         ps.Calories = (int)numericUpDown_Calories_Set12.Value;
                         ps.Pulse = (int)numericUpDown_Pulse_Set12.Value;
@@ -3946,9 +3956,9 @@ namespace GTR_Watch_face
                         ps.Time.Year = dateTimePicker_Date_Set13.Value.Year;
                         ps.Time.Month = dateTimePicker_Date_Set13.Value.Month;
                         ps.Time.Day = dateTimePicker_Date_Set13.Value.Day;
-                        ps.Time.Hour = dateTimePicker_Date_Set13.Value.Hour;
-                        ps.Time.Minute = dateTimePicker_Date_Set13.Value.Minute;
-                        ps.Time.Second = dateTimePicker_Date_Set13.Value.Second;
+                        ps.Time.Hour = dateTimePicker_Time_Set13.Value.Hour;
+                        ps.Time.Minute = dateTimePicker_Time_Set13.Value.Minute;
+                        ps.Time.Second = dateTimePicker_Time_Set13.Value.Second;
                         ps.BatteryLevel = (int)numericUpDown_Battery_Set13.Value;
                         ps.Calories = (int)numericUpDown_Calories_Set13.Value;
                         ps.Pulse = (int)numericUpDown_Pulse_Set13.Value;
@@ -4413,14 +4423,14 @@ namespace GTR_Watch_face
             //pictureBox1.Image.Save(@"C:\test.png");
             pictureBox1.Image = null;
         }
-        
+
         private void panel_Preview_DoubleClick(object sender, EventArgs e)
         {
             if (panel_Preview.Height < 300) button_PreviewBig.PerformClick();
             else
             {
-                if (radioButton_47.Checked) button_PreviewSmall.PerformClick();
-                else button_PreviewSmall_42.PerformClick();
+                //if (radioButton_47.Checked) button_PreviewSmall.PerformClick();
+                //else button_PreviewSmall_42.PerformClick();
             }
         }
 
@@ -4437,15 +4447,25 @@ namespace GTR_Watch_face
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
-                if (radioButton_42.Checked) bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
-                if (radioButton_gts.Checked) bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
+                Bitmap mask = new Bitmap(@"Mask\mask_gtr47.png");
+                if (radioButton_42.Checked)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(@"Mask\mask_gtr42.png");
+                }
+                if (radioButton_gts.Checked)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(@"Mask\mask_gts.png");
+                }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 //float scale = 1.0f;
                 //if (formPreview.radioButton_small.Checked) scale = 0.5f;
                 //if (formPreview.radioButton_large.Checked) scale = 1.5f;
                 //if (formPreview.radioButton_xlarge.Checked) scale = 2.0f;
-                //if (formPreview.radioButton_xxlarge.Checked) scale = 2.5f;
-                PreviewToBitmap(gPanel, 1.0f, radioButton_47.Checked, false, false, false);
+                //if (formPreview.radioButton_xxlarge.Checked) scale = 2.5f;checkBox_crop.Checked,
+                PreviewToBitmap(gPanel, 1.0f, false, false, false, false);
+                if(checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
                 bitmap.Save(saveFileDialog.FileName, ImageFormat.Png);
             }
         }
@@ -4463,8 +4483,17 @@ namespace GTR_Watch_face
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
-                if (radioButton_42.Checked) bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
-                if (radioButton_gts.Checked) bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
+                Bitmap mask = new Bitmap(@"Mask\mask_gtr47.png");
+                if (radioButton_42.Checked)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(@"Mask\mask_gtr42.png");
+                }
+                if (radioButton_gts.Checked)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(@"Mask\mask_gts.png");
+                }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 bool save = false;
                 Random rnd = new Random();
@@ -4591,8 +4620,12 @@ namespace GTR_Watch_face
                             numericUpDown_WeatherSet_NightTemp.Value = numericUpDown_WeatherSet_Temp.Value - rnd.Next(3, 10);
                             comboBox_WeatherSet_Icon.SelectedIndex = rnd.Next(0, 25);
 
-                            PreviewToBitmap(gPanel, 1.0f, radioButton_47.Checked, false, false, false);
-                            // Add first image and set the animation delay to 100ms 
+                            PreviewToBitmap(gPanel, 1.0f, false, false, false, false);
+                            if (checkBox_crop.Checked) {
+                                bitmap = ApplyMask(bitmap, mask);
+                                gPanel = Graphics.FromImage(bitmap);
+                            }
+                            // Add first image and set the animation delay to 100ms
                             MagickImage item = new MagickImage(bitmap);
                             //ExifProfile profile = item.GetExifProfile();
                             collection.Add(item);
@@ -4619,10 +4652,25 @@ namespace GTR_Watch_face
                     collection.Write(saveFileDialog.FileName);
                 }
                 PreviewView = true;
+                mask.Dispose();
             }
         }
 
-        
+        public Bitmap ApplyMask(Bitmap inputImage, Bitmap mask)
+        {
+            ushort[] bgColors = { 203, 255, 240 };
+            ImageMagick.MagickImage image = new ImageMagick.MagickImage(inputImage);
+            //ImageMagick.MagickImage image = new ImageMagick.MagickImage("0.png");
+            ImageMagick.MagickImage combineMask = new ImageMagick.MagickImage(mask);
+
+            image.Composite(combineMask, ImageMagick.CompositeOperator.CopyAlpha);
+            //image.Settings.BackgroundColor = new ImageMagick.MagickColor(bgColors[0], bgColors[1], bgColors[2]);
+            //image.Alpha(ImageMagick.AlphaOption.Remove);
+            image.Transparent(ImageMagick.MagickColor.FromRgba(0, 0, 0, 0));
+
+            return image.ToBitmap();
+        }
+
         private void radioButton_47_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButton_47.Checked)
@@ -4630,8 +4678,8 @@ namespace GTR_Watch_face
                 this.Text = "GTR watch face editor";
                 panel_Preview.Height = 230;
                 panel_Preview.Width = 230;
-                offSetX = 227;
-                offSetY = 227;
+                offSet_X = 227;
+                offSet_Y = 227;
 
                 //Properties.Settings.Default.unpack_command_GTR42 = textBox_unpack_command.Text;
                 //Properties.Settings.Default.pack_command_GTR42 = textBox_pack_command.Text;
@@ -4657,8 +4705,8 @@ namespace GTR_Watch_face
                 this.Text = "GTR watch face editor";
                 panel_Preview.Height = 198;
                 panel_Preview.Width = 198;
-                offSetX = 195;
-                offSetY = 195;
+                offSet_X = 195;
+                offSet_Y = 195;
                 
                 textBox_unpack_command.Text = Program_Settings.unpack_command_GTR42;
                 textBox_pack_command.Text = Program_Settings.pack_command_GTR42;
@@ -4672,8 +4720,8 @@ namespace GTR_Watch_face
                 this.Text = "GTS watch face editor";
                 panel_Preview.Height = 223;
                 panel_Preview.Width = 176;
-                offSetX = 174;
-                offSetY = 221;
+                offSet_X = 174;
+                offSet_Y = 221;
                 
                 textBox_unpack_command.Text = Program_Settings.unpack_command_GTS;
                 textBox_pack_command.Text = Program_Settings.pack_command_GTS;
@@ -4720,7 +4768,7 @@ namespace GTR_Watch_face
                 if (formPreview.radioButton_large.Checked) scalePreviewPaint = 1.5f;
                 if (formPreview.radioButton_xlarge.Checked) scalePreviewPaint = 2.0f;
                 if (formPreview.radioButton_xxlarge.Checked) scalePreviewPaint = 2.5f;
-                PreviewToBitmap(gPanelPreviewPaint, scalePreviewPaint, radioButton_47.Checked, 
+                PreviewToBitmap(gPanelPreviewPaint, scalePreviewPaint, checkBox_crop.Checked,
                     checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked);
                 gPanelPreviewPaint.Dispose();
             }
@@ -4963,7 +5011,7 @@ namespace GTR_Watch_face
             if (e.X <= numericUpDown.Controls[1].Width + 1)
             {
                 // Click is in text area
-                numericUpDown.Value = MouseСoordinates.X - offSetX;
+                numericUpDown.Value = MouseСoordinates.X - offSet_X;
             }
             else
             {
@@ -4984,7 +5032,7 @@ namespace GTR_Watch_face
             if (e.X <= numericUpDown.Controls[1].Width + 1)
             {
                 // Click is in text area
-                numericUpDown.Value = MouseСoordinates.Y - offSetY;
+                numericUpDown.Value = MouseСoordinates.Y - offSet_Y;
             }
             else
             {
@@ -5041,6 +5089,16 @@ namespace GTR_Watch_face
         private void checkBox_border_CheckedChanged(object sender, EventArgs e)
         {
             Program_Settings.ShowBorder = checkBox_border.Checked;
+            string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+            {
+                //DefaultValueHandling = DefaultValueHandling.Ignore,
+                NullValueHandling = NullValueHandling.Ignore
+            });
+            File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
+        }
+        private void checkBox_crop_CheckedChanged(object sender, EventArgs e)
+        {
+            Program_Settings.Crop = checkBox_crop.Checked;
             string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
             {
                 //DefaultValueHandling = DefaultValueHandling.Ignore,
@@ -5110,6 +5168,8 @@ namespace GTR_Watch_face
         private void comboBox_Image_DrawItem(object sender, DrawItemEventArgs e)
         {
             ComboBox comboBox = sender as ComboBox;
+            //if (comboBox.Items.Count < 10) comboBox.DropDownHeight = comboBox.Items.Count * 35;
+            //else comboBox.DropDownHeight = 106;
             float size = comboBox.Font.Size;
             Font myFont;
             FontFamily family = comboBox.Font.FontFamily;
@@ -5153,7 +5213,6 @@ namespace GTR_Watch_face
         private void comboBox_Image_MeasureItem(object sender, MeasureItemEventArgs e)
         {
             e.ItemHeight = 35;
-            //e.ItemWidth = 560;
         }
 
         // проверка разрядности системы
@@ -5278,7 +5337,134 @@ namespace GTR_Watch_face
             }
         }
 
+        private void вставитьКоординатыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Try to cast the sender to a ToolStripItem
+            ToolStripItem menuItem = sender as ToolStripItem;
+            if (menuItem != null)
+            {
+                // Retrieve the ContextMenuStrip that owns this ToolStripItem
+                ContextMenuStrip owner = menuItem.Owner as ContextMenuStrip;
+                if (owner != null)
+                {
+                    // Get the control that is displaying this context menu
+                    Control sourceControl = owner.SourceControl;
+                    DataGridView dataGridView = sourceControl as DataGridView;
+                    DataGridViewRow row = dataGridView.CurrentRow;
+                    row.Cells[0].Value = MouseСoordinates.X;
+                    row.Cells[1].Value = MouseСoordinates.Y;
+                    JSON_write();
+                    PreviewImage();
+                }
+            }
+        }
 
+        private void копироватьToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            ToolStripItem menuItem = sender as ToolStripItem;
+            if (menuItem != null)
+            {
+                // Retrieve the ContextMenuStrip that owns this ToolStripItem
+                ContextMenuStrip owner = menuItem.Owner as ContextMenuStrip;
+                if (owner != null)
+                {
+                    // Get the control that is displaying this context menu
+                    Control sourceControl = owner.SourceControl;
+                    DataGridView dataGridView = sourceControl as DataGridView;
+                    DataGridViewCell cell = dataGridView.CurrentCell;
+                    Clipboard.SetText(cell.Value.ToString());
+                }
+            }
+        }
+
+        private void вставитьToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            ToolStripItem menuItem = sender as ToolStripItem;
+            if (menuItem != null)
+            {
+                // Retrieve the ContextMenuStrip that owns this ToolStripItem
+                ContextMenuStrip owner = menuItem.Owner as ContextMenuStrip;
+                if (owner != null)
+                {
+                    // Get the control that is displaying this context menu
+                    Control sourceControl = owner.SourceControl;
+                    DataGridView dataGridView = sourceControl as DataGridView;
+                    DataGridViewCell cell = dataGridView.CurrentCell;
+                    //Если в буфере обмен содержится текст
+                    if (Clipboard.ContainsText() == true)
+                    {
+                        //Извлекаем (точнее копируем) его и сохраняем в переменную
+                        decimal i = 0;
+                        if (decimal.TryParse(Clipboard.GetText(), out i))
+                        {
+                            cell.Value = i;
+                            int x = dataGridView.CurrentCellAddress.X;
+                            int y = dataGridView.CurrentCellAddress.Y;
+                            dataGridView.CurrentCell = dataGridView.Rows[0].Cells[0];
+                            dataGridView.CurrentCell = dataGridView.Rows[y].Cells[x];
+                            dataGridView.BeginEdit(false);
+                            JSON_write();
+                            PreviewImage();
+                        }
+                    }
+
+                }
+            }
+        }
+
+        private void удалитьСтрокуToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ToolStripItem menuItem = sender as ToolStripItem;
+            if (menuItem != null)
+            {
+                // Retrieve the ContextMenuStrip that owns this ToolStripItem
+                ContextMenuStrip owner = menuItem.Owner as ContextMenuStrip;
+                if (owner != null)
+                {
+                    // Get the control that is displaying this context menu
+                    Control sourceControl = owner.SourceControl;
+                    DataGridView dataGridView = sourceControl as DataGridView;
+                    try
+                    {
+                        int rowIndex = dataGridView.CurrentCellAddress.Y;
+                        dataGridView.Rows.RemoveAt(rowIndex);
+                    }
+                    catch (Exception)
+                    {
+                    }
+                }
+            }
+        }
+
+        private void dataGridView_Battery_IconSet_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                DataGridView dataGridView = sender as DataGridView;
+                dataGridView.CurrentCell = dataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            }
+        }
+
+        private void contextMenuStrip_XY_InTable_Opening(object sender, CancelEventArgs e)
+        {
+            if ((MouseСoordinates.X < 0) || (MouseСoordinates.Y < 0))
+            {
+                contextMenuStrip_XY_InTable.Items[0].Enabled = false;
+            }
+            else
+            {
+                contextMenuStrip_XY_InTable.Items[0].Enabled = true;
+            }
+            decimal i = 0;
+            if ((Clipboard.ContainsText() == true) && (decimal.TryParse(Clipboard.GetText(), out i)))
+            {
+                contextMenuStrip_XY_InTable.Items[2].Enabled = true;
+            }
+            else
+            {
+                contextMenuStrip_XY_InTable.Items[2].Enabled = false;
+            }
+        }
     }
 }
 

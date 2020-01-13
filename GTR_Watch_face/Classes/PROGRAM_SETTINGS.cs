@@ -24,6 +24,7 @@
         public bool Model_GTS = false;
 
         public bool ShowBorder = false;
+        public bool Crop = true;
         public float Scale = 1f;
         public float Gif_Speed = 1f;
 

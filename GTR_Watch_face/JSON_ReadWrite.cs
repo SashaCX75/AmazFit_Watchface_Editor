@@ -230,8 +230,8 @@ namespace GTR_Watch_face
                         //comboBox_OneLine_Delimiter.Text = Watch_Face.Date.MonthAndDay.OneLine.DelimiterImageIndex.ToString();
                         if (Watch_Face.Date.MonthAndDay.OneLine.DelimiterImageIndex != null)
                             checkBoxSetText(comboBox_OneLine_Delimiter, (long)Watch_Face.Date.MonthAndDay.OneLine.DelimiterImageIndex);
-                        string Alignment = AlignmentToString(Watch_Face.Date.MonthAndDay.OneLine.Number.Alignment);
-                        comboBox_OneLine_Alignment.Text = Alignment;
+                        AlignmentToString(comboBox_OneLine_Alignment, Watch_Face.Date.MonthAndDay.OneLine.Number.Alignment);
+                        //comboBox_OneLine_Alignment.Text = Alignment;
                     }
                     else checkBox_OneLine.Checked = false;
 
@@ -249,8 +249,8 @@ namespace GTR_Watch_face
                             numericUpDown_MonthAndDayD_Count.Value = Watch_Face.Date.MonthAndDay.Separate.Day.ImagesCount;
                             //comboBox_MonthAndDayD_Image.Text = Watch_Face.Date.MonthAndDay.Separate.Day.ImageIndex.ToString();
                             checkBoxSetText(comboBox_MonthAndDayD_Image, Watch_Face.Date.MonthAndDay.Separate.Day.ImageIndex);
-                            string Alignment = AlignmentToString(Watch_Face.Date.MonthAndDay.Separate.Day.Alignment);
-                            comboBox_MonthAndDayD_Alignment.Text = Alignment;
+                            AlignmentToString(comboBox_MonthAndDayD_Alignment, Watch_Face.Date.MonthAndDay.Separate.Day.Alignment);
+                            //comboBox_MonthAndDayD_Alignment.Text = Alignment;
                         }
                         else checkBox_MonthAndDayD.Checked = false;
 
@@ -266,8 +266,8 @@ namespace GTR_Watch_face
                             numericUpDown_MonthAndDayM_Count.Value = Watch_Face.Date.MonthAndDay.Separate.Month.ImagesCount;
                             //comboBox_MonthAndDayM_Image.Text = Watch_Face.Date.MonthAndDay.Separate.Month.ImageIndex.ToString();
                             checkBoxSetText(comboBox_MonthAndDayM_Image, Watch_Face.Date.MonthAndDay.Separate.Month.ImageIndex);
-                            string Alignment = AlignmentToString(Watch_Face.Date.MonthAndDay.Separate.Month.Alignment);
-                            comboBox_MonthAndDayM_Alignment.Text = Alignment;
+                            AlignmentToString(comboBox_MonthAndDayM_Alignment,Watch_Face.Date.MonthAndDay.Separate.Month.Alignment);
+                            //comboBox_MonthAndDayM_Alignment.Text = Alignment;
                         }
                         else checkBox_MonthAndDayM.Checked = false;
 
@@ -307,8 +307,8 @@ namespace GTR_Watch_face
                         checkBoxSetText(comboBox_Year_Image, Watch_Face.Date.Year.OneLine.Number.ImageIndex);
                         if (Watch_Face.Date.Year.OneLine.DelimiterImageIndex != null)
                         checkBoxSetText(comboBox_Year_Delimiter, (long)Watch_Face.Date.Year.OneLine.DelimiterImageIndex);
-                        string Alignment = AlignmentToString(Watch_Face.Date.Year.OneLine.Number.Alignment);
-                        comboBox_Year_Alignment.Text = Alignment;
+                        AlignmentToString(comboBox_Year_Alignment, Watch_Face.Date.Year.OneLine.Number.Alignment);
+                        //comboBox_Year_Alignment.Text = Alignment;
                     }
                     else checkBox_Year.Checked = false;
                 }
@@ -497,8 +497,8 @@ namespace GTR_Watch_face
                     checkBoxSetText(comboBox_ActivityGoal_Image, Watch_Face.Activity.StepsGoal.ImageIndex);
                     numericUpDown_ActivityGoal_Count.Value = Watch_Face.Activity.StepsGoal.ImagesCount;
                     numericUpDown_ActivityGoal_Spacing.Value = Watch_Face.Activity.StepsGoal.Spacing;
-                    string Alignment = AlignmentToString(Watch_Face.Activity.StepsGoal.Alignment);
-                    comboBox_ActivityGoal_Alignment.Text = Alignment;
+                    AlignmentToString(comboBox_ActivityGoal_Alignment, Watch_Face.Activity.StepsGoal.Alignment);
+                    //comboBox_ActivityGoal_Alignment.Text = Alignment;
                 }
                 else checkBox_ActivityGoal.Checked = false;
 
@@ -514,8 +514,8 @@ namespace GTR_Watch_face
                     checkBoxSetText(comboBox_ActivitySteps_Image, Watch_Face.Activity.Steps.Step.ImageIndex);
                     numericUpDown_ActivitySteps_Count.Value = Watch_Face.Activity.Steps.Step.ImagesCount;
                     numericUpDown_ActivitySteps_Spacing.Value = Watch_Face.Activity.Steps.Step.Spacing;
-                    string Alignment = AlignmentToString(Watch_Face.Activity.Steps.Step.Alignment);
-                    comboBox_ActivitySteps_Alignment.Text = Alignment;
+                    AlignmentToString(comboBox_ActivitySteps_Alignment, Watch_Face.Activity.Steps.Step.Alignment);
+                    //comboBox_ActivitySteps_Alignment.Text = Alignment;
                 }
                 else checkBox_ActivitySteps.Checked = false;
 
@@ -531,8 +531,8 @@ namespace GTR_Watch_face
                     checkBoxSetText(comboBox_ActivityDistance_Image, Watch_Face.Activity.Distance.Number.ImageIndex);
                     numericUpDown_ActivityDistance_Count.Value = Watch_Face.Activity.Distance.Number.ImagesCount;
                     numericUpDown_ActivityDistance_Spacing.Value = Watch_Face.Activity.Distance.Number.Spacing;
-                    string Alignment = AlignmentToString(Watch_Face.Activity.Distance.Number.Alignment);
-                    comboBox_ActivityDistance_Alignment.Text = Alignment;
+                    AlignmentToString(comboBox_ActivityDistance_Alignment, Watch_Face.Activity.Distance.Number.Alignment);
+                    //comboBox_ActivityDistance_Alignment.Text = Alignment;
 
                     //comboBox_ActivityDistance_Suffix.Text = Watch_Face.Activity.Distance.SuffixImageIndex.ToString();
                     if (Watch_Face.Activity.Distance.SuffixImageIndex != null)
@@ -555,8 +555,8 @@ namespace GTR_Watch_face
                     checkBoxSetText(comboBox_ActivityPuls_Image, Watch_Face.Activity.Pulse.ImageIndex);
                     numericUpDown_ActivityPuls_Count.Value = Watch_Face.Activity.Pulse.ImagesCount;
                     numericUpDown_ActivityPuls_Spacing.Value = Watch_Face.Activity.Pulse.Spacing;
-                    string Alignment = AlignmentToString(Watch_Face.Activity.Pulse.Alignment);
-                    comboBox_ActivityPuls_Alignment.Text = Alignment;
+                    AlignmentToString(comboBox_ActivityPuls_Alignment, Watch_Face.Activity.Pulse.Alignment);
+                    //comboBox_ActivityPuls_Alignment.Text = Alignment;
                 }
                 else checkBox_ActivityPuls.Checked = false;
 
@@ -572,8 +572,8 @@ namespace GTR_Watch_face
                     checkBoxSetText(comboBox_ActivityCalories_Image, Watch_Face.Activity.Calories.ImageIndex);
                     numericUpDown_ActivityCalories_Count.Value = Watch_Face.Activity.Calories.ImagesCount;
                     numericUpDown_ActivityCalories_Spacing.Value = Watch_Face.Activity.Calories.Spacing;
-                    string Alignment = AlignmentToString(Watch_Face.Activity.Calories.Alignment);
-                    comboBox_ActivityCalories_Alignment.Text = Alignment;
+                    AlignmentToString(comboBox_ActivityCalories_Alignment, Watch_Face.Activity.Calories.Alignment);
+                    //comboBox_ActivityCalories_Alignment.Text = Alignment;
                 }
                 else checkBox_ActivityCalories.Checked = false;
 
@@ -693,8 +693,8 @@ namespace GTR_Watch_face
                     numericUpDown_Battery_Text_Count.Value = Watch_Face.Battery.Text.ImagesCount;
                     //comboBox_Battery_Text_Image.Text = Watch_Face.Battery.Text.ImageIndex.ToString();
                     checkBoxSetText(comboBox_Battery_Text_Image, Watch_Face.Battery.Text.ImageIndex);
-                    string Alignment = AlignmentToString(Watch_Face.Battery.Text.Alignment);
-                    comboBox_Battery_Text_Alignment.Text = Alignment;
+                    AlignmentToString(comboBox_Battery_Text_Alignment, Watch_Face.Battery.Text.Alignment);
+                    //comboBox_Battery_Text_Alignment.Text = Alignment;
                 }
                 else checkBox_Battery_Text.Checked = false;
 
@@ -914,8 +914,8 @@ namespace GTR_Watch_face
                     numericUpDown_Weather_Text_Count.Value = Watch_Face.Weather.Temperature.Current.ImagesCount;
                     //comboBox_Weather_Text_Image.Text = Watch_Face.Weather.Temperature.Current.ImageIndex.ToString();
                     checkBoxSetText(comboBox_Weather_Text_Image, Watch_Face.Weather.Temperature.Current.ImageIndex);
-                    string Alignment = AlignmentToString(Watch_Face.Weather.Temperature.Current.Alignment);
-                    comboBox_Weather_Text_Alignment.Text = Alignment;
+                    AlignmentToString(comboBox_Weather_Text_Alignment, Watch_Face.Weather.Temperature.Current.Alignment);
+                    //comboBox_Weather_Text_Alignment.Text = Alignment;
                 }
                 else checkBox_Weather_Text.Checked = false;
 
@@ -942,8 +942,8 @@ namespace GTR_Watch_face
                         //Watch_Face.Weather.Temperature.Today.Separate.Day.ImageIndex.ToString();
                         checkBoxSetText(comboBox_Weather_Day_Image,
                             Watch_Face.Weather.Temperature.Today.Separate.Day.ImageIndex);
-                        string Alignment = AlignmentToString(Watch_Face.Weather.Temperature.Today.Separate.Day.Alignment);
-                        comboBox_Weather_Day_Alignment.Text = Alignment;
+                        AlignmentToString(comboBox_Weather_Day_Alignment, Watch_Face.Weather.Temperature.Today.Separate.Day.Alignment);
+                        //comboBox_Weather_Day_Alignment.Text = Alignment;
                     }
                     else checkBox_Weather_Day.Checked = false;
 
@@ -968,8 +968,8 @@ namespace GTR_Watch_face
                         //    Watch_Face.Weather.Temperature.Today.Separate.Night.ImageIndex.ToString();
                         checkBoxSetText(comboBox_Weather_Night_Image,
                             Watch_Face.Weather.Temperature.Today.Separate.Night.ImageIndex);
-                        string Alignment = AlignmentToString(Watch_Face.Weather.Temperature.Today.Separate.Night.Alignment);
-                        comboBox_Weather_Night_Alignment.Text = Alignment;
+                        AlignmentToString(comboBox_Weather_Night_Alignment, Watch_Face.Weather.Temperature.Today.Separate.Night.Alignment);
+                        //comboBox_Weather_Night_Alignment.Text = Alignment;
                     }
                     else checkBox_Weather_Night.Checked = false;
                 }
@@ -1147,7 +1147,7 @@ namespace GTR_Watch_face
                     Watch_Face.Activity.StepsGoal.BottomRightY = (int)numericUpDown_ActivityGoal_EndCorner_Y.Value;
 
                     Watch_Face.Activity.StepsGoal.Spacing = (int)numericUpDown_ActivityGoal_Spacing.Value;
-                    string Alignment = StringToAlignment(comboBox_ActivityGoal_Alignment.Text);
+                    string Alignment = StringToAlignment(comboBox_ActivityGoal_Alignment.SelectedIndex);
                     Watch_Face.Activity.StepsGoal.Alignment = Alignment;
                 }
 
@@ -1165,7 +1165,7 @@ namespace GTR_Watch_face
                     Watch_Face.Activity.Steps.Step.BottomRightY = (int)numericUpDown_ActivitySteps_EndCorner_Y.Value;
 
                     Watch_Face.Activity.Steps.Step.Spacing = (int)numericUpDown_ActivitySteps_Spacing.Value;
-                    string Alignment = StringToAlignment(comboBox_ActivitySteps_Alignment.Text);
+                    string Alignment = StringToAlignment(comboBox_ActivitySteps_Alignment.SelectedIndex);
                     Watch_Face.Activity.Steps.Step.Alignment = Alignment;
                 }
 
@@ -1183,7 +1183,7 @@ namespace GTR_Watch_face
                     Watch_Face.Activity.Distance.Number.BottomRightY = (int)numericUpDown_ActivityDistance_EndCorner_Y.Value;
 
                     Watch_Face.Activity.Distance.Number.Spacing = (int)numericUpDown_ActivityDistance_Spacing.Value;
-                    string Alignment = StringToAlignment(comboBox_ActivityDistance_Alignment.Text);
+                    string Alignment = StringToAlignment(comboBox_ActivityDistance_Alignment.SelectedIndex);
                     Watch_Face.Activity.Distance.Number.Alignment = Alignment;
 
                     if ((comboBox_ActivityDistance_Suffix.SelectedIndex >= 0) &&
@@ -1207,7 +1207,7 @@ namespace GTR_Watch_face
                     Watch_Face.Activity.Pulse.BottomRightY = (int)numericUpDown_ActivityPuls_EndCorner_Y.Value;
 
                     Watch_Face.Activity.Pulse.Spacing = (int)numericUpDown_ActivityPuls_Spacing.Value;
-                    string Alignment = StringToAlignment(comboBox_ActivityPuls_Alignment.Text);
+                    string Alignment = StringToAlignment(comboBox_ActivityPuls_Alignment.SelectedIndex);
                     Watch_Face.Activity.Pulse.Alignment = Alignment;
                 }
 
@@ -1224,7 +1224,7 @@ namespace GTR_Watch_face
                     Watch_Face.Activity.Calories.BottomRightY = (int)numericUpDown_ActivityCalories_EndCorner_Y.Value;
 
                     Watch_Face.Activity.Calories.Spacing = (int)numericUpDown_ActivityCalories_Spacing.Value;
-                    string Alignment = StringToAlignment(comboBox_ActivityCalories_Alignment.Text);
+                    string Alignment = StringToAlignment(comboBox_ActivityCalories_Alignment.SelectedIndex);
                     Watch_Face.Activity.Calories.Alignment = Alignment;
                 }
 
@@ -1290,7 +1290,7 @@ namespace GTR_Watch_face
                     Watch_Face.Date.MonthAndDay.Separate.Day.BottomRightY = (int)numericUpDown_MonthAndDayD_EndCorner_Y.Value;
 
                     Watch_Face.Date.MonthAndDay.Separate.Day.Spacing = (int)numericUpDown_MonthAndDayD_Spacing.Value;
-                    string Alignment = StringToAlignment(comboBox_MonthAndDayD_Alignment.Text);
+                    string Alignment = StringToAlignment(comboBox_MonthAndDayD_Alignment.SelectedIndex);
                     Watch_Face.Date.MonthAndDay.Separate.Day.Alignment = Alignment;
                 }
                 if ((checkBox_MonthAndDayM.Checked) && (comboBox_MonthAndDayM_Image.SelectedIndex >= 0))
@@ -1310,7 +1310,7 @@ namespace GTR_Watch_face
                     Watch_Face.Date.MonthAndDay.Separate.Month.BottomRightY = (int)numericUpDown_MonthAndDayM_EndCorner_Y.Value;
 
                     Watch_Face.Date.MonthAndDay.Separate.Month.Spacing = (int)numericUpDown_MonthAndDayM_Spacing.Value;
-                    string Alignment = StringToAlignment(comboBox_MonthAndDayM_Alignment.Text);
+                    string Alignment = StringToAlignment(comboBox_MonthAndDayM_Alignment.SelectedIndex);
                     Watch_Face.Date.MonthAndDay.Separate.Month.Alignment = Alignment;
                 }
 
@@ -1331,7 +1331,7 @@ namespace GTR_Watch_face
                     Watch_Face.Date.MonthAndDay.OneLine.Number.BottomRightY = (int)numericUpDown_OneLine_EndCorner_Y.Value;
 
                     Watch_Face.Date.MonthAndDay.OneLine.Number.Spacing = (int)numericUpDown_OneLine_Spacing.Value;
-                    string Alignment = StringToAlignment(comboBox_OneLine_Alignment.Text);
+                    string Alignment = StringToAlignment(comboBox_OneLine_Alignment.SelectedIndex);
                     Watch_Face.Date.MonthAndDay.OneLine.Number.Alignment = Alignment;
 
                     if (comboBox_OneLine_Delimiter.SelectedIndex >= 0)
@@ -1361,7 +1361,7 @@ namespace GTR_Watch_face
                     Watch_Face.Date.Year.OneLine.Number.BottomRightY = (int)numericUpDown_Year_EndCorner_Y.Value;
 
                     Watch_Face.Date.Year.OneLine.Number.Spacing = (int)numericUpDown_Year_Spacing.Value;
-                    string Alignment = StringToAlignment(comboBox_Year_Alignment.Text);
+                    string Alignment = StringToAlignment(comboBox_Year_Alignment.SelectedIndex);
                     Watch_Face.Date.Year.OneLine.Number.Alignment = Alignment;
 
                     if (comboBox_Year_Delimiter.SelectedIndex >= 0)
@@ -1646,7 +1646,7 @@ namespace GTR_Watch_face
                     Watch_Face.Battery.Text.BottomRightY = (int)numericUpDown_Battery_Text_EndCorner_Y.Value;
 
                     Watch_Face.Battery.Text.Spacing = (int)numericUpDown_Battery_Text_Spacing.Value;
-                    string Alignment = StringToAlignment(comboBox_Battery_Text_Alignment.Text);
+                    string Alignment = StringToAlignment(comboBox_Battery_Text_Alignment.SelectedIndex);
                     Watch_Face.Battery.Text.Alignment = Alignment;
                 }
 
@@ -1905,7 +1905,7 @@ namespace GTR_Watch_face
                     Watch_Face.Weather.Temperature.Current.BottomRightY = (int)numericUpDown_Weather_Text_EndCorner_Y.Value;
 
                     Watch_Face.Weather.Temperature.Current.Spacing = (int)numericUpDown_Weather_Text_Spacing.Value;
-                    string Alignment = StringToAlignment(comboBox_Weather_Text_Alignment.Text);
+                    string Alignment = StringToAlignment(comboBox_Weather_Text_Alignment.SelectedIndex);
                     Watch_Face.Weather.Temperature.Current.Alignment = Alignment;
 
                     if ((comboBox_Weather_Text_MinusImage.SelectedIndex >= 0) ||
@@ -1953,7 +1953,7 @@ namespace GTR_Watch_face
 
                     Watch_Face.Weather.Temperature.Today.Separate.Day.Spacing =
                         (int)numericUpDown_Weather_Day_Spacing.Value;
-                    string Alignment = StringToAlignment(comboBox_Weather_Day_Alignment.Text);
+                    string Alignment = StringToAlignment(comboBox_Weather_Day_Alignment.SelectedIndex);
                     Watch_Face.Weather.Temperature.Today.Separate.Day.Alignment = Alignment;
                     Watch_Face.Weather.Temperature.Today.AppendDegreesForBoth = true;
 
@@ -2002,7 +2002,7 @@ namespace GTR_Watch_face
 
                     Watch_Face.Weather.Temperature.Today.Separate.Night.Spacing =
                         (int)numericUpDown_Weather_Night_Spacing.Value;
-                    string Alignment = StringToAlignment(comboBox_Weather_Night_Alignment.Text);
+                    string Alignment = StringToAlignment(comboBox_Weather_Night_Alignment.SelectedIndex);
                     Watch_Face.Weather.Temperature.Today.Separate.Night.Alignment = Alignment;
                     Watch_Face.Weather.Temperature.Today.AppendDegreesForBoth = true;
 
@@ -2049,94 +2049,109 @@ namespace GTR_Watch_face
             });
         }
 
-        private string AlignmentToString(string Alignment)
+        private void AlignmentToString(ComboBox comboBoxAlignment, string Alignment)
         {
-            string result = "Середина по центру";
+            int result = 0;
             switch (Alignment)
             {
                 case "TopLeft":
-                    result = "Вверх влево";
+                    //result = "Вверх влево";
+                    result = 0;
                     break;
                 case "TopCenter":
-                    result = "Вверх по центру";
+                    //result = "Вверх по центру";
+                    result = 1;
                     break;
                 case "TopRight":
-                    result = "Вверх вправо";
+                    //result = "Вверх вправо";
+                    result = 2;
                     break;
 
                 case "CenterLeft":
-                    result = "Середина влево";
+                    //result = "Середина влево";
+                    result = 3;
                     break;
                 case "Center":
-                    result = "Середина по центру";
+                    //result = "Середина по центру";
+                    result = 4;
                     break;
                 case "CenterRight":
-                    result = "Середина вправо";
+                    //result = "Середина вправо";
+                    result = 5;
                     break;
 
                 case "BottomLeft":
-                    result = "Вниз влево";
+                    //result = "Вниз влево";
+                    result = 6;
                     break;
                 case "BottomCenter":
-                    result = "Вниз по центру";
+                    //result = "Вниз по центру";
+                    result = 7;
                     break;
                 case "BottomRight":
-                    result = "Вниз вправо";
+                    //result = "Вниз вправо";
+                    result = 8;
                     break;
 
                 case "Left":
-                    result = "Середина влево";
+                    //result = "Середина влево";
+                    result = 3;
                     break;
                 case "Right":
-                    result = "Середина вправо";
+                    //result = "Середина вправо";
+                    result = 5;
                     break;
                 case "Top":
-                    result = "Вверх по центру";
+                    //result = "Вверх по центру";
+                    result = 1;
                     break;
                 case "Bottom":
-                    result = "Вниз по центру";
+                    //result = "Вниз по центру";
+                    result = 7;
                     break;
 
                 default:
-                    result = "Середина по центру";
+                    //result = "Середина по центру";
+                    result = 4;
                     break;
 
             }
-            return result;
+            //return result;
+            comboBoxAlignment.SelectedIndex = result;
         }
 
-        private string StringToAlignment(string Alignment)
+        private string StringToAlignment(int Alignment)
         {
             string result = "Center";
             switch (Alignment)
             {
-                case "Вверх влево":
+                case 0:
                     result = "TopLeft";
                     break;
-                case "Вверх по центру":
+                case 1:
                     result = "TopCenter";
                     break;
-                case "Вверх вправо":
+                case 2:
                     result = "TopRight";
                     break;
 
-                case "Середина влево":
+                case 3:
                     result = "CenterLeft";
                     break;
-                case "Center":
-                    result = "CenterLeft";
+                case 4:
+                    result = "Center";
                     break;
-                case "Середина вправо":
+                case 5:
                     result = "CenterRight";
                     break;
 
-                case "Вниз влево":
+                case 6:
                     result = "BottomLeft";
                     break;
-                case "Вниз по центру":
+                case 7:
                     result = "BottomCenter";
                     break;
-                case "Вниз вправо":
+                case 8:
                     result = "BottomRight";
                     break;
 

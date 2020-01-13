@@ -93,6 +93,16 @@ namespace GTR_Watch_face.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap table_row_delete_icon {
+            get {
+                object obj = ResourceManager.GetObject("table_row_delete_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap watch_icon {
             get {
                 object obj = ResourceManager.GetObject("watch_icon", resourceCulture);
