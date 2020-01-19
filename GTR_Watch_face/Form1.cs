@@ -78,6 +78,11 @@ namespace GTR_Watch_face
                     Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en");
                     Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
                 }
+                else
+                {
+                    Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("ru");
+                    Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ru");
+                }
                 //Logger.WriteLine("Применили язык");
             }
             catch (Exception ex)
@@ -167,7 +172,7 @@ namespace GTR_Watch_face
                     //DefaultValueHandling = DefaultValueHandling.Ignore,
                     NullValueHandling = NullValueHandling.Ignore
                 });
-                File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
+                File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
             }
             textBox_pack_unpack_dir.Text = Program_Settings.pack_unpack_dir;
             if (Program_Settings.Model_GTS)
@@ -301,7 +306,7 @@ namespace GTR_Watch_face
                     //DefaultValueHandling = DefaultValueHandling.Ignore,
                     NullValueHandling = NullValueHandling.Ignore
                 });
-                File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
+                File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
             }
         }
 
@@ -351,6 +356,7 @@ namespace GTR_Watch_face
 #endif
 
             string filename = Path.GetFileName(fullfilename);
+            filename = filename.Replace(" ", "_");
             string fullPath = subPath + filename;
             // если файл существует
             if (File.Exists(fullPath))
@@ -505,6 +511,7 @@ namespace GTR_Watch_face
             {
                 string fullfilename = openFileDialog.FileName;
                 string filename = Path.GetFileName(fullfilename);
+                filename = filename.Replace(" ", "_");
                 string fullPath = subPath + filename;
                 if (File.Exists(fullPath))
                 {
@@ -1060,9 +1067,12 @@ namespace GTR_Watch_face
             FullFileDir = Path.GetDirectoryName(fullfilename);
             string text = File.ReadAllText(fullfilename);
             //richTextBox_JSON.Text = text;
+            PreviewView = false;
             ListImages.Clear();
             ListImagesFullName.Clear();
             dataGridView_ImagesList.Rows.Clear();
+            dataGridView_Battery_IconSet.Rows.Clear();
+            dataGridView_SPSliced.Rows.Clear();
             //Logger.WriteLine("Прочитали текст из json файла " + fullfilename);
 
             DirectoryInfo Folder;
@@ -1147,8 +1157,7 @@ namespace GTR_Watch_face
             });
 
             
-
-            PreviewView = false;
+            
             JSON_read();
             //Logger.WriteLine("Установили значения в соответствии с json файлом");
 
@@ -3303,7 +3312,7 @@ namespace GTR_Watch_face
                         //DefaultValueHandling = DefaultValueHandling.Ignore,
                         NullValueHandling = NullValueHandling.Ignore
                     });
-                    File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
+                    File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
 
                     PreviewToBitmap(gPanelPreviewResize, scalePreviewResize, checkBox_crop.Checked,
                         checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked);
@@ -4747,7 +4756,7 @@ namespace GTR_Watch_face
                 //DefaultValueHandling = DefaultValueHandling.Ignore,
                 NullValueHandling = NullValueHandling.Ignore
             });
-            File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
+            File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
 
         PreviewImage();
         }
@@ -5074,7 +5083,7 @@ namespace GTR_Watch_face
                 //DefaultValueHandling = DefaultValueHandling.Ignore,
                 NullValueHandling = NullValueHandling.Ignore
             });
-            File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
+            File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
             //File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
         }
         private void numericUpDown_Gif_Speed_ValueChanged(object sender, EventArgs e)
@@ -5084,7 +5093,7 @@ namespace GTR_Watch_face
             {
                 NullValueHandling = NullValueHandling.Ignore
             });
-            File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
+            File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
         }
         private void checkBox_border_CheckedChanged(object sender, EventArgs e)
         {
@@ -5094,7 +5103,7 @@ namespace GTR_Watch_face
                 //DefaultValueHandling = DefaultValueHandling.Ignore,
                 NullValueHandling = NullValueHandling.Ignore
             });
-            File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
+            File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
         }
         private void checkBox_crop_CheckedChanged(object sender, EventArgs e)
         {
@@ -5104,7 +5113,7 @@ namespace GTR_Watch_face
                 //DefaultValueHandling = DefaultValueHandling.Ignore,
                 NullValueHandling = NullValueHandling.Ignore
             });
-            File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
+            File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
         }
         private void textBox_unpack_command_Leave(object sender, EventArgs e)
         {
@@ -5138,7 +5147,7 @@ namespace GTR_Watch_face
             {
                 NullValueHandling = NullValueHandling.Ignore
             });
-            File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
+            File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
             if (!Settings_Load)
             {
                 if (MessageBox.Show(Properties.FormStrings.Message_Restart_Text1 + Environment.NewLine +
@@ -5152,9 +5161,9 @@ namespace GTR_Watch_face
 
         private void button_Reset_Click(object sender, EventArgs e)
         {
-            if (File.Exists("Settings.json"))
+            if (File.Exists(Application.StartupPath + @"\Settings.json"))
             {
-                File.Delete("Settings.json");
+                File.Delete(Application.StartupPath + @"\Settings.json");
                 if (MessageBox.Show(Properties.FormStrings.Message_Restart_Text1 + Environment.NewLine +
                                 Properties.FormStrings.Message_Restart_Text2, Properties.FormStrings.Message_Restart_Caption,
                                 MessageBoxButtons.YesNo) == DialogResult.Yes)

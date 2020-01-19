@@ -1,10 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GTR_Watch_face
@@ -415,9 +411,8 @@ namespace GTR_Watch_face
                     numericUpDown_StepsProgress_StartAngle.Value = Watch_Face.StepsProgress.Circle.StartAngle;
                     numericUpDown_StepsProgress_EndAngle.Value = Watch_Face.StepsProgress.Circle.EndAngle;
                     numericUpDown_StepsProgress_Width.Value = Watch_Face.StepsProgress.Circle.Width;
-
-                    Color color = ColorTranslator.FromHtml(Watch_Face.StepsProgress.Circle.Color);
-                    Color new_color = Color.FromArgb(255, color.R, color.G, color.B);
+                    
+                    Color new_color = ColorRead(Watch_Face.StepsProgress.Circle.Color);
                     comboBox_StepsProgress_Color.BackColor = new_color;
                     colorDialog1.Color = new_color;
                     switch (Watch_Face.StepsProgress.Circle.Flatness)
@@ -751,9 +746,8 @@ namespace GTR_Watch_face
                     numericUpDown_Battery_Scale_StartAngle.Value = Watch_Face.Battery.Scale.StartAngle;
                     numericUpDown_Battery_Scale_EndAngle.Value = Watch_Face.Battery.Scale.EndAngle;
                     numericUpDown_Battery_Scale_Width.Value = Watch_Face.Battery.Scale.Width;
-
-                    Color color = ColorTranslator.FromHtml(Watch_Face.Battery.Scale.Color);
-                    Color new_color = Color.FromArgb(255, color.R, color.G, color.B);
+                    
+                    Color new_color = ColorRead(Watch_Face.Battery.Scale.Color);
                     comboBox_Battery_Scale_Color.BackColor = new_color;
                     colorDialog2.Color = new_color;
 
@@ -2161,6 +2155,14 @@ namespace GTR_Watch_face
 
             }
             return result;
+        }
+
+        private Color ColorRead(string color)
+        {
+            if(color.Length==18)  color = color.Remove(2, 8);
+            Color old_color = ColorTranslator.FromHtml(color);
+            Color new_color = Color.FromArgb(255, old_color.R, old_color.G, old_color.B);
+            return new_color;
         }
 
         private void checkBoxSetText(ComboBox comboBox, long value)

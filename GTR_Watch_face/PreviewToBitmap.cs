@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GTR_Watch_face
@@ -721,18 +717,6 @@ namespace GTR_Watch_face
             {
                 if ((checkBox_Weather_Icon.Checked) && (comboBox_Weather_Icon_Image.SelectedIndex >= 0))
                 {
-                    //int x1 = (int)numericUpDown_ActivityDistance_StartCorner_X.Value;
-                    //int y1 = (int)numericUpDown_ActivityDistance_StartCorner_Y.Value;
-                    //int x2 = (int)numericUpDown_ActivityDistance_EndCorner_X.Value;
-                    //int y2 = (int)numericUpDown_ActivityDistance_EndCorner_Y.Value;
-                    //int image_index = comboBox_ActivityDistance_Image.SelectedIndex;
-                    //int spacing = (int)numericUpDown_ActivityDistance_Spacing.Value;
-                    //int alignment = comboBox_ActivityDistance_Alignment.SelectedIndex;
-                    //double data_number = Watch_Face_Preview_Set.Activity.Distance / 1000.0;
-                    //int suffix = comboBox_ActivityDistance_Suffix.SelectedIndex;
-                    //int dec = comboBox_ActivityDistance_Decimal.SelectedIndex;
-                    //DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, suffix, dec);
-
                     if (comboBox_WeatherSet_Icon.SelectedIndex >= 0)
                     {
                         i = comboBox_Weather_Icon_Image.SelectedIndex + comboBox_WeatherSet_Icon.SelectedIndex;
@@ -929,7 +913,8 @@ namespace GTR_Watch_face
                     int spacing = (int)numericUpDown_ActivityGoal_Spacing.Value;
                     int alignment = comboBox_ActivityGoal_Alignment.SelectedIndex;
                     int data_number = Watch_Face_Preview_Set.Activity.StepsGoal;
-                    DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
+                    if (numericUpDown_ActivityGoal_Count.Value == 10)
+                        DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
                 }
 
                 if ((checkBox_ActivitySteps.Checked) && (comboBox_ActivitySteps_Image.SelectedIndex >= 0))
@@ -944,7 +929,8 @@ namespace GTR_Watch_face
                     int spacing = (int)numericUpDown_ActivitySteps_Spacing.Value;
                     int alignment = comboBox_ActivitySteps_Alignment.SelectedIndex;
                     int data_number = Watch_Face_Preview_Set.Activity.Steps;
-                    DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
+                    if (numericUpDown_ActivitySteps_Count.Value == 10)
+                        DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
                 }
 
                 // прогресс шагов стрелкой
@@ -977,7 +963,8 @@ namespace GTR_Watch_face
                     double data_number = Watch_Face_Preview_Set.Activity.Distance / 1000f;
                     int suffix = comboBox_ActivityDistance_Suffix.SelectedIndex;
                     int dec = comboBox_ActivityDistance_Decimal.SelectedIndex;
-                    DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, suffix, dec, BBorder);
+                    if (numericUpDown_ActivityDistance_Count.Value == 10)
+                        DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, suffix, dec, BBorder);
                 }
 
                 if ((checkBox_ActivityPuls.Checked) && (comboBox_ActivityPuls_Image.SelectedIndex >= 0))
@@ -992,7 +979,8 @@ namespace GTR_Watch_face
                     int spacing = (int)numericUpDown_ActivityPuls_Spacing.Value;
                     int alignment = comboBox_ActivityPuls_Alignment.SelectedIndex;
                     int data_number = Watch_Face_Preview_Set.Activity.Pulse;
-                    DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
+                    if (numericUpDown_ActivityPuls_Count.Value == 10)
+                        DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
                 }
 
                 if ((checkBox_ActivityCalories.Checked) && (comboBox_ActivityCalories_Image.SelectedIndex >= 0))
@@ -1007,7 +995,8 @@ namespace GTR_Watch_face
                     int spacing = (int)numericUpDown_ActivityCalories_Spacing.Value;
                     int alignment = comboBox_ActivityCalories_Alignment.SelectedIndex;
                     int data_number = Watch_Face_Preview_Set.Activity.Calories;
-                    DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
+                    if (numericUpDown_ActivityCalories_Count.Value == 10)
+                        DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
                 }
 
                 if ((checkBox_ActivityStar.Checked) && (comboBox_ActivityStar_Image.SelectedIndex >= 0))
@@ -1138,7 +1127,8 @@ namespace GTR_Watch_face
                         int spacing = (int)numericUpDown_Battery_Text_Spacing.Value;
                         int alignment = comboBox_Battery_Text_Alignment.SelectedIndex;
                         int data_number = Watch_Face_Preview_Set.Battery;
-                        DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
+                        if (numericUpDown_Battery_Text_Count.Value == 10)
+                            DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
                     }
 
                     // заряд картинкой
@@ -1419,14 +1409,14 @@ namespace GTR_Watch_face
 
             if (crop)
             {
-                Bitmap mask = new Bitmap(@"Mask\mask_gtr47.png");
+                Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr47.png");
                 if (radioButton_42.Checked)
                 {
-                    mask = new Bitmap(@"Mask\mask_gtr42.png");
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr42.png");
                 }
                 if (radioButton_gts.Checked)
                 {
-                    mask = new Bitmap(@"Mask\mask_gts.png");
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts.png");
                 }
                 mask = FormColor(mask);
                 gPanel.DrawImage(mask, new Rectangle(0, 0, mask.Width, mask.Height));
