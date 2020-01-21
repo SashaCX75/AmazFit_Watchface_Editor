@@ -73,6 +73,16 @@ namespace GTR_Watch_face.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Amazfit_GTR_47mm {
+            get {
+                object obj = ResourceManager.GetObject("Amazfit_GTR_47mm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Files_Clipboard_icon {
             get {
                 object obj = ResourceManager.GetObject("Files_Clipboard_icon", resourceCulture);

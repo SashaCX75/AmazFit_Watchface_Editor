@@ -56,11 +56,13 @@
     public class Activity
     {
         /// <summary>Цель шагов</summary>
-        public Number StepsGoal { get; set; }
+        public CircleScale StepsGoal { get; set; }
         /// <summary>Калории</summary>
         public Number Calories { get; set; }
         /// <summary>Пульс</summary>
         public Number Pulse { get; set; }
+        /// <summary>Пульс круговая шкала</summary>
+        public CircleScale Goal2 { get; set; }
         /// <summary>Растояние</summary>
         public Distance Distance { get; set; }
         /// <summary>Шаги</summary>

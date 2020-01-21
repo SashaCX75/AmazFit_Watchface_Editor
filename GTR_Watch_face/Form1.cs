@@ -220,8 +220,7 @@ namespace GTR_Watch_face
             comboBox_MonthAndDayM_Alignment.SelectedIndex = 0;
             comboBox_OneLine_Alignment.SelectedIndex = 0;
             comboBox_Year_Alignment.SelectedIndex = 0;
-
-            comboBox_ActivityGoal_Alignment.SelectedIndex = 0; ;
+            
             comboBox_ActivitySteps_Alignment.SelectedIndex = 0;
             comboBox_ActivityDistance_Alignment.SelectedIndex = 0;
             comboBox_ActivityPuls_Alignment.SelectedIndex = 0;
@@ -236,6 +235,9 @@ namespace GTR_Watch_face
             comboBox_StepsProgress_Flatness.SelectedIndex = 0;
 
             label_version.Text = "v " +
+                System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Major.ToString() + "." +
+                System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Minor.ToString();
+            label_version_help.Text =
                 System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Major.ToString() + "." +
                 System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Minor.ToString();
 
@@ -314,7 +316,8 @@ namespace GTR_Watch_face
         {
             //FormFileExists f = new FormFileExists();
             //f.ShowDialog();
-            SendKeys.Send("{F1}");
+            //SendKeys.Send("{F1}");
+            Help.ShowHelp(this, Application.StartupPath + Properties.FormStrings.File_ReadMy);
             e.Cancel = true;
         }
 
@@ -1812,7 +1815,7 @@ namespace GTR_Watch_face
                 panel_Date.Height = 1;
                 panel_AnalogDate.Height = 1;
                 panel_StepsProgress.Height = 1;
-                panel_Activity.Height = (int)(215 * currentDPI);
+                panel_Activity.Height = (int)(230 * currentDPI);
                 panel_Status.Height = 1;
                 panel_Battery.Height = 1;
                 panel_AnalogClock.Height = 1;
@@ -2176,31 +2179,6 @@ namespace GTR_Watch_face
             label171.Enabled = b;
         }
 
-        private void checkBox_ActivityGoal_CheckedChanged(object sender, EventArgs e)
-        {
-            bool b = checkBox_ActivityGoal.Checked;
-            numericUpDown_ActivityGoal_StartCorner_X.Enabled = b;
-            numericUpDown_ActivityGoal_StartCorner_Y.Enabled = b;
-            numericUpDown_ActivityGoal_EndCorner_X.Enabled = b;
-            numericUpDown_ActivityGoal_EndCorner_Y.Enabled = b;
-
-            comboBox_ActivityGoal_Image.Enabled = b;
-            numericUpDown_ActivityGoal_Count.Enabled = b;
-            numericUpDown_ActivityGoal_Spacing.Enabled = b;
-            comboBox_ActivityGoal_Alignment.Enabled = b;
-
-            label112.Enabled = b;
-            label113.Enabled = b;
-            label114.Enabled = b;
-            label115.Enabled = b;
-            label116.Enabled = b;
-            label117.Enabled = b;
-            label118.Enabled = b;
-            label119.Enabled = b;
-            label120.Enabled = b;
-            label121.Enabled = b;
-        }
-
         private void checkBox_ActivitySteps_CheckedChanged(object sender, EventArgs e)
         {
             bool b = checkBox_ActivitySteps.Checked;
@@ -2280,6 +2258,31 @@ namespace GTR_Watch_face
             label151.Enabled = b;
         }
 
+        private void checkBox_ActivityPulsScale_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_ActivityPulsScale.Checked;
+            numericUpDown_ActivityPulsScale_Center_X.Enabled = b;
+            numericUpDown_ActivityPulsScale_Center_Y.Enabled = b;
+            numericUpDown_ActivityPulsScale_Radius_X.Enabled = b;
+            //numericUpDown_Battery_Scale_Radius_Y.Enabled = b;
+
+            numericUpDown_ActivityPulsScale_Width.Enabled = b;
+            comboBox_ActivityPulsScale_Color.Enabled = b;
+            numericUpDown_ActivityPulsScale_EndAngle.Enabled = b;
+            numericUpDown_ActivityPulsScale_StartAngle.Enabled = b;
+            comboBox_ActivityPulsScale_Flatness.Enabled = b;
+
+            label417.Enabled = b;
+            label418.Enabled = b;
+            label419.Enabled = b;
+            label420.Enabled = b;
+            label421.Enabled = b;
+            label422.Enabled = b;
+            label423.Enabled = b;
+            label424.Enabled = b;
+            label425.Enabled = b;
+        }
+
         private void checkBox_ActivityCalories_CheckedChanged(object sender, EventArgs e)
         {
             bool b = checkBox_ActivityCalories.Checked;
@@ -2303,6 +2306,31 @@ namespace GTR_Watch_face
             label159.Enabled = b;
             label160.Enabled = b;
             label161.Enabled = b;
+        }
+
+        private void checkBox_ActivityCaloriesScale_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_ActivityCaloriesScale.Checked;
+            numericUpDown_ActivityCaloriesScale_Center_X.Enabled = b;
+            numericUpDown_ActivityCaloriesScale_Center_Y.Enabled = b;
+            numericUpDown_ActivityCaloriesScale_Radius_X.Enabled = b;
+            //numericUpDown_Battery_Scale_Radius_Y.Enabled = b;
+
+            numericUpDown_ActivityCaloriesScale_Width.Enabled = b;
+            comboBox_ActivityCaloriesScale_Color.Enabled = b;
+            numericUpDown_ActivityCaloriesScale_EndAngle.Enabled = b;
+            numericUpDown_ActivityCaloriesScale_StartAngle.Enabled = b;
+            comboBox_ActivityCaloriesScale_Flatness.Enabled = b;
+
+            label112.Enabled = b;
+            label113.Enabled = b;
+            label114.Enabled = b;
+            label115.Enabled = b;
+            label116.Enabled = b;
+            label117.Enabled = b;
+            label118.Enabled = b;
+            label119.Enabled = b;
+            label120.Enabled = b;
         }
 
         private void checkBox_DND_CheckedChanged(object sender, EventArgs e)
@@ -3239,10 +3267,10 @@ namespace GTR_Watch_face
 
         private void comboBox_StepsProgress_Color_Click(object sender, EventArgs e)
         {
-            if (colorDialog1.ShowDialog() == DialogResult.Cancel)
+            if (colorDialog_StepsProgress.ShowDialog() == DialogResult.Cancel)
                 return;
             // установка цвета формы
-            comboBox_StepsProgress_Color.BackColor = colorDialog1.Color; PreviewImage();
+            comboBox_StepsProgress_Color.BackColor = colorDialog_StepsProgress.Color; PreviewImage();
             JSON_write();
             PreviewImage();
         }
@@ -3255,10 +3283,30 @@ namespace GTR_Watch_face
         
         private void comboBox_Battery_Scale_Color_Click(object sender, EventArgs e)
         {
-            if (colorDialog2.ShowDialog() == DialogResult.Cancel)
+            if (colorDialog_Battery.ShowDialog() == DialogResult.Cancel)
                 return;
             // установка цвета формы
-            comboBox_Battery_Scale_Color.BackColor = colorDialog2.Color;
+            comboBox_Battery_Scale_Color.BackColor = colorDialog_Battery.Color;
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void comboBox_ActivityPulsScale_Color_Click(object sender, EventArgs e)
+        {
+            if (colorDialog_Pulse.ShowDialog() == DialogResult.Cancel)
+                return;
+            // установка цвета формы
+            comboBox_ActivityPulsScale_Color.BackColor = colorDialog_Pulse.Color;
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void comboBox_ActivityCaloriesScale_Color_Click(object sender, EventArgs e)
+        {
+            if (colorDialog_Calories.ShowDialog() == DialogResult.Cancel)
+                return;
+            // установка цвета формы
+            comboBox_ActivityCaloriesScale_Color.BackColor = colorDialog_Calories.Color;
             JSON_write();
             PreviewImage();
         }
@@ -5474,6 +5522,23 @@ namespace GTR_Watch_face
                 contextMenuStrip_XY_InTable.Items[2].Enabled = false;
             }
         }
+
+        private void linkLabel_py_amazfit_tools_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/amazfitbip/py_amazfit_tools/tree/fix_array");
+        }
+
+        private void linkLabel_help_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //helpProvider1.SetHelpNavigator(this, HelpNavigator.Topic);
+            //helpProvider1.SetHelpKeyword(this, "kratkaya_instruktsiya.htm");
+            //SendKeys.Send("{F1}");
+            //Help.ShowHelp(this, Application.StartupPath + Properties.FormStrings.File_ReadMy);
+            string helpfile = Application.StartupPath + Properties.FormStrings.File_ReadMy;
+            HelpNavigator navigator = HelpNavigator.Topic;
+            Help.ShowHelp(this, helpfile, navigator, "kratkaya_instruktsiya.htm");
+        }
+        
     }
 }
 

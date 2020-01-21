@@ -39,8 +39,7 @@ namespace GTR_Watch_face
 
             comboBox_StProg_ClockHand_Image.Items.AddRange(ListImages.ToArray());
             comboBox_SPSliced_Image.Items.AddRange(ListImages.ToArray());
-
-            comboBox_ActivityGoal_Image.Items.AddRange(ListImages.ToArray());
+            
             comboBox_ActivitySteps_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityDistance_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityDistance_Decimal.Items.AddRange(ListImages.ToArray());
@@ -414,7 +413,7 @@ namespace GTR_Watch_face
                     
                     Color new_color = ColorRead(Watch_Face.StepsProgress.Circle.Color);
                     comboBox_StepsProgress_Color.BackColor = new_color;
-                    colorDialog1.Color = new_color;
+                    colorDialog_StepsProgress.Color = new_color;
                     switch (Watch_Face.StepsProgress.Circle.Flatness)
                     {
                         case 90:
@@ -480,23 +479,7 @@ namespace GTR_Watch_face
             if (Watch_Face.Activity != null)
             {
                 checkBox_Activity.Checked = true;
-                if (Watch_Face.Activity.StepsGoal != null)
-                {
-                    checkBox_ActivityGoal.Checked = true;
-                    numericUpDown_ActivityGoal_StartCorner_X.Value = Watch_Face.Activity.StepsGoal.TopLeftX;
-                    numericUpDown_ActivityGoal_StartCorner_Y.Value = Watch_Face.Activity.StepsGoal.TopLeftY;
-                    numericUpDown_ActivityGoal_EndCorner_X.Value = Watch_Face.Activity.StepsGoal.BottomRightX;
-                    numericUpDown_ActivityGoal_EndCorner_Y.Value = Watch_Face.Activity.StepsGoal.BottomRightY;
-
-                    //comboBox_ActivityGoal_Image.Text = Watch_Face.Activity.StepsGoal.ImageIndex.ToString();
-                    checkBoxSetText(comboBox_ActivityGoal_Image, Watch_Face.Activity.StepsGoal.ImageIndex);
-                    numericUpDown_ActivityGoal_Count.Value = Watch_Face.Activity.StepsGoal.ImagesCount;
-                    numericUpDown_ActivityGoal_Spacing.Value = Watch_Face.Activity.StepsGoal.Spacing;
-                    AlignmentToString(comboBox_ActivityGoal_Alignment, Watch_Face.Activity.StepsGoal.Alignment);
-                    //comboBox_ActivityGoal_Alignment.Text = Alignment;
-                }
-                else checkBox_ActivityGoal.Checked = false;
-
+                
                 if ((Watch_Face.Activity.Steps != null) && (Watch_Face.Activity.Steps.Step != null))
                 {
                     checkBox_ActivitySteps.Checked = true;
@@ -555,6 +538,40 @@ namespace GTR_Watch_face
                 }
                 else checkBox_ActivityPuls.Checked = false;
 
+                if (Watch_Face.Activity.Goal2 != null)
+                {
+                    checkBox_ActivityPulsScale.Checked = true;
+                    numericUpDown_ActivityPulsScale_Center_X.Value = Watch_Face.Activity.Goal2.CenterX;
+                    numericUpDown_ActivityPulsScale_Center_Y.Value = Watch_Face.Activity.Goal2.CenterY;
+                    numericUpDown_ActivityPulsScale_Radius_X.Value = Watch_Face.Activity.Goal2.RadiusX;
+                    numericUpDown_ActivityPulsScale_Radius_Y.Value = Watch_Face.Activity.Goal2.RadiusY;
+
+                    numericUpDown_ActivityPulsScale_StartAngle.Value = Watch_Face.Activity.Goal2.StartAngle;
+                    numericUpDown_ActivityPulsScale_EndAngle.Value = Watch_Face.Activity.Goal2.EndAngle;
+                    numericUpDown_ActivityPulsScale_Width.Value = Watch_Face.Activity.Goal2.Width;
+
+                    Color new_color = ColorRead(Watch_Face.Activity.Goal2.Color);
+                    comboBox_ActivityPulsScale_Color.BackColor = new_color;
+                    colorDialog_Pulse.Color = new_color;
+
+                    switch (Watch_Face.Activity.Goal2.Flatness)
+                    {
+                        case 90:
+                            //comboBox_Battery_Flatness.Text = "Треугольное";
+                            comboBox_ActivityPulsScale_Flatness.SelectedIndex = 1;
+                            break;
+                        case 180:
+                            //comboBox_Battery_Flatness.Text = "Плоское";
+                            comboBox_ActivityPulsScale_Flatness.SelectedIndex = 2;
+                            break;
+                        default:
+                            //comboBox_Battery_Flatness.Text = "Круглое";
+                            comboBox_ActivityPulsScale_Flatness.SelectedIndex = 0;
+                            break;
+                    }
+                }
+                else checkBox_ActivityPulsScale.Checked = false;
+
                 if (Watch_Face.Activity.Calories != null)
                 {
                     checkBox_ActivityCalories.Checked = true;
@@ -571,6 +588,40 @@ namespace GTR_Watch_face
                     //comboBox_ActivityCalories_Alignment.Text = Alignment;
                 }
                 else checkBox_ActivityCalories.Checked = false;
+
+                if (Watch_Face.Activity.StepsGoal != null)
+                {
+                    checkBox_ActivityCaloriesScale.Checked = true;
+                    numericUpDown_ActivityCaloriesScale_Center_X.Value = Watch_Face.Activity.StepsGoal.CenterX;
+                    numericUpDown_ActivityCaloriesScale_Center_Y.Value = Watch_Face.Activity.StepsGoal.CenterY;
+                    numericUpDown_ActivityCaloriesScale_Radius_X.Value = Watch_Face.Activity.StepsGoal.RadiusX;
+                    numericUpDown_ActivityCaloriesScale_Radius_Y.Value = Watch_Face.Activity.StepsGoal.RadiusY;
+
+                    numericUpDown_ActivityCaloriesScale_StartAngle.Value = Watch_Face.Activity.StepsGoal.StartAngle;
+                    numericUpDown_ActivityCaloriesScale_EndAngle.Value = Watch_Face.Activity.StepsGoal.EndAngle;
+                    numericUpDown_ActivityCaloriesScale_Width.Value = Watch_Face.Activity.StepsGoal.Width;
+
+                    Color new_color = ColorRead(Watch_Face.Activity.StepsGoal.Color);
+                    comboBox_ActivityCaloriesScale_Color.BackColor = new_color;
+                    colorDialog_Calories.Color = new_color;
+
+                    switch (Watch_Face.Activity.StepsGoal.Flatness)
+                    {
+                        case 90:
+                            //comboBox_Battery_Flatness.Text = "Треугольное";
+                            comboBox_ActivityCaloriesScale_Flatness.SelectedIndex = 1;
+                            break;
+                        case 180:
+                            //comboBox_Battery_Flatness.Text = "Плоское";
+                            comboBox_ActivityCaloriesScale_Flatness.SelectedIndex = 2;
+                            break;
+                        default:
+                            //comboBox_Battery_Flatness.Text = "Круглое";
+                            comboBox_ActivityCaloriesScale_Flatness.SelectedIndex = 0;
+                            break;
+                    }
+                }
+                else checkBox_ActivityCaloriesScale.Checked = false;
 
                 if (Watch_Face.Activity.StarImage != null)
                 {
@@ -591,11 +642,12 @@ namespace GTR_Watch_face
             else
             {
                 checkBox_Activity.Checked = false;
-                checkBox_ActivityGoal.Checked = false;
                 checkBox_ActivitySteps.Checked = false;
                 checkBox_ActivityDistance.Checked = false;
                 checkBox_ActivityPuls.Checked = false;
+                checkBox_ActivityPulsScale.Checked = false;
                 checkBox_ActivityCalories.Checked = false;
+                checkBox_ActivityCaloriesScale.Checked = false;
                 checkBox_ActivityStar.Checked = false;
             }
             #endregion
@@ -749,7 +801,7 @@ namespace GTR_Watch_face
                     
                     Color new_color = ColorRead(Watch_Face.Battery.Scale.Color);
                     comboBox_Battery_Scale_Color.BackColor = new_color;
-                    colorDialog2.Color = new_color;
+                    colorDialog_Battery.Color = new_color;
 
                     switch (Watch_Face.Battery.Scale.Flatness)
                     {
@@ -1128,23 +1180,6 @@ namespace GTR_Watch_face
             // активити
             if (checkBox_Activity.Checked)
             {
-                if ((checkBox_ActivityGoal.Checked) && (comboBox_ActivityGoal_Image.SelectedIndex >= 0))
-                {
-                    if (Watch_Face.Activity == null) Watch_Face.Activity = new Activity();
-                    if (Watch_Face.Activity.StepsGoal == null) Watch_Face.Activity.StepsGoal = new Number();
-
-                    Watch_Face.Activity.StepsGoal.ImageIndex = Int32.Parse(comboBox_ActivityGoal_Image.Text);
-                    Watch_Face.Activity.StepsGoal.ImagesCount = (int)numericUpDown_ActivityGoal_Count.Value;
-                    Watch_Face.Activity.StepsGoal.TopLeftX = (int)numericUpDown_ActivityGoal_StartCorner_X.Value;
-                    Watch_Face.Activity.StepsGoal.TopLeftY = (int)numericUpDown_ActivityGoal_StartCorner_Y.Value;
-                    Watch_Face.Activity.StepsGoal.BottomRightX = (int)numericUpDown_ActivityGoal_EndCorner_X.Value;
-                    Watch_Face.Activity.StepsGoal.BottomRightY = (int)numericUpDown_ActivityGoal_EndCorner_Y.Value;
-
-                    Watch_Face.Activity.StepsGoal.Spacing = (int)numericUpDown_ActivityGoal_Spacing.Value;
-                    string Alignment = StringToAlignment(comboBox_ActivityGoal_Alignment.SelectedIndex);
-                    Watch_Face.Activity.StepsGoal.Alignment = Alignment;
-                }
-
                 if ((checkBox_ActivitySteps.Checked) && (comboBox_ActivitySteps_Image.SelectedIndex >= 0))
                 {
                     if (Watch_Face.Activity == null) Watch_Face.Activity = new Activity();
@@ -1205,6 +1240,52 @@ namespace GTR_Watch_face
                     Watch_Face.Activity.Pulse.Alignment = Alignment;
                 }
 
+                if (checkBox_ActivityPulsScale.Checked)
+                {
+                    if (Watch_Face.Activity == null) Watch_Face.Activity = new Activity();
+                    if (Watch_Face.Activity.Goal2 == null) Watch_Face.Activity.Goal2 = new CircleScale();
+
+                    Watch_Face.Activity.Goal2.CenterX = (int)numericUpDown_ActivityPulsScale_Center_X.Value;
+                    Watch_Face.Activity.Goal2.CenterY = (int)numericUpDown_ActivityPulsScale_Center_Y.Value;
+                    Watch_Face.Activity.Goal2.RadiusX = (int)numericUpDown_ActivityPulsScale_Radius_X.Value;
+                    Watch_Face.Activity.Goal2.RadiusY = (int)numericUpDown_ActivityPulsScale_Radius_Y.Value;
+
+                    Watch_Face.Activity.Goal2.StartAngle = (int)numericUpDown_ActivityPulsScale_StartAngle.Value;
+                    Watch_Face.Activity.Goal2.EndAngle = (int)numericUpDown_ActivityPulsScale_EndAngle.Value;
+                    Watch_Face.Activity.Goal2.Width = (int)numericUpDown_ActivityPulsScale_Width.Value;
+
+                    Color color = comboBox_ActivityPulsScale_Color.BackColor;
+                    Color new_color = Color.FromArgb(0, color.R, color.G, color.B);
+                    string colorStr = ColorTranslator.ToHtml(new_color);
+                    colorStr = colorStr.Replace("#", "0x00");
+                    Watch_Face.Activity.Goal2.Color = colorStr;
+
+                    //switch (comboBox_Battery_Flatness.Text)
+                    //{
+                    //    case "Треугольное":
+                    //        Watch_Face.Battery.Scale.Flatness = 90;
+                    //        break;
+                    //    case "Плоское":
+                    //        Watch_Face.Battery.Scale.Flatness = 180;
+                    //        break;
+                    //    default:
+                    //        Watch_Face.Battery.Scale.Flatness = 0;
+                    //        break;
+                    //}
+                    switch (comboBox_ActivityPulsScale_Flatness.SelectedIndex)
+                    {
+                        case 1:
+                            Watch_Face.Activity.Goal2.Flatness = 90;
+                            break;
+                        case 2:
+                            Watch_Face.Activity.Goal2.Flatness = 180;
+                            break;
+                        default:
+                            Watch_Face.Activity.Goal2.Flatness = 0;
+                            break;
+                    }
+                }
+
                 if ((checkBox_ActivityCalories.Checked) && (comboBox_ActivityCalories_Image.SelectedIndex >= 0))
                 {
                     if (Watch_Face.Activity == null) Watch_Face.Activity = new Activity();
@@ -1220,6 +1301,40 @@ namespace GTR_Watch_face
                     Watch_Face.Activity.Calories.Spacing = (int)numericUpDown_ActivityCalories_Spacing.Value;
                     string Alignment = StringToAlignment(comboBox_ActivityCalories_Alignment.SelectedIndex);
                     Watch_Face.Activity.Calories.Alignment = Alignment;
+                }
+
+                if (checkBox_ActivityCaloriesScale.Checked)
+                {
+                    if (Watch_Face.Activity == null) Watch_Face.Activity = new Activity();
+                    if (Watch_Face.Activity.StepsGoal == null) Watch_Face.Activity.StepsGoal = new CircleScale();
+
+                    Watch_Face.Activity.StepsGoal.CenterX = (int)numericUpDown_ActivityCaloriesScale_Center_X.Value;
+                    Watch_Face.Activity.StepsGoal.CenterY = (int)numericUpDown_ActivityCaloriesScale_Center_Y.Value;
+                    Watch_Face.Activity.StepsGoal.RadiusX = (int)numericUpDown_ActivityCaloriesScale_Radius_X.Value;
+                    Watch_Face.Activity.StepsGoal.RadiusY = (int)numericUpDown_ActivityCaloriesScale_Radius_Y.Value;
+
+                    Watch_Face.Activity.StepsGoal.StartAngle = (int)numericUpDown_ActivityCaloriesScale_StartAngle.Value;
+                    Watch_Face.Activity.StepsGoal.EndAngle = (int)numericUpDown_ActivityCaloriesScale_EndAngle.Value;
+                    Watch_Face.Activity.StepsGoal.Width = (int)numericUpDown_ActivityCaloriesScale_Width.Value;
+
+                    Color color = comboBox_ActivityCaloriesScale_Color.BackColor;
+                    Color new_color = Color.FromArgb(0, color.R, color.G, color.B);
+                    string colorStr = ColorTranslator.ToHtml(new_color);
+                    colorStr = colorStr.Replace("#", "0x00");
+                    Watch_Face.Activity.StepsGoal.Color = colorStr;
+                    
+                    switch (comboBox_ActivityCaloriesScale_Flatness.SelectedIndex)
+                    {
+                        case 1:
+                            Watch_Face.Activity.StepsGoal.Flatness = 90;
+                            break;
+                        case 2:
+                            Watch_Face.Activity.StepsGoal.Flatness = 180;
+                            break;
+                        default:
+                            Watch_Face.Activity.StepsGoal.Flatness = 0;
+                            break;
+                    }
                 }
 
                 if ((checkBox_ActivityStar.Checked) && (comboBox_ActivityStar_Image.SelectedIndex >= 0))
@@ -2239,9 +2354,7 @@ namespace GTR_Watch_face
             comboBox_StProg_ClockHand_Image.Items.Clear();
             comboBox_SPSliced_Image.Text = "";
             comboBox_SPSliced_Image.Items.Clear();
-
-            comboBox_ActivityGoal_Image.Text = "";
-            comboBox_ActivityGoal_Image.Items.Clear();
+           
             comboBox_ActivitySteps_Image.Text = "";
             comboBox_ActivitySteps_Image.Items.Clear();
             comboBox_ActivityDistance_Image.Text = "";

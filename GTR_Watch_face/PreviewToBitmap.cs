@@ -901,22 +901,6 @@ namespace GTR_Watch_face
             #region Activity
             if (checkBox_Activity.Checked)
             {
-                if ((checkBox_ActivityGoal.Checked) && (comboBox_ActivityGoal_Image.SelectedIndex >= 0))
-                {
-                    int x1 = (int)numericUpDown_ActivityGoal_StartCorner_X.Value;
-                    int y1 = (int)numericUpDown_ActivityGoal_StartCorner_Y.Value;
-                    int x2 = (int)numericUpDown_ActivityGoal_EndCorner_X.Value;
-                    int y2 = (int)numericUpDown_ActivityGoal_EndCorner_Y.Value;
-                    x2++;
-                    y2++;
-                    int image_index = comboBox_ActivityGoal_Image.SelectedIndex;
-                    int spacing = (int)numericUpDown_ActivityGoal_Spacing.Value;
-                    int alignment = comboBox_ActivityGoal_Alignment.SelectedIndex;
-                    int data_number = Watch_Face_Preview_Set.Activity.StepsGoal;
-                    if (numericUpDown_ActivityGoal_Count.Value == 10)
-                        DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
-                }
-
                 if ((checkBox_ActivitySteps.Checked) && (comboBox_ActivitySteps_Image.SelectedIndex >= 0))
                 {
                     int x1 = (int)numericUpDown_ActivitySteps_StartCorner_X.Value;
@@ -964,7 +948,8 @@ namespace GTR_Watch_face
                     int suffix = comboBox_ActivityDistance_Suffix.SelectedIndex;
                     int dec = comboBox_ActivityDistance_Decimal.SelectedIndex;
                     if (numericUpDown_ActivityDistance_Count.Value == 10)
-                        DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, suffix, dec, BBorder);
+                        DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, 
+                            suffix, dec, 2, BBorder);
                 }
 
                 if ((checkBox_ActivityPuls.Checked) && (comboBox_ActivityPuls_Image.SelectedIndex >= 0))
@@ -983,6 +968,52 @@ namespace GTR_Watch_face
                         DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
                 }
 
+                // шкала пульса 
+                if (checkBox_ActivityPulsScale.Checked)
+                {
+                    gPanel.SmoothingMode = SmoothingMode.AntiAlias;
+                    Pen pen = new Pen(comboBox_ActivityPulsScale_Color.BackColor,
+                        (float)numericUpDown_ActivityPulsScale_Width.Value);
+                    
+                    switch (comboBox_ActivityPulsScale_Flatness.SelectedIndex)
+                    {
+                        case 1:
+                            pen.EndCap = LineCap.Triangle;
+                            pen.StartCap = LineCap.Triangle;
+                            break;
+                        case 2:
+                            pen.EndCap = LineCap.Flat;
+                            pen.StartCap = LineCap.Flat;
+                            break;
+                        default:
+                            pen.EndCap = LineCap.Round;
+                            pen.StartCap = LineCap.Round;
+                            break;
+                    }
+
+                    int x = (int)numericUpDown_ActivityPulsScale_Center_X.Value -
+                        (int)numericUpDown_ActivityPulsScale_Radius_X.Value;
+                    int y = (int)numericUpDown_ActivityPulsScale_Center_Y.Value -
+                        (int)numericUpDown_ActivityPulsScale_Radius_Y.Value;
+                    int width = (int)numericUpDown_ActivityPulsScale_Radius_X.Value * 2;
+                    //int height = (int)numericUpDown_Battery_Scale_Radius_Y.Value * 2;
+                    int height = width;
+                    float StartAngle = (float)numericUpDown_ActivityPulsScale_StartAngle.Value - 90;
+                    float EndAngle = (float)(numericUpDown_ActivityPulsScale_EndAngle.Value -
+                        numericUpDown_ActivityPulsScale_StartAngle.Value);
+                    float AngleScale = (float)Watch_Face_Preview_Set.Activity.Pulse / 200f;
+                    if (AngleScale > 1) AngleScale = 1;
+                    EndAngle = EndAngle * AngleScale;
+                    try
+                    {
+                        if ((width > 0) && (height > 0)) gPanel.DrawArc(pen, x, y, width, height, StartAngle, EndAngle);
+                    }
+                    catch (Exception)
+                    {
+
+                    }
+                }
+
                 if ((checkBox_ActivityCalories.Checked) && (comboBox_ActivityCalories_Image.SelectedIndex >= 0))
                 {
                     int x1 = (int)numericUpDown_ActivityCalories_StartCorner_X.Value;
@@ -997,6 +1028,53 @@ namespace GTR_Watch_face
                     int data_number = Watch_Face_Preview_Set.Activity.Calories;
                     if (numericUpDown_ActivityCalories_Count.Value == 10)
                         DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
+                }
+
+                // шкала калорий 
+                if (checkBox_ActivityCaloriesScale.Checked)
+                {
+                    gPanel.SmoothingMode = SmoothingMode.AntiAlias;
+                    Pen pen = new Pen(comboBox_ActivityCaloriesScale_Color.BackColor,
+                        (float)numericUpDown_ActivityCaloriesScale_Width.Value);
+
+                    switch (comboBox_ActivityCaloriesScale_Flatness.SelectedIndex)
+                    {
+                        case 1:
+                            pen.EndCap = LineCap.Triangle;
+                            pen.StartCap = LineCap.Triangle;
+                            break;
+                        case 2:
+                            pen.EndCap = LineCap.Flat;
+                            pen.StartCap = LineCap.Flat;
+                            break;
+                        default:
+                            pen.EndCap = LineCap.Round;
+                            pen.StartCap = LineCap.Round;
+                            break;
+                    }
+
+                    int x = (int)numericUpDown_ActivityCaloriesScale_Center_X.Value -
+                        (int)numericUpDown_ActivityCaloriesScale_Radius_X.Value;
+                    int y = (int)numericUpDown_ActivityCaloriesScale_Center_Y.Value -
+                        (int)numericUpDown_ActivityCaloriesScale_Radius_Y.Value;
+                    int width = (int)numericUpDown_ActivityCaloriesScale_Radius_X.Value * 2;
+                    //int height = (int)numericUpDown_Battery_Scale_Radius_Y.Value * 2;
+                    int height = width;
+                    float StartAngle = (float)numericUpDown_ActivityCaloriesScale_StartAngle.Value - 90;
+                    float EndAngle = (float)(numericUpDown_ActivityCaloriesScale_EndAngle.Value -
+                        numericUpDown_ActivityCaloriesScale_StartAngle.Value);
+                    float AngleScale = (float)(8f * Watch_Face_Preview_Set.Activity.Calories / 
+                        Watch_Face_Preview_Set.Activity.StepsGoal);
+                    if (AngleScale > 1) AngleScale = 1;
+                    EndAngle = EndAngle * AngleScale;
+                    try
+                    {
+                        if ((width > 0) && (height > 0)) gPanel.DrawArc(pen, x, y, width, height, StartAngle, EndAngle);
+                    }
+                    catch (Exception)
+                    {
+
+                    }
                 }
 
                 if ((checkBox_ActivityStar.Checked) && (comboBox_ActivityStar_Image.SelectedIndex >= 0))
@@ -1127,7 +1205,14 @@ namespace GTR_Watch_face
                         int spacing = (int)numericUpDown_Battery_Text_Spacing.Value;
                         int alignment = comboBox_Battery_Text_Alignment.SelectedIndex;
                         int data_number = Watch_Face_Preview_Set.Battery;
-                        if (numericUpDown_Battery_Text_Count.Value == 10)
+                        if ((checkBox_Battery_Percent.Checked) && (comboBox_Battery_Percent_Image.SelectedIndex >= 0) &&
+                            (numericUpDown_Battery_Percent_X.Value == 0) && (numericUpDown_Battery_Percent_Y.Value == 0))
+                        {
+                            if (numericUpDown_ActivityDistance_Count.Value == 10)
+                                DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number,
+                                    comboBox_Battery_Percent_Image.SelectedIndex, -1, 0, BBorder);
+                        }
+                        else if (numericUpDown_Battery_Text_Count.Value == 10)
                             DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
                     }
 
@@ -1144,7 +1229,9 @@ namespace GTR_Watch_face
                     }
 
                     // значек процентов
-                    if ((checkBox_Battery_Percent.Checked) && (comboBox_Battery_Percent_Image.SelectedIndex >= 0))
+                    //if ((checkBox_Battery_Percent.Checked) && (comboBox_Battery_Percent_Image.SelectedIndex >= 0))
+                    if ((checkBox_Battery_Percent.Checked) && (comboBox_Battery_Percent_Image.SelectedIndex >= 0) &&
+                            (numericUpDown_Battery_Percent_X.Value != 0) && (numericUpDown_Battery_Percent_Y.Value != 0))
                     {
                         src = new Bitmap(ListImagesFullName[comboBox_Battery_Percent_Image.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Battery_Percent_X.Value,
@@ -1553,9 +1640,10 @@ namespace GTR_Watch_face
         /// <param name="data_number">Отображаемая величина</param>
         /// <param name="suffix">Номер изображения суфикса</param>
         /// <param name="dec">Номер изображения разделителя</param>
+        /// <param name="decCount">Число знаков после запятой</param>
         /// <param name="BBorder">Рисовать рамку по координатам, вокруг элементов с выравниванием</param>
         public void DrawNumber(Graphics graphics, int x1, int y1, int x2, int y2, int image_index, int spacing,
-            int alignment, double data_number, int suffix, int dec, bool BBorder)
+            int alignment, double data_number, int suffix, int dec, int decCount, bool BBorder)
         {
             data_number = Math.Round(data_number, 2);
             var Dagit = new Bitmap(ListImagesFullName[image_index]);
@@ -1563,10 +1651,13 @@ namespace GTR_Watch_face
             //if (dec >= 0) Delimit = new Bitmap(ListImagesFullName[dec]);
             string decimalSeparator = Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator;
             string data_numberS = data_number.ToString();
-            if (data_numberS.IndexOf(decimalSeparator) < 0) data_numberS = data_numberS + decimalSeparator;
-            while (data_numberS.IndexOf(decimalSeparator) > data_numberS.Length-3)
+            if (decCount > 0)
             {
-                data_numberS = data_numberS + "0";
+                if (data_numberS.IndexOf(decimalSeparator) < 0) data_numberS = data_numberS + decimalSeparator;
+                while (data_numberS.IndexOf(decimalSeparator) > data_numberS.Length - decCount - 1)
+                {
+                    data_numberS = data_numberS + "0";
+                } 
             }
             int DateLenght = 0;
             int _number;

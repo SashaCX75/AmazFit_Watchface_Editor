@@ -131,6 +131,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormFileExists.en.resx">
       <DependentUpon>FormFileExists.cs</DependentUpon>
@@ -175,6 +176,7 @@
     <None Include="Resources\Actions_insert_text_icon.png" />
     <None Include="Resources\Files_Copy_File_icon.png" />
     <None Include="Resources\Files_Clipboard_icon.png" />
+    <None Include="Resources\Amazfit_GTR_47mm.png" />
     <Content Include="watch.ico" />
   </ItemGroup>
   <ItemGroup>
