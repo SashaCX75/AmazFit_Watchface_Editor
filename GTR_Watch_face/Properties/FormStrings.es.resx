@@ -117,139 +117,136 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Message_bigFile_Caption" xml:space="preserve">
-    <value>Большой размер файла</value>
-  </data>
-  <data name="Message_bigFile_Text1" xml:space="preserve">
-    <value>Размер несжатого файла превышает 1,95МБ.</value>
-  </data>
-  <data name="Message_bigFile_Text2" xml:space="preserve">
-    <value>Циферблат может не работать.</value>
-  </data>
-  <data name="Message_Error_Caption" xml:space="preserve">
-    <value>Ошибка</value>
-  </data>
-  <data name="Message_error_Image_Text1" xml:space="preserve">
-    <value>Невозможно открыть изображение: </value>
-  </data>
-  <data name="Message_error_Image_Text2" xml:space="preserve">
-    <value>. У Вас нет прав на чтение файла, или изображение повреждено.</value>
-  </data>
-  <data name="Message_error_pack_unpack_dir_Caption" xml:space="preserve">
-    <value>Файл не найден</value>
-  </data>
-  <data name="Message_error_pack_unpack_dir_Text1" xml:space="preserve">
-    <value>Путь [</value>
-  </data>
-  <data name="Message_error_pack_unpack_dir_Text2" xml:space="preserve">
-    <value>] к утилите распаковки/запаковки указан неверно.</value>
-  </data>
-  <data name="Message_error_pack_unpack_dir_Text3" xml:space="preserve">
-    <value>Укажите верный путь к утилите распаковки/запаковки.</value>
-  </data>
-  <data name="Message_error_respackerPath_Text1" xml:space="preserve">
-    <value>Отсутствуют необходимые компоненты программы.</value>
-  </data>
-  <data name="Message_error_respackerPath_Text2" xml:space="preserve">
-    <value>Не найдена утилита сжатия bin файлов по пути [</value>
-  </data>
-  <data name="Message_error_respackerPath_Text3" xml:space="preserve">
-    <value>Проверьте наличие утилиты сжатия bin файлов.</value>
-  </data>
-  <data name="Message_GoToFile_Caption" xml:space="preserve">
-    <value>Перейти к файлу</value>
-  </data>
-  <data name="Message_GoToFile_Text" xml:space="preserve">
-    <value>Перейти к файлу?</value>
-  </data>
-  <data name="Message_JsonError_Text" xml:space="preserve">
-    <value>Неверный JSON файл.</value>
-  </data>
-  <data name="Message_JsonReadError_Text" xml:space="preserve">
-    <value>Ошибка чтения JSON файла.</value>
-  </data>
-  <data name="Message_LoadPreviewStates_Caption" xml:space="preserve">
-    <value>Загрузка настроек предпросмотра</value>
-  </data>
-  <data name="Message_LoadPreviewStates_Text" xml:space="preserve">
-    <value>Загрузить имеющийся файл с набором параметров предпросмотра PreviewStates.json?</value>
-  </data>
-  <data name="Message_openProject_Caption" xml:space="preserve">
-    <value>Открытие проекта</value>
-  </data>
-  <data name="Message_openProject_Text" xml:space="preserve">
-    <value>Открыть распакованный проект?</value>
-  </data>
-  <data name="Message_PNGmissing_Text1" xml:space="preserve">
-    <value>PNG файлы идут не по порядку или часть файлов отсутствует.</value>
-  </data>
-  <data name="Message_PNGmissing_Text2" xml:space="preserve">
-    <value>Присвойте имена PNG файлам в порядке возрастания.</value>
-  </data>
-  <data name="Message_Restart_Caption" xml:space="preserve">
-    <value>Перезагрузка</value>
-  </data>
-  <data name="Message_Restart_Text1" xml:space="preserve">
-    <value>Для применения настроек необходимо перезагрузить программу.</value>
-  </data>
-  <data name="Message_Restart_Text2" xml:space="preserve">
-    <value>Перезапустить программу?</value>
-  </data>
-  <data name="Message_SaveOnly1234_Text" xml:space="preserve">
-    <value>Для сохранения предустановленных параметром установите хотябы в одном поле "Калории" значение отличное от "1234".</value>
-  </data>
-  <data name="Message_Warning3clockHand_Text" xml:space="preserve">
-    <value>Если использовать не все три стрелки в аналоговых часах, то могут возникнуть проблемы.</value>
-  </data>
-  <data name="Message_WarningOnlyMin_Text" xml:space="preserve">
-    <value>Не рекомендуется использовать минуты без использования часов для числового отображения времени.</value>
-  </data>
-  <data name="Message_WarningOnlySec_Text" xml:space="preserve">
-    <value>Не рекомендуется использовать секунды без использования часов и минут для числового отображения времени.</value>
-  </data>
-  <data name="Message_WarningTensOnes_Text" xml:space="preserve">
-    <value>Разные значения ImageIndex для десятков и единиц не поддерживаются.</value>
-  </data>
-  <data name="Message_Warning_Caption" xml:space="preserve">
-    <value>Предупреждение</value>
-  </data>
-  <data name="Message_bigFile_Text1_gts" xml:space="preserve">
-    <value>Размер несжатого файла превышает 1,5МБ.</value>
-  </data>
-  <data name="File_ReadMy" xml:space="preserve">
-    <value>\readme.chm</value>
-  </data>
-  <data name="Form_Preview" xml:space="preserve">
-    <value>Предпросмотр</value>
-  </data>
-  <data name="Form_PreviewX" xml:space="preserve">
-    <value>Предпросмотр [X=</value>
-  </data>
-  <data name="Message_CopyCoord" xml:space="preserve">
-    <value>Координаты скопированны</value>
-  </data>
   <data name="Dialog_Title_Image" xml:space="preserve">
-    <value>Выбор файлов изображений</value>
+    <value>Seleccionar archivos de imagen</value>
   </data>
   <data name="Dialog_Title_Pack" xml:space="preserve">
-    <value>Выбор файла настроек циферблата</value>
+    <value>Seleccione un archivo de configuración del díal</value>
   </data>
   <data name="Dialog_Title_PackUnpack" xml:space="preserve">
-    <value>Путь к файлу упаковщика</value>
+    <value>Ruta del archivo del empaquetador</value>
   </data>
   <data name="Dialog_Title_PreviewStates" xml:space="preserve">
-    <value>Выбор файла настроек предпросмотра</value>
+    <value>Seleccione el archivo de configuración de vista previa</value>
   </data>
   <data name="Dialog_Title_SaveGIF" xml:space="preserve">
-    <value>Сохранить анимированный предпросмотр</value>
+    <value>Guardar vista previa animada</value>
   </data>
   <data name="Dialog_Title_SavePNG" xml:space="preserve">
-    <value>Сохранить предпросмотр</value>
+    <value>Guardar vista previa</value>
   </data>
   <data name="Dialog_Title_Unpack" xml:space="preserve">
-    <value>Выбор файла циферблата</value>
+    <value>Seleccione un archivo de log</value>
+  </data>
+  <data name="Form_Preview" xml:space="preserve">
+    <value>Vista previa</value>
+  </data>
+  <data name="Form_PreviewX" xml:space="preserve">
+    <value>Vista previa [X =</value>
+  </data>
+  <data name="Message_bigFile_Caption" xml:space="preserve">
+    <value>Tamaño de archivo grande</value>
+  </data>
+  <data name="Message_bigFile_Text1" xml:space="preserve">
+    <value>El tamaño del archivo sin comprimir supera los 1,95 MB.</value>
+  </data>
+  <data name="Message_bigFile_Text1_gts" xml:space="preserve">
+    <value>El tamaño del archivo sin comprimir supera los 1,5 MB.</value>
+  </data>
+  <data name="Message_bigFile_Text2" xml:space="preserve">
+    <value>El dial puede no funcionar.</value>
+  </data>
+  <data name="Message_CopyCoord" xml:space="preserve">
+    <value>Coordenadas copiadas</value>
+  </data>
+  <data name="Message_Error_Caption" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Message_error_Image_Text1" xml:space="preserve">
+    <value>No se puede abrir la imagen:</value>
+  </data>
+  <data name="Message_error_Image_Text2" xml:space="preserve">
+    <value>. No tiene permiso para leer el archivo o la imagen está dañada.</value>
+  </data>
+  <data name="Message_error_pack_unpack_dir_Caption" xml:space="preserve">
+    <value>Archivo no encontrado</value>
+  </data>
+  <data name="Message_error_pack_unpack_dir_Text1" xml:space="preserve">
+    <value>Ruta [</value>
+  </data>
+  <data name="Message_error_pack_unpack_dir_Text2" xml:space="preserve">
+    <value>] a la utilidad de desempaquetar / empaquetar es incorrecta.</value>
+  </data>
+  <data name="Message_error_pack_unpack_dir_Text3" xml:space="preserve">
+    <value>Especifique la ruta correcta a la utilidad desempaquetador / empaquetador</value>
+  </data>
+  <data name="Message_error_respackerPath_Text1" xml:space="preserve">
+    <value>Faltan los componentes necesarios del programa.</value>
+  </data>
+  <data name="Message_error_respackerPath_Text2" xml:space="preserve">
+    <value>No se encontró la utilidad de compresión de archivos bin en la ruta [</value>
+  </data>
+  <data name="Message_error_respackerPath_Text3" xml:space="preserve">
+    <value>Verifique la utilidad de compresión del archivo bin.</value>
+  </data>
+  <data name="Message_GoToFile_Caption" xml:space="preserve">
+    <value>Ir al archivo</value>
+  </data>
+  <data name="Message_GoToFile_Text" xml:space="preserve">
+    <value>Ir al archivo?</value>
+  </data>
+  <data name="Message_JsonError_Text" xml:space="preserve">
+    <value>Archivo JSON no válido</value>
+  </data>
+  <data name="Message_JsonReadError_Text" xml:space="preserve">
+    <value>Error al leer el archivo JSON.</value>
+  </data>
+  <data name="Message_LoadPreviewStates_Caption" xml:space="preserve">
+    <value>Descargar configuración de vista previa</value>
+  </data>
+  <data name="Message_LoadPreviewStates_Text" xml:space="preserve">
+    <value>Descargar un archivo existente con un conjunto de configuraciones de vista previa PreviewStates.json?</value>
+  </data>
+  <data name="Message_openProject_Caption" xml:space="preserve">
+    <value>Apertura del proyecto</value>
+  </data>
+  <data name="Message_openProject_Text" xml:space="preserve">
+    <value>Abrir un proyecto desempaquetado?</value>
+  </data>
+  <data name="Message_PNGmissing_Text1" xml:space="preserve">
+    <value>Los archivos PNG no existen o faltan algunos de los archivos.</value>
+  </data>
+  <data name="Message_PNGmissing_Text2" xml:space="preserve">
+    <value>Nombre los archivos PNG en orden ascendente.</value>
+  </data>
+  <data name="Message_Restart_Caption" xml:space="preserve">
+    <value>Reiniciar</value>
+  </data>
+  <data name="Message_Restart_Text1" xml:space="preserve">
+    <value>Para aplicar la configuración, debe reiniciar el programa.</value>
+  </data>
+  <data name="Message_Restart_Text2" xml:space="preserve">
+    <value>Reiniciar el programa?</value>
+  </data>
+  <data name="Message_SaveOnly1234_Text" xml:space="preserve">
+    <value>Para guardar los parámetros preestablecidos, configure al menos un campo "Calorías" en un valor que no sea "1234".</value>
+  </data>
+  <data name="Message_Warning3clockHand_Text" xml:space="preserve">
+    <value>Si no utiliza las tres manecillas en un reloj analógico, pueden surgir problemas.</value>
   </data>
   <data name="Message_WarningDistanceSuffix" xml:space="preserve">
-    <value>Не рекомендуется использовать отображение расстояния без суффикса.</value>
+    <value>No se recomienda usar la pantalla de distancia sin sufijo.</value>
+  </data>
+  <data name="Message_WarningOnlyMin_Text" xml:space="preserve">
+    <value>No se recomienda usar minutos sin usar horas para la visualización numérica del tiempo.</value>
+  </data>
+  <data name="Message_WarningOnlySec_Text" xml:space="preserve">
+    <value>No se recomienda usar segundos sin usar horas y minutos para mostrar la hora numéricamente.</value>
+  </data>
+  <data name="Message_WarningTensOnes_Text" xml:space="preserve">
+    <value>No se admiten diferentes valores de ImageIndex para decenas y unidades.</value>
+  </data>
+  <data name="Message_Warning_Caption" xml:space="preserve">
+    <value>Advertencia</value>
   </data>
 </root>

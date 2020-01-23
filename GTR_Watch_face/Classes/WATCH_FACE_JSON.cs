@@ -61,14 +61,16 @@
         public Number Calories { get; set; }
         /// <summary>Пульс</summary>
         public Number Pulse { get; set; }
-        /// <summary>Пульс круговая шкала</summary>
-        public CircleScale Goal2 { get; set; }
         /// <summary>Растояние</summary>
         public Distance Distance { get; set; }
         /// <summary>Шаги</summary>
         public FormattedNumber Steps { get; set; }
-        /// <summary>Шаги</summary>
+        /// <summary>Достижение цели</summary>
         public ImageW StarImage { get; set; }
+        /// <summary>Пульс круговая шкала</summary>
+        public CircleScale Goal2 { get; set; }
+        /// <summary>Индикатор пульса</summary>
+        public IconSet ColouredSquares { get; set; }
         public long? NoDataImageIndex { get; set; }
     }
 

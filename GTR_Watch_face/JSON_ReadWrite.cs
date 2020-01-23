@@ -45,6 +45,7 @@ namespace GTR_Watch_face
             comboBox_ActivityDistance_Decimal.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityDistance_Suffix.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityPuls_Image.Items.AddRange(ListImages.ToArray());
+            comboBox_ActivityPuls_IconSet_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityCalories_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityStar_Image.Items.AddRange(ListImages.ToArray());
             comboBox_Activity_NDImage.Items.AddRange(ListImages.ToArray());
@@ -572,6 +573,20 @@ namespace GTR_Watch_face
                 }
                 else checkBox_ActivityPulsScale.Checked = false;
 
+                if ((Watch_Face.Activity.ColouredSquares != null) && 
+                    (Watch_Face.Activity.ColouredSquares.Coordinates != null))
+                {
+                    checkBox_ActivityPuls_IconSet.Checked = true;
+                    dataGridView_ActivityPuls_IconSet.Rows.Clear();
+                    checkBoxSetText(comboBox_ActivityPuls_IconSet_Image, Watch_Face.Activity.ColouredSquares.ImageIndex);
+                    foreach (Coordinates coordinates in Watch_Face.Activity.ColouredSquares.Coordinates)
+                    {
+                        var RowNew = new DataGridViewRow();
+                        dataGridView_ActivityPuls_IconSet.Rows.Add(coordinates.X, coordinates.Y);
+                    }
+                }
+                else checkBox_ActivityPuls_IconSet.Checked = false;
+
                 if (Watch_Face.Activity.Calories != null)
                 {
                     checkBox_ActivityCalories.Checked = true;
@@ -646,6 +661,7 @@ namespace GTR_Watch_face
                 checkBox_ActivityDistance.Checked = false;
                 checkBox_ActivityPuls.Checked = false;
                 checkBox_ActivityPulsScale.Checked = false;
+                checkBox_ActivityPuls_IconSet.Checked = false;
                 checkBox_ActivityCalories.Checked = false;
                 checkBox_ActivityCaloriesScale.Checked = false;
                 checkBox_ActivityStar.Checked = false;
@@ -1238,6 +1254,43 @@ namespace GTR_Watch_face
                     Watch_Face.Activity.Pulse.Spacing = (int)numericUpDown_ActivityPuls_Spacing.Value;
                     string Alignment = StringToAlignment(comboBox_ActivityPuls_Alignment.SelectedIndex);
                     Watch_Face.Activity.Pulse.Alignment = Alignment;
+                }
+
+                // пульс набором иконок
+                if (checkBox_ActivityPuls_IconSet.Checked)
+                {
+                    if ((comboBox_ActivityPuls_IconSet_Image.SelectedIndex >= 0) && (dataGridView_ActivityPuls_IconSet.Rows.Count > 1))
+                    {
+                        if (Watch_Face.Activity == null) Watch_Face.Activity = new Activity();
+                        if (Watch_Face.Activity.ColouredSquares == null) Watch_Face.Activity.ColouredSquares = new IconSet();
+
+                        Watch_Face.Activity.ColouredSquares.ImageIndex = Int32.Parse(comboBox_ActivityPuls_IconSet_Image.Text);
+                        Coordinates[] coordinates = new Coordinates[0];
+                        int count = 0;
+
+                        foreach (DataGridViewRow row in dataGridView_ActivityPuls_IconSet.Rows)
+                        {
+                            //whatever you are currently doing
+                            //Coordinates coordinates = new Coordinates();
+                            int x = 0;
+                            int y = 0;
+                            if ((row.Cells[0].Value != null) && (row.Cells[1].Value != null))
+                            {
+                                if ((Int32.TryParse(row.Cells[0].Value.ToString(), out x)) && (Int32.TryParse(row.Cells[1].Value.ToString(), out y)))
+                                {
+
+                                    //Array.Resize(ref objson, objson.Length + 1);
+                                    Array.Resize(ref coordinates, coordinates.Length + 1);
+                                    //objson[count] = coordinates;
+                                    coordinates[count] = new Coordinates();
+                                    coordinates[count].X = x;
+                                    coordinates[count].Y = y;
+                                    count++;
+                                }
+                            }
+                            Watch_Face.Activity.ColouredSquares.Coordinates = coordinates;
+                        }
+                    }
                 }
 
                 if (checkBox_ActivityPulsScale.Checked)
@@ -1855,7 +1908,7 @@ namespace GTR_Watch_face
                     }
                 }
 
-                // прогресc шагов набором иконок
+                // батарея набором иконок
                 if (checkBox_Battery_IconSet.Checked)
                 {
                     if ((comboBox_Battery_IconSet_Image.SelectedIndex >= 0) && (dataGridView_Battery_IconSet.Rows.Count > 1))
@@ -2365,6 +2418,8 @@ namespace GTR_Watch_face
             comboBox_ActivityDistance_Suffix.Items.Clear();
             comboBox_ActivityPuls_Image.Text = "";
             comboBox_ActivityPuls_Image.Items.Clear();
+            comboBox_ActivityPuls_IconSet_Image.Text = "";
+            comboBox_ActivityPuls_IconSet_Image.Items.Clear();
             comboBox_ActivityCalories_Image.Text = "";
             comboBox_ActivityCalories_Image.Items.Clear();
             comboBox_ActivityStar_Image.Text = "";

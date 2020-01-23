@@ -968,6 +968,41 @@ namespace GTR_Watch_face
                         DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
                 }
 
+                // набор иконок
+                if (checkBox_ActivityPuls_IconSet.Checked)
+                {
+                    if ((comboBox_ActivityPuls_IconSet_Image.SelectedIndex >= 0) && (dataGridView_ActivityPuls_IconSet.Rows.Count > 0))
+                    {
+                        int x = 0;
+                        int y = 0;
+                        //int count = 0;
+                        for (int count = 0; count < dataGridView_ActivityPuls_IconSet.Rows.Count; count++)
+                        {
+                            if ((dataGridView_ActivityPuls_IconSet.Rows[count].Cells[0].Value != null) &&
+                                (dataGridView_ActivityPuls_IconSet.Rows[count].Cells[1].Value != null))
+                            {
+                                if (Int32.TryParse(dataGridView_ActivityPuls_IconSet.Rows[count].Cells[0].Value.ToString(), out x) &&
+                                    Int32.TryParse(dataGridView_ActivityPuls_IconSet.Rows[count].Cells[1].Value.ToString(), out y))
+                                {
+                                    i = comboBox_ActivityPuls_IconSet_Image.SelectedIndex + count;
+                                    if (i < ListImagesFullName.Count)
+                                    {
+                                        int value = (dataGridView_ActivityPuls_IconSet.Rows.Count - 1) * Watch_Face_Preview_Set.Activity.Pulse / 200;
+                                        value++;
+                                        if (count < value)
+                                        {
+                                            src = new Bitmap(ListImagesFullName[i]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                            //count++;
+                                            src.Dispose();
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
                 // шкала пульса 
                 if (checkBox_ActivityPulsScale.Checked)
                 {

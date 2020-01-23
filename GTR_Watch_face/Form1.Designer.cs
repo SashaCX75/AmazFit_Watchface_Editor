@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button_zip_unpack = new System.Windows.Forms.Button();
@@ -764,6 +764,12 @@
             this.label425 = new System.Windows.Forms.Label();
             this.checkBox_ActivityPulsScale = new System.Windows.Forms.CheckBox();
             this.tabPage45 = new System.Windows.Forms.TabPage();
+            this.checkBox_ActivityPuls_IconSet = new System.Windows.Forms.CheckBox();
+            this.comboBox_ActivityPuls_IconSet_Image = new System.Windows.Forms.ComboBox();
+            this.dataGridView_ActivityPuls_IconSet = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label121 = new System.Windows.Forms.Label();
             this.tabPage15 = new System.Windows.Forms.TabPage();
             this.numericUpDown_ActivityCalories_EndCorner_X = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_ActivityCalories_Count = new System.Windows.Forms.NumericUpDown();
@@ -1407,6 +1413,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_Radius_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_Center_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_Center_X)).BeginInit();
+            this.tabPage45.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ActivityPuls_IconSet)).BeginInit();
             this.tabPage15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCalories_EndCorner_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCalories_Count)).BeginInit();
@@ -5014,8 +5022,8 @@
             // Number
             // 
             this.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Number.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Number.DefaultCellStyle = dataGridViewCellStyle2;
             resources.ApplyResources(this.Number, "Number");
             this.Number.Name = "Number";
             this.Number.ReadOnly = true;
@@ -7883,11 +7891,12 @@
             this.dataGridView_Battery_IconSet.Name = "dataGridView_Battery_IconSet";
             this.dataGridView_Battery_IconSet.RowTemplate.Height = 18;
             this.helpProvider1.SetShowHelp(this.dataGridView_Battery_IconSet, ((bool)(resources.GetObject("dataGridView_Battery_IconSet.ShowHelp"))));
-            this.dataGridView_Battery_IconSet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_SPSliced_CellClick);
-            this.dataGridView_Battery_IconSet.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_SPSliced_CellEndEdit);
-            this.dataGridView_Battery_IconSet.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_SPSliced_CellMouseDoubleClick);
-            this.dataGridView_Battery_IconSet.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_Battery_IconSet_CellMouseDown);
-            this.dataGridView_Battery_IconSet.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView_SPSliced_RowPrePaint);
+            this.dataGridView_Battery_IconSet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_IconSet_CellClick);
+            this.dataGridView_Battery_IconSet.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_IconSet_CellEndEdit);
+            this.dataGridView_Battery_IconSet.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_IconSet_CellMouseDoubleClick);
+            this.dataGridView_Battery_IconSet.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_IconSet_CellMouseDown);
+            this.dataGridView_Battery_IconSet.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView_IconSet_RowPrePaint);
+            this.dataGridView_Battery_IconSet.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridView_IconSet_RowsRemoved);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -9473,6 +9482,7 @@
             this.tabPage44.Controls.Add(this.checkBox_ActivityPulsScale);
             resources.ApplyResources(this.tabPage44, "tabPage44");
             this.tabPage44.Name = "tabPage44";
+            this.helpProvider1.SetShowHelp(this.tabPage44, ((bool)(resources.GetObject("tabPage44.ShowHelp"))));
             // 
             // comboBox_ActivityPulsScale_Flatness
             // 
@@ -9687,8 +9697,73 @@
             // tabPage45
             // 
             this.tabPage45.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage45.Controls.Add(this.checkBox_ActivityPuls_IconSet);
+            this.tabPage45.Controls.Add(this.comboBox_ActivityPuls_IconSet_Image);
+            this.tabPage45.Controls.Add(this.dataGridView_ActivityPuls_IconSet);
+            this.tabPage45.Controls.Add(this.label121);
             resources.ApplyResources(this.tabPage45, "tabPage45");
             this.tabPage45.Name = "tabPage45";
+            this.helpProvider1.SetShowHelp(this.tabPage45, ((bool)(resources.GetObject("tabPage45.ShowHelp"))));
+            // 
+            // checkBox_ActivityPuls_IconSet
+            // 
+            resources.ApplyResources(this.checkBox_ActivityPuls_IconSet, "checkBox_ActivityPuls_IconSet");
+            this.checkBox_ActivityPuls_IconSet.Name = "checkBox_ActivityPuls_IconSet";
+            this.helpProvider1.SetShowHelp(this.checkBox_ActivityPuls_IconSet, ((bool)(resources.GetObject("checkBox_ActivityPuls_IconSet.ShowHelp"))));
+            this.checkBox_ActivityPuls_IconSet.UseVisualStyleBackColor = true;
+            this.checkBox_ActivityPuls_IconSet.CheckedChanged += new System.EventHandler(this.checkBox_ActivityPulse_IconSet_CheckedChanged);
+            this.checkBox_ActivityPuls_IconSet.Click += new System.EventHandler(this.checkBox_Click);
+            // 
+            // comboBox_ActivityPuls_IconSet_Image
+            // 
+            this.comboBox_ActivityPuls_IconSet_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_ActivityPuls_IconSet_Image.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_ActivityPuls_IconSet_Image, "comboBox_ActivityPuls_IconSet_Image");
+            this.comboBox_ActivityPuls_IconSet_Image.FormattingEnabled = true;
+            this.comboBox_ActivityPuls_IconSet_Image.Name = "comboBox_ActivityPuls_IconSet_Image";
+            this.helpProvider1.SetShowHelp(this.comboBox_ActivityPuls_IconSet_Image, ((bool)(resources.GetObject("comboBox_ActivityPuls_IconSet_Image.ShowHelp"))));
+            this.comboBox_ActivityPuls_IconSet_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_ActivityPuls_IconSet_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_ActivityPuls_IconSet_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            // 
+            // dataGridView_ActivityPuls_IconSet
+            // 
+            this.dataGridView_ActivityPuls_IconSet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_ActivityPuls_IconSet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_ActivityPuls_IconSet.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.dataGridView_ActivityPuls_IconSet.ContextMenuStrip = this.contextMenuStrip_XY_InTable;
+            resources.ApplyResources(this.dataGridView_ActivityPuls_IconSet, "dataGridView_ActivityPuls_IconSet");
+            this.dataGridView_ActivityPuls_IconSet.Name = "dataGridView_ActivityPuls_IconSet";
+            this.dataGridView_ActivityPuls_IconSet.RowTemplate.Height = 18;
+            this.helpProvider1.SetShowHelp(this.dataGridView_ActivityPuls_IconSet, ((bool)(resources.GetObject("dataGridView_ActivityPuls_IconSet.ShowHelp"))));
+            this.dataGridView_ActivityPuls_IconSet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_IconSet_CellClick);
+            this.dataGridView_ActivityPuls_IconSet.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_IconSet_CellEndEdit);
+            this.dataGridView_ActivityPuls_IconSet.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_IconSet_CellMouseDoubleClick);
+            this.dataGridView_ActivityPuls_IconSet.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_IconSet_CellMouseDown);
+            this.dataGridView_ActivityPuls_IconSet.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView_IconSet_RowPrePaint);
+            this.dataGridView_ActivityPuls_IconSet.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridView_IconSet_RowsRemoved);
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // label121
+            // 
+            resources.ApplyResources(this.label121, "label121");
+            this.label121.Name = "label121";
+            this.helpProvider1.SetShowHelp(this.label121, ((bool)(resources.GetObject("label121.ShowHelp"))));
             // 
             // tabPage15
             // 
@@ -10542,12 +10617,12 @@
             this.dataGridView_SPSliced.Name = "dataGridView_SPSliced";
             this.dataGridView_SPSliced.RowTemplate.Height = 18;
             this.helpProvider1.SetShowHelp(this.dataGridView_SPSliced, ((bool)(resources.GetObject("dataGridView_SPSliced.ShowHelp"))));
-            this.dataGridView_SPSliced.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_SPSliced_CellClick);
-            this.dataGridView_SPSliced.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_SPSliced_CellEndEdit);
-            this.dataGridView_SPSliced.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_SPSliced_CellMouseDoubleClick);
-            this.dataGridView_SPSliced.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_Battery_IconSet_CellMouseDown);
-            this.dataGridView_SPSliced.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView_SPSliced_RowPrePaint);
-            this.dataGridView_SPSliced.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridView_SPSliced_RowsRemoved);
+            this.dataGridView_SPSliced.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_IconSet_CellClick);
+            this.dataGridView_SPSliced.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_IconSet_CellEndEdit);
+            this.dataGridView_SPSliced.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_IconSet_CellMouseDoubleClick);
+            this.dataGridView_SPSliced.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_IconSet_CellMouseDown);
+            this.dataGridView_SPSliced.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView_IconSet_RowPrePaint);
+            this.dataGridView_SPSliced.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridView_IconSet_RowsRemoved);
             // 
             // ValueX
             // 
@@ -13566,7 +13641,8 @@
             this.comboBox_Language.FormattingEnabled = true;
             this.comboBox_Language.Items.AddRange(new object[] {
             resources.GetString("comboBox_Language.Items"),
-            resources.GetString("comboBox_Language.Items1")});
+            resources.GetString("comboBox_Language.Items1"),
+            resources.GetString("comboBox_Language.Items2")});
             resources.ApplyResources(this.comboBox_Language, "comboBox_Language");
             this.comboBox_Language.Name = "comboBox_Language";
             this.helpProvider1.SetShowHelp(this.comboBox_Language, ((bool)(resources.GetObject("comboBox_Language.ShowHelp"))));
@@ -14364,6 +14440,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_Radius_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_Center_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_Center_X)).EndInit();
+            this.tabPage45.ResumeLayout(false);
+            this.tabPage45.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ActivityPuls_IconSet)).EndInit();
             this.tabPage15.ResumeLayout(false);
             this.tabPage15.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCalories_EndCorner_X)).EndInit();
@@ -15584,9 +15663,6 @@
         private System.Windows.Forms.Button button_Reset;
         private System.Windows.Forms.ComboBox comboBox_Activity_NDImage;
         private System.Windows.Forms.Label label403;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NameFile;
-        private System.Windows.Forms.DataGridViewImageColumn ColumnImage;
         private System.Windows.Forms.TabPage tabPage41;
         private System.Windows.Forms.ComboBox comboBox_SPSliced_Image;
         private System.Windows.Forms.Label label404;
@@ -15665,6 +15741,15 @@
         private System.Windows.Forms.Label label120;
         private System.Windows.Forms.CheckBox checkBox_ActivityCaloriesScale;
         private System.Windows.Forms.ColorDialog colorDialog_Calories;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameFile;
+        private System.Windows.Forms.DataGridViewImageColumn ColumnImage;
+        private System.Windows.Forms.Label label121;
+        private System.Windows.Forms.CheckBox checkBox_ActivityPuls_IconSet;
+        private System.Windows.Forms.ComboBox comboBox_ActivityPuls_IconSet_Image;
+        private System.Windows.Forms.DataGridView dataGridView_ActivityPuls_IconSet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }
 

@@ -71,18 +71,28 @@ namespace GTR_Watch_face
                     {
                         Program_Settings.language = "English";
                     }
+                    if (language == "es")
+                    {
+                        Program_Settings.language = "Español";
+                    }
                 }
                 //Logger.WriteLine("Определили язык");
-                if (Program_Settings.language == "English")
-                {
-                    Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en");
-                    Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
-                }
-                else
-                {
-                    Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("ru");
-                    Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ru");
-                }
+                SetLanguage();
+                //if (Program_Settings.language == "English")
+                //{
+                //    Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en");
+                //    Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
+                //}
+                //else if(Program_Settings.language == "Español")
+                //{
+                //    Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("es");
+                //    Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("es");
+                //}
+                //else
+                //{
+                //    Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("ru");
+                //    Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ru");
+                //}
                 //Logger.WriteLine("Применили язык");
             }
             catch (Exception ex)
@@ -138,6 +148,24 @@ namespace GTR_Watch_face
 
         }
         
+        private void SetLanguage()
+        {
+            if (Program_Settings.language == "English")
+            {
+                Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en");
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
+            }
+            else if (Program_Settings.language == "Español")
+            {
+                Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("es");
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("es");
+            }
+            else
+            {
+                Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("ru");
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ru");
+            }
+        }
         //private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         //{
         //    Properties.Settings.Default.pack_unpack_dir = textBox_pack_unpack_dir.Text;
@@ -2256,6 +2284,14 @@ namespace GTR_Watch_face
             label149.Enabled = b;
             label150.Enabled = b;
             label151.Enabled = b;
+        }
+
+        private void checkBox_ActivityPulse_IconSet_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_ActivityPuls_IconSet.Checked;
+            comboBox_ActivityPuls_IconSet_Image.Enabled = b;
+            dataGridView_ActivityPuls_IconSet.Enabled = b;
+            label121.Enabled = b;
         }
 
         private void checkBox_ActivityPulsScale_CheckedChanged(object sender, EventArgs e)
@@ -5191,6 +5227,7 @@ namespace GTR_Watch_face
         private void comboBox_Language_SelectedIndexChanged(object sender, EventArgs e)
         {
             Program_Settings.language = comboBox_Language.Text;
+            SetLanguage();
             string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
             {
                 NullValueHandling = NullValueHandling.Ignore
@@ -5312,7 +5349,7 @@ namespace GTR_Watch_face
             catch { return 0; } //перехват ошибок и возврат сообщения об ошибке
         }
 
-        private void dataGridView_SPSliced_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView_IconSet_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dataGridView = sender as DataGridView;
             if (dataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
@@ -5337,13 +5374,13 @@ namespace GTR_Watch_face
             PreviewImage();
         }
 
-        private void dataGridView_SPSliced_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        private void dataGridView_IconSet_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
             JSON_write();
             PreviewImage();
         }
         
-        private void dataGridView_SPSliced_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView_IconSet_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dataGridView = sender as DataGridView;
             if (e.ColumnIndex == -1)
@@ -5373,7 +5410,7 @@ namespace GTR_Watch_face
             }
         }
 
-        private void dataGridView_SPSliced_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        private void dataGridView_IconSet_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
         {
             DataGridView dataGridView = sender as DataGridView;
             object head = dataGridView.Rows[e.RowIndex].HeaderCell.Value;
@@ -5381,7 +5418,7 @@ namespace GTR_Watch_face
                 dataGridView.Rows[e.RowIndex].HeaderCell.Value = (e.RowIndex + 1).ToString();
         }
 
-        private void dataGridView_SPSliced_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dataGridView_IconSet_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             DataGridView dataGridView = sender as DataGridView;
             if (e.ColumnIndex == 0 && MouseСoordinates.X >= 0)
@@ -5493,7 +5530,7 @@ namespace GTR_Watch_face
             }
         }
 
-        private void dataGridView_Battery_IconSet_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        private void dataGridView_IconSet_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
             {
@@ -5538,7 +5575,6 @@ namespace GTR_Watch_face
             HelpNavigator navigator = HelpNavigator.Topic;
             Help.ShowHelp(this, helpfile, navigator, "kratkaya_instruktsiya.htm");
         }
-        
     }
 }
 
