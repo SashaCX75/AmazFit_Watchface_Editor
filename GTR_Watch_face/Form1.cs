@@ -75,6 +75,10 @@ namespace GTR_Watch_face
                     {
                         Program_Settings.language = "Español";
                     }
+                    if (language == "pt")
+                    {
+                        Program_Settings.language = "Português";
+                    }
                 }
                 //Logger.WriteLine("Определили язык");
                 SetLanguage();
@@ -159,6 +163,11 @@ namespace GTR_Watch_face
             {
                 Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("es");
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("es");
+            }
+            else if (Program_Settings.language == "Português")
+            {
+                Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("pt");
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("pt");
             }
             else
             {
@@ -1756,6 +1765,7 @@ namespace GTR_Watch_face
                 panel_StepsProgress.Height = 1;
                 panel_Activity.Height = 1;
                 panel_Status.Height = 1;
+                panel_Battery.Height = 1;
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1; 
             }

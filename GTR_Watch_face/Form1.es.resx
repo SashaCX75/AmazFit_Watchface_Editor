@@ -5438,4 +5438,364 @@
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
   </data>
+  <data name="comboBox_ActivityCaloriesScale_Flatness.Items" xml:space="preserve">
+    <value>Redondeado</value>
+  </data>
+  <data name="comboBox_ActivityCaloriesScale_Flatness.Items1" xml:space="preserve">
+    <value>Triangulo</value>
+  </data>
+  <data name="comboBox_ActivityCaloriesScale_Flatness.Items2" xml:space="preserve">
+    <value>Plano</value>
+  </data>
+  <data name="comboBox_ActivityCalories_Alignment.Items" xml:space="preserve">
+    <value>Arriba izquierda</value>
+  </data>
+  <data name="comboBox_ActivityCalories_Alignment.Items1" xml:space="preserve">
+    <value>Arriba centro</value>
+  </data>
+  <data name="comboBox_ActivityCalories_Alignment.Items2" xml:space="preserve">
+    <value>Arriba derecha</value>
+  </data>
+  <data name="comboBox_ActivityCalories_Alignment.Items3" xml:space="preserve">
+    <value>Centro izquierda</value>
+  </data>
+  <data name="comboBox_ActivityCalories_Alignment.Items4" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="comboBox_ActivityCalories_Alignment.Items5" xml:space="preserve">
+    <value>Centro derecha</value>
+  </data>
+  <data name="comboBox_ActivityCalories_Alignment.Items6" xml:space="preserve">
+    <value>Abajo izquierda</value>
+  </data>
+  <data name="comboBox_ActivityCalories_Alignment.Items7" xml:space="preserve">
+    <value>Abajo centro</value>
+  </data>
+  <data name="comboBox_ActivityCalories_Alignment.Items8" xml:space="preserve">
+    <value>Abajo derecha</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Alignment.Items" xml:space="preserve">
+    <value>Arriba izquierda</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Alignment.Items1" xml:space="preserve">
+    <value>Arriba centro</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Alignment.Items2" xml:space="preserve">
+    <value>Arriba derecha</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Alignment.Items3" xml:space="preserve">
+    <value>Centro izquierda</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Alignment.Items4" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Alignment.Items5" xml:space="preserve">
+    <value>Centro derecha</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Alignment.Items6" xml:space="preserve">
+    <value>Abajo izquierda</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Alignment.Items7" xml:space="preserve">
+    <value>Abajo centro</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Alignment.Items8" xml:space="preserve">
+    <value>Abajo derecha</value>
+  </data>
+  <data name="comboBox_ActivityPulsScale_Flatness.Items" xml:space="preserve">
+    <value>Redondeado</value>
+  </data>
+  <data name="comboBox_ActivityPulsScale_Flatness.Items1" xml:space="preserve">
+    <value>Triangulo</value>
+  </data>
+  <data name="comboBox_ActivityPulsScale_Flatness.Items2" xml:space="preserve">
+    <value>Plano</value>
+  </data>
+  <data name="comboBox_ActivityPuls_Alignment.Items" xml:space="preserve">
+    <value>Arriba izquierda</value>
+  </data>
+  <data name="comboBox_ActivityPuls_Alignment.Items1" xml:space="preserve">
+    <value>Arriba centro</value>
+  </data>
+  <data name="comboBox_ActivityPuls_Alignment.Items2" xml:space="preserve">
+    <value>Arriba derecha</value>
+  </data>
+  <data name="comboBox_ActivityPuls_Alignment.Items3" xml:space="preserve">
+    <value>Centro izquierda</value>
+  </data>
+  <data name="comboBox_ActivityPuls_Alignment.Items4" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="comboBox_ActivityPuls_Alignment.Items5" xml:space="preserve">
+    <value>Centro derecha</value>
+  </data>
+  <data name="comboBox_ActivityPuls_Alignment.Items6" xml:space="preserve">
+    <value>Abajo izquierda</value>
+  </data>
+  <data name="comboBox_ActivityPuls_Alignment.Items7" xml:space="preserve">
+    <value>Abajo centro</value>
+  </data>
+  <data name="comboBox_ActivityPuls_Alignment.Items8" xml:space="preserve">
+    <value>Abajo derecha</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Alignment.Items" xml:space="preserve">
+    <value>Arriba izquierda</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Alignment.Items1" xml:space="preserve">
+    <value>Arriba centro</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Alignment.Items2" xml:space="preserve">
+    <value>Arriba derecha</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Alignment.Items3" xml:space="preserve">
+    <value>Centro izquierda</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Alignment.Items4" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Alignment.Items5" xml:space="preserve">
+    <value>Centro derecha</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Alignment.Items6" xml:space="preserve">
+    <value>Abajo izquierda</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Alignment.Items7" xml:space="preserve">
+    <value>Abajo centro</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Alignment.Items8" xml:space="preserve">
+    <value>Abajo derecha</value>
+  </data>
+  <data name="comboBox_Battery_Flatness.Items" xml:space="preserve">
+    <value>Redondeado</value>
+  </data>
+  <data name="comboBox_Battery_Flatness.Items1" xml:space="preserve">
+    <value>Triangulo</value>
+  </data>
+  <data name="comboBox_Battery_Flatness.Items2" xml:space="preserve">
+    <value>Plano</value>
+  </data>
+  <data name="comboBox_Battery_Text_Alignment.Items" xml:space="preserve">
+    <value>Arriba izquierda</value>
+  </data>
+  <data name="comboBox_Battery_Text_Alignment.Items1" xml:space="preserve">
+    <value>Arriba centro</value>
+  </data>
+  <data name="comboBox_Battery_Text_Alignment.Items2" xml:space="preserve">
+    <value>Arriba derecha</value>
+  </data>
+  <data name="comboBox_Battery_Text_Alignment.Items3" xml:space="preserve">
+    <value>Centro izquierda</value>
+  </data>
+  <data name="comboBox_Battery_Text_Alignment.Items4" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="comboBox_Battery_Text_Alignment.Items5" xml:space="preserve">
+    <value>Centro derecha</value>
+  </data>
+  <data name="comboBox_Battery_Text_Alignment.Items6" xml:space="preserve">
+    <value>Abajo izquierda</value>
+  </data>
+  <data name="comboBox_Battery_Text_Alignment.Items7" xml:space="preserve">
+    <value>Abajo centro</value>
+  </data>
+  <data name="comboBox_Battery_Text_Alignment.Items8" xml:space="preserve">
+    <value>Abajo derecha</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Alignment.Items" xml:space="preserve">
+    <value>Arriba izquierda</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Alignment.Items1" xml:space="preserve">
+    <value>Arriba centro</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Alignment.Items2" xml:space="preserve">
+    <value>Arriba derecha</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Alignment.Items3" xml:space="preserve">
+    <value>Centro izquierda</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Alignment.Items4" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Alignment.Items5" xml:space="preserve">
+    <value>Centro derecha</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Alignment.Items6" xml:space="preserve">
+    <value>Abajo izquierda</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Alignment.Items7" xml:space="preserve">
+    <value>Abajo centro</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Alignment.Items8" xml:space="preserve">
+    <value>Abajo derecha</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Alignment.Items" xml:space="preserve">
+    <value>Arriba izquierda</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Alignment.Items1" xml:space="preserve">
+    <value>Arriba centro</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Alignment.Items2" xml:space="preserve">
+    <value>Arriba derecha</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Alignment.Items3" xml:space="preserve">
+    <value>Centro izquierda</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Alignment.Items4" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Alignment.Items5" xml:space="preserve">
+    <value>Centro derecha</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Alignment.Items6" xml:space="preserve">
+    <value>Abajo izquierda</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Alignment.Items7" xml:space="preserve">
+    <value>Abajo centro</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Alignment.Items8" xml:space="preserve">
+    <value>Abajo derecha</value>
+  </data>
+  <data name="comboBox_OneLine_Alignment.Items" xml:space="preserve">
+    <value>Arriba izquierda</value>
+  </data>
+  <data name="comboBox_OneLine_Alignment.Items1" xml:space="preserve">
+    <value>Arriba centro</value>
+  </data>
+  <data name="comboBox_OneLine_Alignment.Items2" xml:space="preserve">
+    <value>Arriba derecha</value>
+  </data>
+  <data name="comboBox_OneLine_Alignment.Items3" xml:space="preserve">
+    <value>Centro izquierda</value>
+  </data>
+  <data name="comboBox_OneLine_Alignment.Items4" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="comboBox_OneLine_Alignment.Items5" xml:space="preserve">
+    <value>Centro derecha</value>
+  </data>
+  <data name="comboBox_OneLine_Alignment.Items6" xml:space="preserve">
+    <value>Abajo izquierda</value>
+  </data>
+  <data name="comboBox_OneLine_Alignment.Items7" xml:space="preserve">
+    <value>Abajo centro</value>
+  </data>
+  <data name="comboBox_OneLine_Alignment.Items8" xml:space="preserve">
+    <value>Abajo derecha</value>
+  </data>
+  <data name="comboBox_StepsProgress_Flatness.Items" xml:space="preserve">
+    <value>Redondeado</value>
+  </data>
+  <data name="comboBox_StepsProgress_Flatness.Items1" xml:space="preserve">
+    <value>Triangulo</value>
+  </data>
+  <data name="comboBox_StepsProgress_Flatness.Items2" xml:space="preserve">
+    <value>Plano</value>
+  </data>
+  <data name="comboBox_Weather_Day_Alignment.Items" xml:space="preserve">
+    <value>Arriba izquierda</value>
+  </data>
+  <data name="comboBox_Weather_Day_Alignment.Items1" xml:space="preserve">
+    <value>Arriba centro</value>
+  </data>
+  <data name="comboBox_Weather_Day_Alignment.Items2" xml:space="preserve">
+    <value>Arriba derecha</value>
+  </data>
+  <data name="comboBox_Weather_Day_Alignment.Items3" xml:space="preserve">
+    <value>Centro izquierda</value>
+  </data>
+  <data name="comboBox_Weather_Day_Alignment.Items4" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="comboBox_Weather_Day_Alignment.Items5" xml:space="preserve">
+    <value>Centro derecha</value>
+  </data>
+  <data name="comboBox_Weather_Day_Alignment.Items6" xml:space="preserve">
+    <value>Abajo izquierda</value>
+  </data>
+  <data name="comboBox_Weather_Day_Alignment.Items7" xml:space="preserve">
+    <value>Abajo centro</value>
+  </data>
+  <data name="comboBox_Weather_Day_Alignment.Items8" xml:space="preserve">
+    <value>Abajo derecha</value>
+  </data>
+  <data name="comboBox_Weather_Night_Alignment.Items" xml:space="preserve">
+    <value>Arriba izquierda</value>
+  </data>
+  <data name="comboBox_Weather_Night_Alignment.Items1" xml:space="preserve">
+    <value>Arriba centro</value>
+  </data>
+  <data name="comboBox_Weather_Night_Alignment.Items2" xml:space="preserve">
+    <value>Arriba derecha</value>
+  </data>
+  <data name="comboBox_Weather_Night_Alignment.Items3" xml:space="preserve">
+    <value>Centro izquierda</value>
+  </data>
+  <data name="comboBox_Weather_Night_Alignment.Items4" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="comboBox_Weather_Night_Alignment.Items5" xml:space="preserve">
+    <value>Centro derecha</value>
+  </data>
+  <data name="comboBox_Weather_Night_Alignment.Items6" xml:space="preserve">
+    <value>Abajo izquierda</value>
+  </data>
+  <data name="comboBox_Weather_Night_Alignment.Items7" xml:space="preserve">
+    <value>Abajo centro</value>
+  </data>
+  <data name="comboBox_Weather_Night_Alignment.Items8" xml:space="preserve">
+    <value>Abajo derecha</value>
+  </data>
+  <data name="comboBox_Weather_Text_Alignment.Items" xml:space="preserve">
+    <value>Arriba izquierda</value>
+  </data>
+  <data name="comboBox_Weather_Text_Alignment.Items1" xml:space="preserve">
+    <value>Arriba centro</value>
+  </data>
+  <data name="comboBox_Weather_Text_Alignment.Items2" xml:space="preserve">
+    <value>Arriba derecha</value>
+  </data>
+  <data name="comboBox_Weather_Text_Alignment.Items3" xml:space="preserve">
+    <value>Centro izquierda</value>
+  </data>
+  <data name="comboBox_Weather_Text_Alignment.Items4" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="comboBox_Weather_Text_Alignment.Items5" xml:space="preserve">
+    <value>Centro derecha</value>
+  </data>
+  <data name="comboBox_Weather_Text_Alignment.Items6" xml:space="preserve">
+    <value>Abajo izquierda</value>
+  </data>
+  <data name="comboBox_Weather_Text_Alignment.Items7" xml:space="preserve">
+    <value>Abajo centro</value>
+  </data>
+  <data name="comboBox_Weather_Text_Alignment.Items8" xml:space="preserve">
+    <value>Abajo derecha</value>
+  </data>
+  <data name="comboBox_Year_Alignment.Items" xml:space="preserve">
+    <value>Arriba izquierda</value>
+  </data>
+  <data name="comboBox_Year_Alignment.Items1" xml:space="preserve">
+    <value>Arriba centro</value>
+  </data>
+  <data name="comboBox_Year_Alignment.Items2" xml:space="preserve">
+    <value>Arriba derecha</value>
+  </data>
+  <data name="comboBox_Year_Alignment.Items3" xml:space="preserve">
+    <value>Centro izquierda</value>
+  </data>
+  <data name="comboBox_Year_Alignment.Items4" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="comboBox_Year_Alignment.Items5" xml:space="preserve">
+    <value>Centro derecha</value>
+  </data>
+  <data name="comboBox_Year_Alignment.Items6" xml:space="preserve">
+    <value>Abajo izquierda</value>
+  </data>
+  <data name="comboBox_Year_Alignment.Items7" xml:space="preserve">
+    <value>Abajo centro</value>
+  </data>
+  <data name="comboBox_Year_Alignment.Items8" xml:space="preserve">
+    <value>Abajo derecha</value>
+  </data>
 </root>
