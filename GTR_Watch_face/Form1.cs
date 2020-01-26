@@ -1853,7 +1853,7 @@ namespace GTR_Watch_face
                 panel_Date.Height = 1;
                 panel_AnalogDate.Height = 1;
                 panel_StepsProgress.Height = 1;
-                panel_Activity.Height = (int)(230 * currentDPI);
+                panel_Activity.Height = (int)(215 * currentDPI);
                 panel_Status.Height = 1;
                 panel_Battery.Height = 1;
                 panel_AnalogClock.Height = 1;
@@ -2360,7 +2360,10 @@ namespace GTR_Watch_face
             numericUpDown_ActivityCaloriesScale_Center_X.Enabled = b;
             numericUpDown_ActivityCaloriesScale_Center_Y.Enabled = b;
             numericUpDown_ActivityCaloriesScale_Radius_X.Enabled = b;
-            //numericUpDown_Battery_Scale_Radius_Y.Enabled = b;
+            checkBox_ActivityCaloriesScale_Image.Enabled = b;
+            comboBox_ActivityCaloriesScale_Image.Enabled = b;
+            numericUpDown_ActivityCaloriesScale_ImageX.Enabled = b;
+            numericUpDown_ActivityCaloriesScale_ImageY.Enabled = b;
 
             numericUpDown_ActivityCaloriesScale_Width.Enabled = b;
             comboBox_ActivityCaloriesScale_Color.Enabled = b;
@@ -2377,6 +2380,64 @@ namespace GTR_Watch_face
             label118.Enabled = b;
             label119.Enabled = b;
             label120.Enabled = b;
+            label426.Enabled = b;
+            label427.Enabled = b;
+
+            if (b)
+            {
+                if (checkBox_ActivityCaloriesScale_Image.Checked)
+                {
+                    comboBox_ActivityCaloriesScale_Image.Enabled = true;
+                    numericUpDown_ActivityCaloriesScale_ImageX.Enabled = true;
+                    numericUpDown_ActivityCaloriesScale_ImageY.Enabled = true;
+                    label426.Enabled = true;
+                    label427.Enabled = true;
+                    comboBox_ActivityCaloriesScale_Color.Enabled = false;
+                    label115.Enabled = false;
+                }
+                else
+                {
+                    comboBox_ActivityCaloriesScale_Image.Enabled = false;
+                    numericUpDown_ActivityCaloriesScale_ImageX.Enabled = false;
+                    numericUpDown_ActivityCaloriesScale_ImageY.Enabled = false;
+                    label426.Enabled = false;
+                    label427.Enabled = false;
+                    comboBox_ActivityCaloriesScale_Color.Enabled = true;
+                    label115.Enabled = true;
+                }
+            }
+        }
+
+        private void checkBox_ActivityCaloriesScale_Image_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_ActivityCaloriesScale_Image.Checked)
+            {
+                comboBox_ActivityCaloriesScale_Image.Enabled = true;
+                numericUpDown_ActivityCaloriesScale_ImageX.Enabled = true;
+                numericUpDown_ActivityCaloriesScale_ImageY.Enabled = true;
+                label426.Enabled = true;
+                label427.Enabled = true;
+                comboBox_ActivityCaloriesScale_Color.Enabled = false;
+                numericUpDown_ActivityCaloriesScale_Center_X.Enabled = false;
+                numericUpDown_ActivityCaloriesScale_Center_Y.Enabled = false;
+                label115.Enabled = false;
+                label119.Enabled = false;
+                label120.Enabled = false;
+            }
+            else
+            {
+                comboBox_ActivityCaloriesScale_Image.Enabled = false;
+                numericUpDown_ActivityCaloriesScale_ImageX.Enabled = false;
+                numericUpDown_ActivityCaloriesScale_ImageY.Enabled = false;
+                label426.Enabled = false;
+                label427.Enabled = false;
+                comboBox_ActivityCaloriesScale_Color.Enabled = true;
+                numericUpDown_ActivityCaloriesScale_Center_X.Enabled = true;
+                numericUpDown_ActivityCaloriesScale_Center_Y.Enabled = true;
+                label115.Enabled = true;
+                label119.Enabled = true;
+                label120.Enabled = true;
+            }
         }
 
         private void checkBox_DND_CheckedChanged(object sender, EventArgs e)
@@ -4761,15 +4822,15 @@ namespace GTR_Watch_face
 
         public Bitmap ApplyMask(Bitmap inputImage, Bitmap mask)
         {
-            ushort[] bgColors = { 203, 255, 240 };
+            //ushort[] bgColors = { 203, 255, 240 };
             ImageMagick.MagickImage image = new ImageMagick.MagickImage(inputImage);
             //ImageMagick.MagickImage image = new ImageMagick.MagickImage("0.png");
             ImageMagick.MagickImage combineMask = new ImageMagick.MagickImage(mask);
 
-            image.Composite(combineMask, ImageMagick.CompositeOperator.CopyAlpha);
+            image.Composite(combineMask, ImageMagick.CompositeOperator.CopyAlpha, Channels.Alpha);
             //image.Settings.BackgroundColor = new ImageMagick.MagickColor(bgColors[0], bgColors[1], bgColors[2]);
             //image.Alpha(ImageMagick.AlphaOption.Remove);
-            image.Transparent(ImageMagick.MagickColor.FromRgba(0, 0, 0, 0));
+            //image.Transparent(ImageMagick.MagickColor.FromRgba(0, 0, 0, 0));
 
             return image.ToBitmap();
         }

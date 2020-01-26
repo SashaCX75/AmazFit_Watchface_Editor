@@ -39,7 +39,8 @@ namespace GTR_Watch_face
 
             comboBox_StProg_ClockHand_Image.Items.AddRange(ListImages.ToArray());
             comboBox_SPSliced_Image.Items.AddRange(ListImages.ToArray());
-            
+
+            comboBox_ActivityCaloriesScale_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivitySteps_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityDistance_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityDistance_Decimal.Items.AddRange(ListImages.ToArray());
@@ -89,10 +90,10 @@ namespace GTR_Watch_face
             {
                 if (Watch_Face.Background.Image != null)
                     //comboBox_Background.Text = Watch_Face.Background.Image.ImageIndex.ToString();
-                    checkBoxSetText(comboBox_Background, Watch_Face.Background.Image.ImageIndex);
+                    comboBoxSetText(comboBox_Background, Watch_Face.Background.Image.ImageIndex);
                 if (Watch_Face.Background.Preview != null)
                     //comboBox_Preview.Text comboBox_Preview Watch_Face.Background.Preview.ImageIndex.ToString();
-                    checkBoxSetText(comboBox_Preview, Watch_Face.Background.Preview.ImageIndex);
+                    comboBoxSetText(comboBox_Preview, Watch_Face.Background.Preview.ImageIndex);
             }
 
             #region Time
@@ -106,13 +107,13 @@ namespace GTR_Watch_face
                     numericUpDown_Hours_Tens_Y.Value = Watch_Face.Time.Hours.Tens.Y;
                     numericUpDown_Hours_Tens_Count.Value = Watch_Face.Time.Hours.Tens.ImagesCount;
                     //comboBox_Hours_Tens_Image.Text = Watch_Face.Time.Hours.Tens.ImageIndex.ToString();
-                    checkBoxSetText(comboBox_Hours_Tens_Image, Watch_Face.Time.Hours.Tens.ImageIndex);
+                    comboBoxSetText(comboBox_Hours_Tens_Image, Watch_Face.Time.Hours.Tens.ImageIndex);
 
                     numericUpDown_Hours_Ones_X.Value = Watch_Face.Time.Hours.Ones.X;
                     numericUpDown_Hours_Ones_Y.Value = Watch_Face.Time.Hours.Ones.Y;
                     numericUpDown_Hours_Ones_Count.Value = Watch_Face.Time.Hours.Ones.ImagesCount;
                     //comboBox_Hours_Ones_Image.Text = Watch_Face.Time.Hours.Ones.ImageIndex.ToString();
-                    checkBoxSetText(comboBox_Hours_Ones_Image, Watch_Face.Time.Hours.Ones.ImageIndex);
+                    comboBoxSetText(comboBox_Hours_Ones_Image, Watch_Face.Time.Hours.Ones.ImageIndex);
                 }
                 else checkBox_Hours.Checked = false;
 
@@ -123,13 +124,13 @@ namespace GTR_Watch_face
                     numericUpDown_Min_Tens_Y.Value = Watch_Face.Time.Minutes.Tens.Y;
                     numericUpDown_Min_Tens_Count.Value = Watch_Face.Time.Minutes.Tens.ImagesCount;
                     //comboBox_Min_Tens_Image.Text = Watch_Face.Time.Minutes.Tens.ImageIndex.ToString();
-                    checkBoxSetText(comboBox_Min_Tens_Image, Watch_Face.Time.Minutes.Tens.ImageIndex);
+                    comboBoxSetText(comboBox_Min_Tens_Image, Watch_Face.Time.Minutes.Tens.ImageIndex);
 
                     numericUpDown_Min_Ones_X.Value = Watch_Face.Time.Minutes.Ones.X;
                     numericUpDown_Min_Ones_Y.Value = Watch_Face.Time.Minutes.Ones.Y;
                     numericUpDown_Min_Ones_Count.Value = Watch_Face.Time.Minutes.Ones.ImagesCount;
                     //comboBox_Min_Ones_Image.Text = Watch_Face.Time.Minutes.Ones.ImageIndex.ToString();
-                    checkBoxSetText(comboBox_Min_Ones_Image, Watch_Face.Time.Minutes.Ones.ImageIndex);
+                    comboBoxSetText(comboBox_Min_Ones_Image, Watch_Face.Time.Minutes.Ones.ImageIndex);
                 }
                 else checkBox_Minutes.Checked = false;
 
@@ -140,13 +141,13 @@ namespace GTR_Watch_face
                     numericUpDown_Sec_Tens_Y.Value = Watch_Face.Time.Seconds.Tens.Y;
                     numericUpDown_Sec_Tens_Count.Value = Watch_Face.Time.Seconds.Tens.ImagesCount;
                     //comboBox_Sec_Tens_Image.Text = Watch_Face.Time.Seconds.Tens.ImageIndex.ToString();
-                    checkBoxSetText(comboBox_Sec_Tens_Image, Watch_Face.Time.Seconds.Tens.ImageIndex);
+                    comboBoxSetText(comboBox_Sec_Tens_Image, Watch_Face.Time.Seconds.Tens.ImageIndex);
 
                     numericUpDown_Sec_Ones_X.Value = Watch_Face.Time.Seconds.Ones.X;
                     numericUpDown_Sec_Ones_Y.Value = Watch_Face.Time.Seconds.Ones.Y;
                     numericUpDown_Sec_Ones_Count.Value = Watch_Face.Time.Seconds.Ones.ImagesCount;
                     //comboBox_Sec_Ones_Image.Text = Watch_Face.Time.Seconds.Ones.ImageIndex.ToString();
-                    checkBoxSetText(comboBox_Sec_Ones_Image, Watch_Face.Time.Seconds.Ones.ImageIndex);
+                    comboBoxSetText(comboBox_Sec_Ones_Image, Watch_Face.Time.Seconds.Ones.ImageIndex);
                 }
                 else checkBox_Seconds.Checked = false;
 
@@ -156,7 +157,7 @@ namespace GTR_Watch_face
                     numericUpDown_Delimiter_X.Value = Watch_Face.Time.Delimiter.X;
                     numericUpDown_Delimiter_Y.Value = Watch_Face.Time.Delimiter.Y;
                     //comboBox_Delimiter_Image.Text = Watch_Face.Time.Delimiter.ImageIndex.ToString();
-                    checkBoxSetText(comboBox_Delimiter_Image, Watch_Face.Time.Delimiter.ImageIndex);
+                    comboBoxSetText(comboBox_Delimiter_Image, Watch_Face.Time.Delimiter.ImageIndex);
                 }
                 else checkBox_Delimiter.Checked = false;
 
@@ -167,16 +168,16 @@ namespace GTR_Watch_face
                     numericUpDown_AmPm_Y.Value = Watch_Face.Time.AmPm.Y;
                     if (Watch_Face.Time.AmPm.ImageIndexAMCN > 0)
                         //comboBox_Image_Am.Text = Watch_Face.Time.AmPm.ImageIndexAMCN.ToString();
-                        checkBoxSetText(comboBox_Image_Am, Watch_Face.Time.AmPm.ImageIndexAMCN);
+                        comboBoxSetText(comboBox_Image_Am, Watch_Face.Time.AmPm.ImageIndexAMCN);
                     if (Watch_Face.Time.AmPm.ImageIndexAMEN > 0)
                         //comboBox_Image_Am.Text = Watch_Face.Time.AmPm.ImageIndexAMEN.ToString();
-                        checkBoxSetText(comboBox_Image_Am, Watch_Face.Time.AmPm.ImageIndexAMEN);
+                        comboBoxSetText(comboBox_Image_Am, Watch_Face.Time.AmPm.ImageIndexAMEN);
                     if (Watch_Face.Time.AmPm.ImageIndexPMCN > 0)
                         //comboBox_Image_Pm.Text = Watch_Face.Time.AmPm.ImageIndexPMCN.ToString();
-                        checkBoxSetText(comboBox_Image_Pm, Watch_Face.Time.AmPm.ImageIndexPMCN);
+                        comboBoxSetText(comboBox_Image_Pm, Watch_Face.Time.AmPm.ImageIndexPMCN);
                     if (Watch_Face.Time.AmPm.ImageIndexPMEN > 0)
                         //comboBox_Image_Pm.Text = Watch_Face.Time.AmPm.ImageIndexPMEN.ToString();
-                        checkBoxSetText(comboBox_Image_Pm, Watch_Face.Time.AmPm.ImageIndexPMEN);
+                        comboBoxSetText(comboBox_Image_Pm, Watch_Face.Time.AmPm.ImageIndexPMEN);
                 }
                 else checkBox_AmPm.Checked = false;
             }
@@ -202,7 +203,7 @@ namespace GTR_Watch_face
                     numericUpDown_WeekDay_Y.Value = Watch_Face.Date.WeekDay.Y;
                     numericUpDown_WeekDay_Count.Value = Watch_Face.Date.WeekDay.ImagesCount;
                     //comboBox_WeekDay_Image.Text = Watch_Face.Date.WeekDay.ImageIndex.ToString();
-                    checkBoxSetText(comboBox_WeekDay_Image, Watch_Face.Date.WeekDay.ImageIndex);
+                    comboBoxSetText(comboBox_WeekDay_Image, Watch_Face.Date.WeekDay.ImageIndex);
                 }
                 else checkBox_WeekDay.Checked = false;
 
@@ -222,10 +223,10 @@ namespace GTR_Watch_face
                         numericUpDown_OneLine_Spacing.Value = Watch_Face.Date.MonthAndDay.OneLine.Number.Spacing;
                         numericUpDown_OneLine_Count.Value = Watch_Face.Date.MonthAndDay.OneLine.Number.ImagesCount;
                         //comboBox_OneLine_Image.Text = Watch_Face.Date.MonthAndDay.OneLine.Number.ImageIndex.ToString();
-                        checkBoxSetText(comboBox_OneLine_Image, Watch_Face.Date.MonthAndDay.OneLine.Number.ImageIndex);
+                        comboBoxSetText(comboBox_OneLine_Image, Watch_Face.Date.MonthAndDay.OneLine.Number.ImageIndex);
                         //comboBox_OneLine_Delimiter.Text = Watch_Face.Date.MonthAndDay.OneLine.DelimiterImageIndex.ToString();
                         if (Watch_Face.Date.MonthAndDay.OneLine.DelimiterImageIndex != null)
-                            checkBoxSetText(comboBox_OneLine_Delimiter, (long)Watch_Face.Date.MonthAndDay.OneLine.DelimiterImageIndex);
+                            comboBoxSetText(comboBox_OneLine_Delimiter, (long)Watch_Face.Date.MonthAndDay.OneLine.DelimiterImageIndex);
                         AlignmentToString(comboBox_OneLine_Alignment, Watch_Face.Date.MonthAndDay.OneLine.Number.Alignment);
                         //comboBox_OneLine_Alignment.Text = Alignment;
                     }
@@ -244,7 +245,7 @@ namespace GTR_Watch_face
                             numericUpDown_MonthAndDayD_Spacing.Value = Watch_Face.Date.MonthAndDay.Separate.Day.Spacing;
                             numericUpDown_MonthAndDayD_Count.Value = Watch_Face.Date.MonthAndDay.Separate.Day.ImagesCount;
                             //comboBox_MonthAndDayD_Image.Text = Watch_Face.Date.MonthAndDay.Separate.Day.ImageIndex.ToString();
-                            checkBoxSetText(comboBox_MonthAndDayD_Image, Watch_Face.Date.MonthAndDay.Separate.Day.ImageIndex);
+                            comboBoxSetText(comboBox_MonthAndDayD_Image, Watch_Face.Date.MonthAndDay.Separate.Day.ImageIndex);
                             AlignmentToString(comboBox_MonthAndDayD_Alignment, Watch_Face.Date.MonthAndDay.Separate.Day.Alignment);
                             //comboBox_MonthAndDayD_Alignment.Text = Alignment;
                         }
@@ -261,7 +262,7 @@ namespace GTR_Watch_face
                             numericUpDown_MonthAndDayM_Spacing.Value = Watch_Face.Date.MonthAndDay.Separate.Month.Spacing;
                             numericUpDown_MonthAndDayM_Count.Value = Watch_Face.Date.MonthAndDay.Separate.Month.ImagesCount;
                             //comboBox_MonthAndDayM_Image.Text = Watch_Face.Date.MonthAndDay.Separate.Month.ImageIndex.ToString();
-                            checkBoxSetText(comboBox_MonthAndDayM_Image, Watch_Face.Date.MonthAndDay.Separate.Month.ImageIndex);
+                            comboBoxSetText(comboBox_MonthAndDayM_Image, Watch_Face.Date.MonthAndDay.Separate.Month.ImageIndex);
                             AlignmentToString(comboBox_MonthAndDayM_Alignment,Watch_Face.Date.MonthAndDay.Separate.Month.Alignment);
                             //comboBox_MonthAndDayM_Alignment.Text = Alignment;
                         }
@@ -275,7 +276,7 @@ namespace GTR_Watch_face
 
                             numericUpDown_MonthName_Count.Value = Watch_Face.Date.MonthAndDay.Separate.MonthName.ImagesCount;
                             //comboBox_MonthName_Image.Text = Watch_Face.Date.MonthAndDay.Separate.MonthName.ImageIndex.ToString();
-                            checkBoxSetText(comboBox_MonthName_Image, Watch_Face.Date.MonthAndDay.Separate.MonthName.ImageIndex);
+                            comboBoxSetText(comboBox_MonthName_Image, Watch_Face.Date.MonthAndDay.Separate.MonthName.ImageIndex);
                         }
                         else checkBox_MonthName.Checked = false;
                     }
@@ -300,9 +301,9 @@ namespace GTR_Watch_face
 
                         numericUpDown_Year_Spacing.Value = Watch_Face.Date.Year.OneLine.Number.Spacing;
                         numericUpDown_Year_Count.Value = Watch_Face.Date.Year.OneLine.Number.ImagesCount;
-                        checkBoxSetText(comboBox_Year_Image, Watch_Face.Date.Year.OneLine.Number.ImageIndex);
+                        comboBoxSetText(comboBox_Year_Image, Watch_Face.Date.Year.OneLine.Number.ImageIndex);
                         if (Watch_Face.Date.Year.OneLine.DelimiterImageIndex != null)
-                        checkBoxSetText(comboBox_Year_Delimiter, (long)Watch_Face.Date.Year.OneLine.DelimiterImageIndex);
+                        comboBoxSetText(comboBox_Year_Delimiter, (long)Watch_Face.Date.Year.OneLine.DelimiterImageIndex);
                         AlignmentToString(comboBox_Year_Alignment, Watch_Face.Date.Year.OneLine.Number.Alignment);
                         //comboBox_Year_Alignment.Text = Alignment;
                     }
@@ -330,7 +331,7 @@ namespace GTR_Watch_face
                     checkBox_ADDay_ClockHand.Checked = true;
                     numericUpDown_ADDay_ClockHand_X.Value = Watch_Face.DaysProgress.UnknownField2.Image.X;
                     numericUpDown_ADDay_ClockHand_Y.Value = Watch_Face.DaysProgress.UnknownField2.Image.Y;
-                    checkBoxSetText(comboBox_ADDay_ClockHand_Image, Watch_Face.DaysProgress.UnknownField2.Image.ImageIndex);
+                    comboBoxSetText(comboBox_ADDay_ClockHand_Image, Watch_Face.DaysProgress.UnknownField2.Image.ImageIndex);
                     if (Watch_Face.DaysProgress.UnknownField2.CenterOffset != null)
                     {
                         numericUpDown_ADDay_ClockHand_Offset_X.Value = Watch_Face.DaysProgress.UnknownField2.CenterOffset.X;
@@ -351,7 +352,7 @@ namespace GTR_Watch_face
                     checkBox_ADWeekDay_ClockHand.Checked = true;
                     numericUpDown_ADWeekDay_ClockHand_X.Value = Watch_Face.DaysProgress.AnalogDOW.Image.X;
                     numericUpDown_ADWeekDay_ClockHand_Y.Value = Watch_Face.DaysProgress.AnalogDOW.Image.Y;
-                    checkBoxSetText(comboBox_ADWeekDay_ClockHand_Image, Watch_Face.DaysProgress.AnalogDOW.Image.ImageIndex);
+                    comboBoxSetText(comboBox_ADWeekDay_ClockHand_Image, Watch_Face.DaysProgress.AnalogDOW.Image.ImageIndex);
                     if (Watch_Face.DaysProgress.AnalogDOW.CenterOffset != null)
                     {
                         numericUpDown_ADWeekDay_ClockHand_Offset_X.Value = Watch_Face.DaysProgress.AnalogDOW.CenterOffset.X;
@@ -372,7 +373,7 @@ namespace GTR_Watch_face
                     checkBox_ADMonth_ClockHand.Checked = true;
                     numericUpDown_ADMonth_ClockHand_X.Value = Watch_Face.DaysProgress.AnalogMonth.Image.X;
                     numericUpDown_ADMonth_ClockHand_Y.Value = Watch_Face.DaysProgress.AnalogMonth.Image.Y;
-                    checkBoxSetText(comboBox_ADMonth_ClockHand_Image, Watch_Face.DaysProgress.AnalogMonth.Image.ImageIndex);
+                    comboBoxSetText(comboBox_ADMonth_ClockHand_Image, Watch_Face.DaysProgress.AnalogMonth.Image.ImageIndex);
                     if (Watch_Face.DaysProgress.AnalogMonth.CenterOffset != null)
                     {
                         numericUpDown_ADMonth_ClockHand_Offset_X.Value = Watch_Face.DaysProgress.AnalogMonth.CenterOffset.X;
@@ -438,7 +439,7 @@ namespace GTR_Watch_face
                     checkBox_StProg_ClockHand.Checked = true;
                     numericUpDown_StProg_ClockHand_X.Value = Watch_Face.StepsProgress.ClockHand.Image.X;
                     numericUpDown_StProg_ClockHand_Y.Value = Watch_Face.StepsProgress.ClockHand.Image.Y;
-                    checkBoxSetText(comboBox_StProg_ClockHand_Image, Watch_Face.StepsProgress.ClockHand.Image.ImageIndex);
+                    comboBoxSetText(comboBox_StProg_ClockHand_Image, Watch_Face.StepsProgress.ClockHand.Image.ImageIndex);
                     if (Watch_Face.StepsProgress.ClockHand.CenterOffset != null)
                     {
                         numericUpDown_StProg_ClockHand_Offset_X.Value = Watch_Face.StepsProgress.ClockHand.CenterOffset.X;
@@ -458,7 +459,7 @@ namespace GTR_Watch_face
                 {
                     checkBox_SPSliced.Checked = true;
                     dataGridView_SPSliced.Rows.Clear();
-                    checkBoxSetText(comboBox_SPSliced_Image, Watch_Face.StepsProgress.Sliced.ImageIndex);
+                    comboBoxSetText(comboBox_SPSliced_Image, Watch_Face.StepsProgress.Sliced.ImageIndex);
                     foreach (Coordinates coordinates in Watch_Face.StepsProgress.Sliced.Coordinates)
                     {
                         var RowNew = new DataGridViewRow();
@@ -490,7 +491,7 @@ namespace GTR_Watch_face
                     numericUpDown_ActivitySteps_EndCorner_Y.Value = Watch_Face.Activity.Steps.Step.BottomRightY;
 
                     //comboBox_ActivitySteps_Image.Text = Watch_Face.Activity.Steps.Step.ImageIndex.ToString();
-                    checkBoxSetText(comboBox_ActivitySteps_Image, Watch_Face.Activity.Steps.Step.ImageIndex);
+                    comboBoxSetText(comboBox_ActivitySteps_Image, Watch_Face.Activity.Steps.Step.ImageIndex);
                     numericUpDown_ActivitySteps_Count.Value = Watch_Face.Activity.Steps.Step.ImagesCount;
                     numericUpDown_ActivitySteps_Spacing.Value = Watch_Face.Activity.Steps.Step.Spacing;
                     AlignmentToString(comboBox_ActivitySteps_Alignment, Watch_Face.Activity.Steps.Step.Alignment);
@@ -507,7 +508,7 @@ namespace GTR_Watch_face
                     numericUpDown_ActivityDistance_EndCorner_Y.Value = Watch_Face.Activity.Distance.Number.BottomRightY;
 
                     //comboBox_ActivityDistance_Image.Text = Watch_Face.Activity.Distance.Number.ImageIndex.ToString();
-                    checkBoxSetText(comboBox_ActivityDistance_Image, Watch_Face.Activity.Distance.Number.ImageIndex);
+                    comboBoxSetText(comboBox_ActivityDistance_Image, Watch_Face.Activity.Distance.Number.ImageIndex);
                     numericUpDown_ActivityDistance_Count.Value = Watch_Face.Activity.Distance.Number.ImagesCount;
                     numericUpDown_ActivityDistance_Spacing.Value = Watch_Face.Activity.Distance.Number.Spacing;
                     AlignmentToString(comboBox_ActivityDistance_Alignment, Watch_Face.Activity.Distance.Number.Alignment);
@@ -515,10 +516,10 @@ namespace GTR_Watch_face
 
                     //comboBox_ActivityDistance_Suffix.Text = Watch_Face.Activity.Distance.SuffixImageIndex.ToString();
                     if (Watch_Face.Activity.Distance.SuffixImageIndex != null)
-                        checkBoxSetText(comboBox_ActivityDistance_Suffix, (long)Watch_Face.Activity.Distance.SuffixImageIndex);
+                        comboBoxSetText(comboBox_ActivityDistance_Suffix, (long)Watch_Face.Activity.Distance.SuffixImageIndex);
                     //comboBox_ActivityDistance_Decimal.Text = Watch_Face.Activity.Distance.DecimalPointImageIndex.ToString();
                     if (Watch_Face.Activity.Distance.DecimalPointImageIndex != null)
-                        checkBoxSetText(comboBox_ActivityDistance_Decimal, (long)Watch_Face.Activity.Distance.DecimalPointImageIndex);
+                        comboBoxSetText(comboBox_ActivityDistance_Decimal, (long)Watch_Face.Activity.Distance.DecimalPointImageIndex);
                 }
                 else checkBox_ActivityDistance.Checked = false;
 
@@ -531,7 +532,7 @@ namespace GTR_Watch_face
                     numericUpDown_ActivityPuls_EndCorner_Y.Value = Watch_Face.Activity.Pulse.BottomRightY;
 
                     //comboBox_ActivityPuls_Image.Text = Watch_Face.Activity.Pulse.ImageIndex.ToString();
-                    checkBoxSetText(comboBox_ActivityPuls_Image, Watch_Face.Activity.Pulse.ImageIndex);
+                    comboBoxSetText(comboBox_ActivityPuls_Image, Watch_Face.Activity.Pulse.ImageIndex);
                     numericUpDown_ActivityPuls_Count.Value = Watch_Face.Activity.Pulse.ImagesCount;
                     numericUpDown_ActivityPuls_Spacing.Value = Watch_Face.Activity.Pulse.Spacing;
                     AlignmentToString(comboBox_ActivityPuls_Alignment, Watch_Face.Activity.Pulse.Alignment);
@@ -578,7 +579,7 @@ namespace GTR_Watch_face
                 {
                     checkBox_ActivityPuls_IconSet.Checked = true;
                     dataGridView_ActivityPuls_IconSet.Rows.Clear();
-                    checkBoxSetText(comboBox_ActivityPuls_IconSet_Image, Watch_Face.Activity.ColouredSquares.ImageIndex);
+                    comboBoxSetText(comboBox_ActivityPuls_IconSet_Image, Watch_Face.Activity.ColouredSquares.ImageIndex);
                     foreach (Coordinates coordinates in Watch_Face.Activity.ColouredSquares.Coordinates)
                     {
                         var RowNew = new DataGridViewRow();
@@ -596,7 +597,7 @@ namespace GTR_Watch_face
                     numericUpDown_ActivityCalories_EndCorner_Y.Value = Watch_Face.Activity.Calories.BottomRightY;
 
                     //comboBox_ActivityCalories_Image.Text = Watch_Face.Activity.Calories.ImageIndex.ToString();
-                    checkBoxSetText(comboBox_ActivityCalories_Image, Watch_Face.Activity.Calories.ImageIndex);
+                    comboBoxSetText(comboBox_ActivityCalories_Image, Watch_Face.Activity.Calories.ImageIndex);
                     numericUpDown_ActivityCalories_Count.Value = Watch_Face.Activity.Calories.ImagesCount;
                     numericUpDown_ActivityCalories_Spacing.Value = Watch_Face.Activity.Calories.Spacing;
                     AlignmentToString(comboBox_ActivityCalories_Alignment, Watch_Face.Activity.Calories.Alignment);
@@ -635,8 +636,16 @@ namespace GTR_Watch_face
                             comboBox_ActivityCaloriesScale_Flatness.SelectedIndex = 0;
                             break;
                     }
+
+                    if(Watch_Face.Activity.StepsGoal.ImageIndex != null)
+                    {
+                        comboBoxSetText(comboBox_ActivityCaloriesScale_Image, (long)Watch_Face.Activity.StepsGoal.ImageIndex);
+                        ColorToCoodinates(new_color, numericUpDown_ActivityCaloriesScale_ImageX,
+                            numericUpDown_ActivityCaloriesScale_ImageY);
+                        checkBox_ActivityCaloriesScale_Image.Checked = true;
+                    }
                 }
-                else checkBox_ActivityCaloriesScale.Checked = false;
+                else checkBox_ActivityCaloriesScale_Image.Checked = false;
 
                 if (Watch_Face.Activity.StarImage != null)
                 {
@@ -644,13 +653,13 @@ namespace GTR_Watch_face
                     numericUpDown_ActivityStar_X.Value = Watch_Face.Activity.StarImage.X;
                     numericUpDown_ActivityStar_Y.Value = Watch_Face.Activity.StarImage.Y;
                     //comboBox_ActivityStar_Image.Text = Watch_Face.Activity.StarImage.ImageIndex.ToString();
-                    checkBoxSetText(comboBox_ActivityStar_Image, Watch_Face.Activity.StarImage.ImageIndex);
+                    comboBoxSetText(comboBox_ActivityStar_Image, Watch_Face.Activity.StarImage.ImageIndex);
                 }
                 else checkBox_ActivityStar.Checked = false;
 
                 if (Watch_Face.Activity.NoDataImageIndex != null)
                 {
-                    checkBoxSetText(comboBox_Activity_NDImage, (long)Watch_Face.Activity.NoDataImageIndex);
+                    comboBoxSetText(comboBox_Activity_NDImage, (long)Watch_Face.Activity.NoDataImageIndex);
                 }
 
             }
@@ -681,10 +690,10 @@ namespace GTR_Watch_face
                     }
                     if (Watch_Face.Status.Bluetooth.ImageIndexOn != null)
                         //comboBox_Bluetooth_On.Text = Watch_Face.Status.Bluetooth.ImageIndexOn.Value.ToString();
-                        checkBoxSetText(comboBox_Bluetooth_On, (long)Watch_Face.Status.Bluetooth.ImageIndexOn);
+                        comboBoxSetText(comboBox_Bluetooth_On, (long)Watch_Face.Status.Bluetooth.ImageIndexOn);
                     if (Watch_Face.Status.Bluetooth.ImageIndexOff != null)
                         //comboBox_Bluetooth_Off.Text = Watch_Face.Status.Bluetooth.ImageIndexOff.Value.ToString();
-                        checkBoxSetText(comboBox_Bluetooth_Off, (long)Watch_Face.Status.Bluetooth.ImageIndexOff);
+                        comboBoxSetText(comboBox_Bluetooth_Off, (long)Watch_Face.Status.Bluetooth.ImageIndexOff);
                 }
                 else checkBox_Bluetooth.Checked = false;
 
@@ -698,10 +707,10 @@ namespace GTR_Watch_face
                     }
                     if (Watch_Face.Status.Alarm.ImageIndexOn != null)
                         //comboBox_Alarm_On.Text = Watch_Face.Status.Alarm.ImageIndexOn.Value.ToString();
-                        checkBoxSetText(comboBox_Alarm_On, (long)Watch_Face.Status.Alarm.ImageIndexOn);
+                        comboBoxSetText(comboBox_Alarm_On, (long)Watch_Face.Status.Alarm.ImageIndexOn);
                     if (Watch_Face.Status.Alarm.ImageIndexOff != null)
                         //comboBox_Alarm_Off.Text = Watch_Face.Status.Alarm.ImageIndexOff.Value.ToString();
-                        checkBoxSetText(comboBox_Alarm_Off, (long)Watch_Face.Status.Alarm.ImageIndexOff);
+                        comboBoxSetText(comboBox_Alarm_Off, (long)Watch_Face.Status.Alarm.ImageIndexOff);
                 }
                 else checkBox_Alarm.Checked = false;
 
@@ -715,10 +724,10 @@ namespace GTR_Watch_face
                     }
                     if (Watch_Face.Status.Lock.ImageIndexOn != null)
                         //comboBox_Lock_On.Text = Watch_Face.Status.Lock.ImageIndexOn.Value.ToString();
-                        checkBoxSetText(comboBox_Lock_On, (long)Watch_Face.Status.Lock.ImageIndexOn);
+                        comboBoxSetText(comboBox_Lock_On, (long)Watch_Face.Status.Lock.ImageIndexOn);
                     if (Watch_Face.Status.Lock.ImageIndexOff != null)
                         //comboBox_Lock_Off.Text = Watch_Face.Status.Lock.ImageIndexOff.Value.ToString();
-                        checkBoxSetText(comboBox_Lock_Off, (long)Watch_Face.Status.Lock.ImageIndexOff);
+                        comboBoxSetText(comboBox_Lock_Off, (long)Watch_Face.Status.Lock.ImageIndexOff);
                 }
                 else checkBox_Lock.Checked = false;
 
@@ -732,10 +741,10 @@ namespace GTR_Watch_face
                     }
                     if (Watch_Face.Status.DoNotDisturb.ImageIndexOn != null)
                         //comboBox_DND_On.Text = Watch_Face.Status.DoNotDisturb.ImageIndexOn.Value.ToString();
-                        checkBoxSetText(comboBox_DND_On, (long)Watch_Face.Status.DoNotDisturb.ImageIndexOn);
+                        comboBoxSetText(comboBox_DND_On, (long)Watch_Face.Status.DoNotDisturb.ImageIndexOn);
                     if (Watch_Face.Status.DoNotDisturb.ImageIndexOff != null)
                         //comboBox_DND_Off.Text = Watch_Face.Status.DoNotDisturb.ImageIndexOff.Value.ToString();
-                        checkBoxSetText(comboBox_DND_Off, (long)Watch_Face.Status.DoNotDisturb.ImageIndexOff);
+                        comboBoxSetText(comboBox_DND_Off, (long)Watch_Face.Status.DoNotDisturb.ImageIndexOff);
                 }
                 else checkBox_DND.Checked = false;
             }
@@ -755,7 +764,7 @@ namespace GTR_Watch_face
                     numericUpDown_Battery_Text_Spacing.Value = Watch_Face.Battery.Text.Spacing;
                     numericUpDown_Battery_Text_Count.Value = Watch_Face.Battery.Text.ImagesCount;
                     //comboBox_Battery_Text_Image.Text = Watch_Face.Battery.Text.ImageIndex.ToString();
-                    checkBoxSetText(comboBox_Battery_Text_Image, Watch_Face.Battery.Text.ImageIndex);
+                    comboBoxSetText(comboBox_Battery_Text_Image, Watch_Face.Battery.Text.ImageIndex);
                     AlignmentToString(comboBox_Battery_Text_Alignment, Watch_Face.Battery.Text.Alignment);
                     //comboBox_Battery_Text_Alignment.Text = Alignment;
                 }
@@ -768,7 +777,7 @@ namespace GTR_Watch_face
                     numericUpDown_Battery_Img_Y.Value = Watch_Face.Battery.Images.Y;
                     numericUpDown_Battery_Img_Count.Value = Watch_Face.Battery.Images.ImagesCount;
                     //comboBox_Battery_Img_Image.Text = Watch_Face.Battery.Images.ImageIndex.ToString();
-                    checkBoxSetText(comboBox_Battery_Img_Image, Watch_Face.Battery.Images.ImageIndex);
+                    comboBoxSetText(comboBox_Battery_Img_Image, Watch_Face.Battery.Images.ImageIndex);
                 }
                 else checkBox_Battery_Img.Checked = false;
 
@@ -777,7 +786,7 @@ namespace GTR_Watch_face
                     checkBox_Battery_ClockHand.Checked = true;
                     numericUpDown_Battery_ClockHand_X.Value = Watch_Face.Battery.Unknown4.Image.X;
                     numericUpDown_Battery_ClockHand_Y.Value = Watch_Face.Battery.Unknown4.Image.Y;
-                    checkBoxSetText(comboBox_Battery_ClockHand_Image, Watch_Face.Battery.Unknown4.Image.ImageIndex);
+                    comboBoxSetText(comboBox_Battery_ClockHand_Image, Watch_Face.Battery.Unknown4.Image.ImageIndex);
                     if (Watch_Face.Battery.Unknown4.CenterOffset != null)
                     {
                         numericUpDown_Battery_ClockHand_Offset_X.Value = Watch_Face.Battery.Unknown4.CenterOffset.X;
@@ -799,7 +808,7 @@ namespace GTR_Watch_face
                     numericUpDown_Battery_Percent_X.Value = Watch_Face.Battery.Percent.X;
                     numericUpDown_Battery_Percent_Y.Value = Watch_Face.Battery.Percent.Y;
                     //comboBox_Battery_Percent_Image.Text = Watch_Face.Battery.Percent.ImageIndex.ToString();
-                    checkBoxSetText(comboBox_Battery_Percent_Image, Watch_Face.Battery.Percent.ImageIndex);
+                    comboBoxSetText(comboBox_Battery_Percent_Image, Watch_Face.Battery.Percent.ImageIndex);
                 }
                 else checkBox_Battery_Percent.Checked = false;
 
@@ -841,7 +850,7 @@ namespace GTR_Watch_face
                 {
                     checkBox_Battery_IconSet.Checked = true;
                     dataGridView_Battery_IconSet.Rows.Clear();
-                    checkBoxSetText(comboBox_Battery_IconSet_Image, Watch_Face.Battery.Icons.ImageIndex);
+                    comboBoxSetText(comboBox_Battery_IconSet_Image, Watch_Face.Battery.Icons.ImageIndex);
                     foreach (Coordinates coordinates in Watch_Face.Battery.Icons.Coordinates)
                     {
                         var RowNew = new DataGridViewRow();
@@ -872,7 +881,7 @@ namespace GTR_Watch_face
                     numericUpDown_AnalogClock_Hour_X.Value = Watch_Face.AnalogDialFace.Hours.Image.X;
                     numericUpDown_AnalogClock_Hour_Y.Value = Watch_Face.AnalogDialFace.Hours.Image.Y;
                     //comboBox_AnalogClock_Hour_Image.Text = Watch_Face.AnalogDialFace.Hours.Image.ImageIndex.ToString();
-                    checkBoxSetText(comboBox_AnalogClock_Hour_Image, Watch_Face.AnalogDialFace.Hours.Image.ImageIndex);
+                    comboBoxSetText(comboBox_AnalogClock_Hour_Image, Watch_Face.AnalogDialFace.Hours.Image.ImageIndex);
 
                     if (Watch_Face.AnalogDialFace.Hours.CenterOffset != null)
                     {
@@ -889,7 +898,7 @@ namespace GTR_Watch_face
                     numericUpDown_AnalogClock_Min_X.Value = Watch_Face.AnalogDialFace.Minutes.Image.X;
                     numericUpDown_AnalogClock_Min_Y.Value = Watch_Face.AnalogDialFace.Minutes.Image.Y;
                     //comboBox_AnalogClock_Min_Image.Text = Watch_Face.AnalogDialFace.Minutes.Image.ImageIndex.ToString();
-                    checkBoxSetText(comboBox_AnalogClock_Min_Image, Watch_Face.AnalogDialFace.Minutes.Image.ImageIndex);
+                    comboBoxSetText(comboBox_AnalogClock_Min_Image, Watch_Face.AnalogDialFace.Minutes.Image.ImageIndex);
 
                     if (Watch_Face.AnalogDialFace.Minutes.CenterOffset != null)
                     {
@@ -906,7 +915,7 @@ namespace GTR_Watch_face
                     numericUpDown_AnalogClock_Sec_X.Value = Watch_Face.AnalogDialFace.Seconds.Image.X;
                     numericUpDown_AnalogClock_Sec_Y.Value = Watch_Face.AnalogDialFace.Seconds.Image.Y;
                     //comboBox_AnalogClock_Sec_Image.Text = Watch_Face.AnalogDialFace.Seconds.Image.ImageIndex.ToString();
-                    checkBoxSetText(comboBox_AnalogClock_Sec_Image, Watch_Face.AnalogDialFace.Seconds.Image.ImageIndex);
+                    comboBoxSetText(comboBox_AnalogClock_Sec_Image, Watch_Face.AnalogDialFace.Seconds.Image.ImageIndex);
 
                     if (Watch_Face.AnalogDialFace.Seconds.CenterOffset != null)
                     {
@@ -923,7 +932,7 @@ namespace GTR_Watch_face
                     numericUpDown_HourCenterImage_X.Value = Watch_Face.AnalogDialFace.HourCenterImage.X;
                     numericUpDown_HourCenterImage_Y.Value = Watch_Face.AnalogDialFace.HourCenterImage.Y;
                     //comboBox_HourCenterImage_Image.Text = Watch_Face.AnalogDialFace.HourCenterImage.ImageIndex.ToString();
-                    checkBoxSetText(comboBox_HourCenterImage_Image, Watch_Face.AnalogDialFace.HourCenterImage.ImageIndex);
+                    comboBoxSetText(comboBox_HourCenterImage_Image, Watch_Face.AnalogDialFace.HourCenterImage.ImageIndex);
                 }
                 else checkBox_HourCenterImage.Checked = false;
 
@@ -933,7 +942,7 @@ namespace GTR_Watch_face
                     numericUpDown_MinCenterImage_X.Value = Watch_Face.AnalogDialFace.MinCenterImage.X;
                     numericUpDown_MinCenterImage_Y.Value = Watch_Face.AnalogDialFace.MinCenterImage.Y;
                     //comboBox_MinCenterImage_Image.Text = Watch_Face.AnalogDialFace.MinCenterImage.ImageIndex.ToString();
-                    checkBoxSetText(comboBox_MinCenterImage_Image, Watch_Face.AnalogDialFace.MinCenterImage.ImageIndex);
+                    comboBoxSetText(comboBox_MinCenterImage_Image, Watch_Face.AnalogDialFace.MinCenterImage.ImageIndex);
                 }
                 else checkBox_MinCenterImage.Checked = false;
 
@@ -943,7 +952,7 @@ namespace GTR_Watch_face
                     numericUpDown_SecCenterImage_X.Value = Watch_Face.AnalogDialFace.SecCenterImage.X;
                     numericUpDown_SecCenterImage_Y.Value = Watch_Face.AnalogDialFace.SecCenterImage.Y;
                     //comboBox_SecCenterImage_Image.Text = Watch_Face.AnalogDialFace.SecCenterImage.ImageIndex.ToString();
-                    checkBoxSetText(comboBox_SecCenterImage_Image, Watch_Face.AnalogDialFace.SecCenterImage.ImageIndex);
+                    comboBoxSetText(comboBox_SecCenterImage_Image, Watch_Face.AnalogDialFace.SecCenterImage.ImageIndex);
                 }
                 else checkBox_SecCenterImage.Checked = false;
             }
@@ -975,7 +984,7 @@ namespace GTR_Watch_face
                     numericUpDown_Weather_Text_Spacing.Value = Watch_Face.Weather.Temperature.Current.Spacing;
                     numericUpDown_Weather_Text_Count.Value = Watch_Face.Weather.Temperature.Current.ImagesCount;
                     //comboBox_Weather_Text_Image.Text = Watch_Face.Weather.Temperature.Current.ImageIndex.ToString();
-                    checkBoxSetText(comboBox_Weather_Text_Image, Watch_Face.Weather.Temperature.Current.ImageIndex);
+                    comboBoxSetText(comboBox_Weather_Text_Image, Watch_Face.Weather.Temperature.Current.ImageIndex);
                     AlignmentToString(comboBox_Weather_Text_Alignment, Watch_Face.Weather.Temperature.Current.Alignment);
                     //comboBox_Weather_Text_Alignment.Text = Alignment;
                 }
@@ -1002,7 +1011,7 @@ namespace GTR_Watch_face
                             Watch_Face.Weather.Temperature.Today.Separate.Day.ImagesCount;
                         //comboBox_Weather_Day_Image.Text =
                         //Watch_Face.Weather.Temperature.Today.Separate.Day.ImageIndex.ToString();
-                        checkBoxSetText(comboBox_Weather_Day_Image,
+                        comboBoxSetText(comboBox_Weather_Day_Image,
                             Watch_Face.Weather.Temperature.Today.Separate.Day.ImageIndex);
                         AlignmentToString(comboBox_Weather_Day_Alignment, Watch_Face.Weather.Temperature.Today.Separate.Day.Alignment);
                         //comboBox_Weather_Day_Alignment.Text = Alignment;
@@ -1028,7 +1037,7 @@ namespace GTR_Watch_face
                             Watch_Face.Weather.Temperature.Today.Separate.Night.ImagesCount;
                         //comboBox_Weather_Night_Image.Text =
                         //    Watch_Face.Weather.Temperature.Today.Separate.Night.ImageIndex.ToString();
-                        checkBoxSetText(comboBox_Weather_Night_Image,
+                        comboBoxSetText(comboBox_Weather_Night_Image,
                             Watch_Face.Weather.Temperature.Today.Separate.Night.ImageIndex);
                         AlignmentToString(comboBox_Weather_Night_Alignment, Watch_Face.Weather.Temperature.Today.Separate.Night.Alignment);
                         //comboBox_Weather_Night_Alignment.Text = Alignment;
@@ -1044,11 +1053,11 @@ namespace GTR_Watch_face
                 if ((Watch_Face.Weather.Temperature != null) && (Watch_Face.Weather.Temperature.Symbols != null))
                 {
                     //comboBox_Weather_Text_MinusImage.Text = Watch_Face.Weather.Temperature.Symbols.MinusImageIndex.ToString();
-                    checkBoxSetText(comboBox_Weather_Text_MinusImage, Watch_Face.Weather.Temperature.Symbols.MinusImageIndex);
+                    comboBoxSetText(comboBox_Weather_Text_MinusImage, Watch_Face.Weather.Temperature.Symbols.MinusImageIndex);
                     //comboBox_Weather_Text_DegImage.Text = Watch_Face.Weather.Temperature.Symbols.DegreesImageIndex.ToString();
-                    checkBoxSetText(comboBox_Weather_Text_DegImage, Watch_Face.Weather.Temperature.Symbols.DegreesImageIndex);
+                    comboBoxSetText(comboBox_Weather_Text_DegImage, Watch_Face.Weather.Temperature.Symbols.DegreesImageIndex);
                     //comboBox_Weather_Text_NDImage.Text = Watch_Face.Weather.Temperature.Symbols.NoDataImageIndex.ToString();
-                    checkBoxSetText(comboBox_Weather_Text_NDImage, Watch_Face.Weather.Temperature.Symbols.NoDataImageIndex);
+                    comboBoxSetText(comboBox_Weather_Text_NDImage, Watch_Face.Weather.Temperature.Symbols.NoDataImageIndex);
                 }
 
                 if ((Watch_Face.Weather.Icon != null) && (Watch_Face.Weather.Icon.Images != null))
@@ -1059,9 +1068,9 @@ namespace GTR_Watch_face
 
                     numericUpDown_Weather_Icon_Count.Value = Watch_Face.Weather.Icon.Images.ImagesCount;
                     //comboBox_Weather_Icon_Image.Text = Watch_Face.Weather.Icon.Images.ImageIndex.ToString();
-                    checkBoxSetText(comboBox_Weather_Icon_Image, Watch_Face.Weather.Icon.Images.ImageIndex);
+                    comboBoxSetText(comboBox_Weather_Icon_Image, Watch_Face.Weather.Icon.Images.ImageIndex);
                     //comboBox_Weather_Icon_NDImage.Text = Watch_Face.Weather.Icon.NoWeatherImageIndex.ToString();
-                    checkBoxSetText(comboBox_Weather_Icon_NDImage, Watch_Face.Weather.Icon.NoWeatherImageIndex);
+                    comboBoxSetText(comboBox_Weather_Icon_NDImage, Watch_Face.Weather.Icon.NoWeatherImageIndex);
                 }
                 else checkBox_Weather_Icon.Checked = false;
             }
@@ -1387,6 +1396,20 @@ namespace GTR_Watch_face
                         default:
                             Watch_Face.Activity.StepsGoal.Flatness = 0;
                             break;
+                    }
+
+                    if (checkBox_ActivityCaloriesScale_Image.Checked &&
+                        comboBox_ActivityCaloriesScale_Image.SelectedIndex >= 0)
+                    {
+                        int imageX = (int)numericUpDown_ActivityCaloriesScale_ImageX.Value;
+                        int imageY = (int)numericUpDown_ActivityCaloriesScale_ImageY.Value;
+                        int imageIndex = comboBox_ActivityCaloriesScale_Image.SelectedIndex;
+                        colorStr = CoodinatesToColor(imageX, imageY);
+                        Bitmap src = new Bitmap(ListImagesFullName[imageIndex]);
+                        Watch_Face.Activity.StepsGoal.CenterX = imageX + src.Width / 2;
+                        Watch_Face.Activity.StepsGoal.CenterY = imageY + src.Height / 2;
+                        Watch_Face.Activity.StepsGoal.Color = colorStr;
+                        Watch_Face.Activity.StepsGoal.ImageIndex = imageIndex;
                     }
                 }
 
@@ -2333,7 +2356,42 @@ namespace GTR_Watch_face
             return new_color;
         }
 
-        private void checkBoxSetText(ComboBox comboBox, long value)
+        private void ColorToCoodinates(Color color, NumericUpDown numericUpDown_X, NumericUpDown numericUpDown_Y)
+        {
+            //string sColor = ColorTranslator.ToHtml(color);
+            //string sColor = color.A.ToString("X") + color.R.ToString("X") + color.G.ToString("X") + color.B.ToString("X");
+            string sColor = color.R.ToString("X") + color.G.ToString("X") + color.B.ToString("X");
+
+            //sColor = "X123456";
+            //sColor = sColor.Remove(0, 1);
+            int sColorLenght = sColor.Length;
+            string colorX = sColor.Remove(3, sColorLenght - 3);
+            string colorY = sColor.Remove(0, sColorLenght - 3);
+
+            //int myInt = 2934;
+            //string myHex = myInt.ToString("X");  // Gives you hexadecimal
+            //int myNewInt = Convert.ToInt32(myHex, 16);  // Back to int again.
+
+            int X = Convert.ToInt32(colorX, 16);
+            int Y = Convert.ToInt32(colorY, 16);
+            numericUpDown_X.Value = X;
+            numericUpDown_Y.Value = Y;
+        }
+
+        private string CoodinatesToColor(int X, int Y)
+        {
+            string colorX = X.ToString("X3");
+            string colorY = Y.ToString("X3");
+            string color = "0xFF" + colorX + colorY;
+
+            //int myInt = 2934;
+            //string myHex = myInt.ToString("X");  // Gives you hexadecimal
+            //int myNewInt = Convert.ToInt32(myHex, 16);  // Back to int again.
+            
+            return color;
+        }
+
+        private void comboBoxSetText(ComboBox comboBox, long value)
         {
             //for (int i = 0; i < comboBox.Items.Count; i++)
             //{
@@ -2407,7 +2465,9 @@ namespace GTR_Watch_face
             comboBox_StProg_ClockHand_Image.Items.Clear();
             comboBox_SPSliced_Image.Text = "";
             comboBox_SPSliced_Image.Items.Clear();
-           
+
+            comboBox_ActivityCaloriesScale_Image.Text = "";
+            comboBox_ActivityCaloriesScale_Image.Items.Clear();
             comboBox_ActivitySteps_Image.Text = "";
             comboBox_ActivitySteps_Image.Items.Clear();
             comboBox_ActivityDistance_Image.Text = "";

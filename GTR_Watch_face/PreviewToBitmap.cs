@@ -975,31 +975,52 @@ namespace GTR_Watch_face
                     {
                         int x = 0;
                         int y = 0;
-                        //int count = 0;
-                        for (int count = 0; count < dataGridView_ActivityPuls_IconSet.Rows.Count; count++)
+                        int count = dataGridView_ActivityPuls_IconSet.Rows.Count - 1;
+                        int value = (int)((count - 1) * (Watch_Face_Preview_Set.Activity.Pulse - 73) / (90f));
+                        //value++;
+                        if (value > count - 1) value = count - 1;
+                        if (value <0) value = 0;
+                        if ((dataGridView_ActivityPuls_IconSet.Rows[value].Cells[0].Value != null) &&
+                                (dataGridView_ActivityPuls_IconSet.Rows[value].Cells[1].Value != null))
                         {
-                            if ((dataGridView_ActivityPuls_IconSet.Rows[count].Cells[0].Value != null) &&
-                                (dataGridView_ActivityPuls_IconSet.Rows[count].Cells[1].Value != null))
+                            if (Int32.TryParse(dataGridView_ActivityPuls_IconSet.Rows[value].Cells[0].Value.ToString(), out x) &&
+                                Int32.TryParse(dataGridView_ActivityPuls_IconSet.Rows[value].Cells[1].Value.ToString(), out y))
                             {
-                                if (Int32.TryParse(dataGridView_ActivityPuls_IconSet.Rows[count].Cells[0].Value.ToString(), out x) &&
-                                    Int32.TryParse(dataGridView_ActivityPuls_IconSet.Rows[count].Cells[1].Value.ToString(), out y))
+                                i = comboBox_ActivityPuls_IconSet_Image.SelectedIndex + value;
+                                if (i < ListImagesFullName.Count)
                                 {
-                                    i = comboBox_ActivityPuls_IconSet_Image.SelectedIndex + count;
-                                    if (i < ListImagesFullName.Count)
-                                    {
-                                        int value = (dataGridView_ActivityPuls_IconSet.Rows.Count - 1) * Watch_Face_Preview_Set.Activity.Pulse / 200;
-                                        value++;
-                                        if (count < value)
-                                        {
-                                            src = new Bitmap(ListImagesFullName[i]);
-                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
-                                            //count++;
-                                            src.Dispose();
-                                        }
-                                    }
+                                    src = new Bitmap(ListImagesFullName[i]);
+                                    gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                    src.Dispose();
                                 }
                             }
                         }
+
+
+                        //for (int count = 0; count < dataGridView_ActivityPuls_IconSet.Rows.Count; count++)
+                        //{
+                        //    if ((dataGridView_ActivityPuls_IconSet.Rows[count].Cells[0].Value != null) &&
+                        //        (dataGridView_ActivityPuls_IconSet.Rows[count].Cells[1].Value != null))
+                        //    {
+                        //        if (Int32.TryParse(dataGridView_ActivityPuls_IconSet.Rows[count].Cells[0].Value.ToString(), out x) &&
+                        //            Int32.TryParse(dataGridView_ActivityPuls_IconSet.Rows[count].Cells[1].Value.ToString(), out y))
+                        //        {
+                        //            i = comboBox_ActivityPuls_IconSet_Image.SelectedIndex + count;
+                        //            if (i < ListImagesFullName.Count)
+                        //            {
+                        //                int value = (dataGridView_ActivityPuls_IconSet.Rows.Count - 1) * Watch_Face_Preview_Set.Activity.Pulse / 200;
+                        //                value++;
+                        //                if (count < value)
+                        //                {
+                        //                    src = new Bitmap(ListImagesFullName[i]);
+                        //                    gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                        //                    //count++;
+                        //                    src.Dispose();
+                        //                }
+                        //            }
+                        //        }
+                        //    }
+                        //}
                     }
                 }
 
@@ -1068,47 +1089,68 @@ namespace GTR_Watch_face
                 // шкала калорий 
                 if (checkBox_ActivityCaloriesScale.Checked)
                 {
-                    gPanel.SmoothingMode = SmoothingMode.AntiAlias;
-                    Pen pen = new Pen(comboBox_ActivityCaloriesScale_Color.BackColor,
-                        (float)numericUpDown_ActivityCaloriesScale_Width.Value);
-
-                    switch (comboBox_ActivityCaloriesScale_Flatness.SelectedIndex)
+                    if (checkBox_ActivityCaloriesScale_Image.Checked && 
+                        comboBox_ActivityCaloriesScale_Image.SelectedIndex>=0)
                     {
-                        case 1:
-                            pen.EndCap = LineCap.Triangle;
-                            pen.StartCap = LineCap.Triangle;
-                            break;
-                        case 2:
-                            pen.EndCap = LineCap.Flat;
-                            pen.StartCap = LineCap.Flat;
-                            break;
-                        default:
-                            pen.EndCap = LineCap.Round;
-                            pen.StartCap = LineCap.Round;
-                            break;
+                        int x = (int)numericUpDown_ActivityCaloriesScale_ImageX.Value;
+                        int y = (int)numericUpDown_ActivityCaloriesScale_ImageY.Value;
+                        float width = (float)numericUpDown_ActivityCaloriesScale_Width.Value;
+                        int ImageIndex = comboBox_ActivityCaloriesScale_Image.SelectedIndex;
+                        int radius = (int)numericUpDown_ActivityCaloriesScale_Radius_X.Value;
+                        float StartAngle = (float)numericUpDown_ActivityCaloriesScale_StartAngle.Value - 90;
+                        float EndAngle = (float)(numericUpDown_ActivityCaloriesScale_EndAngle.Value -
+                            numericUpDown_ActivityCaloriesScale_StartAngle.Value);
+                        float AngleScale = (float)(8f * Watch_Face_Preview_Set.Activity.Calories /
+                            Watch_Face_Preview_Set.Activity.StepsGoal);
+                        if (AngleScale > 1) AngleScale = 1;
+                        EndAngle = EndAngle * AngleScale;
+                        int lineCap = comboBox_ActivityCaloriesScale_Flatness.SelectedIndex;
+                        CircleOnBitmap(gPanel, x, y, ImageIndex, radius, width, lineCap, StartAngle, EndAngle);
                     }
-
-                    int x = (int)numericUpDown_ActivityCaloriesScale_Center_X.Value -
-                        (int)numericUpDown_ActivityCaloriesScale_Radius_X.Value;
-                    int y = (int)numericUpDown_ActivityCaloriesScale_Center_Y.Value -
-                        (int)numericUpDown_ActivityCaloriesScale_Radius_Y.Value;
-                    int width = (int)numericUpDown_ActivityCaloriesScale_Radius_X.Value * 2;
-                    //int height = (int)numericUpDown_Battery_Scale_Radius_Y.Value * 2;
-                    int height = width;
-                    float StartAngle = (float)numericUpDown_ActivityCaloriesScale_StartAngle.Value - 90;
-                    float EndAngle = (float)(numericUpDown_ActivityCaloriesScale_EndAngle.Value -
-                        numericUpDown_ActivityCaloriesScale_StartAngle.Value);
-                    float AngleScale = (float)(8f * Watch_Face_Preview_Set.Activity.Calories / 
-                        Watch_Face_Preview_Set.Activity.StepsGoal);
-                    if (AngleScale > 1) AngleScale = 1;
-                    EndAngle = EndAngle * AngleScale;
-                    try
+                    else
                     {
-                        if ((width > 0) && (height > 0)) gPanel.DrawArc(pen, x, y, width, height, StartAngle, EndAngle);
-                    }
-                    catch (Exception)
-                    {
+                        gPanel.SmoothingMode = SmoothingMode.AntiAlias;
+                        Pen pen = new Pen(comboBox_ActivityCaloriesScale_Color.BackColor,
+                            (float)numericUpDown_ActivityCaloriesScale_Width.Value);
 
+                        switch (comboBox_ActivityCaloriesScale_Flatness.SelectedIndex)
+                        {
+                            case 1:
+                                pen.EndCap = LineCap.Triangle;
+                                pen.StartCap = LineCap.Triangle;
+                                break;
+                            case 2:
+                                pen.EndCap = LineCap.Flat;
+                                pen.StartCap = LineCap.Flat;
+                                break;
+                            default:
+                                pen.EndCap = LineCap.Round;
+                                pen.StartCap = LineCap.Round;
+                                break;
+                        }
+
+                        int x = (int)numericUpDown_ActivityCaloriesScale_Center_X.Value -
+                            (int)numericUpDown_ActivityCaloriesScale_Radius_X.Value;
+                        int y = (int)numericUpDown_ActivityCaloriesScale_Center_Y.Value -
+                            (int)numericUpDown_ActivityCaloriesScale_Radius_Y.Value;
+                        int width = (int)numericUpDown_ActivityCaloriesScale_Radius_X.Value * 2;
+                        //int height = (int)numericUpDown_Battery_Scale_Radius_Y.Value * 2;
+                        int height = width;
+                        float StartAngle = (float)numericUpDown_ActivityCaloriesScale_StartAngle.Value - 90;
+                        float EndAngle = (float)(numericUpDown_ActivityCaloriesScale_EndAngle.Value -
+                            numericUpDown_ActivityCaloriesScale_StartAngle.Value);
+                        float AngleScale = (float)(8f * Watch_Face_Preview_Set.Activity.Calories /
+                            Watch_Face_Preview_Set.Activity.StepsGoal);
+                        if (AngleScale > 1) AngleScale = 1;
+                        EndAngle = EndAngle * AngleScale;
+                        try
+                        {
+                            if ((width > 0) && (height > 0)) gPanel.DrawArc(pen, x, y, width, height, StartAngle, EndAngle);
+                        }
+                        catch (Exception)
+                        {
+
+                        } 
                     }
                 }
 
@@ -2043,6 +2085,91 @@ namespace GTR_Watch_face
             graphics.RotateTransform(-angle);
             graphics.TranslateTransform(-offSet_X - offsetX, -offSet_Y - offsetY);
             src.Dispose();
+        }
+
+        /// <summary>Рисует стрелки</summary>
+        /// <param name="graphics">Поверхность для рисования</param>
+        /// <param name="x">Координата X</param>
+        /// <param name="y">Координата Y</param>
+        /// <param name="imageIndex">Номер изображения</param>
+        /// <param name="radius">Радиус</param>
+        /// <param name="width">Толщина линии</param>
+        /// <param name="lineCap">Тип окончания линии</param>
+        /// <param name="startAngle">Начальный угол</param>
+        /// <param name="endAngle">Общий угол</param>
+        private void CircleOnBitmap(Graphics graphics, int x, int y, int imageIndex, int radius, float width,
+            int lineCap, float StartAngle, float EndAngle)
+        {
+            Bitmap src = new Bitmap(ListImagesFullName[imageIndex]);
+            Pen pen = new Pen(Color.White, width);
+
+            switch (lineCap)
+            {
+                case 1:
+                    pen.EndCap = LineCap.Triangle;
+                    pen.StartCap = LineCap.Triangle;
+                    break;
+                case 2:
+                    pen.EndCap = LineCap.Flat;
+                    pen.StartCap = LineCap.Flat;
+                    break;
+                default:
+                    pen.EndCap = LineCap.Round;
+                    pen.StartCap = LineCap.Round;
+                    break;
+            }
+            float centrX = src.Width / 2f;
+            float centrY = src.Height / 2f;
+            centrX--;
+            centrY--;
+            //float srcX = centrX - radius - width / 2f;
+            //float srcY = centrY - radius - width / 2f;
+            //float CircleWidth = 2 * radius + width;
+            float srcX = centrX - radius;
+            float srcY = centrY - radius;
+            float CircleWidth = 2 * radius;
+            Bitmap mask = new Bitmap(src.Width, src.Height);
+            Graphics gPanel = Graphics.FromImage(mask);
+            gPanel.SmoothingMode = SmoothingMode.AntiAlias;
+            try
+            {
+                gPanel.DrawArc(pen, srcX, srcY, CircleWidth, CircleWidth, StartAngle, EndAngle);
+                src = ApplyAlfaMask(src, mask);
+                graphics.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                src.Dispose();
+                mask.Dispose();
+            }
+            catch (Exception)
+            {
+
+            }
+            src.Dispose();
+
+        }
+
+        public Bitmap ApplyAlfaMask(Bitmap inputImage, Bitmap mask)
+        {
+            //Resulting collage.
+            Bitmap result = new Bitmap(inputImage);
+            for (int x = 0; x < result.Width; x++)
+            {
+                for (int y = 0; y < result.Height; y++)
+                {
+                    Color colorResult = result.GetPixel(x, y);
+                    Color maskResult = mask.GetPixel(x, y);
+                    if (maskResult.A>80)
+                    {
+                        result.SetPixel(x, y, Color.FromArgb(colorResult.A, colorResult.R, colorResult.G, colorResult.B));
+                    }
+                    else
+                    {
+                        result.SetPixel(x, y, Color.FromArgb(maskResult.A, colorResult.R, colorResult.G, colorResult.B));
+                    }
+                }
+            }
+            inputImage.Dispose();
+            mask.Dispose();
+            return result;
         }
 
         public Bitmap FormColor(Bitmap bitmap)
