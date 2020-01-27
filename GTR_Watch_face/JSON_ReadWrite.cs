@@ -39,12 +39,14 @@ namespace GTR_Watch_face
 
             comboBox_StProg_ClockHand_Image.Items.AddRange(ListImages.ToArray());
             comboBox_SPSliced_Image.Items.AddRange(ListImages.ToArray());
+            comboBox_StepsProgress_Image.Items.AddRange(ListImages.ToArray());
 
             comboBox_ActivityCaloriesScale_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivitySteps_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityDistance_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityDistance_Decimal.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityDistance_Suffix.Items.AddRange(ListImages.ToArray());
+            comboBox_ActivityPulsScale_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityPuls_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityPuls_IconSet_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityCalories_Image.Items.AddRange(ListImages.ToArray());
@@ -65,6 +67,7 @@ namespace GTR_Watch_face
             comboBox_Battery_Percent_Image.Items.AddRange(ListImages.ToArray());
             comboBox_Battery_ClockHand_Image.Items.AddRange(ListImages.ToArray());
             comboBox_Battery_IconSet_Image.Items.AddRange(ListImages.ToArray());
+            comboBox_Battery_Scale_Image.Items.AddRange(ListImages.ToArray());
 
             comboBox_AnalogClock_Hour_Image.Items.AddRange(ListImages.ToArray());
             comboBox_AnalogClock_Min_Image.Items.AddRange(ListImages.ToArray());
@@ -430,7 +433,16 @@ namespace GTR_Watch_face
                             //comboBox_StepsProgress_Flatness.Text = "Круглое";
                             comboBox_StepsProgress_Flatness.SelectedIndex = 0;
                             break;
-                    } 
+                    }
+
+                    if (Watch_Face.StepsProgress.Circle.ImageIndex != null)
+                    {
+                        comboBoxSetText(comboBox_StepsProgress_Image, (long)Watch_Face.StepsProgress.Circle.ImageIndex);
+                        ColorToCoodinates(new_color, numericUpDown_StepsProgress_ImageX,
+                            numericUpDown_StepsProgress_ImageY);
+                        checkBox_StepsProgress_Image.Checked = true;
+                    }
+                    else checkBox_StepsProgress_Image.Checked = false;
                 }
                 else checkBox_StepsProgress.Checked = false;
 
@@ -472,6 +484,7 @@ namespace GTR_Watch_face
             else
             {
                 checkBox_StepsProgress.Checked = false;
+                checkBox_StepsProgress_Image.Checked = false;
                 checkBox_StProg_ClockHand.Checked = false;
                 checkBox_SPSliced.Checked = false;
             }
@@ -571,6 +584,15 @@ namespace GTR_Watch_face
                             comboBox_ActivityPulsScale_Flatness.SelectedIndex = 0;
                             break;
                     }
+
+                    if (Watch_Face.Activity.Goal2.ImageIndex != null)
+                    {
+                        comboBoxSetText(comboBox_ActivityPulsScale_Image, (long)Watch_Face.Activity.Goal2.ImageIndex);
+                        ColorToCoodinates(new_color, numericUpDown_ActivityPulsScale_ImageX,
+                            numericUpDown_ActivityPulsScale_ImageY);
+                        checkBox_ActivityPulsScale_Image.Checked = true;
+                    }
+                    else checkBox_ActivityPulsScale_Image.Checked = false;
                 }
                 else checkBox_ActivityPulsScale.Checked = false;
 
@@ -644,8 +666,9 @@ namespace GTR_Watch_face
                             numericUpDown_ActivityCaloriesScale_ImageY);
                         checkBox_ActivityCaloriesScale_Image.Checked = true;
                     }
+                    else checkBox_ActivityCaloriesScale_Image.Checked = false;
                 }
-                else checkBox_ActivityCaloriesScale_Image.Checked = false;
+                else checkBox_ActivityCaloriesScale.Checked = false;
 
                 if (Watch_Face.Activity.StarImage != null)
                 {
@@ -670,9 +693,11 @@ namespace GTR_Watch_face
                 checkBox_ActivityDistance.Checked = false;
                 checkBox_ActivityPuls.Checked = false;
                 checkBox_ActivityPulsScale.Checked = false;
+                checkBox_ActivityPulsScale_Image.Checked = false;
                 checkBox_ActivityPuls_IconSet.Checked = false;
                 checkBox_ActivityCalories.Checked = false;
                 checkBox_ActivityCaloriesScale.Checked = false;
+                checkBox_ActivityCaloriesScale_Image.Checked = false;
                 checkBox_ActivityStar.Checked = false;
             }
             #endregion
@@ -843,6 +868,15 @@ namespace GTR_Watch_face
                             comboBox_Battery_Flatness.SelectedIndex = 0;
                             break;
                     }
+
+                    if (Watch_Face.Battery.Scale.ImageIndex != null)
+                    {
+                        comboBoxSetText(comboBox_Battery_Scale_Image, (long)Watch_Face.Battery.Scale.ImageIndex);
+                        ColorToCoodinates(new_color, numericUpDown_Battery_Scale_ImageX,
+                            numericUpDown_Battery_Scale_ImageY);
+                        checkBox_Battery_Scale_Image.Checked = true;
+                    }
+                    else checkBox_Battery_Scale_Image.Checked = false;
                 }
                 else checkBox_Battery_Scale.Checked = false;
 
@@ -867,6 +901,7 @@ namespace GTR_Watch_face
                 checkBox_Battery_ClockHand.Checked = false;
                 checkBox_Battery_Percent.Checked = false;
                 checkBox_Battery_Scale.Checked = false;
+                checkBox_Battery_Scale_Image.Checked = false;
                 checkBox_Battery_IconSet.Checked = false;
             }
             #endregion
@@ -1346,6 +1381,20 @@ namespace GTR_Watch_face
                             Watch_Face.Activity.Goal2.Flatness = 0;
                             break;
                     }
+
+                    if (checkBox_ActivityPulsScale_Image.Checked &&
+                        comboBox_ActivityPulsScale_Image.SelectedIndex >= 0)
+                    {
+                        int imageX = (int)numericUpDown_ActivityPulsScale_ImageX.Value;
+                        int imageY = (int)numericUpDown_ActivityPulsScale_ImageY.Value;
+                        int imageIndex = comboBox_ActivityPulsScale_Image.SelectedIndex;
+                        colorStr = CoodinatesToColor(imageX, imageY);
+                        Bitmap src = new Bitmap(ListImagesFullName[imageIndex]);
+                        Watch_Face.Activity.Goal2.CenterX = imageX + src.Width / 2;
+                        Watch_Face.Activity.Goal2.CenterY = imageY + src.Height / 2;
+                        Watch_Face.Activity.Goal2.Color = colorStr;
+                        Watch_Face.Activity.Goal2.ImageIndex = imageIndex;
+                    }
                 }
 
                 if ((checkBox_ActivityCalories.Checked) && (comboBox_ActivityCalories_Image.SelectedIndex >= 0))
@@ -1683,6 +1732,20 @@ namespace GTR_Watch_face
                         Watch_Face.StepsProgress.Circle.Flatness = 0;
                         break;
                 }
+
+                if (checkBox_StepsProgress_Image.Checked &&
+                    comboBox_StepsProgress_Image.SelectedIndex >= 0)
+                {
+                    int imageX = (int)numericUpDown_StepsProgress_ImageX.Value;
+                    int imageY = (int)numericUpDown_StepsProgress_ImageY.Value;
+                    int imageIndex = comboBox_StepsProgress_Image.SelectedIndex;
+                    colorStr = CoodinatesToColor(imageX, imageY);
+                    Bitmap src = new Bitmap(ListImagesFullName[imageIndex]);
+                    Watch_Face.StepsProgress.Circle.CenterX = imageX + src.Width / 2;
+                    Watch_Face.StepsProgress.Circle.CenterY = imageY + src.Height / 2;
+                    Watch_Face.StepsProgress.Circle.Color = colorStr;
+                    Watch_Face.StepsProgress.Circle.ImageIndex = imageIndex;
+                }
             }
 
             // прогресc шагов стрелкой
@@ -1928,6 +1991,20 @@ namespace GTR_Watch_face
                         default:
                             Watch_Face.Battery.Scale.Flatness = 0;
                             break;
+                    }
+
+                    if (checkBox_Battery_Scale_Image.Checked &&
+                        comboBox_Battery_Scale_Image.SelectedIndex >= 0)
+                    {
+                        int imageX = (int)numericUpDown_Battery_Scale_ImageX.Value;
+                        int imageY = (int)numericUpDown_Battery_Scale_ImageY.Value;
+                        int imageIndex = comboBox_Battery_Scale_Image.SelectedIndex;
+                        colorStr = CoodinatesToColor(imageX, imageY);
+                        Bitmap src = new Bitmap(ListImagesFullName[imageIndex]);
+                        Watch_Face.Battery.Scale.CenterX = imageX + src.Width / 2;
+                        Watch_Face.Battery.Scale.CenterY = imageY + src.Height / 2;
+                        Watch_Face.Battery.Scale.Color = colorStr;
+                        Watch_Face.Battery.Scale.ImageIndex = imageIndex;
                     }
                 }
 
@@ -2360,7 +2437,7 @@ namespace GTR_Watch_face
         {
             //string sColor = ColorTranslator.ToHtml(color);
             //string sColor = color.A.ToString("X") + color.R.ToString("X") + color.G.ToString("X") + color.B.ToString("X");
-            string sColor = color.R.ToString("X") + color.G.ToString("X") + color.B.ToString("X");
+            string sColor = color.R.ToString("X2") + color.G.ToString("X2") + color.B.ToString("X2");
 
             //sColor = "X123456";
             //sColor = sColor.Remove(0, 1);
@@ -2465,6 +2542,8 @@ namespace GTR_Watch_face
             comboBox_StProg_ClockHand_Image.Items.Clear();
             comboBox_SPSliced_Image.Text = "";
             comboBox_SPSliced_Image.Items.Clear();
+            comboBox_StepsProgress_Image.Text = "";
+            comboBox_StepsProgress_Image.Items.Clear();
 
             comboBox_ActivityCaloriesScale_Image.Text = "";
             comboBox_ActivityCaloriesScale_Image.Items.Clear();
@@ -2478,6 +2557,8 @@ namespace GTR_Watch_face
             comboBox_ActivityDistance_Suffix.Items.Clear();
             comboBox_ActivityPuls_Image.Text = "";
             comboBox_ActivityPuls_Image.Items.Clear();
+            comboBox_ActivityPulsScale_Image.Text = "";
+            comboBox_ActivityPulsScale_Image.Items.Clear();
             comboBox_ActivityPuls_IconSet_Image.Text = "";
             comboBox_ActivityPuls_IconSet_Image.Items.Clear();
             comboBox_ActivityCalories_Image.Text = "";
@@ -2515,6 +2596,8 @@ namespace GTR_Watch_face
             comboBox_Battery_ClockHand_Image.Items.Clear();
             comboBox_Battery_IconSet_Image.Text = "";
             comboBox_Battery_IconSet_Image.Items.Clear();
+            comboBox_Battery_Scale_Image.Text = "";
+            comboBox_Battery_Scale_Image.Items.Clear();
 
             comboBox_AnalogClock_Hour_Image.Text = "";
             comboBox_AnalogClock_Hour_Image.Items.Clear();

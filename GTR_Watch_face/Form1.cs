@@ -1834,7 +1834,7 @@ namespace GTR_Watch_face
                 panel_Time.Height = 1;
                 panel_Date.Height = 1;
                 panel_AnalogDate.Height = 1;
-                panel_StepsProgress.Height = (int)(145 * currentDPI);
+                panel_StepsProgress.Height = (int)(165 * currentDPI);
                 panel_Activity.Height = 1;
                 panel_Status.Height = 1;
                 panel_Battery.Height = 1;
@@ -1891,11 +1891,43 @@ namespace GTR_Watch_face
                 panel_StepsProgress.Height = 1;
                 panel_Activity.Height = 1;
                 panel_Status.Height = 1;
-                panel_Battery.Height = (int)(165 * currentDPI);
+                panel_Battery.Height = (int)(185 * currentDPI);
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
             }
             else panel_Battery.Height = 1;
+        }
+
+        private void checkBox_Battery_Scale_Image_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_Battery_Scale_Image.Checked)
+            {
+                comboBox_Battery_Scale_Image.Enabled = true;
+                numericUpDown_Battery_Scale_ImageX.Enabled = true;
+                numericUpDown_Battery_Scale_ImageY.Enabled = true;
+                label428.Enabled = true;
+                label429.Enabled = true;
+                comboBox_Battery_Scale_Color.Enabled = false;
+                numericUpDown_Battery_Scale_Center_X.Enabled = false;
+                numericUpDown_Battery_Scale_Center_Y.Enabled = false;
+                label201.Enabled = false;
+                label205.Enabled = false;
+                label206.Enabled = false;
+            }
+            else
+            {
+                comboBox_Battery_Scale_Image.Enabled = false;
+                numericUpDown_Battery_Scale_ImageX.Enabled = false;
+                numericUpDown_Battery_Scale_ImageY.Enabled = false;
+                label428.Enabled = false;
+                label429.Enabled = false;
+                comboBox_Battery_Scale_Color.Enabled = true;
+                numericUpDown_Battery_Scale_Center_X.Enabled = true;
+                numericUpDown_Battery_Scale_Center_Y.Enabled = true;
+                label201.Enabled = true;
+                label205.Enabled = true;
+                label206.Enabled = true;
+            }
         }
 
         private void button_AnalogClock_Click(object sender, EventArgs e)
@@ -2158,7 +2190,11 @@ namespace GTR_Watch_face
             numericUpDown_StepsProgress_Center_X.Enabled = b;
             numericUpDown_StepsProgress_Center_Y.Enabled = b;
             numericUpDown_StepsProgress_Radius_X.Enabled = b;
-            //numericUpDown_StepsProgress_Radius_Y.Enabled = b;
+            checkBox_StepsProgress_Image.Enabled = b;
+            comboBox_StepsProgress_Image.Enabled = b;
+            numericUpDown_StepsProgress_ImageX.Enabled = b;
+            numericUpDown_StepsProgress_ImageY.Enabled = b;
+
             numericUpDown_StepsProgress_Width.Enabled = b;
             comboBox_StepsProgress_Color.Enabled = b;
             numericUpDown_StepsProgress_StartAngle.Enabled = b;
@@ -2174,6 +2210,72 @@ namespace GTR_Watch_face
             label110.Enabled = b;
             label111.Enabled = b;
             label348.Enabled = b;
+            label432.Enabled = b;
+            label433.Enabled = b;
+
+            if (b)
+            {
+                if (checkBox_StepsProgress_Image.Checked)
+                {
+                    comboBox_StepsProgress_Image.Enabled = true;
+                    numericUpDown_StepsProgress_ImageX.Enabled = true;
+                    numericUpDown_StepsProgress_ImageY.Enabled = true;
+                    label432.Enabled = true;
+                    label433.Enabled = true;
+                    comboBox_StepsProgress_Color.Enabled = false;
+                    numericUpDown_StepsProgress_Center_X.Enabled = false;
+                    numericUpDown_StepsProgress_Center_Y.Enabled = false;
+                    label104.Enabled = false;
+                    label105.Enabled = false;
+                    label109.Enabled = false;
+                }
+                else
+                {
+                    comboBox_StepsProgress_Image.Enabled = false;
+                    numericUpDown_StepsProgress_ImageX.Enabled = false;
+                    numericUpDown_StepsProgress_ImageY.Enabled = false;
+                    label432.Enabled = false;
+                    label433.Enabled = false;
+                    comboBox_StepsProgress_Color.Enabled = true;
+                    numericUpDown_StepsProgress_Center_X.Enabled = true;
+                    numericUpDown_StepsProgress_Center_Y.Enabled = true;
+                    label104.Enabled = true;
+                    label105.Enabled = true;
+                    label109.Enabled = true;
+                }
+            }
+        }
+
+        private void checkBox_StepsProgress_Image_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_StepsProgress_Image.Checked)
+            {
+                comboBox_StepsProgress_Image.Enabled = true;
+                numericUpDown_StepsProgress_ImageX.Enabled = true;
+                numericUpDown_StepsProgress_ImageY.Enabled = true;
+                label432.Enabled = true;
+                label433.Enabled = true;
+                comboBox_StepsProgress_Color.Enabled = false;
+                numericUpDown_StepsProgress_Center_X.Enabled = false;
+                numericUpDown_StepsProgress_Center_Y.Enabled = false;
+                label104.Enabled = false;
+                label105.Enabled = false;
+                label109.Enabled = false;
+            }
+            else
+            {
+                comboBox_StepsProgress_Image.Enabled = false;
+                numericUpDown_StepsProgress_ImageX.Enabled = false;
+                numericUpDown_StepsProgress_ImageY.Enabled = false;
+                label432.Enabled = false;
+                label433.Enabled = false;
+                comboBox_StepsProgress_Color.Enabled = true;
+                numericUpDown_StepsProgress_Center_X.Enabled = true;
+                numericUpDown_StepsProgress_Center_Y.Enabled = true;
+                label104.Enabled = true;
+                label105.Enabled = true;
+                label109.Enabled = true;
+            }
         }
 
         private void checkBox_StProg_ClockHand_CheckedChanged(object sender, EventArgs e)
@@ -2310,7 +2412,10 @@ namespace GTR_Watch_face
             numericUpDown_ActivityPulsScale_Center_X.Enabled = b;
             numericUpDown_ActivityPulsScale_Center_Y.Enabled = b;
             numericUpDown_ActivityPulsScale_Radius_X.Enabled = b;
-            //numericUpDown_Battery_Scale_Radius_Y.Enabled = b;
+            checkBox_ActivityPulsScale_Image.Enabled = b;
+            comboBox_ActivityPulsScale_Image.Enabled = b;
+            numericUpDown_ActivityPulsScale_ImageX.Enabled = b;
+            numericUpDown_ActivityPulsScale_ImageY.Enabled = b;
 
             numericUpDown_ActivityPulsScale_Width.Enabled = b;
             comboBox_ActivityPulsScale_Color.Enabled = b;
@@ -2327,6 +2432,72 @@ namespace GTR_Watch_face
             label423.Enabled = b;
             label424.Enabled = b;
             label425.Enabled = b;
+            label430.Enabled = b;
+            label431.Enabled = b;
+
+            if (b)
+            {
+                if (checkBox_ActivityPulsScale_Image.Checked)
+                {
+                    comboBox_ActivityPulsScale_Image.Enabled = true;
+                    numericUpDown_ActivityPulsScale_ImageX.Enabled = true;
+                    numericUpDown_ActivityPulsScale_ImageY.Enabled = true;
+                    label430.Enabled = true;
+                    label431.Enabled = true;
+                    comboBox_ActivityPulsScale_Color.Enabled = false;
+                    numericUpDown_ActivityPulsScale_Center_X.Enabled = false;
+                    numericUpDown_ActivityPulsScale_Center_Y.Enabled = false;
+                    label420.Enabled = false;
+                    label424.Enabled = false;
+                    label425.Enabled = false;
+                }
+                else
+                {
+                    comboBox_ActivityPulsScale_Image.Enabled = false;
+                    numericUpDown_ActivityPulsScale_ImageX.Enabled = false;
+                    numericUpDown_ActivityPulsScale_ImageY.Enabled = false;
+                    label430.Enabled = false;
+                    label431.Enabled = false;
+                    comboBox_ActivityPulsScale_Color.Enabled = true;
+                    numericUpDown_ActivityPulsScale_Center_X.Enabled = true;
+                    numericUpDown_ActivityPulsScale_Center_Y.Enabled = true;
+                    label420.Enabled = true;
+                    label424.Enabled = true;
+                    label425.Enabled = true;
+                }
+            }
+        }
+
+        private void checkBox_ActivityPulsScale_Image_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_ActivityPulsScale_Image.Checked)
+            {
+                comboBox_ActivityPulsScale_Image.Enabled = true;
+                numericUpDown_ActivityPulsScale_ImageX.Enabled = true;
+                numericUpDown_ActivityPulsScale_ImageY.Enabled = true;
+                label430.Enabled = true;
+                label431.Enabled = true;
+                comboBox_ActivityPulsScale_Color.Enabled = false;
+                numericUpDown_ActivityPulsScale_Center_X.Enabled = false;
+                numericUpDown_ActivityPulsScale_Center_Y.Enabled = false;
+                label420.Enabled = false;
+                label424.Enabled = false;
+                label425.Enabled = false;
+            }
+            else
+            {
+                comboBox_ActivityPulsScale_Image.Enabled = false;
+                numericUpDown_ActivityPulsScale_ImageX.Enabled = false;
+                numericUpDown_ActivityPulsScale_ImageY.Enabled = false;
+                label430.Enabled = false;
+                label431.Enabled = false;
+                comboBox_ActivityPulsScale_Color.Enabled = true;
+                numericUpDown_ActivityPulsScale_Center_X.Enabled = true;
+                numericUpDown_ActivityPulsScale_Center_Y.Enabled = true;
+                label420.Enabled = true;
+                label424.Enabled = true;
+                label425.Enabled = true;
+            }
         }
 
         private void checkBox_ActivityCalories_CheckedChanged(object sender, EventArgs e)
@@ -2393,7 +2564,11 @@ namespace GTR_Watch_face
                     label426.Enabled = true;
                     label427.Enabled = true;
                     comboBox_ActivityCaloriesScale_Color.Enabled = false;
+                    numericUpDown_ActivityCaloriesScale_Center_X.Enabled = false;
+                    numericUpDown_ActivityCaloriesScale_Center_Y.Enabled = false;
                     label115.Enabled = false;
+                    label119.Enabled = false;
+                    label120.Enabled = false;
                 }
                 else
                 {
@@ -2403,7 +2578,11 @@ namespace GTR_Watch_face
                     label426.Enabled = false;
                     label427.Enabled = false;
                     comboBox_ActivityCaloriesScale_Color.Enabled = true;
+                    numericUpDown_ActivityCaloriesScale_Center_X.Enabled = true;
+                    numericUpDown_ActivityCaloriesScale_Center_Y.Enabled = true;
                     label115.Enabled = true;
+                    label119.Enabled = true;
+                    label120.Enabled = true;
                 }
             }
         }
@@ -2559,7 +2738,10 @@ namespace GTR_Watch_face
             numericUpDown_Battery_Scale_Center_X.Enabled = b;
             numericUpDown_Battery_Scale_Center_Y.Enabled = b;
             numericUpDown_Battery_Scale_Radius_X.Enabled = b;
-            //numericUpDown_Battery_Scale_Radius_Y.Enabled = b;
+            checkBox_Battery_Scale_Image.Enabled = b;
+            comboBox_Battery_Scale_Image.Enabled = b;
+            numericUpDown_Battery_Scale_ImageX.Enabled = b;
+            numericUpDown_Battery_Scale_ImageY.Enabled = b;
 
             numericUpDown_Battery_Scale_Width.Enabled = b;
             comboBox_Battery_Scale_Color.Enabled = b;
@@ -2576,6 +2758,40 @@ namespace GTR_Watch_face
             label205.Enabled = b;
             label206.Enabled = b;
             label347.Enabled = b;
+            label428.Enabled = b;
+            label429.Enabled = b;
+
+            if (b)
+            {
+                if (checkBox_Battery_Scale_Image.Checked)
+                {
+                    comboBox_Battery_Scale_Image.Enabled = true;
+                    numericUpDown_Battery_Scale_ImageX.Enabled = true;
+                    numericUpDown_Battery_Scale_ImageY.Enabled = true;
+                    label428.Enabled = true;
+                    label429.Enabled = true;
+                    comboBox_Battery_Scale_Color.Enabled = false;
+                    numericUpDown_Battery_Scale_Center_X.Enabled = false;
+                    numericUpDown_Battery_Scale_Center_Y.Enabled = false;
+                    label201.Enabled = false;
+                    label205.Enabled = false;
+                    label206.Enabled = false;
+                }
+                else
+                {
+                    comboBox_Battery_Scale_Image.Enabled = false;
+                    numericUpDown_Battery_Scale_ImageX.Enabled = false;
+                    numericUpDown_Battery_Scale_ImageY.Enabled = false;
+                    label428.Enabled = false;
+                    label429.Enabled = false;
+                    comboBox_ActivityCaloriesScale_Color.Enabled = true;
+                    numericUpDown_Battery_Scale_Center_X.Enabled = true;
+                    numericUpDown_Battery_Scale_Center_Y.Enabled = true;
+                    label115.Enabled = true;
+                    label205.Enabled = true;
+                    label206.Enabled = true;
+                }
+            }
         }
 
         private void checkBox_Battery_ClockHand_CheckedChanged(object sender, EventArgs e)

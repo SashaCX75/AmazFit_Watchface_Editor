@@ -95,6 +95,7 @@
     <Compile Include="Classes\WatchFaceParser\basicElements\basicElements.cs" />
     <Compile Include="Classes\WatchFaceParser\dateElements\dateElements.cs" />
     <Compile Include="Classes\WatchFaceParser\Elements.cs" />
+    <Compile Include="Classes\WatchFaceParser\shortcutsElements\shortcutsElements.cs" />
     <Compile Include="Classes\WatchFaceParser\statusElements\statusElements.cs" />
     <Compile Include="Classes\WatchFaceParser\timeElements\timeElements.cs" />
     <Compile Include="Classes\WatchFaceParser\weatherElements\weatherElements.cs" />

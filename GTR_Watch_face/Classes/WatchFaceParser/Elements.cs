@@ -69,6 +69,18 @@
         public ClockHand AnalogDOW { get; set; }
     }
 
+    public class Device_Id
+    {
+        /// <summary>Изображение заднего фона</summary>
+        public long DeviceId { get; set; }
+    }
+
+    public class Shortcuts
+    {
+        /// <summary>Изображение заднего фона</summary>
+        public Shortcut State { get; set; }
+    }
+
     public class StepsProgress
     {
         public ImageSet Images1 { get; set; }

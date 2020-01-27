@@ -11552,7 +11552,7 @@
     <value>True</value>
   </data>
   <data name="tabPage27.Size" type="System.Drawing.Size, System.Drawing">
-    <value>374, 104</value>
+    <value>357, 104</value>
   </data>
   <data name="tabPage27.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -12221,7 +12221,7 @@
     <value>True</value>
   </data>
   <data name="tabPage30.Size" type="System.Drawing.Size, System.Drawing">
-    <value>374, 104</value>
+    <value>357, 104</value>
   </data>
   <data name="tabPage30.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -12251,7 +12251,7 @@
     <value>True</value>
   </data>
   <data name="tabControl5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 130</value>
+    <value>365, 130</value>
   </data>
   <data name="tabControl5.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -12275,7 +12275,7 @@
     <value>True</value>
   </data>
   <data name="tabPage26.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 129</value>
+    <value>365, 129</value>
   </data>
   <data name="tabPage26.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -12659,7 +12659,7 @@
     <value>True</value>
   </data>
   <data name="tabPage25.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 129</value>
+    <value>365, 129</value>
   </data>
   <data name="tabPage25.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -12749,7 +12749,7 @@
     <value>Top</value>
   </data>
   <data name="panel_Weather.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 453</value>
+    <value>0, 239</value>
   </data>
   <data name="panel_Weather.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -12779,7 +12779,7 @@
     <value>NoControl</value>
   </data>
   <data name="button_Weather.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 430</value>
+    <value>0, 216</value>
   </data>
   <data name="button_Weather.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -14105,7 +14105,7 @@
     <value>True</value>
   </data>
   <data name="tabPage31.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 144</value>
+    <value>365, 144</value>
   </data>
   <data name="tabPage31.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -14762,7 +14762,7 @@
     <value>True</value>
   </data>
   <data name="tabPage32.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 144</value>
+    <value>365, 144</value>
   </data>
   <data name="tabPage32.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -14852,7 +14852,7 @@
     <value>Top</value>
   </data>
   <data name="panel_AnalogClock.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 429</value>
+    <value>0, 215</value>
   </data>
   <data name="panel_AnalogClock.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -14882,7 +14882,7 @@
     <value>NoControl</value>
   </data>
   <data name="button_AnalogClock.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 406</value>
+    <value>0, 192</value>
   </data>
   <data name="button_AnalogClock.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -15557,7 +15557,7 @@
     <value>True</value>
   </data>
   <data name="tabPage21.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 116</value>
+    <value>365, 134</value>
   </data>
   <data name="tabPage21.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -15845,7 +15845,7 @@
     <value>True</value>
   </data>
   <data name="tabPage28.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 116</value>
+    <value>365, 134</value>
   </data>
   <data name="tabPage28.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -16199,7 +16199,7 @@
     <value>True</value>
   </data>
   <data name="tabPage22.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 116</value>
+    <value>365, 134</value>
   </data>
   <data name="tabPage22.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -16218,6 +16218,195 @@
   </data>
   <data name="&gt;&gt;tabPage22.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="numericUpDown_Battery_Scale_ImageY.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_Battery_Scale_ImageY.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 108</value>
+  </data>
+  <data name="numericUpDown_Battery_Scale_ImageY.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_Battery_Scale_ImageY.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="numericUpDown_Battery_Scale_ImageY.TabIndex" type="System.Int32, mscorlib">
+    <value>105</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Battery_Scale_ImageY.Name" xml:space="preserve">
+    <value>numericUpDown_Battery_Scale_ImageY</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Battery_Scale_ImageY.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Battery_Scale_ImageY.Parent" xml:space="preserve">
+    <value>tabPage23</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Battery_Scale_ImageY.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="numericUpDown_Battery_Scale_ImageX.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_Battery_Scale_ImageX.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 108</value>
+  </data>
+  <data name="numericUpDown_Battery_Scale_ImageX.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_Battery_Scale_ImageX.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="numericUpDown_Battery_Scale_ImageX.TabIndex" type="System.Int32, mscorlib">
+    <value>104</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Battery_Scale_ImageX.Name" xml:space="preserve">
+    <value>numericUpDown_Battery_Scale_ImageX</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Battery_Scale_ImageX.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Battery_Scale_ImageX.Parent" xml:space="preserve">
+    <value>tabPage23</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Battery_Scale_ImageX.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label428.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label428.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label428.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label428.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 110</value>
+  </data>
+  <data name="label428.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label428.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
+  </data>
+  <data name="label428.TabIndex" type="System.Int32, mscorlib">
+    <value>103</value>
+  </data>
+  <data name="label428.Text" xml:space="preserve">
+    <value>Y:</value>
+  </data>
+  <data name="&gt;&gt;label428.Name" xml:space="preserve">
+    <value>label428</value>
+  </data>
+  <data name="&gt;&gt;label428.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label428.Parent" xml:space="preserve">
+    <value>tabPage23</value>
+  </data>
+  <data name="&gt;&gt;label428.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label429.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label429.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label429.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label429.Location" type="System.Drawing.Point, System.Drawing">
+    <value>134, 110</value>
+  </data>
+  <data name="label429.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label429.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
+  </data>
+  <data name="label429.TabIndex" type="System.Int32, mscorlib">
+    <value>102</value>
+  </data>
+  <data name="label429.Text" xml:space="preserve">
+    <value>X:</value>
+  </data>
+  <data name="&gt;&gt;label429.Name" xml:space="preserve">
+    <value>label429</value>
+  </data>
+  <data name="&gt;&gt;label429.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label429.Parent" xml:space="preserve">
+    <value>tabPage23</value>
+  </data>
+  <data name="&gt;&gt;label429.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="checkBox_Battery_Scale_Image.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox_Battery_Scale_Image.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox_Battery_Scale_Image.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 110</value>
+  </data>
+  <data name="checkBox_Battery_Scale_Image.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox_Battery_Scale_Image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 17</value>
+  </data>
+  <data name="checkBox_Battery_Scale_Image.TabIndex" type="System.Int32, mscorlib">
+    <value>101</value>
+  </data>
+  <data name="checkBox_Battery_Scale_Image.Text" xml:space="preserve">
+    <value>ImageIndex:</value>
+  </data>
+  <data name="&gt;&gt;checkBox_Battery_Scale_Image.Name" xml:space="preserve">
+    <value>checkBox_Battery_Scale_Image</value>
+  </data>
+  <data name="&gt;&gt;checkBox_Battery_Scale_Image.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox_Battery_Scale_Image.Parent" xml:space="preserve">
+    <value>tabPage23</value>
+  </data>
+  <data name="&gt;&gt;checkBox_Battery_Scale_Image.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="comboBox_Battery_Scale_Image.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="comboBox_Battery_Scale_Image.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 108</value>
+  </data>
+  <data name="comboBox_Battery_Scale_Image.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="comboBox_Battery_Scale_Image.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="comboBox_Battery_Scale_Image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 21</value>
+  </data>
+  <data name="comboBox_Battery_Scale_Image.TabIndex" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Battery_Scale_Image.Name" xml:space="preserve">
+    <value>comboBox_Battery_Scale_Image</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Battery_Scale_Image.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Battery_Scale_Image.Parent" xml:space="preserve">
+    <value>tabPage23</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Battery_Scale_Image.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="comboBox_Battery_Flatness.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -16253,7 +16442,7 @@
     <value>tabPage23</value>
   </data>
   <data name="&gt;&gt;comboBox_Battery_Flatness.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>6</value>
   </data>
   <data name="label347.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -16289,7 +16478,7 @@
     <value>tabPage23</value>
   </data>
   <data name="&gt;&gt;label347.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>7</value>
   </data>
   <data name="numericUpDown_Battery_Scale_EndAngle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -16316,7 +16505,7 @@
     <value>tabPage23</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Battery_Scale_EndAngle.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>8</value>
   </data>
   <data name="label199.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -16352,7 +16541,7 @@
     <value>tabPage23</value>
   </data>
   <data name="&gt;&gt;label199.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>9</value>
   </data>
   <data name="numericUpDown_Battery_Scale_StartAngle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -16379,7 +16568,7 @@
     <value>tabPage23</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Battery_Scale_StartAngle.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>10</value>
   </data>
   <data name="label200.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -16415,7 +16604,7 @@
     <value>tabPage23</value>
   </data>
   <data name="&gt;&gt;label200.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>11</value>
   </data>
   <data name="comboBox_Battery_Scale_Color.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -16445,7 +16634,7 @@
     <value>tabPage23</value>
   </data>
   <data name="&gt;&gt;comboBox_Battery_Scale_Color.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>12</value>
   </data>
   <data name="label201.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -16481,7 +16670,7 @@
     <value>tabPage23</value>
   </data>
   <data name="&gt;&gt;label201.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>13</value>
   </data>
   <data name="numericUpDown_Battery_Scale_Width.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -16508,7 +16697,7 @@
     <value>tabPage23</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Battery_Scale_Width.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>14</value>
   </data>
   <data name="label202.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -16544,7 +16733,7 @@
     <value>tabPage23</value>
   </data>
   <data name="&gt;&gt;label202.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>15</value>
   </data>
   <data name="numericUpDown_Battery_Scale_Radius_Y.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -16571,7 +16760,7 @@
     <value>tabPage23</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Battery_Scale_Radius_Y.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>16</value>
   </data>
   <data name="label203.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -16607,7 +16796,7 @@
     <value>tabPage23</value>
   </data>
   <data name="&gt;&gt;label203.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>17</value>
   </data>
   <data name="numericUpDown_Battery_Scale_Radius_X.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -16634,7 +16823,7 @@
     <value>tabPage23</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Battery_Scale_Radius_X.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>18</value>
   </data>
   <data name="label204.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -16670,7 +16859,7 @@
     <value>tabPage23</value>
   </data>
   <data name="&gt;&gt;label204.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>19</value>
   </data>
   <data name="numericUpDown_Battery_Scale_Center_Y.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -16697,7 +16886,7 @@
     <value>tabPage23</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Battery_Scale_Center_Y.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>20</value>
   </data>
   <data name="label205.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -16733,7 +16922,7 @@
     <value>tabPage23</value>
   </data>
   <data name="&gt;&gt;label205.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>21</value>
   </data>
   <data name="numericUpDown_Battery_Scale_Center_X.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -16760,7 +16949,7 @@
     <value>tabPage23</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Battery_Scale_Center_X.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>22</value>
   </data>
   <data name="label206.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -16796,7 +16985,7 @@
     <value>tabPage23</value>
   </data>
   <data name="&gt;&gt;label206.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>23</value>
   </data>
   <data name="checkBox_Battery_Scale.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -16832,7 +17021,7 @@
     <value>tabPage23</value>
   </data>
   <data name="&gt;&gt;checkBox_Battery_Scale.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>24</value>
   </data>
   <data name="tabPage23.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -16841,7 +17030,7 @@
     <value>True</value>
   </data>
   <data name="tabPage23.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 116</value>
+    <value>382, 134</value>
   </data>
   <data name="tabPage23.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -17321,7 +17510,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_Battery_ClockHand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 20</value>
+    <value>365, 20</value>
   </data>
   <data name="checkBox_Battery_ClockHand.TabIndex" type="System.Int32, mscorlib">
     <value>68</value>
@@ -17348,7 +17537,7 @@
     <value>True</value>
   </data>
   <data name="tabPage35.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 116</value>
+    <value>365, 134</value>
   </data>
   <data name="tabPage35.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -17531,7 +17720,7 @@
     <value>True</value>
   </data>
   <data name="dataGridView_Battery_IconSet.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 112</value>
+    <value>165, 129</value>
   </data>
   <data name="dataGridView_Battery_IconSet.TabIndex" type="System.Int32, mscorlib">
     <value>71</value>
@@ -17555,7 +17744,7 @@
     <value>True</value>
   </data>
   <data name="tabPage42.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 116</value>
+    <value>365, 134</value>
   </data>
   <data name="tabPage42.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -17588,7 +17777,7 @@
     <value>True</value>
   </data>
   <data name="tabControl4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>390, 142</value>
+    <value>390, 160</value>
   </data>
   <data name="tabControl4.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -17645,7 +17834,7 @@
     <value>Top</value>
   </data>
   <data name="panel_Battery.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 405</value>
+    <value>0, 191</value>
   </data>
   <data name="panel_Battery.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -17675,7 +17864,7 @@
     <value>NoControl</value>
   </data>
   <data name="button_Battery.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 382</value>
+    <value>0, 168</value>
   </data>
   <data name="button_Battery.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -18323,7 +18512,7 @@
     <value>True</value>
   </data>
   <data name="tabPage18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 54</value>
+    <value>365, 54</value>
   </data>
   <data name="tabPage18.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -18641,7 +18830,7 @@
     <value>True</value>
   </data>
   <data name="tabPage19.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 54</value>
+    <value>365, 54</value>
   </data>
   <data name="tabPage19.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -18959,7 +19148,7 @@
     <value>True</value>
   </data>
   <data name="tabPage20.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 54</value>
+    <value>365, 54</value>
   </data>
   <data name="tabPage20.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -19010,7 +19199,7 @@
     <value>Top</value>
   </data>
   <data name="panel_Status.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 381</value>
+    <value>0, 167</value>
   </data>
   <data name="panel_Status.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -19040,7 +19229,7 @@
     <value>NoControl</value>
   </data>
   <data name="button_Status.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 358</value>
+    <value>0, 144</value>
   </data>
   <data name="button_Status.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -20573,7 +20762,7 @@
     <value>True</value>
   </data>
   <data name="tabPage13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 139</value>
+    <value>365, 139</value>
   </data>
   <data name="tabPage13.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -21239,7 +21428,7 @@
     <value>True</value>
   </data>
   <data name="tabPage14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 139</value>
+    <value>365, 139</value>
   </data>
   <data name="tabPage14.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -21258,6 +21447,195 @@
   </data>
   <data name="&gt;&gt;tabPage14.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="numericUpDown_ActivityPulsScale_ImageY.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_ActivityPulsScale_ImageY.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 108</value>
+  </data>
+  <data name="numericUpDown_ActivityPulsScale_ImageY.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_ActivityPulsScale_ImageY.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="numericUpDown_ActivityPulsScale_ImageY.TabIndex" type="System.Int32, mscorlib">
+    <value>111</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityPulsScale_ImageY.Name" xml:space="preserve">
+    <value>numericUpDown_ActivityPulsScale_ImageY</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityPulsScale_ImageY.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityPulsScale_ImageY.Parent" xml:space="preserve">
+    <value>tabPage44</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityPulsScale_ImageY.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="numericUpDown_ActivityPulsScale_ImageX.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_ActivityPulsScale_ImageX.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 108</value>
+  </data>
+  <data name="numericUpDown_ActivityPulsScale_ImageX.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_ActivityPulsScale_ImageX.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="numericUpDown_ActivityPulsScale_ImageX.TabIndex" type="System.Int32, mscorlib">
+    <value>110</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityPulsScale_ImageX.Name" xml:space="preserve">
+    <value>numericUpDown_ActivityPulsScale_ImageX</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityPulsScale_ImageX.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityPulsScale_ImageX.Parent" xml:space="preserve">
+    <value>tabPage44</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityPulsScale_ImageX.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label430.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label430.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label430.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label430.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 110</value>
+  </data>
+  <data name="label430.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label430.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
+  </data>
+  <data name="label430.TabIndex" type="System.Int32, mscorlib">
+    <value>109</value>
+  </data>
+  <data name="label430.Text" xml:space="preserve">
+    <value>Y:</value>
+  </data>
+  <data name="&gt;&gt;label430.Name" xml:space="preserve">
+    <value>label430</value>
+  </data>
+  <data name="&gt;&gt;label430.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label430.Parent" xml:space="preserve">
+    <value>tabPage44</value>
+  </data>
+  <data name="&gt;&gt;label430.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label431.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label431.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label431.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label431.Location" type="System.Drawing.Point, System.Drawing">
+    <value>134, 110</value>
+  </data>
+  <data name="label431.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label431.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
+  </data>
+  <data name="label431.TabIndex" type="System.Int32, mscorlib">
+    <value>108</value>
+  </data>
+  <data name="label431.Text" xml:space="preserve">
+    <value>X:</value>
+  </data>
+  <data name="&gt;&gt;label431.Name" xml:space="preserve">
+    <value>label431</value>
+  </data>
+  <data name="&gt;&gt;label431.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label431.Parent" xml:space="preserve">
+    <value>tabPage44</value>
+  </data>
+  <data name="&gt;&gt;label431.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="checkBox_ActivityPulsScale_Image.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox_ActivityPulsScale_Image.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox_ActivityPulsScale_Image.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 110</value>
+  </data>
+  <data name="checkBox_ActivityPulsScale_Image.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox_ActivityPulsScale_Image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 17</value>
+  </data>
+  <data name="checkBox_ActivityPulsScale_Image.TabIndex" type="System.Int32, mscorlib">
+    <value>107</value>
+  </data>
+  <data name="checkBox_ActivityPulsScale_Image.Text" xml:space="preserve">
+    <value>ImageIndex:</value>
+  </data>
+  <data name="&gt;&gt;checkBox_ActivityPulsScale_Image.Name" xml:space="preserve">
+    <value>checkBox_ActivityPulsScale_Image</value>
+  </data>
+  <data name="&gt;&gt;checkBox_ActivityPulsScale_Image.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox_ActivityPulsScale_Image.Parent" xml:space="preserve">
+    <value>tabPage44</value>
+  </data>
+  <data name="&gt;&gt;checkBox_ActivityPulsScale_Image.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="comboBox_ActivityPulsScale_Image.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="comboBox_ActivityPulsScale_Image.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 108</value>
+  </data>
+  <data name="comboBox_ActivityPulsScale_Image.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="comboBox_ActivityPulsScale_Image.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="comboBox_ActivityPulsScale_Image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 21</value>
+  </data>
+  <data name="comboBox_ActivityPulsScale_Image.TabIndex" type="System.Int32, mscorlib">
+    <value>106</value>
+  </data>
+  <data name="&gt;&gt;comboBox_ActivityPulsScale_Image.Name" xml:space="preserve">
+    <value>comboBox_ActivityPulsScale_Image</value>
+  </data>
+  <data name="&gt;&gt;comboBox_ActivityPulsScale_Image.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox_ActivityPulsScale_Image.Parent" xml:space="preserve">
+    <value>tabPage44</value>
+  </data>
+  <data name="&gt;&gt;comboBox_ActivityPulsScale_Image.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="comboBox_ActivityPulsScale_Flatness.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -21293,7 +21671,7 @@
     <value>tabPage44</value>
   </data>
   <data name="&gt;&gt;comboBox_ActivityPulsScale_Flatness.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>6</value>
   </data>
   <data name="label417.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -21329,7 +21707,7 @@
     <value>tabPage44</value>
   </data>
   <data name="&gt;&gt;label417.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>7</value>
   </data>
   <data name="numericUpDown_ActivityPulsScale_EndAngle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -21356,7 +21734,7 @@
     <value>tabPage44</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ActivityPulsScale_EndAngle.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>8</value>
   </data>
   <data name="label418.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -21392,7 +21770,7 @@
     <value>tabPage44</value>
   </data>
   <data name="&gt;&gt;label418.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>9</value>
   </data>
   <data name="numericUpDown_ActivityPulsScale_StartAngle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -21419,7 +21797,7 @@
     <value>tabPage44</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ActivityPulsScale_StartAngle.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>10</value>
   </data>
   <data name="label419.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -21455,7 +21833,7 @@
     <value>tabPage44</value>
   </data>
   <data name="&gt;&gt;label419.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>11</value>
   </data>
   <data name="comboBox_ActivityPulsScale_Color.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -21485,7 +21863,7 @@
     <value>tabPage44</value>
   </data>
   <data name="&gt;&gt;comboBox_ActivityPulsScale_Color.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>12</value>
   </data>
   <data name="label420.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -21521,7 +21899,7 @@
     <value>tabPage44</value>
   </data>
   <data name="&gt;&gt;label420.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>13</value>
   </data>
   <data name="numericUpDown_ActivityPulsScale_Width.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -21548,7 +21926,7 @@
     <value>tabPage44</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ActivityPulsScale_Width.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>14</value>
   </data>
   <data name="label421.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -21584,7 +21962,7 @@
     <value>tabPage44</value>
   </data>
   <data name="&gt;&gt;label421.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>15</value>
   </data>
   <data name="numericUpDown_ActivityPulsScale_Radius_Y.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -21611,7 +21989,7 @@
     <value>tabPage44</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ActivityPulsScale_Radius_Y.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>16</value>
   </data>
   <data name="label422.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -21647,7 +22025,7 @@
     <value>tabPage44</value>
   </data>
   <data name="&gt;&gt;label422.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>17</value>
   </data>
   <data name="numericUpDown_ActivityPulsScale_Radius_X.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -21674,7 +22052,7 @@
     <value>tabPage44</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ActivityPulsScale_Radius_X.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>18</value>
   </data>
   <data name="label423.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -21710,7 +22088,7 @@
     <value>tabPage44</value>
   </data>
   <data name="&gt;&gt;label423.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>19</value>
   </data>
   <data name="numericUpDown_ActivityPulsScale_Center_Y.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -21737,7 +22115,7 @@
     <value>tabPage44</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ActivityPulsScale_Center_Y.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>20</value>
   </data>
   <data name="label424.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -21773,7 +22151,7 @@
     <value>tabPage44</value>
   </data>
   <data name="&gt;&gt;label424.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>21</value>
   </data>
   <data name="numericUpDown_ActivityPulsScale_Center_X.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -21800,7 +22178,7 @@
     <value>tabPage44</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ActivityPulsScale_Center_X.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>22</value>
   </data>
   <data name="label425.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -21836,7 +22214,7 @@
     <value>tabPage44</value>
   </data>
   <data name="&gt;&gt;label425.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>23</value>
   </data>
   <data name="checkBox_ActivityPulsScale.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -21854,7 +22232,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_ActivityPulsScale.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 20</value>
+    <value>365, 20</value>
   </data>
   <data name="checkBox_ActivityPulsScale.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
@@ -21872,7 +22250,7 @@
     <value>tabPage44</value>
   </data>
   <data name="&gt;&gt;checkBox_ActivityPulsScale.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>24</value>
   </data>
   <data name="tabPage44.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -21881,7 +22259,7 @@
     <value>True</value>
   </data>
   <data name="tabPage44.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 139</value>
+    <value>365, 139</value>
   </data>
   <data name="tabPage44.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -22049,7 +22427,7 @@
     <value>True</value>
   </data>
   <data name="tabPage45.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 139</value>
+    <value>365, 139</value>
   </data>
   <data name="tabPage45.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -22715,7 +23093,7 @@
     <value>True</value>
   </data>
   <data name="tabPage15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 139</value>
+    <value>365, 139</value>
   </data>
   <data name="tabPage15.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -22739,7 +23117,7 @@
     <value>False</value>
   </data>
   <data name="numericUpDown_ActivityCaloriesScale_ImageY.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 104</value>
+    <value>209, 108</value>
   </data>
   <data name="numericUpDown_ActivityCaloriesScale_ImageY.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -22766,7 +23144,7 @@
     <value>False</value>
   </data>
   <data name="numericUpDown_ActivityCaloriesScale_ImageX.Location" type="System.Drawing.Point, System.Drawing">
-    <value>149, 104</value>
+    <value>149, 108</value>
   </data>
   <data name="numericUpDown_ActivityCaloriesScale_ImageX.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -22799,7 +23177,7 @@
     <value>NoControl</value>
   </data>
   <data name="label426.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 106</value>
+    <value>194, 110</value>
   </data>
   <data name="label426.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -22835,7 +23213,7 @@
     <value>NoControl</value>
   </data>
   <data name="label427.Location" type="System.Drawing.Point, System.Drawing">
-    <value>134, 106</value>
+    <value>134, 110</value>
   </data>
   <data name="label427.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -22865,7 +23243,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_ActivityCaloriesScale_Image.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 106</value>
+    <value>5, 110</value>
   </data>
   <data name="checkBox_ActivityCaloriesScale_Image.Size" type="System.Drawing.Size, System.Drawing">
     <value>84, 17</value>
@@ -22892,7 +23270,7 @@
     <value>False</value>
   </data>
   <data name="comboBox_ActivityCaloriesScale_Image.Location" type="System.Drawing.Point, System.Drawing">
-    <value>86, 104</value>
+    <value>86, 108</value>
   </data>
   <data name="comboBox_ActivityCaloriesScale_Image.MaxDropDownItems" type="System.Int32, mscorlib">
     <value>25</value>
@@ -23513,7 +23891,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_ActivityCaloriesScale.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 20</value>
+    <value>365, 20</value>
   </data>
   <data name="checkBox_ActivityCaloriesScale.TabIndex" type="System.Int32, mscorlib">
     <value>74</value>
@@ -23540,7 +23918,7 @@
     <value>True</value>
   </data>
   <data name="tabPage11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 139</value>
+    <value>365, 139</value>
   </data>
   <data name="tabPage11.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -23828,7 +24206,7 @@
     <value>True</value>
   </data>
   <data name="tabPage16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 139</value>
+    <value>365, 139</value>
   </data>
   <data name="tabPage16.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -23924,7 +24302,7 @@
     <value>True</value>
   </data>
   <data name="panel_Activity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>392, 215</value>
+    <value>392, 1</value>
   </data>
   <data name="panel_Activity.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -23974,6 +24352,195 @@
   <data name="&gt;&gt;button_Activity.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="numericUpDown_StepsProgress_ImageY.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_StepsProgress_ImageY.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 108</value>
+  </data>
+  <data name="numericUpDown_StepsProgress_ImageY.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_StepsProgress_ImageY.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="numericUpDown_StepsProgress_ImageY.TabIndex" type="System.Int32, mscorlib">
+    <value>111</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StepsProgress_ImageY.Name" xml:space="preserve">
+    <value>numericUpDown_StepsProgress_ImageY</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StepsProgress_ImageY.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StepsProgress_ImageY.Parent" xml:space="preserve">
+    <value>tabPage36</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StepsProgress_ImageY.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="numericUpDown_StepsProgress_ImageX.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_StepsProgress_ImageX.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 108</value>
+  </data>
+  <data name="numericUpDown_StepsProgress_ImageX.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_StepsProgress_ImageX.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="numericUpDown_StepsProgress_ImageX.TabIndex" type="System.Int32, mscorlib">
+    <value>110</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StepsProgress_ImageX.Name" xml:space="preserve">
+    <value>numericUpDown_StepsProgress_ImageX</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StepsProgress_ImageX.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StepsProgress_ImageX.Parent" xml:space="preserve">
+    <value>tabPage36</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StepsProgress_ImageX.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label432.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label432.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label432.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label432.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 110</value>
+  </data>
+  <data name="label432.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label432.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
+  </data>
+  <data name="label432.TabIndex" type="System.Int32, mscorlib">
+    <value>109</value>
+  </data>
+  <data name="label432.Text" xml:space="preserve">
+    <value>Y:</value>
+  </data>
+  <data name="&gt;&gt;label432.Name" xml:space="preserve">
+    <value>label432</value>
+  </data>
+  <data name="&gt;&gt;label432.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label432.Parent" xml:space="preserve">
+    <value>tabPage36</value>
+  </data>
+  <data name="&gt;&gt;label432.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label433.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label433.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label433.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label433.Location" type="System.Drawing.Point, System.Drawing">
+    <value>134, 110</value>
+  </data>
+  <data name="label433.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label433.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
+  </data>
+  <data name="label433.TabIndex" type="System.Int32, mscorlib">
+    <value>108</value>
+  </data>
+  <data name="label433.Text" xml:space="preserve">
+    <value>X:</value>
+  </data>
+  <data name="&gt;&gt;label433.Name" xml:space="preserve">
+    <value>label433</value>
+  </data>
+  <data name="&gt;&gt;label433.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label433.Parent" xml:space="preserve">
+    <value>tabPage36</value>
+  </data>
+  <data name="&gt;&gt;label433.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="checkBox_StepsProgress_Image.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox_StepsProgress_Image.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox_StepsProgress_Image.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 110</value>
+  </data>
+  <data name="checkBox_StepsProgress_Image.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox_StepsProgress_Image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 17</value>
+  </data>
+  <data name="checkBox_StepsProgress_Image.TabIndex" type="System.Int32, mscorlib">
+    <value>107</value>
+  </data>
+  <data name="checkBox_StepsProgress_Image.Text" xml:space="preserve">
+    <value>ImageIndex:</value>
+  </data>
+  <data name="&gt;&gt;checkBox_StepsProgress_Image.Name" xml:space="preserve">
+    <value>checkBox_StepsProgress_Image</value>
+  </data>
+  <data name="&gt;&gt;checkBox_StepsProgress_Image.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox_StepsProgress_Image.Parent" xml:space="preserve">
+    <value>tabPage36</value>
+  </data>
+  <data name="&gt;&gt;checkBox_StepsProgress_Image.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="comboBox_StepsProgress_Image.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="comboBox_StepsProgress_Image.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 108</value>
+  </data>
+  <data name="comboBox_StepsProgress_Image.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="comboBox_StepsProgress_Image.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="comboBox_StepsProgress_Image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 21</value>
+  </data>
+  <data name="comboBox_StepsProgress_Image.TabIndex" type="System.Int32, mscorlib">
+    <value>106</value>
+  </data>
+  <data name="&gt;&gt;comboBox_StepsProgress_Image.Name" xml:space="preserve">
+    <value>comboBox_StepsProgress_Image</value>
+  </data>
+  <data name="&gt;&gt;comboBox_StepsProgress_Image.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox_StepsProgress_Image.Parent" xml:space="preserve">
+    <value>tabPage36</value>
+  </data>
+  <data name="&gt;&gt;comboBox_StepsProgress_Image.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="numericUpDown_StepsProgress_Radius_Y.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -23999,7 +24566,7 @@
     <value>tabPage36</value>
   </data>
   <data name="&gt;&gt;numericUpDown_StepsProgress_Radius_Y.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>6</value>
   </data>
   <data name="numericUpDown_StepsProgress_Radius_X.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -24026,7 +24593,7 @@
     <value>tabPage36</value>
   </data>
   <data name="&gt;&gt;numericUpDown_StepsProgress_Radius_X.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>7</value>
   </data>
   <data name="numericUpDown_StepsProgress_Center_Y.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -24053,7 +24620,7 @@
     <value>tabPage36</value>
   </data>
   <data name="&gt;&gt;numericUpDown_StepsProgress_Center_Y.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>8</value>
   </data>
   <data name="numericUpDown_StepsProgress_Center_X.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -24080,7 +24647,7 @@
     <value>tabPage36</value>
   </data>
   <data name="&gt;&gt;numericUpDown_StepsProgress_Center_X.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>9</value>
   </data>
   <data name="checkBox_StepsProgress.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -24116,7 +24683,7 @@
     <value>tabPage36</value>
   </data>
   <data name="&gt;&gt;checkBox_StepsProgress.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>10</value>
   </data>
   <data name="comboBox_StepsProgress_Flatness.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -24152,7 +24719,7 @@
     <value>tabPage36</value>
   </data>
   <data name="&gt;&gt;comboBox_StepsProgress_Flatness.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>11</value>
   </data>
   <data name="label104.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -24188,7 +24755,7 @@
     <value>tabPage36</value>
   </data>
   <data name="&gt;&gt;label104.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>12</value>
   </data>
   <data name="label348.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -24224,7 +24791,7 @@
     <value>tabPage36</value>
   </data>
   <data name="&gt;&gt;label348.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>13</value>
   </data>
   <data name="numericUpDown_StepsProgress_EndAngle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -24251,7 +24818,7 @@
     <value>tabPage36</value>
   </data>
   <data name="&gt;&gt;numericUpDown_StepsProgress_EndAngle.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>14</value>
   </data>
   <data name="label105.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -24287,7 +24854,7 @@
     <value>tabPage36</value>
   </data>
   <data name="&gt;&gt;label105.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>15</value>
   </data>
   <data name="label111.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -24323,7 +24890,7 @@
     <value>tabPage36</value>
   </data>
   <data name="&gt;&gt;label111.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>16</value>
   </data>
   <data name="numericUpDown_StepsProgress_StartAngle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -24350,7 +24917,7 @@
     <value>tabPage36</value>
   </data>
   <data name="&gt;&gt;numericUpDown_StepsProgress_StartAngle.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>17</value>
   </data>
   <data name="label107.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -24386,7 +24953,7 @@
     <value>tabPage36</value>
   </data>
   <data name="&gt;&gt;label107.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>18</value>
   </data>
   <data name="label110.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -24422,7 +24989,7 @@
     <value>tabPage36</value>
   </data>
   <data name="&gt;&gt;label110.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>19</value>
   </data>
   <data name="comboBox_StepsProgress_Color.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -24452,7 +25019,7 @@
     <value>tabPage36</value>
   </data>
   <data name="&gt;&gt;comboBox_StepsProgress_Color.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>20</value>
   </data>
   <data name="label106.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -24488,7 +25055,7 @@
     <value>tabPage36</value>
   </data>
   <data name="&gt;&gt;label106.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>21</value>
   </data>
   <data name="label109.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -24524,7 +25091,7 @@
     <value>tabPage36</value>
   </data>
   <data name="&gt;&gt;label109.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>22</value>
   </data>
   <data name="numericUpDown_StepsProgress_Width.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -24551,7 +25118,7 @@
     <value>tabPage36</value>
   </data>
   <data name="&gt;&gt;numericUpDown_StepsProgress_Width.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>23</value>
   </data>
   <data name="label108.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -24587,7 +25154,7 @@
     <value>tabPage36</value>
   </data>
   <data name="&gt;&gt;label108.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>24</value>
   </data>
   <data name="tabPage36.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -24599,7 +25166,7 @@
     <value>True</value>
   </data>
   <data name="tabPage36.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 116</value>
+    <value>382, 134</value>
   </data>
   <data name="tabPage36.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -24635,7 +25202,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_StProg_ClockHand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>376, 20</value>
+    <value>359, 20</value>
   </data>
   <data name="checkBox_StProg_ClockHand.TabIndex" type="System.Int32, mscorlib">
     <value>97</value>
@@ -25109,13 +25676,13 @@
     <value>True</value>
   </data>
   <data name="tabPage37.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 116</value>
+    <value>365, 134</value>
   </data>
   <data name="tabPage37.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="tabPage37.Text" xml:space="preserve">
-    <value>Индикатор</value>
+    <value>Стрелочный индикатор</value>
   </data>
   <data name="&gt;&gt;tabPage37.Name" xml:space="preserve">
     <value>tabPage37</value>
@@ -25253,7 +25820,7 @@
     <value>True</value>
   </data>
   <data name="dataGridView_SPSliced.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 112</value>
+    <value>165, 127</value>
   </data>
   <data name="dataGridView_SPSliced.TabIndex" type="System.Int32, mscorlib">
     <value>67</value>
@@ -25277,13 +25844,13 @@
     <value>True</value>
   </data>
   <data name="tabPage41.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 116</value>
+    <value>365, 134</value>
   </data>
   <data name="tabPage41.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="tabPage41.Text" xml:space="preserve">
-    <value>Набор иконок</value>
+    <value>Индикатор</value>
   </data>
   <data name="&gt;&gt;tabPage41.Name" xml:space="preserve">
     <value>tabPage41</value>
@@ -25307,7 +25874,7 @@
     <value>True</value>
   </data>
   <data name="tabControl6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>390, 142</value>
+    <value>390, 160</value>
   </data>
   <data name="tabControl6.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
@@ -26351,7 +26918,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_ADWeekDay_ClockHand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 20</value>
+    <value>365, 20</value>
   </data>
   <data name="checkBox_ADWeekDay_ClockHand.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
@@ -26378,7 +26945,7 @@
     <value>True</value>
   </data>
   <data name="tabPage39.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 116</value>
+    <value>365, 116</value>
   </data>
   <data name="tabPage39.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -26858,7 +27425,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_ADMonth_ClockHand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 20</value>
+    <value>365, 20</value>
   </data>
   <data name="checkBox_ADMonth_ClockHand.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
@@ -26885,7 +27452,7 @@
     <value>True</value>
   </data>
   <data name="tabPage40.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 116</value>
+    <value>365, 116</value>
   </data>
   <data name="tabPage40.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -29414,7 +29981,7 @@
     <value>True</value>
   </data>
   <data name="tabPage7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 169</value>
+    <value>365, 169</value>
   </data>
   <data name="tabPage7.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -30146,7 +30713,7 @@
     <value>True</value>
   </data>
   <data name="tabPage34.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 169</value>
+    <value>365, 169</value>
   </data>
   <data name="tabPage34.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -32393,7 +32960,7 @@
     <value>True</value>
   </data>
   <data name="tabPage5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 150</value>
+    <value>365, 150</value>
   </data>
   <data name="tabPage5.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -32975,7 +33542,7 @@
     <value>True</value>
   </data>
   <data name="tabPage6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 150</value>
+    <value>365, 150</value>
   </data>
   <data name="tabPage6.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>

@@ -4,6 +4,8 @@
     /// <summary>Корневая структура JSON файла</summary>
     public class WATCH_FACE_JSON
     {
+        /// <summary>Тип часов</summary>
+        public Device_Id Info { get; set; }
         /// <summary>Задний фон</summary>
         public Background Background { get; set; }
         /// <summary>Фремя в цифровом формате</summary>
@@ -24,6 +26,8 @@
         public Battery Battery { get; set; }
         /// <summary>Аналоговык часы</summary>
         public Analogdialface AnalogDialFace { get; set; }
+        /// <summary>Ярлыки</summary>
+        public Shortcuts Shortcuts { get; set; }
 
     }
 
