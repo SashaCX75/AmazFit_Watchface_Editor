@@ -1,4 +1,6 @@
-﻿namespace GTR_Watch_face
+﻿using Newtonsoft.Json;
+
+namespace GTR_Watch_face
 {
     public class Background
     {
@@ -41,10 +43,21 @@
         /// <summary>Достижение цели</summary>
         public ImageW StarImage { get; set; }
         /// <summary>Пульс круговая шкала</summary>
-        public CircleScale Goal2 { get; set; }
+        public CircleScale PulseMeter { get; set; }
         /// <summary>Индикатор пульса</summary>
         public IconSet ColouredSquares { get; set; }
         public long? NoDataImageIndex { get; set; }
+        /// <summary>Прогрес калорий</summary>
+        public CaloriesContainer CaloriesGraph { get; set; }
+        /// <summary>Прогрес пульса</summary>
+        public PulseContainer PulseGraph { get; set; }
+
+        // For compatibility with "Goal2" JSON attribute
+        [JsonProperty("Goal2")]
+        private CircleScale Goal2
+        {
+            set { PulseMeter = value; }
+        }
     }
 
     public class Date
@@ -57,6 +70,8 @@
         public Coordinates Unknown4 { get; set; }
         /// <summary>Год</summary>
         public Year Year { get; set; }
+        /// <summary>день недели</summary>
+        public IconSet WeekDayProgress { get; set; }
     }
 
     public class DaysProgress
@@ -71,14 +86,20 @@
 
     public class Device_Id
     {
-        /// <summary>Изображение заднего фона</summary>
+        /// <summary> код часов</summary>
         public long DeviceId { get; set; }
     }
 
     public class Shortcuts
     {
-        /// <summary>Изображение заднего фона</summary>
+        /// <summary>Шаги</summary>
         public Shortcut State { get; set; }
+        /// <summary>Пульс</summary>
+        public Shortcut Pulse { get; set; }
+        /// <summary>Погода</summary>
+        public Shortcut Weather { get; set; }
+        /// <summary>Энергосбережение</summary>
+        public Shortcut Unknown4 { get; set; }
     }
 
     public class StepsProgress

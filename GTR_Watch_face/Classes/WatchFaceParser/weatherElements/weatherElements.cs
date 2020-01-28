@@ -29,6 +29,7 @@
         public Today Today { get; set; }
         /// <summary>Набор вспомогательных символов</summary>
         public Symbols Symbols { get; set; }
+        public CircleScale TemperatureMeter { get; set; }
     }
 
     public class Today

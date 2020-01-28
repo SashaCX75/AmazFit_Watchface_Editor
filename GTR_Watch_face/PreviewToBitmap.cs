@@ -16,7 +16,8 @@ namespace GTR_Watch_face
         /// <param name="WMesh">Рисовать белую сетку</param>
         /// <param name="BMesh">Рисовать черную сетку</param>
         /// <param name="BBorder">Рисовать рамку по координатам, вокруг элементов с выравниванием</param>
-        private void PreviewToBitmap(Graphics gPanel, float scale, bool crop, bool WMesh, bool BMesh, bool BBorder)
+        /// <param name="showShortcuts">Подсвечивать область ярлыков</param>
+        private void PreviewToBitmap(Graphics gPanel, float scale, bool crop, bool WMesh, bool BMesh, bool BBorder, bool showShortcuts)
         {
             var src = new Bitmap(1, 1);
             gPanel.ScaleTransform(scale, scale, MatrixOrder.Prepend);
@@ -1556,6 +1557,70 @@ namespace GTR_Watch_face
                         (int)numericUpDown_SecCenterImage_Y.Value, src.Width, src.Height));
                     src.Dispose();
                 }
+            }
+            #endregion
+
+            #region Shortcuts
+            if (showShortcuts)
+            {
+                if (checkBox_Shortcuts.Checked)
+                {
+                    if (checkBox_Shortcuts_Steps.Checked)
+                    {
+                        int X = (int)numericUpDown_Shortcuts_Steps_X.Value;
+                        int Y = (int)numericUpDown_Shortcuts_Steps_Y.Value;
+                        int Width = (int)numericUpDown_Shortcuts_Steps_Width.Value;
+                        int Height = (int)numericUpDown_Shortcuts_Steps_Height.Value;
+
+                        HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent10, Color.White, Color.Transparent);
+                        Rectangle rect = new Rectangle(X, Y, Width, Height);
+                        gPanel.FillRectangle(myHatchBrush, rect);
+                        myHatchBrush = new HatchBrush(HatchStyle.Percent05, Color.Black, Color.Transparent);
+                        gPanel.FillRectangle(myHatchBrush, rect);
+                    }
+
+                    if (checkBox_Shortcuts_Puls.Checked)
+                    {
+                        int X = (int)numericUpDown_Shortcuts_Puls_X.Value;
+                        int Y = (int)numericUpDown_Shortcuts_Puls_Y.Value;
+                        int Width = (int)numericUpDown_Shortcuts_Puls_Width.Value;
+                        int Height = (int)numericUpDown_Shortcuts_Puls_Height.Value;
+
+                        HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent10, Color.White, Color.Transparent);
+                        Rectangle rect = new Rectangle(X, Y, Width, Height);
+                        gPanel.FillRectangle(myHatchBrush, rect);
+                        myHatchBrush = new HatchBrush(HatchStyle.Percent05, Color.Black, Color.Transparent);
+                        gPanel.FillRectangle(myHatchBrush, rect);
+                    }
+
+                    if (checkBox_Shortcuts_Weather.Checked)
+                    {
+                        int X = (int)numericUpDown_Shortcuts_Weather_X.Value;
+                        int Y = (int)numericUpDown_Shortcuts_Weather_Y.Value;
+                        int Width = (int)numericUpDown_Shortcuts_Weather_Width.Value;
+                        int Height = (int)numericUpDown_Shortcuts_Weather_Height.Value;
+
+                        HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent10, Color.White, Color.Transparent);
+                        Rectangle rect = new Rectangle(X, Y, Width, Height);
+                        gPanel.FillRectangle(myHatchBrush, rect);
+                        myHatchBrush = new HatchBrush(HatchStyle.Percent05, Color.Black, Color.Transparent);
+                        gPanel.FillRectangle(myHatchBrush, rect);
+                    }
+
+                    if (checkBox_Shortcuts_Energy.Checked)
+                    {
+                        int X = (int)numericUpDown_Shortcuts_Energy_X.Value;
+                        int Y = (int)numericUpDown_Shortcuts_Energy_Y.Value;
+                        int Width = (int)numericUpDown_Shortcuts_Energy_Width.Value;
+                        int Height = (int)numericUpDown_Shortcuts_Energy_Height.Value;
+
+                        HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent10, Color.White, Color.Transparent);
+                        Rectangle rect = new Rectangle(X, Y, Width, Height);
+                        gPanel.FillRectangle(myHatchBrush, rect);
+                        myHatchBrush = new HatchBrush(HatchStyle.Percent05, Color.Black, Color.Transparent);
+                        gPanel.FillRectangle(myHatchBrush, rect);
+                    }
+                } 
             }
             #endregion
 

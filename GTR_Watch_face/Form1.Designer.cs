@@ -360,6 +360,66 @@
             this.button_SaveJson = new System.Windows.Forms.Button();
             this.button_TextToJson = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel_Shortcuts = new System.Windows.Forms.Panel();
+            this.tabControl_Shortcuts = new System.Windows.Forms.TabControl();
+            this.tabPage46 = new System.Windows.Forms.TabPage();
+            this.numericUpDown_Shortcuts_Steps_Width = new System.Windows.Forms.NumericUpDown();
+            this.contextMenuStrip_X = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.вставитьКоординатуХToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.копироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вставитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.numericUpDown_Shortcuts_Steps_Y = new System.Windows.Forms.NumericUpDown();
+            this.contextMenuStrip_Y = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.копироватьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.вставитьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.numericUpDown_Shortcuts_Steps_X = new System.Windows.Forms.NumericUpDown();
+            this.checkBox_Shortcuts_Steps = new System.Windows.Forms.CheckBox();
+            this.label435 = new System.Windows.Forms.Label();
+            this.label438 = new System.Windows.Forms.Label();
+            this.numericUpDown_Shortcuts_Steps_Height = new System.Windows.Forms.NumericUpDown();
+            this.label439 = new System.Windows.Forms.Label();
+            this.label440 = new System.Windows.Forms.Label();
+            this.label442 = new System.Windows.Forms.Label();
+            this.label443 = new System.Windows.Forms.Label();
+            this.tabPage47 = new System.Windows.Forms.TabPage();
+            this.numericUpDown_Shortcuts_Puls_Width = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Shortcuts_Puls_Y = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Shortcuts_Puls_X = new System.Windows.Forms.NumericUpDown();
+            this.checkBox_Shortcuts_Puls = new System.Windows.Forms.CheckBox();
+            this.label434 = new System.Windows.Forms.Label();
+            this.label436 = new System.Windows.Forms.Label();
+            this.numericUpDown_Shortcuts_Puls_Height = new System.Windows.Forms.NumericUpDown();
+            this.label437 = new System.Windows.Forms.Label();
+            this.label441 = new System.Windows.Forms.Label();
+            this.label444 = new System.Windows.Forms.Label();
+            this.label445 = new System.Windows.Forms.Label();
+            this.tabPage48 = new System.Windows.Forms.TabPage();
+            this.numericUpDown_Shortcuts_Weather_Width = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Shortcuts_Weather_Y = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Shortcuts_Weather_X = new System.Windows.Forms.NumericUpDown();
+            this.checkBox_Shortcuts_Weather = new System.Windows.Forms.CheckBox();
+            this.label446 = new System.Windows.Forms.Label();
+            this.label447 = new System.Windows.Forms.Label();
+            this.numericUpDown_Shortcuts_Weather_Height = new System.Windows.Forms.NumericUpDown();
+            this.label448 = new System.Windows.Forms.Label();
+            this.label449 = new System.Windows.Forms.Label();
+            this.label450 = new System.Windows.Forms.Label();
+            this.label451 = new System.Windows.Forms.Label();
+            this.tabPage49 = new System.Windows.Forms.TabPage();
+            this.numericUpDown_Shortcuts_Energy_Width = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Shortcuts_Energy_Y = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Shortcuts_Energy_X = new System.Windows.Forms.NumericUpDown();
+            this.checkBox_Shortcuts_Energy = new System.Windows.Forms.CheckBox();
+            this.label452 = new System.Windows.Forms.Label();
+            this.label453 = new System.Windows.Forms.Label();
+            this.numericUpDown_Shortcuts_Energy_Height = new System.Windows.Forms.NumericUpDown();
+            this.label454 = new System.Windows.Forms.Label();
+            this.label455 = new System.Windows.Forms.Label();
+            this.label456 = new System.Windows.Forms.Label();
+            this.label457 = new System.Windows.Forms.Label();
+            this.checkBox_Shortcuts = new System.Windows.Forms.CheckBox();
+            this.button_Shortcuts = new System.Windows.Forms.Button();
             this.panel_Weather = new System.Windows.Forms.Panel();
             this.groupBox_Symbols = new System.Windows.Forms.GroupBox();
             this.comboBox_Weather_Text_NDImage = new System.Windows.Forms.ComboBox();
@@ -372,16 +432,8 @@
             this.tabPage24 = new System.Windows.Forms.TabPage();
             this.comboBox_Weather_Text_Image = new System.Windows.Forms.ComboBox();
             this.numericUpDown_Weather_Text_EndCorner_X = new System.Windows.Forms.NumericUpDown();
-            this.contextMenuStrip_X = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.вставитьКоординатуХToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.копироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вставитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.numericUpDown_Weather_Text_Count = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_Weather_Text_StartCorner_Y = new System.Windows.Forms.NumericUpDown();
-            this.contextMenuStrip_Y = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.копироватьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.вставитьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.numericUpDown_Weather_Text_StartCorner_X = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_Weather_Text_Spacing = new System.Windows.Forms.NumericUpDown();
             this.checkBox_Weather_Text = new System.Windows.Forms.CheckBox();
@@ -1183,6 +1235,7 @@
             this.radioButton_gts = new System.Windows.Forms.RadioButton();
             this.checkBox_crop = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.checkBox_Show_Shortcuts = new System.Windows.Forms.CheckBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.colorDialog_Pulse = new System.Windows.Forms.ColorDialog();
             this.colorDialog_Calories = new System.Windows.Forms.ColorDialog();
@@ -1289,15 +1342,37 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ImagesList)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel_Shortcuts.SuspendLayout();
+            this.tabControl_Shortcuts.SuspendLayout();
+            this.tabPage46.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Steps_Width)).BeginInit();
+            this.contextMenuStrip_X.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Steps_Y)).BeginInit();
+            this.contextMenuStrip_Y.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Steps_X)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Steps_Height)).BeginInit();
+            this.tabPage47.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Puls_Width)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Puls_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Puls_X)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Puls_Height)).BeginInit();
+            this.tabPage48.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Weather_Width)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Weather_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Weather_X)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Weather_Height)).BeginInit();
+            this.tabPage49.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Energy_Width)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Energy_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Energy_X)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Energy_Height)).BeginInit();
             this.panel_Weather.SuspendLayout();
             this.groupBox_Symbols.SuspendLayout();
             this.tabControl_Weather.SuspendLayout();
             this.tabPage24.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Text_EndCorner_X)).BeginInit();
-            this.contextMenuStrip_X.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Text_Count)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Text_StartCorner_Y)).BeginInit();
-            this.contextMenuStrip_Y.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Text_StartCorner_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Text_Spacing)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Text_EndCorner_Y)).BeginInit();
@@ -5132,6 +5207,8 @@
             // panel2
             // 
             resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Controls.Add(this.panel_Shortcuts);
+            this.panel2.Controls.Add(this.button_Shortcuts);
             this.panel2.Controls.Add(this.panel_Weather);
             this.panel2.Controls.Add(this.button_Weather);
             this.panel2.Controls.Add(this.panel_AnalogClock);
@@ -5154,6 +5231,650 @@
             this.panel2.Controls.Add(this.button_Background);
             this.panel2.Name = "panel2";
             this.helpProvider1.SetShowHelp(this.panel2, ((bool)(resources.GetObject("panel2.ShowHelp"))));
+            // 
+            // panel_Shortcuts
+            // 
+            this.panel_Shortcuts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Shortcuts.Controls.Add(this.tabControl_Shortcuts);
+            this.panel_Shortcuts.Controls.Add(this.checkBox_Shortcuts);
+            resources.ApplyResources(this.panel_Shortcuts, "panel_Shortcuts");
+            this.panel_Shortcuts.Name = "panel_Shortcuts";
+            this.helpProvider1.SetShowHelp(this.panel_Shortcuts, ((bool)(resources.GetObject("panel_Shortcuts.ShowHelp"))));
+            // 
+            // tabControl_Shortcuts
+            // 
+            this.tabControl_Shortcuts.Controls.Add(this.tabPage46);
+            this.tabControl_Shortcuts.Controls.Add(this.tabPage47);
+            this.tabControl_Shortcuts.Controls.Add(this.tabPage48);
+            this.tabControl_Shortcuts.Controls.Add(this.tabPage49);
+            resources.ApplyResources(this.tabControl_Shortcuts, "tabControl_Shortcuts");
+            this.tabControl_Shortcuts.Name = "tabControl_Shortcuts";
+            this.tabControl_Shortcuts.SelectedIndex = 0;
+            this.helpProvider1.SetShowHelp(this.tabControl_Shortcuts, ((bool)(resources.GetObject("tabControl_Shortcuts.ShowHelp"))));
+            // 
+            // tabPage46
+            // 
+            this.tabPage46.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage46.Controls.Add(this.numericUpDown_Shortcuts_Steps_Width);
+            this.tabPage46.Controls.Add(this.numericUpDown_Shortcuts_Steps_Y);
+            this.tabPage46.Controls.Add(this.numericUpDown_Shortcuts_Steps_X);
+            this.tabPage46.Controls.Add(this.checkBox_Shortcuts_Steps);
+            this.tabPage46.Controls.Add(this.label435);
+            this.tabPage46.Controls.Add(this.label438);
+            this.tabPage46.Controls.Add(this.numericUpDown_Shortcuts_Steps_Height);
+            this.tabPage46.Controls.Add(this.label439);
+            this.tabPage46.Controls.Add(this.label440);
+            this.tabPage46.Controls.Add(this.label442);
+            this.tabPage46.Controls.Add(this.label443);
+            resources.ApplyResources(this.tabPage46, "tabPage46");
+            this.tabPage46.Name = "tabPage46";
+            this.helpProvider1.SetShowHelp(this.tabPage46, ((bool)(resources.GetObject("tabPage46.ShowHelp"))));
+            // 
+            // numericUpDown_Shortcuts_Steps_Width
+            // 
+            this.numericUpDown_Shortcuts_Steps_Width.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_Shortcuts_Steps_Width, "numericUpDown_Shortcuts_Steps_Width");
+            this.numericUpDown_Shortcuts_Steps_Width.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Shortcuts_Steps_Width.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Shortcuts_Steps_Width.Name = "numericUpDown_Shortcuts_Steps_Width";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Shortcuts_Steps_Width, ((bool)(resources.GetObject("numericUpDown_Shortcuts_Steps_Width.ShowHelp"))));
+            this.numericUpDown_Shortcuts_Steps_Width.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // contextMenuStrip_X
+            // 
+            this.contextMenuStrip_X.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip_X.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.вставитьКоординатуХToolStripMenuItem,
+            this.копироватьToolStripMenuItem,
+            this.вставитьToolStripMenuItem});
+            this.contextMenuStrip_X.Name = "contextMenuStrip_X";
+            this.helpProvider1.SetShowHelp(this.contextMenuStrip_X, ((bool)(resources.GetObject("contextMenuStrip_X.ShowHelp"))));
+            resources.ApplyResources(this.contextMenuStrip_X, "contextMenuStrip_X");
+            this.contextMenuStrip_X.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_X_Opening);
+            // 
+            // вставитьКоординатуХToolStripMenuItem
+            // 
+            resources.ApplyResources(this.вставитьКоординатуХToolStripMenuItem, "вставитьКоординатуХToolStripMenuItem");
+            this.вставитьКоординатуХToolStripMenuItem.Name = "вставитьКоординатуХToolStripMenuItem";
+            this.вставитьКоординатуХToolStripMenuItem.Click += new System.EventHandler(this.вставитьКоординатуХToolStripMenuItem_Click);
+            // 
+            // копироватьToolStripMenuItem
+            // 
+            resources.ApplyResources(this.копироватьToolStripMenuItem, "копироватьToolStripMenuItem");
+            this.копироватьToolStripMenuItem.Name = "копироватьToolStripMenuItem";
+            this.копироватьToolStripMenuItem.Click += new System.EventHandler(this.копироватьToolStripMenuItem_Click);
+            // 
+            // вставитьToolStripMenuItem
+            // 
+            resources.ApplyResources(this.вставитьToolStripMenuItem, "вставитьToolStripMenuItem");
+            this.вставитьToolStripMenuItem.Name = "вставитьToolStripMenuItem";
+            this.вставитьToolStripMenuItem.Click += new System.EventHandler(this.вставитьToolStripMenuItem_Click);
+            // 
+            // numericUpDown_Shortcuts_Steps_Y
+            // 
+            this.numericUpDown_Shortcuts_Steps_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_Shortcuts_Steps_Y, "numericUpDown_Shortcuts_Steps_Y");
+            this.numericUpDown_Shortcuts_Steps_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Shortcuts_Steps_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Shortcuts_Steps_Y.Name = "numericUpDown_Shortcuts_Steps_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Shortcuts_Steps_Y, ((bool)(resources.GetObject("numericUpDown_Shortcuts_Steps_Y.ShowHelp"))));
+            this.numericUpDown_Shortcuts_Steps_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Shortcuts_Steps_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
+            // 
+            // contextMenuStrip_Y
+            // 
+            this.contextMenuStrip_Y.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip_Y.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.копироватьToolStripMenuItem1,
+            this.вставитьToolStripMenuItem1});
+            this.contextMenuStrip_Y.Name = "contextMenuStrip_X";
+            this.helpProvider1.SetShowHelp(this.contextMenuStrip_Y, ((bool)(resources.GetObject("contextMenuStrip_Y.ShowHelp"))));
+            resources.ApplyResources(this.contextMenuStrip_Y, "contextMenuStrip_Y");
+            this.contextMenuStrip_Y.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Y_Opening);
+            // 
+            // toolStripMenuItem1
+            // 
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.вставитьКоординатуYToolStripMenuItem_Click);
+            // 
+            // копироватьToolStripMenuItem1
+            // 
+            resources.ApplyResources(this.копироватьToolStripMenuItem1, "копироватьToolStripMenuItem1");
+            this.копироватьToolStripMenuItem1.Name = "копироватьToolStripMenuItem1";
+            this.копироватьToolStripMenuItem1.Click += new System.EventHandler(this.копироватьToolStripMenuItem_Click);
+            // 
+            // вставитьToolStripMenuItem1
+            // 
+            resources.ApplyResources(this.вставитьToolStripMenuItem1, "вставитьToolStripMenuItem1");
+            this.вставитьToolStripMenuItem1.Name = "вставитьToolStripMenuItem1";
+            this.вставитьToolStripMenuItem1.Click += new System.EventHandler(this.вставитьToolStripMenuItem_Click);
+            // 
+            // numericUpDown_Shortcuts_Steps_X
+            // 
+            this.numericUpDown_Shortcuts_Steps_X.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_Shortcuts_Steps_X, "numericUpDown_Shortcuts_Steps_X");
+            this.numericUpDown_Shortcuts_Steps_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Shortcuts_Steps_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Shortcuts_Steps_X.Name = "numericUpDown_Shortcuts_Steps_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Shortcuts_Steps_X, ((bool)(resources.GetObject("numericUpDown_Shortcuts_Steps_X.ShowHelp"))));
+            this.numericUpDown_Shortcuts_Steps_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Shortcuts_Steps_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
+            // 
+            // checkBox_Shortcuts_Steps
+            // 
+            resources.ApplyResources(this.checkBox_Shortcuts_Steps, "checkBox_Shortcuts_Steps");
+            this.checkBox_Shortcuts_Steps.Name = "checkBox_Shortcuts_Steps";
+            this.helpProvider1.SetShowHelp(this.checkBox_Shortcuts_Steps, ((bool)(resources.GetObject("checkBox_Shortcuts_Steps.ShowHelp"))));
+            this.checkBox_Shortcuts_Steps.UseVisualStyleBackColor = true;
+            this.checkBox_Shortcuts_Steps.CheckedChanged += new System.EventHandler(this.checkBox_Shortcuts_Steps_CheckedChanged);
+            this.checkBox_Shortcuts_Steps.Click += new System.EventHandler(this.checkBox_Click);
+            // 
+            // label435
+            // 
+            resources.ApplyResources(this.label435, "label435");
+            this.label435.Name = "label435";
+            this.helpProvider1.SetShowHelp(this.label435, ((bool)(resources.GetObject("label435.ShowHelp"))));
+            // 
+            // label438
+            // 
+            resources.ApplyResources(this.label438, "label438");
+            this.label438.Name = "label438";
+            this.helpProvider1.SetShowHelp(this.label438, ((bool)(resources.GetObject("label438.ShowHelp"))));
+            // 
+            // numericUpDown_Shortcuts_Steps_Height
+            // 
+            this.numericUpDown_Shortcuts_Steps_Height.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_Shortcuts_Steps_Height, "numericUpDown_Shortcuts_Steps_Height");
+            this.numericUpDown_Shortcuts_Steps_Height.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Shortcuts_Steps_Height.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Shortcuts_Steps_Height.Name = "numericUpDown_Shortcuts_Steps_Height";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Shortcuts_Steps_Height, ((bool)(resources.GetObject("numericUpDown_Shortcuts_Steps_Height.ShowHelp"))));
+            this.numericUpDown_Shortcuts_Steps_Height.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label439
+            // 
+            resources.ApplyResources(this.label439, "label439");
+            this.label439.Name = "label439";
+            this.helpProvider1.SetShowHelp(this.label439, ((bool)(resources.GetObject("label439.ShowHelp"))));
+            // 
+            // label440
+            // 
+            resources.ApplyResources(this.label440, "label440");
+            this.label440.Name = "label440";
+            this.helpProvider1.SetShowHelp(this.label440, ((bool)(resources.GetObject("label440.ShowHelp"))));
+            // 
+            // label442
+            // 
+            resources.ApplyResources(this.label442, "label442");
+            this.label442.Name = "label442";
+            this.helpProvider1.SetShowHelp(this.label442, ((bool)(resources.GetObject("label442.ShowHelp"))));
+            // 
+            // label443
+            // 
+            resources.ApplyResources(this.label443, "label443");
+            this.label443.Name = "label443";
+            this.helpProvider1.SetShowHelp(this.label443, ((bool)(resources.GetObject("label443.ShowHelp"))));
+            // 
+            // tabPage47
+            // 
+            this.tabPage47.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage47.Controls.Add(this.numericUpDown_Shortcuts_Puls_Width);
+            this.tabPage47.Controls.Add(this.numericUpDown_Shortcuts_Puls_Y);
+            this.tabPage47.Controls.Add(this.numericUpDown_Shortcuts_Puls_X);
+            this.tabPage47.Controls.Add(this.checkBox_Shortcuts_Puls);
+            this.tabPage47.Controls.Add(this.label434);
+            this.tabPage47.Controls.Add(this.label436);
+            this.tabPage47.Controls.Add(this.numericUpDown_Shortcuts_Puls_Height);
+            this.tabPage47.Controls.Add(this.label437);
+            this.tabPage47.Controls.Add(this.label441);
+            this.tabPage47.Controls.Add(this.label444);
+            this.tabPage47.Controls.Add(this.label445);
+            resources.ApplyResources(this.tabPage47, "tabPage47");
+            this.tabPage47.Name = "tabPage47";
+            this.helpProvider1.SetShowHelp(this.tabPage47, ((bool)(resources.GetObject("tabPage47.ShowHelp"))));
+            // 
+            // numericUpDown_Shortcuts_Puls_Width
+            // 
+            this.numericUpDown_Shortcuts_Puls_Width.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_Shortcuts_Puls_Width, "numericUpDown_Shortcuts_Puls_Width");
+            this.numericUpDown_Shortcuts_Puls_Width.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Shortcuts_Puls_Width.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Shortcuts_Puls_Width.Name = "numericUpDown_Shortcuts_Puls_Width";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Shortcuts_Puls_Width, ((bool)(resources.GetObject("numericUpDown_Shortcuts_Puls_Width.ShowHelp"))));
+            this.numericUpDown_Shortcuts_Puls_Width.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // numericUpDown_Shortcuts_Puls_Y
+            // 
+            this.numericUpDown_Shortcuts_Puls_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_Shortcuts_Puls_Y, "numericUpDown_Shortcuts_Puls_Y");
+            this.numericUpDown_Shortcuts_Puls_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Shortcuts_Puls_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Shortcuts_Puls_Y.Name = "numericUpDown_Shortcuts_Puls_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Shortcuts_Puls_Y, ((bool)(resources.GetObject("numericUpDown_Shortcuts_Puls_Y.ShowHelp"))));
+            this.numericUpDown_Shortcuts_Puls_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Shortcuts_Puls_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
+            // 
+            // numericUpDown_Shortcuts_Puls_X
+            // 
+            this.numericUpDown_Shortcuts_Puls_X.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_Shortcuts_Puls_X, "numericUpDown_Shortcuts_Puls_X");
+            this.numericUpDown_Shortcuts_Puls_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Shortcuts_Puls_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Shortcuts_Puls_X.Name = "numericUpDown_Shortcuts_Puls_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Shortcuts_Puls_X, ((bool)(resources.GetObject("numericUpDown_Shortcuts_Puls_X.ShowHelp"))));
+            this.numericUpDown_Shortcuts_Puls_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Shortcuts_Puls_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
+            // 
+            // checkBox_Shortcuts_Puls
+            // 
+            resources.ApplyResources(this.checkBox_Shortcuts_Puls, "checkBox_Shortcuts_Puls");
+            this.checkBox_Shortcuts_Puls.Name = "checkBox_Shortcuts_Puls";
+            this.helpProvider1.SetShowHelp(this.checkBox_Shortcuts_Puls, ((bool)(resources.GetObject("checkBox_Shortcuts_Puls.ShowHelp"))));
+            this.checkBox_Shortcuts_Puls.UseVisualStyleBackColor = true;
+            this.checkBox_Shortcuts_Puls.CheckedChanged += new System.EventHandler(this.checkBox_Shortcuts_Puls_CheckedChanged);
+            this.checkBox_Shortcuts_Puls.Click += new System.EventHandler(this.checkBox_Click);
+            // 
+            // label434
+            // 
+            resources.ApplyResources(this.label434, "label434");
+            this.label434.Name = "label434";
+            this.helpProvider1.SetShowHelp(this.label434, ((bool)(resources.GetObject("label434.ShowHelp"))));
+            // 
+            // label436
+            // 
+            resources.ApplyResources(this.label436, "label436");
+            this.label436.Name = "label436";
+            this.helpProvider1.SetShowHelp(this.label436, ((bool)(resources.GetObject("label436.ShowHelp"))));
+            // 
+            // numericUpDown_Shortcuts_Puls_Height
+            // 
+            this.numericUpDown_Shortcuts_Puls_Height.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_Shortcuts_Puls_Height, "numericUpDown_Shortcuts_Puls_Height");
+            this.numericUpDown_Shortcuts_Puls_Height.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Shortcuts_Puls_Height.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Shortcuts_Puls_Height.Name = "numericUpDown_Shortcuts_Puls_Height";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Shortcuts_Puls_Height, ((bool)(resources.GetObject("numericUpDown_Shortcuts_Puls_Height.ShowHelp"))));
+            this.numericUpDown_Shortcuts_Puls_Height.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label437
+            // 
+            resources.ApplyResources(this.label437, "label437");
+            this.label437.Name = "label437";
+            this.helpProvider1.SetShowHelp(this.label437, ((bool)(resources.GetObject("label437.ShowHelp"))));
+            // 
+            // label441
+            // 
+            resources.ApplyResources(this.label441, "label441");
+            this.label441.Name = "label441";
+            this.helpProvider1.SetShowHelp(this.label441, ((bool)(resources.GetObject("label441.ShowHelp"))));
+            // 
+            // label444
+            // 
+            resources.ApplyResources(this.label444, "label444");
+            this.label444.Name = "label444";
+            this.helpProvider1.SetShowHelp(this.label444, ((bool)(resources.GetObject("label444.ShowHelp"))));
+            // 
+            // label445
+            // 
+            resources.ApplyResources(this.label445, "label445");
+            this.label445.Name = "label445";
+            this.helpProvider1.SetShowHelp(this.label445, ((bool)(resources.GetObject("label445.ShowHelp"))));
+            // 
+            // tabPage48
+            // 
+            this.tabPage48.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage48.Controls.Add(this.numericUpDown_Shortcuts_Weather_Width);
+            this.tabPage48.Controls.Add(this.numericUpDown_Shortcuts_Weather_Y);
+            this.tabPage48.Controls.Add(this.numericUpDown_Shortcuts_Weather_X);
+            this.tabPage48.Controls.Add(this.checkBox_Shortcuts_Weather);
+            this.tabPage48.Controls.Add(this.label446);
+            this.tabPage48.Controls.Add(this.label447);
+            this.tabPage48.Controls.Add(this.numericUpDown_Shortcuts_Weather_Height);
+            this.tabPage48.Controls.Add(this.label448);
+            this.tabPage48.Controls.Add(this.label449);
+            this.tabPage48.Controls.Add(this.label450);
+            this.tabPage48.Controls.Add(this.label451);
+            resources.ApplyResources(this.tabPage48, "tabPage48");
+            this.tabPage48.Name = "tabPage48";
+            this.helpProvider1.SetShowHelp(this.tabPage48, ((bool)(resources.GetObject("tabPage48.ShowHelp"))));
+            // 
+            // numericUpDown_Shortcuts_Weather_Width
+            // 
+            this.numericUpDown_Shortcuts_Weather_Width.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_Shortcuts_Weather_Width, "numericUpDown_Shortcuts_Weather_Width");
+            this.numericUpDown_Shortcuts_Weather_Width.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Shortcuts_Weather_Width.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Shortcuts_Weather_Width.Name = "numericUpDown_Shortcuts_Weather_Width";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Shortcuts_Weather_Width, ((bool)(resources.GetObject("numericUpDown_Shortcuts_Weather_Width.ShowHelp"))));
+            this.numericUpDown_Shortcuts_Weather_Width.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // numericUpDown_Shortcuts_Weather_Y
+            // 
+            this.numericUpDown_Shortcuts_Weather_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_Shortcuts_Weather_Y, "numericUpDown_Shortcuts_Weather_Y");
+            this.numericUpDown_Shortcuts_Weather_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Shortcuts_Weather_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Shortcuts_Weather_Y.Name = "numericUpDown_Shortcuts_Weather_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Shortcuts_Weather_Y, ((bool)(resources.GetObject("numericUpDown_Shortcuts_Weather_Y.ShowHelp"))));
+            this.numericUpDown_Shortcuts_Weather_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Shortcuts_Weather_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
+            // 
+            // numericUpDown_Shortcuts_Weather_X
+            // 
+            this.numericUpDown_Shortcuts_Weather_X.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_Shortcuts_Weather_X, "numericUpDown_Shortcuts_Weather_X");
+            this.numericUpDown_Shortcuts_Weather_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Shortcuts_Weather_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Shortcuts_Weather_X.Name = "numericUpDown_Shortcuts_Weather_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Shortcuts_Weather_X, ((bool)(resources.GetObject("numericUpDown_Shortcuts_Weather_X.ShowHelp"))));
+            this.numericUpDown_Shortcuts_Weather_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Shortcuts_Weather_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
+            // 
+            // checkBox_Shortcuts_Weather
+            // 
+            resources.ApplyResources(this.checkBox_Shortcuts_Weather, "checkBox_Shortcuts_Weather");
+            this.checkBox_Shortcuts_Weather.Name = "checkBox_Shortcuts_Weather";
+            this.helpProvider1.SetShowHelp(this.checkBox_Shortcuts_Weather, ((bool)(resources.GetObject("checkBox_Shortcuts_Weather.ShowHelp"))));
+            this.checkBox_Shortcuts_Weather.UseVisualStyleBackColor = true;
+            this.checkBox_Shortcuts_Weather.CheckedChanged += new System.EventHandler(this.checkBox_Shortcuts_Weather_CheckedChanged);
+            this.checkBox_Shortcuts_Weather.Click += new System.EventHandler(this.checkBox_Click);
+            // 
+            // label446
+            // 
+            resources.ApplyResources(this.label446, "label446");
+            this.label446.Name = "label446";
+            this.helpProvider1.SetShowHelp(this.label446, ((bool)(resources.GetObject("label446.ShowHelp"))));
+            // 
+            // label447
+            // 
+            resources.ApplyResources(this.label447, "label447");
+            this.label447.Name = "label447";
+            this.helpProvider1.SetShowHelp(this.label447, ((bool)(resources.GetObject("label447.ShowHelp"))));
+            // 
+            // numericUpDown_Shortcuts_Weather_Height
+            // 
+            this.numericUpDown_Shortcuts_Weather_Height.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_Shortcuts_Weather_Height, "numericUpDown_Shortcuts_Weather_Height");
+            this.numericUpDown_Shortcuts_Weather_Height.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Shortcuts_Weather_Height.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Shortcuts_Weather_Height.Name = "numericUpDown_Shortcuts_Weather_Height";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Shortcuts_Weather_Height, ((bool)(resources.GetObject("numericUpDown_Shortcuts_Weather_Height.ShowHelp"))));
+            this.numericUpDown_Shortcuts_Weather_Height.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label448
+            // 
+            resources.ApplyResources(this.label448, "label448");
+            this.label448.Name = "label448";
+            this.helpProvider1.SetShowHelp(this.label448, ((bool)(resources.GetObject("label448.ShowHelp"))));
+            // 
+            // label449
+            // 
+            resources.ApplyResources(this.label449, "label449");
+            this.label449.Name = "label449";
+            this.helpProvider1.SetShowHelp(this.label449, ((bool)(resources.GetObject("label449.ShowHelp"))));
+            // 
+            // label450
+            // 
+            resources.ApplyResources(this.label450, "label450");
+            this.label450.Name = "label450";
+            this.helpProvider1.SetShowHelp(this.label450, ((bool)(resources.GetObject("label450.ShowHelp"))));
+            // 
+            // label451
+            // 
+            resources.ApplyResources(this.label451, "label451");
+            this.label451.Name = "label451";
+            this.helpProvider1.SetShowHelp(this.label451, ((bool)(resources.GetObject("label451.ShowHelp"))));
+            // 
+            // tabPage49
+            // 
+            this.tabPage49.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage49.Controls.Add(this.numericUpDown_Shortcuts_Energy_Width);
+            this.tabPage49.Controls.Add(this.numericUpDown_Shortcuts_Energy_Y);
+            this.tabPage49.Controls.Add(this.numericUpDown_Shortcuts_Energy_X);
+            this.tabPage49.Controls.Add(this.checkBox_Shortcuts_Energy);
+            this.tabPage49.Controls.Add(this.label452);
+            this.tabPage49.Controls.Add(this.label453);
+            this.tabPage49.Controls.Add(this.numericUpDown_Shortcuts_Energy_Height);
+            this.tabPage49.Controls.Add(this.label454);
+            this.tabPage49.Controls.Add(this.label455);
+            this.tabPage49.Controls.Add(this.label456);
+            this.tabPage49.Controls.Add(this.label457);
+            resources.ApplyResources(this.tabPage49, "tabPage49");
+            this.tabPage49.Name = "tabPage49";
+            // 
+            // numericUpDown_Shortcuts_Energy_Width
+            // 
+            this.numericUpDown_Shortcuts_Energy_Width.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_Shortcuts_Energy_Width, "numericUpDown_Shortcuts_Energy_Width");
+            this.numericUpDown_Shortcuts_Energy_Width.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Shortcuts_Energy_Width.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Shortcuts_Energy_Width.Name = "numericUpDown_Shortcuts_Energy_Width";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Shortcuts_Energy_Width, ((bool)(resources.GetObject("numericUpDown_Shortcuts_Energy_Width.ShowHelp"))));
+            this.numericUpDown_Shortcuts_Energy_Width.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // numericUpDown_Shortcuts_Energy_Y
+            // 
+            this.numericUpDown_Shortcuts_Energy_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_Shortcuts_Energy_Y, "numericUpDown_Shortcuts_Energy_Y");
+            this.numericUpDown_Shortcuts_Energy_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Shortcuts_Energy_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Shortcuts_Energy_Y.Name = "numericUpDown_Shortcuts_Energy_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Shortcuts_Energy_Y, ((bool)(resources.GetObject("numericUpDown_Shortcuts_Energy_Y.ShowHelp"))));
+            this.numericUpDown_Shortcuts_Energy_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Shortcuts_Energy_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
+            // 
+            // numericUpDown_Shortcuts_Energy_X
+            // 
+            this.numericUpDown_Shortcuts_Energy_X.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_Shortcuts_Energy_X, "numericUpDown_Shortcuts_Energy_X");
+            this.numericUpDown_Shortcuts_Energy_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Shortcuts_Energy_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Shortcuts_Energy_X.Name = "numericUpDown_Shortcuts_Energy_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Shortcuts_Energy_X, ((bool)(resources.GetObject("numericUpDown_Shortcuts_Energy_X.ShowHelp"))));
+            this.numericUpDown_Shortcuts_Energy_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Shortcuts_Energy_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
+            // 
+            // checkBox_Shortcuts_Energy
+            // 
+            resources.ApplyResources(this.checkBox_Shortcuts_Energy, "checkBox_Shortcuts_Energy");
+            this.checkBox_Shortcuts_Energy.Name = "checkBox_Shortcuts_Energy";
+            this.helpProvider1.SetShowHelp(this.checkBox_Shortcuts_Energy, ((bool)(resources.GetObject("checkBox_Shortcuts_Energy.ShowHelp"))));
+            this.checkBox_Shortcuts_Energy.UseVisualStyleBackColor = true;
+            this.checkBox_Shortcuts_Energy.CheckedChanged += new System.EventHandler(this.checkBox_Shortcuts_Energy_CheckedChanged);
+            this.checkBox_Shortcuts_Energy.Click += new System.EventHandler(this.checkBox_Click);
+            // 
+            // label452
+            // 
+            resources.ApplyResources(this.label452, "label452");
+            this.label452.Name = "label452";
+            this.helpProvider1.SetShowHelp(this.label452, ((bool)(resources.GetObject("label452.ShowHelp"))));
+            // 
+            // label453
+            // 
+            resources.ApplyResources(this.label453, "label453");
+            this.label453.Name = "label453";
+            this.helpProvider1.SetShowHelp(this.label453, ((bool)(resources.GetObject("label453.ShowHelp"))));
+            // 
+            // numericUpDown_Shortcuts_Energy_Height
+            // 
+            this.numericUpDown_Shortcuts_Energy_Height.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_Shortcuts_Energy_Height, "numericUpDown_Shortcuts_Energy_Height");
+            this.numericUpDown_Shortcuts_Energy_Height.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Shortcuts_Energy_Height.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Shortcuts_Energy_Height.Name = "numericUpDown_Shortcuts_Energy_Height";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Shortcuts_Energy_Height, ((bool)(resources.GetObject("numericUpDown_Shortcuts_Energy_Height.ShowHelp"))));
+            this.numericUpDown_Shortcuts_Energy_Height.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label454
+            // 
+            resources.ApplyResources(this.label454, "label454");
+            this.label454.Name = "label454";
+            this.helpProvider1.SetShowHelp(this.label454, ((bool)(resources.GetObject("label454.ShowHelp"))));
+            // 
+            // label455
+            // 
+            resources.ApplyResources(this.label455, "label455");
+            this.label455.Name = "label455";
+            this.helpProvider1.SetShowHelp(this.label455, ((bool)(resources.GetObject("label455.ShowHelp"))));
+            // 
+            // label456
+            // 
+            resources.ApplyResources(this.label456, "label456");
+            this.label456.Name = "label456";
+            this.helpProvider1.SetShowHelp(this.label456, ((bool)(resources.GetObject("label456.ShowHelp"))));
+            // 
+            // label457
+            // 
+            resources.ApplyResources(this.label457, "label457");
+            this.label457.Name = "label457";
+            this.helpProvider1.SetShowHelp(this.label457, ((bool)(resources.GetObject("label457.ShowHelp"))));
+            // 
+            // checkBox_Shortcuts
+            // 
+            resources.ApplyResources(this.checkBox_Shortcuts, "checkBox_Shortcuts");
+            this.checkBox_Shortcuts.Name = "checkBox_Shortcuts";
+            this.helpProvider1.SetShowHelp(this.checkBox_Shortcuts, ((bool)(resources.GetObject("checkBox_Shortcuts.ShowHelp"))));
+            this.checkBox_Shortcuts.UseVisualStyleBackColor = true;
+            this.checkBox_Shortcuts.CheckedChanged += new System.EventHandler(this.checkBox_Shortcuts_CheckedChanged);
+            this.checkBox_Shortcuts.Click += new System.EventHandler(this.checkBox_Click);
+            // 
+            // button_Shortcuts
+            // 
+            resources.ApplyResources(this.button_Shortcuts, "button_Shortcuts");
+            this.button_Shortcuts.Name = "button_Shortcuts";
+            this.helpProvider1.SetShowHelp(this.button_Shortcuts, ((bool)(resources.GetObject("button_Shortcuts.ShowHelp"))));
+            this.button_Shortcuts.UseVisualStyleBackColor = true;
+            this.button_Shortcuts.Click += new System.EventHandler(this.button_Shortcuts_Click);
             // 
             // panel_Weather
             // 
@@ -5309,36 +6030,6 @@
             this.numericUpDown_Weather_Text_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             this.numericUpDown_Weather_Text_EndCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
-            // contextMenuStrip_X
-            // 
-            this.contextMenuStrip_X.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip_X.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.вставитьКоординатуХToolStripMenuItem,
-            this.копироватьToolStripMenuItem,
-            this.вставитьToolStripMenuItem});
-            this.contextMenuStrip_X.Name = "contextMenuStrip_X";
-            this.helpProvider1.SetShowHelp(this.contextMenuStrip_X, ((bool)(resources.GetObject("contextMenuStrip_X.ShowHelp"))));
-            resources.ApplyResources(this.contextMenuStrip_X, "contextMenuStrip_X");
-            this.contextMenuStrip_X.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_X_Opening);
-            // 
-            // вставитьКоординатуХToolStripMenuItem
-            // 
-            resources.ApplyResources(this.вставитьКоординатуХToolStripMenuItem, "вставитьКоординатуХToolStripMenuItem");
-            this.вставитьКоординатуХToolStripMenuItem.Name = "вставитьКоординатуХToolStripMenuItem";
-            this.вставитьКоординатуХToolStripMenuItem.Click += new System.EventHandler(this.вставитьКоординатуХToolStripMenuItem_Click);
-            // 
-            // копироватьToolStripMenuItem
-            // 
-            resources.ApplyResources(this.копироватьToolStripMenuItem, "копироватьToolStripMenuItem");
-            this.копироватьToolStripMenuItem.Name = "копироватьToolStripMenuItem";
-            this.копироватьToolStripMenuItem.Click += new System.EventHandler(this.копироватьToolStripMenuItem_Click);
-            // 
-            // вставитьToolStripMenuItem
-            // 
-            resources.ApplyResources(this.вставитьToolStripMenuItem, "вставитьToolStripMenuItem");
-            this.вставитьToolStripMenuItem.Name = "вставитьToolStripMenuItem";
-            this.вставитьToolStripMenuItem.Click += new System.EventHandler(this.вставитьToolStripMenuItem_Click);
-            // 
             // numericUpDown_Weather_Text_Count
             // 
             resources.ApplyResources(this.numericUpDown_Weather_Text_Count, "numericUpDown_Weather_Text_Count");
@@ -5374,36 +6065,6 @@
             this.helpProvider1.SetShowHelp(this.numericUpDown_Weather_Text_StartCorner_Y, ((bool)(resources.GetObject("numericUpDown_Weather_Text_StartCorner_Y.ShowHelp"))));
             this.numericUpDown_Weather_Text_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             this.numericUpDown_Weather_Text_StartCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // contextMenuStrip_Y
-            // 
-            this.contextMenuStrip_Y.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip_Y.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.копироватьToolStripMenuItem1,
-            this.вставитьToolStripMenuItem1});
-            this.contextMenuStrip_Y.Name = "contextMenuStrip_X";
-            this.helpProvider1.SetShowHelp(this.contextMenuStrip_Y, ((bool)(resources.GetObject("contextMenuStrip_Y.ShowHelp"))));
-            resources.ApplyResources(this.contextMenuStrip_Y, "contextMenuStrip_Y");
-            this.contextMenuStrip_Y.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Y_Opening);
-            // 
-            // toolStripMenuItem1
-            // 
-            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.вставитьКоординатуYToolStripMenuItem_Click);
-            // 
-            // копироватьToolStripMenuItem1
-            // 
-            resources.ApplyResources(this.копироватьToolStripMenuItem1, "копироватьToolStripMenuItem1");
-            this.копироватьToolStripMenuItem1.Name = "копироватьToolStripMenuItem1";
-            this.копироватьToolStripMenuItem1.Click += new System.EventHandler(this.копироватьToolStripMenuItem_Click);
-            // 
-            // вставитьToolStripMenuItem1
-            // 
-            resources.ApplyResources(this.вставитьToolStripMenuItem1, "вставитьToolStripMenuItem1");
-            this.вставитьToolStripMenuItem1.Name = "вставитьToolStripMenuItem1";
-            this.вставитьToolStripMenuItem1.Click += new System.EventHandler(this.вставитьToolStripMenuItem_Click);
             // 
             // numericUpDown_Weather_Text_StartCorner_X
             // 
@@ -14411,6 +15072,17 @@
             this.helpProvider1.SetShowHelp(this.pictureBox1, ((bool)(resources.GetObject("pictureBox1.ShowHelp"))));
             this.pictureBox1.TabStop = false;
             // 
+            // checkBox_Show_Shortcuts
+            // 
+            this.checkBox_Show_Shortcuts.Checked = true;
+            this.checkBox_Show_Shortcuts.CheckState = System.Windows.Forms.CheckState.Checked;
+            resources.ApplyResources(this.checkBox_Show_Shortcuts, "checkBox_Show_Shortcuts");
+            this.checkBox_Show_Shortcuts.Name = "checkBox_Show_Shortcuts";
+            this.helpProvider1.SetShowHelp(this.checkBox_Show_Shortcuts, ((bool)(resources.GetObject("checkBox_Show_Shortcuts.ShowHelp"))));
+            this.checkBox_Show_Shortcuts.UseVisualStyleBackColor = true;
+            this.checkBox_Show_Shortcuts.CheckedChanged += new System.EventHandler(this.checkBox_Show_Shortcuts_CheckedChanged);
+            this.checkBox_Show_Shortcuts.Click += new System.EventHandler(this.checkBox_Click);
+            // 
             // timer2
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
@@ -14427,6 +15099,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.checkBox_Show_Shortcuts);
             this.Controls.Add(this.checkBox_crop);
             this.Controls.Add(this.radioButton_gts);
             this.Controls.Add(this.label_version);
@@ -14572,6 +15245,34 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ImagesList)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel_Shortcuts.ResumeLayout(false);
+            this.tabControl_Shortcuts.ResumeLayout(false);
+            this.tabPage46.ResumeLayout(false);
+            this.tabPage46.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Steps_Width)).EndInit();
+            this.contextMenuStrip_X.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Steps_Y)).EndInit();
+            this.contextMenuStrip_Y.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Steps_X)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Steps_Height)).EndInit();
+            this.tabPage47.ResumeLayout(false);
+            this.tabPage47.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Puls_Width)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Puls_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Puls_X)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Puls_Height)).EndInit();
+            this.tabPage48.ResumeLayout(false);
+            this.tabPage48.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Weather_Width)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Weather_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Weather_X)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Weather_Height)).EndInit();
+            this.tabPage49.ResumeLayout(false);
+            this.tabPage49.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Energy_Width)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Energy_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Energy_X)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Energy_Height)).EndInit();
             this.panel_Weather.ResumeLayout(false);
             this.groupBox_Symbols.ResumeLayout(false);
             this.groupBox_Symbols.PerformLayout();
@@ -14579,10 +15280,8 @@
             this.tabPage24.ResumeLayout(false);
             this.tabPage24.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Text_EndCorner_X)).EndInit();
-            this.contextMenuStrip_X.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Text_Count)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Text_StartCorner_Y)).EndInit();
-            this.contextMenuStrip_Y.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Text_StartCorner_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Text_Spacing)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Weather_Text_EndCorner_Y)).EndInit();
@@ -16089,6 +16788,59 @@
         private System.Windows.Forms.Label label433;
         private System.Windows.Forms.CheckBox checkBox_StepsProgress_Image;
         private System.Windows.Forms.ComboBox comboBox_StepsProgress_Image;
+        private System.Windows.Forms.Button button_Shortcuts;
+        private System.Windows.Forms.Panel panel_Shortcuts;
+        private System.Windows.Forms.TabControl tabControl_Shortcuts;
+        private System.Windows.Forms.TabPage tabPage46;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Shortcuts_Steps_Width;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Shortcuts_Steps_Y;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Shortcuts_Steps_X;
+        private System.Windows.Forms.CheckBox checkBox_Shortcuts_Steps;
+        private System.Windows.Forms.Label label435;
+        private System.Windows.Forms.Label label438;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Shortcuts_Steps_Height;
+        private System.Windows.Forms.Label label439;
+        private System.Windows.Forms.Label label440;
+        private System.Windows.Forms.Label label442;
+        private System.Windows.Forms.Label label443;
+        private System.Windows.Forms.TabPage tabPage47;
+        private System.Windows.Forms.TabPage tabPage48;
+        private System.Windows.Forms.CheckBox checkBox_Shortcuts;
+        private System.Windows.Forms.CheckBox checkBox_Show_Shortcuts;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Shortcuts_Puls_Width;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Shortcuts_Puls_Y;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Shortcuts_Puls_X;
+        private System.Windows.Forms.CheckBox checkBox_Shortcuts_Puls;
+        private System.Windows.Forms.Label label434;
+        private System.Windows.Forms.Label label436;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Shortcuts_Puls_Height;
+        private System.Windows.Forms.Label label437;
+        private System.Windows.Forms.Label label441;
+        private System.Windows.Forms.Label label444;
+        private System.Windows.Forms.Label label445;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Shortcuts_Weather_Width;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Shortcuts_Weather_Y;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Shortcuts_Weather_X;
+        private System.Windows.Forms.CheckBox checkBox_Shortcuts_Weather;
+        private System.Windows.Forms.Label label446;
+        private System.Windows.Forms.Label label447;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Shortcuts_Weather_Height;
+        private System.Windows.Forms.Label label448;
+        private System.Windows.Forms.Label label449;
+        private System.Windows.Forms.Label label450;
+        private System.Windows.Forms.Label label451;
+        private System.Windows.Forms.TabPage tabPage49;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Shortcuts_Energy_Width;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Shortcuts_Energy_Y;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Shortcuts_Energy_X;
+        private System.Windows.Forms.CheckBox checkBox_Shortcuts_Energy;
+        private System.Windows.Forms.Label label452;
+        private System.Windows.Forms.Label label453;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Shortcuts_Energy_Height;
+        private System.Windows.Forms.Label label454;
+        private System.Windows.Forms.Label label455;
+        private System.Windows.Forms.Label label456;
+        private System.Windows.Forms.Label label457;
     }
 }
 

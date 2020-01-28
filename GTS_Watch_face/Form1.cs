@@ -73,7 +73,7 @@ namespace GTS_Watch_face
                 }
                 //Logger.WriteLine("Применили язык");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //Logger.WriteLine("Ошибка чтения настроек " + ex);
             }

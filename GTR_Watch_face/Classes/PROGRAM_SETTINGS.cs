@@ -25,6 +25,7 @@
 
         public bool ShowBorder = false;
         public bool Crop = true;
+        public bool Show_Shortcuts = true;
         public float Scale = 1f;
         public float Gif_Speed = 1f;
 

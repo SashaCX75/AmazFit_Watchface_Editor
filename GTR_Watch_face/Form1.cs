@@ -99,7 +99,7 @@ namespace GTR_Watch_face
                 //}
                 //Logger.WriteLine("Применили язык");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //Logger.WriteLine("Ошибка чтения настроек " + ex);
             }
@@ -253,6 +253,7 @@ namespace GTR_Watch_face
             //comboBox_StepsProgress_Flatness.Text = "Круглое";
             checkBox_border.Checked = Program_Settings.ShowBorder;
             checkBox_crop.Checked = Program_Settings.Crop;
+            checkBox_Show_Shortcuts.Checked = Program_Settings.Show_Shortcuts;
             comboBox_MonthAndDayD_Alignment.SelectedIndex = 0;
             comboBox_MonthAndDayM_Alignment.SelectedIndex = 0;
             comboBox_OneLine_Alignment.SelectedIndex = 0;
@@ -1231,7 +1232,8 @@ namespace GTR_Watch_face
             gPanel.Clear(panel_Preview.BackColor);
             float scale = 1.0f;
             if (panel_Preview.Height < 300) scale = 0.5f;
-            PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked);
+            PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, 
+                checkBox_border.Checked, checkBox_Show_Shortcuts.Checked);
             gPanel.Dispose();
 
             if ((formPreview != null) && (formPreview.Visible))
@@ -1244,7 +1246,7 @@ namespace GTR_Watch_face
                 if (formPreview.radioButton_xlarge.Checked) scalePreview = 2.0f;
                 if (formPreview.radioButton_xxlarge.Checked) scalePreview = 2.5f;
                 PreviewToBitmap(gPanelPreview, scalePreview, checkBox_crop.Checked, checkBox_WebW.Checked, 
-                    checkBox_WebB.Checked, checkBox_border.Checked);
+                    checkBox_WebB.Checked, checkBox_border.Checked, checkBox_Show_Shortcuts.Checked);
                 gPanelPreview.Dispose();
                 
             }
@@ -1767,7 +1769,8 @@ namespace GTR_Watch_face
                 panel_Status.Height = 1;
                 panel_Battery.Height = 1;
                 panel_AnalogClock.Height = 1;
-                panel_Weather.Height = 1; 
+                panel_Weather.Height = 1;
+                panel_Shortcuts.Height = 1;
             }
             else panel_Background.Height = 1;
         }
@@ -1786,6 +1789,7 @@ namespace GTR_Watch_face
                 panel_Battery.Height = 1;
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
+                panel_Shortcuts.Height = 1;
             }
             else panel_Time.Height = 1;
         }
@@ -1804,6 +1808,7 @@ namespace GTR_Watch_face
                 panel_Battery.Height = 1;
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
+                panel_Shortcuts.Height = 1;
             }
             else panel_Date.Height = 1;
         }
@@ -1822,6 +1827,7 @@ namespace GTR_Watch_face
                 panel_Battery.Height = 1;
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
+                panel_Shortcuts.Height = 1;
             }
             else panel_AnalogDate.Height = 1;
         }
@@ -1840,6 +1846,7 @@ namespace GTR_Watch_face
                 panel_Battery.Height = 1;
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
+                panel_Shortcuts.Height = 1;
             }
             else panel_StepsProgress.Height = 1;
         }
@@ -1858,6 +1865,7 @@ namespace GTR_Watch_face
                 panel_Battery.Height = 1;
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
+                panel_Shortcuts.Height = 1;
             }
             else panel_Activity.Height = 1;
         }
@@ -1876,6 +1884,7 @@ namespace GTR_Watch_face
                 panel_Battery.Height = 1;
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
+                panel_Shortcuts.Height = 1;
             }
             else panel_Status.Height = 1;
         }
@@ -1894,40 +1903,9 @@ namespace GTR_Watch_face
                 panel_Battery.Height = (int)(185 * currentDPI);
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
+                panel_Shortcuts.Height = 1;
             }
             else panel_Battery.Height = 1;
-        }
-
-        private void checkBox_Battery_Scale_Image_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox_Battery_Scale_Image.Checked)
-            {
-                comboBox_Battery_Scale_Image.Enabled = true;
-                numericUpDown_Battery_Scale_ImageX.Enabled = true;
-                numericUpDown_Battery_Scale_ImageY.Enabled = true;
-                label428.Enabled = true;
-                label429.Enabled = true;
-                comboBox_Battery_Scale_Color.Enabled = false;
-                numericUpDown_Battery_Scale_Center_X.Enabled = false;
-                numericUpDown_Battery_Scale_Center_Y.Enabled = false;
-                label201.Enabled = false;
-                label205.Enabled = false;
-                label206.Enabled = false;
-            }
-            else
-            {
-                comboBox_Battery_Scale_Image.Enabled = false;
-                numericUpDown_Battery_Scale_ImageX.Enabled = false;
-                numericUpDown_Battery_Scale_ImageY.Enabled = false;
-                label428.Enabled = false;
-                label429.Enabled = false;
-                comboBox_Battery_Scale_Color.Enabled = true;
-                numericUpDown_Battery_Scale_Center_X.Enabled = true;
-                numericUpDown_Battery_Scale_Center_Y.Enabled = true;
-                label201.Enabled = true;
-                label205.Enabled = true;
-                label206.Enabled = true;
-            }
         }
 
         private void button_AnalogClock_Click(object sender, EventArgs e)
@@ -1944,6 +1922,7 @@ namespace GTR_Watch_face
                 panel_Battery.Height = 1;
                 panel_AnalogClock.Height = (int)(193 * currentDPI);
                 panel_Weather.Height = 1;
+                panel_Shortcuts.Height = 1;
             }
             else panel_AnalogClock.Height = 1;
         }
@@ -1962,12 +1941,32 @@ namespace GTR_Watch_face
                 panel_Battery.Height = 1;
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = (int)(230 * currentDPI);
+                panel_Shortcuts.Height = 1;
             }
             else panel_Weather.Height = 1;
         }
-#endregion
 
-#region активируем и деактивируем настройки
+        private void button_Shortcuts_Click(object sender, EventArgs e)
+        {
+            if (panel_Shortcuts.Height == 1)
+            {
+                panel_Background.Height = 1;
+                panel_Time.Height = 1;
+                panel_Date.Height = 1;
+                panel_AnalogDate.Height = 1;
+                panel_StepsProgress.Height = 1;
+                panel_Activity.Height = 1;
+                panel_Status.Height = 1;
+                panel_Battery.Height = 1;
+                panel_AnalogClock.Height = 1;
+                panel_Weather.Height = 1;
+                panel_Shortcuts.Height = (int)(145 * currentDPI);
+            }
+            else panel_Shortcuts.Height = 1;
+        }
+        #endregion
+
+        #region активируем и деактивируем настройки
         private void checkBox_Minutes_CheckedChanged(object sender, EventArgs e)
         {
             bool b = checkBox_Minutes.Checked;
@@ -2794,6 +2793,38 @@ namespace GTR_Watch_face
             }
         }
 
+        private void checkBox_Battery_Scale_Image_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_Battery_Scale_Image.Checked)
+            {
+                comboBox_Battery_Scale_Image.Enabled = true;
+                numericUpDown_Battery_Scale_ImageX.Enabled = true;
+                numericUpDown_Battery_Scale_ImageY.Enabled = true;
+                label428.Enabled = true;
+                label429.Enabled = true;
+                comboBox_Battery_Scale_Color.Enabled = false;
+                numericUpDown_Battery_Scale_Center_X.Enabled = false;
+                numericUpDown_Battery_Scale_Center_Y.Enabled = false;
+                label201.Enabled = false;
+                label205.Enabled = false;
+                label206.Enabled = false;
+            }
+            else
+            {
+                comboBox_Battery_Scale_Image.Enabled = false;
+                numericUpDown_Battery_Scale_ImageX.Enabled = false;
+                numericUpDown_Battery_Scale_ImageY.Enabled = false;
+                label428.Enabled = false;
+                label429.Enabled = false;
+                comboBox_Battery_Scale_Color.Enabled = true;
+                numericUpDown_Battery_Scale_Center_X.Enabled = true;
+                numericUpDown_Battery_Scale_Center_Y.Enabled = true;
+                label201.Enabled = true;
+                label205.Enabled = true;
+                label206.Enabled = true;
+            }
+        }
+
         private void checkBox_Battery_ClockHand_CheckedChanged(object sender, EventArgs e)
         {
             bool b = checkBox_Battery_ClockHand.Checked;
@@ -3044,7 +3075,77 @@ namespace GTR_Watch_face
                 groupBox_Symbols.Enabled = false;
             }
         }
-#endregion
+
+        private void checkBox_Shortcuts_CheckedChanged(object sender, EventArgs e)
+        {
+            tabControl_Shortcuts.Enabled = checkBox_Shortcuts.Checked;
+        }
+
+        private void checkBox_Shortcuts_Steps_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Shortcuts_Steps.Checked;
+            numericUpDown_Shortcuts_Steps_X.Enabled = b;
+            numericUpDown_Shortcuts_Steps_Y.Enabled = b;
+            numericUpDown_Shortcuts_Steps_Width.Enabled = b;
+            numericUpDown_Shortcuts_Steps_Height.Enabled = b;
+
+            label435.Enabled = b;
+            label438.Enabled = b;
+            label439.Enabled = b;
+            label440.Enabled = b;
+            label442.Enabled = b;
+            label443.Enabled = b;
+
+        }
+
+        private void checkBox_Shortcuts_Puls_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Shortcuts_Puls.Checked;
+            numericUpDown_Shortcuts_Puls_X.Enabled = b;
+            numericUpDown_Shortcuts_Puls_Y.Enabled = b;
+            numericUpDown_Shortcuts_Puls_Width.Enabled = b;
+            numericUpDown_Shortcuts_Puls_Height.Enabled = b;
+
+            label434.Enabled = b;
+            label436.Enabled = b;
+            label437.Enabled = b;
+            label441.Enabled = b;
+            label444.Enabled = b;
+            label445.Enabled = b;
+        }
+
+        private void checkBox_Shortcuts_Weather_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Shortcuts_Weather.Checked;
+            numericUpDown_Shortcuts_Weather_X.Enabled = b;
+            numericUpDown_Shortcuts_Weather_Y.Enabled = b;
+            numericUpDown_Shortcuts_Weather_Width.Enabled = b;
+            numericUpDown_Shortcuts_Weather_Height.Enabled = b;
+
+            label446.Enabled = b;
+            label447.Enabled = b;
+            label448.Enabled = b;
+            label449.Enabled = b;
+            label450.Enabled = b;
+            label451.Enabled = b;
+        }
+
+        private void checkBox_Shortcuts_Energy_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Shortcuts_Energy.Checked;
+            numericUpDown_Shortcuts_Energy_X.Enabled = b;
+            numericUpDown_Shortcuts_Energy_Y.Enabled = b;
+            numericUpDown_Shortcuts_Energy_Width.Enabled = b;
+            numericUpDown_Shortcuts_Energy_Height.Enabled = b;
+
+            label452.Enabled = b;
+            label453.Enabled = b;
+            label454.Enabled = b;
+            label455.Enabled = b;
+            label456.Enabled = b;
+            label457.Enabled = b;
+        }
+        #endregion
 
         private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -3686,7 +3787,7 @@ namespace GTR_Watch_face
                     File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
 
                     PreviewToBitmap(gPanelPreviewResize, scalePreviewResize, checkBox_crop.Checked,
-                        checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked);
+                        checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked, checkBox_Show_Shortcuts.Checked);
                     gPanelPreviewResize.Dispose();
                 };
 
@@ -3729,7 +3830,8 @@ namespace GTR_Watch_face
             if (formPreview.radioButton_xlarge.Checked) scale = 2.0f;
             if (formPreview.radioButton_xxlarge.Checked) scale = 2.5f;
 
-            PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked);
+            PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, 
+                checkBox_border.Checked, checkBox_Show_Shortcuts.Checked);
             gPanel.Dispose();
 
             button_PreviewBig.Enabled = false;
@@ -4839,12 +4941,7 @@ namespace GTR_Watch_face
                     mask = new Bitmap(@"Mask\mask_gts.png");
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
-                //float scale = 1.0f;
-                //if (formPreview.radioButton_small.Checked) scale = 0.5f;
-                //if (formPreview.radioButton_large.Checked) scale = 1.5f;
-                //if (formPreview.radioButton_xlarge.Checked) scale = 2.0f;
-                //if (formPreview.radioButton_xxlarge.Checked) scale = 2.5f;checkBox_crop.Checked,
-                PreviewToBitmap(gPanel, 1.0f, false, false, false, false);
+                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false);
                 if(checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
                 bitmap.Save(saveFileDialog.FileName, ImageFormat.Png);
             }
@@ -5000,7 +5097,7 @@ namespace GTR_Watch_face
                             numericUpDown_WeatherSet_NightTemp.Value = numericUpDown_WeatherSet_Temp.Value - rnd.Next(3, 10);
                             comboBox_WeatherSet_Icon.SelectedIndex = rnd.Next(0, 25);
 
-                            PreviewToBitmap(gPanel, 1.0f, false, false, false, false);
+                            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false);
                             if (checkBox_crop.Checked) {
                                 bitmap = ApplyMask(bitmap, mask);
                                 gPanel = Graphics.FromImage(bitmap);
@@ -5149,7 +5246,7 @@ namespace GTR_Watch_face
                 if (formPreview.radioButton_xlarge.Checked) scalePreviewPaint = 2.0f;
                 if (formPreview.radioButton_xxlarge.Checked) scalePreviewPaint = 2.5f;
                 PreviewToBitmap(gPanelPreviewPaint, scalePreviewPaint, checkBox_crop.Checked,
-                    checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked);
+                    checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked, checkBox_Show_Shortcuts.Checked);
                 gPanelPreviewPaint.Dispose();
             }
         }
@@ -5345,6 +5442,7 @@ namespace GTR_Watch_face
         
         private void numericUpDown_X_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            if (MouseСoordinates.X < 0) return;
             NumericUpDown numericUpDown = sender as NumericUpDown;
             if (e.X <= numericUpDown.Controls[1].Width + 1)
             {
@@ -5366,6 +5464,7 @@ namespace GTR_Watch_face
 
         private void numericUpDown_Y_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            if (MouseСoordinates.Y < 0) return;
             NumericUpDown numericUpDown = sender as NumericUpDown;
             if (e.X <= numericUpDown.Controls[1].Width + 1)
             {
@@ -5387,6 +5486,7 @@ namespace GTR_Watch_face
 
         private void numericUpDown_OffSetX_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            if (MouseСoordinates.X < 0) return;
             NumericUpDown numericUpDown = sender as NumericUpDown;
             if (e.X <= numericUpDown.Controls[1].Width + 1)
             {
@@ -5408,6 +5508,7 @@ namespace GTR_Watch_face
 
         private void numericUpDown_OffSetY_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            if (MouseСoordinates.Y < 0) return;
             NumericUpDown numericUpDown = sender as NumericUpDown;
             if (e.X <= numericUpDown.Controls[1].Width + 1)
             {
@@ -5479,6 +5580,16 @@ namespace GTR_Watch_face
         private void checkBox_crop_CheckedChanged(object sender, EventArgs e)
         {
             Program_Settings.Crop = checkBox_crop.Checked;
+            string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+            {
+                //DefaultValueHandling = DefaultValueHandling.Ignore,
+                NullValueHandling = NullValueHandling.Ignore
+            });
+            File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
+        }
+        private void checkBox_Show_Shortcuts_CheckedChanged(object sender, EventArgs e)
+        {
+            Program_Settings.Show_Shortcuts = checkBox_Show_Shortcuts.Checked;
             string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
             {
                 //DefaultValueHandling = DefaultValueHandling.Ignore,

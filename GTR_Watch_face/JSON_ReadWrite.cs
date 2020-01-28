@@ -89,6 +89,7 @@ namespace GTR_Watch_face
             #endregion
 
             if (Watch_Face == null) return;
+            if (Watch_Face.Info != null) ReadDeviceId();
             if (Watch_Face.Background != null)
             {
                 if (Watch_Face.Background.Image != null)
@@ -553,23 +554,23 @@ namespace GTR_Watch_face
                 }
                 else checkBox_ActivityPuls.Checked = false;
 
-                if (Watch_Face.Activity.Goal2 != null)
+                if (Watch_Face.Activity.PulseMeter != null)
                 {
                     checkBox_ActivityPulsScale.Checked = true;
-                    numericUpDown_ActivityPulsScale_Center_X.Value = Watch_Face.Activity.Goal2.CenterX;
-                    numericUpDown_ActivityPulsScale_Center_Y.Value = Watch_Face.Activity.Goal2.CenterY;
-                    numericUpDown_ActivityPulsScale_Radius_X.Value = Watch_Face.Activity.Goal2.RadiusX;
-                    numericUpDown_ActivityPulsScale_Radius_Y.Value = Watch_Face.Activity.Goal2.RadiusY;
+                    numericUpDown_ActivityPulsScale_Center_X.Value = Watch_Face.Activity.PulseMeter.CenterX;
+                    numericUpDown_ActivityPulsScale_Center_Y.Value = Watch_Face.Activity.PulseMeter.CenterY;
+                    numericUpDown_ActivityPulsScale_Radius_X.Value = Watch_Face.Activity.PulseMeter.RadiusX;
+                    numericUpDown_ActivityPulsScale_Radius_Y.Value = Watch_Face.Activity.PulseMeter.RadiusY;
 
-                    numericUpDown_ActivityPulsScale_StartAngle.Value = Watch_Face.Activity.Goal2.StartAngle;
-                    numericUpDown_ActivityPulsScale_EndAngle.Value = Watch_Face.Activity.Goal2.EndAngle;
-                    numericUpDown_ActivityPulsScale_Width.Value = Watch_Face.Activity.Goal2.Width;
+                    numericUpDown_ActivityPulsScale_StartAngle.Value = Watch_Face.Activity.PulseMeter.StartAngle;
+                    numericUpDown_ActivityPulsScale_EndAngle.Value = Watch_Face.Activity.PulseMeter.EndAngle;
+                    numericUpDown_ActivityPulsScale_Width.Value = Watch_Face.Activity.PulseMeter.Width;
 
-                    Color new_color = ColorRead(Watch_Face.Activity.Goal2.Color);
+                    Color new_color = ColorRead(Watch_Face.Activity.PulseMeter.Color);
                     comboBox_ActivityPulsScale_Color.BackColor = new_color;
                     colorDialog_Pulse.Color = new_color;
 
-                    switch (Watch_Face.Activity.Goal2.Flatness)
+                    switch (Watch_Face.Activity.PulseMeter.Flatness)
                     {
                         case 90:
                             //comboBox_Battery_Flatness.Text = "Треугольное";
@@ -585,9 +586,9 @@ namespace GTR_Watch_face
                             break;
                     }
 
-                    if (Watch_Face.Activity.Goal2.ImageIndex != null)
+                    if (Watch_Face.Activity.PulseMeter.ImageIndex != null)
                     {
-                        comboBoxSetText(comboBox_ActivityPulsScale_Image, (long)Watch_Face.Activity.Goal2.ImageIndex);
+                        comboBoxSetText(comboBox_ActivityPulsScale_Image, (long)Watch_Face.Activity.PulseMeter.ImageIndex);
                         ColorToCoodinates(new_color, numericUpDown_ActivityPulsScale_ImageX,
                             numericUpDown_ActivityPulsScale_ImageY);
                         checkBox_ActivityPulsScale_Image.Checked = true;
@@ -627,23 +628,66 @@ namespace GTR_Watch_face
                 }
                 else checkBox_ActivityCalories.Checked = false;
 
-                if (Watch_Face.Activity.StepsGoal != null)
+                //if (Watch_Face.Activity.StepsGoal != null)
+                //{
+                //    checkBox_ActivityCaloriesScale.Checked = true;
+                //    numericUpDown_ActivityCaloriesScale_Center_X.Value = Watch_Face.Activity.StepsGoal.CenterX;
+                //    numericUpDown_ActivityCaloriesScale_Center_Y.Value = Watch_Face.Activity.StepsGoal.CenterY;
+                //    numericUpDown_ActivityCaloriesScale_Radius_X.Value = Watch_Face.Activity.StepsGoal.RadiusX;
+                //    numericUpDown_ActivityCaloriesScale_Radius_Y.Value = Watch_Face.Activity.StepsGoal.RadiusY;
+
+                //    numericUpDown_ActivityCaloriesScale_StartAngle.Value = Watch_Face.Activity.StepsGoal.StartAngle;
+                //    numericUpDown_ActivityCaloriesScale_EndAngle.Value = Watch_Face.Activity.StepsGoal.EndAngle;
+                //    numericUpDown_ActivityCaloriesScale_Width.Value = Watch_Face.Activity.StepsGoal.Width;
+
+                //    Color new_color = ColorRead(Watch_Face.Activity.StepsGoal.Color);
+                //    comboBox_ActivityCaloriesScale_Color.BackColor = new_color;
+                //    colorDialog_Calories.Color = new_color;
+
+                //    switch (Watch_Face.Activity.StepsGoal.Flatness)
+                //    {
+                //        case 90:
+                //            //comboBox_Battery_Flatness.Text = "Треугольное";
+                //            comboBox_ActivityCaloriesScale_Flatness.SelectedIndex = 1;
+                //            break;
+                //        case 180:
+                //            //comboBox_Battery_Flatness.Text = "Плоское";
+                //            comboBox_ActivityCaloriesScale_Flatness.SelectedIndex = 2;
+                //            break;
+                //        default:
+                //            //comboBox_Battery_Flatness.Text = "Круглое";
+                //            comboBox_ActivityCaloriesScale_Flatness.SelectedIndex = 0;
+                //            break;
+                //    }
+
+                //    if(Watch_Face.Activity.StepsGoal.ImageIndex != null)
+                //    {
+                //        comboBoxSetText(comboBox_ActivityCaloriesScale_Image, (long)Watch_Face.Activity.StepsGoal.ImageIndex);
+                //        ColorToCoodinates(new_color, numericUpDown_ActivityCaloriesScale_ImageX,
+                //            numericUpDown_ActivityCaloriesScale_ImageY);
+                //        checkBox_ActivityCaloriesScale_Image.Checked = true;
+                //    }
+                //    else checkBox_ActivityCaloriesScale_Image.Checked = false;
+                //}
+                //else checkBox_ActivityCaloriesScale.Checked = false;
+
+                if (Watch_Face.Activity.CaloriesGraph != null && Watch_Face.Activity.CaloriesGraph.Circle != null)
                 {
                     checkBox_ActivityCaloriesScale.Checked = true;
-                    numericUpDown_ActivityCaloriesScale_Center_X.Value = Watch_Face.Activity.StepsGoal.CenterX;
-                    numericUpDown_ActivityCaloriesScale_Center_Y.Value = Watch_Face.Activity.StepsGoal.CenterY;
-                    numericUpDown_ActivityCaloriesScale_Radius_X.Value = Watch_Face.Activity.StepsGoal.RadiusX;
-                    numericUpDown_ActivityCaloriesScale_Radius_Y.Value = Watch_Face.Activity.StepsGoal.RadiusY;
+                    numericUpDown_ActivityCaloriesScale_Center_X.Value = Watch_Face.Activity.CaloriesGraph.Circle.CenterX;
+                    numericUpDown_ActivityCaloriesScale_Center_Y.Value = Watch_Face.Activity.CaloriesGraph.Circle.CenterY;
+                    numericUpDown_ActivityCaloriesScale_Radius_X.Value = Watch_Face.Activity.CaloriesGraph.Circle.RadiusX;
+                    numericUpDown_ActivityCaloriesScale_Radius_Y.Value = Watch_Face.Activity.CaloriesGraph.Circle.RadiusY;
 
-                    numericUpDown_ActivityCaloriesScale_StartAngle.Value = Watch_Face.Activity.StepsGoal.StartAngle;
-                    numericUpDown_ActivityCaloriesScale_EndAngle.Value = Watch_Face.Activity.StepsGoal.EndAngle;
-                    numericUpDown_ActivityCaloriesScale_Width.Value = Watch_Face.Activity.StepsGoal.Width;
+                    numericUpDown_ActivityCaloriesScale_StartAngle.Value = Watch_Face.Activity.CaloriesGraph.Circle.StartAngle;
+                    numericUpDown_ActivityCaloriesScale_EndAngle.Value = Watch_Face.Activity.CaloriesGraph.Circle.EndAngle;
+                    numericUpDown_ActivityCaloriesScale_Width.Value = Watch_Face.Activity.CaloriesGraph.Circle.Width;
 
-                    Color new_color = ColorRead(Watch_Face.Activity.StepsGoal.Color);
+                    Color new_color = ColorRead(Watch_Face.Activity.CaloriesGraph.Circle.Color);
                     comboBox_ActivityCaloriesScale_Color.BackColor = new_color;
                     colorDialog_Calories.Color = new_color;
 
-                    switch (Watch_Face.Activity.StepsGoal.Flatness)
+                    switch (Watch_Face.Activity.CaloriesGraph.Circle.Flatness)
                     {
                         case 90:
                             //comboBox_Battery_Flatness.Text = "Треугольное";
@@ -659,9 +703,10 @@ namespace GTR_Watch_face
                             break;
                     }
 
-                    if(Watch_Face.Activity.StepsGoal.ImageIndex != null)
+                    if (Watch_Face.Activity.CaloriesGraph.Circle.ImageIndex != null)
                     {
-                        comboBoxSetText(comboBox_ActivityCaloriesScale_Image, (long)Watch_Face.Activity.StepsGoal.ImageIndex);
+                        comboBoxSetText(comboBox_ActivityCaloriesScale_Image, 
+                            (long)Watch_Face.Activity.CaloriesGraph.Circle.ImageIndex);
                         ColorToCoodinates(new_color, numericUpDown_ActivityCaloriesScale_ImageX,
                             numericUpDown_ActivityCaloriesScale_ImageY);
                         checkBox_ActivityCaloriesScale_Image.Checked = true;
@@ -1118,6 +1163,60 @@ namespace GTR_Watch_face
                 checkBox_Weather.Checked = false;
             }
             #endregion
+
+            #region Shortcuts
+            if(Watch_Face.Shortcuts != null)
+            {
+                checkBox_Shortcuts.Checked = true;
+                if (Watch_Face.Shortcuts.State != null && Watch_Face.Shortcuts.State.Element != null)
+                {
+                    checkBox_Shortcuts_Steps.Checked = true;
+                    numericUpDown_Shortcuts_Steps_X.Value = Watch_Face.Shortcuts.State.Element.TopLeftX;
+                    numericUpDown_Shortcuts_Steps_Y.Value = Watch_Face.Shortcuts.State.Element.TopLeftY;
+                    numericUpDown_Shortcuts_Steps_Width.Value = Watch_Face.Shortcuts.State.Element.Width;
+                    numericUpDown_Shortcuts_Steps_Height.Value = Watch_Face.Shortcuts.State.Element.Height;
+                }
+                else checkBox_Shortcuts_Steps.Checked = false;
+
+                if (Watch_Face.Shortcuts.Pulse != null && Watch_Face.Shortcuts.Pulse.Element != null)
+                {
+                    checkBox_Shortcuts_Puls.Checked = true;
+                    numericUpDown_Shortcuts_Puls_X.Value = Watch_Face.Shortcuts.Pulse.Element.TopLeftX;
+                    numericUpDown_Shortcuts_Puls_Y.Value = Watch_Face.Shortcuts.Pulse.Element.TopLeftY;
+                    numericUpDown_Shortcuts_Puls_Width.Value = Watch_Face.Shortcuts.Pulse.Element.Width;
+                    numericUpDown_Shortcuts_Puls_Height.Value = Watch_Face.Shortcuts.Pulse.Element.Height;
+                }
+                else checkBox_Shortcuts_Puls.Checked = false;
+
+                if (Watch_Face.Shortcuts.Weather != null && Watch_Face.Shortcuts.Weather.Element != null)
+                {
+                    checkBox_Shortcuts_Weather.Checked = true;
+                    numericUpDown_Shortcuts_Weather_X.Value = Watch_Face.Shortcuts.Weather.Element.TopLeftX;
+                    numericUpDown_Shortcuts_Weather_Y.Value = Watch_Face.Shortcuts.Weather.Element.TopLeftY;
+                    numericUpDown_Shortcuts_Weather_Width.Value = Watch_Face.Shortcuts.Weather.Element.Width;
+                    numericUpDown_Shortcuts_Weather_Height.Value = Watch_Face.Shortcuts.Weather.Element.Height;
+                }
+                else checkBox_Shortcuts_Weather.Checked = false;
+
+                if (Watch_Face.Shortcuts.Unknown4 != null && Watch_Face.Shortcuts.Unknown4.Element != null)
+                {
+                    checkBox_Shortcuts_Energy.Checked = true;
+                    numericUpDown_Shortcuts_Energy_X.Value = Watch_Face.Shortcuts.Unknown4.Element.TopLeftX;
+                    numericUpDown_Shortcuts_Energy_Y.Value = Watch_Face.Shortcuts.Unknown4.Element.TopLeftY;
+                    numericUpDown_Shortcuts_Energy_Width.Value = Watch_Face.Shortcuts.Unknown4.Element.Width;
+                    numericUpDown_Shortcuts_Energy_Height.Value = Watch_Face.Shortcuts.Unknown4.Element.Height;
+                }
+                else checkBox_Shortcuts_Energy.Checked = false;
+            }
+            else
+            {
+                checkBox_Shortcuts.Checked = false;
+                checkBox_Shortcuts_Steps.Checked = false;
+                checkBox_Shortcuts_Puls.Checked = false;
+                checkBox_Shortcuts_Weather.Checked = false;
+                checkBox_Shortcuts_Energy.Checked = false;
+            }
+            #endregion
         }
 
         // формируем JSON файл из настроек
@@ -1340,22 +1439,22 @@ namespace GTR_Watch_face
                 if (checkBox_ActivityPulsScale.Checked)
                 {
                     if (Watch_Face.Activity == null) Watch_Face.Activity = new Activity();
-                    if (Watch_Face.Activity.Goal2 == null) Watch_Face.Activity.Goal2 = new CircleScale();
+                    if (Watch_Face.Activity.PulseMeter == null) Watch_Face.Activity.PulseMeter = new CircleScale();
 
-                    Watch_Face.Activity.Goal2.CenterX = (int)numericUpDown_ActivityPulsScale_Center_X.Value;
-                    Watch_Face.Activity.Goal2.CenterY = (int)numericUpDown_ActivityPulsScale_Center_Y.Value;
-                    Watch_Face.Activity.Goal2.RadiusX = (int)numericUpDown_ActivityPulsScale_Radius_X.Value;
-                    Watch_Face.Activity.Goal2.RadiusY = (int)numericUpDown_ActivityPulsScale_Radius_Y.Value;
+                    Watch_Face.Activity.PulseMeter.CenterX = (int)numericUpDown_ActivityPulsScale_Center_X.Value;
+                    Watch_Face.Activity.PulseMeter.CenterY = (int)numericUpDown_ActivityPulsScale_Center_Y.Value;
+                    Watch_Face.Activity.PulseMeter.RadiusX = (int)numericUpDown_ActivityPulsScale_Radius_X.Value;
+                    Watch_Face.Activity.PulseMeter.RadiusY = (int)numericUpDown_ActivityPulsScale_Radius_Y.Value;
 
-                    Watch_Face.Activity.Goal2.StartAngle = (int)numericUpDown_ActivityPulsScale_StartAngle.Value;
-                    Watch_Face.Activity.Goal2.EndAngle = (int)numericUpDown_ActivityPulsScale_EndAngle.Value;
-                    Watch_Face.Activity.Goal2.Width = (int)numericUpDown_ActivityPulsScale_Width.Value;
+                    Watch_Face.Activity.PulseMeter.StartAngle = (int)numericUpDown_ActivityPulsScale_StartAngle.Value;
+                    Watch_Face.Activity.PulseMeter.EndAngle = (int)numericUpDown_ActivityPulsScale_EndAngle.Value;
+                    Watch_Face.Activity.PulseMeter.Width = (int)numericUpDown_ActivityPulsScale_Width.Value;
 
                     Color color = comboBox_ActivityPulsScale_Color.BackColor;
                     Color new_color = Color.FromArgb(0, color.R, color.G, color.B);
                     string colorStr = ColorTranslator.ToHtml(new_color);
                     colorStr = colorStr.Replace("#", "0x00");
-                    Watch_Face.Activity.Goal2.Color = colorStr;
+                    Watch_Face.Activity.PulseMeter.Color = colorStr;
 
                     //switch (comboBox_Battery_Flatness.Text)
                     //{
@@ -1372,13 +1471,13 @@ namespace GTR_Watch_face
                     switch (comboBox_ActivityPulsScale_Flatness.SelectedIndex)
                     {
                         case 1:
-                            Watch_Face.Activity.Goal2.Flatness = 90;
+                            Watch_Face.Activity.PulseMeter.Flatness = 90;
                             break;
                         case 2:
-                            Watch_Face.Activity.Goal2.Flatness = 180;
+                            Watch_Face.Activity.PulseMeter.Flatness = 180;
                             break;
                         default:
-                            Watch_Face.Activity.Goal2.Flatness = 0;
+                            Watch_Face.Activity.PulseMeter.Flatness = 0;
                             break;
                     }
 
@@ -1390,10 +1489,10 @@ namespace GTR_Watch_face
                         int imageIndex = comboBox_ActivityPulsScale_Image.SelectedIndex;
                         colorStr = CoodinatesToColor(imageX, imageY);
                         Bitmap src = new Bitmap(ListImagesFullName[imageIndex]);
-                        Watch_Face.Activity.Goal2.CenterX = imageX + src.Width / 2;
-                        Watch_Face.Activity.Goal2.CenterY = imageY + src.Height / 2;
-                        Watch_Face.Activity.Goal2.Color = colorStr;
-                        Watch_Face.Activity.Goal2.ImageIndex = imageIndex;
+                        Watch_Face.Activity.PulseMeter.CenterX = imageX + src.Width / 2;
+                        Watch_Face.Activity.PulseMeter.CenterY = imageY + src.Height / 2;
+                        Watch_Face.Activity.PulseMeter.Color = colorStr;
+                        Watch_Face.Activity.PulseMeter.ImageIndex = imageIndex;
                     }
                 }
 
@@ -1414,36 +1513,85 @@ namespace GTR_Watch_face
                     Watch_Face.Activity.Calories.Alignment = Alignment;
                 }
 
+                //if (checkBox_ActivityCaloriesScale.Checked)
+                //{
+                //    if (Watch_Face.Activity == null) Watch_Face.Activity = new Activity();
+                //    if (Watch_Face.Activity.StepsGoal == null) Watch_Face.Activity.StepsGoal = new CircleScale();
+
+                //    Watch_Face.Activity.StepsGoal.CenterX = (int)numericUpDown_ActivityCaloriesScale_Center_X.Value;
+                //    Watch_Face.Activity.StepsGoal.CenterY = (int)numericUpDown_ActivityCaloriesScale_Center_Y.Value;
+                //    Watch_Face.Activity.StepsGoal.RadiusX = (int)numericUpDown_ActivityCaloriesScale_Radius_X.Value;
+                //    Watch_Face.Activity.StepsGoal.RadiusY = (int)numericUpDown_ActivityCaloriesScale_Radius_Y.Value;
+
+                //    Watch_Face.Activity.StepsGoal.StartAngle = (int)numericUpDown_ActivityCaloriesScale_StartAngle.Value;
+                //    Watch_Face.Activity.StepsGoal.EndAngle = (int)numericUpDown_ActivityCaloriesScale_EndAngle.Value;
+                //    Watch_Face.Activity.StepsGoal.Width = (int)numericUpDown_ActivityCaloriesScale_Width.Value;
+
+                //    Color color = comboBox_ActivityCaloriesScale_Color.BackColor;
+                //    Color new_color = Color.FromArgb(0, color.R, color.G, color.B);
+                //    string colorStr = ColorTranslator.ToHtml(new_color);
+                //    colorStr = colorStr.Replace("#", "0x00");
+                //    Watch_Face.Activity.StepsGoal.Color = colorStr;
+
+                //    switch (comboBox_ActivityCaloriesScale_Flatness.SelectedIndex)
+                //    {
+                //        case 1:
+                //            Watch_Face.Activity.StepsGoal.Flatness = 90;
+                //            break;
+                //        case 2:
+                //            Watch_Face.Activity.StepsGoal.Flatness = 180;
+                //            break;
+                //        default:
+                //            Watch_Face.Activity.StepsGoal.Flatness = 0;
+                //            break;
+                //    }
+
+                //    if (checkBox_ActivityCaloriesScale_Image.Checked &&
+                //        comboBox_ActivityCaloriesScale_Image.SelectedIndex >= 0)
+                //    {
+                //        int imageX = (int)numericUpDown_ActivityCaloriesScale_ImageX.Value;
+                //        int imageY = (int)numericUpDown_ActivityCaloriesScale_ImageY.Value;
+                //        int imageIndex = comboBox_ActivityCaloriesScale_Image.SelectedIndex;
+                //        colorStr = CoodinatesToColor(imageX, imageY);
+                //        Bitmap src = new Bitmap(ListImagesFullName[imageIndex]);
+                //        Watch_Face.Activity.StepsGoal.CenterX = imageX + src.Width / 2;
+                //        Watch_Face.Activity.StepsGoal.CenterY = imageY + src.Height / 2;
+                //        Watch_Face.Activity.StepsGoal.Color = colorStr;
+                //        Watch_Face.Activity.StepsGoal.ImageIndex = imageIndex;
+                //    }
+                //}
                 if (checkBox_ActivityCaloriesScale.Checked)
                 {
                     if (Watch_Face.Activity == null) Watch_Face.Activity = new Activity();
-                    if (Watch_Face.Activity.StepsGoal == null) Watch_Face.Activity.StepsGoal = new CircleScale();
+                    if (Watch_Face.Activity.CaloriesGraph == null) Watch_Face.Activity.CaloriesGraph = new CaloriesContainer();
+                    if (Watch_Face.Activity.CaloriesGraph.Circle == null)
+                        Watch_Face.Activity.CaloriesGraph.Circle = new CircleScale();
 
-                    Watch_Face.Activity.StepsGoal.CenterX = (int)numericUpDown_ActivityCaloriesScale_Center_X.Value;
-                    Watch_Face.Activity.StepsGoal.CenterY = (int)numericUpDown_ActivityCaloriesScale_Center_Y.Value;
-                    Watch_Face.Activity.StepsGoal.RadiusX = (int)numericUpDown_ActivityCaloriesScale_Radius_X.Value;
-                    Watch_Face.Activity.StepsGoal.RadiusY = (int)numericUpDown_ActivityCaloriesScale_Radius_Y.Value;
+                    Watch_Face.Activity.CaloriesGraph.Circle.CenterX = (int)numericUpDown_ActivityCaloriesScale_Center_X.Value;
+                    Watch_Face.Activity.CaloriesGraph.Circle.CenterY = (int)numericUpDown_ActivityCaloriesScale_Center_Y.Value;
+                    Watch_Face.Activity.CaloriesGraph.Circle.RadiusX = (int)numericUpDown_ActivityCaloriesScale_Radius_X.Value;
+                    Watch_Face.Activity.CaloriesGraph.Circle.RadiusY = (int)numericUpDown_ActivityCaloriesScale_Radius_Y.Value;
 
-                    Watch_Face.Activity.StepsGoal.StartAngle = (int)numericUpDown_ActivityCaloriesScale_StartAngle.Value;
-                    Watch_Face.Activity.StepsGoal.EndAngle = (int)numericUpDown_ActivityCaloriesScale_EndAngle.Value;
-                    Watch_Face.Activity.StepsGoal.Width = (int)numericUpDown_ActivityCaloriesScale_Width.Value;
+                    Watch_Face.Activity.CaloriesGraph.Circle.StartAngle = (int)numericUpDown_ActivityCaloriesScale_StartAngle.Value;
+                    Watch_Face.Activity.CaloriesGraph.Circle.EndAngle = (int)numericUpDown_ActivityCaloriesScale_EndAngle.Value;
+                    Watch_Face.Activity.CaloriesGraph.Circle.Width = (int)numericUpDown_ActivityCaloriesScale_Width.Value;
 
                     Color color = comboBox_ActivityCaloriesScale_Color.BackColor;
                     Color new_color = Color.FromArgb(0, color.R, color.G, color.B);
                     string colorStr = ColorTranslator.ToHtml(new_color);
                     colorStr = colorStr.Replace("#", "0x00");
-                    Watch_Face.Activity.StepsGoal.Color = colorStr;
-                    
+                    Watch_Face.Activity.CaloriesGraph.Circle.Color = colorStr;
+
                     switch (comboBox_ActivityCaloriesScale_Flatness.SelectedIndex)
                     {
                         case 1:
-                            Watch_Face.Activity.StepsGoal.Flatness = 90;
+                            Watch_Face.Activity.CaloriesGraph.Circle.Flatness = 90;
                             break;
                         case 2:
-                            Watch_Face.Activity.StepsGoal.Flatness = 180;
+                            Watch_Face.Activity.CaloriesGraph.Circle.Flatness = 180;
                             break;
                         default:
-                            Watch_Face.Activity.StepsGoal.Flatness = 0;
+                            Watch_Face.Activity.CaloriesGraph.Circle.Flatness = 0;
                             break;
                     }
 
@@ -1455,10 +1603,10 @@ namespace GTR_Watch_face
                         int imageIndex = comboBox_ActivityCaloriesScale_Image.SelectedIndex;
                         colorStr = CoodinatesToColor(imageX, imageY);
                         Bitmap src = new Bitmap(ListImagesFullName[imageIndex]);
-                        Watch_Face.Activity.StepsGoal.CenterX = imageX + src.Width / 2;
-                        Watch_Face.Activity.StepsGoal.CenterY = imageY + src.Height / 2;
-                        Watch_Face.Activity.StepsGoal.Color = colorStr;
-                        Watch_Face.Activity.StepsGoal.ImageIndex = imageIndex;
+                        Watch_Face.Activity.CaloriesGraph.Circle.CenterX = imageX + src.Width / 2;
+                        Watch_Face.Activity.CaloriesGraph.Circle.CenterY = imageY + src.Height / 2;
+                        Watch_Face.Activity.CaloriesGraph.Circle.Color = colorStr;
+                        Watch_Face.Activity.CaloriesGraph.Circle.ImageIndex = imageIndex;
                     }
                 }
 
@@ -2303,6 +2451,53 @@ namespace GTR_Watch_face
                 }
             }
 
+            // ярлыки
+            if (checkBox_Shortcuts.Checked)
+            {
+                if (checkBox_Shortcuts_Steps.Checked)
+                {
+                    if (Watch_Face.Shortcuts == null) Watch_Face.Shortcuts = new Shortcuts();
+                    if (Watch_Face.Shortcuts.State == null) Watch_Face.Shortcuts.State = new Shortcut();
+                    Watch_Face.Shortcuts.State.Element = new Element();
+                    Watch_Face.Shortcuts.State.Element.TopLeftX = (int)numericUpDown_Shortcuts_Steps_X.Value;
+                    Watch_Face.Shortcuts.State.Element.TopLeftY = (int)numericUpDown_Shortcuts_Steps_Y.Value;
+                    Watch_Face.Shortcuts.State.Element.Width = (int)numericUpDown_Shortcuts_Steps_Width.Value;
+                    Watch_Face.Shortcuts.State.Element.Height = (int)numericUpDown_Shortcuts_Steps_Height.Value;
+                }
+
+                if (checkBox_Shortcuts_Puls.Checked)
+                {
+                    if (Watch_Face.Shortcuts == null) Watch_Face.Shortcuts = new Shortcuts();
+                    if (Watch_Face.Shortcuts.Pulse == null) Watch_Face.Shortcuts.Pulse = new Shortcut();
+                    Watch_Face.Shortcuts.Pulse.Element = new Element();
+                    Watch_Face.Shortcuts.Pulse.Element.TopLeftX = (int)numericUpDown_Shortcuts_Puls_X.Value;
+                    Watch_Face.Shortcuts.Pulse.Element.TopLeftY = (int)numericUpDown_Shortcuts_Puls_Y.Value;
+                    Watch_Face.Shortcuts.Pulse.Element.Width = (int)numericUpDown_Shortcuts_Puls_Width.Value;
+                    Watch_Face.Shortcuts.Pulse.Element.Height = (int)numericUpDown_Shortcuts_Puls_Height.Value;
+                }
+
+                if (checkBox_Shortcuts_Weather.Checked)
+                {
+                    if (Watch_Face.Shortcuts == null) Watch_Face.Shortcuts = new Shortcuts();
+                    if (Watch_Face.Shortcuts.Weather == null) Watch_Face.Shortcuts.Weather = new Shortcut();
+                    Watch_Face.Shortcuts.Weather.Element = new Element();
+                    Watch_Face.Shortcuts.Weather.Element.TopLeftX = (int)numericUpDown_Shortcuts_Weather_X.Value;
+                    Watch_Face.Shortcuts.Weather.Element.TopLeftY = (int)numericUpDown_Shortcuts_Weather_Y.Value;
+                    Watch_Face.Shortcuts.Weather.Element.Width = (int)numericUpDown_Shortcuts_Weather_Width.Value;
+                    Watch_Face.Shortcuts.Weather.Element.Height = (int)numericUpDown_Shortcuts_Weather_Height.Value;
+                }
+
+                if (checkBox_Shortcuts_Energy.Checked)
+                {
+                    if (Watch_Face.Shortcuts == null) Watch_Face.Shortcuts = new Shortcuts();
+                    if (Watch_Face.Shortcuts.Unknown4 == null) Watch_Face.Shortcuts.Unknown4 = new Shortcut();
+                    Watch_Face.Shortcuts.Unknown4.Element = new Element();
+                    Watch_Face.Shortcuts.Unknown4.Element.TopLeftX = (int)numericUpDown_Shortcuts_Energy_X.Value;
+                    Watch_Face.Shortcuts.Unknown4.Element.TopLeftY = (int)numericUpDown_Shortcuts_Energy_Y.Value;
+                    Watch_Face.Shortcuts.Unknown4.Element.Width = (int)numericUpDown_Shortcuts_Energy_Width.Value;
+                    Watch_Face.Shortcuts.Unknown4.Element.Height = (int)numericUpDown_Shortcuts_Energy_Height.Value;
+                }
+            }
 
             richTextBox_JSON.Text = JsonConvert.SerializeObject(Watch_Face, Formatting.Indented, new JsonSerializerSettings
             {
@@ -2632,6 +2827,103 @@ namespace GTR_Watch_face
 
         }
 
+        // устанавливаем тип циферблата исходя из DeviceId
+        private void ReadDeviceId()
+        {
+            if (Watch_Face.Info != null)
+            {
+                switch (Watch_Face.Info.DeviceId)
+                {
+                    case 40:
+                        radioButton_47.Checked = true;
+                        break;
+                    case 42:
+                        radioButton_42.Checked = true;
+                        break;
+                    case 46:
+                        radioButton_gts.Checked = true;
+                        break;
+                    default:
+                        return;
+                }
+
+                if (radioButton_47.Checked)
+                {
+                    this.Text = "GTR watch face editor";
+                    panel_Preview.Height = 230;
+                    panel_Preview.Width = 230;
+                    offSet_X = 227;
+                    offSet_Y = 227;
+
+                    //Properties.Settings.Default.unpack_command_GTR42 = textBox_unpack_command.Text;
+                    //Properties.Settings.Default.pack_command_GTR42 = textBox_pack_command.Text;
+                    //Properties.Settings.Default.Save();
+                    //Program_Settings.unpack_command_GTR42 = textBox_unpack_command.Text;
+                    //Program_Settings.pack_command_GTR42 = textBox_pack_command.Text;
+
+                    //textBox_unpack_command.Text = "--gtr 47 --file";
+                    //textBox_pack_command.Text = "--gtr 47 --file";
+                    //if (Properties.Settings.Default.unpack_command.Length > 1)
+                    //    textBox_unpack_command.Text = Properties.Settings.Default.unpack_command;
+                    //if (Properties.Settings.Default.pack_command.Length > 1)
+                    //    textBox_pack_command.Text = Properties.Settings.Default.pack_command;
+                    textBox_unpack_command.Text = Program_Settings.unpack_command_GTR47;
+                    textBox_pack_command.Text = Program_Settings.pack_command_GTR47;
+
+                    button_unpack.Enabled = true;
+                    button_pack.Enabled = true;
+                    button_zip.Enabled = true;
+                }
+                else if (radioButton_42.Checked)
+                {
+                    this.Text = "GTR watch face editor";
+                    panel_Preview.Height = 198;
+                    panel_Preview.Width = 198;
+                    offSet_X = 195;
+                    offSet_Y = 195;
+
+                    textBox_unpack_command.Text = Program_Settings.unpack_command_GTR42;
+                    textBox_pack_command.Text = Program_Settings.pack_command_GTR42;
+
+                    button_unpack.Enabled = true;
+                    button_pack.Enabled = true;
+                    button_zip.Enabled = true;
+                }
+                else
+                {
+                    this.Text = "GTS watch face editor";
+                    panel_Preview.Height = 223;
+                    panel_Preview.Width = 176;
+                    offSet_X = 174;
+                    offSet_Y = 221;
+
+                    textBox_unpack_command.Text = Program_Settings.unpack_command_GTS;
+                    textBox_pack_command.Text = Program_Settings.pack_command_GTS;
+
+                    button_unpack.Enabled = false;
+                    button_pack.Enabled = false;
+                    button_zip.Enabled = false;
+                }
+
+                if ((formPreview != null) && (formPreview.Visible))
+                {
+                    Form_Preview.Model_Wath.model_gtr47 = radioButton_47.Checked;
+                    Form_Preview.Model_Wath.model_gtr42 = radioButton_42.Checked;
+                    Form_Preview.Model_Wath.model_gts = radioButton_gts.Checked;
+                }
+
+                Program_Settings.Model_GTR47 = radioButton_47.Checked;
+                Program_Settings.Model_GTR42 = radioButton_42.Checked;
+                Program_Settings.Model_GTS = radioButton_gts.Checked;
+                string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+                {
+                    //DefaultValueHandling = DefaultValueHandling.Ignore,
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+                System.IO.File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, 
+                    System.Text.Encoding.UTF8);
+            }
+        }
 
 
 
