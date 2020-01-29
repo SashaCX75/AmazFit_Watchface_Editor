@@ -550,6 +550,43 @@ namespace GTR_Watch_face
                     src.Dispose();
                 }
 
+                // набор иконок
+                if (checkBox_DOW_IconSet.Checked)
+                {
+                    if ((comboBox_DOW_IconSet_Image.SelectedIndex >= 0) && (dataGridView_DOW_IconSet.Rows.Count > 0))
+                    {
+                        int x = 0;
+                        int y = 0;
+                        //int count = 0;
+                        for (int count = 0; count < dataGridView_DOW_IconSet.Rows.Count; count++)
+                        {
+                            if ((dataGridView_DOW_IconSet.Rows[count].Cells[0].Value != null) &&
+                                (dataGridView_DOW_IconSet.Rows[count].Cells[1].Value != null))
+                            {
+                                //int x = Int32.Parse(dataGridView_SPSliced.Rows[count].Cells[0].Value.ToString());
+                                //int y = Int32.Parse(dataGridView_SPSliced.Rows[count].Cells[1].Value.ToString());
+                                if (Int32.TryParse(dataGridView_DOW_IconSet.Rows[count].Cells[0].Value.ToString(), out x) &&
+                                    Int32.TryParse(dataGridView_DOW_IconSet.Rows[count].Cells[1].Value.ToString(), out y))
+                                {
+                                    i = comboBox_DOW_IconSet_Image.SelectedIndex + count;
+                                    if (i < ListImagesFullName.Count)
+                                    {
+                                        int value = Watch_Face_Preview_Set.Date.WeekDay;
+                                        value--;
+                                        if (count == value)
+                                        {
+                                            src = new Bitmap(ListImagesFullName[i]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                            //count++;
+                                            src.Dispose();
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
                 if ((checkBox_Year.Checked) && (comboBox_Year_Image.SelectedIndex >= 0))
                 {
                     int x1 = (int)numericUpDown_Year_StartCorner_X.Value;

@@ -198,9 +198,10 @@ namespace GTR_Watch_face
 #if Puthon
             string subPath = Application.StartupPath + @"\py_amazfit_tools-fix_array\main.py";
 #else
-            string subPath = Application.StartupPath + @"\main\main.exe";
+            string subPath = Application.StartupPath + @"\main_v0.2-beta\main.exe";
+            //string subPath = Application.StartupPath + @"\main\main.exe";
 #endif
-            
+
             if (Program_Settings.pack_unpack_dir == null)
             {
                 Program_Settings.pack_unpack_dir = subPath;
@@ -1800,7 +1801,7 @@ namespace GTR_Watch_face
             {
                 panel_Background.Height = 1;
                 panel_Time.Height = 1;
-                panel_Date.Height = (int)(350 * currentDPI);
+                panel_Date.Height = (int)(240 * currentDPI);
                 panel_AnalogDate.Height = 1;
                 panel_StepsProgress.Height = 1;
                 panel_Activity.Height = 1;
@@ -1995,6 +1996,14 @@ namespace GTR_Watch_face
             label58.Enabled = b;
         }
 
+        private void checkBox_DOW_IconSet_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_DOW_IconSet.Checked;
+            comboBox_DOW_IconSet_Image.Enabled = b;
+            dataGridView_DOW_IconSet.Enabled = b;
+            label460.Enabled = b;
+        }
+
         private void checkBox_MonthName_CheckedChanged(object sender, EventArgs e)
         {
             bool b = checkBox_MonthName.Checked;
@@ -2014,6 +2023,7 @@ namespace GTR_Watch_face
             bool b = checkBox_Date.Checked;
             tabControl_Date.Enabled = b;
             groupBox__WeekDay.Enabled = b;
+            groupBox_WeekDayProgress.Enabled = b;
             checkBox_TwoDigitsMonth.Enabled = b;
             checkBox_TwoDigitsDay.Enabled = b;
         }
@@ -5960,7 +5970,7 @@ namespace GTR_Watch_face
 
         private void linkLabel_py_amazfit_tools_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/amazfitbip/py_amazfit_tools/tree/fix_array");
+            System.Diagnostics.Process.Start("https://github.com/amazfitbip/py_amazfit_tools/releases/tag/v0.2-beta");
         }
 
         private void linkLabel_help_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -1050,6 +1050,24 @@
             this.label100 = new System.Windows.Forms.Label();
             this.label101 = new System.Windows.Forms.Label();
             this.label102 = new System.Windows.Forms.Label();
+            this.tabPage50 = new System.Windows.Forms.TabPage();
+            this.groupBox_WeekDayProgress = new System.Windows.Forms.GroupBox();
+            this.dataGridView_DOW_IconSet = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.checkBox_DOW_IconSet = new System.Windows.Forms.CheckBox();
+            this.comboBox_DOW_IconSet_Image = new System.Windows.Forms.ComboBox();
+            this.label460 = new System.Windows.Forms.Label();
+            this.groupBox__WeekDay = new System.Windows.Forms.GroupBox();
+            this.numericUpDown_WeekDay_Count = new System.Windows.Forms.NumericUpDown();
+            this.label58 = new System.Windows.Forms.Label();
+            this.checkBox_WeekDay = new System.Windows.Forms.CheckBox();
+            this.numericUpDown_WeekDay_Y = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_WeekDay_X = new System.Windows.Forms.NumericUpDown();
+            this.comboBox_WeekDay_Image = new System.Windows.Forms.ComboBox();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
             this.tabPage34 = new System.Windows.Forms.TabPage();
             this.comboBox_Year_Delimiter = new System.Windows.Forms.ComboBox();
             this.label357 = new System.Windows.Forms.Label();
@@ -1075,16 +1093,6 @@
             this.checkBox_Date = new System.Windows.Forms.CheckBox();
             this.checkBox_TwoDigitsDay = new System.Windows.Forms.CheckBox();
             this.checkBox_TwoDigitsMonth = new System.Windows.Forms.CheckBox();
-            this.groupBox__WeekDay = new System.Windows.Forms.GroupBox();
-            this.numericUpDown_WeekDay_Count = new System.Windows.Forms.NumericUpDown();
-            this.label58 = new System.Windows.Forms.Label();
-            this.checkBox_WeekDay = new System.Windows.Forms.CheckBox();
-            this.numericUpDown_WeekDay_Y = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_WeekDay_X = new System.Windows.Forms.NumericUpDown();
-            this.comboBox_WeekDay_Image = new System.Windows.Forms.ComboBox();
-            this.label55 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
             this.button_Date = new System.Windows.Forms.Button();
             this.panel_Time = new System.Windows.Forms.Panel();
             this.groupBox_Delimiter = new System.Windows.Forms.GroupBox();
@@ -1603,6 +1611,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_OneLine_StartCorner_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_OneLine_Spacing)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_OneLine_EndCorner_Y)).BeginInit();
+            this.tabPage50.SuspendLayout();
+            this.groupBox_WeekDayProgress.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DOW_IconSet)).BeginInit();
+            this.groupBox__WeekDay.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeekDay_Count)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeekDay_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeekDay_X)).BeginInit();
             this.tabPage34.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Year_EndCorner_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Year_Count)).BeginInit();
@@ -1610,10 +1625,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Year_StartCorner_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Year_Spacing)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Year_EndCorner_Y)).BeginInit();
-            this.groupBox__WeekDay.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeekDay_Count)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeekDay_Y)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeekDay_X)).BeginInit();
             this.panel_Time.SuspendLayout();
             this.groupBox_Delimiter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Delimiter_Y)).BeginInit();
@@ -12240,7 +12251,6 @@
             this.panel_Date.Controls.Add(this.checkBox_Date);
             this.panel_Date.Controls.Add(this.checkBox_TwoDigitsDay);
             this.panel_Date.Controls.Add(this.checkBox_TwoDigitsMonth);
-            this.panel_Date.Controls.Add(this.groupBox__WeekDay);
             resources.ApplyResources(this.panel_Date, "panel_Date");
             this.panel_Date.Name = "panel_Date";
             this.helpProvider1.SetShowHelp(this.panel_Date, ((bool)(resources.GetObject("panel_Date.ShowHelp"))));
@@ -12249,6 +12259,7 @@
             // 
             this.tabControl_Date.Controls.Add(this.tabPage8);
             this.tabControl_Date.Controls.Add(this.tabPage7);
+            this.tabControl_Date.Controls.Add(this.tabPage50);
             this.tabControl_Date.Controls.Add(this.tabPage34);
             resources.ApplyResources(this.tabControl_Date, "tabControl_Date");
             this.tabControl_Date.Name = "tabControl_Date";
@@ -13132,6 +13143,209 @@
             this.label102.Name = "label102";
             this.helpProvider1.SetShowHelp(this.label102, ((bool)(resources.GetObject("label102.ShowHelp"))));
             // 
+            // tabPage50
+            // 
+            this.tabPage50.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage50.Controls.Add(this.groupBox_WeekDayProgress);
+            this.tabPage50.Controls.Add(this.groupBox__WeekDay);
+            resources.ApplyResources(this.tabPage50, "tabPage50");
+            this.tabPage50.Name = "tabPage50";
+            // 
+            // groupBox_WeekDayProgress
+            // 
+            this.groupBox_WeekDayProgress.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox_WeekDayProgress.Controls.Add(this.dataGridView_DOW_IconSet);
+            this.groupBox_WeekDayProgress.Controls.Add(this.checkBox_DOW_IconSet);
+            this.groupBox_WeekDayProgress.Controls.Add(this.comboBox_DOW_IconSet_Image);
+            this.groupBox_WeekDayProgress.Controls.Add(this.label460);
+            resources.ApplyResources(this.groupBox_WeekDayProgress, "groupBox_WeekDayProgress");
+            this.groupBox_WeekDayProgress.Name = "groupBox_WeekDayProgress";
+            this.helpProvider1.SetShowHelp(this.groupBox_WeekDayProgress, ((bool)(resources.GetObject("groupBox_WeekDayProgress.ShowHelp"))));
+            this.groupBox_WeekDayProgress.TabStop = false;
+            this.groupBox_WeekDayProgress.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            // 
+            // dataGridView_DOW_IconSet
+            // 
+            this.dataGridView_DOW_IconSet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_DOW_IconSet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_DOW_IconSet.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.dataGridView_DOW_IconSet.ContextMenuStrip = this.contextMenuStrip_XY_InTable;
+            resources.ApplyResources(this.dataGridView_DOW_IconSet, "dataGridView_DOW_IconSet");
+            this.dataGridView_DOW_IconSet.Name = "dataGridView_DOW_IconSet";
+            this.dataGridView_DOW_IconSet.RowTemplate.Height = 18;
+            this.helpProvider1.SetShowHelp(this.dataGridView_DOW_IconSet, ((bool)(resources.GetObject("dataGridView_DOW_IconSet.ShowHelp"))));
+            this.dataGridView_DOW_IconSet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_IconSet_CellClick);
+            this.dataGridView_DOW_IconSet.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_IconSet_CellEndEdit);
+            this.dataGridView_DOW_IconSet.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_IconSet_CellMouseDoubleClick);
+            this.dataGridView_DOW_IconSet.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_IconSet_CellMouseDown);
+            this.dataGridView_DOW_IconSet.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView_IconSet_RowPrePaint);
+            this.dataGridView_DOW_IconSet.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridView_IconSet_RowsRemoved);
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // checkBox_DOW_IconSet
+            // 
+            resources.ApplyResources(this.checkBox_DOW_IconSet, "checkBox_DOW_IconSet");
+            this.checkBox_DOW_IconSet.Name = "checkBox_DOW_IconSet";
+            this.helpProvider1.SetShowHelp(this.checkBox_DOW_IconSet, ((bool)(resources.GetObject("checkBox_DOW_IconSet.ShowHelp"))));
+            this.checkBox_DOW_IconSet.UseVisualStyleBackColor = true;
+            this.checkBox_DOW_IconSet.CheckedChanged += new System.EventHandler(this.checkBox_DOW_IconSet_CheckedChanged);
+            this.checkBox_DOW_IconSet.Click += new System.EventHandler(this.checkBox_Click);
+            // 
+            // comboBox_DOW_IconSet_Image
+            // 
+            this.comboBox_DOW_IconSet_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_DOW_IconSet_Image.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_DOW_IconSet_Image, "comboBox_DOW_IconSet_Image");
+            this.comboBox_DOW_IconSet_Image.FormattingEnabled = true;
+            this.comboBox_DOW_IconSet_Image.Name = "comboBox_DOW_IconSet_Image";
+            this.helpProvider1.SetShowHelp(this.comboBox_DOW_IconSet_Image, ((bool)(resources.GetObject("comboBox_DOW_IconSet_Image.ShowHelp"))));
+            this.comboBox_DOW_IconSet_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_DOW_IconSet_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_DOW_IconSet_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_DOW_IconSet_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_DOW_IconSet_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // label460
+            // 
+            resources.ApplyResources(this.label460, "label460");
+            this.label460.Name = "label460";
+            this.helpProvider1.SetShowHelp(this.label460, ((bool)(resources.GetObject("label460.ShowHelp"))));
+            // 
+            // groupBox__WeekDay
+            // 
+            this.groupBox__WeekDay.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox__WeekDay.Controls.Add(this.numericUpDown_WeekDay_Count);
+            this.groupBox__WeekDay.Controls.Add(this.label58);
+            this.groupBox__WeekDay.Controls.Add(this.checkBox_WeekDay);
+            this.groupBox__WeekDay.Controls.Add(this.numericUpDown_WeekDay_Y);
+            this.groupBox__WeekDay.Controls.Add(this.numericUpDown_WeekDay_X);
+            this.groupBox__WeekDay.Controls.Add(this.comboBox_WeekDay_Image);
+            this.groupBox__WeekDay.Controls.Add(this.label55);
+            this.groupBox__WeekDay.Controls.Add(this.label56);
+            this.groupBox__WeekDay.Controls.Add(this.label57);
+            resources.ApplyResources(this.groupBox__WeekDay, "groupBox__WeekDay");
+            this.groupBox__WeekDay.Name = "groupBox__WeekDay";
+            this.helpProvider1.SetShowHelp(this.groupBox__WeekDay, ((bool)(resources.GetObject("groupBox__WeekDay.ShowHelp"))));
+            this.groupBox__WeekDay.TabStop = false;
+            this.groupBox__WeekDay.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            // 
+            // numericUpDown_WeekDay_Count
+            // 
+            resources.ApplyResources(this.numericUpDown_WeekDay_Count, "numericUpDown_WeekDay_Count");
+            this.numericUpDown_WeekDay_Count.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.numericUpDown_WeekDay_Count.Name = "numericUpDown_WeekDay_Count";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_WeekDay_Count, ((bool)(resources.GetObject("numericUpDown_WeekDay_Count.ShowHelp"))));
+            this.numericUpDown_WeekDay_Count.Value = new decimal(new int[] {
+            7,
+            0,
+            0,
+            0});
+            this.numericUpDown_WeekDay_Count.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label58
+            // 
+            resources.ApplyResources(this.label58, "label58");
+            this.label58.Name = "label58";
+            this.helpProvider1.SetShowHelp(this.label58, ((bool)(resources.GetObject("label58.ShowHelp"))));
+            // 
+            // checkBox_WeekDay
+            // 
+            resources.ApplyResources(this.checkBox_WeekDay, "checkBox_WeekDay");
+            this.checkBox_WeekDay.Name = "checkBox_WeekDay";
+            this.helpProvider1.SetShowHelp(this.checkBox_WeekDay, ((bool)(resources.GetObject("checkBox_WeekDay.ShowHelp"))));
+            this.checkBox_WeekDay.UseVisualStyleBackColor = true;
+            this.checkBox_WeekDay.CheckedChanged += new System.EventHandler(this.checkBox_WeekDay_CheckedChanged);
+            this.checkBox_WeekDay.Click += new System.EventHandler(this.checkBox_Click);
+            // 
+            // numericUpDown_WeekDay_Y
+            // 
+            this.numericUpDown_WeekDay_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_WeekDay_Y, "numericUpDown_WeekDay_Y");
+            this.numericUpDown_WeekDay_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WeekDay_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WeekDay_Y.Name = "numericUpDown_WeekDay_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_WeekDay_Y, ((bool)(resources.GetObject("numericUpDown_WeekDay_Y.ShowHelp"))));
+            this.numericUpDown_WeekDay_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_WeekDay_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
+            // 
+            // numericUpDown_WeekDay_X
+            // 
+            this.numericUpDown_WeekDay_X.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_WeekDay_X, "numericUpDown_WeekDay_X");
+            this.numericUpDown_WeekDay_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_WeekDay_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_WeekDay_X.Name = "numericUpDown_WeekDay_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_WeekDay_X, ((bool)(resources.GetObject("numericUpDown_WeekDay_X.ShowHelp"))));
+            this.numericUpDown_WeekDay_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_WeekDay_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
+            // 
+            // comboBox_WeekDay_Image
+            // 
+            this.comboBox_WeekDay_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_WeekDay_Image.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_WeekDay_Image, "comboBox_WeekDay_Image");
+            this.comboBox_WeekDay_Image.FormattingEnabled = true;
+            this.comboBox_WeekDay_Image.Name = "comboBox_WeekDay_Image";
+            this.helpProvider1.SetShowHelp(this.comboBox_WeekDay_Image, ((bool)(resources.GetObject("comboBox_WeekDay_Image.ShowHelp"))));
+            this.comboBox_WeekDay_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_WeekDay_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_WeekDay_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_WeekDay_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_WeekDay_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // label55
+            // 
+            resources.ApplyResources(this.label55, "label55");
+            this.label55.Name = "label55";
+            this.helpProvider1.SetShowHelp(this.label55, ((bool)(resources.GetObject("label55.ShowHelp"))));
+            // 
+            // label56
+            // 
+            resources.ApplyResources(this.label56, "label56");
+            this.label56.Name = "label56";
+            this.helpProvider1.SetShowHelp(this.label56, ((bool)(resources.GetObject("label56.ShowHelp"))));
+            // 
+            // label57
+            // 
+            resources.ApplyResources(this.label57, "label57");
+            this.label57.Name = "label57";
+            this.helpProvider1.SetShowHelp(this.label57, ((bool)(resources.GetObject("label57.ShowHelp"))));
+            // 
             // tabPage34
             // 
             this.tabPage34.BackColor = System.Drawing.SystemColors.Control;
@@ -13420,126 +13634,6 @@
             this.helpProvider1.SetShowHelp(this.checkBox_TwoDigitsMonth, ((bool)(resources.GetObject("checkBox_TwoDigitsMonth.ShowHelp"))));
             this.checkBox_TwoDigitsMonth.UseVisualStyleBackColor = true;
             this.checkBox_TwoDigitsMonth.Click += new System.EventHandler(this.checkBox_Click);
-            // 
-            // groupBox__WeekDay
-            // 
-            this.groupBox__WeekDay.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox__WeekDay.Controls.Add(this.numericUpDown_WeekDay_Count);
-            this.groupBox__WeekDay.Controls.Add(this.label58);
-            this.groupBox__WeekDay.Controls.Add(this.checkBox_WeekDay);
-            this.groupBox__WeekDay.Controls.Add(this.numericUpDown_WeekDay_Y);
-            this.groupBox__WeekDay.Controls.Add(this.numericUpDown_WeekDay_X);
-            this.groupBox__WeekDay.Controls.Add(this.comboBox_WeekDay_Image);
-            this.groupBox__WeekDay.Controls.Add(this.label55);
-            this.groupBox__WeekDay.Controls.Add(this.label56);
-            this.groupBox__WeekDay.Controls.Add(this.label57);
-            resources.ApplyResources(this.groupBox__WeekDay, "groupBox__WeekDay");
-            this.groupBox__WeekDay.Name = "groupBox__WeekDay";
-            this.helpProvider1.SetShowHelp(this.groupBox__WeekDay, ((bool)(resources.GetObject("groupBox__WeekDay.ShowHelp"))));
-            this.groupBox__WeekDay.TabStop = false;
-            this.groupBox__WeekDay.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
-            // 
-            // numericUpDown_WeekDay_Count
-            // 
-            resources.ApplyResources(this.numericUpDown_WeekDay_Count, "numericUpDown_WeekDay_Count");
-            this.numericUpDown_WeekDay_Count.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.numericUpDown_WeekDay_Count.Name = "numericUpDown_WeekDay_Count";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_WeekDay_Count, ((bool)(resources.GetObject("numericUpDown_WeekDay_Count.ShowHelp"))));
-            this.numericUpDown_WeekDay_Count.Value = new decimal(new int[] {
-            7,
-            0,
-            0,
-            0});
-            this.numericUpDown_WeekDay_Count.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // label58
-            // 
-            resources.ApplyResources(this.label58, "label58");
-            this.label58.Name = "label58";
-            this.helpProvider1.SetShowHelp(this.label58, ((bool)(resources.GetObject("label58.ShowHelp"))));
-            // 
-            // checkBox_WeekDay
-            // 
-            resources.ApplyResources(this.checkBox_WeekDay, "checkBox_WeekDay");
-            this.checkBox_WeekDay.Name = "checkBox_WeekDay";
-            this.helpProvider1.SetShowHelp(this.checkBox_WeekDay, ((bool)(resources.GetObject("checkBox_WeekDay.ShowHelp"))));
-            this.checkBox_WeekDay.UseVisualStyleBackColor = true;
-            this.checkBox_WeekDay.CheckedChanged += new System.EventHandler(this.checkBox_WeekDay_CheckedChanged);
-            this.checkBox_WeekDay.Click += new System.EventHandler(this.checkBox_Click);
-            // 
-            // numericUpDown_WeekDay_Y
-            // 
-            this.numericUpDown_WeekDay_Y.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_WeekDay_Y, "numericUpDown_WeekDay_Y");
-            this.numericUpDown_WeekDay_Y.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WeekDay_Y.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WeekDay_Y.Name = "numericUpDown_WeekDay_Y";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_WeekDay_Y, ((bool)(resources.GetObject("numericUpDown_WeekDay_Y.ShowHelp"))));
-            this.numericUpDown_WeekDay_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_WeekDay_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // numericUpDown_WeekDay_X
-            // 
-            this.numericUpDown_WeekDay_X.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_WeekDay_X, "numericUpDown_WeekDay_X");
-            this.numericUpDown_WeekDay_X.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_WeekDay_X.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_WeekDay_X.Name = "numericUpDown_WeekDay_X";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_WeekDay_X, ((bool)(resources.GetObject("numericUpDown_WeekDay_X.ShowHelp"))));
-            this.numericUpDown_WeekDay_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_WeekDay_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // comboBox_WeekDay_Image
-            // 
-            this.comboBox_WeekDay_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_WeekDay_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_WeekDay_Image, "comboBox_WeekDay_Image");
-            this.comboBox_WeekDay_Image.FormattingEnabled = true;
-            this.comboBox_WeekDay_Image.Name = "comboBox_WeekDay_Image";
-            this.helpProvider1.SetShowHelp(this.comboBox_WeekDay_Image, ((bool)(resources.GetObject("comboBox_WeekDay_Image.ShowHelp"))));
-            this.comboBox_WeekDay_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_WeekDay_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_WeekDay_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_WeekDay_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_WeekDay_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // label55
-            // 
-            resources.ApplyResources(this.label55, "label55");
-            this.label55.Name = "label55";
-            this.helpProvider1.SetShowHelp(this.label55, ((bool)(resources.GetObject("label55.ShowHelp"))));
-            // 
-            // label56
-            // 
-            resources.ApplyResources(this.label56, "label56");
-            this.label56.Name = "label56";
-            this.helpProvider1.SetShowHelp(this.label56, ((bool)(resources.GetObject("label56.ShowHelp"))));
-            // 
-            // label57
-            // 
-            resources.ApplyResources(this.label57, "label57");
-            this.label57.Name = "label57";
-            this.helpProvider1.SetShowHelp(this.label57, ((bool)(resources.GetObject("label57.ShowHelp"))));
             // 
             // button_Date
             // 
@@ -15551,6 +15645,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_OneLine_StartCorner_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_OneLine_Spacing)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_OneLine_EndCorner_Y)).EndInit();
+            this.tabPage50.ResumeLayout(false);
+            this.groupBox_WeekDayProgress.ResumeLayout(false);
+            this.groupBox_WeekDayProgress.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DOW_IconSet)).EndInit();
+            this.groupBox__WeekDay.ResumeLayout(false);
+            this.groupBox__WeekDay.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeekDay_Count)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeekDay_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeekDay_X)).EndInit();
             this.tabPage34.ResumeLayout(false);
             this.tabPage34.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Year_EndCorner_X)).EndInit();
@@ -15559,11 +15662,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Year_StartCorner_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Year_Spacing)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Year_EndCorner_Y)).EndInit();
-            this.groupBox__WeekDay.ResumeLayout(false);
-            this.groupBox__WeekDay.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeekDay_Count)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeekDay_Y)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_WeekDay_X)).EndInit();
             this.panel_Time.ResumeLayout(false);
             this.groupBox_Delimiter.ResumeLayout(false);
             this.groupBox_Delimiter.PerformLayout();
@@ -16841,6 +16939,14 @@
         private System.Windows.Forms.Label label455;
         private System.Windows.Forms.Label label456;
         private System.Windows.Forms.Label label457;
+        private System.Windows.Forms.TabPage tabPage50;
+        private System.Windows.Forms.GroupBox groupBox_WeekDayProgress;
+        private System.Windows.Forms.DataGridView dataGridView_DOW_IconSet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.CheckBox checkBox_DOW_IconSet;
+        private System.Windows.Forms.ComboBox comboBox_DOW_IconSet_Image;
+        private System.Windows.Forms.Label label460;
     }
 }
 

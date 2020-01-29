@@ -26,6 +26,7 @@ namespace GTR_Watch_face
             comboBox_Image_Pm.Items.AddRange(ListImages.ToArray());
 
             comboBox_WeekDay_Image.Items.AddRange(ListImages.ToArray());
+            comboBox_DOW_IconSet_Image.Items.AddRange(ListImages.ToArray());
             comboBox_OneLine_Image.Items.AddRange(ListImages.ToArray());
             comboBox_OneLine_Delimiter.Items.AddRange(ListImages.ToArray());
             comboBox_MonthAndDayD_Image.Items.AddRange(ListImages.ToArray());
@@ -210,6 +211,19 @@ namespace GTR_Watch_face
                     comboBoxSetText(comboBox_WeekDay_Image, Watch_Face.Date.WeekDay.ImageIndex);
                 }
                 else checkBox_WeekDay.Checked = false;
+
+                if ((Watch_Face.Date.WeekDayProgress != null) && (Watch_Face.Date.WeekDayProgress.Coordinates != null))
+                {
+                    checkBox_DOW_IconSet.Checked = true;
+                    dataGridView_DOW_IconSet.Rows.Clear();
+                    comboBoxSetText(comboBox_DOW_IconSet_Image, Watch_Face.Date.WeekDayProgress.ImageIndex);
+                    foreach (Coordinates coordinates in Watch_Face.Date.WeekDayProgress.Coordinates)
+                    {
+                        var RowNew = new DataGridViewRow();
+                        dataGridView_DOW_IconSet.Rows.Add(coordinates.X, coordinates.Y);
+                    }
+                }
+                else checkBox_DOW_IconSet.Checked = false;
 
                 if (Watch_Face.Date.MonthAndDay != null)
                 {
@@ -1224,6 +1238,23 @@ namespace GTR_Watch_face
         {
             if (!PreviewView) return;
             Watch_Face = new WATCH_FACE_JSON();
+
+            if (radioButton_47.Checked)
+            {
+                Watch_Face.Info = new Device_Id();
+                Watch_Face.Info.DeviceId = 40;
+            }
+            if (radioButton_42.Checked)
+            {
+                Watch_Face.Info = new Device_Id();
+                Watch_Face.Info.DeviceId = 42;
+            }
+            if (radioButton_gts.Checked)
+            {
+                Watch_Face.Info = new Device_Id();
+                Watch_Face.Info.DeviceId = 46;
+            }
+
             if ((comboBox_Background.SelectedIndex >= 0) || (comboBox_Preview.SelectedIndex >= 0))
             {
                 Watch_Face.Background = new Background();
@@ -1639,6 +1670,43 @@ namespace GTR_Watch_face
                     Watch_Face.Date.WeekDay.ImagesCount = (int)numericUpDown_WeekDay_Count.Value;
                     Watch_Face.Date.WeekDay.X = (int)numericUpDown_WeekDay_X.Value;
                     Watch_Face.Date.WeekDay.Y = (int)numericUpDown_WeekDay_Y.Value;
+                }
+
+                // день недели набором иконок
+                if (checkBox_DOW_IconSet.Checked)
+                {
+                    if ((comboBox_DOW_IconSet_Image.SelectedIndex >= 0) && (dataGridView_DOW_IconSet.Rows.Count > 1))
+                    {
+                        if (Watch_Face.Date == null) Watch_Face.Date = new Date();
+                        if (Watch_Face.Date.WeekDayProgress == null) Watch_Face.Date.WeekDayProgress = new IconSet();
+
+                        Watch_Face.Date.WeekDayProgress.ImageIndex = Int32.Parse(comboBox_DOW_IconSet_Image.Text);
+                        Coordinates[] coordinates = new Coordinates[0];
+                        int count = 0;
+
+                        foreach (DataGridViewRow row in dataGridView_DOW_IconSet.Rows)
+                        {
+                            //whatever you are currently doing
+                            //Coordinates coordinates = new Coordinates();
+                            int x = 0;
+                            int y = 0;
+                            if ((row.Cells[0].Value != null) && (row.Cells[1].Value != null))
+                            {
+                                if ((Int32.TryParse(row.Cells[0].Value.ToString(), out x)) && (Int32.TryParse(row.Cells[1].Value.ToString(), out y)))
+                                {
+
+                                    //Array.Resize(ref objson, objson.Length + 1);
+                                    Array.Resize(ref coordinates, coordinates.Length + 1);
+                                    //objson[count] = coordinates;
+                                    coordinates[count] = new Coordinates();
+                                    coordinates[count].X = x;
+                                    coordinates[count].Y = y;
+                                    count++;
+                                }
+                            }
+                            Watch_Face.Date.WeekDayProgress.Coordinates = coordinates;
+                        }
+                    }
                 }
 
                 if ((checkBox_MonthName.Checked) && (comboBox_MonthName_Image.SelectedIndex >= 0))
@@ -2711,6 +2779,8 @@ namespace GTR_Watch_face
 
             comboBox_WeekDay_Image.Text = "";
             comboBox_WeekDay_Image.Items.Clear();
+            comboBox_DOW_IconSet_Image.Text = "";
+            comboBox_DOW_IconSet_Image.Items.Clear();
             comboBox_OneLine_Delimiter.Text = "";
             comboBox_OneLine_Delimiter.Items.Clear();
             comboBox_OneLine_Image.Text = "";

@@ -11636,7 +11636,7 @@
     <value>True</value>
   </data>
   <data name="panel_Shortcuts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>392, 145</value>
+    <value>392, 1</value>
   </data>
   <data name="panel_Shortcuts.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
@@ -30911,7 +30911,7 @@
     <value>True</value>
   </data>
   <data name="tabPage8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 169</value>
+    <value>382, 170</value>
   </data>
   <data name="tabPage8.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -31646,7 +31646,7 @@
     <value>True</value>
   </data>
   <data name="tabPage7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 169</value>
+    <value>382, 170</value>
   </data>
   <data name="tabPage7.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -31665,6 +31665,519 @@
   </data>
   <data name="&gt;&gt;tabPage7.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn5.HeaderText" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn6.HeaderText" xml:space="preserve">
+    <value>Y</value>
+  </data>
+  <data name="dataGridView_DOW_IconSet.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="dataGridView_DOW_IconSet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 44</value>
+  </data>
+  <data name="dataGridView_DOW_IconSet.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="dataGridView_DOW_IconSet.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dataGridView_DOW_IconSet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 115</value>
+  </data>
+  <data name="dataGridView_DOW_IconSet.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_DOW_IconSet.Name" xml:space="preserve">
+    <value>dataGridView_DOW_IconSet</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_DOW_IconSet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_DOW_IconSet.Parent" xml:space="preserve">
+    <value>groupBox_WeekDayProgress</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_DOW_IconSet.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="checkBox_DOW_IconSet.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox_DOW_IconSet.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox_DOW_IconSet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 20</value>
+  </data>
+  <data name="checkBox_DOW_IconSet.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox_DOW_IconSet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 17</value>
+  </data>
+  <data name="checkBox_DOW_IconSet.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="checkBox_DOW_IconSet.Text" xml:space="preserve">
+    <value>Отображать</value>
+  </data>
+  <data name="&gt;&gt;checkBox_DOW_IconSet.Name" xml:space="preserve">
+    <value>checkBox_DOW_IconSet</value>
+  </data>
+  <data name="&gt;&gt;checkBox_DOW_IconSet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox_DOW_IconSet.Parent" xml:space="preserve">
+    <value>groupBox_WeekDayProgress</value>
+  </data>
+  <data name="&gt;&gt;checkBox_DOW_IconSet.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="comboBox_DOW_IconSet_Image.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="comboBox_DOW_IconSet_Image.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 17</value>
+  </data>
+  <data name="comboBox_DOW_IconSet_Image.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="comboBox_DOW_IconSet_Image.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="comboBox_DOW_IconSet_Image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 21</value>
+  </data>
+  <data name="comboBox_DOW_IconSet_Image.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;comboBox_DOW_IconSet_Image.Name" xml:space="preserve">
+    <value>comboBox_DOW_IconSet_Image</value>
+  </data>
+  <data name="&gt;&gt;comboBox_DOW_IconSet_Image.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox_DOW_IconSet_Image.Parent" xml:space="preserve">
+    <value>groupBox_WeekDayProgress</value>
+  </data>
+  <data name="&gt;&gt;comboBox_DOW_IconSet_Image.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label460.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label460.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label460.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label460.Location" type="System.Drawing.Point, System.Drawing">
+    <value>109, 20</value>
+  </data>
+  <data name="label460.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label460.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 13</value>
+  </data>
+  <data name="label460.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label460.Text" xml:space="preserve">
+    <value>ImageIndex:</value>
+  </data>
+  <data name="&gt;&gt;label460.Name" xml:space="preserve">
+    <value>label460</value>
+  </data>
+  <data name="&gt;&gt;label460.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label460.Parent" xml:space="preserve">
+    <value>groupBox_WeekDayProgress</value>
+  </data>
+  <data name="&gt;&gt;label460.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="groupBox_WeekDayProgress.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="groupBox_WeekDayProgress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 4</value>
+  </data>
+  <data name="groupBox_WeekDayProgress.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="groupBox_WeekDayProgress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 165</value>
+  </data>
+  <data name="groupBox_WeekDayProgress.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="groupBox_WeekDayProgress.Text" xml:space="preserve">
+    <value>Индикатор</value>
+  </data>
+  <data name="&gt;&gt;groupBox_WeekDayProgress.Name" xml:space="preserve">
+    <value>groupBox_WeekDayProgress</value>
+  </data>
+  <data name="&gt;&gt;groupBox_WeekDayProgress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox_WeekDayProgress.Parent" xml:space="preserve">
+    <value>tabPage50</value>
+  </data>
+  <data name="&gt;&gt;groupBox_WeekDayProgress.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="numericUpDown_WeekDay_Count.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_WeekDay_Count.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 99</value>
+  </data>
+  <data name="numericUpDown_WeekDay_Count.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_WeekDay_Count.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_WeekDay_Count.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_WeekDay_Count.Name" xml:space="preserve">
+    <value>numericUpDown_WeekDay_Count</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_WeekDay_Count.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_WeekDay_Count.Parent" xml:space="preserve">
+    <value>groupBox__WeekDay</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_WeekDay_Count.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label58.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label58.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label58.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label58.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 101</value>
+  </data>
+  <data name="label58.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label58.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 13</value>
+  </data>
+  <data name="label58.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="label58.Text" xml:space="preserve">
+    <value>ImagesCount:</value>
+  </data>
+  <data name="&gt;&gt;label58.Name" xml:space="preserve">
+    <value>label58</value>
+  </data>
+  <data name="&gt;&gt;label58.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label58.Parent" xml:space="preserve">
+    <value>groupBox__WeekDay</value>
+  </data>
+  <data name="&gt;&gt;label58.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="checkBox_WeekDay.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox_WeekDay.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox_WeekDay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 20</value>
+  </data>
+  <data name="checkBox_WeekDay.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox_WeekDay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 17</value>
+  </data>
+  <data name="checkBox_WeekDay.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="checkBox_WeekDay.Text" xml:space="preserve">
+    <value>Отображать</value>
+  </data>
+  <data name="&gt;&gt;checkBox_WeekDay.Name" xml:space="preserve">
+    <value>checkBox_WeekDay</value>
+  </data>
+  <data name="&gt;&gt;checkBox_WeekDay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox_WeekDay.Parent" xml:space="preserve">
+    <value>groupBox__WeekDay</value>
+  </data>
+  <data name="&gt;&gt;checkBox_WeekDay.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="numericUpDown_WeekDay_Y.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_WeekDay_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 45</value>
+  </data>
+  <data name="numericUpDown_WeekDay_Y.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_WeekDay_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_WeekDay_Y.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_WeekDay_Y.Name" xml:space="preserve">
+    <value>numericUpDown_WeekDay_Y</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_WeekDay_Y.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_WeekDay_Y.Parent" xml:space="preserve">
+    <value>groupBox__WeekDay</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_WeekDay_Y.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="numericUpDown_WeekDay_X.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_WeekDay_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 45</value>
+  </data>
+  <data name="numericUpDown_WeekDay_X.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_WeekDay_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_WeekDay_X.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_WeekDay_X.Name" xml:space="preserve">
+    <value>numericUpDown_WeekDay_X</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_WeekDay_X.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_WeekDay_X.Parent" xml:space="preserve">
+    <value>groupBox__WeekDay</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_WeekDay_X.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="comboBox_WeekDay_Image.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="comboBox_WeekDay_Image.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 71</value>
+  </data>
+  <data name="comboBox_WeekDay_Image.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="comboBox_WeekDay_Image.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="comboBox_WeekDay_Image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 21</value>
+  </data>
+  <data name="comboBox_WeekDay_Image.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;comboBox_WeekDay_Image.Name" xml:space="preserve">
+    <value>comboBox_WeekDay_Image</value>
+  </data>
+  <data name="&gt;&gt;comboBox_WeekDay_Image.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox_WeekDay_Image.Parent" xml:space="preserve">
+    <value>groupBox__WeekDay</value>
+  </data>
+  <data name="&gt;&gt;comboBox_WeekDay_Image.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label55.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label55.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label55.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label55.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 47</value>
+  </data>
+  <data name="label55.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label55.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
+  </data>
+  <data name="label55.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label55.Text" xml:space="preserve">
+    <value>X:</value>
+  </data>
+  <data name="&gt;&gt;label55.Name" xml:space="preserve">
+    <value>label55</value>
+  </data>
+  <data name="&gt;&gt;label55.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label55.Parent" xml:space="preserve">
+    <value>groupBox__WeekDay</value>
+  </data>
+  <data name="&gt;&gt;label55.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="label56.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label56.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label56.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label56.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 74</value>
+  </data>
+  <data name="label56.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label56.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 13</value>
+  </data>
+  <data name="label56.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label56.Text" xml:space="preserve">
+    <value>ImageIndex:</value>
+  </data>
+  <data name="&gt;&gt;label56.Name" xml:space="preserve">
+    <value>label56</value>
+  </data>
+  <data name="&gt;&gt;label56.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label56.Parent" xml:space="preserve">
+    <value>groupBox__WeekDay</value>
+  </data>
+  <data name="&gt;&gt;label56.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="label57.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label57.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label57.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label57.Location" type="System.Drawing.Point, System.Drawing">
+    <value>68, 47</value>
+  </data>
+  <data name="label57.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label57.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
+  </data>
+  <data name="label57.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label57.Text" xml:space="preserve">
+    <value>Y:</value>
+  </data>
+  <data name="&gt;&gt;label57.Name" xml:space="preserve">
+    <value>label57</value>
+  </data>
+  <data name="&gt;&gt;label57.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label57.Parent" xml:space="preserve">
+    <value>groupBox__WeekDay</value>
+  </data>
+  <data name="&gt;&gt;label57.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="groupBox__WeekDay.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="groupBox__WeekDay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 4</value>
+  </data>
+  <data name="groupBox__WeekDay.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="groupBox__WeekDay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 165</value>
+  </data>
+  <data name="groupBox__WeekDay.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="groupBox__WeekDay.Text" xml:space="preserve">
+    <value>День недели</value>
+  </data>
+  <data name="&gt;&gt;groupBox__WeekDay.Name" xml:space="preserve">
+    <value>groupBox__WeekDay</value>
+  </data>
+  <data name="&gt;&gt;groupBox__WeekDay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox__WeekDay.Parent" xml:space="preserve">
+    <value>tabPage50</value>
+  </data>
+  <data name="&gt;&gt;groupBox__WeekDay.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabPage50.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPage50.Size" type="System.Drawing.Size, System.Drawing">
+    <value>382, 170</value>
+  </data>
+  <data name="tabPage50.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tabPage50.Text" xml:space="preserve">
+    <value>День недели</value>
+  </data>
+  <data name="&gt;&gt;tabPage50.Name" xml:space="preserve">
+    <value>tabPage50</value>
+  </data>
+  <data name="&gt;&gt;tabPage50.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage50.Parent" xml:space="preserve">
+    <value>tabControl_Date</value>
+  </data>
+  <data name="&gt;&gt;tabPage50.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="comboBox_Year_Delimiter.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -32378,7 +32891,7 @@
     <value>True</value>
   </data>
   <data name="tabPage34.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 169</value>
+    <value>382, 170</value>
   </data>
   <data name="tabPage34.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -32396,7 +32909,7 @@
     <value>tabControl_Date</value>
   </data>
   <data name="&gt;&gt;tabPage34.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="tabControl_Date.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -32411,7 +32924,7 @@
     <value>True</value>
   </data>
   <data name="tabControl_Date.Size" type="System.Drawing.Size, System.Drawing">
-    <value>390, 195</value>
+    <value>390, 196</value>
   </data>
   <data name="tabControl_Date.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -32474,7 +32987,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_TwoDigitsDay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>152, 248</value>
+    <value>7, 218</value>
   </data>
   <data name="checkBox_TwoDigitsDay.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -32510,7 +33023,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_TwoDigitsMonth.Location" type="System.Drawing.Point, System.Drawing">
-    <value>152, 225</value>
+    <value>151, 218</value>
   </data>
   <data name="checkBox_TwoDigitsMonth.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -32535,324 +33048,6 @@
   </data>
   <data name="&gt;&gt;checkBox_TwoDigitsMonth.ZOrder" xml:space="preserve">
     <value>3</value>
-  </data>
-  <data name="numericUpDown_WeekDay_Count.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="numericUpDown_WeekDay_Count.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 99</value>
-  </data>
-  <data name="numericUpDown_WeekDay_Count.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="numericUpDown_WeekDay_Count.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="numericUpDown_WeekDay_Count.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_WeekDay_Count.Name" xml:space="preserve">
-    <value>numericUpDown_WeekDay_Count</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_WeekDay_Count.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_WeekDay_Count.Parent" xml:space="preserve">
-    <value>groupBox__WeekDay</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_WeekDay_Count.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label58.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label58.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="label58.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label58.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 101</value>
-  </data>
-  <data name="label58.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label58.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 13</value>
-  </data>
-  <data name="label58.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="label58.Text" xml:space="preserve">
-    <value>ImagesCount:</value>
-  </data>
-  <data name="&gt;&gt;label58.Name" xml:space="preserve">
-    <value>label58</value>
-  </data>
-  <data name="&gt;&gt;label58.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label58.Parent" xml:space="preserve">
-    <value>groupBox__WeekDay</value>
-  </data>
-  <data name="&gt;&gt;label58.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="checkBox_WeekDay.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBox_WeekDay.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="checkBox_WeekDay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 20</value>
-  </data>
-  <data name="checkBox_WeekDay.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBox_WeekDay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 17</value>
-  </data>
-  <data name="checkBox_WeekDay.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="checkBox_WeekDay.Text" xml:space="preserve">
-    <value>Отображать</value>
-  </data>
-  <data name="&gt;&gt;checkBox_WeekDay.Name" xml:space="preserve">
-    <value>checkBox_WeekDay</value>
-  </data>
-  <data name="&gt;&gt;checkBox_WeekDay.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBox_WeekDay.Parent" xml:space="preserve">
-    <value>groupBox__WeekDay</value>
-  </data>
-  <data name="&gt;&gt;checkBox_WeekDay.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="numericUpDown_WeekDay_Y.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="numericUpDown_WeekDay_Y.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 45</value>
-  </data>
-  <data name="numericUpDown_WeekDay_Y.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="numericUpDown_WeekDay_Y.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="numericUpDown_WeekDay_Y.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_WeekDay_Y.Name" xml:space="preserve">
-    <value>numericUpDown_WeekDay_Y</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_WeekDay_Y.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_WeekDay_Y.Parent" xml:space="preserve">
-    <value>groupBox__WeekDay</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_WeekDay_Y.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="numericUpDown_WeekDay_X.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="numericUpDown_WeekDay_X.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 45</value>
-  </data>
-  <data name="numericUpDown_WeekDay_X.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="numericUpDown_WeekDay_X.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="numericUpDown_WeekDay_X.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_WeekDay_X.Name" xml:space="preserve">
-    <value>numericUpDown_WeekDay_X</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_WeekDay_X.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_WeekDay_X.Parent" xml:space="preserve">
-    <value>groupBox__WeekDay</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_WeekDay_X.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="comboBox_WeekDay_Image.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="comboBox_WeekDay_Image.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 71</value>
-  </data>
-  <data name="comboBox_WeekDay_Image.MaxDropDownItems" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="comboBox_WeekDay_Image.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="comboBox_WeekDay_Image.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 21</value>
-  </data>
-  <data name="comboBox_WeekDay_Image.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;comboBox_WeekDay_Image.Name" xml:space="preserve">
-    <value>comboBox_WeekDay_Image</value>
-  </data>
-  <data name="&gt;&gt;comboBox_WeekDay_Image.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboBox_WeekDay_Image.Parent" xml:space="preserve">
-    <value>groupBox__WeekDay</value>
-  </data>
-  <data name="&gt;&gt;comboBox_WeekDay_Image.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="label55.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label55.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="label55.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label55.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 47</value>
-  </data>
-  <data name="label55.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label55.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 13</value>
-  </data>
-  <data name="label55.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label55.Text" xml:space="preserve">
-    <value>X:</value>
-  </data>
-  <data name="&gt;&gt;label55.Name" xml:space="preserve">
-    <value>label55</value>
-  </data>
-  <data name="&gt;&gt;label55.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label55.Parent" xml:space="preserve">
-    <value>groupBox__WeekDay</value>
-  </data>
-  <data name="&gt;&gt;label55.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="label56.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label56.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="label56.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label56.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 74</value>
-  </data>
-  <data name="label56.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label56.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 13</value>
-  </data>
-  <data name="label56.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="label56.Text" xml:space="preserve">
-    <value>ImageIndex:</value>
-  </data>
-  <data name="&gt;&gt;label56.Name" xml:space="preserve">
-    <value>label56</value>
-  </data>
-  <data name="&gt;&gt;label56.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label56.Parent" xml:space="preserve">
-    <value>groupBox__WeekDay</value>
-  </data>
-  <data name="&gt;&gt;label56.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="label57.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label57.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="label57.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label57.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 47</value>
-  </data>
-  <data name="label57.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label57.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 13</value>
-  </data>
-  <data name="label57.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="label57.Text" xml:space="preserve">
-    <value>Y:</value>
-  </data>
-  <data name="&gt;&gt;label57.Name" xml:space="preserve">
-    <value>label57</value>
-  </data>
-  <data name="&gt;&gt;label57.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label57.Parent" xml:space="preserve">
-    <value>groupBox__WeekDay</value>
-  </data>
-  <data name="&gt;&gt;label57.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="groupBox__WeekDay.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="groupBox__WeekDay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 218</value>
-  </data>
-  <data name="groupBox__WeekDay.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="groupBox__WeekDay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 125</value>
-  </data>
-  <data name="groupBox__WeekDay.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="groupBox__WeekDay.Text" xml:space="preserve">
-    <value>День недели</value>
-  </data>
-  <data name="&gt;&gt;groupBox__WeekDay.Name" xml:space="preserve">
-    <value>groupBox__WeekDay</value>
-  </data>
-  <data name="&gt;&gt;groupBox__WeekDay.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox__WeekDay.Parent" xml:space="preserve">
-    <value>panel_Date</value>
-  </data>
-  <data name="&gt;&gt;groupBox__WeekDay.ZOrder" xml:space="preserve">
-    <value>4</value>
   </data>
   <data name="panel_Date.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -36644,13 +36839,13 @@
     <value>True</value>
   </data>
   <data name="linkLabel_py_amazfit_tools.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 13</value>
+    <value>267, 13</value>
   </data>
   <data name="linkLabel_py_amazfit_tools.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
   <data name="linkLabel_py_amazfit_tools.Text" xml:space="preserve">
-    <value>py_amazfit_tools (Автор amazfitbip)</value>
+    <value>py_amazfit_tools v0.2-beta (Автор amazfitbip)</value>
   </data>
   <data name="&gt;&gt;linkLabel_py_amazfit_tools.Name" xml:space="preserve">
     <value>linkLabel_py_amazfit_tools</value>
@@ -40571,6 +40766,18 @@
     <value>ValueY</value>
   </data>
   <data name="&gt;&gt;ValueY.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn5</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn6.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn6</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn6.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;colorDialog_StepsProgress.Name" xml:space="preserve">
