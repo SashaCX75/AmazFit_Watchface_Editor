@@ -118,6 +118,124 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="вставитьКоординатуХToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAH8SURBVDhPY/DvvvrfovxIPQMWAJKzxCOnXXi8nsG8eE/9rHXH/586fw2MT1+4DsZnLl7/37nx
+        8f/VB+/+P3vpJhifu3wLjM9fuf0/vvvAfo3MXfZg006cvfz/5af/JOHNmzcjXHbizMX/rz//h+MN2/b/
+        L62sR8HI8iC8fv16hAHHT1/4//brfzieMnM+mC6pqEXhI+M1a9ZADDAtOVy/av+N/x++/cfAZZW1WMVB
+        OKJ1z35gINqDQ7Nvy+P/n378x8AVVXVYxUEYHgsgcPTEqf9ff/7HwFU1dVjFQXjy7KWIMDh6/OT/77/+
+        o+Abt+//t7Wz/z9rzny42K8/EAxiz5s3D2HAkWPH4ZK48J+///8vuDb5//Lb0/7//vvv/6xZs5AMOHIU
+        rAAXBqr//w+Ic/bE/i8/mgQU+/v/ypUrayfOX88GDkTvyk37Gxsb65uamuqbm5vrW1pa6qtbJtSD5CZs
+        vvcnf1vuf/8VHv9z98f/LwYakLor5H/ryeL/Vx59rmcAJsd6eJJEAyC5FUeerXSb4frfbKLR/4C19v8j
+        tjr+N1+g9T9+u8//n7//5kOV4gYTJkxg+/nzZ+7fv3/3afXI/rdZpAb0wu8Dv3//zl+4aCEHVBlh8O79
+        uyy3Gcb/HWbZAsPjH2Gb0UF/fz8b0JCcd+/e5SFsZmAAAO6bd5PMUu6IAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="копироватьToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAJySURBVDhPpVFLbxJhFB2N0brnkWg37upWSpfqyl2Ji5rUf+DSvbow2ppoqilgfCBDY12oQeVR
+        a9WF0Wo7IC3l/RwKwwDDe4B2fb33gxSS6sqbnMydm3POd777cVSnx8ePaTSaE1qtdkyn043p9fqTOgL2
+        Gq0W57rjjPivstmX/OFoHKLxJCRSGUimswgR4sk00DyC8/MXLl4e0A+Xzc4LRIwhMYkG8UQKhTEIhaOw
+        vROGYCgCMzNXrhsMhonJSePEOYPhrHFq6tRAznEvl18JopiH3G4eCpIMPn8A1n8J4Pu9BYHtHWZC6aLx
+        FIQiMQii8f0HC2sDOce9fvNWkEplkBEVRUFB6ECUTGcgnRUZUng1SkfzhYePPg7kHOd8916oKFWo1urQ
+        aLYgGotDAskiJsoXilAoyiAhClIRcvkCm5st1qHBB5dLICFBbat4UgaFEhTlMpQrCijVGgP1pXKFJX3y
+        9NnQwOX2CK12G1qtNqjdDmQwrozEgiRBvdFE4yZLl8BX+fFzk82e214MDdzMQGUGbbUDWTF3cGoEX2cX
+        Y6udHvR6PdgQ/EBcO88fNmiSAX6zogi1ep39B7aCuLgk7O3vs+csVyqMwzsco1dwC81Gm+2AUtAVKCYl
+        oVkdQQvc2PTBt+/rLCXvWBpJ4PH6mriDYYIc1GqNviHOaUaiPvr/PD+SYH7u3rLHsxJBo7DXuxL5/OWr
+        XKs3WAoypVQtNKOeTGk3d+fmnQM5qyOIowNwJpPpWre310+Ep6qdLgP1ZCyXFJi9OnuHuH8to9F4yWJ9
+        vLa4aF41my2rFov1E4H6GzdvOaenTbeRdqbP/q/iuD+MMmJvZ5TQYgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="вставитьToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAK1SURBVDhPZVJLTxNhFJ22PFrkJT4KtIgaEnSB4KP4IJoYE1+oZAqNsFAKiUWKQIypO3+AO10Y
+        UWhrhBBdUAH9EWx0gRG0RUoLpaW0M9OC6+O9Qw0FJzmZm3PPPfe79/sE/gr0ucamkzU9DbUmh9hyq7ez
+        0+602+3O7u5uFRwz12a902upq3acq6/pKS0uMKrF/BUZdNbHdy149+Ylpid9mJmZgd/vRygUUsExc1+m
+        P2Hc+wp9rRZUlZdZM+VkoNeJ/W0WfJ2dw4RvCsMjbrg9Hng8XhVut0flJnyT+DY7D0fLaVRV7BO3qukr
+        MeSI/baz+D7nx4/5X/AvLOJ3cAmLSyEVHAeI4xxrnHSCQ5X7dxoM2hoRCIawsBhEMBRGaHkF4ZWICo6X
+        iONcIBjGQMd5Msg6QTEZDNgsWI7EECZxZDWKaGwNsbW4Co6Z4xxrBjuacKiiLMuAdvCIdhCLJ7EajWEt
+        vo71RBJJSVLBMXOcY00fjVttOvC/wXpSUYWJpARZVqCk0io4Zk41Jo2zrXHXCPocsVc8BUlJq90SkgxF
+        SSGVTqtQUilIxHGONQ+tdI3ZI9A7EB/cboCc2kCCRf8MqDuDY+Y4x5qu5nqYy7MMCukEXTfqKLmJeOYE
+        6ghUyJAVJctgE/evn+CHtG2wJ18n3rt6HJK8sbU8mlfK7IEhybTMxNYy40kZ7VeOwWzcu21gyNOK7Zdr
+        kZTTiNO1cackdeSuDI6Zi0SimP8ZQLPFBJOxdKeB7VINlPQf6kLdaNNSprss0/w0RjyeoBe5jM9Tk7h5
+        xrTrBLnaVtvFoxj1DmPM8xof3g/DN+7Bx9ERjHnfYtQzhKEXz/HsiQPXGo9AvHAYlQdLWjPlgqARBDNd
+        5dNcjeDK1wouQ47gKs6jv05wMcdgrjBf4yrU61xFpNVpNWZBEIS/oF5M/il8x94AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="toolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAH8SURBVDhPY/DvvvrfovxIPQMWAJKzxCOnXXi8nsG8eE/9rHXH/586fw2MT1+4DsZnLl7/37nx
+        8f/VB+/+P3vpJhifu3wLjM9fuf0/vvvAfo3MXfZg006cvfz/5af/JOHNmzcjXHbizMX/rz//h+MN2/b/
+        L62sR8HI8iC8fv16hAHHT1/4//brfzieMnM+mC6pqEXhI+M1a9ZADDAtOVy/av+N/x++/cfAZZW1WMVB
+        OKJ1z35gINqDQ7Nvy+P/n378x8AVVXVYxUEYHgsgcPTEqf9ff/7HwFU1dVjFQXjy7KWIMDh6/OT/77/+
+        o+Abt+//t7Wz/z9rzny42K8/EAxiz5s3D2HAkWPH4ZK48J+///8vuDb5//Lb0/7//vvv/6xZs5AMOHIU
+        rAAXBqr//w+Ic/bE/i8/mgQU+/v/ypUrayfOX88GDkTvyk37Gxsb65uamuqbm5vrW1pa6qtbJtSD5CZs
+        vvcnf1vuf/8VHv9z98f/LwYakLor5H/ryeL/Vx59rmcAJsd6eJJEAyC5FUeerXSb4frfbKLR/4C19v8j
+        tjr+N1+g9T9+u8//n7//5kOV4gYTJkxg+/nzZ+7fv3/3afXI/rdZpAb0wu8Dv3//zl+4aCEHVBlh8O79
+        uyy3Gcb/HWbZAsPjH2Gb0UF/fz8b0JCcd+/e5SFsZmAAAO6bd5PMUu6IAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="копироватьToolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAJySURBVDhPpVFLbxJhFB2N0brnkWg37upWSpfqyl2Ji5rUf+DSvbow2ppoqilgfCBDY12oQeVR
+        a9WF0Wo7IC3l/RwKwwDDe4B2fb33gxSS6sqbnMydm3POd777cVSnx8ePaTSaE1qtdkyn043p9fqTOgL2
+        Gq0W57rjjPivstmX/OFoHKLxJCRSGUimswgR4sk00DyC8/MXLl4e0A+Xzc4LRIwhMYkG8UQKhTEIhaOw
+        vROGYCgCMzNXrhsMhonJSePEOYPhrHFq6tRAznEvl18JopiH3G4eCpIMPn8A1n8J4Pu9BYHtHWZC6aLx
+        FIQiMQii8f0HC2sDOce9fvNWkEplkBEVRUFB6ECUTGcgnRUZUng1SkfzhYePPg7kHOd8916oKFWo1urQ
+        aLYgGotDAskiJsoXilAoyiAhClIRcvkCm5st1qHBB5dLICFBbat4UgaFEhTlMpQrCijVGgP1pXKFJX3y
+        9NnQwOX2CK12G1qtNqjdDmQwrozEgiRBvdFE4yZLl8BX+fFzk82e214MDdzMQGUGbbUDWTF3cGoEX2cX
+        Y6udHvR6PdgQ/EBcO88fNmiSAX6zogi1ep39B7aCuLgk7O3vs+csVyqMwzsco1dwC81Gm+2AUtAVKCYl
+        oVkdQQvc2PTBt+/rLCXvWBpJ4PH6mriDYYIc1GqNviHOaUaiPvr/PD+SYH7u3rLHsxJBo7DXuxL5/OWr
+        XKs3WAoypVQtNKOeTGk3d+fmnQM5qyOIowNwJpPpWre310+Ep6qdLgP1ZCyXFJi9OnuHuH8to9F4yWJ9
+        vLa4aF41my2rFov1E4H6GzdvOaenTbeRdqbP/q/iuD+MMmJvZ5TQYgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="вставитьToolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAK1SURBVDhPZVJLTxNhFJ22PFrkJT4KtIgaEnSB4KP4IJoYE1+oZAqNsFAKiUWKQIypO3+AO10Y
+        UWhrhBBdUAH9EWx0gRG0RUoLpaW0M9OC6+O9Qw0FJzmZm3PPPfe79/sE/gr0ucamkzU9DbUmh9hyq7ez
+        0+602+3O7u5uFRwz12a902upq3acq6/pKS0uMKrF/BUZdNbHdy149+Ylpid9mJmZgd/vRygUUsExc1+m
+        P2Hc+wp9rRZUlZdZM+VkoNeJ/W0WfJ2dw4RvCsMjbrg9Hng8XhVut0flJnyT+DY7D0fLaVRV7BO3qukr
+        MeSI/baz+D7nx4/5X/AvLOJ3cAmLSyEVHAeI4xxrnHSCQ5X7dxoM2hoRCIawsBhEMBRGaHkF4ZWICo6X
+        iONcIBjGQMd5Msg6QTEZDNgsWI7EECZxZDWKaGwNsbW4Co6Z4xxrBjuacKiiLMuAdvCIdhCLJ7EajWEt
+        vo71RBJJSVLBMXOcY00fjVttOvC/wXpSUYWJpARZVqCk0io4Zk41Jo2zrXHXCPocsVc8BUlJq90SkgxF
+        SSGVTqtQUilIxHGONQ+tdI3ZI9A7EB/cboCc2kCCRf8MqDuDY+Y4x5qu5nqYy7MMCukEXTfqKLmJeOYE
+        6ghUyJAVJctgE/evn+CHtG2wJ18n3rt6HJK8sbU8mlfK7IEhybTMxNYy40kZ7VeOwWzcu21gyNOK7Zdr
+        kZTTiNO1cackdeSuDI6Zi0SimP8ZQLPFBJOxdKeB7VINlPQf6kLdaNNSprss0/w0RjyeoBe5jM9Tk7h5
+        xrTrBLnaVtvFoxj1DmPM8xof3g/DN+7Bx9ERjHnfYtQzhKEXz/HsiQPXGo9AvHAYlQdLWjPlgqARBDNd
+        5dNcjeDK1wouQ47gKs6jv05wMcdgrjBf4yrU61xFpNVpNWZBEIS/oF5M/il8x94AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="tabPage21.Size" type="System.Drawing.Size, System.Drawing">
+    <value>382, 134</value>
+  </data>
+  <data name="checkBox_Battery_Scale.Size" type="System.Drawing.Size, System.Drawing">
+    <value>382, 20</value>
+  </data>
+  <data name="tabPage23.Size" type="System.Drawing.Size, System.Drawing">
+    <value>382, 134</value>
+  </data>
+  <data name="tabPage12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>382, 139</value>
+  </data>
+  <data name="checkBox_Pulse_ClockHand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>382, 20</value>
+  </data>
+  <data name="tabPage51.Size" type="System.Drawing.Size, System.Drawing">
+    <value>382, 139</value>
+  </data>
+  <data name="checkBox_ActivityCaloriesScale.Size" type="System.Drawing.Size, System.Drawing">
+    <value>382, 20</value>
+  </data>
+  <data name="tabPage11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>382, 139</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAkAAAAAAAEAIABZPQAAlgAAAICAAAABACAAKAgBAO89AABgYAAAAQAgAKiUAAAXRgEASEgAAAEA
@@ -3081,5 +3199,1832 @@
         SlmARUpZgEVKWYBDSFZuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+D8AAPgfAADwHwAA4A8AAMAHAADA
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
+  </data>
+  <data name="button_Activity.Text" xml:space="preserve">
+    <value>Aktivity</value>
+  </data>
+  <data name="button_AnalogClock.Text" xml:space="preserve">
+    <value>Analogové hodiny</value>
+  </data>
+  <data name="button_AnalogDate.Text" xml:space="preserve">
+    <value>Průběh dnů</value>
+  </data>
+  <data name="button_Background.Text" xml:space="preserve">
+    <value>Pozadí</value>
+  </data>
+  <data name="button_Battery.Text" xml:space="preserve">
+    <value>Baterie</value>
+  </data>
+  <data name="button_Date.Text" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="button_images.Text" xml:space="preserve">
+    <value>Vybrat</value>
+  </data>
+  <data name="button_JSON.Text" xml:space="preserve">
+    <value>Vybrat</value>
+  </data>
+  <data name="button_JsonPreview_Random.Text" xml:space="preserve">
+    <value>Náhodná hodnota</value>
+  </data>
+  <data name="button_JsonPreview_Read.Text" xml:space="preserve">
+    <value>Načíst hodnotu</value>
+  </data>
+  <data name="button_JsonPreview_Write.Text" xml:space="preserve">
+    <value>Uložit hodnotu</value>
+  </data>
+  <data name="button_pack.Text" xml:space="preserve">
+    <value>Sbalit BIN</value>
+  </data>
+  <data name="button_pack_unpack.Text" xml:space="preserve">
+    <value>Náhled</value>
+  </data>
+  <data name="button_pack_zip.Text" xml:space="preserve">
+    <value>Sbalit a komprimovat BIN</value>
+  </data>
+  <data name="button_PreviewBig.Text" xml:space="preserve">
+    <value>Zvětšit</value>
+  </data>
+  <data name="button_Reset.Text" xml:space="preserve">
+    <value>Výchozí nastavení</value>
+  </data>
+  <data name="button_SaveGIF.Text" xml:space="preserve">
+    <value>Uložiť GIF</value>
+  </data>
+  <data name="button_SaveJson.Text" xml:space="preserve">
+    <value>Uložit Json soubor</value>
+  </data>
+  <data name="button_SavePNG.Text" xml:space="preserve">
+    <value>Uložiť PNG</value>
+  </data>
+  <data name="button_Set1.Text" xml:space="preserve">
+    <value>Hodnoty 1</value>
+  </data>
+  <data name="button_Set10.Text" xml:space="preserve">
+    <value>Hodnoty 10</value>
+  </data>
+  <data name="button_Set11.Text" xml:space="preserve">
+    <value>Hodnoty 11</value>
+  </data>
+  <data name="button_Set12.Text" xml:space="preserve">
+    <value>Hodnoty 12</value>
+  </data>
+  <data name="button_Set13.Text" xml:space="preserve">
+    <value>Hodnoty 13</value>
+  </data>
+  <data name="button_Set2.Text" xml:space="preserve">
+    <value>Hodnoty 2</value>
+  </data>
+  <data name="button_Set3.Text" xml:space="preserve">
+    <value>Hodnoty 3</value>
+  </data>
+  <data name="button_Set4.Text" xml:space="preserve">
+    <value>Hodnoty 4</value>
+  </data>
+  <data name="button_Set5.Text" xml:space="preserve">
+    <value>Hodnoty 5</value>
+  </data>
+  <data name="button_Set6.Text" xml:space="preserve">
+    <value>Hodnoty 6</value>
+  </data>
+  <data name="button_Set7.Text" xml:space="preserve">
+    <value>Hodnoty 7</value>
+  </data>
+  <data name="button_Set8.Text" xml:space="preserve">
+    <value>Hodnoty 8</value>
+  </data>
+  <data name="button_Set9.Text" xml:space="preserve">
+    <value>Hodnoty 9</value>
+  </data>
+  <data name="button_SetWeather.Text" xml:space="preserve">
+    <value>Počasí</value>
+  </data>
+  <data name="button_Status.Text" xml:space="preserve">
+    <value>Stav</value>
+  </data>
+  <data name="button_StepsProgress.Text" xml:space="preserve">
+    <value>Průběh kroků</value>
+  </data>
+  <data name="button_TextToJson.Text" xml:space="preserve">
+    <value>Aplikuj změny</value>
+  </data>
+  <data name="button_Time.Text" xml:space="preserve">
+    <value>Čas</value>
+  </data>
+  <data name="button_unpack.Text" xml:space="preserve">
+    <value>Rozbalit BIN</value>
+  </data>
+  <data name="button_Weather.Text" xml:space="preserve">
+    <value>Počasí</value>
+  </data>
+  <data name="button_zip.Text" xml:space="preserve">
+    <value>Komprimovat BIN</value>
+  </data>
+  <data name="button_zip_unpack.Text" xml:space="preserve">
+    <value>Rozbalit komprimovaný BIN</value>
+  </data>
+  <data name="checkBox1.Text" xml:space="preserve">
+    <value>Tmavé pozadí</value>
+  </data>
+  <data name="checkBox_Activity.Text" xml:space="preserve">
+    <value>Použít</value>
+  </data>
+  <data name="checkBox_ActivityCalories.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_ActivityDistance.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_ActivityGoal.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_ActivityPuls.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_ActivityStar.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_ActivitySteps.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_ADDay_ClockHand.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_ADMonth_ClockHand.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_ADWeekDay_ClockHand.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_Alarm.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_Alarm_Set1.Text" xml:space="preserve">
+    <value>Budík</value>
+  </data>
+  <data name="checkBox_Alarm_Set10.Text" xml:space="preserve">
+    <value>Budík</value>
+  </data>
+  <data name="checkBox_Alarm_Set11.Text" xml:space="preserve">
+    <value>Budík</value>
+  </data>
+  <data name="checkBox_Alarm_Set12.Text" xml:space="preserve">
+    <value>Budík</value>
+  </data>
+  <data name="checkBox_Alarm_Set13.Text" xml:space="preserve">
+    <value>Budík</value>
+  </data>
+  <data name="checkBox_Alarm_Set2.Text" xml:space="preserve">
+    <value>Budík</value>
+  </data>
+  <data name="checkBox_Alarm_Set3.Text" xml:space="preserve">
+    <value>Budík</value>
+  </data>
+  <data name="checkBox_Alarm_Set4.Text" xml:space="preserve">
+    <value>Budík</value>
+  </data>
+  <data name="checkBox_Alarm_Set5.Text" xml:space="preserve">
+    <value>Budík</value>
+  </data>
+  <data name="checkBox_Alarm_Set6.Text" xml:space="preserve">
+    <value>Budík</value>
+  </data>
+  <data name="checkBox_Alarm_Set7.Text" xml:space="preserve">
+    <value>Budík</value>
+  </data>
+  <data name="checkBox_Alarm_Set8.Text" xml:space="preserve">
+    <value>Budík</value>
+  </data>
+  <data name="checkBox_Alarm_Set9.Text" xml:space="preserve">
+    <value>Budík</value>
+  </data>
+  <data name="checkBox_AmPm.Text" xml:space="preserve">
+    <value>12-H formát</value>
+  </data>
+  <data name="checkBox_AnalogClock.Text" xml:space="preserve">
+    <value>Použít</value>
+  </data>
+  <data name="checkBox_AnalogClock_Hour.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_AnalogClock_Min.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_AnalogClock_Sec.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_Battery.Text" xml:space="preserve">
+    <value>Použít</value>
+  </data>
+  <data name="checkBox_Battery_ClockHand.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_Battery_IconSet.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_Battery_Img.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_Battery_Percent.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_Battery_Scale.Text" xml:space="preserve">
+    <value>Použít</value>
+  </data>
+  <data name="checkBox_Battery_Text.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_Bluetooth.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_border.Text" xml:space="preserve">
+    <value>Orámovat souřadnice zarovnatelných prvků</value>
+  </data>
+  <data name="checkBox_crop.Text" xml:space="preserve">
+    <value>Oříznout objekty mimo viditelnou oblast</value>
+  </data>
+  <data name="checkBox_Date.Text" xml:space="preserve">
+    <value>Použít</value>
+  </data>
+  <data name="checkBox_Delimiter.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_DND.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_DoNotDisturb_Set1.Text" xml:space="preserve">
+    <value>Nerušit (DND)</value>
+  </data>
+  <data name="checkBox_DoNotDisturb_Set10.Text" xml:space="preserve">
+    <value>Nerušit (DND)</value>
+  </data>
+  <data name="checkBox_DoNotDisturb_Set11.Text" xml:space="preserve">
+    <value>Nerušit (DND)</value>
+  </data>
+  <data name="checkBox_DoNotDisturb_Set12.Text" xml:space="preserve">
+    <value>Nerušit (DND)</value>
+  </data>
+  <data name="checkBox_DoNotDisturb_Set13.Text" xml:space="preserve">
+    <value>Nerušit (DND)</value>
+  </data>
+  <data name="checkBox_DoNotDisturb_Set2.Text" xml:space="preserve">
+    <value>Nerušit (DND)</value>
+  </data>
+  <data name="checkBox_DoNotDisturb_Set3.Text" xml:space="preserve">
+    <value>Nerušit (DND)</value>
+  </data>
+  <data name="checkBox_DoNotDisturb_Set4.Text" xml:space="preserve">
+    <value>Nerušit (DND)</value>
+  </data>
+  <data name="checkBox_DoNotDisturb_Set5.Text" xml:space="preserve">
+    <value>Nerušit (DND)</value>
+  </data>
+  <data name="checkBox_DoNotDisturb_Set6.Text" xml:space="preserve">
+    <value>Nerušit (DND)</value>
+  </data>
+  <data name="checkBox_DoNotDisturb_Set7.Text" xml:space="preserve">
+    <value>Nerušit (DND)</value>
+  </data>
+  <data name="checkBox_DoNotDisturb_Set8.Text" xml:space="preserve">
+    <value>Nerušit (DND)</value>
+  </data>
+  <data name="checkBox_DoNotDisturb_Set9.Text" xml:space="preserve">
+    <value>Nerušit (DND)</value>
+  </data>
+  <data name="checkBox_HourCenterImage.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_Hours.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_JsonWarnings.Text" xml:space="preserve">
+    <value>Zobrazit upozornění při ukládání JSON souboru</value>
+  </data>
+  <data name="checkBox_Lock.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_Lock_Set1.Text" xml:space="preserve">
+    <value>Zámek</value>
+  </data>
+  <data name="checkBox_Lock_Set10.Text" xml:space="preserve">
+    <value>Zámek</value>
+  </data>
+  <data name="checkBox_Lock_Set11.Text" xml:space="preserve">
+    <value>Zámek</value>
+  </data>
+  <data name="checkBox_Lock_Set12.Text" xml:space="preserve">
+    <value>Zámek</value>
+  </data>
+  <data name="checkBox_Lock_Set13.Text" xml:space="preserve">
+    <value>Zámek</value>
+  </data>
+  <data name="checkBox_Lock_Set2.Text" xml:space="preserve">
+    <value>Zámek</value>
+  </data>
+  <data name="checkBox_Lock_Set3.Text" xml:space="preserve">
+    <value>Zámek</value>
+  </data>
+  <data name="checkBox_Lock_Set4.Text" xml:space="preserve">
+    <value>Zámek</value>
+  </data>
+  <data name="checkBox_Lock_Set5.Text" xml:space="preserve">
+    <value>Zámek</value>
+  </data>
+  <data name="checkBox_Lock_Set6.Text" xml:space="preserve">
+    <value>Zámek</value>
+  </data>
+  <data name="checkBox_Lock_Set7.Text" xml:space="preserve">
+    <value>Zámek</value>
+  </data>
+  <data name="checkBox_Lock_Set8.Text" xml:space="preserve">
+    <value>Zámek</value>
+  </data>
+  <data name="checkBox_Lock_Set9.Text" xml:space="preserve">
+    <value>Zámek</value>
+  </data>
+  <data name="checkBox_MinCenterImage.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_Minutes.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_MonthAndDayD.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_MonthAndDayM.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_MonthName.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_OneLine.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_SecCenterImage.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_Seconds.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_SPSliced.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_StepsProgress.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_StProg_ClockHand.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_Time.Text" xml:space="preserve">
+    <value>Použít</value>
+  </data>
+  <data name="checkBox_TwoDigitsDay.Text" xml:space="preserve">
+    <value>dvouciferný den</value>
+  </data>
+  <data name="checkBox_TwoDigitsMonth.Text" xml:space="preserve">
+    <value>dvouciferný měsíc</value>
+  </data>
+  <data name="checkBox_Weather.Text" xml:space="preserve">
+    <value>Použít</value>
+  </data>
+  <data name="checkBox_WeatherSet_DayTemp.Text" xml:space="preserve">
+    <value>Teplota přes den</value>
+  </data>
+  <data name="checkBox_WeatherSet_Temp.Text" xml:space="preserve">
+    <value>Teplota</value>
+  </data>
+  <data name="checkBox_Weather_Day.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_Weather_Icon.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_Weather_Night.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_Weather_Text.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_WebB.Text" xml:space="preserve">
+    <value>Černá mřížka</value>
+  </data>
+  <data name="checkBox_WebW.Text" xml:space="preserve">
+    <value>Bílá mřížka</value>
+  </data>
+  <data name="checkBox_WeekDay.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="checkBox_Year.Text" xml:space="preserve">
+    <value>Zobrazit</value>
+  </data>
+  <data name="ColumnImage.HeaderText" xml:space="preserve">
+    <value>obrázek</value>
+  </data>
+  <data name="comboBox_ActivityCalories_Alignment.Items" xml:space="preserve">
+    <value>Nahoru do leva</value>
+  </data>
+  <data name="comboBox_ActivityCalories_Alignment.Items1" xml:space="preserve">
+    <value>Nahoru na střed</value>
+  </data>
+  <data name="comboBox_ActivityCalories_Alignment.Items2" xml:space="preserve">
+    <value>Nahoru do prava</value>
+  </data>
+  <data name="comboBox_ActivityCalories_Alignment.Items3" xml:space="preserve">
+    <value>Na střed doleva</value>
+  </data>
+  <data name="comboBox_ActivityCalories_Alignment.Items4" xml:space="preserve">
+    <value>na střed</value>
+  </data>
+  <data name="comboBox_ActivityCalories_Alignment.Items5" xml:space="preserve">
+    <value>Na střed do prava</value>
+  </data>
+  <data name="comboBox_ActivityCalories_Alignment.Items6" xml:space="preserve">
+    <value>Dole do leva</value>
+  </data>
+  <data name="comboBox_ActivityCalories_Alignment.Items7" xml:space="preserve">
+    <value>Dole na střed</value>
+  </data>
+  <data name="comboBox_ActivityCalories_Alignment.Items8" xml:space="preserve">
+    <value>Dole do prava</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Alignment.Items" xml:space="preserve">
+    <value>Nahoru do leva</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Alignment.Items1" xml:space="preserve">
+    <value>Nahoru na střed</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Alignment.Items2" xml:space="preserve">
+    <value>Nahoru do prava</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Alignment.Items3" xml:space="preserve">
+    <value>Na střed doleva</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Alignment.Items4" xml:space="preserve">
+    <value>na střed</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Alignment.Items5" xml:space="preserve">
+    <value>Na střed do prava</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Alignment.Items6" xml:space="preserve">
+    <value>Dole do leva</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Alignment.Items7" xml:space="preserve">
+    <value>Dole na střed</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Alignment.Items8" xml:space="preserve">
+    <value>Dole do prava</value>
+  </data>
+  <data name="comboBox_ActivityGoal_Alignment.Items" xml:space="preserve">
+    <value>Nahoru do leva</value>
+  </data>
+  <data name="comboBox_ActivityGoal_Alignment.Items1" xml:space="preserve">
+    <value>Nahoru na střed</value>
+  </data>
+  <data name="comboBox_ActivityGoal_Alignment.Items2" xml:space="preserve">
+    <value>Nahoru do prava</value>
+  </data>
+  <data name="comboBox_ActivityGoal_Alignment.Items3" xml:space="preserve">
+    <value>Na střed doleva</value>
+  </data>
+  <data name="comboBox_ActivityGoal_Alignment.Items4" xml:space="preserve">
+    <value>na střed</value>
+  </data>
+  <data name="comboBox_ActivityGoal_Alignment.Items5" xml:space="preserve">
+    <value>Na střed do prava</value>
+  </data>
+  <data name="comboBox_ActivityGoal_Alignment.Items6" xml:space="preserve">
+    <value>Dole do leva</value>
+  </data>
+  <data name="comboBox_ActivityGoal_Alignment.Items7" xml:space="preserve">
+    <value>Dole na střed</value>
+  </data>
+  <data name="comboBox_ActivityGoal_Alignment.Items8" xml:space="preserve">
+    <value>Dole do prava</value>
+  </data>
+  <data name="comboBox_ActivityPuls_Alignment.Items" xml:space="preserve">
+    <value>Nahoru do leva</value>
+  </data>
+  <data name="comboBox_ActivityPuls_Alignment.Items1" xml:space="preserve">
+    <value>Nahoru na střed</value>
+  </data>
+  <data name="comboBox_ActivityPuls_Alignment.Items2" xml:space="preserve">
+    <value>Nahoru do prava</value>
+  </data>
+  <data name="comboBox_ActivityPuls_Alignment.Items3" xml:space="preserve">
+    <value>Na střed doleva</value>
+  </data>
+  <data name="comboBox_ActivityPuls_Alignment.Items4" xml:space="preserve">
+    <value>na střed</value>
+  </data>
+  <data name="comboBox_ActivityPuls_Alignment.Items5" xml:space="preserve">
+    <value>Na střed do prava</value>
+  </data>
+  <data name="comboBox_ActivityPuls_Alignment.Items6" xml:space="preserve">
+    <value>Dole do leva</value>
+  </data>
+  <data name="comboBox_ActivityPuls_Alignment.Items7" xml:space="preserve">
+    <value>Dole na střed</value>
+  </data>
+  <data name="comboBox_ActivityPuls_Alignment.Items8" xml:space="preserve">
+    <value>Dole do prava</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Alignment.Items" xml:space="preserve">
+    <value>Nahoru do leva</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Alignment.Items1" xml:space="preserve">
+    <value>Nahoru na střed</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Alignment.Items2" xml:space="preserve">
+    <value>Nahoru do prava</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Alignment.Items3" xml:space="preserve">
+    <value>Na střed doleva</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Alignment.Items4" xml:space="preserve">
+    <value>na střed</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Alignment.Items5" xml:space="preserve">
+    <value>Na střed do prava</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Alignment.Items6" xml:space="preserve">
+    <value>Dole do leva</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Alignment.Items7" xml:space="preserve">
+    <value>Dole na střed</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Alignment.Items8" xml:space="preserve">
+    <value>Dole do prava</value>
+  </data>
+  <data name="comboBox_Battery_Flatness.Items" xml:space="preserve">
+    <value>Zaoblené</value>
+  </data>
+  <data name="comboBox_Battery_Flatness.Items1" xml:space="preserve">
+    <value>Trojúhelník</value>
+  </data>
+  <data name="comboBox_Battery_Flatness.Items2" xml:space="preserve">
+    <value>Rovné</value>
+  </data>
+  <data name="comboBox_Battery_Text_Alignment.Items" xml:space="preserve">
+    <value>Nahoru do leva</value>
+  </data>
+  <data name="comboBox_Battery_Text_Alignment.Items1" xml:space="preserve">
+    <value>Nahoru na střed</value>
+  </data>
+  <data name="comboBox_Battery_Text_Alignment.Items2" xml:space="preserve">
+    <value>Nahoru do prava</value>
+  </data>
+  <data name="comboBox_Battery_Text_Alignment.Items3" xml:space="preserve">
+    <value>Na střed doleva</value>
+  </data>
+  <data name="comboBox_Battery_Text_Alignment.Items4" xml:space="preserve">
+    <value>Na střed</value>
+  </data>
+  <data name="comboBox_Battery_Text_Alignment.Items5" xml:space="preserve">
+    <value>Na střed do prava</value>
+  </data>
+  <data name="comboBox_Battery_Text_Alignment.Items6" xml:space="preserve">
+    <value>Dole do leva</value>
+  </data>
+  <data name="comboBox_Battery_Text_Alignment.Items7" xml:space="preserve">
+    <value>Dole na střed</value>
+  </data>
+  <data name="comboBox_Battery_Text_Alignment.Items8" xml:space="preserve">
+    <value>Dole do prava</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Alignment.Items" xml:space="preserve">
+    <value>Nahoru do leva</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Alignment.Items1" xml:space="preserve">
+    <value>Nahoru na střed</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Alignment.Items2" xml:space="preserve">
+    <value>Nahoru do prava</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Alignment.Items3" xml:space="preserve">
+    <value>Na střed doleva</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Alignment.Items4" xml:space="preserve">
+    <value>na střed</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Alignment.Items5" xml:space="preserve">
+    <value>Na střed do prava</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Alignment.Items6" xml:space="preserve">
+    <value>Dole do leva</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Alignment.Items7" xml:space="preserve">
+    <value>Dole na střed</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Alignment.Items8" xml:space="preserve">
+    <value>Dole do prava</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Alignment.Items" xml:space="preserve">
+    <value>Nahoru do leva</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Alignment.Items1" xml:space="preserve">
+    <value>Nahoru na střed</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Alignment.Items2" xml:space="preserve">
+    <value>Nahoru do prava</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Alignment.Items3" xml:space="preserve">
+    <value>Na střed doleva</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Alignment.Items4" xml:space="preserve">
+    <value>na střed</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Alignment.Items5" xml:space="preserve">
+    <value>Na střed do prava</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Alignment.Items6" xml:space="preserve">
+    <value>Dole do leva</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Alignment.Items7" xml:space="preserve">
+    <value>Dole na střed</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Alignment.Items8" xml:space="preserve">
+    <value>Dole do prava</value>
+  </data>
+  <data name="comboBox_OneLine_Alignment.Items" xml:space="preserve">
+    <value>Nahoru do leva</value>
+  </data>
+  <data name="comboBox_OneLine_Alignment.Items1" xml:space="preserve">
+    <value>Nahoru na střed</value>
+  </data>
+  <data name="comboBox_OneLine_Alignment.Items2" xml:space="preserve">
+    <value>Nahoru do prava</value>
+  </data>
+  <data name="comboBox_OneLine_Alignment.Items3" xml:space="preserve">
+    <value>Na střed doleva</value>
+  </data>
+  <data name="comboBox_OneLine_Alignment.Items4" xml:space="preserve">
+    <value>na střed</value>
+  </data>
+  <data name="comboBox_OneLine_Alignment.Items5" xml:space="preserve">
+    <value>Na střed do prava</value>
+  </data>
+  <data name="comboBox_OneLine_Alignment.Items6" xml:space="preserve">
+    <value>Dole do leva</value>
+  </data>
+  <data name="comboBox_OneLine_Alignment.Items7" xml:space="preserve">
+    <value>Dole na střed</value>
+  </data>
+  <data name="comboBox_OneLine_Alignment.Items8" xml:space="preserve">
+    <value>Dole do prava</value>
+  </data>
+  <data name="comboBox_StepsProgress_Flatness.Items" xml:space="preserve">
+    <value>zaoblené</value>
+  </data>
+  <data name="comboBox_StepsProgress_Flatness.Items1" xml:space="preserve">
+    <value>trojúhelník</value>
+  </data>
+  <data name="comboBox_StepsProgress_Flatness.Items2" xml:space="preserve">
+    <value>rovné</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items" xml:space="preserve">
+    <value>oblačno</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items1" xml:space="preserve">
+    <value>Oblačno s deštěm</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items10" xml:space="preserve">
+    <value>silný déšť</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items11" xml:space="preserve">
+    <value>větrno</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items12" xml:space="preserve">
+    <value>Sníh s deštěm</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items13" xml:space="preserve">
+    <value>mlha</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items14" xml:space="preserve">
+    <value>opar</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items15" xml:space="preserve">
+    <value>bouře</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items16" xml:space="preserve">
+    <value>sněžení</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items17" xml:space="preserve">
+    <value>prašno</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items18" xml:space="preserve">
+    <value>mrholení</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items19" xml:space="preserve">
+    <value>krupobití</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items2" xml:space="preserve">
+    <value>Oblačno se sněžením</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items20" xml:space="preserve">
+    <value>Bouře s krupobitím</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items21" xml:space="preserve">
+    <value>silný déšť</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items22" xml:space="preserve">
+    <value>písečná bouře</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items23" xml:space="preserve">
+    <value>hurikán</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items24" xml:space="preserve">
+    <value>povodeň</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items3" xml:space="preserve">
+    <value>slunečno</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items4" xml:space="preserve">
+    <value>Jasno</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items5" xml:space="preserve">
+    <value>dešťové přeháňky</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items6" xml:space="preserve">
+    <value>Sněhové přeháňky</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items7" xml:space="preserve">
+    <value>déšť</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items8" xml:space="preserve">
+    <value>sníh</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items9" xml:space="preserve">
+    <value>silné sněžení</value>
+  </data>
+  <data name="comboBox_Weather_Day_Alignment.Items" xml:space="preserve">
+    <value>Nahoru do leva</value>
+  </data>
+  <data name="comboBox_Weather_Day_Alignment.Items1" xml:space="preserve">
+    <value>Nahoru na střed</value>
+  </data>
+  <data name="comboBox_Weather_Day_Alignment.Items2" xml:space="preserve">
+    <value>Nahoru do prava</value>
+  </data>
+  <data name="comboBox_Weather_Day_Alignment.Items3" xml:space="preserve">
+    <value>Na střed doleva</value>
+  </data>
+  <data name="comboBox_Weather_Day_Alignment.Items4" xml:space="preserve">
+    <value>na střed</value>
+  </data>
+  <data name="comboBox_Weather_Day_Alignment.Items5" xml:space="preserve">
+    <value>Na střed do prava</value>
+  </data>
+  <data name="comboBox_Weather_Day_Alignment.Items6" xml:space="preserve">
+    <value>Dole do leva</value>
+  </data>
+  <data name="comboBox_Weather_Day_Alignment.Items7" xml:space="preserve">
+    <value>Dole na střed</value>
+  </data>
+  <data name="comboBox_Weather_Day_Alignment.Items8" xml:space="preserve">
+    <value>Dole do prava</value>
+  </data>
+  <data name="comboBox_Weather_Night_Alignment.Items" xml:space="preserve">
+    <value>Nahoru do leva</value>
+  </data>
+  <data name="comboBox_Weather_Night_Alignment.Items1" xml:space="preserve">
+    <value>Nahoru na střed</value>
+  </data>
+  <data name="comboBox_Weather_Night_Alignment.Items2" xml:space="preserve">
+    <value>Nahoru do prava</value>
+  </data>
+  <data name="comboBox_Weather_Night_Alignment.Items3" xml:space="preserve">
+    <value>Na střed doleva</value>
+  </data>
+  <data name="comboBox_Weather_Night_Alignment.Items4" xml:space="preserve">
+    <value>na střed</value>
+  </data>
+  <data name="comboBox_Weather_Night_Alignment.Items5" xml:space="preserve">
+    <value>Na střed do prava</value>
+  </data>
+  <data name="comboBox_Weather_Night_Alignment.Items6" xml:space="preserve">
+    <value>Dole do leva</value>
+  </data>
+  <data name="comboBox_Weather_Night_Alignment.Items7" xml:space="preserve">
+    <value>Dole na střed</value>
+  </data>
+  <data name="comboBox_Weather_Night_Alignment.Items8" xml:space="preserve">
+    <value>Dole do prava</value>
+  </data>
+  <data name="comboBox_Weather_Text_Alignment.Items" xml:space="preserve">
+    <value>Nahoru do leva</value>
+  </data>
+  <data name="comboBox_Weather_Text_Alignment.Items1" xml:space="preserve">
+    <value>Nahoru na střed</value>
+  </data>
+  <data name="comboBox_Weather_Text_Alignment.Items2" xml:space="preserve">
+    <value>Nahoru do prava</value>
+  </data>
+  <data name="comboBox_Weather_Text_Alignment.Items3" xml:space="preserve">
+    <value>Na střed doleva</value>
+  </data>
+  <data name="comboBox_Weather_Text_Alignment.Items4" xml:space="preserve">
+    <value>na střed</value>
+  </data>
+  <data name="comboBox_Weather_Text_Alignment.Items5" xml:space="preserve">
+    <value>Na střed do prava</value>
+  </data>
+  <data name="comboBox_Weather_Text_Alignment.Items6" xml:space="preserve">
+    <value>Dole do leva</value>
+  </data>
+  <data name="comboBox_Weather_Text_Alignment.Items7" xml:space="preserve">
+    <value>Dole na střed</value>
+  </data>
+  <data name="comboBox_Weather_Text_Alignment.Items8" xml:space="preserve">
+    <value>Dole do prava</value>
+  </data>
+  <data name="comboBox_Year_Alignment.Items" xml:space="preserve">
+    <value>Nahoru do leva</value>
+  </data>
+  <data name="comboBox_Year_Alignment.Items1" xml:space="preserve">
+    <value>Nahoru na střed</value>
+  </data>
+  <data name="comboBox_Year_Alignment.Items2" xml:space="preserve">
+    <value>Nahoru do prava</value>
+  </data>
+  <data name="comboBox_Year_Alignment.Items3" xml:space="preserve">
+    <value>Na střed doleva</value>
+  </data>
+  <data name="comboBox_Year_Alignment.Items4" xml:space="preserve">
+    <value>na střed</value>
+  </data>
+  <data name="comboBox_Year_Alignment.Items5" xml:space="preserve">
+    <value>Na střed do prava</value>
+  </data>
+  <data name="comboBox_Year_Alignment.Items6" xml:space="preserve">
+    <value>Dole do leva</value>
+  </data>
+  <data name="comboBox_Year_Alignment.Items7" xml:space="preserve">
+    <value>Dole na střed</value>
+  </data>
+  <data name="comboBox_Year_Alignment.Items8" xml:space="preserve">
+    <value>Dole do prava</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Akce při shodných názvech rozbalených souborů</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Obrázek středu</value>
+  </data>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>Obrázek středu</value>
+  </data>
+  <data name="groupBox4.Text" xml:space="preserve">
+    <value>Obrázek středu</value>
+  </data>
+  <data name="groupBox5.Text" xml:space="preserve">
+    <value>Po rozbalení BIN</value>
+  </data>
+  <data name="groupBox6.Text" xml:space="preserve">
+    <value>Po otvorení projektu</value>
+  </data>
+  <data name="groupBox7.Text" xml:space="preserve">
+    <value>Po zabalení projektu</value>
+  </data>
+  <data name="groupBox_AnalogClock_Hour.Text" xml:space="preserve">
+    <value>Hodinová ručička</value>
+  </data>
+  <data name="groupBox_AnalogClock_Min.Text" xml:space="preserve">
+    <value>Hodinová ručička</value>
+  </data>
+  <data name="groupBox_AnalogClock_Sec.Text" xml:space="preserve">
+    <value>Hodinová ručička</value>
+  </data>
+  <data name="groupBox_Delimiter.Text" xml:space="preserve">
+    <value>Oddělovač</value>
+  </data>
+  <data name="groupBox_Hours_Ones.Text" xml:space="preserve">
+    <value>Jednotky</value>
+  </data>
+  <data name="groupBox_Hours_Tens.Text" xml:space="preserve">
+    <value>Desítky</value>
+  </data>
+  <data name="groupBox_Minutes_Ones.Text" xml:space="preserve">
+    <value>Jednotky</value>
+  </data>
+  <data name="groupBox_Minutes_Tens.Text" xml:space="preserve">
+    <value>Desítky</value>
+  </data>
+  <data name="groupBox_Seconds_Ones.Text" xml:space="preserve">
+    <value>Jednotky</value>
+  </data>
+  <data name="groupBox_Seconds_Tens.Text" xml:space="preserve">
+    <value>Desítky</value>
+  </data>
+  <data name="groupBox_Symbols.Text" xml:space="preserve">
+    <value>Symboly</value>
+  </data>
+  <data name="groupBox__MonthName.Text" xml:space="preserve">
+    <value>Měsíc</value>
+  </data>
+  <data name="groupBox__WeekDay.Text" xml:space="preserve">
+    <value>Den v týdnu</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Cesta k nástroji na vybalení / zabalení</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Index obrázku:</value>
+  </data>
+  <data name="label100.Text" xml:space="preserve">
+    <value>Počet obrázků:</value>
+  </data>
+  <data name="label101.Text" xml:space="preserve">
+    <value>Pravý dolní roh</value>
+  </data>
+  <data name="label102.Text" xml:space="preserve">
+    <value>Levý horní roh</value>
+  </data>
+  <data name="label103.Text" xml:space="preserve">
+    <value>Oddělovač:</value>
+  </data>
+  <data name="label104.Text" xml:space="preserve">
+    <value>Střed (X):</value>
+  </data>
+  <data name="label105.Text" xml:space="preserve">
+    <value>Střed (Y):</value>
+  </data>
+  <data name="label106.Text" xml:space="preserve">
+    <value>Poloměr (Y):</value>
+  </data>
+  <data name="label107.Text" xml:space="preserve">
+    <value>Poloměr (X):</value>
+  </data>
+  <data name="label108.Text" xml:space="preserve">
+    <value>Šířka:</value>
+  </data>
+  <data name="label109.Text" xml:space="preserve">
+    <value>Barva:</value>
+  </data>
+  <data name="label110.Text" xml:space="preserve">
+    <value>Počáteční úhel:</value>
+  </data>
+  <data name="label111.Text" xml:space="preserve">
+    <value>Konečný úhel:</value>
+  </data>
+  <data name="label112.Text" xml:space="preserve">
+    <value>Odsazení:</value>
+  </data>
+  <data name="label115.Text" xml:space="preserve">
+    <value>Zarovnání</value>
+  </data>
+  <data name="label120.Text" xml:space="preserve">
+    <value>Pravý dolní roh</value>
+  </data>
+  <data name="label121.Text" xml:space="preserve">
+    <value>Levý horní roh</value>
+  </data>
+  <data name="label122.Text" xml:space="preserve">
+    <value>Odsazení:</value>
+  </data>
+  <data name="label125.Text" xml:space="preserve">
+    <value>Zarovnání</value>
+  </data>
+  <data name="label140.Text" xml:space="preserve">
+    <value>Pravý dolní roh</value>
+  </data>
+  <data name="label141.Text" xml:space="preserve">
+    <value>Levý horní roh</value>
+  </data>
+  <data name="label142.Text" xml:space="preserve">
+    <value>Odsazení:</value>
+  </data>
+  <data name="label150.Text" xml:space="preserve">
+    <value>Pravý dolní roh</value>
+  </data>
+  <data name="label151.Text" xml:space="preserve">
+    <value>Levý horní roh</value>
+  </data>
+  <data name="label152.Text" xml:space="preserve">
+    <value>Odsazení:</value>
+  </data>
+  <data name="label155.Text" xml:space="preserve">
+    <value>Zarovnání</value>
+  </data>
+  <data name="label160.Text" xml:space="preserve">
+    <value>Pravý dolní roh</value>
+  </data>
+  <data name="label161.Text" xml:space="preserve">
+    <value>Levý horní roh</value>
+  </data>
+  <data name="label165.Text" xml:space="preserve">
+    <value>Zapnutý:</value>
+  </data>
+  <data name="label168.Text" xml:space="preserve">
+    <value>Vypnutý:</value>
+  </data>
+  <data name="label169.Text" xml:space="preserve">
+    <value>Vypnutý:</value>
+  </data>
+  <data name="label171.Text" xml:space="preserve">
+    <value>Souřadnice</value>
+  </data>
+  <data name="label172.Text" xml:space="preserve">
+    <value>Přípona:</value>
+  </data>
+  <data name="label173.Text" xml:space="preserve">
+    <value>Oddělovač:</value>
+  </data>
+  <data name="label174.Text" xml:space="preserve">
+    <value>Zapnutý:</value>
+  </data>
+  <data name="label176.Text" xml:space="preserve">
+    <value>Vypnutý:</value>
+  </data>
+  <data name="label178.Text" xml:space="preserve">
+    <value>Vypnutý:</value>
+  </data>
+  <data name="label180.Text" xml:space="preserve">
+    <value>Vypnutý:</value>
+  </data>
+  <data name="label182.Text" xml:space="preserve">
+    <value>Zapnutý:</value>
+  </data>
+  <data name="label184.Text" xml:space="preserve">
+    <value>Odsazení:</value>
+  </data>
+  <data name="label187.Text" xml:space="preserve">
+    <value>Zarovnání</value>
+  </data>
+  <data name="label192.Text" xml:space="preserve">
+    <value>Pravý dolní roh</value>
+  </data>
+  <data name="label193.Text" xml:space="preserve">
+    <value>Levý horní roh</value>
+  </data>
+  <data name="label197.Text" xml:space="preserve">
+    <value>Souřadnice</value>
+  </data>
+  <data name="label199.Text" xml:space="preserve">
+    <value>Počet obrázků:</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Příkaz pro rozbalení ciferníku</value>
+  </data>
+  <data name="label200.Text" xml:space="preserve">
+    <value>Počáteční úhel:</value>
+  </data>
+  <data name="label201.Text" xml:space="preserve">
+    <value>Barva:</value>
+  </data>
+  <data name="label202.Text" xml:space="preserve">
+    <value>Šířka:</value>
+  </data>
+  <data name="label203.Text" xml:space="preserve">
+    <value>Poloměr (Y):</value>
+  </data>
+  <data name="label204.Text" xml:space="preserve">
+    <value>Poloměr (X):</value>
+  </data>
+  <data name="label205.Text" xml:space="preserve">
+    <value>Střed (Y):</value>
+  </data>
+  <data name="label206.Text" xml:space="preserve">
+    <value>Střed (X):</value>
+  </data>
+  <data name="label208.Text" xml:space="preserve">
+    <value>Střed minutové ručičky (Y)</value>
+  </data>
+  <data name="label209.Text" xml:space="preserve">
+    <value>Střed minutové ručičky (X)</value>
+  </data>
+  <data name="label211.Text" xml:space="preserve">
+    <value>Střed vteřinové ručičky (Y)</value>
+  </data>
+  <data name="label212.Text" xml:space="preserve">
+    <value>Střed vteřinové ručičky (X)</value>
+  </data>
+  <data name="label213.Text" xml:space="preserve">
+    <value>Cíl kroků</value>
+  </data>
+  <data name="label214.Text" xml:space="preserve">
+    <value>Kroky</value>
+  </data>
+  <data name="label215.Text" xml:space="preserve">
+    <value>Střed hodinové ručičky (Y)</value>
+  </data>
+  <data name="label216.Text" xml:space="preserve">
+    <value>Střed hodinové ručičky (X)</value>
+  </data>
+  <data name="label218.Text" xml:space="preserve">
+    <value>Puls</value>
+  </data>
+  <data name="label219.Text" xml:space="preserve">
+    <value>Vzdálenost</value>
+  </data>
+  <data name="label220.Text" xml:space="preserve">
+    <value>kalorie</value>
+  </data>
+  <data name="label221.Text" xml:space="preserve">
+    <value>Baterie</value>
+  </data>
+  <data name="label222.Text" xml:space="preserve">
+    <value>čas</value>
+  </data>
+  <data name="label223.Text" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="label224.Text" xml:space="preserve">
+    <value>cíl kroků</value>
+  </data>
+  <data name="label225.Text" xml:space="preserve">
+    <value>kroky</value>
+  </data>
+  <data name="label226.Text" xml:space="preserve">
+    <value>puls</value>
+  </data>
+  <data name="label227.Text" xml:space="preserve">
+    <value>vzdálenost</value>
+  </data>
+  <data name="label228.Text" xml:space="preserve">
+    <value>kalorie</value>
+  </data>
+  <data name="label229.Text" xml:space="preserve">
+    <value>Baterie</value>
+  </data>
+  <data name="label230.Text" xml:space="preserve">
+    <value>čas</value>
+  </data>
+  <data name="label231.Text" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="label232.Text" xml:space="preserve">
+    <value>cíl kroků</value>
+  </data>
+  <data name="label233.Text" xml:space="preserve">
+    <value>kroky</value>
+  </data>
+  <data name="label234.Text" xml:space="preserve">
+    <value>puls</value>
+  </data>
+  <data name="label235.Text" xml:space="preserve">
+    <value>vzdálenost</value>
+  </data>
+  <data name="label236.Text" xml:space="preserve">
+    <value>kalorie</value>
+  </data>
+  <data name="label237.Text" xml:space="preserve">
+    <value>Baterie</value>
+  </data>
+  <data name="label238.Text" xml:space="preserve">
+    <value>čas</value>
+  </data>
+  <data name="label239.Text" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="label240.Text" xml:space="preserve">
+    <value>puls</value>
+  </data>
+  <data name="label241.Text" xml:space="preserve">
+    <value>vzdálenost</value>
+  </data>
+  <data name="label242.Text" xml:space="preserve">
+    <value>kalorie</value>
+  </data>
+  <data name="label243.Text" xml:space="preserve">
+    <value>Baterie</value>
+  </data>
+  <data name="label244.Text" xml:space="preserve">
+    <value>čas</value>
+  </data>
+  <data name="label245.Text" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="label246.Text" xml:space="preserve">
+    <value>cíl kroků</value>
+  </data>
+  <data name="label247.Text" xml:space="preserve">
+    <value>kroky</value>
+  </data>
+  <data name="label248.Text" xml:space="preserve">
+    <value>puls</value>
+  </data>
+  <data name="label249.Text" xml:space="preserve">
+    <value>vzdálenost</value>
+  </data>
+  <data name="label250.Text" xml:space="preserve">
+    <value>kalorie</value>
+  </data>
+  <data name="label251.Text" xml:space="preserve">
+    <value>Baterie</value>
+  </data>
+  <data name="label252.Text" xml:space="preserve">
+    <value>čas</value>
+  </data>
+  <data name="label253.Text" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="label254.Text" xml:space="preserve">
+    <value>cíl kroků</value>
+  </data>
+  <data name="label255.Text" xml:space="preserve">
+    <value>kroky</value>
+  </data>
+  <data name="label256.Text" xml:space="preserve">
+    <value>puls</value>
+  </data>
+  <data name="label257.Text" xml:space="preserve">
+    <value>vzdálenost</value>
+  </data>
+  <data name="label258.Text" xml:space="preserve">
+    <value>kalorie</value>
+  </data>
+  <data name="label259.Text" xml:space="preserve">
+    <value>Baterie</value>
+  </data>
+  <data name="label260.Text" xml:space="preserve">
+    <value>čas</value>
+  </data>
+  <data name="label261.Text" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="label262.Text" xml:space="preserve">
+    <value>cíl kroků</value>
+  </data>
+  <data name="label263.Text" xml:space="preserve">
+    <value>kroky</value>
+  </data>
+  <data name="label264.Text" xml:space="preserve">
+    <value>puls</value>
+  </data>
+  <data name="label265.Text" xml:space="preserve">
+    <value>vzdálenost</value>
+  </data>
+  <data name="label266.Text" xml:space="preserve">
+    <value>kalorie</value>
+  </data>
+  <data name="label267.Text" xml:space="preserve">
+    <value>Baterie</value>
+  </data>
+  <data name="label268.Text" xml:space="preserve">
+    <value>čas</value>
+  </data>
+  <data name="label269.Text" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="label270.Text" xml:space="preserve">
+    <value>Odsazení:</value>
+  </data>
+  <data name="label273.Text" xml:space="preserve">
+    <value>Zarovnání</value>
+  </data>
+  <data name="label278.Text" xml:space="preserve">
+    <value>Pravý dolní roh</value>
+  </data>
+  <data name="label279.Text" xml:space="preserve">
+    <value>Levý horní roh</value>
+  </data>
+  <data name="label284.Text" xml:space="preserve">
+    <value>Symbol "-":</value>
+  </data>
+  <data name="label285.Text" xml:space="preserve">
+    <value>Symbol "°":</value>
+  </data>
+  <data name="label286.Text" xml:space="preserve">
+    <value>Symbol chyby:</value>
+  </data>
+  <data name="label287.Text" xml:space="preserve">
+    <value>Symbol chyby:</value>
+  </data>
+  <data name="label288.Text" xml:space="preserve">
+    <value>Ikona počasí</value>
+  </data>
+  <data name="label289.Text" xml:space="preserve">
+    <value>Odsazení:</value>
+  </data>
+  <data name="label292.Text" xml:space="preserve">
+    <value>Zarovnání</value>
+  </data>
+  <data name="label297.Text" xml:space="preserve">
+    <value>Pravý dolní roh</value>
+  </data>
+  <data name="label298.Text" xml:space="preserve">
+    <value>Levý horní roh</value>
+  </data>
+  <data name="label299.Text" xml:space="preserve">
+    <value>Noční teplota</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Příkaz pro zabalení ciferníku</value>
+  </data>
+  <data name="label303.Text" xml:space="preserve">
+    <value>Souřadnice</value>
+  </data>
+  <data name="label313.Text" xml:space="preserve">
+    <value>Odsazení:</value>
+  </data>
+  <data name="label316.Text" xml:space="preserve">
+    <value>Zarovnání</value>
+  </data>
+  <data name="label321.Text" xml:space="preserve">
+    <value>Pravý dolní roh</value>
+  </data>
+  <data name="label322.Text" xml:space="preserve">
+    <value>Levý horní roh</value>
+  </data>
+  <data name="label323.Text" xml:space="preserve">
+    <value>cíl kroků</value>
+  </data>
+  <data name="label324.Text" xml:space="preserve">
+    <value>kroky</value>
+  </data>
+  <data name="label325.Text" xml:space="preserve">
+    <value>puls</value>
+  </data>
+  <data name="label326.Text" xml:space="preserve">
+    <value>vzdálenost</value>
+  </data>
+  <data name="label327.Text" xml:space="preserve">
+    <value>kalorie</value>
+  </data>
+  <data name="label328.Text" xml:space="preserve">
+    <value>Baterie</value>
+  </data>
+  <data name="label329.Text" xml:space="preserve">
+    <value>čas</value>
+  </data>
+  <data name="label330.Text" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="label331.Text" xml:space="preserve">
+    <value>cíl kroků</value>
+  </data>
+  <data name="label332.Text" xml:space="preserve">
+    <value>kroky</value>
+  </data>
+  <data name="label333.Text" xml:space="preserve">
+    <value>puls</value>
+  </data>
+  <data name="label334.Text" xml:space="preserve">
+    <value>vzdálenost</value>
+  </data>
+  <data name="label335.Text" xml:space="preserve">
+    <value>kalorie</value>
+  </data>
+  <data name="label336.Text" xml:space="preserve">
+    <value>Baterie</value>
+  </data>
+  <data name="label337.Text" xml:space="preserve">
+    <value>čas</value>
+  </data>
+  <data name="label338.Text" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="label339.Text" xml:space="preserve">
+    <value>cíl kroků</value>
+  </data>
+  <data name="label340.Text" xml:space="preserve">
+    <value>kroky</value>
+  </data>
+  <data name="label341.Text" xml:space="preserve">
+    <value>puls</value>
+  </data>
+  <data name="label342.Text" xml:space="preserve">
+    <value>vzdálenost</value>
+  </data>
+  <data name="label343.Text" xml:space="preserve">
+    <value>kalorie</value>
+  </data>
+  <data name="label344.Text" xml:space="preserve">
+    <value>Baterie</value>
+  </data>
+  <data name="label345.Text" xml:space="preserve">
+    <value>čas</value>
+  </data>
+  <data name="label346.Text" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="label347.Text" xml:space="preserve">
+    <value>konec řádku</value>
+  </data>
+  <data name="label348.Text" xml:space="preserve">
+    <value>konec řádku</value>
+  </data>
+  <data name="label349.Text" xml:space="preserve">
+    <value>Osový posun Y</value>
+  </data>
+  <data name="label350.Text" xml:space="preserve">
+    <value>Osový posun X</value>
+  </data>
+  <data name="label351.Text" xml:space="preserve">
+    <value>Osový posun Y</value>
+  </data>
+  <data name="label352.Text" xml:space="preserve">
+    <value>Osový posun X</value>
+  </data>
+  <data name="label353.Text" xml:space="preserve">
+    <value>Osový posun Y</value>
+  </data>
+  <data name="label354.Text" xml:space="preserve">
+    <value>Osový posun X</value>
+  </data>
+  <data name="label355.Text" xml:space="preserve">
+    <value>Rychlost animace GIF</value>
+  </data>
+  <data name="label356.Text" xml:space="preserve">
+    <value>jazyk</value>
+  </data>
+  <data name="label357.Text" xml:space="preserve">
+    <value>oddělovač:</value>
+  </data>
+  <data name="label358.Text" xml:space="preserve">
+    <value>Odsazení:</value>
+  </data>
+  <data name="label36.Text" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="label361.Text" xml:space="preserve">
+    <value>Zarovnání</value>
+  </data>
+  <data name="label366.Text" xml:space="preserve">
+    <value>Pravý dolní roh</value>
+  </data>
+  <data name="label367.Text" xml:space="preserve">
+    <value>Levý horní roh</value>
+  </data>
+  <data name="label368.Text" xml:space="preserve">
+    <value>Osový posun Y</value>
+  </data>
+  <data name="label369.Text" xml:space="preserve">
+    <value>Osový posun X</value>
+  </data>
+  <data name="label371.Text" xml:space="preserve">
+    <value>Střed šipky (Y)</value>
+  </data>
+  <data name="label372.Text" xml:space="preserve">
+    <value>Střed šipky (X)</value>
+  </data>
+  <data name="label373.Text" xml:space="preserve">
+    <value>Počáteční úhel:</value>
+  </data>
+  <data name="label374.Text" xml:space="preserve">
+    <value>Konečný úhel:</value>
+  </data>
+  <data name="label375.Text" xml:space="preserve">
+    <value>Konečný úhel:</value>
+  </data>
+  <data name="label376.Text" xml:space="preserve">
+    <value>Počáteční úhel:</value>
+  </data>
+  <data name="label377.Text" xml:space="preserve">
+    <value>Osový posun Y</value>
+  </data>
+  <data name="label378.Text" xml:space="preserve">
+    <value>Osový posun X</value>
+  </data>
+  <data name="label380.Text" xml:space="preserve">
+    <value>Střed šipky (Y)</value>
+  </data>
+  <data name="label381.Text" xml:space="preserve">
+    <value>Střed šipky (X)</value>
+  </data>
+  <data name="label382.Text" xml:space="preserve">
+    <value>Konečný úhel:</value>
+  </data>
+  <data name="label383.Text" xml:space="preserve">
+    <value>Počáteční úhel:</value>
+  </data>
+  <data name="label384.Text" xml:space="preserve">
+    <value>Osový posun Y</value>
+  </data>
+  <data name="label385.Text" xml:space="preserve">
+    <value>Osový posun X</value>
+  </data>
+  <data name="label387.Text" xml:space="preserve">
+    <value>Střed šipky (Y)</value>
+  </data>
+  <data name="label388.Text" xml:space="preserve">
+    <value>Střed šipky (X)</value>
+  </data>
+  <data name="label389.Text" xml:space="preserve">
+    <value>Konečný úhel:</value>
+  </data>
+  <data name="label390.Text" xml:space="preserve">
+    <value>Počáteční úhel:</value>
+  </data>
+  <data name="label391.Text" xml:space="preserve">
+    <value>Osový posun Y</value>
+  </data>
+  <data name="label392.Text" xml:space="preserve">
+    <value>Osový posun X</value>
+  </data>
+  <data name="label394.Text" xml:space="preserve">
+    <value>Střed šipky (Y)</value>
+  </data>
+  <data name="label395.Text" xml:space="preserve">
+    <value>Střed šipky (X)</value>
+  </data>
+  <data name="label396.Text" xml:space="preserve">
+    <value>Konečný úhel:</value>
+  </data>
+  <data name="label397.Text" xml:space="preserve">
+    <value>Počáteční úhel:</value>
+  </data>
+  <data name="label398.Text" xml:space="preserve">
+    <value>Osový posun Y</value>
+  </data>
+  <data name="label399.Text" xml:space="preserve">
+    <value>Osový posun X</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>JSON s obrázky:</value>
+  </data>
+  <data name="label40.Text" xml:space="preserve">
+    <value>čas</value>
+  </data>
+  <data name="label401.Text" xml:space="preserve">
+    <value>Střed šipky (Y)</value>
+  </data>
+  <data name="label402.Text" xml:space="preserve">
+    <value>Střed šipky (X)</value>
+  </data>
+  <data name="label403.Text" xml:space="preserve">
+    <value>Symbol chyby:</value>
+  </data>
+  <data name="label41.Text" xml:space="preserve">
+    <value>Baterie</value>
+  </data>
+  <data name="label42.Text" xml:space="preserve">
+    <value>Kalorie</value>
+  </data>
+  <data name="label43.Text" xml:space="preserve">
+    <value>vzdálenost</value>
+  </data>
+  <data name="label44.Text" xml:space="preserve">
+    <value>Puls</value>
+  </data>
+  <data name="label45.Text" xml:space="preserve">
+    <value>kroky</value>
+  </data>
+  <data name="label46.Text" xml:space="preserve">
+    <value>cíl kroků</value>
+  </data>
+  <data name="label47.Text" xml:space="preserve">
+    <value>cíl kroků</value>
+  </data>
+  <data name="label48.Text" xml:space="preserve">
+    <value>kroky</value>
+  </data>
+  <data name="label49.Text" xml:space="preserve">
+    <value>Puls</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Obrázky:</value>
+  </data>
+  <data name="label50.Text" xml:space="preserve">
+    <value>vzdálenost</value>
+  </data>
+  <data name="label51.Text" xml:space="preserve">
+    <value>Kalorie</value>
+  </data>
+  <data name="label52.Text" xml:space="preserve">
+    <value>Baterie</value>
+  </data>
+  <data name="label53.Text" xml:space="preserve">
+    <value>Čas</value>
+  </data>
+  <data name="label54.Text" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="label67.Text" xml:space="preserve">
+    <value>Pravý dolní roh</value>
+  </data>
+  <data name="label71.Text" xml:space="preserve">
+    <value>Zarovnání</value>
+  </data>
+  <data name="label72.Text" xml:space="preserve">
+    <value>Odsazení:</value>
+  </data>
+  <data name="label73.Text" xml:space="preserve">
+    <value>Odsazení:</value>
+  </data>
+  <data name="label76.Text" xml:space="preserve">
+    <value>Zarovnání</value>
+  </data>
+  <data name="label81.Text" xml:space="preserve">
+    <value>Pravý dolní roh</value>
+  </data>
+  <data name="label82.Text" xml:space="preserve">
+    <value>Levý horní roh</value>
+  </data>
+  <data name="label83.Text" xml:space="preserve">
+    <value>cíl kroků</value>
+  </data>
+  <data name="label84.Text" xml:space="preserve">
+    <value>kroky</value>
+  </data>
+  <data name="label85.Text" xml:space="preserve">
+    <value>Puls</value>
+  </data>
+  <data name="label86.Text" xml:space="preserve">
+    <value>vzdálenost</value>
+  </data>
+  <data name="label87.Text" xml:space="preserve">
+    <value>Kalorie</value>
+  </data>
+  <data name="label88.Text" xml:space="preserve">
+    <value>Baterie</value>
+  </data>
+  <data name="label89.Text" xml:space="preserve">
+    <value>Čas</value>
+  </data>
+  <data name="label90.Text" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="label91.Text" xml:space="preserve">
+    <value>cíl kroků</value>
+  </data>
+  <data name="label92.Text" xml:space="preserve">
+    <value>kroky</value>
+  </data>
+  <data name="label93.Text" xml:space="preserve">
+    <value>Odsazení:</value>
+  </data>
+  <data name="label96.Text" xml:space="preserve">
+    <value>Zarovnání</value>
+  </data>
+  <data name="radioButton_Settings_AfterUnpack_Dialog.Text" xml:space="preserve">
+    <value>nabídnout volbu</value>
+  </data>
+  <data name="radioButton_Settings_AfterUnpack_DoNothing.Text" xml:space="preserve">
+    <value>nedělat nic</value>
+  </data>
+  <data name="radioButton_Settings_AfterUnpack_Download.Text" xml:space="preserve">
+    <value>Načíst rozbalený projekt</value>
+  </data>
+  <data name="radioButton_Settings_Open_Dialog.Text" xml:space="preserve">
+    <value>nabídnout volbu</value>
+  </data>
+  <data name="radioButton_Settings_Open_DoNotning.Text" xml:space="preserve">
+    <value>nedělat nic</value>
+  </data>
+  <data name="radioButton_Settings_Open_Download.Text" xml:space="preserve">
+    <value>Načíst PreviewStates.json (pokud existuje)</value>
+  </data>
+  <data name="radioButton_Settings_Pack_Copy.Text" xml:space="preserve">
+    <value>Kopírovat .bin do schránky</value>
+  </data>
+  <data name="radioButton_Settings_Pack_Dialog.Text" xml:space="preserve">
+    <value>nabídnout volbu</value>
+  </data>
+  <data name="radioButton_Settings_Pack_DoNotning.Text" xml:space="preserve">
+    <value>nedělat nic</value>
+  </data>
+  <data name="radioButton_Settings_Pack_GoToFile.Text" xml:space="preserve">
+    <value>Otevřít vytvořen .bin</value>
+  </data>
+  <data name="radioButton_Settings_Unpack_Dialog.Text" xml:space="preserve">
+    <value>nabídnout volbu</value>
+  </data>
+  <data name="radioButton_Settings_Unpack_Replace.Text" xml:space="preserve">
+    <value>nahradit</value>
+  </data>
+  <data name="radioButton_Settings_Unpack_Save.Text" xml:space="preserve">
+    <value>Uložit oba</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Rozbalte / zabalte</value>
+  </data>
+  <data name="tabPage10.Text" xml:space="preserve">
+    <value>Měsíc</value>
+  </data>
+  <data name="tabPage12.Text" xml:space="preserve">
+    <value>Kroky</value>
+  </data>
+  <data name="tabPage13.Text" xml:space="preserve">
+    <value>Vzdálenost</value>
+  </data>
+  <data name="tabPage14.Text" xml:space="preserve">
+    <value>Puls</value>
+  </data>
+  <data name="tabPage15.Text" xml:space="preserve">
+    <value>Kalorie</value>
+  </data>
+  <data name="tabPage16.Text" xml:space="preserve">
+    <value>Cílový úspěch</value>
+  </data>
+  <data name="tabPage18.Text" xml:space="preserve">
+    <value>budík</value>
+  </data>
+  <data name="tabPage19.Text" xml:space="preserve">
+    <value>zámek</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Přehled</value>
+  </data>
+  <data name="tabPage20.Text" xml:space="preserve">
+    <value>Nerušit (DND)</value>
+  </data>
+  <data name="tabPage21.Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="tabPage22.Text" xml:space="preserve">
+    <value>ikona</value>
+  </data>
+  <data name="tabPage24.Text" xml:space="preserve">
+    <value>aktuální počasí</value>
+  </data>
+  <data name="tabPage25.Text" xml:space="preserve">
+    <value>ikona</value>
+  </data>
+  <data name="tabPage26.Text" xml:space="preserve">
+    <value>Teplota přes den</value>
+  </data>
+  <data name="tabPage27.Text" xml:space="preserve">
+    <value>den</value>
+  </data>
+  <data name="tabPage28.Text" xml:space="preserve">
+    <value>Ikona "%"</value>
+  </data>
+  <data name="tabPage29.Text" xml:space="preserve">
+    <value>Hoidny</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>Editovat</value>
+  </data>
+  <data name="tabPage30.Text" xml:space="preserve">
+    <value>noc</value>
+  </data>
+  <data name="tabPage31.Text" xml:space="preserve">
+    <value>minuty</value>
+  </data>
+  <data name="tabPage32.Text" xml:space="preserve">
+    <value>sekundy</value>
+  </data>
+  <data name="tabPage33.Text" xml:space="preserve">
+    <value>Volby</value>
+  </data>
+  <data name="tabPage34.Text" xml:space="preserve">
+    <value>rok</value>
+  </data>
+  <data name="tabPage36.Text" xml:space="preserve">
+    <value>Měřítko</value>
+  </data>
+  <data name="tabPage37.Text" xml:space="preserve">
+    <value>ukazatel</value>
+  </data>
+  <data name="tabPage38.Text" xml:space="preserve">
+    <value>číslo</value>
+  </data>
+  <data name="tabPage39.Text" xml:space="preserve">
+    <value>Den v týdnu</value>
+  </data>
+  <data name="tabPage4.Text" xml:space="preserve">
+    <value>hodiny</value>
+  </data>
+  <data name="tabPage40.Text" xml:space="preserve">
+    <value>měsíc</value>
+  </data>
+  <data name="tabPage41.Text" xml:space="preserve">
+    <value>sada ikon</value>
+  </data>
+  <data name="tabPage5.Text" xml:space="preserve">
+    <value>minuty</value>
+  </data>
+  <data name="tabPage6.Text" xml:space="preserve">
+    <value>sekundy</value>
+  </data>
+  <data name="tabPage7.Text" xml:space="preserve">
+    <value>Datum v jedné řadě</value>
+  </data>
+  <data name="tabPage8.Text" xml:space="preserve">
+    <value>Den a měsíc separátně</value>
+  </data>
+  <data name="tabPage9.Text" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="toolStripMenuItem1.Text" xml:space="preserve">
+    <value>Vložit souřadnice Y</value>
+  </data>
+  <data name="вставитьToolStripMenuItem.Text" xml:space="preserve">
+    <value>Vložit</value>
+  </data>
+  <data name="вставитьToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Vložit</value>
+  </data>
+  <data name="вставитьToolStripMenuItem2.Text" xml:space="preserve">
+    <value>Vložit</value>
+  </data>
+  <data name="вставитьКоординатуХToolStripMenuItem.Text" xml:space="preserve">
+    <value>Vložit souřadnice X</value>
+  </data>
+  <data name="вставитьКоординатыToolStripMenuItem.Text" xml:space="preserve">
+    <value>Vložit souřadnice</value>
+  </data>
+  <data name="копироватьToolStripMenuItem.Text" xml:space="preserve">
+    <value>kopírovat</value>
+  </data>
+  <data name="копироватьToolStripMenuItem1.Text" xml:space="preserve">
+    <value>kopírovat</value>
+  </data>
+  <data name="копироватьToolStripMenuItem2.Text" xml:space="preserve">
+    <value>kopírovat</value>
+  </data>
+  <data name="удалитьСтрокуToolStripMenuItem.Text" xml:space="preserve">
+    <value>Smazat řádek</value>
   </data>
 </root>

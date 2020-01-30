@@ -3082,4 +3082,22 @@
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
   </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>A fájl létezik</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Megszüntetni</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>Cserélni</value>
+  </data>
+  <data name="button3.Text" xml:space="preserve">
+    <value>Mentse mindkettőt</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Az azonos nevű fájl már létezik.</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Cserélni létező fájlt?</value>
+  </data>
 </root>

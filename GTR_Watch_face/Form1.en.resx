@@ -5862,7 +5862,7 @@
   <data name="label410.Text" xml:space="preserve">
     <value>Utility to compress bin files:</value>
   </data>
-  <data name="label411.Text" xml:space="preserve">
+  <data name="label_Res_PackerUnpacker.Text" xml:space="preserve">
     <value>Res_PackerUnpacker (Author unknown)</value>
   </data>
   <data name="label412.Text" xml:space="preserve">
@@ -6012,9 +6012,6 @@
   <data name="linkLabel_help.Text" xml:space="preserve">
     <value>Brief instructions for using the program</value>
   </data>
-  <data name="linkLabel_py_amazfit_tools.Text" xml:space="preserve">
-    <value>py_amazfit_tools (Author amazfitbip)</value>
-  </data>
   <data name="NameFile.HeaderText" xml:space="preserve">
     <value>File name</value>
   </data>
@@ -6065,9 +6062,6 @@
   </data>
   <data name="tabPage10.Text" xml:space="preserve">
     <value>Month</value>
-  </data>
-  <data name="tabPage11.Text" xml:space="preserve">
-    <value>Steps goal</value>
   </data>
   <data name="tabPage12.Text" xml:space="preserve">
     <value>Steps</value>
@@ -6141,9 +6135,6 @@
   <data name="tabPage34.Text" xml:space="preserve">
     <value>Year</value>
   </data>
-  <data name="tabPage35.Text" xml:space="preserve">
-    <value>Dial indicator</value>
-  </data>
   <data name="tabPage36.Text" xml:space="preserve">
     <value>Circle scale</value>
   </data>
@@ -6170,9 +6161,6 @@
   </data>
   <data name="tabPage43.Text" xml:space="preserve">
     <value>About the program</value>
-  </data>
-  <data name="tabPage44.Text" xml:space="preserve">
-    <value>Pulse (dial)</value>
   </data>
   <data name="tabPage45.Text" xml:space="preserve">
     <value>Pulse (indicator)</value>

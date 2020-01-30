@@ -136,7 +136,7 @@
     <value>True</value>
   </data>
   <data name="button_zip_unpack.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 23</value>
+    <value>167, 23</value>
   </data>
   <data name="button_zip_unpack.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -166,7 +166,7 @@
     <value>True</value>
   </data>
   <data name="button_pack_zip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 23</value>
+    <value>167, 23</value>
   </data>
   <data name="button_pack_zip.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -196,7 +196,7 @@
     <value>True</value>
   </data>
   <data name="button_zip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 23</value>
+    <value>167, 23</value>
   </data>
   <data name="button_zip.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -226,7 +226,7 @@
     <value>True</value>
   </data>
   <data name="button_unpack.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 23</value>
+    <value>167, 23</value>
   </data>
   <data name="button_unpack.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -256,7 +256,7 @@
     <value>True</value>
   </data>
   <data name="button_pack.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 23</value>
+    <value>167, 23</value>
   </data>
   <data name="button_pack.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -11539,6 +11539,9 @@
   <data name="tabPage49.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
+  <data name="tabPage49.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="tabPage49.Size" type="System.Drawing.Size, System.Drawing">
     <value>382, 94</value>
   </data>
@@ -14456,7 +14459,7 @@
     <value>16</value>
   </data>
   <data name="button_Weather.Text" xml:space="preserve">
-    <value>Weather (beta)</value>
+    <value>Погода (Weather)</value>
   </data>
   <data name="&gt;&gt;button_Weather.Name" xml:space="preserve">
     <value>button_Weather</value>
@@ -23944,6 +23947,513 @@
   <data name="&gt;&gt;tabPage44.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="numericUpDown_Pulse_ClockHand_EndAngle.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_EndAngle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>305, 61</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_EndAngle.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_EndAngle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_EndAngle.TabIndex" type="System.Int32, mscorlib">
+    <value>97</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_EndAngle.Name" xml:space="preserve">
+    <value>numericUpDown_Pulse_ClockHand_EndAngle</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_EndAngle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_EndAngle.Parent" xml:space="preserve">
+    <value>tabPage51</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_EndAngle.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label466.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label466.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label466.Location" type="System.Drawing.Point, System.Drawing">
+    <value>241, 57</value>
+  </data>
+  <data name="label466.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label466.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 30</value>
+  </data>
+  <data name="label466.TabIndex" type="System.Int32, mscorlib">
+    <value>96</value>
+  </data>
+  <data name="label466.Text" xml:space="preserve">
+    <value>Конечный угол</value>
+  </data>
+  <data name="label466.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label466.Name" xml:space="preserve">
+    <value>label466</value>
+  </data>
+  <data name="&gt;&gt;label466.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label466.Parent" xml:space="preserve">
+    <value>tabPage51</value>
+  </data>
+  <data name="&gt;&gt;label466.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_StartAngle.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_StartAngle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>305, 30</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_StartAngle.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_StartAngle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_StartAngle.TabIndex" type="System.Int32, mscorlib">
+    <value>95</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_StartAngle.Name" xml:space="preserve">
+    <value>numericUpDown_Pulse_ClockHand_StartAngle</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_StartAngle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_StartAngle.Parent" xml:space="preserve">
+    <value>tabPage51</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_StartAngle.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label467.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label467.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label467.Location" type="System.Drawing.Point, System.Drawing">
+    <value>241, 23</value>
+  </data>
+  <data name="label467.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label467.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 30</value>
+  </data>
+  <data name="label467.TabIndex" type="System.Int32, mscorlib">
+    <value>94</value>
+  </data>
+  <data name="label467.Text" xml:space="preserve">
+    <value>Начальный угол</value>
+  </data>
+  <data name="label467.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label467.Name" xml:space="preserve">
+    <value>label467</value>
+  </data>
+  <data name="&gt;&gt;label467.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label467.Parent" xml:space="preserve">
+    <value>tabPage51</value>
+  </data>
+  <data name="&gt;&gt;label467.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_Offset_Y.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_Offset_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>185, 61</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_Offset_Y.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_Offset_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_Offset_Y.TabIndex" type="System.Int32, mscorlib">
+    <value>93</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_Offset_Y.Name" xml:space="preserve">
+    <value>numericUpDown_Pulse_ClockHand_Offset_Y</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_Offset_Y.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_Offset_Y.Parent" xml:space="preserve">
+    <value>tabPage51</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_Offset_Y.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label468.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label468.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label468.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 57</value>
+  </data>
+  <data name="label468.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label468.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 30</value>
+  </data>
+  <data name="label468.TabIndex" type="System.Int32, mscorlib">
+    <value>92</value>
+  </data>
+  <data name="label468.Text" xml:space="preserve">
+    <value>Смещение по Y</value>
+  </data>
+  <data name="label468.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label468.Name" xml:space="preserve">
+    <value>label468</value>
+  </data>
+  <data name="&gt;&gt;label468.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label468.Parent" xml:space="preserve">
+    <value>tabPage51</value>
+  </data>
+  <data name="&gt;&gt;label468.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_Offset_X.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_Offset_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>185, 30</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_Offset_X.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_Offset_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_Offset_X.TabIndex" type="System.Int32, mscorlib">
+    <value>91</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_Offset_X.Name" xml:space="preserve">
+    <value>numericUpDown_Pulse_ClockHand_Offset_X</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_Offset_X.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_Offset_X.Parent" xml:space="preserve">
+    <value>tabPage51</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_Offset_X.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="label469.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label469.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label469.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 23</value>
+  </data>
+  <data name="label469.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label469.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 30</value>
+  </data>
+  <data name="label469.TabIndex" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="label469.Text" xml:space="preserve">
+    <value>Смещение по X</value>
+  </data>
+  <data name="label469.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label469.Name" xml:space="preserve">
+    <value>label469</value>
+  </data>
+  <data name="&gt;&gt;label469.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label469.Parent" xml:space="preserve">
+    <value>tabPage51</value>
+  </data>
+  <data name="&gt;&gt;label469.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="comboBox_Pulse_ClockHand_Image.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="comboBox_Pulse_ClockHand_Image.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 93</value>
+  </data>
+  <data name="comboBox_Pulse_ClockHand_Image.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="comboBox_Pulse_ClockHand_Image.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="comboBox_Pulse_ClockHand_Image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 21</value>
+  </data>
+  <data name="comboBox_Pulse_ClockHand_Image.TabIndex" type="System.Int32, mscorlib">
+    <value>89</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Pulse_ClockHand_Image.Name" xml:space="preserve">
+    <value>comboBox_Pulse_ClockHand_Image</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Pulse_ClockHand_Image.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Pulse_ClockHand_Image.Parent" xml:space="preserve">
+    <value>tabPage51</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Pulse_ClockHand_Image.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label470.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label470.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label470.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label470.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 96</value>
+  </data>
+  <data name="label470.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label470.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 13</value>
+  </data>
+  <data name="label470.TabIndex" type="System.Int32, mscorlib">
+    <value>88</value>
+  </data>
+  <data name="label470.Text" xml:space="preserve">
+    <value>ImageIndex:</value>
+  </data>
+  <data name="&gt;&gt;label470.Name" xml:space="preserve">
+    <value>label470</value>
+  </data>
+  <data name="&gt;&gt;label470.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label470.Parent" xml:space="preserve">
+    <value>tabPage51</value>
+  </data>
+  <data name="&gt;&gt;label470.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_Y.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 65</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_Y.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_Y.TabIndex" type="System.Int32, mscorlib">
+    <value>87</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_Y.Name" xml:space="preserve">
+    <value>numericUpDown_Pulse_ClockHand_Y</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_Y.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_Y.Parent" xml:space="preserve">
+    <value>tabPage51</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_Y.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label471.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label471.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label471.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 57</value>
+  </data>
+  <data name="label471.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label471.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 30</value>
+  </data>
+  <data name="label471.TabIndex" type="System.Int32, mscorlib">
+    <value>86</value>
+  </data>
+  <data name="label471.Text" xml:space="preserve">
+    <value>Центр стрелки (Y)</value>
+  </data>
+  <data name="label471.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label471.Name" xml:space="preserve">
+    <value>label471</value>
+  </data>
+  <data name="&gt;&gt;label471.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label471.Parent" xml:space="preserve">
+    <value>tabPage51</value>
+  </data>
+  <data name="&gt;&gt;label471.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_X.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 30</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_X.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_X.TabIndex" type="System.Int32, mscorlib">
+    <value>85</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_X.Name" xml:space="preserve">
+    <value>numericUpDown_Pulse_ClockHand_X</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_X.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_X.Parent" xml:space="preserve">
+    <value>tabPage51</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_X.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="label472.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label472.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label472.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 23</value>
+  </data>
+  <data name="label472.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label472.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 30</value>
+  </data>
+  <data name="label472.TabIndex" type="System.Int32, mscorlib">
+    <value>84</value>
+  </data>
+  <data name="label472.Text" xml:space="preserve">
+    <value>Центр стрелки (X)</value>
+  </data>
+  <data name="label472.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label472.Name" xml:space="preserve">
+    <value>label472</value>
+  </data>
+  <data name="&gt;&gt;label472.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label472.Parent" xml:space="preserve">
+    <value>tabPage51</value>
+  </data>
+  <data name="&gt;&gt;label472.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="checkBox_Pulse_ClockHand.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="checkBox_Pulse_ClockHand.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox_Pulse_ClockHand.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="checkBox_Pulse_ClockHand.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 3, 0, 0</value>
+  </data>
+  <data name="checkBox_Pulse_ClockHand.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox_Pulse_ClockHand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>382, 20</value>
+  </data>
+  <data name="checkBox_Pulse_ClockHand.TabIndex" type="System.Int32, mscorlib">
+    <value>83</value>
+  </data>
+  <data name="checkBox_Pulse_ClockHand.Text" xml:space="preserve">
+    <value>Отображать</value>
+  </data>
+  <data name="&gt;&gt;checkBox_Pulse_ClockHand.Name" xml:space="preserve">
+    <value>checkBox_Pulse_ClockHand</value>
+  </data>
+  <data name="&gt;&gt;checkBox_Pulse_ClockHand.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox_Pulse_ClockHand.Parent" xml:space="preserve">
+    <value>tabPage51</value>
+  </data>
+  <data name="&gt;&gt;checkBox_Pulse_ClockHand.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="tabPage51.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPage51.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tabPage51.Size" type="System.Drawing.Size, System.Drawing">
+    <value>382, 139</value>
+  </data>
+  <data name="tabPage51.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="tabPage51.Text" xml:space="preserve">
+    <value>Пульс (стрелочный индикатор)</value>
+  </data>
+  <data name="&gt;&gt;tabPage51.Name" xml:space="preserve">
+    <value>tabPage51</value>
+  </data>
+  <data name="&gt;&gt;tabPage51.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage51.Parent" xml:space="preserve">
+    <value>tabControl_Activity</value>
+  </data>
+  <data name="&gt;&gt;tabPage51.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="checkBox_ActivityPuls_IconSet.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -24110,7 +24620,7 @@
     <value>tabControl_Activity</value>
   </data>
   <data name="&gt;&gt;tabPage45.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="numericUpDown_ActivityCalories_EndCorner_X.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -24776,7 +25286,7 @@
     <value>tabControl_Activity</value>
   </data>
   <data name="&gt;&gt;tabPage15.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="numericUpDown_ActivityCaloriesScale_ImageY.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -24909,6 +25419,9 @@
   </data>
   <data name="checkBox_ActivityCaloriesScale_Image.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 110</value>
+  </data>
+  <data name="checkBox_ActivityCaloriesScale_Image.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="checkBox_ActivityCaloriesScale_Image.Size" type="System.Drawing.Size, System.Drawing">
     <value>84, 17</value>
@@ -25601,7 +26114,514 @@
     <value>tabControl_Activity</value>
   </data>
   <data name="&gt;&gt;tabPage11.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_EndAngle.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_EndAngle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>305, 61</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_EndAngle.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_EndAngle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_EndAngle.TabIndex" type="System.Int32, mscorlib">
+    <value>97</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_EndAngle.Name" xml:space="preserve">
+    <value>numericUpDown_Calories_ClockHand_EndAngle</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_EndAngle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_EndAngle.Parent" xml:space="preserve">
+    <value>tabPage52</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_EndAngle.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label458.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label458.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label458.Location" type="System.Drawing.Point, System.Drawing">
+    <value>241, 57</value>
+  </data>
+  <data name="label458.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label458.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 30</value>
+  </data>
+  <data name="label458.TabIndex" type="System.Int32, mscorlib">
+    <value>96</value>
+  </data>
+  <data name="label458.Text" xml:space="preserve">
+    <value>Конечный угол</value>
+  </data>
+  <data name="label458.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label458.Name" xml:space="preserve">
+    <value>label458</value>
+  </data>
+  <data name="&gt;&gt;label458.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label458.Parent" xml:space="preserve">
+    <value>tabPage52</value>
+  </data>
+  <data name="&gt;&gt;label458.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_StartAngle.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_StartAngle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>305, 30</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_StartAngle.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_StartAngle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_StartAngle.TabIndex" type="System.Int32, mscorlib">
+    <value>95</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_StartAngle.Name" xml:space="preserve">
+    <value>numericUpDown_Calories_ClockHand_StartAngle</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_StartAngle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_StartAngle.Parent" xml:space="preserve">
+    <value>tabPage52</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_StartAngle.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label459.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label459.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label459.Location" type="System.Drawing.Point, System.Drawing">
+    <value>241, 23</value>
+  </data>
+  <data name="label459.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label459.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 30</value>
+  </data>
+  <data name="label459.TabIndex" type="System.Int32, mscorlib">
+    <value>94</value>
+  </data>
+  <data name="label459.Text" xml:space="preserve">
+    <value>Начальный угол</value>
+  </data>
+  <data name="label459.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label459.Name" xml:space="preserve">
+    <value>label459</value>
+  </data>
+  <data name="&gt;&gt;label459.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label459.Parent" xml:space="preserve">
+    <value>tabPage52</value>
+  </data>
+  <data name="&gt;&gt;label459.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_Offset_Y.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_Offset_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>185, 61</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_Offset_Y.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_Offset_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_Offset_Y.TabIndex" type="System.Int32, mscorlib">
+    <value>93</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_Offset_Y.Name" xml:space="preserve">
+    <value>numericUpDown_Calories_ClockHand_Offset_Y</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_Offset_Y.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_Offset_Y.Parent" xml:space="preserve">
+    <value>tabPage52</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_Offset_Y.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label461.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label461.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label461.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 57</value>
+  </data>
+  <data name="label461.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label461.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 30</value>
+  </data>
+  <data name="label461.TabIndex" type="System.Int32, mscorlib">
+    <value>92</value>
+  </data>
+  <data name="label461.Text" xml:space="preserve">
+    <value>Смещение по Y</value>
+  </data>
+  <data name="label461.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label461.Name" xml:space="preserve">
+    <value>label461</value>
+  </data>
+  <data name="&gt;&gt;label461.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label461.Parent" xml:space="preserve">
+    <value>tabPage52</value>
+  </data>
+  <data name="&gt;&gt;label461.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_Offset_X.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_Offset_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>185, 30</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_Offset_X.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_Offset_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_Offset_X.TabIndex" type="System.Int32, mscorlib">
+    <value>91</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_Offset_X.Name" xml:space="preserve">
+    <value>numericUpDown_Calories_ClockHand_Offset_X</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_Offset_X.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_Offset_X.Parent" xml:space="preserve">
+    <value>tabPage52</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_Offset_X.ZOrder" xml:space="preserve">
     <value>6</value>
+  </data>
+  <data name="label462.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label462.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label462.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 23</value>
+  </data>
+  <data name="label462.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label462.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 30</value>
+  </data>
+  <data name="label462.TabIndex" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="label462.Text" xml:space="preserve">
+    <value>Смещение по X</value>
+  </data>
+  <data name="label462.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label462.Name" xml:space="preserve">
+    <value>label462</value>
+  </data>
+  <data name="&gt;&gt;label462.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label462.Parent" xml:space="preserve">
+    <value>tabPage52</value>
+  </data>
+  <data name="&gt;&gt;label462.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="comboBox_Calories_ClockHand_Image.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="comboBox_Calories_ClockHand_Image.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 93</value>
+  </data>
+  <data name="comboBox_Calories_ClockHand_Image.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="comboBox_Calories_ClockHand_Image.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="comboBox_Calories_ClockHand_Image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 21</value>
+  </data>
+  <data name="comboBox_Calories_ClockHand_Image.TabIndex" type="System.Int32, mscorlib">
+    <value>89</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Calories_ClockHand_Image.Name" xml:space="preserve">
+    <value>comboBox_Calories_ClockHand_Image</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Calories_ClockHand_Image.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Calories_ClockHand_Image.Parent" xml:space="preserve">
+    <value>tabPage52</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Calories_ClockHand_Image.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label463.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label463.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label463.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label463.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 96</value>
+  </data>
+  <data name="label463.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label463.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 13</value>
+  </data>
+  <data name="label463.TabIndex" type="System.Int32, mscorlib">
+    <value>88</value>
+  </data>
+  <data name="label463.Text" xml:space="preserve">
+    <value>ImageIndex:</value>
+  </data>
+  <data name="&gt;&gt;label463.Name" xml:space="preserve">
+    <value>label463</value>
+  </data>
+  <data name="&gt;&gt;label463.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label463.Parent" xml:space="preserve">
+    <value>tabPage52</value>
+  </data>
+  <data name="&gt;&gt;label463.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_Y.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 65</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_Y.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_Y.TabIndex" type="System.Int32, mscorlib">
+    <value>87</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_Y.Name" xml:space="preserve">
+    <value>numericUpDown_Calories_ClockHand_Y</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_Y.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_Y.Parent" xml:space="preserve">
+    <value>tabPage52</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_Y.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label464.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label464.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label464.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 57</value>
+  </data>
+  <data name="label464.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label464.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 30</value>
+  </data>
+  <data name="label464.TabIndex" type="System.Int32, mscorlib">
+    <value>86</value>
+  </data>
+  <data name="label464.Text" xml:space="preserve">
+    <value>Центр стрелки (Y)</value>
+  </data>
+  <data name="label464.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label464.Name" xml:space="preserve">
+    <value>label464</value>
+  </data>
+  <data name="&gt;&gt;label464.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label464.Parent" xml:space="preserve">
+    <value>tabPage52</value>
+  </data>
+  <data name="&gt;&gt;label464.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_X.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 30</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_X.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_X.TabIndex" type="System.Int32, mscorlib">
+    <value>85</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_X.Name" xml:space="preserve">
+    <value>numericUpDown_Calories_ClockHand_X</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_X.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_X.Parent" xml:space="preserve">
+    <value>tabPage52</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_X.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="label465.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label465.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label465.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 23</value>
+  </data>
+  <data name="label465.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label465.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 30</value>
+  </data>
+  <data name="label465.TabIndex" type="System.Int32, mscorlib">
+    <value>84</value>
+  </data>
+  <data name="label465.Text" xml:space="preserve">
+    <value>Центр стрелки (X)</value>
+  </data>
+  <data name="label465.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label465.Name" xml:space="preserve">
+    <value>label465</value>
+  </data>
+  <data name="&gt;&gt;label465.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label465.Parent" xml:space="preserve">
+    <value>tabPage52</value>
+  </data>
+  <data name="&gt;&gt;label465.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="checkBox_Calories_ClockHand.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="checkBox_Calories_ClockHand.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox_Calories_ClockHand.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="checkBox_Calories_ClockHand.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 3, 0, 0</value>
+  </data>
+  <data name="checkBox_Calories_ClockHand.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox_Calories_ClockHand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>382, 20</value>
+  </data>
+  <data name="checkBox_Calories_ClockHand.TabIndex" type="System.Int32, mscorlib">
+    <value>83</value>
+  </data>
+  <data name="checkBox_Calories_ClockHand.Text" xml:space="preserve">
+    <value>Отображать</value>
+  </data>
+  <data name="&gt;&gt;checkBox_Calories_ClockHand.Name" xml:space="preserve">
+    <value>checkBox_Calories_ClockHand</value>
+  </data>
+  <data name="&gt;&gt;checkBox_Calories_ClockHand.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox_Calories_ClockHand.Parent" xml:space="preserve">
+    <value>tabPage52</value>
+  </data>
+  <data name="&gt;&gt;checkBox_Calories_ClockHand.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="tabPage52.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPage52.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tabPage52.Size" type="System.Drawing.Size, System.Drawing">
+    <value>382, 139</value>
+  </data>
+  <data name="tabPage52.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="tabPage52.Text" xml:space="preserve">
+    <value>Калории (стрелочный индикатор)</value>
+  </data>
+  <data name="&gt;&gt;tabPage52.Name" xml:space="preserve">
+    <value>tabPage52</value>
+  </data>
+  <data name="&gt;&gt;tabPage52.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage52.Parent" xml:space="preserve">
+    <value>tabControl_Activity</value>
+  </data>
+  <data name="&gt;&gt;tabPage52.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="numericUpDown_ActivityStar_Y.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -25889,7 +26909,7 @@
     <value>tabControl_Activity</value>
   </data>
   <data name="&gt;&gt;tabPage16.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="tabControl_Activity.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -32158,6 +33178,9 @@
   <data name="tabPage50.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
+  <data name="tabPage50.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="tabPage50.Size" type="System.Drawing.Size, System.Drawing">
     <value>382, 170</value>
   </data>
@@ -35902,6 +36925,15 @@
   <data name="comboBox_Language.Items3" xml:space="preserve">
     <value>Português</value>
   </data>
+  <data name="comboBox_Language.Items4" xml:space="preserve">
+    <value>Slovenčina</value>
+  </data>
+  <data name="comboBox_Language.Items5" xml:space="preserve">
+    <value>Čeština</value>
+  </data>
+  <data name="comboBox_Language.Items6" xml:space="preserve">
+    <value>Magyar</value>
+  </data>
   <data name="comboBox_Language.Location" type="System.Drawing.Point, System.Drawing">
     <value>48, 256</value>
   </data>
@@ -36583,40 +37615,40 @@
   <data name="&gt;&gt;tabPage33.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="label416.AutoSize" type="System.Boolean, mscorlib">
+  <data name="label_TranslateHelp.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label416.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="label_TranslateHelp.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
-  <data name="label416.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="label_TranslateHelp.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label416.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="label_TranslateHelp.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 245</value>
   </data>
-  <data name="label416.ShowHelp" type="System.Boolean, mscorlib">
+  <data name="label_TranslateHelp.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label416.Size" type="System.Drawing.Size, System.Drawing">
-    <value>395, 13</value>
+  <data name="label_TranslateHelp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>638, 13</value>
   </data>
-  <data name="label416.TabIndex" type="System.Int32, mscorlib">
+  <data name="label_TranslateHelp.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
-  <data name="label416.Text" xml:space="preserve">
-    <value>chaadaev88 (English), kampanita (Español), maikeandre (Português)</value>
+  <data name="label_TranslateHelp.Text" xml:space="preserve">
+    <value>chaadaev88 (English), kampanita (Español), maikeandre (Português), Horatius80 (Čeština, Magyar, Slovenčina)</value>
   </data>
-  <data name="&gt;&gt;label416.Name" xml:space="preserve">
-    <value>label416</value>
+  <data name="&gt;&gt;label_TranslateHelp.Name" xml:space="preserve">
+    <value>label_TranslateHelp</value>
   </data>
-  <data name="&gt;&gt;label416.Type" xml:space="preserve">
+  <data name="&gt;&gt;label_TranslateHelp.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label416.Parent" xml:space="preserve">
+  <data name="&gt;&gt;label_TranslateHelp.Parent" xml:space="preserve">
     <value>tabPage43</value>
   </data>
-  <data name="&gt;&gt;label416.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label_TranslateHelp.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="label415.AutoSize" type="System.Boolean, mscorlib">
@@ -36790,40 +37822,40 @@
   <data name="&gt;&gt;label413.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="label411.AutoSize" type="System.Boolean, mscorlib">
+  <data name="label_Res_PackerUnpacker.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label411.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="label_Res_PackerUnpacker.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
-  <data name="label411.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="label_Res_PackerUnpacker.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label411.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="label_Res_PackerUnpacker.Location" type="System.Drawing.Point, System.Drawing">
     <value>235, 125</value>
   </data>
-  <data name="label411.ShowHelp" type="System.Boolean, mscorlib">
+  <data name="label_Res_PackerUnpacker.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label411.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="label_Res_PackerUnpacker.Size" type="System.Drawing.Size, System.Drawing">
     <value>251, 13</value>
   </data>
-  <data name="label411.TabIndex" type="System.Int32, mscorlib">
+  <data name="label_Res_PackerUnpacker.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="label411.Text" xml:space="preserve">
+  <data name="label_Res_PackerUnpacker.Text" xml:space="preserve">
     <value>Res_PackerUnpacker (Автор неизвестен)</value>
   </data>
-  <data name="&gt;&gt;label411.Name" xml:space="preserve">
-    <value>label411</value>
+  <data name="&gt;&gt;label_Res_PackerUnpacker.Name" xml:space="preserve">
+    <value>label_Res_PackerUnpacker</value>
   </data>
-  <data name="&gt;&gt;label411.Type" xml:space="preserve">
+  <data name="&gt;&gt;label_Res_PackerUnpacker.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label411.Parent" xml:space="preserve">
+  <data name="&gt;&gt;label_Res_PackerUnpacker.Parent" xml:space="preserve">
     <value>tabPage43</value>
   </data>
-  <data name="&gt;&gt;label411.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label_Res_PackerUnpacker.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="linkLabel_py_amazfit_tools.AutoSize" type="System.Boolean, mscorlib">
@@ -37646,7 +38678,7 @@
     <value>35</value>
   </data>
   <data name="checkBox_Show_Shortcuts.Text" xml:space="preserve">
-    <value>Выделять область ярлыков</value>
+    <value>Выделять области с ярлыками</value>
   </data>
   <data name="&gt;&gt;checkBox_Show_Shortcuts.Name" xml:space="preserve">
     <value>checkBox_Show_Shortcuts</value>

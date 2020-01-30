@@ -48,9 +48,11 @@ namespace GTR_Watch_face
             comboBox_ActivityDistance_Decimal.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityDistance_Suffix.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityPulsScale_Image.Items.AddRange(ListImages.ToArray());
+            comboBox_Pulse_ClockHand_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityPuls_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityPuls_IconSet_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityCalories_Image.Items.AddRange(ListImages.ToArray());
+            comboBox_Calories_ClockHand_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityStar_Image.Items.AddRange(ListImages.ToArray());
             comboBox_Activity_NDImage.Items.AddRange(ListImages.ToArray());
 
@@ -611,6 +613,29 @@ namespace GTR_Watch_face
                 }
                 else checkBox_ActivityPulsScale.Checked = false;
 
+                if ((Watch_Face.Activity.PulseGraph != null) && 
+                    (Watch_Face.Activity.PulseGraph.ClockHand != null) &&
+                    (Watch_Face.Activity.PulseGraph.ClockHand.Image != null))
+                {
+                    checkBox_Pulse_ClockHand.Checked = true;
+                    numericUpDown_Pulse_ClockHand_X.Value = Watch_Face.Activity.PulseGraph.ClockHand.Image.X;
+                    numericUpDown_Pulse_ClockHand_Y.Value = Watch_Face.Activity.PulseGraph.ClockHand.Image.Y;
+                    comboBoxSetText(comboBox_Pulse_ClockHand_Image, Watch_Face.Activity.PulseGraph.ClockHand.Image.ImageIndex);
+                    if (Watch_Face.Activity.PulseGraph.ClockHand.CenterOffset != null)
+                    {
+                        numericUpDown_Pulse_ClockHand_Offset_X.Value = Watch_Face.Activity.PulseGraph.ClockHand.CenterOffset.X;
+                        numericUpDown_Pulse_ClockHand_Offset_Y.Value = Watch_Face.Activity.PulseGraph.ClockHand.CenterOffset.Y;
+
+                    }
+                    if (Watch_Face.Activity.PulseGraph.ClockHand.Sector != null)
+                    {
+                        numericUpDown_Pulse_ClockHand_StartAngle.Value = (int)(Watch_Face.Activity.PulseGraph.ClockHand.Sector.StartAngle / 100);
+                        numericUpDown_Pulse_ClockHand_EndAngle.Value = (int)(Watch_Face.Activity.PulseGraph.ClockHand.Sector.EndAngle / 100);
+
+                    }
+                }
+                else checkBox_Pulse_ClockHand.Checked = false;
+
                 if ((Watch_Face.Activity.ColouredSquares != null) && 
                     (Watch_Face.Activity.ColouredSquares.Coordinates != null))
                 {
@@ -728,6 +753,29 @@ namespace GTR_Watch_face
                     else checkBox_ActivityCaloriesScale_Image.Checked = false;
                 }
                 else checkBox_ActivityCaloriesScale.Checked = false;
+
+                if ((Watch_Face.Activity.CaloriesGraph != null) &&
+                    (Watch_Face.Activity.CaloriesGraph.ClockHand != null) &&
+                    (Watch_Face.Activity.CaloriesGraph.ClockHand.Image != null))
+                {
+                    checkBox_Calories_ClockHand.Checked = true;
+                    numericUpDown_Calories_ClockHand_X.Value = Watch_Face.Activity.CaloriesGraph.ClockHand.Image.X;
+                    numericUpDown_Calories_ClockHand_Y.Value = Watch_Face.Activity.CaloriesGraph.ClockHand.Image.Y;
+                    comboBoxSetText(comboBox_Calories_ClockHand_Image, Watch_Face.Activity.CaloriesGraph.ClockHand.Image.ImageIndex);
+                    if (Watch_Face.Activity.CaloriesGraph.ClockHand.CenterOffset != null)
+                    {
+                        numericUpDown_Calories_ClockHand_Offset_X.Value = Watch_Face.Activity.CaloriesGraph.ClockHand.CenterOffset.X;
+                        numericUpDown_Calories_ClockHand_Offset_Y.Value = Watch_Face.Activity.CaloriesGraph.ClockHand.CenterOffset.Y;
+
+                    }
+                    if (Watch_Face.Activity.CaloriesGraph.ClockHand.Sector != null)
+                    {
+                        numericUpDown_Calories_ClockHand_StartAngle.Value = (int)(Watch_Face.Activity.CaloriesGraph.ClockHand.Sector.StartAngle / 100);
+                        numericUpDown_Calories_ClockHand_EndAngle.Value = (int)(Watch_Face.Activity.CaloriesGraph.ClockHand.Sector.EndAngle / 100);
+
+                    }
+                }
+                else checkBox_Calories_ClockHand.Checked = false;
 
                 if (Watch_Face.Activity.StarImage != null)
                 {
@@ -1527,6 +1575,36 @@ namespace GTR_Watch_face
                     }
                 }
 
+                if ((checkBox_Pulse_ClockHand.Checked) && (comboBox_Pulse_ClockHand_Image.SelectedIndex >= 0))
+                {
+                    if (Watch_Face.Activity == null) Watch_Face.Activity = new Activity();
+                    if (Watch_Face.Activity.PulseGraph == null) Watch_Face.Activity.PulseGraph = new PulseContainer();
+                    if (Watch_Face.Activity.PulseGraph.ClockHand == null) Watch_Face.Activity.PulseGraph.ClockHand = new ClockHand();
+                    if (Watch_Face.Activity.PulseGraph.ClockHand.CenterOffset == null)
+                        Watch_Face.Activity.PulseGraph.ClockHand.CenterOffset = new Coordinates();
+                    if (Watch_Face.Activity.PulseGraph.ClockHand.Sector == null)
+                        Watch_Face.Activity.PulseGraph.ClockHand.Sector = new Sector();
+                    //if (Watch_Face.AnalogDialFace.Hours.Shape == null)
+                    //Watch_Face.AnalogDialFace.Hours.Shape = new Coordinates();
+                    if (Watch_Face.Activity.PulseGraph.ClockHand.Image == null)
+                        Watch_Face.Activity.PulseGraph.ClockHand.Image = new ImageW();
+
+                    Watch_Face.Activity.PulseGraph.ClockHand.Image.ImageIndex = Int32.Parse(comboBox_Pulse_ClockHand_Image.Text);
+                    Watch_Face.Activity.PulseGraph.ClockHand.Image.X = (int)numericUpDown_Pulse_ClockHand_X.Value;
+                    Watch_Face.Activity.PulseGraph.ClockHand.Image.Y = (int)numericUpDown_Pulse_ClockHand_Y.Value;
+
+                    Watch_Face.Activity.PulseGraph.ClockHand.Color = "0x00000000";
+                    Watch_Face.Activity.PulseGraph.ClockHand.OnlyBorder = false;
+
+                    Watch_Face.Activity.PulseGraph.ClockHand.CenterOffset.X = (int)numericUpDown_Pulse_ClockHand_Offset_X.Value;
+                    Watch_Face.Activity.PulseGraph.ClockHand.CenterOffset.Y = (int)numericUpDown_Pulse_ClockHand_Offset_Y.Value;
+
+                    Watch_Face.Activity.PulseGraph.ClockHand.Sector.StartAngle =
+                        (int)(numericUpDown_Pulse_ClockHand_StartAngle.Value * 100);
+                    Watch_Face.Activity.PulseGraph.ClockHand.Sector.EndAngle =
+                        (int)(numericUpDown_Pulse_ClockHand_EndAngle.Value * 100);
+                }
+
                 if ((checkBox_ActivityCalories.Checked) && (comboBox_ActivityCalories_Image.SelectedIndex >= 0))
                 {
                     if (Watch_Face.Activity == null) Watch_Face.Activity = new Activity();
@@ -1639,6 +1717,36 @@ namespace GTR_Watch_face
                         Watch_Face.Activity.CaloriesGraph.Circle.Color = colorStr;
                         Watch_Face.Activity.CaloriesGraph.Circle.ImageIndex = imageIndex;
                     }
+                }
+
+                if ((checkBox_Calories_ClockHand.Checked) && (comboBox_Calories_ClockHand_Image.SelectedIndex >= 0))
+                {
+                    if (Watch_Face.Activity == null) Watch_Face.Activity = new Activity();
+                    if (Watch_Face.Activity.CaloriesGraph == null) Watch_Face.Activity.CaloriesGraph = new CaloriesContainer();
+                    if (Watch_Face.Activity.CaloriesGraph.ClockHand == null) Watch_Face.Activity.CaloriesGraph.ClockHand = new ClockHand();
+                    if (Watch_Face.Activity.CaloriesGraph.ClockHand.CenterOffset == null)
+                        Watch_Face.Activity.CaloriesGraph.ClockHand.CenterOffset = new Coordinates();
+                    if (Watch_Face.Activity.CaloriesGraph.ClockHand.Sector == null)
+                        Watch_Face.Activity.CaloriesGraph.ClockHand.Sector = new Sector();
+                    //if (Watch_Face.AnalogDialFace.Hours.Shape == null)
+                    //Watch_Face.AnalogDialFace.Hours.Shape = new Coordinates();
+                    if (Watch_Face.Activity.CaloriesGraph.ClockHand.Image == null)
+                        Watch_Face.Activity.CaloriesGraph.ClockHand.Image = new ImageW();
+
+                    Watch_Face.Activity.CaloriesGraph.ClockHand.Image.ImageIndex = Int32.Parse(comboBox_Calories_ClockHand_Image.Text);
+                    Watch_Face.Activity.CaloriesGraph.ClockHand.Image.X = (int)numericUpDown_Calories_ClockHand_X.Value;
+                    Watch_Face.Activity.CaloriesGraph.ClockHand.Image.Y = (int)numericUpDown_Calories_ClockHand_Y.Value;
+
+                    Watch_Face.Activity.CaloriesGraph.ClockHand.Color = "0x00000000";
+                    Watch_Face.Activity.CaloriesGraph.ClockHand.OnlyBorder = false;
+
+                    Watch_Face.Activity.CaloriesGraph.ClockHand.CenterOffset.X = (int)numericUpDown_Calories_ClockHand_Offset_X.Value;
+                    Watch_Face.Activity.CaloriesGraph.ClockHand.CenterOffset.Y = (int)numericUpDown_Calories_ClockHand_Offset_Y.Value;
+
+                    Watch_Face.Activity.CaloriesGraph.ClockHand.Sector.StartAngle =
+                        (int)(numericUpDown_Calories_ClockHand_StartAngle.Value * 100);
+                    Watch_Face.Activity.CaloriesGraph.ClockHand.Sector.EndAngle =
+                        (int)(numericUpDown_Calories_ClockHand_EndAngle.Value * 100);
                 }
 
                 if ((checkBox_ActivityStar.Checked) && (comboBox_ActivityStar_Image.SelectedIndex >= 0))
@@ -2824,10 +2932,14 @@ namespace GTR_Watch_face
             comboBox_ActivityPuls_Image.Items.Clear();
             comboBox_ActivityPulsScale_Image.Text = "";
             comboBox_ActivityPulsScale_Image.Items.Clear();
+            comboBox_Pulse_ClockHand_Image.Text = "";
+            comboBox_Pulse_ClockHand_Image.Items.Clear();
             comboBox_ActivityPuls_IconSet_Image.Text = "";
             comboBox_ActivityPuls_IconSet_Image.Items.Clear();
             comboBox_ActivityCalories_Image.Text = "";
             comboBox_ActivityCalories_Image.Items.Clear();
+            comboBox_Calories_ClockHand_Image.Text = "";
+            comboBox_Calories_ClockHand_Image.Items.Clear();
             comboBox_ActivityStar_Image.Text = "";
             comboBox_ActivityStar_Image.Items.Clear();
             comboBox_Activity_NDImage.Text = "";

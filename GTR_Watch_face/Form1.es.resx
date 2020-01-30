@@ -1586,9 +1586,6 @@
   <data name="checkBox_Battery_Scale.Text" xml:space="preserve">
     <value>Activar</value>
   </data>
-  <data name="tabPage23.Text" xml:space="preserve">
-    <value>Escala</value>
-  </data>
   <data name="label374.Text" xml:space="preserve">
     <value>Ángulo final</value>
   </data>
@@ -1609,9 +1606,6 @@
   </data>
   <data name="checkBox_Battery_ClockHand.Text" xml:space="preserve">
     <value>Mostrar</value>
-  </data>
-  <data name="tabPage35.Text" xml:space="preserve">
-    <value>Indicador</value>
   </data>
   <data name="checkBox_Battery_IconSet.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 17</value>
@@ -1645,9 +1639,6 @@
   </data>
   <data name="contextMenuStrip_XY_InTable.Size" type="System.Drawing.Size, System.Drawing">
     <value>191, 108</value>
-  </data>
-  <data name="tabPage42.Text" xml:space="preserve">
-    <value>Conjunto de iconos</value>
   </data>
   <data name="checkBox_Battery.Text" xml:space="preserve">
     <value>Activar</value>
@@ -1744,9 +1735,6 @@
   </data>
   <data name="label403.Text" xml:space="preserve">
     <value>Símbolo de error:</value>
-  </data>
-  <data name="tabPage11.Text" xml:space="preserve">
-    <value>Meta pasos</value>
   </data>
   <data name="checkBox_ActivitySteps.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 17</value>

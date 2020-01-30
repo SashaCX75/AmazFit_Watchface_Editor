@@ -6594,9 +6594,6 @@
   <data name="tabPage23.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="tabPage23.Text" xml:space="preserve">
-    <value>Escala circular</value>
-  </data>
   <data name="numericUpDown_Battery_ClockHand_EndAngle.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -6762,9 +6759,6 @@
   <data name="tabPage35.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="tabPage35.Text" xml:space="preserve">
-    <value>Indicador de discagem</value>
-  </data>
   <data name="checkBox_Battery_IconSet.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -6851,9 +6845,6 @@
   </data>
   <data name="tabPage42.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
-  </data>
-  <data name="tabPage42.Text" xml:space="preserve">
-    <value>Indicador</value>
   </data>
   <data name="tabControl4.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -7622,9 +7613,6 @@
   </data>
   <data name="tabPage11.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
-  </data>
-  <data name="tabPage11.Text" xml:space="preserve">
-    <value>Metas de Passos</value>
   </data>
   <data name="numericUpDown_ActivitySteps_EndCorner_X.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -8624,9 +8612,6 @@
   </data>
   <data name="tabPage44.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
-  </data>
-  <data name="tabPage44.Text" xml:space="preserve">
-    <value>Pulso (escala circular)</value>
   </data>
   <data name="checkBox_ActivityPuls_IconSet.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -12693,7 +12678,7 @@
   <data name="label411.Size" type="System.Drawing.Size, System.Drawing">
     <value>256, 13</value>
   </data>
-  <data name="label411.Text" xml:space="preserve">
+  <data name="label_Res_PackerUnpacker.Text" xml:space="preserve">
     <value>Res_PackerUnpacker (Autor desconhecido)</value>
   </data>
   <data name="linkLabel_py_amazfit_tools.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
@@ -12707,9 +12692,6 @@
   </data>
   <data name="linkLabel_py_amazfit_tools.Size" type="System.Drawing.Size, System.Drawing">
     <value>204, 13</value>
-  </data>
-  <data name="linkLabel_py_amazfit_tools.Text" xml:space="preserve">
-    <value>py_amazfit_tools (Autor amazfitbip)</value>
   </data>
   <data name="label410.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />

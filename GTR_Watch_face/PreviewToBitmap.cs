@@ -1081,7 +1081,7 @@ namespace GTR_Watch_face
                         float StartAngle = (float)numericUpDown_ActivityPulsScale_StartAngle.Value - 90;
                         float EndAngle = (float)(numericUpDown_ActivityPulsScale_EndAngle.Value -
                             numericUpDown_ActivityPulsScale_StartAngle.Value);
-                        float AngleScale = (float)Watch_Face_Preview_Set.Activity.Pulse / 200f;
+                        float AngleScale = (float)Watch_Face_Preview_Set.Activity.Pulse / 180f;
                         if (AngleScale > 1) AngleScale = 1;
                         EndAngle = EndAngle * AngleScale;
                         int lineCap = comboBox_ActivityPulsScale_Flatness.SelectedIndex;
@@ -1119,7 +1119,7 @@ namespace GTR_Watch_face
                         float StartAngle = (float)numericUpDown_ActivityPulsScale_StartAngle.Value - 90;
                         float EndAngle = (float)(numericUpDown_ActivityPulsScale_EndAngle.Value -
                             numericUpDown_ActivityPulsScale_StartAngle.Value);
-                        float AngleScale = (float)Watch_Face_Preview_Set.Activity.Pulse / 200f;
+                        float AngleScale = (float)Watch_Face_Preview_Set.Activity.Pulse / 180f;
                         if (AngleScale > 1) AngleScale = 1;
                         EndAngle = EndAngle * AngleScale;
                         try
@@ -1131,6 +1131,22 @@ namespace GTR_Watch_face
 
                         }
                     }
+                }
+
+                //  пульс стрелочный индикатор
+                if ((checkBox_Pulse_ClockHand.Checked) && (comboBox_Pulse_ClockHand_Image.SelectedIndex >= 0))
+                {
+                    int x1 = (int)numericUpDown_Pulse_ClockHand_X.Value;
+                    int y1 = (int)numericUpDown_Pulse_ClockHand_Y.Value;
+                    int offsetX = (int)numericUpDown_Pulse_ClockHand_Offset_X.Value;
+                    int offsetY = (int)numericUpDown_Pulse_ClockHand_Offset_Y.Value;
+                    int image_index = comboBox_Pulse_ClockHand_Image.SelectedIndex;
+                    float startAngle = (float)(numericUpDown_Pulse_ClockHand_StartAngle.Value);
+                    float endAngle = (float)(numericUpDown_Pulse_ClockHand_EndAngle.Value);
+                    float angle = startAngle + Watch_Face_Preview_Set.Activity.Pulse * (endAngle - startAngle) / 180;
+                    if (startAngle < endAngle && angle > endAngle) angle = endAngle;
+                    if (startAngle > endAngle && angle < endAngle) angle = endAngle;
+                    DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle);
                 }
 
                 if ((checkBox_ActivityCalories.Checked) && (comboBox_ActivityCalories_Image.SelectedIndex >= 0))
@@ -1163,7 +1179,7 @@ namespace GTR_Watch_face
                         float StartAngle = (float)numericUpDown_ActivityCaloriesScale_StartAngle.Value - 90;
                         float EndAngle = (float)(numericUpDown_ActivityCaloriesScale_EndAngle.Value -
                             numericUpDown_ActivityCaloriesScale_StartAngle.Value);
-                        float AngleScale = (float)(8f * Watch_Face_Preview_Set.Activity.Calories /
+                        float AngleScale = (float)(17f * Watch_Face_Preview_Set.Activity.Calories /
                             Watch_Face_Preview_Set.Activity.StepsGoal);
                         if (AngleScale > 1) AngleScale = 1;
                         EndAngle = EndAngle * AngleScale;
@@ -1202,7 +1218,7 @@ namespace GTR_Watch_face
                         float StartAngle = (float)numericUpDown_ActivityCaloriesScale_StartAngle.Value - 90;
                         float EndAngle = (float)(numericUpDown_ActivityCaloriesScale_EndAngle.Value -
                             numericUpDown_ActivityCaloriesScale_StartAngle.Value);
-                        float AngleScale = (float)(8f * Watch_Face_Preview_Set.Activity.Calories /
+                        float AngleScale = (float)(17f * Watch_Face_Preview_Set.Activity.Calories /
                             Watch_Face_Preview_Set.Activity.StepsGoal);
                         if (AngleScale > 1) AngleScale = 1;
                         EndAngle = EndAngle * AngleScale;
@@ -1215,6 +1231,23 @@ namespace GTR_Watch_face
 
                         } 
                     }
+                }
+
+                //  калории стрелочный индикатор
+                if ((checkBox_Calories_ClockHand.Checked) && (comboBox_Calories_ClockHand_Image.SelectedIndex >= 0))
+                {
+                    int x1 = (int)numericUpDown_Calories_ClockHand_X.Value;
+                    int y1 = (int)numericUpDown_Calories_ClockHand_Y.Value;
+                    int offsetX = (int)numericUpDown_Calories_ClockHand_Offset_X.Value;
+                    int offsetY = (int)numericUpDown_Calories_ClockHand_Offset_Y.Value;
+                    int image_index = comboBox_Calories_ClockHand_Image.SelectedIndex;
+                    float startAngle = (float)(numericUpDown_Calories_ClockHand_StartAngle.Value);
+                    float endAngle = (float)(numericUpDown_Calories_ClockHand_EndAngle.Value);
+                    float angle = startAngle + 17f * Watch_Face_Preview_Set.Activity.Calories * (endAngle - startAngle) /
+                        Watch_Face_Preview_Set.Activity.StepsGoal;
+                    if (startAngle < endAngle && angle > endAngle) angle = endAngle;
+                    if (startAngle > endAngle && angle < endAngle) angle = endAngle;
+                    DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle);
                 }
 
                 if ((checkBox_ActivityStar.Checked) && (comboBox_ActivityStar_Image.SelectedIndex >= 0))

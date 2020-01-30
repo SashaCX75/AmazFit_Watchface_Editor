@@ -79,6 +79,18 @@ namespace GTR_Watch_face
                     {
                         Program_Settings.language = "Português";
                     }
+                    if (language == "cs")
+                    {
+                        Program_Settings.language = "Čeština";
+                    }
+                    if (language == "hu")
+                    {
+                        Program_Settings.language = "Magyar";
+                    }
+                    if (language == "sk")
+                    {
+                        Program_Settings.language = "Slovenčina";
+                    }
                 }
                 //Logger.WriteLine("Определили язык");
                 SetLanguage();
@@ -168,6 +180,21 @@ namespace GTR_Watch_face
             {
                 Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("pt");
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("pt");
+            }
+            else if (Program_Settings.language == "Čeština")
+            {
+                Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("cs");
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("cs");
+            }
+            else if (Program_Settings.language == "Magyar")
+            {
+                Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("hu");
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("hu");
+            }
+            else if (Program_Settings.language == "Slovenčina")
+            {
+                Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("sk");
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("sk");
             }
             else
             {
@@ -2477,6 +2504,25 @@ namespace GTR_Watch_face
             }
         }
 
+        private void checkBox_Pulse_ClockHand_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Pulse_ClockHand.Checked;
+            numericUpDown_Pulse_ClockHand_X.Enabled = b;
+            numericUpDown_Pulse_ClockHand_Y.Enabled = b;
+            numericUpDown_Pulse_ClockHand_Offset_X.Enabled = b;
+            numericUpDown_Pulse_ClockHand_Offset_Y.Enabled = b;
+            comboBox_Pulse_ClockHand_Image.Enabled = b;
+            numericUpDown_Pulse_ClockHand_StartAngle.Enabled = b;
+            numericUpDown_Pulse_ClockHand_EndAngle.Enabled = b;
+            label466.Enabled = b;
+            label467.Enabled = b;
+            label468.Enabled = b;
+            label469.Enabled = b;
+            label470.Enabled = b;
+            label471.Enabled = b;
+            label472.Enabled = b;
+        }
+
         private void checkBox_ActivityPulsScale_Image_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox_ActivityPulsScale_Image.Checked)
@@ -2594,6 +2640,25 @@ namespace GTR_Watch_face
                     label120.Enabled = true;
                 }
             }
+        }
+
+        private void checkBox_Calories_ClockHand_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Calories_ClockHand.Checked;
+            numericUpDown_Calories_ClockHand_X.Enabled = b;
+            numericUpDown_Calories_ClockHand_Y.Enabled = b;
+            numericUpDown_Calories_ClockHand_Offset_X.Enabled = b;
+            numericUpDown_Calories_ClockHand_Offset_Y.Enabled = b;
+            comboBox_Calories_ClockHand_Image.Enabled = b;
+            numericUpDown_Calories_ClockHand_StartAngle.Enabled = b;
+            numericUpDown_Calories_ClockHand_EndAngle.Enabled = b;
+            label458.Enabled = b;
+            label459.Enabled = b;
+            label461.Enabled = b;
+            label462.Enabled = b;
+            label463.Enabled = b;
+            label464.Enabled = b;
+            label465.Enabled = b;
         }
 
         private void checkBox_ActivityCaloriesScale_Image_CheckedChanged(object sender, EventArgs e)

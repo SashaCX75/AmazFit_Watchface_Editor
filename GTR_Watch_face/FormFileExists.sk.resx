@@ -3082,4 +3082,22 @@
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
   </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Súbor existuje</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Zrušiť</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>Zameniť</value>
+  </data>
+  <data name="button3.Text" xml:space="preserve">
+    <value>Uložiť oba</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Súbor s rovnakým názvom už existuje.</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Nahradiť existujúci súbor?</value>
+  </data>
 </root>
