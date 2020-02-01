@@ -5055,6 +5055,7 @@ namespace GTR_Watch_face
                 {
                     for (int i = 0; i < 13; i++)
                     {
+                        save = false;
                         switch (i)
                         {
                             case 0:
@@ -5143,7 +5144,7 @@ namespace GTR_Watch_face
                                 }
                                 break;
                             case 11:
-                                if (numericUpDown_Calories_Set10.Value != 1234)
+                                if (numericUpDown_Calories_Set12.Value != 1234)
                                 {
                                     //button_Set12.PerformClick();
                                     SetPreferences12();
@@ -5151,7 +5152,7 @@ namespace GTR_Watch_face
                                 }
                                 break;
                             case 12:
-                                if (numericUpDown_Calories_Set10.Value != 1234)
+                                if (numericUpDown_Calories_Set13.Value != 1234)
                                 {
                                     //button_Set13.PerformClick();
                                     SetPreferences13();

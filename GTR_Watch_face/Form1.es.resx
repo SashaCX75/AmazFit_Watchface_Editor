@@ -134,7 +134,7 @@
     <value>165, 23</value>
   </data>
   <data name="button_zip.Text" xml:space="preserve">
-    <value>bin comprimido</value>
+    <value>Comprimir bin</value>
   </data>
   <data name="button_unpack.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 23</value>
@@ -379,17 +379,104 @@
   <data name="button_SetWeather.Text" xml:space="preserve">
     <value>Clima</value>
   </data>
+  <data name="numericUpDown_WeatherSet_Temp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 32</value>
+  </data>
+  <data name="label288.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 7</value>
+  </data>
   <data name="label288.Text" xml:space="preserve">
     <value>Icono del tiempo</value>
   </data>
   <data name="label299.Text" xml:space="preserve">
     <value>Temperatura nocturna</value>
   </data>
+  <data name="comboBox_WeatherSet_Icon.Items" xml:space="preserve">
+    <value>Nublado</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items1" xml:space="preserve">
+    <value>Nublado con lluvia</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items2" xml:space="preserve">
+    <value>Nublado con nieve</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items3" xml:space="preserve">
+    <value>Esta soleado</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items4" xml:space="preserve">
+    <value>Nublado</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items5" xml:space="preserve">
+    <value>Nublado con lluvia</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items6" xml:space="preserve">
+    <value>Nublado con nieve</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items7" xml:space="preserve">
+    <value>Lluvia</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items8" xml:space="preserve">
+    <value>Nieve</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items9" xml:space="preserve">
+    <value>Fuertes nevadas</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items10" xml:space="preserve">
+    <value>Lluvia Pesada</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items11" xml:space="preserve">
+    <value>Ventoso</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items12" xml:space="preserve">
+    <value>Nieve con lluvia</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items13" xml:space="preserve">
+    <value>Niebla</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items14" xml:space="preserve">
+    <value>Niebla</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items15" xml:space="preserve">
+    <value>Trovoada</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items16" xml:space="preserve">
+    <value>Nevada</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items17" xml:space="preserve">
+    <value>Polvoriento</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items18" xml:space="preserve">
+    <value>Ducha</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items19" xml:space="preserve">
+    <value>Ciudad</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items20" xml:space="preserve">
+    <value>Tormenta con granizo</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items21" xml:space="preserve">
+    <value>Aguaceros</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items22" xml:space="preserve">
+    <value>Tormenta de arena</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items23" xml:space="preserve">
+    <value>Huracán</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Items24" xml:space="preserve">
+    <value>Inundar</value>
+  </data>
+  <data name="comboBox_WeatherSet_Icon.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 4</value>
+  </data>
   <data name="checkBox_WeatherSet_Temp.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 17</value>
   </data>
   <data name="checkBox_WeatherSet_Temp.Text" xml:space="preserve">
     <value>Temperatura</value>
+  </data>
+  <data name="checkBox_WeatherSet_DayTemp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>187, 7</value>
   </data>
   <data name="checkBox_WeatherSet_DayTemp.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 17</value>
@@ -1016,10 +1103,10 @@
     <value>Despertador</value>
   </data>
   <data name="label46.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 13</value>
+    <value>108, 13</value>
   </data>
   <data name="label46.Text" xml:space="preserve">
-    <value>Meta pasos</value>
+    <value>Objetivo de los pasos</value>
   </data>
   <data name="label45.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 13</value>
@@ -1066,15 +1153,6 @@
   <data name="button_Set1.Text" xml:space="preserve">
     <value>Valores 1</value>
   </data>
-  <data name="Number.HeaderText" xml:space="preserve">
-    <value>#</value>
-  </data>
-  <data name="NameFile.HeaderText" xml:space="preserve">
-    <value>Nombre de archivo</value>
-  </data>
-  <data name="ColumnImage.HeaderText" xml:space="preserve">
-    <value>Imagen</value>
-  </data>
   <data name="button_images.Text" xml:space="preserve">
     <value>Seleccionar</value>
   </data>
@@ -1101,21 +1179,6 @@
   </data>
   <data name="button_TextToJson.Text" xml:space="preserve">
     <value>Aplicar los cambios</value>
-  </data>
-  <data name="label286.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 13</value>
-  </data>
-  <data name="label286.Text" xml:space="preserve">
-    <value>Símbolo de error:</value>
-  </data>
-  <data name="label284.Text" xml:space="preserve">
-    <value>Símbolo "-":</value>
-  </data>
-  <data name="label285.Text" xml:space="preserve">
-    <value>Símbolo "°":</value>
-  </data>
-  <data name="groupBox_Symbols.Text" xml:space="preserve">
-    <value>Símbolos</value>
   </data>
   <data name="вставитьКоординатуХToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1253,11 +1316,188 @@
   <data name="contextMenuStrip_Y.Size" type="System.Drawing.Size, System.Drawing">
     <value>185, 82</value>
   </data>
+  <data name="checkBox_Shortcuts_Steps.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 17</value>
+  </data>
+  <data name="checkBox_Shortcuts_Steps.Text" xml:space="preserve">
+    <value>Mostrar</value>
+  </data>
+  <data name="label439.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 45</value>
+  </data>
+  <data name="label439.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 13</value>
+  </data>
+  <data name="label439.Text" xml:space="preserve">
+    <value>Ancho:</value>
+  </data>
+  <data name="label440.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 71</value>
+  </data>
+  <data name="label440.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 13</value>
+  </data>
+  <data name="label440.Text" xml:space="preserve">
+    <value>Altura:</value>
+  </data>
+  <data name="label442.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 27</value>
+  </data>
+  <data name="label442.Text" xml:space="preserve">
+    <value>Tamaño</value>
+  </data>
+  <data name="label443.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 13</value>
+  </data>
+  <data name="label443.Text" xml:space="preserve">
+    <value>Coordenadas</value>
+  </data>
+  <data name="tabPage46.Text" xml:space="preserve">
+    <value>Pasos</value>
+  </data>
+  <data name="checkBox_Shortcuts_Puls.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 17</value>
+  </data>
+  <data name="checkBox_Shortcuts_Puls.Text" xml:space="preserve">
+    <value>Mostrar</value>
+  </data>
+  <data name="label437.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 45</value>
+  </data>
+  <data name="label437.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 13</value>
+  </data>
+  <data name="label437.Text" xml:space="preserve">
+    <value>Ancho:</value>
+  </data>
+  <data name="label441.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 71</value>
+  </data>
+  <data name="label441.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 13</value>
+  </data>
+  <data name="label441.Text" xml:space="preserve">
+    <value>Altura:</value>
+  </data>
+  <data name="label444.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 27</value>
+  </data>
+  <data name="label444.Text" xml:space="preserve">
+    <value>Tamaño</value>
+  </data>
+  <data name="label445.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 13</value>
+  </data>
+  <data name="label445.Text" xml:space="preserve">
+    <value>Coordenadas</value>
+  </data>
+  <data name="tabPage47.Text" xml:space="preserve">
+    <value>Pulso</value>
+  </data>
+  <data name="checkBox_Shortcuts_Weather.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 17</value>
+  </data>
+  <data name="checkBox_Shortcuts_Weather.Text" xml:space="preserve">
+    <value>Mostrar</value>
+  </data>
+  <data name="label448.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 45</value>
+  </data>
+  <data name="label448.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 13</value>
+  </data>
+  <data name="label448.Text" xml:space="preserve">
+    <value>Ancho:</value>
+  </data>
+  <data name="label449.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 71</value>
+  </data>
+  <data name="label449.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 13</value>
+  </data>
+  <data name="label449.Text" xml:space="preserve">
+    <value>Altura:</value>
+  </data>
+  <data name="label450.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 27</value>
+  </data>
+  <data name="label450.Text" xml:space="preserve">
+    <value>Tamaño</value>
+  </data>
+  <data name="label451.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 13</value>
+  </data>
+  <data name="label451.Text" xml:space="preserve">
+    <value>Coordenadas</value>
+  </data>
+  <data name="tabPage48.Text" xml:space="preserve">
+    <value>El clima</value>
+  </data>
+  <data name="checkBox_Shortcuts_Energy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 17</value>
+  </data>
+  <data name="checkBox_Shortcuts_Energy.Text" xml:space="preserve">
+    <value>Mostrar</value>
+  </data>
+  <data name="label454.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 45</value>
+  </data>
+  <data name="label454.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 13</value>
+  </data>
+  <data name="label454.Text" xml:space="preserve">
+    <value>Ancho:</value>
+  </data>
+  <data name="label455.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 71</value>
+  </data>
+  <data name="label455.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 13</value>
+  </data>
+  <data name="label455.Text" xml:space="preserve">
+    <value>Altura:</value>
+  </data>
+  <data name="label456.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 27</value>
+  </data>
+  <data name="label456.Text" xml:space="preserve">
+    <value>Tamaño</value>
+  </data>
+  <data name="label457.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 13</value>
+  </data>
+  <data name="label457.Text" xml:space="preserve">
+    <value>Coordenadas</value>
+  </data>
+  <data name="tabPage49.Text" xml:space="preserve">
+    <value>Ahorro de energia</value>
+  </data>
+  <data name="checkBox_Shortcuts.Text" xml:space="preserve">
+    <value>Activar</value>
+  </data>
+  <data name="label286.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 13</value>
+  </data>
+  <data name="label286.Text" xml:space="preserve">
+    <value>Símbolo de error:</value>
+  </data>
+  <data name="label284.Text" xml:space="preserve">
+    <value>Símbolo "-":</value>
+  </data>
+  <data name="label285.Text" xml:space="preserve">
+    <value>Símbolo "°":</value>
+  </data>
+  <data name="groupBox_Symbols.Text" xml:space="preserve">
+    <value>Símbolos</value>
+  </data>
   <data name="checkBox_Weather_Text.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 17</value>
   </data>
   <data name="checkBox_Weather_Text.Text" xml:space="preserve">
     <value>Mostrar</value>
+  </data>
+  <data name="label270.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 45</value>
   </data>
   <data name="label270.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 13</value>
@@ -1265,17 +1505,56 @@
   <data name="label270.Text" xml:space="preserve">
     <value>Espaciado:</value>
   </data>
+  <data name="comboBox_Weather_Text_Alignment.Items" xml:space="preserve">
+    <value>Arriba izquierda</value>
+  </data>
+  <data name="comboBox_Weather_Text_Alignment.Items1" xml:space="preserve">
+    <value>Arriba centro</value>
+  </data>
+  <data name="comboBox_Weather_Text_Alignment.Items2" xml:space="preserve">
+    <value>Arriba derecha</value>
+  </data>
+  <data name="comboBox_Weather_Text_Alignment.Items3" xml:space="preserve">
+    <value>Centro izquierda</value>
+  </data>
+  <data name="comboBox_Weather_Text_Alignment.Items4" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="comboBox_Weather_Text_Alignment.Items5" xml:space="preserve">
+    <value>Centro derecha</value>
+  </data>
+  <data name="comboBox_Weather_Text_Alignment.Items6" xml:space="preserve">
+    <value>Abajo izquierda</value>
+  </data>
+  <data name="comboBox_Weather_Text_Alignment.Items7" xml:space="preserve">
+    <value>Abajo centro</value>
+  </data>
+  <data name="comboBox_Weather_Text_Alignment.Items8" xml:space="preserve">
+    <value>Abajo derecha</value>
+  </data>
   <data name="label273.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 13</value>
   </data>
   <data name="label273.Text" xml:space="preserve">
     <value>Alineación</value>
   </data>
+  <data name="label278.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label278.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 27</value>
+  </data>
   <data name="label278.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 13</value>
+    <value>120, 13</value>
   </data>
   <data name="label278.Text" xml:space="preserve">
     <value>Esquina inferior derecha</value>
+  </data>
+  <data name="label279.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label279.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 27</value>
   </data>
   <data name="label279.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 13</value>
@@ -1292,11 +1571,41 @@
   <data name="checkBox_Weather_Day.Text" xml:space="preserve">
     <value>Mostrar</value>
   </data>
+  <data name="label289.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 45</value>
+  </data>
   <data name="label289.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 13</value>
   </data>
   <data name="label289.Text" xml:space="preserve">
     <value>Espaciado:</value>
+  </data>
+  <data name="comboBox_Weather_Day_Alignment.Items" xml:space="preserve">
+    <value>Arriba izquierda</value>
+  </data>
+  <data name="comboBox_Weather_Day_Alignment.Items1" xml:space="preserve">
+    <value>Arriba centro</value>
+  </data>
+  <data name="comboBox_Weather_Day_Alignment.Items2" xml:space="preserve">
+    <value>Arriba derecha</value>
+  </data>
+  <data name="comboBox_Weather_Day_Alignment.Items3" xml:space="preserve">
+    <value>Centro izquierda</value>
+  </data>
+  <data name="comboBox_Weather_Day_Alignment.Items4" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="comboBox_Weather_Day_Alignment.Items5" xml:space="preserve">
+    <value>Centro derecha</value>
+  </data>
+  <data name="comboBox_Weather_Day_Alignment.Items6" xml:space="preserve">
+    <value>Abajo izquierda</value>
+  </data>
+  <data name="comboBox_Weather_Day_Alignment.Items7" xml:space="preserve">
+    <value>Abajo centro</value>
+  </data>
+  <data name="comboBox_Weather_Day_Alignment.Items8" xml:space="preserve">
+    <value>Abajo derecha</value>
   </data>
   <data name="label292.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 13</value>
@@ -1304,11 +1613,23 @@
   <data name="label292.Text" xml:space="preserve">
     <value>Alineación</value>
   </data>
+  <data name="label297.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label297.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 27</value>
+  </data>
   <data name="label297.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 13</value>
+    <value>120, 13</value>
   </data>
   <data name="label297.Text" xml:space="preserve">
     <value>Esquina inferior derecha</value>
+  </data>
+  <data name="label298.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label298.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 27</value>
   </data>
   <data name="label298.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 13</value>
@@ -1325,11 +1646,41 @@
   <data name="checkBox_Weather_Night.Text" xml:space="preserve">
     <value>Mostrar</value>
   </data>
+  <data name="label313.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 45</value>
+  </data>
   <data name="label313.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 13</value>
   </data>
   <data name="label313.Text" xml:space="preserve">
     <value>Espaciado:</value>
+  </data>
+  <data name="comboBox_Weather_Night_Alignment.Items" xml:space="preserve">
+    <value>Arriba izquierda</value>
+  </data>
+  <data name="comboBox_Weather_Night_Alignment.Items1" xml:space="preserve">
+    <value>Arriba centro</value>
+  </data>
+  <data name="comboBox_Weather_Night_Alignment.Items2" xml:space="preserve">
+    <value>Arriba derecha</value>
+  </data>
+  <data name="comboBox_Weather_Night_Alignment.Items3" xml:space="preserve">
+    <value>Centro izquierda</value>
+  </data>
+  <data name="comboBox_Weather_Night_Alignment.Items4" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="comboBox_Weather_Night_Alignment.Items5" xml:space="preserve">
+    <value>Centro derecha</value>
+  </data>
+  <data name="comboBox_Weather_Night_Alignment.Items6" xml:space="preserve">
+    <value>Abajo izquierda</value>
+  </data>
+  <data name="comboBox_Weather_Night_Alignment.Items7" xml:space="preserve">
+    <value>Abajo centro</value>
+  </data>
+  <data name="comboBox_Weather_Night_Alignment.Items8" xml:space="preserve">
+    <value>Abajo derecha</value>
   </data>
   <data name="label316.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 13</value>
@@ -1337,11 +1688,23 @@
   <data name="label316.Text" xml:space="preserve">
     <value>Alineación</value>
   </data>
+  <data name="label321.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label321.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 27</value>
+  </data>
   <data name="label321.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 13</value>
+    <value>120, 13</value>
   </data>
   <data name="label321.Text" xml:space="preserve">
     <value>Esquina inferior derecha</value>
+  </data>
+  <data name="label322.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label322.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 27</value>
   </data>
   <data name="label322.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 13</value>
@@ -1376,14 +1739,63 @@
   <data name="button_Weather.Text" xml:space="preserve">
     <value>Clima</value>
   </data>
+  <data name="numericUpDown_AnalogClock_Hour_Offset_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 72</value>
+  </data>
+  <data name="label349.Location" type="System.Drawing.Point, System.Drawing">
+    <value>131, 68</value>
+  </data>
+  <data name="label349.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 30</value>
+  </data>
   <data name="label349.Text" xml:space="preserve">
     <value>Eje desplazado Y</value>
+  </data>
+  <data name="numericUpDown_AnalogClock_Hour_Offset_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 41</value>
+  </data>
+  <data name="label350.Location" type="System.Drawing.Point, System.Drawing">
+    <value>131, 34</value>
+  </data>
+  <data name="label350.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 30</value>
   </data>
   <data name="label350.Text" xml:space="preserve">
     <value>Eje desplazado X</value>
   </data>
+  <data name="numericUpDown_AnalogClock_Hour_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 76</value>
+  </data>
+  <data name="label215.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label215.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-3, 68</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label215.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="label215.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 30</value>
+  </data>
   <data name="label215.Text" xml:space="preserve">
     <value>Manecilla de hora central (Y)</value>
+  </data>
+  <data name="numericUpDown_AnalogClock_Hour_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 41</value>
+  </data>
+  <data name="label216.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label216.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-3, 34</value>
+  </data>
+  <data name="label216.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="label216.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 30</value>
   </data>
   <data name="label216.Text" xml:space="preserve">
     <value>Manecilla de hora central (X)</value>
@@ -1394,6 +1806,9 @@
   <data name="checkBox_AnalogClock_Hour.Text" xml:space="preserve">
     <value>Mostrar</value>
   </data>
+  <data name="groupBox_AnalogClock_Hour.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 135</value>
+  </data>
   <data name="groupBox_AnalogClock_Hour.Text" xml:space="preserve">
     <value>Manecilla de la hora</value>
   </data>
@@ -1403,20 +1818,65 @@
   <data name="checkBox_HourCenterImage.Text" xml:space="preserve">
     <value>Mostrar</value>
   </data>
+  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>260, 7</value>
+  </data>
   <data name="groupBox4.Text" xml:space="preserve">
     <value>Imagen central</value>
   </data>
   <data name="tabPage29.Text" xml:space="preserve">
     <value>Reloj</value>
   </data>
+  <data name="numericUpDown_AnalogClock_Min_Offset_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 72</value>
+  </data>
+  <data name="label351.Location" type="System.Drawing.Point, System.Drawing">
+    <value>131, 68</value>
+  </data>
+  <data name="label351.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 30</value>
+  </data>
   <data name="label351.Text" xml:space="preserve">
     <value>Eje desplazado Y</value>
+  </data>
+  <data name="numericUpDown_AnalogClock_Min_Offset_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 41</value>
+  </data>
+  <data name="label352.Location" type="System.Drawing.Point, System.Drawing">
+    <value>131, 34</value>
+  </data>
+  <data name="label352.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 30</value>
   </data>
   <data name="label352.Text" xml:space="preserve">
     <value>Eje desplazado X</value>
   </data>
+  <data name="numericUpDown_AnalogClock_Min_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 76</value>
+  </data>
+  <data name="label208.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label208.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-5, 68</value>
+  </data>
+  <data name="label208.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 30</value>
+  </data>
   <data name="label208.Text" xml:space="preserve">
     <value>Manecilla de minutos central (Y)</value>
+  </data>
+  <data name="numericUpDown_AnalogClock_Min_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 41</value>
+  </data>
+  <data name="label209.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label209.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-5, 34</value>
+  </data>
+  <data name="label209.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 30</value>
   </data>
   <data name="label209.Text" xml:space="preserve">
     <value>Manecilla de minutos central (X)</value>
@@ -1427,6 +1887,9 @@
   <data name="checkBox_AnalogClock_Min.Text" xml:space="preserve">
     <value>Mostrar</value>
   </data>
+  <data name="groupBox_AnalogClock_Min.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 135</value>
+  </data>
   <data name="groupBox_AnalogClock_Min.Text" xml:space="preserve">
     <value>Manecilla de la hora</value>
   </data>
@@ -1435,6 +1898,9 @@
   </data>
   <data name="checkBox_MinCenterImage.Text" xml:space="preserve">
     <value>Mostrar</value>
+  </data>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>260, 7</value>
   </data>
   <data name="groupBox3.Text" xml:space="preserve">
     <value>Imagen central</value>
@@ -1448,17 +1914,62 @@
   <data name="checkBox_SecCenterImage.Text" xml:space="preserve">
     <value>Mostrar</value>
   </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>260, 7</value>
+  </data>
   <data name="groupBox2.Text" xml:space="preserve">
     <value>Imagen central</value>
+  </data>
+  <data name="numericUpDown_AnalogClock_Sec_Offset_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 72</value>
+  </data>
+  <data name="label353.Location" type="System.Drawing.Point, System.Drawing">
+    <value>131, 68</value>
+  </data>
+  <data name="label353.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 30</value>
   </data>
   <data name="label353.Text" xml:space="preserve">
     <value>Eje desplazado Y</value>
   </data>
+  <data name="numericUpDown_AnalogClock_Sec_Offset_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 41</value>
+  </data>
+  <data name="label354.Location" type="System.Drawing.Point, System.Drawing">
+    <value>131, 34</value>
+  </data>
+  <data name="label354.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 30</value>
+  </data>
   <data name="label354.Text" xml:space="preserve">
     <value>Eje desplazado X</value>
   </data>
+  <data name="numericUpDown_AnalogClock_Sec_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 76</value>
+  </data>
+  <data name="label211.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label211.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-4, 68</value>
+  </data>
+  <data name="label211.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 30</value>
+  </data>
   <data name="label211.Text" xml:space="preserve">
     <value>Centro de segunda mano (Y)</value>
+  </data>
+  <data name="numericUpDown_AnalogClock_Sec_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 41</value>
+  </data>
+  <data name="label212.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label212.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-4, 34</value>
+  </data>
+  <data name="label212.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 30</value>
   </data>
   <data name="label212.Text" xml:space="preserve">
     <value>Centro de segunda mano (X)</value>
@@ -1468,6 +1979,9 @@
   </data>
   <data name="checkBox_AnalogClock_Sec.Text" xml:space="preserve">
     <value>Mostrar</value>
+  </data>
+  <data name="groupBox_AnalogClock_Sec.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 135</value>
   </data>
   <data name="groupBox_AnalogClock_Sec.Text" xml:space="preserve">
     <value>Manecilla de la hora</value>
@@ -1487,11 +2001,41 @@
   <data name="checkBox_Battery_Text.Text" xml:space="preserve">
     <value>Mostrar</value>
   </data>
+  <data name="label184.Location" type="System.Drawing.Point, System.Drawing">
+    <value>143, 85</value>
+  </data>
   <data name="label184.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 13</value>
   </data>
   <data name="label184.Text" xml:space="preserve">
     <value>Espaciado:</value>
+  </data>
+  <data name="comboBox_Battery_Text_Alignment.Items" xml:space="preserve">
+    <value>Arriba izquierda</value>
+  </data>
+  <data name="comboBox_Battery_Text_Alignment.Items1" xml:space="preserve">
+    <value>Arriba centro</value>
+  </data>
+  <data name="comboBox_Battery_Text_Alignment.Items2" xml:space="preserve">
+    <value>Arriba derecha</value>
+  </data>
+  <data name="comboBox_Battery_Text_Alignment.Items3" xml:space="preserve">
+    <value>Centro izquierda</value>
+  </data>
+  <data name="comboBox_Battery_Text_Alignment.Items4" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="comboBox_Battery_Text_Alignment.Items5" xml:space="preserve">
+    <value>Centro derecha</value>
+  </data>
+  <data name="comboBox_Battery_Text_Alignment.Items6" xml:space="preserve">
+    <value>Abajo izquierda</value>
+  </data>
+  <data name="comboBox_Battery_Text_Alignment.Items7" xml:space="preserve">
+    <value>Abajo centro</value>
+  </data>
+  <data name="comboBox_Battery_Text_Alignment.Items8" xml:space="preserve">
+    <value>Abajo derecha</value>
   </data>
   <data name="label187.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 13</value>
@@ -1499,11 +2043,23 @@
   <data name="label187.Text" xml:space="preserve">
     <value>Alineación</value>
   </data>
+  <data name="label192.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label192.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 27</value>
+  </data>
   <data name="label192.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 13</value>
+    <value>120, 13</value>
   </data>
   <data name="label192.Text" xml:space="preserve">
     <value>Esquina inferior derecha</value>
+  </data>
+  <data name="label193.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label193.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 27</value>
   </data>
   <data name="label193.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 13</value>
@@ -1544,6 +2100,15 @@
   <data name="tabPage22.Text" xml:space="preserve">
     <value>Icono</value>
   </data>
+  <data name="comboBox_Battery_Flatness.Items" xml:space="preserve">
+    <value>Redondeado</value>
+  </data>
+  <data name="comboBox_Battery_Flatness.Items1" xml:space="preserve">
+    <value>Triangulo</value>
+  </data>
+  <data name="comboBox_Battery_Flatness.Items2" xml:space="preserve">
+    <value>Plano</value>
+  </data>
   <data name="label347.Text" xml:space="preserve">
     <value>Final de la línea</value>
   </data>
@@ -1558,6 +2123,9 @@
   </data>
   <data name="label201.Text" xml:space="preserve">
     <value>Color:</value>
+  </data>
+  <data name="label202.Location" type="System.Drawing.Point, System.Drawing">
+    <value>246, 26</value>
   </data>
   <data name="label202.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 13</value>
@@ -1592,8 +2160,20 @@
   <data name="label373.Text" xml:space="preserve">
     <value>Ángulo inicial</value>
   </data>
+  <data name="label368.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 57</value>
+  </data>
+  <data name="label368.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 30</value>
+  </data>
   <data name="label368.Text" xml:space="preserve">
     <value>Eje desplazado Y</value>
+  </data>
+  <data name="label369.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 23</value>
+  </data>
+  <data name="label369.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 30</value>
   </data>
   <data name="label369.Text" xml:space="preserve">
     <value>Eje desplazado X</value>
@@ -1640,11 +2220,17 @@
   <data name="contextMenuStrip_XY_InTable.Size" type="System.Drawing.Size, System.Drawing">
     <value>191, 108</value>
   </data>
+  <data name="tabPage42.Text" xml:space="preserve">
+    <value>Indicador</value>
+  </data>
   <data name="checkBox_Battery.Text" xml:space="preserve">
     <value>Activar</value>
   </data>
   <data name="button_Battery.Text" xml:space="preserve">
     <value>Batería</value>
+  </data>
+  <data name="label168.Location" type="System.Drawing.Point, System.Drawing">
+    <value>280, 32</value>
   </data>
   <data name="label168.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 13</value>
@@ -1658,11 +2244,17 @@
   <data name="checkBox_Bluetooth.Text" xml:space="preserve">
     <value>Mostrar</value>
   </data>
+  <data name="label165.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 32</value>
+  </data>
   <data name="label165.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 13</value>
   </data>
   <data name="label165.Text" xml:space="preserve">
     <value>Encendido:</value>
+  </data>
+  <data name="label169.Location" type="System.Drawing.Point, System.Drawing">
+    <value>280, 32</value>
   </data>
   <data name="label169.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 13</value>
@@ -1676,6 +2268,9 @@
   <data name="checkBox_Alarm.Text" xml:space="preserve">
     <value>Mostrar</value>
   </data>
+  <data name="label174.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 32</value>
+  </data>
   <data name="label174.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 13</value>
   </data>
@@ -1684,6 +2279,9 @@
   </data>
   <data name="tabPage18.Text" xml:space="preserve">
     <value>Despertador</value>
+  </data>
+  <data name="label176.Location" type="System.Drawing.Point, System.Drawing">
+    <value>280, 32</value>
   </data>
   <data name="label176.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 13</value>
@@ -1697,6 +2295,9 @@
   <data name="checkBox_Lock.Text" xml:space="preserve">
     <value>Mostrar</value>
   </data>
+  <data name="label178.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 32</value>
+  </data>
   <data name="label178.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 13</value>
   </data>
@@ -1705,6 +2306,9 @@
   </data>
   <data name="tabPage19.Text" xml:space="preserve">
     <value>Bloquear</value>
+  </data>
+  <data name="label180.Location" type="System.Drawing.Point, System.Drawing">
+    <value>280, 32</value>
   </data>
   <data name="label180.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 13</value>
@@ -1717,6 +2321,9 @@
   </data>
   <data name="checkBox_DND.Text" xml:space="preserve">
     <value>Mostrar</value>
+  </data>
+  <data name="label182.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 32</value>
   </data>
   <data name="label182.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 13</value>
@@ -1742,11 +2349,41 @@
   <data name="checkBox_ActivitySteps.Text" xml:space="preserve">
     <value>Mostrar</value>
   </data>
+  <data name="label122.Location" type="System.Drawing.Point, System.Drawing">
+    <value>143, 85</value>
+  </data>
   <data name="label122.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 13</value>
   </data>
   <data name="label122.Text" xml:space="preserve">
     <value>Espaciado:</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Alignment.Items" xml:space="preserve">
+    <value>Arriba izquierda</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Alignment.Items1" xml:space="preserve">
+    <value>Arriba centro</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Alignment.Items2" xml:space="preserve">
+    <value>Arriba derecha</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Alignment.Items3" xml:space="preserve">
+    <value>Centro izquierda</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Alignment.Items4" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Alignment.Items5" xml:space="preserve">
+    <value>Centro derecha</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Alignment.Items6" xml:space="preserve">
+    <value>Abajo izquierda</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Alignment.Items7" xml:space="preserve">
+    <value>Abajo centro</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Alignment.Items8" xml:space="preserve">
+    <value>Abajo derecha</value>
   </data>
   <data name="label125.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 13</value>
@@ -1754,11 +2391,29 @@
   <data name="label125.Text" xml:space="preserve">
     <value>Alineación</value>
   </data>
+  <data name="label130.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label130.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 27</value>
+  </data>
+  <data name="label130.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
   <data name="label130.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 13</value>
+    <value>120, 13</value>
   </data>
   <data name="label130.Text" xml:space="preserve">
     <value>Esquina inferior derecha</value>
+  </data>
+  <data name="label131.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label131.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 27</value>
+  </data>
+  <data name="label131.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="label131.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 13</value>
@@ -1787,11 +2442,41 @@
   <data name="checkBox_ActivityDistance.Text" xml:space="preserve">
     <value>Mostrar</value>
   </data>
+  <data name="label132.Location" type="System.Drawing.Point, System.Drawing">
+    <value>143, 85</value>
+  </data>
   <data name="label132.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 13</value>
   </data>
   <data name="label132.Text" xml:space="preserve">
     <value>Espaciado:</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Alignment.Items" xml:space="preserve">
+    <value>Arriba izquierda</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Alignment.Items1" xml:space="preserve">
+    <value>Arriba centro</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Alignment.Items2" xml:space="preserve">
+    <value>Arriba derecha</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Alignment.Items3" xml:space="preserve">
+    <value>Centro izquierda</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Alignment.Items4" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Alignment.Items5" xml:space="preserve">
+    <value>Centro derecha</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Alignment.Items6" xml:space="preserve">
+    <value>Abajo izquierda</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Alignment.Items7" xml:space="preserve">
+    <value>Abajo centro</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Alignment.Items8" xml:space="preserve">
+    <value>Abajo derecha</value>
   </data>
   <data name="label135.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 13</value>
@@ -1799,11 +2484,23 @@
   <data name="label135.Text" xml:space="preserve">
     <value>Alineación</value>
   </data>
+  <data name="label140.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label140.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 27</value>
+  </data>
   <data name="label140.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 13</value>
+    <value>120, 13</value>
   </data>
   <data name="label140.Text" xml:space="preserve">
     <value>Esquina inferior derecha</value>
+  </data>
+  <data name="label141.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label141.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 27</value>
   </data>
   <data name="label141.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 13</value>
@@ -1820,11 +2517,41 @@
   <data name="checkBox_ActivityPuls.Text" xml:space="preserve">
     <value>Mostrar</value>
   </data>
+  <data name="label142.Location" type="System.Drawing.Point, System.Drawing">
+    <value>143, 85</value>
+  </data>
   <data name="label142.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 13</value>
   </data>
   <data name="label142.Text" xml:space="preserve">
     <value>Espaciado:</value>
+  </data>
+  <data name="comboBox_ActivityPuls_Alignment.Items" xml:space="preserve">
+    <value>Arriba izquierda</value>
+  </data>
+  <data name="comboBox_ActivityPuls_Alignment.Items1" xml:space="preserve">
+    <value>Arriba centro</value>
+  </data>
+  <data name="comboBox_ActivityPuls_Alignment.Items2" xml:space="preserve">
+    <value>Arriba derecha</value>
+  </data>
+  <data name="comboBox_ActivityPuls_Alignment.Items3" xml:space="preserve">
+    <value>Centro izquierda</value>
+  </data>
+  <data name="comboBox_ActivityPuls_Alignment.Items4" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="comboBox_ActivityPuls_Alignment.Items5" xml:space="preserve">
+    <value>Centro derecha</value>
+  </data>
+  <data name="comboBox_ActivityPuls_Alignment.Items6" xml:space="preserve">
+    <value>Abajo izquierda</value>
+  </data>
+  <data name="comboBox_ActivityPuls_Alignment.Items7" xml:space="preserve">
+    <value>Abajo centro</value>
+  </data>
+  <data name="comboBox_ActivityPuls_Alignment.Items8" xml:space="preserve">
+    <value>Abajo derecha</value>
   </data>
   <data name="label145.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 13</value>
@@ -1832,11 +2559,23 @@
   <data name="label145.Text" xml:space="preserve">
     <value>Alineación</value>
   </data>
+  <data name="label150.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label150.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 27</value>
+  </data>
   <data name="label150.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 13</value>
+    <value>120, 13</value>
   </data>
   <data name="label150.Text" xml:space="preserve">
     <value>Esquina inferior derecha</value>
+  </data>
+  <data name="label151.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label151.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 27</value>
   </data>
   <data name="label151.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 13</value>
@@ -1847,11 +2586,92 @@
   <data name="tabPage14.Text" xml:space="preserve">
     <value>Pulso</value>
   </data>
+  <data name="comboBox_ActivityPulsScale_Flatness.Items" xml:space="preserve">
+    <value>Redondeado</value>
+  </data>
+  <data name="comboBox_ActivityPulsScale_Flatness.Items1" xml:space="preserve">
+    <value>Triangulo</value>
+  </data>
+  <data name="comboBox_ActivityPulsScale_Flatness.Items2" xml:space="preserve">
+    <value>Plano</value>
+  </data>
+  <data name="label417.Text" xml:space="preserve">
+    <value>Final de la línea</value>
+  </data>
+  <data name="label418.Text" xml:space="preserve">
+    <value>Angulo Final</value>
+  </data>
+  <data name="label419.Text" xml:space="preserve">
+    <value>Angulo Inicial</value>
+  </data>
+  <data name="label420.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 13</value>
+  </data>
+  <data name="label420.Text" xml:space="preserve">
+    <value>Color:</value>
+  </data>
+  <data name="label421.Location" type="System.Drawing.Point, System.Drawing">
+    <value>254, 26</value>
+  </data>
+  <data name="label421.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 13</value>
+  </data>
+  <data name="label421.Text" xml:space="preserve">
+    <value>Grosor:</value>
+  </data>
+  <data name="label422.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 13</value>
+  </data>
+  <data name="label422.Text" xml:space="preserve">
+    <value>Radio (Y):</value>
+  </data>
+  <data name="label423.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 13</value>
+  </data>
+  <data name="label423.Text" xml:space="preserve">
+    <value>Radio (X):</value>
+  </data>
+  <data name="label424.Text" xml:space="preserve">
+    <value>Centro (Y):</value>
+  </data>
+  <data name="label425.Text" xml:space="preserve">
+    <value>Centro (X):</value>
+  </data>
+  <data name="checkBox_ActivityPulsScale.Text" xml:space="preserve">
+    <value>Usar</value>
+  </data>
+  <data name="tabPage44.Text" xml:space="preserve">
+    <value>Pulso (Dial)</value>
+  </data>
+  <data name="label466.Text" xml:space="preserve">
+    <value>Ángulo final</value>
+  </data>
+  <data name="label467.Text" xml:space="preserve">
+    <value>Ángulo de inicio</value>
+  </data>
+  <data name="checkBox_Pulse_ClockHand.Text" xml:space="preserve">
+    <value>Mostrar</value>
+  </data>
+  <data name="tabPage51.Text" xml:space="preserve">
+    <value>Pulso (indicador de cuadrante)</value>
+  </data>
+  <data name="checkBox_ActivityPuls_IconSet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 17</value>
+  </data>
+  <data name="checkBox_ActivityPuls_IconSet.Text" xml:space="preserve">
+    <value>Mostrar</value>
+  </data>
+  <data name="tabPage45.Text" xml:space="preserve">
+    <value>Pulso (Indicador)</value>
+  </data>
   <data name="checkBox_ActivityCalories.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 17</value>
   </data>
   <data name="checkBox_ActivityCalories.Text" xml:space="preserve">
     <value>Mostrar</value>
+  </data>
+  <data name="label152.Location" type="System.Drawing.Point, System.Drawing">
+    <value>143, 85</value>
   </data>
   <data name="label152.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 13</value>
@@ -1859,17 +2679,56 @@
   <data name="label152.Text" xml:space="preserve">
     <value>Espaciado:</value>
   </data>
+  <data name="comboBox_ActivityCalories_Alignment.Items" xml:space="preserve">
+    <value>Arriba izquierda</value>
+  </data>
+  <data name="comboBox_ActivityCalories_Alignment.Items1" xml:space="preserve">
+    <value>Arriba centro</value>
+  </data>
+  <data name="comboBox_ActivityCalories_Alignment.Items2" xml:space="preserve">
+    <value>Arriba derecha</value>
+  </data>
+  <data name="comboBox_ActivityCalories_Alignment.Items3" xml:space="preserve">
+    <value>Centro izquierda</value>
+  </data>
+  <data name="comboBox_ActivityCalories_Alignment.Items4" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="comboBox_ActivityCalories_Alignment.Items5" xml:space="preserve">
+    <value>Centro derecha</value>
+  </data>
+  <data name="comboBox_ActivityCalories_Alignment.Items6" xml:space="preserve">
+    <value>Abajo izquierda</value>
+  </data>
+  <data name="comboBox_ActivityCalories_Alignment.Items7" xml:space="preserve">
+    <value>Abajo centro</value>
+  </data>
+  <data name="comboBox_ActivityCalories_Alignment.Items8" xml:space="preserve">
+    <value>Abajo derecha</value>
+  </data>
   <data name="label155.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 13</value>
   </data>
   <data name="label155.Text" xml:space="preserve">
     <value>Alineación</value>
   </data>
+  <data name="label160.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label160.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 27</value>
+  </data>
   <data name="label160.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 13</value>
+    <value>120, 13</value>
   </data>
   <data name="label160.Text" xml:space="preserve">
     <value>Esquina inferior derecha</value>
+  </data>
+  <data name="label161.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label161.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 27</value>
   </data>
   <data name="label161.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 13</value>
@@ -1879,6 +2738,75 @@
   </data>
   <data name="tabPage15.Text" xml:space="preserve">
     <value>Calorías</value>
+  </data>
+  <data name="comboBox_ActivityCaloriesScale_Flatness.Items" xml:space="preserve">
+    <value>Redondeado</value>
+  </data>
+  <data name="comboBox_ActivityCaloriesScale_Flatness.Items1" xml:space="preserve">
+    <value>Triangulo</value>
+  </data>
+  <data name="comboBox_ActivityCaloriesScale_Flatness.Items2" xml:space="preserve">
+    <value>Plano</value>
+  </data>
+  <data name="label112.Text" xml:space="preserve">
+    <value>Final de la línea</value>
+  </data>
+  <data name="label113.Text" xml:space="preserve">
+    <value>Angulo Final</value>
+  </data>
+  <data name="label114.Text" xml:space="preserve">
+    <value>Angulo Inicial</value>
+  </data>
+  <data name="label115.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 13</value>
+  </data>
+  <data name="label115.Text" xml:space="preserve">
+    <value>Color:</value>
+  </data>
+  <data name="label116.Location" type="System.Drawing.Point, System.Drawing">
+    <value>255, 26</value>
+  </data>
+  <data name="label116.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 13</value>
+  </data>
+  <data name="label116.Text" xml:space="preserve">
+    <value>Grosor:</value>
+  </data>
+  <data name="label117.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 13</value>
+  </data>
+  <data name="label117.Text" xml:space="preserve">
+    <value>Radio (Y):</value>
+  </data>
+  <data name="label118.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 13</value>
+  </data>
+  <data name="label118.Text" xml:space="preserve">
+    <value>Radio (X):</value>
+  </data>
+  <data name="label119.Text" xml:space="preserve">
+    <value>Centro (Y):</value>
+  </data>
+  <data name="label120.Text" xml:space="preserve">
+    <value>Centro (X):</value>
+  </data>
+  <data name="checkBox_ActivityCaloriesScale.Text" xml:space="preserve">
+    <value>Usar</value>
+  </data>
+  <data name="tabPage11.Text" xml:space="preserve">
+    <value>Calorías (Dial)</value>
+  </data>
+  <data name="label458.Text" xml:space="preserve">
+    <value>Ángulo final</value>
+  </data>
+  <data name="label459.Text" xml:space="preserve">
+    <value>Ángulo de inicio</value>
+  </data>
+  <data name="checkBox_Calories_ClockHand.Text" xml:space="preserve">
+    <value>Mostrar</value>
+  </data>
+  <data name="tabPage52.Text" xml:space="preserve">
+    <value>Calorías (indicador de cuadrante)</value>
   </data>
   <data name="checkBox_ActivityStar.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 17</value>
@@ -1904,6 +2832,15 @@
   <data name="checkBox_StepsProgress.Text" xml:space="preserve">
     <value>Mostrar</value>
   </data>
+  <data name="comboBox_StepsProgress_Flatness.Items" xml:space="preserve">
+    <value>Redondeado</value>
+  </data>
+  <data name="comboBox_StepsProgress_Flatness.Items1" xml:space="preserve">
+    <value>Triangulo</value>
+  </data>
+  <data name="comboBox_StepsProgress_Flatness.Items2" xml:space="preserve">
+    <value>Plano</value>
+  </data>
   <data name="label104.Text" xml:space="preserve">
     <value>Centro (X):</value>
   </data>
@@ -1916,6 +2853,9 @@
   <data name="label111.Text" xml:space="preserve">
     <value>Ángulo final</value>
   </data>
+  <data name="label107.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 26</value>
+  </data>
   <data name="label107.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 13</value>
   </data>
@@ -1924,6 +2864,9 @@
   </data>
   <data name="label110.Text" xml:space="preserve">
     <value>Ángulo inicial</value>
+  </data>
+  <data name="label106.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 52</value>
   </data>
   <data name="label106.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 13</value>
@@ -1936,6 +2879,9 @@
   </data>
   <data name="label109.Text" xml:space="preserve">
     <value>Color:</value>
+  </data>
+  <data name="label108.Location" type="System.Drawing.Point, System.Drawing">
+    <value>246, 26</value>
   </data>
   <data name="label108.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 13</value>
@@ -1955,8 +2901,20 @@
   <data name="label376.Text" xml:space="preserve">
     <value>Ángulo inicial</value>
   </data>
+  <data name="label377.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 57</value>
+  </data>
+  <data name="label377.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 30</value>
+  </data>
   <data name="label377.Text" xml:space="preserve">
     <value>Eje desplazado Y</value>
+  </data>
+  <data name="label378.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 23</value>
+  </data>
+  <data name="label378.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 30</value>
   </data>
   <data name="label378.Text" xml:space="preserve">
     <value>Eje desplazado X</value>
@@ -1991,8 +2949,29 @@
   <data name="label397.Text" xml:space="preserve">
     <value>Ángulo inicial</value>
   </data>
+  <data name="label398.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="label398.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 57</value>
+  </data>
+  <data name="label398.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="label398.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 30</value>
+  </data>
   <data name="label398.Text" xml:space="preserve">
     <value>Eje desplazado Y</value>
+  </data>
+  <data name="label399.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 23</value>
+  </data>
+  <data name="label399.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="label399.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 30</value>
   </data>
   <data name="label399.Text" xml:space="preserve">
     <value>Eje desplazado X</value>
@@ -2012,8 +2991,20 @@
   <data name="label390.Text" xml:space="preserve">
     <value>Ángulo inicial</value>
   </data>
+  <data name="label391.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 57</value>
+  </data>
+  <data name="label391.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 30</value>
+  </data>
   <data name="label391.Text" xml:space="preserve">
     <value>Eje desplazado Y</value>
+  </data>
+  <data name="label392.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 23</value>
+  </data>
+  <data name="label392.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 30</value>
   </data>
   <data name="label392.Text" xml:space="preserve">
     <value>Eje desplazado X</value>
@@ -2036,8 +3027,20 @@
   <data name="label383.Text" xml:space="preserve">
     <value>Ángulo inicial</value>
   </data>
+  <data name="label384.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 57</value>
+  </data>
+  <data name="label384.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 30</value>
+  </data>
   <data name="label384.Text" xml:space="preserve">
     <value>Eje desplazado Y</value>
+  </data>
+  <data name="label385.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 23</value>
+  </data>
+  <data name="label385.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 30</value>
   </data>
   <data name="label385.Text" xml:space="preserve">
     <value>Eje desplazado X</value>
@@ -2063,11 +3066,41 @@
   <data name="checkBox_MonthAndDayD.Text" xml:space="preserve">
     <value>Mostrar</value>
   </data>
+  <data name="label72.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 112</value>
+  </data>
   <data name="label72.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 13</value>
   </data>
   <data name="label72.Text" xml:space="preserve">
     <value>Espaciado:</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Alignment.Items" xml:space="preserve">
+    <value>Arriba izquierda</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Alignment.Items1" xml:space="preserve">
+    <value>Arriba centro</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Alignment.Items2" xml:space="preserve">
+    <value>Arriba derecha</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Alignment.Items3" xml:space="preserve">
+    <value>Centro izquierda</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Alignment.Items4" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Alignment.Items5" xml:space="preserve">
+    <value>Centro derecha</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Alignment.Items6" xml:space="preserve">
+    <value>Abajo izquierda</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Alignment.Items7" xml:space="preserve">
+    <value>Abajo centro</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Alignment.Items8" xml:space="preserve">
+    <value>Abajo derecha</value>
   </data>
   <data name="label71.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 13</value>
@@ -2075,11 +3108,29 @@
   <data name="label71.Text" xml:space="preserve">
     <value>Alineación</value>
   </data>
+  <data name="label68.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label68.Location" type="System.Drawing.Point, System.Drawing">
+    <value>124, 28</value>
+  </data>
+  <data name="label68.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
   <data name="label68.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 13</value>
+    <value>120, 13</value>
   </data>
   <data name="label68.Text" xml:space="preserve">
     <value>Esquina inferior derecha</value>
+  </data>
+  <data name="label67.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label67.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, 28</value>
+  </data>
+  <data name="label67.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="label67.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 13</value>
@@ -2096,11 +3147,44 @@
   <data name="checkBox_MonthAndDayM.Text" xml:space="preserve">
     <value>Mostrar</value>
   </data>
+  <data name="label73.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 112</value>
+  </data>
+  <data name="label73.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
   <data name="label73.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 13</value>
   </data>
   <data name="label73.Text" xml:space="preserve">
     <value>Espaciado:</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Alignment.Items" xml:space="preserve">
+    <value>Arriba izquierda</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Alignment.Items1" xml:space="preserve">
+    <value>Arriba centro</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Alignment.Items2" xml:space="preserve">
+    <value>Arriba derecha</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Alignment.Items3" xml:space="preserve">
+    <value>Centro izquierda</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Alignment.Items4" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Alignment.Items5" xml:space="preserve">
+    <value>Centro derecha</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Alignment.Items6" xml:space="preserve">
+    <value>Abajo izquierda</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Alignment.Items7" xml:space="preserve">
+    <value>Abajo centro</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Alignment.Items8" xml:space="preserve">
+    <value>Abajo derecha</value>
   </data>
   <data name="label76.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 13</value>
@@ -2108,11 +3192,29 @@
   <data name="label76.Text" xml:space="preserve">
     <value>Alineación</value>
   </data>
+  <data name="label81.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label81.Location" type="System.Drawing.Point, System.Drawing">
+    <value>124, 28</value>
+  </data>
+  <data name="label81.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
   <data name="label81.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 13</value>
+    <value>120, 13</value>
   </data>
   <data name="label81.Text" xml:space="preserve">
     <value>Esquina inferior derecha</value>
+  </data>
+  <data name="label82.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label82.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, 28</value>
+  </data>
+  <data name="label82.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="label82.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 13</value>
@@ -2135,6 +3237,9 @@
   <data name="tabPage8.Text" xml:space="preserve">
     <value>Día y mes en bloques separados.</value>
   </data>
+  <data name="label103.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 99</value>
+  </data>
   <data name="label103.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 13</value>
   </data>
@@ -2147,11 +3252,41 @@
   <data name="checkBox_OneLine.Text" xml:space="preserve">
     <value>Mostrar</value>
   </data>
+  <data name="label93.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 111</value>
+  </data>
   <data name="label93.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 13</value>
   </data>
   <data name="label93.Text" xml:space="preserve">
     <value>Espaciado:</value>
+  </data>
+  <data name="comboBox_OneLine_Alignment.Items" xml:space="preserve">
+    <value>Arriba izquierda</value>
+  </data>
+  <data name="comboBox_OneLine_Alignment.Items1" xml:space="preserve">
+    <value>Arriba centro</value>
+  </data>
+  <data name="comboBox_OneLine_Alignment.Items2" xml:space="preserve">
+    <value>Arriba derecha</value>
+  </data>
+  <data name="comboBox_OneLine_Alignment.Items3" xml:space="preserve">
+    <value>Centro izquierda</value>
+  </data>
+  <data name="comboBox_OneLine_Alignment.Items4" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="comboBox_OneLine_Alignment.Items5" xml:space="preserve">
+    <value>Centro derecha</value>
+  </data>
+  <data name="comboBox_OneLine_Alignment.Items6" xml:space="preserve">
+    <value>Abajo izquierda</value>
+  </data>
+  <data name="comboBox_OneLine_Alignment.Items7" xml:space="preserve">
+    <value>Abajo centro</value>
+  </data>
+  <data name="comboBox_OneLine_Alignment.Items8" xml:space="preserve">
+    <value>Abajo derecha</value>
   </data>
   <data name="label96.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 13</value>
@@ -2159,17 +3294,23 @@
   <data name="label96.Text" xml:space="preserve">
     <value>Alineación</value>
   </data>
-  <data name="label100.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 13</value>
+  <data name="label101.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
   </data>
-  <data name="label100.Text" xml:space="preserve">
-    <value>Recuento de imágenes:</value>
+  <data name="label101.Location" type="System.Drawing.Point, System.Drawing">
+    <value>127, 27</value>
   </data>
   <data name="label101.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 13</value>
+    <value>120, 13</value>
   </data>
   <data name="label101.Text" xml:space="preserve">
     <value>Esquina inferior derecha</value>
+  </data>
+  <data name="label102.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label102.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 27</value>
   </data>
   <data name="label102.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 13</value>
@@ -2179,6 +3320,30 @@
   </data>
   <data name="tabPage7.Text" xml:space="preserve">
     <value>Fecha en una línea</value>
+  </data>
+  <data name="checkBox_DOW_IconSet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 17</value>
+  </data>
+  <data name="checkBox_DOW_IconSet.Text" xml:space="preserve">
+    <value>Mostrar</value>
+  </data>
+  <data name="groupBox_WeekDayProgress.Text" xml:space="preserve">
+    <value>Indicador</value>
+  </data>
+  <data name="checkBox_WeekDay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 17</value>
+  </data>
+  <data name="checkBox_WeekDay.Text" xml:space="preserve">
+    <value>Mostrar</value>
+  </data>
+  <data name="groupBox__WeekDay.Text" xml:space="preserve">
+    <value>Día de la semana</value>
+  </data>
+  <data name="tabPage50.Text" xml:space="preserve">
+    <value>Dia de la semana</value>
+  </data>
+  <data name="label357.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 99</value>
   </data>
   <data name="label357.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 13</value>
@@ -2192,11 +3357,41 @@
   <data name="checkBox_Year.Text" xml:space="preserve">
     <value>Mostrar</value>
   </data>
+  <data name="label358.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 111</value>
+  </data>
   <data name="label358.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 13</value>
   </data>
   <data name="label358.Text" xml:space="preserve">
     <value>Espaciado:</value>
+  </data>
+  <data name="comboBox_Year_Alignment.Items" xml:space="preserve">
+    <value>Arriba izquierda</value>
+  </data>
+  <data name="comboBox_Year_Alignment.Items1" xml:space="preserve">
+    <value>Arriba centro</value>
+  </data>
+  <data name="comboBox_Year_Alignment.Items2" xml:space="preserve">
+    <value>Arriba derecha</value>
+  </data>
+  <data name="comboBox_Year_Alignment.Items3" xml:space="preserve">
+    <value>Centro izquierda</value>
+  </data>
+  <data name="comboBox_Year_Alignment.Items4" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="comboBox_Year_Alignment.Items5" xml:space="preserve">
+    <value>Centro derecha</value>
+  </data>
+  <data name="comboBox_Year_Alignment.Items6" xml:space="preserve">
+    <value>Abajo izquierda</value>
+  </data>
+  <data name="comboBox_Year_Alignment.Items7" xml:space="preserve">
+    <value>Abajo centro</value>
+  </data>
+  <data name="comboBox_Year_Alignment.Items8" xml:space="preserve">
+    <value>Abajo derecha</value>
   </data>
   <data name="label361.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 13</value>
@@ -2204,17 +3399,23 @@
   <data name="label361.Text" xml:space="preserve">
     <value>Alineación</value>
   </data>
-  <data name="label365.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 13</value>
+  <data name="label366.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
   </data>
-  <data name="label365.Text" xml:space="preserve">
-    <value>Recuento de imágenes:</value>
+  <data name="label366.Location" type="System.Drawing.Point, System.Drawing">
+    <value>127, 27</value>
   </data>
   <data name="label366.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 13</value>
+    <value>120, 13</value>
   </data>
   <data name="label366.Text" xml:space="preserve">
     <value>Esquina inferior derecha</value>
+  </data>
+  <data name="label367.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="label367.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 27</value>
   </data>
   <data name="label367.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 13</value>
@@ -2239,15 +3440,6 @@
   </data>
   <data name="checkBox_TwoDigitsMonth.Text" xml:space="preserve">
     <value>Dos número mes</value>
-  </data>
-  <data name="checkBox_WeekDay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 17</value>
-  </data>
-  <data name="checkBox_WeekDay.Text" xml:space="preserve">
-    <value>Mostrar</value>
-  </data>
-  <data name="groupBox__WeekDay.Text" xml:space="preserve">
-    <value>Día de la semana</value>
   </data>
   <data name="button_Date.Text" xml:space="preserve">
     <value>Fecha</value>
@@ -2338,6 +3530,9 @@
   </data>
   <data name="label356.Text" xml:space="preserve">
     <value>Idioma</value>
+  </data>
+  <data name="numericUpDown_Gif_Speed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>155, 213</value>
   </data>
   <data name="label355.Size" type="System.Drawing.Size, System.Drawing">
     <value>145, 13</value>
@@ -2438,6 +3633,66 @@
   <data name="tabPage33.Text" xml:space="preserve">
     <value>Opciones</value>
   </data>
+  <data name="label415.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 13</value>
+  </data>
+  <data name="label415.Text" xml:space="preserve">
+    <value>Ayudaron en la traducción:</value>
+  </data>
+  <data name="label412.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 13</value>
+  </data>
+  <data name="label412.Text" xml:space="preserve">
+    <value>En las pruebas al programa asistieron:</value>
+  </data>
+  <data name="label413.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 13</value>
+  </data>
+  <data name="label413.Text" xml:space="preserve">
+    <value>Utilidad para empaquetar/desempaquetar ficheros bin</value>
+  </data>
+  <data name="label_Res_PackerUnpacker.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 13</value>
+  </data>
+  <data name="label_Res_PackerUnpacker.Text" xml:space="preserve">
+    <value>Res_PackerUnpacker (Autor desconocido) </value>
+  </data>
+  <data name="linkLabel_py_amazfit_tools.Size" type="System.Drawing.Size, System.Drawing">
+    <value>262, 13</value>
+  </data>
+  <data name="linkLabel_py_amazfit_tools.Text" xml:space="preserve">
+    <value>py_amazfit_tools v0.2-beta (Autor amazfitbip)</value>
+  </data>
+  <data name="label410.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 13</value>
+  </data>
+  <data name="label410.Text" xml:space="preserve">
+    <value>Utilidad para comprimir los ficheros bin:</value>
+  </data>
+  <data name="label409.Text" xml:space="preserve">
+    <value>El programa es un editor gráfico de archivos de configuración de json watchfaces. El programa utiliza utilidades de terceros para trabajar con archivos bin watchfaces.</value>
+  </data>
+  <data name="label408.Location" type="System.Drawing.Point, System.Drawing">
+    <value>305, 35</value>
+  </data>
+  <data name="label407.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 13</value>
+  </data>
+  <data name="label407.Text" xml:space="preserve">
+    <value>Posteado por:</value>
+  </data>
+  <data name="label_version_help.Location" type="System.Drawing.Point, System.Drawing">
+    <value>275, 10</value>
+  </data>
+  <data name="label406.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="label406.Text" xml:space="preserve">
+    <value>Version:</value>
+  </data>
+  <data name="tabPage43.Text" xml:space="preserve">
+    <value>Acerca del programa</value>
+  </data>
   <data name="button_PreviewBig.Text" xml:space="preserve">
     <value>Agrandar</value>
   </data>
@@ -2461,6 +3716,9 @@
   </data>
   <data name="checkBox_crop.Text" xml:space="preserve">
     <value>Recortar imagen a la forma de pantalla (puede ir más lento)</value>
+  </data>
+  <data name="checkBox_Show_Shortcuts.Text" xml:space="preserve">
+    <value>Seleccionar areas con atajos</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -5425,365 +6683,5 @@
         SlmARUpZgEVKWYBDSFZuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+D8AAPgfAADwHwAA4A8AAMAHAADA
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
-  </data>
-  <data name="comboBox_ActivityCaloriesScale_Flatness.Items" xml:space="preserve">
-    <value>Redondeado</value>
-  </data>
-  <data name="comboBox_ActivityCaloriesScale_Flatness.Items1" xml:space="preserve">
-    <value>Triangulo</value>
-  </data>
-  <data name="comboBox_ActivityCaloriesScale_Flatness.Items2" xml:space="preserve">
-    <value>Plano</value>
-  </data>
-  <data name="comboBox_ActivityCalories_Alignment.Items" xml:space="preserve">
-    <value>Arriba izquierda</value>
-  </data>
-  <data name="comboBox_ActivityCalories_Alignment.Items1" xml:space="preserve">
-    <value>Arriba centro</value>
-  </data>
-  <data name="comboBox_ActivityCalories_Alignment.Items2" xml:space="preserve">
-    <value>Arriba derecha</value>
-  </data>
-  <data name="comboBox_ActivityCalories_Alignment.Items3" xml:space="preserve">
-    <value>Centro izquierda</value>
-  </data>
-  <data name="comboBox_ActivityCalories_Alignment.Items4" xml:space="preserve">
-    <value>Centro</value>
-  </data>
-  <data name="comboBox_ActivityCalories_Alignment.Items5" xml:space="preserve">
-    <value>Centro derecha</value>
-  </data>
-  <data name="comboBox_ActivityCalories_Alignment.Items6" xml:space="preserve">
-    <value>Abajo izquierda</value>
-  </data>
-  <data name="comboBox_ActivityCalories_Alignment.Items7" xml:space="preserve">
-    <value>Abajo centro</value>
-  </data>
-  <data name="comboBox_ActivityCalories_Alignment.Items8" xml:space="preserve">
-    <value>Abajo derecha</value>
-  </data>
-  <data name="comboBox_ActivityDistance_Alignment.Items" xml:space="preserve">
-    <value>Arriba izquierda</value>
-  </data>
-  <data name="comboBox_ActivityDistance_Alignment.Items1" xml:space="preserve">
-    <value>Arriba centro</value>
-  </data>
-  <data name="comboBox_ActivityDistance_Alignment.Items2" xml:space="preserve">
-    <value>Arriba derecha</value>
-  </data>
-  <data name="comboBox_ActivityDistance_Alignment.Items3" xml:space="preserve">
-    <value>Centro izquierda</value>
-  </data>
-  <data name="comboBox_ActivityDistance_Alignment.Items4" xml:space="preserve">
-    <value>Centro</value>
-  </data>
-  <data name="comboBox_ActivityDistance_Alignment.Items5" xml:space="preserve">
-    <value>Centro derecha</value>
-  </data>
-  <data name="comboBox_ActivityDistance_Alignment.Items6" xml:space="preserve">
-    <value>Abajo izquierda</value>
-  </data>
-  <data name="comboBox_ActivityDistance_Alignment.Items7" xml:space="preserve">
-    <value>Abajo centro</value>
-  </data>
-  <data name="comboBox_ActivityDistance_Alignment.Items8" xml:space="preserve">
-    <value>Abajo derecha</value>
-  </data>
-  <data name="comboBox_ActivityPulsScale_Flatness.Items" xml:space="preserve">
-    <value>Redondeado</value>
-  </data>
-  <data name="comboBox_ActivityPulsScale_Flatness.Items1" xml:space="preserve">
-    <value>Triangulo</value>
-  </data>
-  <data name="comboBox_ActivityPulsScale_Flatness.Items2" xml:space="preserve">
-    <value>Plano</value>
-  </data>
-  <data name="comboBox_ActivityPuls_Alignment.Items" xml:space="preserve">
-    <value>Arriba izquierda</value>
-  </data>
-  <data name="comboBox_ActivityPuls_Alignment.Items1" xml:space="preserve">
-    <value>Arriba centro</value>
-  </data>
-  <data name="comboBox_ActivityPuls_Alignment.Items2" xml:space="preserve">
-    <value>Arriba derecha</value>
-  </data>
-  <data name="comboBox_ActivityPuls_Alignment.Items3" xml:space="preserve">
-    <value>Centro izquierda</value>
-  </data>
-  <data name="comboBox_ActivityPuls_Alignment.Items4" xml:space="preserve">
-    <value>Centro</value>
-  </data>
-  <data name="comboBox_ActivityPuls_Alignment.Items5" xml:space="preserve">
-    <value>Centro derecha</value>
-  </data>
-  <data name="comboBox_ActivityPuls_Alignment.Items6" xml:space="preserve">
-    <value>Abajo izquierda</value>
-  </data>
-  <data name="comboBox_ActivityPuls_Alignment.Items7" xml:space="preserve">
-    <value>Abajo centro</value>
-  </data>
-  <data name="comboBox_ActivityPuls_Alignment.Items8" xml:space="preserve">
-    <value>Abajo derecha</value>
-  </data>
-  <data name="comboBox_ActivitySteps_Alignment.Items" xml:space="preserve">
-    <value>Arriba izquierda</value>
-  </data>
-  <data name="comboBox_ActivitySteps_Alignment.Items1" xml:space="preserve">
-    <value>Arriba centro</value>
-  </data>
-  <data name="comboBox_ActivitySteps_Alignment.Items2" xml:space="preserve">
-    <value>Arriba derecha</value>
-  </data>
-  <data name="comboBox_ActivitySteps_Alignment.Items3" xml:space="preserve">
-    <value>Centro izquierda</value>
-  </data>
-  <data name="comboBox_ActivitySteps_Alignment.Items4" xml:space="preserve">
-    <value>Centro</value>
-  </data>
-  <data name="comboBox_ActivitySteps_Alignment.Items5" xml:space="preserve">
-    <value>Centro derecha</value>
-  </data>
-  <data name="comboBox_ActivitySteps_Alignment.Items6" xml:space="preserve">
-    <value>Abajo izquierda</value>
-  </data>
-  <data name="comboBox_ActivitySteps_Alignment.Items7" xml:space="preserve">
-    <value>Abajo centro</value>
-  </data>
-  <data name="comboBox_ActivitySteps_Alignment.Items8" xml:space="preserve">
-    <value>Abajo derecha</value>
-  </data>
-  <data name="comboBox_Battery_Flatness.Items" xml:space="preserve">
-    <value>Redondeado</value>
-  </data>
-  <data name="comboBox_Battery_Flatness.Items1" xml:space="preserve">
-    <value>Triangulo</value>
-  </data>
-  <data name="comboBox_Battery_Flatness.Items2" xml:space="preserve">
-    <value>Plano</value>
-  </data>
-  <data name="comboBox_Battery_Text_Alignment.Items" xml:space="preserve">
-    <value>Arriba izquierda</value>
-  </data>
-  <data name="comboBox_Battery_Text_Alignment.Items1" xml:space="preserve">
-    <value>Arriba centro</value>
-  </data>
-  <data name="comboBox_Battery_Text_Alignment.Items2" xml:space="preserve">
-    <value>Arriba derecha</value>
-  </data>
-  <data name="comboBox_Battery_Text_Alignment.Items3" xml:space="preserve">
-    <value>Centro izquierda</value>
-  </data>
-  <data name="comboBox_Battery_Text_Alignment.Items4" xml:space="preserve">
-    <value>Centro</value>
-  </data>
-  <data name="comboBox_Battery_Text_Alignment.Items5" xml:space="preserve">
-    <value>Centro derecha</value>
-  </data>
-  <data name="comboBox_Battery_Text_Alignment.Items6" xml:space="preserve">
-    <value>Abajo izquierda</value>
-  </data>
-  <data name="comboBox_Battery_Text_Alignment.Items7" xml:space="preserve">
-    <value>Abajo centro</value>
-  </data>
-  <data name="comboBox_Battery_Text_Alignment.Items8" xml:space="preserve">
-    <value>Abajo derecha</value>
-  </data>
-  <data name="comboBox_MonthAndDayD_Alignment.Items" xml:space="preserve">
-    <value>Arriba izquierda</value>
-  </data>
-  <data name="comboBox_MonthAndDayD_Alignment.Items1" xml:space="preserve">
-    <value>Arriba centro</value>
-  </data>
-  <data name="comboBox_MonthAndDayD_Alignment.Items2" xml:space="preserve">
-    <value>Arriba derecha</value>
-  </data>
-  <data name="comboBox_MonthAndDayD_Alignment.Items3" xml:space="preserve">
-    <value>Centro izquierda</value>
-  </data>
-  <data name="comboBox_MonthAndDayD_Alignment.Items4" xml:space="preserve">
-    <value>Centro</value>
-  </data>
-  <data name="comboBox_MonthAndDayD_Alignment.Items5" xml:space="preserve">
-    <value>Centro derecha</value>
-  </data>
-  <data name="comboBox_MonthAndDayD_Alignment.Items6" xml:space="preserve">
-    <value>Abajo izquierda</value>
-  </data>
-  <data name="comboBox_MonthAndDayD_Alignment.Items7" xml:space="preserve">
-    <value>Abajo centro</value>
-  </data>
-  <data name="comboBox_MonthAndDayD_Alignment.Items8" xml:space="preserve">
-    <value>Abajo derecha</value>
-  </data>
-  <data name="comboBox_MonthAndDayM_Alignment.Items" xml:space="preserve">
-    <value>Arriba izquierda</value>
-  </data>
-  <data name="comboBox_MonthAndDayM_Alignment.Items1" xml:space="preserve">
-    <value>Arriba centro</value>
-  </data>
-  <data name="comboBox_MonthAndDayM_Alignment.Items2" xml:space="preserve">
-    <value>Arriba derecha</value>
-  </data>
-  <data name="comboBox_MonthAndDayM_Alignment.Items3" xml:space="preserve">
-    <value>Centro izquierda</value>
-  </data>
-  <data name="comboBox_MonthAndDayM_Alignment.Items4" xml:space="preserve">
-    <value>Centro</value>
-  </data>
-  <data name="comboBox_MonthAndDayM_Alignment.Items5" xml:space="preserve">
-    <value>Centro derecha</value>
-  </data>
-  <data name="comboBox_MonthAndDayM_Alignment.Items6" xml:space="preserve">
-    <value>Abajo izquierda</value>
-  </data>
-  <data name="comboBox_MonthAndDayM_Alignment.Items7" xml:space="preserve">
-    <value>Abajo centro</value>
-  </data>
-  <data name="comboBox_MonthAndDayM_Alignment.Items8" xml:space="preserve">
-    <value>Abajo derecha</value>
-  </data>
-  <data name="comboBox_OneLine_Alignment.Items" xml:space="preserve">
-    <value>Arriba izquierda</value>
-  </data>
-  <data name="comboBox_OneLine_Alignment.Items1" xml:space="preserve">
-    <value>Arriba centro</value>
-  </data>
-  <data name="comboBox_OneLine_Alignment.Items2" xml:space="preserve">
-    <value>Arriba derecha</value>
-  </data>
-  <data name="comboBox_OneLine_Alignment.Items3" xml:space="preserve">
-    <value>Centro izquierda</value>
-  </data>
-  <data name="comboBox_OneLine_Alignment.Items4" xml:space="preserve">
-    <value>Centro</value>
-  </data>
-  <data name="comboBox_OneLine_Alignment.Items5" xml:space="preserve">
-    <value>Centro derecha</value>
-  </data>
-  <data name="comboBox_OneLine_Alignment.Items6" xml:space="preserve">
-    <value>Abajo izquierda</value>
-  </data>
-  <data name="comboBox_OneLine_Alignment.Items7" xml:space="preserve">
-    <value>Abajo centro</value>
-  </data>
-  <data name="comboBox_OneLine_Alignment.Items8" xml:space="preserve">
-    <value>Abajo derecha</value>
-  </data>
-  <data name="comboBox_StepsProgress_Flatness.Items" xml:space="preserve">
-    <value>Redondeado</value>
-  </data>
-  <data name="comboBox_StepsProgress_Flatness.Items1" xml:space="preserve">
-    <value>Triangulo</value>
-  </data>
-  <data name="comboBox_StepsProgress_Flatness.Items2" xml:space="preserve">
-    <value>Plano</value>
-  </data>
-  <data name="comboBox_Weather_Day_Alignment.Items" xml:space="preserve">
-    <value>Arriba izquierda</value>
-  </data>
-  <data name="comboBox_Weather_Day_Alignment.Items1" xml:space="preserve">
-    <value>Arriba centro</value>
-  </data>
-  <data name="comboBox_Weather_Day_Alignment.Items2" xml:space="preserve">
-    <value>Arriba derecha</value>
-  </data>
-  <data name="comboBox_Weather_Day_Alignment.Items3" xml:space="preserve">
-    <value>Centro izquierda</value>
-  </data>
-  <data name="comboBox_Weather_Day_Alignment.Items4" xml:space="preserve">
-    <value>Centro</value>
-  </data>
-  <data name="comboBox_Weather_Day_Alignment.Items5" xml:space="preserve">
-    <value>Centro derecha</value>
-  </data>
-  <data name="comboBox_Weather_Day_Alignment.Items6" xml:space="preserve">
-    <value>Abajo izquierda</value>
-  </data>
-  <data name="comboBox_Weather_Day_Alignment.Items7" xml:space="preserve">
-    <value>Abajo centro</value>
-  </data>
-  <data name="comboBox_Weather_Day_Alignment.Items8" xml:space="preserve">
-    <value>Abajo derecha</value>
-  </data>
-  <data name="comboBox_Weather_Night_Alignment.Items" xml:space="preserve">
-    <value>Arriba izquierda</value>
-  </data>
-  <data name="comboBox_Weather_Night_Alignment.Items1" xml:space="preserve">
-    <value>Arriba centro</value>
-  </data>
-  <data name="comboBox_Weather_Night_Alignment.Items2" xml:space="preserve">
-    <value>Arriba derecha</value>
-  </data>
-  <data name="comboBox_Weather_Night_Alignment.Items3" xml:space="preserve">
-    <value>Centro izquierda</value>
-  </data>
-  <data name="comboBox_Weather_Night_Alignment.Items4" xml:space="preserve">
-    <value>Centro</value>
-  </data>
-  <data name="comboBox_Weather_Night_Alignment.Items5" xml:space="preserve">
-    <value>Centro derecha</value>
-  </data>
-  <data name="comboBox_Weather_Night_Alignment.Items6" xml:space="preserve">
-    <value>Abajo izquierda</value>
-  </data>
-  <data name="comboBox_Weather_Night_Alignment.Items7" xml:space="preserve">
-    <value>Abajo centro</value>
-  </data>
-  <data name="comboBox_Weather_Night_Alignment.Items8" xml:space="preserve">
-    <value>Abajo derecha</value>
-  </data>
-  <data name="comboBox_Weather_Text_Alignment.Items" xml:space="preserve">
-    <value>Arriba izquierda</value>
-  </data>
-  <data name="comboBox_Weather_Text_Alignment.Items1" xml:space="preserve">
-    <value>Arriba centro</value>
-  </data>
-  <data name="comboBox_Weather_Text_Alignment.Items2" xml:space="preserve">
-    <value>Arriba derecha</value>
-  </data>
-  <data name="comboBox_Weather_Text_Alignment.Items3" xml:space="preserve">
-    <value>Centro izquierda</value>
-  </data>
-  <data name="comboBox_Weather_Text_Alignment.Items4" xml:space="preserve">
-    <value>Centro</value>
-  </data>
-  <data name="comboBox_Weather_Text_Alignment.Items5" xml:space="preserve">
-    <value>Centro derecha</value>
-  </data>
-  <data name="comboBox_Weather_Text_Alignment.Items6" xml:space="preserve">
-    <value>Abajo izquierda</value>
-  </data>
-  <data name="comboBox_Weather_Text_Alignment.Items7" xml:space="preserve">
-    <value>Abajo centro</value>
-  </data>
-  <data name="comboBox_Weather_Text_Alignment.Items8" xml:space="preserve">
-    <value>Abajo derecha</value>
-  </data>
-  <data name="comboBox_Year_Alignment.Items" xml:space="preserve">
-    <value>Arriba izquierda</value>
-  </data>
-  <data name="comboBox_Year_Alignment.Items1" xml:space="preserve">
-    <value>Arriba centro</value>
-  </data>
-  <data name="comboBox_Year_Alignment.Items2" xml:space="preserve">
-    <value>Arriba derecha</value>
-  </data>
-  <data name="comboBox_Year_Alignment.Items3" xml:space="preserve">
-    <value>Centro izquierda</value>
-  </data>
-  <data name="comboBox_Year_Alignment.Items4" xml:space="preserve">
-    <value>Centro</value>
-  </data>
-  <data name="comboBox_Year_Alignment.Items5" xml:space="preserve">
-    <value>Centro derecha</value>
-  </data>
-  <data name="comboBox_Year_Alignment.Items6" xml:space="preserve">
-    <value>Abajo izquierda</value>
-  </data>
-  <data name="comboBox_Year_Alignment.Items7" xml:space="preserve">
-    <value>Abajo centro</value>
-  </data>
-  <data name="comboBox_Year_Alignment.Items8" xml:space="preserve">
-    <value>Abajo derecha</value>
   </data>
 </root>
