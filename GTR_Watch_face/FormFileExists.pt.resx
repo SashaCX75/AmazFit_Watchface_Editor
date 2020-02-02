@@ -3082,4 +3082,22 @@
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
   </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>O arquivo já existe</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>Substituir</value>
+  </data>
+  <data name="button3.Text" xml:space="preserve">
+    <value>Salvar ambos</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Um arquivo de observação com o mesmo nome já existe.</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Substituir arquivo existente?</value>
+  </data>
 </root>

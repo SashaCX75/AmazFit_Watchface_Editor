@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button_zip_unpack = new System.Windows.Forms.Button();
@@ -509,6 +509,9 @@
             this.tabControl_AnalogClock = new System.Windows.Forms.TabControl();
             this.tabPage29 = new System.Windows.Forms.TabPage();
             this.groupBox_AnalogClock_Hour = new System.Windows.Forms.GroupBox();
+            this.numericUpDown_AnalogClock_Hour_X = new System.Windows.Forms.NumericUpDown();
+            this.label216 = new System.Windows.Forms.Label();
+            this.checkBox_AnalogClock_Hour = new System.Windows.Forms.CheckBox();
             this.numericUpDown_AnalogClock_Hour_Offset_Y = new System.Windows.Forms.NumericUpDown();
             this.label349 = new System.Windows.Forms.Label();
             this.numericUpDown_AnalogClock_Hour_Offset_X = new System.Windows.Forms.NumericUpDown();
@@ -517,9 +520,6 @@
             this.label217 = new System.Windows.Forms.Label();
             this.numericUpDown_AnalogClock_Hour_Y = new System.Windows.Forms.NumericUpDown();
             this.label215 = new System.Windows.Forms.Label();
-            this.numericUpDown_AnalogClock_Hour_X = new System.Windows.Forms.NumericUpDown();
-            this.label216 = new System.Windows.Forms.Label();
-            this.checkBox_AnalogClock_Hour = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.comboBox_HourCenterImage_Image = new System.Windows.Forms.ComboBox();
             this.label310 = new System.Windows.Forms.Label();
@@ -1216,6 +1216,9 @@
             this.button_Background = new System.Windows.Forms.Button();
             this.richTextBox_JSON = new System.Windows.Forms.RichTextBox();
             this.tabPage33 = new System.Windows.Forms.TabPage();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.checkBox_Shortcuts_Border = new System.Windows.Forms.CheckBox();
+            this.checkBox_Shortcuts_Area = new System.Windows.Forms.CheckBox();
             this.button_Reset = new System.Windows.Forms.Button();
             this.checkBox_JsonWarnings = new System.Windows.Forms.CheckBox();
             this.comboBox_Language = new System.Windows.Forms.ComboBox();
@@ -1440,10 +1443,10 @@
             this.tabControl_AnalogClock.SuspendLayout();
             this.tabPage29.SuspendLayout();
             this.groupBox_AnalogClock_Hour.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Hour_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Hour_Offset_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Hour_Offset_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Hour_Y)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Hour_X)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_HourCenterImage_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_HourCenterImage_X)).BeginInit();
@@ -1708,6 +1711,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Sec_Tens_X)).BeginInit();
             this.panel_Background.SuspendLayout();
             this.tabPage33.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Gif_Speed)).BeginInit();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -6140,8 +6144,8 @@
             // Number
             // 
             this.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Number.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Number.DefaultCellStyle = dataGridViewCellStyle2;
             resources.ApplyResources(this.Number, "Number");
             this.Number.Name = "Number";
             this.Number.ReadOnly = true;
@@ -8347,6 +8351,9 @@
             // groupBox_AnalogClock_Hour
             // 
             resources.ApplyResources(this.groupBox_AnalogClock_Hour, "groupBox_AnalogClock_Hour");
+            this.groupBox_AnalogClock_Hour.Controls.Add(this.numericUpDown_AnalogClock_Hour_X);
+            this.groupBox_AnalogClock_Hour.Controls.Add(this.label216);
+            this.groupBox_AnalogClock_Hour.Controls.Add(this.checkBox_AnalogClock_Hour);
             this.groupBox_AnalogClock_Hour.Controls.Add(this.numericUpDown_AnalogClock_Hour_Offset_Y);
             this.groupBox_AnalogClock_Hour.Controls.Add(this.label349);
             this.groupBox_AnalogClock_Hour.Controls.Add(this.numericUpDown_AnalogClock_Hour_Offset_X);
@@ -8355,9 +8362,6 @@
             this.groupBox_AnalogClock_Hour.Controls.Add(this.label217);
             this.groupBox_AnalogClock_Hour.Controls.Add(this.numericUpDown_AnalogClock_Hour_Y);
             this.groupBox_AnalogClock_Hour.Controls.Add(this.label215);
-            this.groupBox_AnalogClock_Hour.Controls.Add(this.numericUpDown_AnalogClock_Hour_X);
-            this.groupBox_AnalogClock_Hour.Controls.Add(this.label216);
-            this.groupBox_AnalogClock_Hour.Controls.Add(this.checkBox_AnalogClock_Hour);
             this.helpProvider1.SetHelpKeyword(this.groupBox_AnalogClock_Hour, resources.GetString("groupBox_AnalogClock_Hour.HelpKeyword"));
             this.helpProvider1.SetHelpNavigator(this.groupBox_AnalogClock_Hour, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("groupBox_AnalogClock_Hour.HelpNavigator"))));
             this.helpProvider1.SetHelpString(this.groupBox_AnalogClock_Hour, resources.GetString("groupBox_AnalogClock_Hour.HelpString"));
@@ -8365,6 +8369,49 @@
             this.helpProvider1.SetShowHelp(this.groupBox_AnalogClock_Hour, ((bool)(resources.GetObject("groupBox_AnalogClock_Hour.ShowHelp"))));
             this.groupBox_AnalogClock_Hour.TabStop = false;
             this.groupBox_AnalogClock_Hour.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            // 
+            // numericUpDown_AnalogClock_Hour_X
+            // 
+            resources.ApplyResources(this.numericUpDown_AnalogClock_Hour_X, "numericUpDown_AnalogClock_Hour_X");
+            this.helpProvider1.SetHelpKeyword(this.numericUpDown_AnalogClock_Hour_X, resources.GetString("numericUpDown_AnalogClock_Hour_X.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.numericUpDown_AnalogClock_Hour_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_AnalogClock_Hour_X.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.numericUpDown_AnalogClock_Hour_X, resources.GetString("numericUpDown_AnalogClock_Hour_X.HelpString"));
+            this.numericUpDown_AnalogClock_Hour_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_AnalogClock_Hour_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_AnalogClock_Hour_X.Name = "numericUpDown_AnalogClock_Hour_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_AnalogClock_Hour_X, ((bool)(resources.GetObject("numericUpDown_AnalogClock_Hour_X.ShowHelp"))));
+            this.numericUpDown_AnalogClock_Hour_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label216
+            // 
+            resources.ApplyResources(this.label216, "label216");
+            this.label216.BackColor = System.Drawing.Color.Transparent;
+            this.helpProvider1.SetHelpKeyword(this.label216, resources.GetString("label216.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.label216, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label216.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.label216, resources.GetString("label216.HelpString"));
+            this.label216.Name = "label216";
+            this.helpProvider1.SetShowHelp(this.label216, ((bool)(resources.GetObject("label216.ShowHelp"))));
+            // 
+            // checkBox_AnalogClock_Hour
+            // 
+            resources.ApplyResources(this.checkBox_AnalogClock_Hour, "checkBox_AnalogClock_Hour");
+            this.checkBox_AnalogClock_Hour.BackColor = System.Drawing.Color.Transparent;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_AnalogClock_Hour, resources.GetString("checkBox_AnalogClock_Hour.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_AnalogClock_Hour, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_AnalogClock_Hour.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_AnalogClock_Hour, resources.GetString("checkBox_AnalogClock_Hour.HelpString"));
+            this.checkBox_AnalogClock_Hour.Name = "checkBox_AnalogClock_Hour";
+            this.helpProvider1.SetShowHelp(this.checkBox_AnalogClock_Hour, ((bool)(resources.GetObject("checkBox_AnalogClock_Hour.ShowHelp"))));
+            this.checkBox_AnalogClock_Hour.UseVisualStyleBackColor = false;
+            this.checkBox_AnalogClock_Hour.CheckedChanged += new System.EventHandler(this.checkBox_AnalogClock_Hour_CheckedChanged);
+            this.checkBox_AnalogClock_Hour.MouseClick += new System.Windows.Forms.MouseEventHandler(this.checkBox_Click);
             // 
             // numericUpDown_AnalogClock_Hour_Offset_Y
             // 
@@ -8480,47 +8527,6 @@
             this.helpProvider1.SetHelpString(this.label215, resources.GetString("label215.HelpString"));
             this.label215.Name = "label215";
             this.helpProvider1.SetShowHelp(this.label215, ((bool)(resources.GetObject("label215.ShowHelp"))));
-            // 
-            // numericUpDown_AnalogClock_Hour_X
-            // 
-            resources.ApplyResources(this.numericUpDown_AnalogClock_Hour_X, "numericUpDown_AnalogClock_Hour_X");
-            this.helpProvider1.SetHelpKeyword(this.numericUpDown_AnalogClock_Hour_X, resources.GetString("numericUpDown_AnalogClock_Hour_X.HelpKeyword"));
-            this.helpProvider1.SetHelpNavigator(this.numericUpDown_AnalogClock_Hour_X, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("numericUpDown_AnalogClock_Hour_X.HelpNavigator"))));
-            this.helpProvider1.SetHelpString(this.numericUpDown_AnalogClock_Hour_X, resources.GetString("numericUpDown_AnalogClock_Hour_X.HelpString"));
-            this.numericUpDown_AnalogClock_Hour_X.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_AnalogClock_Hour_X.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_AnalogClock_Hour_X.Name = "numericUpDown_AnalogClock_Hour_X";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_AnalogClock_Hour_X, ((bool)(resources.GetObject("numericUpDown_AnalogClock_Hour_X.ShowHelp"))));
-            this.numericUpDown_AnalogClock_Hour_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // label216
-            // 
-            resources.ApplyResources(this.label216, "label216");
-            this.helpProvider1.SetHelpKeyword(this.label216, resources.GetString("label216.HelpKeyword"));
-            this.helpProvider1.SetHelpNavigator(this.label216, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("label216.HelpNavigator"))));
-            this.helpProvider1.SetHelpString(this.label216, resources.GetString("label216.HelpString"));
-            this.label216.Name = "label216";
-            this.helpProvider1.SetShowHelp(this.label216, ((bool)(resources.GetObject("label216.ShowHelp"))));
-            // 
-            // checkBox_AnalogClock_Hour
-            // 
-            resources.ApplyResources(this.checkBox_AnalogClock_Hour, "checkBox_AnalogClock_Hour");
-            this.helpProvider1.SetHelpKeyword(this.checkBox_AnalogClock_Hour, resources.GetString("checkBox_AnalogClock_Hour.HelpKeyword"));
-            this.helpProvider1.SetHelpNavigator(this.checkBox_AnalogClock_Hour, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_AnalogClock_Hour.HelpNavigator"))));
-            this.helpProvider1.SetHelpString(this.checkBox_AnalogClock_Hour, resources.GetString("checkBox_AnalogClock_Hour.HelpString"));
-            this.checkBox_AnalogClock_Hour.Name = "checkBox_AnalogClock_Hour";
-            this.helpProvider1.SetShowHelp(this.checkBox_AnalogClock_Hour, ((bool)(resources.GetObject("checkBox_AnalogClock_Hour.ShowHelp"))));
-            this.checkBox_AnalogClock_Hour.UseVisualStyleBackColor = true;
-            this.checkBox_AnalogClock_Hour.CheckedChanged += new System.EventHandler(this.checkBox_AnalogClock_Hour_CheckedChanged);
-            this.checkBox_AnalogClock_Hour.MouseClick += new System.Windows.Forms.MouseEventHandler(this.checkBox_Click);
             // 
             // groupBox4
             // 
@@ -18608,6 +18614,7 @@
             // 
             resources.ApplyResources(this.tabPage33, "tabPage33");
             this.tabPage33.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage33.Controls.Add(this.groupBox8);
             this.tabPage33.Controls.Add(this.button_Reset);
             this.tabPage33.Controls.Add(this.checkBox_JsonWarnings);
             this.tabPage33.Controls.Add(this.comboBox_Language);
@@ -18623,6 +18630,47 @@
             this.helpProvider1.SetHelpString(this.tabPage33, resources.GetString("tabPage33.HelpString"));
             this.tabPage33.Name = "tabPage33";
             this.helpProvider1.SetShowHelp(this.tabPage33, ((bool)(resources.GetObject("tabPage33.ShowHelp"))));
+            // 
+            // groupBox8
+            // 
+            resources.ApplyResources(this.groupBox8, "groupBox8");
+            this.groupBox8.Controls.Add(this.checkBox_Shortcuts_Border);
+            this.groupBox8.Controls.Add(this.checkBox_Shortcuts_Area);
+            this.helpProvider1.SetHelpKeyword(this.groupBox8, resources.GetString("groupBox8.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.groupBox8, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("groupBox8.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.groupBox8, resources.GetString("groupBox8.HelpString"));
+            this.groupBox8.Name = "groupBox8";
+            this.helpProvider1.SetShowHelp(this.groupBox8, ((bool)(resources.GetObject("groupBox8.ShowHelp"))));
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            // 
+            // checkBox_Shortcuts_Border
+            // 
+            resources.ApplyResources(this.checkBox_Shortcuts_Border, "checkBox_Shortcuts_Border");
+            this.checkBox_Shortcuts_Border.Checked = true;
+            this.checkBox_Shortcuts_Border.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Shortcuts_Border, resources.GetString("checkBox_Shortcuts_Border.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Shortcuts_Border, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Shortcuts_Border.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Shortcuts_Border, resources.GetString("checkBox_Shortcuts_Border.HelpString"));
+            this.checkBox_Shortcuts_Border.Name = "checkBox_Shortcuts_Border";
+            this.helpProvider1.SetShowHelp(this.checkBox_Shortcuts_Border, ((bool)(resources.GetObject("checkBox_Shortcuts_Border.ShowHelp"))));
+            this.checkBox_Shortcuts_Border.UseVisualStyleBackColor = true;
+            this.checkBox_Shortcuts_Border.CheckedChanged += new System.EventHandler(this.checkBox_Shortcuts_Area_CheckedChanged);
+            this.checkBox_Shortcuts_Border.Click += new System.EventHandler(this.checkBox_Click);
+            // 
+            // checkBox_Shortcuts_Area
+            // 
+            resources.ApplyResources(this.checkBox_Shortcuts_Area, "checkBox_Shortcuts_Area");
+            this.checkBox_Shortcuts_Area.Checked = true;
+            this.checkBox_Shortcuts_Area.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.helpProvider1.SetHelpKeyword(this.checkBox_Shortcuts_Area, resources.GetString("checkBox_Shortcuts_Area.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.checkBox_Shortcuts_Area, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("checkBox_Shortcuts_Area.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.checkBox_Shortcuts_Area, resources.GetString("checkBox_Shortcuts_Area.HelpString"));
+            this.checkBox_Shortcuts_Area.Name = "checkBox_Shortcuts_Area";
+            this.helpProvider1.SetShowHelp(this.checkBox_Shortcuts_Area, ((bool)(resources.GetObject("checkBox_Shortcuts_Area.ShowHelp"))));
+            this.checkBox_Shortcuts_Area.UseVisualStyleBackColor = true;
+            this.checkBox_Shortcuts_Area.CheckedChanged += new System.EventHandler(this.checkBox_Shortcuts_Area_CheckedChanged);
+            this.checkBox_Shortcuts_Area.Click += new System.EventHandler(this.checkBox_Click);
             // 
             // button_Reset
             // 
@@ -19526,10 +19574,10 @@
             this.tabPage29.ResumeLayout(false);
             this.groupBox_AnalogClock_Hour.ResumeLayout(false);
             this.groupBox_AnalogClock_Hour.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Hour_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Hour_Offset_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Hour_Offset_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Hour_Y)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Hour_X)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_HourCenterImage_Y)).EndInit();
@@ -19847,6 +19895,8 @@
             this.panel_Background.PerformLayout();
             this.tabPage33.ResumeLayout(false);
             this.tabPage33.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Gif_Speed)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
@@ -21114,6 +21164,9 @@
         private System.Windows.Forms.NumericUpDown numericUpDown_Calories_ClockHand_X;
         private System.Windows.Forms.Label label465;
         private System.Windows.Forms.CheckBox checkBox_Calories_ClockHand;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.CheckBox checkBox_Shortcuts_Area;
+        private System.Windows.Forms.CheckBox checkBox_Shortcuts_Border;
     }
 }
 

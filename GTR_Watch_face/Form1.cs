@@ -326,7 +326,10 @@ namespace GTR_Watch_face
             radioButton_Settings_Unpack_Save.Checked = Program_Settings.Settings_Unpack_Save;
             numericUpDown_Gif_Speed.Value = (decimal)Program_Settings.Gif_Speed;
 
-            if(Program_Settings.language.Length>1) comboBox_Language.Text = Program_Settings.language;
+            checkBox_Shortcuts_Area.Checked = Program_Settings.Shortcuts_Area;
+            checkBox_Shortcuts_Border.Checked = Program_Settings.Shortcuts_Border;
+
+            if (Program_Settings.language.Length>1) comboBox_Language.Text = Program_Settings.language;
 
             Settings_Load = false;
 
@@ -1261,7 +1264,7 @@ namespace GTR_Watch_face
             float scale = 1.0f;
             if (panel_Preview.Height < 300) scale = 0.5f;
             PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, 
-                checkBox_border.Checked, checkBox_Show_Shortcuts.Checked);
+                checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked);
             gPanel.Dispose();
 
             if ((formPreview != null) && (formPreview.Visible))
@@ -1274,7 +1277,8 @@ namespace GTR_Watch_face
                 if (formPreview.radioButton_xlarge.Checked) scalePreview = 2.0f;
                 if (formPreview.radioButton_xxlarge.Checked) scalePreview = 2.5f;
                 PreviewToBitmap(gPanelPreview, scalePreview, checkBox_crop.Checked, checkBox_WebW.Checked, 
-                    checkBox_WebB.Checked, checkBox_border.Checked, checkBox_Show_Shortcuts.Checked);
+                    checkBox_WebB.Checked, checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, 
+                    checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked);
                 gPanelPreview.Dispose();
                 
             }
@@ -3862,7 +3866,8 @@ namespace GTR_Watch_face
                     File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
 
                     PreviewToBitmap(gPanelPreviewResize, scalePreviewResize, checkBox_crop.Checked,
-                        checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked, checkBox_Show_Shortcuts.Checked);
+                        checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked, 
+                        checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked);
                     gPanelPreviewResize.Dispose();
                 };
 
@@ -3906,7 +3911,8 @@ namespace GTR_Watch_face
             if (formPreview.radioButton_xxlarge.Checked) scale = 2.5f;
 
             PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, 
-                checkBox_border.Checked, checkBox_Show_Shortcuts.Checked);
+                checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, 
+                checkBox_Shortcuts_Border.Checked);
             gPanel.Dispose();
 
             button_PreviewBig.Enabled = false;
@@ -5016,7 +5022,7 @@ namespace GTR_Watch_face
                     mask = new Bitmap(@"Mask\mask_gts.png");
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
-                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false);
+                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false);
                 if(checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
                 bitmap.Save(saveFileDialog.FileName, ImageFormat.Png);
             }
@@ -5173,7 +5179,7 @@ namespace GTR_Watch_face
                             numericUpDown_WeatherSet_NightTemp.Value = numericUpDown_WeatherSet_Temp.Value - rnd.Next(3, 10);
                             comboBox_WeatherSet_Icon.SelectedIndex = rnd.Next(0, 25);
 
-                            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false);
+                            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false);
                             if (checkBox_crop.Checked) {
                                 bitmap = ApplyMask(bitmap, mask);
                                 gPanel = Graphics.FromImage(bitmap);
@@ -5322,7 +5328,8 @@ namespace GTR_Watch_face
                 if (formPreview.radioButton_xlarge.Checked) scalePreviewPaint = 2.0f;
                 if (formPreview.radioButton_xxlarge.Checked) scalePreviewPaint = 2.5f;
                 PreviewToBitmap(gPanelPreviewPaint, scalePreviewPaint, checkBox_crop.Checked,
-                    checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked, checkBox_Show_Shortcuts.Checked);
+                    checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked, 
+                    checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked);
                 gPanelPreviewPaint.Dispose();
             }
         }
@@ -6048,6 +6055,19 @@ namespace GTR_Watch_face
             string helpfile = Application.StartupPath + Properties.FormStrings.File_ReadMy;
             HelpNavigator navigator = HelpNavigator.Topic;
             Help.ShowHelp(this, helpfile, navigator, "kratkaya_instruktsiya.htm");
+        }
+
+        private void checkBox_Shortcuts_Area_CheckedChanged(object sender, EventArgs e)
+        {
+            Program_Settings.Shortcuts_Area = checkBox_Shortcuts_Area.Checked;
+            Program_Settings.Shortcuts_Border = checkBox_Shortcuts_Border.Checked;
+
+            string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+            {
+                //DefaultValueHandling = DefaultValueHandling.Ignore,
+                NullValueHandling = NullValueHandling.Ignore
+            });
+            File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
         }
     }
 }

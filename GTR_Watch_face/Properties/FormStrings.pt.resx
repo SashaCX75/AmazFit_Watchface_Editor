@@ -118,135 +118,135 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Dialog_Title_Image" xml:space="preserve">
-    <value>Select image files</value>
+    <value>Selecionar arquivos de imagem</value>
   </data>
   <data name="Dialog_Title_Pack" xml:space="preserve">
-    <value>Select a dial settings file</value>
+    <value>Selecione um arquivo de configurações de discagem</value>
   </data>
   <data name="Dialog_Title_PackUnpack" xml:space="preserve">
-    <value>Path to the packer file</value>
+    <value>Caminho para o arquivo do empacotador</value>
   </data>
   <data name="Dialog_Title_PreviewStates" xml:space="preserve">
-    <value>Select a preview settings file</value>
+    <value>Selecione um arquivo de configurações de visualização</value>
   </data>
   <data name="Dialog_Title_SaveGIF" xml:space="preserve">
-    <value>Save the animated preview</value>
+    <value>Salve a visualização animada</value>
   </data>
   <data name="Dialog_Title_SavePNG" xml:space="preserve">
-    <value>Save preview</value>
+    <value>Salvar visualização</value>
   </data>
   <data name="Dialog_Title_Unpack" xml:space="preserve">
-    <value>Select a watch file</value>
+    <value>Selecionando um arquivo watch</value>
   </data>
   <data name="Form_Preview" xml:space="preserve">
-    <value>Preview</value>
+    <value>Pré-visualização</value>
   </data>
   <data name="Form_PreviewX" xml:space="preserve">
-    <value>Preview [X =</value>
+    <value>Visualizar [X =</value>
   </data>
   <data name="Message_bigFile_Caption" xml:space="preserve">
-    <value>Large file size</value>
+    <value>Tamanho do arquivo grande</value>
   </data>
   <data name="Message_bigFile_Text1" xml:space="preserve">
-    <value>Uncompressed file size exceeds 1.95MB.</value>
+    <value>O tamanho do arquivo não compactado excede 1,95 MB.</value>
   </data>
   <data name="Message_bigFile_Text1_gts" xml:space="preserve">
-    <value>Uncompressed file size exceeds 1.5MB.</value>
+    <value>O tamanho do arquivo não compactado excede 1,5 MB.</value>
   </data>
   <data name="Message_bigFile_Text2" xml:space="preserve">
-    <value>The dial may not work.</value>
+    <value>A watchface pode não funcionar.</value>
   </data>
   <data name="Message_CopyCoord" xml:space="preserve">
-    <value>Coordinates copied</value>
+    <value>Coordenadas copiadas</value>
   </data>
   <data name="Message_Error_Caption" xml:space="preserve">
-    <value>Error</value>
+    <value>Erro</value>
   </data>
   <data name="Message_error_Image_Text1" xml:space="preserve">
-    <value>Unable to open image:</value>
+    <value>Não foi possível abrir a imagem:</value>
   </data>
   <data name="Message_error_Image_Text2" xml:space="preserve">
-    <value>. You do not have permission to read the file, or the image is damaged.</value>
+    <value>. Você não tem permissão para ler o arquivo ou a imagem está corrompida.</value>
   </data>
   <data name="Message_error_pack_unpack_dir_Caption" xml:space="preserve">
-    <value>File not found</value>
+    <value>Arquivo não encontrado</value>
   </data>
   <data name="Message_error_pack_unpack_dir_Text1" xml:space="preserve">
-    <value>Way [</value>
+    <value>Caminho [</value>
   </data>
   <data name="Message_error_pack_unpack_dir_Text2" xml:space="preserve">
-    <value>] to the unpacking / packing utility is indicated incorrectly.</value>
+    <value>] para o utilitário de desembalagem / embalagem está indicado incorretamente.</value>
   </data>
   <data name="Message_error_pack_unpack_dir_Text3" xml:space="preserve">
-    <value>Specify the correct path to the unpack / pack utility.</value>
+    <value>Especifique o caminho correto para o utilitário descompactar / pacote.</value>
   </data>
   <data name="Message_error_respackerPath_Text1" xml:space="preserve">
-    <value>The required program components are missing.</value>
+    <value>Os componentes necessários do programa estão ausentes.</value>
   </data>
   <data name="Message_error_respackerPath_Text2" xml:space="preserve">
-    <value>No bin file compression utility found on path [</value>
+    <value>Nenhum utilitário de compactação de arquivo bin encontrado no caminho [</value>
   </data>
   <data name="Message_error_respackerPath_Text3" xml:space="preserve">
-    <value>Check for bin file compression utility.</value>
+    <value>Verifique o utilitário de compactação de arquivos bin.</value>
   </data>
   <data name="Message_GoToFile_Caption" xml:space="preserve">
-    <value>Go to file</value>
+    <value>Ir para o arquivo</value>
   </data>
   <data name="Message_GoToFile_Text" xml:space="preserve">
-    <value>Go to file?</value>
+    <value>Ir para o arquivo?</value>
   </data>
   <data name="Message_JsonError_Text" xml:space="preserve">
-    <value>Invalid JSON file.</value>
+    <value>Arquivo JSON inválido.</value>
   </data>
   <data name="Message_JsonReadError_Text" xml:space="preserve">
-    <value>Error reading JSON file.</value>
+    <value>Erro ao ler o arquivo JSON.</value>
   </data>
   <data name="Message_LoadPreviewStates_Caption" xml:space="preserve">
-    <value>Download preview settings</value>
+    <value>Download das configurações de visualização</value>
   </data>
   <data name="Message_LoadPreviewStates_Text" xml:space="preserve">
-    <value>Download an existing file with a set of preview settings PreviewStates.json?</value>
+    <value>Baixar um arquivo existente com um conjunto de configurações de visualização PreviewStates.json?</value>
   </data>
   <data name="Message_openProject_Caption" xml:space="preserve">
-    <value>Project Opening</value>
+    <value>Abertura do Projeto</value>
   </data>
   <data name="Message_openProject_Text" xml:space="preserve">
-    <value>Open an unpacked project?</value>
+    <value>Abrir um projeto descompactado?</value>
   </data>
   <data name="Message_PNGmissing_Text1" xml:space="preserve">
-    <value>PNG files go out of order or some of the files are missing.</value>
+    <value>Os arquivos PNG estão com defeito ou alguns dos arquivos estão ausentes.</value>
   </data>
   <data name="Message_PNGmissing_Text2" xml:space="preserve">
-    <value>Name the PNG files in ascending order.</value>
+    <value>Nomeie os arquivos PNG em ordem crescente.</value>
   </data>
   <data name="Message_Restart_Caption" xml:space="preserve">
-    <value>Reboot</value>
+    <value>Reiniciar</value>
   </data>
   <data name="Message_Restart_Text1" xml:space="preserve">
-    <value>To apply the settings, you must restart the program.</value>
+    <value>Para aplicar as configurações, você deve reiniciar o programa.</value>
   </data>
   <data name="Message_Restart_Text2" xml:space="preserve">
-    <value>Restart the program?</value>
+    <value>Reiniciar o programa?</value>
   </data>
   <data name="Message_SaveOnly1234_Text" xml:space="preserve">
-    <value>To save pre-set parameters, set at least one field "Calories" to a value other than "1234".</value>
+    <value>Para salvar parâmetros predefinidos, defina pelo menos um campo "Calorias" para um valor diferente de "1234".</value>
   </data>
   <data name="Message_Warning3clockHand_Text" xml:space="preserve">
-    <value>If you do not use all three hands in an analog watch, problems may arise.</value>
+    <value>Se você não usar os três ponteiros de um relógio analógico, poderão surgir problemas.</value>
   </data>
   <data name="Message_WarningDistanceSuffix" xml:space="preserve">
-    <value>Using distance display without a suffix is ​​not recommended.</value>
+    <value>O uso da exibição de distância sem sufixo não é recomendado.</value>
   </data>
   <data name="Message_WarningOnlyMin_Text" xml:space="preserve">
-    <value>It is not recommended to use minutes without using hours for numerical display of time.</value>
+    <value>Não é recomendável usar minutos sem usar horas para a exibição numérica do tempo.</value>
   </data>
   <data name="Message_WarningOnlySec_Text" xml:space="preserve">
-    <value>It is not recommended to use seconds without using hours and minutes for numerical display of time.</value>
+    <value>Não é recomendável usar segundos sem usar horas e minutos para a exibição numérica do tempo.</value>
   </data>
   <data name="Message_WarningTensOnes_Text" xml:space="preserve">
-    <value>Different ImageIndex values ​​for tens and units are not supported.</value>
+    <value>Valores diferentes do ImageIndex para dezenas e unidades não são suportados.</value>
   </data>
   <data name="Message_Warning_Caption" xml:space="preserve">
-    <value>Warning</value>
+    <value>Aviso</value>
   </data>
 </root>

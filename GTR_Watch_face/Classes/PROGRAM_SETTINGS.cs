@@ -25,7 +25,10 @@
 
         public bool ShowBorder = false;
         public bool Crop = true;
+        public bool Show_Warnings = true;
         public bool Show_Shortcuts = true;
+        public bool Shortcuts_Area = true;
+        public bool Shortcuts_Border = true;
         public float Scale = 1f;
         public float Gif_Speed = 1f;
 
