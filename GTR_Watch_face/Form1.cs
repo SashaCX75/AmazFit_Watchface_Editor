@@ -66,7 +66,12 @@ namespace GTR_Watch_face
                 {
                     string language = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
                     //int language = System.Globalization.CultureInfo.CurrentCulture.LCID;
-                    Program_Settings.language = "Русский";
+                    //Program_Settings.language = "Русский";
+                    Program_Settings.language = "English";
+                    if (language == "ru")
+                    {
+                        Program_Settings.language = "Русский";
+                    }
                     if (language == "en")
                     {
                         Program_Settings.language = "English";
