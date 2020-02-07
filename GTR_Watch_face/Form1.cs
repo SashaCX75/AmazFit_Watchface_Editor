@@ -3853,6 +3853,7 @@ namespace GTR_Watch_face
                     Form_Preview.Model_Wath.model_gtr47 = radioButton_47.Checked;
                     Form_Preview.Model_Wath.model_gtr42 = radioButton_42.Checked;
                     Form_Preview.Model_Wath.model_gts = radioButton_gts.Checked;
+                    Form_Preview.Model_Wath.model_TRex = radioButton_TRex.Checked;
                     Graphics gPanelPreviewResize = formPreview.panel_Preview.CreateGraphics();
                     gPanelPreviewResize.Clear(panel_Preview.BackColor);
                     formPreview.radioButton_CheckedChanged(sender, e);
@@ -3902,6 +3903,7 @@ namespace GTR_Watch_face
             Form_Preview.Model_Wath.model_gtr47 = radioButton_47.Checked;
             Form_Preview.Model_Wath.model_gtr42 = radioButton_42.Checked;
             Form_Preview.Model_Wath.model_gts = radioButton_gts.Checked;
+            Form_Preview.Model_Wath.model_TRex = radioButton_TRex.Checked;
             Graphics gPanel = formPreview.panel_Preview.CreateGraphics();
             gPanel.Clear(panel_Preview.BackColor);
             //Pen pen = new Pen(Color.Blue, 1);
@@ -5279,7 +5281,7 @@ namespace GTR_Watch_face
                 button_pack.Enabled = true;
                 button_zip.Enabled = true;
             }
-            else
+            else if (radioButton_gts.Checked)
             {
                 this.Text = "GTS watch face editor";
                 panel_Preview.Height = 223;
@@ -5294,18 +5296,35 @@ namespace GTR_Watch_face
                 button_pack.Enabled = false;
                 button_zip.Enabled = false;
             }
+            else if (radioButton_TRex.Checked)
+            {
+                this.Text = "T-Rex watch face editor";
+                panel_Preview.Height = 183;
+                panel_Preview.Width = 183;
+                offSet_X = 180;
+                offSet_Y = 180;
+
+                textBox_unpack_command.Text = Program_Settings.unpack_command_TRex;
+                textBox_pack_command.Text = Program_Settings.pack_command_TRex;
+
+                button_unpack.Enabled = true;
+                button_pack.Enabled = true;
+                button_zip.Enabled = true;
+            }
 
             if ((formPreview != null) && (formPreview.Visible))
             {
                 Form_Preview.Model_Wath.model_gtr47 = radioButton_47.Checked;
                 Form_Preview.Model_Wath.model_gtr42 = radioButton_42.Checked;
                 Form_Preview.Model_Wath.model_gts = radioButton_gts.Checked;
+                Form_Preview.Model_Wath.model_TRex = radioButton_TRex.Checked;
                 formPreview.radioButton_CheckedChanged(sender, e);
             }
 
             Program_Settings.Model_GTR47 = radioButton_47.Checked;
             Program_Settings.Model_GTR42 = radioButton_42.Checked;
             Program_Settings.Model_GTS = radioButton_gts.Checked;
+            Program_Settings.Model_TRex = radioButton_TRex.Checked;
             string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
             {
                 //DefaultValueHandling = DefaultValueHandling.Ignore,
@@ -5701,6 +5720,11 @@ namespace GTR_Watch_face
             {
                 Program_Settings.unpack_command_GTS = textBox_unpack_command.Text;
                 Program_Settings.pack_command_GTS = textBox_pack_command.Text;
+            }
+            else if (radioButton_TRex.Checked)
+            {
+                Program_Settings.unpack_command_TRex = textBox_unpack_command.Text;
+                Program_Settings.pack_command_TRex = textBox_pack_command.Text;
             }
 
             string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings

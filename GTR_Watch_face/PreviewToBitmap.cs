@@ -1787,7 +1787,10 @@ namespace GTR_Watch_face
             {
                 Pen pen = new Pen(Color.White, 1);
                 int LineDistance = 30;
-                if (panel_Preview.Height > 300) LineDistance = 15;
+                if (scale >= 1) LineDistance = 15;
+                if (scale >= 2) LineDistance = 10;
+                //if (panel_Preview.Height > 300) LineDistance = 15;
+                //if (panel_Preview.Height > 690) LineDistance = 10;
                 for (i = 0; i < 30; i++)
                 {
                     gPanel.DrawLine(pen, new Point(offSet_X + i * LineDistance, 0), new Point(offSet_X + i * LineDistance, 454));
@@ -1802,7 +1805,10 @@ namespace GTR_Watch_face
             {
                 Pen pen = new Pen(Color.Black, 1);
                 int LineDistance = 30;
-                if (panel_Preview.Height > 300) LineDistance = 15;
+                if (scale >= 1) LineDistance = 15;
+                if (scale >= 2) LineDistance = 10;
+                //if (panel_Preview.Height > 300) LineDistance = 15;
+                //if (panel_Preview.Height > 690) LineDistance = 10;
                 for (i = 0; i < 30; i++)
                 {
                     gPanel.DrawLine(pen, new Point(offSet_X + i * LineDistance, 0), new Point(offSet_X + i * LineDistance, 454));
@@ -1826,6 +1832,10 @@ namespace GTR_Watch_face
                 if (radioButton_gts.Checked)
                 {
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts.png");
+                }
+                if (radioButton_TRex.Checked)
+                {
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
                 }
                 mask = FormColor(mask);
                 gPanel.DrawImage(mask, new Rectangle(0, 0, mask.Width, mask.Height));

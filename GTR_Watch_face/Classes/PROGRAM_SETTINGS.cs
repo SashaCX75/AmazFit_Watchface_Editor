@@ -22,6 +22,7 @@
         public bool Model_GTR47 = true;
         public bool Model_GTR42 = false;
         public bool Model_GTS = false;
+        public bool Model_TRex = false;
 
         public bool ShowBorder = false;
         public bool Crop = true;
@@ -39,6 +40,8 @@
         public string pack_command_GTR42 = "--gtr 42 --file";
         public string unpack_command_GTS = "--gts --file";
         public string pack_command_GTS = "--gts --file";
+        public string unpack_command_TRex = "--trex --file";
+        public string pack_command_TRex = "--trex --file";
 
         public string language { get; set; }
     }

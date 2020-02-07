@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button_zip_unpack = new System.Windows.Forms.Button();
@@ -1279,6 +1279,7 @@
             this.checkBox_crop = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.checkBox_Show_Shortcuts = new System.Windows.Forms.CheckBox();
+            this.radioButton_TRex = new System.Windows.Forms.RadioButton();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.colorDialog_Pulse = new System.Windows.Forms.ColorDialog();
             this.colorDialog_Calories = new System.Windows.Forms.ColorDialog();
@@ -5190,8 +5191,8 @@
             // Number
             // 
             this.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Number.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Number.DefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.Number, "Number");
             this.Number.Name = "Number";
             this.Number.ReadOnly = true;
@@ -15672,6 +15673,14 @@
             this.checkBox_Show_Shortcuts.CheckedChanged += new System.EventHandler(this.checkBox_Show_Shortcuts_CheckedChanged);
             this.checkBox_Show_Shortcuts.Click += new System.EventHandler(this.checkBox_Click);
             // 
+            // radioButton_TRex
+            // 
+            resources.ApplyResources(this.radioButton_TRex, "radioButton_TRex");
+            this.radioButton_TRex.Name = "radioButton_TRex";
+            this.helpProvider1.SetShowHelp(this.radioButton_TRex, ((bool)(resources.GetObject("radioButton_TRex.ShowHelp"))));
+            this.radioButton_TRex.UseVisualStyleBackColor = true;
+            this.radioButton_TRex.CheckedChanged += new System.EventHandler(this.radioButton_47_CheckedChanged);
+            // 
             // timer2
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
@@ -15688,6 +15697,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.radioButton_TRex);
             this.Controls.Add(this.checkBox_Show_Shortcuts);
             this.Controls.Add(this.checkBox_crop);
             this.Controls.Add(this.radioButton_gts);
@@ -17495,6 +17505,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameFile;
         private System.Windows.Forms.DataGridViewImageColumn ColumnImage;
+        private System.Windows.Forms.RadioButton radioButton_TRex;
     }
 }
 
