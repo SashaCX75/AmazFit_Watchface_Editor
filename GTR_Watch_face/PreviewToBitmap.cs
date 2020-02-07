@@ -885,6 +885,11 @@ namespace GTR_Watch_face
                         (int)numericUpDown_StepsProgress_Radius_X.Value;
                     int y = (int)numericUpDown_StepsProgress_Center_Y.Value -
                         (int)numericUpDown_StepsProgress_Radius_Y.Value;
+                    if (numericUpDown_StepsProgress_Radius_Y.Value == 0)
+                    {
+                        y = (int)numericUpDown_StepsProgress_Center_Y.Value -
+                        (int)numericUpDown_StepsProgress_Radius_X.Value;
+                    }
                     int width = (int)numericUpDown_StepsProgress_Radius_X.Value * 2;
                     //int height = (int)numericUpDown_StepsProgress_Radius_Y.Value * 2;
                     int height = width;
@@ -1116,6 +1121,11 @@ namespace GTR_Watch_face
                             (int)numericUpDown_ActivityPulsScale_Radius_X.Value;
                         int y = (int)numericUpDown_ActivityPulsScale_Center_Y.Value -
                             (int)numericUpDown_ActivityPulsScale_Radius_Y.Value;
+                        if (numericUpDown_ActivityPulsScale_Radius_Y.Value == 0)
+                        {
+                            y = (int)numericUpDown_ActivityPulsScale_Center_Y.Value -
+                            (int)numericUpDown_ActivityPulsScale_Radius_X.Value;
+                        }
                         int width = (int)numericUpDown_ActivityPulsScale_Radius_X.Value * 2;
                         //int height = (int)numericUpDown_Battery_Scale_Radius_Y.Value * 2;
                         int height = width;
@@ -1215,6 +1225,11 @@ namespace GTR_Watch_face
                             (int)numericUpDown_ActivityCaloriesScale_Radius_X.Value;
                         int y = (int)numericUpDown_ActivityCaloriesScale_Center_Y.Value -
                             (int)numericUpDown_ActivityCaloriesScale_Radius_Y.Value;
+                        if (numericUpDown_ActivityCaloriesScale_Radius_Y.Value == 0)
+                        {
+                            y = (int)numericUpDown_ActivityCaloriesScale_Center_Y.Value -
+                            (int)numericUpDown_ActivityCaloriesScale_Radius_X.Value;
+                        }
                         int width = (int)numericUpDown_ActivityCaloriesScale_Radius_X.Value * 2;
                         //int height = (int)numericUpDown_Battery_Scale_Radius_Y.Value * 2;
                         int height = width;
@@ -1458,6 +1473,11 @@ namespace GTR_Watch_face
                             (int)numericUpDown_Battery_Scale_Radius_X.Value;
                         int y = (int)numericUpDown_Battery_Scale_Center_Y.Value -
                             (int)numericUpDown_Battery_Scale_Radius_Y.Value;
+                        if (numericUpDown_Battery_Scale_Radius_Y.Value == 0)
+                        {
+                            y = (int)numericUpDown_Battery_Scale_Center_Y.Value -
+                            (int)numericUpDown_Battery_Scale_Radius_X.Value;
+                        }
                         int width = (int)numericUpDown_Battery_Scale_Radius_X.Value * 2;
                         //int height = (int)numericUpDown_Battery_Scale_Radius_Y.Value * 2;
                         int height = width;

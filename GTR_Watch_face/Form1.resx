@@ -651,6 +651,99 @@
   <data name="&gt;&gt;button_Shortcuts.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="&gt;&gt;comboBox_Weather_Text_NDImage.Name" xml:space="preserve">
+    <value>comboBox_Weather_Text_NDImage</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Weather_Text_NDImage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Weather_Text_NDImage.Parent" xml:space="preserve">
+    <value>groupBox_Symbols</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Weather_Text_NDImage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Weather_Text_MinusImage.Name" xml:space="preserve">
+    <value>comboBox_Weather_Text_MinusImage</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Weather_Text_MinusImage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Weather_Text_MinusImage.Parent" xml:space="preserve">
+    <value>groupBox_Symbols</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Weather_Text_MinusImage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label286.Name" xml:space="preserve">
+    <value>label286</value>
+  </data>
+  <data name="&gt;&gt;label286.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label286.Parent" xml:space="preserve">
+    <value>groupBox_Symbols</value>
+  </data>
+  <data name="&gt;&gt;label286.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Weather_Text_DegImage.Name" xml:space="preserve">
+    <value>comboBox_Weather_Text_DegImage</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Weather_Text_DegImage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Weather_Text_DegImage.Parent" xml:space="preserve">
+    <value>groupBox_Symbols</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Weather_Text_DegImage.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label284.Name" xml:space="preserve">
+    <value>label284</value>
+  </data>
+  <data name="&gt;&gt;label284.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label284.Parent" xml:space="preserve">
+    <value>groupBox_Symbols</value>
+  </data>
+  <data name="&gt;&gt;label284.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label285.Name" xml:space="preserve">
+    <value>label285</value>
+  </data>
+  <data name="&gt;&gt;label285.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label285.Parent" xml:space="preserve">
+    <value>groupBox_Symbols</value>
+  </data>
+  <data name="&gt;&gt;label285.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupBox_Symbols.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="groupBox_Symbols.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="groupBox_Symbols.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 175</value>
+  </data>
+  <data name="groupBox_Symbols.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="groupBox_Symbols.Size" type="System.Drawing.Size, System.Drawing">
+    <value>390, 47</value>
+  </data>
+  <data name="groupBox_Symbols.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="groupBox_Symbols.Text" xml:space="preserve">
+    <value>Символы</value>
+  </data>
   <data name="&gt;&gt;groupBox_Symbols.Name" xml:space="preserve">
     <value>groupBox_Symbols</value>
   </data>
@@ -663,6 +756,60 @@
   <data name="&gt;&gt;groupBox_Symbols.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="&gt;&gt;tabPage24.Name" xml:space="preserve">
+    <value>tabPage24</value>
+  </data>
+  <data name="&gt;&gt;tabPage24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage24.Parent" xml:space="preserve">
+    <value>tabControl_Weather</value>
+  </data>
+  <data name="&gt;&gt;tabPage24.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tabPage26.Name" xml:space="preserve">
+    <value>tabPage26</value>
+  </data>
+  <data name="&gt;&gt;tabPage26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage26.Parent" xml:space="preserve">
+    <value>tabControl_Weather</value>
+  </data>
+  <data name="&gt;&gt;tabPage26.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tabPage25.Name" xml:space="preserve">
+    <value>tabPage25</value>
+  </data>
+  <data name="&gt;&gt;tabPage25.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage25.Parent" xml:space="preserve">
+    <value>tabControl_Weather</value>
+  </data>
+  <data name="&gt;&gt;tabPage25.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tabControl_Weather.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tabControl_Weather.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tabControl_Weather.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 20</value>
+  </data>
+  <data name="tabControl_Weather.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tabControl_Weather.Size" type="System.Drawing.Size, System.Drawing">
+    <value>390, 155</value>
+  </data>
+  <data name="tabControl_Weather.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
   <data name="&gt;&gt;tabControl_Weather.Name" xml:space="preserve">
     <value>tabControl_Weather</value>
   </data>
@@ -674,6 +821,30 @@
   </data>
   <data name="&gt;&gt;tabControl_Weather.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="checkBox_Weather.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="checkBox_Weather.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox_Weather.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="checkBox_Weather.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 3, 0, 0</value>
+  </data>
+  <data name="checkBox_Weather.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox_Weather.Size" type="System.Drawing.Size, System.Drawing">
+    <value>390, 20</value>
+  </data>
+  <data name="checkBox_Weather.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="checkBox_Weather.Text" xml:space="preserve">
+    <value>Использовать</value>
   </data>
   <data name="&gt;&gt;checkBox_Weather.Name" xml:space="preserve">
     <value>checkBox_Weather</value>
@@ -747,6 +918,60 @@
   <data name="&gt;&gt;button_Weather.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="&gt;&gt;tabPage29.Name" xml:space="preserve">
+    <value>tabPage29</value>
+  </data>
+  <data name="&gt;&gt;tabPage29.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage29.Parent" xml:space="preserve">
+    <value>tabControl_AnalogClock</value>
+  </data>
+  <data name="&gt;&gt;tabPage29.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tabPage31.Name" xml:space="preserve">
+    <value>tabPage31</value>
+  </data>
+  <data name="&gt;&gt;tabPage31.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage31.Parent" xml:space="preserve">
+    <value>tabControl_AnalogClock</value>
+  </data>
+  <data name="&gt;&gt;tabPage31.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tabPage32.Name" xml:space="preserve">
+    <value>tabPage32</value>
+  </data>
+  <data name="&gt;&gt;tabPage32.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage32.Parent" xml:space="preserve">
+    <value>tabControl_AnalogClock</value>
+  </data>
+  <data name="&gt;&gt;tabPage32.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tabControl_AnalogClock.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tabControl_AnalogClock.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tabControl_AnalogClock.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 20</value>
+  </data>
+  <data name="tabControl_AnalogClock.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tabControl_AnalogClock.Size" type="System.Drawing.Size, System.Drawing">
+    <value>390, 170</value>
+  </data>
+  <data name="tabControl_AnalogClock.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
   <data name="&gt;&gt;tabControl_AnalogClock.Name" xml:space="preserve">
     <value>tabControl_AnalogClock</value>
   </data>
@@ -758,6 +983,30 @@
   </data>
   <data name="&gt;&gt;tabControl_AnalogClock.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="checkBox_AnalogClock.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="checkBox_AnalogClock.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox_AnalogClock.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="checkBox_AnalogClock.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 3, 0, 0</value>
+  </data>
+  <data name="checkBox_AnalogClock.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox_AnalogClock.Size" type="System.Drawing.Size, System.Drawing">
+    <value>390, 20</value>
+  </data>
+  <data name="checkBox_AnalogClock.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="checkBox_AnalogClock.Text" xml:space="preserve">
+    <value>Использовать</value>
   </data>
   <data name="&gt;&gt;checkBox_AnalogClock.Name" xml:space="preserve">
     <value>checkBox_AnalogClock</value>
@@ -17485,111 +17734,6 @@
   <data name="&gt;&gt;label457.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="&gt;&gt;comboBox_Weather_Text_NDImage.Name" xml:space="preserve">
-    <value>comboBox_Weather_Text_NDImage</value>
-  </data>
-  <data name="&gt;&gt;comboBox_Weather_Text_NDImage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboBox_Weather_Text_NDImage.Parent" xml:space="preserve">
-    <value>groupBox_Symbols</value>
-  </data>
-  <data name="&gt;&gt;comboBox_Weather_Text_NDImage.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;comboBox_Weather_Text_MinusImage.Name" xml:space="preserve">
-    <value>comboBox_Weather_Text_MinusImage</value>
-  </data>
-  <data name="&gt;&gt;comboBox_Weather_Text_MinusImage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboBox_Weather_Text_MinusImage.Parent" xml:space="preserve">
-    <value>groupBox_Symbols</value>
-  </data>
-  <data name="&gt;&gt;comboBox_Weather_Text_MinusImage.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;label286.Name" xml:space="preserve">
-    <value>label286</value>
-  </data>
-  <data name="&gt;&gt;label286.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label286.Parent" xml:space="preserve">
-    <value>groupBox_Symbols</value>
-  </data>
-  <data name="&gt;&gt;label286.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;comboBox_Weather_Text_DegImage.Name" xml:space="preserve">
-    <value>comboBox_Weather_Text_DegImage</value>
-  </data>
-  <data name="&gt;&gt;comboBox_Weather_Text_DegImage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboBox_Weather_Text_DegImage.Parent" xml:space="preserve">
-    <value>groupBox_Symbols</value>
-  </data>
-  <data name="&gt;&gt;comboBox_Weather_Text_DegImage.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;label284.Name" xml:space="preserve">
-    <value>label284</value>
-  </data>
-  <data name="&gt;&gt;label284.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label284.Parent" xml:space="preserve">
-    <value>groupBox_Symbols</value>
-  </data>
-  <data name="&gt;&gt;label284.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;label285.Name" xml:space="preserve">
-    <value>label285</value>
-  </data>
-  <data name="&gt;&gt;label285.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label285.Parent" xml:space="preserve">
-    <value>groupBox_Symbols</value>
-  </data>
-  <data name="&gt;&gt;label285.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="groupBox_Symbols.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="groupBox_Symbols.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="groupBox_Symbols.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 175</value>
-  </data>
-  <data name="groupBox_Symbols.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="groupBox_Symbols.Size" type="System.Drawing.Size, System.Drawing">
-    <value>390, 47</value>
-  </data>
-  <data name="groupBox_Symbols.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="groupBox_Symbols.Text" xml:space="preserve">
-    <value>Символы</value>
-  </data>
-  <data name="&gt;&gt;groupBox_Symbols.Name" xml:space="preserve">
-    <value>groupBox_Symbols</value>
-  </data>
-  <data name="&gt;&gt;groupBox_Symbols.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox_Symbols.Parent" xml:space="preserve">
-    <value>panel_Weather</value>
-  </data>
-  <data name="&gt;&gt;groupBox_Symbols.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="comboBox_Weather_Text_NDImage.Location" type="System.Drawing.Point, System.Drawing">
     <value>336, 17</value>
   </data>
@@ -17769,72 +17913,6 @@
   </data>
   <data name="&gt;&gt;label285.ZOrder" xml:space="preserve">
     <value>5</value>
-  </data>
-  <data name="&gt;&gt;tabPage24.Name" xml:space="preserve">
-    <value>tabPage24</value>
-  </data>
-  <data name="&gt;&gt;tabPage24.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage24.Parent" xml:space="preserve">
-    <value>tabControl_Weather</value>
-  </data>
-  <data name="&gt;&gt;tabPage24.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tabPage26.Name" xml:space="preserve">
-    <value>tabPage26</value>
-  </data>
-  <data name="&gt;&gt;tabPage26.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage26.Parent" xml:space="preserve">
-    <value>tabControl_Weather</value>
-  </data>
-  <data name="&gt;&gt;tabPage26.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;tabPage25.Name" xml:space="preserve">
-    <value>tabPage25</value>
-  </data>
-  <data name="&gt;&gt;tabPage25.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage25.Parent" xml:space="preserve">
-    <value>tabControl_Weather</value>
-  </data>
-  <data name="&gt;&gt;tabPage25.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tabControl_Weather.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="tabControl_Weather.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="tabControl_Weather.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 20</value>
-  </data>
-  <data name="tabControl_Weather.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="tabControl_Weather.Size" type="System.Drawing.Size, System.Drawing">
-    <value>390, 155</value>
-  </data>
-  <data name="tabControl_Weather.TabIndex" type="System.Int32, mscorlib">
-    <value>54</value>
-  </data>
-  <data name="&gt;&gt;tabControl_Weather.Name" xml:space="preserve">
-    <value>tabControl_Weather</value>
-  </data>
-  <data name="&gt;&gt;tabControl_Weather.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabControl_Weather.Parent" xml:space="preserve">
-    <value>panel_Weather</value>
-  </data>
-  <data name="&gt;&gt;tabControl_Weather.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="&gt;&gt;comboBox_Weather_Text_Image.Name" xml:space="preserve">
     <value>comboBox_Weather_Text_Image</value>
@@ -21133,108 +21211,6 @@
   <data name="&gt;&gt;label283.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="checkBox_Weather.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="checkBox_Weather.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="checkBox_Weather.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="checkBox_Weather.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>10, 3, 0, 0</value>
-  </data>
-  <data name="checkBox_Weather.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBox_Weather.Size" type="System.Drawing.Size, System.Drawing">
-    <value>390, 20</value>
-  </data>
-  <data name="checkBox_Weather.TabIndex" type="System.Int32, mscorlib">
-    <value>53</value>
-  </data>
-  <data name="checkBox_Weather.Text" xml:space="preserve">
-    <value>Использовать</value>
-  </data>
-  <data name="&gt;&gt;checkBox_Weather.Name" xml:space="preserve">
-    <value>checkBox_Weather</value>
-  </data>
-  <data name="&gt;&gt;checkBox_Weather.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBox_Weather.Parent" xml:space="preserve">
-    <value>panel_Weather</value>
-  </data>
-  <data name="&gt;&gt;checkBox_Weather.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;tabPage29.Name" xml:space="preserve">
-    <value>tabPage29</value>
-  </data>
-  <data name="&gt;&gt;tabPage29.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage29.Parent" xml:space="preserve">
-    <value>tabControl_AnalogClock</value>
-  </data>
-  <data name="&gt;&gt;tabPage29.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tabPage31.Name" xml:space="preserve">
-    <value>tabPage31</value>
-  </data>
-  <data name="&gt;&gt;tabPage31.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage31.Parent" xml:space="preserve">
-    <value>tabControl_AnalogClock</value>
-  </data>
-  <data name="&gt;&gt;tabPage31.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;tabPage32.Name" xml:space="preserve">
-    <value>tabPage32</value>
-  </data>
-  <data name="&gt;&gt;tabPage32.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage32.Parent" xml:space="preserve">
-    <value>tabControl_AnalogClock</value>
-  </data>
-  <data name="&gt;&gt;tabPage32.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tabControl_AnalogClock.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="tabControl_AnalogClock.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="tabControl_AnalogClock.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 20</value>
-  </data>
-  <data name="tabControl_AnalogClock.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="tabControl_AnalogClock.Size" type="System.Drawing.Size, System.Drawing">
-    <value>390, 170</value>
-  </data>
-  <data name="tabControl_AnalogClock.TabIndex" type="System.Int32, mscorlib">
-    <value>54</value>
-  </data>
-  <data name="&gt;&gt;tabControl_AnalogClock.Name" xml:space="preserve">
-    <value>tabControl_AnalogClock</value>
-  </data>
-  <data name="&gt;&gt;tabControl_AnalogClock.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabControl_AnalogClock.Parent" xml:space="preserve">
-    <value>panel_AnalogClock</value>
-  </data>
-  <data name="&gt;&gt;tabControl_AnalogClock.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="&gt;&gt;groupBox_AnalogClock_Hour.Name" xml:space="preserve">
     <value>groupBox_AnalogClock_Hour</value>
   </data>
@@ -23931,42 +23907,6 @@
   </data>
   <data name="&gt;&gt;checkBox_AnalogClock_Sec.ZOrder" xml:space="preserve">
     <value>10</value>
-  </data>
-  <data name="checkBox_AnalogClock.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="checkBox_AnalogClock.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="checkBox_AnalogClock.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="checkBox_AnalogClock.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>10, 3, 0, 0</value>
-  </data>
-  <data name="checkBox_AnalogClock.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBox_AnalogClock.Size" type="System.Drawing.Size, System.Drawing">
-    <value>390, 20</value>
-  </data>
-  <data name="checkBox_AnalogClock.TabIndex" type="System.Int32, mscorlib">
-    <value>53</value>
-  </data>
-  <data name="checkBox_AnalogClock.Text" xml:space="preserve">
-    <value>Использовать</value>
-  </data>
-  <data name="&gt;&gt;checkBox_AnalogClock.Name" xml:space="preserve">
-    <value>checkBox_AnalogClock</value>
-  </data>
-  <data name="&gt;&gt;checkBox_AnalogClock.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBox_AnalogClock.Parent" xml:space="preserve">
-    <value>panel_AnalogClock</value>
-  </data>
-  <data name="&gt;&gt;checkBox_AnalogClock.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="&gt;&gt;tabPage21.Name" xml:space="preserve">
     <value>tabPage21</value>

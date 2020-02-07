@@ -6672,9 +6672,6 @@
   <data name="tabControl_AnalogClock.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="tabControl_AnalogClock.Size" type="System.Drawing.Size, System.Drawing">
-    <value>390, 135</value>
-  </data>
   <data name="checkBox_AnalogClock.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>

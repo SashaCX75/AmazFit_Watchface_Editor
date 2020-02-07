@@ -10288,7 +10288,7 @@
             0});
             this.numericUpDown_ActivityPulsScale_Radius_X.Name = "numericUpDown_ActivityPulsScale_Radius_X";
             this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityPulsScale_Radius_X, ((bool)(resources.GetObject("numericUpDown_ActivityPulsScale_Radius_X.ShowHelp"))));
-            this.numericUpDown_ActivityPulsScale_Radius_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityPulsScale_Radius_X.ValueChanged += new System.EventHandler(this.numericUpDown_ActivityPulsScale_Radius_X_ValueChanged);
             // 
             // label423
             // 
@@ -11104,7 +11104,7 @@
             0});
             this.numericUpDown_ActivityCaloriesScale_Radius_X.Name = "numericUpDown_ActivityCaloriesScale_Radius_X";
             this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityCaloriesScale_Radius_X, ((bool)(resources.GetObject("numericUpDown_ActivityCaloriesScale_Radius_X.ShowHelp"))));
-            this.numericUpDown_ActivityCaloriesScale_Radius_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityCaloriesScale_Radius_X.ValueChanged += new System.EventHandler(this.numericUpDown_ActivityCaloriesScale_Radius_X_ValueChanged);
             // 
             // label118
             // 

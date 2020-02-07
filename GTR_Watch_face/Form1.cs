@@ -6074,6 +6074,18 @@ namespace GTR_Watch_face
             });
             File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
         }
+
+        private void numericUpDown_ActivityPulsScale_Radius_X_ValueChanged(object sender, EventArgs e)
+        {
+            numericUpDown_ActivityPulsScale_Radius_Y.Value = numericUpDown_ActivityPulsScale_Radius_X.Value;
+            PreviewImage();
+        }
+
+        private void numericUpDown_ActivityCaloriesScale_Radius_X_ValueChanged(object sender, EventArgs e)
+        {
+            numericUpDown_ActivityCaloriesScale_Radius_Y.Value = numericUpDown_ActivityCaloriesScale_Radius_X.Value;
+            PreviewImage();
+        }
     }
 }
 
