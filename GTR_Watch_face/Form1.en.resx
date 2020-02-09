@@ -14574,18 +14574,6 @@
   <data name="checkBox_crop.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="checkBox_crop.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="checkBox_crop.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="checkBox_crop.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 321</value>
-  </data>
-  <data name="checkBox_crop.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
   <data name="checkBox_crop.Text" xml:space="preserve">
     <value>Crop image to fit the screen (may work slowly)</value>
   </data>

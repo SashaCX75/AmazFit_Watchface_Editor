@@ -1311,6 +1311,11 @@ namespace GTR_Watch_face
                 Watch_Face.Info = new Device_Id();
                 Watch_Face.Info.DeviceId = 46;
             }
+            if (radioButton_TRex.Checked)
+            {
+                Watch_Face.Info = new Device_Id();
+                Watch_Face.Info.DeviceId = 52;
+            }
 
             if ((comboBox_Background.SelectedIndex >= 0) || (comboBox_Preview.SelectedIndex >= 0))
             {

@@ -251,6 +251,12 @@ namespace GTR_Watch_face
                 textBox_unpack_command.Text = Program_Settings.unpack_command_GTS;
                 textBox_pack_command.Text = Program_Settings.pack_command_GTS;
             }
+            else if (Program_Settings.Model_TRex)
+            {
+                radioButton_TRex.Checked = Program_Settings.Model_TRex;
+                textBox_unpack_command.Text = Program_Settings.unpack_command_TRex;
+                textBox_pack_command.Text = Program_Settings.pack_command_TRex;
+            }
             else if (Program_Settings.Model_GTR42)
             {
                 radioButton_42.Checked = Program_Settings.Model_GTR42;
