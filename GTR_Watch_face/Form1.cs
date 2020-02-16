@@ -31,6 +31,7 @@ namespace GTR_Watch_face
         List<string> ListImagesFullName = new List<string>(); // перечень путей к файлам с картинками
         bool PreviewView; // включает прорисовку предпросмотра
         bool Settings_Load; // включать при обновлении настроек длу выключения перерисовки
+        bool JSON_Modified = false; // JSON файл был изменен
         string FileName; // Запоминает имя для диалогов
         string FullFileDir; // Запоминает папку для диалогов
         string StartFileNameJson; // имя файла из параметров запуска
@@ -364,6 +365,62 @@ namespace GTR_Watch_face
                 StartFileNameBin = "";
             }
             //Logger.WriteLine("Загрузили файл из значения аргумента " + StartFileNameJson);
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (JSON_Modified)
+            {
+                if (FileName != null)
+                {
+                    DialogResult dr = MessageBox.Show(Properties.FormStrings.Message_Save_JSON_Modified_Text1 +
+                        Path.GetFileNameWithoutExtension(FileName) + Properties.FormStrings.Message_Save_JSON_Modified_Text2, 
+                        Properties.FormStrings.Message_Save_JSON_Modified_Caption, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                    if (dr == DialogResult.Yes)
+                    {
+                        string fullfilename = Path.Combine(FullFileDir, FileName);
+                        File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+                        if (checkBox_JsonWarnings.Checked) jsonWarnings();
+                    }
+                    if (dr == DialogResult.Cancel)
+                    {
+                        e.Cancel = true;
+                    } 
+                }
+                else
+                {
+                    DialogResult dr = MessageBox.Show(Properties.FormStrings.Message_Save_new_JSON, 
+                        Properties.FormStrings.Message_Save_JSON_Modified_Caption,
+                        MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                    if (dr == DialogResult.Yes)
+                    {
+                        SaveFileDialog saveFileDialog = new SaveFileDialog();
+                        saveFileDialog.InitialDirectory = FullFileDir;
+                        saveFileDialog.FileName = FileName;
+                        saveFileDialog.Filter = "Json files (*.json) | *.json";
+
+                        //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
+                        ////openFileDialog1.FilterIndex = 2;
+                        saveFileDialog.RestoreDirectory = true;
+                        saveFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
+                        if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                        {
+                            string fullfilename = saveFileDialog.FileName;
+                            File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+
+                            FileName = Path.GetFileName(fullfilename);
+                            FullFileDir = Path.GetDirectoryName(fullfilename);
+                            JSON_Modified = false;
+                            if (checkBox_JsonWarnings.Checked) jsonWarnings();
+                        }
+                        else e.Cancel = true;
+                    }
+                    if (dr == DialogResult.Cancel)
+                    {
+                        e.Cancel = true;
+                    }
+                }
+            }
         }
 
         private void button_pack_unpack_Click(object sender, EventArgs e)
@@ -749,6 +806,61 @@ namespace GTR_Watch_face
 
         private void button_pack_Click(object sender, EventArgs e)
         {
+            if (JSON_Modified) // сохранение если файл не сохранен
+            {
+                if (FileName != null)
+                {
+                    DialogResult dr = MessageBox.Show(Properties.FormStrings.Message_Save_JSON_Modified_Text1 +
+                        Path.GetFileNameWithoutExtension(FileName) + Properties.FormStrings.Message_Save_JSON_Modified_Text2,
+                        Properties.FormStrings.Message_Save_JSON_Modified_Caption, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                    if (dr == DialogResult.Yes)
+                    {
+                        string fullfilename = Path.Combine(FullFileDir, FileName);
+                        File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+                        JSON_Modified = false;
+                        if (checkBox_JsonWarnings.Checked) jsonWarnings();
+                    }
+                    if (dr == DialogResult.Cancel)
+                    {
+                        return;
+                    }
+                }
+                else
+                {
+                    DialogResult dr = MessageBox.Show(Properties.FormStrings.Message_Save_new_JSON,
+                        Properties.FormStrings.Message_Save_JSON_Modified_Caption,
+                        MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                    if (dr == DialogResult.Yes)
+                    {
+                        SaveFileDialog saveFileDialog = new SaveFileDialog();
+                        saveFileDialog.InitialDirectory = FullFileDir;
+                        saveFileDialog.FileName = FileName;
+                        saveFileDialog.Filter = "Json files (*.json) | *.json";
+
+                        //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
+                        ////openFileDialog1.FilterIndex = 2;
+                        saveFileDialog.RestoreDirectory = true;
+                        saveFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
+                        if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                        {
+                            string fullfilename = saveFileDialog.FileName;
+                            File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+                            JSON_Modified = false;
+
+                            FileName = Path.GetFileName(fullfilename);
+                            FullFileDir = Path.GetDirectoryName(fullfilename);
+                            JSON_Modified = false;
+                            if (checkBox_JsonWarnings.Checked) jsonWarnings();
+                        }
+                        else return;
+                    }
+                    if (dr == DialogResult.Cancel)
+                    {
+                        return;
+                    }
+                }
+            }
+
             string subPath = Application.StartupPath + @"\Watch_face\";
             if (!Directory.Exists(subPath)) Directory.CreateDirectory(subPath);
 
@@ -929,6 +1041,61 @@ namespace GTR_Watch_face
 
         private void button_pack_zip_Click(object sender, EventArgs e)
         {
+            if (JSON_Modified) // сохранение если файл не сохранен
+            {
+                if (FileName != null)
+                {
+                    DialogResult dr = MessageBox.Show(Properties.FormStrings.Message_Save_JSON_Modified_Text1 +
+                        Path.GetFileNameWithoutExtension(FileName) + Properties.FormStrings.Message_Save_JSON_Modified_Text2,
+                        Properties.FormStrings.Message_Save_JSON_Modified_Caption, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                    if (dr == DialogResult.Yes)
+                    {
+                        string fullfilename = Path.Combine(FullFileDir, FileName);
+                        File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+                        JSON_Modified = false;
+                        if (checkBox_JsonWarnings.Checked) jsonWarnings();
+                    }
+                    if (dr == DialogResult.Cancel)
+                    {
+                        return;
+                    }
+                }
+                else
+                {
+                    DialogResult dr = MessageBox.Show(Properties.FormStrings.Message_Save_new_JSON,
+                        Properties.FormStrings.Message_Save_JSON_Modified_Caption,
+                        MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                    if (dr == DialogResult.Yes)
+                    {
+                        SaveFileDialog saveFileDialog = new SaveFileDialog();
+                        saveFileDialog.InitialDirectory = FullFileDir;
+                        saveFileDialog.FileName = FileName;
+                        saveFileDialog.Filter = "Json files (*.json) | *.json";
+
+                        //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
+                        ////openFileDialog1.FilterIndex = 2;
+                        saveFileDialog.RestoreDirectory = true;
+                        saveFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
+                        if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                        {
+                            string fullfilename = saveFileDialog.FileName;
+                            File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+                            JSON_Modified = false;
+
+                            FileName = Path.GetFileName(fullfilename);
+                            FullFileDir = Path.GetDirectoryName(fullfilename);
+                            JSON_Modified = false;
+                            if (checkBox_JsonWarnings.Checked) jsonWarnings();
+                        }
+                        else return;
+                    }
+                    if (dr == DialogResult.Cancel)
+                    {
+                        return;
+                    }
+                }
+            }
+
             string subPath = Application.StartupPath + @"\Watch_face\";
             if (!Directory.Exists(subPath)) Directory.CreateDirectory(subPath);
 
@@ -1074,6 +1241,7 @@ namespace GTR_Watch_face
                 ListImagesFullName.Clear();
                 int i;
                 Image loadedImage = null;
+                List<string> ErrorImage = new List<string>();
                 foreach (String file in openFileDialog.FileNames)
                 {
                     try
@@ -1087,6 +1255,9 @@ namespace GTR_Watch_face
                             {
                                 loadedImage = Image.FromStream(stream);
                             }
+
+                            PixelFormat pf = loadedImage.PixelFormat;
+                            if (pf != PixelFormat.Format32bppArgb) ErrorImage.Add(Path.GetFileName(file));
                             var RowNew = new DataGridViewRow();
                             DataGridViewImageCellLayout ZoomType = DataGridViewImageCellLayout.Zoom;
                             if ((loadedImage.Height < 45) && (loadedImage.Width < 110))
@@ -1114,10 +1285,44 @@ namespace GTR_Watch_face
                     }
                 }
                 //loadedImage.Dispose();
+                if (ErrorImage.Count > 0)
+                {
+                    string StringFileName = string.Join(Environment.NewLine, ErrorImage);
+                    if (MessageBox.Show(Properties.FormStrings.Message_ErrorImage_Text1 + ErrorImage.Count.ToString() + "):" +
+                        Environment.NewLine + StringFileName + Environment.NewLine + Environment.NewLine +
+                        Properties.FormStrings.Message_ErrorImage_Text2, Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    {
+                        FixImage(Path.GetDirectoryName(openFileDialog.FileName), ErrorImage);
+                    }
+                }
                 PreviewView = false;
                 JSON_read();
                 PreviewView = true;
                 PreviewImage();
+            }
+        }
+
+        private void FixImage(string directory, List<string> errorImage)
+        {
+            foreach (string fileName in errorImage)
+            {
+                string fullFileName = Path.Combine(directory, fileName);
+
+                if (File.Exists(fullFileName))
+                {
+                    Bitmap bmpTermp = null;
+                    using (FileStream stream = new FileStream(fullFileName, FileMode.Open, FileAccess.Read))
+                    {
+                        bmpTermp = new Bitmap(stream);
+                    }
+                    try
+                    {
+                        MagickImage item = new MagickImage(bmpTermp);
+                        item.Format = MagickFormat.Png32;
+                        item.Write(fullFileName);
+                    }
+                    catch (Exception){}
+                }
             }
         }
 
@@ -1145,6 +1350,7 @@ namespace GTR_Watch_face
 
         private void LoadJsonAndImage(string fullfilename)
         {
+            JSON_Modified = false;
             //Logger.WriteLine("LoadJsonAndImage");
             FileName = Path.GetFileName(fullfilename);
             FullFileDir = Path.GetDirectoryName(fullfilename);
@@ -1164,6 +1370,7 @@ namespace GTR_Watch_face
             Images = Folder.GetFiles("*.png");
             int count = 0;
             Image loadedImage = null;
+            List<string> ErrorImage = new List<string>();
             foreach (FileInfo file in Images)
             {
                 try
@@ -1178,6 +1385,9 @@ namespace GTR_Watch_face
                         {
                             loadedImage = Image.FromStream(stream);
                         }
+
+                        PixelFormat pf = loadedImage.PixelFormat;
+                        if (pf != PixelFormat.Format32bppArgb) ErrorImage.Add(Path.GetFileName(file.FullName));
                         var RowNew = new DataGridViewRow();
                         DataGridViewImageCellLayout ZoomType = DataGridViewImageCellLayout.Zoom;
                         if ((loadedImage.Height < 45) && (loadedImage.Width < 110))
@@ -1216,6 +1426,16 @@ namespace GTR_Watch_face
                  Properties.FormStrings.Message_PNGmissing_Text2, Properties.FormStrings.Message_Error_Caption, 
                  MessageBoxButtons.OK, MessageBoxIcon.Warning);
 #endif
+            if (ErrorImage.Count > 0)
+            {
+                string StringFileName = string.Join(Environment.NewLine, ErrorImage);
+                if (MessageBox.Show(Properties.FormStrings.Message_ErrorImage_Text1 + ErrorImage.Count.ToString() + "):" +
+                    Environment.NewLine + StringFileName + Environment.NewLine + Environment.NewLine +
+                    Properties.FormStrings.Message_ErrorImage_Text2, Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    FixImage(FullFileDir, ErrorImage);
+                }
+            }
 
             //Logger.WriteLine("Не верный json формат");
             try
@@ -4901,6 +5121,7 @@ namespace GTR_Watch_face
 
                 FileName = Path.GetFileName(fullfilename);
                 FullFileDir = Path.GetDirectoryName(fullfilename);
+                JSON_Modified = false;
                 if (checkBox_JsonWarnings.Checked) jsonWarnings();
             }
         }
@@ -4977,7 +5198,7 @@ namespace GTR_Watch_face
             {
                 comboBox_WeatherSet_Icon.Text = "";
                 comboBox_WeatherSet_Icon.SelectedIndex = -1;
-                JSON_write();
+                //JSON_write();
                 PreviewImage();
             }
         }
@@ -6114,6 +6335,21 @@ namespace GTR_Watch_face
         private void numericUpDown_ActivityCaloriesScale_Radius_X_ValueChanged(object sender, EventArgs e)
         {
             numericUpDown_ActivityCaloriesScale_Radius_Y.Value = numericUpDown_ActivityCaloriesScale_Radius_X.Value;
+            PreviewImage();
+        }
+
+        private void checkBox_WeatherSet_Temp_Click(object sender, EventArgs e)
+        {
+            PreviewImage();
+        }
+
+        private void numericUpDown_WeatherSet_Temp_ValueChanged(object sender, EventArgs e)
+        {
+            PreviewImage();
+        }
+
+        private void comboBox_WeatherSet_Icon_SelectedIndexChanged(object sender, EventArgs e)
+        {
             PreviewImage();
         }
     }

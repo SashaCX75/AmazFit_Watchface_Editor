@@ -249,4 +249,22 @@
   <data name="Message_Warning_Caption" xml:space="preserve">
     <value>Figyelmeztetés</value>
   </data>
+  <data name="Message_ErrorImage_Text1" xml:space="preserve">
+    <value>Egyes képek hibákat okozhatnak (</value>
+  </data>
+  <data name="Message_ErrorImage_Text2" xml:space="preserve">
+    <value>Próbáljam kijavítani őket?</value>
+  </data>
+  <data name="Message_Save_JSON_Modified_Caption" xml:space="preserve">
+    <value>A projekt mentése</value>
+  </data>
+  <data name="Message_Save_JSON_Modified_Text1" xml:space="preserve">
+    <value>Meg akarja menteni a </value>
+  </data>
+  <data name="Message_Save_JSON_Modified_Text2" xml:space="preserve">
+    <value> projekt változásait?</value>
+  </data>
+  <data name="Message_Save_new_JSON" xml:space="preserve">
+    <value>A jelenlegi projekt nem lett elmentve. Szeretné menteni?</value>
+  </data>
 </root>

@@ -2653,7 +2653,7 @@
             0,
             0,
             -2147483648});
-            this.numericUpDown_WeatherSet_Temp.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_WeatherSet_Temp.ValueChanged += new System.EventHandler(this.numericUpDown_WeatherSet_Temp_ValueChanged);
             // 
             // numericUpDown_WeatherSet_NightTemp
             // 
@@ -2675,7 +2675,7 @@
             0,
             0,
             -2147483648});
-            this.numericUpDown_WeatherSet_NightTemp.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_WeatherSet_NightTemp.ValueChanged += new System.EventHandler(this.numericUpDown_WeatherSet_Temp_ValueChanged);
             // 
             // label288
             // 
@@ -2722,7 +2722,7 @@
             resources.ApplyResources(this.comboBox_WeatherSet_Icon, "comboBox_WeatherSet_Icon");
             this.comboBox_WeatherSet_Icon.Name = "comboBox_WeatherSet_Icon";
             this.helpProvider1.SetShowHelp(this.comboBox_WeatherSet_Icon, ((bool)(resources.GetObject("comboBox_WeatherSet_Icon.ShowHelp"))));
-            this.comboBox_WeatherSet_Icon.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_WeatherSet_Icon.SelectedIndexChanged += new System.EventHandler(this.comboBox_WeatherSet_Icon_SelectedIndexChanged);
             this.comboBox_WeatherSet_Icon.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_WeatherSet_Icon_KeyDown);
             this.comboBox_WeatherSet_Icon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
@@ -2746,7 +2746,7 @@
             0,
             0,
             0});
-            this.numericUpDown_WeatherSet_DayTemp.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_WeatherSet_DayTemp.ValueChanged += new System.EventHandler(this.numericUpDown_WeatherSet_Temp_ValueChanged);
             // 
             // checkBox_WeatherSet_Temp
             // 
@@ -2757,7 +2757,7 @@
             this.helpProvider1.SetShowHelp(this.checkBox_WeatherSet_Temp, ((bool)(resources.GetObject("checkBox_WeatherSet_Temp.ShowHelp"))));
             this.checkBox_WeatherSet_Temp.UseVisualStyleBackColor = true;
             this.checkBox_WeatherSet_Temp.CheckedChanged += new System.EventHandler(this.checkBox_WeatherSet_Temp_CheckedChanged);
-            this.checkBox_WeatherSet_Temp.Click += new System.EventHandler(this.checkBox_Click);
+            this.checkBox_WeatherSet_Temp.Click += new System.EventHandler(this.checkBox_WeatherSet_Temp_Click);
             // 
             // checkBox_WeatherSet_DayTemp
             // 
@@ -2768,7 +2768,7 @@
             this.helpProvider1.SetShowHelp(this.checkBox_WeatherSet_DayTemp, ((bool)(resources.GetObject("checkBox_WeatherSet_DayTemp.ShowHelp"))));
             this.checkBox_WeatherSet_DayTemp.UseVisualStyleBackColor = true;
             this.checkBox_WeatherSet_DayTemp.CheckedChanged += new System.EventHandler(this.checkBox_WeatherSet_DayTemp_CheckedChanged);
-            this.checkBox_WeatherSet_DayTemp.Click += new System.EventHandler(this.checkBox_Click);
+            this.checkBox_WeatherSet_DayTemp.Click += new System.EventHandler(this.checkBox_WeatherSet_Temp_Click);
             // 
             // panel_PreviewStates
             // 
@@ -15488,6 +15488,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Image = global::GTR_Watch_face.Properties.Resources.Amazfit_GTR_47mm;
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Name = "pictureBox2";
             this.helpProvider1.SetShowHelp(this.pictureBox2, ((bool)(resources.GetObject("pictureBox2.ShowHelp"))));
@@ -15723,6 +15724,7 @@
             this.Name = "Form1";
             this.helpProvider1.SetShowHelp(this, ((bool)(resources.GetObject("$this.ShowHelp"))));
             this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.Form1_HelpButtonClicked);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Shown += new System.EventHandler(this.Form1_Shown);
             this.tabControl1.ResumeLayout(false);

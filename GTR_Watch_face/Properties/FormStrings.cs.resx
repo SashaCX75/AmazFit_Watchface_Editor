@@ -249,4 +249,19 @@
   <data name="Message_Warning_Caption" xml:space="preserve">
     <value>Varování</value>
   </data>
+  <data name="Message_ErrorImage_Text1" xml:space="preserve">
+    <value>Některé obrázky mohou způsobovat chyby (</value>
+  </data>
+  <data name="Message_ErrorImage_Text2" xml:space="preserve">
+    <value>Pokusit se je opravit?</value>
+  </data>
+  <data name="Message_Save_JSON_Modified_Caption" xml:space="preserve">
+    <value>Uložit projekt</value>
+  </data>
+  <data name="Message_Save_JSON_Modified_Text1" xml:space="preserve">
+    <value>Chcete uložit změny v projektu </value>
+  </data>
+  <data name="Message_Save_new_JSON" xml:space="preserve">
+    <value>Aktuální projekt ještě nebyl uložen. Chcete jej uložit?</value>
+  </data>
 </root>

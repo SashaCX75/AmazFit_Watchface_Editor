@@ -2694,6 +2694,7 @@ namespace GTR_Watch_face
                 //DefaultValueHandling = DefaultValueHandling.Ignore,
                 NullValueHandling = NullValueHandling.Ignore
             });
+            JSON_Modified = true;
         }
 
         private void AlignmentToString(ComboBox comboBoxAlignment, string Alignment)

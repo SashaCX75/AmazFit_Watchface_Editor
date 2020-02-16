@@ -252,4 +252,22 @@
   <data name="Message_WarningDistanceSuffix" xml:space="preserve">
     <value>Не рекомендуется использовать отображение расстояния без суффикса.</value>
   </data>
+  <data name="Message_ErrorImage_Text1" xml:space="preserve">
+    <value>Некоторые изображения могут вызывать ошибки (</value>
+  </data>
+  <data name="Message_ErrorImage_Text2" xml:space="preserve">
+    <value>Попробовать их исправить?</value>
+  </data>
+  <data name="Message_Save_JSON_Modified_Caption" xml:space="preserve">
+    <value>Сохранение проекта</value>
+  </data>
+  <data name="Message_Save_JSON_Modified_Text1" xml:space="preserve">
+    <value>Вы хотите сохранить изменения в проекте </value>
+  </data>
+  <data name="Message_Save_JSON_Modified_Text2" xml:space="preserve">
+    <value>?</value>
+  </data>
+  <data name="Message_Save_new_JSON" xml:space="preserve">
+    <value>Текущий проект еще не сохранен. Вы хотите сохранить его?</value>
+  </data>
 </root>

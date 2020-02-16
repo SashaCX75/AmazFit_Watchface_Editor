@@ -1785,10 +1785,11 @@ namespace GTR_Watch_face
 
             if (WMesh)
             {
-                Pen pen = new Pen(Color.White, 1);
+                Pen pen = new Pen(Color.White, 2);
                 int LineDistance = 30;
                 if (scale >= 1) LineDistance = 15;
                 if (scale >= 2) LineDistance = 10;
+                if (scale >= 2) pen.Width = 1;
                 //if (panel_Preview.Height > 300) LineDistance = 15;
                 //if (panel_Preview.Height > 690) LineDistance = 10;
                 for (i = 0; i < 30; i++)
@@ -1798,15 +1799,18 @@ namespace GTR_Watch_face
 
                     gPanel.DrawLine(pen, new Point(0, offSet_Y + i * LineDistance), new Point(454, offSet_Y + i * LineDistance));
                     gPanel.DrawLine(pen, new Point(0, offSet_Y - i * LineDistance), new Point(454, offSet_Y - i * LineDistance));
+
+                    if (i == 0) pen.Width = pen.Width/3f;
                 }
             }
-
+            
             if (BMesh)
             {
-                Pen pen = new Pen(Color.Black, 1);
+                Pen pen = new Pen(Color.Black, 2);
                 int LineDistance = 30;
                 if (scale >= 1) LineDistance = 15;
                 if (scale >= 2) LineDistance = 10;
+                if (scale >= 2) pen.Width = 1;
                 //if (panel_Preview.Height > 300) LineDistance = 15;
                 //if (panel_Preview.Height > 690) LineDistance = 10;
                 for (i = 0; i < 30; i++)
@@ -1816,6 +1820,8 @@ namespace GTR_Watch_face
 
                     gPanel.DrawLine(pen, new Point(0, offSet_Y + i * LineDistance), new Point(454, offSet_Y + i * LineDistance));
                     gPanel.DrawLine(pen, new Point(0, offSet_Y - i * LineDistance), new Point(454, offSet_Y - i * LineDistance));
+
+                    if (i == 0) pen.Width = pen.Width / 3f;
                 }
             }
             #endregion

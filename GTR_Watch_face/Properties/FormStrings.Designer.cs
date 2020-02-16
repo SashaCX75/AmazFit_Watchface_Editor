@@ -286,6 +286,24 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Некоторые изображения могут вызывать ошибки (.
+        /// </summary>
+        public static string Message_ErrorImage_Text1 {
+            get {
+                return ResourceManager.GetString("Message_ErrorImage_Text1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попробовать их исправить?.
+        /// </summary>
+        public static string Message_ErrorImage_Text2 {
+            get {
+                return ResourceManager.GetString("Message_ErrorImage_Text2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Перейти к файлу.
         /// </summary>
         public static string Message_GoToFile_Caption {
@@ -399,6 +417,42 @@ namespace GTR_Watch_face.Properties {
         public static string Message_Restart_Text2 {
             get {
                 return ResourceManager.GetString("Message_Restart_Text2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Сохранение проекта.
+        /// </summary>
+        public static string Message_Save_JSON_Modified_Caption {
+            get {
+                return ResourceManager.GetString("Message_Save_JSON_Modified_Caption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Вы хотите сохранить изменения в проекте .
+        /// </summary>
+        public static string Message_Save_JSON_Modified_Text1 {
+            get {
+                return ResourceManager.GetString("Message_Save_JSON_Modified_Text1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ?.
+        /// </summary>
+        public static string Message_Save_JSON_Modified_Text2 {
+            get {
+                return ResourceManager.GetString("Message_Save_JSON_Modified_Text2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Текущий проект еще не сохранен. Вы хотите сохранить его?.
+        /// </summary>
+        public static string Message_Save_new_JSON {
+            get {
+                return ResourceManager.GetString("Message_Save_new_JSON", resourceCulture);
             }
         }
         
