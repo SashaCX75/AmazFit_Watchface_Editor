@@ -1376,7 +1376,6 @@ namespace GTR_Watch_face
                 try
                 {
                     string fileNameOnly = Path.GetFileNameWithoutExtension(file.Name);
-                    //string fileNameOnly = Path.GetFileName(file);
                     int i;
                     if (int.TryParse(fileNameOnly, out i))
                     {
@@ -1394,7 +1393,6 @@ namespace GTR_Watch_face
                             ZoomType = DataGridViewImageCellLayout.Normal;
                         RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = i.ToString() });
                         RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = fileNameOnly });
-                        //RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = file });
                         RowNew.Cells.Add(new DataGridViewImageCell()
                         {
                             Value = loadedImage,
