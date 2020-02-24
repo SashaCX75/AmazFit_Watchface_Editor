@@ -229,7 +229,7 @@ namespace GTR_Watch_face
             //Logger.WriteLine("Form1_Load");
             helpProvider1.HelpNamespace = Application.StartupPath + Properties.FormStrings.File_ReadMy;
 #if Puthon
-            string subPath = Application.StartupPath + @"\py_amazfit_tools-fix_array\main.py";
+            string subPath = Application.StartupPath + @"\py_amazfit_tools_beta\main.py";
 #else
             string subPath = Application.StartupPath + @"\main_v0.2-beta\main.exe";
             //string subPath = Application.StartupPath + @"\main\main.exe";
@@ -1242,8 +1242,11 @@ namespace GTR_Watch_face
                 int i;
                 Image loadedImage = null;
                 List<string> ErrorImage = new List<string>();
-                foreach (String file in openFileDialog.FileNames)
-                {
+                List<string> FileNames = openFileDialog.FileNames.ToList();
+                FileNames.Sort();
+                foreach (String file in FileNames)
+                    //foreach (String file in openFileDialog.FileNames)
+                    {
                     try
                     {
                         string fileNameOnly = Path.GetFileNameWithoutExtension(file);
@@ -1329,6 +1332,61 @@ namespace GTR_Watch_face
         // загружаем JSON файл с настройками
         private void button_JSON_Click(object sender, EventArgs e)
         {
+            if (JSON_Modified) // сохранение если файл не сохранен
+            {
+                if (FileName != null)
+                {
+                    DialogResult dr = MessageBox.Show(Properties.FormStrings.Message_Save_JSON_Modified_Text1 +
+                        Path.GetFileNameWithoutExtension(FileName) + Properties.FormStrings.Message_Save_JSON_Modified_Text2,
+                        Properties.FormStrings.Message_Save_JSON_Modified_Caption, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                    if (dr == DialogResult.Yes)
+                    {
+                        string fullfilename = Path.Combine(FullFileDir, FileName);
+                        File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+                        JSON_Modified = false;
+                        if (checkBox_JsonWarnings.Checked) jsonWarnings();
+                    }
+                    if (dr == DialogResult.Cancel)
+                    {
+                        return;
+                    }
+                }
+                else
+                {
+                    DialogResult dr = MessageBox.Show(Properties.FormStrings.Message_Save_new_JSON,
+                        Properties.FormStrings.Message_Save_JSON_Modified_Caption,
+                        MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                    if (dr == DialogResult.Yes)
+                    {
+                        SaveFileDialog saveFileDialog = new SaveFileDialog();
+                        saveFileDialog.InitialDirectory = FullFileDir;
+                        saveFileDialog.FileName = FileName;
+                        saveFileDialog.Filter = "Json files (*.json) | *.json";
+
+                        //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
+                        ////openFileDialog1.FilterIndex = 2;
+                        saveFileDialog.RestoreDirectory = true;
+                        saveFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
+                        if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                        {
+                            string fullfilename = saveFileDialog.FileName;
+                            File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+                            JSON_Modified = false;
+
+                            FileName = Path.GetFileName(fullfilename);
+                            FullFileDir = Path.GetDirectoryName(fullfilename);
+                            JSON_Modified = false;
+                            if (checkBox_JsonWarnings.Checked) jsonWarnings();
+                        }
+                        else return;
+                    }
+                    if (dr == DialogResult.Cancel)
+                    {
+                        return;
+                    }
+                }
+            }
+
             string subPath = Application.StartupPath + @"\Watch_face\";
             if (!Directory.Exists(subPath)) Directory.CreateDirectory(subPath);
 
@@ -5253,6 +5311,11 @@ namespace GTR_Watch_face
                     bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
                     mask = new Bitmap(@"Mask\mask_gts.png");
                 }
+                if (radioButton_TRex.Checked)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(@"Mask\mask_trex.png");
+                }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false);
                 if(checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
@@ -5283,6 +5346,11 @@ namespace GTR_Watch_face
                 {
                     bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
                     mask = new Bitmap(@"Mask\mask_gts.png");
+                }
+                if (radioButton_TRex.Checked)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(@"Mask\mask_trex.png");
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 bool save = false;
