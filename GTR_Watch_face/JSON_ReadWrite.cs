@@ -88,6 +88,7 @@ namespace GTR_Watch_face
             comboBox_Weather_Icon_NDImage.Items.AddRange(ListImages.ToArray());
             comboBox_Weather_Day_Image.Items.AddRange(ListImages.ToArray());
             comboBox_Weather_Night_Image.Items.AddRange(ListImages.ToArray());
+            comboBox_StaticAnimation_Image.Items.AddRange(ListImages.ToArray());
 
             #endregion
 
@@ -1119,7 +1120,7 @@ namespace GTR_Watch_face
                 checkBox_SecCenterImage.Checked = false;
             }
             #endregion
-
+            
             #region Weather
             if (Watch_Face.Weather != null)
             {
@@ -1286,6 +1287,31 @@ namespace GTR_Watch_face
                 checkBox_Shortcuts_Puls.Checked = false;
                 checkBox_Shortcuts_Weather.Checked = false;
                 checkBox_Shortcuts_Energy.Checked = false;
+            }
+            #endregion
+
+            #region Animation
+            if (Watch_Face.Unknown11 != null)
+            {
+                checkBox_Animation.Checked = true;
+                if (Watch_Face.Unknown11.Unknown11_2 != null && Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1 != null)
+                {
+                    checkBox_StaticAnimation.Checked = true;
+                    numericUpDown_StaticAnimation_SpeedAnimation.Value = Watch_Face.Unknown11.Unknown11_2.Unknown11d2p2;
+                    numericUpDown_StaticAnimation_TimeAnimation.Value = Watch_Face.Unknown11.Unknown11_2.Unknown11d2p4;
+                    numericUpDown_StaticAnimation_Pause.Value = Watch_Face.Unknown11.Unknown11_2.Unknown11d2p5;
+
+                    comboBoxSetText(comboBox_StaticAnimation_Image, Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1.ImageIndex);
+                    numericUpDown_StaticAnimation_Count.Value = Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1.ImagesCount;
+                    numericUpDown_StaticAnimation_X.Value = Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1.X;
+                    numericUpDown_StaticAnimation_Y.Value = Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1.Y;
+                }
+                else checkBox_StaticAnimation.Checked = false;
+            }
+            else
+            {
+                checkBox_Animation.Checked = false;
+                checkBox_StaticAnimation.Checked = false;
             }
             #endregion
         }
@@ -2688,6 +2714,28 @@ namespace GTR_Watch_face
                     Watch_Face.Shortcuts.Unknown4.Element.Height = (int)numericUpDown_Shortcuts_Energy_Height.Value;
                 }
             }
+            
+            // анимация
+            if (checkBox_Animation.Checked)
+            {
+                if ((checkBox_StaticAnimation.Checked) && (comboBox_StaticAnimation_Image.SelectedIndex >= 0))
+                {
+                    if (Watch_Face.Unknown11 == null) Watch_Face.Unknown11 = new Animation();
+                    if (Watch_Face.Unknown11.Unknown11_2 == null) Watch_Face.Unknown11.Unknown11_2 = new StaticAnimation();
+                    if (Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1 == null)
+                        Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1 = new ImageSet();
+
+                    Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1.ImageIndex = Int32.Parse(comboBox_StaticAnimation_Image.Text);
+                    Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1.ImagesCount = (int)numericUpDown_StaticAnimation_Count.Value;
+                    Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1.X = (int)numericUpDown_StaticAnimation_X.Value;
+                    Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1.Y = (int)numericUpDown_StaticAnimation_Y.Value;
+
+                    Watch_Face.Unknown11.Unknown11_2.Unknown11d2p2 = (int)numericUpDown_StaticAnimation_SpeedAnimation.Value;
+                    Watch_Face.Unknown11.Unknown11_2.Unknown11d2p3 = 0;
+                    Watch_Face.Unknown11.Unknown11_2.Unknown11d2p4 = (int)numericUpDown_StaticAnimation_TimeAnimation.Value;
+                    Watch_Face.Unknown11.Unknown11_2.Unknown11d2p5 = (int)numericUpDown_StaticAnimation_Pause.Value;
+                }
+            }
 
             richTextBox_JSON.Text = JsonConvert.SerializeObject(Watch_Face, Formatting.Indented, new JsonSerializerSettings
             {
@@ -3021,6 +3069,8 @@ namespace GTR_Watch_face
             comboBox_Weather_Day_Image.Items.Clear();
             comboBox_Weather_Night_Image.Text = "";
             comboBox_Weather_Night_Image.Items.Clear();
+            comboBox_StaticAnimation_Image.Text = "";
+            comboBox_StaticAnimation_Image.Items.Clear();
 
         }
 

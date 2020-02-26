@@ -125,9 +125,9 @@
   <data name="button_zip_unpack.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 138</value>
   </data>
-  <data name="helpProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  <metadata name="helpProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>482, 17</value>
-  </data>
+  </metadata>
   <data name="helpProvider1.HelpNamespace" xml:space="preserve">
     <value>C:\Users\Администратор\Documents\readme.chm</value>
   </data>
@@ -493,7 +493,7 @@
     <value>True</value>
   </data>
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>683, 525</value>
+    <value>683, 575</value>
   </data>
   <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -520,7 +520,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 502</value>
+    <value>9, 552</value>
   </data>
   <data name="checkBox1.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2524,7 +2524,7 @@
     <value>NoControl</value>
   </data>
   <data name="button_SetWeather.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 469</value>
+    <value>0, 519</value>
   </data>
   <data name="button_SetWeather.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2857,7 +2857,7 @@
     <value>Bottom</value>
   </data>
   <data name="panel_SetWeather.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 492</value>
+    <value>0, 542</value>
   </data>
   <data name="panel_SetWeather.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2974,7 +2974,7 @@
     <value>Bottom</value>
   </data>
   <data name="panel_PreviewStates.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 493</value>
+    <value>0, 543</value>
   </data>
   <data name="panel_PreviewStates.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 0</value>
@@ -9577,7 +9577,7 @@
     <value>True</value>
   </data>
   <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>350, 519</value>
+    <value>350, 569</value>
   </data>
   <data name="panel3.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -9594,24 +9594,24 @@
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="Number.UserAddedColumn" type="System.Boolean, mscorlib">
+  <metadata name="Number.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="Number.HeaderText" xml:space="preserve">
     <value>№</value>
   </data>
   <data name="Number.Width" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
-  <data name="NameFile.UserAddedColumn" type="System.Boolean, mscorlib">
+  <metadata name="NameFile.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="NameFile.HeaderText" xml:space="preserve">
     <value>Имя файла</value>
   </data>
-  <data name="ColumnImage.UserAddedColumn" type="System.Boolean, mscorlib">
+  <metadata name="ColumnImage.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="ColumnImage.HeaderText" xml:space="preserve">
     <value>Картинка</value>
   </data>
@@ -9625,7 +9625,7 @@
     <value>True</value>
   </data>
   <data name="dataGridView_ImagesList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>315, 464</value>
+    <value>315, 514</value>
   </data>
   <data name="dataGridView_ImagesList.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -9778,7 +9778,7 @@
     <value>True</value>
   </data>
   <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>683, 525</value>
+    <value>683, 575</value>
   </data>
   <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -9802,7 +9802,7 @@
     <value>NoControl</value>
   </data>
   <data name="button_SaveJson.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 499</value>
+    <value>147, 549</value>
   </data>
   <data name="button_SaveJson.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -9832,7 +9832,7 @@
     <value>NoControl</value>
   </data>
   <data name="button_TextToJson.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 499</value>
+    <value>3, 549</value>
   </data>
   <data name="button_TextToJson.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -9861,9 +9861,485 @@
   <data name="panel2.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="contextMenuStrip_X.TrayLocation" type="System.Drawing.Point, System.Drawing">
-    <value>696, 17</value>
+  <data name="button_ShowAnimation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 195</value>
   </data>
+  <data name="button_ShowAnimation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 23</value>
+  </data>
+  <data name="button_ShowAnimation.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="button_ShowAnimation.Text" xml:space="preserve">
+    <value>Показать анимацию</value>
+  </data>
+  <data name="&gt;&gt;button_ShowAnimation.Name" xml:space="preserve">
+    <value>button_ShowAnimation</value>
+  </data>
+  <data name="&gt;&gt;button_ShowAnimation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_ShowAnimation.Parent" xml:space="preserve">
+    <value>panel_Animation</value>
+  </data>
+  <data name="&gt;&gt;button_ShowAnimation.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_SpeedAnimation.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_SpeedAnimation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 112</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_SpeedAnimation.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_SpeedAnimation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_SpeedAnimation.TabIndex" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_SpeedAnimation.Name" xml:space="preserve">
+    <value>numericUpDown_StaticAnimation_SpeedAnimation</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_SpeedAnimation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_SpeedAnimation.Parent" xml:space="preserve">
+    <value>tabPage53</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_SpeedAnimation.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label479.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label479.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label479.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 106</value>
+  </data>
+  <data name="label479.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label479.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 30</value>
+  </data>
+  <data name="label479.TabIndex" type="System.Int32, mscorlib">
+    <value>99</value>
+  </data>
+  <data name="label479.Text" xml:space="preserve">
+    <value>Скорость анимации</value>
+  </data>
+  <data name="label479.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label479.Name" xml:space="preserve">
+    <value>label479</value>
+  </data>
+  <data name="&gt;&gt;label479.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label479.Parent" xml:space="preserve">
+    <value>tabPage53</value>
+  </data>
+  <data name="&gt;&gt;label479.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_CyclesCount.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_CyclesCount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 77</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_CyclesCount.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_CyclesCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_CyclesCount.TabIndex" type="System.Int32, mscorlib">
+    <value>98</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_CyclesCount.Name" xml:space="preserve">
+    <value>numericUpDown_StaticAnimation_CyclesCount</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_CyclesCount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_CyclesCount.Parent" xml:space="preserve">
+    <value>tabPage53</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_CyclesCount.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label476.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label476.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label476.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 71</value>
+  </data>
+  <data name="label476.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label476.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 30</value>
+  </data>
+  <data name="label476.TabIndex" type="System.Int32, mscorlib">
+    <value>97</value>
+  </data>
+  <data name="label476.Text" xml:space="preserve">
+    <value>Количество циклов анимации до паузы</value>
+  </data>
+  <data name="label476.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label476.Name" xml:space="preserve">
+    <value>label476</value>
+  </data>
+  <data name="&gt;&gt;label476.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label476.Parent" xml:space="preserve">
+    <value>tabPage53</value>
+  </data>
+  <data name="&gt;&gt;label476.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_Pause.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_Pause.Location" type="System.Drawing.Point, System.Drawing">
+    <value>324, 112</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_Pause.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_Pause.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 20</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_Pause.TabIndex" type="System.Int32, mscorlib">
+    <value>96</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_Pause.Name" xml:space="preserve">
+    <value>numericUpDown_StaticAnimation_Pause</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_Pause.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_Pause.Parent" xml:space="preserve">
+    <value>tabPage53</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_Pause.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label478.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label478.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label478.Location" type="System.Drawing.Point, System.Drawing">
+    <value>219, 106</value>
+  </data>
+  <data name="label478.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label478.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 30</value>
+  </data>
+  <data name="label478.TabIndex" type="System.Int32, mscorlib">
+    <value>95</value>
+  </data>
+  <data name="label478.Text" xml:space="preserve">
+    <value>Пауза между циклами анимации</value>
+  </data>
+  <data name="label478.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label478.Name" xml:space="preserve">
+    <value>label478</value>
+  </data>
+  <data name="&gt;&gt;label478.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label478.Parent" xml:space="preserve">
+    <value>tabPage53</value>
+  </data>
+  <data name="&gt;&gt;label478.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_TimeAnimation.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_TimeAnimation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>324, 77</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_TimeAnimation.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_TimeAnimation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 20</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_TimeAnimation.TabIndex" type="System.Int32, mscorlib">
+    <value>94</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_TimeAnimation.Name" xml:space="preserve">
+    <value>numericUpDown_StaticAnimation_TimeAnimation</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_TimeAnimation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_TimeAnimation.Parent" xml:space="preserve">
+    <value>tabPage53</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_TimeAnimation.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="label477.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label477.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label477.Location" type="System.Drawing.Point, System.Drawing">
+    <value>229, 71</value>
+  </data>
+  <data name="label477.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label477.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 30</value>
+  </data>
+  <data name="label477.TabIndex" type="System.Int32, mscorlib">
+    <value>93</value>
+  </data>
+  <data name="label477.Text" xml:space="preserve">
+    <value>Длительность цикла анимации</value>
+  </data>
+  <data name="label477.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label477.Name" xml:space="preserve">
+    <value>label477</value>
+  </data>
+  <data name="&gt;&gt;label477.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label477.Parent" xml:space="preserve">
+    <value>tabPage53</value>
+  </data>
+  <data name="&gt;&gt;label477.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="comboBox_StaticAnimation_Image.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="comboBox_StaticAnimation_Image.Location" type="System.Drawing.Point, System.Drawing">
+    <value>199, 42</value>
+  </data>
+  <data name="comboBox_StaticAnimation_Image.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="comboBox_StaticAnimation_Image.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="comboBox_StaticAnimation_Image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 21</value>
+  </data>
+  <data name="comboBox_StaticAnimation_Image.TabIndex" type="System.Int32, mscorlib">
+    <value>84</value>
+  </data>
+  <data name="&gt;&gt;comboBox_StaticAnimation_Image.Name" xml:space="preserve">
+    <value>comboBox_StaticAnimation_Image</value>
+  </data>
+  <data name="&gt;&gt;comboBox_StaticAnimation_Image.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox_StaticAnimation_Image.Parent" xml:space="preserve">
+    <value>tabPage53</value>
+  </data>
+  <data name="&gt;&gt;comboBox_StaticAnimation_Image.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_Count.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_Count.Location" type="System.Drawing.Point, System.Drawing">
+    <value>329, 44</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_Count.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_Count.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_Count.TabIndex" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_Count.Name" xml:space="preserve">
+    <value>numericUpDown_StaticAnimation_Count</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_Count.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_Count.Parent" xml:space="preserve">
+    <value>tabPage53</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_Count.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="label411.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label411.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label411.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label411.Location" type="System.Drawing.Point, System.Drawing">
+    <value>259, 46</value>
+  </data>
+  <data name="label411.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label411.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 13</value>
+  </data>
+  <data name="label411.TabIndex" type="System.Int32, mscorlib">
+    <value>89</value>
+  </data>
+  <data name="label411.Text" xml:space="preserve">
+    <value>ImagesCount:</value>
+  </data>
+  <data name="&gt;&gt;label411.Name" xml:space="preserve">
+    <value>label411</value>
+  </data>
+  <data name="&gt;&gt;label411.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label411.Parent" xml:space="preserve">
+    <value>tabPage53</value>
+  </data>
+  <data name="&gt;&gt;label411.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <metadata name="contextMenuStrip_Y.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <data name="toolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAH8SURBVDhPY/DvvvrfovxIPQMWAJKzxCOnXXi8nsG8eE/9rHXH/586fw2MT1+4DsZnLl7/37nx
+        8f/VB+/+P3vpJhifu3wLjM9fuf0/vvvAfo3MXfZg006cvfz/5af/JOHNmzcjXHbizMX/rz//h+MN2/b/
+        L62sR8HI8iC8fv16hAHHT1/4//brfzieMnM+mC6pqEXhI+M1a9ZADDAtOVy/av+N/x++/cfAZZW1WMVB
+        OKJ1z35gINqDQ7Nvy+P/n378x8AVVXVYxUEYHgsgcPTEqf9ff/7HwFU1dVjFQXjy7KWIMDh6/OT/77/+
+        o+Abt+//t7Wz/z9rzny42K8/EAxiz5s3D2HAkWPH4ZK48J+///8vuDb5//Lb0/7//vvv/6xZs5AMOHIU
+        rAAXBqr//w+Ic/bE/i8/mgQU+/v/ypUrayfOX88GDkTvyk37Gxsb65uamuqbm5vrW1pa6qtbJtSD5CZs
+        vvcnf1vuf/8VHv9z98f/LwYakLor5H/ryeL/Vx59rmcAJsd6eJJEAyC5FUeerXSb4frfbKLR/4C19v8j
+        tjr+N1+g9T9+u8//n7//5kOV4gYTJkxg+/nzZ+7fv3/3afXI/rdZpAb0wu8Dv3//zl+4aCEHVBlh8O79
+        uyy3Gcb/HWbZAsPjH2Gb0UF/fz8b0JCcd+/e5SFsZmAAAO6bd5PMUu6IAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 26</value>
+  </data>
+  <data name="toolStripMenuItem1.Text" xml:space="preserve">
+    <value>Вставить координату Y</value>
+  </data>
+  <data name="копироватьToolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAJySURBVDhPpVFLbxJhFB2N0brnkWg37upWSpfqyl2Ji5rUf+DSvbow2ppoqilgfCBDY12oQeVR
+        a9WF0Wo7IC3l/RwKwwDDe4B2fb33gxSS6sqbnMydm3POd777cVSnx8ePaTSaE1qtdkyn043p9fqTOgL2
+        Gq0W57rjjPivstmX/OFoHKLxJCRSGUimswgR4sk00DyC8/MXLl4e0A+Xzc4LRIwhMYkG8UQKhTEIhaOw
+        vROGYCgCMzNXrhsMhonJSePEOYPhrHFq6tRAznEvl18JopiH3G4eCpIMPn8A1n8J4Pu9BYHtHWZC6aLx
+        FIQiMQii8f0HC2sDOce9fvNWkEplkBEVRUFB6ECUTGcgnRUZUng1SkfzhYePPg7kHOd8916oKFWo1urQ
+        aLYgGotDAskiJsoXilAoyiAhClIRcvkCm5st1qHBB5dLICFBbat4UgaFEhTlMpQrCijVGgP1pXKFJX3y
+        9NnQwOX2CK12G1qtNqjdDmQwrozEgiRBvdFE4yZLl8BX+fFzk82e214MDdzMQGUGbbUDWTF3cGoEX2cX
+        Y6udHvR6PdgQ/EBcO88fNmiSAX6zogi1ep39B7aCuLgk7O3vs+csVyqMwzsco1dwC81Gm+2AUtAVKCYl
+        oVkdQQvc2PTBt+/rLCXvWBpJ4PH6mriDYYIc1GqNviHOaUaiPvr/PD+SYH7u3rLHsxJBo7DXuxL5/OWr
+        XKs3WAoypVQtNKOeTGk3d+fmnQM5qyOIowNwJpPpWre310+Ep6qdLgP1ZCyXFJi9OnuHuH8to9F4yWJ9
+        vLa4aF41my2rFov1E4H6GzdvOaenTbeRdqbP/q/iuD+MMmJvZ5TQYgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="копироватьToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 26</value>
+  </data>
+  <data name="копироватьToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Копировать</value>
+  </data>
+  <data name="вставитьToolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAK1SURBVDhPZVJLTxNhFJ22PFrkJT4KtIgaEnSB4KP4IJoYE1+oZAqNsFAKiUWKQIypO3+AO10Y
+        UWhrhBBdUAH9EWx0gRG0RUoLpaW0M9OC6+O9Qw0FJzmZm3PPPfe79/sE/gr0ucamkzU9DbUmh9hyq7ez
+        0+602+3O7u5uFRwz12a902upq3acq6/pKS0uMKrF/BUZdNbHdy149+Ylpid9mJmZgd/vRygUUsExc1+m
+        P2Hc+wp9rRZUlZdZM+VkoNeJ/W0WfJ2dw4RvCsMjbrg9Hng8XhVut0flJnyT+DY7D0fLaVRV7BO3qukr
+        MeSI/baz+D7nx4/5X/AvLOJ3cAmLSyEVHAeI4xxrnHSCQ5X7dxoM2hoRCIawsBhEMBRGaHkF4ZWICo6X
+        iONcIBjGQMd5Msg6QTEZDNgsWI7EECZxZDWKaGwNsbW4Co6Z4xxrBjuacKiiLMuAdvCIdhCLJ7EajWEt
+        vo71RBJJSVLBMXOcY00fjVttOvC/wXpSUYWJpARZVqCk0io4Zk41Jo2zrXHXCPocsVc8BUlJq90SkgxF
+        SSGVTqtQUilIxHGONQ+tdI3ZI9A7EB/cboCc2kCCRf8MqDuDY+Y4x5qu5nqYy7MMCukEXTfqKLmJeOYE
+        6ghUyJAVJctgE/evn+CHtG2wJ18n3rt6HJK8sbU8mlfK7IEhybTMxNYy40kZ7VeOwWzcu21gyNOK7Zdr
+        kZTTiNO1cackdeSuDI6Zi0SimP8ZQLPFBJOxdKeB7VINlPQf6kLdaNNSprss0/w0RjyeoBe5jM9Tk7h5
+        xrTrBLnaVtvFoxj1DmPM8xof3g/DN+7Bx9ERjHnfYtQzhKEXz/HsiQPXGo9AvHAYlQdLWjPlgqARBDNd
+        5dNcjeDK1wouQ47gKs6jv05wMcdgrjBf4yrU61xFpNVpNWZBEIS/oF5M/il8x94AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="вставитьToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 26</value>
+  </data>
+  <data name="вставитьToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Вставить</value>
+  </data>
+  <data name="contextMenuStrip_Y.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="contextMenuStrip_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 82</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip_Y.Name" xml:space="preserve">
+    <value>contextMenuStrip_Y</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip_Y.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_Y.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>79, 43</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_Y.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_Y.TabIndex" type="System.Int32, mscorlib">
+    <value>86</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_Y.Name" xml:space="preserve">
+    <value>numericUpDown_StaticAnimation_Y</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_Y.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_Y.Parent" xml:space="preserve">
+    <value>tabPage53</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_Y.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <metadata name="contextMenuStrip_X.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>696, 17</value>
+  </metadata>
   <data name="вставитьКоординатуХToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -9941,6 +10417,393 @@
   <data name="&gt;&gt;contextMenuStrip_X.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="numericUpDown_StaticAnimation_X.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 43</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_X.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="numericUpDown_StaticAnimation_X.TabIndex" type="System.Int32, mscorlib">
+    <value>85</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_X.Name" xml:space="preserve">
+    <value>numericUpDown_StaticAnimation_X</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_X.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_X.Parent" xml:space="preserve">
+    <value>tabPage53</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StaticAnimation_X.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="checkBox_StaticAnimation.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox_StaticAnimation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox_StaticAnimation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 7</value>
+  </data>
+  <data name="checkBox_StaticAnimation.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox_StaticAnimation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 17</value>
+  </data>
+  <data name="checkBox_StaticAnimation.TabIndex" type="System.Int32, mscorlib">
+    <value>87</value>
+  </data>
+  <data name="checkBox_StaticAnimation.Text" xml:space="preserve">
+    <value>Отображать</value>
+  </data>
+  <data name="&gt;&gt;checkBox_StaticAnimation.Name" xml:space="preserve">
+    <value>checkBox_StaticAnimation</value>
+  </data>
+  <data name="&gt;&gt;checkBox_StaticAnimation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox_StaticAnimation.Parent" xml:space="preserve">
+    <value>tabPage53</value>
+  </data>
+  <data name="&gt;&gt;checkBox_StaticAnimation.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="label416.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label416.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label416.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label416.Location" type="System.Drawing.Point, System.Drawing">
+    <value>64, 45</value>
+  </data>
+  <data name="label416.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label416.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
+  </data>
+  <data name="label416.TabIndex" type="System.Int32, mscorlib">
+    <value>82</value>
+  </data>
+  <data name="label416.Text" xml:space="preserve">
+    <value>Y:</value>
+  </data>
+  <data name="&gt;&gt;label416.Name" xml:space="preserve">
+    <value>label416</value>
+  </data>
+  <data name="&gt;&gt;label416.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label416.Parent" xml:space="preserve">
+    <value>tabPage53</value>
+  </data>
+  <data name="&gt;&gt;label416.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="label473.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label473.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label473.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label473.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 45</value>
+  </data>
+  <data name="label473.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label473.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 13</value>
+  </data>
+  <data name="label473.TabIndex" type="System.Int32, mscorlib">
+    <value>83</value>
+  </data>
+  <data name="label473.Text" xml:space="preserve">
+    <value>ImageIndex:</value>
+  </data>
+  <data name="&gt;&gt;label473.Name" xml:space="preserve">
+    <value>label473</value>
+  </data>
+  <data name="&gt;&gt;label473.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label473.Parent" xml:space="preserve">
+    <value>tabPage53</value>
+  </data>
+  <data name="&gt;&gt;label473.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="label474.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label474.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label474.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label474.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 45</value>
+  </data>
+  <data name="label474.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label474.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
+  </data>
+  <data name="label474.TabIndex" type="System.Int32, mscorlib">
+    <value>81</value>
+  </data>
+  <data name="label474.Text" xml:space="preserve">
+    <value>X:</value>
+  </data>
+  <data name="&gt;&gt;label474.Name" xml:space="preserve">
+    <value>label474</value>
+  </data>
+  <data name="&gt;&gt;label474.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label474.Parent" xml:space="preserve">
+    <value>tabPage53</value>
+  </data>
+  <data name="&gt;&gt;label474.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="label475.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label475.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label475.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label475.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 27</value>
+  </data>
+  <data name="label475.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label475.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
+  </data>
+  <data name="label475.TabIndex" type="System.Int32, mscorlib">
+    <value>88</value>
+  </data>
+  <data name="label475.Text" xml:space="preserve">
+    <value>Координаты</value>
+  </data>
+  <data name="&gt;&gt;label475.Name" xml:space="preserve">
+    <value>label475</value>
+  </data>
+  <data name="&gt;&gt;label475.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label475.Parent" xml:space="preserve">
+    <value>tabPage53</value>
+  </data>
+  <data name="&gt;&gt;label475.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="tabPage53.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPage53.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage53.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tabPage53.Size" type="System.Drawing.Size, System.Drawing">
+    <value>382, 142</value>
+  </data>
+  <data name="tabPage53.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPage53.Text" xml:space="preserve">
+    <value>Покадровая анимация</value>
+  </data>
+  <data name="&gt;&gt;tabPage53.Name" xml:space="preserve">
+    <value>tabPage53</value>
+  </data>
+  <data name="&gt;&gt;tabPage53.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage53.Parent" xml:space="preserve">
+    <value>tabControl_Animation</value>
+  </data>
+  <data name="&gt;&gt;tabPage53.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPage54.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPage54.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tabPage54.Size" type="System.Drawing.Size, System.Drawing">
+    <value>382, 142</value>
+  </data>
+  <data name="tabPage54.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tabPage54.Text" xml:space="preserve">
+    <value>Перемещение между координатами</value>
+  </data>
+  <data name="&gt;&gt;tabPage54.Name" xml:space="preserve">
+    <value>tabPage54</value>
+  </data>
+  <data name="&gt;&gt;tabPage54.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage54.Parent" xml:space="preserve">
+    <value>tabControl_Animation</value>
+  </data>
+  <data name="&gt;&gt;tabPage54.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabControl_Animation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tabControl_Animation.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tabControl_Animation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 20</value>
+  </data>
+  <data name="tabControl_Animation.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tabControl_Animation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>390, 168</value>
+  </data>
+  <data name="tabControl_Animation.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;tabControl_Animation.Name" xml:space="preserve">
+    <value>tabControl_Animation</value>
+  </data>
+  <data name="&gt;&gt;tabControl_Animation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl_Animation.Parent" xml:space="preserve">
+    <value>panel_Animation</value>
+  </data>
+  <data name="&gt;&gt;tabControl_Animation.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="checkBox_Animation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="checkBox_Animation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox_Animation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="checkBox_Animation.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 3, 0, 0</value>
+  </data>
+  <data name="checkBox_Animation.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox_Animation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>390, 20</value>
+  </data>
+  <data name="checkBox_Animation.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="checkBox_Animation.Text" xml:space="preserve">
+    <value>Использовать</value>
+  </data>
+  <data name="&gt;&gt;checkBox_Animation.Name" xml:space="preserve">
+    <value>checkBox_Animation</value>
+  </data>
+  <data name="&gt;&gt;checkBox_Animation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox_Animation.Parent" xml:space="preserve">
+    <value>panel_Animation</value>
+  </data>
+  <data name="&gt;&gt;checkBox_Animation.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="panel_Animation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panel_Animation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 287</value>
+  </data>
+  <data name="panel_Animation.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="panel_Animation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>392, 244</value>
+  </data>
+  <data name="panel_Animation.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="&gt;&gt;panel_Animation.Name" xml:space="preserve">
+    <value>panel_Animation</value>
+  </data>
+  <data name="&gt;&gt;panel_Animation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel_Animation.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel_Animation.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="button_Animation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="button_Animation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_Animation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 264</value>
+  </data>
+  <data name="button_Animation.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="button_Animation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>392, 23</value>
+  </data>
+  <data name="button_Animation.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="button_Animation.Text" xml:space="preserve">
+    <value>Анимация (Animation) - beta</value>
+  </data>
+  <data name="&gt;&gt;button_Animation.Name" xml:space="preserve">
+    <value>button_Animation</value>
+  </data>
+  <data name="&gt;&gt;button_Animation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_Animation.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;button_Animation.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="numericUpDown_Shortcuts_Steps_Width.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -9967,86 +10830,6 @@
   </data>
   <data name="&gt;&gt;numericUpDown_Shortcuts_Steps_Width.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="contextMenuStrip_Y.TrayLocation" type="System.Drawing.Point, System.Drawing">
-    <value>17, 56</value>
-  </data>
-  <data name="toolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAH8SURBVDhPY/DvvvrfovxIPQMWAJKzxCOnXXi8nsG8eE/9rHXH/586fw2MT1+4DsZnLl7/37nx
-        8f/VB+/+P3vpJhifu3wLjM9fuf0/vvvAfo3MXfZg006cvfz/5af/JOHNmzcjXHbizMX/rz//h+MN2/b/
-        L62sR8HI8iC8fv16hAHHT1/4//brfzieMnM+mC6pqEXhI+M1a9ZADDAtOVy/av+N/x++/cfAZZW1WMVB
-        OKJ1z35gINqDQ7Nvy+P/n378x8AVVXVYxUEYHgsgcPTEqf9ff/7HwFU1dVjFQXjy7KWIMDh6/OT/77/+
-        o+Abt+//t7Wz/z9rzny42K8/EAxiz5s3D2HAkWPH4ZK48J+///8vuDb5//Lb0/7//vvv/6xZs5AMOHIU
-        rAAXBqr//w+Ic/bE/i8/mgQU+/v/ypUrayfOX88GDkTvyk37Gxsb65uamuqbm5vrW1pa6qtbJtSD5CZs
-        vvcnf1vuf/8VHv9z98f/LwYakLor5H/ryeL/Vx59rmcAJsd6eJJEAyC5FUeerXSb4frfbKLR/4C19v8j
-        tjr+N1+g9T9+u8//n7//5kOV4gYTJkxg+/nzZ+7fv3/3afXI/rdZpAb0wu8Dv3//zl+4aCEHVBlh8O79
-        uyy3Gcb/HWbZAsPjH2Gb0UF/fz8b0JCcd+/e5SFsZmAAAO6bd5PMUu6IAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 26</value>
-  </data>
-  <data name="toolStripMenuItem1.Text" xml:space="preserve">
-    <value>Вставить координату Y</value>
-  </data>
-  <data name="копироватьToolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAJySURBVDhPpVFLbxJhFB2N0brnkWg37upWSpfqyl2Ji5rUf+DSvbow2ppoqilgfCBDY12oQeVR
-        a9WF0Wo7IC3l/RwKwwDDe4B2fb33gxSS6sqbnMydm3POd777cVSnx8ePaTSaE1qtdkyn043p9fqTOgL2
-        Gq0W57rjjPivstmX/OFoHKLxJCRSGUimswgR4sk00DyC8/MXLl4e0A+Xzc4LRIwhMYkG8UQKhTEIhaOw
-        vROGYCgCMzNXrhsMhonJSePEOYPhrHFq6tRAznEvl18JopiH3G4eCpIMPn8A1n8J4Pu9BYHtHWZC6aLx
-        FIQiMQii8f0HC2sDOce9fvNWkEplkBEVRUFB6ECUTGcgnRUZUng1SkfzhYePPg7kHOd8916oKFWo1urQ
-        aLYgGotDAskiJsoXilAoyiAhClIRcvkCm5st1qHBB5dLICFBbat4UgaFEhTlMpQrCijVGgP1pXKFJX3y
-        9NnQwOX2CK12G1qtNqjdDmQwrozEgiRBvdFE4yZLl8BX+fFzk82e214MDdzMQGUGbbUDWTF3cGoEX2cX
-        Y6udHvR6PdgQ/EBcO88fNmiSAX6zogi1ep39B7aCuLgk7O3vs+csVyqMwzsco1dwC81Gm+2AUtAVKCYl
-        oVkdQQvc2PTBt+/rLCXvWBpJ4PH6mriDYYIc1GqNviHOaUaiPvr/PD+SYH7u3rLHsxJBo7DXuxL5/OWr
-        XKs3WAoypVQtNKOeTGk3d+fmnQM5qyOIowNwJpPpWre310+Ep6qdLgP1ZCyXFJi9OnuHuH8to9F4yWJ9
-        vLa4aF41my2rFov1E4H6GzdvOaenTbeRdqbP/q/iuD+MMmJvZ5TQYgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="копироватьToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 26</value>
-  </data>
-  <data name="копироватьToolStripMenuItem1.Text" xml:space="preserve">
-    <value>Копировать</value>
-  </data>
-  <data name="вставитьToolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAK1SURBVDhPZVJLTxNhFJ22PFrkJT4KtIgaEnSB4KP4IJoYE1+oZAqNsFAKiUWKQIypO3+AO10Y
-        UWhrhBBdUAH9EWx0gRG0RUoLpaW0M9OC6+O9Qw0FJzmZm3PPPfe79/sE/gr0ucamkzU9DbUmh9hyq7ez
-        0+602+3O7u5uFRwz12a902upq3acq6/pKS0uMKrF/BUZdNbHdy149+Ylpid9mJmZgd/vRygUUsExc1+m
-        P2Hc+wp9rRZUlZdZM+VkoNeJ/W0WfJ2dw4RvCsMjbrg9Hng8XhVut0flJnyT+DY7D0fLaVRV7BO3qukr
-        MeSI/baz+D7nx4/5X/AvLOJ3cAmLSyEVHAeI4xxrnHSCQ5X7dxoM2hoRCIawsBhEMBRGaHkF4ZWICo6X
-        iONcIBjGQMd5Msg6QTEZDNgsWI7EECZxZDWKaGwNsbW4Co6Z4xxrBjuacKiiLMuAdvCIdhCLJ7EajWEt
-        vo71RBJJSVLBMXOcY00fjVttOvC/wXpSUYWJpARZVqCk0io4Zk41Jo2zrXHXCPocsVc8BUlJq90SkgxF
-        SSGVTqtQUilIxHGONQ+tdI3ZI9A7EB/cboCc2kCCRf8MqDuDY+Y4x5qu5nqYy7MMCukEXTfqKLmJeOYE
-        6ghUyJAVJctgE/evn+CHtG2wJ18n3rt6HJK8sbU8mlfK7IEhybTMxNYy40kZ7VeOwWzcu21gyNOK7Zdr
-        kZTTiNO1cackdeSuDI6Zi0SimP8ZQLPFBJOxdKeB7VINlPQf6kLdaNNSprss0/w0RjyeoBe5jM9Tk7h5
-        xrTrBLnaVtvFoxj1DmPM8xof3g/DN+7Bx9ERjHnfYtQzhKEXz/HsiQPXGo9AvHAYlQdLWjPlgqARBDNd
-        5dNcjeDK1wouQ47gKs6jv05wMcdgrjBf4yrU61xFpNVpNWZBEIS/oF5M/il8x94AAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="вставитьToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 26</value>
-  </data>
-  <data name="вставитьToolStripMenuItem1.Text" xml:space="preserve">
-    <value>Вставить</value>
-  </data>
-  <data name="contextMenuStrip_Y.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="contextMenuStrip_Y.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 82</value>
-  </data>
-  <data name="&gt;&gt;contextMenuStrip_Y.Name" xml:space="preserve">
-    <value>contextMenuStrip_Y</value>
-  </data>
-  <data name="&gt;&gt;contextMenuStrip_Y.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="numericUpDown_Shortcuts_Steps_Y.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -11654,7 +12437,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;panel_Shortcuts.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="button_Shortcuts.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -11687,7 +12470,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;button_Shortcuts.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="comboBox_Weather_Text_NDImage.Location" type="System.Drawing.Point, System.Drawing">
     <value>336, 17</value>
@@ -14438,7 +15221,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;panel_Weather.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="button_Weather.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -14471,7 +15254,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;button_Weather.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="numericUpDown_AnalogClock_Hour_Offset_X.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -16541,7 +17324,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;panel_AnalogClock.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="button_AnalogClock.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -16574,7 +17357,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;button_AnalogClock.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="comboBox_Battery_Text_Image.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -19324,21 +20107,21 @@
   <data name="&gt;&gt;label405.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib">
+  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
     <value>X</value>
   </data>
-  <data name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib">
+  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
     <value>Y</value>
   </data>
-  <data name="contextMenuStrip_XY_InTable.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  <metadata name="contextMenuStrip_XY_InTable.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>178, 56</value>
-  </data>
+  </metadata>
   <data name="вставитьКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 22</value>
   </data>
@@ -19523,7 +20306,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;panel_Battery.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="button_Battery.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -19556,7 +20339,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;button_Battery.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="comboBox_Bluetooth_Off.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -20888,7 +21671,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;panel_Status.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="button_Status.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -20921,7 +21704,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;button_Status.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="comboBox_Activity_NDImage.Location" type="System.Drawing.Point, System.Drawing">
     <value>91, 188</value>
@@ -24517,15 +25300,15 @@
   <data name="&gt;&gt;comboBox_ActivityPuls_IconSet_Image.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="dataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib">
+  <metadata name="dataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="dataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
     <value>X</value>
   </data>
-  <data name="dataGridViewTextBoxColumn4.UserAddedColumn" type="System.Boolean, mscorlib">
+  <metadata name="dataGridViewTextBoxColumn4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="dataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
     <value>Y</value>
   </data>
@@ -27002,7 +27785,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;panel_Activity.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="button_Activity.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -27035,7 +27818,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;button_Activity.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="numericUpDown_StepsProgress_ImageY.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -28480,15 +29263,15 @@
   <data name="&gt;&gt;label404.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="ValueX.UserAddedColumn" type="System.Boolean, mscorlib">
+  <metadata name="ValueX.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="ValueX.HeaderText" xml:space="preserve">
     <value>X</value>
   </data>
-  <data name="ValueY.UserAddedColumn" type="System.Boolean, mscorlib">
+  <metadata name="ValueY.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="ValueY.HeaderText" xml:space="preserve">
     <value>Y</value>
   </data>
@@ -28601,7 +29384,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;panel_StepsProgress.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="button_StepsProgress.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -28634,7 +29417,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;button_StepsProgress.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="checkBox_ADDay_ClockHand.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -30209,7 +30992,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;panel_AnalogDate.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="button_AnalogDate.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -30242,7 +31025,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;button_AnalogDate.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="numericUpDown_MonthAndDayD_EndCorner_X.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -32686,15 +33469,15 @@
   <data name="&gt;&gt;tabPage7.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="dataGridViewTextBoxColumn5.UserAddedColumn" type="System.Boolean, mscorlib">
+  <metadata name="dataGridViewTextBoxColumn5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="dataGridViewTextBoxColumn5.HeaderText" xml:space="preserve">
     <value>X</value>
   </data>
-  <data name="dataGridViewTextBoxColumn6.UserAddedColumn" type="System.Boolean, mscorlib">
+  <metadata name="dataGridViewTextBoxColumn6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="dataGridViewTextBoxColumn6.HeaderText" xml:space="preserve">
     <value>Y</value>
   </data>
@@ -34097,7 +34880,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;panel_Date.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>18</value>
   </data>
   <data name="button_Date.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -34130,7 +34913,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;button_Date.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>19</value>
   </data>
   <data name="panel_Time.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -36536,7 +37319,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;panel_Time.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>20</value>
   </data>
   <data name="button_Time.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -36569,7 +37352,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;button_Time.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>21</value>
   </data>
   <data name="comboBox_Preview.Items" xml:space="preserve">
     <value>414</value>
@@ -36737,7 +37520,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;panel_Background.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>22</value>
   </data>
   <data name="button_Background.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -36770,7 +37553,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;button_Background.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>23</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>288, 3</value>
@@ -36779,7 +37562,7 @@
     <value>True</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>392, 519</value>
+    <value>392, 569</value>
   </data>
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -36803,7 +37586,7 @@
     <value>True</value>
   </data>
   <data name="richTextBox_JSON.Size" type="System.Drawing.Size, System.Drawing">
-    <value>279, 488</value>
+    <value>279, 538</value>
   </data>
   <data name="richTextBox_JSON.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -36830,7 +37613,7 @@
     <value>True</value>
   </data>
   <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>683, 525</value>
+    <value>683, 575</value>
   </data>
   <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -36944,7 +37727,7 @@
     <value>NoControl</value>
   </data>
   <data name="button_Reset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>556, 490</value>
+    <value>556, 540</value>
   </data>
   <data name="button_Reset.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -37685,7 +38468,7 @@
     <value>True</value>
   </data>
   <data name="tabPage33.Size" type="System.Drawing.Size, System.Drawing">
-    <value>683, 525</value>
+    <value>683, 575</value>
   </data>
   <data name="tabPage33.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -38216,7 +38999,7 @@
     <value>True</value>
   </data>
   <data name="tabPage43.Size" type="System.Drawing.Size, System.Drawing">
-    <value>683, 525</value>
+    <value>683, 575</value>
   </data>
   <data name="tabPage43.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -38243,7 +39026,7 @@
     <value>True</value>
   </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>691, 551</value>
+    <value>691, 601</value>
   </data>
   <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -38260,15 +39043,15 @@
   <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
     <value>20</value>
   </data>
-  <data name="colorDialog_StepsProgress.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  <metadata name="colorDialog_StepsProgress.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
-  </data>
-  <data name="colorDialog_Battery.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  </metadata>
+  <metadata name="colorDialog_Battery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>169, 20</value>
-  </data>
-  <data name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  </metadata>
+  <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>259, 17</value>
-  </data>
+  </metadata>
   <data name="button_PreviewBig.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -38365,14 +39148,14 @@
   <data name="&gt;&gt;checkBox_WebB.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <data name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>395, 17</value>
-  </data>
+  </metadata>
   <data name="button_SavePNG.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="button_SavePNG.Location" type="System.Drawing.Point, System.Drawing">
-    <value>135, 533</value>
+    <value>135, 583</value>
   </data>
   <data name="button_SavePNG.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -38426,7 +39209,7 @@
     <value>NoControl</value>
   </data>
   <data name="button_SaveGIF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>135, 504</value>
+    <value>135, 554</value>
   </data>
   <data name="button_SaveGIF.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -38630,7 +39413,7 @@
     <value>NoControl</value>
   </data>
   <data name="label_version.Location" type="System.Drawing.Point, System.Drawing">
-    <value>905, 555</value>
+    <value>905, 605</value>
   </data>
   <data name="label_version.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -38726,7 +39509,7 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 506</value>
+    <value>5, 555</value>
   </data>
   <data name="pictureBox1.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -38815,23 +39598,23 @@
   <data name="&gt;&gt;radioButton_TRex.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="timer2.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  <metadata name="timer2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>609, 17</value>
-  </data>
-  <data name="colorDialog_Pulse.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  </metadata>
+  <metadata name="colorDialog_Pulse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>391, 56</value>
-  </data>
-  <data name="colorDialog_Calories.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  </metadata>
+  <metadata name="colorDialog_Calories.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>512, 56</value>
-  </data>
-  <data name="$this.Localizable" type="System.Boolean, mscorlib">
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>934, 562</value>
+    <value>934, 612</value>
   </data>
   <data name="$this.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>TableOfContents</value>
@@ -41827,24 +42610,6 @@
   <data name="&gt;&gt;ColumnImage.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewImageColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;вставитьКоординатуХToolStripMenuItem.Name" xml:space="preserve">
-    <value>вставитьКоординатуХToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;вставитьКоординатуХToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;копироватьToolStripMenuItem.Name" xml:space="preserve">
-    <value>копироватьToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;копироватьToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;вставитьToolStripMenuItem.Name" xml:space="preserve">
-    <value>вставитьToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;вставитьToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
     <value>toolStripMenuItem1</value>
   </data>
@@ -41861,6 +42626,24 @@
     <value>вставитьToolStripMenuItem1</value>
   </data>
   <data name="&gt;&gt;вставитьToolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;вставитьКоординатуХToolStripMenuItem.Name" xml:space="preserve">
+    <value>вставитьКоординатуХToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;вставитьКоординатуХToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;копироватьToolStripMenuItem.Name" xml:space="preserve">
+    <value>копироватьToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;копироватьToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;вставитьToolStripMenuItem.Name" xml:space="preserve">
+    <value>вставитьToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;вставитьToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn1.Name" xml:space="preserve">

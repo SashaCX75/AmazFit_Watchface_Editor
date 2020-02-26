@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace GTR_Watch_face
 {
@@ -153,6 +154,15 @@ namespace GTR_Watch_face
         /// <summary>Секундная стрелка</summary>
         public ClockHand Seconds { get; set; }
         public ImageW SecCenterImage { get; set; }
+    }
+
+    public class Animation
+    {
+        /// <summary>Перемещение по координатам</summary>
+        public List<MotiomAnimation> Unknown11_1 { get; set; }
+        /// <summary>Покадровая анимация</summary>
+        public StaticAnimation Unknown11_2 { get; set; }
+        public List<StaticAnimation> Unknown11_02_temp { get; set; }
     }
 
     public class Weather

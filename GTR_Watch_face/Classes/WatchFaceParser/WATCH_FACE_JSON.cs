@@ -26,6 +26,8 @@
         public Battery Battery { get; set; }
         /// <summary>Аналоговык часы</summary>
         public Analogdialface AnalogDialFace { get; set; }
+        /// <summary>Анимация</summary>
+        public Animation Unknown11 { get; set; }
         /// <summary>Ярлыки</summary>
         public Shortcuts Shortcuts { get; set; }
 
