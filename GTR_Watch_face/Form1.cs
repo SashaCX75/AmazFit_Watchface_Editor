@@ -1496,11 +1496,14 @@ namespace GTR_Watch_face
             //Logger.WriteLine("Не верный json формат");
             try
             {
+                text = text.Replace("\"Unknown11_2\": [", "\"Unknown11_02_temp\": [");
+                //text = text.Replace("Unknown11_2", "Unknown11_02_temp");
                 Watch_Face = JsonConvert.DeserializeObject<WATCH_FACE_JSON>(text, new JsonSerializerSettings
                 {
                     DefaultValueHandling = DefaultValueHandling.Ignore,
                     NullValueHandling = NullValueHandling.Ignore
                 });
+                FixAnimation();
             }
             catch (Exception ex)
             {
@@ -1541,7 +1544,26 @@ namespace GTR_Watch_face
             PreviewView = true;
             PreviewImage();
         }
-      
+
+        private void FixAnimation()
+        {
+            if (Watch_Face.Unknown11 != null && Watch_Face.Unknown11.Unknown11_2 == null)
+            {
+                if (Watch_Face.Unknown11.Unknown11_02_temp != null)
+                {
+                    foreach (StaticAnimation staticAnimation in Watch_Face.Unknown11.Unknown11_02_temp)
+                    {
+                        if (staticAnimation.Unknown11d2p1 != null)
+                        {
+                            Watch_Face.Unknown11.Unknown11_2 = staticAnimation;
+                            return;
+                        }
+                    }
+
+                }
+            }
+        }
+
         // формируем изображение для предпросмотра
         private void PreviewImage()
         {
@@ -2090,6 +2112,7 @@ namespace GTR_Watch_face
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
                 panel_Shortcuts.Height = 1;
+                panel_Animation.Height = 1;
             }
             else panel_Background.Height = 1;
         }
@@ -2109,6 +2132,7 @@ namespace GTR_Watch_face
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
                 panel_Shortcuts.Height = 1;
+                panel_Animation.Height = 1;
             }
             else panel_Time.Height = 1;
         }
@@ -2128,6 +2152,7 @@ namespace GTR_Watch_face
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
                 panel_Shortcuts.Height = 1;
+                panel_Animation.Height = 1;
             }
             else panel_Date.Height = 1;
         }
@@ -2147,6 +2172,7 @@ namespace GTR_Watch_face
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
                 panel_Shortcuts.Height = 1;
+                panel_Animation.Height = 1;
             }
             else panel_AnalogDate.Height = 1;
         }
@@ -2166,6 +2192,7 @@ namespace GTR_Watch_face
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
                 panel_Shortcuts.Height = 1;
+                panel_Animation.Height = 1;
             }
             else panel_StepsProgress.Height = 1;
         }
@@ -2185,6 +2212,7 @@ namespace GTR_Watch_face
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
                 panel_Shortcuts.Height = 1;
+                panel_Animation.Height = 1;
             }
             else panel_Activity.Height = 1;
         }
@@ -2204,6 +2232,7 @@ namespace GTR_Watch_face
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
                 panel_Shortcuts.Height = 1;
+                panel_Animation.Height = 1;
             }
             else panel_Status.Height = 1;
         }
@@ -2223,6 +2252,7 @@ namespace GTR_Watch_face
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
                 panel_Shortcuts.Height = 1;
+                panel_Animation.Height = 1;
             }
             else panel_Battery.Height = 1;
         }
@@ -2242,6 +2272,7 @@ namespace GTR_Watch_face
                 panel_AnalogClock.Height = (int)(193 * currentDPI);
                 panel_Weather.Height = 1;
                 panel_Shortcuts.Height = 1;
+                panel_Animation.Height = 1;
             }
             else panel_AnalogClock.Height = 1;
         }
@@ -2261,6 +2292,7 @@ namespace GTR_Watch_face
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = (int)(230 * currentDPI);
                 panel_Shortcuts.Height = 1;
+                panel_Animation.Height = 1;
             }
             else panel_Weather.Height = 1;
         }
@@ -2280,8 +2312,29 @@ namespace GTR_Watch_face
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
                 panel_Shortcuts.Height = (int)(145 * currentDPI);
+                panel_Animation.Height = 1;
             }
             else panel_Shortcuts.Height = 1;
+        }
+
+        private void button_Animation_Click(object sender, EventArgs e)
+        {
+            if (panel_Animation.Height == 1)
+            {
+                panel_Background.Height = 1;
+                panel_Time.Height = 1;
+                panel_Date.Height = 1;
+                panel_AnalogDate.Height = 1;
+                panel_StepsProgress.Height = 1;
+                panel_Activity.Height = 1;
+                panel_Status.Height = 1;
+                panel_Battery.Height = 1;
+                panel_AnalogClock.Height = 1;
+                panel_Weather.Height = 1;
+                panel_Shortcuts.Height = 1;
+                panel_Animation.Height = (int)(145 * currentDPI);
+            }
+            else panel_Animation.Height = 1;
         }
         #endregion
 
@@ -3510,6 +3563,36 @@ namespace GTR_Watch_face
             label455.Enabled = b;
             label456.Enabled = b;
             label457.Enabled = b;
+        }
+
+        private void checkBox_Animation_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Animation.Checked;
+            tabControl_Animation.Enabled = b;
+        }
+
+        private void checkBox_StaticAnimation_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_StaticAnimation.Checked;
+            numericUpDown_StaticAnimation_X.Enabled = b;
+            numericUpDown_StaticAnimation_Y.Enabled = b;
+            comboBox_StaticAnimation_Image.Enabled = b;
+            numericUpDown_StaticAnimation_Count.Enabled = b;
+
+            numericUpDown_StaticAnimation_CyclesCount.Enabled = b;
+            numericUpDown_StaticAnimation_SpeedAnimation.Enabled = b;
+            numericUpDown_StaticAnimation_TimeAnimation.Enabled = b;
+            numericUpDown_StaticAnimation_Pause.Enabled = b;
+
+            label411.Enabled = b;
+            label416.Enabled = b;
+            label473.Enabled = b;
+            label474.Enabled = b;
+            label475.Enabled = b;
+            label476.Enabled = b;
+            label477.Enabled = b;
+            label478.Enabled = b;
+            label479.Enabled = b;
         }
         #endregion
 
@@ -6417,6 +6500,46 @@ namespace GTR_Watch_face
         private void comboBox_WeatherSet_Icon_SelectedIndexChanged(object sender, EventArgs e)
         {
             PreviewImage();
+        }
+
+        private void numericUpDown_StaticAnimation_CyclesCount_ValueChanged(object sender, EventArgs e)
+        {
+            int Animation_Count = (int)numericUpDown_StaticAnimation_Count.Value;
+            int Animation_CyclesCount = (int)numericUpDown_StaticAnimation_CyclesCount.Value;
+            //int Animation_TimeAnimation = (int)numericUpDown_StaticAnimation_TimeAnimation.Value;
+            int Animation_SpeedAnimation = (int)numericUpDown_StaticAnimation_SpeedAnimation.Value;
+            int Animation_TimeAnimation = (Animation_Count * Animation_CyclesCount * Animation_SpeedAnimation) - Animation_SpeedAnimation;
+            if (Animation_TimeAnimation < 0) Animation_TimeAnimation = 0;
+            if (Animation_TimeAnimation != (int)numericUpDown_StaticAnimation_TimeAnimation.Value && Animation_CyclesCount != 0)
+                numericUpDown_StaticAnimation_TimeAnimation.Value = Animation_TimeAnimation;
+        }
+
+        private void numericUpDown_StaticAnimation_TimeAnimation_ValueChanged(object sender, EventArgs e)
+        {
+            int Animation_Count = (int)numericUpDown_StaticAnimation_Count.Value;
+            //int Animation_CyclesCount = (int)numericUpDown_StaticAnimation_CyclesCount.Value;
+            int Animation_TimeAnimation = (int)numericUpDown_StaticAnimation_TimeAnimation.Value;
+            int Animation_SpeedAnimation = (int)numericUpDown_StaticAnimation_SpeedAnimation.Value;
+            int Animation_CyclesCount = (Animation_TimeAnimation + Animation_SpeedAnimation) /
+                (Animation_SpeedAnimation * Animation_Count);
+            if (Animation_CyclesCount != (Animation_TimeAnimation + Animation_SpeedAnimation) / 
+                (float)(Animation_SpeedAnimation * Animation_Count)) Animation_CyclesCount = 0;
+            if (Animation_CyclesCount != (int)numericUpDown_StaticAnimation_CyclesCount.Value)
+                numericUpDown_StaticAnimation_CyclesCount.Value = Animation_CyclesCount;
+        }
+
+        private void numericUpDown_StaticAnimation_Count_ValueChanged(object sender, EventArgs e)
+        {
+            int Animation_CyclesCount = (int)numericUpDown_StaticAnimation_CyclesCount.Value;
+            if (Animation_CyclesCount != 0)
+            {
+                int Animation_Count = (int)numericUpDown_StaticAnimation_Count.Value;
+                int Animation_SpeedAnimation = (int)numericUpDown_StaticAnimation_SpeedAnimation.Value;
+                int Animation_TimeAnimation = (Animation_Count * Animation_CyclesCount * Animation_SpeedAnimation) - Animation_SpeedAnimation;
+                if (Animation_TimeAnimation < 0) Animation_TimeAnimation = 0;
+                if (Animation_TimeAnimation != (int)numericUpDown_StaticAnimation_TimeAnimation.Value && Animation_CyclesCount != 0)
+                    numericUpDown_StaticAnimation_TimeAnimation.Value = Animation_TimeAnimation;
+            }
         }
     }
 }

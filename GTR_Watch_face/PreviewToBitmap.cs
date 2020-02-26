@@ -1653,6 +1653,26 @@ namespace GTR_Watch_face
             }
             #endregion
 
+            #region Animation
+            if (checkBox_Animation.Checked)
+            {
+                // покадровая анимация
+                if ((checkBox_StaticAnimation.Checked) && (comboBox_StaticAnimation_Image.SelectedIndex >= 0))
+                {
+                    i = comboBox_StaticAnimation_Image.SelectedIndex;
+                    if (i < ListImagesFullName.Count)
+                    {
+                        src = new Bitmap(ListImagesFullName[i]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_StaticAnimation_X.Value,
+                            (int)numericUpDown_StaticAnimation_Y.Value, src.Width, src.Height));
+                        src.Dispose(); 
+                    }
+                }
+
+            }
+            #endregion
+
+
             #region Shortcuts
             if (showShortcuts)
             {
@@ -1780,7 +1800,6 @@ namespace GTR_Watch_face
                 } 
             }
             #endregion
-
             #region Mesh
 
             if (WMesh)
