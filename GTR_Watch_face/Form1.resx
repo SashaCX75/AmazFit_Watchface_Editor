@@ -9861,11 +9861,14 @@
   <data name="panel2.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="button_ShowAnimation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
   <data name="button_ShowAnimation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>141, 195</value>
+    <value>0, 211</value>
   </data>
   <data name="button_ShowAnimation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 23</value>
+    <value>390, 23</value>
   </data>
   <data name="button_ShowAnimation.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -10631,7 +10634,7 @@
     <value>True</value>
   </data>
   <data name="tabPage53.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 142</value>
+    <value>382, 165</value>
   </data>
   <data name="tabPage53.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -10651,6 +10654,600 @@
   <data name="&gt;&gt;tabPage53.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="radioButton_MotiomAnimation_EndCoordinates.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="radioButton_MotiomAnimation_EndCoordinates.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton_MotiomAnimation_EndCoordinates.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 110</value>
+  </data>
+  <data name="radioButton_MotiomAnimation_EndCoordinates.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_MotiomAnimation_EndCoordinates.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 30</value>
+  </data>
+  <data name="radioButton_MotiomAnimation_EndCoordinates.TabIndex" type="System.Int32, mscorlib">
+    <value>102</value>
+  </data>
+  <data name="radioButton_MotiomAnimation_EndCoordinates.Text" xml:space="preserve">
+    <value>Конечные координаты</value>
+  </data>
+  <data name="&gt;&gt;radioButton_MotiomAnimation_EndCoordinates.Name" xml:space="preserve">
+    <value>radioButton_MotiomAnimation_EndCoordinates</value>
+  </data>
+  <data name="&gt;&gt;radioButton_MotiomAnimation_EndCoordinates.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton_MotiomAnimation_EndCoordinates.Parent" xml:space="preserve">
+    <value>tabPage54</value>
+  </data>
+  <data name="&gt;&gt;radioButton_MotiomAnimation_EndCoordinates.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radioButton_MotiomAnimation_StartCoordinates.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="radioButton_MotiomAnimation_StartCoordinates.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 51</value>
+  </data>
+  <data name="radioButton_MotiomAnimation_StartCoordinates.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 30</value>
+  </data>
+  <data name="radioButton_MotiomAnimation_StartCoordinates.TabIndex" type="System.Int32, mscorlib">
+    <value>101</value>
+  </data>
+  <data name="radioButton_MotiomAnimation_StartCoordinates.Text" xml:space="preserve">
+    <value>Начальные координаты</value>
+  </data>
+  <data name="&gt;&gt;radioButton_MotiomAnimation_StartCoordinates.Name" xml:space="preserve">
+    <value>radioButton_MotiomAnimation_StartCoordinates</value>
+  </data>
+  <data name="&gt;&gt;radioButton_MotiomAnimation_StartCoordinates.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton_MotiomAnimation_StartCoordinates.Parent" xml:space="preserve">
+    <value>tabPage54</value>
+  </data>
+  <data name="&gt;&gt;radioButton_MotiomAnimation_StartCoordinates.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="numericUpDown_MotiomAnimation_EndCoordinates_Y.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_MotiomAnimation_EndCoordinates_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 141</value>
+  </data>
+  <data name="numericUpDown_MotiomAnimation_EndCoordinates_Y.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_MotiomAnimation_EndCoordinates_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="numericUpDown_MotiomAnimation_EndCoordinates_Y.TabIndex" type="System.Int32, mscorlib">
+    <value>99</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_EndCoordinates_Y.Name" xml:space="preserve">
+    <value>numericUpDown_MotiomAnimation_EndCoordinates_Y</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_EndCoordinates_Y.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_EndCoordinates_Y.Parent" xml:space="preserve">
+    <value>tabPage54</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_EndCoordinates_Y.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="numericUpDown_MotiomAnimation_EndCoordinates_X.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_MotiomAnimation_EndCoordinates_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 141</value>
+  </data>
+  <data name="numericUpDown_MotiomAnimation_EndCoordinates_X.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_MotiomAnimation_EndCoordinates_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="numericUpDown_MotiomAnimation_EndCoordinates_X.TabIndex" type="System.Int32, mscorlib">
+    <value>98</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_EndCoordinates_X.Name" xml:space="preserve">
+    <value>numericUpDown_MotiomAnimation_EndCoordinates_X</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_EndCoordinates_X.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_EndCoordinates_X.Parent" xml:space="preserve">
+    <value>tabPage54</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_EndCoordinates_X.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label484.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label484.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label484.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label484.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 143</value>
+  </data>
+  <data name="label484.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label484.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
+  </data>
+  <data name="label484.TabIndex" type="System.Int32, mscorlib">
+    <value>97</value>
+  </data>
+  <data name="label484.Text" xml:space="preserve">
+    <value>Y:</value>
+  </data>
+  <data name="&gt;&gt;label484.Name" xml:space="preserve">
+    <value>label484</value>
+  </data>
+  <data name="&gt;&gt;label484.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label484.Parent" xml:space="preserve">
+    <value>tabPage54</value>
+  </data>
+  <data name="&gt;&gt;label484.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label485.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label485.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label485.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label485.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 143</value>
+  </data>
+  <data name="label485.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label485.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
+  </data>
+  <data name="label485.TabIndex" type="System.Int32, mscorlib">
+    <value>96</value>
+  </data>
+  <data name="label485.Text" xml:space="preserve">
+    <value>X:</value>
+  </data>
+  <data name="&gt;&gt;label485.Name" xml:space="preserve">
+    <value>label485</value>
+  </data>
+  <data name="&gt;&gt;label485.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label485.Parent" xml:space="preserve">
+    <value>tabPage54</value>
+  </data>
+  <data name="&gt;&gt;label485.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="numericUpDown_MotiomAnimation_StartCoordinates_Y.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_MotiomAnimation_StartCoordinates_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 82</value>
+  </data>
+  <data name="numericUpDown_MotiomAnimation_StartCoordinates_Y.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_MotiomAnimation_StartCoordinates_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="numericUpDown_MotiomAnimation_StartCoordinates_Y.TabIndex" type="System.Int32, mscorlib">
+    <value>94</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_StartCoordinates_Y.Name" xml:space="preserve">
+    <value>numericUpDown_MotiomAnimation_StartCoordinates_Y</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_StartCoordinates_Y.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_StartCoordinates_Y.Parent" xml:space="preserve">
+    <value>tabPage54</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_StartCoordinates_Y.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="numericUpDown_MotiomAnimation_StartCoordinates_X.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_MotiomAnimation_StartCoordinates_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 82</value>
+  </data>
+  <data name="numericUpDown_MotiomAnimation_StartCoordinates_X.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_MotiomAnimation_StartCoordinates_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="numericUpDown_MotiomAnimation_StartCoordinates_X.TabIndex" type="System.Int32, mscorlib">
+    <value>93</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_StartCoordinates_X.Name" xml:space="preserve">
+    <value>numericUpDown_MotiomAnimation_StartCoordinates_X</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_StartCoordinates_X.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_StartCoordinates_X.Parent" xml:space="preserve">
+    <value>tabPage54</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_StartCoordinates_X.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="label481.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label481.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label481.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label481.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 84</value>
+  </data>
+  <data name="label481.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label481.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
+  </data>
+  <data name="label481.TabIndex" type="System.Int32, mscorlib">
+    <value>92</value>
+  </data>
+  <data name="label481.Text" xml:space="preserve">
+    <value>Y:</value>
+  </data>
+  <data name="&gt;&gt;label481.Name" xml:space="preserve">
+    <value>label481</value>
+  </data>
+  <data name="&gt;&gt;label481.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label481.Parent" xml:space="preserve">
+    <value>tabPage54</value>
+  </data>
+  <data name="&gt;&gt;label481.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label482.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label482.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label482.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label482.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 84</value>
+  </data>
+  <data name="label482.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label482.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
+  </data>
+  <data name="label482.TabIndex" type="System.Int32, mscorlib">
+    <value>91</value>
+  </data>
+  <data name="label482.Text" xml:space="preserve">
+    <value>X:</value>
+  </data>
+  <data name="&gt;&gt;label482.Name" xml:space="preserve">
+    <value>label482</value>
+  </data>
+  <data name="&gt;&gt;label482.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label482.Parent" xml:space="preserve">
+    <value>tabPage54</value>
+  </data>
+  <data name="&gt;&gt;label482.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column1.HeaderText" xml:space="preserve">
+    <value>Unknown1</value>
+  </data>
+  <data name="Column1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column2.HeaderText" xml:space="preserve">
+    <value>Start coordinates (X)</value>
+  </data>
+  <data name="Column2.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column3.HeaderText" xml:space="preserve">
+    <value>Start coordinates (Y)</value>
+  </data>
+  <data name="Column3.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <metadata name="Column4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column4.HeaderText" xml:space="preserve">
+    <value>End coordinates (X)</value>
+  </data>
+  <data name="Column4.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <metadata name="Column5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column5.HeaderText" xml:space="preserve">
+    <value>End coordinates (Y)</value>
+  </data>
+  <data name="Column5.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <metadata name="Column6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column6.HeaderText" xml:space="preserve">
+    <value>ImageIndex</value>
+  </data>
+  <data name="Column6.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <metadata name="Column7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column7.HeaderText" xml:space="preserve">
+    <value>Speed Animation</value>
+  </data>
+  <data name="Column7.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <metadata name="Column8.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column8.HeaderText" xml:space="preserve">
+    <value>Time Animation</value>
+  </data>
+  <data name="Column8.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <metadata name="Column9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column9.HeaderText" xml:space="preserve">
+    <value>Unknown5</value>
+  </data>
+  <data name="Column9.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <metadata name="Column10.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column10.HeaderText" xml:space="preserve">
+    <value>Unknown6</value>
+  </data>
+  <data name="Column10.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <metadata name="Column11.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column11.HeaderText" xml:space="preserve">
+    <value>Unknown7</value>
+  </data>
+  <data name="Column11.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <metadata name="Column12.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column12.HeaderText" xml:space="preserve">
+    <value>Bounce</value>
+  </data>
+  <data name="Column12.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <metadata name="contextMenuStrip_XY_InAnimationTable.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>675, 56</value>
+  </metadata>
+  <data name="вставитьНачальныеКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 22</value>
+  </data>
+  <data name="вставитьНачальныеКоординатыToolStripMenuItem.Text" xml:space="preserve">
+    <value>Вставить начальные координаты</value>
+  </data>
+  <data name="вставитьКонечныеКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 22</value>
+  </data>
+  <data name="вставитьКонечныеКоординатыToolStripMenuItem.Text" xml:space="preserve">
+    <value>Вставить конечные координаты</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 6</value>
+  </data>
+  <data name="копироватьToolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 22</value>
+  </data>
+  <data name="копироватьToolStripMenuItem3.Text" xml:space="preserve">
+    <value>Копировать</value>
+  </data>
+  <data name="вставитьToolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 22</value>
+  </data>
+  <data name="вставитьToolStripMenuItem3.Text" xml:space="preserve">
+    <value>Вставить</value>
+  </data>
+  <data name="удалитьСтрокуToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 22</value>
+  </data>
+  <data name="удалитьСтрокуToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Удалить строку</value>
+  </data>
+  <data name="contextMenuStrip_XY_InAnimationTable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 120</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip_XY_InAnimationTable.Name" xml:space="preserve">
+    <value>contextMenuStrip_XY_InAnimationTable</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip_XY_InAnimationTable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dataGridView_MotiomAnimation.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="dataGridView_MotiomAnimation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>123, 5</value>
+  </data>
+  <data name="dataGridView_MotiomAnimation.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="dataGridView_MotiomAnimation.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dataGridView_MotiomAnimation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 156</value>
+  </data>
+  <data name="dataGridView_MotiomAnimation.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_MotiomAnimation.Name" xml:space="preserve">
+    <value>dataGridView_MotiomAnimation</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_MotiomAnimation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_MotiomAnimation.Parent" xml:space="preserve">
+    <value>tabPage54</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_MotiomAnimation.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="comboBox_MotiomAnimation_Image.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="comboBox_MotiomAnimation_Image.Location" type="System.Drawing.Point, System.Drawing">
+    <value>67, 27</value>
+  </data>
+  <data name="comboBox_MotiomAnimation_Image.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="comboBox_MotiomAnimation_Image.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="comboBox_MotiomAnimation_Image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 21</value>
+  </data>
+  <data name="comboBox_MotiomAnimation_Image.TabIndex" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="&gt;&gt;comboBox_MotiomAnimation_Image.Name" xml:space="preserve">
+    <value>comboBox_MotiomAnimation_Image</value>
+  </data>
+  <data name="&gt;&gt;comboBox_MotiomAnimation_Image.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox_MotiomAnimation_Image.Parent" xml:space="preserve">
+    <value>tabPage54</value>
+  </data>
+  <data name="&gt;&gt;comboBox_MotiomAnimation_Image.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="label480.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label480.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label480.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label480.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 30</value>
+  </data>
+  <data name="label480.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label480.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 13</value>
+  </data>
+  <data name="label480.TabIndex" type="System.Int32, mscorlib">
+    <value>89</value>
+  </data>
+  <data name="label480.Text" xml:space="preserve">
+    <value>ImageIndex:</value>
+  </data>
+  <data name="&gt;&gt;label480.Name" xml:space="preserve">
+    <value>label480</value>
+  </data>
+  <data name="&gt;&gt;label480.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label480.Parent" xml:space="preserve">
+    <value>tabPage54</value>
+  </data>
+  <data name="&gt;&gt;label480.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="checkBox_MotiomAnimation.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox_MotiomAnimation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox_MotiomAnimation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 7</value>
+  </data>
+  <data name="checkBox_MotiomAnimation.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox_MotiomAnimation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 17</value>
+  </data>
+  <data name="checkBox_MotiomAnimation.TabIndex" type="System.Int32, mscorlib">
+    <value>88</value>
+  </data>
+  <data name="checkBox_MotiomAnimation.Text" xml:space="preserve">
+    <value>Отображать</value>
+  </data>
+  <data name="&gt;&gt;checkBox_MotiomAnimation.Name" xml:space="preserve">
+    <value>checkBox_MotiomAnimation</value>
+  </data>
+  <data name="&gt;&gt;checkBox_MotiomAnimation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox_MotiomAnimation.Parent" xml:space="preserve">
+    <value>tabPage54</value>
+  </data>
+  <data name="&gt;&gt;checkBox_MotiomAnimation.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
   <data name="tabPage54.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
@@ -10658,7 +11255,7 @@
     <value>True</value>
   </data>
   <data name="tabPage54.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 142</value>
+    <value>382, 165</value>
   </data>
   <data name="tabPage54.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -10691,7 +11288,7 @@
     <value>True</value>
   </data>
   <data name="tabControl_Animation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>390, 168</value>
+    <value>390, 191</value>
   </data>
   <data name="tabControl_Animation.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -20123,25 +20720,25 @@
     <value>178, 56</value>
   </metadata>
   <data name="вставитьКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
+    <value>196, 26</value>
   </data>
   <data name="вставитьКоординатыToolStripMenuItem.Text" xml:space="preserve">
     <value>Вставить координаты</value>
   </data>
   <data name="копироватьToolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
+    <value>196, 26</value>
   </data>
   <data name="копироватьToolStripMenuItem2.Text" xml:space="preserve">
     <value>Копировать</value>
   </data>
   <data name="вставитьToolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
+    <value>196, 26</value>
   </data>
   <data name="вставитьToolStripMenuItem2.Text" xml:space="preserve">
     <value>Вставить</value>
   </data>
   <data name="удалитьСтрокуToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
+    <value>196, 26</value>
   </data>
   <data name="удалитьСтрокуToolStripMenuItem.Text" xml:space="preserve">
     <value>Удалить строку</value>
@@ -20150,7 +20747,7 @@
     <value>True</value>
   </data>
   <data name="contextMenuStrip_XY_InTable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 92</value>
+    <value>197, 108</value>
   </data>
   <data name="&gt;&gt;contextMenuStrip_XY_InTable.Name" xml:space="preserve">
     <value>contextMenuStrip_XY_InTable</value>
@@ -39041,7 +39638,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <metadata name="colorDialog_StepsProgress.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -39080,7 +39677,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button_PreviewBig.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="checkBox_WebW.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -39113,7 +39710,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBox_WebW.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="checkBox_WebB.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -39146,7 +39743,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBox_WebB.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>395, 17</value>
@@ -39179,7 +39776,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button_SavePNG.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="panel_Preview.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 5</value>
@@ -39203,7 +39800,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel_Preview.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="button_SaveGIF.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -39233,7 +39830,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button_SaveGIF.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="radioButton_47.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -39266,7 +39863,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;radioButton_47.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="radioButton_42.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -39299,7 +39896,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;radioButton_42.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="label_preview_X.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -39335,7 +39932,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label_preview_X.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="label_preview_Y.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -39371,7 +39968,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label_preview_Y.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="checkBox_border.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -39401,7 +39998,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBox_border.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="label_version.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -39440,7 +40037,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label_version.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="radioButton_gts.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -39473,7 +40070,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;radioButton_gts.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="checkBox_crop.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -39503,7 +40100,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBox_crop.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -39533,7 +40130,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="checkBox_Show_Shortcuts.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -39563,7 +40160,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBox_Show_Shortcuts.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="radioButton_TRex.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -39596,7 +40193,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;radioButton_TRex.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <metadata name="timer2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>609, 17</value>
@@ -42644,6 +43241,114 @@
     <value>вставитьToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;вставитьToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column1.Name" xml:space="preserve">
+    <value>Column1</value>
+  </data>
+  <data name="&gt;&gt;Column1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column2.Name" xml:space="preserve">
+    <value>Column2</value>
+  </data>
+  <data name="&gt;&gt;Column2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column3.Name" xml:space="preserve">
+    <value>Column3</value>
+  </data>
+  <data name="&gt;&gt;Column3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column4.Name" xml:space="preserve">
+    <value>Column4</value>
+  </data>
+  <data name="&gt;&gt;Column4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column5.Name" xml:space="preserve">
+    <value>Column5</value>
+  </data>
+  <data name="&gt;&gt;Column5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column6.Name" xml:space="preserve">
+    <value>Column6</value>
+  </data>
+  <data name="&gt;&gt;Column6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column7.Name" xml:space="preserve">
+    <value>Column7</value>
+  </data>
+  <data name="&gt;&gt;Column7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column8.Name" xml:space="preserve">
+    <value>Column8</value>
+  </data>
+  <data name="&gt;&gt;Column8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column9.Name" xml:space="preserve">
+    <value>Column9</value>
+  </data>
+  <data name="&gt;&gt;Column9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column10.Name" xml:space="preserve">
+    <value>Column10</value>
+  </data>
+  <data name="&gt;&gt;Column10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column11.Name" xml:space="preserve">
+    <value>Column11</value>
+  </data>
+  <data name="&gt;&gt;Column11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column12.Name" xml:space="preserve">
+    <value>Column12</value>
+  </data>
+  <data name="&gt;&gt;Column12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;вставитьНачальныеКоординатыToolStripMenuItem.Name" xml:space="preserve">
+    <value>вставитьНачальныеКоординатыToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;вставитьНачальныеКоординатыToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;вставитьКонечныеКоординатыToolStripMenuItem.Name" xml:space="preserve">
+    <value>вставитьКонечныеКоординатыToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;вставитьКонечныеКоординатыToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;копироватьToolStripMenuItem3.Name" xml:space="preserve">
+    <value>копироватьToolStripMenuItem3</value>
+  </data>
+  <data name="&gt;&gt;копироватьToolStripMenuItem3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;вставитьToolStripMenuItem3.Name" xml:space="preserve">
+    <value>вставитьToolStripMenuItem3</value>
+  </data>
+  <data name="&gt;&gt;вставитьToolStripMenuItem3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;удалитьСтрокуToolStripMenuItem1.Name" xml:space="preserve">
+    <value>удалитьСтрокуToolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;удалитьСтрокуToolStripMenuItem1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn1.Name" xml:space="preserve">

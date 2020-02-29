@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button_zip_unpack = new System.Windows.Forms.Button();
@@ -391,6 +392,39 @@
             this.label474 = new System.Windows.Forms.Label();
             this.label475 = new System.Windows.Forms.Label();
             this.tabPage54 = new System.Windows.Forms.TabPage();
+            this.radioButton_MotiomAnimation_EndCoordinates = new System.Windows.Forms.RadioButton();
+            this.radioButton_MotiomAnimation_StartCoordinates = new System.Windows.Forms.RadioButton();
+            this.numericUpDown_MotiomAnimation_EndCoordinates_Y = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_MotiomAnimation_EndCoordinates_X = new System.Windows.Forms.NumericUpDown();
+            this.label484 = new System.Windows.Forms.Label();
+            this.label485 = new System.Windows.Forms.Label();
+            this.numericUpDown_MotiomAnimation_StartCoordinates_Y = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_MotiomAnimation_StartCoordinates_X = new System.Windows.Forms.NumericUpDown();
+            this.label481 = new System.Windows.Forms.Label();
+            this.label482 = new System.Windows.Forms.Label();
+            this.dataGridView_MotiomAnimation = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.contextMenuStrip_XY_InAnimationTable = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.вставитьНачальныеКоординатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вставитьКонечныеКоординатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.копироватьToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.вставитьToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.удалитьСтрокуToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.comboBox_MotiomAnimation_Image = new System.Windows.Forms.ComboBox();
+            this.label480 = new System.Windows.Forms.Label();
+            this.checkBox_MotiomAnimation = new System.Windows.Forms.CheckBox();
             this.checkBox_Animation = new System.Windows.Forms.CheckBox();
             this.button_Animation = new System.Windows.Forms.Button();
             this.panel_Shortcuts = new System.Windows.Forms.Panel();
@@ -1423,6 +1457,13 @@
             this.contextMenuStrip_Y.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StaticAnimation_X)).BeginInit();
             this.contextMenuStrip_X.SuspendLayout();
+            this.tabPage54.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MotiomAnimation_EndCoordinates_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MotiomAnimation_EndCoordinates_X)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MotiomAnimation_StartCoordinates_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MotiomAnimation_StartCoordinates_X)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_MotiomAnimation)).BeginInit();
+            this.contextMenuStrip_XY_InAnimationTable.SuspendLayout();
             this.panel_Shortcuts.SuspendLayout();
             this.tabControl_Shortcuts.SuspendLayout();
             this.tabPage46.SuspendLayout();
@@ -5614,6 +5655,7 @@
             this.helpProvider1.SetShowHelp(this.checkBox_StaticAnimation, ((bool)(resources.GetObject("checkBox_StaticAnimation.ShowHelp"))));
             this.checkBox_StaticAnimation.UseVisualStyleBackColor = true;
             this.checkBox_StaticAnimation.CheckedChanged += new System.EventHandler(this.checkBox_StaticAnimation_CheckedChanged);
+            this.checkBox_StaticAnimation.Click += new System.EventHandler(this.checkBox_Click);
             // 
             // label416
             // 
@@ -5642,9 +5684,326 @@
             // tabPage54
             // 
             this.tabPage54.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage54.Controls.Add(this.radioButton_MotiomAnimation_EndCoordinates);
+            this.tabPage54.Controls.Add(this.radioButton_MotiomAnimation_StartCoordinates);
+            this.tabPage54.Controls.Add(this.numericUpDown_MotiomAnimation_EndCoordinates_Y);
+            this.tabPage54.Controls.Add(this.numericUpDown_MotiomAnimation_EndCoordinates_X);
+            this.tabPage54.Controls.Add(this.label484);
+            this.tabPage54.Controls.Add(this.label485);
+            this.tabPage54.Controls.Add(this.numericUpDown_MotiomAnimation_StartCoordinates_Y);
+            this.tabPage54.Controls.Add(this.numericUpDown_MotiomAnimation_StartCoordinates_X);
+            this.tabPage54.Controls.Add(this.label481);
+            this.tabPage54.Controls.Add(this.label482);
+            this.tabPage54.Controls.Add(this.dataGridView_MotiomAnimation);
+            this.tabPage54.Controls.Add(this.comboBox_MotiomAnimation_Image);
+            this.tabPage54.Controls.Add(this.label480);
+            this.tabPage54.Controls.Add(this.checkBox_MotiomAnimation);
             resources.ApplyResources(this.tabPage54, "tabPage54");
             this.tabPage54.Name = "tabPage54";
             this.helpProvider1.SetShowHelp(this.tabPage54, ((bool)(resources.GetObject("tabPage54.ShowHelp"))));
+            // 
+            // radioButton_MotiomAnimation_EndCoordinates
+            // 
+            resources.ApplyResources(this.radioButton_MotiomAnimation_EndCoordinates, "radioButton_MotiomAnimation_EndCoordinates");
+            this.radioButton_MotiomAnimation_EndCoordinates.Name = "radioButton_MotiomAnimation_EndCoordinates";
+            this.helpProvider1.SetShowHelp(this.radioButton_MotiomAnimation_EndCoordinates, ((bool)(resources.GetObject("radioButton_MotiomAnimation_EndCoordinates.ShowHelp"))));
+            this.radioButton_MotiomAnimation_EndCoordinates.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_MotiomAnimation_StartCoordinates
+            // 
+            this.radioButton_MotiomAnimation_StartCoordinates.Checked = true;
+            resources.ApplyResources(this.radioButton_MotiomAnimation_StartCoordinates, "radioButton_MotiomAnimation_StartCoordinates");
+            this.radioButton_MotiomAnimation_StartCoordinates.Name = "radioButton_MotiomAnimation_StartCoordinates";
+            this.radioButton_MotiomAnimation_StartCoordinates.TabStop = true;
+            this.radioButton_MotiomAnimation_StartCoordinates.UseVisualStyleBackColor = true;
+            this.radioButton_MotiomAnimation_StartCoordinates.CheckedChanged += new System.EventHandler(this.radioButton_MotiomAnimation_StartCoordinates_CheckedChanged);
+            // 
+            // numericUpDown_MotiomAnimation_EndCoordinates_Y
+            // 
+            this.numericUpDown_MotiomAnimation_EndCoordinates_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_MotiomAnimation_EndCoordinates_Y, "numericUpDown_MotiomAnimation_EndCoordinates_Y");
+            this.numericUpDown_MotiomAnimation_EndCoordinates_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_MotiomAnimation_EndCoordinates_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_MotiomAnimation_EndCoordinates_Y.Name = "numericUpDown_MotiomAnimation_EndCoordinates_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_MotiomAnimation_EndCoordinates_Y, ((bool)(resources.GetObject("numericUpDown_MotiomAnimation_EndCoordinates_Y.ShowHelp"))));
+            this.numericUpDown_MotiomAnimation_EndCoordinates_Y.ValueChanged += new System.EventHandler(this.numericUpDown_MotiomAnimation_StartCoordinates_X_ValueChanged);
+            // 
+            // numericUpDown_MotiomAnimation_EndCoordinates_X
+            // 
+            this.numericUpDown_MotiomAnimation_EndCoordinates_X.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_MotiomAnimation_EndCoordinates_X, "numericUpDown_MotiomAnimation_EndCoordinates_X");
+            this.numericUpDown_MotiomAnimation_EndCoordinates_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_MotiomAnimation_EndCoordinates_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_MotiomAnimation_EndCoordinates_X.Name = "numericUpDown_MotiomAnimation_EndCoordinates_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_MotiomAnimation_EndCoordinates_X, ((bool)(resources.GetObject("numericUpDown_MotiomAnimation_EndCoordinates_X.ShowHelp"))));
+            this.numericUpDown_MotiomAnimation_EndCoordinates_X.ValueChanged += new System.EventHandler(this.numericUpDown_MotiomAnimation_StartCoordinates_X_ValueChanged);
+            // 
+            // label484
+            // 
+            resources.ApplyResources(this.label484, "label484");
+            this.label484.Name = "label484";
+            this.helpProvider1.SetShowHelp(this.label484, ((bool)(resources.GetObject("label484.ShowHelp"))));
+            // 
+            // label485
+            // 
+            resources.ApplyResources(this.label485, "label485");
+            this.label485.Name = "label485";
+            this.helpProvider1.SetShowHelp(this.label485, ((bool)(resources.GetObject("label485.ShowHelp"))));
+            // 
+            // numericUpDown_MotiomAnimation_StartCoordinates_Y
+            // 
+            this.numericUpDown_MotiomAnimation_StartCoordinates_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_MotiomAnimation_StartCoordinates_Y, "numericUpDown_MotiomAnimation_StartCoordinates_Y");
+            this.numericUpDown_MotiomAnimation_StartCoordinates_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_MotiomAnimation_StartCoordinates_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_MotiomAnimation_StartCoordinates_Y.Name = "numericUpDown_MotiomAnimation_StartCoordinates_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_MotiomAnimation_StartCoordinates_Y, ((bool)(resources.GetObject("numericUpDown_MotiomAnimation_StartCoordinates_Y.ShowHelp"))));
+            this.numericUpDown_MotiomAnimation_StartCoordinates_Y.ValueChanged += new System.EventHandler(this.numericUpDown_MotiomAnimation_StartCoordinates_X_ValueChanged);
+            // 
+            // numericUpDown_MotiomAnimation_StartCoordinates_X
+            // 
+            this.numericUpDown_MotiomAnimation_StartCoordinates_X.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_MotiomAnimation_StartCoordinates_X, "numericUpDown_MotiomAnimation_StartCoordinates_X");
+            this.numericUpDown_MotiomAnimation_StartCoordinates_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_MotiomAnimation_StartCoordinates_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_MotiomAnimation_StartCoordinates_X.Name = "numericUpDown_MotiomAnimation_StartCoordinates_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_MotiomAnimation_StartCoordinates_X, ((bool)(resources.GetObject("numericUpDown_MotiomAnimation_StartCoordinates_X.ShowHelp"))));
+            this.numericUpDown_MotiomAnimation_StartCoordinates_X.ValueChanged += new System.EventHandler(this.numericUpDown_MotiomAnimation_StartCoordinates_X_ValueChanged);
+            // 
+            // label481
+            // 
+            resources.ApplyResources(this.label481, "label481");
+            this.label481.Name = "label481";
+            this.helpProvider1.SetShowHelp(this.label481, ((bool)(resources.GetObject("label481.ShowHelp"))));
+            // 
+            // label482
+            // 
+            resources.ApplyResources(this.label482, "label482");
+            this.label482.Name = "label482";
+            this.helpProvider1.SetShowHelp(this.label482, ((bool)(resources.GetObject("label482.ShowHelp"))));
+            // 
+            // dataGridView_MotiomAnimation
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_MotiomAnimation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView_MotiomAnimation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_MotiomAnimation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9,
+            this.Column10,
+            this.Column11,
+            this.Column12});
+            this.dataGridView_MotiomAnimation.ContextMenuStrip = this.contextMenuStrip_XY_InAnimationTable;
+            resources.ApplyResources(this.dataGridView_MotiomAnimation, "dataGridView_MotiomAnimation");
+            this.dataGridView_MotiomAnimation.Name = "dataGridView_MotiomAnimation";
+            this.dataGridView_MotiomAnimation.RowTemplate.Height = 18;
+            this.helpProvider1.SetShowHelp(this.dataGridView_MotiomAnimation, ((bool)(resources.GetObject("dataGridView_MotiomAnimation.ShowHelp"))));
+            this.dataGridView_MotiomAnimation.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_MotiomAnimation_CellClick);
+            this.dataGridView_MotiomAnimation.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_MotiomAnimation_CellContentClick);
+            this.dataGridView_MotiomAnimation.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_MotiomAnimation_CellEndEdit);
+            this.dataGridView_MotiomAnimation.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_MotiomAnimation_CellMouseDoubleClick);
+            this.dataGridView_MotiomAnimation.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_IconSet_CellMouseDown);
+            this.dataGridView_MotiomAnimation.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView_IconSet_RowPrePaint);
+            this.dataGridView_MotiomAnimation.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridView_IconSet_RowsRemoved);
+            this.dataGridView_MotiomAnimation.SelectionChanged += new System.EventHandler(this.dataGridView_MotiomAnimation_SelectionChanged);
+            // 
+            // Column1
+            // 
+            resources.ApplyResources(this.Column1, "Column1");
+            this.Column1.Name = "Column1";
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column2
+            // 
+            resources.ApplyResources(this.Column2, "Column2");
+            this.Column2.Name = "Column2";
+            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column3
+            // 
+            resources.ApplyResources(this.Column3, "Column3");
+            this.Column3.Name = "Column3";
+            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column4
+            // 
+            resources.ApplyResources(this.Column4, "Column4");
+            this.Column4.Name = "Column4";
+            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column5
+            // 
+            resources.ApplyResources(this.Column5, "Column5");
+            this.Column5.Name = "Column5";
+            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column6
+            // 
+            resources.ApplyResources(this.Column6, "Column6");
+            this.Column6.Name = "Column6";
+            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column7
+            // 
+            resources.ApplyResources(this.Column7, "Column7");
+            this.Column7.Name = "Column7";
+            this.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column8
+            // 
+            resources.ApplyResources(this.Column8, "Column8");
+            this.Column8.Name = "Column8";
+            this.Column8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column9
+            // 
+            resources.ApplyResources(this.Column9, "Column9");
+            this.Column9.Name = "Column9";
+            this.Column9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column10
+            // 
+            resources.ApplyResources(this.Column10, "Column10");
+            this.Column10.Name = "Column10";
+            this.Column10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column11
+            // 
+            resources.ApplyResources(this.Column11, "Column11");
+            this.Column11.Name = "Column11";
+            this.Column11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column12
+            // 
+            resources.ApplyResources(this.Column12, "Column12");
+            this.Column12.Name = "Column12";
+            // 
+            // contextMenuStrip_XY_InAnimationTable
+            // 
+            this.contextMenuStrip_XY_InAnimationTable.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.вставитьНачальныеКоординатыToolStripMenuItem,
+            this.вставитьКонечныеКоординатыToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.копироватьToolStripMenuItem3,
+            this.вставитьToolStripMenuItem3,
+            this.удалитьСтрокуToolStripMenuItem1});
+            this.contextMenuStrip_XY_InAnimationTable.Name = "contextMenuStrip_XY_InAnimationTable";
+            resources.ApplyResources(this.contextMenuStrip_XY_InAnimationTable, "contextMenuStrip_XY_InAnimationTable");
+            this.contextMenuStrip_XY_InAnimationTable.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_XY_InAnimationTable_Opening);
+            // 
+            // вставитьНачальныеКоординатыToolStripMenuItem
+            // 
+            this.вставитьНачальныеКоординатыToolStripMenuItem.Image = global::GTR_Watch_face.Properties.Resources.Actions_insert_text_icon;
+            this.вставитьНачальныеКоординатыToolStripMenuItem.Name = "вставитьНачальныеКоординатыToolStripMenuItem";
+            resources.ApplyResources(this.вставитьНачальныеКоординатыToolStripMenuItem, "вставитьНачальныеКоординатыToolStripMenuItem");
+            this.вставитьНачальныеКоординатыToolStripMenuItem.Click += new System.EventHandler(this.вставитьНачальныеКоординатыToolStripMenuItem_Click);
+            // 
+            // вставитьКонечныеКоординатыToolStripMenuItem
+            // 
+            this.вставитьКонечныеКоординатыToolStripMenuItem.Image = global::GTR_Watch_face.Properties.Resources.Actions_insert_text_icon;
+            this.вставитьКонечныеКоординатыToolStripMenuItem.Name = "вставитьКонечныеКоординатыToolStripMenuItem";
+            resources.ApplyResources(this.вставитьКонечныеКоординатыToolStripMenuItem, "вставитьКонечныеКоординатыToolStripMenuItem");
+            this.вставитьКонечныеКоординатыToolStripMenuItem.Click += new System.EventHandler(this.вставитьКонечныеКоординатыToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            // 
+            // копироватьToolStripMenuItem3
+            // 
+            this.копироватьToolStripMenuItem3.Image = global::GTR_Watch_face.Properties.Resources.Files_Copy_File_icon;
+            this.копироватьToolStripMenuItem3.Name = "копироватьToolStripMenuItem3";
+            resources.ApplyResources(this.копироватьToolStripMenuItem3, "копироватьToolStripMenuItem3");
+            this.копироватьToolStripMenuItem3.Click += new System.EventHandler(this.копироватьToolStripMenuItem2_Click);
+            // 
+            // вставитьToolStripMenuItem3
+            // 
+            this.вставитьToolStripMenuItem3.Image = global::GTR_Watch_face.Properties.Resources.Files_Clipboard_icon;
+            this.вставитьToolStripMenuItem3.Name = "вставитьToolStripMenuItem3";
+            resources.ApplyResources(this.вставитьToolStripMenuItem3, "вставитьToolStripMenuItem3");
+            this.вставитьToolStripMenuItem3.Click += new System.EventHandler(this.вставитьToolStripMenuItem3_Click);
+            // 
+            // удалитьСтрокуToolStripMenuItem1
+            // 
+            this.удалитьСтрокуToolStripMenuItem1.Image = global::GTR_Watch_face.Properties.Resources.table_row_delete_icon;
+            this.удалитьСтрокуToolStripMenuItem1.Name = "удалитьСтрокуToolStripMenuItem1";
+            resources.ApplyResources(this.удалитьСтрокуToolStripMenuItem1, "удалитьСтрокуToolStripMenuItem1");
+            this.удалитьСтрокуToolStripMenuItem1.Click += new System.EventHandler(this.удалитьСтрокуToolStripMenuItem_Click);
+            // 
+            // comboBox_MotiomAnimation_Image
+            // 
+            this.comboBox_MotiomAnimation_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_MotiomAnimation_Image.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_MotiomAnimation_Image, "comboBox_MotiomAnimation_Image");
+            this.comboBox_MotiomAnimation_Image.FormattingEnabled = true;
+            this.comboBox_MotiomAnimation_Image.Name = "comboBox_MotiomAnimation_Image";
+            this.helpProvider1.SetShowHelp(this.comboBox_MotiomAnimation_Image, ((bool)(resources.GetObject("comboBox_MotiomAnimation_Image.ShowHelp"))));
+            this.comboBox_MotiomAnimation_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_MotiomAnimation_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_MotiomAnimation_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_MotiomAnimation_Image_SelectedIndexChanged);
+            this.comboBox_MotiomAnimation_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_MotiomAnimation_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // label480
+            // 
+            resources.ApplyResources(this.label480, "label480");
+            this.label480.Name = "label480";
+            this.helpProvider1.SetShowHelp(this.label480, ((bool)(resources.GetObject("label480.ShowHelp"))));
+            // 
+            // checkBox_MotiomAnimation
+            // 
+            resources.ApplyResources(this.checkBox_MotiomAnimation, "checkBox_MotiomAnimation");
+            this.checkBox_MotiomAnimation.Name = "checkBox_MotiomAnimation";
+            this.helpProvider1.SetShowHelp(this.checkBox_MotiomAnimation, ((bool)(resources.GetObject("checkBox_MotiomAnimation.ShowHelp"))));
+            this.checkBox_MotiomAnimation.UseVisualStyleBackColor = true;
+            this.checkBox_MotiomAnimation.CheckedChanged += new System.EventHandler(this.checkBox_MotiomAnimation_CheckedChanged);
+            this.checkBox_MotiomAnimation.Click += new System.EventHandler(this.checkBox_Click);
             // 
             // checkBox_Animation
             // 
@@ -5653,6 +6012,7 @@
             this.helpProvider1.SetShowHelp(this.checkBox_Animation, ((bool)(resources.GetObject("checkBox_Animation.ShowHelp"))));
             this.checkBox_Animation.UseVisualStyleBackColor = true;
             this.checkBox_Animation.CheckedChanged += new System.EventHandler(this.checkBox_Animation_CheckedChanged);
+            this.checkBox_Animation.Click += new System.EventHandler(this.checkBox_Click);
             // 
             // button_Animation
             // 
@@ -9067,24 +9427,28 @@
             // 
             // вставитьКоординатыToolStripMenuItem
             // 
+            this.вставитьКоординатыToolStripMenuItem.Image = global::GTR_Watch_face.Properties.Resources.Actions_insert_text_icon;
             this.вставитьКоординатыToolStripMenuItem.Name = "вставитьКоординатыToolStripMenuItem";
             resources.ApplyResources(this.вставитьКоординатыToolStripMenuItem, "вставитьКоординатыToolStripMenuItem");
             this.вставитьКоординатыToolStripMenuItem.Click += new System.EventHandler(this.вставитьКоординатыToolStripMenuItem_Click);
             // 
             // копироватьToolStripMenuItem2
             // 
+            this.копироватьToolStripMenuItem2.Image = global::GTR_Watch_face.Properties.Resources.Files_Copy_File_icon;
             this.копироватьToolStripMenuItem2.Name = "копироватьToolStripMenuItem2";
             resources.ApplyResources(this.копироватьToolStripMenuItem2, "копироватьToolStripMenuItem2");
             this.копироватьToolStripMenuItem2.Click += new System.EventHandler(this.копироватьToolStripMenuItem2_Click);
             // 
             // вставитьToolStripMenuItem2
             // 
+            this.вставитьToolStripMenuItem2.Image = global::GTR_Watch_face.Properties.Resources.Files_Clipboard_icon;
             this.вставитьToolStripMenuItem2.Name = "вставитьToolStripMenuItem2";
             resources.ApplyResources(this.вставитьToolStripMenuItem2, "вставитьToolStripMenuItem2");
             this.вставитьToolStripMenuItem2.Click += new System.EventHandler(this.вставитьToolStripMenuItem2_Click);
             // 
             // удалитьСтрокуToolStripMenuItem
             // 
+            this.удалитьСтрокуToolStripMenuItem.Image = global::GTR_Watch_face.Properties.Resources.table_row_delete_icon;
             this.удалитьСтрокуToolStripMenuItem.Name = "удалитьСтрокуToolStripMenuItem";
             resources.ApplyResources(this.удалитьСтрокуToolStripMenuItem, "удалитьСтрокуToolStripMenuItem");
             this.удалитьСтрокуToolStripMenuItem.Click += new System.EventHandler(this.удалитьСтрокуToolStripMenuItem_Click);
@@ -16167,6 +16531,14 @@
             this.contextMenuStrip_Y.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StaticAnimation_X)).EndInit();
             this.contextMenuStrip_X.ResumeLayout(false);
+            this.tabPage54.ResumeLayout(false);
+            this.tabPage54.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MotiomAnimation_EndCoordinates_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MotiomAnimation_EndCoordinates_X)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MotiomAnimation_StartCoordinates_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MotiomAnimation_StartCoordinates_X)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_MotiomAnimation)).EndInit();
+            this.contextMenuStrip_XY_InAnimationTable.ResumeLayout(false);
             this.panel_Shortcuts.ResumeLayout(false);
             this.tabControl_Shortcuts.ResumeLayout(false);
             this.tabPage46.ResumeLayout(false);
@@ -17852,6 +18224,39 @@
         private System.Windows.Forms.Label label477;
         private System.Windows.Forms.NumericUpDown numericUpDown_StaticAnimation_SpeedAnimation;
         private System.Windows.Forms.Label label479;
+        private System.Windows.Forms.DataGridView dataGridView_MotiomAnimation;
+        private System.Windows.Forms.ComboBox comboBox_MotiomAnimation_Image;
+        private System.Windows.Forms.Label label480;
+        private System.Windows.Forms.CheckBox checkBox_MotiomAnimation;
+        private System.Windows.Forms.NumericUpDown numericUpDown_MotiomAnimation_EndCoordinates_Y;
+        private System.Windows.Forms.NumericUpDown numericUpDown_MotiomAnimation_EndCoordinates_X;
+        private System.Windows.Forms.Label label484;
+        private System.Windows.Forms.Label label485;
+        private System.Windows.Forms.NumericUpDown numericUpDown_MotiomAnimation_StartCoordinates_Y;
+        private System.Windows.Forms.NumericUpDown numericUpDown_MotiomAnimation_StartCoordinates_X;
+        private System.Windows.Forms.Label label481;
+        private System.Windows.Forms.Label label482;
+        private System.Windows.Forms.RadioButton radioButton_MotiomAnimation_EndCoordinates;
+        private System.Windows.Forms.RadioButton radioButton_MotiomAnimation_StartCoordinates;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column12;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip_XY_InAnimationTable;
+        private System.Windows.Forms.ToolStripMenuItem вставитьНачальныеКоординатыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem вставитьКонечныеКоординатыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem копироватьToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem вставитьToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem удалитьСтрокуToolStripMenuItem1;
     }
 }
 

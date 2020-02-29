@@ -1656,8 +1656,48 @@ namespace GTR_Watch_face
             #region Animation
             if (checkBox_Animation.Checked)
             {
-                // покадровая анимация
-                if ((checkBox_StaticAnimation.Checked) && (comboBox_StaticAnimation_Image.SelectedIndex >= 0))
+                // анимация (перемещение между координатами)
+                if (checkBox_MotiomAnimation.Checked)
+                {
+                    foreach (DataGridViewRow row in dataGridView_MotiomAnimation.Rows)
+                    {
+                        int StartCoordinates_X = 0;
+                        int StartCoordinates_Y = 0;
+                        int EndCoordinates_X = 0;
+                        int EndCoordinates_Y = 0;
+                        int ImageIndex = 0;
+                        if (row.Cells[1].Value != null && row.Cells[2].Value != null && row.Cells[3].Value != null &&
+                            row.Cells[4].Value != null && row.Cells[5].Value != null && row.Cells[6].Value != null &&
+                            row.Cells[7].Value != null)
+                        {
+                            if (Int32.TryParse(row.Cells[1].Value.ToString(), out StartCoordinates_X) &&
+                                Int32.TryParse(row.Cells[2].Value.ToString(), out StartCoordinates_Y) &&
+                                Int32.TryParse(row.Cells[3].Value.ToString(), out EndCoordinates_X) &&
+                                Int32.TryParse(row.Cells[4].Value.ToString(), out EndCoordinates_Y) &&
+                                Int32.TryParse(row.Cells[5].Value.ToString(), out ImageIndex))
+                            {
+                                int Coordinates_X = StartCoordinates_X;
+                                int Coordinates_Y = StartCoordinates_Y;
+                                if (radioButton_MotiomAnimation_EndCoordinates.Checked)
+                                {
+                                    Coordinates_X = EndCoordinates_X;
+                                    Coordinates_Y = EndCoordinates_Y;
+                                }
+
+                                i = ImageIndex;
+                                if (i < ListImagesFullName.Count)
+                                {
+                                    src = new Bitmap(ListImagesFullName[i]);
+                                    gPanel.DrawImage(src, new Rectangle(Coordinates_X, Coordinates_Y, src.Width, src.Height));
+                                    src.Dispose();
+                                }
+                            }
+                        }
+                    }
+                }
+
+                    // покадровая анимация
+                    if ((checkBox_StaticAnimation.Checked) && (comboBox_StaticAnimation_Image.SelectedIndex >= 0))
                 {
                     i = comboBox_StaticAnimation_Image.SelectedIndex;
                     if (i < ListImagesFullName.Count)
