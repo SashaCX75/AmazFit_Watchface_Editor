@@ -31,6 +31,7 @@ namespace GTR_Watch_face
         List<string> ListImagesFullName = new List<string>(); // перечень путей к файлам с картинками
         bool PreviewView; // включает прорисовку предпросмотра
         bool Settings_Load; // включать при обновлении настроек длу выключения перерисовки
+        bool MotiomAnimation_Update = false; // включать при обновлении параметров анимации
         bool JSON_Modified = false; // JSON файл был изменен
         string FileName; // Запоминает имя для диалогов
         string FullFileDir; // Запоминает папку для диалогов
@@ -3594,6 +3595,25 @@ namespace GTR_Watch_face
             label478.Enabled = b;
             label479.Enabled = b;
         }
+
+        private void checkBox_MotiomAnimation_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_MotiomAnimation.Checked;
+            comboBox_MotiomAnimation_Image.Enabled = b;
+            dataGridView_MotiomAnimation.Enabled = b;
+            radioButton_MotiomAnimation_StartCoordinates.Enabled = b;
+            radioButton_MotiomAnimation_EndCoordinates.Enabled = b;
+            numericUpDown_MotiomAnimation_StartCoordinates_X.Enabled = b;
+            numericUpDown_MotiomAnimation_StartCoordinates_Y.Enabled = b;
+            numericUpDown_MotiomAnimation_EndCoordinates_X.Enabled = b;
+            numericUpDown_MotiomAnimation_EndCoordinates_Y.Enabled = b;
+
+            label480.Enabled = b;
+            label481.Enabled = b;
+            label482.Enabled = b;
+            label484.Enabled = b;
+            label485.Enabled = b;
+        }
         #endregion
 
         private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -6260,6 +6280,37 @@ namespace GTR_Watch_face
             PreviewImage();
         }
 
+        private void dataGridView_MotiomAnimation_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null && e.ColumnIndex < 11)
+            {
+                Regex my_reg = new Regex(@"[^-\d]");
+                string oldValue = dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                string newValue = my_reg.Replace(oldValue, "");
+                dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = newValue;
+                if (newValue.Length == 0) dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = null;
+            }
+
+            try
+            {
+                if ((dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[1].Value == null) &&
+                    (dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[2].Value == null) &&
+                    (dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[3].Value == null) &&
+                    (dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[4].Value == null) &&
+                    (dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[5].Value == null) &&
+                    (dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[6].Value == null) &&
+                    (dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[7].Value == null) && 
+                        (e.RowIndex < dataGridView_MotiomAnimation.Rows.Count - 1))
+                    dataGridView_MotiomAnimation.Rows.RemoveAt(e.RowIndex);
+            }
+            catch (Exception)
+            {
+            }
+        
+            JSON_write();
+            PreviewImage();
+        }
+
         private void dataGridView_IconSet_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
             JSON_write();
@@ -6296,6 +6347,61 @@ namespace GTR_Watch_face
             }
         }
 
+        private void dataGridView_MotiomAnimation_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dataGridView = sender as DataGridView;
+            if (e.ColumnIndex == -1)
+            {
+                dataGridView.EditMode = DataGridViewEditMode.EditOnKeystrokeOrF2;
+                dataGridView.EndEdit();
+            }
+            else if (dataGridView.EditMode != DataGridViewEditMode.EditOnEnter)
+            {
+                dataGridView.EditMode = DataGridViewEditMode.EditOnEnter;
+                dataGridView.BeginEdit(false);
+            }
+
+            try
+            {
+                for (int i = dataGridView.Rows.Count - 1; i > -1; i--)
+                {
+                    DataGridViewRow row = dataGridView.Rows[i];
+                    if (!row.IsNewRow && row.Cells[1].Value == null && row.Cells[2].Value == null &&
+                        row.Cells[3].Value == null && row.Cells[4].Value == null && row.Cells[5].Value == null &&
+                        row.Cells[6].Value == null && row.Cells[7].Value == null)
+                    {
+                        dataGridView.Rows.Remove(row);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+            }
+
+        }
+
+        private void dataGridView_MotiomAnimation_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 11)
+            {
+                DataGridViewCheckBoxCell chBounce = new DataGridViewCheckBoxCell();
+                chBounce = (DataGridViewCheckBoxCell)dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[11];
+
+                if (chBounce.Value == null)
+                    chBounce.Value = false;
+                switch (chBounce.Value.ToString())
+                {
+                    case "True":
+                        chBounce.Value = false;
+                        break;
+                    case "False":
+                        chBounce.Value = true;
+                        break;
+                }
+                JSON_write();
+            }
+        }
+
         private void dataGridView_IconSet_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
         {
             DataGridView dataGridView = sender as DataGridView;
@@ -6314,6 +6420,19 @@ namespace GTR_Watch_face
             if (e.ColumnIndex == 1 && MouseСoordinates.Y >= 0)
             {
                 dataGridView.Rows[e.RowIndex].Cells[1].Value = MouseСoordinates.Y;
+            }
+        }
+
+        private void dataGridView_MotiomAnimation_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridView dataGridView = sender as DataGridView;
+            if ((e.ColumnIndex == 1 || e.ColumnIndex == 3) && MouseСoordinates.X >= 0)
+            {
+                dataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MouseСoordinates.X;
+            }
+            if ((e.ColumnIndex == 2 || e.ColumnIndex == 4) && MouseСoordinates.Y >= 0)
+            {
+                dataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MouseСoordinates.Y;
             }
         }
 
@@ -6421,7 +6540,10 @@ namespace GTR_Watch_face
             if (e.Button == MouseButtons.Right)
             {
                 DataGridView dataGridView = sender as DataGridView;
-                dataGridView.CurrentCell = dataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+                {
+                    dataGridView.CurrentCell = dataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex]; 
+                }
             }
         }
 
@@ -6540,6 +6662,255 @@ namespace GTR_Watch_face
                 if (Animation_TimeAnimation != (int)numericUpDown_StaticAnimation_TimeAnimation.Value && Animation_CyclesCount != 0)
                     numericUpDown_StaticAnimation_TimeAnimation.Value = Animation_TimeAnimation;
             }
+        }
+
+        private void radioButton_MotiomAnimation_StartCoordinates_CheckedChanged(object sender, EventArgs e)
+        {
+            PreviewImage();
+        }
+
+        private void contextMenuStrip_XY_InAnimationTable_Opening(object sender, CancelEventArgs e)
+        {
+            if ((MouseСoordinates.X < 0) || (MouseСoordinates.Y < 0))
+            {
+                contextMenuStrip_XY_InAnimationTable.Items[0].Enabled = false;
+                contextMenuStrip_XY_InAnimationTable.Items[1].Enabled = false;
+            }
+            else
+            {
+                contextMenuStrip_XY_InAnimationTable.Items[0].Enabled = true;
+                contextMenuStrip_XY_InAnimationTable.Items[1].Enabled = true;
+            }
+            decimal i = 0;
+            if ((Clipboard.ContainsText() == true) && (decimal.TryParse(Clipboard.GetText(), out i)))
+            {
+                contextMenuStrip_XY_InAnimationTable.Items[4].Enabled = true;
+            }
+            else
+            {
+                contextMenuStrip_XY_InAnimationTable.Items[4].Enabled = false;
+            }
+        }
+
+        private void вставитьToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            ToolStripItem menuItem = sender as ToolStripItem;
+            if (menuItem != null)
+            {
+                // Retrieve the ContextMenuStrip that owns this ToolStripItem
+                ContextMenuStrip owner = menuItem.Owner as ContextMenuStrip;
+                if (owner != null)
+                {
+                    // Get the control that is displaying this context menu
+                    Control sourceControl = owner.SourceControl;
+                    DataGridView dataGridView = sourceControl as DataGridView;
+                    DataGridViewCell cell = dataGridView.CurrentCell;
+                    //Если в буфере обмен содержится текст
+                    if (Clipboard.ContainsText() == true)
+                    {
+                        //Извлекаем (точнее копируем) его и сохраняем в переменную
+                        decimal i = 0;
+                        if (decimal.TryParse(Clipboard.GetText(), out i))
+                        {
+                            cell.Value = i;
+                            int x = dataGridView.CurrentCellAddress.X;
+                            int y = dataGridView.CurrentCellAddress.Y;
+                            dataGridView.CurrentCell = dataGridView.Rows[0].Cells[1];
+                            dataGridView.CurrentCell = dataGridView.Rows[y].Cells[x];
+                            dataGridView.BeginEdit(false);
+                            JSON_write();
+                            PreviewImage();
+                        }
+                    }
+
+                }
+            }
+        }
+
+        private void вставитьНачальныеКоординатыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Try to cast the sender to a ToolStripItem
+            ToolStripItem menuItem = sender as ToolStripItem;
+            if (menuItem != null)
+            {
+                // Retrieve the ContextMenuStrip that owns this ToolStripItem
+                ContextMenuStrip owner = menuItem.Owner as ContextMenuStrip;
+                if (owner != null)
+                {
+                    // Get the control that is displaying this context menu
+                    Control sourceControl = owner.SourceControl;
+                    DataGridView dataGridView = sourceControl as DataGridView;
+                    DataGridViewRow row = dataGridView.CurrentRow;
+                    row.Cells[1].Value = MouseСoordinates.X;
+                    row.Cells[2].Value = MouseСoordinates.Y;
+
+                    // копируем данные в поля для редактирования
+                    MotiomAnimation_Update = true;
+                    int StartCoordinates_X = 0;
+                    int StartCoordinates_Y = 0;
+                    int EndCoordinates_X = 0;
+                    int EndCoordinates_Y = 0;
+                    int ImageIndex = 0;
+                    numericUpDown_MotiomAnimation_StartCoordinates_X.Value = StartCoordinates_X;
+                    numericUpDown_MotiomAnimation_StartCoordinates_Y.Value = StartCoordinates_Y;
+                    numericUpDown_MotiomAnimation_EndCoordinates_X.Value = EndCoordinates_X;
+                    numericUpDown_MotiomAnimation_EndCoordinates_Y.Value = EndCoordinates_Y;
+                    comboBox_MotiomAnimation_Image.Text = "";
+
+                    if (row.Cells[1].Value != null) Int32.TryParse(row.Cells[1].Value.ToString(), out StartCoordinates_X);
+                    if (row.Cells[2].Value != null) Int32.TryParse(row.Cells[2].Value.ToString(), out StartCoordinates_Y);
+                    if (row.Cells[3].Value != null) Int32.TryParse(row.Cells[3].Value.ToString(), out EndCoordinates_X);
+                    if (row.Cells[4].Value != null) Int32.TryParse(row.Cells[4].Value.ToString(), out EndCoordinates_Y);
+
+                    numericUpDown_MotiomAnimation_StartCoordinates_X.Value = StartCoordinates_X;
+                    numericUpDown_MotiomAnimation_StartCoordinates_Y.Value = StartCoordinates_Y;
+                    numericUpDown_MotiomAnimation_EndCoordinates_X.Value = EndCoordinates_X;
+                    numericUpDown_MotiomAnimation_EndCoordinates_Y.Value = EndCoordinates_Y;
+
+                    if (row.Cells[5].Value != null && Int32.TryParse(row.Cells[5].Value.ToString(), out ImageIndex))
+                    {
+                        comboBoxSetText(comboBox_MotiomAnimation_Image, ImageIndex);
+                    }
+                    else
+                    {
+                        comboBox_MotiomAnimation_Image.Text = "";
+                    }
+                    MotiomAnimation_Update = false;
+
+                    JSON_write();
+                    PreviewImage();
+                }
+            }
+        }
+
+        private void вставитьКонечныеКоординатыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Try to cast the sender to a ToolStripItem
+            ToolStripItem menuItem = sender as ToolStripItem;
+            if (menuItem != null)
+            {
+                // Retrieve the ContextMenuStrip that owns this ToolStripItem
+                ContextMenuStrip owner = menuItem.Owner as ContextMenuStrip;
+                if (owner != null)
+                {
+                    // Get the control that is displaying this context menu
+                    Control sourceControl = owner.SourceControl;
+                    DataGridView dataGridView = sourceControl as DataGridView;
+                    DataGridViewRow row = dataGridView.CurrentRow;
+                    row.Cells[3].Value = MouseСoordinates.X;
+                    row.Cells[4].Value = MouseСoordinates.Y;
+
+                    // копируем данные в поля для редактирования
+                    MotiomAnimation_Update = true;
+                    int StartCoordinates_X = 0;
+                    int StartCoordinates_Y = 0;
+                    int EndCoordinates_X = 0;
+                    int EndCoordinates_Y = 0;
+                    int ImageIndex = 0;
+                    numericUpDown_MotiomAnimation_StartCoordinates_X.Value = StartCoordinates_X;
+                    numericUpDown_MotiomAnimation_StartCoordinates_Y.Value = StartCoordinates_Y;
+                    numericUpDown_MotiomAnimation_EndCoordinates_X.Value = EndCoordinates_X;
+                    numericUpDown_MotiomAnimation_EndCoordinates_Y.Value = EndCoordinates_Y;
+                    comboBox_MotiomAnimation_Image.Text = "";
+
+                    if (row.Cells[1].Value != null) Int32.TryParse(row.Cells[1].Value.ToString(), out StartCoordinates_X);
+                    if (row.Cells[2].Value != null) Int32.TryParse(row.Cells[2].Value.ToString(), out StartCoordinates_Y);
+                    if (row.Cells[3].Value != null) Int32.TryParse(row.Cells[3].Value.ToString(), out EndCoordinates_X);
+                    if (row.Cells[4].Value != null) Int32.TryParse(row.Cells[4].Value.ToString(), out EndCoordinates_Y);
+
+                    numericUpDown_MotiomAnimation_StartCoordinates_X.Value = StartCoordinates_X;
+                    numericUpDown_MotiomAnimation_StartCoordinates_Y.Value = StartCoordinates_Y;
+                    numericUpDown_MotiomAnimation_EndCoordinates_X.Value = EndCoordinates_X;
+                    numericUpDown_MotiomAnimation_EndCoordinates_Y.Value = EndCoordinates_Y;
+
+                    if (row.Cells[5].Value != null && Int32.TryParse(row.Cells[5].Value.ToString(), out ImageIndex))
+                    {
+                        comboBoxSetText(comboBox_MotiomAnimation_Image, ImageIndex);
+                    }
+                    else
+                    {
+                        comboBox_MotiomAnimation_Image.Text = "";
+                    }
+                    MotiomAnimation_Update = false;
+
+                    JSON_write();
+                    PreviewImage();
+                }
+            }
+        }
+
+        // копируем данные из полей для редактирования
+        private void comboBox_MotiomAnimation_Image_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (MotiomAnimation_Update) return;
+            DataGridViewRow row = dataGridView_MotiomAnimation.CurrentRow;
+            if (row != null)
+            {
+                row.Cells[5].Value = comboBox_MotiomAnimation_Image.Text;
+
+                JSON_write();
+                PreviewImage(); 
+            }
+        }
+
+        // копируем данные из полей для редактирования
+        private void numericUpDown_MotiomAnimation_StartCoordinates_X_ValueChanged(object sender, EventArgs e)
+        {
+            if (MotiomAnimation_Update) return;
+            DataGridViewRow row = dataGridView_MotiomAnimation.CurrentRow;
+            if (row != null)
+            {
+                row.Cells[1].Value = numericUpDown_MotiomAnimation_StartCoordinates_X.Value;
+                row.Cells[2].Value = numericUpDown_MotiomAnimation_StartCoordinates_Y.Value;
+                row.Cells[3].Value = numericUpDown_MotiomAnimation_EndCoordinates_X.Value;
+                row.Cells[4].Value = numericUpDown_MotiomAnimation_EndCoordinates_Y.Value;
+
+                JSON_write();
+                PreviewImage(); 
+            }
+        }
+
+        private void dataGridView_MotiomAnimation_SelectionChanged(object sender, EventArgs e)
+        {
+            MotiomAnimation_Update = true;
+            int StartCoordinates_X = 0;
+            int StartCoordinates_Y = 0;
+            int EndCoordinates_X = 0;
+            int EndCoordinates_Y = 0;
+            int ImageIndex = 0;
+            numericUpDown_MotiomAnimation_StartCoordinates_X.Value = StartCoordinates_X;
+            numericUpDown_MotiomAnimation_StartCoordinates_Y.Value = StartCoordinates_Y;
+            numericUpDown_MotiomAnimation_EndCoordinates_X.Value = EndCoordinates_X;
+            numericUpDown_MotiomAnimation_EndCoordinates_Y.Value = EndCoordinates_Y;
+            comboBox_MotiomAnimation_Image.Text = "";
+
+            if (dataGridView_MotiomAnimation.SelectedCells.Count > 0)
+            {
+                int RowIndex = dataGridView_MotiomAnimation.SelectedCells[0].RowIndex;
+                if (!dataGridView_MotiomAnimation.Rows[RowIndex].IsNewRow)
+                {
+                    DataGridViewRow row = dataGridView_MotiomAnimation.Rows[RowIndex];
+                    if (row.Cells[1].Value != null) Int32.TryParse(row.Cells[1].Value.ToString(), out StartCoordinates_X);
+                    if (row.Cells[2].Value != null) Int32.TryParse(row.Cells[2].Value.ToString(), out StartCoordinates_Y);
+                    if (row.Cells[3].Value != null) Int32.TryParse(row.Cells[3].Value.ToString(), out EndCoordinates_X);
+                    if (row.Cells[4].Value != null) Int32.TryParse(row.Cells[4].Value.ToString(), out EndCoordinates_Y);
+
+                    numericUpDown_MotiomAnimation_StartCoordinates_X.Value = StartCoordinates_X;
+                    numericUpDown_MotiomAnimation_StartCoordinates_Y.Value = StartCoordinates_Y;
+                    numericUpDown_MotiomAnimation_EndCoordinates_X.Value = EndCoordinates_X;
+                    numericUpDown_MotiomAnimation_EndCoordinates_Y.Value = EndCoordinates_Y;
+
+                    if (row.Cells[5].Value != null && Int32.TryParse(row.Cells[5].Value.ToString(), out ImageIndex))
+                    {
+                        comboBoxSetText(comboBox_MotiomAnimation_Image, ImageIndex);
+                    }
+                    else
+                    {
+                        comboBox_MotiomAnimation_Image.Text = "";
+                    }
+                }
+            }
+            MotiomAnimation_Update = false;
         }
     }
 }

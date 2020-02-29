@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -80,6 +81,9 @@ namespace GTR_Watch_face
             comboBox_MinCenterImage_Image.Items.AddRange(ListImages.ToArray());
             comboBox_SecCenterImage_Image.Items.AddRange(ListImages.ToArray());
 
+            comboBox_StaticAnimation_Image.Items.AddRange(ListImages.ToArray());
+            comboBox_MotiomAnimation_Image.Items.AddRange(ListImages.ToArray());
+
             comboBox_Weather_Text_Image.Items.AddRange(ListImages.ToArray());
             comboBox_Weather_Text_DegImage.Items.AddRange(ListImages.ToArray());
             comboBox_Weather_Text_MinusImage.Items.AddRange(ListImages.ToArray());
@@ -88,7 +92,6 @@ namespace GTR_Watch_face
             comboBox_Weather_Icon_NDImage.Items.AddRange(ListImages.ToArray());
             comboBox_Weather_Day_Image.Items.AddRange(ListImages.ToArray());
             comboBox_Weather_Night_Image.Items.AddRange(ListImages.ToArray());
-            comboBox_StaticAnimation_Image.Items.AddRange(ListImages.ToArray());
 
             #endregion
 
@@ -1307,11 +1310,89 @@ namespace GTR_Watch_face
                     numericUpDown_StaticAnimation_Y.Value = Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1.Y;
                 }
                 else checkBox_StaticAnimation.Checked = false;
+
+                if (Watch_Face.Unknown11.Unknown11_1 != null)
+                {
+                    bool motiomAnimation = false;
+                    dataGridView_MotiomAnimation.Rows.Clear();
+                    foreach (MotiomAnimation MotiomAnimation in Watch_Face.Unknown11.Unknown11_1)
+                    {
+                        if (MotiomAnimation.Unknown11d1p2 != null && MotiomAnimation.Unknown11d1p3 != null)
+                        {
+                            motiomAnimation = true;
+                            int Unknown1 = (int)MotiomAnimation.Unknown11d1p1;
+                            int StartCoordinates_X = (int)MotiomAnimation.Unknown11d1p2.X;
+                            int StartCoordinates_Y = (int)MotiomAnimation.Unknown11d1p2.Y;
+                            int EndCoordinates_X = (int)MotiomAnimation.Unknown11d1p3.X;
+                            int EndCoordinates_Y = (int)MotiomAnimation.Unknown11d1p3.Y;
+                            int ImageIndex = (int)MotiomAnimation.ImageIndex;
+                            int SpeedAnimation = (int)MotiomAnimation.Unknown11d1p5;
+                            int TimeAnimation = (int)MotiomAnimation.Unknown11d1p6;
+                            int Unknown5 = (int)MotiomAnimation.Unknown11d1p7;
+                            int Unknown6 = (int)MotiomAnimation.Unknown11d1p8;
+                            int Unknown7 = (int)MotiomAnimation.Unknown11d1p9;
+                            bool Bounce = false;
+                            if (MotiomAnimation.Unknown11d1p10 == 1) Bounce = true;
+
+                            //var RowNew = new DataGridViewRow();
+                            dataGridView_MotiomAnimation.Rows.Add(Unknown1, StartCoordinates_X, StartCoordinates_Y,
+                                EndCoordinates_X, EndCoordinates_Y, ImageIndex, SpeedAnimation, TimeAnimation,
+                                Unknown5, Unknown6, Unknown7, Bounce);
+                        }
+                    }
+                    if (motiomAnimation)
+                    {
+                        checkBox_MotiomAnimation.Checked = true;
+
+
+                        MotiomAnimation_Update = true;
+
+                        int StartCoordinates_X = 0;
+                        int StartCoordinates_Y = 0;
+                        int EndCoordinates_X = 0;
+                        int EndCoordinates_Y = 0;
+                        int ImageIndex = 0;
+                        numericUpDown_MotiomAnimation_StartCoordinates_X.Value = StartCoordinates_X;
+                        numericUpDown_MotiomAnimation_StartCoordinates_Y.Value = StartCoordinates_Y;
+                        numericUpDown_MotiomAnimation_EndCoordinates_X.Value = EndCoordinates_X;
+                        numericUpDown_MotiomAnimation_EndCoordinates_Y.Value = EndCoordinates_Y;
+                        comboBox_MotiomAnimation_Image.Text = "";
+
+                        int RowIndex = 0;
+                        if (!dataGridView_MotiomAnimation.Rows[RowIndex].IsNewRow)
+                        {
+                            DataGridViewRow row = dataGridView_MotiomAnimation.Rows[RowIndex];
+                            if (row.Cells[1].Value != null) Int32.TryParse(row.Cells[1].Value.ToString(), out StartCoordinates_X);
+                            if (row.Cells[2].Value != null) Int32.TryParse(row.Cells[2].Value.ToString(), out StartCoordinates_Y);
+                            if (row.Cells[3].Value != null) Int32.TryParse(row.Cells[3].Value.ToString(), out EndCoordinates_X);
+                            if (row.Cells[4].Value != null) Int32.TryParse(row.Cells[4].Value.ToString(), out EndCoordinates_Y);
+
+                            numericUpDown_MotiomAnimation_StartCoordinates_X.Value = StartCoordinates_X;
+                            numericUpDown_MotiomAnimation_StartCoordinates_Y.Value = StartCoordinates_Y;
+                            numericUpDown_MotiomAnimation_EndCoordinates_X.Value = EndCoordinates_X;
+                            numericUpDown_MotiomAnimation_EndCoordinates_Y.Value = EndCoordinates_Y;
+
+                            if (row.Cells[5].Value != null && Int32.TryParse(row.Cells[5].Value.ToString(), out ImageIndex))
+                            {
+                                comboBoxSetText(comboBox_MotiomAnimation_Image, ImageIndex);
+                            }
+                            else
+                            {
+                                comboBox_MotiomAnimation_Image.Text = "";
+                            }
+                        }
+                        MotiomAnimation_Update = false;
+                    }
+                    else checkBox_MotiomAnimation.Checked = false;
+                }
+
+
             }
             else
             {
                 checkBox_Animation.Checked = false;
                 checkBox_StaticAnimation.Checked = false;
+                checkBox_MotiomAnimation.Checked = false;
             }
             #endregion
         }
@@ -2718,6 +2799,81 @@ namespace GTR_Watch_face
             // анимация
             if (checkBox_Animation.Checked)
             {
+                // анимация (перемещение между координатами)
+                if (checkBox_MotiomAnimation.Checked)
+                {
+                    if (Watch_Face.Unknown11 == null) Watch_Face.Unknown11 = new Animation();
+
+                    //MotiomAnimation[] motiomAnimation = new MotiomAnimation[0];
+                    List<MotiomAnimation> MotiomAnimation = new List<MotiomAnimation>();
+
+                    foreach (DataGridViewRow row in dataGridView_MotiomAnimation.Rows)
+                    {
+                        //whatever you are currently doing
+                        //Coordinates coordinates = new Coordinates();
+                        MotiomAnimation motiomAnimation = new MotiomAnimation();
+                        int Unknown1 = 0;
+                        int StartCoordinates_X = 0;
+                        int StartCoordinates_Y = 0;
+                        int EndCoordinates_X = 0;
+                        int EndCoordinates_Y = 0;
+                        int ImageIndex = 0;
+                        int SpeedAnimation = 0;
+                        int TimeAnimation = 0;
+                        int Unknown5 = 0;
+                        int Unknown6 = 1;
+                        int Unknown7 = 0;
+                        int Bounce = 0;
+                        bool Bounce_b = false;
+                        if (row.Cells[1].Value != null && row.Cells[2].Value != null && row.Cells[3].Value != null &&
+                            row.Cells[4].Value != null && row.Cells[5].Value != null && row.Cells[6].Value != null &&
+                            row.Cells[7].Value != null)
+                        {
+                            if (Int32.TryParse(row.Cells[1].Value.ToString(), out StartCoordinates_X) &&
+                                Int32.TryParse(row.Cells[2].Value.ToString(), out StartCoordinates_Y) &&
+                                Int32.TryParse(row.Cells[3].Value.ToString(), out EndCoordinates_X) &&
+                                Int32.TryParse(row.Cells[4].Value.ToString(), out EndCoordinates_Y) &&
+                                Int32.TryParse(row.Cells[5].Value.ToString(), out ImageIndex) &&
+                                Int32.TryParse(row.Cells[6].Value.ToString(), out SpeedAnimation) &&
+                                Int32.TryParse(row.Cells[7].Value.ToString(), out TimeAnimation))
+                            {
+                                //if (row.Cells[11].Value == true) Bounce = true;
+                                //Array.Resize(ref motiomAnimation, motiomAnimation.Length + 1);
+                                //objson[count] = coordinates;
+                                //motiomAnimation[count] = new MotiomAnimation();
+                                //motiomAnimation[count].X = x;
+                                //motiomAnimation[count].Y = y;
+                                //count++;
+                                if (row.Cells[11].Value != null) Boolean.TryParse(row.Cells[11].Value.ToString(), out Bounce_b);
+                                if (Bounce_b) Bounce = 1;
+                                Coordinates StartCoordinates = new Coordinates();
+                                Coordinates EndCoordinates = new Coordinates();
+                                StartCoordinates.X = StartCoordinates_X;
+                                StartCoordinates.Y = StartCoordinates_Y;
+                                EndCoordinates.X = EndCoordinates_X;
+                                EndCoordinates.Y = EndCoordinates_Y;
+
+                                motiomAnimation.Unknown11d1p1 = Unknown1;
+                                motiomAnimation.Unknown11d1p2 = StartCoordinates;
+                                motiomAnimation.Unknown11d1p3 = EndCoordinates;
+                                motiomAnimation.ImageIndex = ImageIndex;
+                                motiomAnimation.Unknown11d1p5 = SpeedAnimation;
+                                motiomAnimation.Unknown11d1p6 = TimeAnimation;
+                                motiomAnimation.Unknown11d1p7 = Unknown5;
+                                motiomAnimation.Unknown11d1p8 = Unknown6;
+                                motiomAnimation.Unknown11d1p9 = Unknown7;
+                                motiomAnimation.Unknown11d1p10 = Bounce;
+
+                                MotiomAnimation.Add(motiomAnimation);
+                            }
+                        }
+                    }
+                    if (MotiomAnimation.Count > 0)
+                    {
+                        Watch_Face.Unknown11.Unknown11_1 = MotiomAnimation;
+                    }
+                }
+
                 if ((checkBox_StaticAnimation.Checked) && (comboBox_StaticAnimation_Image.SelectedIndex >= 0))
                 {
                     if (Watch_Face.Unknown11 == null) Watch_Face.Unknown11 = new Animation();
@@ -2735,6 +2891,7 @@ namespace GTR_Watch_face
                     Watch_Face.Unknown11.Unknown11_2.Unknown11d2p4 = (int)numericUpDown_StaticAnimation_TimeAnimation.Value;
                     Watch_Face.Unknown11.Unknown11_2.Unknown11d2p5 = (int)numericUpDown_StaticAnimation_Pause.Value;
                 }
+                
             }
 
             richTextBox_JSON.Text = JsonConvert.SerializeObject(Watch_Face, Formatting.Indented, new JsonSerializerSettings
@@ -3053,6 +3210,11 @@ namespace GTR_Watch_face
             comboBox_SecCenterImage_Image.Text = "";
             comboBox_SecCenterImage_Image.Items.Clear();
 
+            comboBox_StaticAnimation_Image.Text = "";
+            comboBox_StaticAnimation_Image.Items.Clear();
+            comboBox_MotiomAnimation_Image.Text = "";
+            comboBox_MotiomAnimation_Image.Items.Clear();
+
             comboBox_Weather_Text_Image.Text = "";
             comboBox_Weather_Text_Image.Items.Clear();
             comboBox_Weather_Text_DegImage.Text = "";
@@ -3069,9 +3231,6 @@ namespace GTR_Watch_face
             comboBox_Weather_Day_Image.Items.Clear();
             comboBox_Weather_Night_Image.Text = "";
             comboBox_Weather_Night_Image.Items.Clear();
-            comboBox_StaticAnimation_Image.Text = "";
-            comboBox_StaticAnimation_Image.Items.Clear();
-
         }
 
         // устанавливаем тип циферблата исходя из DeviceId
