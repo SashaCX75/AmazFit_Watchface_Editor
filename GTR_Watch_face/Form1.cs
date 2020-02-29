@@ -97,6 +97,10 @@ namespace GTR_Watch_face
                     {
                         Program_Settings.language = "Slovenčina";
                     }
+                    if (language == "fr")
+                    {
+                        Program_Settings.language = "French";
+                    }
                 }
                 //Logger.WriteLine("Определили язык");
                 SetLanguage();
@@ -201,6 +205,11 @@ namespace GTR_Watch_face
             {
                 Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("sk");
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("sk");
+            }
+            else if (Program_Settings.language == "French")
+            {
+                Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("fr");
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("fr");
             }
             else
             {
@@ -5300,21 +5309,21 @@ namespace GTR_Watch_face
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
-                Bitmap mask = new Bitmap(@"Mask\mask_gtr47.png");
+                Bitmap mask = new Bitmap(Application.StartupPath + @"Mask\mask_gtr47.png");
                 if (radioButton_42.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(@"Mask\mask_gtr42.png");
+                    mask = new Bitmap(Application.StartupPath + @"Mask\mask_gtr42.png");
                 }
                 if (radioButton_gts.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(@"Mask\mask_gts.png");
+                    mask = new Bitmap(Application.StartupPath + @"Mask\mask_gts.png");
                 }
                 if (radioButton_TRex.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(@"Mask\mask_trex.png");
+                    mask = new Bitmap(Application.StartupPath + @"Mask\mask_trex.png");
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false);
@@ -5336,21 +5345,21 @@ namespace GTR_Watch_face
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
-                Bitmap mask = new Bitmap(@"Mask\mask_gtr47.png");
+                Bitmap mask = new Bitmap(Application.StartupPath + @"Mask\mask_gtr47.png");
                 if (radioButton_42.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(@"Mask\mask_gtr42.png");
+                    mask = new Bitmap(Application.StartupPath + @"Mask\mask_gtr42.png");
                 }
                 if (radioButton_gts.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(@"Mask\mask_gts.png");
+                    mask = new Bitmap(Application.StartupPath + @"Mask\mask_gts.png");
                 }
                 if (radioButton_TRex.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(@"Mask\mask_trex.png");
+                    mask = new Bitmap(Application.StartupPath + @"Mask\mask_trex.png");
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 bool save = false;

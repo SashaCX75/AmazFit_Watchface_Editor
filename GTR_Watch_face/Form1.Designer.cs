@@ -530,15 +530,15 @@
             this.checkBox_HourCenterImage = new System.Windows.Forms.CheckBox();
             this.tabPage31 = new System.Windows.Forms.TabPage();
             this.groupBox_AnalogClock_Min = new System.Windows.Forms.GroupBox();
+            this.numericUpDown_AnalogClock_Min_Y = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_AnalogClock_Min_X = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_AnalogClock_Min_Offset_X = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_AnalogClock_Min_Offset_Y = new System.Windows.Forms.NumericUpDown();
             this.label351 = new System.Windows.Forms.Label();
             this.label352 = new System.Windows.Forms.Label();
             this.comboBox_AnalogClock_Min_Image = new System.Windows.Forms.ComboBox();
             this.label207 = new System.Windows.Forms.Label();
-            this.numericUpDown_AnalogClock_Min_Y = new System.Windows.Forms.NumericUpDown();
             this.label208 = new System.Windows.Forms.Label();
-            this.numericUpDown_AnalogClock_Min_X = new System.Windows.Forms.NumericUpDown();
             this.label209 = new System.Windows.Forms.Label();
             this.checkBox_AnalogClock_Min = new System.Windows.Forms.CheckBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -1453,10 +1453,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_HourCenterImage_X)).BeginInit();
             this.tabPage31.SuspendLayout();
             this.groupBox_AnalogClock_Min.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Min_Offset_X)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Min_Offset_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Min_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Min_X)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Min_Offset_X)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Min_Offset_Y)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MinCenterImage_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MinCenterImage_X)).BeginInit();
@@ -7190,15 +7190,15 @@
             // 
             // groupBox_AnalogClock_Min
             // 
+            this.groupBox_AnalogClock_Min.Controls.Add(this.numericUpDown_AnalogClock_Min_Y);
+            this.groupBox_AnalogClock_Min.Controls.Add(this.numericUpDown_AnalogClock_Min_X);
             this.groupBox_AnalogClock_Min.Controls.Add(this.numericUpDown_AnalogClock_Min_Offset_X);
             this.groupBox_AnalogClock_Min.Controls.Add(this.numericUpDown_AnalogClock_Min_Offset_Y);
             this.groupBox_AnalogClock_Min.Controls.Add(this.label351);
             this.groupBox_AnalogClock_Min.Controls.Add(this.label352);
             this.groupBox_AnalogClock_Min.Controls.Add(this.comboBox_AnalogClock_Min_Image);
             this.groupBox_AnalogClock_Min.Controls.Add(this.label207);
-            this.groupBox_AnalogClock_Min.Controls.Add(this.numericUpDown_AnalogClock_Min_Y);
             this.groupBox_AnalogClock_Min.Controls.Add(this.label208);
-            this.groupBox_AnalogClock_Min.Controls.Add(this.numericUpDown_AnalogClock_Min_X);
             this.groupBox_AnalogClock_Min.Controls.Add(this.label209);
             this.groupBox_AnalogClock_Min.Controls.Add(this.checkBox_AnalogClock_Min);
             resources.ApplyResources(this.groupBox_AnalogClock_Min, "groupBox_AnalogClock_Min");
@@ -7206,6 +7206,40 @@
             this.helpProvider1.SetShowHelp(this.groupBox_AnalogClock_Min, ((bool)(resources.GetObject("groupBox_AnalogClock_Min.ShowHelp"))));
             this.groupBox_AnalogClock_Min.TabStop = false;
             this.groupBox_AnalogClock_Min.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            // 
+            // numericUpDown_AnalogClock_Min_Y
+            // 
+            resources.ApplyResources(this.numericUpDown_AnalogClock_Min_Y, "numericUpDown_AnalogClock_Min_Y");
+            this.numericUpDown_AnalogClock_Min_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_AnalogClock_Min_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_AnalogClock_Min_Y.Name = "numericUpDown_AnalogClock_Min_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_AnalogClock_Min_Y, ((bool)(resources.GetObject("numericUpDown_AnalogClock_Min_Y.ShowHelp"))));
+            this.numericUpDown_AnalogClock_Min_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // numericUpDown_AnalogClock_Min_X
+            // 
+            resources.ApplyResources(this.numericUpDown_AnalogClock_Min_X, "numericUpDown_AnalogClock_Min_X");
+            this.numericUpDown_AnalogClock_Min_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_AnalogClock_Min_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_AnalogClock_Min_X.Name = "numericUpDown_AnalogClock_Min_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_AnalogClock_Min_X, ((bool)(resources.GetObject("numericUpDown_AnalogClock_Min_X.ShowHelp"))));
+            this.numericUpDown_AnalogClock_Min_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // numericUpDown_AnalogClock_Min_Offset_X
             // 
@@ -7275,46 +7309,12 @@
             this.label207.Name = "label207";
             this.helpProvider1.SetShowHelp(this.label207, ((bool)(resources.GetObject("label207.ShowHelp"))));
             // 
-            // numericUpDown_AnalogClock_Min_Y
-            // 
-            resources.ApplyResources(this.numericUpDown_AnalogClock_Min_Y, "numericUpDown_AnalogClock_Min_Y");
-            this.numericUpDown_AnalogClock_Min_Y.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_AnalogClock_Min_Y.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_AnalogClock_Min_Y.Name = "numericUpDown_AnalogClock_Min_Y";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_AnalogClock_Min_Y, ((bool)(resources.GetObject("numericUpDown_AnalogClock_Min_Y.ShowHelp"))));
-            this.numericUpDown_AnalogClock_Min_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
             // label208
             // 
             this.label208.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.label208, "label208");
             this.label208.Name = "label208";
             this.helpProvider1.SetShowHelp(this.label208, ((bool)(resources.GetObject("label208.ShowHelp"))));
-            // 
-            // numericUpDown_AnalogClock_Min_X
-            // 
-            resources.ApplyResources(this.numericUpDown_AnalogClock_Min_X, "numericUpDown_AnalogClock_Min_X");
-            this.numericUpDown_AnalogClock_Min_X.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_AnalogClock_Min_X.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_AnalogClock_Min_X.Name = "numericUpDown_AnalogClock_Min_X";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_AnalogClock_Min_X, ((bool)(resources.GetObject("numericUpDown_AnalogClock_Min_X.ShowHelp"))));
-            this.numericUpDown_AnalogClock_Min_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // label209
             // 
@@ -15201,7 +15201,8 @@
             resources.GetString("comboBox_Language.Items3"),
             resources.GetString("comboBox_Language.Items4"),
             resources.GetString("comboBox_Language.Items5"),
-            resources.GetString("comboBox_Language.Items6")});
+            resources.GetString("comboBox_Language.Items6"),
+            resources.GetString("comboBox_Language.Items7")});
             resources.ApplyResources(this.comboBox_Language, "comboBox_Language");
             this.comboBox_Language.Name = "comboBox_Language";
             this.helpProvider1.SetShowHelp(this.comboBox_Language, ((bool)(resources.GetObject("comboBox_Language.ShowHelp"))));
@@ -15925,10 +15926,10 @@
             this.tabPage31.ResumeLayout(false);
             this.groupBox_AnalogClock_Min.ResumeLayout(false);
             this.groupBox_AnalogClock_Min.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Min_Offset_X)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Min_Offset_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Min_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Min_X)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Min_Offset_X)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_AnalogClock_Min_Offset_Y)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MinCenterImage_Y)).EndInit();

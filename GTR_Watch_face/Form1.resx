@@ -125,9 +125,9 @@
   <data name="button_zip_unpack.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 138</value>
   </data>
-  <data name="helpProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  <metadata name="helpProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>482, 17</value>
-  </data>
+  </metadata>
   <data name="helpProvider1.HelpNamespace" xml:space="preserve">
     <value>C:\Users\Администратор\Documents\readme.chm</value>
   </data>
@@ -9594,24 +9594,24 @@
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="Number.UserAddedColumn" type="System.Boolean, mscorlib">
+  <metadata name="Number.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="Number.HeaderText" xml:space="preserve">
     <value>№</value>
   </data>
   <data name="Number.Width" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
-  <data name="NameFile.UserAddedColumn" type="System.Boolean, mscorlib">
+  <metadata name="NameFile.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="NameFile.HeaderText" xml:space="preserve">
     <value>Имя файла</value>
   </data>
-  <data name="ColumnImage.UserAddedColumn" type="System.Boolean, mscorlib">
+  <metadata name="ColumnImage.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="ColumnImage.HeaderText" xml:space="preserve">
     <value>Картинка</value>
   </data>
@@ -9861,9 +9861,9 @@
   <data name="panel2.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="contextMenuStrip_X.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  <metadata name="contextMenuStrip_X.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>696, 17</value>
-  </data>
+  </metadata>
   <data name="вставитьКоординатуХToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -9968,9 +9968,9 @@
   <data name="&gt;&gt;numericUpDown_Shortcuts_Steps_Width.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="contextMenuStrip_Y.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  <metadata name="contextMenuStrip_Y.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
-  </data>
+  </metadata>
   <data name="toolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -15133,6 +15133,60 @@
   <data name="&gt;&gt;tabPage29.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="numericUpDown_AnalogClock_Min_Y.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_AnalogClock_Min_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>71, 76</value>
+  </data>
+  <data name="numericUpDown_AnalogClock_Min_Y.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_AnalogClock_Min_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_AnalogClock_Min_Y.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_AnalogClock_Min_Y.Name" xml:space="preserve">
+    <value>numericUpDown_AnalogClock_Min_Y</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_AnalogClock_Min_Y.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_AnalogClock_Min_Y.Parent" xml:space="preserve">
+    <value>groupBox_AnalogClock_Min</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_AnalogClock_Min_Y.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="numericUpDown_AnalogClock_Min_X.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_AnalogClock_Min_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>71, 41</value>
+  </data>
+  <data name="numericUpDown_AnalogClock_Min_X.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_AnalogClock_Min_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_AnalogClock_Min_X.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_AnalogClock_Min_X.Name" xml:space="preserve">
+    <value>numericUpDown_AnalogClock_Min_X</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_AnalogClock_Min_X.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_AnalogClock_Min_X.Parent" xml:space="preserve">
+    <value>groupBox_AnalogClock_Min</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_AnalogClock_Min_X.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="numericUpDown_AnalogClock_Min_Offset_X.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -15158,7 +15212,7 @@
     <value>groupBox_AnalogClock_Min</value>
   </data>
   <data name="&gt;&gt;numericUpDown_AnalogClock_Min_Offset_X.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="numericUpDown_AnalogClock_Min_Offset_Y.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -15185,7 +15239,7 @@
     <value>groupBox_AnalogClock_Min</value>
   </data>
   <data name="&gt;&gt;numericUpDown_AnalogClock_Min_Offset_Y.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="label351.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -15221,7 +15275,7 @@
     <value>groupBox_AnalogClock_Min</value>
   </data>
   <data name="&gt;&gt;label351.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="label352.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -15257,7 +15311,7 @@
     <value>groupBox_AnalogClock_Min</value>
   </data>
   <data name="&gt;&gt;label352.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="comboBox_AnalogClock_Min_Image.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -15287,7 +15341,7 @@
     <value>groupBox_AnalogClock_Min</value>
   </data>
   <data name="&gt;&gt;comboBox_AnalogClock_Min_Image.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="label207.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -15323,34 +15377,7 @@
     <value>groupBox_AnalogClock_Min</value>
   </data>
   <data name="&gt;&gt;label207.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="numericUpDown_AnalogClock_Min_Y.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="numericUpDown_AnalogClock_Min_Y.Location" type="System.Drawing.Point, System.Drawing">
-    <value>71, 76</value>
-  </data>
-  <data name="numericUpDown_AnalogClock_Min_Y.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="numericUpDown_AnalogClock_Min_Y.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="numericUpDown_AnalogClock_Min_Y.TabIndex" type="System.Int32, mscorlib">
-    <value>61</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_AnalogClock_Min_Y.Name" xml:space="preserve">
-    <value>numericUpDown_AnalogClock_Min_Y</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_AnalogClock_Min_Y.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_AnalogClock_Min_Y.Parent" xml:space="preserve">
-    <value>groupBox_AnalogClock_Min</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_AnalogClock_Min_Y.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="label208.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -15386,33 +15413,6 @@
     <value>groupBox_AnalogClock_Min</value>
   </data>
   <data name="&gt;&gt;label208.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="numericUpDown_AnalogClock_Min_X.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="numericUpDown_AnalogClock_Min_X.Location" type="System.Drawing.Point, System.Drawing">
-    <value>71, 41</value>
-  </data>
-  <data name="numericUpDown_AnalogClock_Min_X.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="numericUpDown_AnalogClock_Min_X.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="numericUpDown_AnalogClock_Min_X.TabIndex" type="System.Int32, mscorlib">
-    <value>59</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_AnalogClock_Min_X.Name" xml:space="preserve">
-    <value>numericUpDown_AnalogClock_Min_X</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_AnalogClock_Min_X.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_AnalogClock_Min_X.Parent" xml:space="preserve">
-    <value>groupBox_AnalogClock_Min</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_AnalogClock_Min_X.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="label209.Enabled" type="System.Boolean, mscorlib">
@@ -19324,21 +19324,21 @@
   <data name="&gt;&gt;label405.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib">
+  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
     <value>X</value>
   </data>
-  <data name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib">
+  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
     <value>Y</value>
   </data>
-  <data name="contextMenuStrip_XY_InTable.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  <metadata name="contextMenuStrip_XY_InTable.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>178, 56</value>
-  </data>
+  </metadata>
   <data name="вставитьКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 22</value>
   </data>
@@ -24517,15 +24517,15 @@
   <data name="&gt;&gt;comboBox_ActivityPuls_IconSet_Image.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="dataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib">
+  <metadata name="dataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="dataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
     <value>X</value>
   </data>
-  <data name="dataGridViewTextBoxColumn4.UserAddedColumn" type="System.Boolean, mscorlib">
+  <metadata name="dataGridViewTextBoxColumn4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="dataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
     <value>Y</value>
   </data>
@@ -28480,15 +28480,15 @@
   <data name="&gt;&gt;label404.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="ValueX.UserAddedColumn" type="System.Boolean, mscorlib">
+  <metadata name="ValueX.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="ValueX.HeaderText" xml:space="preserve">
     <value>X</value>
   </data>
-  <data name="ValueY.UserAddedColumn" type="System.Boolean, mscorlib">
+  <metadata name="ValueY.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="ValueY.HeaderText" xml:space="preserve">
     <value>Y</value>
   </data>
@@ -32686,15 +32686,15 @@
   <data name="&gt;&gt;tabPage7.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="dataGridViewTextBoxColumn5.UserAddedColumn" type="System.Boolean, mscorlib">
+  <metadata name="dataGridViewTextBoxColumn5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="dataGridViewTextBoxColumn5.HeaderText" xml:space="preserve">
     <value>X</value>
   </data>
-  <data name="dataGridViewTextBoxColumn6.UserAddedColumn" type="System.Boolean, mscorlib">
+  <metadata name="dataGridViewTextBoxColumn6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="dataGridViewTextBoxColumn6.HeaderText" xml:space="preserve">
     <value>Y</value>
   </data>
@@ -37024,6 +37024,9 @@
   <data name="comboBox_Language.Items6" xml:space="preserve">
     <value>Magyar</value>
   </data>
+  <data name="comboBox_Language.Items7" xml:space="preserve">
+    <value>French</value>
+  </data>
   <data name="comboBox_Language.Location" type="System.Drawing.Point, System.Drawing">
     <value>48, 256</value>
   </data>
@@ -37721,13 +37724,14 @@
     <value>True</value>
   </data>
   <data name="label_TranslateHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>638, 13</value>
+    <value>642, 26</value>
   </data>
   <data name="label_TranslateHelp.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
   <data name="label_TranslateHelp.Text" xml:space="preserve">
-    <value>chaadaev88 (English), kampanita (Español), maikeandre (Português), Horatius80 (Čeština, Magyar, Slovenčina)</value>
+    <value>chaadaev88 (English), kampanita (Español), maikeandre (Português), Horatius80 (Čeština, Magyar, Slovenčina),
+bigsurf05 (French)</value>
   </data>
   <data name="&gt;&gt;label_TranslateHelp.Name" xml:space="preserve">
     <value>label_TranslateHelp</value>
@@ -37853,7 +37857,7 @@
     <value>NoControl</value>
   </data>
   <data name="linkLabel_help.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 276</value>
+    <value>3, 290</value>
   </data>
   <data name="linkLabel_help.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -38260,15 +38264,15 @@
   <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
     <value>20</value>
   </data>
-  <data name="colorDialog_StepsProgress.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  <metadata name="colorDialog_StepsProgress.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
-  </data>
-  <data name="colorDialog_Battery.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  </metadata>
+  <metadata name="colorDialog_Battery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>169, 20</value>
-  </data>
-  <data name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  </metadata>
+  <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>259, 17</value>
-  </data>
+  </metadata>
   <data name="button_PreviewBig.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -38365,9 +38369,9 @@
   <data name="&gt;&gt;checkBox_WebB.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <data name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>395, 17</value>
-  </data>
+  </metadata>
   <data name="button_SavePNG.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -38815,18 +38819,18 @@
   <data name="&gt;&gt;radioButton_TRex.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="timer2.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  <metadata name="timer2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>609, 17</value>
-  </data>
-  <data name="colorDialog_Pulse.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  </metadata>
+  <metadata name="colorDialog_Pulse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>391, 56</value>
-  </data>
-  <data name="colorDialog_Calories.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  </metadata>
+  <metadata name="colorDialog_Calories.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>512, 56</value>
-  </data>
-  <data name="$this.Localizable" type="System.Boolean, mscorlib">
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
