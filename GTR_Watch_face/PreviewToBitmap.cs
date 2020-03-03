@@ -1409,7 +1409,8 @@ namespace GTR_Watch_face
                 if ((checkBox_Battery_Img.Checked) && (comboBox_Battery_Img_Image.SelectedIndex >= 0))
                 {
                     float count = (float)numericUpDown_Battery_Img_Count.Value - 1;
-                    int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
+                    int offSet = (int)(count * Watch_Face_Preview_Set.Battery / 100f);
+                    //int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
                     i = comboBox_Battery_Img_Image.SelectedIndex + offSet;
                     src = new Bitmap(ListImagesFullName[i]);
                     gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Battery_Img_X.Value,
