@@ -98,6 +98,10 @@ namespace GTR_Watch_face
                     {
                         Program_Settings.language = "Slovenčina";
                     }
+                    if (language == "fr")
+                    {
+                        Program_Settings.language = "French";
+                    }
                 }
                 //Logger.WriteLine("Определили язык");
                 SetLanguage();
@@ -202,6 +206,11 @@ namespace GTR_Watch_face
             {
                 Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("sk");
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("sk");
+            }
+            else if (Program_Settings.language == "French")
+            {
+                Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("fr");
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("fr");
             }
             else
             {
