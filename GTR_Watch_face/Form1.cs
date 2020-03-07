@@ -6964,6 +6964,10 @@ namespace GTR_Watch_face
 
             FormAnimation f = new FormAnimation(bitmap, MotiomAnimation);
             f.Owner = this;
+            FormAnimation.Model_Wath.model_gtr47 = radioButton_47.Checked;
+            FormAnimation.Model_Wath.model_gtr42 = radioButton_42.Checked;
+            FormAnimation.Model_Wath.model_gts = radioButton_gts.Checked;
+            FormAnimation.Model_Wath.model_TRex = radioButton_TRex.Checked;
             f.ShowDialog();
         }
     }
