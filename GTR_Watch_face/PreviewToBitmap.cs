@@ -38,219 +38,6 @@ namespace GTR_Watch_face
             #endregion
             if (scale == 0.5) gPanel.SmoothingMode = SmoothingMode.AntiAlias;
 
-            #region Time
-            if (checkBox_Time.Checked)
-            {
-                if (checkBox_AmPm.Checked)
-                {
-                    if (checkBox_Hours.Checked)
-                    {
-                        if (comboBox_Hours_Tens_Image.SelectedIndex >= 0)
-                        {
-                            i = comboBox_Hours_Tens_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.TimePm.Hours.Tens;
-                            if (i < ListImagesFullName.Count)
-                            {
-                                src = new Bitmap(ListImagesFullName[i]);
-                                gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Hours_Tens_X.Value,
-                                    (int)numericUpDown_Hours_Tens_Y.Value, src.Width, src.Height));
-                                src.Dispose();
-                            }
-                        }
-                        if (comboBox_Hours_Ones_Image.SelectedIndex >= 0)
-                        {
-                            i = comboBox_Hours_Ones_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.TimePm.Hours.Ones;
-                            if (i < ListImagesFullName.Count)
-                            {
-                                src = new Bitmap(ListImagesFullName[i]);
-                                gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Hours_Ones_X.Value,
-                                    (int)numericUpDown_Hours_Ones_Y.Value, src.Width, src.Height));
-                                src.Dispose();
-                            }
-                        }
-                    }
-
-                    if (checkBox_Minutes.Checked)
-                    {
-                        if (comboBox_Min_Tens_Image.SelectedIndex >= 0)
-                        {
-                            i = comboBox_Min_Tens_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.TimePm.Minutes.Tens;
-                            if (i < ListImagesFullName.Count)
-                            {
-                                src = new Bitmap(ListImagesFullName[i]);
-                                gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Min_Tens_X.Value,
-                                    (int)numericUpDown_Min_Tens_Y.Value, src.Width, src.Height));
-                                src.Dispose();
-                            }
-                        }
-                        if (comboBox_Min_Ones_Image.SelectedIndex >= 0)
-                        {
-                            i = comboBox_Min_Ones_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.TimePm.Minutes.Ones;
-                            if (i < ListImagesFullName.Count)
-                            {
-                                src = new Bitmap(ListImagesFullName[i]);
-                                gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Min_Ones_X.Value,
-                                    (int)numericUpDown_Min_Ones_Y.Value, src.Width, src.Height));
-                                src.Dispose();
-                            }
-                        }
-                    }
-
-                    if (checkBox_Seconds.Checked)
-                    {
-                        if (comboBox_Sec_Tens_Image.SelectedIndex >= 0)
-                        {
-                            i = comboBox_Sec_Tens_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.TimePm.Seconds.Tens;
-                            if (i < ListImagesFullName.Count)
-                            {
-                                src = new Bitmap(ListImagesFullName[i]);
-                                gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Sec_Tens_X.Value,
-                                    (int)numericUpDown_Sec_Tens_Y.Value, src.Width, src.Height));
-                                src.Dispose();
-                            }
-                        }
-                        if (comboBox_Sec_Ones_Image.SelectedIndex >= 0)
-                        {
-                            i = comboBox_Sec_Ones_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.TimePm.Seconds.Ones;
-                            if (i < ListImagesFullName.Count)
-                            {
-                                src = new Bitmap(ListImagesFullName[i]);
-                                gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Sec_Ones_X.Value,
-                                    (int)numericUpDown_Sec_Ones_Y.Value, src.Width, src.Height));
-                                src.Dispose();
-                            }
-                        }
-                    }
-
-                    if (Watch_Face_Preview_TwoDigits.TimePm.Pm)
-                    {
-                        if (comboBox_Image_Pm.SelectedIndex >= 0)
-                        {
-                            i = comboBox_Image_Pm.SelectedIndex;
-                            src = new Bitmap(ListImagesFullName[i]);
-                            gPanel.DrawImage(src, new Rectangle((int)numericUpDown_AmPm_X.Value,
-                                (int)numericUpDown_AmPm_Y.Value, src.Width, src.Height));
-                            src.Dispose();
-                        }
-                    }
-                    else
-                    {
-                        if (comboBox_Image_Am.SelectedIndex >= 0)
-                        {
-                            i = comboBox_Image_Am.SelectedIndex;
-                            src = new Bitmap(ListImagesFullName[i]);
-                            gPanel.DrawImage(src, new Rectangle((int)numericUpDown_AmPm_X.Value,
-                                (int)numericUpDown_AmPm_Y.Value, src.Width, src.Height));
-                            src.Dispose();
-                        }
-                    }
-
-                    if (checkBox_Delimiter.Checked)
-                    {
-                        if (comboBox_Delimiter_Image.SelectedIndex >= 0)
-                        {
-                            i = comboBox_Delimiter_Image.SelectedIndex;
-                            src = new Bitmap(ListImagesFullName[i]);
-                            gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Delimiter_X.Value,
-                                (int)numericUpDown_Delimiter_Y.Value, src.Width, src.Height));
-                            src.Dispose();
-                        }
-                    }
-                }
-                else
-                {
-                    if (checkBox_Hours.Checked)
-                    {
-                        if (comboBox_Hours_Tens_Image.SelectedIndex >= 0)
-                        {
-                            i = comboBox_Hours_Tens_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Time.Hours.Tens;
-                            if (i < ListImagesFullName.Count)
-                            {
-                                src = new Bitmap(ListImagesFullName[i]);
-                                gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Hours_Tens_X.Value,
-                                    (int)numericUpDown_Hours_Tens_Y.Value, src.Width, src.Height));
-                                src.Dispose();
-                            }
-                        }
-                        if (comboBox_Hours_Ones_Image.SelectedIndex >= 0)
-                        {
-                            i = comboBox_Hours_Ones_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Time.Hours.Ones;
-                            if (i < ListImagesFullName.Count)
-                            {
-                                src = new Bitmap(ListImagesFullName[i]);
-                                gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Hours_Ones_X.Value,
-                                    (int)numericUpDown_Hours_Ones_Y.Value, src.Width, src.Height));
-                                src.Dispose();
-                            }
-                        }
-                    }
-
-                    if (checkBox_Minutes.Checked)
-                    {
-                        if (comboBox_Min_Tens_Image.SelectedIndex >= 0)
-                        {
-                            i = comboBox_Min_Tens_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Time.Minutes.Tens;
-                            if (i < ListImagesFullName.Count)
-                            {
-                                src = new Bitmap(ListImagesFullName[i]);
-                                gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Min_Tens_X.Value,
-                                    (int)numericUpDown_Min_Tens_Y.Value, src.Width, src.Height));
-                                src.Dispose();
-                            }
-                        }
-                        if (comboBox_Min_Ones_Image.SelectedIndex >= 0)
-                        {
-                            i = comboBox_Min_Ones_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Time.Minutes.Ones;
-                            if (i < ListImagesFullName.Count)
-                            {
-                                src = new Bitmap(ListImagesFullName[i]);
-                                gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Min_Ones_X.Value,
-                                    (int)numericUpDown_Min_Ones_Y.Value, src.Width, src.Height));
-                                src.Dispose();
-                            }
-                        }
-                    }
-
-                    if (checkBox_Seconds.Checked)
-                    {
-                        if (comboBox_Sec_Tens_Image.SelectedIndex >= 0)
-                        {
-                            i = comboBox_Sec_Tens_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Time.Seconds.Tens;
-                            if (i < ListImagesFullName.Count)
-                            {
-                                src = new Bitmap(ListImagesFullName[i]);
-                                gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Sec_Tens_X.Value,
-                                    (int)numericUpDown_Sec_Tens_Y.Value, src.Width, src.Height));
-                                src.Dispose();
-                            }
-                        }
-                        if (comboBox_Sec_Ones_Image.SelectedIndex >= 0)
-                        {
-                            i = comboBox_Sec_Ones_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Time.Seconds.Ones;
-                            if (i < ListImagesFullName.Count)
-                            {
-                                src = new Bitmap(ListImagesFullName[i]);
-                                gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Sec_Ones_X.Value,
-                                    (int)numericUpDown_Sec_Ones_Y.Value, src.Width, src.Height));
-                                src.Dispose();
-                            }
-                        }
-                    }
-
-                    if (checkBox_Delimiter.Checked)
-                    {
-                        if (comboBox_Delimiter_Image.SelectedIndex >= 0)
-                        {
-                            i = comboBox_Delimiter_Image.SelectedIndex;
-                            src = new Bitmap(ListImagesFullName[i]);
-                            gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Delimiter_X.Value,
-                                (int)numericUpDown_Delimiter_Y.Value, src.Width, src.Height));
-                            src.Dispose();
-                        }
-                    }
-                }
-            }
-            #endregion
-
             #region Date
             if (checkBox_Date.Checked)
             {
@@ -1408,9 +1195,14 @@ namespace GTR_Watch_face
                 // заряд картинкой
                 if ((checkBox_Battery_Img.Checked) && (comboBox_Battery_Img_Image.SelectedIndex >= 0))
                 {
-                    float count = (float)numericUpDown_Battery_Img_Count.Value - 1;
-                    int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
-                    i = comboBox_Battery_Img_Image.SelectedIndex + offSet;
+                    float count = (float)numericUpDown_Battery_Img_Count.Value;
+                    if (count > 10) count = 10;
+                    int offSet = (int)Math.Ceiling(count * Watch_Face_Preview_Set.Battery / 100f);
+                    offSet --;
+                    if (offSet < 0) offSet = 0;
+                    if (offSet >= count) offSet = (int)(count - 1);
+                     //int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
+                     i = comboBox_Battery_Img_Image.SelectedIndex + offSet;
                     src = new Bitmap(ListImagesFullName[i]);
                     gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Battery_Img_X.Value,
                         (int)numericUpDown_Battery_Img_Y.Value, src.Width, src.Height));
@@ -1519,8 +1311,12 @@ namespace GTR_Watch_face
                     {
                         int x = 0;
                         int y = 0;
+                        float RowsCount = dataGridView_Battery_IconSet.Rows.Count;
+                        RowsCount--;
+                        if (RowsCount < 0) RowsCount = 0;
+                        if (RowsCount > 10) RowsCount = 10;
                         //int count = 0;
-                        for (int count = 0; count < dataGridView_Battery_IconSet.Rows.Count; count++)
+                        for (int count = 0; count < RowsCount; count++)
                         {
                             if ((dataGridView_Battery_IconSet.Rows[count].Cells[0].Value != null) &&
                                 (dataGridView_Battery_IconSet.Rows[count].Cells[1].Value != null))
@@ -1533,8 +1329,9 @@ namespace GTR_Watch_face
                                     i = comboBox_Battery_IconSet_Image.SelectedIndex + count;
                                     if (i < ListImagesFullName.Count)
                                     {
-                                        int value = (dataGridView_Battery_IconSet.Rows.Count - 1) * Watch_Face_Preview_Set.Battery / 100;
-                                        value++;
+                                        int value = (int)Math.Ceiling(RowsCount * Watch_Face_Preview_Set.Battery / 100);
+                                        //value--;
+                                        if (value < 0) value = 0;
                                         if (count < value)
                                         {
                                             src = new Bitmap(ListImagesFullName[i]);
@@ -1549,6 +1346,219 @@ namespace GTR_Watch_face
                     }
                 }
 
+            }
+            #endregion
+
+            #region Time
+            if (checkBox_Time.Checked)
+            {
+                if (checkBox_AmPm.Checked)
+                {
+                    if (checkBox_Hours.Checked)
+                    {
+                        if (comboBox_Hours_Tens_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Hours_Tens_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.TimePm.Hours.Tens;
+                            if (i < ListImagesFullName.Count)
+                            {
+                                src = new Bitmap(ListImagesFullName[i]);
+                                gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Hours_Tens_X.Value,
+                                    (int)numericUpDown_Hours_Tens_Y.Value, src.Width, src.Height));
+                                src.Dispose();
+                            }
+                        }
+                        if (comboBox_Hours_Ones_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Hours_Ones_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.TimePm.Hours.Ones;
+                            if (i < ListImagesFullName.Count)
+                            {
+                                src = new Bitmap(ListImagesFullName[i]);
+                                gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Hours_Ones_X.Value,
+                                    (int)numericUpDown_Hours_Ones_Y.Value, src.Width, src.Height));
+                                src.Dispose();
+                            }
+                        }
+                    }
+
+                    if (checkBox_Minutes.Checked)
+                    {
+                        if (comboBox_Min_Tens_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Min_Tens_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.TimePm.Minutes.Tens;
+                            if (i < ListImagesFullName.Count)
+                            {
+                                src = new Bitmap(ListImagesFullName[i]);
+                                gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Min_Tens_X.Value,
+                                    (int)numericUpDown_Min_Tens_Y.Value, src.Width, src.Height));
+                                src.Dispose();
+                            }
+                        }
+                        if (comboBox_Min_Ones_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Min_Ones_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.TimePm.Minutes.Ones;
+                            if (i < ListImagesFullName.Count)
+                            {
+                                src = new Bitmap(ListImagesFullName[i]);
+                                gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Min_Ones_X.Value,
+                                    (int)numericUpDown_Min_Ones_Y.Value, src.Width, src.Height));
+                                src.Dispose();
+                            }
+                        }
+                    }
+
+                    if (checkBox_Seconds.Checked)
+                    {
+                        if (comboBox_Sec_Tens_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Sec_Tens_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.TimePm.Seconds.Tens;
+                            if (i < ListImagesFullName.Count)
+                            {
+                                src = new Bitmap(ListImagesFullName[i]);
+                                gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Sec_Tens_X.Value,
+                                    (int)numericUpDown_Sec_Tens_Y.Value, src.Width, src.Height));
+                                src.Dispose();
+                            }
+                        }
+                        if (comboBox_Sec_Ones_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Sec_Ones_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.TimePm.Seconds.Ones;
+                            if (i < ListImagesFullName.Count)
+                            {
+                                src = new Bitmap(ListImagesFullName[i]);
+                                gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Sec_Ones_X.Value,
+                                    (int)numericUpDown_Sec_Ones_Y.Value, src.Width, src.Height));
+                                src.Dispose();
+                            }
+                        }
+                    }
+
+                    if (Watch_Face_Preview_TwoDigits.TimePm.Pm)
+                    {
+                        if (comboBox_Image_Pm.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Image_Pm.SelectedIndex;
+                            src = new Bitmap(ListImagesFullName[i]);
+                            gPanel.DrawImage(src, new Rectangle((int)numericUpDown_AmPm_X.Value,
+                                (int)numericUpDown_AmPm_Y.Value, src.Width, src.Height));
+                            src.Dispose();
+                        }
+                    }
+                    else
+                    {
+                        if (comboBox_Image_Am.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Image_Am.SelectedIndex;
+                            src = new Bitmap(ListImagesFullName[i]);
+                            gPanel.DrawImage(src, new Rectangle((int)numericUpDown_AmPm_X.Value,
+                                (int)numericUpDown_AmPm_Y.Value, src.Width, src.Height));
+                            src.Dispose();
+                        }
+                    }
+
+                    if (checkBox_Delimiter.Checked)
+                    {
+                        if (comboBox_Delimiter_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Delimiter_Image.SelectedIndex;
+                            src = new Bitmap(ListImagesFullName[i]);
+                            gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Delimiter_X.Value,
+                                (int)numericUpDown_Delimiter_Y.Value, src.Width, src.Height));
+                            src.Dispose();
+                        }
+                    }
+                }
+                else
+                {
+                    if (checkBox_Hours.Checked)
+                    {
+                        if (comboBox_Hours_Tens_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Hours_Tens_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Time.Hours.Tens;
+                            if (i < ListImagesFullName.Count)
+                            {
+                                src = new Bitmap(ListImagesFullName[i]);
+                                gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Hours_Tens_X.Value,
+                                    (int)numericUpDown_Hours_Tens_Y.Value, src.Width, src.Height));
+                                src.Dispose();
+                            }
+                        }
+                        if (comboBox_Hours_Ones_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Hours_Ones_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Time.Hours.Ones;
+                            if (i < ListImagesFullName.Count)
+                            {
+                                src = new Bitmap(ListImagesFullName[i]);
+                                gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Hours_Ones_X.Value,
+                                    (int)numericUpDown_Hours_Ones_Y.Value, src.Width, src.Height));
+                                src.Dispose();
+                            }
+                        }
+                    }
+
+                    if (checkBox_Minutes.Checked)
+                    {
+                        if (comboBox_Min_Tens_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Min_Tens_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Time.Minutes.Tens;
+                            if (i < ListImagesFullName.Count)
+                            {
+                                src = new Bitmap(ListImagesFullName[i]);
+                                gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Min_Tens_X.Value,
+                                    (int)numericUpDown_Min_Tens_Y.Value, src.Width, src.Height));
+                                src.Dispose();
+                            }
+                        }
+                        if (comboBox_Min_Ones_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Min_Ones_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Time.Minutes.Ones;
+                            if (i < ListImagesFullName.Count)
+                            {
+                                src = new Bitmap(ListImagesFullName[i]);
+                                gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Min_Ones_X.Value,
+                                    (int)numericUpDown_Min_Ones_Y.Value, src.Width, src.Height));
+                                src.Dispose();
+                            }
+                        }
+                    }
+
+                    if (checkBox_Seconds.Checked)
+                    {
+                        if (comboBox_Sec_Tens_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Sec_Tens_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Time.Seconds.Tens;
+                            if (i < ListImagesFullName.Count)
+                            {
+                                src = new Bitmap(ListImagesFullName[i]);
+                                gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Sec_Tens_X.Value,
+                                    (int)numericUpDown_Sec_Tens_Y.Value, src.Width, src.Height));
+                                src.Dispose();
+                            }
+                        }
+                        if (comboBox_Sec_Ones_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Sec_Ones_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Time.Seconds.Ones;
+                            if (i < ListImagesFullName.Count)
+                            {
+                                src = new Bitmap(ListImagesFullName[i]);
+                                gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Sec_Ones_X.Value,
+                                    (int)numericUpDown_Sec_Ones_Y.Value, src.Width, src.Height));
+                                src.Dispose();
+                            }
+                        }
+                    }
+
+                    if (checkBox_Delimiter.Checked)
+                    {
+                        if (comboBox_Delimiter_Image.SelectedIndex >= 0)
+                        {
+                            i = comboBox_Delimiter_Image.SelectedIndex;
+                            src = new Bitmap(ListImagesFullName[i]);
+                            gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Delimiter_X.Value,
+                                (int)numericUpDown_Delimiter_Y.Value, src.Width, src.Height));
+                            src.Dispose();
+                        }
+                    }
+                }
             }
             #endregion
 
