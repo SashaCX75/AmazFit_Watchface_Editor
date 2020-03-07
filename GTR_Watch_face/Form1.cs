@@ -1574,7 +1574,8 @@ namespace GTR_Watch_face
             float scale = 1.0f;
             if (panel_Preview.Height < 300) scale = 0.5f;
             PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, 
-                checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked);
+                checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, 
+                checkBox_Shortcuts_Border.Checked, true);
             gPanel.Dispose();
 
             if ((formPreview != null) && (formPreview.Visible))
@@ -1588,7 +1589,7 @@ namespace GTR_Watch_face
                 if (formPreview.radioButton_xxlarge.Checked) scalePreview = 2.5f;
                 PreviewToBitmap(gPanelPreview, scalePreview, checkBox_crop.Checked, checkBox_WebW.Checked, 
                     checkBox_WebB.Checked, checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, 
-                    checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked);
+                    checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true);
                 gPanelPreview.Dispose();
                 
             }
@@ -1978,7 +1979,7 @@ namespace GTR_Watch_face
                 Watch_Face_Preview_TwoDigits.Time.Seconds.Tens * 10;
 
             int hour = Watch_Face_Preview_Set.Time.Hours;
-            if (Watch_Face_Preview_Set.Time.Hours > 12)
+            if (Watch_Face_Preview_Set.Time.Hours >= 12)
             {
                 hour = hour - 12;
                 Watch_Face_Preview_TwoDigits.TimePm.Pm = true;
@@ -1987,6 +1988,7 @@ namespace GTR_Watch_face
             {
                 Watch_Face_Preview_TwoDigits.TimePm.Pm = false;
             }
+            if (hour == 0) hour = 12;
             Watch_Face_Preview_TwoDigits.TimePm.Hours.Tens = hour / 10;
             Watch_Face_Preview_TwoDigits.TimePm.Hours.Ones = hour - (int)Watch_Face_Preview_TwoDigits.TimePm.Hours.Tens * 10;
             Watch_Face_Preview_TwoDigits.TimePm.Minutes.Tens = (int)Watch_Face_Preview_Set.Time.Minutes / 10;
@@ -2333,7 +2335,7 @@ namespace GTR_Watch_face
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
                 panel_Shortcuts.Height = 1;
-                panel_Animation.Height = (int)(145 * currentDPI);
+                panel_Animation.Height = (int)(237 * currentDPI);
             }
             else panel_Animation.Height = 1;
         }
@@ -3594,6 +3596,9 @@ namespace GTR_Watch_face
             label477.Enabled = b;
             label478.Enabled = b;
             label479.Enabled = b;
+
+            if (checkBox_StaticAnimation.Checked || checkBox_MotiomAnimation.Checked) button_ShowAnimation.Enabled = true;
+            else button_ShowAnimation.Enabled = false;
         }
 
         private void checkBox_MotiomAnimation_CheckedChanged(object sender, EventArgs e)
@@ -3613,6 +3618,9 @@ namespace GTR_Watch_face
             label482.Enabled = b;
             label484.Enabled = b;
             label485.Enabled = b;
+
+            if (checkBox_StaticAnimation.Checked || checkBox_MotiomAnimation.Checked) button_ShowAnimation.Enabled = true;
+            else button_ShowAnimation.Enabled = false;
         }
         #endregion
 
@@ -4258,7 +4266,7 @@ namespace GTR_Watch_face
 
                     PreviewToBitmap(gPanelPreviewResize, scalePreviewResize, checkBox_crop.Checked,
                         checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked, 
-                        checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked);
+                        checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true);
                     gPanelPreviewResize.Dispose();
                 };
 
@@ -4304,7 +4312,7 @@ namespace GTR_Watch_face
 
             PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, 
                 checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, 
-                checkBox_Shortcuts_Border.Checked);
+                checkBox_Shortcuts_Border.Checked, true);
             gPanel.Dispose();
 
             button_PreviewBig.Enabled = false;
@@ -5420,7 +5428,7 @@ namespace GTR_Watch_face
                     mask = new Bitmap(@"Mask\mask_trex.png");
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
-                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false);
+                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true);
                 if(checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
                 bitmap.Save(saveFileDialog.FileName, ImageFormat.Png);
             }
@@ -5582,7 +5590,7 @@ namespace GTR_Watch_face
                             numericUpDown_WeatherSet_NightTemp.Value = numericUpDown_WeatherSet_Temp.Value - rnd.Next(3, 10);
                             comboBox_WeatherSet_Icon.SelectedIndex = rnd.Next(0, 25);
 
-                            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false);
+                            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true);
                             if (checkBox_crop.Checked) {
                                 bitmap = ApplyMask(bitmap, mask);
                                 gPanel = Graphics.FromImage(bitmap);
@@ -5749,7 +5757,7 @@ namespace GTR_Watch_face
                 if (formPreview.radioButton_xxlarge.Checked) scalePreviewPaint = 2.5f;
                 PreviewToBitmap(gPanelPreviewPaint, scalePreviewPaint, checkBox_crop.Checked,
                     checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked, 
-                    checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked);
+                    checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true);
                 gPanelPreviewPaint.Dispose();
             }
         }
@@ -6911,6 +6919,52 @@ namespace GTR_Watch_face
                 }
             }
             MotiomAnimation_Update = false;
+        }
+
+        private void button_ShowAnimation_Click(object sender, EventArgs e)
+        {
+            Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
+            Bitmap mask = new Bitmap(@"Mask\mask_gtr47.png");
+            if (radioButton_42.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
+                mask = new Bitmap(@"Mask\mask_gtr42.png");
+            }
+            if (radioButton_gts.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
+                mask = new Bitmap(@"Mask\mask_gts.png");
+            }
+            if (radioButton_TRex.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
+                mask = new Bitmap(@"Mask\mask_trex.png");
+            }
+            Graphics gPanel = Graphics.FromImage(bitmap);
+            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false);
+            if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
+
+            ClassStaticAnimation MotiomAnimation = null;
+            List<Bitmap> Images = new List<Bitmap>();
+            if (checkBox_StaticAnimation.Checked && comboBox_StaticAnimation_Image.SelectedIndex >= 0)
+            {
+                for (int i = comboBox_StaticAnimation_Image.SelectedIndex;
+                    i < (comboBox_StaticAnimation_Image.SelectedIndex + (int)numericUpDown_StaticAnimation_Count.Value); i++)
+                {
+                    if (i < ListImagesFullName.Count) Images.Add(new Bitmap(ListImagesFullName[i]));
+                }
+            }
+            if (Images.Count > 0)
+            {
+                MotiomAnimation = new ClassStaticAnimation(Images, (int)numericUpDown_StaticAnimation_X.Value,
+                    (int)numericUpDown_StaticAnimation_Y.Value, (int)numericUpDown_StaticAnimation_SpeedAnimation.Value,
+                    (int)numericUpDown_StaticAnimation_TimeAnimation.Value, (int)numericUpDown_StaticAnimation_Pause.Value);
+
+            }
+
+            FormAnimation f = new FormAnimation(bitmap, MotiomAnimation);
+            f.Owner = this;
+            f.ShowDialog();
         }
     }
 }
