@@ -5387,6 +5387,7 @@
             resources.ApplyResources(this.button_ShowAnimation, "button_ShowAnimation");
             this.button_ShowAnimation.Name = "button_ShowAnimation";
             this.button_ShowAnimation.UseVisualStyleBackColor = true;
+            this.button_ShowAnimation.Click += new System.EventHandler(this.button_ShowAnimation_Click);
             // 
             // tabControl_Animation
             // 
