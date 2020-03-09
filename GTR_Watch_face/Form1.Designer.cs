@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button_zip_unpack = new System.Windows.Forms.Button();
@@ -392,16 +392,19 @@
             this.label474 = new System.Windows.Forms.Label();
             this.label475 = new System.Windows.Forms.Label();
             this.tabPage54 = new System.Windows.Forms.TabPage();
-            this.radioButton_MotiomAnimation_EndCoordinates = new System.Windows.Forms.RadioButton();
-            this.radioButton_MotiomAnimation_StartCoordinates = new System.Windows.Forms.RadioButton();
+            this.groupBox_MotiomAnimation = new System.Windows.Forms.GroupBox();
             this.numericUpDown_MotiomAnimation_EndCoordinates_Y = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_MotiomAnimation_EndCoordinates_X = new System.Windows.Forms.NumericUpDown();
-            this.label484 = new System.Windows.Forms.Label();
-            this.label485 = new System.Windows.Forms.Label();
             this.numericUpDown_MotiomAnimation_StartCoordinates_Y = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_MotiomAnimation_StartCoordinates_X = new System.Windows.Forms.NumericUpDown();
-            this.label481 = new System.Windows.Forms.Label();
+            this.radioButton_MotiomAnimation_EndCoordinates = new System.Windows.Forms.RadioButton();
+            this.label480 = new System.Windows.Forms.Label();
+            this.label484 = new System.Windows.Forms.Label();
+            this.comboBox_MotiomAnimation_Image = new System.Windows.Forms.ComboBox();
+            this.numericUpDown_MotiomAnimation_EndCoordinates_X = new System.Windows.Forms.NumericUpDown();
+            this.radioButton_MotiomAnimation_StartCoordinates = new System.Windows.Forms.RadioButton();
             this.label482 = new System.Windows.Forms.Label();
+            this.label481 = new System.Windows.Forms.Label();
+            this.label485 = new System.Windows.Forms.Label();
             this.dataGridView_MotiomAnimation = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -422,8 +425,6 @@
             this.копироватьToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.вставитьToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.удалитьСтрокуToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.comboBox_MotiomAnimation_Image = new System.Windows.Forms.ComboBox();
-            this.label480 = new System.Windows.Forms.Label();
             this.checkBox_MotiomAnimation = new System.Windows.Forms.CheckBox();
             this.checkBox_Animation = new System.Windows.Forms.CheckBox();
             this.button_Animation = new System.Windows.Forms.Button();
@@ -1346,6 +1347,7 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.colorDialog_Pulse = new System.Windows.Forms.ColorDialog();
             this.colorDialog_Calories = new System.Windows.Forms.ColorDialog();
+            this.radioButton_Verge = new System.Windows.Forms.RadioButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -1462,10 +1464,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StaticAnimation_X)).BeginInit();
             this.contextMenuStrip_X.SuspendLayout();
             this.tabPage54.SuspendLayout();
+            this.groupBox_MotiomAnimation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MotiomAnimation_EndCoordinates_Y)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MotiomAnimation_EndCoordinates_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MotiomAnimation_StartCoordinates_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MotiomAnimation_StartCoordinates_X)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MotiomAnimation_EndCoordinates_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_MotiomAnimation)).BeginInit();
             this.contextMenuStrip_XY_InAnimationTable.SuspendLayout();
             this.panel_Shortcuts.SuspendLayout();
@@ -5275,8 +5278,8 @@
             // Number
             // 
             this.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Number.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Number.DefaultCellStyle = dataGridViewCellStyle3;
             resources.ApplyResources(this.Number, "Number");
             this.Number.Name = "Number";
             this.Number.ReadOnly = true;
@@ -5493,6 +5496,7 @@
             0});
             this.numericUpDown_StaticAnimation_Pause.Name = "numericUpDown_StaticAnimation_Pause";
             this.helpProvider1.SetShowHelp(this.numericUpDown_StaticAnimation_Pause, ((bool)(resources.GetObject("numericUpDown_StaticAnimation_Pause.ShowHelp"))));
+            this.numericUpDown_StaticAnimation_Pause.ValueChanged += new System.EventHandler(this.numericUpDown_StaticAnimation_Count_ValueChanged);
             // 
             // label478
             // 
@@ -5694,40 +5698,31 @@
             // tabPage54
             // 
             this.tabPage54.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage54.Controls.Add(this.radioButton_MotiomAnimation_EndCoordinates);
-            this.tabPage54.Controls.Add(this.radioButton_MotiomAnimation_StartCoordinates);
-            this.tabPage54.Controls.Add(this.numericUpDown_MotiomAnimation_EndCoordinates_Y);
-            this.tabPage54.Controls.Add(this.numericUpDown_MotiomAnimation_EndCoordinates_X);
-            this.tabPage54.Controls.Add(this.label484);
-            this.tabPage54.Controls.Add(this.label485);
-            this.tabPage54.Controls.Add(this.numericUpDown_MotiomAnimation_StartCoordinates_Y);
-            this.tabPage54.Controls.Add(this.numericUpDown_MotiomAnimation_StartCoordinates_X);
-            this.tabPage54.Controls.Add(this.label481);
-            this.tabPage54.Controls.Add(this.label482);
+            this.tabPage54.Controls.Add(this.groupBox_MotiomAnimation);
             this.tabPage54.Controls.Add(this.dataGridView_MotiomAnimation);
-            this.tabPage54.Controls.Add(this.comboBox_MotiomAnimation_Image);
-            this.tabPage54.Controls.Add(this.label480);
             this.tabPage54.Controls.Add(this.checkBox_MotiomAnimation);
             resources.ApplyResources(this.tabPage54, "tabPage54");
             this.tabPage54.Name = "tabPage54";
             this.helpProvider1.SetShowHelp(this.tabPage54, ((bool)(resources.GetObject("tabPage54.ShowHelp"))));
             // 
-            // radioButton_MotiomAnimation_EndCoordinates
+            // groupBox_MotiomAnimation
             // 
-            resources.ApplyResources(this.radioButton_MotiomAnimation_EndCoordinates, "radioButton_MotiomAnimation_EndCoordinates");
-            this.radioButton_MotiomAnimation_EndCoordinates.Name = "radioButton_MotiomAnimation_EndCoordinates";
-            this.helpProvider1.SetShowHelp(this.radioButton_MotiomAnimation_EndCoordinates, ((bool)(resources.GetObject("radioButton_MotiomAnimation_EndCoordinates.ShowHelp"))));
-            this.radioButton_MotiomAnimation_EndCoordinates.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_MotiomAnimation_StartCoordinates
-            // 
-            this.radioButton_MotiomAnimation_StartCoordinates.Checked = true;
-            resources.ApplyResources(this.radioButton_MotiomAnimation_StartCoordinates, "radioButton_MotiomAnimation_StartCoordinates");
-            this.radioButton_MotiomAnimation_StartCoordinates.Name = "radioButton_MotiomAnimation_StartCoordinates";
-            this.helpProvider1.SetShowHelp(this.radioButton_MotiomAnimation_StartCoordinates, ((bool)(resources.GetObject("radioButton_MotiomAnimation_StartCoordinates.ShowHelp"))));
-            this.radioButton_MotiomAnimation_StartCoordinates.TabStop = true;
-            this.radioButton_MotiomAnimation_StartCoordinates.UseVisualStyleBackColor = true;
-            this.radioButton_MotiomAnimation_StartCoordinates.CheckedChanged += new System.EventHandler(this.radioButton_MotiomAnimation_StartCoordinates_CheckedChanged);
+            this.groupBox_MotiomAnimation.Controls.Add(this.numericUpDown_MotiomAnimation_EndCoordinates_Y);
+            this.groupBox_MotiomAnimation.Controls.Add(this.numericUpDown_MotiomAnimation_StartCoordinates_Y);
+            this.groupBox_MotiomAnimation.Controls.Add(this.numericUpDown_MotiomAnimation_StartCoordinates_X);
+            this.groupBox_MotiomAnimation.Controls.Add(this.radioButton_MotiomAnimation_EndCoordinates);
+            this.groupBox_MotiomAnimation.Controls.Add(this.label480);
+            this.groupBox_MotiomAnimation.Controls.Add(this.label484);
+            this.groupBox_MotiomAnimation.Controls.Add(this.comboBox_MotiomAnimation_Image);
+            this.groupBox_MotiomAnimation.Controls.Add(this.numericUpDown_MotiomAnimation_EndCoordinates_X);
+            this.groupBox_MotiomAnimation.Controls.Add(this.radioButton_MotiomAnimation_StartCoordinates);
+            this.groupBox_MotiomAnimation.Controls.Add(this.label482);
+            this.groupBox_MotiomAnimation.Controls.Add(this.label481);
+            this.groupBox_MotiomAnimation.Controls.Add(this.label485);
+            resources.ApplyResources(this.groupBox_MotiomAnimation, "groupBox_MotiomAnimation");
+            this.groupBox_MotiomAnimation.Name = "groupBox_MotiomAnimation";
+            this.groupBox_MotiomAnimation.TabStop = false;
+            this.groupBox_MotiomAnimation.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
             // 
             // numericUpDown_MotiomAnimation_EndCoordinates_Y
             // 
@@ -5746,36 +5741,6 @@
             this.numericUpDown_MotiomAnimation_EndCoordinates_Y.Name = "numericUpDown_MotiomAnimation_EndCoordinates_Y";
             this.helpProvider1.SetShowHelp(this.numericUpDown_MotiomAnimation_EndCoordinates_Y, ((bool)(resources.GetObject("numericUpDown_MotiomAnimation_EndCoordinates_Y.ShowHelp"))));
             this.numericUpDown_MotiomAnimation_EndCoordinates_Y.ValueChanged += new System.EventHandler(this.numericUpDown_MotiomAnimation_StartCoordinates_X_ValueChanged);
-            // 
-            // numericUpDown_MotiomAnimation_EndCoordinates_X
-            // 
-            this.numericUpDown_MotiomAnimation_EndCoordinates_X.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_MotiomAnimation_EndCoordinates_X, "numericUpDown_MotiomAnimation_EndCoordinates_X");
-            this.numericUpDown_MotiomAnimation_EndCoordinates_X.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_MotiomAnimation_EndCoordinates_X.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_MotiomAnimation_EndCoordinates_X.Name = "numericUpDown_MotiomAnimation_EndCoordinates_X";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_MotiomAnimation_EndCoordinates_X, ((bool)(resources.GetObject("numericUpDown_MotiomAnimation_EndCoordinates_X.ShowHelp"))));
-            this.numericUpDown_MotiomAnimation_EndCoordinates_X.ValueChanged += new System.EventHandler(this.numericUpDown_MotiomAnimation_StartCoordinates_X_ValueChanged);
-            // 
-            // label484
-            // 
-            resources.ApplyResources(this.label484, "label484");
-            this.label484.Name = "label484";
-            this.helpProvider1.SetShowHelp(this.label484, ((bool)(resources.GetObject("label484.ShowHelp"))));
-            // 
-            // label485
-            // 
-            resources.ApplyResources(this.label485, "label485");
-            this.label485.Name = "label485";
-            this.helpProvider1.SetShowHelp(this.label485, ((bool)(resources.GetObject("label485.ShowHelp"))));
             // 
             // numericUpDown_MotiomAnimation_StartCoordinates_Y
             // 
@@ -5813,11 +5778,66 @@
             this.helpProvider1.SetShowHelp(this.numericUpDown_MotiomAnimation_StartCoordinates_X, ((bool)(resources.GetObject("numericUpDown_MotiomAnimation_StartCoordinates_X.ShowHelp"))));
             this.numericUpDown_MotiomAnimation_StartCoordinates_X.ValueChanged += new System.EventHandler(this.numericUpDown_MotiomAnimation_StartCoordinates_X_ValueChanged);
             // 
-            // label481
+            // radioButton_MotiomAnimation_EndCoordinates
             // 
-            resources.ApplyResources(this.label481, "label481");
-            this.label481.Name = "label481";
-            this.helpProvider1.SetShowHelp(this.label481, ((bool)(resources.GetObject("label481.ShowHelp"))));
+            resources.ApplyResources(this.radioButton_MotiomAnimation_EndCoordinates, "radioButton_MotiomAnimation_EndCoordinates");
+            this.radioButton_MotiomAnimation_EndCoordinates.Name = "radioButton_MotiomAnimation_EndCoordinates";
+            this.helpProvider1.SetShowHelp(this.radioButton_MotiomAnimation_EndCoordinates, ((bool)(resources.GetObject("radioButton_MotiomAnimation_EndCoordinates.ShowHelp"))));
+            this.radioButton_MotiomAnimation_EndCoordinates.UseVisualStyleBackColor = true;
+            // 
+            // label480
+            // 
+            resources.ApplyResources(this.label480, "label480");
+            this.label480.Name = "label480";
+            this.helpProvider1.SetShowHelp(this.label480, ((bool)(resources.GetObject("label480.ShowHelp"))));
+            // 
+            // label484
+            // 
+            resources.ApplyResources(this.label484, "label484");
+            this.label484.Name = "label484";
+            this.helpProvider1.SetShowHelp(this.label484, ((bool)(resources.GetObject("label484.ShowHelp"))));
+            // 
+            // comboBox_MotiomAnimation_Image
+            // 
+            this.comboBox_MotiomAnimation_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_MotiomAnimation_Image.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_MotiomAnimation_Image, "comboBox_MotiomAnimation_Image");
+            this.comboBox_MotiomAnimation_Image.FormattingEnabled = true;
+            this.comboBox_MotiomAnimation_Image.Name = "comboBox_MotiomAnimation_Image";
+            this.helpProvider1.SetShowHelp(this.comboBox_MotiomAnimation_Image, ((bool)(resources.GetObject("comboBox_MotiomAnimation_Image.ShowHelp"))));
+            this.comboBox_MotiomAnimation_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_MotiomAnimation_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_MotiomAnimation_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_MotiomAnimation_Image_SelectedIndexChanged);
+            this.comboBox_MotiomAnimation_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_MotiomAnimation_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // numericUpDown_MotiomAnimation_EndCoordinates_X
+            // 
+            this.numericUpDown_MotiomAnimation_EndCoordinates_X.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_MotiomAnimation_EndCoordinates_X, "numericUpDown_MotiomAnimation_EndCoordinates_X");
+            this.numericUpDown_MotiomAnimation_EndCoordinates_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_MotiomAnimation_EndCoordinates_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_MotiomAnimation_EndCoordinates_X.Name = "numericUpDown_MotiomAnimation_EndCoordinates_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_MotiomAnimation_EndCoordinates_X, ((bool)(resources.GetObject("numericUpDown_MotiomAnimation_EndCoordinates_X.ShowHelp"))));
+            this.numericUpDown_MotiomAnimation_EndCoordinates_X.ValueChanged += new System.EventHandler(this.numericUpDown_MotiomAnimation_StartCoordinates_X_ValueChanged);
+            // 
+            // radioButton_MotiomAnimation_StartCoordinates
+            // 
+            resources.ApplyResources(this.radioButton_MotiomAnimation_StartCoordinates, "radioButton_MotiomAnimation_StartCoordinates");
+            this.radioButton_MotiomAnimation_StartCoordinates.Checked = true;
+            this.radioButton_MotiomAnimation_StartCoordinates.Name = "radioButton_MotiomAnimation_StartCoordinates";
+            this.helpProvider1.SetShowHelp(this.radioButton_MotiomAnimation_StartCoordinates, ((bool)(resources.GetObject("radioButton_MotiomAnimation_StartCoordinates.ShowHelp"))));
+            this.radioButton_MotiomAnimation_StartCoordinates.TabStop = true;
+            this.radioButton_MotiomAnimation_StartCoordinates.UseVisualStyleBackColor = true;
+            this.radioButton_MotiomAnimation_StartCoordinates.CheckedChanged += new System.EventHandler(this.radioButton_MotiomAnimation_StartCoordinates_CheckedChanged);
             // 
             // label482
             // 
@@ -5825,16 +5845,28 @@
             this.label482.Name = "label482";
             this.helpProvider1.SetShowHelp(this.label482, ((bool)(resources.GetObject("label482.ShowHelp"))));
             // 
+            // label481
+            // 
+            resources.ApplyResources(this.label481, "label481");
+            this.label481.Name = "label481";
+            this.helpProvider1.SetShowHelp(this.label481, ((bool)(resources.GetObject("label481.ShowHelp"))));
+            // 
+            // label485
+            // 
+            resources.ApplyResources(this.label485, "label485");
+            this.label485.Name = "label485";
+            this.helpProvider1.SetShowHelp(this.label485, ((bool)(resources.GetObject("label485.ShowHelp"))));
+            // 
             // dataGridView_MotiomAnimation
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_MotiomAnimation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_MotiomAnimation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView_MotiomAnimation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_MotiomAnimation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -5987,26 +6019,6 @@
             this.удалитьСтрокуToolStripMenuItem1.Name = "удалитьСтрокуToolStripMenuItem1";
             resources.ApplyResources(this.удалитьСтрокуToolStripMenuItem1, "удалитьСтрокуToolStripMenuItem1");
             this.удалитьСтрокуToolStripMenuItem1.Click += new System.EventHandler(this.удалитьСтрокуToolStripMenuItem_Click);
-            // 
-            // comboBox_MotiomAnimation_Image
-            // 
-            this.comboBox_MotiomAnimation_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_MotiomAnimation_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_MotiomAnimation_Image, "comboBox_MotiomAnimation_Image");
-            this.comboBox_MotiomAnimation_Image.FormattingEnabled = true;
-            this.comboBox_MotiomAnimation_Image.Name = "comboBox_MotiomAnimation_Image";
-            this.helpProvider1.SetShowHelp(this.comboBox_MotiomAnimation_Image, ((bool)(resources.GetObject("comboBox_MotiomAnimation_Image.ShowHelp"))));
-            this.comboBox_MotiomAnimation_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_MotiomAnimation_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_MotiomAnimation_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_MotiomAnimation_Image_SelectedIndexChanged);
-            this.comboBox_MotiomAnimation_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_MotiomAnimation_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // label480
-            // 
-            resources.ApplyResources(this.label480, "label480");
-            this.label480.Name = "label480";
-            this.helpProvider1.SetShowHelp(this.label480, ((bool)(resources.GetObject("label480.ShowHelp"))));
             // 
             // checkBox_MotiomAnimation
             // 
@@ -16313,7 +16325,7 @@
             this.helpProvider1.SetShowHelp(this.radioButton_47, ((bool)(resources.GetObject("radioButton_47.ShowHelp"))));
             this.radioButton_47.TabStop = true;
             this.radioButton_47.UseVisualStyleBackColor = true;
-            this.radioButton_47.CheckedChanged += new System.EventHandler(this.radioButton_47_CheckedChanged);
+            this.radioButton_47.CheckedChanged += new System.EventHandler(this.radioButton_Model_Changed);
             // 
             // radioButton_42
             // 
@@ -16321,7 +16333,7 @@
             this.radioButton_42.Name = "radioButton_42";
             this.helpProvider1.SetShowHelp(this.radioButton_42, ((bool)(resources.GetObject("radioButton_42.ShowHelp"))));
             this.radioButton_42.UseVisualStyleBackColor = true;
-            this.radioButton_42.CheckedChanged += new System.EventHandler(this.radioButton_47_CheckedChanged);
+            this.radioButton_42.CheckedChanged += new System.EventHandler(this.radioButton_Model_Changed);
             // 
             // helpProvider1
             // 
@@ -16360,7 +16372,7 @@
             this.radioButton_gts.Name = "radioButton_gts";
             this.helpProvider1.SetShowHelp(this.radioButton_gts, ((bool)(resources.GetObject("radioButton_gts.ShowHelp"))));
             this.radioButton_gts.UseVisualStyleBackColor = true;
-            this.radioButton_gts.CheckedChanged += new System.EventHandler(this.radioButton_47_CheckedChanged);
+            this.radioButton_gts.CheckedChanged += new System.EventHandler(this.radioButton_Model_Changed);
             // 
             // checkBox_crop
             // 
@@ -16397,7 +16409,7 @@
             this.radioButton_TRex.Name = "radioButton_TRex";
             this.helpProvider1.SetShowHelp(this.radioButton_TRex, ((bool)(resources.GetObject("radioButton_TRex.ShowHelp"))));
             this.radioButton_TRex.UseVisualStyleBackColor = true;
-            this.radioButton_TRex.CheckedChanged += new System.EventHandler(this.radioButton_47_CheckedChanged);
+            this.radioButton_TRex.CheckedChanged += new System.EventHandler(this.radioButton_Model_Changed);
             // 
             // timer2
             // 
@@ -16411,10 +16423,19 @@
             // 
             this.colorDialog_Calories.FullOpen = true;
             // 
+            // radioButton_Verge
+            // 
+            resources.ApplyResources(this.radioButton_Verge, "radioButton_Verge");
+            this.radioButton_Verge.Name = "radioButton_Verge";
+            this.helpProvider1.SetShowHelp(this.radioButton_Verge, ((bool)(resources.GetObject("radioButton_Verge.ShowHelp"))));
+            this.radioButton_Verge.UseVisualStyleBackColor = true;
+            this.radioButton_Verge.CheckedChanged += new System.EventHandler(this.radioButton_Model_Changed);
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.radioButton_Verge);
             this.Controls.Add(this.radioButton_TRex);
             this.Controls.Add(this.checkBox_Show_Shortcuts);
             this.Controls.Add(this.checkBox_crop);
@@ -16578,10 +16599,12 @@
             this.contextMenuStrip_X.ResumeLayout(false);
             this.tabPage54.ResumeLayout(false);
             this.tabPage54.PerformLayout();
+            this.groupBox_MotiomAnimation.ResumeLayout(false);
+            this.groupBox_MotiomAnimation.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MotiomAnimation_EndCoordinates_Y)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MotiomAnimation_EndCoordinates_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MotiomAnimation_StartCoordinates_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MotiomAnimation_StartCoordinates_X)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MotiomAnimation_EndCoordinates_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_MotiomAnimation)).EndInit();
             this.contextMenuStrip_XY_InAnimationTable.ResumeLayout(false);
             this.panel_Shortcuts.ResumeLayout(false);
@@ -18259,18 +18282,6 @@
         private System.Windows.Forms.Label label482;
         private System.Windows.Forms.RadioButton radioButton_MotiomAnimation_EndCoordinates;
         private System.Windows.Forms.RadioButton radioButton_MotiomAnimation_StartCoordinates;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column12;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip_XY_InAnimationTable;
         private System.Windows.Forms.ToolStripMenuItem вставитьНачальныеКоординатыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem вставитьКонечныеКоординатыToolStripMenuItem;
@@ -18310,6 +18321,20 @@
         private System.Windows.Forms.TabPage tabPage11;
         private System.Windows.Forms.TabPage tabPage52;
         private System.Windows.Forms.TabPage tabPage45;
+        private System.Windows.Forms.GroupBox groupBox_MotiomAnimation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column12;
+        private System.Windows.Forms.RadioButton radioButton_Verge;
     }
 }
 

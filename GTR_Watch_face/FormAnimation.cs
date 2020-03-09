@@ -82,7 +82,7 @@ namespace GTR_Watch_face
                     pictureBox_AnimatiomPreview.Size = new Size(350, 444);
                     this.Size = new Size(350 + 20, 444 + 100);
                 }
-                else if (Model_Wath.model_TRex)
+                else if (Model_Wath.model_TRex || Model_Wath.model_Verge)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(362, 362);
                     this.Size = new Size(362 + 20, 362 + 100);
@@ -107,7 +107,7 @@ namespace GTR_Watch_face
                     pictureBox_AnimatiomPreview.Size = new Size(524, 665);
                     this.Size = new Size(524 + 20, 665 + 100);
                 }
-                else if (Model_Wath.model_TRex)
+                else if (Model_Wath.model_TRex || Model_Wath.model_Verge)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(541, 541);
                     this.Size = new Size(542 + 20, 542 + 100);
@@ -132,7 +132,7 @@ namespace GTR_Watch_face
                     pictureBox_AnimatiomPreview.Size = new Size(697, 885);
                     this.Size = new Size(697 + 20, 885 + 100);
                 }
-                else if (Model_Wath.model_TRex)
+                else if (Model_Wath.model_TRex || Model_Wath.model_Verge)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(721, 721);
                     this.Size = new Size(721 + 20, 721 + 100);
@@ -147,6 +147,7 @@ namespace GTR_Watch_face
             public static bool model_gtr42 { get; set; }
             public static bool model_gts { get; set; }
             public static bool model_TRex { get; set; }
+            public static bool model_Verge { get; set; }
 
         }
 
@@ -174,7 +175,7 @@ namespace GTR_Watch_face
                     bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
                     mask = new Bitmap(@"Mask\mask_gts.png");
                 }
-                if (Model_Wath.model_TRex)
+                if (Model_Wath.model_TRex || Model_Wath.model_Verge)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
                     mask = new Bitmap(@"Mask\mask_trex.png");
@@ -380,6 +381,21 @@ namespace GTR_Watch_face
                 timer1.Enabled = true;
                 mask.Dispose();
             }
+        }
+
+        private void button_AnimationReset_Click(object sender, EventArgs e)
+        {
+            foreach (ClassMotiomAnimation elementMotiomAnimation in MotiomAnimation)
+            {
+                elementMotiomAnimation.ResetDrawMotiomAnimation();
+            }
+            StaticAnimation.ResetDrawStaticAnimation();
+        }
+
+        private void FormAnimation_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MotiomAnimation.Clear();
+            this.Dispose();
         }
     }
 }

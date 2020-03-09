@@ -38,6 +38,8 @@ namespace GTR_Watch_face
             {
                 _cyclesTime = _cyclesTime + SpeedAnimation * Images.Count;
             }
+            if (_cyclesTime == 0) _cyclesTime = SpeedAnimation * Images.Count;
+            if (TimeAnimation == 0) _pause = 0;
             _time = 0;
         }
 

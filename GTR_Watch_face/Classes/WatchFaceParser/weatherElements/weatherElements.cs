@@ -26,6 +26,7 @@
     {
         /// <summary>Текущая температура</summary>
         public Number Current { get; set; }
+        /// <summary>Температура день/ночь</summary>
         public Today Today { get; set; }
         /// <summary>Набор вспомогательных символов</summary>
         public Symbols Symbols { get; set; }

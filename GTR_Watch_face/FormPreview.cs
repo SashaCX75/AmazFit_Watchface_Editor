@@ -39,7 +39,7 @@ namespace GTR_Watch_face
                     panel_Preview.Size = new Size(176, 223);
                     this.Size = new Size(176 + 22, 223 + 66);
                 }
-                else if (Model_Wath.model_TRex)
+                else if (Model_Wath.model_TRex || Model_Wath.model_Verge)
                 {
                     panel_Preview.Size = new Size(183, 183);
                     this.Size = new Size(183 + 22, 183 + 66);
@@ -64,7 +64,7 @@ namespace GTR_Watch_face
                     panel_Preview.Size = new Size(350, 444);
                     this.Size = new Size(350 + 22, 444 + 66);
                 }
-                else if (Model_Wath.model_TRex)
+                else if (Model_Wath.model_TRex || Model_Wath.model_Verge)
                 {
                     panel_Preview.Size = new Size(362, 362);
                     this.Size = new Size(362 + 22, 362 + 66);
@@ -89,7 +89,7 @@ namespace GTR_Watch_face
                     panel_Preview.Size = new Size(524, 665);
                     this.Size = new Size(524 + 22, 665 + 66);
                 }
-                else if (Model_Wath.model_TRex)
+                else if (Model_Wath.model_TRex || Model_Wath.model_Verge)
                 {
                     panel_Preview.Size = new Size(541, 541);
                     this.Size = new Size(542 + 22, 542 + 66);
@@ -114,7 +114,7 @@ namespace GTR_Watch_face
                     panel_Preview.Size = new Size(697, 885);
                     this.Size = new Size(697 + 22, 885 + 66);
                 }
-                else if (Model_Wath.model_TRex)
+                else if (Model_Wath.model_TRex || Model_Wath.model_Verge)
                 {
                     panel_Preview.Size = new Size(721, 721);
                     this.Size = new Size(721 + 22, 721 + 66);
@@ -139,7 +139,7 @@ namespace GTR_Watch_face
                     panel_Preview.Size = new Size(1135, 1105);
                     this.Size = new Size(870 + 22, 1105 + 66);
                 }
-                else if (Model_Wath.model_TRex)
+                else if (Model_Wath.model_TRex || Model_Wath.model_Verge)
                 {
                     panel_Preview.Size = new Size(900, 900);
                     this.Size = new Size(900 + 22, 900 + 66);
@@ -154,6 +154,7 @@ namespace GTR_Watch_face
             public static bool model_gtr42 { get; set; }
             public static bool model_gts { get; set; }
             public static bool model_TRex { get; set; }
+            public static bool model_Verge { get; set; }
 
         }
 
