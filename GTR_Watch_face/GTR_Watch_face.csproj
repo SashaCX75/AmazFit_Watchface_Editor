@@ -91,6 +91,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Animation\ClassMotiomAnimation.cs" />
     <Compile Include="Classes\Animation\ClassStaticAnimation.cs" />
     <Compile Include="Classes\WatchFaceParser\activityElements\activityElements.cs" />
     <Compile Include="Classes\WatchFaceParser\analogDialFaceElements\analogDialFaceElements.cs" />

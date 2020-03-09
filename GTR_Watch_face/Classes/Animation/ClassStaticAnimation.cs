@@ -42,12 +42,8 @@ namespace GTR_Watch_face
         }
 
         /// <summary>Отрисовываем следующий цикл анимации</summary>
-        /// <param name="Images">Набор кадров для анимации</param>
-        /// <param name="X">Координата X</param>
-        /// <param name="Y">Координата Y</param>
-        /// <param name="SpeedAnimation">Скорость анимации</param>
-        /// <param name="TimeAnimation">Время анимации</param>
-        /// <param name="Pause">Пауза между циклами анимации</param>
+        /// <param name="g">Поверхность для рисования</param>
+        /// <param name="deltaTime">Шаг приращения времени</param>
         public void DrawStaticAnimation(Graphics g, int deltaTime)
         {
             int i = (int)(_time / _speedAnimation);
@@ -62,5 +58,12 @@ namespace GTR_Watch_face
             _time = _time + deltaTime;
             if (_time >= _cyclesTime + _pause) _time = _time - (_cyclesTime + _pause);
         }
+
+        /// <summary>Сброс анимации к начальному значению</summary>
+        public void ResetDrawStaticAnimation()
+        {
+            _time = 0;
+        }
+
     }
 }
