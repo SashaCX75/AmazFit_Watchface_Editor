@@ -1,9 +1,11 @@
-﻿using System;
+﻿using ImageMagick;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,17 +16,20 @@ namespace GTR_Watch_face
     public partial class FormAnimation : Form
     {
         ClassStaticAnimation StaticAnimation;
+        List<ClassMotiomAnimation> MotiomAnimation;
         //Bitmap PreviewBackground;
         private Bitmap SrcImg;
         float scalePreview = 1.0f;
 
-        public FormAnimation(Bitmap previewBackground, ClassStaticAnimation staticAnimation)
+        public FormAnimation(Bitmap previewBackground,List<ClassMotiomAnimation> motiomAnimation, ClassStaticAnimation staticAnimation)
         {
             InitializeComponent();
             //PreviewBackground = previewBackground;
             pictureBox_AnimatiomPreview.BackgroundImage = previewBackground;
             //pictureBox_AnimatiomPreview.Image = previewBackground;
+            MotiomAnimation = motiomAnimation;
             StaticAnimation = staticAnimation;
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -48,8 +53,12 @@ namespace GTR_Watch_face
             //Point p2 = new Point(rand.Next(100), rand.Next(100));// вторая точка
             //gPanel.DrawLine(p, p1, p2);// рисуем линию
 
-            pictureBox_AnimatiomPreview.Image = SrcImg;
+            foreach (ClassMotiomAnimation elementMotiomAnimation in MotiomAnimation)
+            {
+                elementMotiomAnimation.DrawMotiomAnimation(gPanel, 100);
+            }
             StaticAnimation.DrawStaticAnimation(gPanel, 100);
+            pictureBox_AnimatiomPreview.Image = SrcImg;
 
             gPanel.Dispose();// освобождаем все ресурсы, связанные с отрисовкой
         }
@@ -61,22 +70,22 @@ namespace GTR_Watch_face
                 if (Model_Wath.model_gtr47)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(456, 456);
-                    this.Size = new Size(456 + 20, 456 + 70);
+                    this.Size = new Size(456 + 20, 456 + 100);
                 }
                 else if (Model_Wath.model_gtr42)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(392, 392);
-                    this.Size = new Size(392 + 20, 392 + 70);
+                    this.Size = new Size(392 + 20, 392 + 100);
                 }
                 else if (Model_Wath.model_gts)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(350, 444);
-                    this.Size = new Size(350 + 20, 444 + 70);
+                    this.Size = new Size(350 + 20, 444 + 100);
                 }
                 else if (Model_Wath.model_TRex)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(362, 362);
-                    this.Size = new Size(362 + 20, 362 + 70);
+                    this.Size = new Size(362 + 20, 362 + 100);
                 }
                 scalePreview = 1f;
             }
@@ -86,22 +95,22 @@ namespace GTR_Watch_face
                 if (Model_Wath.model_gtr47)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(683, 683);
-                    this.Size = new Size(683 + 20, 683 + 70);
+                    this.Size = new Size(683 + 20, 683 + 100);
                 }
                 else if (Model_Wath.model_gtr42)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(586, 586);
-                    this.Size = new Size(586 + 20, 586 + 70);
+                    this.Size = new Size(586 + 20, 586 + 100);
                 }
                 else if (Model_Wath.model_gts)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(524, 665);
-                    this.Size = new Size(524 + 20, 665 + 70);
+                    this.Size = new Size(524 + 20, 665 + 100);
                 }
                 else if (Model_Wath.model_TRex)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(541, 541);
-                    this.Size = new Size(542 + 20, 542 + 70);
+                    this.Size = new Size(542 + 20, 542 + 100);
                 }
                 scalePreview = 1.5f;
             }
@@ -111,22 +120,22 @@ namespace GTR_Watch_face
                 if (Model_Wath.model_gtr47)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(909, 909);
-                    this.Size = new Size(909 + 20, 909 + 70);
+                    this.Size = new Size(909 + 20, 909 + 100);
                 }
                 else if (Model_Wath.model_gtr42)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(781, 781);
-                    this.Size = new Size(781 + 20, 781 + 70);
+                    this.Size = new Size(781 + 20, 781 + 100);
                 }
                 else if (Model_Wath.model_gts)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(697, 885);
-                    this.Size = new Size(697 + 20, 885 + 70);
+                    this.Size = new Size(697 + 20, 885 + 100);
                 }
                 else if (Model_Wath.model_TRex)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(721, 721);
-                    this.Size = new Size(721 + 20, 721 + 70);
+                    this.Size = new Size(721 + 20, 721 + 100);
                 }
                 scalePreview = 2f;
             }
@@ -139,6 +148,238 @@ namespace GTR_Watch_face
             public static bool model_gts { get; set; }
             public static bool model_TRex { get; set; }
 
+        }
+
+        private void button_SaveAnimation_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            //openFileDialog.InitialDirectory = subPath;
+            saveFileDialog.Filter = "GIF Files: (*.gif)|*.gif";
+            saveFileDialog.FileName = "Preview.gif";
+            //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
+            ////openFileDialog1.FilterIndex = 2;
+            saveFileDialog.RestoreDirectory = true;
+            saveFileDialog.Title = Properties.FormStrings.Dialog_Title_SaveGIF;
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
+                Bitmap mask = new Bitmap(@"Mask\mask_gtr47.png");
+                if (Model_Wath.model_gtr42)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(@"Mask\mask_gtr42.png");
+                }
+                if (Model_Wath.model_gts)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(@"Mask\mask_gts.png");
+                }
+                if (Model_Wath.model_TRex)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(@"Mask\mask_trex.png");
+                }
+                Graphics gPanel = Graphics.FromImage(bitmap);
+                bool save = false;
+                int set = 0;
+                int setIndex = 0;
+                Random rnd = new Random();
+                progressBar_SaveAnimation.Width = pictureBox_AnimatiomPreview.Width - 100;
+                progressBar_SaveAnimation.Maximum = (int)numericUpDown_NumberOfFrames.Value;
+                progressBar_SaveAnimation.Value = 0;
+                progressBar_SaveAnimation.Visible = true;
+                Form1 form1 = this.Owner as Form1;//Получаем ссылку на первую форму
+                form1.PreviewView = false;
+                timer1.Enabled = false;
+                foreach (ClassMotiomAnimation elementMotiomAnimation in MotiomAnimation)
+                {
+                    elementMotiomAnimation.ResetDrawMotiomAnimation();
+                }
+                StaticAnimation.ResetDrawStaticAnimation();
+
+                using (MagickImageCollection collection = new MagickImageCollection())
+                {
+                    for (int i = 0; i < numericUpDown_NumberOfFrames.Value; i++)
+                    {
+                        save = false;
+                        while (!save)
+                        {
+                            switch (set)
+                            {
+                                case 0:
+                                    //button_Set1.PerformClick();
+                                    form1.SetPreferences1();
+                                    save = true;
+                                    break;
+                                case 1:
+                                    if (form1.numericUpDown_Calories_Set2.Value != 1234)
+                                    {
+                                        //button_Set2.PerformClick();
+                                        form1.SetPreferences2();
+                                        save = true;
+                                    }
+                                    break;
+                                case 2:
+                                    if (form1.numericUpDown_Calories_Set3.Value != 1234)
+                                    {
+                                        //button_Set3.PerformClick();
+                                        form1.SetPreferences3();
+                                        save = true;
+                                    }
+                                    break;
+                                case 3:
+                                    if (form1.numericUpDown_Calories_Set4.Value != 1234)
+                                    {
+                                        //button_Set4.PerformClick();
+                                        form1.SetPreferences4();
+                                        save = true;
+                                    }
+                                    break;
+                                case 4:
+                                    if (form1.numericUpDown_Calories_Set5.Value != 1234)
+                                    {
+                                        //button_Set5.PerformClick();
+                                        form1.SetPreferences5();
+                                        save = true;
+                                    }
+                                    break;
+                                case 5:
+                                    if (form1.numericUpDown_Calories_Set6.Value != 1234)
+                                    {
+                                        //button_Set6.PerformClick();
+                                        form1.SetPreferences6();
+                                        save = true;
+                                    }
+                                    break;
+                                case 6:
+                                    if (form1.numericUpDown_Calories_Set7.Value != 1234)
+                                    {
+                                        //button_Set7.PerformClick();
+                                        form1.SetPreferences7();
+                                        save = true;
+                                    }
+                                    break;
+                                case 7:
+                                    if (form1.numericUpDown_Calories_Set8.Value != 1234)
+                                    {
+                                        //button_Set8.PerformClick();
+                                        form1.SetPreferences8();
+                                        save = true;
+                                    }
+                                    break;
+                                case 8:
+                                    if (form1.numericUpDown_Calories_Set9.Value != 1234)
+                                    {
+                                        //button_Set9.PerformClick();
+                                        form1.SetPreferences9();
+                                        save = true;
+                                    }
+                                    break;
+                                case 9:
+                                    if (form1.numericUpDown_Calories_Set10.Value != 1234)
+                                    {
+                                        //button_Set10.PerformClick();
+                                        form1.SetPreferences10();
+                                        save = true;
+                                    }
+                                    break;
+                                case 10:
+                                    if (form1.numericUpDown_Calories_Set11.Value != 1234)
+                                    {
+                                        //button_Set11.PerformClick();
+                                        form1.SetPreferences11();
+                                        save = true;
+                                    }
+                                    break;
+                                case 11:
+                                    if (form1.numericUpDown_Calories_Set12.Value != 1234)
+                                    {
+                                        //button_Set12.PerformClick();
+                                        form1.SetPreferences12();
+                                        save = true;
+                                    }
+                                    break;
+                                case 12:
+                                    if (form1.numericUpDown_Calories_Set13.Value != 1234)
+                                    {
+                                        //button_Set13.PerformClick();
+                                        form1.SetPreferences13();
+                                        save = true;
+                                    }
+                                    break;
+
+                            }
+                            if (!save) set++;
+                            if (set > 12) set = 0; 
+                        }
+
+                        if (save)
+                        {
+                            int WeatherSet_Temp = (int)form1.numericUpDown_WeatherSet_Temp.Value;
+                            int WeatherSet_DayTemp = (int)form1.numericUpDown_WeatherSet_DayTemp.Value;
+                            int WeatherSet_NightTemp = (int)form1.numericUpDown_WeatherSet_NightTemp.Value;
+                            int WeatherSet_Icon = form1.comboBox_WeatherSet_Icon.SelectedIndex;
+
+                            form1.numericUpDown_WeatherSet_Temp.Value = rnd.Next(-25, 35) + 1;
+                            form1.numericUpDown_WeatherSet_DayTemp.Value = form1.numericUpDown_WeatherSet_Temp.Value;
+                            form1.numericUpDown_WeatherSet_NightTemp.Value = form1.numericUpDown_WeatherSet_Temp.Value - rnd.Next(3, 10);
+                            form1.comboBox_WeatherSet_Icon.SelectedIndex = rnd.Next(0, 25);
+
+                            form1.PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false);
+
+                            foreach (ClassMotiomAnimation elementMotiomAnimation in MotiomAnimation)
+                            {
+                                elementMotiomAnimation.DrawMotiomAnimation(gPanel, 100);
+                            }
+                            StaticAnimation.DrawStaticAnimation(gPanel, 100);
+
+                            if (form1.checkBox_crop.Checked)
+                            {
+                                bitmap = form1.ApplyMask(bitmap, mask);
+                                gPanel = Graphics.FromImage(bitmap);
+                            }
+                            // Add first image and set the animation delay to 100ms
+                            MagickImage item = new MagickImage(bitmap);
+                            //ExifProfile profile = item.GetExifProfile();
+                            collection.Add(item);
+                            //collection[collection.Count - 1].AnimationDelay = 100;
+                            collection[collection.Count - 1].AnimationDelay = 10;
+
+                            form1.numericUpDown_WeatherSet_Temp.Value = WeatherSet_Temp;
+                            form1.numericUpDown_WeatherSet_DayTemp.Value = WeatherSet_DayTemp;
+                            form1.numericUpDown_WeatherSet_NightTemp.Value = WeatherSet_NightTemp;
+                            form1.comboBox_WeatherSet_Icon.SelectedIndex = WeatherSet_Icon;
+                        }
+
+                        setIndex = setIndex + 100;
+                        if (setIndex >= (1000 * form1.numericUpDown_Gif_Speed.Value))
+                        {
+                            setIndex = 0;
+                            set++;
+                            if (set > 12) set = 0;
+                        }
+
+                        progressBar_SaveAnimation.Value = i;
+                    }
+
+
+                    progressBar_SaveAnimation.Visible = false;
+                    // Optionally reduce colors
+                    QuantizeSettings settings = new QuantizeSettings();
+                    //settings.Colors = 256;
+                    //collection.Quantize(settings);
+
+                    // Optionally optimize the images (images should have the same size).
+                    collection.OptimizeTransparency();
+                    //collection.Optimize();
+
+                    // Save gif
+                    collection.Write(saveFileDialog.FileName);
+                }
+                form1.PreviewView = true;
+                timer1.Enabled = true;
+                mask.Dispose();
+            }
         }
     }
 }

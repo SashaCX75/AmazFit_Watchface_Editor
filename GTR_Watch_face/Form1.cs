@@ -29,7 +29,7 @@ namespace GTR_Watch_face
         WATCH_FACE_PREWIEV_SET Watch_Face_Preview_Set;
         List<string> ListImages = new List<string>(); // перечень имен файлов с картинками
         List<string> ListImagesFullName = new List<string>(); // перечень путей к файлам с картинками
-        bool PreviewView; // включает прорисовку предпросмотра
+        public bool PreviewView; // включает прорисовку предпросмотра
         bool Settings_Load; // включать при обновлении настроек длу выключения перерисовки
         bool MotiomAnimation_Update = false; // включать при обновлении параметров анимации
         bool JSON_Modified = false; // JSON файл был изменен
@@ -1606,7 +1606,7 @@ namespace GTR_Watch_face
         
 
 #region выбираем данные для предпросмотра
-        private void SetPreferences1()
+        public void SetPreferences1()
         {
             Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set1.Value.Year;
             Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set1.Value.Month;
@@ -1633,7 +1633,7 @@ namespace GTR_Watch_face
             SetDigitForPrewiev();
         }
 
-        private void SetPreferences2()
+        public void SetPreferences2()
         {
             Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set2.Value.Year;
             Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set2.Value.Month;
@@ -1660,7 +1660,7 @@ namespace GTR_Watch_face
             SetDigitForPrewiev();
         }
 
-        private void SetPreferences3()
+        public void SetPreferences3()
         {
             Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set3.Value.Year;
             Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set3.Value.Month;
@@ -1687,7 +1687,7 @@ namespace GTR_Watch_face
             SetDigitForPrewiev();
         }
 
-        private void SetPreferences4()
+        public void SetPreferences4()
         {
             Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set4.Value.Year;
             Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set4.Value.Month;
@@ -1714,7 +1714,7 @@ namespace GTR_Watch_face
             SetDigitForPrewiev();
         }
 
-        private void SetPreferences5()
+        public void SetPreferences5()
         {
             Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set5.Value.Year;
             Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set5.Value.Month;
@@ -1741,7 +1741,7 @@ namespace GTR_Watch_face
             SetDigitForPrewiev();
         }
 
-        private void SetPreferences6()
+        public void SetPreferences6()
         {
             Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set6.Value.Year;
             Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set6.Value.Month;
@@ -1768,7 +1768,7 @@ namespace GTR_Watch_face
             SetDigitForPrewiev();
         }
 
-        private void SetPreferences7()
+        public void SetPreferences7()
         {
             Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set7.Value.Year;
             Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set7.Value.Month;
@@ -1795,7 +1795,7 @@ namespace GTR_Watch_face
             SetDigitForPrewiev();
         }
 
-        private void SetPreferences8()
+        public void SetPreferences8()
         {
             Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set8.Value.Year;
             Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set8.Value.Month;
@@ -1822,7 +1822,7 @@ namespace GTR_Watch_face
             SetDigitForPrewiev();
         }
 
-        private void SetPreferences9()
+        public void SetPreferences9()
         {
             Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set9.Value.Year;
             Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set9.Value.Month;
@@ -1849,7 +1849,7 @@ namespace GTR_Watch_face
             SetDigitForPrewiev();
         }
 
-        private void SetPreferences10()
+        public void SetPreferences10()
         {
             Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set10.Value.Year;
             Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set10.Value.Month;
@@ -1876,7 +1876,7 @@ namespace GTR_Watch_face
             SetDigitForPrewiev();
         }
 
-        private void SetPreferences11()
+        public void SetPreferences11()
         {
             Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set11.Value.Year;
             Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set11.Value.Month;
@@ -1903,7 +1903,7 @@ namespace GTR_Watch_face
             SetDigitForPrewiev();
         }
 
-        private void SetPreferences12()
+        public void SetPreferences12()
         {
             Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set12.Value.Year;
             Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set12.Value.Month;
@@ -1930,7 +1930,7 @@ namespace GTR_Watch_face
             SetDigitForPrewiev();
         }
 
-        private void SetPreferences13()
+        public void SetPreferences13()
         {
             Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set13.Value.Year;
             Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set13.Value.Month;
@@ -2218,7 +2218,7 @@ namespace GTR_Watch_face
                 panel_Date.Height = 1;
                 panel_AnalogDate.Height = 1;
                 panel_StepsProgress.Height = 1;
-                panel_Activity.Height = (int)(215 * currentDPI);
+                panel_Activity.Height = (int)(235 * currentDPI);
                 panel_Status.Height = 1;
                 panel_Battery.Height = 1;
                 panel_AnalogClock.Height = 1;
@@ -6953,7 +6953,44 @@ namespace GTR_Watch_face
             PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false);
             if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
 
-            ClassStaticAnimation MotiomAnimation = null;
+            List<ClassMotiomAnimation> MotiomAnimation = new List<ClassMotiomAnimation>();
+            if (checkBox_MotiomAnimation.Checked)
+            {
+                foreach (DataGridViewRow row in dataGridView_MotiomAnimation.Rows)
+                {
+                    int StartCoordinates_X = 0;
+                    int StartCoordinates_Y = 0;
+                    int EndCoordinates_X = 0;
+                    int EndCoordinates_Y = 0;
+                    int ImageIndex = 0;
+                    int SpeedAnimation = 0;
+                    int TimeAnimation = 0;
+                    bool Bounce_b = false;
+                    if (row.Cells[1].Value != null && row.Cells[2].Value != null && row.Cells[3].Value != null &&
+                        row.Cells[4].Value != null && row.Cells[5].Value != null && row.Cells[6].Value != null &&
+                        row.Cells[7].Value != null)
+                    {
+                        if (Int32.TryParse(row.Cells[1].Value.ToString(), out StartCoordinates_X) &&
+                            Int32.TryParse(row.Cells[2].Value.ToString(), out StartCoordinates_Y) &&
+                            Int32.TryParse(row.Cells[3].Value.ToString(), out EndCoordinates_X) &&
+                            Int32.TryParse(row.Cells[4].Value.ToString(), out EndCoordinates_Y) &&
+                            Int32.TryParse(row.Cells[5].Value.ToString(), out ImageIndex) &&
+                            Int32.TryParse(row.Cells[6].Value.ToString(), out SpeedAnimation) &&
+                            Int32.TryParse(row.Cells[7].Value.ToString(), out TimeAnimation))
+                        {
+                            if (row.Cells[11].Value != null) Boolean.TryParse(row.Cells[11].Value.ToString(), out Bounce_b);
+
+                            ClassMotiomAnimation motiomAnimation = new ClassMotiomAnimation(new Bitmap(ListImagesFullName[ImageIndex]), 
+                                StartCoordinates_X, StartCoordinates_Y, EndCoordinates_X, EndCoordinates_Y, 
+                                SpeedAnimation, TimeAnimation, Bounce_b);
+
+                            MotiomAnimation.Add(motiomAnimation);
+                        }
+                    }
+                } 
+            }
+
+            ClassStaticAnimation StaticAnimation = null;
             List<Bitmap> Images = new List<Bitmap>();
             if (checkBox_StaticAnimation.Checked && comboBox_StaticAnimation_Image.SelectedIndex >= 0)
             {
@@ -6965,13 +7002,13 @@ namespace GTR_Watch_face
             }
             if (Images.Count > 0)
             {
-                MotiomAnimation = new ClassStaticAnimation(Images, (int)numericUpDown_StaticAnimation_X.Value,
+                StaticAnimation = new ClassStaticAnimation(Images, (int)numericUpDown_StaticAnimation_X.Value,
                     (int)numericUpDown_StaticAnimation_Y.Value, (int)numericUpDown_StaticAnimation_SpeedAnimation.Value,
                     (int)numericUpDown_StaticAnimation_TimeAnimation.Value, (int)numericUpDown_StaticAnimation_Pause.Value);
 
             }
 
-            FormAnimation f = new FormAnimation(bitmap, MotiomAnimation);
+            FormAnimation f = new FormAnimation(bitmap, MotiomAnimation, StaticAnimation);
             f.Owner = this;
             FormAnimation.Model_Wath.model_gtr47 = radioButton_47.Checked;
             FormAnimation.Model_Wath.model_gtr42 = radioButton_42.Checked;
