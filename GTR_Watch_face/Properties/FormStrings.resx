@@ -270,4 +270,13 @@
   <data name="Message_Save_new_JSON" xml:space="preserve">
     <value>Текущий проект еще не сохранен. Вы хотите сохранить его?</value>
   </data>
+  <data name="Message_WarningBatterySegment_Text" xml:space="preserve">
+    <value>Отображение заряда в виде стрелочного индикатора не работает совместно с отображением заряда сегментами.</value>
+  </data>
+  <data name="Message_WarningSpaceInName_Text" xml:space="preserve">
+    <value>Имя файла и путь к нему не должны содержать пробелов.</value>
+  </data>
+  <data name="Message_WarningTemperature_Text" xml:space="preserve">
+    <value>Отображение текущей температуры может не работать без отображения дневной и ночной температуры.</value>
+  </data>
 </root>
