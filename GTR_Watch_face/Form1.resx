@@ -53264,7 +53264,7 @@
     <value>French</value>
   </data>
   <data name="comboBox_Language.Items8" xml:space="preserve">
-    <value>Chinese</value>
+    <value>Chinese/简体中文</value>
   </data>
   <data name="comboBox_Language.Location" type="System.Drawing.Point, System.Drawing">
     <value>48, 256</value>

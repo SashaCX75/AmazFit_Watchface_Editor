@@ -128,7 +128,7 @@
     <value />
   </data>
   <data name="button_zip_unpack.Text" xml:space="preserve">
-    <value>解压缩的 bin</value>
+    <value>解压缩的bin</value>
   </data>
   <data name="button_pack_zip.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -140,7 +140,7 @@
     <value />
   </data>
   <data name="button_pack_zip.Text" xml:space="preserve">
-    <value>打包和压缩 bin</value>
+    <value>打包和压缩bin</value>
   </data>
   <data name="button_zip.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -176,7 +176,7 @@
     <value />
   </data>
   <data name="button_pack.Text" xml:space="preserve">
-    <value>打包 bin</value>
+    <value>打包bin</value>
   </data>
   <data name="textBox_pack_command.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -273,7 +273,7 @@
     <value />
   </data>
   <data name="tabPage1.Text" xml:space="preserve">
-    <value>解包打包</value>
+    <value>解包/打包</value>
   </data>
   <data name="checkBox1.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1158,10 +1158,10 @@
     <value />
   </data>
   <data name="comboBox_WeatherSet_Icon.Items" xml:space="preserve">
-    <value>部分多云</value>
+    <value>局部多云</value>
   </data>
   <data name="comboBox_WeatherSet_Icon.Items1" xml:space="preserve">
-    <value>阵雨</value>
+    <value>多云有雨</value>
   </data>
   <data name="comboBox_WeatherSet_Icon.Items2" xml:space="preserve">
     <value>多云有雪</value>
@@ -1170,7 +1170,7 @@
     <value>晴</value>
   </data>
   <data name="comboBox_WeatherSet_Icon.Items4" xml:space="preserve">
-    <value>多云</value>
+    <value>多云有雨</value>
   </data>
   <data name="comboBox_WeatherSet_Icon.Items5" xml:space="preserve">
     <value>阵雨</value>
@@ -1179,10 +1179,10 @@
     <value>多云有雪</value>
   </data>
   <data name="comboBox_WeatherSet_Icon.Items7" xml:space="preserve">
-    <value>雨天</value>
+    <value>小雨</value>
   </data>
   <data name="comboBox_WeatherSet_Icon.Items8" xml:space="preserve">
-    <value>雪</value>
+    <value>小雪</value>
   </data>
   <data name="comboBox_WeatherSet_Icon.Items9" xml:space="preserve">
     <value>大雪</value>
@@ -1191,37 +1191,37 @@
     <value>大雨</value>
   </data>
   <data name="comboBox_WeatherSet_Icon.Items11" xml:space="preserve">
-    <value>有风的</value>
+    <value>大风</value>
   </data>
   <data name="comboBox_WeatherSet_Icon.Items12" xml:space="preserve">
     <value>雨夹雪</value>
   </data>
   <data name="comboBox_WeatherSet_Icon.Items13" xml:space="preserve">
-    <value>雾气</value>
+    <value>雾</value>
   </data>
   <data name="comboBox_WeatherSet_Icon.Items14" xml:space="preserve">
-    <value>阴霾</value>
+    <value>雾霾</value>
   </data>
   <data name="comboBox_WeatherSet_Icon.Items15" xml:space="preserve">
-    <value>雷暴</value>
+    <value>雷暴风</value>
   </data>
   <data name="comboBox_WeatherSet_Icon.Items16" xml:space="preserve">
     <value>降雪</value>
   </data>
   <data name="comboBox_WeatherSet_Icon.Items17" xml:space="preserve">
-    <value>尘土飞扬</value>
+    <value>浮尘</value>
   </data>
   <data name="comboBox_WeatherSet_Icon.Items18" xml:space="preserve">
-    <value>倾盆大雨</value>
+    <value>暴雨</value>
   </data>
   <data name="comboBox_WeatherSet_Icon.Items19" xml:space="preserve">
     <value>冰雹</value>
   </data>
   <data name="comboBox_WeatherSet_Icon.Items20" xml:space="preserve">
-    <value>冰雹</value>
+    <value>大冰雹</value>
   </data>
   <data name="comboBox_WeatherSet_Icon.Items21" xml:space="preserve">
-    <value>倾盆大雨</value>
+    <value>大暴雨</value>
   </data>
   <data name="comboBox_WeatherSet_Icon.Items22" xml:space="preserve">
     <value>沙尘暴</value>
@@ -1275,7 +1275,7 @@
     <value>104, 17</value>
   </data>
   <data name="checkBox_WeatherSet_DayTemp.Text" xml:space="preserve">
-    <value>Day temperature</value>
+    <value>日温度</value>
   </data>
   <data name="panel_SetWeather.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1308,7 +1308,7 @@
     <value />
   </data>
   <data name="button_JsonPreview_Read.Text" xml:space="preserve">
-    <value>负荷值</value>
+    <value>下载值</value>
   </data>
   <data name="button_JsonPreview_Write.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -6310,7 +6310,7 @@
     <value>8, 34</value>
   </data>
   <data name="label216.Text" xml:space="preserve">
-    <value>中心时针（X）</value>
+    <value>中心时针(X)</value>
   </data>
   <data name="checkBox_AnalogClock_Hour.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -6418,7 +6418,7 @@
     <value>8, 68</value>
   </data>
   <data name="label215.Text" xml:space="preserve">
-    <value>中心时针（Y）</value>
+    <value>中心时针(Y)</value>
   </data>
   <data name="groupBox_AnalogClock_Hour.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -6646,7 +6646,7 @@
     <value>75, 30</value>
   </data>
   <data name="label208.Text" xml:space="preserve">
-    <value>中心分针（Y）</value>
+    <value>中心分针(Y)</value>
   </data>
   <data name="label209.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -6664,7 +6664,7 @@
     <value>75, 30</value>
   </data>
   <data name="label209.Text" xml:space="preserve">
-    <value>中心分针（X）</value>
+    <value>中心分针(X)</value>
   </data>
   <data name="checkBox_AnalogClock_Min.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -6976,7 +6976,7 @@
     <value>77, 30</value>
   </data>
   <data name="label211.Text" xml:space="preserve">
-    <value>中心秒针（Y）</value>
+    <value>中心秒针(Y)</value>
   </data>
   <data name="numericUpDown_AnalogClock_Sec_X.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -7003,7 +7003,7 @@
     <value>77, 30</value>
   </data>
   <data name="label212.Text" xml:space="preserve">
-    <value>中心秒针（X）</value>
+    <value>中心秒针(X)</value>
   </data>
   <data name="checkBox_AnalogClock_Sec.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -7747,7 +7747,7 @@
     <value>59, 13</value>
   </data>
   <data name="label203.Text" xml:space="preserve">
-    <value>半径（Y）：</value>
+    <value>半径(Y):</value>
   </data>
   <data name="numericUpDown_Battery_Scale_Radius_X.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -7771,7 +7771,7 @@
     <value>59, 13</value>
   </data>
   <data name="label204.Text" xml:space="preserve">
-    <value>半径（X）：</value>
+    <value>半径(X):</value>
   </data>
   <data name="numericUpDown_Battery_Scale_Center_Y.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -7792,7 +7792,7 @@
     <value />
   </data>
   <data name="label205.Text" xml:space="preserve">
-    <value>中心 (Y):</value>
+    <value>中心(Y):</value>
   </data>
   <data name="numericUpDown_Battery_Scale_Center_X.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -7813,7 +7813,7 @@
     <value />
   </data>
   <data name="label206.Text" xml:space="preserve">
-    <value>中心 (X):</value>
+    <value>中心(X):</value>
   </data>
   <data name="checkBox_Battery_Scale.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -7978,7 +7978,7 @@
     <value />
   </data>
   <data name="label371.Text" xml:space="preserve">
-    <value>箭头的中心（X）</value>
+    <value>箭头的中心(X)</value>
   </data>
   <data name="numericUpDown_Battery_ClockHand_X.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -7999,7 +7999,7 @@
     <value />
   </data>
   <data name="label372.Text" xml:space="preserve">
-    <value>箭头的中心（X）</value>
+    <value>箭头的中心(X)</value>
   </data>
   <data name="checkBox_Battery_ClockHand.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -9625,7 +9625,7 @@
     <value />
   </data>
   <data name="label425.Text" xml:space="preserve">
-    <value>中心 (X):</value>
+    <value>中心(X):</value>
   </data>
   <data name="label430.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -9655,7 +9655,7 @@
     <value />
   </data>
   <data name="label424.Text" xml:space="preserve">
-    <value>中心 (Y):</value>
+    <value>中心(Y):</value>
   </data>
   <data name="checkBox_ActivityPulsScale_Image.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -9679,7 +9679,7 @@
     <value>59, 13</value>
   </data>
   <data name="label423.Text" xml:space="preserve">
-    <value>半径（X）：</value>
+    <value>半径(X):</value>
   </data>
   <data name="label417.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -9706,7 +9706,7 @@
     <value>59, 13</value>
   </data>
   <data name="label422.Text" xml:space="preserve">
-    <value>半径（Y）：</value>
+    <value>半径(Y):</value>
   </data>
   <data name="label418.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -9874,7 +9874,7 @@
     <value />
   </data>
   <data name="label472.Text" xml:space="preserve">
-    <value>箭头的中心（X）</value>
+    <value>箭头的中心(X)</value>
   </data>
   <data name="label467.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -9898,7 +9898,7 @@
     <value />
   </data>
   <data name="label471.Text" xml:space="preserve">
-    <value>箭头的中心（X）</value>
+    <value>箭头的中心(X)</value>
   </data>
   <data name="label468.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -10411,7 +10411,7 @@
     <value />
   </data>
   <data name="label120.Text" xml:space="preserve">
-    <value>中心 (X):</value>
+    <value>中心(X):</value>
   </data>
   <data name="label426.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -10441,7 +10441,7 @@
     <value />
   </data>
   <data name="label119.Text" xml:space="preserve">
-    <value>中心 (Y):</value>
+    <value>中心(Y):</value>
   </data>
   <data name="checkBox_ActivityCaloriesScale_Image.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -10465,7 +10465,7 @@
     <value>59, 13</value>
   </data>
   <data name="label118.Text" xml:space="preserve">
-    <value>半径（X）：</value>
+    <value>半径(X):</value>
   </data>
   <data name="label112.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -10492,7 +10492,7 @@
     <value>59, 13</value>
   </data>
   <data name="label117.Text" xml:space="preserve">
-    <value>半径（Y）：</value>
+    <value>半径(Y):</value>
   </data>
   <data name="label113.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -10663,7 +10663,7 @@
     <value />
   </data>
   <data name="label465.Text" xml:space="preserve">
-    <value>箭头的中心（X）</value>
+    <value>箭头的中心(X)</value>
   </data>
   <data name="label459.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -10687,7 +10687,7 @@
     <value />
   </data>
   <data name="label464.Text" xml:space="preserve">
-    <value>箭头的中心（X）</value>
+    <value>箭头的中心(X)</value>
   </data>
   <data name="label461.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -11104,7 +11104,7 @@
     <value>59, 13</value>
   </data>
   <data name="label107.Text" xml:space="preserve">
-    <value>半径（X）：</value>
+    <value>半径(X):</value>
   </data>
   <data name="label110.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -11140,7 +11140,7 @@
     <value>59, 13</value>
   </data>
   <data name="label106.Text" xml:space="preserve">
-    <value>半径（Y）：</value>
+    <value>半径(Y):</value>
   </data>
   <data name="label109.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -11350,7 +11350,7 @@
     <value />
   </data>
   <data name="label380.Text" xml:space="preserve">
-    <value>箭头的中心（X）</value>
+    <value>箭头的中心(X)</value>
   </data>
   <data name="numericUpDown_StProg_ClockHand_X.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -11371,7 +11371,7 @@
     <value />
   </data>
   <data name="label381.Text" xml:space="preserve">
-    <value>箭头的中心（X）</value>
+    <value>箭头的中心(X)</value>
   </data>
   <data name="tabPage37.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -11626,7 +11626,7 @@
     <value />
   </data>
   <data name="label401.Text" xml:space="preserve">
-    <value>箭头的中心（X）</value>
+    <value>箭头的中心(X)</value>
   </data>
   <data name="numericUpDown_ADDay_ClockHand_X.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -11647,7 +11647,7 @@
     <value />
   </data>
   <data name="label402.Text" xml:space="preserve">
-    <value>箭头的中心（X）</value>
+    <value>箭头的中心(X)</value>
   </data>
   <data name="tabPage38.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -11800,7 +11800,7 @@
     <value />
   </data>
   <data name="label394.Text" xml:space="preserve">
-    <value>箭头的中心（X）</value>
+    <value>箭头的中心(X)</value>
   </data>
   <data name="numericUpDown_ADWeekDay_ClockHand_X.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -11821,7 +11821,7 @@
     <value />
   </data>
   <data name="label395.Text" xml:space="preserve">
-    <value>箭头的中心（X）</value>
+    <value>箭头的中心(X)</value>
   </data>
   <data name="checkBox_ADWeekDay_ClockHand.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -11851,7 +11851,7 @@
     <value>365, 116</value>
   </data>
   <data name="tabPage39.Text" xml:space="preserve">
-    <value>Day of the week</value>
+    <value>一周7天</value>
   </data>
   <data name="numericUpDown_ADMonth_ClockHand_EndAngle.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -11992,7 +11992,7 @@
     <value />
   </data>
   <data name="label387.Text" xml:space="preserve">
-    <value>箭头的中心（X）</value>
+    <value>箭头的中心(X)</value>
   </data>
   <data name="numericUpDown_ADMonth_ClockHand_X.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -12013,7 +12013,7 @@
     <value />
   </data>
   <data name="label388.Text" xml:space="preserve">
-    <value>箭头的中心（X）</value>
+    <value>箭头的中心(X)</value>
   </data>
   <data name="checkBox_ADMonth_ClockHand.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -12073,7 +12073,7 @@
     <value />
   </data>
   <data name="button_AnalogDate.Text" xml:space="preserve">
-    <value>Days Progress</value>
+    <value>日期程序</value>
   </data>
   <data name="numericUpDown_MonthAndDayD_EndCorner_X.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -13099,7 +13099,7 @@
     <value />
   </data>
   <data name="groupBox__WeekDay.Text" xml:space="preserve">
-    <value>Day of the week</value>
+    <value>一周7天</value>
   </data>
   <data name="tabPage50.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -13114,7 +13114,7 @@
     <value>365, 170</value>
   </data>
   <data name="tabPage50.Text" xml:space="preserve">
-    <value>Day of week</value>
+    <value>一周7天</value>
   </data>
   <data name="comboBox_Year_Delimiter.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -13735,7 +13735,7 @@
     <value />
   </data>
   <data name="groupBox_Hours_Tens.Text" xml:space="preserve">
-    <value>Tens</value>
+    <value>时针</value>
   </data>
   <data name="numericUpDown_Hours_Ones_Count.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -13930,7 +13930,7 @@
     <value />
   </data>
   <data name="groupBox_Minutes_Tens.Text" xml:space="preserve">
-    <value>Tens</value>
+    <value>时针</value>
   </data>
   <data name="numericUpDown_Min_Ones_Count.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -14212,7 +14212,7 @@
     <value />
   </data>
   <data name="groupBox_Seconds_Tens.Text" xml:space="preserve">
-    <value>Tens</value>
+    <value>时针</value>
   </data>
   <data name="tabPage6.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -14812,7 +14812,7 @@
     <value>190, 13</value>
   </data>
   <data name="label413.Text" xml:space="preserve">
-    <value>打包/解包bin文件的实用程序：</value>
+    <value>打包/解包bin文件的程序：</value>
   </data>
   <data name="label_Res_PackerUnpacker.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -14878,7 +14878,7 @@
     <value />
   </data>
   <data name="label409.Text" xml:space="preserve">
-    <value>该程序是json表盘设置文件的图形编辑器。 该程序使用第三方实用程序来处理bin表盘文件。</value>
+    <value>该程序利用json文件设置表盘图形编辑。 该程序使用第三方程序来处理bin表盘文件。</value>
   </data>
   <data name="label408.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
