@@ -69,14 +69,14 @@ namespace GTR_Watch_face
                     string language = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
                     //int language = System.Globalization.CultureInfo.CurrentCulture.LCID;
                     //Program_Settings.language = "Русский";
-                    Program_Settings.language = "Chinese";
+                    Program_Settings.language = "Русский";
                     if (language == "ru")
                     {
                         Program_Settings.language = "Русский";
                     }
                       if (language == "zh")
                     {
-                      Program_Settings.language = "Chinese";
+                      Program_Settings.language = "Chinese/简体中文";
                     }
                         if (language == "en")
                     {
@@ -186,7 +186,7 @@ namespace GTR_Watch_face
                 Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en");
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
             }
-            if (Program_Settings.language == "Chinese")
+            if (Program_Settings.language == "Chinese/简体中文")
             {
                 Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("zh");
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("zh");
