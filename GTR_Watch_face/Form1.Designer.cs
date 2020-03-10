@@ -15930,7 +15930,8 @@
             resources.GetString("comboBox_Language.Items4"),
             resources.GetString("comboBox_Language.Items5"),
             resources.GetString("comboBox_Language.Items6"),
-            resources.GetString("comboBox_Language.Items7")});
+            resources.GetString("comboBox_Language.Items7"),
+            resources.GetString("comboBox_Language.Items8")});
             resources.ApplyResources(this.comboBox_Language, "comboBox_Language");
             this.comboBox_Language.Name = "comboBox_Language";
             this.helpProvider1.SetShowHelp(this.comboBox_Language, ((bool)(resources.GetObject("comboBox_Language.ShowHelp"))));

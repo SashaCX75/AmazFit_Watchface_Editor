@@ -137,6 +137,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Classes\PROGRAM_SETTINGS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\FormStrings.zh.Designer.cs">
+      <DependentUpon>FormStrings.zh.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Properties\FormStrings.fr.Designer.cs">
       <DependentUpon>FormStrings.fr.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -182,6 +187,7 @@
     <Compile Include="Classes\WATCH_FACE_PREWIEV_TwoDigits.cs" />
     <EmbeddedResource Include="Form1.cs.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.en.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -203,6 +209,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.sk.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.zh.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAnimation.resx">
@@ -234,6 +243,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPreview.resx">
       <DependentUpon>FormPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\FormStrings.zh.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FormStrings.zh.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\FormStrings.fr.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
