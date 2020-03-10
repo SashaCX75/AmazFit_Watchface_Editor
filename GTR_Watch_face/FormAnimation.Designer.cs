@@ -33,6 +33,7 @@
             this.pictureBox_AnimatiomPreview = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button_AnimationReset = new System.Windows.Forms.Button();
             this.numericUpDown_NumberOfFrames = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.button_SaveAnimation = new System.Windows.Forms.Button();
@@ -40,7 +41,6 @@
             this.radioButton_large = new System.Windows.Forms.RadioButton();
             this.radioButton_normal = new System.Windows.Forms.RadioButton();
             this.progressBar_SaveAnimation = new System.Windows.Forms.ProgressBar();
-            this.button_AnimationReset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_AnimatiomPreview)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_NumberOfFrames)).BeginInit();
@@ -76,6 +76,16 @@
             this.panel1.Size = new System.Drawing.Size(460, 57);
             this.panel1.TabIndex = 1;
             // 
+            // button_AnimationReset
+            // 
+            this.button_AnimationReset.Location = new System.Drawing.Point(199, 4);
+            this.button_AnimationReset.Name = "button_AnimationReset";
+            this.button_AnimationReset.Size = new System.Drawing.Size(134, 23);
+            this.button_AnimationReset.TabIndex = 6;
+            this.button_AnimationReset.Text = "Reset Animation";
+            this.button_AnimationReset.UseVisualStyleBackColor = true;
+            this.button_AnimationReset.Click += new System.EventHandler(this.button_AnimationReset_Click);
+            // 
             // numericUpDown_NumberOfFrames
             // 
             this.numericUpDown_NumberOfFrames.Location = new System.Drawing.Point(127, 30);
@@ -99,7 +109,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 29);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Количество кадров для сохранения";
+            this.label1.Text = "The number of frames to save";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button_SaveAnimation
@@ -108,7 +118,7 @@
             this.button_SaveAnimation.Name = "button_SaveAnimation";
             this.button_SaveAnimation.Size = new System.Drawing.Size(134, 23);
             this.button_SaveAnimation.TabIndex = 3;
-            this.button_SaveAnimation.Text = "Сохранить анимацию";
+            this.button_SaveAnimation.Text = "Save animation";
             this.button_SaveAnimation.UseVisualStyleBackColor = true;
             this.button_SaveAnimation.Click += new System.EventHandler(this.button_SaveAnimation_Click);
             // 
@@ -156,16 +166,6 @@
             this.progressBar_SaveAnimation.TabIndex = 2;
             this.progressBar_SaveAnimation.Value = 50;
             this.progressBar_SaveAnimation.Visible = false;
-            // 
-            // button_AnimationReset
-            // 
-            this.button_AnimationReset.Location = new System.Drawing.Point(199, 4);
-            this.button_AnimationReset.Name = "button_AnimationReset";
-            this.button_AnimationReset.Size = new System.Drawing.Size(134, 23);
-            this.button_AnimationReset.TabIndex = 6;
-            this.button_AnimationReset.Text = "Сбросить анимацию";
-            this.button_AnimationReset.UseVisualStyleBackColor = true;
-            this.button_AnimationReset.Click += new System.EventHandler(this.button_AnimationReset_Click);
             // 
             // FormAnimation
             // 

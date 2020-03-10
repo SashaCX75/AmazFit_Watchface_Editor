@@ -3596,6 +3596,7 @@ namespace GTR_Watch_face
         {
             bool b = checkBox_Animation.Checked;
             tabControl_Animation.Enabled = b;
+            button_ShowAnimation.Enabled = b;
         }
 
         private void checkBox_StaticAnimation_CheckedChanged(object sender, EventArgs e)
@@ -3636,6 +3637,8 @@ namespace GTR_Watch_face
             numericUpDown_MotiomAnimation_StartCoordinates_Y.Enabled = b;
             numericUpDown_MotiomAnimation_EndCoordinates_X.Enabled = b;
             numericUpDown_MotiomAnimation_EndCoordinates_Y.Enabled = b;
+
+            groupBox_MotiomAnimation.Enabled = b;
 
             label480.Enabled = b;
             label481.Enabled = b;

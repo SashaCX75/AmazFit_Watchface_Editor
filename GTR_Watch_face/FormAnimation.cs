@@ -57,7 +57,7 @@ namespace GTR_Watch_face
             {
                 elementMotiomAnimation.DrawMotiomAnimation(gPanel, 100);
             }
-            StaticAnimation.DrawStaticAnimation(gPanel, 100);
+            if(StaticAnimation != null) StaticAnimation.DrawStaticAnimation(gPanel, 100);
             pictureBox_AnimatiomPreview.Image = SrcImg;
 
             gPanel.Dispose();// освобождаем все ресурсы, связанные с отрисовкой
@@ -196,7 +196,7 @@ namespace GTR_Watch_face
                 {
                     elementMotiomAnimation.ResetDrawMotiomAnimation();
                 }
-                StaticAnimation.ResetDrawStaticAnimation();
+                if (StaticAnimation != null) StaticAnimation.ResetDrawStaticAnimation();
 
                 using (MagickImageCollection collection = new MagickImageCollection())
                 {
@@ -332,7 +332,7 @@ namespace GTR_Watch_face
                             {
                                 elementMotiomAnimation.DrawMotiomAnimation(gPanel, 100);
                             }
-                            StaticAnimation.DrawStaticAnimation(gPanel, 100);
+                            if (StaticAnimation != null) StaticAnimation.DrawStaticAnimation(gPanel, 100);
 
                             if (form1.checkBox_crop.Checked)
                             {
@@ -361,6 +361,7 @@ namespace GTR_Watch_face
                         }
 
                         progressBar_SaveAnimation.Value = i;
+                        progressBar_SaveAnimation.Update();
                     }
 
 
@@ -389,12 +390,14 @@ namespace GTR_Watch_face
             {
                 elementMotiomAnimation.ResetDrawMotiomAnimation();
             }
-            StaticAnimation.ResetDrawStaticAnimation();
+            if (StaticAnimation != null) StaticAnimation.ResetDrawStaticAnimation();
         }
 
         private void FormAnimation_FormClosed(object sender, FormClosedEventArgs e)
         {
+            timer1.Enabled = false;
             MotiomAnimation.Clear();
+            StaticAnimation = null;
             this.Dispose();
         }
     }
