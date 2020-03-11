@@ -297,25 +297,6 @@ namespace GTR_Watch_face
             }
 
             PreviewView = false;
-            //checkBox_border.Checked = Program_Settings.ShowBorder;
-            //comboBox_MonthAndDayD_Alignment.Text = "Вверх влево";
-            //comboBox_MonthAndDayM_Alignment.Text = "Вверх влево";
-            //comboBox_OneLine_Alignment.Text = "Вверх влево";
-            //comboBox_Year_Alignment.Text = "Вверх влево";
-
-            //comboBox_ActivityGoal_Alignment.Text = "Вверх влево";
-            //comboBox_ActivitySteps_Alignment.Text = "Вверх влево";
-            //comboBox_ActivityDistance_Alignment.Text = "Вверх влево";
-            //comboBox_ActivityPuls_Alignment.Text = "Вверх влево";
-            //comboBox_ActivityCalories_Alignment.Text = "Вверх влево";
-            //comboBox_Battery_Text_Alignment.Text = "Вверх влево";
-
-            //comboBox_Weather_Text_Alignment.Text = "Вверх влево";
-            //comboBox_Weather_Day_Alignment.Text = "Вверх влево";
-            //comboBox_Weather_Night_Alignment.Text = "Вверх влево";
-
-            //comboBox_Battery_Flatness.Text = "Круглое";
-            //comboBox_StepsProgress_Flatness.Text = "Круглое";
             checkBox_border.Checked = Program_Settings.ShowBorder;
             checkBox_crop.Checked = Program_Settings.Crop;
             checkBox_Show_Shortcuts.Checked = Program_Settings.Show_Shortcuts;
@@ -389,6 +370,7 @@ namespace GTR_Watch_face
                 zip_unpack_bin(StartFileNameBin);
                 StartFileNameBin = "";
             }
+            JSON_Modified = false;
             //Logger.WriteLine("Загрузили файл из значения аргумента " + StartFileNameJson);
         }
 
@@ -5809,7 +5791,9 @@ namespace GTR_Watch_face
             });
             File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
 
-        PreviewImage();
+
+            JSON_write();
+            PreviewImage();
         }
 
         private void timer2_Tick(object sender, EventArgs e)

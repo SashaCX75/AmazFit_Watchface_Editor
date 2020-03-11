@@ -1723,8 +1723,8 @@ namespace GTR_Watch_face
 
                 } 
             }
-            #endregion
-            
+            #endregion            
+           
             #region Shortcuts
             if (showShortcuts)
             {
@@ -1912,6 +1912,10 @@ namespace GTR_Watch_face
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts.png");
                 }
                 if (radioButton_TRex.Checked)
+                {
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
+                }
+                if (radioButton_Verge.Checked)
                 {
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
                 }

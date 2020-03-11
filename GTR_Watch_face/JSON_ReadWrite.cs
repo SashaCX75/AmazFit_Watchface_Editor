@@ -1423,6 +1423,11 @@ namespace GTR_Watch_face
                 Watch_Face.Info = new Device_Id();
                 Watch_Face.Info.DeviceId = 52;
             }
+            if (radioButton_Verge.Checked)
+            {
+                Watch_Face.Info = new Device_Id();
+                Watch_Face.Info.DeviceId = 32;
+            }
 
             if ((comboBox_Background.SelectedIndex >= 0) || (comboBox_Preview.SelectedIndex >= 0))
             {
@@ -3252,6 +3257,9 @@ namespace GTR_Watch_face
                     case 52:
                         radioButton_TRex.Checked = true;
                         break;
+                    case 32:
+                        radioButton_Verge.Checked = true;
+                        break;
                     default:
                         return;
                 }
@@ -3328,6 +3336,21 @@ namespace GTR_Watch_face
                     button_pack.Enabled = true;
                     button_zip.Enabled = true;
                 }
+                else if (radioButton_Verge.Checked)
+                {
+                    this.Text = "Verge Lite watch face editor";
+                    panel_Preview.Height = 183;
+                    panel_Preview.Width = 183;
+                    offSet_X = 180;
+                    offSet_Y = 180;
+
+                    textBox_unpack_command.Text = Program_Settings.unpack_command_TRex;
+                    textBox_pack_command.Text = Program_Settings.pack_command_TRex;
+
+                    button_unpack.Enabled = true;
+                    button_pack.Enabled = true;
+                    button_zip.Enabled = true;
+                }
 
                 if ((formPreview != null) && (formPreview.Visible))
                 {
@@ -3335,6 +3358,7 @@ namespace GTR_Watch_face
                     Form_Preview.Model_Wath.model_gtr42 = radioButton_42.Checked;
                     Form_Preview.Model_Wath.model_gts = radioButton_gts.Checked;
                     Form_Preview.Model_Wath.model_TRex = radioButton_TRex.Checked;
+                    Form_Preview.Model_Wath.model_Verge = radioButton_Verge.Checked;
                 }
 
                 Program_Settings.Model_GTR47 = radioButton_47.Checked;
