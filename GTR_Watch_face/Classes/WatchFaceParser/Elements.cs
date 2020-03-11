@@ -135,7 +135,7 @@ namespace GTR_Watch_face
         public ImageSet Images { get; set; }
         /// <summary>Процент заряда в виде набора картинок и координат к ним</summary>
         public IconSet Icons { get; set; }
-        /// <summary>Индикатор</summary>
+        /// <summary>Стрелочный индикатор</summary>
         public ClockHand Unknown4 { get; set; }
         /// <summary>Иконка %</summary>
         public ImageW Percent { get; set; }

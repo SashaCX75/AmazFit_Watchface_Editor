@@ -9865,7 +9865,7 @@
     <value>Top</value>
   </data>
   <data name="button_ShowAnimation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 211</value>
+    <value>0, 249</value>
   </data>
   <data name="button_ShowAnimation.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -9877,7 +9877,7 @@
     <value>23</value>
   </data>
   <data name="button_ShowAnimation.Text" xml:space="preserve">
-    <value>Показать анимацию</value>
+    <value>Show animation</value>
   </data>
   <data name="&gt;&gt;button_ShowAnimation.Name" xml:space="preserve">
     <value>button_ShowAnimation</value>
@@ -10637,7 +10637,7 @@
     <value>True</value>
   </data>
   <data name="tabPage53.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 165</value>
+    <value>382, 203</value>
   </data>
   <data name="tabPage53.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -10657,74 +10657,11 @@
   <data name="&gt;&gt;tabPage53.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="radioButton_MotiomAnimation_EndCoordinates.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="radioButton_MotiomAnimation_EndCoordinates.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="radioButton_MotiomAnimation_EndCoordinates.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 110</value>
-  </data>
-  <data name="radioButton_MotiomAnimation_EndCoordinates.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="radioButton_MotiomAnimation_EndCoordinates.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 30</value>
-  </data>
-  <data name="radioButton_MotiomAnimation_EndCoordinates.TabIndex" type="System.Int32, mscorlib">
-    <value>102</value>
-  </data>
-  <data name="radioButton_MotiomAnimation_EndCoordinates.Text" xml:space="preserve">
-    <value>End    coordinates</value>
-  </data>
-  <data name="&gt;&gt;radioButton_MotiomAnimation_EndCoordinates.Name" xml:space="preserve">
-    <value>radioButton_MotiomAnimation_EndCoordinates</value>
-  </data>
-  <data name="&gt;&gt;radioButton_MotiomAnimation_EndCoordinates.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioButton_MotiomAnimation_EndCoordinates.Parent" xml:space="preserve">
-    <value>tabPage54</value>
-  </data>
-  <data name="&gt;&gt;radioButton_MotiomAnimation_EndCoordinates.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="radioButton_MotiomAnimation_StartCoordinates.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="radioButton_MotiomAnimation_StartCoordinates.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 51</value>
-  </data>
-  <data name="radioButton_MotiomAnimation_StartCoordinates.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="radioButton_MotiomAnimation_StartCoordinates.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 30</value>
-  </data>
-  <data name="radioButton_MotiomAnimation_StartCoordinates.TabIndex" type="System.Int32, mscorlib">
-    <value>101</value>
-  </data>
-  <data name="radioButton_MotiomAnimation_StartCoordinates.Text" xml:space="preserve">
-    <value>Start coordinates</value>
-  </data>
-  <data name="&gt;&gt;radioButton_MotiomAnimation_StartCoordinates.Name" xml:space="preserve">
-    <value>radioButton_MotiomAnimation_StartCoordinates</value>
-  </data>
-  <data name="&gt;&gt;radioButton_MotiomAnimation_StartCoordinates.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioButton_MotiomAnimation_StartCoordinates.Parent" xml:space="preserve">
-    <value>tabPage54</value>
-  </data>
-  <data name="&gt;&gt;radioButton_MotiomAnimation_StartCoordinates.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="numericUpDown_MotiomAnimation_EndCoordinates_Y.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="numericUpDown_MotiomAnimation_EndCoordinates_Y.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 141</value>
+    <value>323, 32</value>
   </data>
   <data name="numericUpDown_MotiomAnimation_EndCoordinates_Y.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -10742,37 +10679,136 @@
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;numericUpDown_MotiomAnimation_EndCoordinates_Y.Parent" xml:space="preserve">
-    <value>tabPage54</value>
+    <value>groupBox_MotiomAnimation</value>
   </data>
   <data name="&gt;&gt;numericUpDown_MotiomAnimation_EndCoordinates_Y.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
   </data>
-  <data name="numericUpDown_MotiomAnimation_EndCoordinates_X.Enabled" type="System.Boolean, mscorlib">
+  <data name="numericUpDown_MotiomAnimation_StartCoordinates_Y.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="numericUpDown_MotiomAnimation_EndCoordinates_X.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 141</value>
+  <data name="numericUpDown_MotiomAnimation_StartCoordinates_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>183, 32</value>
   </data>
-  <data name="numericUpDown_MotiomAnimation_EndCoordinates_X.ShowHelp" type="System.Boolean, mscorlib">
+  <data name="numericUpDown_MotiomAnimation_StartCoordinates_Y.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="numericUpDown_MotiomAnimation_EndCoordinates_X.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="numericUpDown_MotiomAnimation_StartCoordinates_Y.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 20</value>
   </data>
-  <data name="numericUpDown_MotiomAnimation_EndCoordinates_X.TabIndex" type="System.Int32, mscorlib">
-    <value>98</value>
+  <data name="numericUpDown_MotiomAnimation_StartCoordinates_Y.TabIndex" type="System.Int32, mscorlib">
+    <value>94</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_MotiomAnimation_EndCoordinates_X.Name" xml:space="preserve">
-    <value>numericUpDown_MotiomAnimation_EndCoordinates_X</value>
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_StartCoordinates_Y.Name" xml:space="preserve">
+    <value>numericUpDown_MotiomAnimation_StartCoordinates_Y</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_MotiomAnimation_EndCoordinates_X.Type" xml:space="preserve">
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_StartCoordinates_Y.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_MotiomAnimation_EndCoordinates_X.Parent" xml:space="preserve">
-    <value>tabPage54</value>
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_StartCoordinates_Y.Parent" xml:space="preserve">
+    <value>groupBox_MotiomAnimation</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_MotiomAnimation_EndCoordinates_X.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_StartCoordinates_Y.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="numericUpDown_MotiomAnimation_StartCoordinates_X.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_MotiomAnimation_StartCoordinates_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>123, 32</value>
+  </data>
+  <data name="numericUpDown_MotiomAnimation_StartCoordinates_X.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_MotiomAnimation_StartCoordinates_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="numericUpDown_MotiomAnimation_StartCoordinates_X.TabIndex" type="System.Int32, mscorlib">
+    <value>93</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_StartCoordinates_X.Name" xml:space="preserve">
+    <value>numericUpDown_MotiomAnimation_StartCoordinates_X</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_StartCoordinates_X.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_StartCoordinates_X.Parent" xml:space="preserve">
+    <value>groupBox_MotiomAnimation</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_StartCoordinates_X.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="radioButton_MotiomAnimation_EndCoordinates.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_MotiomAnimation_EndCoordinates.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="radioButton_MotiomAnimation_EndCoordinates.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton_MotiomAnimation_EndCoordinates.Location" type="System.Drawing.Point, System.Drawing">
+    <value>251, 13</value>
+  </data>
+  <data name="radioButton_MotiomAnimation_EndCoordinates.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_MotiomAnimation_EndCoordinates.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 17</value>
+  </data>
+  <data name="radioButton_MotiomAnimation_EndCoordinates.TabIndex" type="System.Int32, mscorlib">
+    <value>102</value>
+  </data>
+  <data name="radioButton_MotiomAnimation_EndCoordinates.Text" xml:space="preserve">
+    <value>End coordinates</value>
+  </data>
+  <data name="&gt;&gt;radioButton_MotiomAnimation_EndCoordinates.Name" xml:space="preserve">
+    <value>radioButton_MotiomAnimation_EndCoordinates</value>
+  </data>
+  <data name="&gt;&gt;radioButton_MotiomAnimation_EndCoordinates.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton_MotiomAnimation_EndCoordinates.Parent" xml:space="preserve">
+    <value>groupBox_MotiomAnimation</value>
+  </data>
+  <data name="&gt;&gt;radioButton_MotiomAnimation_EndCoordinates.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="label480.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label480.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label480.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label480.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="label480.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label480.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 13</value>
+  </data>
+  <data name="label480.TabIndex" type="System.Int32, mscorlib">
+    <value>89</value>
+  </data>
+  <data name="label480.Text" xml:space="preserve">
+    <value>ImageIndex</value>
+  </data>
+  <data name="&gt;&gt;label480.Name" xml:space="preserve">
+    <value>label480</value>
+  </data>
+  <data name="&gt;&gt;label480.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label480.Parent" xml:space="preserve">
+    <value>groupBox_MotiomAnimation</value>
+  </data>
+  <data name="&gt;&gt;label480.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="label484.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -10784,7 +10820,7 @@
     <value>NoControl</value>
   </data>
   <data name="label484.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 143</value>
+    <value>308, 34</value>
   </data>
   <data name="label484.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -10805,135 +10841,99 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label484.Parent" xml:space="preserve">
-    <value>tabPage54</value>
+    <value>groupBox_MotiomAnimation</value>
   </data>
   <data name="&gt;&gt;label484.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="label485.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label485.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="label485.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label485.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 143</value>
-  </data>
-  <data name="label485.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label485.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 13</value>
-  </data>
-  <data name="label485.TabIndex" type="System.Int32, mscorlib">
-    <value>96</value>
-  </data>
-  <data name="label485.Text" xml:space="preserve">
-    <value>X:</value>
-  </data>
-  <data name="&gt;&gt;label485.Name" xml:space="preserve">
-    <value>label485</value>
-  </data>
-  <data name="&gt;&gt;label485.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label485.Parent" xml:space="preserve">
-    <value>tabPage54</value>
-  </data>
-  <data name="&gt;&gt;label485.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="numericUpDown_MotiomAnimation_StartCoordinates_Y.Enabled" type="System.Boolean, mscorlib">
+  <data name="comboBox_MotiomAnimation_Image.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="numericUpDown_MotiomAnimation_StartCoordinates_Y.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 82</value>
+  <data name="comboBox_MotiomAnimation_Image.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 32</value>
   </data>
-  <data name="numericUpDown_MotiomAnimation_StartCoordinates_Y.ShowHelp" type="System.Boolean, mscorlib">
+  <data name="comboBox_MotiomAnimation_Image.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="comboBox_MotiomAnimation_Image.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="numericUpDown_MotiomAnimation_StartCoordinates_Y.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
+  <data name="comboBox_MotiomAnimation_Image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 21</value>
   </data>
-  <data name="numericUpDown_MotiomAnimation_StartCoordinates_Y.TabIndex" type="System.Int32, mscorlib">
-    <value>94</value>
+  <data name="comboBox_MotiomAnimation_Image.TabIndex" type="System.Int32, mscorlib">
+    <value>90</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_MotiomAnimation_StartCoordinates_Y.Name" xml:space="preserve">
-    <value>numericUpDown_MotiomAnimation_StartCoordinates_Y</value>
+  <data name="&gt;&gt;comboBox_MotiomAnimation_Image.Name" xml:space="preserve">
+    <value>comboBox_MotiomAnimation_Image</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_MotiomAnimation_StartCoordinates_Y.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;comboBox_MotiomAnimation_Image.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_MotiomAnimation_StartCoordinates_Y.Parent" xml:space="preserve">
-    <value>tabPage54</value>
+  <data name="&gt;&gt;comboBox_MotiomAnimation_Image.Parent" xml:space="preserve">
+    <value>groupBox_MotiomAnimation</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_MotiomAnimation_StartCoordinates_Y.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;comboBox_MotiomAnimation_Image.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="numericUpDown_MotiomAnimation_StartCoordinates_X.Enabled" type="System.Boolean, mscorlib">
+  <data name="numericUpDown_MotiomAnimation_EndCoordinates_X.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="numericUpDown_MotiomAnimation_StartCoordinates_X.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 82</value>
+  <data name="numericUpDown_MotiomAnimation_EndCoordinates_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>263, 32</value>
   </data>
-  <data name="numericUpDown_MotiomAnimation_StartCoordinates_X.ShowHelp" type="System.Boolean, mscorlib">
+  <data name="numericUpDown_MotiomAnimation_EndCoordinates_X.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="numericUpDown_MotiomAnimation_StartCoordinates_X.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="numericUpDown_MotiomAnimation_EndCoordinates_X.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 20</value>
   </data>
-  <data name="numericUpDown_MotiomAnimation_StartCoordinates_X.TabIndex" type="System.Int32, mscorlib">
-    <value>93</value>
+  <data name="numericUpDown_MotiomAnimation_EndCoordinates_X.TabIndex" type="System.Int32, mscorlib">
+    <value>98</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_MotiomAnimation_StartCoordinates_X.Name" xml:space="preserve">
-    <value>numericUpDown_MotiomAnimation_StartCoordinates_X</value>
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_EndCoordinates_X.Name" xml:space="preserve">
+    <value>numericUpDown_MotiomAnimation_EndCoordinates_X</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_MotiomAnimation_StartCoordinates_X.Type" xml:space="preserve">
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_EndCoordinates_X.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_MotiomAnimation_StartCoordinates_X.Parent" xml:space="preserve">
-    <value>tabPage54</value>
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_EndCoordinates_X.Parent" xml:space="preserve">
+    <value>groupBox_MotiomAnimation</value>
   </data>
-  <data name="&gt;&gt;numericUpDown_MotiomAnimation_StartCoordinates_X.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;numericUpDown_MotiomAnimation_EndCoordinates_X.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="label481.AutoSize" type="System.Boolean, mscorlib">
+  <data name="radioButton_MotiomAnimation_StartCoordinates.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label481.Enabled" type="System.Boolean, mscorlib">
+  <data name="radioButton_MotiomAnimation_StartCoordinates.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="label481.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="radioButton_MotiomAnimation_StartCoordinates.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 13</value>
   </data>
-  <data name="label481.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 84</value>
-  </data>
-  <data name="label481.ShowHelp" type="System.Boolean, mscorlib">
+  <data name="radioButton_MotiomAnimation_StartCoordinates.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label481.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 13</value>
+  <data name="radioButton_MotiomAnimation_StartCoordinates.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 17</value>
   </data>
-  <data name="label481.TabIndex" type="System.Int32, mscorlib">
-    <value>92</value>
+  <data name="radioButton_MotiomAnimation_StartCoordinates.TabIndex" type="System.Int32, mscorlib">
+    <value>101</value>
   </data>
-  <data name="label481.Text" xml:space="preserve">
-    <value>Y:</value>
+  <data name="radioButton_MotiomAnimation_StartCoordinates.Text" xml:space="preserve">
+    <value>Start coordinates</value>
   </data>
-  <data name="&gt;&gt;label481.Name" xml:space="preserve">
-    <value>label481</value>
+  <data name="&gt;&gt;radioButton_MotiomAnimation_StartCoordinates.Name" xml:space="preserve">
+    <value>radioButton_MotiomAnimation_StartCoordinates</value>
   </data>
-  <data name="&gt;&gt;label481.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;radioButton_MotiomAnimation_StartCoordinates.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label481.Parent" xml:space="preserve">
-    <value>tabPage54</value>
+  <data name="&gt;&gt;radioButton_MotiomAnimation_StartCoordinates.Parent" xml:space="preserve">
+    <value>groupBox_MotiomAnimation</value>
   </data>
-  <data name="&gt;&gt;label481.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;radioButton_MotiomAnimation_StartCoordinates.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="label482.AutoSize" type="System.Boolean, mscorlib">
@@ -10946,7 +10946,7 @@
     <value>NoControl</value>
   </data>
   <data name="label482.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 84</value>
+    <value>108, 34</value>
   </data>
   <data name="label482.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -10967,10 +10967,106 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label482.Parent" xml:space="preserve">
-    <value>tabPage54</value>
+    <value>groupBox_MotiomAnimation</value>
   </data>
   <data name="&gt;&gt;label482.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="label481.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label481.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label481.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label481.Location" type="System.Drawing.Point, System.Drawing">
+    <value>168, 34</value>
+  </data>
+  <data name="label481.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label481.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
+  </data>
+  <data name="label481.TabIndex" type="System.Int32, mscorlib">
+    <value>92</value>
+  </data>
+  <data name="label481.Text" xml:space="preserve">
+    <value>Y:</value>
+  </data>
+  <data name="&gt;&gt;label481.Name" xml:space="preserve">
+    <value>label481</value>
+  </data>
+  <data name="&gt;&gt;label481.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label481.Parent" xml:space="preserve">
+    <value>groupBox_MotiomAnimation</value>
+  </data>
+  <data name="&gt;&gt;label481.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label485.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label485.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label485.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label485.Location" type="System.Drawing.Point, System.Drawing">
+    <value>248, 34</value>
+  </data>
+  <data name="label485.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label485.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
+  </data>
+  <data name="label485.TabIndex" type="System.Int32, mscorlib">
+    <value>96</value>
+  </data>
+  <data name="label485.Text" xml:space="preserve">
+    <value>X:</value>
+  </data>
+  <data name="&gt;&gt;label485.Name" xml:space="preserve">
+    <value>label485</value>
+  </data>
+  <data name="&gt;&gt;label485.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label485.Parent" xml:space="preserve">
+    <value>groupBox_MotiomAnimation</value>
+  </data>
+  <data name="&gt;&gt;label485.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="groupBox_MotiomAnimation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 146</value>
+  </data>
+  <data name="groupBox_MotiomAnimation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>381, 57</value>
+  </data>
+  <data name="groupBox_MotiomAnimation.TabIndex" type="System.Int32, mscorlib">
+    <value>89</value>
+  </data>
+  <data name="groupBox_MotiomAnimation.Text" xml:space="preserve">
+    <value>Edit values in selected row</value>
+  </data>
+  <data name="&gt;&gt;groupBox_MotiomAnimation.Name" xml:space="preserve">
+    <value>groupBox_MotiomAnimation</value>
+  </data>
+  <data name="&gt;&gt;groupBox_MotiomAnimation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox_MotiomAnimation.Parent" xml:space="preserve">
+    <value>tabPage54</value>
+  </data>
+  <data name="&gt;&gt;groupBox_MotiomAnimation.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -10988,7 +11084,7 @@
     <value>Start coordinates (X)</value>
   </data>
   <data name="Column2.Width" type="System.Int32, mscorlib">
-    <value>90</value>
+    <value>85</value>
   </data>
   <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -10997,7 +11093,7 @@
     <value>Start coordinates (Y)</value>
   </data>
   <data name="Column3.Width" type="System.Int32, mscorlib">
-    <value>90</value>
+    <value>85</value>
   </data>
   <metadata name="Column4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -11006,7 +11102,7 @@
     <value>End coordinates (X)</value>
   </data>
   <data name="Column4.Width" type="System.Int32, mscorlib">
-    <value>90</value>
+    <value>85</value>
   </data>
   <metadata name="Column5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -11015,16 +11111,16 @@
     <value>End coordinates (Y)</value>
   </data>
   <data name="Column5.Width" type="System.Int32, mscorlib">
-    <value>90</value>
+    <value>85</value>
   </data>
   <metadata name="Column6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="Column6.HeaderText" xml:space="preserve">
-    <value>ImageIndex</value>
+    <value>Image Index</value>
   </data>
   <data name="Column6.Width" type="System.Int32, mscorlib">
-    <value>70</value>
+    <value>50</value>
   </data>
   <metadata name="Column7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -11033,7 +11129,7 @@
     <value>Speed Animation</value>
   </data>
   <data name="Column7.Width" type="System.Int32, mscorlib">
-    <value>70</value>
+    <value>60</value>
   </data>
   <metadata name="Column8.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -11042,7 +11138,7 @@
     <value>Time Animation</value>
   </data>
   <data name="Column8.Width" type="System.Int32, mscorlib">
-    <value>70</value>
+    <value>60</value>
   </data>
   <metadata name="Column9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -11128,11 +11224,14 @@
   <data name="&gt;&gt;contextMenuStrip_XY_InAnimationTable.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="dataGridView_MotiomAnimation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
   <data name="dataGridView_MotiomAnimation.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="dataGridView_MotiomAnimation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>123, 5</value>
+    <value>0, 17</value>
   </data>
   <data name="dataGridView_MotiomAnimation.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>45</value>
@@ -11141,7 +11240,7 @@
     <value>True</value>
   </data>
   <data name="dataGridView_MotiomAnimation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 156</value>
+    <value>382, 125</value>
   </data>
   <data name="dataGridView_MotiomAnimation.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -11156,88 +11255,25 @@
     <value>tabPage54</value>
   </data>
   <data name="&gt;&gt;dataGridView_MotiomAnimation.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="comboBox_MotiomAnimation_Image.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="comboBox_MotiomAnimation_Image.Location" type="System.Drawing.Point, System.Drawing">
-    <value>67, 27</value>
-  </data>
-  <data name="comboBox_MotiomAnimation_Image.MaxDropDownItems" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="comboBox_MotiomAnimation_Image.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="comboBox_MotiomAnimation_Image.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 21</value>
-  </data>
-  <data name="comboBox_MotiomAnimation_Image.TabIndex" type="System.Int32, mscorlib">
-    <value>90</value>
-  </data>
-  <data name="&gt;&gt;comboBox_MotiomAnimation_Image.Name" xml:space="preserve">
-    <value>comboBox_MotiomAnimation_Image</value>
-  </data>
-  <data name="&gt;&gt;comboBox_MotiomAnimation_Image.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboBox_MotiomAnimation_Image.Parent" xml:space="preserve">
-    <value>tabPage54</value>
-  </data>
-  <data name="&gt;&gt;comboBox_MotiomAnimation_Image.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="label480.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label480.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="label480.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label480.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 30</value>
-  </data>
-  <data name="label480.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label480.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 13</value>
-  </data>
-  <data name="label480.TabIndex" type="System.Int32, mscorlib">
-    <value>89</value>
-  </data>
-  <data name="label480.Text" xml:space="preserve">
-    <value>ImageIndex:</value>
-  </data>
-  <data name="&gt;&gt;label480.Name" xml:space="preserve">
-    <value>label480</value>
-  </data>
-  <data name="&gt;&gt;label480.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label480.Parent" xml:space="preserve">
-    <value>tabPage54</value>
-  </data>
-  <data name="&gt;&gt;label480.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>1</value>
   </data>
   <data name="checkBox_MotiomAnimation.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="checkBox_MotiomAnimation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
   <data name="checkBox_MotiomAnimation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="checkBox_MotiomAnimation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 7</value>
+    <value>0, 0</value>
   </data>
   <data name="checkBox_MotiomAnimation.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="checkBox_MotiomAnimation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 17</value>
+    <value>382, 17</value>
   </data>
   <data name="checkBox_MotiomAnimation.TabIndex" type="System.Int32, mscorlib">
     <value>88</value>
@@ -11255,7 +11291,7 @@
     <value>tabPage54</value>
   </data>
   <data name="&gt;&gt;checkBox_MotiomAnimation.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>2</value>
   </data>
   <data name="tabPage54.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -11264,7 +11300,7 @@
     <value>True</value>
   </data>
   <data name="tabPage54.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 165</value>
+    <value>382, 203</value>
   </data>
   <data name="tabPage54.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -11297,7 +11333,7 @@
     <value>True</value>
   </data>
   <data name="tabControl_Animation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>390, 191</value>
+    <value>390, 229</value>
   </data>
   <data name="tabControl_Animation.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -39258,7 +39294,7 @@
   </data>
   <data name="label_TranslateHelp.Text" xml:space="preserve">
     <value>chaadaev88 (English), kampanita (Español), maikeandre (Português), Horatius80 (Čeština, Magyar, Slovenčina),
-bigsurf05 (French)</value>
+bigsurf05 (French), kyle208(Chinese/简体中文)</value>
   </data>
   <data name="&gt;&gt;label_TranslateHelp.Name" xml:space="preserve">
     <value>label_TranslateHelp</value>
@@ -39789,7 +39825,7 @@ bigsurf05 (French)</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>22</value>
   </data>
   <metadata name="colorDialog_StepsProgress.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -39828,7 +39864,7 @@ bigsurf05 (French)</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button_PreviewBig.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="checkBox_WebW.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -39861,7 +39897,7 @@ bigsurf05 (French)</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBox_WebW.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="checkBox_WebB.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -39894,7 +39930,7 @@ bigsurf05 (French)</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBox_WebB.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>395, 17</value>
@@ -39927,7 +39963,7 @@ bigsurf05 (French)</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button_SavePNG.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="panel_Preview.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 5</value>
@@ -39951,7 +39987,7 @@ bigsurf05 (French)</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel_Preview.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="button_SaveGIF.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -39981,7 +40017,7 @@ bigsurf05 (French)</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button_SaveGIF.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="radioButton_47.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -40014,7 +40050,7 @@ bigsurf05 (French)</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;radioButton_47.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="radioButton_42.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -40047,7 +40083,7 @@ bigsurf05 (French)</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;radioButton_42.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="label_preview_X.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -40083,7 +40119,7 @@ bigsurf05 (French)</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label_preview_X.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="label_preview_Y.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -40119,7 +40155,7 @@ bigsurf05 (French)</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label_preview_Y.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="checkBox_border.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -40149,7 +40185,7 @@ bigsurf05 (French)</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBox_border.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="label_version.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -40188,7 +40224,7 @@ bigsurf05 (French)</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label_version.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="radioButton_gts.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -40221,7 +40257,7 @@ bigsurf05 (French)</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;radioButton_gts.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="checkBox_crop.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -40251,7 +40287,7 @@ bigsurf05 (French)</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBox_crop.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -40281,7 +40317,7 @@ bigsurf05 (French)</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="checkBox_Show_Shortcuts.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -40311,7 +40347,7 @@ bigsurf05 (French)</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBox_Show_Shortcuts.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="radioButton_TRex.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -40344,6 +40380,39 @@ bigsurf05 (French)</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;radioButton_TRex.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="radioButton_Verge.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_Verge.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton_Verge.Location" type="System.Drawing.Point, System.Drawing">
+    <value>80, 263</value>
+  </data>
+  <data name="radioButton_Verge.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_Verge.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 17</value>
+  </data>
+  <data name="radioButton_Verge.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="radioButton_Verge.Text" xml:space="preserve">
+    <value>Verge Lite</value>
+  </data>
+  <data name="&gt;&gt;radioButton_Verge.Name" xml:space="preserve">
+    <value>radioButton_Verge</value>
+  </data>
+  <data name="&gt;&gt;radioButton_Verge.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton_Verge.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;radioButton_Verge.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <metadata name="timer2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

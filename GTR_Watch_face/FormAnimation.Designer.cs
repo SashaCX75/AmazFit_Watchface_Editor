@@ -33,12 +33,13 @@
             this.pictureBox_AnimatiomPreview = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button_AnimationReset = new System.Windows.Forms.Button();
+            this.numericUpDown_NumberOfFrames = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button_SaveAnimation = new System.Windows.Forms.Button();
             this.radioButton_xlarge = new System.Windows.Forms.RadioButton();
             this.radioButton_large = new System.Windows.Forms.RadioButton();
             this.radioButton_normal = new System.Windows.Forms.RadioButton();
-            this.button_SaveAnimation = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown_NumberOfFrames = new System.Windows.Forms.NumericUpDown();
             this.progressBar_SaveAnimation = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_AnimatiomPreview)).BeginInit();
             this.panel1.SuspendLayout();
@@ -62,6 +63,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button_AnimationReset);
             this.panel1.Controls.Add(this.numericUpDown_NumberOfFrames);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button_SaveAnimation);
@@ -73,6 +75,52 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(460, 57);
             this.panel1.TabIndex = 1;
+            // 
+            // button_AnimationReset
+            // 
+            this.button_AnimationReset.Location = new System.Drawing.Point(199, 4);
+            this.button_AnimationReset.Name = "button_AnimationReset";
+            this.button_AnimationReset.Size = new System.Drawing.Size(134, 23);
+            this.button_AnimationReset.TabIndex = 6;
+            this.button_AnimationReset.Text = "Reset Animation";
+            this.button_AnimationReset.UseVisualStyleBackColor = true;
+            this.button_AnimationReset.Click += new System.EventHandler(this.button_AnimationReset_Click);
+            // 
+            // numericUpDown_NumberOfFrames
+            // 
+            this.numericUpDown_NumberOfFrames.Location = new System.Drawing.Point(127, 30);
+            this.numericUpDown_NumberOfFrames.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown_NumberOfFrames.Name = "numericUpDown_NumberOfFrames";
+            this.numericUpDown_NumberOfFrames.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDown_NumberOfFrames.TabIndex = 5;
+            this.numericUpDown_NumberOfFrames.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(3, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 29);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "The number of frames to save";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button_SaveAnimation
+            // 
+            this.button_SaveAnimation.Location = new System.Drawing.Point(199, 29);
+            this.button_SaveAnimation.Name = "button_SaveAnimation";
+            this.button_SaveAnimation.Size = new System.Drawing.Size(134, 23);
+            this.button_SaveAnimation.TabIndex = 3;
+            this.button_SaveAnimation.Text = "Save animation";
+            this.button_SaveAnimation.UseVisualStyleBackColor = true;
+            this.button_SaveAnimation.Click += new System.EventHandler(this.button_SaveAnimation_Click);
             // 
             // radioButton_xlarge
             // 
@@ -109,42 +157,6 @@
             this.radioButton_normal.UseVisualStyleBackColor = true;
             this.radioButton_normal.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
             // 
-            // button_SaveAnimation
-            // 
-            this.button_SaveAnimation.Location = new System.Drawing.Point(199, 27);
-            this.button_SaveAnimation.Name = "button_SaveAnimation";
-            this.button_SaveAnimation.Size = new System.Drawing.Size(134, 23);
-            this.button_SaveAnimation.TabIndex = 3;
-            this.button_SaveAnimation.Text = "Сохранить анимацию";
-            this.button_SaveAnimation.UseVisualStyleBackColor = true;
-            this.button_SaveAnimation.Click += new System.EventHandler(this.button_SaveAnimation_Click);
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(3, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 29);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Количество кадров для сохранения";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // numericUpDown_NumberOfFrames
-            // 
-            this.numericUpDown_NumberOfFrames.Location = new System.Drawing.Point(127, 30);
-            this.numericUpDown_NumberOfFrames.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numericUpDown_NumberOfFrames.Name = "numericUpDown_NumberOfFrames";
-            this.numericUpDown_NumberOfFrames.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDown_NumberOfFrames.TabIndex = 5;
-            this.numericUpDown_NumberOfFrames.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
             // progressBar_SaveAnimation
             // 
             this.progressBar_SaveAnimation.Location = new System.Drawing.Point(52, 219);
@@ -172,6 +184,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Preview animation";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormAnimation_FormClosed);
             this.Shown += new System.EventHandler(this.radioButton_CheckedChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_AnimatiomPreview)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -193,5 +206,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button_SaveAnimation;
         private System.Windows.Forms.ProgressBar progressBar_SaveAnimation;
+        private System.Windows.Forms.Button button_AnimationReset;
     }
 }

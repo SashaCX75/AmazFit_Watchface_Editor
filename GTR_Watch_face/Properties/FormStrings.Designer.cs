@@ -484,6 +484,15 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Отображение заряда в виде стрелочного индикатора не работает совместно с отображением заряда сегментами..
+        /// </summary>
+        public static string Message_WarningBatterySegment_Text {
+            get {
+                return ResourceManager.GetString("Message_WarningBatterySegment_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Не рекомендуется использовать отображение расстояния без суффикса..
         /// </summary>
         public static string Message_WarningDistanceSuffix {
@@ -507,6 +516,24 @@ namespace GTR_Watch_face.Properties {
         public static string Message_WarningOnlySec_Text {
             get {
                 return ResourceManager.GetString("Message_WarningOnlySec_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Имя файла и путь к нему не должны содержать пробелов..
+        /// </summary>
+        public static string Message_WarningSpaceInName_Text {
+            get {
+                return ResourceManager.GetString("Message_WarningSpaceInName_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Отображение текущей температуры может не работать без отображения дневной и ночной температуры..
+        /// </summary>
+        public static string Message_WarningTemperature_Text {
+            get {
+                return ResourceManager.GetString("Message_WarningTemperature_Text", resourceCulture);
             }
         }
         
