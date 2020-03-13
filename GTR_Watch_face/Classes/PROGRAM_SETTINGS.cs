@@ -33,6 +33,7 @@
         public bool Shortcuts_Border = true;
         public float Scale = 1f;
         public float Gif_Speed = 1f;
+        public int Animation_Preview_Speed = 4;
 
         public string pack_unpack_dir { get; set; }
         public string unpack_command_GTR47 = "--gtr 47 --file";
