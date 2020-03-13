@@ -59,6 +59,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
+            this.timer1.Interval = 20;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // panel1
@@ -197,7 +198,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox_AnimatiomPreview;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton radioButton_normal;
         private System.Windows.Forms.RadioButton radioButton_xlarge;
@@ -207,5 +207,6 @@
         private System.Windows.Forms.Button button_SaveAnimation;
         private System.Windows.Forms.ProgressBar progressBar_SaveAnimation;
         private System.Windows.Forms.Button button_AnimationReset;
+        public System.Windows.Forms.Timer timer1;
     }
 }

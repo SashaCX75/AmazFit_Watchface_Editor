@@ -540,6 +540,104 @@ namespace GTR_Watch_face
             }
             #endregion
 
+            #region Status
+            if (checkBox_Bluetooth.Checked)
+            {
+                if (Watch_Face_Preview_Set.Status.Bluetooth)
+                {
+                    if (comboBox_Bluetooth_On.SelectedIndex >= 0)
+                    {
+                        src = new Bitmap(ListImagesFullName[comboBox_Bluetooth_On.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Bluetooth_X.Value,
+                            (int)numericUpDown_Bluetooth_Y.Value, src.Width, src.Height));
+                        src.Dispose();
+                    }
+                }
+                else
+                {
+                    if (comboBox_Bluetooth_Off.SelectedIndex >= 0)
+                    {
+                        src = new Bitmap(ListImagesFullName[comboBox_Bluetooth_Off.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Bluetooth_X.Value,
+                            (int)numericUpDown_Bluetooth_Y.Value, src.Width, src.Height));
+                        src.Dispose();
+                    }
+                }
+            }
+
+            if (checkBox_Alarm.Checked)
+            {
+                if (Watch_Face_Preview_Set.Status.Alarm)
+                {
+                    if (comboBox_Alarm_On.SelectedIndex >= 0)
+                    {
+                        src = new Bitmap(ListImagesFullName[comboBox_Alarm_On.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Alarm_X.Value,
+                            (int)numericUpDown_Alarm_Y.Value, src.Width, src.Height));
+                        src.Dispose();
+                    }
+                }
+                else
+                {
+                    if (comboBox_Alarm_Off.SelectedIndex >= 0)
+                    {
+                        src = new Bitmap(ListImagesFullName[comboBox_Alarm_Off.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Alarm_X.Value,
+                            (int)numericUpDown_Alarm_Y.Value, src.Width, src.Height));
+                        src.Dispose();
+                    }
+                }
+            }
+
+            if (checkBox_Lock.Checked)
+            {
+                if (Watch_Face_Preview_Set.Status.Lock)
+                {
+                    if (comboBox_Lock_On.SelectedIndex >= 0)
+                    {
+                        src = new Bitmap(ListImagesFullName[comboBox_Lock_On.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Lock_X.Value,
+                            (int)numericUpDown_Lock_Y.Value, src.Width, src.Height));
+                        src.Dispose();
+                    }
+                }
+                else
+                {
+                    if (comboBox_Lock_Off.SelectedIndex >= 0)
+                    {
+                        src = new Bitmap(ListImagesFullName[comboBox_Lock_Off.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Lock_X.Value,
+                            (int)numericUpDown_Lock_Y.Value, src.Width, src.Height));
+                        src.Dispose();
+                    }
+                }
+            }
+
+            if (checkBox_DND.Checked)
+            {
+                if (Watch_Face_Preview_Set.Status.DoNotDisturb)
+                {
+                    if (comboBox_DND_On.SelectedIndex >= 0)
+                    {
+                        src = new Bitmap(ListImagesFullName[comboBox_DND_On.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_DND_X.Value,
+                            (int)numericUpDown_DND_Y.Value, src.Width, src.Height));
+                        src.Dispose();
+                    }
+                }
+                else
+                {
+                    if (comboBox_DND_Off.SelectedIndex >= 0)
+                    {
+                        src = new Bitmap(ListImagesFullName[comboBox_DND_Off.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_DND_X.Value,
+                            (int)numericUpDown_DND_Y.Value, src.Width, src.Height));
+                        src.Dispose();
+                    }
+                }
+            }
+            #endregion
+
             #region Weather
             if (checkBox_Weather.Checked)
             {
@@ -697,6 +795,22 @@ namespace GTR_Watch_face
                 }
             }
 
+            // прогресс шагов стрелочный индикатор
+            if ((checkBox_StProg_ClockHand.Checked) && (comboBox_StProg_ClockHand_Image.SelectedIndex >= 0))
+            {
+                int x1 = (int)numericUpDown_StProg_ClockHand_X.Value;
+                int y1 = (int)numericUpDown_StProg_ClockHand_Y.Value;
+                int offsetX = (int)numericUpDown_StProg_ClockHand_Offset_X.Value;
+                int offsetY = (int)numericUpDown_StProg_ClockHand_Offset_Y.Value;
+                int image_index = comboBox_StProg_ClockHand_Image.SelectedIndex;
+                float startAngle = (float)(numericUpDown_StProg_ClockHand_StartAngle.Value);
+                float endAngle = (float)(numericUpDown_StProg_ClockHand_EndAngle.Value);
+                float angle = startAngle + Watch_Face_Preview_Set.Activity.Steps * (endAngle - startAngle) /
+                    Watch_Face_Preview_Set.Activity.StepsGoal;
+                if (Watch_Face_Preview_Set.Activity.Steps > Watch_Face_Preview_Set.Activity.StepsGoal) angle = endAngle;
+                DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle);
+            }
+
             if (checkBox_SPSliced.Checked)
             {
                 if ((comboBox_SPSliced_Image.SelectedIndex >= 0) && (dataGridView_SPSliced.Rows.Count > 0))
@@ -756,20 +870,20 @@ namespace GTR_Watch_face
                 }
 
                 // прогресс шагов стрелкой
-                if ((checkBox_StProg_ClockHand.Checked) && (comboBox_StProg_ClockHand_Image.SelectedIndex >= 0))
-                {
-                    int x1 = (int)numericUpDown_StProg_ClockHand_X.Value;
-                    int y1 = (int)numericUpDown_StProg_ClockHand_Y.Value;
-                    int offsetX = (int)numericUpDown_StProg_ClockHand_Offset_X.Value;
-                    int offsetY = (int)numericUpDown_StProg_ClockHand_Offset_Y.Value;
-                    int image_index = comboBox_StProg_ClockHand_Image.SelectedIndex;
-                    float startAngle = (float)(numericUpDown_StProg_ClockHand_StartAngle.Value);
-                    float endAngle = (float)(numericUpDown_StProg_ClockHand_EndAngle.Value);
-                    float angle = startAngle + Watch_Face_Preview_Set.Activity.Steps *
-                        (endAngle - startAngle) / Watch_Face_Preview_Set.Activity.StepsGoal;
-                    if (Watch_Face_Preview_Set.Activity.Steps > Watch_Face_Preview_Set.Activity.StepsGoal) angle = endAngle;
-                    DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle);
-                }
+                //if ((checkBox_StProg_ClockHand.Checked) && (comboBox_StProg_ClockHand_Image.SelectedIndex >= 0))
+                //{
+                //    int x1 = (int)numericUpDown_StProg_ClockHand_X.Value;
+                //    int y1 = (int)numericUpDown_StProg_ClockHand_Y.Value;
+                //    int offsetX = (int)numericUpDown_StProg_ClockHand_Offset_X.Value;
+                //    int offsetY = (int)numericUpDown_StProg_ClockHand_Offset_Y.Value;
+                //    int image_index = comboBox_StProg_ClockHand_Image.SelectedIndex;
+                //    float startAngle = (float)(numericUpDown_StProg_ClockHand_StartAngle.Value);
+                //    float endAngle = (float)(numericUpDown_StProg_ClockHand_EndAngle.Value);
+                //    float angle = startAngle + Watch_Face_Preview_Set.Activity.Steps *
+                //        (endAngle - startAngle) / Watch_Face_Preview_Set.Activity.StepsGoal;
+                //    if (Watch_Face_Preview_Set.Activity.Steps > Watch_Face_Preview_Set.Activity.StepsGoal) angle = endAngle;
+                //    DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle);
+                //}
 
                 if ((checkBox_ActivityDistance.Checked) && (comboBox_ActivityDistance_Image.SelectedIndex >= 0))
                 {
@@ -1062,104 +1176,6 @@ namespace GTR_Watch_face
                         src = new Bitmap(ListImagesFullName[comboBox_ActivityStar_Image.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_ActivityStar_X.Value,
                             (int)numericUpDown_ActivityStar_Y.Value, src.Width, src.Height));
-                    }
-                }
-            }
-            #endregion
-
-            #region Status
-            if (checkBox_Bluetooth.Checked)
-            {
-                if (Watch_Face_Preview_Set.Status.Bluetooth)
-                {
-                    if (comboBox_Bluetooth_On.SelectedIndex >= 0)
-                    {
-                        src = new Bitmap(ListImagesFullName[comboBox_Bluetooth_On.SelectedIndex]);
-                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Bluetooth_X.Value,
-                            (int)numericUpDown_Bluetooth_Y.Value, src.Width, src.Height));
-                        src.Dispose();
-                    }
-                }
-                else
-                {
-                    if (comboBox_Bluetooth_Off.SelectedIndex >= 0)
-                    {
-                        src = new Bitmap(ListImagesFullName[comboBox_Bluetooth_Off.SelectedIndex]);
-                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Bluetooth_X.Value,
-                            (int)numericUpDown_Bluetooth_Y.Value, src.Width, src.Height));
-                        src.Dispose();
-                    }
-                }
-            }
-
-            if (checkBox_Alarm.Checked)
-            {
-                if (Watch_Face_Preview_Set.Status.Alarm)
-                {
-                    if (comboBox_Alarm_On.SelectedIndex >= 0)
-                    {
-                        src = new Bitmap(ListImagesFullName[comboBox_Alarm_On.SelectedIndex]);
-                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Alarm_X.Value,
-                            (int)numericUpDown_Alarm_Y.Value, src.Width, src.Height));
-                        src.Dispose();
-                    }
-                }
-                else
-                {
-                    if (comboBox_Alarm_Off.SelectedIndex >= 0)
-                    {
-                        src = new Bitmap(ListImagesFullName[comboBox_Alarm_Off.SelectedIndex]);
-                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Alarm_X.Value,
-                            (int)numericUpDown_Alarm_Y.Value, src.Width, src.Height));
-                        src.Dispose();
-                    }
-                }
-            }
-
-            if (checkBox_Lock.Checked)
-            {
-                if (Watch_Face_Preview_Set.Status.Lock)
-                {
-                    if (comboBox_Lock_On.SelectedIndex >= 0)
-                    {
-                        src = new Bitmap(ListImagesFullName[comboBox_Lock_On.SelectedIndex]);
-                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Lock_X.Value,
-                            (int)numericUpDown_Lock_Y.Value, src.Width, src.Height));
-                        src.Dispose();
-                    }
-                }
-                else
-                {
-                    if (comboBox_Lock_Off.SelectedIndex >= 0)
-                    {
-                        src = new Bitmap(ListImagesFullName[comboBox_Lock_Off.SelectedIndex]);
-                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Lock_X.Value,
-                            (int)numericUpDown_Lock_Y.Value, src.Width, src.Height));
-                        src.Dispose();
-                    }
-                }
-            }
-
-            if (checkBox_DND.Checked)
-            {
-                if (Watch_Face_Preview_Set.Status.DoNotDisturb)
-                {
-                    if (comboBox_DND_On.SelectedIndex >= 0)
-                    {
-                        src = new Bitmap(ListImagesFullName[comboBox_DND_On.SelectedIndex]);
-                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_DND_X.Value,
-                            (int)numericUpDown_DND_Y.Value, src.Width, src.Height));
-                        src.Dispose();
-                    }
-                }
-                else
-                {
-                    if (comboBox_DND_Off.SelectedIndex >= 0)
-                    {
-                        src = new Bitmap(ListImagesFullName[comboBox_DND_Off.SelectedIndex]);
-                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_DND_X.Value,
-                            (int)numericUpDown_DND_Y.Value, src.Width, src.Height));
-                        src.Dispose();
                     }
                 }
             }
@@ -1923,6 +1939,8 @@ namespace GTR_Watch_face
                 gPanel.DrawImage(mask, new Rectangle(0, 0, mask.Width, mask.Height));
                 mask.Dispose();
             }
+            
+            FormText();
         }
 
         /// <summary>Рисует число</summary>

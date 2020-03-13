@@ -55,9 +55,9 @@ namespace GTR_Watch_face
 
             foreach (ClassMotiomAnimation elementMotiomAnimation in MotiomAnimation)
             {
-                elementMotiomAnimation.DrawMotiomAnimation(gPanel, 100);
+                elementMotiomAnimation.DrawMotiomAnimation(gPanel, timer1.Interval);
             }
-            if(StaticAnimation != null) StaticAnimation.DrawStaticAnimation(gPanel, 100);
+            if(StaticAnimation != null) StaticAnimation.DrawStaticAnimation(gPanel, timer1.Interval);
             pictureBox_AnimatiomPreview.Image = SrcImg;
 
             gPanel.Dispose();// освобождаем все ресурсы, связанные с отрисовкой
