@@ -279,4 +279,7 @@
   <data name="Message_WarningTemperature_Text" xml:space="preserve">
     <value>Отображение текущей температуры может не работать без отображения дневной и ночной температуры.</value>
   </data>
+  <data name="Message_WarningAnimationCoun_Text" xml:space="preserve">
+    <value>Количество элементов для анимации не может быть больше 4.</value>
+  </data>
 </root>

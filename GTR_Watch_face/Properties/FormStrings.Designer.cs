@@ -484,6 +484,15 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Количество элементов для анимации не может быть больше 4..
+        /// </summary>
+        public static string Message_WarningAnimationCoun_Text {
+            get {
+                return ResourceManager.GetString("Message_WarningAnimationCoun_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Отображение заряда в виде стрелочного индикатора не работает совместно с отображением заряда сегментами..
         /// </summary>
         public static string Message_WarningBatterySegment_Text {

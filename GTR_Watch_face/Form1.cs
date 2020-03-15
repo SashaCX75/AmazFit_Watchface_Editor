@@ -4294,6 +4294,11 @@ namespace GTR_Watch_face
                 {
                     button_PreviewBig.Enabled = true;
                 };
+
+                formPreview.KeyDown += (object senderKeyDown, KeyEventArgs eKeyDown) =>
+                {
+                    this.Form1_KeyDown(senderKeyDown, eKeyDown);
+                };
             }
 
             if (Form_Preview.Model_Wath.model_gtr47 != radioButton_47.Checked)
@@ -7045,6 +7050,7 @@ namespace GTR_Watch_face
             {
                 foreach (DataGridViewRow row in dataGridView_MotiomAnimation.Rows)
                 {
+                    if (MotiomAnimation.Count >= 4) break;
                     int StartCoordinates_X = 0;
                     int StartCoordinates_Y = 0;
                     int EndCoordinates_X = 0;
@@ -7183,6 +7189,15 @@ namespace GTR_Watch_face
             });
             File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
             //File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+        }
+
+        private void dataGridView_MotiomAnimation_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            if(dataGridView_MotiomAnimation.Rows.Count > 5)
+            {
+                MessageBox.Show(Properties.FormStrings.Message_WarningAnimationCoun_Text,
+                    Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

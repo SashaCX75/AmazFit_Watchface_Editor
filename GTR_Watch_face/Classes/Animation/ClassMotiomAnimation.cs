@@ -93,11 +93,10 @@ namespace GTR_Watch_face
             }
             _time = _time + deltaTime;
         }
-
-        //private void DrawMotiomAnimationBonce(Graphics g, int deltaTime)
-
+        
         private void DrawMotiomAnimationBonce(Graphics g, int deltaTime)
         {
+            double TimeCoeff = 0.3;
             int newX = _startX;
             int newY = _startY;
 
@@ -116,27 +115,27 @@ namespace GTR_Watch_face
                 int dY = _startY - _endY;
 
                 // конечный отскок
-                if (_newtime >= 0.7f * _speedAnimation)
+                if (_newtime >= (1 - TimeCoeff) * _speedAnimation)
                 {
                     _newtime = _newtime - _speedAnimation;
-                    double proportions = _newtime / (_speedAnimation * 0.3f);
-                    newX = (int)(_startX - 0.1f * dX * proportions);
-                    newY = (int)(_startY - 0.1f * dY * proportions);
+                    double proportions = _newtime / (_speedAnimation * TimeCoeff);
+                    newX = (int)Math.Round((_startX - 0.1f * dX * proportions));
+                    newY = (int)Math.Round((_startY - 0.1f * dY * proportions));
                 }
                 // основной ход
-                else if (_newtime >= 0.3f * _speedAnimation)
+                else if (_newtime >= TimeCoeff * _speedAnimation)
                 {
-                    _newtime = _newtime - 0.3 * _speedAnimation;
-                    double proportions = _newtime / (_speedAnimation * 0.4f);
-                    newX = (int)(_endX + dX * proportions);
-                    newY = (int)(_endY + dY * proportions);
+                    _newtime = _newtime - TimeCoeff * _speedAnimation;
+                    double proportions = _newtime / (_speedAnimation * (1 - TimeCoeff - TimeCoeff));
+                    newX = (int)Math.Round((_endX + dX * proportions));
+                    newY = (int)Math.Round((_endY + dY * proportions));
                 }
                 // начальный отскок
                 else
                 {
-                    double proportions = _newtime / (_speedAnimation * 0.3f);
-                    newX = (int)(_endX - 0.1f * dX * proportions);
-                    newY = (int)(_endY - 0.1f * dY * proportions);
+                    double proportions = _newtime / (_speedAnimation * TimeCoeff);
+                    newX = (int)Math.Round((_endX - 0.1f * dX * proportions));
+                    newY = (int)Math.Round((_endY - 0.1f * dY * proportions));
                 }
 
 
@@ -146,44 +145,28 @@ namespace GTR_Watch_face
                 int dX = _endX - _startX;
                 int dY = _endY - _startY;
 
-                // 2 фаза конечного отскока
-                if (_newtime >= 0.85f * _speedAnimation)
+                // конечный отскок
+                if (_newtime >= (1 - TimeCoeff) * _speedAnimation)
                 {
                     _newtime = _newtime - _speedAnimation;
-                    double proportions = _newtime / (_speedAnimation * 0.15f);
-                    newX = (int)(_endX - 0.1f * dX * proportions);
-                    newY = (int)(_endY - 0.1f * dY * proportions);
-                }
-                // 1 фаза конечного отскока
-                else if (_newtime >= 0.7f * _speedAnimation)
-                {
-                    _newtime = _newtime - 0.7f * _speedAnimation;
-                    double proportions = _newtime / (_speedAnimation * 0.15f);
-                    newX = (int)(_endX + 0.1f * dX * proportions);
-                    newY = (int)(_endY + 0.1f * dY * proportions);
+                    double proportions = _newtime / (_speedAnimation * TimeCoeff);
+                    newX = (int)Math.Round((_endX - 0.1f * dX * proportions));
+                    newY = (int)Math.Round((_endY - 0.1f * dY * proportions));
                 }
                 // основной ход
-                else if (_newtime >= 0.3f * _speedAnimation)
+                else if (_newtime >= TimeCoeff * _speedAnimation)
                 {
-                    _newtime = _newtime - 0.3 * _speedAnimation;
-                    double proportions = _newtime / (_speedAnimation * 0.4f);
-                    newX = (int)(_startX + dX * proportions);
-                    newY = (int)(_startY + dY * proportions);
+                    _newtime = _newtime - TimeCoeff * _speedAnimation;
+                    double proportions = _newtime / (_speedAnimation * (1 - TimeCoeff - TimeCoeff));
+                    newX = (int)Math.Round((_startX + dX * proportions));
+                    newY = (int)Math.Round((_startY + dY * proportions));
                 }
-                // 2 фаза начального отскока
-                else if (_newtime >= 0.15f * _speedAnimation)
-                {
-                    _newtime = _newtime - 0.3f * _speedAnimation;
-                    double proportions = _newtime / (_speedAnimation * 0.15f);
-                    newX = (int)(_startX + 0.1f * dX * proportions);
-                    newY = (int)(_startY + 0.1f * dY * proportions);
-                }
-                // 1 фаза начального отскока
+                // начальный отскок
                 else
                 {
-                    double proportions = _newtime / (_speedAnimation * 0.15f);
-                    newX = (int)(_startX - 0.1f * dX * proportions);
-                    newY = (int)(_startY - 0.1f * dY * proportions);
+                    double proportions = _newtime / (_speedAnimation * TimeCoeff);
+                    newX = (int)Math.Round((_startX - 0.1f * dX * proportions));
+                    newY = (int)Math.Round((_startY - 0.1f * dY * proportions));
                 }
 
             }
