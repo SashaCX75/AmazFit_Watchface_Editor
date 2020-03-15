@@ -1687,16 +1687,17 @@ namespace GTR_Watch_face
                     // анимация (перемещение между координатами)
                     if (checkBox_MotiomAnimation.Checked)
                     {
+                        int AnimationIndex = 0;
                         foreach (DataGridViewRow row in dataGridView_MotiomAnimation.Rows)
                         {
+                            if (++AnimationIndex > 4) break;
                             int StartCoordinates_X = 0;
                             int StartCoordinates_Y = 0;
                             int EndCoordinates_X = 0;
                             int EndCoordinates_Y = 0;
                             int ImageIndex = 0;
                             if (row.Cells[1].Value != null && row.Cells[2].Value != null && row.Cells[3].Value != null &&
-                                row.Cells[4].Value != null && row.Cells[5].Value != null && row.Cells[6].Value != null &&
-                                row.Cells[7].Value != null)
+                                row.Cells[4].Value != null && row.Cells[5].Value != null && row.Cells[6].Value != null)
                             {
                                 if (Int32.TryParse(row.Cells[1].Value.ToString(), out StartCoordinates_X) &&
                                     Int32.TryParse(row.Cells[2].Value.ToString(), out StartCoordinates_Y) &&

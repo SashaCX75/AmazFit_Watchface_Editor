@@ -2810,10 +2810,10 @@ namespace GTR_Watch_face
 
                     //MotiomAnimation[] motiomAnimation = new MotiomAnimation[0];
                     List<MotiomAnimation> MotiomAnimation = new List<MotiomAnimation>();
-
+                    
                     foreach (DataGridViewRow row in dataGridView_MotiomAnimation.Rows)
                     {
-                        //whatever you are currently doing
+                        if (MotiomAnimation.Count >= 4) break;
                         //Coordinates coordinates = new Coordinates();
                         MotiomAnimation motiomAnimation = new MotiomAnimation();
                         int Unknown1 = 0;
