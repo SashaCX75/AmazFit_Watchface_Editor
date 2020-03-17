@@ -406,18 +406,18 @@
             this.label481 = new System.Windows.Forms.Label();
             this.label485 = new System.Windows.Forms.Label();
             this.dataGridView_MotiomAnimation = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.AnimationColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnimationColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnimationColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnimationColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnimationColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnimationColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnimationColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnimationColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnimationColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnimationColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnimationColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnimationColumn12 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.contextMenuStrip_XY_InAnimationTable = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.вставитьНачальныеКоординатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вставитьКонечныеКоординатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -1280,6 +1280,8 @@
             this.button_Background = new System.Windows.Forms.Button();
             this.richTextBox_JSON = new System.Windows.Forms.RichTextBox();
             this.tabPage33 = new System.Windows.Forms.TabPage();
+            this.comboBox_Animation_Preview_Speed = new System.Windows.Forms.ComboBox();
+            this.label483 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.checkBox_Shortcuts_Border = new System.Windows.Forms.CheckBox();
             this.checkBox_Shortcuts_Area = new System.Windows.Forms.CheckBox();
@@ -5721,6 +5723,7 @@
             this.groupBox_MotiomAnimation.Controls.Add(this.label485);
             resources.ApplyResources(this.groupBox_MotiomAnimation, "groupBox_MotiomAnimation");
             this.groupBox_MotiomAnimation.Name = "groupBox_MotiomAnimation";
+            this.helpProvider1.SetShowHelp(this.groupBox_MotiomAnimation, ((bool)(resources.GetObject("groupBox_MotiomAnimation.ShowHelp"))));
             this.groupBox_MotiomAnimation.TabStop = false;
             this.groupBox_MotiomAnimation.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
             // 
@@ -5741,6 +5744,7 @@
             this.numericUpDown_MotiomAnimation_EndCoordinates_Y.Name = "numericUpDown_MotiomAnimation_EndCoordinates_Y";
             this.helpProvider1.SetShowHelp(this.numericUpDown_MotiomAnimation_EndCoordinates_Y, ((bool)(resources.GetObject("numericUpDown_MotiomAnimation_EndCoordinates_Y.ShowHelp"))));
             this.numericUpDown_MotiomAnimation_EndCoordinates_Y.ValueChanged += new System.EventHandler(this.numericUpDown_MotiomAnimation_StartCoordinates_X_ValueChanged);
+            this.numericUpDown_MotiomAnimation_EndCoordinates_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_MotiomAnimation_StartCoordinates_Y
             // 
@@ -5759,6 +5763,7 @@
             this.numericUpDown_MotiomAnimation_StartCoordinates_Y.Name = "numericUpDown_MotiomAnimation_StartCoordinates_Y";
             this.helpProvider1.SetShowHelp(this.numericUpDown_MotiomAnimation_StartCoordinates_Y, ((bool)(resources.GetObject("numericUpDown_MotiomAnimation_StartCoordinates_Y.ShowHelp"))));
             this.numericUpDown_MotiomAnimation_StartCoordinates_Y.ValueChanged += new System.EventHandler(this.numericUpDown_MotiomAnimation_StartCoordinates_X_ValueChanged);
+            this.numericUpDown_MotiomAnimation_StartCoordinates_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_MotiomAnimation_StartCoordinates_X
             // 
@@ -5777,6 +5782,7 @@
             this.numericUpDown_MotiomAnimation_StartCoordinates_X.Name = "numericUpDown_MotiomAnimation_StartCoordinates_X";
             this.helpProvider1.SetShowHelp(this.numericUpDown_MotiomAnimation_StartCoordinates_X, ((bool)(resources.GetObject("numericUpDown_MotiomAnimation_StartCoordinates_X.ShowHelp"))));
             this.numericUpDown_MotiomAnimation_StartCoordinates_X.ValueChanged += new System.EventHandler(this.numericUpDown_MotiomAnimation_StartCoordinates_X_ValueChanged);
+            this.numericUpDown_MotiomAnimation_StartCoordinates_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // radioButton_MotiomAnimation_EndCoordinates
             // 
@@ -5828,6 +5834,7 @@
             this.numericUpDown_MotiomAnimation_EndCoordinates_X.Name = "numericUpDown_MotiomAnimation_EndCoordinates_X";
             this.helpProvider1.SetShowHelp(this.numericUpDown_MotiomAnimation_EndCoordinates_X, ((bool)(resources.GetObject("numericUpDown_MotiomAnimation_EndCoordinates_X.ShowHelp"))));
             this.numericUpDown_MotiomAnimation_EndCoordinates_X.ValueChanged += new System.EventHandler(this.numericUpDown_MotiomAnimation_StartCoordinates_X_ValueChanged);
+            this.numericUpDown_MotiomAnimation_EndCoordinates_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
             // radioButton_MotiomAnimation_StartCoordinates
             // 
@@ -5869,18 +5876,18 @@
             this.dataGridView_MotiomAnimation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_MotiomAnimation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_MotiomAnimation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column10,
-            this.Column11,
-            this.Column12});
+            this.AnimationColumn1,
+            this.AnimationColumn2,
+            this.AnimationColumn3,
+            this.AnimationColumn4,
+            this.AnimationColumn5,
+            this.AnimationColumn6,
+            this.AnimationColumn7,
+            this.AnimationColumn8,
+            this.AnimationColumn9,
+            this.AnimationColumn10,
+            this.AnimationColumn11,
+            this.AnimationColumn12});
             this.dataGridView_MotiomAnimation.ContextMenuStrip = this.contextMenuStrip_XY_InAnimationTable;
             resources.ApplyResources(this.dataGridView_MotiomAnimation, "dataGridView_MotiomAnimation");
             this.dataGridView_MotiomAnimation.Name = "dataGridView_MotiomAnimation";
@@ -5892,79 +5899,80 @@
             this.dataGridView_MotiomAnimation.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_MotiomAnimation_CellMouseDoubleClick);
             this.dataGridView_MotiomAnimation.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_IconSet_CellMouseDown);
             this.dataGridView_MotiomAnimation.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView_IconSet_RowPrePaint);
+            this.dataGridView_MotiomAnimation.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView_MotiomAnimation_RowsAdded);
             this.dataGridView_MotiomAnimation.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridView_IconSet_RowsRemoved);
             this.dataGridView_MotiomAnimation.SelectionChanged += new System.EventHandler(this.dataGridView_MotiomAnimation_SelectionChanged);
             // 
-            // Column1
+            // AnimationColumn1
             // 
-            resources.ApplyResources(this.Column1, "Column1");
-            this.Column1.Name = "Column1";
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            resources.ApplyResources(this.AnimationColumn1, "AnimationColumn1");
+            this.AnimationColumn1.Name = "AnimationColumn1";
+            this.AnimationColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Column2
+            // AnimationColumn2
             // 
-            resources.ApplyResources(this.Column2, "Column2");
-            this.Column2.Name = "Column2";
-            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            resources.ApplyResources(this.AnimationColumn2, "AnimationColumn2");
+            this.AnimationColumn2.Name = "AnimationColumn2";
+            this.AnimationColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Column3
+            // AnimationColumn3
             // 
-            resources.ApplyResources(this.Column3, "Column3");
-            this.Column3.Name = "Column3";
-            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            resources.ApplyResources(this.AnimationColumn3, "AnimationColumn3");
+            this.AnimationColumn3.Name = "AnimationColumn3";
+            this.AnimationColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Column4
+            // AnimationColumn4
             // 
-            resources.ApplyResources(this.Column4, "Column4");
-            this.Column4.Name = "Column4";
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            resources.ApplyResources(this.AnimationColumn4, "AnimationColumn4");
+            this.AnimationColumn4.Name = "AnimationColumn4";
+            this.AnimationColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Column5
+            // AnimationColumn5
             // 
-            resources.ApplyResources(this.Column5, "Column5");
-            this.Column5.Name = "Column5";
-            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            resources.ApplyResources(this.AnimationColumn5, "AnimationColumn5");
+            this.AnimationColumn5.Name = "AnimationColumn5";
+            this.AnimationColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Column6
+            // AnimationColumn6
             // 
-            resources.ApplyResources(this.Column6, "Column6");
-            this.Column6.Name = "Column6";
-            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            resources.ApplyResources(this.AnimationColumn6, "AnimationColumn6");
+            this.AnimationColumn6.Name = "AnimationColumn6";
+            this.AnimationColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Column7
+            // AnimationColumn7
             // 
-            resources.ApplyResources(this.Column7, "Column7");
-            this.Column7.Name = "Column7";
-            this.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            resources.ApplyResources(this.AnimationColumn7, "AnimationColumn7");
+            this.AnimationColumn7.Name = "AnimationColumn7";
+            this.AnimationColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Column8
+            // AnimationColumn8
             // 
-            resources.ApplyResources(this.Column8, "Column8");
-            this.Column8.Name = "Column8";
-            this.Column8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            resources.ApplyResources(this.AnimationColumn8, "AnimationColumn8");
+            this.AnimationColumn8.Name = "AnimationColumn8";
+            this.AnimationColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Column9
+            // AnimationColumn9
             // 
-            resources.ApplyResources(this.Column9, "Column9");
-            this.Column9.Name = "Column9";
-            this.Column9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            resources.ApplyResources(this.AnimationColumn9, "AnimationColumn9");
+            this.AnimationColumn9.Name = "AnimationColumn9";
+            this.AnimationColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Column10
+            // AnimationColumn10
             // 
-            resources.ApplyResources(this.Column10, "Column10");
-            this.Column10.Name = "Column10";
-            this.Column10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            resources.ApplyResources(this.AnimationColumn10, "AnimationColumn10");
+            this.AnimationColumn10.Name = "AnimationColumn10";
+            this.AnimationColumn10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Column11
+            // AnimationColumn11
             // 
-            resources.ApplyResources(this.Column11, "Column11");
-            this.Column11.Name = "Column11";
-            this.Column11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            resources.ApplyResources(this.AnimationColumn11, "AnimationColumn11");
+            this.AnimationColumn11.Name = "AnimationColumn11";
+            this.AnimationColumn11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Column12
+            // AnimationColumn12
             // 
-            resources.ApplyResources(this.Column12, "Column12");
-            this.Column12.Name = "Column12";
+            resources.ApplyResources(this.AnimationColumn12, "AnimationColumn12");
+            this.AnimationColumn12.Name = "AnimationColumn12";
             // 
             // contextMenuStrip_XY_InAnimationTable
             // 
@@ -15854,6 +15862,8 @@
             // tabPage33
             // 
             this.tabPage33.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage33.Controls.Add(this.comboBox_Animation_Preview_Speed);
+            this.tabPage33.Controls.Add(this.label483);
             this.tabPage33.Controls.Add(this.groupBox8);
             this.tabPage33.Controls.Add(this.button_Reset);
             this.tabPage33.Controls.Add(this.checkBox_JsonWarnings);
@@ -15868,6 +15878,27 @@
             resources.ApplyResources(this.tabPage33, "tabPage33");
             this.tabPage33.Name = "tabPage33";
             this.helpProvider1.SetShowHelp(this.tabPage33, ((bool)(resources.GetObject("tabPage33.ShowHelp"))));
+            // 
+            // comboBox_Animation_Preview_Speed
+            // 
+            this.comboBox_Animation_Preview_Speed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Animation_Preview_Speed.FormattingEnabled = true;
+            this.comboBox_Animation_Preview_Speed.Items.AddRange(new object[] {
+            resources.GetString("comboBox_Animation_Preview_Speed.Items"),
+            resources.GetString("comboBox_Animation_Preview_Speed.Items1"),
+            resources.GetString("comboBox_Animation_Preview_Speed.Items2"),
+            resources.GetString("comboBox_Animation_Preview_Speed.Items3"),
+            resources.GetString("comboBox_Animation_Preview_Speed.Items4")});
+            resources.ApplyResources(this.comboBox_Animation_Preview_Speed, "comboBox_Animation_Preview_Speed");
+            this.comboBox_Animation_Preview_Speed.Name = "comboBox_Animation_Preview_Speed";
+            this.helpProvider1.SetShowHelp(this.comboBox_Animation_Preview_Speed, ((bool)(resources.GetObject("comboBox_Animation_Preview_Speed.ShowHelp"))));
+            this.comboBox_Animation_Preview_Speed.SelectedIndexChanged += new System.EventHandler(this.comboBox_Animation_Preview_Speed_SelectedIndexChanged);
+            // 
+            // label483
+            // 
+            resources.ApplyResources(this.label483, "label483");
+            this.label483.Name = "label483";
+            this.helpProvider1.SetShowHelp(this.label483, ((bool)(resources.GetObject("label483.ShowHelp"))));
             // 
             // groupBox8
             // 
@@ -16458,6 +16489,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HelpButton = true;
             this.helpProvider1.SetHelpNavigator(this, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("$this.HelpNavigator"))));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
@@ -16466,6 +16498,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Shown += new System.EventHandler(this.Form1_Shown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -18323,19 +18356,21 @@
         private System.Windows.Forms.TabPage tabPage52;
         private System.Windows.Forms.TabPage tabPage45;
         private System.Windows.Forms.GroupBox groupBox_MotiomAnimation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column12;
         private System.Windows.Forms.RadioButton radioButton_Verge;
+        private System.Windows.Forms.Label label483;
+        private System.Windows.Forms.ComboBox comboBox_Animation_Preview_Speed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn11;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn AnimationColumn12;
     }
 }
 

@@ -53,6 +53,11 @@ namespace GTR_Watch_face
         /// <param name="deltaTime">Шаг приращения времени</param>
         public void DrawMotiomAnimation(Graphics g, int deltaTime)
         {
+            if (_bounce)
+            {
+                DrawMotiomAnimationBonce(g, deltaTime);
+                return;
+            }
             int newX = _startX;
             int newY = _startY;
 
@@ -81,6 +86,89 @@ namespace GTR_Watch_face
                 double proportions = (double)_newtime / _speedAnimation;
                 newX = (int)(_startX + dX * proportions);
                 newY = (int)(_startY + dY * proportions);
+            }
+            if (_image != null)
+            {
+                g.DrawImage(_image, new Rectangle(newX, newY, _image.Width, _image.Height));
+            }
+            _time = _time + deltaTime;
+        }
+        
+        private void DrawMotiomAnimationBonce(Graphics g, int deltaTime)
+        {
+            double TimeCoeff = 0.3;
+            int newX = _startX;
+            int newY = _startY;
+
+            double _newtime = _time;
+            if (_newtime > _cyclesTime && _timeAnimation > 0) _newtime = _cyclesTime;
+            while (_newtime > _speedAnimation * 2)
+            {
+                _newtime = _newtime - _speedAnimation * 2;
+            }
+
+            // обратный ход
+            if (_newtime > _speedAnimation)
+            {
+                _newtime = _newtime - _speedAnimation;
+                int dX = _startX - _endX;
+                int dY = _startY - _endY;
+
+                // конечный отскок
+                if (_newtime >= (1 - TimeCoeff) * _speedAnimation)
+                {
+                    _newtime = _newtime - _speedAnimation;
+                    double proportions = _newtime / (_speedAnimation * TimeCoeff);
+                    newX = (int)Math.Round((_startX - 0.1f * dX * proportions));
+                    newY = (int)Math.Round((_startY - 0.1f * dY * proportions));
+                }
+                // основной ход
+                else if (_newtime >= TimeCoeff * _speedAnimation)
+                {
+                    _newtime = _newtime - TimeCoeff * _speedAnimation;
+                    double proportions = _newtime / (_speedAnimation * (1 - TimeCoeff - TimeCoeff));
+                    newX = (int)Math.Round((_endX + dX * proportions));
+                    newY = (int)Math.Round((_endY + dY * proportions));
+                }
+                // начальный отскок
+                else
+                {
+                    double proportions = _newtime / (_speedAnimation * TimeCoeff);
+                    newX = (int)Math.Round((_endX - 0.1f * dX * proportions));
+                    newY = (int)Math.Round((_endY - 0.1f * dY * proportions));
+                }
+
+
+            }
+            else // прямой ход
+            {
+                int dX = _endX - _startX;
+                int dY = _endY - _startY;
+
+                // конечный отскок
+                if (_newtime >= (1 - TimeCoeff) * _speedAnimation)
+                {
+                    _newtime = _newtime - _speedAnimation;
+                    double proportions = _newtime / (_speedAnimation * TimeCoeff);
+                    newX = (int)Math.Round((_endX - 0.1f * dX * proportions));
+                    newY = (int)Math.Round((_endY - 0.1f * dY * proportions));
+                }
+                // основной ход
+                else if (_newtime >= TimeCoeff * _speedAnimation)
+                {
+                    _newtime = _newtime - TimeCoeff * _speedAnimation;
+                    double proportions = _newtime / (_speedAnimation * (1 - TimeCoeff - TimeCoeff));
+                    newX = (int)Math.Round((_startX + dX * proportions));
+                    newY = (int)Math.Round((_startY + dY * proportions));
+                }
+                // начальный отскок
+                else
+                {
+                    double proportions = _newtime / (_speedAnimation * TimeCoeff);
+                    newX = (int)Math.Round((_startX - 0.1f * dX * proportions));
+                    newY = (int)Math.Round((_startY - 0.1f * dY * proportions));
+                }
+
             }
             if (_image != null)
             {

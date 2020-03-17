@@ -1343,8 +1343,7 @@ namespace GTR_Watch_face
                     if (motiomAnimation)
                     {
                         checkBox_MotiomAnimation.Checked = true;
-
-
+                        
                         MotiomAnimation_Update = true;
 
                         int StartCoordinates_X = 0;
@@ -2807,14 +2806,14 @@ namespace GTR_Watch_face
                 // анимация (перемещение между координатами)
                 if (checkBox_MotiomAnimation.Checked)
                 {
-                    if (Watch_Face.Unknown11 == null) Watch_Face.Unknown11 = new Animation();
+                    //if (Watch_Face.Unknown11 == null) Watch_Face.Unknown11 = new Animation();
 
                     //MotiomAnimation[] motiomAnimation = new MotiomAnimation[0];
                     List<MotiomAnimation> MotiomAnimation = new List<MotiomAnimation>();
-
+                    
                     foreach (DataGridViewRow row in dataGridView_MotiomAnimation.Rows)
                     {
-                        //whatever you are currently doing
+                        if (MotiomAnimation.Count >= 4) break;
                         //Coordinates coordinates = new Coordinates();
                         MotiomAnimation motiomAnimation = new MotiomAnimation();
                         int Unknown1 = 0;
@@ -2831,17 +2830,16 @@ namespace GTR_Watch_face
                         int Bounce = 0;
                         bool Bounce_b = false;
                         if (row.Cells[1].Value != null && row.Cells[2].Value != null && row.Cells[3].Value != null &&
-                            row.Cells[4].Value != null && row.Cells[5].Value != null && row.Cells[6].Value != null &&
-                            row.Cells[7].Value != null)
+                            row.Cells[4].Value != null && row.Cells[5].Value != null && row.Cells[6].Value != null)
                         {
                             if (Int32.TryParse(row.Cells[1].Value.ToString(), out StartCoordinates_X) &&
                                 Int32.TryParse(row.Cells[2].Value.ToString(), out StartCoordinates_Y) &&
                                 Int32.TryParse(row.Cells[3].Value.ToString(), out EndCoordinates_X) &&
                                 Int32.TryParse(row.Cells[4].Value.ToString(), out EndCoordinates_Y) &&
                                 Int32.TryParse(row.Cells[5].Value.ToString(), out ImageIndex) &&
-                                Int32.TryParse(row.Cells[6].Value.ToString(), out SpeedAnimation) &&
-                                Int32.TryParse(row.Cells[7].Value.ToString(), out TimeAnimation))
+                                Int32.TryParse(row.Cells[6].Value.ToString(), out SpeedAnimation))
                             {
+                                if(row.Cells[7].Value != null) Int32.TryParse(row.Cells[7].Value.ToString(), out TimeAnimation);
                                 //if (row.Cells[11].Value == true) Bounce = true;
                                 //Array.Resize(ref motiomAnimation, motiomAnimation.Length + 1);
                                 //objson[count] = coordinates;
@@ -2875,6 +2873,7 @@ namespace GTR_Watch_face
                     }
                     if (MotiomAnimation.Count > 0)
                     {
+                        if (Watch_Face.Unknown11 == null) Watch_Face.Unknown11 = new Animation();
                         Watch_Face.Unknown11.Unknown11_1 = MotiomAnimation;
                     }
                 }
@@ -3236,6 +3235,13 @@ namespace GTR_Watch_face
             comboBox_Weather_Day_Image.Items.Clear();
             comboBox_Weather_Night_Image.Text = "";
             comboBox_Weather_Night_Image.Items.Clear();
+
+            dataGridView_ActivityPuls_IconSet.Rows.Clear();
+            dataGridView_Battery_IconSet.Rows.Clear();
+            dataGridView_DOW_IconSet.Rows.Clear();
+            dataGridView_MotiomAnimation.Rows.Clear();
+            dataGridView_SPSliced
+.Rows.Clear();
         }
 
         // устанавливаем тип циферблата исходя из DeviceId

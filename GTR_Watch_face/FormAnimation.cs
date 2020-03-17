@@ -55,9 +55,9 @@ namespace GTR_Watch_face
 
             foreach (ClassMotiomAnimation elementMotiomAnimation in MotiomAnimation)
             {
-                elementMotiomAnimation.DrawMotiomAnimation(gPanel, 100);
+                elementMotiomAnimation.DrawMotiomAnimation(gPanel, timer1.Interval);
             }
-            if(StaticAnimation != null) StaticAnimation.DrawStaticAnimation(gPanel, 100);
+            if(StaticAnimation != null) StaticAnimation.DrawStaticAnimation(gPanel, timer1.Interval);
             pictureBox_AnimatiomPreview.Image = SrcImg;
 
             gPanel.Dispose();// освобождаем все ресурсы, связанные с отрисовкой
@@ -183,6 +183,7 @@ namespace GTR_Watch_face
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 bool save = false;
                 int set = 0;
+                int oldSet = -1;
                 int setIndex = 0;
                 Random rnd = new Random();
                 progressBar_SaveAnimation.Width = pictureBox_AnimatiomPreview.Width - 100;
@@ -200,6 +201,12 @@ namespace GTR_Watch_face
 
                 using (MagickImageCollection collection = new MagickImageCollection())
                 {
+
+                    int WeatherSet_Temp = (int)form1.numericUpDown_WeatherSet_Temp.Value;
+                    int WeatherSet_DayTemp = (int)form1.numericUpDown_WeatherSet_DayTemp.Value;
+                    int WeatherSet_NightTemp = (int)form1.numericUpDown_WeatherSet_NightTemp.Value;
+                    int WeatherSet_Icon = form1.comboBox_WeatherSet_Icon.SelectedIndex;
+
                     for (int i = 0; i < numericUpDown_NumberOfFrames.Value; i++)
                     {
                         save = false;
@@ -316,15 +323,15 @@ namespace GTR_Watch_face
 
                         if (save)
                         {
-                            int WeatherSet_Temp = (int)form1.numericUpDown_WeatherSet_Temp.Value;
-                            int WeatherSet_DayTemp = (int)form1.numericUpDown_WeatherSet_DayTemp.Value;
-                            int WeatherSet_NightTemp = (int)form1.numericUpDown_WeatherSet_NightTemp.Value;
-                            int WeatherSet_Icon = form1.comboBox_WeatherSet_Icon.SelectedIndex;
 
-                            form1.numericUpDown_WeatherSet_Temp.Value = rnd.Next(-25, 35) + 1;
-                            form1.numericUpDown_WeatherSet_DayTemp.Value = form1.numericUpDown_WeatherSet_Temp.Value;
-                            form1.numericUpDown_WeatherSet_NightTemp.Value = form1.numericUpDown_WeatherSet_Temp.Value - rnd.Next(3, 10);
-                            form1.comboBox_WeatherSet_Icon.SelectedIndex = rnd.Next(0, 25);
+                            if (oldSet!= set)
+                            {
+                                form1.numericUpDown_WeatherSet_Temp.Value = rnd.Next(-25, 35) + 1;
+                                form1.numericUpDown_WeatherSet_DayTemp.Value = form1.numericUpDown_WeatherSet_Temp.Value;
+                                form1.numericUpDown_WeatherSet_NightTemp.Value = form1.numericUpDown_WeatherSet_Temp.Value - rnd.Next(3, 10);
+                                form1.comboBox_WeatherSet_Icon.SelectedIndex = rnd.Next(0, 25);
+                                oldSet = set;
+                            }
 
                             form1.PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false);
 
@@ -346,10 +353,7 @@ namespace GTR_Watch_face
                             //collection[collection.Count - 1].AnimationDelay = 100;
                             collection[collection.Count - 1].AnimationDelay = 10;
 
-                            form1.numericUpDown_WeatherSet_Temp.Value = WeatherSet_Temp;
-                            form1.numericUpDown_WeatherSet_DayTemp.Value = WeatherSet_DayTemp;
-                            form1.numericUpDown_WeatherSet_NightTemp.Value = WeatherSet_NightTemp;
-                            form1.comboBox_WeatherSet_Icon.SelectedIndex = WeatherSet_Icon;
+                            
                         }
 
                         setIndex = setIndex + 100;
@@ -363,6 +367,11 @@ namespace GTR_Watch_face
                         progressBar_SaveAnimation.Value = i;
                         progressBar_SaveAnimation.Update();
                     }
+
+                    form1.numericUpDown_WeatherSet_Temp.Value = WeatherSet_Temp;
+                    form1.numericUpDown_WeatherSet_DayTemp.Value = WeatherSet_DayTemp;
+                    form1.numericUpDown_WeatherSet_NightTemp.Value = WeatherSet_NightTemp;
+                    form1.comboBox_WeatherSet_Icon.SelectedIndex = WeatherSet_Icon;
 
 
                     progressBar_SaveAnimation.Visible = false;

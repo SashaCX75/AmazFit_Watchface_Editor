@@ -9877,7 +9877,7 @@
     <value>23</value>
   </data>
   <data name="button_ShowAnimation.Text" xml:space="preserve">
-    <value>Show animation</value>
+    <value>Предпросмотр анимации</value>
   </data>
   <data name="&gt;&gt;button_ShowAnimation.Name" xml:space="preserve">
     <value>button_ShowAnimation</value>
@@ -9937,7 +9937,7 @@
     <value>99</value>
   </data>
   <data name="label479.Text" xml:space="preserve">
-    <value>Animation speed</value>
+    <value>Скорость анимации</value>
   </data>
   <data name="label479.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -10000,7 +10000,7 @@
     <value>97</value>
   </data>
   <data name="label476.Text" xml:space="preserve">
-    <value>Number of animation cycles before pause</value>
+    <value>Количество циклов анимации до паузы</value>
   </data>
   <data name="label476.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -10063,7 +10063,7 @@
     <value>95</value>
   </data>
   <data name="label478.Text" xml:space="preserve">
-    <value>Pause between the cycles of animation</value>
+    <value>Пауза между циклами анимации</value>
   </data>
   <data name="label478.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -10126,7 +10126,7 @@
     <value>93</value>
   </data>
   <data name="label477.Text" xml:space="preserve">
-    <value>Animation cycle duration</value>
+    <value>Длительность цикла анимации</value>
   </data>
   <data name="label477.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -10463,13 +10463,13 @@
     <value>True</value>
   </data>
   <data name="checkBox_StaticAnimation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 17</value>
+    <value>88, 17</value>
   </data>
   <data name="checkBox_StaticAnimation.TabIndex" type="System.Int32, mscorlib">
     <value>87</value>
   </data>
   <data name="checkBox_StaticAnimation.Text" xml:space="preserve">
-    <value>Show</value>
+    <value>Отображать</value>
   </data>
   <data name="&gt;&gt;checkBox_StaticAnimation.Name" xml:space="preserve">
     <value>checkBox_StaticAnimation</value>
@@ -10607,13 +10607,13 @@
     <value>True</value>
   </data>
   <data name="label475.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 13</value>
+    <value>69, 13</value>
   </data>
   <data name="label475.TabIndex" type="System.Int32, mscorlib">
     <value>88</value>
   </data>
   <data name="label475.Text" xml:space="preserve">
-    <value>Coordinates</value>
+    <value>Координаты</value>
   </data>
   <data name="&gt;&gt;label475.Name" xml:space="preserve">
     <value>label475</value>
@@ -10643,7 +10643,7 @@
     <value>1</value>
   </data>
   <data name="tabPage53.Text" xml:space="preserve">
-    <value>Frame animation</value>
+    <value>Покадровая анимация</value>
   </data>
   <data name="&gt;&gt;tabPage53.Name" xml:space="preserve">
     <value>tabPage53</value>
@@ -10661,7 +10661,7 @@
     <value>False</value>
   </data>
   <data name="numericUpDown_MotiomAnimation_EndCoordinates_Y.Location" type="System.Drawing.Point, System.Drawing">
-    <value>323, 32</value>
+    <value>298, 32</value>
   </data>
   <data name="numericUpDown_MotiomAnimation_EndCoordinates_Y.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -10688,7 +10688,7 @@
     <value>False</value>
   </data>
   <data name="numericUpDown_MotiomAnimation_StartCoordinates_Y.Location" type="System.Drawing.Point, System.Drawing">
-    <value>183, 32</value>
+    <value>148, 32</value>
   </data>
   <data name="numericUpDown_MotiomAnimation_StartCoordinates_Y.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -10715,7 +10715,7 @@
     <value>False</value>
   </data>
   <data name="numericUpDown_MotiomAnimation_StartCoordinates_X.Location" type="System.Drawing.Point, System.Drawing">
-    <value>123, 32</value>
+    <value>88, 32</value>
   </data>
   <data name="numericUpDown_MotiomAnimation_StartCoordinates_X.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -10748,19 +10748,19 @@
     <value>NoControl</value>
   </data>
   <data name="radioButton_MotiomAnimation_EndCoordinates.Location" type="System.Drawing.Point, System.Drawing">
-    <value>251, 13</value>
+    <value>223, 13</value>
   </data>
   <data name="radioButton_MotiomAnimation_EndCoordinates.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="radioButton_MotiomAnimation_EndCoordinates.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 17</value>
+    <value>139, 17</value>
   </data>
   <data name="radioButton_MotiomAnimation_EndCoordinates.TabIndex" type="System.Int32, mscorlib">
     <value>102</value>
   </data>
   <data name="radioButton_MotiomAnimation_EndCoordinates.Text" xml:space="preserve">
-    <value>End coordinates</value>
+    <value>Конечные координаты</value>
   </data>
   <data name="&gt;&gt;radioButton_MotiomAnimation_EndCoordinates.Name" xml:space="preserve">
     <value>radioButton_MotiomAnimation_EndCoordinates</value>
@@ -10784,7 +10784,7 @@
     <value>NoControl</value>
   </data>
   <data name="label480.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 16</value>
+    <value>3, 16</value>
   </data>
   <data name="label480.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -10820,7 +10820,7 @@
     <value>NoControl</value>
   </data>
   <data name="label484.Location" type="System.Drawing.Point, System.Drawing">
-    <value>308, 34</value>
+    <value>283, 34</value>
   </data>
   <data name="label484.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -10880,7 +10880,7 @@
     <value>False</value>
   </data>
   <data name="numericUpDown_MotiomAnimation_EndCoordinates_X.Location" type="System.Drawing.Point, System.Drawing">
-    <value>263, 32</value>
+    <value>238, 32</value>
   </data>
   <data name="numericUpDown_MotiomAnimation_EndCoordinates_X.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -10910,19 +10910,19 @@
     <value>False</value>
   </data>
   <data name="radioButton_MotiomAnimation_StartCoordinates.Location" type="System.Drawing.Point, System.Drawing">
-    <value>112, 13</value>
+    <value>74, 13</value>
   </data>
   <data name="radioButton_MotiomAnimation_StartCoordinates.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="radioButton_MotiomAnimation_StartCoordinates.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 17</value>
+    <value>146, 17</value>
   </data>
   <data name="radioButton_MotiomAnimation_StartCoordinates.TabIndex" type="System.Int32, mscorlib">
     <value>101</value>
   </data>
   <data name="radioButton_MotiomAnimation_StartCoordinates.Text" xml:space="preserve">
-    <value>Start coordinates</value>
+    <value>Начальные координаты</value>
   </data>
   <data name="&gt;&gt;radioButton_MotiomAnimation_StartCoordinates.Name" xml:space="preserve">
     <value>radioButton_MotiomAnimation_StartCoordinates</value>
@@ -10946,7 +10946,7 @@
     <value>NoControl</value>
   </data>
   <data name="label482.Location" type="System.Drawing.Point, System.Drawing">
-    <value>108, 34</value>
+    <value>73, 34</value>
   </data>
   <data name="label482.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -10982,7 +10982,7 @@
     <value>NoControl</value>
   </data>
   <data name="label481.Location" type="System.Drawing.Point, System.Drawing">
-    <value>168, 34</value>
+    <value>133, 34</value>
   </data>
   <data name="label481.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -11018,7 +11018,7 @@
     <value>NoControl</value>
   </data>
   <data name="label485.Location" type="System.Drawing.Point, System.Drawing">
-    <value>248, 34</value>
+    <value>223, 34</value>
   </data>
   <data name="label485.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -11047,6 +11047,9 @@
   <data name="groupBox_MotiomAnimation.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 146</value>
   </data>
+  <data name="groupBox_MotiomAnimation.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="groupBox_MotiomAnimation.Size" type="System.Drawing.Size, System.Drawing">
     <value>381, 57</value>
   </data>
@@ -11054,7 +11057,7 @@
     <value>89</value>
   </data>
   <data name="groupBox_MotiomAnimation.Text" xml:space="preserve">
-    <value>Edit values in selected row</value>
+    <value>Редактировать данные в выбранной строке</value>
   </data>
   <data name="&gt;&gt;groupBox_MotiomAnimation.Name" xml:space="preserve">
     <value>groupBox_MotiomAnimation</value>
@@ -11068,112 +11071,112 @@
   <data name="&gt;&gt;groupBox_MotiomAnimation.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="AnimationColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Column1.HeaderText" xml:space="preserve">
+  <data name="AnimationColumn1.HeaderText" xml:space="preserve">
     <value>Unknown1</value>
   </data>
-  <data name="Column1.Visible" type="System.Boolean, mscorlib">
+  <data name="AnimationColumn1.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="AnimationColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Column2.HeaderText" xml:space="preserve">
-    <value>Start coordinates (X)</value>
+  <data name="AnimationColumn2.HeaderText" xml:space="preserve">
+    <value>Начальные координаты (X)</value>
   </data>
-  <data name="Column2.Width" type="System.Int32, mscorlib">
-    <value>85</value>
+  <data name="AnimationColumn2.Width" type="System.Int32, mscorlib">
+    <value>90</value>
   </data>
-  <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="AnimationColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Column3.HeaderText" xml:space="preserve">
-    <value>Start coordinates (Y)</value>
+  <data name="AnimationColumn3.HeaderText" xml:space="preserve">
+    <value>Начальные координаты (Y)</value>
   </data>
-  <data name="Column3.Width" type="System.Int32, mscorlib">
-    <value>85</value>
+  <data name="AnimationColumn3.Width" type="System.Int32, mscorlib">
+    <value>90</value>
   </data>
-  <metadata name="Column4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="AnimationColumn4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Column4.HeaderText" xml:space="preserve">
-    <value>End coordinates (X)</value>
+  <data name="AnimationColumn4.HeaderText" xml:space="preserve">
+    <value>Конечные координаты (X)</value>
   </data>
-  <data name="Column4.Width" type="System.Int32, mscorlib">
-    <value>85</value>
+  <data name="AnimationColumn4.Width" type="System.Int32, mscorlib">
+    <value>90</value>
   </data>
-  <metadata name="Column5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="AnimationColumn5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Column5.HeaderText" xml:space="preserve">
-    <value>End coordinates (Y)</value>
+  <data name="AnimationColumn5.HeaderText" xml:space="preserve">
+    <value>Конечные координаты (Y)</value>
   </data>
-  <data name="Column5.Width" type="System.Int32, mscorlib">
-    <value>85</value>
+  <data name="AnimationColumn5.Width" type="System.Int32, mscorlib">
+    <value>90</value>
   </data>
-  <metadata name="Column6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="AnimationColumn6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Column6.HeaderText" xml:space="preserve">
+  <data name="AnimationColumn6.HeaderText" xml:space="preserve">
     <value>Image Index</value>
   </data>
-  <data name="Column6.Width" type="System.Int32, mscorlib">
+  <data name="AnimationColumn6.Width" type="System.Int32, mscorlib">
     <value>50</value>
   </data>
-  <metadata name="Column7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="AnimationColumn7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Column7.HeaderText" xml:space="preserve">
-    <value>Speed Animation</value>
+  <data name="AnimationColumn7.HeaderText" xml:space="preserve">
+    <value>Скорость анимации</value>
   </data>
-  <data name="Column7.Width" type="System.Int32, mscorlib">
+  <data name="AnimationColumn7.Width" type="System.Int32, mscorlib">
     <value>60</value>
   </data>
-  <metadata name="Column8.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="AnimationColumn8.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Column8.HeaderText" xml:space="preserve">
-    <value>Time Animation</value>
+  <data name="AnimationColumn8.HeaderText" xml:space="preserve">
+    <value>Время анимации</value>
   </data>
-  <data name="Column8.Width" type="System.Int32, mscorlib">
+  <data name="AnimationColumn8.Width" type="System.Int32, mscorlib">
     <value>60</value>
   </data>
-  <metadata name="Column9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="AnimationColumn9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Column9.HeaderText" xml:space="preserve">
+  <data name="AnimationColumn9.HeaderText" xml:space="preserve">
     <value>Unknown5</value>
   </data>
-  <data name="Column9.Visible" type="System.Boolean, mscorlib">
+  <data name="AnimationColumn9.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <metadata name="Column10.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="AnimationColumn10.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Column10.HeaderText" xml:space="preserve">
+  <data name="AnimationColumn10.HeaderText" xml:space="preserve">
     <value>Unknown6</value>
   </data>
-  <data name="Column10.Visible" type="System.Boolean, mscorlib">
+  <data name="AnimationColumn10.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <metadata name="Column11.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="AnimationColumn11.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Column11.HeaderText" xml:space="preserve">
+  <data name="AnimationColumn11.HeaderText" xml:space="preserve">
     <value>Unknown7</value>
   </data>
-  <data name="Column11.Visible" type="System.Boolean, mscorlib">
+  <data name="AnimationColumn11.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <metadata name="Column12.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="AnimationColumn12.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Column12.HeaderText" xml:space="preserve">
-    <value>Bounce</value>
+  <data name="AnimationColumn12.HeaderText" xml:space="preserve">
+    <value>Отскок</value>
   </data>
-  <data name="Column12.Width" type="System.Int32, mscorlib">
+  <data name="AnimationColumn12.Width" type="System.Int32, mscorlib">
     <value>50</value>
   </data>
   <metadata name="contextMenuStrip_XY_InAnimationTable.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -11240,7 +11243,7 @@
     <value>True</value>
   </data>
   <data name="dataGridView_MotiomAnimation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 125</value>
+    <value>365, 125</value>
   </data>
   <data name="dataGridView_MotiomAnimation.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -11273,13 +11276,13 @@
     <value>True</value>
   </data>
   <data name="checkBox_MotiomAnimation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 17</value>
+    <value>365, 17</value>
   </data>
   <data name="checkBox_MotiomAnimation.TabIndex" type="System.Int32, mscorlib">
     <value>88</value>
   </data>
   <data name="checkBox_MotiomAnimation.Text" xml:space="preserve">
-    <value>Show</value>
+    <value>Отображать</value>
   </data>
   <data name="&gt;&gt;checkBox_MotiomAnimation.Name" xml:space="preserve">
     <value>checkBox_MotiomAnimation</value>
@@ -11300,13 +11303,13 @@
     <value>True</value>
   </data>
   <data name="tabPage54.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 203</value>
+    <value>365, 203</value>
   </data>
   <data name="tabPage54.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="tabPage54.Text" xml:space="preserve">
-    <value>Move between coordinates</value>
+    <value>Перемещение между координатами</value>
   </data>
   <data name="&gt;&gt;tabPage54.Name" xml:space="preserve">
     <value>tabPage54</value>
@@ -11372,7 +11375,7 @@
     <value>19</value>
   </data>
   <data name="checkBox_Animation.Text" xml:space="preserve">
-    <value>Activate</value>
+    <value>Использовать</value>
   </data>
   <data name="&gt;&gt;checkBox_Animation.Name" xml:space="preserve">
     <value>checkBox_Animation</value>
@@ -12197,7 +12200,7 @@
     <value>True</value>
   </data>
   <data name="tabPage47.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 94</value>
+    <value>365, 94</value>
   </data>
   <data name="tabPage47.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -12584,7 +12587,7 @@
     <value>True</value>
   </data>
   <data name="tabPage48.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 94</value>
+    <value>365, 94</value>
   </data>
   <data name="tabPage48.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -12968,7 +12971,7 @@
     <value>True</value>
   </data>
   <data name="tabPage49.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 94</value>
+    <value>365, 94</value>
   </data>
   <data name="tabPage49.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -14645,7 +14648,7 @@
     <value>True</value>
   </data>
   <data name="tabPage27.Size" type="System.Drawing.Size, System.Drawing">
-    <value>374, 104</value>
+    <value>357, 104</value>
   </data>
   <data name="tabPage27.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -15314,7 +15317,7 @@
     <value>True</value>
   </data>
   <data name="tabPage30.Size" type="System.Drawing.Size, System.Drawing">
-    <value>374, 104</value>
+    <value>357, 104</value>
   </data>
   <data name="tabPage30.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -15344,7 +15347,7 @@
     <value>True</value>
   </data>
   <data name="tabControl5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 130</value>
+    <value>365, 130</value>
   </data>
   <data name="tabControl5.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -15368,7 +15371,7 @@
     <value>True</value>
   </data>
   <data name="tabPage26.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 129</value>
+    <value>365, 129</value>
   </data>
   <data name="tabPage26.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -15752,7 +15755,7 @@
     <value>True</value>
   </data>
   <data name="tabPage25.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 129</value>
+    <value>365, 129</value>
   </data>
   <data name="tabPage25.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -17198,7 +17201,7 @@
     <value>True</value>
   </data>
   <data name="tabPage31.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 144</value>
+    <value>365, 144</value>
   </data>
   <data name="tabPage31.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -17855,7 +17858,7 @@
     <value>True</value>
   </data>
   <data name="tabPage32.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 144</value>
+    <value>365, 144</value>
   </data>
   <data name="tabPage32.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -18938,7 +18941,7 @@
     <value>True</value>
   </data>
   <data name="tabPage28.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 134</value>
+    <value>365, 134</value>
   </data>
   <data name="tabPage28.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -19292,7 +19295,7 @@
     <value>True</value>
   </data>
   <data name="tabPage22.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 134</value>
+    <value>365, 134</value>
   </data>
   <data name="tabPage22.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -20096,7 +20099,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_Battery_Scale.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 20</value>
+    <value>365, 20</value>
   </data>
   <data name="checkBox_Battery_Scale.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
@@ -20123,7 +20126,7 @@
     <value>True</value>
   </data>
   <data name="tabPage23.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 134</value>
+    <value>365, 134</value>
   </data>
   <data name="tabPage23.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -20603,7 +20606,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_Battery_ClockHand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 20</value>
+    <value>365, 20</value>
   </data>
   <data name="checkBox_Battery_ClockHand.TabIndex" type="System.Int32, mscorlib">
     <value>68</value>
@@ -20630,7 +20633,7 @@
     <value>True</value>
   </data>
   <data name="tabPage35.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 134</value>
+    <value>365, 134</value>
   </data>
   <data name="tabPage35.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -20837,7 +20840,7 @@
     <value>True</value>
   </data>
   <data name="tabPage42.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 134</value>
+    <value>365, 134</value>
   </data>
   <data name="tabPage42.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -21605,7 +21608,7 @@
     <value>True</value>
   </data>
   <data name="tabPage18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 54</value>
+    <value>365, 54</value>
   </data>
   <data name="tabPage18.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -21923,7 +21926,7 @@
     <value>True</value>
   </data>
   <data name="tabPage19.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 54</value>
+    <value>365, 54</value>
   </data>
   <data name="tabPage19.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -22241,7 +22244,7 @@
     <value>True</value>
   </data>
   <data name="tabPage20.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 54</value>
+    <value>365, 54</value>
   </data>
   <data name="tabPage20.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -23855,7 +23858,7 @@
     <value>True</value>
   </data>
   <data name="tabPage13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 159</value>
+    <value>365, 159</value>
   </data>
   <data name="tabPage13.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -24524,7 +24527,7 @@
     <value>True</value>
   </data>
   <data name="tabPage14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>374, 134</value>
+    <value>357, 134</value>
   </data>
   <data name="tabPage14.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -24872,7 +24875,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_ActivityPulsScale.Size" type="System.Drawing.Size, System.Drawing">
-    <value>368, 20</value>
+    <value>351, 20</value>
   </data>
   <data name="checkBox_ActivityPulsScale.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
@@ -25361,7 +25364,7 @@
     <value>True</value>
   </data>
   <data name="tabPage44.Size" type="System.Drawing.Size, System.Drawing">
-    <value>374, 134</value>
+    <value>357, 134</value>
   </data>
   <data name="tabPage44.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -25589,7 +25592,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_Pulse_ClockHand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>368, 20</value>
+    <value>351, 20</value>
   </data>
   <data name="checkBox_Pulse_ClockHand.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
@@ -25871,7 +25874,7 @@
     <value>True</value>
   </data>
   <data name="tabPage51.Size" type="System.Drawing.Size, System.Drawing">
-    <value>374, 134</value>
+    <value>357, 134</value>
   </data>
   <data name="tabPage51.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -26042,7 +26045,7 @@
     <value>True</value>
   </data>
   <data name="tabPage45.Size" type="System.Drawing.Size, System.Drawing">
-    <value>374, 134</value>
+    <value>357, 134</value>
   </data>
   <data name="tabPage45.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -26072,7 +26075,7 @@
     <value>True</value>
   </data>
   <data name="tabControl8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 160</value>
+    <value>365, 160</value>
   </data>
   <data name="tabControl8.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -26096,7 +26099,7 @@
     <value>True</value>
   </data>
   <data name="tabPage55.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 159</value>
+    <value>365, 159</value>
   </data>
   <data name="tabPage55.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -26765,7 +26768,7 @@
     <value>True</value>
   </data>
   <data name="tabPage15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>374, 134</value>
+    <value>357, 134</value>
   </data>
   <data name="tabPage15.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -27113,7 +27116,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_ActivityCaloriesScale.Size" type="System.Drawing.Size, System.Drawing">
-    <value>368, 20</value>
+    <value>351, 20</value>
   </data>
   <data name="checkBox_ActivityCaloriesScale.TabIndex" type="System.Int32, mscorlib">
     <value>74</value>
@@ -27599,7 +27602,7 @@
     <value>True</value>
   </data>
   <data name="tabPage11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>374, 134</value>
+    <value>357, 134</value>
   </data>
   <data name="tabPage11.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -27827,7 +27830,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_Calories_ClockHand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>368, 20</value>
+    <value>351, 20</value>
   </data>
   <data name="checkBox_Calories_ClockHand.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
@@ -28109,7 +28112,7 @@
     <value>True</value>
   </data>
   <data name="tabPage52.Size" type="System.Drawing.Size, System.Drawing">
-    <value>374, 134</value>
+    <value>357, 134</value>
   </data>
   <data name="tabPage52.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -28139,7 +28142,7 @@
     <value>True</value>
   </data>
   <data name="tabControl9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 160</value>
+    <value>365, 160</value>
   </data>
   <data name="tabControl9.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -28163,7 +28166,7 @@
     <value>True</value>
   </data>
   <data name="tabPage59.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 159</value>
+    <value>365, 159</value>
   </data>
   <data name="tabPage59.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -28451,7 +28454,7 @@
     <value>True</value>
   </data>
   <data name="tabPage16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 159</value>
+    <value>365, 159</value>
   </data>
   <data name="tabPage16.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -29447,7 +29450,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_StProg_ClockHand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>376, 20</value>
+    <value>359, 20</value>
   </data>
   <data name="checkBox_StProg_ClockHand.TabIndex" type="System.Int32, mscorlib">
     <value>97</value>
@@ -29921,7 +29924,7 @@
     <value>True</value>
   </data>
   <data name="tabPage37.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 134</value>
+    <value>365, 134</value>
   </data>
   <data name="tabPage37.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -30089,7 +30092,7 @@
     <value>True</value>
   </data>
   <data name="tabPage41.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 134</value>
+    <value>365, 134</value>
   </data>
   <data name="tabPage41.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -31163,7 +31166,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_ADWeekDay_ClockHand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 20</value>
+    <value>365, 20</value>
   </data>
   <data name="checkBox_ADWeekDay_ClockHand.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
@@ -31190,7 +31193,7 @@
     <value>True</value>
   </data>
   <data name="tabPage39.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 116</value>
+    <value>365, 116</value>
   </data>
   <data name="tabPage39.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -31670,7 +31673,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_ADMonth_ClockHand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 20</value>
+    <value>365, 20</value>
   </data>
   <data name="checkBox_ADMonth_ClockHand.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
@@ -31697,7 +31700,7 @@
     <value>True</value>
   </data>
   <data name="tabPage40.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 116</value>
+    <value>365, 116</value>
   </data>
   <data name="tabPage40.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -34226,7 +34229,7 @@
     <value>True</value>
   </data>
   <data name="tabPage7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 170</value>
+    <value>365, 170</value>
   </data>
   <data name="tabPage7.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -34742,7 +34745,7 @@
     <value>True</value>
   </data>
   <data name="tabPage50.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 170</value>
+    <value>365, 170</value>
   </data>
   <data name="tabPage50.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -35474,7 +35477,7 @@
     <value>True</value>
   </data>
   <data name="tabPage34.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 170</value>
+    <value>365, 170</value>
   </data>
   <data name="tabPage34.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -37403,7 +37406,7 @@
     <value>True</value>
   </data>
   <data name="tabPage5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 150</value>
+    <value>365, 150</value>
   </data>
   <data name="tabPage5.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -37985,7 +37988,7 @@
     <value>True</value>
   </data>
   <data name="tabPage6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 150</value>
+    <value>365, 150</value>
   </data>
   <data name="tabPage6.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -38410,6 +38413,80 @@
   <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="comboBox_Animation_Preview_Speed.Items" xml:space="preserve">
+    <value>50</value>
+  </data>
+  <data name="comboBox_Animation_Preview_Speed.Items1" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="comboBox_Animation_Preview_Speed.Items2" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="comboBox_Animation_Preview_Speed.Items3" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="comboBox_Animation_Preview_Speed.Items4" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="comboBox_Animation_Preview_Speed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>241, 259</value>
+  </data>
+  <data name="comboBox_Animation_Preview_Speed.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="comboBox_Animation_Preview_Speed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 21</value>
+  </data>
+  <data name="comboBox_Animation_Preview_Speed.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Animation_Preview_Speed.Name" xml:space="preserve">
+    <value>comboBox_Animation_Preview_Speed</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Animation_Preview_Speed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Animation_Preview_Speed.Parent" xml:space="preserve">
+    <value>tabPage33</value>
+  </data>
+  <data name="&gt;&gt;comboBox_Animation_Preview_Speed.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label483.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label483.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label483.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 239</value>
+  </data>
+  <data name="label483.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label483.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 39</value>
+  </data>
+  <data name="label483.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="label483.Text" xml:space="preserve">
+    <value>Скорость анимации при предпросмотре анимации
+(большая скорость - плавней анимация, 
+больше нагрузка на систему)</value>
+  </data>
+  <data name="&gt;&gt;label483.Name" xml:space="preserve">
+    <value>label483</value>
+  </data>
+  <data name="&gt;&gt;label483.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label483.Parent" xml:space="preserve">
+    <value>tabPage33</value>
+  </data>
+  <data name="&gt;&gt;label483.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="checkBox_Shortcuts_Border.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -38498,7 +38575,7 @@
     <value>tabPage33</value>
   </data>
   <data name="&gt;&gt;groupBox8.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="button_Reset.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -38528,7 +38605,7 @@
     <value>tabPage33</value>
   </data>
   <data name="&gt;&gt;button_Reset.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="checkBox_JsonWarnings.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -38537,7 +38614,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBox_JsonWarnings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 236</value>
+    <value>10, 286</value>
   </data>
   <data name="checkBox_JsonWarnings.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -38561,7 +38638,7 @@
     <value>tabPage33</value>
   </data>
   <data name="&gt;&gt;checkBox_JsonWarnings.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="comboBox_Language.Items" xml:space="preserve">
     <value>Русский</value>
@@ -38591,7 +38668,7 @@
     <value>Chinese/简体中文</value>
   </data>
   <data name="comboBox_Language.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 256</value>
+    <value>48, 306</value>
   </data>
   <data name="comboBox_Language.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -38612,7 +38689,7 @@
     <value>tabPage33</value>
   </data>
   <data name="&gt;&gt;comboBox_Language.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="label356.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -38621,7 +38698,7 @@
     <value>NoControl</value>
   </data>
   <data name="label356.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 259</value>
+    <value>7, 309</value>
   </data>
   <data name="label356.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -38645,7 +38722,7 @@
     <value>tabPage33</value>
   </data>
   <data name="&gt;&gt;label356.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="numericUpDown_Gif_Speed.Location" type="System.Drawing.Point, System.Drawing">
     <value>179, 213</value>
@@ -38669,7 +38746,7 @@
     <value>tabPage33</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Gif_Speed.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="label355.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -38702,7 +38779,7 @@
     <value>tabPage33</value>
   </data>
   <data name="&gt;&gt;label355.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="radioButton_Settings_Pack_DoNotning.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -38864,7 +38941,7 @@
     <value>tabPage33</value>
   </data>
   <data name="&gt;&gt;groupBox7.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="radioButton_Settings_Open_DoNotning.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -38990,7 +39067,7 @@
     <value>tabPage33</value>
   </data>
   <data name="&gt;&gt;groupBox6.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="radioButton_Settings_AfterUnpack_DoNothing.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -39116,7 +39193,7 @@
     <value>tabPage33</value>
   </data>
   <data name="&gt;&gt;groupBox5.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="radioButton_Settings_Unpack_Replace.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -39242,7 +39319,7 @@
     <value>tabPage33</value>
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="tabPage33.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -43463,76 +43540,76 @@ bigsurf05 (French), kyle208 (Chinese/简体中文)</value>
   <data name="&gt;&gt;вставитьToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Column1.Name" xml:space="preserve">
-    <value>Column1</value>
+  <data name="&gt;&gt;AnimationColumn1.Name" xml:space="preserve">
+    <value>AnimationColumn1</value>
   </data>
-  <data name="&gt;&gt;Column1.Type" xml:space="preserve">
+  <data name="&gt;&gt;AnimationColumn1.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Column2.Name" xml:space="preserve">
-    <value>Column2</value>
+  <data name="&gt;&gt;AnimationColumn2.Name" xml:space="preserve">
+    <value>AnimationColumn2</value>
   </data>
-  <data name="&gt;&gt;Column2.Type" xml:space="preserve">
+  <data name="&gt;&gt;AnimationColumn2.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Column3.Name" xml:space="preserve">
-    <value>Column3</value>
+  <data name="&gt;&gt;AnimationColumn3.Name" xml:space="preserve">
+    <value>AnimationColumn3</value>
   </data>
-  <data name="&gt;&gt;Column3.Type" xml:space="preserve">
+  <data name="&gt;&gt;AnimationColumn3.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Column4.Name" xml:space="preserve">
-    <value>Column4</value>
+  <data name="&gt;&gt;AnimationColumn4.Name" xml:space="preserve">
+    <value>AnimationColumn4</value>
   </data>
-  <data name="&gt;&gt;Column4.Type" xml:space="preserve">
+  <data name="&gt;&gt;AnimationColumn4.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Column5.Name" xml:space="preserve">
-    <value>Column5</value>
+  <data name="&gt;&gt;AnimationColumn5.Name" xml:space="preserve">
+    <value>AnimationColumn5</value>
   </data>
-  <data name="&gt;&gt;Column5.Type" xml:space="preserve">
+  <data name="&gt;&gt;AnimationColumn5.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Column6.Name" xml:space="preserve">
-    <value>Column6</value>
+  <data name="&gt;&gt;AnimationColumn6.Name" xml:space="preserve">
+    <value>AnimationColumn6</value>
   </data>
-  <data name="&gt;&gt;Column6.Type" xml:space="preserve">
+  <data name="&gt;&gt;AnimationColumn6.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Column7.Name" xml:space="preserve">
-    <value>Column7</value>
+  <data name="&gt;&gt;AnimationColumn7.Name" xml:space="preserve">
+    <value>AnimationColumn7</value>
   </data>
-  <data name="&gt;&gt;Column7.Type" xml:space="preserve">
+  <data name="&gt;&gt;AnimationColumn7.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Column8.Name" xml:space="preserve">
-    <value>Column8</value>
+  <data name="&gt;&gt;AnimationColumn8.Name" xml:space="preserve">
+    <value>AnimationColumn8</value>
   </data>
-  <data name="&gt;&gt;Column8.Type" xml:space="preserve">
+  <data name="&gt;&gt;AnimationColumn8.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Column9.Name" xml:space="preserve">
-    <value>Column9</value>
+  <data name="&gt;&gt;AnimationColumn9.Name" xml:space="preserve">
+    <value>AnimationColumn9</value>
   </data>
-  <data name="&gt;&gt;Column9.Type" xml:space="preserve">
+  <data name="&gt;&gt;AnimationColumn9.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Column10.Name" xml:space="preserve">
-    <value>Column10</value>
+  <data name="&gt;&gt;AnimationColumn10.Name" xml:space="preserve">
+    <value>AnimationColumn10</value>
   </data>
-  <data name="&gt;&gt;Column10.Type" xml:space="preserve">
+  <data name="&gt;&gt;AnimationColumn10.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Column11.Name" xml:space="preserve">
-    <value>Column11</value>
+  <data name="&gt;&gt;AnimationColumn11.Name" xml:space="preserve">
+    <value>AnimationColumn11</value>
   </data>
-  <data name="&gt;&gt;Column11.Type" xml:space="preserve">
+  <data name="&gt;&gt;AnimationColumn11.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Column12.Name" xml:space="preserve">
-    <value>Column12</value>
+  <data name="&gt;&gt;AnimationColumn12.Name" xml:space="preserve">
+    <value>AnimationColumn12</value>
   </data>
-  <data name="&gt;&gt;Column12.Type" xml:space="preserve">
+  <data name="&gt;&gt;AnimationColumn12.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;вставитьНачальныеКоординатыToolStripMenuItem.Name" xml:space="preserve">

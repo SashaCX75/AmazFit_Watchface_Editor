@@ -227,21 +227,6 @@ namespace GTR_Watch_face
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ru");
             }
         }
-        //private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        //{
-        //    Properties.Settings.Default.pack_unpack_dir = textBox_pack_unpack_dir.Text;
-        //    if (radioButton_47.Checked)
-        //    {
-        //        Properties.Settings.Default.unpack_command = textBox_unpack_command.Text;
-        //        Properties.Settings.Default.pack_command = textBox_pack_command.Text;
-        //    }
-        //    else
-        //    {
-        //        Properties.Settings.Default.unpack_command_GTR42 = textBox_unpack_command.Text;
-        //        Properties.Settings.Default.pack_command_GTR42 = textBox_pack_command.Text;
-        //    }
-        //    Properties.Settings.Default.Save();
-        //}
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -343,6 +328,7 @@ namespace GTR_Watch_face
             radioButton_Settings_Unpack_Replace.Checked = Program_Settings.Settings_Unpack_Replace;
             radioButton_Settings_Unpack_Save.Checked = Program_Settings.Settings_Unpack_Save;
             numericUpDown_Gif_Speed.Value = (decimal)Program_Settings.Gif_Speed;
+            comboBox_Animation_Preview_Speed.SelectedIndex = Program_Settings.Animation_Preview_Speed;
 
             checkBox_Shortcuts_Area.Checked = Program_Settings.Shortcuts_Area;
             checkBox_Shortcuts_Border.Checked = Program_Settings.Shortcuts_Border;
@@ -371,6 +357,7 @@ namespace GTR_Watch_face
                 StartFileNameBin = "";
             }
             JSON_Modified = false;
+            FormText();
             //Logger.WriteLine("Загрузили файл из значения аргумента " + StartFileNameJson);
         }
 
@@ -1548,6 +1535,7 @@ namespace GTR_Watch_face
                     }
                 }
             }
+            FormText();
             PreviewView = true;
             PreviewImage();
         }
@@ -4306,6 +4294,11 @@ namespace GTR_Watch_face
                 {
                     button_PreviewBig.Enabled = true;
                 };
+
+                formPreview.KeyDown += (object senderKeyDown, KeyEventArgs eKeyDown) =>
+                {
+                    this.Form1_KeyDown(senderKeyDown, eKeyDown);
+                };
             }
 
             if (Form_Preview.Model_Wath.model_gtr47 != radioButton_47.Checked)
@@ -5310,6 +5303,7 @@ namespace GTR_Watch_face
                 FileName = Path.GetFileName(fullfilename);
                 FullFileDir = Path.GetDirectoryName(fullfilename);
                 JSON_Modified = false;
+                FormText();
                 if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
             }
         }
@@ -5690,7 +5684,7 @@ namespace GTR_Watch_face
         {
             if (radioButton_47.Checked)
             {
-                this.Text = "GTR watch face editor";
+                //this.Text = "GTR watch face editor";
                 panel_Preview.Height = 230;
                 panel_Preview.Width = 230;
                 offSet_X = 227;
@@ -5705,7 +5699,7 @@ namespace GTR_Watch_face
             }
             else if (radioButton_42.Checked)
             {
-                this.Text = "GTR watch face editor";
+                //this.Text = "GTR watch face editor";
                 panel_Preview.Height = 198;
                 panel_Preview.Width = 198;
                 offSet_X = 195;
@@ -5720,7 +5714,7 @@ namespace GTR_Watch_face
             }
             else if (radioButton_gts.Checked)
             {
-                this.Text = "GTS watch face editor";
+                //this.Text = "GTS watch face editor";
                 panel_Preview.Height = 223;
                 panel_Preview.Width = 176;
                 offSet_X = 174;
@@ -5735,7 +5729,7 @@ namespace GTR_Watch_face
             }
             else if (radioButton_TRex.Checked)
             {
-                this.Text = "T-Rex watch face editor";
+                //this.Text = "T-Rex watch face editor";
                 panel_Preview.Height = 183;
                 panel_Preview.Width = 183;
                 offSet_X = 180;
@@ -5750,7 +5744,7 @@ namespace GTR_Watch_face
             }
             else if (radioButton_Verge.Checked)
             {
-                this.Text = "Verge Lite watch face editor";
+                //this.Text = "Verge Lite watch face editor";
                 panel_Preview.Height = 183;
                 panel_Preview.Width = 183;
                 offSet_X = 180;
@@ -5763,6 +5757,7 @@ namespace GTR_Watch_face
                 button_pack.Enabled = true;
                 button_zip.Enabled = true;
             }
+            FormText();
 
             if ((formPreview != null) && (formPreview.Visible))
             {
@@ -5794,6 +5789,47 @@ namespace GTR_Watch_face
 
             JSON_write();
             PreviewImage();
+        }
+
+        private void FormText()
+        {
+            //throw new NotImplementedException(); FileName
+            string FormName = "GTR watch face editor";
+            string FormNameSufix = "";
+            if (FileName != null)
+            {
+                FormNameSufix = Path.GetFileNameWithoutExtension(FileName); 
+            }
+            if (radioButton_47.Checked)
+            {
+                FormName = "GTR watch face editor";
+            }
+            else if (radioButton_42.Checked)
+            {
+                FormName = "GTR watch face editor";
+            }
+            else if (radioButton_gts.Checked)
+            {
+                FormName = "GTS watch face editor";
+            }
+            else if (radioButton_TRex.Checked)
+            {
+                FormName = "T-Rex watch face editor";
+            }
+            else if (radioButton_Verge.Checked)
+            {
+                FormName = "Verge Lite watch face editor";
+            }
+
+            if (FormNameSufix.Length == 0)
+            {
+                this.Text = FormName;
+            }
+            else
+            {
+                if (JSON_Modified) FormNameSufix = FormNameSufix + "*";
+                this.Text = FormName + " (" + FormNameSufix + ")";
+            }
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -7014,6 +7050,7 @@ namespace GTR_Watch_face
             {
                 foreach (DataGridViewRow row in dataGridView_MotiomAnimation.Rows)
                 {
+                    if (MotiomAnimation.Count >= 4) break;
                     int StartCoordinates_X = 0;
                     int StartCoordinates_Y = 0;
                     int EndCoordinates_X = 0;
@@ -7076,7 +7113,91 @@ namespace GTR_Watch_face
                 FormAnimation.Model_Wath.model_TRex = radioButton_TRex.Checked;
             if (FormAnimation.Model_Wath.model_Verge != radioButton_Verge.Checked)
                 FormAnimation.Model_Wath.model_Verge = radioButton_Verge.Checked;
+
+            switch (comboBox_Animation_Preview_Speed.SelectedIndex)
+            {
+                case 0:
+                    f.timer1.Interval = 20;
+                    break;
+                case 1:
+                    f.timer1.Interval = 25;
+                    break;
+                case 2:
+                    f.timer1.Interval = 33;
+                    break;
+                case 3:
+                    f.timer1.Interval = 50;
+                    break;
+                case 4:
+                    f.timer1.Interval = 100;
+                    break;
+            }
             f.ShowDialog();
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.S)       // Ctrl-S Save
+            {
+                // Do what you want here
+                if (FileName != null)
+                {
+                    string fullfilename = Path.Combine(FullFileDir, FileName);
+                    if(File.Exists(fullfilename)) File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+
+                    JSON_Modified = false;
+                    FormText();
+                    if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
+                }
+                else
+                {
+                    SaveFileDialog saveFileDialog = new SaveFileDialog();
+                    saveFileDialog.InitialDirectory = FullFileDir;
+                    saveFileDialog.FileName = FileName;
+                    saveFileDialog.Filter = "Json files (*.json) | *.json";
+
+                    //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
+                    ////openFileDialog1.FilterIndex = 2;
+                    saveFileDialog.RestoreDirectory = true;
+                    saveFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        string fullfilename = saveFileDialog.FileName;
+                        File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+
+                        FileName = Path.GetFileName(fullfilename);
+                        FullFileDir = Path.GetDirectoryName(fullfilename);
+                        JSON_Modified = false;
+                        FormText();
+                        if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
+                    }
+                }
+                e.SuppressKeyPress = true;  // Stops other controls on the form receiving event.
+            }
+        }
+
+        private void comboBox_Animation_Preview_Speed_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Settings_Load) return;
+
+            Program_Settings.Animation_Preview_Speed = comboBox_Animation_Preview_Speed.SelectedIndex;
+            //string JSON_String = JObject.FromObject(Program_Settings).ToString();
+            string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+            {
+                //DefaultValueHandling = DefaultValueHandling.Ignore,
+                NullValueHandling = NullValueHandling.Ignore
+            });
+            File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
+            //File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+        }
+
+        private void dataGridView_MotiomAnimation_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            if(dataGridView_MotiomAnimation.Rows.Count > 5)
+            {
+                MessageBox.Show(Properties.FormStrings.Message_WarningAnimationCoun_Text,
+                    Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
