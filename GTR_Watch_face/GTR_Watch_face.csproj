@@ -220,6 +220,9 @@
     <EmbeddedResource Include="FormAnimation.resx">
       <DependentUpon>FormAnimation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAnimation.zh.resx">
+      <DependentUpon>FormAnimation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormFileExists.cs.resx">
       <DependentUpon>FormFileExists.cs</DependentUpon>
     </EmbeddedResource>

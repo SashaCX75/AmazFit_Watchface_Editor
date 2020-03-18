@@ -172,10 +172,10 @@
     <value>文件没有发现</value>
   </data>
   <data name="Message_error_pack_unpack_dir_Text1" xml:space="preserve">
-    <value>方式 [</value>
+    <value>路径[</value>
   </data>
   <data name="Message_error_pack_unpack_dir_Text2" xml:space="preserve">
-    <value>] 拆包/包装实用程序指示错误。</value>
+    <value>] 解包/打包程序指示错误。</value>
   </data>
   <data name="Message_error_pack_unpack_dir_Text3" xml:space="preserve">
     <value>指定解包/打包实用程序的正确路径。</value>
@@ -220,10 +220,10 @@
     <value>按升序命名PNG文件。</value>
   </data>
   <data name="Message_Restart_Caption" xml:space="preserve">
-    <value>重启</value>
+    <value>语言重启选项</value>
   </data>
   <data name="Message_Restart_Text1" xml:space="preserve">
-    <value>你必须重启程序才能应用设置。</value>
+    <value>你必须重启程序才能应用所选设置。</value>
   </data>
   <data name="Message_Restart_Text2" xml:space="preserve">
     <value>重启程序?</value>
