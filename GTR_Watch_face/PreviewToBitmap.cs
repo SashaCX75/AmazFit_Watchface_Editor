@@ -489,57 +489,6 @@ namespace GTR_Watch_face
             }
             #endregion
 
-            #region DaysProgress
-            // прогресс числа стрелкой
-            if ((checkBox_ADDay_ClockHand.Checked) && (comboBox_ADDay_ClockHand_Image.SelectedIndex >= 0))
-            {
-                int x1 = (int)numericUpDown_ADDay_ClockHand_X.Value;
-                int y1 = (int)numericUpDown_ADDay_ClockHand_Y.Value;
-                int offsetX = (int)numericUpDown_ADDay_ClockHand_Offset_X.Value;
-                int offsetY = (int)numericUpDown_ADDay_ClockHand_Offset_Y.Value;
-                int image_index = comboBox_ADDay_ClockHand_Image.SelectedIndex;
-                float startAngle = (float)(numericUpDown_ADDay_ClockHand_StartAngle.Value);
-                float endAngle = (float)(numericUpDown_ADDay_ClockHand_EndAngle.Value);
-                int Day = Watch_Face_Preview_Set.Date.Day;
-                Day--;
-                float angle = startAngle + Day * (endAngle - startAngle) / 30;
-                DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle);
-            }
-
-            // прогресс дней недели стрелкой
-            if ((checkBox_ADWeekDay_ClockHand.Checked) && (comboBox_ADWeekDay_ClockHand_Image.SelectedIndex >= 0))
-            {
-                int x1 = (int)numericUpDown_ADWeekDay_ClockHand_X.Value;
-                int y1 = (int)numericUpDown_ADWeekDay_ClockHand_Y.Value;
-                int offsetX = (int)numericUpDown_ADWeekDay_ClockHand_Offset_X.Value;
-                int offsetY = (int)numericUpDown_ADWeekDay_ClockHand_Offset_Y.Value;
-                int image_index = comboBox_ADWeekDay_ClockHand_Image.SelectedIndex;
-                float startAngle = (float)(numericUpDown_ADWeekDay_ClockHand_StartAngle.Value);
-                float endAngle = (float)(numericUpDown_ADWeekDay_ClockHand_EndAngle.Value);
-                int WeekDay = Watch_Face_Preview_Set.Date.WeekDay;
-                WeekDay--;
-                if (WeekDay < 0) WeekDay = 6;
-                float angle = startAngle + WeekDay * (endAngle - startAngle) / 6;
-                DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle);
-            }
-
-            // прогресс месяца стрелкой
-            if ((checkBox_ADMonth_ClockHand.Checked) && (comboBox_ADMonth_ClockHand_Image.SelectedIndex >= 0))
-            {
-                int x1 = (int)numericUpDown_ADMonth_ClockHand_X.Value;
-                int y1 = (int)numericUpDown_ADMonth_ClockHand_Y.Value;
-                int offsetX = (int)numericUpDown_ADMonth_ClockHand_Offset_X.Value;
-                int offsetY = (int)numericUpDown_ADMonth_ClockHand_Offset_Y.Value;
-                int image_index = comboBox_ADMonth_ClockHand_Image.SelectedIndex;
-                float startAngle = (float)(numericUpDown_ADMonth_ClockHand_StartAngle.Value);
-                float endAngle = (float)(numericUpDown_ADMonth_ClockHand_EndAngle.Value);
-                int Month = Watch_Face_Preview_Set.Date.Month;
-                Month--;
-                float angle = startAngle + Month * (endAngle - startAngle) / 11;
-                DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle);
-            }
-            #endregion
-
             #region Status
             if (checkBox_Bluetooth.Checked)
             {
@@ -1575,6 +1524,57 @@ namespace GTR_Watch_face
                         }
                     }
                 }
+            }
+            #endregion
+
+            #region DaysProgress
+            // прогресс числа стрелкой
+            if ((checkBox_ADDay_ClockHand.Checked) && (comboBox_ADDay_ClockHand_Image.SelectedIndex >= 0))
+            {
+                int x1 = (int)numericUpDown_ADDay_ClockHand_X.Value;
+                int y1 = (int)numericUpDown_ADDay_ClockHand_Y.Value;
+                int offsetX = (int)numericUpDown_ADDay_ClockHand_Offset_X.Value;
+                int offsetY = (int)numericUpDown_ADDay_ClockHand_Offset_Y.Value;
+                int image_index = comboBox_ADDay_ClockHand_Image.SelectedIndex;
+                float startAngle = (float)(numericUpDown_ADDay_ClockHand_StartAngle.Value);
+                float endAngle = (float)(numericUpDown_ADDay_ClockHand_EndAngle.Value);
+                int Day = Watch_Face_Preview_Set.Date.Day;
+                Day--;
+                float angle = startAngle + Day * (endAngle - startAngle) / 30;
+                DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle);
+            }
+
+            // прогресс дней недели стрелкой
+            if ((checkBox_ADWeekDay_ClockHand.Checked) && (comboBox_ADWeekDay_ClockHand_Image.SelectedIndex >= 0))
+            {
+                int x1 = (int)numericUpDown_ADWeekDay_ClockHand_X.Value;
+                int y1 = (int)numericUpDown_ADWeekDay_ClockHand_Y.Value;
+                int offsetX = (int)numericUpDown_ADWeekDay_ClockHand_Offset_X.Value;
+                int offsetY = (int)numericUpDown_ADWeekDay_ClockHand_Offset_Y.Value;
+                int image_index = comboBox_ADWeekDay_ClockHand_Image.SelectedIndex;
+                float startAngle = (float)(numericUpDown_ADWeekDay_ClockHand_StartAngle.Value);
+                float endAngle = (float)(numericUpDown_ADWeekDay_ClockHand_EndAngle.Value);
+                int WeekDay = Watch_Face_Preview_Set.Date.WeekDay;
+                WeekDay--;
+                if (WeekDay < 0) WeekDay = 6;
+                float angle = startAngle + WeekDay * (endAngle - startAngle) / 6;
+                DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle);
+            }
+
+            // прогресс месяца стрелкой
+            if ((checkBox_ADMonth_ClockHand.Checked) && (comboBox_ADMonth_ClockHand_Image.SelectedIndex >= 0))
+            {
+                int x1 = (int)numericUpDown_ADMonth_ClockHand_X.Value;
+                int y1 = (int)numericUpDown_ADMonth_ClockHand_Y.Value;
+                int offsetX = (int)numericUpDown_ADMonth_ClockHand_Offset_X.Value;
+                int offsetY = (int)numericUpDown_ADMonth_ClockHand_Offset_Y.Value;
+                int image_index = comboBox_ADMonth_ClockHand_Image.SelectedIndex;
+                float startAngle = (float)(numericUpDown_ADMonth_ClockHand_StartAngle.Value);
+                float endAngle = (float)(numericUpDown_ADMonth_ClockHand_EndAngle.Value);
+                int Month = Watch_Face_Preview_Set.Date.Month;
+                Month--;
+                float angle = startAngle + Month * (endAngle - startAngle) / 11;
+                DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle);
             }
             #endregion
 
