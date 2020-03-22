@@ -903,9 +903,15 @@ namespace GTR_Watch_face
                     {
                         this.BringToFront();
                         double fileSize = (GetFileSizeMB(new FileInfo(newFullName)));
-                        if (fileSize > 1.95) MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1 + Environment.NewLine + Environment.NewLine +
+                        if ((fileSize > 1.5) && (!radioButton_47.Checked))
+                        {
+                            MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_gts + Environment.NewLine + Environment.NewLine +
                             Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else if (fileSize > 1.95) MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1 + Environment.NewLine + Environment.NewLine +
+                        Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         //if (radioButton_Settings_Pack_Dialog.Checked)
                         if (Program_Settings.Settings_Pack_Dialog)
@@ -5310,6 +5316,7 @@ namespace GTR_Watch_face
 
         private void jsonWarnings(String fullfilename)
         {
+            // 3 стрелки для аналоговых часов
             if (Watch_Face.AnalogDialFace != null)
             {
                 int i = 0;
@@ -5320,6 +5327,7 @@ namespace GTR_Watch_face
                     Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
+            // разные значения для десятков и единиц
             if (Watch_Face.Time != null)
             {
                 bool err = false;
@@ -5339,6 +5347,7 @@ namespace GTR_Watch_face
                     Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
+            // минуты без часоа
             if (Watch_Face.Time != null)
             {
                 if ((Watch_Face.Time.Minutes != null) && (Watch_Face.Time.Hours == null))
@@ -5353,6 +5362,7 @@ namespace GTR_Watch_face
                 }
             }
 
+            // надпись км для дистанции
             if ((Watch_Face.Activity != null) && (Watch_Face.Activity.Distance != null))
             {
                 if(Watch_Face.Activity.Distance.SuffixImageIndex==null)
@@ -5360,6 +5370,7 @@ namespace GTR_Watch_face
                     Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
+            // индикатор и сегменты для батареи
             if (Watch_Face.Battery != null)
             {
                 if ((Watch_Face.Battery.Unknown4 != null) && (Watch_Face.Battery.Icons != null))
@@ -5369,6 +5380,17 @@ namespace GTR_Watch_face
                 }
             }
 
+            // индикатор и сегменты для батареи
+            if (Watch_Face.StepsProgress != null)
+            {
+                if ((Watch_Face.StepsProgress.ClockHand != null) && (Watch_Face.StepsProgress.Sliced != null))
+                {
+                    MessageBox.Show(Properties.FormStrings.Message_WarningBatterySegment_Text,
+                    Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
+            // текущая температура и температура день/ночь
             if (Watch_Face.Weather != null && Watch_Face.Weather.Temperature != null)
             {
                 if ((Watch_Face.Weather.Temperature.Current != null) && (Watch_Face.Weather.Temperature.Today == null))
@@ -6393,7 +6415,14 @@ namespace GTR_Watch_face
                 Regex my_reg = new Regex(@"[^-\d]");
                 string oldValue = dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
                 string newValue = my_reg.Replace(oldValue, "");
-                dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = newValue;
+                int v = 0;
+                Int32.TryParse(newValue, out v);
+                if (e.ColumnIndex == 6)
+                {
+                    if (v < 100) v = 100;
+                }
+                dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = v;
+                //dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = newValue;
                 if (newValue.Length == 0) dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = null;
             }
 
@@ -7060,17 +7089,16 @@ namespace GTR_Watch_face
                     int TimeAnimation = 0;
                     bool Bounce_b = false;
                     if (row.Cells[1].Value != null && row.Cells[2].Value != null && row.Cells[3].Value != null &&
-                        row.Cells[4].Value != null && row.Cells[5].Value != null && row.Cells[6].Value != null &&
-                        row.Cells[7].Value != null)
+                        row.Cells[4].Value != null && row.Cells[5].Value != null && row.Cells[6].Value != null)
                     {
                         if (Int32.TryParse(row.Cells[1].Value.ToString(), out StartCoordinates_X) &&
                             Int32.TryParse(row.Cells[2].Value.ToString(), out StartCoordinates_Y) &&
                             Int32.TryParse(row.Cells[3].Value.ToString(), out EndCoordinates_X) &&
                             Int32.TryParse(row.Cells[4].Value.ToString(), out EndCoordinates_Y) &&
                             Int32.TryParse(row.Cells[5].Value.ToString(), out ImageIndex) &&
-                            Int32.TryParse(row.Cells[6].Value.ToString(), out SpeedAnimation) &&
-                            Int32.TryParse(row.Cells[7].Value.ToString(), out TimeAnimation))
+                            Int32.TryParse(row.Cells[6].Value.ToString(), out SpeedAnimation))
                         {
+                            if (row.Cells[7].Value != null) Int32.TryParse(row.Cells[7].Value.ToString(), out TimeAnimation);
                             if (row.Cells[11].Value != null) Boolean.TryParse(row.Cells[11].Value.ToString(), out Bounce_b);
 
                             ClassMotiomAnimation motiomAnimation = new ClassMotiomAnimation(new Bitmap(ListImagesFullName[ImageIndex]), 

@@ -271,7 +271,7 @@
     <value>Текущий проект еще не сохранен. Вы хотите сохранить его?</value>
   </data>
   <data name="Message_WarningBatterySegment_Text" xml:space="preserve">
-    <value>Отображение заряда в виде стрелочного индикатора не работает совместно с отображением заряда сегментами.</value>
+    <value>Не рекомендуется отображение в виде стрелочного индикатора совместно с отображением сегментами для одного элемента.</value>
   </data>
   <data name="Message_WarningSpaceInName_Text" xml:space="preserve">
     <value>Имя файла и путь к нему не должны содержать пробелов.</value>

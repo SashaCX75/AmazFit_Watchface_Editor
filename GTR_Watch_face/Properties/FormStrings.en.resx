@@ -264,4 +264,16 @@
   <data name="Message_Save_new_JSON" xml:space="preserve">
     <value>The current project has not yet been saved. Do you want to save it?</value>
   </data>
+  <data name="Message_WarningAnimationCoun_Text" xml:space="preserve">
+    <value>The number of elements for animation cannot be more than 4.</value>
+  </data>
+  <data name="Message_WarningBatterySegment_Text" xml:space="preserve">
+    <value>It is not recommended to use segments and a indicator at the same time for the same type of values. This may cause glitches !</value>
+  </data>
+  <data name="Message_WarningSpaceInName_Text" xml:space="preserve">
+    <value>File name and path cannot contain spaces!</value>
+  </data>
+  <data name="Message_WarningTemperature_Text" xml:space="preserve">
+    <value>The current temperature display may not work without displaying the day and night temperatures.</value>
+  </data>
 </root>
