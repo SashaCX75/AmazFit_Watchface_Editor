@@ -891,6 +891,13 @@ namespace GTR_Watch_face
                 }
                 else checkBox_DND.Checked = false;
             }
+            else
+            {
+                checkBox_Bluetooth.Checked = false;
+                checkBox_Alarm.Checked = false;
+                checkBox_Lock.Checked = false;
+                checkBox_DND.Checked = false;
+            }
             #endregion
 
             #region Battery
@@ -1300,7 +1307,9 @@ namespace GTR_Watch_face
                 if (Watch_Face.Unknown11.Unknown11_2 != null && Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1 != null)
                 {
                     checkBox_StaticAnimation.Checked = true;
-                    numericUpDown_StaticAnimation_SpeedAnimation.Value = Watch_Face.Unknown11.Unknown11_2.Unknown11d2p2;
+                    int v = (int)Watch_Face.Unknown11.Unknown11_2.Unknown11d2p2;
+                    if (v < 100) v = 100;
+                    numericUpDown_StaticAnimation_SpeedAnimation.Value = v;
                     numericUpDown_StaticAnimation_TimeAnimation.Value = Watch_Face.Unknown11.Unknown11_2.Unknown11d2p4;
                     numericUpDown_StaticAnimation_Pause.Value = Watch_Face.Unknown11.Unknown11_2.Unknown11d2p5;
 
@@ -1333,6 +1342,8 @@ namespace GTR_Watch_face
                             int Unknown7 = (int)MotiomAnimation.Unknown11d1p9;
                             bool Bounce = false;
                             if (MotiomAnimation.Unknown11d1p10 == 1) Bounce = true;
+
+                            if (SpeedAnimation < 10) SpeedAnimation = 10;
 
                             //var RowNew = new DataGridViewRow();
                             dataGridView_MotiomAnimation.Rows.Add(Unknown1, StartCoordinates_X, StartCoordinates_Y,
