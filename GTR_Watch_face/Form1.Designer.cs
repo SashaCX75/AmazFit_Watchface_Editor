@@ -701,6 +701,8 @@
             this.label206 = new System.Windows.Forms.Label();
             this.checkBox_Battery_Scale = new System.Windows.Forms.CheckBox();
             this.tabPage35 = new System.Windows.Forms.TabPage();
+            this.numericUpDown_Battery_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Battery_ClockHand_X = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_Battery_ClockHand_EndAngle = new System.Windows.Forms.NumericUpDown();
             this.label374 = new System.Windows.Forms.Label();
             this.numericUpDown_Battery_ClockHand_StartAngle = new System.Windows.Forms.NumericUpDown();
@@ -711,9 +713,7 @@
             this.label369 = new System.Windows.Forms.Label();
             this.comboBox_Battery_ClockHand_Image = new System.Windows.Forms.ComboBox();
             this.label370 = new System.Windows.Forms.Label();
-            this.numericUpDown_Battery_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
             this.label371 = new System.Windows.Forms.Label();
-            this.numericUpDown_Battery_ClockHand_X = new System.Windows.Forms.NumericUpDown();
             this.label372 = new System.Windows.Forms.Label();
             this.checkBox_Battery_ClockHand = new System.Windows.Forms.CheckBox();
             this.tabPage42 = new System.Windows.Forms.TabPage();
@@ -870,13 +870,13 @@
             this.label419 = new System.Windows.Forms.Label();
             this.label420 = new System.Windows.Forms.Label();
             this.tabPage51 = new System.Windows.Forms.TabPage();
+            this.numericUpDown_Pulse_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Pulse_ClockHand_X = new System.Windows.Forms.NumericUpDown();
             this.comboBox_Pulse_ClockHand_Image = new System.Windows.Forms.ComboBox();
             this.numericUpDown_Pulse_ClockHand_EndAngle = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_Pulse_ClockHand_Offset_Y = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Pulse_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_Pulse_ClockHand_StartAngle = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_Pulse_ClockHand_Offset_X = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Pulse_ClockHand_X = new System.Windows.Forms.NumericUpDown();
             this.checkBox_Pulse_ClockHand = new System.Windows.Forms.CheckBox();
             this.label466 = new System.Windows.Forms.Label();
             this.label472 = new System.Windows.Forms.Label();
@@ -941,13 +941,13 @@
             this.label114 = new System.Windows.Forms.Label();
             this.label115 = new System.Windows.Forms.Label();
             this.tabPage52 = new System.Windows.Forms.TabPage();
-            this.comboBox_Calories_ClockHand_Image = new System.Windows.Forms.ComboBox();
             this.numericUpDown_Calories_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Calories_ClockHand_X = new System.Windows.Forms.NumericUpDown();
+            this.comboBox_Calories_ClockHand_Image = new System.Windows.Forms.ComboBox();
             this.numericUpDown_Calories_ClockHand_Offset_Y = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_Calories_ClockHand_EndAngle = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_Calories_ClockHand_StartAngle = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_Calories_ClockHand_Offset_X = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_Calories_ClockHand_X = new System.Windows.Forms.NumericUpDown();
             this.checkBox_Calories_ClockHand = new System.Windows.Forms.CheckBox();
             this.label458 = new System.Windows.Forms.Label();
             this.label465 = new System.Windows.Forms.Label();
@@ -996,6 +996,8 @@
             this.numericUpDown_StepsProgress_Width = new System.Windows.Forms.NumericUpDown();
             this.label108 = new System.Windows.Forms.Label();
             this.tabPage37 = new System.Windows.Forms.TabPage();
+            this.numericUpDown_StProg_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_StProg_ClockHand_X = new System.Windows.Forms.NumericUpDown();
             this.checkBox_StProg_ClockHand = new System.Windows.Forms.CheckBox();
             this.numericUpDown_StProg_ClockHand_EndAngle = new System.Windows.Forms.NumericUpDown();
             this.label375 = new System.Windows.Forms.Label();
@@ -1007,9 +1009,7 @@
             this.label378 = new System.Windows.Forms.Label();
             this.comboBox_StProg_ClockHand_Image = new System.Windows.Forms.ComboBox();
             this.label379 = new System.Windows.Forms.Label();
-            this.numericUpDown_StProg_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
             this.label380 = new System.Windows.Forms.Label();
-            this.numericUpDown_StProg_ClockHand_X = new System.Windows.Forms.NumericUpDown();
             this.label381 = new System.Windows.Forms.Label();
             this.tabPage41 = new System.Windows.Forms.TabPage();
             this.checkBox_SPSliced = new System.Windows.Forms.CheckBox();
@@ -1022,6 +1022,8 @@
             this.panel_AnalogDate = new System.Windows.Forms.Panel();
             this.tabControl7 = new System.Windows.Forms.TabControl();
             this.tabPage38 = new System.Windows.Forms.TabPage();
+            this.numericUpDown_ADDay_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_ADDay_ClockHand_X = new System.Windows.Forms.NumericUpDown();
             this.checkBox_ADDay_ClockHand = new System.Windows.Forms.CheckBox();
             this.numericUpDown_ADDay_ClockHand_EndAngle = new System.Windows.Forms.NumericUpDown();
             this.label396 = new System.Windows.Forms.Label();
@@ -1033,11 +1035,11 @@
             this.label399 = new System.Windows.Forms.Label();
             this.comboBox_ADDay_ClockHand_Image = new System.Windows.Forms.ComboBox();
             this.label400 = new System.Windows.Forms.Label();
-            this.numericUpDown_ADDay_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
             this.label401 = new System.Windows.Forms.Label();
-            this.numericUpDown_ADDay_ClockHand_X = new System.Windows.Forms.NumericUpDown();
             this.label402 = new System.Windows.Forms.Label();
             this.tabPage39 = new System.Windows.Forms.TabPage();
+            this.numericUpDown_ADWeekDay_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_ADWeekDay_ClockHand_X = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_ADWeekDay_ClockHand_EndAngle = new System.Windows.Forms.NumericUpDown();
             this.label389 = new System.Windows.Forms.Label();
             this.numericUpDown_ADWeekDay_ClockHand_StartAngle = new System.Windows.Forms.NumericUpDown();
@@ -1048,12 +1050,12 @@
             this.label392 = new System.Windows.Forms.Label();
             this.comboBox_ADWeekDay_ClockHand_Image = new System.Windows.Forms.ComboBox();
             this.label393 = new System.Windows.Forms.Label();
-            this.numericUpDown_ADWeekDay_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
             this.label394 = new System.Windows.Forms.Label();
-            this.numericUpDown_ADWeekDay_ClockHand_X = new System.Windows.Forms.NumericUpDown();
             this.label395 = new System.Windows.Forms.Label();
             this.checkBox_ADWeekDay_ClockHand = new System.Windows.Forms.CheckBox();
             this.tabPage40 = new System.Windows.Forms.TabPage();
+            this.numericUpDown_ADMonth_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_ADMonth_ClockHand_X = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_ADMonth_ClockHand_EndAngle = new System.Windows.Forms.NumericUpDown();
             this.label382 = new System.Windows.Forms.Label();
             this.numericUpDown_ADMonth_ClockHand_StartAngle = new System.Windows.Forms.NumericUpDown();
@@ -1064,9 +1066,7 @@
             this.label385 = new System.Windows.Forms.Label();
             this.comboBox_ADMonth_ClockHand_Image = new System.Windows.Forms.ComboBox();
             this.label386 = new System.Windows.Forms.Label();
-            this.numericUpDown_ADMonth_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
             this.label387 = new System.Windows.Forms.Label();
-            this.numericUpDown_ADMonth_ClockHand_X = new System.Windows.Forms.NumericUpDown();
             this.label388 = new System.Windows.Forms.Label();
             this.checkBox_ADMonth_ClockHand = new System.Windows.Forms.CheckBox();
             this.button_AnalogDate = new System.Windows.Forms.Button();
@@ -1581,12 +1581,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_Scale_Center_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_Scale_Center_X)).BeginInit();
             this.tabPage35.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_EndAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_StartAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_Offset_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_Offset_X)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_Y)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_X)).BeginInit();
             this.tabPage42.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Battery_IconSet)).BeginInit();
             this.contextMenuStrip_XY_InTable.SuspendLayout();
@@ -1640,12 +1640,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_ImageY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_ImageX)).BeginInit();
             this.tabPage51.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_EndAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_Offset_Y)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_StartAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_Offset_X)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_X)).BeginInit();
             this.tabPage45.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ActivityPuls_IconSet)).BeginInit();
             this.tabPage59.SuspendLayout();
@@ -1669,11 +1669,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_ImageX)).BeginInit();
             this.tabPage52.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_Offset_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_EndAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_StartAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_Offset_X)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_X)).BeginInit();
             this.tabPage16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStar_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStar_X)).BeginInit();
@@ -1690,37 +1690,37 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_StartAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_Width)).BeginInit();
             this.tabPage37.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_EndAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_StartAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_Offset_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_Offset_X)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_Y)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_X)).BeginInit();
             this.tabPage41.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SPSliced)).BeginInit();
             this.panel_AnalogDate.SuspendLayout();
             this.tabControl7.SuspendLayout();
             this.tabPage38.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_EndAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_StartAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_Offset_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_Offset_X)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_Y)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_X)).BeginInit();
             this.tabPage39.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_EndAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_StartAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_Offset_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_Offset_X)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_Y)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_X)).BeginInit();
             this.tabPage40.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_EndAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_StartAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_Offset_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_Offset_X)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_Y)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_X)).BeginInit();
             this.panel_Date.SuspendLayout();
             this.tabControl_Date.SuspendLayout();
             this.tabPage8.SuspendLayout();
@@ -5450,6 +5450,11 @@
             0,
             0,
             0});
+            this.numericUpDown_StaticAnimation_SpeedAnimation.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.numericUpDown_StaticAnimation_SpeedAnimation.Name = "numericUpDown_StaticAnimation_SpeedAnimation";
             this.helpProvider1.SetShowHelp(this.numericUpDown_StaticAnimation_SpeedAnimation, ((bool)(resources.GetObject("numericUpDown_StaticAnimation_SpeedAnimation.ShowHelp"))));
             this.numericUpDown_StaticAnimation_SpeedAnimation.Value = new decimal(new int[] {
@@ -9173,6 +9178,8 @@
             // tabPage35
             // 
             this.tabPage35.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage35.Controls.Add(this.numericUpDown_Battery_ClockHand_Y);
+            this.tabPage35.Controls.Add(this.numericUpDown_Battery_ClockHand_X);
             this.tabPage35.Controls.Add(this.numericUpDown_Battery_ClockHand_EndAngle);
             this.tabPage35.Controls.Add(this.label374);
             this.tabPage35.Controls.Add(this.numericUpDown_Battery_ClockHand_StartAngle);
@@ -9183,14 +9190,46 @@
             this.tabPage35.Controls.Add(this.label369);
             this.tabPage35.Controls.Add(this.comboBox_Battery_ClockHand_Image);
             this.tabPage35.Controls.Add(this.label370);
-            this.tabPage35.Controls.Add(this.numericUpDown_Battery_ClockHand_Y);
             this.tabPage35.Controls.Add(this.label371);
-            this.tabPage35.Controls.Add(this.numericUpDown_Battery_ClockHand_X);
             this.tabPage35.Controls.Add(this.label372);
             this.tabPage35.Controls.Add(this.checkBox_Battery_ClockHand);
             resources.ApplyResources(this.tabPage35, "tabPage35");
             this.tabPage35.Name = "tabPage35";
             this.helpProvider1.SetShowHelp(this.tabPage35, ((bool)(resources.GetObject("tabPage35.ShowHelp"))));
+            // 
+            // numericUpDown_Battery_ClockHand_Y
+            // 
+            resources.ApplyResources(this.numericUpDown_Battery_ClockHand_Y, "numericUpDown_Battery_ClockHand_Y");
+            this.numericUpDown_Battery_ClockHand_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Battery_ClockHand_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Battery_ClockHand_Y.Name = "numericUpDown_Battery_ClockHand_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_Battery_ClockHand_Y.ShowHelp"))));
+            this.numericUpDown_Battery_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // numericUpDown_Battery_ClockHand_X
+            // 
+            resources.ApplyResources(this.numericUpDown_Battery_ClockHand_X, "numericUpDown_Battery_ClockHand_X");
+            this.numericUpDown_Battery_ClockHand_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Battery_ClockHand_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Battery_ClockHand_X.Name = "numericUpDown_Battery_ClockHand_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_Battery_ClockHand_X.ShowHelp"))));
+            this.numericUpDown_Battery_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // numericUpDown_Battery_ClockHand_EndAngle
             // 
@@ -9316,45 +9355,11 @@
             this.label370.Name = "label370";
             this.helpProvider1.SetShowHelp(this.label370, ((bool)(resources.GetObject("label370.ShowHelp"))));
             // 
-            // numericUpDown_Battery_ClockHand_Y
-            // 
-            resources.ApplyResources(this.numericUpDown_Battery_ClockHand_Y, "numericUpDown_Battery_ClockHand_Y");
-            this.numericUpDown_Battery_ClockHand_Y.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Battery_ClockHand_Y.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Battery_ClockHand_Y.Name = "numericUpDown_Battery_ClockHand_Y";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_Battery_ClockHand_Y.ShowHelp"))));
-            this.numericUpDown_Battery_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
             // label371
             // 
             resources.ApplyResources(this.label371, "label371");
             this.label371.Name = "label371";
             this.helpProvider1.SetShowHelp(this.label371, ((bool)(resources.GetObject("label371.ShowHelp"))));
-            // 
-            // numericUpDown_Battery_ClockHand_X
-            // 
-            resources.ApplyResources(this.numericUpDown_Battery_ClockHand_X, "numericUpDown_Battery_ClockHand_X");
-            this.numericUpDown_Battery_ClockHand_X.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Battery_ClockHand_X.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Battery_ClockHand_X.Name = "numericUpDown_Battery_ClockHand_X";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_Battery_ClockHand_X.ShowHelp"))));
-            this.numericUpDown_Battery_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // label372
             // 
@@ -11077,13 +11082,13 @@
             // tabPage51
             // 
             this.tabPage51.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage51.Controls.Add(this.numericUpDown_Pulse_ClockHand_Y);
+            this.tabPage51.Controls.Add(this.numericUpDown_Pulse_ClockHand_X);
             this.tabPage51.Controls.Add(this.comboBox_Pulse_ClockHand_Image);
             this.tabPage51.Controls.Add(this.numericUpDown_Pulse_ClockHand_EndAngle);
             this.tabPage51.Controls.Add(this.numericUpDown_Pulse_ClockHand_Offset_Y);
-            this.tabPage51.Controls.Add(this.numericUpDown_Pulse_ClockHand_Y);
             this.tabPage51.Controls.Add(this.numericUpDown_Pulse_ClockHand_StartAngle);
             this.tabPage51.Controls.Add(this.numericUpDown_Pulse_ClockHand_Offset_X);
-            this.tabPage51.Controls.Add(this.numericUpDown_Pulse_ClockHand_X);
             this.tabPage51.Controls.Add(this.checkBox_Pulse_ClockHand);
             this.tabPage51.Controls.Add(this.label466);
             this.tabPage51.Controls.Add(this.label472);
@@ -11095,6 +11100,40 @@
             resources.ApplyResources(this.tabPage51, "tabPage51");
             this.tabPage51.Name = "tabPage51";
             this.helpProvider1.SetShowHelp(this.tabPage51, ((bool)(resources.GetObject("tabPage51.ShowHelp"))));
+            // 
+            // numericUpDown_Pulse_ClockHand_Y
+            // 
+            resources.ApplyResources(this.numericUpDown_Pulse_ClockHand_Y, "numericUpDown_Pulse_ClockHand_Y");
+            this.numericUpDown_Pulse_ClockHand_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Pulse_ClockHand_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Pulse_ClockHand_Y.Name = "numericUpDown_Pulse_ClockHand_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Pulse_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_Pulse_ClockHand_Y.ShowHelp"))));
+            this.numericUpDown_Pulse_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // numericUpDown_Pulse_ClockHand_X
+            // 
+            resources.ApplyResources(this.numericUpDown_Pulse_ClockHand_X, "numericUpDown_Pulse_ClockHand_X");
+            this.numericUpDown_Pulse_ClockHand_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Pulse_ClockHand_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Pulse_ClockHand_X.Name = "numericUpDown_Pulse_ClockHand_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Pulse_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_Pulse_ClockHand_X.ShowHelp"))));
+            this.numericUpDown_Pulse_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // comboBox_Pulse_ClockHand_Image
             // 
@@ -11150,23 +11189,6 @@
             this.numericUpDown_Pulse_ClockHand_Offset_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             this.numericUpDown_Pulse_ClockHand_Offset_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_OffSetY_MouseDoubleClick);
             // 
-            // numericUpDown_Pulse_ClockHand_Y
-            // 
-            resources.ApplyResources(this.numericUpDown_Pulse_ClockHand_Y, "numericUpDown_Pulse_ClockHand_Y");
-            this.numericUpDown_Pulse_ClockHand_Y.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Pulse_ClockHand_Y.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Pulse_ClockHand_Y.Name = "numericUpDown_Pulse_ClockHand_Y";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_Pulse_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_Pulse_ClockHand_Y.ShowHelp"))));
-            this.numericUpDown_Pulse_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
             // numericUpDown_Pulse_ClockHand_StartAngle
             // 
             resources.ApplyResources(this.numericUpDown_Pulse_ClockHand_StartAngle, "numericUpDown_Pulse_ClockHand_StartAngle");
@@ -11206,23 +11228,6 @@
             this.helpProvider1.SetShowHelp(this.numericUpDown_Pulse_ClockHand_Offset_X, ((bool)(resources.GetObject("numericUpDown_Pulse_ClockHand_Offset_X.ShowHelp"))));
             this.numericUpDown_Pulse_ClockHand_Offset_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             this.numericUpDown_Pulse_ClockHand_Offset_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_OffSetX_MouseDoubleClick);
-            // 
-            // numericUpDown_Pulse_ClockHand_X
-            // 
-            resources.ApplyResources(this.numericUpDown_Pulse_ClockHand_X, "numericUpDown_Pulse_ClockHand_X");
-            this.numericUpDown_Pulse_ClockHand_X.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Pulse_ClockHand_X.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Pulse_ClockHand_X.Name = "numericUpDown_Pulse_ClockHand_X";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_Pulse_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_Pulse_ClockHand_X.ShowHelp"))));
-            this.numericUpDown_Pulse_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // checkBox_Pulse_ClockHand
             // 
@@ -11911,13 +11916,13 @@
             // tabPage52
             // 
             this.tabPage52.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage52.Controls.Add(this.comboBox_Calories_ClockHand_Image);
             this.tabPage52.Controls.Add(this.numericUpDown_Calories_ClockHand_Y);
+            this.tabPage52.Controls.Add(this.numericUpDown_Calories_ClockHand_X);
+            this.tabPage52.Controls.Add(this.comboBox_Calories_ClockHand_Image);
             this.tabPage52.Controls.Add(this.numericUpDown_Calories_ClockHand_Offset_Y);
             this.tabPage52.Controls.Add(this.numericUpDown_Calories_ClockHand_EndAngle);
             this.tabPage52.Controls.Add(this.numericUpDown_Calories_ClockHand_StartAngle);
             this.tabPage52.Controls.Add(this.numericUpDown_Calories_ClockHand_Offset_X);
-            this.tabPage52.Controls.Add(this.numericUpDown_Calories_ClockHand_X);
             this.tabPage52.Controls.Add(this.checkBox_Calories_ClockHand);
             this.tabPage52.Controls.Add(this.label458);
             this.tabPage52.Controls.Add(this.label465);
@@ -11929,20 +11934,6 @@
             resources.ApplyResources(this.tabPage52, "tabPage52");
             this.tabPage52.Name = "tabPage52";
             this.helpProvider1.SetShowHelp(this.tabPage52, ((bool)(resources.GetObject("tabPage52.ShowHelp"))));
-            // 
-            // comboBox_Calories_ClockHand_Image
-            // 
-            this.comboBox_Calories_ClockHand_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Calories_ClockHand_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Calories_ClockHand_Image, "comboBox_Calories_ClockHand_Image");
-            this.comboBox_Calories_ClockHand_Image.FormattingEnabled = true;
-            this.comboBox_Calories_ClockHand_Image.Name = "comboBox_Calories_ClockHand_Image";
-            this.helpProvider1.SetShowHelp(this.comboBox_Calories_ClockHand_Image, ((bool)(resources.GetObject("comboBox_Calories_ClockHand_Image.ShowHelp"))));
-            this.comboBox_Calories_ClockHand_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Calories_ClockHand_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Calories_ClockHand_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Calories_ClockHand_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Calories_ClockHand_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // numericUpDown_Calories_ClockHand_Y
             // 
@@ -11960,6 +11951,37 @@
             this.numericUpDown_Calories_ClockHand_Y.Name = "numericUpDown_Calories_ClockHand_Y";
             this.helpProvider1.SetShowHelp(this.numericUpDown_Calories_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_Calories_ClockHand_Y.ShowHelp"))));
             this.numericUpDown_Calories_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // numericUpDown_Calories_ClockHand_X
+            // 
+            resources.ApplyResources(this.numericUpDown_Calories_ClockHand_X, "numericUpDown_Calories_ClockHand_X");
+            this.numericUpDown_Calories_ClockHand_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Calories_ClockHand_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Calories_ClockHand_X.Name = "numericUpDown_Calories_ClockHand_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Calories_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_Calories_ClockHand_X.ShowHelp"))));
+            this.numericUpDown_Calories_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // comboBox_Calories_ClockHand_Image
+            // 
+            this.comboBox_Calories_ClockHand_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Calories_ClockHand_Image.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Calories_ClockHand_Image, "comboBox_Calories_ClockHand_Image");
+            this.comboBox_Calories_ClockHand_Image.FormattingEnabled = true;
+            this.comboBox_Calories_ClockHand_Image.Name = "comboBox_Calories_ClockHand_Image";
+            this.helpProvider1.SetShowHelp(this.comboBox_Calories_ClockHand_Image, ((bool)(resources.GetObject("comboBox_Calories_ClockHand_Image.ShowHelp"))));
+            this.comboBox_Calories_ClockHand_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Calories_ClockHand_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Calories_ClockHand_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Calories_ClockHand_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Calories_ClockHand_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // numericUpDown_Calories_ClockHand_Offset_Y
             // 
@@ -12040,23 +12062,6 @@
             this.helpProvider1.SetShowHelp(this.numericUpDown_Calories_ClockHand_Offset_X, ((bool)(resources.GetObject("numericUpDown_Calories_ClockHand_Offset_X.ShowHelp"))));
             this.numericUpDown_Calories_ClockHand_Offset_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             this.numericUpDown_Calories_ClockHand_Offset_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_OffSetX_MouseDoubleClick);
-            // 
-            // numericUpDown_Calories_ClockHand_X
-            // 
-            resources.ApplyResources(this.numericUpDown_Calories_ClockHand_X, "numericUpDown_Calories_ClockHand_X");
-            this.numericUpDown_Calories_ClockHand_X.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Calories_ClockHand_X.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Calories_ClockHand_X.Name = "numericUpDown_Calories_ClockHand_X";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_Calories_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_Calories_ClockHand_X.ShowHelp"))));
-            this.numericUpDown_Calories_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // checkBox_Calories_ClockHand
             // 
@@ -12541,6 +12546,8 @@
             // tabPage37
             // 
             this.tabPage37.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage37.Controls.Add(this.numericUpDown_StProg_ClockHand_Y);
+            this.tabPage37.Controls.Add(this.numericUpDown_StProg_ClockHand_X);
             this.tabPage37.Controls.Add(this.checkBox_StProg_ClockHand);
             this.tabPage37.Controls.Add(this.numericUpDown_StProg_ClockHand_EndAngle);
             this.tabPage37.Controls.Add(this.label375);
@@ -12552,13 +12559,45 @@
             this.tabPage37.Controls.Add(this.label378);
             this.tabPage37.Controls.Add(this.comboBox_StProg_ClockHand_Image);
             this.tabPage37.Controls.Add(this.label379);
-            this.tabPage37.Controls.Add(this.numericUpDown_StProg_ClockHand_Y);
             this.tabPage37.Controls.Add(this.label380);
-            this.tabPage37.Controls.Add(this.numericUpDown_StProg_ClockHand_X);
             this.tabPage37.Controls.Add(this.label381);
             resources.ApplyResources(this.tabPage37, "tabPage37");
             this.tabPage37.Name = "tabPage37";
             this.helpProvider1.SetShowHelp(this.tabPage37, ((bool)(resources.GetObject("tabPage37.ShowHelp"))));
+            // 
+            // numericUpDown_StProg_ClockHand_Y
+            // 
+            resources.ApplyResources(this.numericUpDown_StProg_ClockHand_Y, "numericUpDown_StProg_ClockHand_Y");
+            this.numericUpDown_StProg_ClockHand_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_StProg_ClockHand_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_StProg_ClockHand_Y.Name = "numericUpDown_StProg_ClockHand_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_StProg_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_StProg_ClockHand_Y.ShowHelp"))));
+            this.numericUpDown_StProg_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // numericUpDown_StProg_ClockHand_X
+            // 
+            resources.ApplyResources(this.numericUpDown_StProg_ClockHand_X, "numericUpDown_StProg_ClockHand_X");
+            this.numericUpDown_StProg_ClockHand_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_StProg_ClockHand_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_StProg_ClockHand_X.Name = "numericUpDown_StProg_ClockHand_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_StProg_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_StProg_ClockHand_X.ShowHelp"))));
+            this.numericUpDown_StProg_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // checkBox_StProg_ClockHand
             // 
@@ -12693,45 +12732,11 @@
             this.label379.Name = "label379";
             this.helpProvider1.SetShowHelp(this.label379, ((bool)(resources.GetObject("label379.ShowHelp"))));
             // 
-            // numericUpDown_StProg_ClockHand_Y
-            // 
-            resources.ApplyResources(this.numericUpDown_StProg_ClockHand_Y, "numericUpDown_StProg_ClockHand_Y");
-            this.numericUpDown_StProg_ClockHand_Y.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_StProg_ClockHand_Y.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_StProg_ClockHand_Y.Name = "numericUpDown_StProg_ClockHand_Y";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_StProg_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_StProg_ClockHand_Y.ShowHelp"))));
-            this.numericUpDown_StProg_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
             // label380
             // 
             resources.ApplyResources(this.label380, "label380");
             this.label380.Name = "label380";
             this.helpProvider1.SetShowHelp(this.label380, ((bool)(resources.GetObject("label380.ShowHelp"))));
-            // 
-            // numericUpDown_StProg_ClockHand_X
-            // 
-            resources.ApplyResources(this.numericUpDown_StProg_ClockHand_X, "numericUpDown_StProg_ClockHand_X");
-            this.numericUpDown_StProg_ClockHand_X.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_StProg_ClockHand_X.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_StProg_ClockHand_X.Name = "numericUpDown_StProg_ClockHand_X";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_StProg_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_StProg_ClockHand_X.ShowHelp"))));
-            this.numericUpDown_StProg_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // label381
             // 
@@ -12842,6 +12847,8 @@
             // tabPage38
             // 
             this.tabPage38.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage38.Controls.Add(this.numericUpDown_ADDay_ClockHand_Y);
+            this.tabPage38.Controls.Add(this.numericUpDown_ADDay_ClockHand_X);
             this.tabPage38.Controls.Add(this.checkBox_ADDay_ClockHand);
             this.tabPage38.Controls.Add(this.numericUpDown_ADDay_ClockHand_EndAngle);
             this.tabPage38.Controls.Add(this.label396);
@@ -12853,13 +12860,45 @@
             this.tabPage38.Controls.Add(this.label399);
             this.tabPage38.Controls.Add(this.comboBox_ADDay_ClockHand_Image);
             this.tabPage38.Controls.Add(this.label400);
-            this.tabPage38.Controls.Add(this.numericUpDown_ADDay_ClockHand_Y);
             this.tabPage38.Controls.Add(this.label401);
-            this.tabPage38.Controls.Add(this.numericUpDown_ADDay_ClockHand_X);
             this.tabPage38.Controls.Add(this.label402);
             resources.ApplyResources(this.tabPage38, "tabPage38");
             this.tabPage38.Name = "tabPage38";
             this.helpProvider1.SetShowHelp(this.tabPage38, ((bool)(resources.GetObject("tabPage38.ShowHelp"))));
+            // 
+            // numericUpDown_ADDay_ClockHand_Y
+            // 
+            resources.ApplyResources(this.numericUpDown_ADDay_ClockHand_Y, "numericUpDown_ADDay_ClockHand_Y");
+            this.numericUpDown_ADDay_ClockHand_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADDay_ClockHand_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADDay_ClockHand_Y.Name = "numericUpDown_ADDay_ClockHand_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADDay_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_ADDay_ClockHand_Y.ShowHelp"))));
+            this.numericUpDown_ADDay_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // numericUpDown_ADDay_ClockHand_X
+            // 
+            resources.ApplyResources(this.numericUpDown_ADDay_ClockHand_X, "numericUpDown_ADDay_ClockHand_X");
+            this.numericUpDown_ADDay_ClockHand_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADDay_ClockHand_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADDay_ClockHand_X.Name = "numericUpDown_ADDay_ClockHand_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADDay_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_ADDay_ClockHand_X.ShowHelp"))));
+            this.numericUpDown_ADDay_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // checkBox_ADDay_ClockHand
             // 
@@ -12989,45 +13028,11 @@
             this.label400.Name = "label400";
             this.helpProvider1.SetShowHelp(this.label400, ((bool)(resources.GetObject("label400.ShowHelp"))));
             // 
-            // numericUpDown_ADDay_ClockHand_Y
-            // 
-            resources.ApplyResources(this.numericUpDown_ADDay_ClockHand_Y, "numericUpDown_ADDay_ClockHand_Y");
-            this.numericUpDown_ADDay_ClockHand_Y.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_ADDay_ClockHand_Y.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_ADDay_ClockHand_Y.Name = "numericUpDown_ADDay_ClockHand_Y";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_ADDay_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_ADDay_ClockHand_Y.ShowHelp"))));
-            this.numericUpDown_ADDay_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
             // label401
             // 
             resources.ApplyResources(this.label401, "label401");
             this.label401.Name = "label401";
             this.helpProvider1.SetShowHelp(this.label401, ((bool)(resources.GetObject("label401.ShowHelp"))));
-            // 
-            // numericUpDown_ADDay_ClockHand_X
-            // 
-            resources.ApplyResources(this.numericUpDown_ADDay_ClockHand_X, "numericUpDown_ADDay_ClockHand_X");
-            this.numericUpDown_ADDay_ClockHand_X.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_ADDay_ClockHand_X.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_ADDay_ClockHand_X.Name = "numericUpDown_ADDay_ClockHand_X";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_ADDay_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_ADDay_ClockHand_X.ShowHelp"))));
-            this.numericUpDown_ADDay_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // label402
             // 
@@ -13038,6 +13043,8 @@
             // tabPage39
             // 
             this.tabPage39.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage39.Controls.Add(this.numericUpDown_ADWeekDay_ClockHand_Y);
+            this.tabPage39.Controls.Add(this.numericUpDown_ADWeekDay_ClockHand_X);
             this.tabPage39.Controls.Add(this.numericUpDown_ADWeekDay_ClockHand_EndAngle);
             this.tabPage39.Controls.Add(this.label389);
             this.tabPage39.Controls.Add(this.numericUpDown_ADWeekDay_ClockHand_StartAngle);
@@ -13048,14 +13055,46 @@
             this.tabPage39.Controls.Add(this.label392);
             this.tabPage39.Controls.Add(this.comboBox_ADWeekDay_ClockHand_Image);
             this.tabPage39.Controls.Add(this.label393);
-            this.tabPage39.Controls.Add(this.numericUpDown_ADWeekDay_ClockHand_Y);
             this.tabPage39.Controls.Add(this.label394);
-            this.tabPage39.Controls.Add(this.numericUpDown_ADWeekDay_ClockHand_X);
             this.tabPage39.Controls.Add(this.label395);
             this.tabPage39.Controls.Add(this.checkBox_ADWeekDay_ClockHand);
             resources.ApplyResources(this.tabPage39, "tabPage39");
             this.tabPage39.Name = "tabPage39";
             this.helpProvider1.SetShowHelp(this.tabPage39, ((bool)(resources.GetObject("tabPage39.ShowHelp"))));
+            // 
+            // numericUpDown_ADWeekDay_ClockHand_Y
+            // 
+            resources.ApplyResources(this.numericUpDown_ADWeekDay_ClockHand_Y, "numericUpDown_ADWeekDay_ClockHand_Y");
+            this.numericUpDown_ADWeekDay_ClockHand_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADWeekDay_ClockHand_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADWeekDay_ClockHand_Y.Name = "numericUpDown_ADWeekDay_ClockHand_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADWeekDay_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_ADWeekDay_ClockHand_Y.ShowHelp"))));
+            this.numericUpDown_ADWeekDay_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // numericUpDown_ADWeekDay_ClockHand_X
+            // 
+            resources.ApplyResources(this.numericUpDown_ADWeekDay_ClockHand_X, "numericUpDown_ADWeekDay_ClockHand_X");
+            this.numericUpDown_ADWeekDay_ClockHand_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADWeekDay_ClockHand_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADWeekDay_ClockHand_X.Name = "numericUpDown_ADWeekDay_ClockHand_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADWeekDay_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_ADWeekDay_ClockHand_X.ShowHelp"))));
+            this.numericUpDown_ADWeekDay_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // numericUpDown_ADWeekDay_ClockHand_EndAngle
             // 
@@ -13176,45 +13215,11 @@
             this.label393.Name = "label393";
             this.helpProvider1.SetShowHelp(this.label393, ((bool)(resources.GetObject("label393.ShowHelp"))));
             // 
-            // numericUpDown_ADWeekDay_ClockHand_Y
-            // 
-            resources.ApplyResources(this.numericUpDown_ADWeekDay_ClockHand_Y, "numericUpDown_ADWeekDay_ClockHand_Y");
-            this.numericUpDown_ADWeekDay_ClockHand_Y.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_ADWeekDay_ClockHand_Y.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_ADWeekDay_ClockHand_Y.Name = "numericUpDown_ADWeekDay_ClockHand_Y";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_ADWeekDay_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_ADWeekDay_ClockHand_Y.ShowHelp"))));
-            this.numericUpDown_ADWeekDay_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
             // label394
             // 
             resources.ApplyResources(this.label394, "label394");
             this.label394.Name = "label394";
             this.helpProvider1.SetShowHelp(this.label394, ((bool)(resources.GetObject("label394.ShowHelp"))));
-            // 
-            // numericUpDown_ADWeekDay_ClockHand_X
-            // 
-            resources.ApplyResources(this.numericUpDown_ADWeekDay_ClockHand_X, "numericUpDown_ADWeekDay_ClockHand_X");
-            this.numericUpDown_ADWeekDay_ClockHand_X.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_ADWeekDay_ClockHand_X.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_ADWeekDay_ClockHand_X.Name = "numericUpDown_ADWeekDay_ClockHand_X";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_ADWeekDay_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_ADWeekDay_ClockHand_X.ShowHelp"))));
-            this.numericUpDown_ADWeekDay_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // label395
             // 
@@ -13234,6 +13239,8 @@
             // tabPage40
             // 
             this.tabPage40.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage40.Controls.Add(this.numericUpDown_ADMonth_ClockHand_Y);
+            this.tabPage40.Controls.Add(this.numericUpDown_ADMonth_ClockHand_X);
             this.tabPage40.Controls.Add(this.numericUpDown_ADMonth_ClockHand_EndAngle);
             this.tabPage40.Controls.Add(this.label382);
             this.tabPage40.Controls.Add(this.numericUpDown_ADMonth_ClockHand_StartAngle);
@@ -13244,14 +13251,46 @@
             this.tabPage40.Controls.Add(this.label385);
             this.tabPage40.Controls.Add(this.comboBox_ADMonth_ClockHand_Image);
             this.tabPage40.Controls.Add(this.label386);
-            this.tabPage40.Controls.Add(this.numericUpDown_ADMonth_ClockHand_Y);
             this.tabPage40.Controls.Add(this.label387);
-            this.tabPage40.Controls.Add(this.numericUpDown_ADMonth_ClockHand_X);
             this.tabPage40.Controls.Add(this.label388);
             this.tabPage40.Controls.Add(this.checkBox_ADMonth_ClockHand);
             resources.ApplyResources(this.tabPage40, "tabPage40");
             this.tabPage40.Name = "tabPage40";
             this.helpProvider1.SetShowHelp(this.tabPage40, ((bool)(resources.GetObject("tabPage40.ShowHelp"))));
+            // 
+            // numericUpDown_ADMonth_ClockHand_Y
+            // 
+            resources.ApplyResources(this.numericUpDown_ADMonth_ClockHand_Y, "numericUpDown_ADMonth_ClockHand_Y");
+            this.numericUpDown_ADMonth_ClockHand_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADMonth_ClockHand_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADMonth_ClockHand_Y.Name = "numericUpDown_ADMonth_ClockHand_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADMonth_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_ADMonth_ClockHand_Y.ShowHelp"))));
+            this.numericUpDown_ADMonth_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // numericUpDown_ADMonth_ClockHand_X
+            // 
+            resources.ApplyResources(this.numericUpDown_ADMonth_ClockHand_X, "numericUpDown_ADMonth_ClockHand_X");
+            this.numericUpDown_ADMonth_ClockHand_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADMonth_ClockHand_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADMonth_ClockHand_X.Name = "numericUpDown_ADMonth_ClockHand_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADMonth_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_ADMonth_ClockHand_X.ShowHelp"))));
+            this.numericUpDown_ADMonth_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // numericUpDown_ADMonth_ClockHand_EndAngle
             // 
@@ -13377,45 +13416,11 @@
             this.label386.Name = "label386";
             this.helpProvider1.SetShowHelp(this.label386, ((bool)(resources.GetObject("label386.ShowHelp"))));
             // 
-            // numericUpDown_ADMonth_ClockHand_Y
-            // 
-            resources.ApplyResources(this.numericUpDown_ADMonth_ClockHand_Y, "numericUpDown_ADMonth_ClockHand_Y");
-            this.numericUpDown_ADMonth_ClockHand_Y.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_ADMonth_ClockHand_Y.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_ADMonth_ClockHand_Y.Name = "numericUpDown_ADMonth_ClockHand_Y";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_ADMonth_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_ADMonth_ClockHand_Y.ShowHelp"))));
-            this.numericUpDown_ADMonth_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
             // label387
             // 
             resources.ApplyResources(this.label387, "label387");
             this.label387.Name = "label387";
             this.helpProvider1.SetShowHelp(this.label387, ((bool)(resources.GetObject("label387.ShowHelp"))));
-            // 
-            // numericUpDown_ADMonth_ClockHand_X
-            // 
-            resources.ApplyResources(this.numericUpDown_ADMonth_ClockHand_X, "numericUpDown_ADMonth_ClockHand_X");
-            this.numericUpDown_ADMonth_ClockHand_X.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_ADMonth_ClockHand_X.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_ADMonth_ClockHand_X.Name = "numericUpDown_ADMonth_ClockHand_X";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_ADMonth_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_ADMonth_ClockHand_X.ShowHelp"))));
-            this.numericUpDown_ADMonth_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // label388
             // 
@@ -16769,12 +16774,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_Scale_Center_X)).EndInit();
             this.tabPage35.ResumeLayout(false);
             this.tabPage35.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_EndAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_StartAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_Offset_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_Offset_X)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_Y)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_X)).EndInit();
             this.tabPage42.ResumeLayout(false);
             this.tabPage42.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Battery_IconSet)).EndInit();
@@ -16839,12 +16844,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_ImageX)).EndInit();
             this.tabPage51.ResumeLayout(false);
             this.tabPage51.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_EndAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_Offset_Y)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_StartAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_Offset_X)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_X)).EndInit();
             this.tabPage45.ResumeLayout(false);
             this.tabPage45.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ActivityPuls_IconSet)).EndInit();
@@ -16872,11 +16877,11 @@
             this.tabPage52.ResumeLayout(false);
             this.tabPage52.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_Offset_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_EndAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_StartAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_Offset_X)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_X)).EndInit();
             this.tabPage16.ResumeLayout(false);
             this.tabPage16.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStar_Y)).EndInit();
@@ -16896,12 +16901,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_Width)).EndInit();
             this.tabPage37.ResumeLayout(false);
             this.tabPage37.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_EndAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_StartAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_Offset_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_Offset_X)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_Y)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_X)).EndInit();
             this.tabPage41.ResumeLayout(false);
             this.tabPage41.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SPSliced)).EndInit();
@@ -16909,28 +16914,28 @@
             this.tabControl7.ResumeLayout(false);
             this.tabPage38.ResumeLayout(false);
             this.tabPage38.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_EndAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_StartAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_Offset_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_Offset_X)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_Y)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_X)).EndInit();
             this.tabPage39.ResumeLayout(false);
             this.tabPage39.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_EndAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_StartAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_Offset_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_Offset_X)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_Y)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_X)).EndInit();
             this.tabPage40.ResumeLayout(false);
             this.tabPage40.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_EndAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_StartAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_Offset_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_Offset_X)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_Y)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_X)).EndInit();
             this.panel_Date.ResumeLayout(false);
             this.panel_Date.PerformLayout();
             this.tabControl_Date.ResumeLayout(false);

@@ -264,4 +264,16 @@
   <data name="Message_Save_new_JSON" xml:space="preserve">
     <value>Aktuální projekt ještě nebyl uložen. Chcete jej uložit?</value>
   </data>
+  <data name="Message_WarningAnimationCoun_Text" xml:space="preserve">
+    <value>Pro animaci nelze použít více než 4 různé objekty.</value>
+  </data>
+  <data name="Message_WarningBatterySegment_Text" xml:space="preserve">
+    <value>Nedoporučuje se používat segmenty a ukazatel současně pro stejný typ hodnot. Toto může způsobit chyby!</value>
+  </data>
+  <data name="Message_WarningSpaceInName_Text" xml:space="preserve">
+    <value>Název souboru a cesta nesmí obsahovat mezery!</value>
+  </data>
+  <data name="Message_WarningTemperature_Text" xml:space="preserve">
+    <value>Zobrazení aktuální teploty nemusí fungovat bez aktivace / zobrazení denní a noční teploty</value>
+  </data>
 </root>

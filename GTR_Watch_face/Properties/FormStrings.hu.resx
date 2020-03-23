@@ -267,4 +267,16 @@
   <data name="Message_Save_new_JSON" xml:space="preserve">
     <value>A jelenlegi projekt nem lett elmentve. Szeretné menteni?</value>
   </data>
+  <data name="Message_WarningAnimationCoun_Text" xml:space="preserve">
+    <value>Az animációhoz legfeljebb 4 különféle objektum használható.</value>
+  </data>
+  <data name="Message_WarningBatterySegment_Text" xml:space="preserve">
+    <value>Nem ajánlott szegmensek és mutató egyidejű használata azonos típusú értékekhez. Ez hibákat okozhat!</value>
+  </data>
+  <data name="Message_WarningSpaceInName_Text" xml:space="preserve">
+    <value>A fájlnév és az elérési út nem tartalmazhat szóközt!</value>
+  </data>
+  <data name="Message_WarningTemperature_Text" xml:space="preserve">
+    <value>Előfordulhat, hogy az aktuális hőmérsékleti kijelző nem működik a nappali és az éjszakai hőmérséklet aktiválása / megjelenítése nélkül</value>
+  </data>
 </root>

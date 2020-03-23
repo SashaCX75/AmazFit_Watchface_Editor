@@ -489,57 +489,6 @@ namespace GTR_Watch_face
             }
             #endregion
 
-            #region DaysProgress
-            // прогресс числа стрелкой
-            if ((checkBox_ADDay_ClockHand.Checked) && (comboBox_ADDay_ClockHand_Image.SelectedIndex >= 0))
-            {
-                int x1 = (int)numericUpDown_ADDay_ClockHand_X.Value;
-                int y1 = (int)numericUpDown_ADDay_ClockHand_Y.Value;
-                int offsetX = (int)numericUpDown_ADDay_ClockHand_Offset_X.Value;
-                int offsetY = (int)numericUpDown_ADDay_ClockHand_Offset_Y.Value;
-                int image_index = comboBox_ADDay_ClockHand_Image.SelectedIndex;
-                float startAngle = (float)(numericUpDown_ADDay_ClockHand_StartAngle.Value);
-                float endAngle = (float)(numericUpDown_ADDay_ClockHand_EndAngle.Value);
-                int Day = Watch_Face_Preview_Set.Date.Day;
-                Day--;
-                float angle = startAngle + Day * (endAngle - startAngle) / 30;
-                DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle);
-            }
-
-            // прогресс дней недели стрелкой
-            if ((checkBox_ADWeekDay_ClockHand.Checked) && (comboBox_ADWeekDay_ClockHand_Image.SelectedIndex >= 0))
-            {
-                int x1 = (int)numericUpDown_ADWeekDay_ClockHand_X.Value;
-                int y1 = (int)numericUpDown_ADWeekDay_ClockHand_Y.Value;
-                int offsetX = (int)numericUpDown_ADWeekDay_ClockHand_Offset_X.Value;
-                int offsetY = (int)numericUpDown_ADWeekDay_ClockHand_Offset_Y.Value;
-                int image_index = comboBox_ADWeekDay_ClockHand_Image.SelectedIndex;
-                float startAngle = (float)(numericUpDown_ADWeekDay_ClockHand_StartAngle.Value);
-                float endAngle = (float)(numericUpDown_ADWeekDay_ClockHand_EndAngle.Value);
-                int WeekDay = Watch_Face_Preview_Set.Date.WeekDay;
-                WeekDay--;
-                if (WeekDay < 0) WeekDay = 6;
-                float angle = startAngle + WeekDay * (endAngle - startAngle) / 6;
-                DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle);
-            }
-
-            // прогресс месяца стрелкой
-            if ((checkBox_ADMonth_ClockHand.Checked) && (comboBox_ADMonth_ClockHand_Image.SelectedIndex >= 0))
-            {
-                int x1 = (int)numericUpDown_ADMonth_ClockHand_X.Value;
-                int y1 = (int)numericUpDown_ADMonth_ClockHand_Y.Value;
-                int offsetX = (int)numericUpDown_ADMonth_ClockHand_Offset_X.Value;
-                int offsetY = (int)numericUpDown_ADMonth_ClockHand_Offset_Y.Value;
-                int image_index = comboBox_ADMonth_ClockHand_Image.SelectedIndex;
-                float startAngle = (float)(numericUpDown_ADMonth_ClockHand_StartAngle.Value);
-                float endAngle = (float)(numericUpDown_ADMonth_ClockHand_EndAngle.Value);
-                int Month = Watch_Face_Preview_Set.Date.Month;
-                Month--;
-                float angle = startAngle + Month * (endAngle - startAngle) / 11;
-                DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle);
-            }
-            #endregion
-
             #region Status
             if (checkBox_Bluetooth.Checked)
             {
@@ -1365,6 +1314,69 @@ namespace GTR_Watch_face
             }
             #endregion
 
+            #region Animation
+            if (showAnimation)
+            {
+                if (checkBox_Animation.Checked)
+                {
+                    // анимация (перемещение между координатами)
+                    if (checkBox_MotiomAnimation.Checked)
+                    {
+                        int AnimationIndex = 0;
+                        foreach (DataGridViewRow row in dataGridView_MotiomAnimation.Rows)
+                        {
+                            if (++AnimationIndex > 4) break;
+                            int StartCoordinates_X = 0;
+                            int StartCoordinates_Y = 0;
+                            int EndCoordinates_X = 0;
+                            int EndCoordinates_Y = 0;
+                            int ImageIndex = 0;
+                            if (row.Cells[1].Value != null && row.Cells[2].Value != null && row.Cells[3].Value != null &&
+                                row.Cells[4].Value != null && row.Cells[5].Value != null && row.Cells[6].Value != null)
+                            {
+                                if (Int32.TryParse(row.Cells[1].Value.ToString(), out StartCoordinates_X) &&
+                                    Int32.TryParse(row.Cells[2].Value.ToString(), out StartCoordinates_Y) &&
+                                    Int32.TryParse(row.Cells[3].Value.ToString(), out EndCoordinates_X) &&
+                                    Int32.TryParse(row.Cells[4].Value.ToString(), out EndCoordinates_Y) &&
+                                    Int32.TryParse(row.Cells[5].Value.ToString(), out ImageIndex))
+                                {
+                                    int Coordinates_X = StartCoordinates_X;
+                                    int Coordinates_Y = StartCoordinates_Y;
+                                    if (radioButton_MotiomAnimation_EndCoordinates.Checked)
+                                    {
+                                        Coordinates_X = EndCoordinates_X;
+                                        Coordinates_Y = EndCoordinates_Y;
+                                    }
+
+                                    i = ImageIndex;
+                                    if (i < ListImagesFullName.Count)
+                                    {
+                                        src = new Bitmap(ListImagesFullName[i]);
+                                        gPanel.DrawImage(src, new Rectangle(Coordinates_X, Coordinates_Y, src.Width, src.Height));
+                                        src.Dispose();
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // покадровая анимация
+                    if ((checkBox_StaticAnimation.Checked) && (comboBox_StaticAnimation_Image.SelectedIndex >= 0))
+                    {
+                        i = comboBox_StaticAnimation_Image.SelectedIndex;
+                        if (i < ListImagesFullName.Count)
+                        {
+                            src = new Bitmap(ListImagesFullName[i]);
+                            gPanel.DrawImage(src, new Rectangle((int)numericUpDown_StaticAnimation_X.Value,
+                                (int)numericUpDown_StaticAnimation_Y.Value, src.Width, src.Height));
+                            src.Dispose();
+                        }
+                    }
+
+                }
+            }
+            #endregion            
+
             #region Time
             if (checkBox_Time.Checked)
             {
@@ -1578,6 +1590,57 @@ namespace GTR_Watch_face
             }
             #endregion
 
+            #region DaysProgress
+            // прогресс числа стрелкой
+            if ((checkBox_ADDay_ClockHand.Checked) && (comboBox_ADDay_ClockHand_Image.SelectedIndex >= 0))
+            {
+                int x1 = (int)numericUpDown_ADDay_ClockHand_X.Value;
+                int y1 = (int)numericUpDown_ADDay_ClockHand_Y.Value;
+                int offsetX = (int)numericUpDown_ADDay_ClockHand_Offset_X.Value;
+                int offsetY = (int)numericUpDown_ADDay_ClockHand_Offset_Y.Value;
+                int image_index = comboBox_ADDay_ClockHand_Image.SelectedIndex;
+                float startAngle = (float)(numericUpDown_ADDay_ClockHand_StartAngle.Value);
+                float endAngle = (float)(numericUpDown_ADDay_ClockHand_EndAngle.Value);
+                int Day = Watch_Face_Preview_Set.Date.Day;
+                Day--;
+                float angle = startAngle + Day * (endAngle - startAngle) / 30;
+                DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle);
+            }
+
+            // прогресс дней недели стрелкой
+            if ((checkBox_ADWeekDay_ClockHand.Checked) && (comboBox_ADWeekDay_ClockHand_Image.SelectedIndex >= 0))
+            {
+                int x1 = (int)numericUpDown_ADWeekDay_ClockHand_X.Value;
+                int y1 = (int)numericUpDown_ADWeekDay_ClockHand_Y.Value;
+                int offsetX = (int)numericUpDown_ADWeekDay_ClockHand_Offset_X.Value;
+                int offsetY = (int)numericUpDown_ADWeekDay_ClockHand_Offset_Y.Value;
+                int image_index = comboBox_ADWeekDay_ClockHand_Image.SelectedIndex;
+                float startAngle = (float)(numericUpDown_ADWeekDay_ClockHand_StartAngle.Value);
+                float endAngle = (float)(numericUpDown_ADWeekDay_ClockHand_EndAngle.Value);
+                int WeekDay = Watch_Face_Preview_Set.Date.WeekDay;
+                WeekDay--;
+                if (WeekDay < 0) WeekDay = 6;
+                float angle = startAngle + WeekDay * (endAngle - startAngle) / 6;
+                DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle);
+            }
+
+            // прогресс месяца стрелкой
+            if ((checkBox_ADMonth_ClockHand.Checked) && (comboBox_ADMonth_ClockHand_Image.SelectedIndex >= 0))
+            {
+                int x1 = (int)numericUpDown_ADMonth_ClockHand_X.Value;
+                int y1 = (int)numericUpDown_ADMonth_ClockHand_Y.Value;
+                int offsetX = (int)numericUpDown_ADMonth_ClockHand_Offset_X.Value;
+                int offsetY = (int)numericUpDown_ADMonth_ClockHand_Offset_Y.Value;
+                int image_index = comboBox_ADMonth_ClockHand_Image.SelectedIndex;
+                float startAngle = (float)(numericUpDown_ADMonth_ClockHand_StartAngle.Value);
+                float endAngle = (float)(numericUpDown_ADMonth_ClockHand_EndAngle.Value);
+                int Month = Watch_Face_Preview_Set.Date.Month;
+                Month--;
+                float angle = startAngle + Month * (endAngle - startAngle) / 11;
+                DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle);
+            }
+            #endregion
+
             #region AnalogDialFace
             if (checkBox_AnalogClock.Checked)
             {
@@ -1678,69 +1741,6 @@ namespace GTR_Watch_face
                 }
             }
             #endregion
-
-            #region Animation
-            if (showAnimation)
-            {
-                if (checkBox_Animation.Checked)
-                {
-                    // анимация (перемещение между координатами)
-                    if (checkBox_MotiomAnimation.Checked)
-                    {
-                        int AnimationIndex = 0;
-                        foreach (DataGridViewRow row in dataGridView_MotiomAnimation.Rows)
-                        {
-                            if (++AnimationIndex > 4) break;
-                            int StartCoordinates_X = 0;
-                            int StartCoordinates_Y = 0;
-                            int EndCoordinates_X = 0;
-                            int EndCoordinates_Y = 0;
-                            int ImageIndex = 0;
-                            if (row.Cells[1].Value != null && row.Cells[2].Value != null && row.Cells[3].Value != null &&
-                                row.Cells[4].Value != null && row.Cells[5].Value != null && row.Cells[6].Value != null)
-                            {
-                                if (Int32.TryParse(row.Cells[1].Value.ToString(), out StartCoordinates_X) &&
-                                    Int32.TryParse(row.Cells[2].Value.ToString(), out StartCoordinates_Y) &&
-                                    Int32.TryParse(row.Cells[3].Value.ToString(), out EndCoordinates_X) &&
-                                    Int32.TryParse(row.Cells[4].Value.ToString(), out EndCoordinates_Y) &&
-                                    Int32.TryParse(row.Cells[5].Value.ToString(), out ImageIndex))
-                                {
-                                    int Coordinates_X = StartCoordinates_X;
-                                    int Coordinates_Y = StartCoordinates_Y;
-                                    if (radioButton_MotiomAnimation_EndCoordinates.Checked)
-                                    {
-                                        Coordinates_X = EndCoordinates_X;
-                                        Coordinates_Y = EndCoordinates_Y;
-                                    }
-
-                                    i = ImageIndex;
-                                    if (i < ListImagesFullName.Count)
-                                    {
-                                        src = new Bitmap(ListImagesFullName[i]);
-                                        gPanel.DrawImage(src, new Rectangle(Coordinates_X, Coordinates_Y, src.Width, src.Height));
-                                        src.Dispose();
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    // покадровая анимация
-                    if ((checkBox_StaticAnimation.Checked) && (comboBox_StaticAnimation_Image.SelectedIndex >= 0))
-                    {
-                        i = comboBox_StaticAnimation_Image.SelectedIndex;
-                        if (i < ListImagesFullName.Count)
-                        {
-                            src = new Bitmap(ListImagesFullName[i]);
-                            gPanel.DrawImage(src, new Rectangle((int)numericUpDown_StaticAnimation_X.Value,
-                                (int)numericUpDown_StaticAnimation_Y.Value, src.Width, src.Height));
-                            src.Dispose();
-                        }
-                    }
-
-                } 
-            }
-            #endregion            
            
             #region Shortcuts
             if (showShortcuts)

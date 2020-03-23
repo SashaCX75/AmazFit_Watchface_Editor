@@ -214,10 +214,19 @@
     <EmbeddedResource Include="Form1.zh.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAnimation.cs.resx">
+      <DependentUpon>FormAnimation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAnimation.en.resx">
       <DependentUpon>FormAnimation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAnimation.hu.resx">
+      <DependentUpon>FormAnimation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAnimation.resx">
+      <DependentUpon>FormAnimation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAnimation.sk.resx">
       <DependentUpon>FormAnimation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAnimation.zh.resx">

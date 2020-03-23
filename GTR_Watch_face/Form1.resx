@@ -16283,7 +16283,7 @@
     <value>False</value>
   </data>
   <data name="comboBox_HourCenterImage_Image.Location" type="System.Drawing.Point, System.Drawing">
-    <value>65, 94</value>
+    <value>65, 93</value>
   </data>
   <data name="comboBox_HourCenterImage_Image.MaxDropDownItems" type="System.Int32, mscorlib">
     <value>25</value>
@@ -16319,7 +16319,7 @@
     <value>NoControl</value>
   </data>
   <data name="label310.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 97</value>
+    <value>2, 96</value>
   </data>
   <data name="label310.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -20146,6 +20146,60 @@
   <data name="&gt;&gt;tabPage23.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="numericUpDown_Battery_ClockHand_Y.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_Battery_ClockHand_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 65</value>
+  </data>
+  <data name="numericUpDown_Battery_ClockHand_Y.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_Battery_ClockHand_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_Battery_ClockHand_Y.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Battery_ClockHand_Y.Name" xml:space="preserve">
+    <value>numericUpDown_Battery_ClockHand_Y</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Battery_ClockHand_Y.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Battery_ClockHand_Y.Parent" xml:space="preserve">
+    <value>tabPage35</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Battery_ClockHand_Y.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="numericUpDown_Battery_ClockHand_X.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_Battery_ClockHand_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 30</value>
+  </data>
+  <data name="numericUpDown_Battery_ClockHand_X.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_Battery_ClockHand_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_Battery_ClockHand_X.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Battery_ClockHand_X.Name" xml:space="preserve">
+    <value>numericUpDown_Battery_ClockHand_X</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Battery_ClockHand_X.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Battery_ClockHand_X.Parent" xml:space="preserve">
+    <value>tabPage35</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Battery_ClockHand_X.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="numericUpDown_Battery_ClockHand_EndAngle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -20171,7 +20225,7 @@
     <value>tabPage35</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Battery_ClockHand_EndAngle.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="label374.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -20207,7 +20261,7 @@
     <value>tabPage35</value>
   </data>
   <data name="&gt;&gt;label374.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="numericUpDown_Battery_ClockHand_StartAngle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -20234,7 +20288,7 @@
     <value>tabPage35</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Battery_ClockHand_StartAngle.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="label373.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -20270,7 +20324,7 @@
     <value>tabPage35</value>
   </data>
   <data name="&gt;&gt;label373.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="numericUpDown_Battery_ClockHand_Offset_Y.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -20297,7 +20351,7 @@
     <value>tabPage35</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Battery_ClockHand_Offset_Y.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="label368.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -20333,7 +20387,7 @@
     <value>tabPage35</value>
   </data>
   <data name="&gt;&gt;label368.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="numericUpDown_Battery_ClockHand_Offset_X.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -20360,7 +20414,7 @@
     <value>tabPage35</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Battery_ClockHand_Offset_X.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="label369.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -20396,7 +20450,7 @@
     <value>tabPage35</value>
   </data>
   <data name="&gt;&gt;label369.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="comboBox_Battery_ClockHand_Image.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -20426,7 +20480,7 @@
     <value>tabPage35</value>
   </data>
   <data name="&gt;&gt;comboBox_Battery_ClockHand_Image.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="label370.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -20462,34 +20516,7 @@
     <value>tabPage35</value>
   </data>
   <data name="&gt;&gt;label370.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="numericUpDown_Battery_ClockHand_Y.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="numericUpDown_Battery_ClockHand_Y.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 65</value>
-  </data>
-  <data name="numericUpDown_Battery_ClockHand_Y.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="numericUpDown_Battery_ClockHand_Y.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="numericUpDown_Battery_ClockHand_Y.TabIndex" type="System.Int32, mscorlib">
-    <value>72</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_Battery_ClockHand_Y.Name" xml:space="preserve">
-    <value>numericUpDown_Battery_ClockHand_Y</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_Battery_ClockHand_Y.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_Battery_ClockHand_Y.Parent" xml:space="preserve">
-    <value>tabPage35</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_Battery_ClockHand_Y.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="label371.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -20525,33 +20552,6 @@
     <value>tabPage35</value>
   </data>
   <data name="&gt;&gt;label371.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="numericUpDown_Battery_ClockHand_X.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="numericUpDown_Battery_ClockHand_X.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 30</value>
-  </data>
-  <data name="numericUpDown_Battery_ClockHand_X.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="numericUpDown_Battery_ClockHand_X.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="numericUpDown_Battery_ClockHand_X.TabIndex" type="System.Int32, mscorlib">
-    <value>70</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_Battery_ClockHand_X.Name" xml:space="preserve">
-    <value>numericUpDown_Battery_ClockHand_X</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_Battery_ClockHand_X.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_Battery_ClockHand_X.Parent" xml:space="preserve">
-    <value>tabPage35</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_Battery_ClockHand_X.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
   <data name="label372.Enabled" type="System.Boolean, mscorlib">
@@ -25384,6 +25384,60 @@
   <data name="&gt;&gt;tabPage44.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="numericUpDown_Pulse_ClockHand_Y.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 65</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_Y.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_Y.TabIndex" type="System.Int32, mscorlib">
+    <value>87</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_Y.Name" xml:space="preserve">
+    <value>numericUpDown_Pulse_ClockHand_Y</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_Y.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_Y.Parent" xml:space="preserve">
+    <value>tabPage51</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_Y.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_X.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 30</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_X.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_Pulse_ClockHand_X.TabIndex" type="System.Int32, mscorlib">
+    <value>85</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_X.Name" xml:space="preserve">
+    <value>numericUpDown_Pulse_ClockHand_X</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_X.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_X.Parent" xml:space="preserve">
+    <value>tabPage51</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_X.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="comboBox_Pulse_ClockHand_Image.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -25412,7 +25466,7 @@
     <value>tabPage51</value>
   </data>
   <data name="&gt;&gt;comboBox_Pulse_ClockHand_Image.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="numericUpDown_Pulse_ClockHand_EndAngle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -25439,7 +25493,7 @@
     <value>tabPage51</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_EndAngle.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="numericUpDown_Pulse_ClockHand_Offset_Y.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -25466,34 +25520,7 @@
     <value>tabPage51</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_Offset_Y.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="numericUpDown_Pulse_ClockHand_Y.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="numericUpDown_Pulse_ClockHand_Y.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 65</value>
-  </data>
-  <data name="numericUpDown_Pulse_ClockHand_Y.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="numericUpDown_Pulse_ClockHand_Y.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="numericUpDown_Pulse_ClockHand_Y.TabIndex" type="System.Int32, mscorlib">
-    <value>87</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_Y.Name" xml:space="preserve">
-    <value>numericUpDown_Pulse_ClockHand_Y</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_Y.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_Y.Parent" xml:space="preserve">
-    <value>tabPage51</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_Y.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="numericUpDown_Pulse_ClockHand_StartAngle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -25520,7 +25547,7 @@
     <value>tabPage51</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_StartAngle.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="numericUpDown_Pulse_ClockHand_Offset_X.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -25547,33 +25574,6 @@
     <value>tabPage51</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_Offset_X.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="numericUpDown_Pulse_ClockHand_X.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="numericUpDown_Pulse_ClockHand_X.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 30</value>
-  </data>
-  <data name="numericUpDown_Pulse_ClockHand_X.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="numericUpDown_Pulse_ClockHand_X.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="numericUpDown_Pulse_ClockHand_X.TabIndex" type="System.Int32, mscorlib">
-    <value>85</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_X.Name" xml:space="preserve">
-    <value>numericUpDown_Pulse_ClockHand_X</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_X.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_X.Parent" xml:space="preserve">
-    <value>tabPage51</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_Pulse_ClockHand_X.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="checkBox_Pulse_ClockHand.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -27622,6 +27622,60 @@
   <data name="&gt;&gt;tabPage11.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="numericUpDown_Calories_ClockHand_Y.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 65</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_Y.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_Y.TabIndex" type="System.Int32, mscorlib">
+    <value>87</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_Y.Name" xml:space="preserve">
+    <value>numericUpDown_Calories_ClockHand_Y</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_Y.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_Y.Parent" xml:space="preserve">
+    <value>tabPage52</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_Y.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_X.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 30</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_X.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_Calories_ClockHand_X.TabIndex" type="System.Int32, mscorlib">
+    <value>85</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_X.Name" xml:space="preserve">
+    <value>numericUpDown_Calories_ClockHand_X</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_X.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_X.Parent" xml:space="preserve">
+    <value>tabPage52</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_X.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="comboBox_Calories_ClockHand_Image.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -27650,34 +27704,7 @@
     <value>tabPage52</value>
   </data>
   <data name="&gt;&gt;comboBox_Calories_ClockHand_Image.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="numericUpDown_Calories_ClockHand_Y.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="numericUpDown_Calories_ClockHand_Y.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 65</value>
-  </data>
-  <data name="numericUpDown_Calories_ClockHand_Y.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="numericUpDown_Calories_ClockHand_Y.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="numericUpDown_Calories_ClockHand_Y.TabIndex" type="System.Int32, mscorlib">
-    <value>87</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_Y.Name" xml:space="preserve">
-    <value>numericUpDown_Calories_ClockHand_Y</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_Y.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_Y.Parent" xml:space="preserve">
-    <value>tabPage52</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_Y.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="numericUpDown_Calories_ClockHand_Offset_Y.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -27704,7 +27731,7 @@
     <value>tabPage52</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Calories_ClockHand_Offset_Y.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="numericUpDown_Calories_ClockHand_EndAngle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -27731,7 +27758,7 @@
     <value>tabPage52</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Calories_ClockHand_EndAngle.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="numericUpDown_Calories_ClockHand_StartAngle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -27758,7 +27785,7 @@
     <value>tabPage52</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Calories_ClockHand_StartAngle.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="numericUpDown_Calories_ClockHand_Offset_X.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -27785,33 +27812,6 @@
     <value>tabPage52</value>
   </data>
   <data name="&gt;&gt;numericUpDown_Calories_ClockHand_Offset_X.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="numericUpDown_Calories_ClockHand_X.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="numericUpDown_Calories_ClockHand_X.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 30</value>
-  </data>
-  <data name="numericUpDown_Calories_ClockHand_X.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="numericUpDown_Calories_ClockHand_X.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="numericUpDown_Calories_ClockHand_X.TabIndex" type="System.Int32, mscorlib">
-    <value>85</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_X.Name" xml:space="preserve">
-    <value>numericUpDown_Calories_ClockHand_X</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_X.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_X.Parent" xml:space="preserve">
-    <value>tabPage52</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_Calories_ClockHand_X.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="checkBox_Calories_ClockHand.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -29434,6 +29434,60 @@
   <data name="&gt;&gt;tabPage36.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="numericUpDown_StProg_ClockHand_Y.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_StProg_ClockHand_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 65</value>
+  </data>
+  <data name="numericUpDown_StProg_ClockHand_Y.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_StProg_ClockHand_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_StProg_ClockHand_Y.TabIndex" type="System.Int32, mscorlib">
+    <value>86</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StProg_ClockHand_Y.Name" xml:space="preserve">
+    <value>numericUpDown_StProg_ClockHand_Y</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StProg_ClockHand_Y.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StProg_ClockHand_Y.Parent" xml:space="preserve">
+    <value>tabPage37</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StProg_ClockHand_Y.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="numericUpDown_StProg_ClockHand_X.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_StProg_ClockHand_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 30</value>
+  </data>
+  <data name="numericUpDown_StProg_ClockHand_X.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_StProg_ClockHand_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_StProg_ClockHand_X.TabIndex" type="System.Int32, mscorlib">
+    <value>84</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StProg_ClockHand_X.Name" xml:space="preserve">
+    <value>numericUpDown_StProg_ClockHand_X</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StProg_ClockHand_X.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StProg_ClockHand_X.Parent" xml:space="preserve">
+    <value>tabPage37</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_StProg_ClockHand_X.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="checkBox_StProg_ClockHand.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
@@ -29468,7 +29522,7 @@
     <value>tabPage37</value>
   </data>
   <data name="&gt;&gt;checkBox_StProg_ClockHand.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="numericUpDown_StProg_ClockHand_EndAngle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -29495,7 +29549,7 @@
     <value>tabPage37</value>
   </data>
   <data name="&gt;&gt;numericUpDown_StProg_ClockHand_EndAngle.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="label375.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -29531,7 +29585,7 @@
     <value>tabPage37</value>
   </data>
   <data name="&gt;&gt;label375.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="numericUpDown_StProg_ClockHand_StartAngle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -29558,7 +29612,7 @@
     <value>tabPage37</value>
   </data>
   <data name="&gt;&gt;numericUpDown_StProg_ClockHand_StartAngle.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="label376.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -29594,7 +29648,7 @@
     <value>tabPage37</value>
   </data>
   <data name="&gt;&gt;label376.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="numericUpDown_StProg_ClockHand_Offset_Y.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -29621,7 +29675,7 @@
     <value>tabPage37</value>
   </data>
   <data name="&gt;&gt;numericUpDown_StProg_ClockHand_Offset_Y.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="label377.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -29657,7 +29711,7 @@
     <value>tabPage37</value>
   </data>
   <data name="&gt;&gt;label377.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="numericUpDown_StProg_ClockHand_Offset_X.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -29684,7 +29738,7 @@
     <value>tabPage37</value>
   </data>
   <data name="&gt;&gt;numericUpDown_StProg_ClockHand_Offset_X.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="label378.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -29720,7 +29774,7 @@
     <value>tabPage37</value>
   </data>
   <data name="&gt;&gt;label378.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="comboBox_StProg_ClockHand_Image.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -29750,7 +29804,7 @@
     <value>tabPage37</value>
   </data>
   <data name="&gt;&gt;comboBox_StProg_ClockHand_Image.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="label379.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -29786,34 +29840,7 @@
     <value>tabPage37</value>
   </data>
   <data name="&gt;&gt;label379.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="numericUpDown_StProg_ClockHand_Y.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="numericUpDown_StProg_ClockHand_Y.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 65</value>
-  </data>
-  <data name="numericUpDown_StProg_ClockHand_Y.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="numericUpDown_StProg_ClockHand_Y.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="numericUpDown_StProg_ClockHand_Y.TabIndex" type="System.Int32, mscorlib">
-    <value>86</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_StProg_ClockHand_Y.Name" xml:space="preserve">
-    <value>numericUpDown_StProg_ClockHand_Y</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_StProg_ClockHand_Y.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_StProg_ClockHand_Y.Parent" xml:space="preserve">
-    <value>tabPage37</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_StProg_ClockHand_Y.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="label380.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -29849,33 +29876,6 @@
     <value>tabPage37</value>
   </data>
   <data name="&gt;&gt;label380.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="numericUpDown_StProg_ClockHand_X.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="numericUpDown_StProg_ClockHand_X.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 30</value>
-  </data>
-  <data name="numericUpDown_StProg_ClockHand_X.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="numericUpDown_StProg_ClockHand_X.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="numericUpDown_StProg_ClockHand_X.TabIndex" type="System.Int32, mscorlib">
-    <value>84</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_StProg_ClockHand_X.Name" xml:space="preserve">
-    <value>numericUpDown_StProg_ClockHand_X</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_StProg_ClockHand_X.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_StProg_ClockHand_X.Parent" xml:space="preserve">
-    <value>tabPage37</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_StProg_ClockHand_X.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
   <data name="label381.Enabled" type="System.Boolean, mscorlib">
@@ -30199,6 +30199,60 @@
   <data name="&gt;&gt;button_StepsProgress.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
+  <data name="numericUpDown_ADDay_ClockHand_Y.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_ADDay_ClockHand_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 65</value>
+  </data>
+  <data name="numericUpDown_ADDay_ClockHand_Y.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_ADDay_ClockHand_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_ADDay_ClockHand_Y.TabIndex" type="System.Int32, mscorlib">
+    <value>87</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ADDay_ClockHand_Y.Name" xml:space="preserve">
+    <value>numericUpDown_ADDay_ClockHand_Y</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ADDay_ClockHand_Y.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ADDay_ClockHand_Y.Parent" xml:space="preserve">
+    <value>tabPage38</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ADDay_ClockHand_Y.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="numericUpDown_ADDay_ClockHand_X.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_ADDay_ClockHand_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 30</value>
+  </data>
+  <data name="numericUpDown_ADDay_ClockHand_X.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_ADDay_ClockHand_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_ADDay_ClockHand_X.TabIndex" type="System.Int32, mscorlib">
+    <value>85</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ADDay_ClockHand_X.Name" xml:space="preserve">
+    <value>numericUpDown_ADDay_ClockHand_X</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ADDay_ClockHand_X.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ADDay_ClockHand_X.Parent" xml:space="preserve">
+    <value>tabPage38</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ADDay_ClockHand_X.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="checkBox_ADDay_ClockHand.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
@@ -30233,7 +30287,7 @@
     <value>tabPage38</value>
   </data>
   <data name="&gt;&gt;checkBox_ADDay_ClockHand.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="numericUpDown_ADDay_ClockHand_EndAngle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -30260,7 +30314,7 @@
     <value>tabPage38</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ADDay_ClockHand_EndAngle.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="label396.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -30296,7 +30350,7 @@
     <value>tabPage38</value>
   </data>
   <data name="&gt;&gt;label396.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="numericUpDown_ADDay_ClockHand_StartAngle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -30323,7 +30377,7 @@
     <value>tabPage38</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ADDay_ClockHand_StartAngle.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="label397.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -30359,7 +30413,7 @@
     <value>tabPage38</value>
   </data>
   <data name="&gt;&gt;label397.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="numericUpDown_ADDay_ClockHand_Offset_Y.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -30386,7 +30440,7 @@
     <value>tabPage38</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ADDay_ClockHand_Offset_Y.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="label398.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -30422,7 +30476,7 @@
     <value>tabPage38</value>
   </data>
   <data name="&gt;&gt;label398.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="numericUpDown_ADDay_ClockHand_Offset_X.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -30449,7 +30503,7 @@
     <value>tabPage38</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ADDay_ClockHand_Offset_X.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="label399.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -30485,7 +30539,7 @@
     <value>tabPage38</value>
   </data>
   <data name="&gt;&gt;label399.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="comboBox_ADDay_ClockHand_Image.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -30515,7 +30569,7 @@
     <value>tabPage38</value>
   </data>
   <data name="&gt;&gt;comboBox_ADDay_ClockHand_Image.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="label400.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -30551,34 +30605,7 @@
     <value>tabPage38</value>
   </data>
   <data name="&gt;&gt;label400.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="numericUpDown_ADDay_ClockHand_Y.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="numericUpDown_ADDay_ClockHand_Y.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 65</value>
-  </data>
-  <data name="numericUpDown_ADDay_ClockHand_Y.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="numericUpDown_ADDay_ClockHand_Y.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="numericUpDown_ADDay_ClockHand_Y.TabIndex" type="System.Int32, mscorlib">
-    <value>87</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ADDay_ClockHand_Y.Name" xml:space="preserve">
-    <value>numericUpDown_ADDay_ClockHand_Y</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ADDay_ClockHand_Y.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ADDay_ClockHand_Y.Parent" xml:space="preserve">
-    <value>tabPage38</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ADDay_ClockHand_Y.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="label401.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -30614,33 +30641,6 @@
     <value>tabPage38</value>
   </data>
   <data name="&gt;&gt;label401.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="numericUpDown_ADDay_ClockHand_X.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="numericUpDown_ADDay_ClockHand_X.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 30</value>
-  </data>
-  <data name="numericUpDown_ADDay_ClockHand_X.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="numericUpDown_ADDay_ClockHand_X.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="numericUpDown_ADDay_ClockHand_X.TabIndex" type="System.Int32, mscorlib">
-    <value>85</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ADDay_ClockHand_X.Name" xml:space="preserve">
-    <value>numericUpDown_ADDay_ClockHand_X</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ADDay_ClockHand_X.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ADDay_ClockHand_X.Parent" xml:space="preserve">
-    <value>tabPage38</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ADDay_ClockHand_X.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
   <data name="label402.Enabled" type="System.Boolean, mscorlib">
@@ -30706,6 +30706,60 @@
   <data name="&gt;&gt;tabPage38.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="numericUpDown_ADWeekDay_ClockHand_Y.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_ADWeekDay_ClockHand_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 65</value>
+  </data>
+  <data name="numericUpDown_ADWeekDay_ClockHand_Y.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_ADWeekDay_ClockHand_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_ADWeekDay_ClockHand_Y.TabIndex" type="System.Int32, mscorlib">
+    <value>87</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ADWeekDay_ClockHand_Y.Name" xml:space="preserve">
+    <value>numericUpDown_ADWeekDay_ClockHand_Y</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ADWeekDay_ClockHand_Y.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ADWeekDay_ClockHand_Y.Parent" xml:space="preserve">
+    <value>tabPage39</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ADWeekDay_ClockHand_Y.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="numericUpDown_ADWeekDay_ClockHand_X.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_ADWeekDay_ClockHand_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 30</value>
+  </data>
+  <data name="numericUpDown_ADWeekDay_ClockHand_X.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_ADWeekDay_ClockHand_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_ADWeekDay_ClockHand_X.TabIndex" type="System.Int32, mscorlib">
+    <value>85</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ADWeekDay_ClockHand_X.Name" xml:space="preserve">
+    <value>numericUpDown_ADWeekDay_ClockHand_X</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ADWeekDay_ClockHand_X.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ADWeekDay_ClockHand_X.Parent" xml:space="preserve">
+    <value>tabPage39</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ADWeekDay_ClockHand_X.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="numericUpDown_ADWeekDay_ClockHand_EndAngle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -30731,7 +30785,7 @@
     <value>tabPage39</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ADWeekDay_ClockHand_EndAngle.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="label389.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -30767,7 +30821,7 @@
     <value>tabPage39</value>
   </data>
   <data name="&gt;&gt;label389.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="numericUpDown_ADWeekDay_ClockHand_StartAngle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -30794,7 +30848,7 @@
     <value>tabPage39</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ADWeekDay_ClockHand_StartAngle.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="label390.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -30830,7 +30884,7 @@
     <value>tabPage39</value>
   </data>
   <data name="&gt;&gt;label390.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="numericUpDown_ADWeekDay_ClockHand_Offset_Y.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -30857,7 +30911,7 @@
     <value>tabPage39</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ADWeekDay_ClockHand_Offset_Y.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="label391.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -30893,7 +30947,7 @@
     <value>tabPage39</value>
   </data>
   <data name="&gt;&gt;label391.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="numericUpDown_ADWeekDay_ClockHand_Offset_X.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -30920,7 +30974,7 @@
     <value>tabPage39</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ADWeekDay_ClockHand_Offset_X.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="label392.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -30956,7 +31010,7 @@
     <value>tabPage39</value>
   </data>
   <data name="&gt;&gt;label392.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="comboBox_ADWeekDay_ClockHand_Image.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -30986,7 +31040,7 @@
     <value>tabPage39</value>
   </data>
   <data name="&gt;&gt;comboBox_ADWeekDay_ClockHand_Image.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="label393.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -31022,34 +31076,7 @@
     <value>tabPage39</value>
   </data>
   <data name="&gt;&gt;label393.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="numericUpDown_ADWeekDay_ClockHand_Y.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="numericUpDown_ADWeekDay_ClockHand_Y.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 65</value>
-  </data>
-  <data name="numericUpDown_ADWeekDay_ClockHand_Y.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="numericUpDown_ADWeekDay_ClockHand_Y.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="numericUpDown_ADWeekDay_ClockHand_Y.TabIndex" type="System.Int32, mscorlib">
-    <value>87</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ADWeekDay_ClockHand_Y.Name" xml:space="preserve">
-    <value>numericUpDown_ADWeekDay_ClockHand_Y</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ADWeekDay_ClockHand_Y.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ADWeekDay_ClockHand_Y.Parent" xml:space="preserve">
-    <value>tabPage39</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ADWeekDay_ClockHand_Y.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="label394.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -31085,33 +31112,6 @@
     <value>tabPage39</value>
   </data>
   <data name="&gt;&gt;label394.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="numericUpDown_ADWeekDay_ClockHand_X.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="numericUpDown_ADWeekDay_ClockHand_X.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 30</value>
-  </data>
-  <data name="numericUpDown_ADWeekDay_ClockHand_X.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="numericUpDown_ADWeekDay_ClockHand_X.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="numericUpDown_ADWeekDay_ClockHand_X.TabIndex" type="System.Int32, mscorlib">
-    <value>85</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ADWeekDay_ClockHand_X.Name" xml:space="preserve">
-    <value>numericUpDown_ADWeekDay_ClockHand_X</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ADWeekDay_ClockHand_X.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ADWeekDay_ClockHand_X.Parent" xml:space="preserve">
-    <value>tabPage39</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ADWeekDay_ClockHand_X.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
   <data name="label395.Enabled" type="System.Boolean, mscorlib">
@@ -31213,6 +31213,60 @@
   <data name="&gt;&gt;tabPage39.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="numericUpDown_ADMonth_ClockHand_Y.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_ADMonth_ClockHand_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 65</value>
+  </data>
+  <data name="numericUpDown_ADMonth_ClockHand_Y.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_ADMonth_ClockHand_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_ADMonth_ClockHand_Y.TabIndex" type="System.Int32, mscorlib">
+    <value>87</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ADMonth_ClockHand_Y.Name" xml:space="preserve">
+    <value>numericUpDown_ADMonth_ClockHand_Y</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ADMonth_ClockHand_Y.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ADMonth_ClockHand_Y.Parent" xml:space="preserve">
+    <value>tabPage40</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ADMonth_ClockHand_Y.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="numericUpDown_ADMonth_ClockHand_X.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_ADMonth_ClockHand_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 30</value>
+  </data>
+  <data name="numericUpDown_ADMonth_ClockHand_X.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_ADMonth_ClockHand_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_ADMonth_ClockHand_X.TabIndex" type="System.Int32, mscorlib">
+    <value>85</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ADMonth_ClockHand_X.Name" xml:space="preserve">
+    <value>numericUpDown_ADMonth_ClockHand_X</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ADMonth_ClockHand_X.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ADMonth_ClockHand_X.Parent" xml:space="preserve">
+    <value>tabPage40</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ADMonth_ClockHand_X.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="numericUpDown_ADMonth_ClockHand_EndAngle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -31238,7 +31292,7 @@
     <value>tabPage40</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ADMonth_ClockHand_EndAngle.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="label382.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -31274,7 +31328,7 @@
     <value>tabPage40</value>
   </data>
   <data name="&gt;&gt;label382.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="numericUpDown_ADMonth_ClockHand_StartAngle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -31301,7 +31355,7 @@
     <value>tabPage40</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ADMonth_ClockHand_StartAngle.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="label383.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -31337,7 +31391,7 @@
     <value>tabPage40</value>
   </data>
   <data name="&gt;&gt;label383.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="numericUpDown_ADMonth_ClockHand_Offset_Y.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -31364,7 +31418,7 @@
     <value>tabPage40</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ADMonth_ClockHand_Offset_Y.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="label384.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -31400,7 +31454,7 @@
     <value>tabPage40</value>
   </data>
   <data name="&gt;&gt;label384.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="numericUpDown_ADMonth_ClockHand_Offset_X.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -31427,7 +31481,7 @@
     <value>tabPage40</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ADMonth_ClockHand_Offset_X.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="label385.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -31463,7 +31517,7 @@
     <value>tabPage40</value>
   </data>
   <data name="&gt;&gt;label385.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="comboBox_ADMonth_ClockHand_Image.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -31493,7 +31547,7 @@
     <value>tabPage40</value>
   </data>
   <data name="&gt;&gt;comboBox_ADMonth_ClockHand_Image.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="label386.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -31529,34 +31583,7 @@
     <value>tabPage40</value>
   </data>
   <data name="&gt;&gt;label386.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="numericUpDown_ADMonth_ClockHand_Y.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="numericUpDown_ADMonth_ClockHand_Y.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 65</value>
-  </data>
-  <data name="numericUpDown_ADMonth_ClockHand_Y.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="numericUpDown_ADMonth_ClockHand_Y.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="numericUpDown_ADMonth_ClockHand_Y.TabIndex" type="System.Int32, mscorlib">
-    <value>87</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ADMonth_ClockHand_Y.Name" xml:space="preserve">
-    <value>numericUpDown_ADMonth_ClockHand_Y</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ADMonth_ClockHand_Y.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ADMonth_ClockHand_Y.Parent" xml:space="preserve">
-    <value>tabPage40</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ADMonth_ClockHand_Y.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="label387.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -31592,33 +31619,6 @@
     <value>tabPage40</value>
   </data>
   <data name="&gt;&gt;label387.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="numericUpDown_ADMonth_ClockHand_X.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="numericUpDown_ADMonth_ClockHand_X.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 30</value>
-  </data>
-  <data name="numericUpDown_ADMonth_ClockHand_X.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="numericUpDown_ADMonth_ClockHand_X.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="numericUpDown_ADMonth_ClockHand_X.TabIndex" type="System.Int32, mscorlib">
-    <value>85</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ADMonth_ClockHand_X.Name" xml:space="preserve">
-    <value>numericUpDown_ADMonth_ClockHand_X</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ADMonth_ClockHand_X.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ADMonth_ClockHand_X.Parent" xml:space="preserve">
-    <value>tabPage40</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ADMonth_ClockHand_X.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
   <data name="label388.Enabled" type="System.Boolean, mscorlib">
