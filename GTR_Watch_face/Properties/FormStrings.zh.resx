@@ -178,7 +178,7 @@
     <value>] 解包/打包程序指示错误。</value>
   </data>
   <data name="Message_error_pack_unpack_dir_Text3" xml:space="preserve">
-    <value>指定解包/打包实用程序的正确路径。</value>
+    <value>指定解包/打包程序的正确路径。</value>
   </data>
   <data name="Message_error_respackerPath_Text1" xml:space="preserve">
     <value>缺少必需的程序组件。</value>
@@ -263,5 +263,17 @@
   </data>
   <data name="Message_Save_new_JSON" xml:space="preserve">
     <value>当前项目尚未保存。你想保存它吗？</value>
+  </data>
+  <data name="Message_WarningAnimationCoun_Text" xml:space="preserve">
+    <value>动画的元素数量不能超过4个。</value>
+  </data>
+  <data name="Message_WarningBatterySegment_Text" xml:space="preserve">
+    <value>建议不要对相同类型的值同时使用细分和指标。 这可能会引起故障！</value>
+  </data>
+  <data name="Message_WarningSpaceInName_Text" xml:space="preserve">
+    <value>文件名和路径不能包含空格！</value>
+  </data>
+  <data name="Message_WarningTemperature_Text" xml:space="preserve">
+    <value>如果不显示白天和黑夜的温度，当前的温度显示可能无法工作。</value>
   </data>
 </root>
