@@ -279,4 +279,7 @@
   <data name="Message_WarningTemperature_Text" xml:space="preserve">
     <value>Előfordulhat, hogy az aktuális hőmérsékleti kijelző nem működik a nappali és az éjszakai hőmérséklet aktiválása / megjelenítése nélkül</value>
   </data>
+  <data name="Message_WarningBatteryCount_Text" xml:space="preserve">
+    <value>Nem ajánlott tíznél több képet használni az akkumulátor töltöttségének megjelenítéséhez.</value>
+  </data>
 </root>

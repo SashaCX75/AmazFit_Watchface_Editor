@@ -282,4 +282,7 @@
   <data name="Message_WarningAnimationCoun_Text" xml:space="preserve">
     <value>Количество элементов для анимации не может быть больше 4.</value>
   </data>
+  <data name="Message_WarningBatteryCount_Text" xml:space="preserve">
+    <value>Не рекомендуется использовать больше 10 картинок для отображения заряда батареи.</value>
+  </data>
 </root>

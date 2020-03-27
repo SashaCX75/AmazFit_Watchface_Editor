@@ -27,6 +27,28 @@ namespace GTR_Watch_face
             int i;
             //gPanel.SmoothingMode = SmoothingMode.AntiAlias;
 
+            #region Black background
+            src = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr47.png");
+            if (radioButton_42.Checked)
+            {
+                src = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr42.png");
+            }
+            if (radioButton_gts.Checked)
+            {
+                src = new Bitmap(Application.StartupPath + @"\Mask\mask_gts.png");
+            }
+            if (radioButton_TRex.Checked)
+            {
+                src = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
+            }
+            if (radioButton_Verge.Checked)
+            {
+                src = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
+            }
+            gPanel.DrawImage(src, new Rectangle(0, 0, src.Width, src.Height));
+            src.Dispose();
+            #endregion
+
             #region Background
             if (comboBox_Background.SelectedIndex >= 0)
             {
@@ -37,6 +59,193 @@ namespace GTR_Watch_face
             }
             #endregion
             if (scale == 0.5) gPanel.SmoothingMode = SmoothingMode.AntiAlias;
+
+            #region Battery
+            if (checkBox_Battery.Checked)
+            {
+                // заряд числом
+                if ((checkBox_Battery_Text.Checked) && (comboBox_Battery_Text_Image.SelectedIndex >= 0))
+                {
+                    int x1 = (int)numericUpDown_Battery_Text_StartCorner_X.Value;
+                    int y1 = (int)numericUpDown_Battery_Text_StartCorner_Y.Value;
+                    int x2 = (int)numericUpDown_Battery_Text_EndCorner_X.Value;
+                    int y2 = (int)numericUpDown_Battery_Text_EndCorner_Y.Value;
+                    x2++;
+                    y2++;
+                    int image_index = comboBox_Battery_Text_Image.SelectedIndex;
+                    int spacing = (int)numericUpDown_Battery_Text_Spacing.Value;
+                    int alignment = comboBox_Battery_Text_Alignment.SelectedIndex;
+                    int data_number = Watch_Face_Preview_Set.Battery;
+                    if ((checkBox_Battery_Percent.Checked) && (comboBox_Battery_Percent_Image.SelectedIndex >= 0) &&
+                        (numericUpDown_Battery_Percent_X.Value == 0) && (numericUpDown_Battery_Percent_Y.Value == 0))
+                    {
+                        if (numericUpDown_Battery_Text_Count.Value == 10)
+                            DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number,
+                                comboBox_Battery_Percent_Image.SelectedIndex, -1, 0, BBorder);
+                    }
+                    else if (numericUpDown_Battery_Text_Count.Value == 10)
+                        DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
+                }
+
+                // заряд картинкой
+                if ((checkBox_Battery_Img.Checked) && (comboBox_Battery_Img_Image.SelectedIndex >= 0))
+                {
+                    float count = (float)numericUpDown_Battery_Img_Count.Value;
+                    if (count > 10) count = 10;
+                    int offSet = (int)Math.Ceiling(count * Watch_Face_Preview_Set.Battery / 100f);
+                    offSet--;
+                    if (offSet < 0) offSet = 0;
+                    if (offSet >= count) offSet = (int)(count - 1);
+                    //int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
+                    i = comboBox_Battery_Img_Image.SelectedIndex + offSet;
+                    src = new Bitmap(ListImagesFullName[i]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Battery_Img_X.Value,
+                        (int)numericUpDown_Battery_Img_Y.Value, src.Width, src.Height));
+                    src.Dispose();
+                }
+
+                // значек процентов
+                //if ((checkBox_Battery_Percent.Checked) && (comboBox_Battery_Percent_Image.SelectedIndex >= 0))
+                if ((checkBox_Battery_Percent.Checked) && (comboBox_Battery_Percent_Image.SelectedIndex >= 0) &&
+                        (numericUpDown_Battery_Percent_X.Value != 0) && (numericUpDown_Battery_Percent_Y.Value != 0))
+                {
+                    if ((checkBox_Battery_Text.Checked) && (comboBox_Battery_Text_Image.SelectedIndex >= 0))
+                    {
+                        src = new Bitmap(ListImagesFullName[comboBox_Battery_Percent_Image.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Battery_Percent_X.Value,
+                            (int)numericUpDown_Battery_Percent_Y.Value, src.Width, src.Height));
+                        src.Dispose(); 
+                    }
+                }
+
+                // шкала
+                if (checkBox_Battery_Scale.Checked)
+                {
+                    if (checkBox_Battery_Scale_Image.Checked &&
+                        comboBox_Battery_Scale_Image.SelectedIndex >= 0)
+                    {
+                        int x = (int)numericUpDown_Battery_Scale_ImageX.Value;
+                        int y = (int)numericUpDown_Battery_Scale_ImageY.Value;
+                        float width = (float)numericUpDown_Battery_Scale_Width.Value;
+                        int ImageIndex = comboBox_Battery_Scale_Image.SelectedIndex;
+                        int radius = (int)numericUpDown_Battery_Scale_Radius_X.Value;
+                        float StartAngle = (float)numericUpDown_Battery_Scale_StartAngle.Value - 90;
+                        float EndAngle = (float)(numericUpDown_Battery_Scale_EndAngle.Value -
+                            numericUpDown_Battery_Scale_StartAngle.Value);
+                        float AngleScale = (float)Watch_Face_Preview_Set.Battery / 100f;
+                        if (AngleScale > 1) AngleScale = 1;
+                        EndAngle = EndAngle * AngleScale;
+                        int lineCap = comboBox_Battery_Flatness.SelectedIndex;
+                        CircleOnBitmap(gPanel, x, y, ImageIndex, radius, width, lineCap, StartAngle, EndAngle);
+                    }
+                    else
+                    {
+                        gPanel.SmoothingMode = SmoothingMode.AntiAlias;
+                        Pen pen = new Pen(comboBox_Battery_Scale_Color.BackColor,
+                            (float)numericUpDown_Battery_Scale_Width.Value);
+                        switch (comboBox_Battery_Flatness.SelectedIndex)
+                        {
+                            case 1:
+                                pen.EndCap = LineCap.Triangle;
+                                pen.StartCap = LineCap.Triangle;
+                                break;
+                            case 2:
+                                pen.EndCap = LineCap.Flat;
+                                pen.StartCap = LineCap.Flat;
+                                break;
+                            default:
+                                pen.EndCap = LineCap.Round;
+                                pen.StartCap = LineCap.Round;
+                                break;
+                        }
+
+                        int x = (int)numericUpDown_Battery_Scale_Center_X.Value -
+                            (int)numericUpDown_Battery_Scale_Radius_X.Value;
+                        int y = (int)numericUpDown_Battery_Scale_Center_Y.Value -
+                            (int)numericUpDown_Battery_Scale_Radius_Y.Value;
+                        if (numericUpDown_Battery_Scale_Radius_Y.Value == 0)
+                        {
+                            y = (int)numericUpDown_Battery_Scale_Center_Y.Value -
+                            (int)numericUpDown_Battery_Scale_Radius_X.Value;
+                        }
+                        int width = (int)numericUpDown_Battery_Scale_Radius_X.Value * 2;
+                        //int height = (int)numericUpDown_Battery_Scale_Radius_Y.Value * 2;
+                        int height = width;
+                        float StartAngle = (float)numericUpDown_Battery_Scale_StartAngle.Value - 90;
+                        float EndAngle = (float)(numericUpDown_Battery_Scale_EndAngle.Value -
+                            numericUpDown_Battery_Scale_StartAngle.Value);
+                        float AngleScale = (float)Watch_Face_Preview_Set.Battery / 100f;
+                        if (AngleScale > 1) AngleScale = 1;
+                        EndAngle = EndAngle * AngleScale;
+                        try
+                        {
+                            if ((width > 0) && (height > 0)) gPanel.DrawArc(pen, x, y, width, height, StartAngle, EndAngle);
+                        }
+                        catch (Exception)
+                        {
+
+                        }
+                    }
+                }
+
+                // заряд стрелочный индикатор
+                if ((checkBox_Battery_ClockHand.Checked) && (comboBox_Battery_ClockHand_Image.SelectedIndex >= 0))
+                {
+                    int x1 = (int)numericUpDown_Battery_ClockHand_X.Value;
+                    int y1 = (int)numericUpDown_Battery_ClockHand_Y.Value;
+                    int offsetX = (int)numericUpDown_Battery_ClockHand_Offset_X.Value;
+                    int offsetY = (int)numericUpDown_Battery_ClockHand_Offset_Y.Value;
+                    int image_index = comboBox_Battery_ClockHand_Image.SelectedIndex;
+                    float startAngle = (float)(numericUpDown_Battery_ClockHand_StartAngle.Value);
+                    float endAngle = (float)(numericUpDown_Battery_ClockHand_EndAngle.Value);
+                    float angle = startAngle + Watch_Face_Preview_Set.Battery * (endAngle - startAngle) / 100;
+                    DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle);
+                }
+
+                // набор иконок
+                if (checkBox_Battery_IconSet.Checked)
+                {
+                    if ((comboBox_Battery_IconSet_Image.SelectedIndex >= 0) && (dataGridView_Battery_IconSet.Rows.Count > 0))
+                    {
+                        int x = 0;
+                        int y = 0;
+                        float RowsCount = dataGridView_Battery_IconSet.Rows.Count;
+                        RowsCount--;
+                        if (RowsCount < 0) RowsCount = 0;
+                        if (RowsCount > 10) RowsCount = 10;
+                        //int count = 0;
+                        for (int count = 0; count < RowsCount; count++)
+                        {
+                            if ((dataGridView_Battery_IconSet.Rows[count].Cells[0].Value != null) &&
+                                (dataGridView_Battery_IconSet.Rows[count].Cells[1].Value != null))
+                            {
+                                //int x = Int32.Parse(dataGridView_SPSliced.Rows[count].Cells[0].Value.ToString());
+                                //int y = Int32.Parse(dataGridView_SPSliced.Rows[count].Cells[1].Value.ToString());
+                                if (Int32.TryParse(dataGridView_Battery_IconSet.Rows[count].Cells[0].Value.ToString(), out x) &&
+                                    Int32.TryParse(dataGridView_Battery_IconSet.Rows[count].Cells[1].Value.ToString(), out y))
+                                {
+                                    i = comboBox_Battery_IconSet_Image.SelectedIndex + count;
+                                    if (i < ListImagesFullName.Count)
+                                    {
+                                        int value = (int)Math.Ceiling(RowsCount * Watch_Face_Preview_Set.Battery / 100);
+                                        //value--;
+                                        if (value < 0) value = 0;
+                                        if (count < value)
+                                        {
+                                            src = new Bitmap(ListImagesFullName[i]);
+                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                            //count++;
+                                            src.Dispose();
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+            #endregion
 
             #region Date
             if (checkBox_Date.Checked)
@@ -1127,190 +1336,6 @@ namespace GTR_Watch_face
                             (int)numericUpDown_ActivityStar_Y.Value, src.Width, src.Height));
                     }
                 }
-            }
-            #endregion
-
-            #region Battery
-            if (checkBox_Battery.Checked)
-            {
-                // заряд числом
-                if ((checkBox_Battery_Text.Checked) && (comboBox_Battery_Text_Image.SelectedIndex >= 0))
-                {
-                    int x1 = (int)numericUpDown_Battery_Text_StartCorner_X.Value;
-                    int y1 = (int)numericUpDown_Battery_Text_StartCorner_Y.Value;
-                    int x2 = (int)numericUpDown_Battery_Text_EndCorner_X.Value;
-                    int y2 = (int)numericUpDown_Battery_Text_EndCorner_Y.Value;
-                    x2++;
-                    y2++;
-                    int image_index = comboBox_Battery_Text_Image.SelectedIndex;
-                    int spacing = (int)numericUpDown_Battery_Text_Spacing.Value;
-                    int alignment = comboBox_Battery_Text_Alignment.SelectedIndex;
-                    int data_number = Watch_Face_Preview_Set.Battery;
-                    if ((checkBox_Battery_Percent.Checked) && (comboBox_Battery_Percent_Image.SelectedIndex >= 0) &&
-                        (numericUpDown_Battery_Percent_X.Value == 0) && (numericUpDown_Battery_Percent_Y.Value == 0))
-                    {
-                        if (numericUpDown_ActivityDistance_Count.Value == 10)
-                            DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number,
-                                comboBox_Battery_Percent_Image.SelectedIndex, -1, 0, BBorder);
-                    }
-                    else if (numericUpDown_Battery_Text_Count.Value == 10)
-                        DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
-                }
-
-                // заряд картинкой
-                if ((checkBox_Battery_Img.Checked) && (comboBox_Battery_Img_Image.SelectedIndex >= 0))
-                {
-                    float count = (float)numericUpDown_Battery_Img_Count.Value;
-                    if (count > 10) count = 10;
-                    int offSet = (int)Math.Ceiling(count * Watch_Face_Preview_Set.Battery / 100f);
-                    offSet --;
-                    if (offSet < 0) offSet = 0;
-                    if (offSet >= count) offSet = (int)(count - 1);
-                     //int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
-                     i = comboBox_Battery_Img_Image.SelectedIndex + offSet;
-                    src = new Bitmap(ListImagesFullName[i]);
-                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Battery_Img_X.Value,
-                        (int)numericUpDown_Battery_Img_Y.Value, src.Width, src.Height));
-                    src.Dispose();
-                }
-
-                // значек процентов
-                //if ((checkBox_Battery_Percent.Checked) && (comboBox_Battery_Percent_Image.SelectedIndex >= 0))
-                if ((checkBox_Battery_Percent.Checked) && (comboBox_Battery_Percent_Image.SelectedIndex >= 0) &&
-                        (numericUpDown_Battery_Percent_X.Value != 0) && (numericUpDown_Battery_Percent_Y.Value != 0))
-                {
-                    src = new Bitmap(ListImagesFullName[comboBox_Battery_Percent_Image.SelectedIndex]);
-                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Battery_Percent_X.Value,
-                        (int)numericUpDown_Battery_Percent_Y.Value, src.Width, src.Height));
-                    src.Dispose();
-                }
-
-                // шкала
-                if (checkBox_Battery_Scale.Checked)
-                {
-                    if (checkBox_Battery_Scale_Image.Checked &&
-                        comboBox_Battery_Scale_Image.SelectedIndex >= 0)
-                    {
-                        int x = (int)numericUpDown_Battery_Scale_ImageX.Value;
-                        int y = (int)numericUpDown_Battery_Scale_ImageY.Value;
-                        float width = (float)numericUpDown_Battery_Scale_Width.Value;
-                        int ImageIndex = comboBox_Battery_Scale_Image.SelectedIndex;
-                        int radius = (int)numericUpDown_Battery_Scale_Radius_X.Value;
-                        float StartAngle = (float)numericUpDown_Battery_Scale_StartAngle.Value - 90;
-                        float EndAngle = (float)(numericUpDown_Battery_Scale_EndAngle.Value -
-                            numericUpDown_Battery_Scale_StartAngle.Value);
-                        float AngleScale = (float)Watch_Face_Preview_Set.Battery / 100f;
-                        if (AngleScale > 1) AngleScale = 1;
-                        EndAngle = EndAngle * AngleScale;
-                        int lineCap = comboBox_Battery_Flatness.SelectedIndex;
-                        CircleOnBitmap(gPanel, x, y, ImageIndex, radius, width, lineCap, StartAngle, EndAngle);
-                    }
-                    else
-                    {
-                        gPanel.SmoothingMode = SmoothingMode.AntiAlias;
-                        Pen pen = new Pen(comboBox_Battery_Scale_Color.BackColor,
-                            (float)numericUpDown_Battery_Scale_Width.Value);
-                        switch (comboBox_Battery_Flatness.SelectedIndex)
-                        {
-                            case 1:
-                                pen.EndCap = LineCap.Triangle;
-                                pen.StartCap = LineCap.Triangle;
-                                break;
-                            case 2:
-                                pen.EndCap = LineCap.Flat;
-                                pen.StartCap = LineCap.Flat;
-                                break;
-                            default:
-                                pen.EndCap = LineCap.Round;
-                                pen.StartCap = LineCap.Round;
-                                break;
-                        }
-
-                        int x = (int)numericUpDown_Battery_Scale_Center_X.Value -
-                            (int)numericUpDown_Battery_Scale_Radius_X.Value;
-                        int y = (int)numericUpDown_Battery_Scale_Center_Y.Value -
-                            (int)numericUpDown_Battery_Scale_Radius_Y.Value;
-                        if (numericUpDown_Battery_Scale_Radius_Y.Value == 0)
-                        {
-                            y = (int)numericUpDown_Battery_Scale_Center_Y.Value -
-                            (int)numericUpDown_Battery_Scale_Radius_X.Value;
-                        }
-                        int width = (int)numericUpDown_Battery_Scale_Radius_X.Value * 2;
-                        //int height = (int)numericUpDown_Battery_Scale_Radius_Y.Value * 2;
-                        int height = width;
-                        float StartAngle = (float)numericUpDown_Battery_Scale_StartAngle.Value - 90;
-                        float EndAngle = (float)(numericUpDown_Battery_Scale_EndAngle.Value -
-                            numericUpDown_Battery_Scale_StartAngle.Value);
-                        float AngleScale = (float)Watch_Face_Preview_Set.Battery / 100f;
-                        if (AngleScale > 1) AngleScale = 1;
-                        EndAngle = EndAngle * AngleScale;
-                        try
-                        {
-                            if ((width > 0) && (height > 0)) gPanel.DrawArc(pen, x, y, width, height, StartAngle, EndAngle);
-                        }
-                        catch (Exception)
-                        {
-
-                        }
-                    }
-                }
-
-                // заряд стрелочный индикатор
-                if ((checkBox_Battery_ClockHand.Checked) && (comboBox_Battery_ClockHand_Image.SelectedIndex >= 0))
-                {
-                    int x1 = (int)numericUpDown_Battery_ClockHand_X.Value;
-                    int y1 = (int)numericUpDown_Battery_ClockHand_Y.Value;
-                    int offsetX = (int)numericUpDown_Battery_ClockHand_Offset_X.Value;
-                    int offsetY = (int)numericUpDown_Battery_ClockHand_Offset_Y.Value;
-                    int image_index = comboBox_Battery_ClockHand_Image.SelectedIndex;
-                    float startAngle = (float)(numericUpDown_Battery_ClockHand_StartAngle.Value);
-                    float endAngle = (float)(numericUpDown_Battery_ClockHand_EndAngle.Value);
-                    float angle = startAngle + Watch_Face_Preview_Set.Battery * (endAngle - startAngle) / 100;
-                    DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle);
-                }
-
-                // набор иконок
-                if (checkBox_Battery_IconSet.Checked)
-                {
-                    if ((comboBox_Battery_IconSet_Image.SelectedIndex >= 0) && (dataGridView_Battery_IconSet.Rows.Count > 0))
-                    {
-                        int x = 0;
-                        int y = 0;
-                        float RowsCount = dataGridView_Battery_IconSet.Rows.Count;
-                        RowsCount--;
-                        if (RowsCount < 0) RowsCount = 0;
-                        if (RowsCount > 10) RowsCount = 10;
-                        //int count = 0;
-                        for (int count = 0; count < RowsCount; count++)
-                        {
-                            if ((dataGridView_Battery_IconSet.Rows[count].Cells[0].Value != null) &&
-                                (dataGridView_Battery_IconSet.Rows[count].Cells[1].Value != null))
-                            {
-                                //int x = Int32.Parse(dataGridView_SPSliced.Rows[count].Cells[0].Value.ToString());
-                                //int y = Int32.Parse(dataGridView_SPSliced.Rows[count].Cells[1].Value.ToString());
-                                if (Int32.TryParse(dataGridView_Battery_IconSet.Rows[count].Cells[0].Value.ToString(), out x) &&
-                                    Int32.TryParse(dataGridView_Battery_IconSet.Rows[count].Cells[1].Value.ToString(), out y))
-                                {
-                                    i = comboBox_Battery_IconSet_Image.SelectedIndex + count;
-                                    if (i < ListImagesFullName.Count)
-                                    {
-                                        int value = (int)Math.Ceiling(RowsCount * Watch_Face_Preview_Set.Battery / 100);
-                                        //value--;
-                                        if (value < 0) value = 0;
-                                        if (count < value)
-                                        {
-                                            src = new Bitmap(ListImagesFullName[i]);
-                                            gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
-                                            //count++;
-                                            src.Dispose();
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-
             }
             #endregion
 

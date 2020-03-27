@@ -117,6 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>解包/打包</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>选择</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="tabPage33.Text" xml:space="preserve">
+    <value>选项</value>
+  </data>
+  <data name="tabPage43.Text" xml:space="preserve">
+    <value>关于程序</value>
+  </data>
   <data name="button_zip_unpack.Text" xml:space="preserve">
     <value>解包压缩bin</value>
   </data>
@@ -153,9 +168,6 @@
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>打包程序路径</value>
-  </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>解包/打包</value>
   </data>
   <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 17</value>
@@ -1261,9 +1273,6 @@
   <data name="label4.Text" xml:space="preserve">
     <value>带图片的JSON：</value>
   </data>
-  <data name="tabPage2.Text" xml:space="preserve">
-    <value>选择</value>
-  </data>
   <data name="button_SaveJson.Text" xml:space="preserve">
     <value>保存 Json</value>
   </data>
@@ -1448,7 +1457,9 @@
   <data name="label475.Text" xml:space="preserve">
     <value>坐标</value>
   </data>
-
+  <data name="tabPage54.Text" xml:space="preserve">
+    <value>在坐标之间移动</value>
+  </data>
   <data name="groupBox_MotiomAnimation.Text" xml:space="preserve">
     <value>编辑所选行中的数据</value>
   </data>
@@ -1467,19 +1478,31 @@
   <data name="AnimationColumn2.HeaderText" xml:space="preserve">
     <value>起始坐标（X）</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="AnimationColumn2.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
   <data name="AnimationColumn3.HeaderText" xml:space="preserve">
     <value>起始坐标（Y）</value>
+  </data>
+  <data name="AnimationColumn3.Width" type="System.Int32, mscorlib">
+    <value>80</value>
   </data>
   <data name="AnimationColumn4.HeaderText" xml:space="preserve">
     <value>终点坐标（X）</value>
   </data>
+  <data name="AnimationColumn4.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
   <data name="AnimationColumn5.HeaderText" xml:space="preserve">
     <value>终点坐标（Y）</value>
+  </data>
+  <data name="AnimationColumn5.Width" type="System.Int32, mscorlib">
+    <value>80</value>
   </data>
   <data name="AnimationColumn7.HeaderText" xml:space="preserve">
     <value>动画速度</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="AnimationColumn7.Width" type="System.Int32, mscorlib">
     <value>65</value>
   </data>
@@ -1492,11 +1515,11 @@
   <data name="AnimationColumn12.HeaderText" xml:space="preserve">
     <value>弹跳动画</value>
   </data>
+  <data name="AnimationColumn12.Width" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
   <data name="checkBox_MotiomAnimation.Text" xml:space="preserve">
     <value>激活</value>
-  </data>
-  <data name="tabPage54.Text" xml:space="preserve">
-    <value>在坐标之间移动</value>
   </data>
   <data name="checkBox_Animation.Text" xml:space="preserve">
     <value>激活</value>
@@ -1588,7 +1611,9 @@
   <data name="label445.Text" xml:space="preserve">
     <value>坐标</value>
   </data>
-
+  <data name="tabPage48.Text" xml:space="preserve">
+    <value>天气</value>
+  </data>
   <data name="checkBox_Shortcuts_Weather.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
   </data>
@@ -1628,8 +1653,8 @@
   <data name="label451.Text" xml:space="preserve">
     <value>坐标</value>
   </data>
-  <data name="tabPage48.Text" xml:space="preserve">
-    <value>天气</value>
+  <data name="tabPage49.Text" xml:space="preserve">
+    <value>节能</value>
   </data>
   <data name="checkBox_Shortcuts_Energy.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
@@ -1669,9 +1694,6 @@
   </data>
   <data name="label457.Text" xml:space="preserve">
     <value>坐标</value>
-  </data>
-  <data name="tabPage49.Text" xml:space="preserve">
-    <value>节能</value>
   </data>
   <data name="checkBox_Shortcuts.Text" xml:space="preserve">
     <value>激活</value>
@@ -1886,7 +1908,9 @@
   <data name="label322.Text" xml:space="preserve">
     <value>左上角</value>
   </data>
-
+  <data name="tabPage25.Text" xml:space="preserve">
+    <value>图标</value>
+  </data>
   <data name="label287.Location" type="System.Drawing.Point, System.Drawing">
     <value>240, 31</value>
   </data>
@@ -1901,9 +1925,6 @@
   </data>
   <data name="checkBox_Weather_Icon.Text" xml:space="preserve">
     <value>显示</value>
-  </data>
-  <data name="tabPage25.Text" xml:space="preserve">
-    <value>图标</value>
   </data>
   <data name="checkBox_Weather.Text" xml:space="preserve">
     <value>激活</value>
@@ -3690,7 +3711,9 @@
   <data name="checkBox_AmPm.Text" xml:space="preserve">
     <value>12小时制</value>
   </data>
-
+  <data name="tabPage4.Text" xml:space="preserve">
+    <value>小时</value>
+  </data>
   <data name="checkBox_Hours.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
   </data>
@@ -3703,8 +3726,8 @@
   <data name="groupBox_Hours_Ones.Text" xml:space="preserve">
     <value>秒针</value>
   </data>
-  <data name="tabPage4.Text" xml:space="preserve">
-    <value>小时</value>
+  <data name="tabPage5.Text" xml:space="preserve">
+    <value>分钟</value>
   </data>
   <data name="checkBox_Minutes.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
@@ -3718,8 +3741,8 @@
   <data name="groupBox_Minutes_Ones.Text" xml:space="preserve">
     <value>秒针</value>
   </data>
-  <data name="tabPage5.Text" xml:space="preserve">
-    <value>分钟</value>
+  <data name="tabPage6.Text" xml:space="preserve">
+    <value>秒</value>
   </data>
   <data name="groupBox_Seconds_Ones.Text" xml:space="preserve">
     <value>秒针</value>
@@ -3733,9 +3756,6 @@
   <data name="groupBox_Seconds_Tens.Text" xml:space="preserve">
     <value>时针</value>
   </data>
-  <data name="tabPage6.Text" xml:space="preserve">
-    <value>秒</value>
-  </data>
   <data name="checkBox_Time.Text" xml:space="preserve">
     <value>激活</value>
   </data>
@@ -3744,9 +3764,6 @@
   </data>
   <data name="button_Background.Text" xml:space="preserve">
     <value>背景</value>
-  </data>
-    <data name="tabPage3.Text" xml:space="preserve">
-    <value>编辑</value>
   </data>
   <data name="comboBox_Animation_Preview_Speed.Location" type="System.Drawing.Point, System.Drawing">
     <value>241, 244</value>
@@ -3758,7 +3775,9 @@
     <value>预览动画时的动画速度（高速-动画更流畅，
 	需要使用更多系统负载，请按需设置数值。）</value>
   </data>
-
+  <data name="groupBox8.Text" xml:space="preserve">
+    <value>快捷方式区域突出显示类型</value>
+  </data>
   <data name="checkBox_Shortcuts_Border.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 17</value>
   </data>
@@ -3770,9 +3789,6 @@
   </data>
   <data name="checkBox_Shortcuts_Area.Text" xml:space="preserve">
     <value>虚线区域</value>
-  </data>
-  <data name="groupBox8.Text" xml:space="preserve">
-    <value>快捷方式区域突出显示类型</value>
   </data>
   <data name="button_Reset.Text" xml:space="preserve">
     <value>重置</value>
@@ -3849,7 +3865,9 @@
   <data name="radioButton_Settings_Open_Dialog.Text" xml:space="preserve">
     <value>建议一个选择</value>
   </data>
-
+  <data name="groupBox5.Text" xml:space="preserve">
+    <value>提取.bin之后</value>
+  </data>
   <data name="radioButton_Settings_AfterUnpack_DoNothing.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 17</value>
   </data>
@@ -3868,8 +3886,8 @@
   <data name="radioButton_Settings_AfterUnpack_Dialog.Text" xml:space="preserve">
     <value>建议一个选择</value>
   </data>
-  <data name="groupBox5.Text" xml:space="preserve">
-    <value>提取.bin之后</value>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>如果提取的文件名相同</value>
   </data>
   <data name="radioButton_Settings_Unpack_Replace.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 17</value>
@@ -3888,12 +3906,6 @@
   </data>
   <data name="radioButton_Settings_Unpack_Dialog.Text" xml:space="preserve">
     <value>建议一个选择</value>
-  </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>如果提取的文件名相同</value>
-  </data>
-  <data name="tabPage33.Text" xml:space="preserve">
-    <value>选项</value>
   </data>
   <data name="label415.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 13</value>
@@ -3951,9 +3963,6 @@
   </data>
   <data name="label406.Text" xml:space="preserve">
     <value>版本：</value>
-  </data>
-  <data name="tabPage43.Text" xml:space="preserve">
-    <value>关于程序</value>
   </data>
   <data name="button_PreviewBig.Text" xml:space="preserve">
     <value>放大</value>

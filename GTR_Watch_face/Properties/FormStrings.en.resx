@@ -276,4 +276,7 @@
   <data name="Message_WarningTemperature_Text" xml:space="preserve">
     <value>The current temperature display may not work without displaying the day and night temperatures.</value>
   </data>
+  <data name="Message_WarningBatteryCount_Text" xml:space="preserve">
+    <value>It is not recommended using more than 10 images to display battery power.</value>
+  </data>
 </root>
