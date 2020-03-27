@@ -2536,7 +2536,7 @@
     <value>27</value>
   </data>
   <data name="button_SetWeather.Text" xml:space="preserve">
-    <value>Weather (beta)</value>
+    <value>Погода</value>
   </data>
   <data name="&gt;&gt;button_SetWeather.Name" xml:space="preserve">
     <value>button_SetWeather</value>
