@@ -202,7 +202,7 @@
     <value>读取JSON文件时出错。</value>
   </data>
   <data name="Message_LoadPreviewStates_Caption" xml:space="preserve">
-    <value>下载preview设置</value>
+    <value>下载Preview设置</value>
   </data>
   <data name="Message_LoadPreviewStates_Text" xml:space="preserve">
     <value>下载具有一组预览设置PreviewStates.json的现有文件？</value>
