@@ -276,4 +276,7 @@
   <data name="Message_WarningTemperature_Text" xml:space="preserve">
     <value>Zobrazení aktuální teploty nemusí fungovat bez aktivace / zobrazení denní a noční teploty</value>
   </data>
+  <data name="Message_WarningBatteryCount_Text" xml:space="preserve">
+    <value>Pro zobrazení stavu baterie se nedoporučuje používat více než 10 obrázků.</value>
+  </data>
 </root>

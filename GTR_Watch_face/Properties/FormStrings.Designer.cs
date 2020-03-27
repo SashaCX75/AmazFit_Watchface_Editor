@@ -493,6 +493,15 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Не рекомендуется использовать больше 10 картинок для отображения заряда батареи..
+        /// </summary>
+        public static string Message_WarningBatteryCount_Text {
+            get {
+                return ResourceManager.GetString("Message_WarningBatteryCount_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Не рекомендуется отображение в виде стрелочного индикатора совместно с отображением сегментами для одного элемента..
         /// </summary>
         public static string Message_WarningBatterySegment_Text {
