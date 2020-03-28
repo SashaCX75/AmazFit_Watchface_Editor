@@ -279,4 +279,7 @@
   <data name="Message_WarningBatteryCount_Text" xml:space="preserve">
     <value>Pro zobrazení stavu baterie se nedoporučuje používat více než 10 obrázků.</value>
   </data>
+  <data name="Message_Error_SpaceInProgrammName_Text" xml:space="preserve">
+    <value>Cesta k programu by neměla obsahovat mezery. Je doporučeno umístit program do kořenového adresáře disku.</value>
+  </data>
 </root>

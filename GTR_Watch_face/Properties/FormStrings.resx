@@ -285,4 +285,7 @@
   <data name="Message_WarningBatteryCount_Text" xml:space="preserve">
     <value>Не рекомендуется использовать больше 10 картинок для отображения заряда батареи.</value>
   </data>
+  <data name="Message_Error_SpaceInProgrammName_Text" xml:space="preserve">
+    <value>Путь к программе не должен содержать пробелы. Желательно поместить программу в корень диска.</value>
+  </data>
 </root>

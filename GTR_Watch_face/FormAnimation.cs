@@ -58,6 +58,10 @@ namespace GTR_Watch_face
                 elementMotiomAnimation.DrawMotiomAnimation(gPanel, timer1.Interval);
             }
             if(StaticAnimation != null) StaticAnimation.DrawStaticAnimation(gPanel, timer1.Interval);
+
+            Form1 form1 = this.Owner as Form1;//Получаем ссылку на первую форму
+            form1.PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false, 2);
+
             pictureBox_AnimatiomPreview.Image = SrcImg;
 
             gPanel.Dispose();// освобождаем все ресурсы, связанные с отрисовкой
@@ -333,13 +337,14 @@ namespace GTR_Watch_face
                                 oldSet = set;
                             }
 
-                            form1.PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false);
+                            form1.PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false, 1);
 
                             foreach (ClassMotiomAnimation elementMotiomAnimation in MotiomAnimation)
                             {
                                 elementMotiomAnimation.DrawMotiomAnimation(gPanel, 100);
                             }
                             if (StaticAnimation != null) StaticAnimation.DrawStaticAnimation(gPanel, 100);
+                            form1.PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false, 2);
 
                             if (form1.checkBox_crop.Checked)
                             {

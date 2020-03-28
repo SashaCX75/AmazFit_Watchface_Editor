@@ -286,6 +286,15 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Путь к программе не должен содержать пробелы. Желательно поместить программу в корень диска..
+        /// </summary>
+        public static string Message_Error_SpaceInProgrammName_Text {
+            get {
+                return ResourceManager.GetString("Message_Error_SpaceInProgrammName_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Некоторые изображения могут вызывать ошибки (.
         /// </summary>
         public static string Message_ErrorImage_Text1 {

@@ -279,4 +279,7 @@
   <data name="Message_WarningBatteryCount_Text" xml:space="preserve">
     <value>It is not recommended using more than 10 images to display battery power.</value>
   </data>
+  <data name="Message_Error_SpaceInProgrammName_Text" xml:space="preserve">
+    <value>The program path should not contain spaces. It is recommended to place the program in the root directory of the disk.</value>
+  </data>
 </root>

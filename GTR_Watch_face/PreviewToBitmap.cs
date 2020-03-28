@@ -19,13 +19,16 @@ namespace GTR_Watch_face
         /// <param name="showShortcuts">Подсвечивать область ярлыков</param>
         /// <param name="showShortcutsArea">Подсвечивать область ярлыков рамкой</param>
         /// <param name="showShortcutsBorder">Подсвечивать область ярлыков заливкой</param>
+        /// <param name="link">1 - если отрисовка только до анимации, 
+        /// 2 - если отрисовка только после анимации, в остальных случаях полная отрисовка</param>
         public void PreviewToBitmap(Graphics gPanel, float scale, bool crop, bool WMesh, bool BMesh, bool BBorder, 
-            bool showShortcuts, bool showShortcutsArea, bool showShortcutsBorder, bool showAnimation)
+            bool showShortcuts, bool showShortcutsArea, bool showShortcutsBorder, bool showAnimation, int link)
         {
             var src = new Bitmap(1, 1);
             gPanel.ScaleTransform(scale, scale, MatrixOrder.Prepend);
             int i;
             //gPanel.SmoothingMode = SmoothingMode.AntiAlias;
+            if (link == 2) goto AnimationEnd;
 
             #region Black background
             src = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr47.png");
@@ -1340,6 +1343,7 @@ namespace GTR_Watch_face
             #endregion
 
             #region Animation
+            if (link == 1) goto DrawEnd;
             if (showAnimation)
             {
                 if (checkBox_Animation.Checked)
@@ -1400,7 +1404,8 @@ namespace GTR_Watch_face
 
                 }
             }
-            #endregion            
+            AnimationEnd:
+            #endregion
 
             #region Time
             if (checkBox_Time.Checked)
@@ -1940,6 +1945,8 @@ namespace GTR_Watch_face
             }
             #endregion
 
+            DrawEnd:
+
             src.Dispose();
 
             if (crop)
@@ -1965,8 +1972,8 @@ namespace GTR_Watch_face
                 gPanel.DrawImage(mask, new Rectangle(0, 0, mask.Width, mask.Height));
                 mask.Dispose();
             }
-            
-            FormText();
+
+            if (link !=1 && link !=2) FormText();
         }
 
         /// <summary>Рисует число</summary>

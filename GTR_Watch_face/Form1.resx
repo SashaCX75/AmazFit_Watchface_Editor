@@ -11243,7 +11243,7 @@
     <value>True</value>
   </data>
   <data name="dataGridView_MotiomAnimation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 125</value>
+    <value>382, 125</value>
   </data>
   <data name="dataGridView_MotiomAnimation.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -11276,7 +11276,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_MotiomAnimation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 17</value>
+    <value>382, 17</value>
   </data>
   <data name="checkBox_MotiomAnimation.TabIndex" type="System.Int32, mscorlib">
     <value>88</value>
@@ -11303,7 +11303,7 @@
     <value>True</value>
   </data>
   <data name="tabPage54.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 203</value>
+    <value>382, 203</value>
   </data>
   <data name="tabPage54.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -12200,7 +12200,7 @@
     <value>True</value>
   </data>
   <data name="tabPage47.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 94</value>
+    <value>382, 94</value>
   </data>
   <data name="tabPage47.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -12587,7 +12587,7 @@
     <value>True</value>
   </data>
   <data name="tabPage48.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 94</value>
+    <value>382, 94</value>
   </data>
   <data name="tabPage48.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -12971,7 +12971,7 @@
     <value>True</value>
   </data>
   <data name="tabPage49.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 94</value>
+    <value>382, 94</value>
   </data>
   <data name="tabPage49.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -14648,7 +14648,7 @@
     <value>True</value>
   </data>
   <data name="tabPage27.Size" type="System.Drawing.Size, System.Drawing">
-    <value>357, 104</value>
+    <value>374, 104</value>
   </data>
   <data name="tabPage27.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -15317,7 +15317,7 @@
     <value>True</value>
   </data>
   <data name="tabPage30.Size" type="System.Drawing.Size, System.Drawing">
-    <value>357, 104</value>
+    <value>374, 104</value>
   </data>
   <data name="tabPage30.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -15347,7 +15347,7 @@
     <value>True</value>
   </data>
   <data name="tabControl5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 130</value>
+    <value>382, 130</value>
   </data>
   <data name="tabControl5.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -15371,7 +15371,7 @@
     <value>True</value>
   </data>
   <data name="tabPage26.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 129</value>
+    <value>382, 129</value>
   </data>
   <data name="tabPage26.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -15755,7 +15755,7 @@
     <value>True</value>
   </data>
   <data name="tabPage25.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 129</value>
+    <value>382, 129</value>
   </data>
   <data name="tabPage25.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -17201,7 +17201,7 @@
     <value>True</value>
   </data>
   <data name="tabPage31.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 144</value>
+    <value>382, 144</value>
   </data>
   <data name="tabPage31.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -17858,7 +17858,7 @@
     <value>True</value>
   </data>
   <data name="tabPage32.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 144</value>
+    <value>382, 144</value>
   </data>
   <data name="tabPage32.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -18941,7 +18941,7 @@
     <value>True</value>
   </data>
   <data name="tabPage28.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 134</value>
+    <value>382, 134</value>
   </data>
   <data name="tabPage28.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -19295,7 +19295,7 @@
     <value>True</value>
   </data>
   <data name="tabPage22.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 134</value>
+    <value>382, 134</value>
   </data>
   <data name="tabPage22.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -20099,7 +20099,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_Battery_Scale.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 20</value>
+    <value>382, 20</value>
   </data>
   <data name="checkBox_Battery_Scale.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
@@ -20126,7 +20126,7 @@
     <value>True</value>
   </data>
   <data name="tabPage23.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 134</value>
+    <value>382, 134</value>
   </data>
   <data name="tabPage23.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -20606,7 +20606,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_Battery_ClockHand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 20</value>
+    <value>382, 20</value>
   </data>
   <data name="checkBox_Battery_ClockHand.TabIndex" type="System.Int32, mscorlib">
     <value>68</value>
@@ -20633,7 +20633,7 @@
     <value>True</value>
   </data>
   <data name="tabPage35.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 134</value>
+    <value>382, 134</value>
   </data>
   <data name="tabPage35.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -20840,7 +20840,7 @@
     <value>True</value>
   </data>
   <data name="tabPage42.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 134</value>
+    <value>382, 134</value>
   </data>
   <data name="tabPage42.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -21608,7 +21608,7 @@
     <value>True</value>
   </data>
   <data name="tabPage18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 54</value>
+    <value>382, 54</value>
   </data>
   <data name="tabPage18.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -21926,7 +21926,7 @@
     <value>True</value>
   </data>
   <data name="tabPage19.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 54</value>
+    <value>382, 54</value>
   </data>
   <data name="tabPage19.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -22244,7 +22244,7 @@
     <value>True</value>
   </data>
   <data name="tabPage20.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 54</value>
+    <value>382, 54</value>
   </data>
   <data name="tabPage20.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -23858,7 +23858,7 @@
     <value>True</value>
   </data>
   <data name="tabPage13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 159</value>
+    <value>382, 159</value>
   </data>
   <data name="tabPage13.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -24527,7 +24527,7 @@
     <value>True</value>
   </data>
   <data name="tabPage14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>357, 134</value>
+    <value>374, 134</value>
   </data>
   <data name="tabPage14.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -24875,7 +24875,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_ActivityPulsScale.Size" type="System.Drawing.Size, System.Drawing">
-    <value>351, 20</value>
+    <value>368, 20</value>
   </data>
   <data name="checkBox_ActivityPulsScale.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
@@ -25364,7 +25364,7 @@
     <value>True</value>
   </data>
   <data name="tabPage44.Size" type="System.Drawing.Size, System.Drawing">
-    <value>357, 134</value>
+    <value>374, 134</value>
   </data>
   <data name="tabPage44.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -25592,7 +25592,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_Pulse_ClockHand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>351, 20</value>
+    <value>368, 20</value>
   </data>
   <data name="checkBox_Pulse_ClockHand.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
@@ -25874,7 +25874,7 @@
     <value>True</value>
   </data>
   <data name="tabPage51.Size" type="System.Drawing.Size, System.Drawing">
-    <value>357, 134</value>
+    <value>374, 134</value>
   </data>
   <data name="tabPage51.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -26045,7 +26045,7 @@
     <value>True</value>
   </data>
   <data name="tabPage45.Size" type="System.Drawing.Size, System.Drawing">
-    <value>357, 134</value>
+    <value>374, 134</value>
   </data>
   <data name="tabPage45.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -26075,7 +26075,7 @@
     <value>True</value>
   </data>
   <data name="tabControl8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 160</value>
+    <value>382, 160</value>
   </data>
   <data name="tabControl8.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -26099,7 +26099,7 @@
     <value>True</value>
   </data>
   <data name="tabPage55.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 159</value>
+    <value>382, 159</value>
   </data>
   <data name="tabPage55.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -26768,7 +26768,7 @@
     <value>True</value>
   </data>
   <data name="tabPage15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>357, 134</value>
+    <value>374, 134</value>
   </data>
   <data name="tabPage15.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -27116,7 +27116,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_ActivityCaloriesScale.Size" type="System.Drawing.Size, System.Drawing">
-    <value>351, 20</value>
+    <value>368, 20</value>
   </data>
   <data name="checkBox_ActivityCaloriesScale.TabIndex" type="System.Int32, mscorlib">
     <value>74</value>
@@ -27602,7 +27602,7 @@
     <value>True</value>
   </data>
   <data name="tabPage11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>357, 134</value>
+    <value>374, 134</value>
   </data>
   <data name="tabPage11.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -27830,7 +27830,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_Calories_ClockHand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>351, 20</value>
+    <value>368, 20</value>
   </data>
   <data name="checkBox_Calories_ClockHand.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
@@ -28112,7 +28112,7 @@
     <value>True</value>
   </data>
   <data name="tabPage52.Size" type="System.Drawing.Size, System.Drawing">
-    <value>357, 134</value>
+    <value>374, 134</value>
   </data>
   <data name="tabPage52.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -28142,7 +28142,7 @@
     <value>True</value>
   </data>
   <data name="tabControl9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 160</value>
+    <value>382, 160</value>
   </data>
   <data name="tabControl9.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -28166,7 +28166,7 @@
     <value>True</value>
   </data>
   <data name="tabPage59.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 159</value>
+    <value>382, 159</value>
   </data>
   <data name="tabPage59.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -28454,7 +28454,7 @@
     <value>True</value>
   </data>
   <data name="tabPage16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 159</value>
+    <value>382, 159</value>
   </data>
   <data name="tabPage16.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -29504,7 +29504,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_StProg_ClockHand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>359, 20</value>
+    <value>376, 20</value>
   </data>
   <data name="checkBox_StProg_ClockHand.TabIndex" type="System.Int32, mscorlib">
     <value>97</value>
@@ -29924,7 +29924,7 @@
     <value>True</value>
   </data>
   <data name="tabPage37.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 134</value>
+    <value>382, 134</value>
   </data>
   <data name="tabPage37.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -30092,7 +30092,7 @@
     <value>True</value>
   </data>
   <data name="tabPage41.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 134</value>
+    <value>382, 134</value>
   </data>
   <data name="tabPage41.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -31166,7 +31166,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_ADWeekDay_ClockHand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 20</value>
+    <value>382, 20</value>
   </data>
   <data name="checkBox_ADWeekDay_ClockHand.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
@@ -31193,7 +31193,7 @@
     <value>True</value>
   </data>
   <data name="tabPage39.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 116</value>
+    <value>382, 116</value>
   </data>
   <data name="tabPage39.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -31673,7 +31673,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_ADMonth_ClockHand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 20</value>
+    <value>382, 20</value>
   </data>
   <data name="checkBox_ADMonth_ClockHand.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
@@ -31700,7 +31700,7 @@
     <value>True</value>
   </data>
   <data name="tabPage40.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 116</value>
+    <value>382, 116</value>
   </data>
   <data name="tabPage40.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -34229,7 +34229,7 @@
     <value>True</value>
   </data>
   <data name="tabPage7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 170</value>
+    <value>382, 170</value>
   </data>
   <data name="tabPage7.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -34745,7 +34745,7 @@
     <value>True</value>
   </data>
   <data name="tabPage50.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 170</value>
+    <value>382, 170</value>
   </data>
   <data name="tabPage50.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -35477,7 +35477,7 @@
     <value>True</value>
   </data>
   <data name="tabPage34.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 170</value>
+    <value>382, 170</value>
   </data>
   <data name="tabPage34.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -37406,7 +37406,7 @@
     <value>True</value>
   </data>
   <data name="tabPage5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 150</value>
+    <value>382, 150</value>
   </data>
   <data name="tabPage5.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -37988,7 +37988,7 @@
     <value>True</value>
   </data>
   <data name="tabPage6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 150</value>
+    <value>382, 150</value>
   </data>
   <data name="tabPage6.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
