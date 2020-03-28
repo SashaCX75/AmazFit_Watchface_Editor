@@ -256,6 +256,9 @@
     <EmbeddedResource Include="FormFileExists.sk.resx">
       <DependentUpon>FormFileExists.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormFileExists.zh.resx">
+      <DependentUpon>FormFileExists.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPreview.resx">
       <DependentUpon>FormPreview.cs</DependentUpon>
     </EmbeddedResource>
