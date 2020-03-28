@@ -1304,22 +1304,24 @@ namespace GTR_Watch_face
             if (Watch_Face.Unknown11 != null)
             {
                 checkBox_Animation.Checked = true;
+                // покадровая анимация
                 if (Watch_Face.Unknown11.Unknown11_2 != null && Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1 != null)
                 {
                     checkBox_StaticAnimation.Checked = true;
                     int v = (int)Watch_Face.Unknown11.Unknown11_2.Unknown11d2p2;
                     if (v < 100) v = 100;
+                    numericUpDown_StaticAnimation_Count.Value = Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1.ImagesCount;
                     numericUpDown_StaticAnimation_SpeedAnimation.Value = v;
                     numericUpDown_StaticAnimation_TimeAnimation.Value = Watch_Face.Unknown11.Unknown11_2.Unknown11d2p4;
                     numericUpDown_StaticAnimation_Pause.Value = Watch_Face.Unknown11.Unknown11_2.Unknown11d2p5;
 
                     comboBoxSetText(comboBox_StaticAnimation_Image, Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1.ImageIndex);
-                    numericUpDown_StaticAnimation_Count.Value = Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1.ImagesCount;
                     numericUpDown_StaticAnimation_X.Value = Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1.X;
                     numericUpDown_StaticAnimation_Y.Value = Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1.Y;
                 }
                 else checkBox_StaticAnimation.Checked = false;
 
+                // перемещение между координатами
                 if (Watch_Face.Unknown11.Unknown11_1 != null)
                 {
                     bool motiomAnimation = false;
