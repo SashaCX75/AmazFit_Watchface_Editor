@@ -139,7 +139,7 @@
     <value>选择一个表盘文件</value>
   </data>
   <data name="Form_Preview" xml:space="preserve">
-    <value>预览版</value>
+    <value>预览</value>
   </data>
   <data name="Form_PreviewX" xml:space="preserve">
     <value>预览  [X =</value>
@@ -238,10 +238,10 @@
     <value>不建议使用不带后缀的距离显示。</value>
   </data>
   <data name="Message_WarningOnlyMin_Text" xml:space="preserve">
-    <value>不建议使用分钟而不使用小时来数字显示时间。</value>
+    <value>不建议使用分钟而不使用小时来显示时间。</value>
   </data>
   <data name="Message_WarningOnlySec_Text" xml:space="preserve">
-    <value>不建议使用秒而不使用小时和分钟进行时间的数字显示。</value>
+    <value>不建议使用秒而不使用小时和分钟来显示时间。</value>
   </data>
   <data name="Message_WarningTensOnes_Text" xml:space="preserve">
     <value>不支持十位和个位的不同ImageIndex值。</value>
@@ -268,12 +268,18 @@
     <value>动画的元素数量不能超过4个。</value>
   </data>
   <data name="Message_WarningBatterySegment_Text" xml:space="preserve">
-    <value>建议不要对相同类型的值同时使用细分和指标。 这可能会引起故障！</value>
+    <value>建议不要对相同类型的值同时使用段和指标。这可能会引起故障！</value>
   </data>
   <data name="Message_WarningSpaceInName_Text" xml:space="preserve">
     <value>文件名和路径不能包含空格！</value>
   </data>
   <data name="Message_WarningTemperature_Text" xml:space="preserve">
-    <value>如果不显示白天和黑夜的温度，当前的温度显示可能无法工作。</value>
+    <value>如果不显示日间和夜间的温度，实时温度显示可能无法工作。</value>
+  </data>
+  <data name="Message_WarningBatteryCount_Text" xml:space="preserve">
+    <value>不建议使用超过10个图像来显示电池电量。</value>
+  </data>
+  <data name="Message_Error_SpaceInProgrammName_Text" xml:space="preserve">
+    <value>程序路径不应包含空格。建议将程序放在磁盘的根目录中。</value>
   </data>
 </root>
