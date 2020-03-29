@@ -16395,7 +16395,7 @@
             this.helpProvider1.SetShowHelp(this.checkBox_border, ((bool)(resources.GetObject("checkBox_border.ShowHelp"))));
             this.checkBox_border.UseVisualStyleBackColor = true;
             this.checkBox_border.CheckedChanged += new System.EventHandler(this.checkBox_border_CheckedChanged);
-            this.checkBox_border.Click += new System.EventHandler(this.checkBox_Click);
+            this.checkBox_border.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
             // 
             // label_version
             // 
@@ -16420,7 +16420,7 @@
             this.helpProvider1.SetShowHelp(this.checkBox_crop, ((bool)(resources.GetObject("checkBox_crop.ShowHelp"))));
             this.checkBox_crop.UseVisualStyleBackColor = true;
             this.checkBox_crop.CheckedChanged += new System.EventHandler(this.checkBox_crop_CheckedChanged);
-            this.checkBox_crop.Click += new System.EventHandler(this.checkBox_Click);
+            this.checkBox_crop.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
             // 
             // pictureBox1
             // 
@@ -16438,7 +16438,7 @@
             this.helpProvider1.SetShowHelp(this.checkBox_Show_Shortcuts, ((bool)(resources.GetObject("checkBox_Show_Shortcuts.ShowHelp"))));
             this.checkBox_Show_Shortcuts.UseVisualStyleBackColor = true;
             this.checkBox_Show_Shortcuts.CheckedChanged += new System.EventHandler(this.checkBox_Show_Shortcuts_CheckedChanged);
-            this.checkBox_Show_Shortcuts.Click += new System.EventHandler(this.checkBox_Click);
+            this.checkBox_Show_Shortcuts.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
             // 
             // radioButton_TRex
             // 
