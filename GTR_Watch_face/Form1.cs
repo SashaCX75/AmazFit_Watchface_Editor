@@ -108,6 +108,10 @@ namespace GTR_Watch_face
                     {
                         Program_Settings.language = "Chinese/简体中文";
                     }
+                    if (language == "it")
+                    {
+                        Program_Settings.language = "Italian";
+                    }
                 }
                 //Logger.WriteLine("Определили язык");
                 SetLanguage();
@@ -218,10 +222,15 @@ namespace GTR_Watch_face
                 Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("fr");
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("fr");
             }
-            else if(Program_Settings.language == "Chinese/简体中文")
+            else if (Program_Settings.language == "Chinese/简体中文")
             {
                 Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("zh");
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("zh");
+            }
+            else if (Program_Settings.language == "Italian")
+            {
+                Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("it");
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("it");
             }
             else
             {
@@ -6849,6 +6858,11 @@ namespace GTR_Watch_face
         private void linkLabel_py_amazfit_tools_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/amazfitbip/py_amazfit_tools/releases/tag/v0.2-beta");
+        }
+
+        private void linkLabel_resunpacker_qzip_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/amazfitbip/resunpacker_qzip");
         }
 
         private void linkLabel_help_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

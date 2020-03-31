@@ -778,11 +778,11 @@
             this.label403 = new System.Windows.Forms.Label();
             this.tabControl_Activity = new System.Windows.Forms.TabControl();
             this.tabPage12 = new System.Windows.Forms.TabPage();
+            this.numericUpDown_ActivitySteps_Spacing = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_ActivitySteps_EndCorner_X = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_ActivitySteps_Count = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_ActivitySteps_StartCorner_Y = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_ActivitySteps_StartCorner_X = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_ActivitySteps_Spacing = new System.Windows.Forms.NumericUpDown();
             this.checkBox_ActivitySteps = new System.Windows.Forms.CheckBox();
             this.label122 = new System.Windows.Forms.Label();
             this.label123 = new System.Windows.Forms.Label();
@@ -798,15 +798,15 @@
             this.label130 = new System.Windows.Forms.Label();
             this.label131 = new System.Windows.Forms.Label();
             this.tabPage13 = new System.Windows.Forms.TabPage();
+            this.comboBox_ActivityDistance_Decimal = new System.Windows.Forms.ComboBox();
+            this.numericUpDown_ActivityDistance_Spacing = new System.Windows.Forms.NumericUpDown();
             this.comboBox_ActivityDistance_Suffix = new System.Windows.Forms.ComboBox();
             this.label173 = new System.Windows.Forms.Label();
-            this.comboBox_ActivityDistance_Decimal = new System.Windows.Forms.ComboBox();
             this.label172 = new System.Windows.Forms.Label();
             this.numericUpDown_ActivityDistance_EndCorner_X = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_ActivityDistance_Count = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_ActivityDistance_StartCorner_Y = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_ActivityDistance_StartCorner_X = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_ActivityDistance_Spacing = new System.Windows.Forms.NumericUpDown();
             this.checkBox_ActivityDistance = new System.Windows.Forms.CheckBox();
             this.label132 = new System.Windows.Forms.Label();
             this.label133 = new System.Windows.Forms.Label();
@@ -1309,13 +1309,13 @@
             this.radioButton_Settings_Unpack_Save = new System.Windows.Forms.RadioButton();
             this.radioButton_Settings_Unpack_Dialog = new System.Windows.Forms.RadioButton();
             this.tabPage43 = new System.Windows.Forms.TabPage();
+            this.linkLabel_resunpacker_qzip = new System.Windows.Forms.LinkLabel();
             this.label_TranslateHelp = new System.Windows.Forms.Label();
             this.label415 = new System.Windows.Forms.Label();
             this.label414 = new System.Windows.Forms.Label();
             this.label412 = new System.Windows.Forms.Label();
             this.linkLabel_help = new System.Windows.Forms.LinkLabel();
             this.label413 = new System.Windows.Forms.Label();
-            this.label_Res_PackerUnpacker = new System.Windows.Forms.Label();
             this.linkLabel_py_amazfit_tools = new System.Windows.Forms.LinkLabel();
             this.label410 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -1607,18 +1607,18 @@
             this.panel_Activity.SuspendLayout();
             this.tabControl_Activity.SuspendLayout();
             this.tabPage12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_Spacing)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_EndCorner_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_Count)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_StartCorner_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_StartCorner_X)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_Spacing)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_EndCorner_Y)).BeginInit();
             this.tabPage13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_Spacing)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_EndCorner_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_Count)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_StartCorner_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_StartCorner_X)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_Spacing)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_EndCorner_Y)).BeginInit();
             this.tabPage55.SuspendLayout();
             this.tabControl8.SuspendLayout();
@@ -10000,11 +10000,11 @@
             // tabPage12
             // 
             this.tabPage12.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage12.Controls.Add(this.numericUpDown_ActivitySteps_Spacing);
             this.tabPage12.Controls.Add(this.numericUpDown_ActivitySteps_EndCorner_X);
             this.tabPage12.Controls.Add(this.numericUpDown_ActivitySteps_Count);
             this.tabPage12.Controls.Add(this.numericUpDown_ActivitySteps_StartCorner_Y);
             this.tabPage12.Controls.Add(this.numericUpDown_ActivitySteps_StartCorner_X);
-            this.tabPage12.Controls.Add(this.numericUpDown_ActivitySteps_Spacing);
             this.tabPage12.Controls.Add(this.checkBox_ActivitySteps);
             this.tabPage12.Controls.Add(this.label122);
             this.tabPage12.Controls.Add(this.label123);
@@ -10022,6 +10022,23 @@
             resources.ApplyResources(this.tabPage12, "tabPage12");
             this.tabPage12.Name = "tabPage12";
             this.helpProvider1.SetShowHelp(this.tabPage12, ((bool)(resources.GetObject("tabPage12.ShowHelp"))));
+            // 
+            // numericUpDown_ActivitySteps_Spacing
+            // 
+            resources.ApplyResources(this.numericUpDown_ActivitySteps_Spacing, "numericUpDown_ActivitySteps_Spacing");
+            this.numericUpDown_ActivitySteps_Spacing.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ActivitySteps_Spacing.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ActivitySteps_Spacing.Name = "numericUpDown_ActivitySteps_Spacing";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivitySteps_Spacing, ((bool)(resources.GetObject("numericUpDown_ActivitySteps_Spacing.ShowHelp"))));
+            this.numericUpDown_ActivitySteps_Spacing.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // numericUpDown_ActivitySteps_EndCorner_X
             // 
@@ -10096,23 +10113,6 @@
             this.helpProvider1.SetShowHelp(this.numericUpDown_ActivitySteps_StartCorner_X, ((bool)(resources.GetObject("numericUpDown_ActivitySteps_StartCorner_X.ShowHelp"))));
             this.numericUpDown_ActivitySteps_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             this.numericUpDown_ActivitySteps_StartCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_ActivitySteps_Spacing
-            // 
-            resources.ApplyResources(this.numericUpDown_ActivitySteps_Spacing, "numericUpDown_ActivitySteps_Spacing");
-            this.numericUpDown_ActivitySteps_Spacing.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_ActivitySteps_Spacing.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_ActivitySteps_Spacing.Name = "numericUpDown_ActivitySteps_Spacing";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivitySteps_Spacing, ((bool)(resources.GetObject("numericUpDown_ActivitySteps_Spacing.ShowHelp"))));
-            this.numericUpDown_ActivitySteps_Spacing.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // checkBox_ActivitySteps
             // 
@@ -10238,15 +10238,15 @@
             // tabPage13
             // 
             this.tabPage13.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage13.Controls.Add(this.comboBox_ActivityDistance_Decimal);
+            this.tabPage13.Controls.Add(this.numericUpDown_ActivityDistance_Spacing);
             this.tabPage13.Controls.Add(this.comboBox_ActivityDistance_Suffix);
             this.tabPage13.Controls.Add(this.label173);
-            this.tabPage13.Controls.Add(this.comboBox_ActivityDistance_Decimal);
             this.tabPage13.Controls.Add(this.label172);
             this.tabPage13.Controls.Add(this.numericUpDown_ActivityDistance_EndCorner_X);
             this.tabPage13.Controls.Add(this.numericUpDown_ActivityDistance_Count);
             this.tabPage13.Controls.Add(this.numericUpDown_ActivityDistance_StartCorner_Y);
             this.tabPage13.Controls.Add(this.numericUpDown_ActivityDistance_StartCorner_X);
-            this.tabPage13.Controls.Add(this.numericUpDown_ActivityDistance_Spacing);
             this.tabPage13.Controls.Add(this.checkBox_ActivityDistance);
             this.tabPage13.Controls.Add(this.label132);
             this.tabPage13.Controls.Add(this.label133);
@@ -10264,6 +10264,37 @@
             resources.ApplyResources(this.tabPage13, "tabPage13");
             this.tabPage13.Name = "tabPage13";
             this.helpProvider1.SetShowHelp(this.tabPage13, ((bool)(resources.GetObject("tabPage13.ShowHelp"))));
+            // 
+            // comboBox_ActivityDistance_Decimal
+            // 
+            this.comboBox_ActivityDistance_Decimal.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_ActivityDistance_Decimal.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_ActivityDistance_Decimal, "comboBox_ActivityDistance_Decimal");
+            this.comboBox_ActivityDistance_Decimal.FormattingEnabled = true;
+            this.comboBox_ActivityDistance_Decimal.Name = "comboBox_ActivityDistance_Decimal";
+            this.helpProvider1.SetShowHelp(this.comboBox_ActivityDistance_Decimal, ((bool)(resources.GetObject("comboBox_ActivityDistance_Decimal.ShowHelp"))));
+            this.comboBox_ActivityDistance_Decimal.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_ActivityDistance_Decimal.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_ActivityDistance_Decimal.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_ActivityDistance_Decimal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_ActivityDistance_Decimal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // numericUpDown_ActivityDistance_Spacing
+            // 
+            resources.ApplyResources(this.numericUpDown_ActivityDistance_Spacing, "numericUpDown_ActivityDistance_Spacing");
+            this.numericUpDown_ActivityDistance_Spacing.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ActivityDistance_Spacing.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ActivityDistance_Spacing.Name = "numericUpDown_ActivityDistance_Spacing";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityDistance_Spacing, ((bool)(resources.GetObject("numericUpDown_ActivityDistance_Spacing.ShowHelp"))));
+            this.numericUpDown_ActivityDistance_Spacing.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // comboBox_ActivityDistance_Suffix
             // 
@@ -10284,20 +10315,6 @@
             resources.ApplyResources(this.label173, "label173");
             this.label173.Name = "label173";
             this.helpProvider1.SetShowHelp(this.label173, ((bool)(resources.GetObject("label173.ShowHelp"))));
-            // 
-            // comboBox_ActivityDistance_Decimal
-            // 
-            this.comboBox_ActivityDistance_Decimal.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_ActivityDistance_Decimal.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_ActivityDistance_Decimal, "comboBox_ActivityDistance_Decimal");
-            this.comboBox_ActivityDistance_Decimal.FormattingEnabled = true;
-            this.comboBox_ActivityDistance_Decimal.Name = "comboBox_ActivityDistance_Decimal";
-            this.helpProvider1.SetShowHelp(this.comboBox_ActivityDistance_Decimal, ((bool)(resources.GetObject("comboBox_ActivityDistance_Decimal.ShowHelp"))));
-            this.comboBox_ActivityDistance_Decimal.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_ActivityDistance_Decimal.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_ActivityDistance_Decimal.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_ActivityDistance_Decimal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_ActivityDistance_Decimal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label172
             // 
@@ -10378,23 +10395,6 @@
             this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityDistance_StartCorner_X, ((bool)(resources.GetObject("numericUpDown_ActivityDistance_StartCorner_X.ShowHelp"))));
             this.numericUpDown_ActivityDistance_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             this.numericUpDown_ActivityDistance_StartCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_ActivityDistance_Spacing
-            // 
-            resources.ApplyResources(this.numericUpDown_ActivityDistance_Spacing, "numericUpDown_ActivityDistance_Spacing");
-            this.numericUpDown_ActivityDistance_Spacing.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_ActivityDistance_Spacing.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_ActivityDistance_Spacing.Name = "numericUpDown_ActivityDistance_Spacing";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityDistance_Spacing, ((bool)(resources.GetObject("numericUpDown_ActivityDistance_Spacing.ShowHelp"))));
-            this.numericUpDown_ActivityDistance_Spacing.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // checkBox_ActivityDistance
             // 
@@ -15967,7 +15967,8 @@
             resources.GetString("comboBox_Language.Items5"),
             resources.GetString("comboBox_Language.Items6"),
             resources.GetString("comboBox_Language.Items7"),
-            resources.GetString("comboBox_Language.Items8")});
+            resources.GetString("comboBox_Language.Items8"),
+            resources.GetString("comboBox_Language.Items9")});
             resources.ApplyResources(this.comboBox_Language, "comboBox_Language");
             this.comboBox_Language.Name = "comboBox_Language";
             this.helpProvider1.SetShowHelp(this.comboBox_Language, ((bool)(resources.GetObject("comboBox_Language.ShowHelp"))));
@@ -16175,13 +16176,13 @@
             // tabPage43
             // 
             this.tabPage43.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage43.Controls.Add(this.linkLabel_resunpacker_qzip);
             this.tabPage43.Controls.Add(this.label_TranslateHelp);
             this.tabPage43.Controls.Add(this.label415);
             this.tabPage43.Controls.Add(this.label414);
             this.tabPage43.Controls.Add(this.label412);
             this.tabPage43.Controls.Add(this.linkLabel_help);
             this.tabPage43.Controls.Add(this.label413);
-            this.tabPage43.Controls.Add(this.label_Res_PackerUnpacker);
             this.tabPage43.Controls.Add(this.linkLabel_py_amazfit_tools);
             this.tabPage43.Controls.Add(this.label410);
             this.tabPage43.Controls.Add(this.pictureBox2);
@@ -16193,6 +16194,14 @@
             resources.ApplyResources(this.tabPage43, "tabPage43");
             this.tabPage43.Name = "tabPage43";
             this.helpProvider1.SetShowHelp(this.tabPage43, ((bool)(resources.GetObject("tabPage43.ShowHelp"))));
+            // 
+            // linkLabel_resunpacker_qzip
+            // 
+            resources.ApplyResources(this.linkLabel_resunpacker_qzip, "linkLabel_resunpacker_qzip");
+            this.linkLabel_resunpacker_qzip.Name = "linkLabel_resunpacker_qzip";
+            this.helpProvider1.SetShowHelp(this.linkLabel_resunpacker_qzip, ((bool)(resources.GetObject("linkLabel_resunpacker_qzip.ShowHelp"))));
+            this.linkLabel_resunpacker_qzip.TabStop = true;
+            this.linkLabel_resunpacker_qzip.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_resunpacker_qzip_LinkClicked);
             // 
             // label_TranslateHelp
             // 
@@ -16231,12 +16240,6 @@
             resources.ApplyResources(this.label413, "label413");
             this.label413.Name = "label413";
             this.helpProvider1.SetShowHelp(this.label413, ((bool)(resources.GetObject("label413.ShowHelp"))));
-            // 
-            // label_Res_PackerUnpacker
-            // 
-            resources.ApplyResources(this.label_Res_PackerUnpacker, "label_Res_PackerUnpacker");
-            this.label_Res_PackerUnpacker.Name = "label_Res_PackerUnpacker";
-            this.helpProvider1.SetShowHelp(this.label_Res_PackerUnpacker, ((bool)(resources.GetObject("label_Res_PackerUnpacker.ShowHelp"))));
             // 
             // linkLabel_py_amazfit_tools
             // 
@@ -16807,19 +16810,19 @@
             this.tabControl_Activity.ResumeLayout(false);
             this.tabPage12.ResumeLayout(false);
             this.tabPage12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_Spacing)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_EndCorner_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_Count)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_StartCorner_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_StartCorner_X)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_Spacing)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_EndCorner_Y)).EndInit();
             this.tabPage13.ResumeLayout(false);
             this.tabPage13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_Spacing)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_EndCorner_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_Count)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_StartCorner_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_StartCorner_X)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_Spacing)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_EndCorner_Y)).EndInit();
             this.tabPage55.ResumeLayout(false);
             this.tabControl8.ResumeLayout(false);
@@ -18106,7 +18109,6 @@
         private System.Windows.Forms.Label label_version_help;
         private System.Windows.Forms.Label label406;
         private System.Windows.Forms.Label label413;
-        private System.Windows.Forms.Label label_Res_PackerUnpacker;
         private System.Windows.Forms.LinkLabel linkLabel_py_amazfit_tools;
         private System.Windows.Forms.Label label410;
         private System.Windows.Forms.LinkLabel linkLabel_help;
@@ -18376,6 +18378,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn11;
         private System.Windows.Forms.DataGridViewCheckBoxColumn AnimationColumn12;
+        private System.Windows.Forms.LinkLabel linkLabel_resunpacker_qzip;
     }
 }
 

@@ -22411,6 +22411,33 @@
   <data name="&gt;&gt;label403.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="numericUpDown_ActivitySteps_Spacing.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_ActivitySteps_Spacing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 83</value>
+  </data>
+  <data name="numericUpDown_ActivitySteps_Spacing.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_ActivitySteps_Spacing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="numericUpDown_ActivitySteps_Spacing.TabIndex" type="System.Int32, mscorlib">
+    <value>79</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivitySteps_Spacing.Name" xml:space="preserve">
+    <value>numericUpDown_ActivitySteps_Spacing</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivitySteps_Spacing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivitySteps_Spacing.Parent" xml:space="preserve">
+    <value>tabPage12</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivitySteps_Spacing.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="numericUpDown_ActivitySteps_EndCorner_X.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -22436,7 +22463,7 @@
     <value>tabPage12</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ActivitySteps_EndCorner_X.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="numericUpDown_ActivitySteps_Count.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -22463,7 +22490,7 @@
     <value>tabPage12</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ActivitySteps_Count.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="numericUpDown_ActivitySteps_StartCorner_Y.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -22490,7 +22517,7 @@
     <value>tabPage12</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ActivitySteps_StartCorner_Y.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="numericUpDown_ActivitySteps_StartCorner_X.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -22517,33 +22544,6 @@
     <value>tabPage12</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ActivitySteps_StartCorner_X.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="numericUpDown_ActivitySteps_Spacing.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="numericUpDown_ActivitySteps_Spacing.Location" type="System.Drawing.Point, System.Drawing">
-    <value>200, 83</value>
-  </data>
-  <data name="numericUpDown_ActivitySteps_Spacing.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="numericUpDown_ActivitySteps_Spacing.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
-  </data>
-  <data name="numericUpDown_ActivitySteps_Spacing.TabIndex" type="System.Int32, mscorlib">
-    <value>79</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ActivitySteps_Spacing.Name" xml:space="preserve">
-    <value>numericUpDown_ActivitySteps_Spacing</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ActivitySteps_Spacing.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ActivitySteps_Spacing.Parent" xml:space="preserve">
-    <value>tabPage12</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ActivitySteps_Spacing.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="checkBox_ActivitySteps.AutoSize" type="System.Boolean, mscorlib">
@@ -23080,6 +23080,63 @@
   <data name="&gt;&gt;tabPage12.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="comboBox_ActivityDistance_Decimal.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Decimal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>258, 114</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Decimal.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Decimal.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Decimal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 21</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Decimal.TabIndex" type="System.Int32, mscorlib">
+    <value>83</value>
+  </data>
+  <data name="&gt;&gt;comboBox_ActivityDistance_Decimal.Name" xml:space="preserve">
+    <value>comboBox_ActivityDistance_Decimal</value>
+  </data>
+  <data name="&gt;&gt;comboBox_ActivityDistance_Decimal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox_ActivityDistance_Decimal.Parent" xml:space="preserve">
+    <value>tabPage13</value>
+  </data>
+  <data name="&gt;&gt;comboBox_ActivityDistance_Decimal.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="numericUpDown_ActivityDistance_Spacing.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_ActivityDistance_Spacing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 83</value>
+  </data>
+  <data name="numericUpDown_ActivityDistance_Spacing.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_ActivityDistance_Spacing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="numericUpDown_ActivityDistance_Spacing.TabIndex" type="System.Int32, mscorlib">
+    <value>79</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityDistance_Spacing.Name" xml:space="preserve">
+    <value>numericUpDown_ActivityDistance_Spacing</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityDistance_Spacing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityDistance_Spacing.Parent" xml:space="preserve">
+    <value>tabPage13</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityDistance_Spacing.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="comboBox_ActivityDistance_Suffix.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -23108,7 +23165,7 @@
     <value>tabPage13</value>
   </data>
   <data name="&gt;&gt;comboBox_ActivityDistance_Suffix.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="label173.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -23144,37 +23201,7 @@
     <value>tabPage13</value>
   </data>
   <data name="&gt;&gt;label173.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="comboBox_ActivityDistance_Decimal.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="comboBox_ActivityDistance_Decimal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>258, 114</value>
-  </data>
-  <data name="comboBox_ActivityDistance_Decimal.MaxDropDownItems" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="comboBox_ActivityDistance_Decimal.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="comboBox_ActivityDistance_Decimal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 21</value>
-  </data>
-  <data name="comboBox_ActivityDistance_Decimal.TabIndex" type="System.Int32, mscorlib">
-    <value>83</value>
-  </data>
-  <data name="&gt;&gt;comboBox_ActivityDistance_Decimal.Name" xml:space="preserve">
-    <value>comboBox_ActivityDistance_Decimal</value>
-  </data>
-  <data name="&gt;&gt;comboBox_ActivityDistance_Decimal.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboBox_ActivityDistance_Decimal.Parent" xml:space="preserve">
-    <value>tabPage13</value>
-  </data>
-  <data name="&gt;&gt;comboBox_ActivityDistance_Decimal.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="label172.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -23210,7 +23237,7 @@
     <value>tabPage13</value>
   </data>
   <data name="&gt;&gt;label172.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="numericUpDown_ActivityDistance_EndCorner_X.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -23237,7 +23264,7 @@
     <value>tabPage13</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ActivityDistance_EndCorner_X.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="numericUpDown_ActivityDistance_Count.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -23264,7 +23291,7 @@
     <value>tabPage13</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ActivityDistance_Count.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="numericUpDown_ActivityDistance_StartCorner_Y.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -23291,7 +23318,7 @@
     <value>tabPage13</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ActivityDistance_StartCorner_Y.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="numericUpDown_ActivityDistance_StartCorner_X.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -23318,33 +23345,6 @@
     <value>tabPage13</value>
   </data>
   <data name="&gt;&gt;numericUpDown_ActivityDistance_StartCorner_X.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="numericUpDown_ActivityDistance_Spacing.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="numericUpDown_ActivityDistance_Spacing.Location" type="System.Drawing.Point, System.Drawing">
-    <value>200, 83</value>
-  </data>
-  <data name="numericUpDown_ActivityDistance_Spacing.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="numericUpDown_ActivityDistance_Spacing.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
-  </data>
-  <data name="numericUpDown_ActivityDistance_Spacing.TabIndex" type="System.Int32, mscorlib">
-    <value>79</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ActivityDistance_Spacing.Name" xml:space="preserve">
-    <value>numericUpDown_ActivityDistance_Spacing</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ActivityDistance_Spacing.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ActivityDistance_Spacing.Parent" xml:space="preserve">
-    <value>tabPage13</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown_ActivityDistance_Spacing.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="checkBox_ActivityDistance.AutoSize" type="System.Boolean, mscorlib">
@@ -38667,6 +38667,9 @@
   <data name="comboBox_Language.Items8" xml:space="preserve">
     <value>Chinese/简体中文</value>
   </data>
+  <data name="comboBox_Language.Items9" xml:space="preserve">
+    <value>Italian</value>
+  </data>
   <data name="comboBox_Language.Location" type="System.Drawing.Point, System.Drawing">
     <value>48, 306</value>
   </data>
@@ -39348,6 +39351,39 @@
   <data name="&gt;&gt;tabPage33.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="linkLabel_resunpacker_qzip.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="linkLabel_resunpacker_qzip.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="linkLabel_resunpacker_qzip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>235, 125</value>
+  </data>
+  <data name="linkLabel_resunpacker_qzip.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="linkLabel_resunpacker_qzip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 13</value>
+  </data>
+  <data name="linkLabel_resunpacker_qzip.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="linkLabel_resunpacker_qzip.Text" xml:space="preserve">
+    <value>Res_PackerUnpacker (Автор dpeddi)</value>
+  </data>
+  <data name="&gt;&gt;linkLabel_resunpacker_qzip.Name" xml:space="preserve">
+    <value>linkLabel_resunpacker_qzip</value>
+  </data>
+  <data name="&gt;&gt;linkLabel_resunpacker_qzip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;linkLabel_resunpacker_qzip.Parent" xml:space="preserve">
+    <value>tabPage43</value>
+  </data>
+  <data name="&gt;&gt;linkLabel_resunpacker_qzip.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="label_TranslateHelp.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -39371,7 +39407,7 @@
   </data>
   <data name="label_TranslateHelp.Text" xml:space="preserve">
     <value>chaadaev88 (English), kampanita (Español), maikeandre (Português), Horatius80 (Čeština, Magyar, Slovenčina),
-bigsurf05 (French), kyle208 (Chinese/简体中文)</value>
+bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian),  F481O (Italian)</value>
   </data>
   <data name="&gt;&gt;label_TranslateHelp.Name" xml:space="preserve">
     <value>label_TranslateHelp</value>
@@ -39383,7 +39419,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文)</value>
     <value>tabPage43</value>
   </data>
   <data name="&gt;&gt;label_TranslateHelp.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label415.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -39416,7 +39452,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文)</value>
     <value>tabPage43</value>
   </data>
   <data name="&gt;&gt;label415.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="label414.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -39434,13 +39470,13 @@ bigsurf05 (French), kyle208 (Chinese/简体中文)</value>
     <value>True</value>
   </data>
   <data name="label414.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 13</value>
+    <value>335, 13</value>
   </data>
   <data name="label414.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
   <data name="label414.Text" xml:space="preserve">
-    <value>WakeUpich, andrewjswan, gothfox, looking2012</value>
+    <value>WakeUpich, andrewjswan, gothfox, looking2012, stemcell</value>
   </data>
   <data name="&gt;&gt;label414.Name" xml:space="preserve">
     <value>label414</value>
@@ -39452,7 +39488,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文)</value>
     <value>tabPage43</value>
   </data>
   <data name="&gt;&gt;label414.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="label412.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -39485,7 +39521,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文)</value>
     <value>tabPage43</value>
   </data>
   <data name="&gt;&gt;label412.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="linkLabel_help.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -39521,7 +39557,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文)</value>
     <value>tabPage43</value>
   </data>
   <data name="&gt;&gt;linkLabel_help.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="label413.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -39554,42 +39590,6 @@ bigsurf05 (French), kyle208 (Chinese/简体中文)</value>
     <value>tabPage43</value>
   </data>
   <data name="&gt;&gt;label413.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="label_Res_PackerUnpacker.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label_Res_PackerUnpacker.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
-  </data>
-  <data name="label_Res_PackerUnpacker.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label_Res_PackerUnpacker.Location" type="System.Drawing.Point, System.Drawing">
-    <value>235, 125</value>
-  </data>
-  <data name="label_Res_PackerUnpacker.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label_Res_PackerUnpacker.Size" type="System.Drawing.Size, System.Drawing">
-    <value>251, 13</value>
-  </data>
-  <data name="label_Res_PackerUnpacker.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="label_Res_PackerUnpacker.Text" xml:space="preserve">
-    <value>Res_PackerUnpacker (Автор неизвестен)</value>
-  </data>
-  <data name="&gt;&gt;label_Res_PackerUnpacker.Name" xml:space="preserve">
-    <value>label_Res_PackerUnpacker</value>
-  </data>
-  <data name="&gt;&gt;label_Res_PackerUnpacker.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label_Res_PackerUnpacker.Parent" xml:space="preserve">
-    <value>tabPage43</value>
-  </data>
-  <data name="&gt;&gt;label_Res_PackerUnpacker.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="linkLabel_py_amazfit_tools.AutoSize" type="System.Boolean, mscorlib">
