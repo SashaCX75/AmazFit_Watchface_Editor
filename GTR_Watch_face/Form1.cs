@@ -323,6 +323,8 @@ namespace GTR_Watch_face
 
             comboBox_Battery_Flatness.SelectedIndex = 0;
             comboBox_StepsProgress_Flatness.SelectedIndex = 0;
+            comboBox_ActivityPulsScale_Flatness.SelectedIndex = 0;
+            comboBox_ActivityCaloriesScale_Flatness.SelectedIndex = 0;
 
             label_version.Text = "v " +
                 System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Major.ToString() + "." +
@@ -3708,7 +3710,12 @@ namespace GTR_Watch_face
         {
             bool b = checkBox_Animation.Checked;
             tabControl_Animation.Enabled = b;
-            button_ShowAnimation.Enabled = b;
+            if (checkBox_Animation.Checked)
+            {
+                if (checkBox_StaticAnimation.Checked || checkBox_MotiomAnimation.Checked) button_ShowAnimation.Enabled = true;
+                else button_ShowAnimation.Enabled = false;
+            }
+            else button_ShowAnimation.Enabled = false;
         }
 
         private void checkBox_StaticAnimation_CheckedChanged(object sender, EventArgs e)
@@ -3734,7 +3741,11 @@ namespace GTR_Watch_face
             label478.Enabled = b;
             label479.Enabled = b;
 
-            if (checkBox_StaticAnimation.Checked || checkBox_MotiomAnimation.Checked) button_ShowAnimation.Enabled = true;
+            if (checkBox_Animation.Checked)
+            {
+                if (checkBox_StaticAnimation.Checked || checkBox_MotiomAnimation.Checked) button_ShowAnimation.Enabled = true;
+                else button_ShowAnimation.Enabled = false;
+            }
             else button_ShowAnimation.Enabled = false;
         }
 
@@ -3758,7 +3769,11 @@ namespace GTR_Watch_face
             label484.Enabled = b;
             label485.Enabled = b;
 
-            if (checkBox_StaticAnimation.Checked || checkBox_MotiomAnimation.Checked) button_ShowAnimation.Enabled = true;
+            if (checkBox_Animation.Checked)
+            {
+                if (checkBox_StaticAnimation.Checked || checkBox_MotiomAnimation.Checked) button_ShowAnimation.Enabled = true;
+                else button_ShowAnimation.Enabled = false;
+            }
             else button_ShowAnimation.Enabled = false;
         }
         #endregion
@@ -7295,7 +7310,7 @@ namespace GTR_Watch_face
                     //if (i < ListImagesFullName.Count) Images.Add(new Bitmap(ListImagesFullName[i]));
                 }
             }
-            loadedImage.Dispose();
+            if (loadedImage !=null) loadedImage.Dispose();
             if (Images.Count > 0)
             {
                 StaticAnimation = new ClassStaticAnimation(Images, (int)numericUpDown_StaticAnimation_X.Value,
@@ -7304,38 +7319,41 @@ namespace GTR_Watch_face
 
             }
 
-            FormAnimation formAnimation = new FormAnimation(bitmap, MotiomAnimation, StaticAnimation);
-            formAnimation.Owner = this;
-            if (FormAnimation.Model_Wath.model_gtr47 != radioButton_47.Checked)
-                FormAnimation.Model_Wath.model_gtr47 = radioButton_47.Checked;
-            if (FormAnimation.Model_Wath.model_gtr42 != radioButton_42.Checked)
-                FormAnimation.Model_Wath.model_gtr42 = radioButton_42.Checked;
-            if (FormAnimation.Model_Wath.model_gts != radioButton_gts.Checked)
-                FormAnimation.Model_Wath.model_gts = radioButton_gts.Checked;
-            if (FormAnimation.Model_Wath.model_TRex != radioButton_TRex.Checked)
-                FormAnimation.Model_Wath.model_TRex = radioButton_TRex.Checked;
-            if (FormAnimation.Model_Wath.model_Verge != radioButton_Verge.Checked)
-                FormAnimation.Model_Wath.model_Verge = radioButton_Verge.Checked;
-
-            switch (comboBox_Animation_Preview_Speed.SelectedIndex)
+            if (MotiomAnimation.Count > 0 || StaticAnimation != null)
             {
-                case 0:
-                    formAnimation.timer1.Interval = 20;
-                    break;
-                case 1:
-                    formAnimation.timer1.Interval = 25;
-                    break;
-                case 2:
-                    formAnimation.timer1.Interval = 33;
-                    break;
-                case 3:
-                    formAnimation.timer1.Interval = 50;
-                    break;
-                case 4:
-                    formAnimation.timer1.Interval = 100;
-                    break;
+                FormAnimation formAnimation = new FormAnimation(bitmap, MotiomAnimation, StaticAnimation);
+                formAnimation.Owner = this;
+                if (FormAnimation.Model_Wath.model_gtr47 != radioButton_47.Checked)
+                    FormAnimation.Model_Wath.model_gtr47 = radioButton_47.Checked;
+                if (FormAnimation.Model_Wath.model_gtr42 != radioButton_42.Checked)
+                    FormAnimation.Model_Wath.model_gtr42 = radioButton_42.Checked;
+                if (FormAnimation.Model_Wath.model_gts != radioButton_gts.Checked)
+                    FormAnimation.Model_Wath.model_gts = radioButton_gts.Checked;
+                if (FormAnimation.Model_Wath.model_TRex != radioButton_TRex.Checked)
+                    FormAnimation.Model_Wath.model_TRex = radioButton_TRex.Checked;
+                if (FormAnimation.Model_Wath.model_Verge != radioButton_Verge.Checked)
+                    FormAnimation.Model_Wath.model_Verge = radioButton_Verge.Checked;
+
+                switch (comboBox_Animation_Preview_Speed.SelectedIndex)
+                {
+                    case 0:
+                        formAnimation.timer1.Interval = 20;
+                        break;
+                    case 1:
+                        formAnimation.timer1.Interval = 25;
+                        break;
+                    case 2:
+                        formAnimation.timer1.Interval = 33;
+                        break;
+                    case 3:
+                        formAnimation.timer1.Interval = 50;
+                        break;
+                    case 4:
+                        formAnimation.timer1.Interval = 100;
+                        break;
+                }
+                formAnimation.ShowDialog(); 
             }
-            formAnimation.ShowDialog();
 
             //formAnimation.FormClosed += (object senderClosed, FormClosedEventArgs eClosed) =>
             //{

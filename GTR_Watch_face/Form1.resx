@@ -9864,6 +9864,9 @@
   <data name="button_ShowAnimation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
+  <data name="button_ShowAnimation.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="button_ShowAnimation.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 249</value>
   </data>
@@ -27608,7 +27611,7 @@
     <value>1</value>
   </data>
   <data name="tabPage11.Text" xml:space="preserve">
-    <value>Калории  (круговая шкала)</value>
+    <value>Калории (круговая шкала)</value>
   </data>
   <data name="&gt;&gt;tabPage11.Name" xml:space="preserve">
     <value>tabPage11</value>

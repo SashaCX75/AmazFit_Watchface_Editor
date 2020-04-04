@@ -121,7 +121,7 @@
     <value>Decompila/Ricompila</value>
   </data>
   <data name="tabPage2.Text" xml:space="preserve">
-    <value>Scegliere</value>
+    <value>Parametri di prova</value>
   </data>
   <data name="tabPage3.Text" xml:space="preserve">
     <value>Edita/Modifica</value>
@@ -133,19 +133,19 @@
     <value>Informazioni sul programma</value>
   </data>
   <data name="button_zip_unpack.Text" xml:space="preserve">
-    <value>Decomprimere il .bin</value>
+    <value>Decomprimere .bin</value>
   </data>
   <data name="button_pack_zip.Text" xml:space="preserve">
-    <value>Compila e comprimi il bin</value>
+    <value>Compilare e comprimere .bin</value>
   </data>
   <data name="button_zip.Text" xml:space="preserve">
-    <value>Comprimere il .bin</value>
+    <value>Comprimere .bin</value>
   </data>
   <data name="button_unpack.Text" xml:space="preserve">
     <value>Decompilare .bin</value>
   </data>
   <data name="button_pack.Text" xml:space="preserve">
-    <value>Comprimi bin</value>
+    <value>Compilare .bin</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
@@ -558,7 +558,7 @@
     <value>24, 13</value>
   </data>
   <data name="label268.Text" xml:space="preserve">
-    <value>Ore</value>
+    <value>Orario</value>
   </data>
   <data name="label269.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 13</value>
@@ -624,7 +624,7 @@
     <value>24, 13</value>
   </data>
   <data name="label260.Text" xml:space="preserve">
-    <value>Ore</value>
+    <value>Orario</value>
   </data>
   <data name="label261.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 13</value>
@@ -690,7 +690,7 @@
     <value>24, 13</value>
   </data>
   <data name="label252.Text" xml:space="preserve">
-    <value>Ore</value>
+    <value>Orario</value>
   </data>
   <data name="label253.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 13</value>
@@ -756,7 +756,7 @@
     <value>24, 13</value>
   </data>
   <data name="label244.Text" xml:space="preserve">
-    <value>Ore</value>
+    <value>Orario</value>
   </data>
   <data name="label245.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 13</value>
@@ -888,7 +888,7 @@
     <value>24, 13</value>
   </data>
   <data name="label238.Text" xml:space="preserve">
-    <value>Ore</value>
+    <value>Orario</value>
   </data>
   <data name="label239.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 13</value>
@@ -954,7 +954,7 @@
     <value>24, 13</value>
   </data>
   <data name="label230.Text" xml:space="preserve">
-    <value>Ore</value>
+    <value>Orario</value>
   </data>
   <data name="label231.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 13</value>
@@ -1020,7 +1020,7 @@
     <value>24, 13</value>
   </data>
   <data name="label222.Text" xml:space="preserve">
-    <value>Ore</value>
+    <value>Orario</value>
   </data>
   <data name="label223.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 13</value>
@@ -1191,7 +1191,7 @@
     <value>113, 13</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>JSON con le immagini:</value>
+    <value>JSON con immagini:</value>
   </data>
   <data name="button_SaveJson.Text" xml:space="preserve">
     <value>Salva JSON</value>
@@ -1684,7 +1684,7 @@
     <value>Angolo superiore sinistro</value>
   </data>
   <data name="tabPage26.Text" xml:space="preserve">
-    <value>Temperatura diurna</value>
+    <value>Temperatura</value>
   </data>
   <data name="tabPage27.Text" xml:space="preserve">
     <value>Giorno</value>
@@ -2032,7 +2032,7 @@
     <value>Coordinate</value>
   </data>
   <data name="tabPage23.Text" xml:space="preserve">
-    <value>Progresso circolare</value>
+    <value>Barra di avanzamento</value>
   </data>
   <data name="comboBox_Battery_Flatness.Items" xml:space="preserve">
     <value>Tonda</value>
@@ -2626,7 +2626,7 @@
     <value>Allineamento</value>
   </data>
   <data name="tabPage11.Text" xml:space="preserve">
-    <value>Calorie (Barra di avanzamento)</value>
+    <value>Calorie (barra di avanzamento)</value>
   </data>
   <data name="comboBox_ActivityCaloriesScale_Flatness.Items" xml:space="preserve">
     <value>Tonda</value>
@@ -2725,7 +2725,7 @@
     <value>Attività</value>
   </data>
   <data name="tabPage36.Text" xml:space="preserve">
-    <value>Progresso circolare</value>
+    <value>Barra di avanzamento</value>
   </data>
   <data name="checkBox_StepsProgress.Text" xml:space="preserve">
     <value>Mostrare</value>
@@ -3282,7 +3282,7 @@
 carico maggiore del sistema)</value>
   </data>
   <data name="groupBox8.Text" xml:space="preserve">
-    <value>Evidenziazione della zona scorciatoia</value>
+    <value>Evidenziatura zona scorciatoia</value>
   </data>
   <data name="checkBox_Shortcuts_Border.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 17</value>
@@ -3345,7 +3345,7 @@ carico maggiore del sistema)</value>
     <value>126, 17</value>
   </data>
   <data name="radioButton_Settings_Pack_Dialog.Text" xml:space="preserve">
-    <value>Suggerisci una scelta</value>
+    <value>Suggerire una scelta</value>
   </data>
   <data name="groupBox6.Text" xml:space="preserve">
     <value>Dopo aver aperto il progetto</value>
@@ -3366,7 +3366,7 @@ carico maggiore del sistema)</value>
     <value>126, 17</value>
   </data>
   <data name="radioButton_Settings_Open_Dialog.Text" xml:space="preserve">
-    <value>Suggerisci una scelta</value>
+    <value>Suggerire una scelta</value>
   </data>
   <data name="groupBox5.Text" xml:space="preserve">
     <value>Dopo l'estrazione del .bin</value>
@@ -3387,7 +3387,7 @@ carico maggiore del sistema)</value>
     <value>126, 17</value>
   </data>
   <data name="radioButton_Settings_AfterUnpack_Dialog.Text" xml:space="preserve">
-    <value>Suggerisci una scelta</value>
+    <value>Suggerire una scelta</value>
   </data>
   <data name="groupBox1.Text" xml:space="preserve">
     <value>Se i nomi dei file estratti sono uguali</value>
@@ -3402,13 +3402,13 @@ carico maggiore del sistema)</value>
     <value>95, 17</value>
   </data>
   <data name="radioButton_Settings_Unpack_Save.Text" xml:space="preserve">
-    <value>Salva entrambi</value>
+    <value>Salvare entrambi</value>
   </data>
   <data name="radioButton_Settings_Unpack_Dialog.Size" type="System.Drawing.Size, System.Drawing">
     <value>126, 17</value>
   </data>
   <data name="radioButton_Settings_Unpack_Dialog.Text" xml:space="preserve">
-    <value>Suggerisci una scelta</value>
+    <value>Suggerire una scelta</value>
   </data>
   <data name="linkLabel_resunpacker_qzip.Size" type="System.Drawing.Size, System.Drawing">
     <value>221, 13</value>
@@ -3438,7 +3438,7 @@ carico maggiore del sistema)</value>
     <value>263, 13</value>
   </data>
   <data name="label413.Text" xml:space="preserve">
-    <value>Utilità per la compilazione / decompilazione dei file bin:</value>
+    <value>Strumento per la compilazione / decompilazione dei file bin:</value>
   </data>
   <data name="linkLabel_py_amazfit_tools.Size" type="System.Drawing.Size, System.Drawing">
     <value>318, 13</value>
@@ -3450,7 +3450,7 @@ carico maggiore del sistema)</value>
     <value>271, 13</value>
   </data>
   <data name="label410.Text" xml:space="preserve">
-    <value>Utility per la compressione e decompressione dei file bin:</value>
+    <value>Strumento per la compressione e decompressione dei file bin:</value>
   </data>
   <data name="label409.Text" xml:space="preserve">
     <value>Il programma è un editor grafico per la creazione di un file .json che contiene le impostazioni di una watchface. Il programma adopera delle utility di terza parte per lavorare sui file bin delle watchfaces.</value>
@@ -3489,7 +3489,7 @@ carico maggiore del sistema)</value>
     <value>Salva GIF</value>
   </data>
   <data name="checkBox_border.Text" xml:space="preserve">
-    <value>Cornice attorno agli oggetti allineati</value>
+    <value>Mostra la cornice di allineamento</value>
   </data>
   <data name="checkBox_crop.Text" xml:space="preserve">
     <value>Ritaglia l'immagine per adattarla allo schermo (può funzionare lentamente)</value>

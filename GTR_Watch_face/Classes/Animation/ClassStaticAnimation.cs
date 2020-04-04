@@ -39,7 +39,7 @@ namespace GTR_Watch_face
                 _cyclesTime = _cyclesTime + SpeedAnimation * Images.Count;
             }
             if (_cyclesTime == 0) _cyclesTime = SpeedAnimation * Images.Count;
-            if (TimeAnimation == 0) _pause = 0;
+            //if (TimeAnimation == 0) _pause = 0;
             _time = 0;
         }
 
@@ -54,11 +54,12 @@ namespace GTR_Watch_face
                 i = i - _images.Count;
             }
             if (_time >= _cyclesTime) i = 0;
+            //if (_timeAnimation == 0 && _pause == 0) i = 0;
             Bitmap src = new Bitmap(_images[i]);
             g.DrawImage(src, new Rectangle(_x, _y, src.Width, src.Height));
             src.Dispose();
             _time = _time + deltaTime;
-            if (_time >= _cyclesTime + _pause) _time = _time - (_cyclesTime + _pause);
+            if ((_time >= _cyclesTime + _pause) && (_pause > 0 || _timeAnimation == 0)) _time = _time - (_cyclesTime + _pause);
         }
 
         /// <summary>Сброс анимации к начальному значению</summary>
