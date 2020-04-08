@@ -1332,7 +1332,6 @@
             this.checkBox_WebB = new System.Windows.Forms.CheckBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button_SavePNG = new System.Windows.Forms.Button();
-            this.panel_Preview = new System.Windows.Forms.Panel();
             this.button_SaveGIF = new System.Windows.Forms.Button();
             this.radioButton_47 = new System.Windows.Forms.RadioButton();
             this.radioButton_42 = new System.Windows.Forms.RadioButton();
@@ -1350,6 +1349,7 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.colorDialog_Pulse = new System.Windows.Forms.ColorDialog();
             this.colorDialog_Calories = new System.Windows.Forms.ColorDialog();
+            this.pictureBox_Preview = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -1810,6 +1810,7 @@
             this.tabPage43.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Preview)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -16307,7 +16308,7 @@
             this.button_PreviewBig.Name = "button_PreviewBig";
             this.helpProvider1.SetShowHelp(this.button_PreviewBig, ((bool)(resources.GetObject("button_PreviewBig.ShowHelp"))));
             this.button_PreviewBig.UseVisualStyleBackColor = true;
-            this.button_PreviewBig.Click += new System.EventHandler(this.panel1_DoubleClick);
+            this.button_PreviewBig.Click += new System.EventHandler(this.pictureBox_Preview_DoubleClick);
             // 
             // checkBox_WebW
             // 
@@ -16337,17 +16338,6 @@
             this.helpProvider1.SetShowHelp(this.button_SavePNG, ((bool)(resources.GetObject("button_SavePNG.ShowHelp"))));
             this.button_SavePNG.UseVisualStyleBackColor = true;
             this.button_SavePNG.Click += new System.EventHandler(this.button_SavePNG_Click);
-            // 
-            // panel_Preview
-            // 
-            this.panel_Preview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Preview.Cursor = System.Windows.Forms.Cursors.Cross;
-            resources.ApplyResources(this.panel_Preview, "panel_Preview");
-            this.panel_Preview.Name = "panel_Preview";
-            this.helpProvider1.SetShowHelp(this.panel_Preview, ((bool)(resources.GetObject("panel_Preview.ShowHelp"))));
-            this.panel_Preview.DoubleClick += new System.EventHandler(this.panel_Preview_DoubleClick);
-            this.panel_Preview.MouseLeave += new System.EventHandler(this.panel_Preview_MouseLeave);
-            this.panel_Preview.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_Preview_MouseMove);
             // 
             // button_SaveGIF
             // 
@@ -16471,10 +16461,20 @@
             // 
             this.colorDialog_Calories.FullOpen = true;
             // 
+            // pictureBox_Preview
+            // 
+            resources.ApplyResources(this.pictureBox_Preview, "pictureBox_Preview");
+            this.pictureBox_Preview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox_Preview.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.pictureBox_Preview.Name = "pictureBox_Preview";
+            this.pictureBox_Preview.TabStop = false;
+            this.pictureBox_Preview.Click += new System.EventHandler(this.pictureBox_Preview_DoubleClick);
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox_Preview);
             this.Controls.Add(this.radioButton_Verge);
             this.Controls.Add(this.radioButton_TRex);
             this.Controls.Add(this.checkBox_Show_Shortcuts);
@@ -16484,7 +16484,6 @@
             this.Controls.Add(this.checkBox_border);
             this.Controls.Add(this.label_preview_Y);
             this.Controls.Add(this.label_preview_X);
-            this.Controls.Add(this.panel_Preview);
             this.Controls.Add(this.radioButton_42);
             this.Controls.Add(this.radioButton_47);
             this.Controls.Add(this.button_SaveGIF);
@@ -17055,6 +17054,7 @@
             this.tabPage43.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Preview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -17817,7 +17817,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button_SavePNG;
-        private System.Windows.Forms.Panel panel_Preview;
         private System.Windows.Forms.Button button_SaveGIF;
         private System.Windows.Forms.RadioButton radioButton_47;
         private System.Windows.Forms.RadioButton radioButton_42;
@@ -18379,6 +18378,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn11;
         private System.Windows.Forms.DataGridViewCheckBoxColumn AnimationColumn12;
         private System.Windows.Forms.LinkLabel linkLabel_resunpacker_qzip;
+        private System.Windows.Forms.PictureBox pictureBox_Preview;
     }
 }
 

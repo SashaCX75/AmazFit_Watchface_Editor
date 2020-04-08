@@ -2563,7 +2563,7 @@ namespace GTR_Watch_face
         public Bitmap FormColor(Bitmap bitmap)
         {
             int[] bgColors = { 203, 255, 240 };
-            Color color = panel_Preview.BackColor;
+            Color color = pictureBox_Preview.BackColor;
             ImageMagick.MagickImage image = new ImageMagick.MagickImage(bitmap);
             // меняем прозрачный цвет на цвет фона
             image.Opaque(ImageMagick.MagickColor.FromRgba((byte)0, (byte)0, (byte)0, (byte)0),

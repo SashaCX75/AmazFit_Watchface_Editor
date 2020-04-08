@@ -3286,23 +3286,11 @@ namespace GTR_Watch_face
                 if (radioButton_47.Checked)
                 {
                     this.Text = "GTR watch face editor";
-                    panel_Preview.Height = 230;
-                    panel_Preview.Width = 230;
+                    pictureBox_Preview.Height = 229;
+                    pictureBox_Preview.Width = 229;
                     offSet_X = 227;
                     offSet_Y = 227;
-
-                    //Properties.Settings.Default.unpack_command_GTR42 = textBox_unpack_command.Text;
-                    //Properties.Settings.Default.pack_command_GTR42 = textBox_pack_command.Text;
-                    //Properties.Settings.Default.Save();
-                    //Program_Settings.unpack_command_GTR42 = textBox_unpack_command.Text;
-                    //Program_Settings.pack_command_GTR42 = textBox_pack_command.Text;
-
-                    //textBox_unpack_command.Text = "--gtr 47 --file";
-                    //textBox_pack_command.Text = "--gtr 47 --file";
-                    //if (Properties.Settings.Default.unpack_command.Length > 1)
-                    //    textBox_unpack_command.Text = Properties.Settings.Default.unpack_command;
-                    //if (Properties.Settings.Default.pack_command.Length > 1)
-                    //    textBox_pack_command.Text = Properties.Settings.Default.pack_command;
+                    
                     textBox_unpack_command.Text = Program_Settings.unpack_command_GTR47;
                     textBox_pack_command.Text = Program_Settings.pack_command_GTR47;
 
@@ -3313,8 +3301,8 @@ namespace GTR_Watch_face
                 else if (radioButton_42.Checked)
                 {
                     this.Text = "GTR watch face editor";
-                    panel_Preview.Height = 198;
-                    panel_Preview.Width = 198;
+                    pictureBox_Preview.Height = 197;
+                    pictureBox_Preview.Width = 197;
                     offSet_X = 195;
                     offSet_Y = 195;
 
@@ -3328,8 +3316,8 @@ namespace GTR_Watch_face
                 else if (radioButton_gts.Checked)
                 {
                     this.Text = "GTS watch face editor";
-                    panel_Preview.Height = 223;
-                    panel_Preview.Width = 176;
+                    pictureBox_Preview.Height = 223;
+                    pictureBox_Preview.Width = 176;
                     offSet_X = 174;
                     offSet_Y = 221;
 
@@ -3343,8 +3331,8 @@ namespace GTR_Watch_face
                 else if (radioButton_TRex.Checked)
                 {
                     this.Text = "T-Rex watch face editor";
-                    panel_Preview.Height = 183;
-                    panel_Preview.Width = 183;
+                    pictureBox_Preview.Height = 182;
+                    pictureBox_Preview.Width = 182;
                     offSet_X = 180;
                     offSet_Y = 180;
 
@@ -3358,8 +3346,8 @@ namespace GTR_Watch_face
                 else if (radioButton_Verge.Checked)
                 {
                     this.Text = "Verge Lite watch face editor";
-                    panel_Preview.Height = 183;
-                    panel_Preview.Width = 183;
+                    pictureBox_Preview.Height = 182;
+                    pictureBox_Preview.Width = 182;
                     offSet_X = 180;
                     offSet_Y = 180;
 

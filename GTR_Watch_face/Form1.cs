@@ -386,6 +386,7 @@ namespace GTR_Watch_face
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+#if !DEBUG
             if (JSON_Modified)
             {
                 if (FileName != null)
@@ -438,6 +439,7 @@ namespace GTR_Watch_face
                     }
                 }
             }
+#endif
         }
 
         private void button_pack_unpack_Click(object sender, EventArgs e)
@@ -1707,29 +1709,48 @@ namespace GTR_Watch_face
         private void PreviewImage()
         {
             if (!PreviewView) return;
-            Graphics gPanel = panel_Preview.CreateGraphics();
-            gPanel.Clear(panel_Preview.BackColor);
+            //Graphics gPanel = panel_Preview.CreateGraphics();
+            //gPanel.Clear(panel_Preview.BackColor);
             float scale = 1.0f;
-            if (panel_Preview.Height < 300) scale = 0.5f;
+            //if (panel_Preview.Height < 300) scale = 0.5f;
+            #region BackgroundImage 
+            Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
+            if (radioButton_42.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
+            }
+            if (radioButton_gts.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
+            }
+            if (radioButton_TRex.Checked || radioButton_Verge.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
+            }
+            Graphics gPanel = Graphics.FromImage(bitmap);
+            #endregion
+
             PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, 
                 checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, 
                 checkBox_Shortcuts_Border.Checked, true, 0);
+            pictureBox_Preview.BackgroundImage = bitmap;
             gPanel.Dispose();
 
             if ((formPreview != null) && (formPreview.Visible))
             {
-                Graphics gPanelPreview = formPreview.panel_Preview.CreateGraphics();
-                gPanelPreview.Clear(panel_Preview.BackColor);
-                float scalePreview = 1.0f;
-                if (formPreview.radioButton_small.Checked) scalePreview = 0.5f;
-                if (formPreview.radioButton_large.Checked) scalePreview = 1.5f;
-                if (formPreview.radioButton_xlarge.Checked) scalePreview = 2.0f;
-                if (formPreview.radioButton_xxlarge.Checked) scalePreview = 2.5f;
-                PreviewToBitmap(gPanelPreview, scalePreview, checkBox_crop.Checked, checkBox_WebW.Checked, 
-                    checkBox_WebB.Checked, checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, 
-                    checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true, 0);
-                gPanelPreview.Dispose();
-                
+                //Graphics gPanelPreview = formPreview.panel_Preview.CreateGraphics();
+                //gPanelPreview.Clear(pictureBox_Preview.BackColor);
+                //float scalePreview = 1.0f;
+                //if (formPreview.radioButton_small.Checked) scalePreview = 0.5f;
+                //if (formPreview.radioButton_large.Checked) scalePreview = 1.5f;
+                //if (formPreview.radioButton_xlarge.Checked) scalePreview = 2.0f;
+                //if (formPreview.radioButton_xxlarge.Checked) scalePreview = 2.5f;
+                //PreviewToBitmap(gPanelPreview, scalePreview, checkBox_crop.Checked, checkBox_WebW.Checked, 
+                //    checkBox_WebB.Checked, checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, 
+                //    checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true, 0);
+                //gPanelPreview.Dispose();
+
+                formPreview.pictureBox_Preview.BackgroundImage = bitmap;
             }
         }
         
@@ -4372,7 +4393,7 @@ namespace GTR_Watch_face
         }
 
 
-        private void panel1_DoubleClick(object sender, EventArgs e)
+        private void pictureBox_Preview_DoubleClick(object sender, EventArgs e)
         {
             if ((formPreview == null) || (!formPreview.Visible))
             {
@@ -4400,7 +4421,7 @@ namespace GTR_Watch_face
 
                 }
 
-                formPreview.panel_Preview.Resize += (object senderResize, EventArgs eResize) =>
+                formPreview.pictureBox_Preview.Resize += (object senderResize, EventArgs eResize) =>
                 {
                     if (Form_Preview.Model_Wath.model_gtr47 != radioButton_47.Checked)
                         Form_Preview.Model_Wath.model_gtr47 = radioButton_47.Checked;
@@ -4412,9 +4433,9 @@ namespace GTR_Watch_face
                         Form_Preview.Model_Wath.model_TRex = radioButton_TRex.Checked;
                     if (Form_Preview.Model_Wath.model_Verge != radioButton_Verge.Checked)
                         Form_Preview.Model_Wath.model_Verge = radioButton_Verge.Checked;
-                    Graphics gPanelPreviewResize = formPreview.panel_Preview.CreateGraphics();
-                    gPanelPreviewResize.Clear(panel_Preview.BackColor);
-                    formPreview.radioButton_CheckedChanged(sender, e);
+                    //Graphics gPanelPreviewResize = formPreview.panel_Preview.CreateGraphics();
+                    //gPanelPreviewResize.Clear(panel_Preview.BackColor);
+                    //formPreview.radioButton_CheckedChanged(sender, e);
                     float scalePreviewResize = 1.0f;
                     if (formPreview.radioButton_small.Checked) scalePreviewResize = 0.5f;
                     if (formPreview.radioButton_large.Checked) scalePreviewResize = 1.5f;
@@ -4428,29 +4449,47 @@ namespace GTR_Watch_face
                         NullValueHandling = NullValueHandling.Ignore
                     });
                     File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
+                    
+                    #region BackgroundImage 
+                    Bitmap bitmapPreviewResize = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
+                    if (radioButton_42.Checked)
+                    {
+                        bitmapPreviewResize = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
+                    }
+                    if (radioButton_gts.Checked)
+                    {
+                        bitmapPreviewResize = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
+                    }
+                    if (radioButton_TRex.Checked || radioButton_Verge.Checked)
+                    {
+                        bitmapPreviewResize = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
+                    }
+                    Graphics gPanelPreviewResize = Graphics.FromImage(bitmapPreviewResize);
+                    #endregion
 
-                    PreviewToBitmap(gPanelPreviewResize, scalePreviewResize, checkBox_crop.Checked,
+                    PreviewToBitmap(gPanelPreviewResize, 1, checkBox_crop.Checked,
                         checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked, 
                         checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true, 0);
+                    formPreview.pictureBox_Preview.BackgroundImage = bitmapPreviewResize;
                     gPanelPreviewResize.Dispose();
                 };
 
-                formPreview.panel_Preview.Paint += (object senderPaint, PaintEventArgs ePaint) =>
-                {
-                    //Form_Preview.Model_GTR47.model_gtr47 = radioButton_47.Checked;
-                    //Graphics gPanelPreviewPaint = formPreview.panel_Preview.CreateGraphics();
-                    //gPanelPreviewPaint.Clear(panel_Preview.BackColor);
-                    //formPreview.radioButton_CheckedChanged(sender, e);
-                    //float scalePreviewPaint = 1.0f;
-                    //if (formPreview.radioButton_small.Checked) scalePreviewPaint = 0.5f;
-                    //if (formPreview.radioButton_large.Checked) scalePreviewPaint = 1.5f;
-                    //if (formPreview.radioButton_xlarge.Checked) scalePreviewPaint = 2.0f;
-                    //if (formPreview.radioButton_xxlarge.Checked) scalePreviewPaint = 2.5f;
-                    //PreviewToBitmap(gPanelPreviewPaint, scalePreviewPaint, radioButton_47.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked);
-                    //gPanelPreviewPaint.Dispose();
-                    timer2.Enabled = false;
-                    timer2.Enabled = true;
-                };
+                //formPreview.panel_Preview.Paint += (object senderPaint, PaintEventArgs ePaint) =>
+                //{
+                //    //Form_Preview.Model_GTR47.model_gtr47 = radioButton_47.Checked;
+                //    //Graphics gPanelPreviewPaint = formPreview.panel_Preview.CreateGraphics();
+                //    //gPanelPreviewPaint.Clear(panel_Preview.BackColor);
+                //    //formPreview.radioButton_CheckedChanged(sender, e);
+                //    //float scalePreviewPaint = 1.0f;
+                //    //if (formPreview.radioButton_small.Checked) scalePreviewPaint = 0.5f;
+                //    //if (formPreview.radioButton_large.Checked) scalePreviewPaint = 1.5f;
+                //    //if (formPreview.radioButton_xlarge.Checked) scalePreviewPaint = 2.0f;
+                //    //if (formPreview.radioButton_xxlarge.Checked) scalePreviewPaint = 2.5f;
+                //    //PreviewToBitmap(gPanelPreviewPaint, scalePreviewPaint, radioButton_47.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked);
+                //    //gPanelPreviewPaint.Dispose();
+                //    timer2.Enabled = false;
+                //    timer2.Enabled = true;
+                //};
 
                 formPreview.FormClosing += (object senderClosing, FormClosingEventArgs eClosing) =>
                 {
@@ -4473,22 +4512,40 @@ namespace GTR_Watch_face
                 Form_Preview.Model_Wath.model_TRex = radioButton_TRex.Checked;
             if (Form_Preview.Model_Wath.model_Verge != radioButton_Verge.Checked)
                 Form_Preview.Model_Wath.model_Verge = radioButton_Verge.Checked;
-            Graphics gPanel = formPreview.panel_Preview.CreateGraphics();
-            gPanel.Clear(panel_Preview.BackColor);
+            //Graphics gPanel = formPreview.panel_Preview.CreateGraphics();
+            //gPanel.Clear(panel_Preview.BackColor);
             //Pen pen = new Pen(Color.Blue, 1);
             //Random rnd = new Random();
             //gPanel.DrawLine(pen, new Point(0, 0), new Point(rnd.Next(0, 450), rnd.Next(0, 450)));
             //Form_Preview.Model_GTR47.model_gtr47 = radioButton_47.Checked;
             formPreview.radioButton_CheckedChanged(sender, e);
             float scale = 1.0f;
-            if (formPreview.radioButton_small.Checked) scale = 0.5f;
-            if (formPreview.radioButton_large.Checked) scale = 1.5f;
-            if (formPreview.radioButton_xlarge.Checked) scale = 2.0f;
-            if (formPreview.radioButton_xxlarge.Checked) scale = 2.5f;
+            //if (formPreview.radioButton_small.Checked) scale = 0.5f;
+            //if (formPreview.radioButton_large.Checked) scale = 1.5f;
+            //if (formPreview.radioButton_xlarge.Checked) scale = 2.0f;
+            //if (formPreview.radioButton_xxlarge.Checked) scale = 2.5f;
+
+            #region BackgroundImage 
+            Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
+            if (radioButton_42.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
+            }
+            if (radioButton_gts.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
+            }
+            if (radioButton_TRex.Checked || radioButton_Verge.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
+            }
+            Graphics gPanel = Graphics.FromImage(bitmap);
+            #endregion
 
             PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, 
                 checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, 
                 checkBox_Shortcuts_Border.Checked, true, 0);
+            formPreview.pictureBox_Preview.BackgroundImage = bitmap;
             gPanel.Dispose();
 
             button_PreviewBig.Enabled = false;
@@ -5618,7 +5675,7 @@ namespace GTR_Watch_face
 
         private void panel_Preview_DoubleClick(object sender, EventArgs e)
         {
-            if (panel_Preview.Height < 300) button_PreviewBig.PerformClick();
+            if (pictureBox_Preview.Height < 300) button_PreviewBig.PerformClick();
             else
             {
                 //if (radioButton_47.Checked) button_PreviewSmall.PerformClick();
@@ -5874,8 +5931,8 @@ namespace GTR_Watch_face
             if (radioButton_47.Checked)
             {
                 //this.Text = "GTR watch face editor";
-                panel_Preview.Height = 230;
-                panel_Preview.Width = 230;
+                pictureBox_Preview.Height = 229;
+                pictureBox_Preview.Width = 229;
                 offSet_X = 227;
                 offSet_Y = 227;
                 
@@ -5889,8 +5946,8 @@ namespace GTR_Watch_face
             else if (radioButton_42.Checked)
             {
                 //this.Text = "GTR watch face editor";
-                panel_Preview.Height = 198;
-                panel_Preview.Width = 198;
+                pictureBox_Preview.Height = 197;
+                pictureBox_Preview.Width = 197;
                 offSet_X = 195;
                 offSet_Y = 195;
                 
@@ -5904,8 +5961,8 @@ namespace GTR_Watch_face
             else if (radioButton_gts.Checked)
             {
                 //this.Text = "GTS watch face editor";
-                panel_Preview.Height = 223;
-                panel_Preview.Width = 176;
+                pictureBox_Preview.Height = 223;
+                pictureBox_Preview.Width = 176;
                 offSet_X = 174;
                 offSet_Y = 221;
                 
@@ -5919,8 +5976,8 @@ namespace GTR_Watch_face
             else if (radioButton_TRex.Checked)
             {
                 //this.Text = "T-Rex watch face editor";
-                panel_Preview.Height = 183;
-                panel_Preview.Width = 183;
+                pictureBox_Preview.Height = 182;
+                pictureBox_Preview.Width = 182;
                 offSet_X = 180;
                 offSet_Y = 180;
 
@@ -5934,8 +5991,8 @@ namespace GTR_Watch_face
             else if (radioButton_Verge.Checked)
             {
                 //this.Text = "Verge Lite watch face editor";
-                panel_Preview.Height = 183;
-                panel_Preview.Width = 183;
+                pictureBox_Preview.Height = 182;
+                pictureBox_Preview.Width = 182;
                 offSet_X = 180;
                 offSet_Y = 180;
 
@@ -6023,25 +6080,25 @@ namespace GTR_Watch_face
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            timer2.Enabled = false;
-            if ((formPreview != null) && (formPreview.Visible))
-            {
-                Form_Preview.Model_Wath.model_gtr47 = radioButton_47.Checked;
-                Form_Preview.Model_Wath.model_gtr42 = radioButton_42.Checked;
-                Form_Preview.Model_Wath.model_gts = radioButton_gts.Checked;
-                Graphics gPanelPreviewPaint = formPreview.panel_Preview.CreateGraphics();
-                gPanelPreviewPaint.Clear(panel_Preview.BackColor);
-                formPreview.radioButton_CheckedChanged(sender, e);
-                float scalePreviewPaint = 1.0f;
-                if (formPreview.radioButton_small.Checked) scalePreviewPaint = 0.5f;
-                if (formPreview.radioButton_large.Checked) scalePreviewPaint = 1.5f;
-                if (formPreview.radioButton_xlarge.Checked) scalePreviewPaint = 2.0f;
-                if (formPreview.radioButton_xxlarge.Checked) scalePreviewPaint = 2.5f;
-                PreviewToBitmap(gPanelPreviewPaint, scalePreviewPaint, checkBox_crop.Checked,
-                    checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked, 
-                    checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true, 0);
-                gPanelPreviewPaint.Dispose();
-            }
+            //timer2.Enabled = false;
+            //if ((formPreview != null) && (formPreview.Visible))
+            //{
+            //    Form_Preview.Model_Wath.model_gtr47 = radioButton_47.Checked;
+            //    Form_Preview.Model_Wath.model_gtr42 = radioButton_42.Checked;
+            //    Form_Preview.Model_Wath.model_gts = radioButton_gts.Checked;
+            //    Graphics gPanelPreviewPaint = formPreview.panel_Preview.CreateGraphics();
+            //    //gPanelPreviewPaint.Clear(panel_Preview.BackColor);
+            //    formPreview.radioButton_CheckedChanged(sender, e);
+            //    float scalePreviewPaint = 1.0f;
+            //    if (formPreview.radioButton_small.Checked) scalePreviewPaint = 0.5f;
+            //    if (formPreview.radioButton_large.Checked) scalePreviewPaint = 1.5f;
+            //    if (formPreview.radioButton_xlarge.Checked) scalePreviewPaint = 2.0f;
+            //    if (formPreview.radioButton_xxlarge.Checked) scalePreviewPaint = 2.5f;
+            //    PreviewToBitmap(gPanelPreviewPaint, scalePreviewPaint, checkBox_crop.Checked,
+            //        checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked, 
+            //        checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true, 0);
+            //    gPanelPreviewPaint.Dispose();
+            //}
         }
 
         private void panel_Preview_MouseMove(object sender, MouseEventArgs e)

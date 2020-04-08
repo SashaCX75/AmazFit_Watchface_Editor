@@ -40045,30 +40045,6 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
   <data name="&gt;&gt;button_SavePNG.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <data name="panel_Preview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 5</value>
-  </data>
-  <data name="panel_Preview.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="panel_Preview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 230</value>
-  </data>
-  <data name="panel_Preview.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="&gt;&gt;panel_Preview.Name" xml:space="preserve">
-    <value>panel_Preview</value>
-  </data>
-  <data name="&gt;&gt;panel_Preview.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel_Preview.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel_Preview.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
   <data name="button_SaveGIF.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -40199,7 +40175,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label_preview_X.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="label_preview_Y.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -40235,7 +40211,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label_preview_Y.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="checkBox_border.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -40265,7 +40241,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBox_border.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="label_version.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -40304,7 +40280,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label_version.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="radioButton_gts.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -40337,7 +40313,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>$this</value>
   </data>
   <data name="&gt;&gt;radioButton_gts.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="checkBox_crop.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -40367,7 +40343,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBox_crop.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -40427,7 +40403,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBox_Show_Shortcuts.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="radioButton_TRex.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -40460,7 +40436,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>$this</value>
   </data>
   <data name="&gt;&gt;radioButton_TRex.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="radioButton_Verge.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -40493,7 +40469,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>$this</value>
   </data>
   <data name="&gt;&gt;radioButton_Verge.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <metadata name="timer2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>609, 17</value>
@@ -40504,6 +40480,30 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
   <metadata name="colorDialog_Calories.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>512, 56</value>
   </metadata>
+  <data name="pictureBox_Preview.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="pictureBox_Preview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
+  </data>
+  <data name="pictureBox_Preview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 229</value>
+  </data>
+  <data name="pictureBox_Preview.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="&gt;&gt;pictureBox_Preview.Name" xml:space="preserve">
+    <value>pictureBox_Preview</value>
+  </data>
+  <data name="&gt;&gt;pictureBox_Preview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox_Preview.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureBox_Preview.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
