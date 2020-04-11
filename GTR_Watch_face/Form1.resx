@@ -38416,6 +38416,624 @@
   <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="label489.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label489.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label489.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 556</value>
+  </data>
+  <data name="label489.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label489.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 13</value>
+  </data>
+  <data name="label489.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="label489.Text" xml:space="preserve">
+    <value>!!! Проверьте получившийся циферблат после конвертирования !!!</value>
+  </data>
+  <data name="&gt;&gt;label489.Name" xml:space="preserve">
+    <value>label489</value>
+  </data>
+  <data name="&gt;&gt;label489.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label489.Parent" xml:space="preserve">
+    <value>tabPageConverting</value>
+  </data>
+  <data name="&gt;&gt;label489.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label488.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label488.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label488.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 537</value>
+  </data>
+  <data name="label488.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label488.Size" type="System.Drawing.Size, System.Drawing">
+    <value>552, 13</value>
+  </data>
+  <data name="label488.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="label488.Text" xml:space="preserve">
+    <value>** Будут изменены размеры изображений, координаты элементов, радиусы окружностей, толщины линий.</value>
+  </data>
+  <data name="&gt;&gt;label488.Name" xml:space="preserve">
+    <value>label488</value>
+  </data>
+  <data name="&gt;&gt;label488.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label488.Parent" xml:space="preserve">
+    <value>tabPageConverting</value>
+  </data>
+  <data name="&gt;&gt;label488.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label487.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label487.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label487.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 517</value>
+  </data>
+  <data name="label487.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label487.Size" type="System.Drawing.Size, System.Drawing">
+    <value>376, 13</value>
+  </data>
+  <data name="label487.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="label487.Text" xml:space="preserve">
+    <value> * Для нового циферблата будет создана папка рядом с существующей.</value>
+  </data>
+  <data name="&gt;&gt;label487.Name" xml:space="preserve">
+    <value>label487</value>
+  </data>
+  <data name="&gt;&gt;label487.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label487.Parent" xml:space="preserve">
+    <value>tabPageConverting</value>
+  </data>
+  <data name="&gt;&gt;label487.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label486.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label486.Location" type="System.Drawing.Point, System.Drawing">
+    <value>176, 120</value>
+  </data>
+  <data name="label486.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 13</value>
+  </data>
+  <data name="label486.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="label486.Text" xml:space="preserve">
+    <value>Откройте нужный циферблат или сохраните текущий.</value>
+  </data>
+  <data name="label486.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label486.Name" xml:space="preserve">
+    <value>label486</value>
+  </data>
+  <data name="&gt;&gt;label486.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label486.Parent" xml:space="preserve">
+    <value>tabPageConverting</value>
+  </data>
+  <data name="&gt;&gt;label486.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="button_Converting.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="button_Converting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 115</value>
+  </data>
+  <data name="button_Converting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 23</value>
+  </data>
+  <data name="button_Converting.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="button_Converting.Text" xml:space="preserve">
+    <value>Конвертировать</value>
+  </data>
+  <data name="&gt;&gt;button_Converting.Name" xml:space="preserve">
+    <value>button_Converting</value>
+  </data>
+  <data name="&gt;&gt;button_Converting.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_Converting.Parent" xml:space="preserve">
+    <value>tabPageConverting</value>
+  </data>
+  <data name="&gt;&gt;button_Converting.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="numericUpDown_ConvertingOutput_Custom.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_ConvertingOutput_Custom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>483, 19</value>
+  </data>
+  <data name="numericUpDown_ConvertingOutput_Custom.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_ConvertingOutput_Custom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 20</value>
+  </data>
+  <data name="numericUpDown_ConvertingOutput_Custom.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ConvertingOutput_Custom.Name" xml:space="preserve">
+    <value>numericUpDown_ConvertingOutput_Custom</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ConvertingOutput_Custom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ConvertingOutput_Custom.Parent" xml:space="preserve">
+    <value>groupBox10</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ConvertingOutput_Custom.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Custom.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Custom.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Custom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>335, 19</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Custom.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Custom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 17</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Custom.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Custom.Text" xml:space="preserve">
+    <value>Произвольный размер</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingOutput_Custom.Name" xml:space="preserve">
+    <value>radioButton_ConvertingOutput_Custom</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingOutput_Custom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingOutput_Custom.Parent" xml:space="preserve">
+    <value>groupBox10</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingOutput_Custom.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Verge.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Verge.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Verge.Location" type="System.Drawing.Point, System.Drawing">
+    <value>246, 19</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Verge.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Verge.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 17</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Verge.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Verge.Text" xml:space="preserve">
+    <value>Verge Lite</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingOutput_Verge.Name" xml:space="preserve">
+    <value>radioButton_ConvertingOutput_Verge</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingOutput_Verge.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingOutput_Verge.Parent" xml:space="preserve">
+    <value>groupBox10</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingOutput_Verge.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_TRex.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_TRex.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_TRex.Location" type="System.Drawing.Point, System.Drawing">
+    <value>176, 19</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_TRex.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_TRex.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 17</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_TRex.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_TRex.Text" xml:space="preserve">
+    <value>T-Rex</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingOutput_TRex.Name" xml:space="preserve">
+    <value>radioButton_ConvertingOutput_TRex</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingOutput_TRex.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingOutput_TRex.Parent" xml:space="preserve">
+    <value>groupBox10</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingOutput_TRex.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_GTR42.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_GTR42.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_GTR42.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 19</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_GTR42.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_GTR42.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 17</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_GTR42.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_GTR42.Text" xml:space="preserve">
+    <value>GTR (42)</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingOutput_GTR42.Name" xml:space="preserve">
+    <value>radioButton_ConvertingOutput_GTR42</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingOutput_GTR42.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingOutput_GTR42.Parent" xml:space="preserve">
+    <value>groupBox10</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingOutput_GTR42.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_GTR47.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_GTR47.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_GTR47.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 19</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_GTR47.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_GTR47.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 17</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_GTR47.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_GTR47.Text" xml:space="preserve">
+    <value>GTR (47)</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingOutput_GTR47.Name" xml:space="preserve">
+    <value>radioButton_ConvertingOutput_GTR47</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingOutput_GTR47.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingOutput_GTR47.Parent" xml:space="preserve">
+    <value>groupBox10</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingOutput_GTR47.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupBox10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 60</value>
+  </data>
+  <data name="groupBox10.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="groupBox10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>677, 47</value>
+  </data>
+  <data name="groupBox10.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="groupBox10.Text" xml:space="preserve">
+    <value>Целевая модель</value>
+  </data>
+  <data name="&gt;&gt;groupBox10.Name" xml:space="preserve">
+    <value>groupBox10</value>
+  </data>
+  <data name="&gt;&gt;groupBox10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox10.Parent" xml:space="preserve">
+    <value>tabPageConverting</value>
+  </data>
+  <data name="&gt;&gt;groupBox10.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="numericUpDown_ConvertingInput_Custom.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_ConvertingInput_Custom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>483, 19</value>
+  </data>
+  <data name="numericUpDown_ConvertingInput_Custom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 20</value>
+  </data>
+  <data name="numericUpDown_ConvertingInput_Custom.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ConvertingInput_Custom.Name" xml:space="preserve">
+    <value>numericUpDown_ConvertingInput_Custom</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ConvertingInput_Custom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ConvertingInput_Custom.Parent" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ConvertingInput_Custom.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Custom.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Custom.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Custom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>335, 19</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Custom.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Custom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 17</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Custom.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Custom.Text" xml:space="preserve">
+    <value>Произвольный размер</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingInput_Custom.Name" xml:space="preserve">
+    <value>radioButton_ConvertingInput_Custom</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingInput_Custom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingInput_Custom.Parent" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingInput_Custom.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Verge.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Verge.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Verge.Location" type="System.Drawing.Point, System.Drawing">
+    <value>246, 19</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Verge.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Verge.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 17</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Verge.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Verge.Text" xml:space="preserve">
+    <value>Verge Lite</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingInput_Verge.Name" xml:space="preserve">
+    <value>radioButton_ConvertingInput_Verge</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingInput_Verge.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingInput_Verge.Parent" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingInput_Verge.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="radioButton_ConvertingInput_TRex.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_ConvertingInput_TRex.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton_ConvertingInput_TRex.Location" type="System.Drawing.Point, System.Drawing">
+    <value>176, 19</value>
+  </data>
+  <data name="radioButton_ConvertingInput_TRex.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_ConvertingInput_TRex.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 17</value>
+  </data>
+  <data name="radioButton_ConvertingInput_TRex.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="radioButton_ConvertingInput_TRex.Text" xml:space="preserve">
+    <value>T-Rex</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingInput_TRex.Name" xml:space="preserve">
+    <value>radioButton_ConvertingInput_TRex</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingInput_TRex.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingInput_TRex.Parent" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingInput_TRex.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="radioButton_ConvertingInput_GTR42.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_ConvertingInput_GTR42.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton_ConvertingInput_GTR42.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 19</value>
+  </data>
+  <data name="radioButton_ConvertingInput_GTR42.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_ConvertingInput_GTR42.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 17</value>
+  </data>
+  <data name="radioButton_ConvertingInput_GTR42.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="radioButton_ConvertingInput_GTR42.Text" xml:space="preserve">
+    <value>GTR (42)</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingInput_GTR42.Name" xml:space="preserve">
+    <value>radioButton_ConvertingInput_GTR42</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingInput_GTR42.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingInput_GTR42.Parent" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingInput_GTR42.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="radioButton_ConvertingInput_GTR47.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_ConvertingInput_GTR47.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton_ConvertingInput_GTR47.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 19</value>
+  </data>
+  <data name="radioButton_ConvertingInput_GTR47.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_ConvertingInput_GTR47.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 17</value>
+  </data>
+  <data name="radioButton_ConvertingInput_GTR47.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="radioButton_ConvertingInput_GTR47.Text" xml:space="preserve">
+    <value>GTR (47)</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingInput_GTR47.Name" xml:space="preserve">
+    <value>radioButton_ConvertingInput_GTR47</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingInput_GTR47.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingInput_GTR47.Parent" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;radioButton_ConvertingInput_GTR47.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupBox9.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="groupBox9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="groupBox9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>677, 47</value>
+  </data>
+  <data name="groupBox9.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="groupBox9.Text" xml:space="preserve">
+    <value>Исходная модель</value>
+  </data>
+  <data name="&gt;&gt;groupBox9.Name" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;groupBox9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox9.Parent" xml:space="preserve">
+    <value>tabPageConverting</value>
+  </data>
+  <data name="&gt;&gt;groupBox9.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="tabPageConverting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPageConverting.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPageConverting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>683, 575</value>
+  </data>
+  <data name="tabPageConverting.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="tabPageConverting.Text" xml:space="preserve">
+    <value>Конвертирование</value>
+  </data>
+  <data name="&gt;&gt;tabPageConverting.Name" xml:space="preserve">
+    <value>tabPageConverting</value>
+  </data>
+  <data name="&gt;&gt;tabPageConverting.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageConverting.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPageConverting.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="comboBox_Animation_Preview_Speed.Items" xml:space="preserve">
     <value>50</value>
   </data>
@@ -39352,7 +39970,7 @@
     <value>tabControl1</value>
   </data>
   <data name="&gt;&gt;tabPage33.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="linkLabel_resunpacker_qzip.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -39881,7 +40499,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>tabControl1</value>
   </data>
   <data name="&gt;&gt;tabPage43.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>238, 5</value>
@@ -40289,7 +40907,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>NoControl</value>
   </data>
   <data name="radioButton_gts.Location" type="System.Drawing.Point, System.Drawing">
-    <value>155, 241</value>
+    <value>155, 240</value>
   </data>
   <data name="radioButton_gts.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -40487,7 +41105,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>5, 5</value>
   </data>
   <data name="pictureBox_Preview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>229, 229</value>
+    <value>230, 230</value>
   </data>
   <data name="pictureBox_Preview.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>

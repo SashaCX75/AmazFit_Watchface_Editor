@@ -30,23 +30,23 @@ namespace GTR_Watch_face
             {
                 if (Model_Wath.model_gtr47)
                 {
-                    pictureBox_Preview.Size = new Size(229, 229);
-                    this.Size = new Size(229 + (int)(22 * currentDPI), 229 + (int)(66 * currentDPI));
+                    pictureBox_Preview.Size = new Size(230, 230);
+                    this.Size = new Size(230 + (int)(22 * currentDPI), 230 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_gtr42)
                 {
-                    pictureBox_Preview.Size = new Size(197, 197);
-                    this.Size = new Size(197 + (int)(22 * currentDPI), 197 + (int)(66 * currentDPI));
+                    pictureBox_Preview.Size = new Size(198, 198);
+                    this.Size = new Size(198 + (int)(22 * currentDPI), 198 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_gts)
                 {
-                    pictureBox_Preview.Size = new Size(176, 223);
-                    this.Size = new Size(176 + (int)(22 * currentDPI), 223 + (int)(66 * currentDPI));
+                    pictureBox_Preview.Size = new Size(177, 224);
+                    this.Size = new Size(177 + (int)(22 * currentDPI), 224 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_TRex || Model_Wath.model_Verge)
                 {
-                    pictureBox_Preview.Size = new Size(182, 182);
-                    this.Size = new Size(182 + (int)(22 * currentDPI), 182 + (int)(66 * currentDPI));
+                    pictureBox_Preview.Size = new Size(183, 183);
+                    this.Size = new Size(183 + (int)(22 * currentDPI), 183 + (int)(66 * currentDPI));
                 }
                 scale = 0.5f;
             }
@@ -55,23 +55,23 @@ namespace GTR_Watch_face
             {
                 if (Model_Wath.model_gtr47)
                 {
-                    pictureBox_Preview.Size = new Size(456, 456);
-                    this.Size = new Size(456 + (int)(22 * currentDPI), 456 + (int)(66 * currentDPI));
+                    pictureBox_Preview.Size = new Size(457, 457);
+                    this.Size = new Size(457 + (int)(22 * currentDPI), 457 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_gtr42)
                 {
-                    pictureBox_Preview.Size = new Size(392, 392);
-                    this.Size = new Size(392 + (int)(22 * currentDPI), 392 + (int)(66 * currentDPI));
+                    pictureBox_Preview.Size = new Size(393, 393);
+                    this.Size = new Size(393 + (int)(22 * currentDPI), 393 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_gts)
                 {
-                    pictureBox_Preview.Size = new Size(350, 444);
-                    this.Size = new Size(350 + (int)(22 * currentDPI), 444 + (int)(66 * currentDPI));
+                    pictureBox_Preview.Size = new Size(351, 445);
+                    this.Size = new Size(351 + (int)(22 * currentDPI), 445 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_TRex || Model_Wath.model_Verge)
                 {
-                    pictureBox_Preview.Size = new Size(362, 362);
-                    this.Size = new Size(362 + (int)(22 * currentDPI), 362 + (int)(66 * currentDPI));
+                    pictureBox_Preview.Size = new Size(363, 363);
+                    this.Size = new Size(363 + (int)(22 * currentDPI), 363 + (int)(66 * currentDPI));
                 }
                 scale = 1f;
             }
@@ -80,23 +80,23 @@ namespace GTR_Watch_face
             {
                 if (Model_Wath.model_gtr47)
                 {
-                    pictureBox_Preview.Size = new Size(683, 683);
-                    this.Size = new Size(683 + (int)(22 * currentDPI), 683 + (int)(66 * currentDPI));
+                    pictureBox_Preview.Size = new Size(684, 684);
+                    this.Size = new Size(684 + (int)(22 * currentDPI), 684 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_gtr42)
                 {
-                    pictureBox_Preview.Size = new Size(587, 587);
-                    this.Size = new Size(587 + (int)(22 * currentDPI), 587 + (int)(66 * currentDPI));
+                    pictureBox_Preview.Size = new Size(588, 588);
+                    this.Size = new Size(588 + (int)(22 * currentDPI), 588 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_gts)
                 {
-                    pictureBox_Preview.Size = new Size(524, 665);
-                    this.Size = new Size(524 + (int)(22 * currentDPI), 665 + (int)(66 * currentDPI));
+                    pictureBox_Preview.Size = new Size(525, 666);
+                    this.Size = new Size(525 + (int)(22 * currentDPI), 666 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_TRex || Model_Wath.model_Verge)
                 {
-                    pictureBox_Preview.Size = new Size(542, 542);
-                    this.Size = new Size(542 + (int)(22 * currentDPI), 542 + (int)(66 * currentDPI));
+                    pictureBox_Preview.Size = new Size(543, 543);
+                    this.Size = new Size(543 + (int)(22 * currentDPI), 543 + (int)(66 * currentDPI));
                 }
                 scale = 1.5f;
             }
@@ -105,23 +105,23 @@ namespace GTR_Watch_face
             {
                 if (Model_Wath.model_gtr47)
                 {
-                    pictureBox_Preview.Size = new Size(910, 910);
-                    this.Size = new Size(910 + (int)(22 * currentDPI), 910 + (int)(66 * currentDPI));
+                    pictureBox_Preview.Size = new Size(911, 911);
+                    this.Size = new Size(911 + (int)(22 * currentDPI), 911 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_gtr42)
                 {
-                    pictureBox_Preview.Size = new Size(782, 782);
-                    this.Size = new Size(782 + (int)(22 * currentDPI), 782 + (int)(66 * currentDPI));
+                    pictureBox_Preview.Size = new Size(783, 783);
+                    this.Size = new Size(783 + (int)(22 * currentDPI), 783 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_gts)
                 {
-                    pictureBox_Preview.Size = new Size(698, 886);
-                    this.Size = new Size(698 + (int)(22 * currentDPI), 886 + (int)(66 * currentDPI));
+                    pictureBox_Preview.Size = new Size(699, 887);
+                    this.Size = new Size(699 + (int)(22 * currentDPI), 887 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_TRex || Model_Wath.model_Verge)
                 {
-                    pictureBox_Preview.Size = new Size(722, 722);
-                    this.Size = new Size(722 + (int)(22 * currentDPI), 722 + (int)(66 * currentDPI));
+                    pictureBox_Preview.Size = new Size(723, 723);
+                    this.Size = new Size(723 + (int)(22 * currentDPI), 723 + (int)(66 * currentDPI));
                 }
                 scale = 2f;
             }
@@ -130,23 +130,23 @@ namespace GTR_Watch_face
             {
                 if (Model_Wath.model_gtr47)
                 {
-                    pictureBox_Preview.Size = new Size(1137, 1137);
-                    this.Size = new Size(1137 + (int)(22 * currentDPI), 1137 + (int)(66 * currentDPI));
+                    pictureBox_Preview.Size = new Size(1138, 1138);
+                    this.Size = new Size(1138 + (int)(22 * currentDPI), 1138 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_gtr42)
                 {
-                    pictureBox_Preview.Size = new Size(977, 977);
-                    this.Size = new Size(977 + (int)(22 * currentDPI), 977 + (int)(66 * currentDPI));
+                    pictureBox_Preview.Size = new Size(978, 978);
+                    this.Size = new Size(978 + (int)(22 * currentDPI), 978 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_gts)
                 {
-                    pictureBox_Preview.Size = new Size(872, 1107);
-                    this.Size = new Size(872 + (int)(22 * currentDPI), 1107 + (int)(66 * currentDPI));
+                    pictureBox_Preview.Size = new Size(873, 1108);
+                    this.Size = new Size(873 + (int)(22 * currentDPI), 1108 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_TRex || Model_Wath.model_Verge)
                 {
-                    pictureBox_Preview.Size = new Size(902, 902);
-                    this.Size = new Size(902 + (int)(22 * currentDPI), 902 + (int)(66 * currentDPI));
+                    pictureBox_Preview.Size = new Size(903, 903);
+                    this.Size = new Size(903 + (int)(22 * currentDPI), 903 + (int)(66 * currentDPI));
                 }
                 scale = 2.5f;
             }

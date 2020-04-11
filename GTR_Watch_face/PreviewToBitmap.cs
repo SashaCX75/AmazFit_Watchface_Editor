@@ -2475,7 +2475,7 @@ namespace GTR_Watch_face
             src.Dispose();
         }
 
-        /// <summary>Рисует стрелки</summary>
+        /// <summary>круговая шкала поверх картинки</summary>
         /// <param name="graphics">Поверхность для рисования</param>
         /// <param name="x">Координата X</param>
         /// <param name="y">Координата Y</param>
@@ -2522,7 +2522,8 @@ namespace GTR_Watch_face
             try
             {
                 gPanel.DrawArc(pen, srcX, srcY, CircleWidth, CircleWidth, StartAngle, EndAngle);
-                src = ApplyAlfaMask(src, mask);
+                //src = ApplyAlfaMask(src, mask);
+                src = ApplyMask(src, mask);
                 graphics.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
                 src.Dispose();
                 mask.Dispose();
@@ -2535,34 +2536,34 @@ namespace GTR_Watch_face
 
         }
 
-        public Bitmap ApplyAlfaMask(Bitmap inputImage, Bitmap mask)
-        {
-            //Resulting collage.
-            Bitmap result = new Bitmap(inputImage);
-            for (int x = 0; x < result.Width; x++)
-            {
-                for (int y = 0; y < result.Height; y++)
-                {
-                    Color colorResult = result.GetPixel(x, y);
-                    Color maskResult = mask.GetPixel(x, y);
-                    if (maskResult.A>80)
-                    {
-                        result.SetPixel(x, y, Color.FromArgb(colorResult.A, colorResult.R, colorResult.G, colorResult.B));
-                    }
-                    else
-                    {
-                        result.SetPixel(x, y, Color.FromArgb(maskResult.A, colorResult.R, colorResult.G, colorResult.B));
-                    }
-                }
-            }
-            inputImage.Dispose();
-            mask.Dispose();
-            return result;
-        }
+        //public Bitmap ApplyAlfaMask(Bitmap inputImage, Bitmap mask)
+        //{
+        //    //Resulting collage.
+        //    Bitmap result = new Bitmap(inputImage);
+        //    for (int x = 0; x < result.Width; x++)
+        //    {
+        //        for (int y = 0; y < result.Height; y++)
+        //        {
+        //            Color colorResult = result.GetPixel(x, y);
+        //            Color maskResult = mask.GetPixel(x, y);
+        //            if (maskResult.A>80)
+        //            {
+        //                result.SetPixel(x, y, Color.FromArgb(colorResult.A, colorResult.R, colorResult.G, colorResult.B));
+        //            }
+        //            else
+        //            {
+        //                result.SetPixel(x, y, Color.FromArgb(maskResult.A, colorResult.R, colorResult.G, colorResult.B));
+        //            }
+        //        }
+        //    }
+        //    inputImage.Dispose();
+        //    mask.Dispose();
+        //    return result;
+        //}
 
         public Bitmap FormColor(Bitmap bitmap)
         {
-            int[] bgColors = { 203, 255, 240 };
+            //int[] bgColors = { 203, 255, 240 };
             Color color = pictureBox_Preview.BackColor;
             ImageMagick.MagickImage image = new ImageMagick.MagickImage(bitmap);
             // меняем прозрачный цвет на цвет фона

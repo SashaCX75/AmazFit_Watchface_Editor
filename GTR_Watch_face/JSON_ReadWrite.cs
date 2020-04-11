@@ -461,8 +461,13 @@ namespace GTR_Watch_face
                     if (Watch_Face.StepsProgress.Circle.ImageIndex != null)
                     {
                         comboBoxSetText(comboBox_StepsProgress_Image, (long)Watch_Face.StepsProgress.Circle.ImageIndex);
-                        ColorToCoodinates(new_color, numericUpDown_StepsProgress_ImageX,
-                            numericUpDown_StepsProgress_ImageY);
+                        int x = 0;
+                        int y = 0;
+                        ColorToCoodinates(new_color, out x, out y);
+                        numericUpDown_StepsProgress_ImageX.Value = x;
+                        numericUpDown_StepsProgress_ImageY.Value = y;
+                        //ColorToCoodinates(new_color, numericUpDown_StepsProgress_ImageX,
+                        //    numericUpDown_StepsProgress_ImageY);
                         checkBox_StepsProgress_Image.Checked = true;
                     }
                     else checkBox_StepsProgress_Image.Checked = false;
@@ -614,8 +619,13 @@ namespace GTR_Watch_face
                     if (Watch_Face.Activity.PulseMeter.ImageIndex != null)
                     {
                         comboBoxSetText(comboBox_ActivityPulsScale_Image, (long)Watch_Face.Activity.PulseMeter.ImageIndex);
-                        ColorToCoodinates(new_color, numericUpDown_ActivityPulsScale_ImageX,
-                            numericUpDown_ActivityPulsScale_ImageY);
+                        int x = 0;
+                        int y = 0;
+                        ColorToCoodinates(new_color, out x, out y);
+                        numericUpDown_ActivityPulsScale_ImageX.Value = x;
+                        numericUpDown_ActivityPulsScale_ImageY.Value = y;
+                        //ColorToCoodinates(new_color, numericUpDown_ActivityPulsScale_ImageX,
+                        //    numericUpDown_ActivityPulsScale_ImageY);
                         checkBox_ActivityPulsScale_Image.Checked = true;
                     }
                     else checkBox_ActivityPulsScale_Image.Checked = false;
@@ -757,8 +767,13 @@ namespace GTR_Watch_face
                     {
                         comboBoxSetText(comboBox_ActivityCaloriesScale_Image, 
                             (long)Watch_Face.Activity.CaloriesGraph.Circle.ImageIndex);
-                        ColorToCoodinates(new_color, numericUpDown_ActivityCaloriesScale_ImageX,
-                            numericUpDown_ActivityCaloriesScale_ImageY);
+                        int x = 0;
+                        int y = 0;
+                        ColorToCoodinates(new_color, out x, out y);
+                        numericUpDown_ActivityCaloriesScale_ImageX.Value = x;
+                        numericUpDown_ActivityCaloriesScale_ImageY.Value = y;
+                        //ColorToCoodinates(new_color, numericUpDown_ActivityCaloriesScale_ImageX,
+                        //    numericUpDown_ActivityCaloriesScale_ImageY);
                         checkBox_ActivityCaloriesScale_Image.Checked = true;
                     }
                     else checkBox_ActivityCaloriesScale_Image.Checked = false;
@@ -999,8 +1014,13 @@ namespace GTR_Watch_face
                     if (Watch_Face.Battery.Scale.ImageIndex != null)
                     {
                         comboBoxSetText(comboBox_Battery_Scale_Image, (long)Watch_Face.Battery.Scale.ImageIndex);
-                        ColorToCoodinates(new_color, numericUpDown_Battery_Scale_ImageX,
-                            numericUpDown_Battery_Scale_ImageY);
+                        int x = 0;
+                        int y = 0;
+                        ColorToCoodinates(new_color, out x, out y);
+                        numericUpDown_Battery_Scale_ImageX.Value = x;
+                        numericUpDown_Battery_Scale_ImageY.Value = y;
+                        //ColorToCoodinates(new_color, numericUpDown_Battery_Scale_ImageX,
+                        //    numericUpDown_Battery_Scale_ImageY);
                         checkBox_Battery_Scale_Image.Checked = true;
                     }
                     else checkBox_Battery_Scale_Image.Checked = false;
@@ -3041,7 +3061,11 @@ namespace GTR_Watch_face
             return new_color;
         }
 
-        private void ColorToCoodinates(Color color, NumericUpDown numericUpDown_X, NumericUpDown numericUpDown_Y)
+        /// <summary>Преобразует цвет в координаты</summary>
+        /// <param name="color">Цвет, кодирующий координаты</param>
+        /// <param name="X">Координата X</param>
+        /// <param name="Y">Координата Y</param>
+        private void ColorToCoodinates(Color color, out int X, out int Y)
         {
             //string sColor = ColorTranslator.ToHtml(color);
             //string sColor = color.A.ToString("X") + color.R.ToString("X") + color.G.ToString("X") + color.B.ToString("X");
@@ -3057,12 +3081,15 @@ namespace GTR_Watch_face
             //string myHex = myInt.ToString("X");  // Gives you hexadecimal
             //int myNewInt = Convert.ToInt32(myHex, 16);  // Back to int again.
 
-            int X = Convert.ToInt32(colorX, 16);
-            int Y = Convert.ToInt32(colorY, 16);
-            numericUpDown_X.Value = X;
-            numericUpDown_Y.Value = Y;
+            X = Convert.ToInt32(colorX, 16);
+            Y = Convert.ToInt32(colorY, 16);
+            //numericUpDown_X.Value = X;
+            //numericUpDown_Y.Value = Y;
         }
 
+        /// <summary>Кодирование координат цветом</summary>
+        /// <param name="X">Координата X</param>
+        /// <param name="Y">Координата Y</param>
         private string CoodinatesToColor(int X, int Y)
         {
             string colorX = X.ToString("X3");
@@ -3286,8 +3313,8 @@ namespace GTR_Watch_face
                 if (radioButton_47.Checked)
                 {
                     this.Text = "GTR watch face editor";
-                    pictureBox_Preview.Height = 229;
-                    pictureBox_Preview.Width = 229;
+                    pictureBox_Preview.Height = 230;
+                    pictureBox_Preview.Width = 230;
                     offSet_X = 227;
                     offSet_Y = 227;
                     
@@ -3301,8 +3328,8 @@ namespace GTR_Watch_face
                 else if (radioButton_42.Checked)
                 {
                     this.Text = "GTR watch face editor";
-                    pictureBox_Preview.Height = 197;
-                    pictureBox_Preview.Width = 197;
+                    pictureBox_Preview.Height = 198;
+                    pictureBox_Preview.Width = 198;
                     offSet_X = 195;
                     offSet_Y = 195;
 
@@ -3316,8 +3343,8 @@ namespace GTR_Watch_face
                 else if (radioButton_gts.Checked)
                 {
                     this.Text = "GTS watch face editor";
-                    pictureBox_Preview.Height = 223;
-                    pictureBox_Preview.Width = 176;
+                    pictureBox_Preview.Height = 224;
+                    pictureBox_Preview.Width = 177;
                     offSet_X = 174;
                     offSet_Y = 221;
 
@@ -3331,8 +3358,8 @@ namespace GTR_Watch_face
                 else if (radioButton_TRex.Checked)
                 {
                     this.Text = "T-Rex watch face editor";
-                    pictureBox_Preview.Height = 182;
-                    pictureBox_Preview.Width = 182;
+                    pictureBox_Preview.Height = 183;
+                    pictureBox_Preview.Width = 183;
                     offSet_X = 180;
                     offSet_Y = 180;
 
@@ -3346,8 +3373,8 @@ namespace GTR_Watch_face
                 else if (radioButton_Verge.Checked)
                 {
                     this.Text = "Verge Lite watch face editor";
-                    pictureBox_Preview.Height = 182;
-                    pictureBox_Preview.Width = 182;
+                    pictureBox_Preview.Height = 183;
+                    pictureBox_Preview.Width = 183;
                     offSet_X = 180;
                     offSet_Y = 180;
 

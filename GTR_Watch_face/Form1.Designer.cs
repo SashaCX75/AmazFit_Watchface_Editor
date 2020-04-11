@@ -1279,6 +1279,26 @@
             this.label6 = new System.Windows.Forms.Label();
             this.button_Background = new System.Windows.Forms.Button();
             this.richTextBox_JSON = new System.Windows.Forms.RichTextBox();
+            this.tabPageConverting = new System.Windows.Forms.TabPage();
+            this.label489 = new System.Windows.Forms.Label();
+            this.label488 = new System.Windows.Forms.Label();
+            this.label487 = new System.Windows.Forms.Label();
+            this.label486 = new System.Windows.Forms.Label();
+            this.button_Converting = new System.Windows.Forms.Button();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown_ConvertingOutput_Custom = new System.Windows.Forms.NumericUpDown();
+            this.radioButton_ConvertingOutput_Custom = new System.Windows.Forms.RadioButton();
+            this.radioButton_ConvertingOutput_Verge = new System.Windows.Forms.RadioButton();
+            this.radioButton_ConvertingOutput_TRex = new System.Windows.Forms.RadioButton();
+            this.radioButton_ConvertingOutput_GTR42 = new System.Windows.Forms.RadioButton();
+            this.radioButton_ConvertingOutput_GTR47 = new System.Windows.Forms.RadioButton();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown_ConvertingInput_Custom = new System.Windows.Forms.NumericUpDown();
+            this.radioButton_ConvertingInput_Custom = new System.Windows.Forms.RadioButton();
+            this.radioButton_ConvertingInput_Verge = new System.Windows.Forms.RadioButton();
+            this.radioButton_ConvertingInput_TRex = new System.Windows.Forms.RadioButton();
+            this.radioButton_ConvertingInput_GTR42 = new System.Windows.Forms.RadioButton();
+            this.radioButton_ConvertingInput_GTR47 = new System.Windows.Forms.RadioButton();
             this.tabPage33 = new System.Windows.Forms.TabPage();
             this.comboBox_Animation_Preview_Speed = new System.Windows.Forms.ComboBox();
             this.label483 = new System.Windows.Forms.Label();
@@ -1800,6 +1820,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Sec_Tens_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Sec_Tens_X)).BeginInit();
             this.panel_Background.SuspendLayout();
+            this.tabPageConverting.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ConvertingOutput_Custom)).BeginInit();
+            this.groupBox9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ConvertingInput_Custom)).BeginInit();
             this.tabPage33.SuspendLayout();
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Gif_Speed)).BeginInit();
@@ -1818,12 +1843,14 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPageConverting);
             this.tabControl1.Controls.Add(this.tabPage33);
             this.tabControl1.Controls.Add(this.tabPage43);
             resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.helpProvider1.SetShowHelp(this.tabControl1, ((bool)(resources.GetObject("tabControl1.ShowHelp"))));
+            this.tabControl1.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControl1_Selecting);
             // 
             // tabPage1
             // 
@@ -5479,6 +5506,11 @@
             0,
             0,
             0});
+            this.numericUpDown_StaticAnimation_CyclesCount.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
             this.numericUpDown_StaticAnimation_CyclesCount.Name = "numericUpDown_StaticAnimation_CyclesCount";
             this.helpProvider1.SetShowHelp(this.numericUpDown_StaticAnimation_CyclesCount, ((bool)(resources.GetObject("numericUpDown_StaticAnimation_CyclesCount.ShowHelp"))));
             this.numericUpDown_StaticAnimation_CyclesCount.ValueChanged += new System.EventHandler(this.numericUpDown_StaticAnimation_CyclesCount_ValueChanged);
@@ -6115,6 +6147,7 @@
             this.numericUpDown_Shortcuts_Steps_Width.Name = "numericUpDown_Shortcuts_Steps_Width";
             this.helpProvider1.SetShowHelp(this.numericUpDown_Shortcuts_Steps_Width, ((bool)(resources.GetObject("numericUpDown_Shortcuts_Steps_Width.ShowHelp"))));
             this.numericUpDown_Shortcuts_Steps_Width.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Shortcuts_Steps_Width.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Shortcuts_Steps_Width_MouseDoubleClick);
             // 
             // numericUpDown_Shortcuts_Steps_Y
             // 
@@ -6192,6 +6225,7 @@
             this.numericUpDown_Shortcuts_Steps_Height.Name = "numericUpDown_Shortcuts_Steps_Height";
             this.helpProvider1.SetShowHelp(this.numericUpDown_Shortcuts_Steps_Height, ((bool)(resources.GetObject("numericUpDown_Shortcuts_Steps_Height.ShowHelp"))));
             this.numericUpDown_Shortcuts_Steps_Height.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Shortcuts_Steps_Height.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Shortcuts_Steps_Height_MouseDoubleClick);
             // 
             // label439
             // 
@@ -6252,6 +6286,7 @@
             this.numericUpDown_Shortcuts_Puls_Width.Name = "numericUpDown_Shortcuts_Puls_Width";
             this.helpProvider1.SetShowHelp(this.numericUpDown_Shortcuts_Puls_Width, ((bool)(resources.GetObject("numericUpDown_Shortcuts_Puls_Width.ShowHelp"))));
             this.numericUpDown_Shortcuts_Puls_Width.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Shortcuts_Puls_Width.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Shortcuts_Puls_Width_MouseDoubleClick);
             // 
             // numericUpDown_Shortcuts_Puls_Y
             // 
@@ -6329,6 +6364,7 @@
             this.numericUpDown_Shortcuts_Puls_Height.Name = "numericUpDown_Shortcuts_Puls_Height";
             this.helpProvider1.SetShowHelp(this.numericUpDown_Shortcuts_Puls_Height, ((bool)(resources.GetObject("numericUpDown_Shortcuts_Puls_Height.ShowHelp"))));
             this.numericUpDown_Shortcuts_Puls_Height.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Shortcuts_Puls_Height.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Shortcuts_Puls_Height_MouseDoubleClick);
             // 
             // label437
             // 
@@ -6389,6 +6425,7 @@
             this.numericUpDown_Shortcuts_Weather_Width.Name = "numericUpDown_Shortcuts_Weather_Width";
             this.helpProvider1.SetShowHelp(this.numericUpDown_Shortcuts_Weather_Width, ((bool)(resources.GetObject("numericUpDown_Shortcuts_Weather_Width.ShowHelp"))));
             this.numericUpDown_Shortcuts_Weather_Width.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Shortcuts_Weather_Width.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Shortcuts_Weather_Width_MouseDoubleClick);
             // 
             // numericUpDown_Shortcuts_Weather_Y
             // 
@@ -6466,6 +6503,7 @@
             this.numericUpDown_Shortcuts_Weather_Height.Name = "numericUpDown_Shortcuts_Weather_Height";
             this.helpProvider1.SetShowHelp(this.numericUpDown_Shortcuts_Weather_Height, ((bool)(resources.GetObject("numericUpDown_Shortcuts_Weather_Height.ShowHelp"))));
             this.numericUpDown_Shortcuts_Weather_Height.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Shortcuts_Weather_Height.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Shortcuts_Weather_Height_MouseDoubleClick);
             // 
             // label448
             // 
@@ -6511,7 +6549,6 @@
             // 
             // numericUpDown_Shortcuts_Energy_Width
             // 
-            this.numericUpDown_Shortcuts_Energy_Width.ContextMenuStrip = this.contextMenuStrip_X;
             resources.ApplyResources(this.numericUpDown_Shortcuts_Energy_Width, "numericUpDown_Shortcuts_Energy_Width");
             this.numericUpDown_Shortcuts_Energy_Width.Maximum = new decimal(new int[] {
             999,
@@ -6526,6 +6563,7 @@
             this.numericUpDown_Shortcuts_Energy_Width.Name = "numericUpDown_Shortcuts_Energy_Width";
             this.helpProvider1.SetShowHelp(this.numericUpDown_Shortcuts_Energy_Width, ((bool)(resources.GetObject("numericUpDown_Shortcuts_Energy_Width.ShowHelp"))));
             this.numericUpDown_Shortcuts_Energy_Width.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Shortcuts_Energy_Width.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Shortcuts_Energy_Width_MouseDoubleClick);
             // 
             // numericUpDown_Shortcuts_Energy_Y
             // 
@@ -6588,7 +6626,6 @@
             // 
             // numericUpDown_Shortcuts_Energy_Height
             // 
-            this.numericUpDown_Shortcuts_Energy_Height.ContextMenuStrip = this.contextMenuStrip_Y;
             resources.ApplyResources(this.numericUpDown_Shortcuts_Energy_Height, "numericUpDown_Shortcuts_Energy_Height");
             this.numericUpDown_Shortcuts_Energy_Height.Maximum = new decimal(new int[] {
             999,
@@ -6603,6 +6640,7 @@
             this.numericUpDown_Shortcuts_Energy_Height.Name = "numericUpDown_Shortcuts_Energy_Height";
             this.helpProvider1.SetShowHelp(this.numericUpDown_Shortcuts_Energy_Height, ((bool)(resources.GetObject("numericUpDown_Shortcuts_Energy_Height.ShowHelp"))));
             this.numericUpDown_Shortcuts_Energy_Height.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Shortcuts_Energy_Height.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Shortcuts_Energy_Height_MouseDoubleClick);
             // 
             // label454
             // 
@@ -15865,6 +15903,193 @@
             this.richTextBox_JSON.Name = "richTextBox_JSON";
             this.helpProvider1.SetShowHelp(this.richTextBox_JSON, ((bool)(resources.GetObject("richTextBox_JSON.ShowHelp"))));
             // 
+            // tabPageConverting
+            // 
+            this.tabPageConverting.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageConverting.Controls.Add(this.label489);
+            this.tabPageConverting.Controls.Add(this.label488);
+            this.tabPageConverting.Controls.Add(this.label487);
+            this.tabPageConverting.Controls.Add(this.label486);
+            this.tabPageConverting.Controls.Add(this.button_Converting);
+            this.tabPageConverting.Controls.Add(this.groupBox10);
+            this.tabPageConverting.Controls.Add(this.groupBox9);
+            resources.ApplyResources(this.tabPageConverting, "tabPageConverting");
+            this.tabPageConverting.Name = "tabPageConverting";
+            // 
+            // label489
+            // 
+            resources.ApplyResources(this.label489, "label489");
+            this.label489.Name = "label489";
+            this.helpProvider1.SetShowHelp(this.label489, ((bool)(resources.GetObject("label489.ShowHelp"))));
+            // 
+            // label488
+            // 
+            resources.ApplyResources(this.label488, "label488");
+            this.label488.Name = "label488";
+            this.helpProvider1.SetShowHelp(this.label488, ((bool)(resources.GetObject("label488.ShowHelp"))));
+            // 
+            // label487
+            // 
+            resources.ApplyResources(this.label487, "label487");
+            this.label487.Name = "label487";
+            this.helpProvider1.SetShowHelp(this.label487, ((bool)(resources.GetObject("label487.ShowHelp"))));
+            // 
+            // label486
+            // 
+            resources.ApplyResources(this.label486, "label486");
+            this.label486.Name = "label486";
+            // 
+            // button_Converting
+            // 
+            resources.ApplyResources(this.button_Converting, "button_Converting");
+            this.button_Converting.Name = "button_Converting";
+            this.button_Converting.UseVisualStyleBackColor = true;
+            this.button_Converting.Click += new System.EventHandler(this.button_Converting_Click);
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.numericUpDown_ConvertingOutput_Custom);
+            this.groupBox10.Controls.Add(this.radioButton_ConvertingOutput_Custom);
+            this.groupBox10.Controls.Add(this.radioButton_ConvertingOutput_Verge);
+            this.groupBox10.Controls.Add(this.radioButton_ConvertingOutput_TRex);
+            this.groupBox10.Controls.Add(this.radioButton_ConvertingOutput_GTR42);
+            this.groupBox10.Controls.Add(this.radioButton_ConvertingOutput_GTR47);
+            resources.ApplyResources(this.groupBox10, "groupBox10");
+            this.groupBox10.Name = "groupBox10";
+            this.helpProvider1.SetShowHelp(this.groupBox10, ((bool)(resources.GetObject("groupBox10.ShowHelp"))));
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            // 
+            // numericUpDown_ConvertingOutput_Custom
+            // 
+            resources.ApplyResources(this.numericUpDown_ConvertingOutput_Custom, "numericUpDown_ConvertingOutput_Custom");
+            this.numericUpDown_ConvertingOutput_Custom.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ConvertingOutput_Custom.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.numericUpDown_ConvertingOutput_Custom.Name = "numericUpDown_ConvertingOutput_Custom";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ConvertingOutput_Custom, ((bool)(resources.GetObject("numericUpDown_ConvertingOutput_Custom.ShowHelp"))));
+            this.numericUpDown_ConvertingOutput_Custom.Value = new decimal(new int[] {
+            454,
+            0,
+            0,
+            0});
+            // 
+            // radioButton_ConvertingOutput_Custom
+            // 
+            resources.ApplyResources(this.radioButton_ConvertingOutput_Custom, "radioButton_ConvertingOutput_Custom");
+            this.radioButton_ConvertingOutput_Custom.Name = "radioButton_ConvertingOutput_Custom";
+            this.helpProvider1.SetShowHelp(this.radioButton_ConvertingOutput_Custom, ((bool)(resources.GetObject("radioButton_ConvertingOutput_Custom.ShowHelp"))));
+            this.radioButton_ConvertingOutput_Custom.UseVisualStyleBackColor = true;
+            this.radioButton_ConvertingOutput_Custom.CheckedChanged += new System.EventHandler(this.radioButton_ConvertingOutput_Custom_CheckedChanged);
+            // 
+            // radioButton_ConvertingOutput_Verge
+            // 
+            resources.ApplyResources(this.radioButton_ConvertingOutput_Verge, "radioButton_ConvertingOutput_Verge");
+            this.radioButton_ConvertingOutput_Verge.Name = "radioButton_ConvertingOutput_Verge";
+            this.helpProvider1.SetShowHelp(this.radioButton_ConvertingOutput_Verge, ((bool)(resources.GetObject("radioButton_ConvertingOutput_Verge.ShowHelp"))));
+            this.radioButton_ConvertingOutput_Verge.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_ConvertingOutput_TRex
+            // 
+            resources.ApplyResources(this.radioButton_ConvertingOutput_TRex, "radioButton_ConvertingOutput_TRex");
+            this.radioButton_ConvertingOutput_TRex.Name = "radioButton_ConvertingOutput_TRex";
+            this.helpProvider1.SetShowHelp(this.radioButton_ConvertingOutput_TRex, ((bool)(resources.GetObject("radioButton_ConvertingOutput_TRex.ShowHelp"))));
+            this.radioButton_ConvertingOutput_TRex.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_ConvertingOutput_GTR42
+            // 
+            resources.ApplyResources(this.radioButton_ConvertingOutput_GTR42, "radioButton_ConvertingOutput_GTR42");
+            this.radioButton_ConvertingOutput_GTR42.Checked = true;
+            this.radioButton_ConvertingOutput_GTR42.Name = "radioButton_ConvertingOutput_GTR42";
+            this.helpProvider1.SetShowHelp(this.radioButton_ConvertingOutput_GTR42, ((bool)(resources.GetObject("radioButton_ConvertingOutput_GTR42.ShowHelp"))));
+            this.radioButton_ConvertingOutput_GTR42.TabStop = true;
+            this.radioButton_ConvertingOutput_GTR42.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_ConvertingOutput_GTR47
+            // 
+            resources.ApplyResources(this.radioButton_ConvertingOutput_GTR47, "radioButton_ConvertingOutput_GTR47");
+            this.radioButton_ConvertingOutput_GTR47.Name = "radioButton_ConvertingOutput_GTR47";
+            this.helpProvider1.SetShowHelp(this.radioButton_ConvertingOutput_GTR47, ((bool)(resources.GetObject("radioButton_ConvertingOutput_GTR47.ShowHelp"))));
+            this.radioButton_ConvertingOutput_GTR47.UseVisualStyleBackColor = true;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.numericUpDown_ConvertingInput_Custom);
+            this.groupBox9.Controls.Add(this.radioButton_ConvertingInput_Custom);
+            this.groupBox9.Controls.Add(this.radioButton_ConvertingInput_Verge);
+            this.groupBox9.Controls.Add(this.radioButton_ConvertingInput_TRex);
+            this.groupBox9.Controls.Add(this.radioButton_ConvertingInput_GTR42);
+            this.groupBox9.Controls.Add(this.radioButton_ConvertingInput_GTR47);
+            resources.ApplyResources(this.groupBox9, "groupBox9");
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            // 
+            // numericUpDown_ConvertingInput_Custom
+            // 
+            resources.ApplyResources(this.numericUpDown_ConvertingInput_Custom, "numericUpDown_ConvertingInput_Custom");
+            this.numericUpDown_ConvertingInput_Custom.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ConvertingInput_Custom.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.numericUpDown_ConvertingInput_Custom.Name = "numericUpDown_ConvertingInput_Custom";
+            this.numericUpDown_ConvertingInput_Custom.Value = new decimal(new int[] {
+            454,
+            0,
+            0,
+            0});
+            // 
+            // radioButton_ConvertingInput_Custom
+            // 
+            resources.ApplyResources(this.radioButton_ConvertingInput_Custom, "radioButton_ConvertingInput_Custom");
+            this.radioButton_ConvertingInput_Custom.Name = "radioButton_ConvertingInput_Custom";
+            this.helpProvider1.SetShowHelp(this.radioButton_ConvertingInput_Custom, ((bool)(resources.GetObject("radioButton_ConvertingInput_Custom.ShowHelp"))));
+            this.radioButton_ConvertingInput_Custom.UseVisualStyleBackColor = true;
+            this.radioButton_ConvertingInput_Custom.CheckedChanged += new System.EventHandler(this.radioButton_ConvertingInput_Custom_CheckedChanged);
+            // 
+            // radioButton_ConvertingInput_Verge
+            // 
+            resources.ApplyResources(this.radioButton_ConvertingInput_Verge, "radioButton_ConvertingInput_Verge");
+            this.radioButton_ConvertingInput_Verge.Name = "radioButton_ConvertingInput_Verge";
+            this.helpProvider1.SetShowHelp(this.radioButton_ConvertingInput_Verge, ((bool)(resources.GetObject("radioButton_ConvertingInput_Verge.ShowHelp"))));
+            this.radioButton_ConvertingInput_Verge.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_ConvertingInput_TRex
+            // 
+            resources.ApplyResources(this.radioButton_ConvertingInput_TRex, "radioButton_ConvertingInput_TRex");
+            this.radioButton_ConvertingInput_TRex.Name = "radioButton_ConvertingInput_TRex";
+            this.helpProvider1.SetShowHelp(this.radioButton_ConvertingInput_TRex, ((bool)(resources.GetObject("radioButton_ConvertingInput_TRex.ShowHelp"))));
+            this.radioButton_ConvertingInput_TRex.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_ConvertingInput_GTR42
+            // 
+            resources.ApplyResources(this.radioButton_ConvertingInput_GTR42, "radioButton_ConvertingInput_GTR42");
+            this.radioButton_ConvertingInput_GTR42.Name = "radioButton_ConvertingInput_GTR42";
+            this.helpProvider1.SetShowHelp(this.radioButton_ConvertingInput_GTR42, ((bool)(resources.GetObject("radioButton_ConvertingInput_GTR42.ShowHelp"))));
+            this.radioButton_ConvertingInput_GTR42.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_ConvertingInput_GTR47
+            // 
+            resources.ApplyResources(this.radioButton_ConvertingInput_GTR47, "radioButton_ConvertingInput_GTR47");
+            this.radioButton_ConvertingInput_GTR47.Checked = true;
+            this.radioButton_ConvertingInput_GTR47.Name = "radioButton_ConvertingInput_GTR47";
+            this.helpProvider1.SetShowHelp(this.radioButton_ConvertingInput_GTR47, ((bool)(resources.GetObject("radioButton_ConvertingInput_GTR47.ShowHelp"))));
+            this.radioButton_ConvertingInput_GTR47.TabStop = true;
+            this.radioButton_ConvertingInput_GTR47.UseVisualStyleBackColor = true;
+            // 
             // tabPage33
             // 
             this.tabPage33.BackColor = System.Drawing.SystemColors.Control;
@@ -16468,7 +16693,9 @@
             this.pictureBox_Preview.Cursor = System.Windows.Forms.Cursors.Cross;
             this.pictureBox_Preview.Name = "pictureBox_Preview";
             this.pictureBox_Preview.TabStop = false;
-            this.pictureBox_Preview.Click += new System.EventHandler(this.pictureBox_Preview_DoubleClick);
+            this.pictureBox_Preview.DoubleClick += new System.EventHandler(this.pictureBox_Preview_DoubleClick);
+            this.pictureBox_Preview.MouseLeave += new System.EventHandler(this.pictureBox_Preview_MouseLeave);
+            this.pictureBox_Preview.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox_Preview_MouseMove);
             // 
             // Form1
             // 
@@ -17037,6 +17264,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Sec_Tens_X)).EndInit();
             this.panel_Background.ResumeLayout(false);
             this.panel_Background.PerformLayout();
+            this.tabPageConverting.ResumeLayout(false);
+            this.tabPageConverting.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ConvertingOutput_Custom)).EndInit();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ConvertingInput_Custom)).EndInit();
             this.tabPage33.ResumeLayout(false);
             this.tabPage33.PerformLayout();
             this.groupBox8.ResumeLayout(false);
@@ -18379,6 +18614,26 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn AnimationColumn12;
         private System.Windows.Forms.LinkLabel linkLabel_resunpacker_qzip;
         private System.Windows.Forms.PictureBox pictureBox_Preview;
+        private System.Windows.Forms.TabPage tabPageConverting;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.RadioButton radioButton_ConvertingInput_Verge;
+        private System.Windows.Forms.RadioButton radioButton_ConvertingInput_TRex;
+        private System.Windows.Forms.RadioButton radioButton_ConvertingInput_GTR42;
+        private System.Windows.Forms.RadioButton radioButton_ConvertingInput_GTR47;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ConvertingInput_Custom;
+        private System.Windows.Forms.RadioButton radioButton_ConvertingInput_Custom;
+        private System.Windows.Forms.Button button_Converting;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ConvertingOutput_Custom;
+        private System.Windows.Forms.RadioButton radioButton_ConvertingOutput_Custom;
+        private System.Windows.Forms.RadioButton radioButton_ConvertingOutput_Verge;
+        private System.Windows.Forms.RadioButton radioButton_ConvertingOutput_TRex;
+        private System.Windows.Forms.RadioButton radioButton_ConvertingOutput_GTR42;
+        private System.Windows.Forms.RadioButton radioButton_ConvertingOutput_GTR47;
+        private System.Windows.Forms.Label label489;
+        private System.Windows.Forms.Label label488;
+        private System.Windows.Forms.Label label487;
+        private System.Windows.Forms.Label label486;
     }
 }
 
