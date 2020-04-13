@@ -2452,7 +2452,7 @@ namespace GTR_Watch_face
                 panel_Status.Height = 1;
                 panel_Battery.Height = 1;
                 panel_AnalogClock.Height = 1;
-                panel_Weather.Height = (int)(230 * currentDPI);
+                panel_Weather.Height = (int)(260 * currentDPI);
                 panel_Shortcuts.Height = 1;
                 panel_Animation.Height = 1;
             }
@@ -7704,7 +7704,7 @@ namespace GTR_Watch_face
                     if (radioButton_ConvertingOutput_GTR47.Checked) scale = 454 / 360f;
                     if (radioButton_ConvertingOutput_GTR42.Checked) scale = 390 / 360f;
                     if (radioButton_ConvertingOutput_TRex.Checked) scale = 360 / 360f;
-                    if (radioButton_ConvertingOutput_Verge.Checked) scale = 360 / 454f;
+                    if (radioButton_ConvertingOutput_Verge.Checked) scale = 360 / 360f;
                     if (radioButton_ConvertingOutput_Custom.Checked)
                         scale = (float)(numericUpDown_ConvertingOutput_Custom.Value / 360);
                 }
@@ -7768,7 +7768,7 @@ namespace GTR_Watch_face
 
                 MessageBox.Show(Properties.FormStrings.Message_ConvertingCompleted_Text,
                         Properties.FormStrings.Message_Warning_Information, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MessageBox.Show(Properties.FormStrings.Message_ConvertingCompleted_Text);
+                //MessageBox.Show(Properties.FormStrings.Message_ConvertingCompleted_Text);
             }
         }
 
