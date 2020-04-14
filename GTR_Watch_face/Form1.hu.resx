@@ -6646,4 +6646,34 @@ több rendszerbetöltés)</value>
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
   </data>
+  <data name="groupBox9.Text" xml:space="preserve">
+    <value>Forrásmodell</value>
+  </data>
+  <data name="label486.Text" xml:space="preserve">
+    <value>Nyissa meg a kívánt óralapot, vagy mentse el az aktuális óralapot.</value>
+  </data>
+  <data name="label487.Text" xml:space="preserve">
+    <value>* Egy új könyvtár jön létre a meglévő óralap könyvtára mellett.</value>
+  </data>
+  <data name="label488.Text" xml:space="preserve">
+    <value>** A konverzió átméretezi a képeket, a funkció koordinátáit, a kör sugarat és a vonalvastagságot.</value>
+  </data>
+  <data name="label489.Text" xml:space="preserve">
+    <value>!!! Ellenőrizze a kapott óralapot az átalakítás után !!!</value>
+  </data>
+  <data name="label490.Text" xml:space="preserve">
+    <value>* Csak akkor jelenik meg, ha az aktuális hőmérsékletet nem lehet megjeleníteni.</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Custom.Text" xml:space="preserve">
+    <value>Egyéni méret</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Custom.Text" xml:space="preserve">
+    <value>Egyéni méret</value>
+  </data>
+  <data name="tabPageConverting.Text" xml:space="preserve">
+    <value>Konvertálás</value>
+  </data>
+  <data name="button_Converting.Text" xml:space="preserve">
+    <value>Konverzió</value>
+  </data>
 </root>

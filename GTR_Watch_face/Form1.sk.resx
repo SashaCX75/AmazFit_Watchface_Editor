@@ -6677,4 +6677,37 @@ väčšie zaťaženie systému)</value>
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
   </data>
+  <data name="button_Converting.Text" xml:space="preserve">
+    <value>Konverzia</value>
+  </data>
+  <data name="groupBox10.Text" xml:space="preserve">
+    <value>Cieľový model</value>
+  </data>
+  <data name="groupBox9.Text" xml:space="preserve">
+    <value>Zdrojový model</value>
+  </data>
+  <data name="label486.Text" xml:space="preserve">
+    <value>Otvorte požadovaný ciferník alebo uložte aktuálny.</value>
+  </data>
+  <data name="label487.Text" xml:space="preserve">
+    <value>* Pre výsledný ciferník bude popri existujúcom adresáry vytvorený adresár nový.</value>
+  </data>
+  <data name="label488.Text" xml:space="preserve">
+    <value>** Konverziou bude vykonaná zmena veľkosti obrázkov, súradníc prvkov, polomeru kruhov, hrúbky čiar.</value>
+  </data>
+  <data name="label489.Text" xml:space="preserve">
+    <value>!!! Po prevode skontrolujte výsledný číselník !!!</value>
+  </data>
+  <data name="label490.Text" xml:space="preserve">
+    <value>* Zobrazí sa, iba ak nie je možné zobraziť aktuálnu teplotu.</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Custom.Text" xml:space="preserve">
+    <value>Vlastná veľkosť</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Custom.Text" xml:space="preserve">
+    <value>Vlastná veľkosť</value>
+  </data>
+  <data name="tabPageConverting.Text" xml:space="preserve">
+    <value>Konvertovanie</value>
+  </data>
 </root>
