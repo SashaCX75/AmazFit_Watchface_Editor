@@ -1664,6 +1664,13 @@
   <data name="tabPage24.Text" xml:space="preserve">
     <value>Jelenlegi hőmérséklet</value>
   </data>
+  <data name="label490.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 26</value>
+  </data>
+  <data name="label490.Text" xml:space="preserve">
+    <value>* Csak akkor jelenik meg, ha az aktuális hőmérsékletet 
+nem lehet megjeleníteni.</value>
+  </data>
   <data name="comboBox_Weather_Day_Image.Location" type="System.Drawing.Point, System.Drawing">
     <value>197, 81</value>
   </data>
@@ -3452,6 +3459,51 @@
   <data name="tabPage3.Text" xml:space="preserve">
     <value>Szerkesztés</value>
   </data>
+  <data name="label489.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 13</value>
+  </data>
+  <data name="label489.Text" xml:space="preserve">
+    <value>!!! Ellenőrizze a kapott óralapot az átalakítás után !!!</value>
+  </data>
+  <data name="label488.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 13</value>
+  </data>
+  <data name="label488.Text" xml:space="preserve">
+    <value>** A konverzió átméretezi a képeket, a funkció koordinátáit, a kör sugarat és a vonalvastagságot.</value>
+  </data>
+  <data name="label487.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 13</value>
+  </data>
+  <data name="label487.Text" xml:space="preserve">
+    <value>* Egy új könyvtár jön létre a meglévő óralap könyvtára mellett.</value>
+  </data>
+  <data name="label486.Size" type="System.Drawing.Size, System.Drawing">
+    <value>319, 13</value>
+  </data>
+  <data name="label486.Text" xml:space="preserve">
+    <value>Nyissa meg a kívánt óralapot, vagy mentse el az aktuális óralapot.</value>
+  </data>
+  <data name="button_Converting.Text" xml:space="preserve">
+    <value>Konverzió</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Custom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 17</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Custom.Text" xml:space="preserve">
+    <value>Egyéni méret</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Custom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 17</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Custom.Text" xml:space="preserve">
+    <value>Egyéni méret</value>
+  </data>
+  <data name="groupBox9.Text" xml:space="preserve">
+    <value>Forrásmodell</value>
+  </data>
+  <data name="tabPageConverting.Text" xml:space="preserve">
+    <value>Konvertálás</value>
+  </data>
   <data name="label483.Size" type="System.Drawing.Size, System.Drawing">
     <value>206, 39</value>
   </data>
@@ -3592,6 +3644,12 @@ több rendszerbetöltés)</value>
   <data name="tabPage33.Text" xml:space="preserve">
     <value>Opciók</value>
   </data>
+  <data name="linkLabel_resunpacker_qzip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 13</value>
+  </data>
+  <data name="linkLabel_resunpacker_qzip.Text" xml:space="preserve">
+    <value>Res_PackerUnpacker (szerző dpeddi)</value>
+  </data>
   <data name="label415.Size" type="System.Drawing.Size, System.Drawing">
     <value>126, 13</value>
   </data>
@@ -3615,9 +3673,6 @@ több rendszerbetöltés)</value>
   </data>
   <data name="label413.Text" xml:space="preserve">
     <value>BIN fájl csomagolási / kicsomagolási eszköz:</value>
-  </data>
-  <data name="linkLabel_resunpacker_qzip.Text" xml:space="preserve">
-    <value>Res_PackerUnpacker (szerző dpeddi)</value>
   </data>
   <data name="linkLabel_py_amazfit_tools.Size" type="System.Drawing.Size, System.Drawing">
     <value>318, 13</value>
@@ -6645,35 +6700,5 @@ több rendszerbetöltés)</value>
         SlmARUpZgEVKWYBDSFZuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+D8AAPgfAADwHwAA4A8AAMAHAADA
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
-  </data>
-  <data name="groupBox9.Text" xml:space="preserve">
-    <value>Forrásmodell</value>
-  </data>
-  <data name="label486.Text" xml:space="preserve">
-    <value>Nyissa meg a kívánt óralapot, vagy mentse el az aktuális óralapot.</value>
-  </data>
-  <data name="label487.Text" xml:space="preserve">
-    <value>* Egy új könyvtár jön létre a meglévő óralap könyvtára mellett.</value>
-  </data>
-  <data name="label488.Text" xml:space="preserve">
-    <value>** A konverzió átméretezi a képeket, a funkció koordinátáit, a kör sugarat és a vonalvastagságot.</value>
-  </data>
-  <data name="label489.Text" xml:space="preserve">
-    <value>!!! Ellenőrizze a kapott óralapot az átalakítás után !!!</value>
-  </data>
-  <data name="label490.Text" xml:space="preserve">
-    <value>* Csak akkor jelenik meg, ha az aktuális hőmérsékletet nem lehet megjeleníteni.</value>
-  </data>
-  <data name="radioButton_ConvertingInput_Custom.Text" xml:space="preserve">
-    <value>Egyéni méret</value>
-  </data>
-  <data name="radioButton_ConvertingOutput_Custom.Text" xml:space="preserve">
-    <value>Egyéni méret</value>
-  </data>
-  <data name="tabPageConverting.Text" xml:space="preserve">
-    <value>Konvertálás</value>
-  </data>
-  <data name="button_Converting.Text" xml:space="preserve">
-    <value>Konverzió</value>
   </data>
 </root>

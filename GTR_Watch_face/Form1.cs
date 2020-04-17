@@ -1379,6 +1379,7 @@ namespace GTR_Watch_face
                 ListImages.Clear();
                 ListImagesFullName.Clear();
                 int i;
+                int count = 0;
                 Image loadedImage = null;
                 List<string> ErrorImage = new List<string>();
                 List<string> FileNames = openFileDialog.FileNames.ToList();
@@ -1404,7 +1405,8 @@ namespace GTR_Watch_face
                             DataGridViewImageCellLayout ZoomType = DataGridViewImageCellLayout.Zoom;
                             if ((loadedImage.Height < 45) && (loadedImage.Width < 110))
                                 ZoomType = DataGridViewImageCellLayout.Normal;
-                            RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = i.ToString() });
+                            RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = count.ToString() });
+                            //RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = i.ToString() });
                             RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = fileNameOnly });
                             //RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = file });
                             RowNew.Cells.Add(new DataGridViewImageCell()
@@ -1416,6 +1418,7 @@ namespace GTR_Watch_face
                             dataGridView_ImagesList.Rows.Add(RowNew);
                             ListImages.Add(i.ToString());
                             ListImagesFullName.Add(file);
+                            count++;
                         }
 
                     }
@@ -1588,7 +1591,8 @@ namespace GTR_Watch_face
                         DataGridViewImageCellLayout ZoomType = DataGridViewImageCellLayout.Zoom;
                         if ((loadedImage.Height < 45) && (loadedImage.Width < 110))
                             ZoomType = DataGridViewImageCellLayout.Normal;
-                        RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = i.ToString() });
+                        RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = count.ToString() });
+                        //RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = i.ToString() });
                         RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = fileNameOnly });
                         RowNew.Cells.Add(new DataGridViewImageCell()
                         {
@@ -5614,17 +5618,20 @@ namespace GTR_Watch_face
             }
 
             // текущая температура и температура день/ночь
-            //if (Watch_Face.Weather != null && Watch_Face.Weather.Temperature != null)
-            //{
-            //    if ((Watch_Face.Weather.Temperature.Current != null) && (Watch_Face.Weather.Temperature.Today == null))
-            //    {
-            //        MessageBox.Show(Properties.FormStrings.Message_WarningTemperature_Text,
-            //        Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    }
-            //}
+            if (Watch_Face.Weather != null && Watch_Face.Weather.Temperature != null)
+            {
+                if ((Watch_Face.Weather.Temperature.Current != null) && (Watch_Face.Weather.Temperature.Today == null))
+                {
+                    if (Watch_Face.StepsProgress != null && Watch_Face.StepsProgress.ClockHand != null)
+                    {
+                        MessageBox.Show(Properties.FormStrings.Message_WarningTemperature_Text,
+                            Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning); 
+                    }
+                }
+            }
 
             // пробелы в имени
-            if(fullfilename.IndexOf(" ") != -1)
+            if (fullfilename.IndexOf(" ") != -1)
             {
                 MessageBox.Show(Properties.FormStrings.Message_WarningSpaceInName_Text,
                     Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -5918,7 +5925,8 @@ namespace GTR_Watch_face
             //ImageMagick.MagickImage image = new ImageMagick.MagickImage("0.png");
             ImageMagick.MagickImage combineMask = new ImageMagick.MagickImage(mask);
 
-            image.Composite(combineMask, ImageMagick.CompositeOperator.CopyAlpha, Channels.Alpha);
+            //image.Composite(combineMask, ImageMagick.CompositeOperator.CopyAlpha, Channels.Alpha);
+            image.Composite(combineMask, ImageMagick.CompositeOperator.In, Channels.Alpha);
             //image.Settings.BackgroundColor = new ImageMagick.MagickColor(bgColors[0], bgColors[1], bgColors[2]);
             //image.Alpha(ImageMagick.AlphaOption.Remove);
             //image.Transparent(ImageMagick.MagickColor.FromRgba(0, 0, 0, 0));
