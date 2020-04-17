@@ -19,10 +19,13 @@ namespace GTR_Watch_face
         /// <param name="showShortcuts">Подсвечивать область ярлыков</param>
         /// <param name="showShortcutsArea">Подсвечивать область ярлыков рамкой</param>
         /// <param name="showShortcutsBorder">Подсвечивать область ярлыков заливкой</param>
+        /// <param name="showAnimation">Показывать анимацию при предпросмотре</param>
+        /// <param name="showCircleScaleArea">Подсвечивать круговую шкалу при наличии фонового изображения</param>
         /// <param name="link">1 - если отрисовка только до анимации, 
         /// 2 - если отрисовка только после анимации, в остальных случаях полная отрисовка</param>
         public void PreviewToBitmap(Graphics gPanel, float scale, bool crop, bool WMesh, bool BMesh, bool BBorder, 
-            bool showShortcuts, bool showShortcutsArea, bool showShortcutsBorder, bool showAnimation, int link)
+            bool showShortcuts, bool showShortcutsArea, bool showShortcutsBorder, bool showAnimation, bool showCircleScaleArea, 
+            int link)
         {
             var src = new Bitmap(1, 1);
             gPanel.ScaleTransform(scale, scale, MatrixOrder.Prepend);
@@ -139,7 +142,7 @@ namespace GTR_Watch_face
                         if (AngleScale > 1) AngleScale = 1;
                         EndAngle = EndAngle * AngleScale;
                         int lineCap = comboBox_Battery_Flatness.SelectedIndex;
-                        CircleOnBitmap(gPanel, x, y, ImageIndex, radius, width, lineCap, StartAngle, EndAngle);
+                        CircleOnBitmap(gPanel, x, y, ImageIndex, radius, width, lineCap, StartAngle, EndAngle, showCircleScaleArea);
                     }
                     else
                     {
@@ -1031,7 +1034,7 @@ namespace GTR_Watch_face
                         if (AngleScale > 1) AngleScale = 1;
                         EndAngle = EndAngle * AngleScale;
                         int lineCap = comboBox_ActivityPulsScale_Flatness.SelectedIndex;
-                        CircleOnBitmap(gPanel, x, y, ImageIndex, radius, width, lineCap, StartAngle, EndAngle);
+                        CircleOnBitmap(gPanel, x, y, ImageIndex, radius, width, lineCap, StartAngle, EndAngle, showCircleScaleArea);
                     }
                     else
                     {
@@ -1135,7 +1138,7 @@ namespace GTR_Watch_face
                         if (AngleScale > 1) AngleScale = 1;
                         EndAngle = EndAngle * AngleScale;
                         int lineCap = comboBox_ActivityCaloriesScale_Flatness.SelectedIndex;
-                        CircleOnBitmap(gPanel, x, y, ImageIndex, radius, width, lineCap, StartAngle, EndAngle);
+                        CircleOnBitmap(gPanel, x, y, ImageIndex, radius, width, lineCap, StartAngle, EndAngle, showCircleScaleArea);
                     }
                     else
                     {
@@ -1236,7 +1239,7 @@ namespace GTR_Watch_face
                     if (AngleScale > 1) AngleScale = 1;
                     EndAngle = EndAngle * AngleScale;
                     int lineCap = comboBox_StepsProgress_Flatness.SelectedIndex;
-                    CircleOnBitmap(gPanel, x, y, ImageIndex, radius, width, lineCap, StartAngle, EndAngle);
+                    CircleOnBitmap(gPanel, x, y, ImageIndex, radius, width, lineCap, StartAngle, EndAngle, showCircleScaleArea);
                 }
                 else
                 {
@@ -2483,8 +2486,9 @@ namespace GTR_Watch_face
         /// <param name="lineCap">Тип окончания линии</param>
         /// <param name="startAngle">Начальный угол</param>
         /// <param name="endAngle">Общий угол</param>
+        /// <param name="showCircleScaleArea">Подсвечивать круговую шкалу при наличии фонового изображения</param>
         private void CircleOnBitmap(Graphics graphics, int x, int y, int imageIndex, int radius, float width,
-            int lineCap, float StartAngle, float EndAngle)
+            int lineCap, float StartAngle, float EndAngle, bool showCircleScaleArea)
         {
             Bitmap src = new Bitmap(ListImagesFullName[imageIndex]);
             Pen pen = new Pen(Color.Black, width);
@@ -2527,26 +2531,29 @@ namespace GTR_Watch_face
                 src.Dispose();
                 mask.Dispose();
 
-                // подсвечивание шкалы заливкой
-                HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent20, Color.White, Color.Transparent);
-                pen.Brush = myHatchBrush;
-                graphics.DrawArc(pen, srcX, srcY, CircleWidth, CircleWidth, StartAngle, EndAngle);
-                myHatchBrush = new HatchBrush(HatchStyle.Percent10, Color.Black, Color.Transparent);
-                pen.Brush = myHatchBrush;
-                graphics.DrawArc(pen, srcX, srcY, CircleWidth, CircleWidth, StartAngle, EndAngle);
+                if (showCircleScaleArea)
+                {
+                    // подсвечивание шкалы заливкой
+                    HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent20, Color.White, Color.Transparent);
+                    pen.Brush = myHatchBrush;
+                    graphics.DrawArc(pen, srcX, srcY, CircleWidth, CircleWidth, StartAngle, EndAngle);
+                    myHatchBrush = new HatchBrush(HatchStyle.Percent10, Color.Black, Color.Transparent);
+                    pen.Brush = myHatchBrush;
+                    graphics.DrawArc(pen, srcX, srcY, CircleWidth, CircleWidth, StartAngle, EndAngle);
 
-                // подсвечивание внешней и внутреней дуги на шкале
-                float w2 = width / 2f;
-                using (Pen pen1 = new Pen(Color.White, 1))
-                {
-                    graphics.DrawArc(pen1, srcX + w2, srcY + w2, CircleWidth - width, CircleWidth - width, StartAngle, EndAngle);
-                    graphics.DrawArc(pen1, srcX - w2, srcY - w2, CircleWidth + width, CircleWidth + width, StartAngle, EndAngle);
-                }
-                using (Pen pen2 = new Pen(Color.Black, 1))
-                {
-                    pen2.DashStyle = DashStyle.Dot;
-                    graphics.DrawArc(pen2, srcX + w2, srcY + w2, CircleWidth - width, CircleWidth - width, StartAngle, EndAngle);
-                    graphics.DrawArc(pen2, srcX - w2, srcY - w2, CircleWidth + width, CircleWidth + width, StartAngle, EndAngle);
+                    // подсвечивание внешней и внутреней дуги на шкале
+                    float w2 = width / 2f;
+                    using (Pen pen1 = new Pen(Color.White, 1))
+                    {
+                        graphics.DrawArc(pen1, srcX + w2, srcY + w2, CircleWidth - width, CircleWidth - width, StartAngle, EndAngle);
+                        graphics.DrawArc(pen1, srcX - w2, srcY - w2, CircleWidth + width, CircleWidth + width, StartAngle, EndAngle);
+                    }
+                    using (Pen pen2 = new Pen(Color.Black, 1))
+                    {
+                        pen2.DashStyle = DashStyle.Dot;
+                        graphics.DrawArc(pen2, srcX + w2, srcY + w2, CircleWidth - width, CircleWidth - width, StartAngle, EndAngle);
+                        graphics.DrawArc(pen2, srcX - w2, srcY - w2, CircleWidth + width, CircleWidth + width, StartAngle, EndAngle);
+                    } 
                 }
             }
             catch (Exception)

@@ -1710,6 +1710,12 @@
   <data name="tabPage24.Text" xml:space="preserve">
     <value>Aktuální teplota</value>
   </data>
+  <data name="label490.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 13</value>
+  </data>
+  <data name="label490.Text" xml:space="preserve">
+    <value>* Zobrazí se, pouze pokud nelze zobrazit aktuální teplotu.</value>
+  </data>
   <data name="checkBox_Weather_Day.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
   </data>
@@ -3477,6 +3483,60 @@
   <data name="tabPage3.Text" xml:space="preserve">
     <value>Editovat</value>
   </data>
+  <data name="label489.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 13</value>
+  </data>
+  <data name="label489.Text" xml:space="preserve">
+    <value>!!! Po převodu zkontrolujte výsledný číselník !!!</value>
+  </data>
+  <data name="label488.Size" type="System.Drawing.Size, System.Drawing">
+    <value>484, 13</value>
+  </data>
+  <data name="label488.Text" xml:space="preserve">
+    <value>** Konverzí bude provedena změna velikosti obrázků, souřadnic prvků, poloměru kruhů, tloušťky čar.</value>
+  </data>
+  <data name="label487.Size" type="System.Drawing.Size, System.Drawing">
+    <value>360, 13</value>
+  </data>
+  <data name="label487.Text" xml:space="preserve">
+    <value>* Pro výsledný ciferník bude vedle stávající složky vytvořena složka nová.</value>
+  </data>
+  <data name="label486.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 13</value>
+  </data>
+  <data name="label486.Text" xml:space="preserve">
+    <value>Otevřete požadovaný ciferník nebo uložte aktuální.</value>
+  </data>
+  <data name="button_Converting.Text" xml:space="preserve">
+    <value>Konvertovat</value>
+  </data>
+  <data name="numericUpDown_ConvertingOutput_Custom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>435, 19</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Custom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 17</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Custom.Text" xml:space="preserve">
+    <value>Vlastní velikost</value>
+  </data>
+  <data name="groupBox10.Text" xml:space="preserve">
+    <value>Cílový model</value>
+  </data>
+  <data name="numericUpDown_ConvertingInput_Custom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>435, 19</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Custom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 17</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Custom.Text" xml:space="preserve">
+    <value>Vlastní velikost</value>
+  </data>
+  <data name="groupBox9.Text" xml:space="preserve">
+    <value>Zdrojový model</value>
+  </data>
+  <data name="tabPageConverting.Text" xml:space="preserve">
+    <value>Konvertování</value>
+  </data>
   <data name="label483.Size" type="System.Drawing.Size, System.Drawing">
     <value>185, 39</value>
   </data>
@@ -3617,6 +3677,12 @@ větší zatížení systému)</value>
   <data name="tabPage33.Text" xml:space="preserve">
     <value>Volby</value>
   </data>
+  <data name="linkLabel_resunpacker_qzip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 13</value>
+  </data>
+  <data name="linkLabel_resunpacker_qzip.Text" xml:space="preserve">
+    <value>Res_PackerUnpacker (Author dpeddi)</value>
+  </data>
   <data name="label415.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 13</value>
   </data>
@@ -3640,12 +3706,6 @@ větší zatížení systému)</value>
   </data>
   <data name="label413.Text" xml:space="preserve">
     <value>Nástroj na zabalení / rozbalení BIN souborů:</value>
-  </data>
-  <data name="label_Res_PackerUnpacker.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 13</value>
-  </data>
-  <data name="linkLabel_resunpacker_qzip.Text" xml:space="preserve">
-    <value>Res_PackerUnpacker (Author dpeddi)</value>
   </data>
   <data name="linkLabel_py_amazfit_tools.Size" type="System.Drawing.Size, System.Drawing">
     <value>311, 13</value>
@@ -3712,6 +3772,9 @@ větší zatížení systému)</value>
   </data>
   <data name="checkBox_Show_Shortcuts.Text" xml:space="preserve">
     <value>Zobrazit oblast zkratek</value>
+  </data>
+  <data name="checkBox_CircleScaleImage.Text" xml:space="preserve">
+    <value>Zvýraznit pole pro ukazatel průběhu s krycím obrázkem</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -6676,38 +6739,5 @@ větší zatížení systému)</value>
         SlmARUpZgEVKWYBDSFZuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+D8AAPgfAADwHwAA4A8AAMAHAADA
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
-  </data>
-  <data name="button_Converting.Text" xml:space="preserve">
-    <value>Konverze</value>
-  </data>
-  <data name="groupBox10.Text" xml:space="preserve">
-    <value>Cílový model</value>
-  </data>
-  <data name="groupBox9.Text" xml:space="preserve">
-    <value>Zdrojový model</value>
-  </data>
-  <data name="label486.Text" xml:space="preserve">
-    <value>Otevřete požadovaný ciferník nebo uložte aktuální.</value>
-  </data>
-  <data name="label487.Text" xml:space="preserve">
-    <value>* Pro výsledný ciferník bude vedle stávající složky vytvořena složka nová.</value>
-  </data>
-  <data name="label488.Text" xml:space="preserve">
-    <value>** Konverzí bude provedena změna velikosti obrázků, souřadnic prvků, poloměru kruhů, tloušťky čar.</value>
-  </data>
-  <data name="label489.Text" xml:space="preserve">
-    <value>!!! Po převodu zkontrolujte výsledný číselník !!!</value>
-  </data>
-  <data name="label490.Text" xml:space="preserve">
-    <value>* Zobrazí se, pouze pokud nelze zobrazit aktuální teplotu.</value>
-  </data>
-  <data name="radioButton_ConvertingInput_Custom.Text" xml:space="preserve">
-    <value>Vlastní velikost</value>
-  </data>
-  <data name="radioButton_ConvertingOutput_Custom.Text" xml:space="preserve">
-    <value>Vlastní velikost</value>
-  </data>
-  <data name="tabPageConverting.Text" xml:space="preserve">
-    <value>Konvertování</value>
   </data>
 </root>

@@ -306,6 +306,7 @@ namespace GTR_Watch_face
             checkBox_border.Checked = Program_Settings.ShowBorder;
             checkBox_crop.Checked = Program_Settings.Crop;
             checkBox_Show_Shortcuts.Checked = Program_Settings.Show_Shortcuts;
+            checkBox_CircleScaleImage.Checked = Program_Settings.Show_CircleScale_Area;
             comboBox_MonthAndDayD_Alignment.SelectedIndex = 0;
             comboBox_MonthAndDayM_Alignment.SelectedIndex = 0;
             comboBox_OneLine_Alignment.SelectedIndex = 0;
@@ -1736,7 +1737,7 @@ namespace GTR_Watch_face
 
             PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, 
                 checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, 
-                checkBox_Shortcuts_Border.Checked, true, 0);
+                checkBox_Shortcuts_Border.Checked, true, checkBox_CircleScaleImage.Checked, 0);
             pictureBox_Preview.BackgroundImage = bitmap;
             gPanel.Dispose();
 
@@ -4473,7 +4474,8 @@ namespace GTR_Watch_face
 
                     PreviewToBitmap(gPanelPreviewResize, 1, checkBox_crop.Checked,
                         checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked, 
-                        checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true, 0);
+                        checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true,
+                        checkBox_CircleScaleImage.Checked, 0);
                     formPreview.pictureBox_Preview.BackgroundImage = bitmapPreviewResize;
                     gPanelPreviewResize.Dispose();
                 };
@@ -4548,7 +4550,7 @@ namespace GTR_Watch_face
 
             PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, 
                 checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, 
-                checkBox_Shortcuts_Border.Checked, true, 0);
+                checkBox_Shortcuts_Border.Checked, true, checkBox_CircleScaleImage.Checked, 0);
             formPreview.pictureBox_Preview.BackgroundImage = bitmap;
             gPanel.Dispose();
 
@@ -5720,7 +5722,7 @@ namespace GTR_Watch_face
                     mask = new Bitmap(@"Mask\mask_trex.png");
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
-                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, 0);
+                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, 0);
                 if(checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
                 bitmap.Save(saveFileDialog.FileName, ImageFormat.Png);
             }
@@ -5882,7 +5884,7 @@ namespace GTR_Watch_face
                             numericUpDown_WeatherSet_NightTemp.Value = numericUpDown_WeatherSet_Temp.Value - rnd.Next(3, 10);
                             comboBox_WeatherSet_Icon.SelectedIndex = rnd.Next(0, 25);
 
-                            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, 0);
+                            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, 0);
                             if (checkBox_crop.Checked) {
                                 bitmap = ApplyMask(bitmap, mask);
                                 gPanel = Graphics.FromImage(bitmap);
@@ -6451,6 +6453,16 @@ namespace GTR_Watch_face
         private void checkBox_Show_Shortcuts_CheckedChanged(object sender, EventArgs e)
         {
             Program_Settings.Show_Shortcuts = checkBox_Show_Shortcuts.Checked;
+            string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+            {
+                //DefaultValueHandling = DefaultValueHandling.Ignore,
+                NullValueHandling = NullValueHandling.Ignore
+            });
+            File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
+        }
+        private void checkBox_CircleScaleImage_CheckedChanged(object sender, EventArgs e)
+        {
+            Program_Settings.Show_CircleScale_Area = checkBox_CircleScaleImage.Checked;
             string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
             {
                 //DefaultValueHandling = DefaultValueHandling.Ignore,
@@ -7316,7 +7328,7 @@ namespace GTR_Watch_face
                 mask = new Bitmap(@"Mask\mask_trex.png");
             }
             Graphics gPanel = Graphics.FromImage(bitmap);
-            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false, 1);
+            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false, false, 1);
             if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
             Image loadedImage = null;
 

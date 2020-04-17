@@ -3484,13 +3484,19 @@ nem lehet megjeleníteni.</value>
     <value>Nyissa meg a kívánt óralapot, vagy mentse el az aktuális óralapot.</value>
   </data>
   <data name="button_Converting.Text" xml:space="preserve">
-    <value>Konverzió</value>
+    <value>Konvertálni</value>
+  </data>
+  <data name="numericUpDown_ConvertingOutput_Custom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>425, 19</value>
   </data>
   <data name="radioButton_ConvertingOutput_Custom.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 17</value>
   </data>
   <data name="radioButton_ConvertingOutput_Custom.Text" xml:space="preserve">
     <value>Egyéni méret</value>
+  </data>
+  <data name="numericUpDown_ConvertingInput_Custom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>425, 19</value>
   </data>
   <data name="radioButton_ConvertingInput_Custom.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 17</value>
@@ -3736,6 +3742,9 @@ több rendszerbetöltés)</value>
   </data>
   <data name="checkBox_Show_Shortcuts.Text" xml:space="preserve">
     <value>Gyorsmenük terület megjelenítése</value>
+  </data>
+  <data name="checkBox_CircleScaleImage.Text" xml:space="preserve">
+    <value>Jelölje ki a folyamatjelző sávot a fedőképpel</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
