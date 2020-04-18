@@ -52,7 +52,7 @@
     <ApplicationIcon>watch.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release %28without puthon%29|AnyCPU'">
-    <OutputPath>bin\Release %28without puthon%29\</OutputPath>
+    <OutputPath>bin\Release_%28without_puthon%29\</OutputPath>
     <DefineConstants>TRACE;WithoutPuthon</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
@@ -63,7 +63,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug %28without puthon%29|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\Debug %28without puthon%29\</OutputPath>
+    <OutputPath>bin\Debug_%28without_puthon%29\</OutputPath>
     <DefineConstants>TRACE;DEBUG;WithoutPuthon</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -221,6 +221,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.zh.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAnimation.cs.resx">
       <DependentUpon>FormAnimation.cs</DependentUpon>
@@ -283,6 +284,7 @@
     <EmbeddedResource Include="Properties\FormStrings.zh.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>FormStrings.zh.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\FormStrings.fr.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
