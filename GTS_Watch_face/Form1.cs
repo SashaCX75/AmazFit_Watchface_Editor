@@ -120,7 +120,7 @@ namespace GTS_Watch_face
 
         }
 
-            private void button_pack_unpack_Click(object sender, EventArgs e)
+        private void button_pack_unpack_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = textBox_pack_unpack_dir.Text;

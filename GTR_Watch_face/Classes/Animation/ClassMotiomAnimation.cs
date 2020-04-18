@@ -39,12 +39,13 @@ namespace GTR_Watch_face
             _endY = EndY;
             _speedAnimation = SpeedAnimation;
             _timeAnimation = TimeAnimation;
-            _bounce = Bounce;
+            if (_timeAnimation <= 10) _timeAnimation = 0;
+             _bounce = Bounce;
             _time = 0;
             _cyclesTime = SpeedAnimation;
             while (_cyclesTime < TimeAnimation)
             {
-                _cyclesTime = _cyclesTime + _cyclesTime;
+                _cyclesTime = _cyclesTime + SpeedAnimation;
             }
         }
 

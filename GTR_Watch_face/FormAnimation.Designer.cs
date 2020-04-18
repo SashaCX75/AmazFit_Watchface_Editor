@@ -61,7 +61,6 @@
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.button_AnimationReset);
             this.panel1.Controls.Add(this.numericUpDown_NumberOfFrames);
             this.panel1.Controls.Add(this.label1);
@@ -69,6 +68,7 @@
             this.panel1.Controls.Add(this.radioButton_xlarge);
             this.panel1.Controls.Add(this.radioButton_large);
             this.panel1.Controls.Add(this.radioButton_normal);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // button_AnimationReset

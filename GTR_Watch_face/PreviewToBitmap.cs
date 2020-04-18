@@ -19,10 +19,13 @@ namespace GTR_Watch_face
         /// <param name="showShortcuts">Подсвечивать область ярлыков</param>
         /// <param name="showShortcutsArea">Подсвечивать область ярлыков рамкой</param>
         /// <param name="showShortcutsBorder">Подсвечивать область ярлыков заливкой</param>
+        /// <param name="showAnimation">Показывать анимацию при предпросмотре</param>
+        /// <param name="showCircleScaleArea">Подсвечивать круговую шкалу при наличии фонового изображения</param>
         /// <param name="link">1 - если отрисовка только до анимации, 
         /// 2 - если отрисовка только после анимации, в остальных случаях полная отрисовка</param>
         public void PreviewToBitmap(Graphics gPanel, float scale, bool crop, bool WMesh, bool BMesh, bool BBorder, 
-            bool showShortcuts, bool showShortcutsArea, bool showShortcutsBorder, bool showAnimation, int link)
+            bool showShortcuts, bool showShortcutsArea, bool showShortcutsBorder, bool showAnimation, bool showCircleScaleArea, 
+            int link)
         {
             var src = new Bitmap(1, 1);
             gPanel.ScaleTransform(scale, scale, MatrixOrder.Prepend);
@@ -139,7 +142,7 @@ namespace GTR_Watch_face
                         if (AngleScale > 1) AngleScale = 1;
                         EndAngle = EndAngle * AngleScale;
                         int lineCap = comboBox_Battery_Flatness.SelectedIndex;
-                        CircleOnBitmap(gPanel, x, y, ImageIndex, radius, width, lineCap, StartAngle, EndAngle);
+                        CircleOnBitmap(gPanel, x, y, ImageIndex, radius, width, lineCap, StartAngle, EndAngle, showCircleScaleArea);
                     }
                     else
                     {
@@ -887,130 +890,6 @@ namespace GTR_Watch_face
 
             gPanel.SmoothingMode = SmoothingMode.AntiAlias;
 
-            #region StepsProgress
-            if (checkBox_StepsProgress.Checked)
-            {
-                if (checkBox_StepsProgress_Image.Checked &&
-                        comboBox_StepsProgress_Image.SelectedIndex >= 0)
-                {
-                    int x = (int)numericUpDown_StepsProgress_ImageX.Value;
-                    int y = (int)numericUpDown_StepsProgress_ImageY.Value;
-                    float width = (float)numericUpDown_StepsProgress_Width.Value;
-                    int ImageIndex = comboBox_StepsProgress_Image.SelectedIndex;
-                    int radius = (int)numericUpDown_StepsProgress_Radius_X.Value;
-                    float StartAngle = (float)numericUpDown_StepsProgress_StartAngle.Value - 90;
-                    float EndAngle = (float)(numericUpDown_StepsProgress_EndAngle.Value -
-                        numericUpDown_StepsProgress_StartAngle.Value);
-                    float AngleScale = (float)Watch_Face_Preview_Set.Activity.Steps / Watch_Face_Preview_Set.Activity.StepsGoal;
-                    if (AngleScale > 1) AngleScale = 1;
-                    EndAngle = EndAngle * AngleScale;
-                    int lineCap = comboBox_StepsProgress_Flatness.SelectedIndex;
-                    CircleOnBitmap(gPanel, x, y, ImageIndex, radius, width, lineCap, StartAngle, EndAngle);
-                }
-                else
-                {
-                    Pen pen = new Pen(comboBox_StepsProgress_Color.BackColor,
-                    (float)numericUpDown_StepsProgress_Width.Value);
-                    switch (comboBox_StepsProgress_Flatness.SelectedIndex)
-                    {
-                        case 1:
-                            pen.EndCap = LineCap.Triangle;
-                            pen.StartCap = LineCap.Triangle;
-                            break;
-                        case 2:
-                            pen.EndCap = LineCap.Flat;
-                            pen.StartCap = LineCap.Flat;
-                            break;
-                        default:
-                            pen.EndCap = LineCap.Round;
-                            pen.StartCap = LineCap.Round;
-                            break;
-                    }
-
-                    int x = (int)numericUpDown_StepsProgress_Center_X.Value -
-                        (int)numericUpDown_StepsProgress_Radius_X.Value;
-                    int y = (int)numericUpDown_StepsProgress_Center_Y.Value -
-                        (int)numericUpDown_StepsProgress_Radius_Y.Value;
-                    if (numericUpDown_StepsProgress_Radius_Y.Value == 0)
-                    {
-                        y = (int)numericUpDown_StepsProgress_Center_Y.Value -
-                        (int)numericUpDown_StepsProgress_Radius_X.Value;
-                    }
-                    int width = (int)numericUpDown_StepsProgress_Radius_X.Value * 2;
-                    //int height = (int)numericUpDown_StepsProgress_Radius_Y.Value * 2;
-                    int height = width;
-                    float StartAngle = (float)numericUpDown_StepsProgress_StartAngle.Value - 90;
-                    float EndAngle = (float)(numericUpDown_StepsProgress_EndAngle.Value -
-                        numericUpDown_StepsProgress_StartAngle.Value);
-                    float AngleScale = (float)Watch_Face_Preview_Set.Activity.Steps / Watch_Face_Preview_Set.Activity.StepsGoal;
-                    if (AngleScale > 1) AngleScale = 1;
-                    EndAngle = EndAngle * AngleScale;
-                    try
-                    {
-                        if ((width > 0) && (height > 0)) gPanel.DrawArc(pen, x, y, width, height, StartAngle, EndAngle);
-                    }
-                    catch (Exception)
-                    {
-
-                    }
-                }
-            }
-
-            // прогресс шагов стрелочный индикатор
-            if ((checkBox_StProg_ClockHand.Checked) && (comboBox_StProg_ClockHand_Image.SelectedIndex >= 0))
-            {
-                int x1 = (int)numericUpDown_StProg_ClockHand_X.Value;
-                int y1 = (int)numericUpDown_StProg_ClockHand_Y.Value;
-                int offsetX = (int)numericUpDown_StProg_ClockHand_Offset_X.Value;
-                int offsetY = (int)numericUpDown_StProg_ClockHand_Offset_Y.Value;
-                int image_index = comboBox_StProg_ClockHand_Image.SelectedIndex;
-                float startAngle = (float)(numericUpDown_StProg_ClockHand_StartAngle.Value);
-                float endAngle = (float)(numericUpDown_StProg_ClockHand_EndAngle.Value);
-                float angle = startAngle + Watch_Face_Preview_Set.Activity.Steps * (endAngle - startAngle) /
-                    Watch_Face_Preview_Set.Activity.StepsGoal;
-                if (Watch_Face_Preview_Set.Activity.Steps > Watch_Face_Preview_Set.Activity.StepsGoal) angle = endAngle;
-                DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle);
-            }
-
-            if (checkBox_SPSliced.Checked)
-            {
-                if ((comboBox_SPSliced_Image.SelectedIndex >= 0) && (dataGridView_SPSliced.Rows.Count > 0))
-                {
-                    int x = 0;
-                    int y = 0;
-                    //int count = 0;
-                    for (int count = 0; count < dataGridView_SPSliced.Rows.Count; count++)
-                    {
-                        if ((dataGridView_SPSliced.Rows[count].Cells[0].Value != null) &&
-                            (dataGridView_SPSliced.Rows[count].Cells[1].Value != null))
-                        {
-                            //int x = Int32.Parse(dataGridView_SPSliced.Rows[count].Cells[0].Value.ToString());
-                            //int y = Int32.Parse(dataGridView_SPSliced.Rows[count].Cells[1].Value.ToString());
-                            if (Int32.TryParse(dataGridView_SPSliced.Rows[count].Cells[0].Value.ToString(), out x) &&
-                                Int32.TryParse(dataGridView_SPSliced.Rows[count].Cells[1].Value.ToString(), out y))
-                            {
-                                i = comboBox_SPSliced_Image.SelectedIndex + count;
-                                if (i < ListImagesFullName.Count)
-                                {
-                                    int value = (dataGridView_SPSliced.Rows.Count - 1) * Watch_Face_Preview_Set.Activity.Steps /
-                                        Watch_Face_Preview_Set.Activity.StepsGoal;
-                                    if (count < value)
-                                    {
-                                        src = new Bitmap(ListImagesFullName[i]);
-                                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
-                                        //count++;
-                                        src.Dispose();
-                                    }
-                                } 
-                            }
-                        }
-                    }
-                }
-            }
-            #endregion
-
-            if (scale != 0.5) gPanel.SmoothingMode = SmoothingMode.Default;
-
             #region Activity
             if (checkBox_Activity.Checked)
             {
@@ -1155,7 +1034,7 @@ namespace GTR_Watch_face
                         if (AngleScale > 1) AngleScale = 1;
                         EndAngle = EndAngle * AngleScale;
                         int lineCap = comboBox_ActivityPulsScale_Flatness.SelectedIndex;
-                        CircleOnBitmap(gPanel, x, y, ImageIndex, radius, width, lineCap, StartAngle, EndAngle);
+                        CircleOnBitmap(gPanel, x, y, ImageIndex, radius, width, lineCap, StartAngle, EndAngle, showCircleScaleArea);
                     }
                     else
                     {
@@ -1259,7 +1138,7 @@ namespace GTR_Watch_face
                         if (AngleScale > 1) AngleScale = 1;
                         EndAngle = EndAngle * AngleScale;
                         int lineCap = comboBox_ActivityCaloriesScale_Flatness.SelectedIndex;
-                        CircleOnBitmap(gPanel, x, y, ImageIndex, radius, width, lineCap, StartAngle, EndAngle);
+                        CircleOnBitmap(gPanel, x, y, ImageIndex, radius, width, lineCap, StartAngle, EndAngle, showCircleScaleArea);
                     }
                     else
                     {
@@ -1337,6 +1216,128 @@ namespace GTR_Watch_face
                         src = new Bitmap(ListImagesFullName[comboBox_ActivityStar_Image.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_ActivityStar_X.Value,
                             (int)numericUpDown_ActivityStar_Y.Value, src.Width, src.Height));
+                    }
+                }
+            }
+            #endregion
+
+            #region StepsProgress
+            if (checkBox_StepsProgress.Checked)
+            {
+                if (checkBox_StepsProgress_Image.Checked &&
+                        comboBox_StepsProgress_Image.SelectedIndex >= 0)
+                {
+                    int x = (int)numericUpDown_StepsProgress_ImageX.Value;
+                    int y = (int)numericUpDown_StepsProgress_ImageY.Value;
+                    float width = (float)numericUpDown_StepsProgress_Width.Value;
+                    int ImageIndex = comboBox_StepsProgress_Image.SelectedIndex;
+                    int radius = (int)numericUpDown_StepsProgress_Radius_X.Value;
+                    float StartAngle = (float)numericUpDown_StepsProgress_StartAngle.Value - 90;
+                    float EndAngle = (float)(numericUpDown_StepsProgress_EndAngle.Value -
+                        numericUpDown_StepsProgress_StartAngle.Value);
+                    float AngleScale = (float)Watch_Face_Preview_Set.Activity.Steps / Watch_Face_Preview_Set.Activity.StepsGoal;
+                    if (AngleScale > 1) AngleScale = 1;
+                    EndAngle = EndAngle * AngleScale;
+                    int lineCap = comboBox_StepsProgress_Flatness.SelectedIndex;
+                    CircleOnBitmap(gPanel, x, y, ImageIndex, radius, width, lineCap, StartAngle, EndAngle, showCircleScaleArea);
+                }
+                else
+                {
+                    Pen pen = new Pen(comboBox_StepsProgress_Color.BackColor,
+                    (float)numericUpDown_StepsProgress_Width.Value);
+                    switch (comboBox_StepsProgress_Flatness.SelectedIndex)
+                    {
+                        case 1:
+                            pen.EndCap = LineCap.Triangle;
+                            pen.StartCap = LineCap.Triangle;
+                            break;
+                        case 2:
+                            pen.EndCap = LineCap.Flat;
+                            pen.StartCap = LineCap.Flat;
+                            break;
+                        default:
+                            pen.EndCap = LineCap.Round;
+                            pen.StartCap = LineCap.Round;
+                            break;
+                    }
+
+                    int x = (int)numericUpDown_StepsProgress_Center_X.Value -
+                        (int)numericUpDown_StepsProgress_Radius_X.Value;
+                    int y = (int)numericUpDown_StepsProgress_Center_Y.Value -
+                        (int)numericUpDown_StepsProgress_Radius_Y.Value;
+                    if (numericUpDown_StepsProgress_Radius_Y.Value == 0)
+                    {
+                        y = (int)numericUpDown_StepsProgress_Center_Y.Value -
+                        (int)numericUpDown_StepsProgress_Radius_X.Value;
+                    }
+                    int width = (int)numericUpDown_StepsProgress_Radius_X.Value * 2;
+                    //int height = (int)numericUpDown_StepsProgress_Radius_Y.Value * 2;
+                    int height = width;
+                    float StartAngle = (float)numericUpDown_StepsProgress_StartAngle.Value - 90;
+                    float EndAngle = (float)(numericUpDown_StepsProgress_EndAngle.Value -
+                        numericUpDown_StepsProgress_StartAngle.Value);
+                    float AngleScale = (float)Watch_Face_Preview_Set.Activity.Steps / Watch_Face_Preview_Set.Activity.StepsGoal;
+                    if (AngleScale > 1) AngleScale = 1;
+                    EndAngle = EndAngle * AngleScale;
+                    try
+                    {
+                        if ((width > 0) && (height > 0)) gPanel.DrawArc(pen, x, y, width, height, StartAngle, EndAngle);
+                    }
+                    catch (Exception)
+                    {
+
+                    }
+                }
+            }
+
+            // прогресс шагов стрелочный индикатор
+            if ((checkBox_StProg_ClockHand.Checked) && (comboBox_StProg_ClockHand_Image.SelectedIndex >= 0))
+            {
+                int x1 = (int)numericUpDown_StProg_ClockHand_X.Value;
+                int y1 = (int)numericUpDown_StProg_ClockHand_Y.Value;
+                int offsetX = (int)numericUpDown_StProg_ClockHand_Offset_X.Value;
+                int offsetY = (int)numericUpDown_StProg_ClockHand_Offset_Y.Value;
+                int image_index = comboBox_StProg_ClockHand_Image.SelectedIndex;
+                float startAngle = (float)(numericUpDown_StProg_ClockHand_StartAngle.Value);
+                float endAngle = (float)(numericUpDown_StProg_ClockHand_EndAngle.Value);
+                float angle = startAngle + Watch_Face_Preview_Set.Activity.Steps * (endAngle - startAngle) /
+                    Watch_Face_Preview_Set.Activity.StepsGoal;
+                if (Watch_Face_Preview_Set.Activity.Steps > Watch_Face_Preview_Set.Activity.StepsGoal) angle = endAngle;
+                DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle);
+            }
+
+            if (checkBox_SPSliced.Checked)
+            {
+                if ((comboBox_SPSliced_Image.SelectedIndex >= 0) && (dataGridView_SPSliced.Rows.Count > 0))
+                {
+                    int x = 0;
+                    int y = 0;
+                    //int count = 0;
+                    for (int count = 0; count < dataGridView_SPSliced.Rows.Count; count++)
+                    {
+                        if ((dataGridView_SPSliced.Rows[count].Cells[0].Value != null) &&
+                            (dataGridView_SPSliced.Rows[count].Cells[1].Value != null))
+                        {
+                            //int x = Int32.Parse(dataGridView_SPSliced.Rows[count].Cells[0].Value.ToString());
+                            //int y = Int32.Parse(dataGridView_SPSliced.Rows[count].Cells[1].Value.ToString());
+                            if (Int32.TryParse(dataGridView_SPSliced.Rows[count].Cells[0].Value.ToString(), out x) &&
+                                Int32.TryParse(dataGridView_SPSliced.Rows[count].Cells[1].Value.ToString(), out y))
+                            {
+                                i = comboBox_SPSliced_Image.SelectedIndex + count;
+                                if (i < ListImagesFullName.Count)
+                                {
+                                    int value = (dataGridView_SPSliced.Rows.Count - 1) * Watch_Face_Preview_Set.Activity.Steps /
+                                        Watch_Face_Preview_Set.Activity.StepsGoal;
+                                    if (count < value)
+                                    {
+                                        src = new Bitmap(ListImagesFullName[i]);
+                                        gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
+                                        //count++;
+                                        src.Dispose();
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -2475,7 +2476,7 @@ namespace GTR_Watch_face
             src.Dispose();
         }
 
-        /// <summary>Рисует стрелки</summary>
+        /// <summary>круговая шкала поверх картинки</summary>
         /// <param name="graphics">Поверхность для рисования</param>
         /// <param name="x">Координата X</param>
         /// <param name="y">Координата Y</param>
@@ -2485,11 +2486,12 @@ namespace GTR_Watch_face
         /// <param name="lineCap">Тип окончания линии</param>
         /// <param name="startAngle">Начальный угол</param>
         /// <param name="endAngle">Общий угол</param>
+        /// <param name="showCircleScaleArea">Подсвечивать круговую шкалу при наличии фонового изображения</param>
         private void CircleOnBitmap(Graphics graphics, int x, int y, int imageIndex, int radius, float width,
-            int lineCap, float StartAngle, float EndAngle)
+            int lineCap, float StartAngle, float EndAngle, bool showCircleScaleArea)
         {
             Bitmap src = new Bitmap(ListImagesFullName[imageIndex]);
-            Pen pen = new Pen(Color.White, width);
+            Pen pen = new Pen(Color.Black, width);
 
             switch (lineCap)
             {
@@ -2516,16 +2518,43 @@ namespace GTR_Watch_face
             float srcX = centrX - radius;
             float srcY = centrY - radius;
             float CircleWidth = 2 * radius;
-            Bitmap mask = new Bitmap(src.Width, src.Height);
+            Bitmap mask = new Bitmap(src.Width, src.Height, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
             Graphics gPanel = Graphics.FromImage(mask);
             gPanel.SmoothingMode = SmoothingMode.AntiAlias;
             try
             {
                 gPanel.DrawArc(pen, srcX, srcY, CircleWidth, CircleWidth, StartAngle, EndAngle);
-                src = ApplyAlfaMask(src, mask);
+                //src = ApplyAlfaMask(src, mask);
+                src = ApplyMask(src, mask);
+                //src = mask;
                 graphics.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
                 src.Dispose();
                 mask.Dispose();
+
+                if (showCircleScaleArea)
+                {
+                    // подсвечивание шкалы заливкой
+                    HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent20, Color.White, Color.Transparent);
+                    pen.Brush = myHatchBrush;
+                    graphics.DrawArc(pen, srcX, srcY, CircleWidth, CircleWidth, StartAngle, EndAngle);
+                    myHatchBrush = new HatchBrush(HatchStyle.Percent10, Color.Black, Color.Transparent);
+                    pen.Brush = myHatchBrush;
+                    graphics.DrawArc(pen, srcX, srcY, CircleWidth, CircleWidth, StartAngle, EndAngle);
+
+                    // подсвечивание внешней и внутреней дуги на шкале
+                    float w2 = width / 2f;
+                    using (Pen pen1 = new Pen(Color.White, 1))
+                    {
+                        graphics.DrawArc(pen1, srcX + w2, srcY + w2, CircleWidth - width, CircleWidth - width, StartAngle, EndAngle);
+                        graphics.DrawArc(pen1, srcX - w2, srcY - w2, CircleWidth + width, CircleWidth + width, StartAngle, EndAngle);
+                    }
+                    using (Pen pen2 = new Pen(Color.Black, 1))
+                    {
+                        pen2.DashStyle = DashStyle.Dot;
+                        graphics.DrawArc(pen2, srcX + w2, srcY + w2, CircleWidth - width, CircleWidth - width, StartAngle, EndAngle);
+                        graphics.DrawArc(pen2, srcX - w2, srcY - w2, CircleWidth + width, CircleWidth + width, StartAngle, EndAngle);
+                    } 
+                }
             }
             catch (Exception)
             {
@@ -2535,35 +2564,35 @@ namespace GTR_Watch_face
 
         }
 
-        public Bitmap ApplyAlfaMask(Bitmap inputImage, Bitmap mask)
-        {
-            //Resulting collage.
-            Bitmap result = new Bitmap(inputImage);
-            for (int x = 0; x < result.Width; x++)
-            {
-                for (int y = 0; y < result.Height; y++)
-                {
-                    Color colorResult = result.GetPixel(x, y);
-                    Color maskResult = mask.GetPixel(x, y);
-                    if (maskResult.A>80)
-                    {
-                        result.SetPixel(x, y, Color.FromArgb(colorResult.A, colorResult.R, colorResult.G, colorResult.B));
-                    }
-                    else
-                    {
-                        result.SetPixel(x, y, Color.FromArgb(maskResult.A, colorResult.R, colorResult.G, colorResult.B));
-                    }
-                }
-            }
-            inputImage.Dispose();
-            mask.Dispose();
-            return result;
-        }
+        //public Bitmap ApplyAlfaMask(Bitmap inputImage, Bitmap mask)
+        //{
+        //    //Resulting collage.
+        //    Bitmap result = new Bitmap(inputImage);
+        //    for (int x = 0; x < result.Width; x++)
+        //    {
+        //        for (int y = 0; y < result.Height; y++)
+        //        {
+        //            Color colorResult = result.GetPixel(x, y);
+        //            Color maskResult = mask.GetPixel(x, y);
+        //            if (maskResult.A > 80)
+        //            {
+        //                result.SetPixel(x, y, Color.FromArgb(colorResult.A, colorResult.R, colorResult.G, colorResult.B));
+        //            }
+        //            else
+        //            {
+        //                result.SetPixel(x, y, Color.FromArgb(maskResult.A, colorResult.R, colorResult.G, colorResult.B));
+        //            }
+        //        }
+        //    }
+        //    inputImage.Dispose();
+        //    mask.Dispose();
+        //    return result;
+        //}
 
         public Bitmap FormColor(Bitmap bitmap)
         {
-            int[] bgColors = { 203, 255, 240 };
-            Color color = panel_Preview.BackColor;
+            //int[] bgColors = { 203, 255, 240 };
+            Color color = pictureBox_Preview.BackColor;
             ImageMagick.MagickImage image = new ImageMagick.MagickImage(bitmap);
             // меняем прозрачный цвет на цвет фона
             image.Opaque(ImageMagick.MagickColor.FromRgba((byte)0, (byte)0, (byte)0, (byte)0),

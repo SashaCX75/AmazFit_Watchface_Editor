@@ -285,4 +285,16 @@
   <data name="Message_Error_SpaceInProgrammName_Text" xml:space="preserve">
     <value>A program elérési útja nem tartalmazhat szóközt. Ajánlatos a programot a lemez gyökérkönyvtárába helyezni.</value>
   </data>
+  <data name="Message_ConvertingCompleted_Text" xml:space="preserve">
+    <value>Új óralap készült.</value>
+  </data>
+  <data name="Message_WarningConverting_Text1" xml:space="preserve">
+    <value>A </value>
+  </data>
+  <data name="Message_WarningConverting_Text2" xml:space="preserve">
+    <value> könyvtár már létezik. Csere?</value>
+  </data>
+  <data name="Message_Warning_Information" xml:space="preserve">
+    <value>Információ</value>
+  </data>
 </root>

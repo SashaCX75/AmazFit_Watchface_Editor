@@ -282,4 +282,16 @@
   <data name="Message_Error_SpaceInProgrammName_Text" xml:space="preserve">
     <value>Cesta k programu by nemala obsahovať medzery. Je doporučené umiestniť program do koreňového adresára disku.</value>
   </data>
+  <data name="Message_ConvertingCompleted_Text" xml:space="preserve">
+    <value>Bol vytvorený nový ciferník.</value>
+  </data>
+  <data name="Message_WarningConverting_Text1" xml:space="preserve">
+    <value>Adresár </value>
+  </data>
+  <data name="Message_WarningConverting_Text2" xml:space="preserve">
+    <value> už existuje. Nahradiť?</value>
+  </data>
+  <data name="Message_Warning_Information" xml:space="preserve">
+    <value>Informácie</value>
+  </data>
 </root>

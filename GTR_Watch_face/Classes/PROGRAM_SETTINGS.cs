@@ -31,6 +31,7 @@
         public bool Show_Shortcuts = true;
         public bool Shortcuts_Area = true;
         public bool Shortcuts_Border = true;
+        public bool Show_CircleScale_Area = false;
         public float Scale = 1f;
         public float Gif_Speed = 1f;
         public int Animation_Preview_Speed = 4;

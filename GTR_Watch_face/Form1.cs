@@ -270,6 +270,7 @@ namespace GTR_Watch_face
                 });
                 File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
             }
+            PreviewView = false;
             textBox_pack_unpack_dir.Text = Program_Settings.pack_unpack_dir;
             if (Program_Settings.Model_GTS)
             {
@@ -301,11 +302,11 @@ namespace GTR_Watch_face
                 textBox_unpack_command.Text = Program_Settings.unpack_command_GTR47;
                 textBox_pack_command.Text = Program_Settings.pack_command_GTR47;
             }
-
-            PreviewView = false;
+            
             checkBox_border.Checked = Program_Settings.ShowBorder;
             checkBox_crop.Checked = Program_Settings.Crop;
             checkBox_Show_Shortcuts.Checked = Program_Settings.Show_Shortcuts;
+            checkBox_CircleScaleImage.Checked = Program_Settings.Show_CircleScale_Area;
             comboBox_MonthAndDayD_Alignment.SelectedIndex = 0;
             comboBox_MonthAndDayM_Alignment.SelectedIndex = 0;
             comboBox_OneLine_Alignment.SelectedIndex = 0;
@@ -323,6 +324,8 @@ namespace GTR_Watch_face
 
             comboBox_Battery_Flatness.SelectedIndex = 0;
             comboBox_StepsProgress_Flatness.SelectedIndex = 0;
+            comboBox_ActivityPulsScale_Flatness.SelectedIndex = 0;
+            comboBox_ActivityCaloriesScale_Flatness.SelectedIndex = 0;
 
             label_version.Text = "v " +
                 System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Major.ToString() + "." +
@@ -384,6 +387,7 @@ namespace GTR_Watch_face
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+#if !DEBUG
             if (JSON_Modified)
             {
                 if (FileName != null)
@@ -436,6 +440,7 @@ namespace GTR_Watch_face
                     }
                 }
             }
+#endif
         }
 
         private void button_pack_unpack_Click(object sender, EventArgs e)
@@ -1037,7 +1042,7 @@ namespace GTR_Watch_face
                     {
                         this.BringToFront();
                         double fileSize = (GetFileSizeMB(new FileInfo(newFullName)));
-                        if ((fileSize > 1.5) && (!radioButton_47.Checked))
+                        if ((fileSize >= 1.5) && (!radioButton_47.Checked))
                         {
                             MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_gts + Environment.NewLine + Environment.NewLine +
                             Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
@@ -1278,7 +1283,7 @@ namespace GTR_Watch_face
                     if (File.Exists(newFullName))
                     {
                         double fileSize = (GetFileSizeMB(new FileInfo(newFullName)));
-                        if ((fileSize > 1.5) && (!radioButton_47.Checked))
+                        if ((fileSize >= 1.5) && (!radioButton_47.Checked))
                         {
                             MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_gts + Environment.NewLine + Environment.NewLine +
                             Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
@@ -1375,6 +1380,7 @@ namespace GTR_Watch_face
                 ListImages.Clear();
                 ListImagesFullName.Clear();
                 int i;
+                int count = 0;
                 Image loadedImage = null;
                 List<string> ErrorImage = new List<string>();
                 List<string> FileNames = openFileDialog.FileNames.ToList();
@@ -1400,7 +1406,8 @@ namespace GTR_Watch_face
                             DataGridViewImageCellLayout ZoomType = DataGridViewImageCellLayout.Zoom;
                             if ((loadedImage.Height < 45) && (loadedImage.Width < 110))
                                 ZoomType = DataGridViewImageCellLayout.Normal;
-                            RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = i.ToString() });
+                            RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = count.ToString() });
+                            //RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = i.ToString() });
                             RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = fileNameOnly });
                             //RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = file });
                             RowNew.Cells.Add(new DataGridViewImageCell()
@@ -1412,6 +1419,7 @@ namespace GTR_Watch_face
                             dataGridView_ImagesList.Rows.Add(RowNew);
                             ListImages.Add(i.ToString());
                             ListImagesFullName.Add(file);
+                            count++;
                         }
 
                     }
@@ -1584,7 +1592,8 @@ namespace GTR_Watch_face
                         DataGridViewImageCellLayout ZoomType = DataGridViewImageCellLayout.Zoom;
                         if ((loadedImage.Height < 45) && (loadedImage.Width < 110))
                             ZoomType = DataGridViewImageCellLayout.Normal;
-                        RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = i.ToString() });
+                        RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = count.ToString() });
+                        //RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = i.ToString() });
                         RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = fileNameOnly });
                         RowNew.Cells.Add(new DataGridViewImageCell()
                         {
@@ -1705,29 +1714,48 @@ namespace GTR_Watch_face
         private void PreviewImage()
         {
             if (!PreviewView) return;
-            Graphics gPanel = panel_Preview.CreateGraphics();
-            gPanel.Clear(panel_Preview.BackColor);
+            //Graphics gPanel = panel_Preview.CreateGraphics();
+            //gPanel.Clear(panel_Preview.BackColor);
             float scale = 1.0f;
-            if (panel_Preview.Height < 300) scale = 0.5f;
+            //if (panel_Preview.Height < 300) scale = 0.5f;
+            #region BackgroundImage 
+            Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
+            if (radioButton_42.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
+            }
+            if (radioButton_gts.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
+            }
+            if (radioButton_TRex.Checked || radioButton_Verge.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
+            }
+            Graphics gPanel = Graphics.FromImage(bitmap);
+            #endregion
+
             PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, 
                 checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, 
-                checkBox_Shortcuts_Border.Checked, true, 0);
+                checkBox_Shortcuts_Border.Checked, true, checkBox_CircleScaleImage.Checked, 0);
+            pictureBox_Preview.BackgroundImage = bitmap;
             gPanel.Dispose();
 
             if ((formPreview != null) && (formPreview.Visible))
             {
-                Graphics gPanelPreview = formPreview.panel_Preview.CreateGraphics();
-                gPanelPreview.Clear(panel_Preview.BackColor);
-                float scalePreview = 1.0f;
-                if (formPreview.radioButton_small.Checked) scalePreview = 0.5f;
-                if (formPreview.radioButton_large.Checked) scalePreview = 1.5f;
-                if (formPreview.radioButton_xlarge.Checked) scalePreview = 2.0f;
-                if (formPreview.radioButton_xxlarge.Checked) scalePreview = 2.5f;
-                PreviewToBitmap(gPanelPreview, scalePreview, checkBox_crop.Checked, checkBox_WebW.Checked, 
-                    checkBox_WebB.Checked, checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, 
-                    checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true, 0);
-                gPanelPreview.Dispose();
-                
+                //Graphics gPanelPreview = formPreview.panel_Preview.CreateGraphics();
+                //gPanelPreview.Clear(pictureBox_Preview.BackColor);
+                //float scalePreview = 1.0f;
+                //if (formPreview.radioButton_small.Checked) scalePreview = 0.5f;
+                //if (formPreview.radioButton_large.Checked) scalePreview = 1.5f;
+                //if (formPreview.radioButton_xlarge.Checked) scalePreview = 2.0f;
+                //if (formPreview.radioButton_xxlarge.Checked) scalePreview = 2.5f;
+                //PreviewToBitmap(gPanelPreview, scalePreview, checkBox_crop.Checked, checkBox_WebW.Checked, 
+                //    checkBox_WebB.Checked, checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, 
+                //    checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true, 0);
+                //gPanelPreview.Dispose();
+
+                formPreview.pictureBox_Preview.BackgroundImage = bitmap;
             }
         }
         
@@ -2429,7 +2457,7 @@ namespace GTR_Watch_face
                 panel_Status.Height = 1;
                 panel_Battery.Height = 1;
                 panel_AnalogClock.Height = 1;
-                panel_Weather.Height = (int)(230 * currentDPI);
+                panel_Weather.Height = (int)(260 * currentDPI);
                 panel_Shortcuts.Height = 1;
                 panel_Animation.Height = 1;
             }
@@ -3708,7 +3736,12 @@ namespace GTR_Watch_face
         {
             bool b = checkBox_Animation.Checked;
             tabControl_Animation.Enabled = b;
-            button_ShowAnimation.Enabled = b;
+            if (checkBox_Animation.Checked)
+            {
+                if (checkBox_StaticAnimation.Checked || checkBox_MotiomAnimation.Checked) button_ShowAnimation.Enabled = true;
+                else button_ShowAnimation.Enabled = false;
+            }
+            else button_ShowAnimation.Enabled = false;
         }
 
         private void checkBox_StaticAnimation_CheckedChanged(object sender, EventArgs e)
@@ -3734,7 +3767,11 @@ namespace GTR_Watch_face
             label478.Enabled = b;
             label479.Enabled = b;
 
-            if (checkBox_StaticAnimation.Checked || checkBox_MotiomAnimation.Checked) button_ShowAnimation.Enabled = true;
+            if (checkBox_Animation.Checked)
+            {
+                if (checkBox_StaticAnimation.Checked || checkBox_MotiomAnimation.Checked) button_ShowAnimation.Enabled = true;
+                else button_ShowAnimation.Enabled = false;
+            }
             else button_ShowAnimation.Enabled = false;
         }
 
@@ -3758,7 +3795,11 @@ namespace GTR_Watch_face
             label484.Enabled = b;
             label485.Enabled = b;
 
-            if (checkBox_StaticAnimation.Checked || checkBox_MotiomAnimation.Checked) button_ShowAnimation.Enabled = true;
+            if (checkBox_Animation.Checked)
+            {
+                if (checkBox_StaticAnimation.Checked || checkBox_MotiomAnimation.Checked) button_ShowAnimation.Enabled = true;
+                else button_ShowAnimation.Enabled = false;
+            }
             else button_ShowAnimation.Enabled = false;
         }
         #endregion
@@ -3830,7 +3871,7 @@ namespace GTR_Watch_face
         private void button_Set1_Click(object sender, EventArgs e)
         {
             panel_SetWeather.Height = 1;
-            panel_Set1.Height = 125;
+            panel_Set1.Height = (int)(125 * currentDPI);
             panel_Set2.Height = 1;
             panel_Set3.Height = 1;
             panel_Set4.Height = 1;
@@ -3851,7 +3892,7 @@ namespace GTR_Watch_face
         {
             panel_SetWeather.Height = 1;
             panel_Set1.Height = 1;
-            panel_Set2.Height = 125;
+            panel_Set2.Height = (int)(125 * currentDPI);
             panel_Set3.Height = 1;
             panel_Set4.Height = 1;
             panel_Set5.Height = 1;
@@ -3871,7 +3912,7 @@ namespace GTR_Watch_face
             panel_SetWeather.Height = 1;
             panel_Set1.Height = 1;
             panel_Set2.Height = 1;
-            panel_Set3.Height = 125;
+            panel_Set3.Height = (int)(125 * currentDPI);
             panel_Set4.Height = 1;
             panel_Set5.Height = 1;
             panel_Set6.Height = 1;
@@ -3891,7 +3932,7 @@ namespace GTR_Watch_face
             panel_Set1.Height = 1;
             panel_Set2.Height = 1;
             panel_Set3.Height = 1;
-            panel_Set4.Height = 125;
+            panel_Set4.Height = (int)(125 * currentDPI);
             panel_Set5.Height = 1;
             panel_Set6.Height = 1;
             panel_Set7.Height = 1;
@@ -3911,7 +3952,7 @@ namespace GTR_Watch_face
             panel_Set2.Height = 1;
             panel_Set3.Height = 1;
             panel_Set4.Height = 1;
-            panel_Set5.Height = 125;
+            panel_Set5.Height = (int)(125 * currentDPI);
             panel_Set6.Height = 1;
             panel_Set7.Height = 1;
             panel_Set8.Height = 1;
@@ -3931,7 +3972,7 @@ namespace GTR_Watch_face
             panel_Set3.Height = 1;
             panel_Set4.Height = 1;
             panel_Set5.Height = 1;
-            panel_Set6.Height = 125;
+            panel_Set6.Height = (int)(125 * currentDPI);
             panel_Set7.Height = 1;
             panel_Set8.Height = 1;
             panel_Set9.Height = 1;
@@ -3951,7 +3992,7 @@ namespace GTR_Watch_face
             panel_Set4.Height = 1;
             panel_Set5.Height = 1;
             panel_Set6.Height = 1;
-            panel_Set7.Height = 125;
+            panel_Set7.Height = (int)(125 * currentDPI);
             panel_Set8.Height = 1;
             panel_Set9.Height = 1;
             panel_Set10.Height = 1;
@@ -3971,7 +4012,7 @@ namespace GTR_Watch_face
             panel_Set5.Height = 1;
             panel_Set6.Height = 1;
             panel_Set7.Height = 1;
-            panel_Set8.Height = 125;
+            panel_Set8.Height = (int)(125 * currentDPI);
             panel_Set9.Height = 1;
             panel_Set10.Height = 1;
             panel_Set11.Height = 1;
@@ -3991,7 +4032,7 @@ namespace GTR_Watch_face
             panel_Set6.Height = 1;
             panel_Set7.Height = 1;
             panel_Set8.Height = 1;
-            panel_Set9.Height = 125;
+            panel_Set9.Height = (int)(125 * currentDPI);
             panel_Set10.Height = 1;
             panel_Set11.Height = 1;
             panel_Set12.Height = 1;
@@ -4011,7 +4052,7 @@ namespace GTR_Watch_face
             panel_Set7.Height = 1;
             panel_Set8.Height = 1;
             panel_Set9.Height = 1;
-            panel_Set10.Height = 125;
+            panel_Set10.Height = (int)(125 * currentDPI);
             panel_Set11.Height = 1;
             panel_Set12.Height = 1;
             panel_Set13.Height = 1;
@@ -4031,7 +4072,7 @@ namespace GTR_Watch_face
             panel_Set8.Height = 1;
             panel_Set9.Height = 1;
             panel_Set10.Height = 1;
-            panel_Set11.Height = 125;
+            panel_Set11.Height = (int)(125 * currentDPI);
             panel_Set12.Height = 1;
             panel_Set13.Height = 1;
             SetPreferences11();
@@ -4051,7 +4092,7 @@ namespace GTR_Watch_face
             panel_Set9.Height = 1;
             panel_Set10.Height = 1;
             panel_Set11.Height = 1;
-            panel_Set12.Height = 125;
+            panel_Set12.Height = (int)(125 * currentDPI);
             panel_Set13.Height = 1;
             SetPreferences12();
             PreviewImage();
@@ -4071,14 +4112,14 @@ namespace GTR_Watch_face
             panel_Set10.Height = 1;
             panel_Set11.Height = 1;
             panel_Set12.Height = 1;
-            panel_Set13.Height = 125;
+            panel_Set13.Height = (int)(125 * currentDPI);
             SetPreferences13();
             PreviewImage();
         }
 
         private void button_SetWeather_Click(object sender, EventArgs e)
         {
-            panel_SetWeather.Height = 60;
+            panel_SetWeather.Height = (int)(60 * currentDPI);
             panel_Set1.Height = 1;
             panel_Set2.Height = 1;
             panel_Set3.Height = 1;
@@ -4357,7 +4398,7 @@ namespace GTR_Watch_face
         }
 
 
-        private void panel1_DoubleClick(object sender, EventArgs e)
+        private void pictureBox_Preview_DoubleClick(object sender, EventArgs e)
         {
             if ((formPreview == null) || (!formPreview.Visible))
             {
@@ -4385,7 +4426,7 @@ namespace GTR_Watch_face
 
                 }
 
-                formPreview.panel_Preview.Resize += (object senderResize, EventArgs eResize) =>
+                formPreview.pictureBox_Preview.Resize += (object senderResize, EventArgs eResize) =>
                 {
                     if (Form_Preview.Model_Wath.model_gtr47 != radioButton_47.Checked)
                         Form_Preview.Model_Wath.model_gtr47 = radioButton_47.Checked;
@@ -4397,9 +4438,9 @@ namespace GTR_Watch_face
                         Form_Preview.Model_Wath.model_TRex = radioButton_TRex.Checked;
                     if (Form_Preview.Model_Wath.model_Verge != radioButton_Verge.Checked)
                         Form_Preview.Model_Wath.model_Verge = radioButton_Verge.Checked;
-                    Graphics gPanelPreviewResize = formPreview.panel_Preview.CreateGraphics();
-                    gPanelPreviewResize.Clear(panel_Preview.BackColor);
-                    formPreview.radioButton_CheckedChanged(sender, e);
+                    //Graphics gPanelPreviewResize = formPreview.panel_Preview.CreateGraphics();
+                    //gPanelPreviewResize.Clear(panel_Preview.BackColor);
+                    //formPreview.radioButton_CheckedChanged(sender, e);
                     float scalePreviewResize = 1.0f;
                     if (formPreview.radioButton_small.Checked) scalePreviewResize = 0.5f;
                     if (formPreview.radioButton_large.Checked) scalePreviewResize = 1.5f;
@@ -4413,29 +4454,48 @@ namespace GTR_Watch_face
                         NullValueHandling = NullValueHandling.Ignore
                     });
                     File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
+                    
+                    #region BackgroundImage 
+                    Bitmap bitmapPreviewResize = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
+                    if (radioButton_42.Checked)
+                    {
+                        bitmapPreviewResize = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
+                    }
+                    if (radioButton_gts.Checked)
+                    {
+                        bitmapPreviewResize = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
+                    }
+                    if (radioButton_TRex.Checked || radioButton_Verge.Checked)
+                    {
+                        bitmapPreviewResize = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
+                    }
+                    Graphics gPanelPreviewResize = Graphics.FromImage(bitmapPreviewResize);
+                    #endregion
 
-                    PreviewToBitmap(gPanelPreviewResize, scalePreviewResize, checkBox_crop.Checked,
+                    PreviewToBitmap(gPanelPreviewResize, 1, checkBox_crop.Checked,
                         checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked, 
-                        checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true, 0);
+                        checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true,
+                        checkBox_CircleScaleImage.Checked, 0);
+                    formPreview.pictureBox_Preview.BackgroundImage = bitmapPreviewResize;
                     gPanelPreviewResize.Dispose();
                 };
 
-                formPreview.panel_Preview.Paint += (object senderPaint, PaintEventArgs ePaint) =>
-                {
-                    //Form_Preview.Model_GTR47.model_gtr47 = radioButton_47.Checked;
-                    //Graphics gPanelPreviewPaint = formPreview.panel_Preview.CreateGraphics();
-                    //gPanelPreviewPaint.Clear(panel_Preview.BackColor);
-                    //formPreview.radioButton_CheckedChanged(sender, e);
-                    //float scalePreviewPaint = 1.0f;
-                    //if (formPreview.radioButton_small.Checked) scalePreviewPaint = 0.5f;
-                    //if (formPreview.radioButton_large.Checked) scalePreviewPaint = 1.5f;
-                    //if (formPreview.radioButton_xlarge.Checked) scalePreviewPaint = 2.0f;
-                    //if (formPreview.radioButton_xxlarge.Checked) scalePreviewPaint = 2.5f;
-                    //PreviewToBitmap(gPanelPreviewPaint, scalePreviewPaint, radioButton_47.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked);
-                    //gPanelPreviewPaint.Dispose();
-                    timer2.Enabled = false;
-                    timer2.Enabled = true;
-                };
+                //formPreview.panel_Preview.Paint += (object senderPaint, PaintEventArgs ePaint) =>
+                //{
+                //    //Form_Preview.Model_GTR47.model_gtr47 = radioButton_47.Checked;
+                //    //Graphics gPanelPreviewPaint = formPreview.panel_Preview.CreateGraphics();
+                //    //gPanelPreviewPaint.Clear(panel_Preview.BackColor);
+                //    //formPreview.radioButton_CheckedChanged(sender, e);
+                //    //float scalePreviewPaint = 1.0f;
+                //    //if (formPreview.radioButton_small.Checked) scalePreviewPaint = 0.5f;
+                //    //if (formPreview.radioButton_large.Checked) scalePreviewPaint = 1.5f;
+                //    //if (formPreview.radioButton_xlarge.Checked) scalePreviewPaint = 2.0f;
+                //    //if (formPreview.radioButton_xxlarge.Checked) scalePreviewPaint = 2.5f;
+                //    //PreviewToBitmap(gPanelPreviewPaint, scalePreviewPaint, radioButton_47.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked);
+                //    //gPanelPreviewPaint.Dispose();
+                //    timer2.Enabled = false;
+                //    timer2.Enabled = true;
+                //};
 
                 formPreview.FormClosing += (object senderClosing, FormClosingEventArgs eClosing) =>
                 {
@@ -4458,22 +4518,40 @@ namespace GTR_Watch_face
                 Form_Preview.Model_Wath.model_TRex = radioButton_TRex.Checked;
             if (Form_Preview.Model_Wath.model_Verge != radioButton_Verge.Checked)
                 Form_Preview.Model_Wath.model_Verge = radioButton_Verge.Checked;
-            Graphics gPanel = formPreview.panel_Preview.CreateGraphics();
-            gPanel.Clear(panel_Preview.BackColor);
+            //Graphics gPanel = formPreview.panel_Preview.CreateGraphics();
+            //gPanel.Clear(panel_Preview.BackColor);
             //Pen pen = new Pen(Color.Blue, 1);
             //Random rnd = new Random();
             //gPanel.DrawLine(pen, new Point(0, 0), new Point(rnd.Next(0, 450), rnd.Next(0, 450)));
             //Form_Preview.Model_GTR47.model_gtr47 = radioButton_47.Checked;
             formPreview.radioButton_CheckedChanged(sender, e);
             float scale = 1.0f;
-            if (formPreview.radioButton_small.Checked) scale = 0.5f;
-            if (formPreview.radioButton_large.Checked) scale = 1.5f;
-            if (formPreview.radioButton_xlarge.Checked) scale = 2.0f;
-            if (formPreview.radioButton_xxlarge.Checked) scale = 2.5f;
+            //if (formPreview.radioButton_small.Checked) scale = 0.5f;
+            //if (formPreview.radioButton_large.Checked) scale = 1.5f;
+            //if (formPreview.radioButton_xlarge.Checked) scale = 2.0f;
+            //if (formPreview.radioButton_xxlarge.Checked) scale = 2.5f;
+
+            #region BackgroundImage 
+            Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
+            if (radioButton_42.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
+            }
+            if (radioButton_gts.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
+            }
+            if (radioButton_TRex.Checked || radioButton_Verge.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
+            }
+            Graphics gPanel = Graphics.FromImage(bitmap);
+            #endregion
 
             PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, 
                 checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, 
-                checkBox_Shortcuts_Border.Checked, true, 0);
+                checkBox_Shortcuts_Border.Checked, true, checkBox_CircleScaleImage.Checked, 0);
+            formPreview.pictureBox_Preview.BackgroundImage = bitmap;
             gPanel.Dispose();
 
             button_PreviewBig.Enabled = false;
@@ -5542,17 +5620,20 @@ namespace GTR_Watch_face
             }
 
             // текущая температура и температура день/ночь
-            //if (Watch_Face.Weather != null && Watch_Face.Weather.Temperature != null)
-            //{
-            //    if ((Watch_Face.Weather.Temperature.Current != null) && (Watch_Face.Weather.Temperature.Today == null))
-            //    {
-            //        MessageBox.Show(Properties.FormStrings.Message_WarningTemperature_Text,
-            //        Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    }
-            //}
+            if (Watch_Face.Weather != null && Watch_Face.Weather.Temperature != null)
+            {
+                if ((Watch_Face.Weather.Temperature.Current != null) && (Watch_Face.Weather.Temperature.Today == null))
+                {
+                    if (Watch_Face.StepsProgress != null && Watch_Face.StepsProgress.ClockHand != null)
+                    {
+                        MessageBox.Show(Properties.FormStrings.Message_WarningTemperature_Text,
+                            Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning); 
+                    }
+                }
+            }
 
             // пробелы в имени
-            if(fullfilename.IndexOf(" ") != -1)
+            if (fullfilename.IndexOf(" ") != -1)
             {
                 MessageBox.Show(Properties.FormStrings.Message_WarningSpaceInName_Text,
                     Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -5603,7 +5684,7 @@ namespace GTR_Watch_face
 
         private void panel_Preview_DoubleClick(object sender, EventArgs e)
         {
-            if (panel_Preview.Height < 300) button_PreviewBig.PerformClick();
+            if (pictureBox_Preview.Height < 300) button_PreviewBig.PerformClick();
             else
             {
                 //if (radioButton_47.Checked) button_PreviewSmall.PerformClick();
@@ -5641,7 +5722,7 @@ namespace GTR_Watch_face
                     mask = new Bitmap(@"Mask\mask_trex.png");
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
-                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, 0);
+                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, 0);
                 if(checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
                 bitmap.Save(saveFileDialog.FileName, ImageFormat.Png);
             }
@@ -5803,7 +5884,7 @@ namespace GTR_Watch_face
                             numericUpDown_WeatherSet_NightTemp.Value = numericUpDown_WeatherSet_Temp.Value - rnd.Next(3, 10);
                             comboBox_WeatherSet_Icon.SelectedIndex = rnd.Next(0, 25);
 
-                            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, 0);
+                            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, 0);
                             if (checkBox_crop.Checked) {
                                 bitmap = ApplyMask(bitmap, mask);
                                 gPanel = Graphics.FromImage(bitmap);
@@ -5846,7 +5927,8 @@ namespace GTR_Watch_face
             //ImageMagick.MagickImage image = new ImageMagick.MagickImage("0.png");
             ImageMagick.MagickImage combineMask = new ImageMagick.MagickImage(mask);
 
-            image.Composite(combineMask, ImageMagick.CompositeOperator.CopyAlpha, Channels.Alpha);
+            //image.Composite(combineMask, ImageMagick.CompositeOperator.CopyAlpha, Channels.Alpha);
+            image.Composite(combineMask, ImageMagick.CompositeOperator.In, Channels.Alpha);
             //image.Settings.BackgroundColor = new ImageMagick.MagickColor(bgColors[0], bgColors[1], bgColors[2]);
             //image.Alpha(ImageMagick.AlphaOption.Remove);
             //image.Transparent(ImageMagick.MagickColor.FromRgba(0, 0, 0, 0));
@@ -5854,13 +5936,14 @@ namespace GTR_Watch_face
             return image.ToBitmap();
         }
 
+        // изменили модель часов
         private void radioButton_Model_Changed(object sender, EventArgs e)
         {
             if (radioButton_47.Checked)
             {
                 //this.Text = "GTR watch face editor";
-                panel_Preview.Height = 230;
-                panel_Preview.Width = 230;
+                pictureBox_Preview.Height = 230;
+                pictureBox_Preview.Width = 230;
                 offSet_X = 227;
                 offSet_Y = 227;
                 
@@ -5874,8 +5957,8 @@ namespace GTR_Watch_face
             else if (radioButton_42.Checked)
             {
                 //this.Text = "GTR watch face editor";
-                panel_Preview.Height = 198;
-                panel_Preview.Width = 198;
+                pictureBox_Preview.Height = 198;
+                pictureBox_Preview.Width = 198;
                 offSet_X = 195;
                 offSet_Y = 195;
                 
@@ -5889,8 +5972,8 @@ namespace GTR_Watch_face
             else if (radioButton_gts.Checked)
             {
                 //this.Text = "GTS watch face editor";
-                panel_Preview.Height = 223;
-                panel_Preview.Width = 176;
+                pictureBox_Preview.Height = 224;
+                pictureBox_Preview.Width = 177;
                 offSet_X = 174;
                 offSet_Y = 221;
                 
@@ -5904,8 +5987,8 @@ namespace GTR_Watch_face
             else if (radioButton_TRex.Checked)
             {
                 //this.Text = "T-Rex watch face editor";
-                panel_Preview.Height = 183;
-                panel_Preview.Width = 183;
+                pictureBox_Preview.Height = 183;
+                pictureBox_Preview.Width = 183;
                 offSet_X = 180;
                 offSet_Y = 180;
 
@@ -5919,8 +6002,8 @@ namespace GTR_Watch_face
             else if (radioButton_Verge.Checked)
             {
                 //this.Text = "Verge Lite watch face editor";
-                panel_Preview.Height = 183;
-                panel_Preview.Width = 183;
+                pictureBox_Preview.Height = 183;
+                pictureBox_Preview.Width = 183;
                 offSet_X = 180;
                 offSet_Y = 180;
 
@@ -5965,6 +6048,7 @@ namespace GTR_Watch_face
             PreviewImage();
         }
 
+        // устанавливаем заголовок окна
         private void FormText()
         {
             //throw new NotImplementedException(); FileName
@@ -6008,28 +6092,29 @@ namespace GTR_Watch_face
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            timer2.Enabled = false;
-            if ((formPreview != null) && (formPreview.Visible))
-            {
-                Form_Preview.Model_Wath.model_gtr47 = radioButton_47.Checked;
-                Form_Preview.Model_Wath.model_gtr42 = radioButton_42.Checked;
-                Form_Preview.Model_Wath.model_gts = radioButton_gts.Checked;
-                Graphics gPanelPreviewPaint = formPreview.panel_Preview.CreateGraphics();
-                gPanelPreviewPaint.Clear(panel_Preview.BackColor);
-                formPreview.radioButton_CheckedChanged(sender, e);
-                float scalePreviewPaint = 1.0f;
-                if (formPreview.radioButton_small.Checked) scalePreviewPaint = 0.5f;
-                if (formPreview.radioButton_large.Checked) scalePreviewPaint = 1.5f;
-                if (formPreview.radioButton_xlarge.Checked) scalePreviewPaint = 2.0f;
-                if (formPreview.radioButton_xxlarge.Checked) scalePreviewPaint = 2.5f;
-                PreviewToBitmap(gPanelPreviewPaint, scalePreviewPaint, checkBox_crop.Checked,
-                    checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked, 
-                    checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true, 0);
-                gPanelPreviewPaint.Dispose();
-            }
+            //timer2.Enabled = false;
+            //if ((formPreview != null) && (formPreview.Visible))
+            //{
+            //    Form_Preview.Model_Wath.model_gtr47 = radioButton_47.Checked;
+            //    Form_Preview.Model_Wath.model_gtr42 = radioButton_42.Checked;
+            //    Form_Preview.Model_Wath.model_gts = radioButton_gts.Checked;
+            //    Graphics gPanelPreviewPaint = formPreview.panel_Preview.CreateGraphics();
+            //    //gPanelPreviewPaint.Clear(panel_Preview.BackColor);
+            //    formPreview.radioButton_CheckedChanged(sender, e);
+            //    float scalePreviewPaint = 1.0f;
+            //    if (formPreview.radioButton_small.Checked) scalePreviewPaint = 0.5f;
+            //    if (formPreview.radioButton_large.Checked) scalePreviewPaint = 1.5f;
+            //    if (formPreview.radioButton_xlarge.Checked) scalePreviewPaint = 2.0f;
+            //    if (formPreview.radioButton_xxlarge.Checked) scalePreviewPaint = 2.5f;
+            //    PreviewToBitmap(gPanelPreviewPaint, scalePreviewPaint, checkBox_crop.Checked,
+            //        checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked, 
+            //        checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true, 0);
+            //    gPanelPreviewPaint.Dispose();
+            //}
         }
 
-        private void panel_Preview_MouseMove(object sender, MouseEventArgs e)
+        // координаты в заголовке при перемещении мыши
+        private void pictureBox_Preview_MouseMove(object sender, MouseEventArgs e)
         {
             int CursorX = e.X;
             int CursorY = e.Y;
@@ -6041,7 +6126,7 @@ namespace GTR_Watch_face
             label_preview_Y.Visible = true;
         }
 
-        private void panel_Preview_MouseLeave(object sender, EventArgs e)
+        private void pictureBox_Preview_MouseLeave(object sender, EventArgs e)
         {
             label_preview_X.Visible = false;
             label_preview_Y.Visible = false;
@@ -6368,6 +6453,16 @@ namespace GTR_Watch_face
         private void checkBox_Show_Shortcuts_CheckedChanged(object sender, EventArgs e)
         {
             Program_Settings.Show_Shortcuts = checkBox_Show_Shortcuts.Checked;
+            string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+            {
+                //DefaultValueHandling = DefaultValueHandling.Ignore,
+                NullValueHandling = NullValueHandling.Ignore
+            });
+            File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
+        }
+        private void checkBox_CircleScaleImage_CheckedChanged(object sender, EventArgs e)
+        {
+            Program_Settings.Show_CircleScale_Area = checkBox_CircleScaleImage.Checked;
             string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
             {
                 //DefaultValueHandling = DefaultValueHandling.Ignore,
@@ -6924,7 +7019,7 @@ namespace GTR_Watch_face
             int Animation_SpeedAnimation = (int)numericUpDown_StaticAnimation_SpeedAnimation.Value;
             int Animation_TimeAnimation = (Animation_Count * Animation_CyclesCount * Animation_SpeedAnimation) - Animation_SpeedAnimation;
             if (Animation_TimeAnimation < 0) Animation_TimeAnimation = 0;
-            if (Animation_TimeAnimation != (int)numericUpDown_StaticAnimation_TimeAnimation.Value && Animation_CyclesCount != 0)
+            if (Animation_TimeAnimation != (int)numericUpDown_StaticAnimation_TimeAnimation.Value && Animation_CyclesCount >= 0)
                 numericUpDown_StaticAnimation_TimeAnimation.Value = Animation_TimeAnimation;
         }
 
@@ -6937,7 +7032,8 @@ namespace GTR_Watch_face
             int Animation_CyclesCount = (Animation_TimeAnimation + Animation_SpeedAnimation) /
                 (Animation_SpeedAnimation * Animation_Count);
             if (Animation_CyclesCount != (Animation_TimeAnimation + Animation_SpeedAnimation) / 
-                (float)(Animation_SpeedAnimation * Animation_Count)) Animation_CyclesCount = 0;
+                (float)(Animation_SpeedAnimation * Animation_Count)) Animation_CyclesCount = -1;
+            if (Animation_TimeAnimation == 0) Animation_CyclesCount = 0;
             if (Animation_CyclesCount != (int)numericUpDown_StaticAnimation_CyclesCount.Value)
                 numericUpDown_StaticAnimation_CyclesCount.Value = Animation_CyclesCount;
 
@@ -6949,7 +7045,7 @@ namespace GTR_Watch_face
         private void numericUpDown_StaticAnimation_Count_ValueChanged(object sender, EventArgs e)
         {
             int Animation_CyclesCount = (int)numericUpDown_StaticAnimation_CyclesCount.Value;
-            if (Animation_CyclesCount != 0)
+            if (Animation_CyclesCount >= 0)
             {
                 int Animation_Count = (int)numericUpDown_StaticAnimation_Count.Value;
                 int Animation_SpeedAnimation = (int)numericUpDown_StaticAnimation_SpeedAnimation.Value;
@@ -7232,7 +7328,7 @@ namespace GTR_Watch_face
                 mask = new Bitmap(@"Mask\mask_trex.png");
             }
             Graphics gPanel = Graphics.FromImage(bitmap);
-            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false, 1);
+            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false, false, 1);
             if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
             Image loadedImage = null;
 
@@ -7295,7 +7391,7 @@ namespace GTR_Watch_face
                     //if (i < ListImagesFullName.Count) Images.Add(new Bitmap(ListImagesFullName[i]));
                 }
             }
-            loadedImage.Dispose();
+            if (loadedImage !=null) loadedImage.Dispose();
             if (Images.Count > 0)
             {
                 StaticAnimation = new ClassStaticAnimation(Images, (int)numericUpDown_StaticAnimation_X.Value,
@@ -7304,38 +7400,41 @@ namespace GTR_Watch_face
 
             }
 
-            FormAnimation formAnimation = new FormAnimation(bitmap, MotiomAnimation, StaticAnimation);
-            formAnimation.Owner = this;
-            if (FormAnimation.Model_Wath.model_gtr47 != radioButton_47.Checked)
-                FormAnimation.Model_Wath.model_gtr47 = radioButton_47.Checked;
-            if (FormAnimation.Model_Wath.model_gtr42 != radioButton_42.Checked)
-                FormAnimation.Model_Wath.model_gtr42 = radioButton_42.Checked;
-            if (FormAnimation.Model_Wath.model_gts != radioButton_gts.Checked)
-                FormAnimation.Model_Wath.model_gts = radioButton_gts.Checked;
-            if (FormAnimation.Model_Wath.model_TRex != radioButton_TRex.Checked)
-                FormAnimation.Model_Wath.model_TRex = radioButton_TRex.Checked;
-            if (FormAnimation.Model_Wath.model_Verge != radioButton_Verge.Checked)
-                FormAnimation.Model_Wath.model_Verge = radioButton_Verge.Checked;
-
-            switch (comboBox_Animation_Preview_Speed.SelectedIndex)
+            if (MotiomAnimation.Count > 0 || StaticAnimation != null)
             {
-                case 0:
-                    formAnimation.timer1.Interval = 20;
-                    break;
-                case 1:
-                    formAnimation.timer1.Interval = 25;
-                    break;
-                case 2:
-                    formAnimation.timer1.Interval = 33;
-                    break;
-                case 3:
-                    formAnimation.timer1.Interval = 50;
-                    break;
-                case 4:
-                    formAnimation.timer1.Interval = 100;
-                    break;
+                FormAnimation formAnimation = new FormAnimation(bitmap, MotiomAnimation, StaticAnimation);
+                formAnimation.Owner = this;
+                if (FormAnimation.Model_Wath.model_gtr47 != radioButton_47.Checked)
+                    FormAnimation.Model_Wath.model_gtr47 = radioButton_47.Checked;
+                if (FormAnimation.Model_Wath.model_gtr42 != radioButton_42.Checked)
+                    FormAnimation.Model_Wath.model_gtr42 = radioButton_42.Checked;
+                if (FormAnimation.Model_Wath.model_gts != radioButton_gts.Checked)
+                    FormAnimation.Model_Wath.model_gts = radioButton_gts.Checked;
+                if (FormAnimation.Model_Wath.model_TRex != radioButton_TRex.Checked)
+                    FormAnimation.Model_Wath.model_TRex = radioButton_TRex.Checked;
+                if (FormAnimation.Model_Wath.model_Verge != radioButton_Verge.Checked)
+                    FormAnimation.Model_Wath.model_Verge = radioButton_Verge.Checked;
+
+                switch (comboBox_Animation_Preview_Speed.SelectedIndex)
+                {
+                    case 0:
+                        formAnimation.timer1.Interval = 20;
+                        break;
+                    case 1:
+                        formAnimation.timer1.Interval = 25;
+                        break;
+                    case 2:
+                        formAnimation.timer1.Interval = 33;
+                        break;
+                    case 3:
+                        formAnimation.timer1.Interval = 50;
+                        break;
+                    case 4:
+                        formAnimation.timer1.Interval = 100;
+                        break;
+                }
+                formAnimation.ShowDialog(); 
             }
-            formAnimation.ShowDialog();
 
             //formAnimation.FormClosed += (object senderClosed, FormClosedEventArgs eClosed) =>
             //{
@@ -7407,6 +7506,977 @@ namespace GTR_Watch_face
                 MessageBox.Show(Properties.FormStrings.Message_WarningAnimationCoun_Text,
                     Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void tabControl1_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            if(e.TabPage.Name == "tabPageConverting")
+            {
+                if (radioButton_47.Checked)
+                {
+                    radioButton_ConvertingInput_GTR47.Checked = true;
+                    numericUpDown_ConvertingInput_Custom.Value = 454;
+                }
+                if (radioButton_42.Checked)
+                {
+                    radioButton_ConvertingInput_GTR42.Checked = true;
+                    numericUpDown_ConvertingInput_Custom.Value = 390;
+                }
+                if (radioButton_TRex.Checked)
+                {
+                    radioButton_ConvertingInput_TRex.Checked = true;
+                    numericUpDown_ConvertingInput_Custom.Value = 360;
+                }
+                if (radioButton_Verge.Checked)
+                {
+                    radioButton_ConvertingInput_Verge.Checked = true;
+                    numericUpDown_ConvertingInput_Custom.Value = 360;
+                }
+                numericUpDown_ConvertingInput_Custom.Enabled = radioButton_ConvertingInput_Custom.Checked;
+            }
+            if (FileName != null && FullFileDir != null)
+            {
+                button_Converting.Enabled = true;
+                label486.Visible = false;
+            }
+            else
+            {
+                button_Converting.Enabled = false;
+                label486.Visible = true;
+            }
+        }
+
+        private void radioButton_ConvertingInput_Custom_CheckedChanged(object sender, EventArgs e)
+        {
+            numericUpDown_ConvertingInput_Custom.Enabled = radioButton_ConvertingInput_Custom.Checked;
+        }
+
+        private void radioButton_ConvertingOutput_Custom_CheckedChanged(object sender, EventArgs e)
+        {
+            numericUpDown_ConvertingOutput_Custom.Enabled = radioButton_ConvertingOutput_Custom.Checked;
+        }
+
+        #region Shortcuts_Width_Height
+        private void numericUpDown_Shortcuts_Steps_Width_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.X < 0) return;
+            int value = MouseСoordinates.X - (int)numericUpDown_Shortcuts_Steps_X.Value;
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+
+        private void numericUpDown_Shortcuts_Steps_Height_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.Y < 0) return;
+            int value = MouseСoordinates.Y - (int)numericUpDown_Shortcuts_Steps_Y.Value;
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if ((e.Y <= numericUpDown.Controls[1].Width + 1) && (value > 0))
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+
+        private void numericUpDown_Shortcuts_Puls_Width_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.X < 0) return;
+            int value = MouseСoordinates.X - (int)numericUpDown_Shortcuts_Puls_X.Value;
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+
+        private void numericUpDown_Shortcuts_Puls_Height_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.Y < 0) return;
+            int value = MouseСoordinates.Y - (int)numericUpDown_Shortcuts_Puls_Y.Value;
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if ((e.Y <= numericUpDown.Controls[1].Width + 1) && (value > 0))
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+
+        private void numericUpDown_Shortcuts_Weather_Width_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.X < 0) return;
+            int value = MouseСoordinates.X - (int)numericUpDown_Shortcuts_Weather_X.Value;
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+
+        private void numericUpDown_Shortcuts_Weather_Height_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.Y < 0) return;
+            int value = MouseСoordinates.Y - (int)numericUpDown_Shortcuts_Weather_Y.Value;
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if ((e.Y <= numericUpDown.Controls[1].Width + 1) && (value > 0))
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+
+        private void numericUpDown_Shortcuts_Energy_Width_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.X < 0) return;
+            int value = MouseСoordinates.X - (int)numericUpDown_Shortcuts_Energy_X.Value;
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+
+        private void numericUpDown_Shortcuts_Energy_Height_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.Y < 0) return;
+            int value = MouseСoordinates.Y - (int)numericUpDown_Shortcuts_Energy_Y.Value;
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if ((e.Y <= numericUpDown.Controls[1].Width + 1) && (value > 0))
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+        #endregion
+
+        private void button_Converting_Click(object sender, EventArgs e)
+        {
+            if (FileName != null && FullFileDir != null)
+            {
+                if (JSON_Modified) // сохранение если файл не сохранен
+                {
+                    DialogResult dr = MessageBox.Show(Properties.FormStrings.Message_Save_JSON_Modified_Text1 +
+                            Path.GetFileNameWithoutExtension(FileName) + Properties.FormStrings.Message_Save_JSON_Modified_Text2,
+                            Properties.FormStrings.Message_Save_JSON_Modified_Caption, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                    if (dr == DialogResult.Yes)
+                    {
+                        string fullfilename = Path.Combine(FullFileDir, FileName);
+                        File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+                        JSON_Modified = false;
+                        FormText();
+                        if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
+                    }
+                    if (dr == DialogResult.Cancel)
+                    {
+                        return;
+                    }
+                }
+                
+                int DeviceId = 40;
+                string suffix = "_GTR_47";
+                float scale = 1;
+                if (radioButton_ConvertingOutput_GTR42.Checked)
+                {
+                    suffix = "_GTR_42";
+                    DeviceId = 42;
+                }
+                if (radioButton_ConvertingOutput_TRex.Checked)
+                {
+                    suffix = "_T-Rex";
+                    DeviceId = 52;
+                }
+                if (radioButton_ConvertingOutput_Verge.Checked)
+                {
+                    suffix = "_Verge_Lite";
+                    DeviceId = 32;
+                }
+                if (radioButton_ConvertingOutput_Custom.Checked)
+                {
+                    suffix = "_Custom";
+                    DeviceId = 0;
+                }
+
+                if (radioButton_ConvertingInput_GTR47.Checked)
+                {
+                    if (radioButton_ConvertingOutput_GTR47.Checked) scale = 454 / 454f;
+                    if (radioButton_ConvertingOutput_GTR42.Checked) scale = 390 / 454f;
+                    if (radioButton_ConvertingOutput_TRex.Checked) scale = 360 / 454f;
+                    if (radioButton_ConvertingOutput_Verge.Checked) scale = 360 / 454f;
+                    if (radioButton_ConvertingOutput_Custom.Checked)
+                        scale = (float)(numericUpDown_ConvertingOutput_Custom.Value / 454);
+                }
+                if (radioButton_ConvertingInput_GTR42.Checked)
+                {
+                    if (radioButton_ConvertingOutput_GTR47.Checked) scale = 454 / 390f;
+                    if (radioButton_ConvertingOutput_GTR42.Checked) scale = 390 / 390f;
+                    if (radioButton_ConvertingOutput_TRex.Checked) scale = 360 / 390f;
+                    if (radioButton_ConvertingOutput_Verge.Checked) scale = 360 / 390f;
+                    if (radioButton_ConvertingOutput_Custom.Checked)
+                        scale = (float)(numericUpDown_ConvertingOutput_Custom.Value / 390);
+                }
+                if (radioButton_ConvertingInput_TRex.Checked || radioButton_ConvertingInput_Verge.Checked)
+                {
+                    if (radioButton_ConvertingOutput_GTR47.Checked) scale = 454 / 360f;
+                    if (radioButton_ConvertingOutput_GTR42.Checked) scale = 390 / 360f;
+                    if (radioButton_ConvertingOutput_TRex.Checked) scale = 360 / 360f;
+                    if (radioButton_ConvertingOutput_Verge.Checked) scale = 360 / 360f;
+                    if (radioButton_ConvertingOutput_Custom.Checked)
+                        scale = (float)(numericUpDown_ConvertingOutput_Custom.Value / 360);
+                }
+                if (radioButton_ConvertingInput_Custom.Checked)
+                {
+                    float value = (float)numericUpDown_ConvertingInput_Custom.Value;
+                    if (radioButton_ConvertingOutput_GTR47.Checked) scale = 454 / value;
+                    if (radioButton_ConvertingOutput_GTR42.Checked) scale = 390 / value;
+                    if (radioButton_ConvertingOutput_TRex.Checked) scale = 360 / value;
+                    if (radioButton_ConvertingOutput_Verge.Checked) scale = 360 / value;
+                    if (radioButton_ConvertingOutput_Custom.Checked)
+                        scale = (float)numericUpDown_ConvertingOutput_Custom.Value / value;
+                }
+
+                string newFullDirName = FullFileDir + suffix;
+                string newDirName = Path.GetFileName(newFullDirName);
+                if (Directory.Exists(newFullDirName))
+                {
+                    //DialogResult dr = MessageBox.Show(Properties.FormStrings.Message_Save_JSON_Modified_Text1 +
+                    //    Path.GetFileNameWithoutExtension(FileName) + Properties.FormStrings.Message_Save_JSON_Modified_Text2,
+                    //    Properties.FormStrings.Message_Save_JSON_Modified_Caption, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                    DialogResult dr = MessageBox.Show(Properties.FormStrings.Message_WarningConverting_Text1
+                        + newDirName + Properties.FormStrings.Message_WarningConverting_Text2,
+                        Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (dr == DialogResult.Yes)
+                    {
+                        Directory.Delete(newFullDirName, true);
+                    }
+                    else return;
+                }
+
+                // Масштабируем изображения
+                Image loadedImage = null;
+                Directory.CreateDirectory(newFullDirName);
+                foreach (string ImageFullName in ListImagesFullName)
+                {
+                    using (FileStream stream = new FileStream(ImageFullName, FileMode.Open, FileAccess.Read))
+                    {
+                        loadedImage = Image.FromStream(stream);
+                    }
+                    string fileName = Path.GetFileName(ImageFullName);
+                    string newFullFileName = Path.Combine(newFullDirName, fileName);
+                    Bitmap bitmap = ResizeImage(loadedImage, scale);
+
+                    bitmap.Save(newFullFileName, ImageFormat.Png);
+                }
+                loadedImage = null;
+
+                JSON_Scale(scale, DeviceId);
+
+                string newFullFileNameJson = Path.Combine(newFullDirName,
+                    Path.GetFileNameWithoutExtension(FileName) + suffix + ".json");
+                string newJson = JsonConvert.SerializeObject(Watch_Face, Formatting.Indented, new JsonSerializerSettings
+                {
+                    //DefaultValueHandling = DefaultValueHandling.Ignore,
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+                File.WriteAllText(newFullFileNameJson, newJson, Encoding.UTF8);
+
+                LoadJsonAndImage(newFullFileNameJson);
+
+                MessageBox.Show(Properties.FormStrings.Message_ConvertingCompleted_Text,
+                        Properties.FormStrings.Message_Warning_Information, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show(Properties.FormStrings.Message_ConvertingCompleted_Text);
+            }
+        }
+
+        /// <summary>
+        /// Масштабирование изображения
+        /// </summary>
+        /// <param name="image">Исходное изображение</param>
+        /// <param name="scale">Масштаб</param>
+        /// <returns>The resized image.</returns>
+        public static Bitmap ResizeImage(Image image, float scale)
+        {
+            int width = (int)Math.Round(image.Width * scale);
+            int height = (int)Math.Round(image.Height * scale);
+            var destRect = new Rectangle(0, 0, width, height);
+            var destImage = new Bitmap(width, height);
+
+            destImage.SetResolution(image.HorizontalResolution, image.VerticalResolution);
+
+            using (var graphics = Graphics.FromImage(destImage))
+            {
+                graphics.CompositingMode = CompositingMode.SourceCopy;
+                graphics.CompositingQuality = CompositingQuality.HighQuality;
+                graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                graphics.SmoothingMode = SmoothingMode.HighQuality;
+                graphics.PixelOffsetMode = PixelOffsetMode.HighQuality;
+
+                using (var wrapMode = new ImageAttributes())
+                {
+                    wrapMode.SetWrapMode(WrapMode.TileFlipXY);
+                    graphics.DrawImage(image, destRect, 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, wrapMode);
+                }
+            }
+
+            return destImage;
+        }
+
+        private void JSON_Scale(float scale, int DeviceId)
+        {
+            if (Watch_Face == null) return;
+            if (DeviceId != 0)
+            {
+                if (Watch_Face.Info == null) Watch_Face.Info = new Device_Id();
+                Watch_Face.Info.DeviceId = DeviceId;
+            }
+
+            #region Time
+            if (Watch_Face.Time != null)
+            {
+                if (Watch_Face.Time.Hours != null)
+                {
+                    if (Watch_Face.Time.Hours.Tens != null)
+                    {
+                        Watch_Face.Time.Hours.Tens.X = (int)Math.Round(Watch_Face.Time.Hours.Tens.X * scale);
+                        Watch_Face.Time.Hours.Tens.Y = (int)Math.Round(Watch_Face.Time.Hours.Tens.Y * scale); 
+                    }
+
+                    if (Watch_Face.Time.Hours.Ones != null)
+                    {
+                        Watch_Face.Time.Hours.Ones.X = (int)Math.Round(Watch_Face.Time.Hours.Ones.X * scale);
+                        Watch_Face.Time.Hours.Ones.Y = (int)Math.Round(Watch_Face.Time.Hours.Ones.Y * scale); 
+                    }
+                }
+
+                if (Watch_Face.Time.Minutes != null)
+                {
+                    if (Watch_Face.Time.Minutes.Tens != null)
+                    {
+                        Watch_Face.Time.Minutes.Tens.X = (int)Math.Round(Watch_Face.Time.Minutes.Tens.X * scale);
+                        Watch_Face.Time.Minutes.Tens.Y = (int)Math.Round(Watch_Face.Time.Minutes.Tens.Y * scale); 
+                    }
+
+                    if (Watch_Face.Time.Minutes.Ones != null)
+                    {
+                        Watch_Face.Time.Minutes.Ones.X = (int)Math.Round(Watch_Face.Time.Minutes.Ones.X * scale);
+                        Watch_Face.Time.Minutes.Ones.Y = (int)Math.Round(Watch_Face.Time.Minutes.Ones.Y * scale); 
+                    }
+                }
+
+                if (Watch_Face.Time.Seconds != null)
+                {
+                    if (Watch_Face.Time.Seconds.Tens != null)
+                    {
+                        Watch_Face.Time.Seconds.Tens.X = (int)Math.Round(Watch_Face.Time.Seconds.Tens.X * scale);
+                        Watch_Face.Time.Seconds.Tens.Y = (int)Math.Round(Watch_Face.Time.Seconds.Tens.Y * scale); 
+                    }
+
+                    if (Watch_Face.Time.Seconds.Ones != null)
+                    {
+                        Watch_Face.Time.Seconds.Ones.X = (int)Math.Round(Watch_Face.Time.Seconds.Ones.X * scale);
+                        Watch_Face.Time.Seconds.Ones.Y = (int)Math.Round(Watch_Face.Time.Seconds.Ones.Y * scale); 
+                    }
+                }
+
+                if (Watch_Face.Time.Delimiter != null)
+                {
+                    Watch_Face.Time.Delimiter.X = (int)Math.Round(Watch_Face.Time.Delimiter.X * scale);
+                    Watch_Face.Time.Delimiter.Y = (int)Math.Round(Watch_Face.Time.Delimiter.Y * scale);
+                }
+
+                if (Watch_Face.Time.AmPm != null)
+                {
+                    Watch_Face.Time.AmPm.X = (int)Math.Round(Watch_Face.Time.AmPm.X * scale);
+                    Watch_Face.Time.AmPm.Y = (int)Math.Round(Watch_Face.Time.AmPm.Y * scale);
+                }
+            }
+            #endregion
+
+            #region Date
+            if (Watch_Face.Date != null)
+            {
+                if (Watch_Face.Date.WeekDay != null)
+                {
+                    Watch_Face.Date.WeekDay.X = (int)Math.Round(Watch_Face.Date.WeekDay.X * scale);
+                    Watch_Face.Date.WeekDay.Y = (int)Math.Round(Watch_Face.Date.WeekDay.Y * scale);
+                }
+
+                if ((Watch_Face.Date.WeekDayProgress != null) && (Watch_Face.Date.WeekDayProgress.Coordinates != null))
+                {
+                    foreach (Coordinates coordinates in Watch_Face.Date.WeekDayProgress.Coordinates)
+                    {
+                        coordinates.X = (int)Math.Round(coordinates.X * scale);
+                        coordinates.Y = (int)Math.Round(coordinates.Y * scale);
+                    }
+                }
+
+                if (Watch_Face.Date.MonthAndDay != null)
+                {
+                    if ((Watch_Face.Date.MonthAndDay.OneLine != null) && (Watch_Face.Date.MonthAndDay.OneLine.Number != null))
+                    {
+                        Watch_Face.Date.MonthAndDay.OneLine.Number.TopLeftX =
+                            (int)Math.Round(Watch_Face.Date.MonthAndDay.OneLine.Number.TopLeftX * scale);
+                        Watch_Face.Date.MonthAndDay.OneLine.Number.TopLeftY =
+                            (int)Math.Round(Watch_Face.Date.MonthAndDay.OneLine.Number.TopLeftY * scale);
+                        Watch_Face.Date.MonthAndDay.OneLine.Number.BottomRightX =
+                            (int)Math.Round(Watch_Face.Date.MonthAndDay.OneLine.Number.BottomRightX * scale);
+                        Watch_Face.Date.MonthAndDay.OneLine.Number.BottomRightY =
+                            (int)Math.Round(Watch_Face.Date.MonthAndDay.OneLine.Number.BottomRightY * scale);
+                    }
+
+                    if (Watch_Face.Date.MonthAndDay.Separate != null)
+                    {
+                        if (Watch_Face.Date.MonthAndDay.Separate.Day != null)
+                        {
+                            Watch_Face.Date.MonthAndDay.Separate.Day.TopLeftX =
+                                 (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Day.TopLeftX * scale);
+                            Watch_Face.Date.MonthAndDay.Separate.Day.TopLeftY =
+                                 (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Day.TopLeftY * scale);
+                            Watch_Face.Date.MonthAndDay.Separate.Day.BottomRightX =
+                                 (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Day.BottomRightX * scale);
+                            Watch_Face.Date.MonthAndDay.Separate.Day.BottomRightY =
+                                 (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Day.BottomRightY * scale);
+                        }
+
+                        if (Watch_Face.Date.MonthAndDay.Separate.Month != null)
+                        {
+                            Watch_Face.Date.MonthAndDay.Separate.Month.TopLeftX =
+                                (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Month.TopLeftX * scale);
+                            Watch_Face.Date.MonthAndDay.Separate.Month.TopLeftY =
+                                (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Month.TopLeftY * scale);
+                            Watch_Face.Date.MonthAndDay.Separate.Month.BottomRightX =
+                                (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Month.BottomRightX * scale);
+                            Watch_Face.Date.MonthAndDay.Separate.Month.BottomRightY =
+                                (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Month.BottomRightY * scale);
+                        }
+
+                        if (Watch_Face.Date.MonthAndDay.Separate.MonthName != null)
+                        {
+                            Watch_Face.Date.MonthAndDay.Separate.MonthName.X = 
+                                (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.MonthName.X * scale);
+                            Watch_Face.Date.MonthAndDay.Separate.MonthName.Y = 
+                                (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.MonthName.Y * scale);
+                        }
+                    }
+
+                }
+
+                if (Watch_Face.Date.Year != null)
+                {
+                    if ((Watch_Face.Date.Year.OneLine != null) && (Watch_Face.Date.Year.OneLine.Number != null))
+                    {
+                        Watch_Face.Date.Year.OneLine.Number.TopLeftX = (int)Math.Round(Watch_Face.Date.Year.OneLine.Number.TopLeftX * scale);
+                        Watch_Face.Date.Year.OneLine.Number.TopLeftY = (int)Math.Round(Watch_Face.Date.Year.OneLine.Number.TopLeftY * scale);
+                        Watch_Face.Date.Year.OneLine.Number.BottomRightX = (int)Math.Round(Watch_Face.Date.Year.OneLine.Number.BottomRightX * scale);
+                        Watch_Face.Date.Year.OneLine.Number.BottomRightY = (int)Math.Round(Watch_Face.Date.Year.OneLine.Number.BottomRightY * scale);
+                    }
+                }
+            }
+            #endregion
+
+            #region AnalogDate
+            if (Watch_Face.DaysProgress != null)
+            {
+                if ((Watch_Face.DaysProgress.UnknownField2 != null) && (Watch_Face.DaysProgress.UnknownField2.Image != null))
+                {
+                    Watch_Face.DaysProgress.UnknownField2.Image.X = (int)Math.Round(Watch_Face.DaysProgress.UnknownField2.Image.X * scale);
+                    Watch_Face.DaysProgress.UnknownField2.Image.Y = (int)Math.Round(Watch_Face.DaysProgress.UnknownField2.Image.Y * scale);
+                    if (Watch_Face.DaysProgress.UnknownField2.CenterOffset != null)
+                    {
+                        Watch_Face.DaysProgress.UnknownField2.CenterOffset.X =
+                            (int)Math.Round(Watch_Face.DaysProgress.UnknownField2.CenterOffset.X * scale);
+                        Watch_Face.DaysProgress.UnknownField2.CenterOffset.Y = 
+                            (int)Math.Round(Watch_Face.DaysProgress.UnknownField2.CenterOffset.Y * scale);
+
+                    }
+                }
+
+                if ((Watch_Face.DaysProgress.AnalogDOW != null) && (Watch_Face.DaysProgress.AnalogDOW.Image != null))
+                {
+                    Watch_Face.DaysProgress.AnalogDOW.Image.X = (int)Math.Round(Watch_Face.DaysProgress.AnalogDOW.Image.X * scale);
+                    Watch_Face.DaysProgress.AnalogDOW.Image.Y = (int)Math.Round(Watch_Face.DaysProgress.AnalogDOW.Image.Y * scale);
+                    if (Watch_Face.DaysProgress.AnalogDOW.CenterOffset != null)
+                    {
+                        Watch_Face.DaysProgress.AnalogDOW.CenterOffset.X =
+                            (int)Math.Round(Watch_Face.DaysProgress.AnalogDOW.CenterOffset.X * scale);
+                        Watch_Face.DaysProgress.AnalogDOW.CenterOffset.Y =
+                            (int)Math.Round(Watch_Face.DaysProgress.AnalogDOW.CenterOffset.Y * scale);
+
+                    }
+                }
+
+                if ((Watch_Face.DaysProgress.AnalogMonth != null) && (Watch_Face.DaysProgress.AnalogMonth.Image != null))
+                {
+                    Watch_Face.DaysProgress.AnalogMonth.Image.X = (int)Math.Round(Watch_Face.DaysProgress.AnalogMonth.Image.X * scale);
+                    Watch_Face.DaysProgress.AnalogMonth.Image.Y = (int)Math.Round(Watch_Face.DaysProgress.AnalogMonth.Image.Y * scale);
+                    if (Watch_Face.DaysProgress.AnalogMonth.CenterOffset != null)
+                    {
+                        Watch_Face.DaysProgress.AnalogMonth.CenterOffset.X = (int)Math.Round(Watch_Face.DaysProgress.AnalogMonth.CenterOffset.X * scale);
+                        Watch_Face.DaysProgress.AnalogMonth.CenterOffset.Y = (int)Math.Round(Watch_Face.DaysProgress.AnalogMonth.CenterOffset.Y * scale);
+                    }
+                }
+
+            }
+            #endregion
+
+            #region StepsProgress
+            if (Watch_Face.StepsProgress != null)
+            {
+                if (Watch_Face.StepsProgress.Circle != null)
+                {
+                    Watch_Face.StepsProgress.Circle.CenterX = (int)Math.Round(Watch_Face.StepsProgress.Circle.CenterX * scale);
+                    Watch_Face.StepsProgress.Circle.CenterY = (int)Math.Round(Watch_Face.StepsProgress.Circle.CenterY * scale);
+                    Watch_Face.StepsProgress.Circle.RadiusX = (int)Math.Round(Watch_Face.StepsProgress.Circle.RadiusX * scale);
+                    Watch_Face.StepsProgress.Circle.RadiusY = (int)Math.Round(Watch_Face.StepsProgress.Circle.RadiusY * scale);
+                    Watch_Face.StepsProgress.Circle.Width = (int)Math.Round(Watch_Face.StepsProgress.Circle.Width * scale);
+                    if (Watch_Face.StepsProgress.Circle.ImageIndex != null)
+                    {
+                        int x = 0;
+                        int y = 0;
+                        Color new_color = ColorRead(Watch_Face.StepsProgress.Circle.Color);
+                        ColorToCoodinates(new_color, out x, out y);
+                        x = (int)Math.Round(x * scale);
+                        y = (int)Math.Round(y * scale);
+                        string colorStr = CoodinatesToColor(x, y);
+                        Watch_Face.StepsProgress.Circle.Color = colorStr;
+                    }
+                }
+
+                if ((Watch_Face.StepsProgress.ClockHand != null) && (Watch_Face.StepsProgress.ClockHand.Image != null))
+                {
+                    Watch_Face.StepsProgress.ClockHand.Image.X = (int)Math.Round(Watch_Face.StepsProgress.ClockHand.Image.X * scale);
+                    Watch_Face.StepsProgress.ClockHand.Image.Y = (int)Math.Round(Watch_Face.StepsProgress.ClockHand.Image.Y * scale);
+                    if (Watch_Face.StepsProgress.ClockHand.CenterOffset != null)
+                    {
+                        Watch_Face.StepsProgress.ClockHand.CenterOffset.X =
+                            (int)Math.Round(Watch_Face.StepsProgress.ClockHand.CenterOffset.X * scale);
+                        Watch_Face.StepsProgress.ClockHand.CenterOffset.Y =
+                            (int)Math.Round(Watch_Face.StepsProgress.ClockHand.CenterOffset.Y * scale);
+                    }
+                }
+
+                if ((Watch_Face.StepsProgress.Sliced != null) && (Watch_Face.StepsProgress.Sliced.Coordinates != null))
+                {
+                    foreach (Coordinates coordinates in Watch_Face.StepsProgress.Sliced.Coordinates)
+                    {
+                        coordinates.X = (int)Math.Round(coordinates.X * scale);
+                        coordinates.Y = (int)Math.Round(coordinates.Y * scale);
+                    }
+                }
+            }
+            #endregion
+
+            #region Activity
+            if (Watch_Face.Activity != null)
+            {
+                if ((Watch_Face.Activity.Steps != null) && (Watch_Face.Activity.Steps.Step != null))
+                {
+                    Watch_Face.Activity.Steps.Step.TopLeftX = (int)Math.Round(Watch_Face.Activity.Steps.Step.TopLeftX * scale);
+                    Watch_Face.Activity.Steps.Step.TopLeftY = (int)Math.Round(Watch_Face.Activity.Steps.Step.TopLeftY * scale);
+                    Watch_Face.Activity.Steps.Step.BottomRightX = (int)Math.Round(Watch_Face.Activity.Steps.Step.BottomRightX * scale);
+                    Watch_Face.Activity.Steps.Step.BottomRightY = (int)Math.Round(Watch_Face.Activity.Steps.Step.BottomRightY * scale);
+                }
+
+                if ((Watch_Face.Activity.Distance != null) && (Watch_Face.Activity.Distance.Number != null))
+                {
+                    Watch_Face.Activity.Distance.Number.TopLeftX = (int)Math.Round(Watch_Face.Activity.Distance.Number.TopLeftX * scale);
+                    Watch_Face.Activity.Distance.Number.TopLeftY = (int)Math.Round(Watch_Face.Activity.Distance.Number.TopLeftY * scale);
+                    Watch_Face.Activity.Distance.Number.BottomRightX = (int)Math.Round(Watch_Face.Activity.Distance.Number.BottomRightX * scale);
+                    Watch_Face.Activity.Distance.Number.BottomRightY = (int)Math.Round(Watch_Face.Activity.Distance.Number.BottomRightY * scale);
+                }
+
+                if (Watch_Face.Activity.Pulse != null)
+                {
+                    Watch_Face.Activity.Pulse.TopLeftX = (int)Math.Round(Watch_Face.Activity.Pulse.TopLeftX * scale);
+                    Watch_Face.Activity.Pulse.TopLeftY = (int)Math.Round(Watch_Face.Activity.Pulse.TopLeftY * scale);
+                    Watch_Face.Activity.Pulse.BottomRightX = (int)Math.Round(Watch_Face.Activity.Pulse.BottomRightX * scale);
+                    Watch_Face.Activity.Pulse.BottomRightY = (int)Math.Round(Watch_Face.Activity.Pulse.BottomRightY * scale);
+                }
+
+                if (Watch_Face.Activity.PulseMeter != null)
+                {
+                    Watch_Face.Activity.PulseMeter.CenterX = (int)Math.Round(Watch_Face.Activity.PulseMeter.CenterX * scale);
+                    Watch_Face.Activity.PulseMeter.CenterY = (int)Math.Round(Watch_Face.Activity.PulseMeter.CenterY * scale);
+                    Watch_Face.Activity.PulseMeter.RadiusX = (int)Math.Round(Watch_Face.Activity.PulseMeter.RadiusX * scale);
+                    Watch_Face.Activity.PulseMeter.RadiusY = (int)Math.Round(Watch_Face.Activity.PulseMeter.RadiusY * scale);
+                    Watch_Face.Activity.PulseMeter.Width = (int)Math.Round(Watch_Face.Activity.PulseMeter.Width * scale);
+                    if (Watch_Face.Activity.PulseMeter.ImageIndex != null)
+                    {
+                        int x = 0;
+                        int y = 0;
+                        Color new_color = ColorRead(Watch_Face.Activity.PulseMeter.Color);
+                        ColorToCoodinates(new_color, out x, out y);
+                        x = (int)Math.Round(x * scale);
+                        y = (int)Math.Round(y * scale);
+                        string colorStr = CoodinatesToColor(x, y);
+                        Watch_Face.Activity.PulseMeter.Color = colorStr;
+                    }
+                }
+
+                if ((Watch_Face.Activity.PulseGraph != null) &&
+                    (Watch_Face.Activity.PulseGraph.ClockHand != null) &&
+                    (Watch_Face.Activity.PulseGraph.ClockHand.Image != null))
+                {
+                    Watch_Face.Activity.PulseGraph.ClockHand.Image.X = (int)Math.Round(Watch_Face.Activity.PulseGraph.ClockHand.Image.X * scale);
+                    Watch_Face.Activity.PulseGraph.ClockHand.Image.Y = (int)Math.Round(Watch_Face.Activity.PulseGraph.ClockHand.Image.Y * scale);
+                    if (Watch_Face.Activity.PulseGraph.ClockHand.CenterOffset != null)
+                    {
+                        Watch_Face.Activity.PulseGraph.ClockHand.CenterOffset.X =
+                            (int)Math.Round(Watch_Face.Activity.PulseGraph.ClockHand.CenterOffset.X * scale);
+                        Watch_Face.Activity.PulseGraph.ClockHand.CenterOffset.Y =
+                            (int)Math.Round(Watch_Face.Activity.PulseGraph.ClockHand.CenterOffset.Y * scale);
+                    }
+                }
+
+                if ((Watch_Face.Activity.ColouredSquares != null) &&
+                    (Watch_Face.Activity.ColouredSquares.Coordinates != null))
+                {
+                    foreach (Coordinates coordinates in Watch_Face.Activity.ColouredSquares.Coordinates)
+                    {
+                        coordinates.X = (int)Math.Round(coordinates.X * scale);
+                        coordinates.Y = (int)Math.Round(coordinates.Y * scale);
+                    }
+                }
+
+                if (Watch_Face.Activity.Calories != null)
+                {
+                    Watch_Face.Activity.Calories.TopLeftX = (int)Math.Round(Watch_Face.Activity.Calories.TopLeftX * scale);
+                    Watch_Face.Activity.Calories.TopLeftY = (int)Math.Round(Watch_Face.Activity.Calories.TopLeftY * scale);
+                    Watch_Face.Activity.Calories.BottomRightX = (int)Math.Round(Watch_Face.Activity.Calories.BottomRightX * scale);
+                    Watch_Face.Activity.Calories.BottomRightY = (int)Math.Round(Watch_Face.Activity.Calories.BottomRightY * scale);
+                }
+                
+                if (Watch_Face.Activity.CaloriesGraph != null && Watch_Face.Activity.CaloriesGraph.Circle != null)
+                {
+                    Watch_Face.Activity.CaloriesGraph.Circle.CenterX = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.Circle.CenterX * scale);
+                    Watch_Face.Activity.CaloriesGraph.Circle.CenterY = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.Circle.CenterY * scale);
+                    Watch_Face.Activity.CaloriesGraph.Circle.RadiusX = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.Circle.RadiusX * scale);
+                    Watch_Face.Activity.CaloriesGraph.Circle.RadiusY = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.Circle.RadiusY * scale);
+                    Watch_Face.Activity.CaloriesGraph.Circle.Width = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.Circle.Width * scale);
+                    if (Watch_Face.Activity.CaloriesGraph.Circle.ImageIndex != null)
+                    {
+                        int x = 0;
+                        int y = 0;
+                        Color new_color = ColorRead(Watch_Face.Activity.CaloriesGraph.Circle.Color);
+                        ColorToCoodinates(new_color, out x, out y);
+                        x = (int)Math.Round(x * scale);
+                        y = (int)Math.Round(y * scale);
+                        string colorStr = CoodinatesToColor(x, y);
+                        Watch_Face.Activity.CaloriesGraph.Circle.Color = colorStr;
+                    }
+                }
+
+                if ((Watch_Face.Activity.CaloriesGraph != null) &&
+                    (Watch_Face.Activity.CaloriesGraph.ClockHand != null) &&
+                    (Watch_Face.Activity.CaloriesGraph.ClockHand.Image != null))
+                {
+                    Watch_Face.Activity.CaloriesGraph.ClockHand.Image.X = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.ClockHand.Image.X * scale);
+                    Watch_Face.Activity.CaloriesGraph.ClockHand.Image.Y = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.ClockHand.Image.Y * scale);
+                    if (Watch_Face.Activity.CaloriesGraph.ClockHand.CenterOffset != null)
+                    {
+                        Watch_Face.Activity.CaloriesGraph.ClockHand.CenterOffset.X =
+                            (int)Math.Round(Watch_Face.Activity.CaloriesGraph.ClockHand.CenterOffset.X * scale);
+                        Watch_Face.Activity.CaloriesGraph.ClockHand.CenterOffset.Y =
+                            (int)Math.Round(Watch_Face.Activity.CaloriesGraph.ClockHand.CenterOffset.Y * scale);
+                    }
+                }
+
+                if (Watch_Face.Activity.StarImage != null)
+                {
+                    Watch_Face.Activity.StarImage.X = (int)Math.Round(Watch_Face.Activity.StarImage.X * scale);
+                    Watch_Face.Activity.StarImage.Y = (int)Math.Round(Watch_Face.Activity.StarImage.Y * scale);
+                }
+            }
+            #endregion
+
+            #region Status
+            if (Watch_Face.Status != null)
+            {
+                if (Watch_Face.Status.Bluetooth != null)
+                {
+                    if (Watch_Face.Status.Bluetooth.Coordinates != null)
+                    {
+                        Watch_Face.Status.Bluetooth.Coordinates.X = (int)Math.Round(Watch_Face.Status.Bluetooth.Coordinates.X * scale);
+                        Watch_Face.Status.Bluetooth.Coordinates.Y = (int)Math.Round(Watch_Face.Status.Bluetooth.Coordinates.Y * scale);
+                    }
+                }
+
+                if (Watch_Face.Status.Alarm != null)
+                {
+                    if (Watch_Face.Status.Alarm.Coordinates != null)
+                    {
+                        Watch_Face.Status.Alarm.Coordinates.X = (int)Math.Round(Watch_Face.Status.Alarm.Coordinates.X * scale);
+                        Watch_Face.Status.Alarm.Coordinates.Y = (int)Math.Round(Watch_Face.Status.Alarm.Coordinates.Y * scale);
+                    }
+                }
+
+                if (Watch_Face.Status.Lock != null)
+                {
+                    if (Watch_Face.Status.Lock.Coordinates != null)
+                    {
+                        Watch_Face.Status.Lock.Coordinates.X = (int)Math.Round(Watch_Face.Status.Lock.Coordinates.X * scale);
+                        Watch_Face.Status.Lock.Coordinates.Y = (int)Math.Round(Watch_Face.Status.Lock.Coordinates.Y * scale);
+                    }
+                }
+
+                if (Watch_Face.Status.DoNotDisturb != null)
+                {
+                    if (Watch_Face.Status.DoNotDisturb.Coordinates != null)
+                    {
+                        Watch_Face.Status.DoNotDisturb.Coordinates.X = (int)Math.Round(Watch_Face.Status.DoNotDisturb.Coordinates.X * scale);
+                        Watch_Face.Status.DoNotDisturb.Coordinates.Y = (int)Math.Round(Watch_Face.Status.DoNotDisturb.Coordinates.Y * scale);
+                    }
+                }
+            }
+            #endregion
+
+            #region Battery
+            if (Watch_Face.Battery != null)
+            {
+                if (Watch_Face.Battery.Text != null)
+                {
+                    Watch_Face.Battery.Text.TopLeftX = (int)Math.Round(Watch_Face.Battery.Text.TopLeftX * scale);
+                    Watch_Face.Battery.Text.TopLeftY = (int)Math.Round(Watch_Face.Battery.Text.TopLeftY * scale);
+                    Watch_Face.Battery.Text.BottomRightX = (int)Math.Round(Watch_Face.Battery.Text.BottomRightX * scale);
+                    Watch_Face.Battery.Text.BottomRightY = (int)Math.Round(Watch_Face.Battery.Text.BottomRightY * scale);
+                }
+
+                if (Watch_Face.Battery.Images != null)
+                {
+                    Watch_Face.Battery.Images.X = (int)Math.Round(Watch_Face.Battery.Images.X * scale);
+                    Watch_Face.Battery.Images.Y = (int)Math.Round(Watch_Face.Battery.Images.Y * scale);
+                }
+
+                if ((Watch_Face.Battery.Unknown4 != null) && (Watch_Face.Battery.Unknown4.Image != null))
+                {
+                    Watch_Face.Battery.Unknown4.Image.X = (int)Math.Round(Watch_Face.Battery.Unknown4.Image.X * scale);
+                    Watch_Face.Battery.Unknown4.Image.Y = (int)Math.Round(Watch_Face.Battery.Unknown4.Image.Y * scale);
+                    if (Watch_Face.Battery.Unknown4.CenterOffset != null)
+                    {
+                        Watch_Face.Battery.Unknown4.CenterOffset.X =
+                             (int)Math.Round(Watch_Face.Battery.Unknown4.CenterOffset.X * scale);
+                        Watch_Face.Battery.Unknown4.CenterOffset.Y =
+                             (int)Math.Round(Watch_Face.Battery.Unknown4.CenterOffset.Y * scale);
+                    }
+                }
+
+                if (Watch_Face.Battery.Percent != null)
+                {
+                    Watch_Face.Battery.Percent.X = (int)Math.Round(Watch_Face.Battery.Percent.X * scale);
+                    Watch_Face.Battery.Percent.Y = (int)Math.Round(Watch_Face.Battery.Percent.Y * scale);
+                }
+
+                if (Watch_Face.Battery.Scale != null)
+                {
+                    Watch_Face.Battery.Scale.CenterX = (int)Math.Round(Watch_Face.Battery.Scale.CenterX * scale);
+                    Watch_Face.Battery.Scale.CenterY = (int)Math.Round(Watch_Face.Battery.Scale.CenterY * scale);
+                    Watch_Face.Battery.Scale.RadiusX = (int)Math.Round(Watch_Face.Battery.Scale.RadiusX * scale);
+                    Watch_Face.Battery.Scale.RadiusY = (int)Math.Round(Watch_Face.Battery.Scale.RadiusY * scale);
+                    Watch_Face.Battery.Scale.Width = (int)Math.Round(Watch_Face.Battery.Scale.Width * scale);
+                    if (Watch_Face.Battery.Scale.ImageIndex != null)
+                    {
+                        int x = 0;
+                        int y = 0;
+                        Color new_color = ColorRead(Watch_Face.Battery.Scale.Color);
+                        ColorToCoodinates(new_color, out x, out y);
+                        x = (int)Math.Round(x * scale);
+                        y = (int)Math.Round(y * scale);
+                        string colorStr = CoodinatesToColor(x, y);
+                        Watch_Face.Battery.Scale.Color = colorStr;
+                    }
+                }
+
+                if ((Watch_Face.Battery.Icons != null) && (Watch_Face.Battery.Icons.Coordinates != null))
+                {
+                    foreach (Coordinates coordinates in Watch_Face.Battery.Icons.Coordinates)
+                    {
+                        coordinates.X = (int)Math.Round(coordinates.X * scale);
+                        coordinates.Y = (int)Math.Round(coordinates.Y * scale);
+                    }
+                }
+            }
+            #endregion
+
+            #region AnalogDialFace
+            if (Watch_Face.AnalogDialFace != null)
+            {
+                if ((Watch_Face.AnalogDialFace.Hours != null) && (Watch_Face.AnalogDialFace.Hours.Image != null))
+                {
+                    Watch_Face.AnalogDialFace.Hours.Image.X = (int)Math.Round(Watch_Face.AnalogDialFace.Hours.Image.X * scale);
+                    Watch_Face.AnalogDialFace.Hours.Image.Y = (int)Math.Round(Watch_Face.AnalogDialFace.Hours.Image.Y * scale);
+
+                    if (Watch_Face.AnalogDialFace.Hours.CenterOffset != null)
+                    {
+                        Watch_Face.AnalogDialFace.Hours.CenterOffset.X = 
+                            (int)Math.Round(Watch_Face.AnalogDialFace.Hours.CenterOffset.X * scale);
+                        Watch_Face.AnalogDialFace.Hours.CenterOffset.Y = 
+                            (int)Math.Round(Watch_Face.AnalogDialFace.Hours.CenterOffset.Y * scale);
+                    }
+                }
+
+                if ((Watch_Face.AnalogDialFace.Minutes != null) && (Watch_Face.AnalogDialFace.Minutes.Image != null))
+                {
+                    Watch_Face.AnalogDialFace.Minutes.Image.X = (int)Math.Round(Watch_Face.AnalogDialFace.Minutes.Image.X * scale);
+                    Watch_Face.AnalogDialFace.Minutes.Image.Y = (int)Math.Round(Watch_Face.AnalogDialFace.Minutes.Image.Y * scale);
+
+                    if (Watch_Face.AnalogDialFace.Minutes.CenterOffset != null)
+                    {
+                        Watch_Face.AnalogDialFace.Minutes.CenterOffset.X =
+                             (int)Math.Round(Watch_Face.AnalogDialFace.Minutes.CenterOffset.X * scale);
+                        Watch_Face.AnalogDialFace.Minutes.CenterOffset.Y =
+                             (int)Math.Round(Watch_Face.AnalogDialFace.Minutes.CenterOffset.Y * scale);
+                    }
+                }
+
+                if ((Watch_Face.AnalogDialFace.Seconds != null) && (Watch_Face.AnalogDialFace.Seconds.Image != null))
+                {
+                    Watch_Face.AnalogDialFace.Seconds.Image.X = (int)Math.Round(Watch_Face.AnalogDialFace.Seconds.Image.X * scale);
+                    Watch_Face.AnalogDialFace.Seconds.Image.Y = (int)Math.Round(Watch_Face.AnalogDialFace.Seconds.Image.Y * scale);
+
+                    if (Watch_Face.AnalogDialFace.Seconds.CenterOffset != null)
+                    {
+                        Watch_Face.AnalogDialFace.Seconds.CenterOffset.X =
+                            (int)Math.Round(Watch_Face.AnalogDialFace.Seconds.CenterOffset.X * scale);
+                        Watch_Face.AnalogDialFace.Seconds.CenterOffset.Y =
+                            (int)Math.Round(Watch_Face.AnalogDialFace.Seconds.CenterOffset.Y * scale);
+                    }
+                }
+
+                if (Watch_Face.AnalogDialFace.HourCenterImage != null)
+                {
+                    Watch_Face.AnalogDialFace.HourCenterImage.X = (int)Math.Round(Watch_Face.AnalogDialFace.HourCenterImage.X * scale);
+                    Watch_Face.AnalogDialFace.HourCenterImage.Y = (int)Math.Round(Watch_Face.AnalogDialFace.HourCenterImage.Y * scale);
+                }
+
+                if (Watch_Face.AnalogDialFace.MinCenterImage != null)
+                {
+                    Watch_Face.AnalogDialFace.MinCenterImage.X = (int)Math.Round(Watch_Face.AnalogDialFace.MinCenterImage.X * scale);
+                    Watch_Face.AnalogDialFace.MinCenterImage.Y = (int)Math.Round(Watch_Face.AnalogDialFace.MinCenterImage.Y * scale);
+                }
+
+                if (Watch_Face.AnalogDialFace.SecCenterImage != null)
+                {
+                    Watch_Face.AnalogDialFace.SecCenterImage.X = (int)Math.Round(Watch_Face.AnalogDialFace.SecCenterImage.X * scale);
+                    Watch_Face.AnalogDialFace.SecCenterImage.Y = (int)Math.Round(Watch_Face.AnalogDialFace.SecCenterImage.Y * scale);
+                }
+            }
+            #endregion
+
+            #region Weather
+            if (Watch_Face.Weather != null)
+            {
+                if ((Watch_Face.Weather.Temperature != null) && (Watch_Face.Weather.Temperature.Current != null))
+                {
+                    Watch_Face.Weather.Temperature.Current.TopLeftX = (int)Math.Round(Watch_Face.Weather.Temperature.Current.TopLeftX * scale);
+                    Watch_Face.Weather.Temperature.Current.TopLeftY = (int)Math.Round(Watch_Face.Weather.Temperature.Current.TopLeftY * scale);
+                    Watch_Face.Weather.Temperature.Current.BottomRightX = (int)Math.Round(Watch_Face.Weather.Temperature.Current.BottomRightX * scale);
+                    Watch_Face.Weather.Temperature.Current.BottomRightY = (int)Math.Round(Watch_Face.Weather.Temperature.Current.BottomRightY * scale);
+                }
+
+                if ((Watch_Face.Weather.Temperature != null) && (Watch_Face.Weather.Temperature.Today != null))
+                {
+                    if ((Watch_Face.Weather.Temperature.Today.Separate != null) &&
+                        (Watch_Face.Weather.Temperature.Today.Separate.Day != null))
+                    {
+                        Watch_Face.Weather.Temperature.Today.Separate.Day.TopLeftX =
+                            (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Day.TopLeftX * scale);
+                        Watch_Face.Weather.Temperature.Today.Separate.Day.TopLeftY =
+                            (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Day.TopLeftY * scale);
+                        Watch_Face.Weather.Temperature.Today.Separate.Day.BottomRightX =
+                            (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Day.BottomRightX * scale);
+                        Watch_Face.Weather.Temperature.Today.Separate.Day.BottomRightY =
+                            (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Day.BottomRightY * scale);
+                    }
+
+                    if ((Watch_Face.Weather.Temperature.Today.Separate != null) &&
+                        (Watch_Face.Weather.Temperature.Today.Separate.Night != null))
+                    {
+                        Watch_Face.Weather.Temperature.Today.Separate.Night.TopLeftX =
+                            (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Night.TopLeftX * scale);
+                        Watch_Face.Weather.Temperature.Today.Separate.Night.TopLeftY =
+                            (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Night.TopLeftY * scale);
+                        Watch_Face.Weather.Temperature.Today.Separate.Night.BottomRightX =
+                            (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Night.BottomRightX * scale);
+                        Watch_Face.Weather.Temperature.Today.Separate.Night.BottomRightY =
+                            (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Night.BottomRightY * scale);
+                    }
+                }
+
+                if ((Watch_Face.Weather.Icon != null) && (Watch_Face.Weather.Icon.Images != null))
+                {
+                    Watch_Face.Weather.Icon.Images.X = (int)Math.Round(Watch_Face.Weather.Icon.Images.X * scale);
+                    Watch_Face.Weather.Icon.Images.Y = (int)Math.Round(Watch_Face.Weather.Icon.Images.Y * scale);
+                }
+            }
+            #endregion
+
+            #region Shortcuts
+            if (Watch_Face.Shortcuts != null)
+            {
+                if (Watch_Face.Shortcuts.State != null && Watch_Face.Shortcuts.State.Element != null)
+                {
+                    Watch_Face.Shortcuts.State.Element.TopLeftX = (int)Math.Round(Watch_Face.Shortcuts.State.Element.TopLeftX * scale);
+                    Watch_Face.Shortcuts.State.Element.TopLeftY = (int)Math.Round(Watch_Face.Shortcuts.State.Element.TopLeftY * scale);
+                    Watch_Face.Shortcuts.State.Element.Width = (int)Math.Round(Watch_Face.Shortcuts.State.Element.Width * scale);
+                    Watch_Face.Shortcuts.State.Element.Height = (int)Math.Round(Watch_Face.Shortcuts.State.Element.Height * scale);
+                }
+
+                if (Watch_Face.Shortcuts.Pulse != null && Watch_Face.Shortcuts.Pulse.Element != null)
+                {
+                    Watch_Face.Shortcuts.Pulse.Element.TopLeftX = (int)Math.Round(Watch_Face.Shortcuts.Pulse.Element.TopLeftX * scale);
+                    Watch_Face.Shortcuts.Pulse.Element.TopLeftY = (int)Math.Round(Watch_Face.Shortcuts.Pulse.Element.TopLeftY * scale);
+                    Watch_Face.Shortcuts.Pulse.Element.Width = (int)Math.Round(Watch_Face.Shortcuts.Pulse.Element.Width * scale);
+                    Watch_Face.Shortcuts.Pulse.Element.Height = (int)Math.Round(Watch_Face.Shortcuts.Pulse.Element.Height * scale);
+                }
+
+                if (Watch_Face.Shortcuts.Weather != null && Watch_Face.Shortcuts.Weather.Element != null)
+                {
+                    Watch_Face.Shortcuts.Weather.Element.TopLeftX = (int)Math.Round(Watch_Face.Shortcuts.Weather.Element.TopLeftX * scale);
+                    Watch_Face.Shortcuts.Weather.Element.TopLeftY = (int)Math.Round(Watch_Face.Shortcuts.Weather.Element.TopLeftY * scale);
+                    Watch_Face.Shortcuts.Weather.Element.Width = (int)Math.Round(Watch_Face.Shortcuts.Weather.Element.Width * scale);
+                    Watch_Face.Shortcuts.Weather.Element.Height = (int)Math.Round(Watch_Face.Shortcuts.Weather.Element.Height * scale);
+                }
+
+                if (Watch_Face.Shortcuts.Unknown4 != null && Watch_Face.Shortcuts.Unknown4.Element != null)
+                {
+                    Watch_Face.Shortcuts.Unknown4.Element.TopLeftX = (int)Math.Round(Watch_Face.Shortcuts.Unknown4.Element.TopLeftX * scale);
+                    Watch_Face.Shortcuts.Unknown4.Element.TopLeftY = (int)Math.Round(Watch_Face.Shortcuts.Unknown4.Element.TopLeftY * scale);
+                    Watch_Face.Shortcuts.Unknown4.Element.Width = (int)Math.Round(Watch_Face.Shortcuts.Unknown4.Element.Width * scale);
+                    Watch_Face.Shortcuts.Unknown4.Element.Height = (int)Math.Round(Watch_Face.Shortcuts.Unknown4.Element.Height * scale);
+                }
+            }
+            #endregion
+
+            #region Animation
+            if (Watch_Face.Unknown11 != null)
+            {
+                // покадровая анимация
+                if (Watch_Face.Unknown11.Unknown11_2 != null && Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1 != null)
+                {
+                    Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1.X = (int)Math.Round(Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1.X * scale);
+                    Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1.Y = (int)Math.Round(Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1.Y * scale);
+                }
+
+                // перемещение между координатами
+                if (Watch_Face.Unknown11.Unknown11_1 != null)
+                {
+                    foreach (MotiomAnimation MotiomAnimation in Watch_Face.Unknown11.Unknown11_1)
+                    {
+                        if (MotiomAnimation.Unknown11d1p2 != null && MotiomAnimation.Unknown11d1p3 != null)
+                        {
+                            MotiomAnimation.Unknown11d1p2.X = (int)Math.Round(MotiomAnimation.Unknown11d1p2.X * scale);
+                            MotiomAnimation.Unknown11d1p2.Y = (int)Math.Round(MotiomAnimation.Unknown11d1p2.Y * scale);
+                            MotiomAnimation.Unknown11d1p3.X = (int)Math.Round(MotiomAnimation.Unknown11d1p3.X * scale);
+                            MotiomAnimation.Unknown11d1p3.Y = (int)Math.Round(MotiomAnimation.Unknown11d1p3.Y * scale);
+                        }
+                    }
+                }
+            }
+            #endregion
         }
     }
 }
