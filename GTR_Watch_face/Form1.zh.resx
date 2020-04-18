@@ -3715,7 +3715,7 @@
     <value>12小时制</value>
   </data>
   <data name="tabPage4.Text" xml:space="preserve">
-    <value>小时钟</value>
+    <value>时钟</value>
   </data>
   <data name="checkBox_Hours.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
