@@ -133,10 +133,10 @@
     <value>关于程序</value>
   </data>
   <data name="button_zip_unpack.Text" xml:space="preserve">
-    <value>解包压缩bin</value>
+    <value>解包(压缩的bin)</value>
   </data>
   <data name="button_pack_zip.Text" xml:space="preserve">
-    <value>打包并压缩bin</value>
+    <value>打包(压缩的bin)</value>
   </data>
   <data name="button_zip.Text" xml:space="preserve">
     <value>压缩bin</value>
@@ -512,13 +512,13 @@
     <value>白天气温</value>
   </data>
   <data name="button_JsonPreview_Random.Text" xml:space="preserve">
-    <value>随机配置</value>
+    <value>随机Preview</value>
   </data>
   <data name="button_JsonPreview_Read.Text" xml:space="preserve">
-    <value>载入配置</value>
+    <value>载入Preview</value>
   </data>
   <data name="button_JsonPreview_Write.Text" xml:space="preserve">
-    <value>保存配置</value>
+    <value>保存Preview</value>
   </data>
   <data name="checkBox_DoNotDisturb_Set10.Text" xml:space="preserve">
     <value>勿扰模式</value>
@@ -1476,26 +1476,26 @@
     <value>原点坐标</value>
   </data>
   <data name="AnimationColumn2.HeaderText" xml:space="preserve">
-    <value>起始坐标（X）</value>
+    <value>起始坐标(X):</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="AnimationColumn2.Width" type="System.Int32, mscorlib">
     <value>80</value>
   </data>
   <data name="AnimationColumn3.HeaderText" xml:space="preserve">
-    <value>起始坐标（Y）</value>
+    <value>起始坐标(Y):</value>
   </data>
   <data name="AnimationColumn3.Width" type="System.Int32, mscorlib">
     <value>80</value>
   </data>
   <data name="AnimationColumn4.HeaderText" xml:space="preserve">
-    <value>终点坐标（X）</value>
+    <value>终点坐标(X):</value>
   </data>
   <data name="AnimationColumn4.Width" type="System.Int32, mscorlib">
     <value>80</value>
   </data>
   <data name="AnimationColumn5.HeaderText" xml:space="preserve">
-    <value>终点坐标（Y）</value>
+    <value>终点坐标(Y):</value>
   </data>
   <data name="AnimationColumn5.Width" type="System.Int32, mscorlib">
     <value>80</value>
@@ -1711,7 +1711,7 @@
     <value>61, 13</value>
   </data>
   <data name="label286.Text" xml:space="preserve">
-    <value>错误符号：</value>
+    <value>错误符号:</value>
   </data>
   <data name="label284.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 13</value>
@@ -1738,7 +1738,7 @@
     <value>37, 13</value>
   </data>
   <data name="label270.Text" xml:space="preserve">
-    <value>间距：</value>
+    <value>间距:</value>
   </data>
   <data name="comboBox_Weather_Text_Alignment.Items" xml:space="preserve">
     <value>左上方</value>
@@ -1801,7 +1801,7 @@
     <value>37, 13</value>
   </data>
   <data name="label289.Text" xml:space="preserve">
-    <value>间距：</value>
+    <value>间距:</value>
   </data>
   <data name="comboBox_Weather_Day_Alignment.Items" xml:space="preserve">
     <value>左上方</value>
@@ -1918,7 +1918,7 @@
     <value>61, 13</value>
   </data>
   <data name="label287.Text" xml:space="preserve">
-    <value>错误符号：</value>
+    <value>错误符号:</value>
   </data>
   <data name="checkBox_Weather_Icon.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
@@ -1951,7 +1951,7 @@
     <value>8, 34</value>
   </data>
   <data name="label216.Text" xml:space="preserve">
-    <value>中心时针(X)</value>
+    <value>中心时针(X):</value>
   </data>
   <data name="checkBox_AnalogClock_Hour.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
@@ -1969,7 +1969,7 @@
     <value>70, 13</value>
   </data>
   <data name="label349.Text" xml:space="preserve">
-    <value>轴偏移Y</value>
+    <value>轴偏移Y:</value>
   </data>
   <data name="label350.Location" type="System.Drawing.Point, System.Drawing">
     <value>126, 43</value>
@@ -1978,7 +1978,7 @@
     <value>70, 13</value>
   </data>
   <data name="label350.Text" xml:space="preserve">
-    <value>轴偏移X</value>
+    <value>轴偏移X:</value>
   </data>
   <data name="numericUpDown_AnalogClock_Hour_Y.Location" type="System.Drawing.Point, System.Drawing">
     <value>76, 76</value>
@@ -1987,7 +1987,7 @@
     <value>8, 68</value>
   </data>
   <data name="label215.Text" xml:space="preserve">
-    <value>中心时针(Y)</value>
+    <value>中心时针(Y):</value>
   </data>
   <data name="groupBox4.Text" xml:space="preserve">
     <value>中心图片</value>
@@ -2026,7 +2026,7 @@
     <value>70, 13</value>
   </data>
   <data name="label351.Text" xml:space="preserve">
-    <value>轴偏移Y</value>
+    <value>轴偏移Y:</value>
   </data>
   <data name="label352.Location" type="System.Drawing.Point, System.Drawing">
     <value>126, 43</value>
@@ -2035,7 +2035,7 @@
     <value>70, 13</value>
   </data>
   <data name="label352.Text" xml:space="preserve">
-    <value>轴偏移X</value>
+    <value>轴偏移X:</value>
   </data>
   <data name="label208.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 68</value>
@@ -2044,7 +2044,7 @@
     <value>75, 30</value>
   </data>
   <data name="label208.Text" xml:space="preserve">
-    <value>中心分针(Y)</value>
+    <value>中心分针(Y):</value>
   </data>
   <data name="label209.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 34</value>
@@ -2053,7 +2053,7 @@
     <value>75, 30</value>
   </data>
   <data name="label209.Text" xml:space="preserve">
-    <value>中心分针(X)</value>
+    <value>中心分针(X):</value>
   </data>
   <data name="checkBox_AnalogClock_Min.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
@@ -2098,7 +2098,7 @@
     <value>70, 13</value>
   </data>
   <data name="label353.Text" xml:space="preserve">
-    <value>轴偏移Y</value>
+    <value>轴偏移Y:</value>
   </data>
   <data name="numericUpDown_AnalogClock_Sec_Offset_X.Location" type="System.Drawing.Point, System.Drawing">
     <value>191, 41</value>
@@ -2110,7 +2110,7 @@
     <value>70, 13</value>
   </data>
   <data name="label354.Text" xml:space="preserve">
-    <value>轴偏移X</value>
+    <value>轴偏移X:</value>
   </data>
   <data name="numericUpDown_AnalogClock_Sec_Y.Location" type="System.Drawing.Point, System.Drawing">
     <value>76, 76</value>
@@ -2122,7 +2122,7 @@
     <value>75, 30</value>
   </data>
   <data name="label211.Text" xml:space="preserve">
-    <value>中心秒针(Y)</value>
+    <value>中心秒针(Y):</value>
   </data>
   <data name="numericUpDown_AnalogClock_Sec_X.Location" type="System.Drawing.Point, System.Drawing">
     <value>76, 41</value>
@@ -2134,7 +2134,7 @@
     <value>75, 30</value>
   </data>
   <data name="label212.Text" xml:space="preserve">
-    <value>中心秒针(X)</value>
+    <value>中心秒针(X):</value>
   </data>
   <data name="checkBox_AnalogClock_Sec.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
@@ -2164,7 +2164,7 @@
     <value>37, 13</value>
   </data>
   <data name="label184.Text" xml:space="preserve">
-    <value>间距：</value>
+    <value>间距:</value>
   </data>
   <data name="comboBox_Battery_Text_Alignment.Items" xml:space="preserve">
     <value>左上方</value>
@@ -2254,7 +2254,7 @@
     <value>平整</value>
   </data>
   <data name="label347.Text" xml:space="preserve">
-    <value>行尾</value>
+    <value>行尾:</value>
   </data>
   <data name="label199.Text" xml:space="preserve">
     <value>结束角</value>
@@ -2332,7 +2332,7 @@
     <value>70, 13</value>
   </data>
   <data name="label368.Text" xml:space="preserve">
-    <value>轴偏移Y</value>
+    <value>轴偏移Y:</value>
   </data>
   <data name="label369.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 32</value>
@@ -2341,7 +2341,7 @@
     <value>70, 13</value>
   </data>
   <data name="label369.Text" xml:space="preserve">
-    <value>轴偏移X</value>
+    <value>轴偏移X:</value>
   </data>
   <data name="comboBox_Battery_ClockHand_Image.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 93</value>
@@ -2353,7 +2353,7 @@
     <value>80, 30</value>
   </data>
   <data name="label371.Text" xml:space="preserve">
-    <value>箭头中心(Y)</value>
+    <value>箭头中心(Y):</value>
   </data>
   <data name="label372.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 23</value>
@@ -2362,7 +2362,7 @@
     <value>80, 30</value>
   </data>
   <data name="label372.Text" xml:space="preserve">
-    <value>箭头中心(X)</value>
+    <value>箭头中心(X):</value>
   </data>
   <data name="checkBox_Battery_ClockHand.Text" xml:space="preserve">
     <value>启用</value>
@@ -2545,7 +2545,7 @@
     <value>37, 13</value>
   </data>
   <data name="label122.Text" xml:space="preserve">
-    <value>间距：</value>
+    <value>间距:</value>
   </data>
   <data name="comboBox_ActivitySteps_Alignment.Items" xml:space="preserve">
     <value>左上方</value>
@@ -2611,7 +2611,7 @@
     <value>37, 13</value>
   </data>
   <data name="label172.Text" xml:space="preserve">
-    <value>后缀：</value>
+    <value>后缀:</value>
   </data>
   <data name="checkBox_ActivityDistance.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
@@ -2626,7 +2626,7 @@
     <value>37, 13</value>
   </data>
   <data name="label132.Text" xml:space="preserve">
-    <value>间距：</value>
+    <value>间距:</value>
   </data>
   <data name="comboBox_ActivityDistance_Alignment.Items" xml:space="preserve">
     <value>左上方</value>
@@ -2704,7 +2704,7 @@
     <value>37, 13</value>
   </data>
   <data name="label142.Text" xml:space="preserve">
-    <value>间距：</value>
+    <value>间距:</value>
   </data>
   <data name="comboBox_ActivityPuls_Alignment.Items" xml:space="preserve">
     <value>左上方</value>
@@ -2740,7 +2740,7 @@
     <value>对齐方式</value>
   </data>
   <data name="tabPage44.Text" xml:space="preserve">
-    <value>心率 (进度条)</value>
+    <value>心率(进度条)</value>
   </data>
   <data name="comboBox_ActivityPulsScale_Flatness.Items" xml:space="preserve">
     <value>圆</value>
@@ -2773,7 +2773,7 @@
     <value>半径(X):</value>
   </data>
   <data name="label417.Text" xml:space="preserve">
-    <value>行尾</value>
+    <value>行尾:</value>
   </data>
   <data name="label422.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 13</value>
@@ -2782,7 +2782,7 @@
     <value>半径(Y):</value>
   </data>
   <data name="label418.Text" xml:space="preserve">
-    <value>结束角</value>
+    <value>结束角:</value>
   </data>
   <data name="label421.Location" type="System.Drawing.Point, System.Drawing">
     <value>260, 26</value>
@@ -2794,7 +2794,7 @@
     <value>宽度：</value>
   </data>
   <data name="label419.Text" xml:space="preserve">
-    <value>起始角度</value>
+    <value>起始角度:</value>
   </data>
   <data name="label420.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 13</value>
@@ -2818,7 +2818,7 @@
     <value>启用</value>
   </data>
   <data name="label466.Text" xml:space="preserve">
-    <value>结束角</value>
+    <value>结束角:</value>
   </data>
   <data name="label472.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 23</value>
@@ -2827,10 +2827,10 @@
     <value>80, 30</value>
   </data>
   <data name="label472.Text" xml:space="preserve">
-    <value>箭头中心(X)</value>
+    <value>箭头中心(X):</value>
   </data>
   <data name="label467.Text" xml:space="preserve">
-    <value>起始角度</value>
+    <value>起始角度:</value>
   </data>
   <data name="label471.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 57</value>
@@ -2839,13 +2839,13 @@
     <value>80, 30</value>
   </data>
   <data name="label471.Text" xml:space="preserve">
-    <value>箭头中心(Y)</value>
+    <value>箭头中心(Y):</value>
   </data>
   <data name="label468.Text" xml:space="preserve">
-    <value>轴偏移Y</value>
+    <value>轴偏移Y:</value>
   </data>
   <data name="label469.Text" xml:space="preserve">
-    <value>轴偏移X</value>
+    <value>轴偏移X:</value>
   </data>
   <data name="tabPage45.Text" xml:space="preserve">
     <value>心率 (段)</value>
@@ -2887,7 +2887,7 @@
     <value>37, 13</value>
   </data>
   <data name="label152.Text" xml:space="preserve">
-    <value>间距：</value>
+    <value>间距:</value>
   </data>
   <data name="comboBox_ActivityCalories_Alignment.Items" xml:space="preserve">
     <value>左上方</value>
@@ -2956,7 +2956,7 @@
     <value>半径(X):</value>
   </data>
   <data name="label112.Text" xml:space="preserve">
-    <value>行尾</value>
+    <value>行尾:</value>
   </data>
   <data name="label117.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 13</value>
@@ -2965,7 +2965,7 @@
     <value>半径(Y):</value>
   </data>
   <data name="label113.Text" xml:space="preserve">
-    <value>结束角</value>
+    <value>结束角:</value>
   </data>
   <data name="label116.Location" type="System.Drawing.Point, System.Drawing">
     <value>260, 26</value>
@@ -2974,16 +2974,16 @@
     <value>37, 13</value>
   </data>
   <data name="label116.Text" xml:space="preserve">
-    <value>宽度：</value>
+    <value>宽度:</value>
   </data>
   <data name="label114.Text" xml:space="preserve">
-    <value>起始角度</value>
+    <value>起始角度:</value>
   </data>
   <data name="label115.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 13</value>
   </data>
   <data name="label115.Text" xml:space="preserve">
-    <value>颜色：</value>
+    <value>颜色:</value>
   </data>
   <data name="tabPage52.Text" xml:space="preserve">
     <value>卡路里（指标）</value>
@@ -3001,7 +3001,7 @@
     <value>启用</value>
   </data>
   <data name="label458.Text" xml:space="preserve">
-    <value>结束角</value>
+    <value>结束角:</value>
   </data>
   <data name="label465.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 23</value>
@@ -3010,10 +3010,10 @@
     <value>80, 30</value>
   </data>
   <data name="label465.Text" xml:space="preserve">
-    <value>箭头中心(X)</value>
+    <value>箭头中心(X):</value>
   </data>
   <data name="label459.Text" xml:space="preserve">
-    <value>起始角度</value>
+    <value>起始角度:</value>
   </data>
   <data name="label464.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 57</value>
@@ -3022,13 +3022,13 @@
     <value>80, 30</value>
   </data>
   <data name="label464.Text" xml:space="preserve">
-    <value>箭头中心(Y)</value>
+    <value>箭头中心(Y):</value>
   </data>
   <data name="label461.Text" xml:space="preserve">
-    <value>轴偏移Y</value>
+    <value>轴偏移Y:</value>
   </data>
   <data name="label462.Text" xml:space="preserve">
-    <value>轴偏移X</value>
+    <value>轴偏移X:</value>
   </data>
   <data name="tabPage16.Text" xml:space="preserve">
     <value>目标达成</value>
@@ -3070,19 +3070,19 @@
     <value>50, 13</value>
   </data>
   <data name="label104.Text" xml:space="preserve">
-    <value>中心 (X):</value>
+    <value>中心(X):</value>
   </data>
   <data name="label348.Text" xml:space="preserve">
-    <value>行尾</value>
+    <value>行尾:</value>
   </data>
   <data name="label105.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 13</value>
   </data>
   <data name="label105.Text" xml:space="preserve">
-    <value>中心 (Y):</value>
+    <value>中心(Y):</value>
   </data>
   <data name="label111.Text" xml:space="preserve">
-    <value>结束角</value>
+    <value>结束角:</value>
   </data>
   <data name="label107.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 13</value>
@@ -3091,7 +3091,7 @@
     <value>半径(X):</value>
   </data>
   <data name="label110.Text" xml:space="preserve">
-    <value>起始角度</value>
+    <value>起始角度:</value>
   </data>
   <data name="label106.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 13</value>
@@ -3103,7 +3103,7 @@
     <value>37, 13</value>
   </data>
   <data name="label109.Text" xml:space="preserve">
-    <value>颜色：</value>
+    <value>颜色:</value>
   </data>
   <data name="label108.Location" type="System.Drawing.Point, System.Drawing">
     <value>260, 26</value>
@@ -3112,7 +3112,7 @@
     <value>37, 13</value>
   </data>
   <data name="label108.Text" xml:space="preserve">
-    <value>宽度：</value>
+    <value>宽度:</value>
   </data>
   <data name="tabPage37.Text" xml:space="preserve">
     <value>指针</value>
@@ -3145,7 +3145,7 @@
     <value>70, 13</value>
   </data>
   <data name="label377.Text" xml:space="preserve">
-    <value>轴偏移Y</value>
+    <value>轴偏移Y:</value>
   </data>
   <data name="label378.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 32</value>
@@ -3154,7 +3154,7 @@
     <value>70, 13</value>
   </data>
   <data name="label378.Text" xml:space="preserve">
-    <value>轴偏移X</value>
+    <value>轴偏移X:</value>
   </data>
   <data name="comboBox_StProg_ClockHand_Image.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 93</value>
@@ -3166,7 +3166,7 @@
     <value>80, 30</value>
   </data>
   <data name="label380.Text" xml:space="preserve">
-    <value>箭头中心(Y)</value>
+    <value>箭头中心(Y):</value>
   </data>
   <data name="label381.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 23</value>
@@ -3175,7 +3175,7 @@
     <value>80, 30</value>
   </data>
   <data name="label381.Text" xml:space="preserve">
-    <value>箭头中心(X)</value>
+    <value>箭头中心(X):</value>
   </data>
   <data name="tabPage41.Text" xml:space="preserve">
     <value>区隔</value>
@@ -3205,13 +3205,13 @@
     <value>245, 55</value>
   </data>
   <data name="label396.Text" xml:space="preserve">
-    <value>结束角</value>
+    <value>结束角:</value>
   </data>
   <data name="label397.Location" type="System.Drawing.Point, System.Drawing">
     <value>245, 23</value>
   </data>
   <data name="label397.Text" xml:space="preserve">
-    <value>起始角度</value>
+    <value>起始角度:</value>
   </data>
   <data name="label398.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 63</value>
@@ -3220,7 +3220,7 @@
     <value>70, 13</value>
   </data>
   <data name="label398.Text" xml:space="preserve">
-    <value>轴偏移Y</value>
+    <value>轴偏移Y:</value>
   </data>
   <data name="label399.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 32</value>
@@ -3229,7 +3229,7 @@
     <value>70, 13</value>
   </data>
   <data name="label399.Text" xml:space="preserve">
-    <value>轴偏移X</value>
+    <value>轴偏移X:</value>
   </data>
   <data name="comboBox_ADDay_ClockHand_Image.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 93</value>
@@ -3241,7 +3241,7 @@
     <value>80, 30</value>
   </data>
   <data name="label401.Text" xml:space="preserve">
-    <value>箭头中心(Y)</value>
+    <value>箭头中心(Y):</value>
   </data>
   <data name="label402.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 23</value>
@@ -3250,7 +3250,7 @@
     <value>80, 30</value>
   </data>
   <data name="label402.Text" xml:space="preserve">
-    <value>箭头中心(X)</value>
+    <value>箭头中心(X):</value>
   </data>
   <data name="tabPage39.Text" xml:space="preserve">
     <value>星期</value>
@@ -3266,13 +3266,13 @@
     <value>245, 55</value>
   </data>
   <data name="label389.Text" xml:space="preserve">
-    <value>结束角</value>
+    <value>结束角:</value>
   </data>
   <data name="label390.Location" type="System.Drawing.Point, System.Drawing">
     <value>245, 23</value>
   </data>
   <data name="label390.Text" xml:space="preserve">
-    <value>起始角度</value>
+    <value>起始角度:</value>
   </data>
   <data name="label391.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 63</value>
@@ -3281,7 +3281,7 @@
     <value>70, 13</value>
   </data>
   <data name="label391.Text" xml:space="preserve">
-    <value>轴偏移Y</value>
+    <value>轴偏移Y:</value>
   </data>
   <data name="label392.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 32</value>
@@ -3290,7 +3290,7 @@
     <value>70, 13</value>
   </data>
   <data name="label392.Text" xml:space="preserve">
-    <value>轴偏移X</value>
+    <value>轴偏移X:</value>
   </data>
   <data name="comboBox_ADWeekDay_ClockHand_Image.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 93</value>
@@ -3302,7 +3302,7 @@
     <value>80, 30</value>
   </data>
   <data name="label394.Text" xml:space="preserve">
-    <value>箭头中心(Y)</value>
+    <value>箭头中心(Y):</value>
   </data>
   <data name="label395.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 23</value>
@@ -3311,7 +3311,7 @@
     <value>80, 30</value>
   </data>
   <data name="label395.Text" xml:space="preserve">
-    <value>箭头中心(X)</value>
+    <value>箭头中心(X):</value>
   </data>
   <data name="checkBox_ADWeekDay_ClockHand.Text" xml:space="preserve">
     <value>启用</value>
@@ -3329,13 +3329,13 @@
     <value>245, 55</value>
   </data>
   <data name="label382.Text" xml:space="preserve">
-    <value>结束角</value>
+    <value>结束角:</value>
   </data>
   <data name="label383.Location" type="System.Drawing.Point, System.Drawing">
     <value>245, 23</value>
   </data>
   <data name="label383.Text" xml:space="preserve">
-    <value>起始角度</value>
+    <value>起始角度:</value>
   </data>
   <data name="label384.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 63</value>
@@ -3344,7 +3344,7 @@
     <value>70, 13</value>
   </data>
   <data name="label384.Text" xml:space="preserve">
-    <value>轴偏移Y</value>
+    <value>轴偏移Y:</value>
   </data>
   <data name="label385.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 32</value>
@@ -3353,7 +3353,7 @@
     <value>70, 13</value>
   </data>
   <data name="label385.Text" xml:space="preserve">
-    <value>轴偏移X</value>
+    <value>轴偏移X:</value>
   </data>
   <data name="comboBox_ADMonth_ClockHand_Image.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 93</value>
@@ -3365,7 +3365,7 @@
     <value>80, 30</value>
   </data>
   <data name="label387.Text" xml:space="preserve">
-    <value>箭头中心(Y)</value>
+    <value>箭头中心(Y):</value>
   </data>
   <data name="label388.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 23</value>
@@ -3374,7 +3374,7 @@
     <value>80, 30</value>
   </data>
   <data name="label388.Text" xml:space="preserve">
-    <value>箭头中心(X)</value>
+    <value>箭头中心(X):</value>
   </data>
   <data name="checkBox_ADMonth_ClockHand.Text" xml:space="preserve">
     <value>启用</value>
@@ -3715,7 +3715,7 @@
     <value>12小时制</value>
   </data>
   <data name="tabPage4.Text" xml:space="preserve">
-    <value>小时</value>
+    <value>小时钟</value>
   </data>
   <data name="checkBox_Hours.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
@@ -3827,7 +3827,7 @@
     <value>85, 17</value>
   </data>
   <data name="radioButton_Settings_Pack_DoNotning.Text" xml:space="preserve">
-    <value>什么都不做</value>
+    <value>什么也不做</value>
   </data>
   <data name="radioButton_Settings_Pack_Copy.Size" type="System.Drawing.Size, System.Drawing">
     <value>126, 17</value>
@@ -3854,7 +3854,7 @@
     <value>85, 17</value>
   </data>
   <data name="radioButton_Settings_Open_DoNotning.Text" xml:space="preserve">
-    <value>什么都不做</value>
+    <value>什么也不做</value>
   </data>
   <data name="radioButton_Settings_Open_Download.Size" type="System.Drawing.Size, System.Drawing">
     <value>199, 17</value>
@@ -3875,7 +3875,7 @@
     <value>85, 17</value>
   </data>
   <data name="radioButton_Settings_AfterUnpack_DoNothing.Text" xml:space="preserve">
-    <value>什么都不做</value>
+    <value>什么也不做</value>
   </data>
   <data name="radioButton_Settings_AfterUnpack_Download.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 17</value>
@@ -3914,13 +3914,13 @@
     <value>61, 13</value>
   </data>
   <data name="label415.Text" xml:space="preserve">
-    <value>翻译帮助：</value>
+    <value>翻译帮助人员：</value>
   </data>
   <data name="label412.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 13</value>
   </data>
   <data name="label412.Text" xml:space="preserve">
-    <value>参加测试的人员包括：</value>
+    <value>测试帮助人员：</value>
   </data>
   <data name="linkLabel_help.Size" type="System.Drawing.Size, System.Drawing">
     <value>137, 13</value>
@@ -3996,6 +3996,45 @@
   </data>
   <data name="checkBox_Show_Shortcuts.Text" xml:space="preserve">
     <value>显示快捷方式区域</value>
+  </data>
+  <data name="label489.Text" xml:space="preserve">
+    <value>*** 请仔细检查转化后的文件！！！</value>
+  </data>
+  <data name="label488.Text" xml:space="preserve">
+    <value>** 转换将调整图像大小，圆半径，线宽，重新计算元素的坐标。</value>
+  </data>
+  <data name="label487.Text" xml:space="preserve">
+    <value>* 将在现有目录旁边创建一个新目录，以生成文件。</value>
+  </data>
+  <data name="button_Converting.Text" xml:space="preserve">
+    <value>转化</value>
+  </data>
+  <data name="numericUpDown_ConvertingOutput_Custom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>410, 19</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Custom.Text" xml:space="preserve">
+    <value>自定义大小</value>
+  </data>
+  <data name="groupBox10.Text" xml:space="preserve">
+    <value>目标机型</value>
+  </data>
+  <data name="numericUpDown_ConvertingInput_Custom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>410, 19</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Custom.Text" xml:space="preserve">
+    <value>自定义大小</value>
+  </data>
+  <data name="groupBox9.Text" xml:space="preserve">
+    <value>源机型</value>
+  </data>
+  <data name="tabPageConverting.Text" xml:space="preserve">
+    <value>表盘转化</value>
+  </data>
+  <data name="checkBox_CircleScaleImage.Text" xml:space="preserve">
+    <value>带有覆盖图像的进度条的突出显示字段</value>
+  </data>
+  <data name="label486.Text" xml:space="preserve">
+    <value>打开所需的表盘或保存当前的表盘。</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
