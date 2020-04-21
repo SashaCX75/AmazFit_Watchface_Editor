@@ -126,6 +126,9 @@
   <data name="tabPage3.Text" xml:space="preserve">
     <value>编辑</value>
   </data>
+  <data name="tabPageConverting.Text" xml:space="preserve">
+    <value>表盘转化</value>
+  </data>
   <data name="tabPage33.Text" xml:space="preserve">
     <value>设置选项</value>
   </data>
@@ -1268,7 +1271,7 @@
     <value>14, 8</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 13</value>
+    <value>83, 13</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>带图片的Json：</value>
@@ -1708,7 +1711,7 @@
     <value>270, 20</value>
   </data>
   <data name="label286.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 13</value>
+    <value>58, 13</value>
   </data>
   <data name="label286.Text" xml:space="preserve">
     <value>错误符号:</value>
@@ -1735,7 +1738,7 @@
     <value>启用</value>
   </data>
   <data name="label270.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 13</value>
+    <value>34, 13</value>
   </data>
   <data name="label270.Text" xml:space="preserve">
     <value>间距:</value>
@@ -1798,7 +1801,7 @@
     <value>启用</value>
   </data>
   <data name="label289.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 13</value>
+    <value>34, 13</value>
   </data>
   <data name="label289.Text" xml:space="preserve">
     <value>间距:</value>
@@ -1915,7 +1918,7 @@
     <value>240, 31</value>
   </data>
   <data name="label287.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 13</value>
+    <value>58, 13</value>
   </data>
   <data name="label287.Text" xml:space="preserve">
     <value>错误符号:</value>
@@ -2161,7 +2164,7 @@
     <value>150, 85</value>
   </data>
   <data name="label184.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 13</value>
+    <value>34, 13</value>
   </data>
   <data name="label184.Text" xml:space="preserve">
     <value>间距:</value>
@@ -2542,7 +2545,7 @@
     <value>150, 85</value>
   </data>
   <data name="label122.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 13</value>
+    <value>34, 13</value>
   </data>
   <data name="label122.Text" xml:space="preserve">
     <value>间距:</value>
@@ -2608,7 +2611,7 @@
     <value>38, 117</value>
   </data>
   <data name="label172.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 13</value>
+    <value>34, 13</value>
   </data>
   <data name="label172.Text" xml:space="preserve">
     <value>后缀:</value>
@@ -2623,7 +2626,7 @@
     <value>150, 85</value>
   </data>
   <data name="label132.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 13</value>
+    <value>34, 13</value>
   </data>
   <data name="label132.Text" xml:space="preserve">
     <value>间距:</value>
@@ -2701,7 +2704,7 @@
     <value>150, 85</value>
   </data>
   <data name="label142.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 13</value>
+    <value>34, 13</value>
   </data>
   <data name="label142.Text" xml:space="preserve">
     <value>间距:</value>
@@ -2884,7 +2887,7 @@
     <value>150, 85</value>
   </data>
   <data name="label152.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 13</value>
+    <value>34, 13</value>
   </data>
   <data name="label152.Text" xml:space="preserve">
     <value>间距:</value>
@@ -2971,7 +2974,7 @@
     <value>260, 26</value>
   </data>
   <data name="label116.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 13</value>
+    <value>34, 13</value>
   </data>
   <data name="label116.Text" xml:space="preserve">
     <value>宽度:</value>
@@ -2980,7 +2983,7 @@
     <value>起始角度:</value>
   </data>
   <data name="label115.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 13</value>
+    <value>34, 13</value>
   </data>
   <data name="label115.Text" xml:space="preserve">
     <value>颜色:</value>
@@ -3067,7 +3070,7 @@
     <value>平整</value>
   </data>
   <data name="label104.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 13</value>
+    <value>47, 13</value>
   </data>
   <data name="label104.Text" xml:space="preserve">
     <value>中心(X):</value>
@@ -3076,7 +3079,7 @@
     <value>行尾:</value>
   </data>
   <data name="label105.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 13</value>
+    <value>47, 13</value>
   </data>
   <data name="label105.Text" xml:space="preserve">
     <value>中心(Y):</value>
@@ -3100,7 +3103,7 @@
     <value>半径(Y):</value>
   </data>
   <data name="label109.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 13</value>
+    <value>34, 13</value>
   </data>
   <data name="label109.Text" xml:space="preserve">
     <value>颜色:</value>
@@ -3109,7 +3112,7 @@
     <value>260, 26</value>
   </data>
   <data name="label108.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 13</value>
+    <value>34, 13</value>
   </data>
   <data name="label108.Text" xml:space="preserve">
     <value>宽度:</value>
@@ -3254,7 +3257,6 @@
   </data>
   <data name="tabPage39.Text" xml:space="preserve">
     <value>星期</value>
-    <comment>一周七天</comment>
   </data>
   <data name="numericUpDown_ADWeekDay_ClockHand_Y.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 65</value>
@@ -3588,7 +3590,6 @@
   </data>
   <data name="tabPage50.Text" xml:space="preserve">
     <value>星期</value>
-    <comment>一周7天</comment>
   </data>
   <data name="groupBox_WeekDayProgress.Text" xml:space="preserve">
     <value>区隔</value>
@@ -3601,7 +3602,6 @@
   </data>
   <data name="groupBox__WeekDay.Text" xml:space="preserve">
     <value>星期</value>
-    <comment>一周7天</comment>
   </data>
   <data name="checkBox_WeekDay.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
@@ -3768,6 +3768,57 @@
   <data name="button_Background.Text" xml:space="preserve">
     <value>背景</value>
   </data>
+  <data name="label489.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 13</value>
+  </data>
+  <data name="label489.Text" xml:space="preserve">
+    <value>*** 请仔细检查转化后的文件！！！</value>
+  </data>
+  <data name="label488.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 13</value>
+  </data>
+  <data name="label488.Text" xml:space="preserve">
+    <value>** 转换将调整图像大小，圆半径，线宽，重新计算元素的坐标。</value>
+  </data>
+  <data name="label487.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 13</value>
+  </data>
+  <data name="label487.Text" xml:space="preserve">
+    <value>* 将在现有目录旁边创建一个新目录，以生成文件。</value>
+  </data>
+  <data name="label486.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 13</value>
+  </data>
+  <data name="label486.Text" xml:space="preserve">
+    <value>打开所需的表盘或保存当前的表盘。</value>
+  </data>
+  <data name="button_Converting.Text" xml:space="preserve">
+    <value>转化</value>
+  </data>
+  <data name="groupBox10.Text" xml:space="preserve">
+    <value>目标机型</value>
+  </data>
+  <data name="numericUpDown_ConvertingOutput_Custom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>425, 19</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Custom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 17</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Custom.Text" xml:space="preserve">
+    <value>自定义大小</value>
+  </data>
+  <data name="groupBox9.Text" xml:space="preserve">
+    <value>源机型</value>
+  </data>
+  <data name="numericUpDown_ConvertingInput_Custom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>425, 19</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Custom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 17</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Custom.Text" xml:space="preserve">
+    <value>自定义大小</value>
+  </data>
   <data name="comboBox_Animation_Preview_Speed.Location" type="System.Drawing.Point, System.Drawing">
     <value>241, 244</value>
   </data>
@@ -3797,7 +3848,7 @@
     <value>重置</value>
   </data>
   <data name="checkBox_JsonWarnings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 17</value>
+    <value>156, 17</value>
   </data>
   <data name="checkBox_JsonWarnings.Text" xml:space="preserve">
     <value>保存Json文件时显示警告</value>
@@ -3806,7 +3857,7 @@
     <value>40, 306</value>
   </data>
   <data name="label356.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 13</value>
+    <value>37, 13</value>
   </data>
   <data name="label356.Text" xml:space="preserve">
     <value>语言：</value>
@@ -3815,7 +3866,7 @@
     <value>85, 213</value>
   </data>
   <data name="label355.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 13</value>
+    <value>84, 13</value>
   </data>
   <data name="label355.Text" xml:space="preserve">
     <value>GIF动画的速度</value>
@@ -3910,14 +3961,20 @@
   <data name="radioButton_Settings_Unpack_Dialog.Text" xml:space="preserve">
     <value>建议一个选择</value>
   </data>
+  <data name="linkLabel_resunpacker_qzip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 13</value>
+  </data>
+  <data name="linkLabel_resunpacker_qzip.Text" xml:space="preserve">
+    <value>Res_PackerUnpacker (作者 dpeddi)</value>
+  </data>
   <data name="label415.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 13</value>
+    <value>85, 13</value>
   </data>
   <data name="label415.Text" xml:space="preserve">
     <value>翻译帮助人员：</value>
   </data>
   <data name="label412.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 13</value>
+    <value>85, 13</value>
   </data>
   <data name="label412.Text" xml:space="preserve">
     <value>测试帮助人员：</value>
@@ -3933,12 +3990,6 @@
   </data>
   <data name="label413.Text" xml:space="preserve">
     <value>打包/解包bin文件的程序：</value>
-  </data>
-  <data name="label_Res_PackerUnpacker.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 13</value>
-  </data>
-  <data name="linkLabel_resunpacker_qzip.Text" xml:space="preserve">
-    <value>Res_PackerUnpacker (作者 dpeddi)</value>
   </data>
   <data name="linkLabel_py_amazfit_tools.Size" type="System.Drawing.Size, System.Drawing">
     <value>308, 13</value>
@@ -3997,44 +4048,8 @@
   <data name="checkBox_Show_Shortcuts.Text" xml:space="preserve">
     <value>显示快捷方式区域</value>
   </data>
-  <data name="label489.Text" xml:space="preserve">
-    <value>*** 请仔细检查转化后的文件！！！</value>
-  </data>
-  <data name="label488.Text" xml:space="preserve">
-    <value>** 转换将调整图像大小，圆半径，线宽，重新计算元素的坐标。</value>
-  </data>
-  <data name="label487.Text" xml:space="preserve">
-    <value>* 将在现有目录旁边创建一个新目录，以生成文件。</value>
-  </data>
-  <data name="button_Converting.Text" xml:space="preserve">
-    <value>转化</value>
-  </data>
-  <data name="numericUpDown_ConvertingOutput_Custom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>410, 19</value>
-  </data>
-  <data name="radioButton_ConvertingOutput_Custom.Text" xml:space="preserve">
-    <value>自定义大小</value>
-  </data>
-  <data name="groupBox10.Text" xml:space="preserve">
-    <value>目标机型</value>
-  </data>
-  <data name="numericUpDown_ConvertingInput_Custom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>410, 19</value>
-  </data>
-  <data name="radioButton_ConvertingInput_Custom.Text" xml:space="preserve">
-    <value>自定义大小</value>
-  </data>
-  <data name="groupBox9.Text" xml:space="preserve">
-    <value>源机型</value>
-  </data>
-  <data name="tabPageConverting.Text" xml:space="preserve">
-    <value>表盘转化</value>
-  </data>
   <data name="checkBox_CircleScaleImage.Text" xml:space="preserve">
     <value>带有覆盖图像的进度条的突出显示字段</value>
-  </data>
-  <data name="label486.Text" xml:space="preserve">
-    <value>打开所需的表盘或保存当前的表盘。</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

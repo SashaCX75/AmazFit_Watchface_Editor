@@ -2536,23 +2536,23 @@ namespace GTR_Watch_face
                     // подсвечивание шкалы заливкой
                     HatchBrush myHatchBrush = new HatchBrush(HatchStyle.Percent20, Color.White, Color.Transparent);
                     pen.Brush = myHatchBrush;
-                    graphics.DrawArc(pen, srcX, srcY, CircleWidth, CircleWidth, StartAngle, EndAngle);
+                    graphics.DrawArc(pen, x+srcX, y+srcY, CircleWidth, CircleWidth, StartAngle, EndAngle);
                     myHatchBrush = new HatchBrush(HatchStyle.Percent10, Color.Black, Color.Transparent);
                     pen.Brush = myHatchBrush;
-                    graphics.DrawArc(pen, srcX, srcY, CircleWidth, CircleWidth, StartAngle, EndAngle);
+                    graphics.DrawArc(pen, x+srcX, y+srcY, CircleWidth, CircleWidth, StartAngle, EndAngle);
 
                     // подсвечивание внешней и внутреней дуги на шкале
                     float w2 = width / 2f;
                     using (Pen pen1 = new Pen(Color.White, 1))
                     {
-                        graphics.DrawArc(pen1, srcX + w2, srcY + w2, CircleWidth - width, CircleWidth - width, StartAngle, EndAngle);
-                        graphics.DrawArc(pen1, srcX - w2, srcY - w2, CircleWidth + width, CircleWidth + width, StartAngle, EndAngle);
+                        graphics.DrawArc(pen1, x+srcX + w2, y+srcY + w2, CircleWidth - width, CircleWidth - width, StartAngle, EndAngle);
+                        graphics.DrawArc(pen1, x+srcX - w2, y+srcY - w2, CircleWidth + width, CircleWidth + width, StartAngle, EndAngle);
                     }
                     using (Pen pen2 = new Pen(Color.Black, 1))
                     {
                         pen2.DashStyle = DashStyle.Dot;
-                        graphics.DrawArc(pen2, srcX + w2, srcY + w2, CircleWidth - width, CircleWidth - width, StartAngle, EndAngle);
-                        graphics.DrawArc(pen2, srcX - w2, srcY - w2, CircleWidth + width, CircleWidth + width, StartAngle, EndAngle);
+                        graphics.DrawArc(pen2, x+srcX + w2, y+srcY + w2, CircleWidth - width, CircleWidth - width, StartAngle, EndAngle);
+                        graphics.DrawArc(pen2, x+srcX - w2, y+srcY - w2, CircleWidth + width, CircleWidth + width, StartAngle, EndAngle);
                     } 
                 }
             }
