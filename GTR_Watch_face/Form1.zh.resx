@@ -3190,7 +3190,7 @@
     <value>启用</value>
   </data>
   <data name="button_StepsProgress.Text" xml:space="preserve">
-    <value>步数进度</value>
+    <value>步数指针</value>
   </data>
   <data name="tabPage38.Text" xml:space="preserve">
     <value>日期</value>
@@ -3382,7 +3382,7 @@
     <value>启用</value>
   </data>
   <data name="button_AnalogDate.Text" xml:space="preserve">
-    <value>天数进度</value>
+    <value>天数指针</value>
   </data>
   <data name="tabPage8.Text" xml:space="preserve">
     <value>日/月</value>
@@ -3724,10 +3724,10 @@
     <value>启用</value>
   </data>
   <data name="groupBox_Hours_Tens.Text" xml:space="preserve">
-    <value>时针</value>
+    <value>十位</value>
   </data>
   <data name="groupBox_Hours_Ones.Text" xml:space="preserve">
-    <value>秒针</value>
+    <value>个位</value>
   </data>
   <data name="tabPage5.Text" xml:space="preserve">
     <value>分钟</value>
@@ -3739,16 +3739,16 @@
     <value>启用</value>
   </data>
   <data name="groupBox_Minutes_Tens.Text" xml:space="preserve">
-    <value>时针</value>
+    <value>十位</value>
   </data>
   <data name="groupBox_Minutes_Ones.Text" xml:space="preserve">
-    <value>秒针</value>
+    <value>个位</value>
   </data>
   <data name="tabPage6.Text" xml:space="preserve">
     <value>秒钟</value>
   </data>
   <data name="groupBox_Seconds_Ones.Text" xml:space="preserve">
-    <value>秒针</value>
+    <value>个位</value>
   </data>
   <data name="checkBox_Seconds.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
@@ -3757,7 +3757,7 @@
     <value>启用</value>
   </data>
   <data name="groupBox_Seconds_Tens.Text" xml:space="preserve">
-    <value>时针</value>
+    <value>十位</value>
   </data>
   <data name="checkBox_Time.Text" xml:space="preserve">
     <value>激活</value>
@@ -7014,5 +7014,8 @@
         SlmARUpZgEVKWYBDSFZuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+D8AAPgfAADwHwAA4A8AAMAHAADA
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
+  </data>
+  <data name="groupBox_AmPm.Text" xml:space="preserve">
+    <value>12/24制式</value>
   </data>
 </root>

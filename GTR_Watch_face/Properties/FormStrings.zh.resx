@@ -282,4 +282,16 @@
   <data name="Message_Error_SpaceInProgrammName_Text" xml:space="preserve">
     <value>程序路径不应包含空格。建议将程序放在磁盘的根目录中。</value>
   </data>
+  <data name="Message_ConvertingCompleted_Text" xml:space="preserve">
+    <value>一个新的表盘已经被创建。</value>
+  </data>
+  <data name="Message_WarningConverting_Text1" xml:space="preserve">
+    <value>目录</value>
+  </data>
+  <data name="Message_WarningConverting_Text2" xml:space="preserve">
+    <value> 已经存在，是否替换？</value>
+  </data>
+  <data name="Message_Warning_Information" xml:space="preserve">
+    <value>信息</value>
+  </data>
 </root>
