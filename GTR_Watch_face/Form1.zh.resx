@@ -1274,7 +1274,7 @@
     <value>83, 13</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>带图片的Json：</value>
+    <value>带图片的Json:</value>
   </data>
   <data name="button_SaveJson.Text" xml:space="preserve">
     <value>保存 Json</value>
@@ -1528,7 +1528,7 @@
     <value>激活</value>
   </data>
   <data name="button_Animation.Text" xml:space="preserve">
-    <value>动画制作（测试）</value>
+    <value>动画制作(测试)</value>
   </data>
   <data name="tabPage46.Text" xml:space="preserve">
     <value>步数</value>
@@ -1546,7 +1546,7 @@
     <value>37, 13</value>
   </data>
   <data name="label439.Text" xml:space="preserve">
-    <value>宽度：</value>
+    <value>宽度:</value>
   </data>
   <data name="label440.Location" type="System.Drawing.Point, System.Drawing">
     <value>101, 71</value>
@@ -1555,7 +1555,7 @@
     <value>37, 13</value>
   </data>
   <data name="label440.Text" xml:space="preserve">
-    <value>高度：</value>
+    <value>高度:</value>
   </data>
   <data name="label442.Location" type="System.Drawing.Point, System.Drawing">
     <value>100, 27</value>
@@ -1588,7 +1588,7 @@
     <value>37, 13</value>
   </data>
   <data name="label437.Text" xml:space="preserve">
-    <value>宽度：</value>
+    <value>宽度:</value>
   </data>
   <data name="label441.Location" type="System.Drawing.Point, System.Drawing">
     <value>101, 71</value>
@@ -1597,7 +1597,7 @@
     <value>37, 13</value>
   </data>
   <data name="label441.Text" xml:space="preserve">
-    <value>高度：</value>
+    <value>高度:</value>
   </data>
   <data name="label444.Location" type="System.Drawing.Point, System.Drawing">
     <value>100, 27</value>
@@ -1630,7 +1630,7 @@
     <value>37, 13</value>
   </data>
   <data name="label448.Text" xml:space="preserve">
-    <value>宽度：</value>
+    <value>宽度:</value>
   </data>
   <data name="label449.Location" type="System.Drawing.Point, System.Drawing">
     <value>101, 71</value>
@@ -1639,7 +1639,7 @@
     <value>37, 13</value>
   </data>
   <data name="label449.Text" xml:space="preserve">
-    <value>高度：</value>
+    <value>高度:</value>
   </data>
   <data name="label450.Location" type="System.Drawing.Point, System.Drawing">
     <value>100, 27</value>
@@ -1672,7 +1672,7 @@
     <value>37, 13</value>
   </data>
   <data name="label454.Text" xml:space="preserve">
-    <value>宽度：</value>
+    <value>宽度:</value>
   </data>
   <data name="label455.Location" type="System.Drawing.Point, System.Drawing">
     <value>101, 71</value>
@@ -1681,7 +1681,7 @@
     <value>37, 13</value>
   </data>
   <data name="label455.Text" xml:space="preserve">
-    <value>高度：</value>
+    <value>高度:</value>
   </data>
   <data name="label456.Location" type="System.Drawing.Point, System.Drawing">
     <value>100, 27</value>
@@ -1864,7 +1864,7 @@
     <value>37, 13</value>
   </data>
   <data name="label313.Text" xml:space="preserve">
-    <value>间距：</value>
+    <value>间距:</value>
   </data>
   <data name="comboBox_Weather_Night_Alignment.Items" xml:space="preserve">
     <value>左上方</value>
@@ -2269,7 +2269,7 @@
     <value>37, 13</value>
   </data>
   <data name="label201.Text" xml:space="preserve">
-    <value>颜色：</value>
+    <value>颜色:</value>
   </data>
   <data name="label202.Location" type="System.Drawing.Point, System.Drawing">
     <value>258, 26</value>
@@ -2278,7 +2278,7 @@
     <value>37, 13</value>
   </data>
   <data name="label202.Text" xml:space="preserve">
-    <value>宽度：</value>
+    <value>宽度:</value>
   </data>
   <data name="label203.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 13</value>
@@ -2422,7 +2422,7 @@
     <value>25, 13</value>
   </data>
   <data name="label168.Text" xml:space="preserve">
-    <value>关：</value>
+    <value>关:</value>
   </data>
   <data name="checkBox_Bluetooth.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
@@ -2437,7 +2437,7 @@
     <value>25, 13</value>
   </data>
   <data name="label165.Text" xml:space="preserve">
-    <value>开：</value>
+    <value>开:</value>
   </data>
   <data name="tabPage18.Text" xml:space="preserve">
     <value>闹钟</value>
@@ -2449,7 +2449,7 @@
     <value>25, 13</value>
   </data>
   <data name="label169.Text" xml:space="preserve">
-    <value>关：</value>
+    <value>关:</value>
   </data>
   <data name="checkBox_Alarm.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
@@ -2464,7 +2464,7 @@
     <value>25, 13</value>
   </data>
   <data name="label174.Text" xml:space="preserve">
-    <value>开：</value>
+    <value>开:</value>
   </data>
   <data name="tabPage19.Text" xml:space="preserve">
     <value>锁</value>
@@ -2476,7 +2476,7 @@
     <value>25, 13</value>
   </data>
   <data name="label176.Text" xml:space="preserve">
-    <value>关：</value>
+    <value>关:</value>
   </data>
   <data name="checkBox_Lock.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
@@ -2491,7 +2491,7 @@
     <value>25, 13</value>
   </data>
   <data name="label178.Text" xml:space="preserve">
-    <value>开：</value>
+    <value>开:</value>
   </data>
   <data name="tabPage20.Text" xml:space="preserve">
     <value>勿扰模式</value>
@@ -2503,7 +2503,7 @@
     <value>25, 13</value>
   </data>
   <data name="label180.Text" xml:space="preserve">
-    <value>关：</value>
+    <value>关:</value>
   </data>
   <data name="checkBox_DND.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
@@ -2518,7 +2518,7 @@
     <value>25, 13</value>
   </data>
   <data name="label182.Text" xml:space="preserve">
-    <value>开：</value>
+    <value>开:</value>
   </data>
   <data name="button_Status.Text" xml:space="preserve">
     <value>状态</value>
@@ -2530,7 +2530,7 @@
     <value>61, 13</value>
   </data>
   <data name="label403.Text" xml:space="preserve">
-    <value>错误符号：</value>
+    <value>错误符号:</value>
   </data>
   <data name="tabPage12.Text" xml:space="preserve">
     <value>步数</value>
@@ -2794,7 +2794,7 @@
     <value>37, 13</value>
   </data>
   <data name="label421.Text" xml:space="preserve">
-    <value>宽度：</value>
+    <value>宽度:</value>
   </data>
   <data name="label419.Text" xml:space="preserve">
     <value>起始角度:</value>
@@ -2803,10 +2803,10 @@
     <value>37, 13</value>
   </data>
   <data name="label420.Text" xml:space="preserve">
-    <value>颜色：</value>
+    <value>颜色:</value>
   </data>
   <data name="tabPage51.Text" xml:space="preserve">
-    <value>心率（指示器）</value>
+    <value>心率(指示器)</value>
   </data>
   <data name="numericUpDown_Pulse_ClockHand_Y.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 65</value>
@@ -2851,7 +2851,7 @@
     <value>轴偏移X:</value>
   </data>
   <data name="tabPage45.Text" xml:space="preserve">
-    <value>心率 (段)</value>
+    <value>心率(段)</value>
   </data>
   <data name="checkBox_ActivityPuls_IconSet.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
@@ -2989,7 +2989,7 @@
     <value>颜色:</value>
   </data>
   <data name="tabPage52.Text" xml:space="preserve">
-    <value>卡路里（指标）</value>
+    <value>卡路里(指标)</value>
   </data>
   <data name="numericUpDown_Calories_ClockHand_Y.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 65</value>
@@ -3400,7 +3400,7 @@
     <value>37, 13</value>
   </data>
   <data name="label72.Text" xml:space="preserve">
-    <value>间距：</value>
+    <value>间距:</value>
   </data>
   <data name="comboBox_MonthAndDayD_Alignment.Items" xml:space="preserve">
     <value>左上方</value>
@@ -3460,7 +3460,7 @@
     <value>37, 13</value>
   </data>
   <data name="label73.Text" xml:space="preserve">
-    <value>间距：</value>
+    <value>间距:</value>
   </data>
   <data name="comboBox_MonthAndDayM_Alignment.Items" xml:space="preserve">
     <value>左上方</value>
@@ -3538,7 +3538,7 @@
     <value>37, 13</value>
   </data>
   <data name="label93.Text" xml:space="preserve">
-    <value>间距：</value>
+    <value>间距:</value>
   </data>
   <data name="comboBox_OneLine_Alignment.Items" xml:space="preserve">
     <value>左上方</value>
@@ -3631,7 +3631,7 @@
     <value>37, 13</value>
   </data>
   <data name="label358.Text" xml:space="preserve">
-    <value>间距：</value>
+    <value>间距:</value>
   </data>
   <data name="comboBox_Year_Alignment.Items" xml:space="preserve">
     <value>左上方</value>
@@ -3860,7 +3860,7 @@
     <value>37, 13</value>
   </data>
   <data name="label356.Text" xml:space="preserve">
-    <value>语言：</value>
+    <value>语言:</value>
   </data>
   <data name="numericUpDown_Gif_Speed.Location" type="System.Drawing.Point, System.Drawing">
     <value>85, 213</value>
@@ -3965,19 +3965,19 @@
     <value>211, 13</value>
   </data>
   <data name="linkLabel_resunpacker_qzip.Text" xml:space="preserve">
-    <value>Res_PackerUnpacker (作者 dpeddi)</value>
+    <value>Res_PackerUnpacker [ 作者 dpeddi ]</value>
   </data>
   <data name="label415.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 13</value>
   </data>
   <data name="label415.Text" xml:space="preserve">
-    <value>翻译帮助人员：</value>
+    <value>翻译帮助人员:</value>
   </data>
   <data name="label412.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 13</value>
   </data>
   <data name="label412.Text" xml:space="preserve">
-    <value>测试帮助人员：</value>
+    <value>测试帮助人员:</value>
   </data>
   <data name="linkLabel_help.Size" type="System.Drawing.Size, System.Drawing">
     <value>137, 13</value>
@@ -3989,19 +3989,19 @@
     <value>140, 13</value>
   </data>
   <data name="label413.Text" xml:space="preserve">
-    <value>打包/解包bin文件的程序：</value>
+    <value>打包/解包bin文件的程序:</value>
   </data>
   <data name="linkLabel_py_amazfit_tools.Size" type="System.Drawing.Size, System.Drawing">
     <value>308, 13</value>
   </data>
   <data name="linkLabel_py_amazfit_tools.Text" xml:space="preserve">
-    <value>py_amazfit_tools v0.2-beta（作者amazfitbip（dpeddi））</value>
+    <value>py_amazfit_tools v0.2-beta[ 作者amazfitbip(dpeddi) ]</value>
   </data>
   <data name="label410.Size" type="System.Drawing.Size, System.Drawing">
     <value>135, 13</value>
   </data>
   <data name="label410.Text" xml:space="preserve">
-    <value>压缩bin文件的实用程序：</value>
+    <value>压缩bin文件的实用程序:</value>
   </data>
   <data name="label409.Text" xml:space="preserve">
     <value>该程序利用Json文件设置表盘图形编辑。 该程序使用第三方程序来处理bin表盘文件。</value>
@@ -4010,13 +4010,13 @@
     <value>37, 13</value>
   </data>
   <data name="label407.Text" xml:space="preserve">
-    <value>作者：</value>
+    <value>作者:</value>
   </data>
   <data name="label406.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 13</value>
   </data>
   <data name="label406.Text" xml:space="preserve">
-    <value>版本：</value>
+    <value>版本:</value>
   </data>
   <data name="button_PreviewBig.Text" xml:space="preserve">
     <value>放大</value>
@@ -4043,7 +4043,7 @@
     <value>对齐对象周围的边框</value>
   </data>
   <data name="checkBox_crop.Text" xml:space="preserve">
-    <value>裁剪图像以适合屏幕（可能工作缓慢）</value>
+    <value>裁剪图像以适合屏幕(可能工作缓慢)</value>
   </data>
   <data name="checkBox_Show_Shortcuts.Text" xml:space="preserve">
     <value>显示快捷方式区域</value>
@@ -7017,5 +7017,8 @@
   </data>
   <data name="groupBox_AmPm.Text" xml:space="preserve">
     <value>12/24制式</value>
+  </data>
+  <data name="label490.Text" xml:space="preserve">
+    <value>***注意:仅在无法显示实时温度时显示日间夜间温度***</value>
   </data>
 </root>
