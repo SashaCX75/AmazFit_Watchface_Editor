@@ -126,6 +126,9 @@
   <data name="tabPage3.Text" xml:space="preserve">
     <value>Edita/Modifica</value>
   </data>
+  <data name="tabPageConverting.Text" xml:space="preserve">
+    <value>Conversione</value>
+  </data>
   <data name="tabPage33.Text" xml:space="preserve">
     <value>Opzioni</value>
   </data>
@@ -555,7 +558,7 @@
     <value>Batteria</value>
   </data>
   <data name="label268.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 13</value>
+    <value>35, 13</value>
   </data>
   <data name="label268.Text" xml:space="preserve">
     <value>Orario</value>
@@ -621,7 +624,7 @@
     <value>Batteria</value>
   </data>
   <data name="label260.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 13</value>
+    <value>35, 13</value>
   </data>
   <data name="label260.Text" xml:space="preserve">
     <value>Orario</value>
@@ -687,7 +690,7 @@
     <value>Batteria</value>
   </data>
   <data name="label252.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 13</value>
+    <value>35, 13</value>
   </data>
   <data name="label252.Text" xml:space="preserve">
     <value>Orario</value>
@@ -753,7 +756,7 @@
     <value>Batteria</value>
   </data>
   <data name="label244.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 13</value>
+    <value>35, 13</value>
   </data>
   <data name="label244.Text" xml:space="preserve">
     <value>Orario</value>
@@ -885,7 +888,7 @@
     <value>Batteria</value>
   </data>
   <data name="label238.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 13</value>
+    <value>35, 13</value>
   </data>
   <data name="label238.Text" xml:space="preserve">
     <value>Orario</value>
@@ -951,7 +954,7 @@
     <value>Batteria</value>
   </data>
   <data name="label230.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 13</value>
+    <value>35, 13</value>
   </data>
   <data name="label230.Text" xml:space="preserve">
     <value>Orario</value>
@@ -1017,7 +1020,7 @@
     <value>Batteria</value>
   </data>
   <data name="label222.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 13</value>
+    <value>35, 13</value>
   </data>
   <data name="label222.Text" xml:space="preserve">
     <value>Orario</value>
@@ -1188,7 +1191,7 @@
     <value>Selezionare</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 13</value>
+    <value>102, 13</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>JSON con immagini:</value>
@@ -1685,6 +1688,12 @@
   </data>
   <data name="tabPage26.Text" xml:space="preserve">
     <value>Temperatura</value>
+  </data>
+  <data name="label490.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 13</value>
+  </data>
+  <data name="label490.Text" xml:space="preserve">
+    <value>* Mostra solo se impossibile visualizzare la temperatura attuale</value>
   </data>
   <data name="tabPage27.Text" xml:space="preserve">
     <value>Giorno</value>
@@ -3273,6 +3282,51 @@
   <data name="button_Background.Text" xml:space="preserve">
     <value>Sfondo</value>
   </data>
+  <data name="label489.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 13</value>
+  </data>
+  <data name="label489.Text" xml:space="preserve">
+    <value>!!! Controlla la watchface dopo la conversione !!!</value>
+  </data>
+  <data name="label488.Size" type="System.Drawing.Size, System.Drawing">
+    <value>653, 13</value>
+  </data>
+  <data name="label488.Text" xml:space="preserve">
+    <value>** La conversione ridimensionerà le immagini, il raggio del cerchio, lo spessore della linea e saranno ricalcolate le coordinate dell'elemento.</value>
+  </data>
+  <data name="label487.Size" type="System.Drawing.Size, System.Drawing">
+    <value>447, 13</value>
+  </data>
+  <data name="label487.Text" xml:space="preserve">
+    <value>* Il risultato della conversione si troverà in una nuova directory creata vicino a quella esistente</value>
+  </data>
+  <data name="label486.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 13</value>
+  </data>
+  <data name="label486.Text" xml:space="preserve">
+    <value>Apri la watchface desiderata o salva quella attuale</value>
+  </data>
+  <data name="button_Converting.Text" xml:space="preserve">
+    <value>Converti</value>
+  </data>
+  <data name="groupBox10.Text" xml:space="preserve">
+    <value>Modello di destinazione</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Custom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 17</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Custom.Text" xml:space="preserve">
+    <value>Dimensione personalizzata</value>
+  </data>
+  <data name="groupBox9.Text" xml:space="preserve">
+    <value>Modello di origine</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Custom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 17</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Custom.Text" xml:space="preserve">
+    <value>Dimensione personalizzata</value>
+  </data>
   <data name="label483.Size" type="System.Drawing.Size, System.Drawing">
     <value>204, 39</value>
   </data>
@@ -3342,7 +3396,7 @@ carico maggiore del sistema)</value>
     <value>Apri .bin creato</value>
   </data>
   <data name="radioButton_Settings_Pack_Dialog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 17</value>
+    <value>122, 17</value>
   </data>
   <data name="radioButton_Settings_Pack_Dialog.Text" xml:space="preserve">
     <value>Suggerire una scelta</value>
@@ -3363,7 +3417,7 @@ carico maggiore del sistema)</value>
     <value>Caricare PreviewStates.json (se esistente)</value>
   </data>
   <data name="radioButton_Settings_Open_Dialog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 17</value>
+    <value>122, 17</value>
   </data>
   <data name="radioButton_Settings_Open_Dialog.Text" xml:space="preserve">
     <value>Suggerire una scelta</value>
@@ -3384,7 +3438,7 @@ carico maggiore del sistema)</value>
     <value>Carica il progetto decompilato</value>
   </data>
   <data name="radioButton_Settings_AfterUnpack_Dialog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 17</value>
+    <value>122, 17</value>
   </data>
   <data name="radioButton_Settings_AfterUnpack_Dialog.Text" xml:space="preserve">
     <value>Suggerire una scelta</value>
@@ -3399,13 +3453,13 @@ carico maggiore del sistema)</value>
     <value>Sostituire</value>
   </data>
   <data name="radioButton_Settings_Unpack_Save.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 17</value>
+    <value>104, 17</value>
   </data>
   <data name="radioButton_Settings_Unpack_Save.Text" xml:space="preserve">
     <value>Salvare entrambi</value>
   </data>
   <data name="radioButton_Settings_Unpack_Dialog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 17</value>
+    <value>122, 17</value>
   </data>
   <data name="radioButton_Settings_Unpack_Dialog.Text" xml:space="preserve">
     <value>Suggerire una scelta</value>
@@ -3435,7 +3489,7 @@ carico maggiore del sistema)</value>
     <value>Brevi istruzioni per l'uso del programma</value>
   </data>
   <data name="label413.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 13</value>
+    <value>285, 13</value>
   </data>
   <data name="label413.Text" xml:space="preserve">
     <value>Strumento per la compilazione / decompilazione dei file bin:</value>
@@ -3447,7 +3501,7 @@ carico maggiore del sistema)</value>
     <value>py_amazfit_tools v0.2-beta (autore amazfitbip (dpeddi))</value>
   </data>
   <data name="label410.Size" type="System.Drawing.Size, System.Drawing">
-    <value>271, 13</value>
+    <value>294, 13</value>
   </data>
   <data name="label410.Text" xml:space="preserve">
     <value>Strumento per la compressione e decompressione dei file bin:</value>
@@ -3496,6 +3550,9 @@ carico maggiore del sistema)</value>
   </data>
   <data name="checkBox_Show_Shortcuts.Text" xml:space="preserve">
     <value>Mostra l'area della scorciatoia</value>
+  </data>
+  <data name="checkBox_CircleScaleImage.Text" xml:space="preserve">
+    <value>Mostra l'area della barra di progressione (quando usi immagini di sfondo)</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -6460,38 +6517,5 @@ carico maggiore del sistema)</value>
         SlmARUpZgEVKWYBDSFZuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+D8AAPgfAADwHwAA4A8AAMAHAADA
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
-  </data>
-  <data name="button_Converting.Text" xml:space="preserve">
-    <value>Converti</value>
-  </data>
-  <data name="groupBox10.Text" xml:space="preserve">
-    <value>Modello di destinazione</value>
-  </data>
-  <data name="groupBox9.Text" xml:space="preserve">
-    <value>Modello di origine</value>
-  </data>
-  <data name="label486.Text" xml:space="preserve">
-    <value>Apri la watchface desiderata o salva quella attuale</value>
-  </data>
-  <data name="label487.Text" xml:space="preserve">
-    <value>* Il risultato della conversione si troverà in una nuova directory creata vicino a quella esistente</value>
-  </data>
-  <data name="label488.Text" xml:space="preserve">
-    <value>** La conversione ridimensionerà le immagini, il raggio del cerchio, lo spessore della linea e saranno ricalcolate le coordinate dell'elemento.</value>
-  </data>
-  <data name="label489.Text" xml:space="preserve">
-    <value>!!! Controlla la watchface dopo la conversione !!!</value>
-  </data>
-  <data name="label490.Text" xml:space="preserve">
-    <value>* Mostra solo se impossibile visualizzare la temperatura attuale</value>
-  </data>
-  <data name="radioButton_ConvertingInput_Custom.Text" xml:space="preserve">
-    <value>Dimensione personalizzata</value>
-  </data>
-  <data name="radioButton_ConvertingOutput_Custom.Text" xml:space="preserve">
-    <value>Dimensione personalizzata</value>
-  </data>
-  <data name="tabPageConverting.Text" xml:space="preserve">
-    <value>Conversione</value>
   </data>
 </root>
