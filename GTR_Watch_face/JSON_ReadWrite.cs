@@ -114,51 +114,69 @@ namespace GTR_Watch_face
                 if (Watch_Face.Time.Hours != null)
                 {
                     checkBox_Hours.Checked = true;
-                    numericUpDown_Hours_Tens_X.Value = Watch_Face.Time.Hours.Tens.X;
-                    numericUpDown_Hours_Tens_Y.Value = Watch_Face.Time.Hours.Tens.Y;
-                    numericUpDown_Hours_Tens_Count.Value = Watch_Face.Time.Hours.Tens.ImagesCount;
-                    //comboBox_Hours_Tens_Image.Text = Watch_Face.Time.Hours.Tens.ImageIndex.ToString();
-                    comboBoxSetText(comboBox_Hours_Tens_Image, Watch_Face.Time.Hours.Tens.ImageIndex);
+                    if (Watch_Face.Time.Hours.Tens != null)
+                    {
+                        numericUpDown_Hours_Tens_X.Value = Watch_Face.Time.Hours.Tens.X;
+                        numericUpDown_Hours_Tens_Y.Value = Watch_Face.Time.Hours.Tens.Y;
+                        numericUpDown_Hours_Tens_Count.Value = Watch_Face.Time.Hours.Tens.ImagesCount;
+                        //comboBox_Hours_Tens_Image.Text = Watch_Face.Time.Hours.Tens.ImageIndex.ToString();
+                        comboBoxSetText(comboBox_Hours_Tens_Image, Watch_Face.Time.Hours.Tens.ImageIndex); 
+                    }
 
-                    numericUpDown_Hours_Ones_X.Value = Watch_Face.Time.Hours.Ones.X;
-                    numericUpDown_Hours_Ones_Y.Value = Watch_Face.Time.Hours.Ones.Y;
-                    numericUpDown_Hours_Ones_Count.Value = Watch_Face.Time.Hours.Ones.ImagesCount;
-                    //comboBox_Hours_Ones_Image.Text = Watch_Face.Time.Hours.Ones.ImageIndex.ToString();
-                    comboBoxSetText(comboBox_Hours_Ones_Image, Watch_Face.Time.Hours.Ones.ImageIndex);
+                    if (Watch_Face.Time.Hours.Ones != null)
+                    {
+                        numericUpDown_Hours_Ones_X.Value = Watch_Face.Time.Hours.Ones.X;
+                        numericUpDown_Hours_Ones_Y.Value = Watch_Face.Time.Hours.Ones.Y;
+                        numericUpDown_Hours_Ones_Count.Value = Watch_Face.Time.Hours.Ones.ImagesCount;
+                        //comboBox_Hours_Ones_Image.Text = Watch_Face.Time.Hours.Ones.ImageIndex.ToString();
+                        comboBoxSetText(comboBox_Hours_Ones_Image, Watch_Face.Time.Hours.Ones.ImageIndex); 
+                    }
                 }
                 else checkBox_Hours.Checked = false;
 
                 if (Watch_Face.Time.Minutes != null)
                 {
                     checkBox_Minutes.Checked = true;
-                    numericUpDown_Min_Tens_X.Value = Watch_Face.Time.Minutes.Tens.X;
-                    numericUpDown_Min_Tens_Y.Value = Watch_Face.Time.Minutes.Tens.Y;
-                    numericUpDown_Min_Tens_Count.Value = Watch_Face.Time.Minutes.Tens.ImagesCount;
-                    //comboBox_Min_Tens_Image.Text = Watch_Face.Time.Minutes.Tens.ImageIndex.ToString();
-                    comboBoxSetText(comboBox_Min_Tens_Image, Watch_Face.Time.Minutes.Tens.ImageIndex);
+                    if (Watch_Face.Time.Minutes.Tens != null)
+                    {
+                        numericUpDown_Min_Tens_X.Value = Watch_Face.Time.Minutes.Tens.X;
+                        numericUpDown_Min_Tens_Y.Value = Watch_Face.Time.Minutes.Tens.Y;
+                        numericUpDown_Min_Tens_Count.Value = Watch_Face.Time.Minutes.Tens.ImagesCount;
+                        //comboBox_Min_Tens_Image.Text = Watch_Face.Time.Minutes.Tens.ImageIndex.ToString();
+                        comboBoxSetText(comboBox_Min_Tens_Image, Watch_Face.Time.Minutes.Tens.ImageIndex); 
+                    }
 
-                    numericUpDown_Min_Ones_X.Value = Watch_Face.Time.Minutes.Ones.X;
-                    numericUpDown_Min_Ones_Y.Value = Watch_Face.Time.Minutes.Ones.Y;
-                    numericUpDown_Min_Ones_Count.Value = Watch_Face.Time.Minutes.Ones.ImagesCount;
-                    //comboBox_Min_Ones_Image.Text = Watch_Face.Time.Minutes.Ones.ImageIndex.ToString();
-                    comboBoxSetText(comboBox_Min_Ones_Image, Watch_Face.Time.Minutes.Ones.ImageIndex);
+                    if (Watch_Face.Time.Minutes.Ones != null)
+                    {
+                        numericUpDown_Min_Ones_X.Value = Watch_Face.Time.Minutes.Ones.X;
+                        numericUpDown_Min_Ones_Y.Value = Watch_Face.Time.Minutes.Ones.Y;
+                        numericUpDown_Min_Ones_Count.Value = Watch_Face.Time.Minutes.Ones.ImagesCount;
+                        //comboBox_Min_Ones_Image.Text = Watch_Face.Time.Minutes.Ones.ImageIndex.ToString();
+                        comboBoxSetText(comboBox_Min_Ones_Image, Watch_Face.Time.Minutes.Ones.ImageIndex); 
+                    }
                 }
                 else checkBox_Minutes.Checked = false;
 
                 if (Watch_Face.Time.Seconds != null)
                 {
                     checkBox_Seconds.Checked = true;
-                    numericUpDown_Sec_Tens_X.Value = Watch_Face.Time.Seconds.Tens.X;
-                    numericUpDown_Sec_Tens_Y.Value = Watch_Face.Time.Seconds.Tens.Y;
-                    numericUpDown_Sec_Tens_Count.Value = Watch_Face.Time.Seconds.Tens.ImagesCount;
-                    //comboBox_Sec_Tens_Image.Text = Watch_Face.Time.Seconds.Tens.ImageIndex.ToString();
-                    comboBoxSetText(comboBox_Sec_Tens_Image, Watch_Face.Time.Seconds.Tens.ImageIndex);
+                    if (Watch_Face.Time.Seconds.Tens != null)
+                    {
+                        numericUpDown_Sec_Tens_X.Value = Watch_Face.Time.Seconds.Tens.X;
+                        numericUpDown_Sec_Tens_Y.Value = Watch_Face.Time.Seconds.Tens.Y;
+                        numericUpDown_Sec_Tens_Count.Value = Watch_Face.Time.Seconds.Tens.ImagesCount;
+                        //comboBox_Sec_Tens_Image.Text = Watch_Face.Time.Seconds.Tens.ImageIndex.ToString();
+                        comboBoxSetText(comboBox_Sec_Tens_Image, Watch_Face.Time.Seconds.Tens.ImageIndex); 
+                    }
 
-                    numericUpDown_Sec_Ones_X.Value = Watch_Face.Time.Seconds.Ones.X;
-                    numericUpDown_Sec_Ones_Y.Value = Watch_Face.Time.Seconds.Ones.Y;
-                    numericUpDown_Sec_Ones_Count.Value = Watch_Face.Time.Seconds.Ones.ImagesCount;
-                    //comboBox_Sec_Ones_Image.Text = Watch_Face.Time.Seconds.Ones.ImageIndex.ToString();
-                    comboBoxSetText(comboBox_Sec_Ones_Image, Watch_Face.Time.Seconds.Ones.ImageIndex);
+                    if (Watch_Face.Time.Seconds.Ones != null)
+                    {
+                        numericUpDown_Sec_Ones_X.Value = Watch_Face.Time.Seconds.Ones.X;
+                        numericUpDown_Sec_Ones_Y.Value = Watch_Face.Time.Seconds.Ones.Y;
+                        numericUpDown_Sec_Ones_Count.Value = Watch_Face.Time.Seconds.Ones.ImagesCount;
+                        //comboBox_Sec_Ones_Image.Text = Watch_Face.Time.Seconds.Ones.ImageIndex.ToString();
+                        comboBoxSetText(comboBox_Sec_Ones_Image, Watch_Face.Time.Seconds.Ones.ImageIndex); 
+                    }
                 }
                 else checkBox_Seconds.Checked = false;
 

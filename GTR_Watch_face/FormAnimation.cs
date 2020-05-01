@@ -72,8 +72,10 @@ namespace GTR_Watch_face
 
         private void radioButton_CheckedChanged(object sender, EventArgs e)
         {
+            pictureBox_AnimatiomPreview.BackgroundImageLayout = ImageLayout.Zoom;
             if (radioButton_normal.Checked)
             {
+                pictureBox_AnimatiomPreview.BackgroundImageLayout = ImageLayout.None;
                 if (Model_Wath.model_gtr47)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(456, 456);
@@ -106,8 +108,8 @@ namespace GTR_Watch_face
                 }
                 else if (Model_Wath.model_gtr42)
                 {
-                    pictureBox_AnimatiomPreview.Size = new Size(586, 586);
-                    this.Size = new Size(586 + 20, 586 + 100);
+                    pictureBox_AnimatiomPreview.Size = new Size(587, 587);
+                    this.Size = new Size(587 + 20, 587 + 100);
                 }
                 else if (Model_Wath.model_gts)
                 {
@@ -116,7 +118,7 @@ namespace GTR_Watch_face
                 }
                 else if (Model_Wath.model_TRex || Model_Wath.model_Verge)
                 {
-                    pictureBox_AnimatiomPreview.Size = new Size(541, 541);
+                    pictureBox_AnimatiomPreview.Size = new Size(542, 542);
                     this.Size = new Size(542 + 20, 542 + 100);
                 }
                 scalePreview = 1.5f;

@@ -302,7 +302,7 @@ namespace GTR_Watch_face
                 textBox_unpack_command.Text = Program_Settings.unpack_command_GTR47;
                 textBox_pack_command.Text = Program_Settings.pack_command_GTR47;
             }
-            
+
             checkBox_border.Checked = Program_Settings.ShowBorder;
             checkBox_crop.Checked = Program_Settings.Crop;
             checkBox_Show_Shortcuts.Checked = Program_Settings.Show_Shortcuts;
@@ -383,6 +383,21 @@ namespace GTR_Watch_face
             JSON_Modified = false;
             FormText();
             //Logger.WriteLine("Загрузили файл из значения аргумента " + StartFileNameJson);
+
+            // изменяем размер фопанели для предпросмотра если она не влазит
+            if (pictureBox_Preview.Top + pictureBox_Preview.Height > radioButton_47.Top)
+            {
+                float newHeight = radioButton_47.Top - pictureBox_Preview.Top;
+                float scale = newHeight / pictureBox_Preview.Height;
+                pictureBox_Preview.Size = new Size((int)(pictureBox_Preview.Width * scale), (int)(pictureBox_Preview.Height * scale));
+            }
+
+            //if (pictureBox_Preview.Top + pictureBox_Preview.Height > 100)
+            //{
+            //    float newHeight = 100 - pictureBox_Preview.Top;
+            //    float scale = newHeight / pictureBox_Preview.Height;
+            //    pictureBox_Preview.Size = new Size((int)(pictureBox_Preview.Width * scale), (int)(pictureBox_Preview.Height * scale));
+            //}
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -1693,7 +1708,7 @@ namespace GTR_Watch_face
 
         private void FixAnimation()
         {
-            if (Watch_Face.Unknown11 != null && Watch_Face.Unknown11.Unknown11_2 == null)
+            if (Watch_Face != null && Watch_Face.Unknown11 != null && Watch_Face.Unknown11.Unknown11_2 == null)
             {
                 if (Watch_Face.Unknown11.Unknown11_02_temp != null)
                 {
@@ -5535,6 +5550,14 @@ namespace GTR_Watch_face
 
         private void jsonWarnings(String fullfilename)
         {
+            // пробелы в имени
+            if (fullfilename.IndexOf(" ") != -1)
+            {
+                MessageBox.Show(Properties.FormStrings.Message_WarningSpaceInName_Text,
+                    Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (Watch_Face == null) return;
+
             // 3 стрелки для аналоговых часов
             if (Watch_Face.AnalogDialFace != null)
             {
@@ -5631,13 +5654,7 @@ namespace GTR_Watch_face
                     }
                 }
             }
-
-            // пробелы в имени
-            if (fullfilename.IndexOf(" ") != -1)
-            {
-                MessageBox.Show(Properties.FormStrings.Message_WarningSpaceInName_Text,
-                    Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            
         }
 
         private void checkBox_Weather_CheckedChanged(object sender, EventArgs e)
@@ -5939,11 +5956,14 @@ namespace GTR_Watch_face
         // изменили модель часов
         private void radioButton_Model_Changed(object sender, EventArgs e)
         {
+            RadioButton radioButton = sender as RadioButton;
+            if (radioButton != null && !radioButton.Checked) return;
             if (radioButton_47.Checked)
             {
                 //this.Text = "GTR watch face editor";
-                pictureBox_Preview.Height = 230;
-                pictureBox_Preview.Width = 230;
+                //pictureBox_Preview.Height = 230;
+                //pictureBox_Preview.Width = 230;
+                pictureBox_Preview.Size = new Size(230, 230);
                 offSet_X = 227;
                 offSet_Y = 227;
                 
@@ -5957,8 +5977,9 @@ namespace GTR_Watch_face
             else if (radioButton_42.Checked)
             {
                 //this.Text = "GTR watch face editor";
-                pictureBox_Preview.Height = 198;
-                pictureBox_Preview.Width = 198;
+                //pictureBox_Preview.Height = 198;
+                //pictureBox_Preview.Width = 198;
+                pictureBox_Preview.Size = new Size(198, 198);
                 offSet_X = 195;
                 offSet_Y = 195;
                 
@@ -5972,8 +5993,9 @@ namespace GTR_Watch_face
             else if (radioButton_gts.Checked)
             {
                 //this.Text = "GTS watch face editor";
-                pictureBox_Preview.Height = 224;
-                pictureBox_Preview.Width = 177;
+                //pictureBox_Preview.Height = 224;
+                //pictureBox_Preview.Width = 177;
+                pictureBox_Preview.Size = new Size(177, 224);
                 offSet_X = 174;
                 offSet_Y = 221;
                 
@@ -5987,8 +6009,9 @@ namespace GTR_Watch_face
             else if (radioButton_TRex.Checked)
             {
                 //this.Text = "T-Rex watch face editor";
-                pictureBox_Preview.Height = 183;
-                pictureBox_Preview.Width = 183;
+                //pictureBox_Preview.Height = 183;
+                //pictureBox_Preview.Width = 183;
+                pictureBox_Preview.Size = new Size(183, 183);
                 offSet_X = 180;
                 offSet_Y = 180;
 
@@ -6002,8 +6025,9 @@ namespace GTR_Watch_face
             else if (radioButton_Verge.Checked)
             {
                 //this.Text = "Verge Lite watch face editor";
-                pictureBox_Preview.Height = 183;
-                pictureBox_Preview.Width = 183;
+                //pictureBox_Preview.Height = 183;
+                //pictureBox_Preview.Width = 183;
+                pictureBox_Preview.Size = new Size(183, 183);
                 offSet_X = 180;
                 offSet_Y = 180;
 
@@ -6014,6 +6038,20 @@ namespace GTR_Watch_face
                 button_pack.Enabled = true;
                 button_zip.Enabled = true;
             }
+            // изменяем размер фопанели для предпросмотра если она не влазит
+            if (pictureBox_Preview.Top + pictureBox_Preview.Height > radioButton_47.Top)
+            {
+                float newHeight = radioButton_47.Top - pictureBox_Preview.Top;
+                float scale = newHeight / pictureBox_Preview.Height;
+                pictureBox_Preview.Size = new Size((int)(pictureBox_Preview.Width * scale), (int)(pictureBox_Preview.Height * scale));
+            }
+
+            //if (pictureBox_Preview.Top + pictureBox_Preview.Height > 200)
+            //{
+            //    float newHeight = 200 - pictureBox_Preview.Top;
+            //    float scale = newHeight / pictureBox_Preview.Height;
+            //    pictureBox_Preview.Size = new Size((int)(pictureBox_Preview.Width * scale), (int)(pictureBox_Preview.Height * scale));
+            //}
             FormText();
 
             if ((formPreview != null) && (formPreview.Visible))
@@ -7574,7 +7612,7 @@ namespace GTR_Watch_face
             if (MouseСoordinates.Y < 0) return;
             int value = MouseСoordinates.Y - (int)numericUpDown_Shortcuts_Steps_Y.Value;
             NumericUpDown numericUpDown = sender as NumericUpDown;
-            if ((e.Y <= numericUpDown.Controls[1].Width + 1) && (value > 0))
+            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
             {
                 // Click is in text area
                 numericUpDown.Value = value;
@@ -7598,7 +7636,7 @@ namespace GTR_Watch_face
             if (MouseСoordinates.Y < 0) return;
             int value = MouseСoordinates.Y - (int)numericUpDown_Shortcuts_Puls_Y.Value;
             NumericUpDown numericUpDown = sender as NumericUpDown;
-            if ((e.Y <= numericUpDown.Controls[1].Width + 1) && (value > 0))
+            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
             {
                 // Click is in text area
                 numericUpDown.Value = value;
@@ -7622,7 +7660,7 @@ namespace GTR_Watch_face
             if (MouseСoordinates.Y < 0) return;
             int value = MouseСoordinates.Y - (int)numericUpDown_Shortcuts_Weather_Y.Value;
             NumericUpDown numericUpDown = sender as NumericUpDown;
-            if ((e.Y <= numericUpDown.Controls[1].Width + 1) && (value > 0))
+            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
             {
                 // Click is in text area
                 numericUpDown.Value = value;
@@ -7646,7 +7684,7 @@ namespace GTR_Watch_face
             if (MouseСoordinates.Y < 0) return;
             int value = MouseСoordinates.Y - (int)numericUpDown_Shortcuts_Energy_Y.Value;
             NumericUpDown numericUpDown = sender as NumericUpDown;
-            if ((e.Y <= numericUpDown.Controls[1].Width + 1) && (value > 0))
+            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
             {
                 // Click is in text area
                 numericUpDown.Value = value;
@@ -8478,6 +8516,64 @@ namespace GTR_Watch_face
             }
             #endregion
         }
+
+        #region Radius
+        private void numericUpDown_StepsProgress_Radius_X_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.X < 0) return;
+            int valueX = MouseСoordinates.X - (int)numericUpDown_StepsProgress_Center_X.Value;
+            int valueY = MouseСoordinates.Y - (int)numericUpDown_StepsProgress_Center_Y.Value;
+            int value = (int)Math.Round(Math.Sqrt(valueX * valueX + valueY * valueY));
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if (e.X <= numericUpDown.Controls[1].Width + 1)
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+
+        private void numericUpDown_ActivityPulsScale_Radius_X_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.X < 0) return;
+            int valueX = MouseСoordinates.X - (int)numericUpDown_ActivityPulsScale_Center_X.Value;
+            int valueY = MouseСoordinates.Y - (int)numericUpDown_ActivityPulsScale_Center_Y.Value;
+            int value = (int)Math.Round(Math.Sqrt(valueX * valueX + valueY * valueY));
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if (e.X <= numericUpDown.Controls[1].Width + 1)
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+
+        private void numericUpDown_ActivityCaloriesScale_Radius_X_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.X < 0) return;
+            int valueX = MouseСoordinates.X - (int)numericUpDown_ActivityCaloriesScale_Center_X.Value;
+            int valueY = MouseСoordinates.Y - (int)numericUpDown_ActivityCaloriesScale_Center_Y.Value;
+            int value = (int)Math.Round(Math.Sqrt(valueX * valueX + valueY * valueY));
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if (e.X <= numericUpDown.Controls[1].Width + 1)
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+
+        private void numericUpDown_Battery_Scale_Radius_X_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.X < 0) return;
+            int valueX = MouseСoordinates.X - (int)numericUpDown_Battery_Scale_Center_X.Value;
+            int valueY = MouseСoordinates.Y - (int)numericUpDown_Battery_Scale_Center_Y.Value;
+            int value = (int)Math.Round(Math.Sqrt(valueX * valueX + valueY * valueY));
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if (e.X <= numericUpDown.Controls[1].Width + 1)
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+        #endregion
     }
 }
 

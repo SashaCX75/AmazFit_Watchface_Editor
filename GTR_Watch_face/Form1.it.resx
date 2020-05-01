@@ -6461,4 +6461,37 @@ carico maggiore del sistema)</value>
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
   </data>
+  <data name="button_Converting.Text" xml:space="preserve">
+    <value>Converti</value>
+  </data>
+  <data name="groupBox10.Text" xml:space="preserve">
+    <value>Modello di destinazione</value>
+  </data>
+  <data name="groupBox9.Text" xml:space="preserve">
+    <value>Modello di origine</value>
+  </data>
+  <data name="label486.Text" xml:space="preserve">
+    <value>Apri la watchface desiderata o salva quella attuale</value>
+  </data>
+  <data name="label487.Text" xml:space="preserve">
+    <value>* Il risultato della conversione si troverà in una nuova directory creata vicino a quella esistente</value>
+  </data>
+  <data name="label488.Text" xml:space="preserve">
+    <value>** La conversione ridimensionerà le immagini, il raggio del cerchio, lo spessore della linea e saranno ricalcolate le coordinate dell'elemento.</value>
+  </data>
+  <data name="label489.Text" xml:space="preserve">
+    <value>!!! Controlla la watchface dopo la conversione !!!</value>
+  </data>
+  <data name="label490.Text" xml:space="preserve">
+    <value>* Mostra solo se impossibile visualizzare la temperatura attuale</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Custom.Text" xml:space="preserve">
+    <value>Dimensione personalizzata</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Custom.Text" xml:space="preserve">
+    <value>Dimensione personalizzata</value>
+  </data>
+  <data name="tabPageConverting.Text" xml:space="preserve">
+    <value>Conversione</value>
+  </data>
 </root>
