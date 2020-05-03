@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button_zip_unpack = new System.Windows.Forms.Button();
@@ -6264,8 +6264,8 @@
             // Number
             // 
             this.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Number.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Number.DefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.Number, "Number");
             this.Number.Name = "Number";
             this.Number.ReadOnly = true;
@@ -6999,14 +6999,14 @@
             // dataGridView_MotiomAnimation
             // 
             resources.ApplyResources(this.dataGridView_MotiomAnimation, "dataGridView_MotiomAnimation");
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_MotiomAnimation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_MotiomAnimation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_MotiomAnimation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_MotiomAnimation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.AnimationColumn1,
@@ -22514,18 +22514,6 @@
         private System.Windows.Forms.RadioButton radioButton_Verge;
         private System.Windows.Forms.Label label483;
         private System.Windows.Forms.ComboBox comboBox_Animation_Preview_Speed;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn11;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn AnimationColumn12;
         private System.Windows.Forms.LinkLabel linkLabel_resunpacker_qzip;
         private System.Windows.Forms.PictureBox pictureBox_Preview;
         private System.Windows.Forms.TabPage tabPageConverting;
@@ -22550,6 +22538,18 @@
         private System.Windows.Forms.Label label486;
         private System.Windows.Forms.Label label490;
         private System.Windows.Forms.CheckBox checkBox_CircleScaleImage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn11;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn AnimationColumn12;
     }
 }
 
