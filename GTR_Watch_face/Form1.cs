@@ -165,7 +165,15 @@ namespace GTR_Watch_face
 
             PreviewView = true;
             Settings_Load = false;
-            currentDPI = (int)Registry.GetValue("HKEY_CURRENT_USER\\Control Panel\\Desktop", "LogPixels", 96)/96f;
+            //currentDPI = (int)Registry.GetValue(@"HKEY_CURRENT_USER\Control Panel\Desktop", "LogPixels", 96) / 96f;
+            //if (getOSversion() >= 10)
+            //{
+            //    float AppliedDPI = (int)Registry.GetValue(@"HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics", "AppliedDPI", 96) / 96f;
+            //    MessageBox.Show(AppliedDPI.ToString());
+            //    currentDPI = AppliedDPI / currentDPI;
+            //    MessageBox.Show(currentDPI.ToString());
+            //}
+            currentDPI = tabControl1.Height / 601f;
             //Logger.WriteLine("Создали переменные");
 
             if (args.Length == 1)
@@ -358,6 +366,7 @@ namespace GTR_Watch_face
             checkBox_Shortcuts_Border.Checked = Program_Settings.Shortcuts_Border;
 
             if (Program_Settings.language.Length>1) comboBox_Language.Text = Program_Settings.language;
+            dataGridView_MotiomAnimation.RowTemplate.Height = (int)(18 * currentDPI);
 
             Settings_Load = false;
 
@@ -4417,7 +4426,7 @@ namespace GTR_Watch_face
         {
             if ((formPreview == null) || (!formPreview.Visible))
             {
-                formPreview = new Form_Preview();
+                formPreview = new Form_Preview(currentDPI);
                 formPreview.Show(this);
                 //formPreview.Show();
 
@@ -5712,7 +5721,7 @@ namespace GTR_Watch_face
         private void button_SavePNG_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
-            //openFileDialog.InitialDirectory = subPath;
+            saveFileDialog.InitialDirectory = FullFileDir;
             saveFileDialog.Filter = "PNG Files: (*.png)|*.png";
             saveFileDialog.FileName = "Preview.png";
             //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
@@ -5748,7 +5757,7 @@ namespace GTR_Watch_face
         private void button_SaveGIF_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
-            //openFileDialog.InitialDirectory = subPath;
+            saveFileDialog.InitialDirectory = FullFileDir;
             saveFileDialog.Filter = "GIF Files: (*.gif)|*.gif";
             saveFileDialog.FileName = "Preview.gif";
             //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
@@ -5963,7 +5972,7 @@ namespace GTR_Watch_face
                 //this.Text = "GTR watch face editor";
                 //pictureBox_Preview.Height = 230;
                 //pictureBox_Preview.Width = 230;
-                pictureBox_Preview.Size = new Size(230, 230);
+                pictureBox_Preview.Size = new Size((int)(230 * currentDPI), (int)(230 * currentDPI));
                 offSet_X = 227;
                 offSet_Y = 227;
                 
@@ -5979,7 +5988,7 @@ namespace GTR_Watch_face
                 //this.Text = "GTR watch face editor";
                 //pictureBox_Preview.Height = 198;
                 //pictureBox_Preview.Width = 198;
-                pictureBox_Preview.Size = new Size(198, 198);
+                pictureBox_Preview.Size = new Size((int)(198 * currentDPI), (int)(198 * currentDPI));
                 offSet_X = 195;
                 offSet_Y = 195;
                 
@@ -5995,7 +6004,7 @@ namespace GTR_Watch_face
                 //this.Text = "GTS watch face editor";
                 //pictureBox_Preview.Height = 224;
                 //pictureBox_Preview.Width = 177;
-                pictureBox_Preview.Size = new Size(177, 224);
+                pictureBox_Preview.Size = new Size((int)(177 * currentDPI), (int)(224 * currentDPI));
                 offSet_X = 174;
                 offSet_Y = 221;
                 
@@ -6011,7 +6020,7 @@ namespace GTR_Watch_face
                 //this.Text = "T-Rex watch face editor";
                 //pictureBox_Preview.Height = 183;
                 //pictureBox_Preview.Width = 183;
-                pictureBox_Preview.Size = new Size(183, 183);
+                pictureBox_Preview.Size = new Size((int)(183 * currentDPI), (int)(183 * currentDPI));
                 offSet_X = 180;
                 offSet_Y = 180;
 
@@ -6027,7 +6036,7 @@ namespace GTR_Watch_face
                 //this.Text = "Verge Lite watch face editor";
                 //pictureBox_Preview.Height = 183;
                 //pictureBox_Preview.Width = 183;
-                pictureBox_Preview.Size = new Size(183, 183);
+                pictureBox_Preview.Size = new Size((int)(183 * currentDPI), (int)(183 * currentDPI));
                 offSet_X = 180;
                 offSet_Y = 180;
 
@@ -7440,7 +7449,7 @@ namespace GTR_Watch_face
 
             if (MotiomAnimation.Count > 0 || StaticAnimation != null)
             {
-                FormAnimation formAnimation = new FormAnimation(bitmap, MotiomAnimation, StaticAnimation);
+                FormAnimation formAnimation = new FormAnimation(bitmap, MotiomAnimation, StaticAnimation, currentDPI);
                 formAnimation.Owner = this;
                 if (FormAnimation.Model_Wath.model_gtr47 != radioButton_47.Checked)
                     FormAnimation.Model_Wath.model_gtr47 = radioButton_47.Checked;
@@ -8574,6 +8583,16 @@ namespace GTR_Watch_face
             }
         }
         #endregion
+
+        //private int getOSversion()
+        //{
+        //    int version = 7;
+        //    RegistryKey registryKey = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows NT\CurrentVersion");
+        //    string ProductName = registryKey.GetValue("ProductName").ToString();
+        //    string[] words = ProductName.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+        //    Int32.TryParse(words[1], out version);
+        //    return version;
+        //}
     }
 }
 
@@ -8588,7 +8607,6 @@ public static class MouseСoordinates
     public static int X = -1;
     public static int Y = -1;
 }
-
 
 /*static class Logger
 {

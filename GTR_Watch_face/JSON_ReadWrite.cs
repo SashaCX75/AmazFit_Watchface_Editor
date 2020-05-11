@@ -3331,8 +3331,9 @@ namespace GTR_Watch_face
                 if (radioButton_47.Checked)
                 {
                     this.Text = "GTR watch face editor";
-                    pictureBox_Preview.Height = 230;
-                    pictureBox_Preview.Width = 230;
+                    //pictureBox_Preview.Height = 230;
+                    //pictureBox_Preview.Width = 230;
+                    pictureBox_Preview.Size = new Size((int)(230 * currentDPI), (int)(230 * currentDPI));
                     offSet_X = 227;
                     offSet_Y = 227;
                     
@@ -3346,8 +3347,9 @@ namespace GTR_Watch_face
                 else if (radioButton_42.Checked)
                 {
                     this.Text = "GTR watch face editor";
-                    pictureBox_Preview.Height = 198;
-                    pictureBox_Preview.Width = 198;
+                    //pictureBox_Preview.Height = 198;
+                    //pictureBox_Preview.Width = 198;
+                    pictureBox_Preview.Size = new Size((int)(198 * currentDPI), (int)(198 * currentDPI));
                     offSet_X = 195;
                     offSet_Y = 195;
 
@@ -3361,8 +3363,9 @@ namespace GTR_Watch_face
                 else if (radioButton_gts.Checked)
                 {
                     this.Text = "GTS watch face editor";
-                    pictureBox_Preview.Height = 224;
-                    pictureBox_Preview.Width = 177;
+                    //pictureBox_Preview.Height = 224;
+                    //pictureBox_Preview.Width = 177;
+                    pictureBox_Preview.Size = new Size((int)(177 * currentDPI), (int)(224 * currentDPI));
                     offSet_X = 174;
                     offSet_Y = 221;
 
@@ -3376,8 +3379,9 @@ namespace GTR_Watch_face
                 else if (radioButton_TRex.Checked)
                 {
                     this.Text = "T-Rex watch face editor";
-                    pictureBox_Preview.Height = 183;
-                    pictureBox_Preview.Width = 183;
+                    //pictureBox_Preview.Height = 183;
+                    //pictureBox_Preview.Width = 183;
+                    pictureBox_Preview.Size = new Size((int)(183 * currentDPI), (int)(183 * currentDPI));
                     offSet_X = 180;
                     offSet_Y = 180;
 
@@ -3391,8 +3395,9 @@ namespace GTR_Watch_face
                 else if (radioButton_Verge.Checked)
                 {
                     this.Text = "Verge Lite watch face editor";
-                    pictureBox_Preview.Height = 183;
-                    pictureBox_Preview.Width = 183;
+                    //pictureBox_Preview.Height = 183;
+                    //pictureBox_Preview.Width = 183;
+                    pictureBox_Preview.Size = new Size((int)(183 * currentDPI), (int)(183 * currentDPI));
                     offSet_X = 180;
                     offSet_Y = 180;
 

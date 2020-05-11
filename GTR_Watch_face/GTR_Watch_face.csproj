@@ -229,6 +229,9 @@
     <EmbeddedResource Include="FormAnimation.en.resx">
       <DependentUpon>FormAnimation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAnimation.es.resx">
+      <DependentUpon>FormAnimation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAnimation.fr.resx">
       <DependentUpon>FormAnimation.cs</DependentUpon>
     </EmbeddedResource>

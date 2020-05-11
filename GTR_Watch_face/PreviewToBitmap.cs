@@ -2490,6 +2490,7 @@ namespace GTR_Watch_face
         private void CircleOnBitmap(Graphics graphics, int x, int y, int imageIndex, int radius, float width,
             int lineCap, float StartAngle, float EndAngle, bool showCircleScaleArea)
         {
+            if (EndAngle == 0) return;
             Bitmap src = new Bitmap(ListImagesFullName[imageIndex]);
             Pen pen = new Pen(Color.Black, width);
 

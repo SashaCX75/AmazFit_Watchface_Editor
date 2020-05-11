@@ -16,10 +16,11 @@ namespace GTR_Watch_face
         float scale = 1;
         float currentDPI; // масштаб экрана
 
-        public Form_Preview()
+        public Form_Preview(float cDPI)
         {
             InitializeComponent();
-            currentDPI = (int)Registry.GetValue("HKEY_CURRENT_USER\\Control Panel\\Desktop", "LogPixels", 96) / 96f;
+            //currentDPI = (int)Registry.GetValue("HKEY_CURRENT_USER\\Control Panel\\Desktop", "LogPixels", 96) / 96f;
+            currentDPI = cDPI;
         }
 
         public void radioButton_CheckedChanged(object sender, EventArgs e)

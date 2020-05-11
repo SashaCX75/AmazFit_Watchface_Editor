@@ -249,4 +249,49 @@
   <data name="Message_Warning_Caption" xml:space="preserve">
     <value>Advertencia</value>
   </data>
+  <data name="Message_ConvertingCompleted_Text" xml:space="preserve">
+    <value>Se ha creado una nueva esfera del reloj.</value>
+  </data>
+  <data name="Message_ErrorImage_Text1" xml:space="preserve">
+    <value>Algunas imágenes pueden causar errores (</value>
+  </data>
+  <data name="Message_ErrorImage_Text2" xml:space="preserve">
+    <value>Intenta arreglarlos?</value>
+  </data>
+  <data name="Message_Error_SpaceInProgrammName_Text" xml:space="preserve">
+    <value>La ruta del programa no debe contener espacios. Se recomienda colocar el programa en el directorio raíz del disco.</value>
+  </data>
+  <data name="Message_Save_JSON_Modified_Caption" xml:space="preserve">
+    <value>Guardar el proyecto</value>
+  </data>
+  <data name="Message_Save_JSON_Modified_Text1" xml:space="preserve">
+    <value>¿Quieres guardar los cambios del proyecto </value>
+  </data>
+  <data name="Message_Save_new_JSON" xml:space="preserve">
+    <value>El proyecto actual aún no se ha guardado. ¿Quieres guardarlo?</value>
+  </data>
+  <data name="Message_WarningAnimationCoun_Text" xml:space="preserve">
+    <value>El número de elementos para la animación no puede ser más de 4.</value>
+  </data>
+  <data name="Message_WarningBatteryCount_Text" xml:space="preserve">
+    <value>No se recomienda usar más de 10 imágenes para mostrar la energía de la batería.</value>
+  </data>
+  <data name="Message_WarningBatterySegment_Text" xml:space="preserve">
+    <value>No se recomienda utilizar segmentos y un indicador al mismo tiempo para el mismo tipo de valores. ¡Esto puede causar problemas técnicos!</value>
+  </data>
+  <data name="Message_WarningConverting_Text1" xml:space="preserve">
+    <value>Directorio </value>
+  </data>
+  <data name="Message_WarningConverting_Text2" xml:space="preserve">
+    <value> ya existe. ¿Reemplazar?</value>
+  </data>
+  <data name="Message_WarningSpaceInName_Text" xml:space="preserve">
+    <value>¡El nombre y la ruta del archivo no pueden contener espacios!</value>
+  </data>
+  <data name="Message_WarningTemperature_Text" xml:space="preserve">
+    <value>Es posible que la pantalla de temperatura actual no funcione sin mostrar las temperaturas diurnas y nocturnas.</value>
+  </data>
+  <data name="Message_Warning_Information" xml:space="preserve">
+    <value>Información</value>
+  </data>
 </root>
