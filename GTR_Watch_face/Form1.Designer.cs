@@ -45,8 +45,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button_pack_unpack = new System.Windows.Forms.Button();
             this.textBox_pack_unpack_dir = new System.Windows.Forms.TextBox();
+            this.label_version = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label_size = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel_Set13 = new System.Windows.Forms.Panel();
@@ -1360,7 +1362,6 @@
             this.label_preview_X = new System.Windows.Forms.Label();
             this.label_preview_Y = new System.Windows.Forms.Label();
             this.checkBox_border = new System.Windows.Forms.CheckBox();
-            this.label_version = new System.Windows.Forms.Label();
             this.radioButton_gts = new System.Windows.Forms.RadioButton();
             this.checkBox_crop = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -1868,6 +1869,7 @@
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.button_pack_unpack);
             this.tabPage1.Controls.Add(this.textBox_pack_unpack_dir);
+            this.tabPage1.Controls.Add(this.label_version);
             this.tabPage1.Controls.Add(this.label1);
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
@@ -1955,6 +1957,12 @@
             this.textBox_pack_unpack_dir.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.textBox_pack_unpack_dir, ((bool)(resources.GetObject("textBox_pack_unpack_dir.ShowHelp"))));
             // 
+            // label_version
+            // 
+            resources.ApplyResources(this.label_version, "label_version");
+            this.label_version.Name = "label_version";
+            this.helpProvider1.SetShowHelp(this.label_version, ((bool)(resources.GetObject("label_version.ShowHelp"))));
+            // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
@@ -1964,6 +1972,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage2.Controls.Add(this.label_size);
             this.tabPage2.Controls.Add(this.checkBox1);
             this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Controls.Add(this.dataGridView_ImagesList);
@@ -1974,6 +1983,11 @@
             resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
             this.helpProvider1.SetShowHelp(this.tabPage2, ((bool)(resources.GetObject("tabPage2.ShowHelp"))));
+            // 
+            // label_size
+            // 
+            resources.ApplyResources(this.label_size, "label_size");
+            this.label_size.Name = "label_size";
             // 
             // checkBox1
             // 
@@ -16635,12 +16649,6 @@
             this.checkBox_border.CheckedChanged += new System.EventHandler(this.checkBox_border_CheckedChanged);
             this.checkBox_border.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
             // 
-            // label_version
-            // 
-            resources.ApplyResources(this.label_version, "label_version");
-            this.label_version.Name = "label_version";
-            this.helpProvider1.SetShowHelp(this.label_version, ((bool)(resources.GetObject("label_version.ShowHelp"))));
-            // 
             // radioButton_gts
             // 
             resources.ApplyResources(this.radioButton_gts, "radioButton_gts");
@@ -16738,7 +16746,6 @@
             this.Controls.Add(this.checkBox_Show_Shortcuts);
             this.Controls.Add(this.checkBox_crop);
             this.Controls.Add(this.radioButton_gts);
-            this.Controls.Add(this.label_version);
             this.Controls.Add(this.checkBox_border);
             this.Controls.Add(this.label_preview_Y);
             this.Controls.Add(this.label_preview_X);
@@ -18667,6 +18674,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn11;
         private System.Windows.Forms.DataGridViewCheckBoxColumn AnimationColumn12;
+        private System.Windows.Forms.Label label_size;
     }
 }
 

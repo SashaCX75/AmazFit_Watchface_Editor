@@ -450,6 +450,45 @@
   <data name="&gt;&gt;textBox_pack_unpack_dir.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="label_version.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_version.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 5pt</value>
+  </data>
+  <data name="label_version.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label_version.Location" type="System.Drawing.Point, System.Drawing">
+    <value>660, 566</value>
+  </data>
+  <data name="label_version.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="label_version.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_version.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 7</value>
+  </data>
+  <data name="label_version.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="label_version.Text" xml:space="preserve">
+    <value>v 0.0</value>
+  </data>
+  <data name="&gt;&gt;label_version.Name" xml:space="preserve">
+    <value>label_version</value>
+  </data>
+  <data name="&gt;&gt;label_version.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_version.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label_version.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -481,7 +520,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -511,6 +550,33 @@
     <value>tabControl1</value>
   </data>
   <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label_size.Location" type="System.Drawing.Point, System.Drawing">
+    <value>224, 549</value>
+  </data>
+  <data name="label_size.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="label_size.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="label_size.Text" xml:space="preserve">
+    <value>≈0MB</value>
+  </data>
+  <data name="label_size.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label_size.Name" xml:space="preserve">
+    <value>label_size</value>
+  </data>
+  <data name="&gt;&gt;label_size.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_size.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label_size.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="checkBox1.AutoSize" type="System.Boolean, mscorlib">
@@ -544,7 +610,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;checkBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="checkBox_DoNotDisturb_Set13.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>System</value>
@@ -9592,7 +9658,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <metadata name="Number.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -9640,7 +9706,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;dataGridView_ImagesList.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="button_images.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -9670,7 +9736,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;button_images.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -9703,7 +9769,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="button_JSON.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -9733,7 +9799,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;button_JSON.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -9766,7 +9832,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -11246,7 +11312,7 @@
     <value>True</value>
   </data>
   <data name="dataGridView_MotiomAnimation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 125</value>
+    <value>382, 125</value>
   </data>
   <data name="dataGridView_MotiomAnimation.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -11279,7 +11345,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_MotiomAnimation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 17</value>
+    <value>382, 17</value>
   </data>
   <data name="checkBox_MotiomAnimation.TabIndex" type="System.Int32, mscorlib">
     <value>88</value>
@@ -11306,7 +11372,7 @@
     <value>True</value>
   </data>
   <data name="tabPage54.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 203</value>
+    <value>382, 203</value>
   </data>
   <data name="tabPage54.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -12203,7 +12269,7 @@
     <value>True</value>
   </data>
   <data name="tabPage47.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 94</value>
+    <value>382, 94</value>
   </data>
   <data name="tabPage47.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -12590,7 +12656,7 @@
     <value>True</value>
   </data>
   <data name="tabPage48.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 94</value>
+    <value>382, 94</value>
   </data>
   <data name="tabPage48.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -12974,7 +13040,7 @@
     <value>True</value>
   </data>
   <data name="tabPage49.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 94</value>
+    <value>382, 94</value>
   </data>
   <data name="tabPage49.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -14683,7 +14749,7 @@
     <value>True</value>
   </data>
   <data name="tabPage27.Size" type="System.Drawing.Size, System.Drawing">
-    <value>375, 104</value>
+    <value>374, 104</value>
   </data>
   <data name="tabPage27.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -15352,7 +15418,7 @@
     <value>True</value>
   </data>
   <data name="tabPage30.Size" type="System.Drawing.Size, System.Drawing">
-    <value>377, 104</value>
+    <value>374, 104</value>
   </data>
   <data name="tabPage30.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -15382,7 +15448,7 @@
     <value>True</value>
   </data>
   <data name="tabControl5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 130</value>
+    <value>382, 130</value>
   </data>
   <data name="tabControl5.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -15406,7 +15472,7 @@
     <value>True</value>
   </data>
   <data name="tabPage26.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 159</value>
+    <value>382, 159</value>
   </data>
   <data name="tabPage26.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -15790,7 +15856,7 @@
     <value>True</value>
   </data>
   <data name="tabPage25.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 159</value>
+    <value>382, 159</value>
   </data>
   <data name="tabPage25.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -17236,7 +17302,7 @@
     <value>True</value>
   </data>
   <data name="tabPage31.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 144</value>
+    <value>382, 144</value>
   </data>
   <data name="tabPage31.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -17893,7 +17959,7 @@
     <value>True</value>
   </data>
   <data name="tabPage32.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 144</value>
+    <value>382, 144</value>
   </data>
   <data name="tabPage32.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -18976,7 +19042,7 @@
     <value>True</value>
   </data>
   <data name="tabPage28.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 134</value>
+    <value>382, 134</value>
   </data>
   <data name="tabPage28.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -19330,7 +19396,7 @@
     <value>True</value>
   </data>
   <data name="tabPage22.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 134</value>
+    <value>382, 134</value>
   </data>
   <data name="tabPage22.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -20134,7 +20200,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_Battery_Scale.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 20</value>
+    <value>382, 20</value>
   </data>
   <data name="checkBox_Battery_Scale.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
@@ -20161,7 +20227,7 @@
     <value>True</value>
   </data>
   <data name="tabPage23.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 134</value>
+    <value>382, 134</value>
   </data>
   <data name="tabPage23.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -20641,7 +20707,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_Battery_ClockHand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 20</value>
+    <value>382, 20</value>
   </data>
   <data name="checkBox_Battery_ClockHand.TabIndex" type="System.Int32, mscorlib">
     <value>68</value>
@@ -20668,7 +20734,7 @@
     <value>True</value>
   </data>
   <data name="tabPage35.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 134</value>
+    <value>382, 134</value>
   </data>
   <data name="tabPage35.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -20875,7 +20941,7 @@
     <value>True</value>
   </data>
   <data name="tabPage42.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 134</value>
+    <value>382, 134</value>
   </data>
   <data name="tabPage42.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -21643,7 +21709,7 @@
     <value>True</value>
   </data>
   <data name="tabPage18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 54</value>
+    <value>382, 54</value>
   </data>
   <data name="tabPage18.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -21961,7 +22027,7 @@
     <value>True</value>
   </data>
   <data name="tabPage19.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 54</value>
+    <value>382, 54</value>
   </data>
   <data name="tabPage19.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -22279,7 +22345,7 @@
     <value>True</value>
   </data>
   <data name="tabPage20.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 54</value>
+    <value>382, 54</value>
   </data>
   <data name="tabPage20.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -23893,7 +23959,7 @@
     <value>True</value>
   </data>
   <data name="tabPage13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 159</value>
+    <value>382, 159</value>
   </data>
   <data name="tabPage13.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -24562,7 +24628,7 @@
     <value>True</value>
   </data>
   <data name="tabPage14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>375, 134</value>
+    <value>374, 134</value>
   </data>
   <data name="tabPage14.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -24910,7 +24976,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_ActivityPulsScale.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 20</value>
+    <value>368, 20</value>
   </data>
   <data name="checkBox_ActivityPulsScale.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
@@ -25399,7 +25465,7 @@
     <value>True</value>
   </data>
   <data name="tabPage44.Size" type="System.Drawing.Size, System.Drawing">
-    <value>377, 134</value>
+    <value>374, 134</value>
   </data>
   <data name="tabPage44.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -25627,7 +25693,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_Pulse_ClockHand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 20</value>
+    <value>368, 20</value>
   </data>
   <data name="checkBox_Pulse_ClockHand.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
@@ -25909,7 +25975,7 @@
     <value>True</value>
   </data>
   <data name="tabPage51.Size" type="System.Drawing.Size, System.Drawing">
-    <value>377, 134</value>
+    <value>374, 134</value>
   </data>
   <data name="tabPage51.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -26080,7 +26146,7 @@
     <value>True</value>
   </data>
   <data name="tabPage45.Size" type="System.Drawing.Size, System.Drawing">
-    <value>377, 134</value>
+    <value>374, 134</value>
   </data>
   <data name="tabPage45.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -26110,7 +26176,7 @@
     <value>True</value>
   </data>
   <data name="tabControl8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 160</value>
+    <value>382, 160</value>
   </data>
   <data name="tabControl8.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -26134,7 +26200,7 @@
     <value>True</value>
   </data>
   <data name="tabPage55.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 159</value>
+    <value>382, 159</value>
   </data>
   <data name="tabPage55.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -26803,7 +26869,7 @@
     <value>True</value>
   </data>
   <data name="tabPage15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>375, 134</value>
+    <value>374, 134</value>
   </data>
   <data name="tabPage15.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -27151,7 +27217,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_ActivityCaloriesScale.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 20</value>
+    <value>368, 20</value>
   </data>
   <data name="checkBox_ActivityCaloriesScale.TabIndex" type="System.Int32, mscorlib">
     <value>74</value>
@@ -27637,7 +27703,7 @@
     <value>True</value>
   </data>
   <data name="tabPage11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>377, 134</value>
+    <value>374, 134</value>
   </data>
   <data name="tabPage11.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -27865,7 +27931,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_Calories_ClockHand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 20</value>
+    <value>368, 20</value>
   </data>
   <data name="checkBox_Calories_ClockHand.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
@@ -28147,7 +28213,7 @@
     <value>True</value>
   </data>
   <data name="tabPage52.Size" type="System.Drawing.Size, System.Drawing">
-    <value>377, 134</value>
+    <value>374, 134</value>
   </data>
   <data name="tabPage52.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -28177,7 +28243,7 @@
     <value>True</value>
   </data>
   <data name="tabControl9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 160</value>
+    <value>382, 160</value>
   </data>
   <data name="tabControl9.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -28201,7 +28267,7 @@
     <value>True</value>
   </data>
   <data name="tabPage59.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 159</value>
+    <value>382, 159</value>
   </data>
   <data name="tabPage59.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -28489,7 +28555,7 @@
     <value>True</value>
   </data>
   <data name="tabPage16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 159</value>
+    <value>382, 159</value>
   </data>
   <data name="tabPage16.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -29539,7 +29605,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_StProg_ClockHand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>377, 20</value>
+    <value>376, 20</value>
   </data>
   <data name="checkBox_StProg_ClockHand.TabIndex" type="System.Int32, mscorlib">
     <value>97</value>
@@ -29959,7 +30025,7 @@
     <value>True</value>
   </data>
   <data name="tabPage37.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 134</value>
+    <value>382, 134</value>
   </data>
   <data name="tabPage37.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -30127,7 +30193,7 @@
     <value>True</value>
   </data>
   <data name="tabPage41.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 134</value>
+    <value>382, 134</value>
   </data>
   <data name="tabPage41.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -31201,7 +31267,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_ADWeekDay_ClockHand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 20</value>
+    <value>382, 20</value>
   </data>
   <data name="checkBox_ADWeekDay_ClockHand.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
@@ -31228,7 +31294,7 @@
     <value>True</value>
   </data>
   <data name="tabPage39.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 116</value>
+    <value>382, 116</value>
   </data>
   <data name="tabPage39.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -31708,7 +31774,7 @@
     <value>True</value>
   </data>
   <data name="checkBox_ADMonth_ClockHand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 20</value>
+    <value>382, 20</value>
   </data>
   <data name="checkBox_ADMonth_ClockHand.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
@@ -31735,7 +31801,7 @@
     <value>True</value>
   </data>
   <data name="tabPage40.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 116</value>
+    <value>382, 116</value>
   </data>
   <data name="tabPage40.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -34264,7 +34330,7 @@
     <value>True</value>
   </data>
   <data name="tabPage7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 170</value>
+    <value>382, 170</value>
   </data>
   <data name="tabPage7.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -34780,7 +34846,7 @@
     <value>True</value>
   </data>
   <data name="tabPage50.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 170</value>
+    <value>382, 170</value>
   </data>
   <data name="tabPage50.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -35512,7 +35578,7 @@
     <value>True</value>
   </data>
   <data name="tabPage34.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 170</value>
+    <value>382, 170</value>
   </data>
   <data name="tabPage34.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -37441,7 +37507,7 @@
     <value>True</value>
   </data>
   <data name="tabPage5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 150</value>
+    <value>382, 150</value>
   </data>
   <data name="tabPage5.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -38023,7 +38089,7 @@
     <value>True</value>
   </data>
   <data name="tabPage6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 150</value>
+    <value>382, 150</value>
   </data>
   <data name="tabPage6.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -40570,7 +40636,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>22</value>
   </data>
   <metadata name="colorDialog_StepsProgress.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -40609,7 +40675,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button_PreviewBig.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>21</value>
   </data>
   <data name="checkBox_WebW.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -40642,7 +40708,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBox_WebW.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>20</value>
   </data>
   <data name="checkBox_WebB.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -40675,7 +40741,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBox_WebB.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>19</value>
   </data>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>395, 17</value>
@@ -40708,7 +40774,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button_SavePNG.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>17</value>
   </data>
   <data name="button_SaveGIF.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -40738,7 +40804,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button_SaveGIF.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>16</value>
   </data>
   <data name="radioButton_47.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -40771,7 +40837,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>$this</value>
   </data>
   <data name="&gt;&gt;radioButton_47.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>15</value>
   </data>
   <data name="radioButton_42.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -40804,7 +40870,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>$this</value>
   </data>
   <data name="&gt;&gt;radioButton_42.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>14</value>
   </data>
   <data name="label_preview_X.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -40840,7 +40906,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label_preview_X.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>13</value>
   </data>
   <data name="label_preview_Y.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -40876,7 +40942,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label_preview_Y.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>12</value>
   </data>
   <data name="checkBox_border.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -40888,7 +40954,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>True</value>
   </data>
   <data name="checkBox_border.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 30</value>
+    <value>227, 35</value>
   </data>
   <data name="checkBox_border.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -40906,45 +40972,6 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBox_border.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="label_version.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label_version.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 5pt</value>
-  </data>
-  <data name="label_version.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label_version.Location" type="System.Drawing.Point, System.Drawing">
-    <value>905, 605</value>
-  </data>
-  <data name="label_version.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="label_version.ShowHelp" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label_version.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 7</value>
-  </data>
-  <data name="label_version.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="label_version.Text" xml:space="preserve">
-    <value>v 0.0</value>
-  </data>
-  <data name="&gt;&gt;label_version.Name" xml:space="preserve">
-    <value>label_version</value>
-  </data>
-  <data name="&gt;&gt;label_version.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label_version.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label_version.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
   <data name="radioButton_gts.AutoSize" type="System.Boolean, mscorlib">
@@ -40990,7 +41017,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>True</value>
   </data>
   <data name="checkBox_crop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 30</value>
+    <value>227, 35</value>
   </data>
   <data name="checkBox_crop.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
@@ -41038,7 +41065,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>18</value>
   </data>
   <data name="checkBox_Show_Shortcuts.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -41050,7 +41077,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>True</value>
   </data>
   <data name="checkBox_Show_Shortcuts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 20</value>
+    <value>227, 30</value>
   </data>
   <data name="checkBox_Show_Shortcuts.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -41173,7 +41200,7 @@ bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian)
     <value>True</value>
   </data>
   <data name="checkBox_CircleScaleImage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 30</value>
+    <value>227, 35</value>
   </data>
   <data name="checkBox_CircleScaleImage.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>

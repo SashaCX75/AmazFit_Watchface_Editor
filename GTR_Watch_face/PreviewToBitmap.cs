@@ -235,7 +235,7 @@ namespace GTR_Watch_face
                                     {
                                         int value = (int)Math.Ceiling(RowsCount * Watch_Face_Preview_Set.Battery / 100);
                                         //value--;
-                                        if (value < 0) value = 0;
+                                        if (value <= 0) value = 1;
                                         if (count < value)
                                         {
                                             src = new Bitmap(ListImagesFullName[i]);

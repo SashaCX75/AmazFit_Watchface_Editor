@@ -1582,6 +1582,7 @@ namespace GTR_Watch_face
             string text = File.ReadAllText(fullfilename);
             //richTextBox_JSON.Text = text;
             PreviewView = false;
+            int AllFileSize = 0;
             ListImages.Clear();
             ListImagesFullName.Clear();
             dataGridView_ImagesList.Rows.Clear();
@@ -1612,6 +1613,9 @@ namespace GTR_Watch_face
 
                         PixelFormat pf = loadedImage.PixelFormat;
                         if (pf != PixelFormat.Format32bppArgb) ErrorImage.Add(Path.GetFileName(file.FullName));
+                        int pixels = loadedImage.Width * loadedImage.Height;
+                        AllFileSize = AllFileSize + pixels * 4 + 20;
+
                         var RowNew = new DataGridViewRow();
                         DataGridViewImageCellLayout ZoomType = DataGridViewImageCellLayout.Zoom;
                         if ((loadedImage.Height < 45) && (loadedImage.Width < 110))
@@ -1713,6 +1717,13 @@ namespace GTR_Watch_face
             PreviewImage();
             JSON_Modified = false;
             FormText();
+            ShowAllFileSize(AllFileSize);
+        }
+
+        private void ShowAllFileSize(double sizeinbytes)
+        {
+            double AllFileSizeMB = GetFileSizeMB(sizeinbytes);
+            label_size.Text = "≈" + AllFileSizeMB.ToString() + "MB";
         }
 
         private void FixAnimation()
@@ -6669,6 +6680,18 @@ namespace GTR_Watch_face
             try
             {
                 double sizeinbytes = file.Length;
+                double sizeinkbytes = Math.Round((sizeinbytes / 1024), 2);
+                double sizeinmbytes = Math.Round((sizeinkbytes / 1024), 2);
+                double sizeingbytes = Math.Round((sizeinmbytes / 1024), 2);
+                return sizeinmbytes;
+            }
+            catch { return 0; } //перехват ошибок и возврат сообщения об ошибке
+        }
+        public double GetFileSizeMB(double sizeinbytes)
+        {
+            try
+            {
+                //double sizeinbytes = file.Length;
                 double sizeinkbytes = Math.Round((sizeinbytes / 1024), 2);
                 double sizeinmbytes = Math.Round((sizeinkbytes / 1024), 2);
                 double sizeingbytes = Math.Round((sizeinmbytes / 1024), 2);
