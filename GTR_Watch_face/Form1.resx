@@ -555,6 +555,9 @@
   <data name="label_size.Location" type="System.Drawing.Point, System.Drawing">
     <value>224, 549</value>
   </data>
+  <data name="label_size.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="label_size.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
   </data>
@@ -28574,6 +28577,672 @@
   </data>
   <data name="&gt;&gt;tabPage16.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_Spacing.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_Spacing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 83</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_Spacing.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_Spacing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_Spacing.TabIndex" type="System.Int32, mscorlib">
+    <value>98</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityStepsGoal_Spacing.Name" xml:space="preserve">
+    <value>numericUpDown_ActivityStepsGoal_Spacing</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityStepsGoal_Spacing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityStepsGoal_Spacing.Parent" xml:space="preserve">
+    <value>tabPage56</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityStepsGoal_Spacing.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_EndCorner_X.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_EndCorner_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>140, 43</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_EndCorner_X.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_EndCorner_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_EndCorner_X.TabIndex" type="System.Int32, mscorlib">
+    <value>93</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityStepsGoal_EndCorner_X.Name" xml:space="preserve">
+    <value>numericUpDown_ActivityStepsGoal_EndCorner_X</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityStepsGoal_EndCorner_X.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityStepsGoal_EndCorner_X.Parent" xml:space="preserve">
+    <value>tabPage56</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityStepsGoal_EndCorner_X.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_Count.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_Count.Location" type="System.Drawing.Point, System.Drawing">
+    <value>321, 84</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_Count.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_Count.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_Count.TabIndex" type="System.Int32, mscorlib">
+    <value>88</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityStepsGoal_Count.Name" xml:space="preserve">
+    <value>numericUpDown_ActivityStepsGoal_Count</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityStepsGoal_Count.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityStepsGoal_Count.Parent" xml:space="preserve">
+    <value>tabPage56</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityStepsGoal_Count.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_StartCorner_Y.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_StartCorner_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>79, 43</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_StartCorner_Y.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_StartCorner_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_StartCorner_Y.TabIndex" type="System.Int32, mscorlib">
+    <value>85</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityStepsGoal_StartCorner_Y.Name" xml:space="preserve">
+    <value>numericUpDown_ActivityStepsGoal_StartCorner_Y</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityStepsGoal_StartCorner_Y.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityStepsGoal_StartCorner_Y.Parent" xml:space="preserve">
+    <value>tabPage56</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityStepsGoal_StartCorner_Y.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_StartCorner_X.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_StartCorner_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 43</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_StartCorner_X.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_StartCorner_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_StartCorner_X.TabIndex" type="System.Int32, mscorlib">
+    <value>84</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityStepsGoal_StartCorner_X.Name" xml:space="preserve">
+    <value>numericUpDown_ActivityStepsGoal_StartCorner_X</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityStepsGoal_StartCorner_X.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityStepsGoal_StartCorner_X.Parent" xml:space="preserve">
+    <value>tabPage56</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityStepsGoal_StartCorner_X.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="checkBox_ActivityStepsGoal.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox_ActivityStepsGoal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox_ActivityStepsGoal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 7</value>
+  </data>
+  <data name="checkBox_ActivityStepsGoal.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox_ActivityStepsGoal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 17</value>
+  </data>
+  <data name="checkBox_ActivityStepsGoal.TabIndex" type="System.Int32, mscorlib">
+    <value>86</value>
+  </data>
+  <data name="checkBox_ActivityStepsGoal.Text" xml:space="preserve">
+    <value>Отображать</value>
+  </data>
+  <data name="&gt;&gt;checkBox_ActivityStepsGoal.Name" xml:space="preserve">
+    <value>checkBox_ActivityStepsGoal</value>
+  </data>
+  <data name="&gt;&gt;checkBox_ActivityStepsGoal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox_ActivityStepsGoal.Parent" xml:space="preserve">
+    <value>tabPage56</value>
+  </data>
+  <data name="&gt;&gt;checkBox_ActivityStepsGoal.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label491.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label491.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label491.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label491.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 85</value>
+  </data>
+  <data name="label491.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label491.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 13</value>
+  </data>
+  <data name="label491.TabIndex" type="System.Int32, mscorlib">
+    <value>97</value>
+  </data>
+  <data name="label491.Text" xml:space="preserve">
+    <value>Отступы</value>
+  </data>
+  <data name="&gt;&gt;label491.Name" xml:space="preserve">
+    <value>label491</value>
+  </data>
+  <data name="&gt;&gt;label491.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label491.Parent" xml:space="preserve">
+    <value>tabPage56</value>
+  </data>
+  <data name="&gt;&gt;label491.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="label492.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label492.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label492.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label492.Location" type="System.Drawing.Point, System.Drawing">
+    <value>64, 45</value>
+  </data>
+  <data name="label492.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label492.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
+  </data>
+  <data name="label492.TabIndex" type="System.Int32, mscorlib">
+    <value>81</value>
+  </data>
+  <data name="label492.Text" xml:space="preserve">
+    <value>Y:</value>
+  </data>
+  <data name="&gt;&gt;label492.Name" xml:space="preserve">
+    <value>label492</value>
+  </data>
+  <data name="&gt;&gt;label492.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label492.Parent" xml:space="preserve">
+    <value>tabPage56</value>
+  </data>
+  <data name="&gt;&gt;label492.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items" xml:space="preserve">
+    <value>Вверх влево</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items1" xml:space="preserve">
+    <value>Вверх по центру</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items2" xml:space="preserve">
+    <value>Вверх вправо</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items3" xml:space="preserve">
+    <value>Середина влево</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items4" xml:space="preserve">
+    <value>Середина по центру</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items5" xml:space="preserve">
+    <value>Середина вправо</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items6" xml:space="preserve">
+    <value>Вниз влево</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items7" xml:space="preserve">
+    <value>Вниз по центру</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items8" xml:space="preserve">
+    <value>Вниз вправо</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 82</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 21</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.TabIndex" type="System.Int32, mscorlib">
+    <value>96</value>
+  </data>
+  <data name="&gt;&gt;comboBox_ActivityStepsGoal_Alignment.Name" xml:space="preserve">
+    <value>comboBox_ActivityStepsGoal_Alignment</value>
+  </data>
+  <data name="&gt;&gt;comboBox_ActivityStepsGoal_Alignment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox_ActivityStepsGoal_Alignment.Parent" xml:space="preserve">
+    <value>tabPage56</value>
+  </data>
+  <data name="&gt;&gt;comboBox_ActivityStepsGoal_Alignment.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label493.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label493.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label493.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label493.Location" type="System.Drawing.Point, System.Drawing">
+    <value>255, 45</value>
+  </data>
+  <data name="label493.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label493.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 13</value>
+  </data>
+  <data name="label493.TabIndex" type="System.Int32, mscorlib">
+    <value>82</value>
+  </data>
+  <data name="label493.Text" xml:space="preserve">
+    <value>ImageIndex:</value>
+  </data>
+  <data name="&gt;&gt;label493.Name" xml:space="preserve">
+    <value>label493</value>
+  </data>
+  <data name="&gt;&gt;label493.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label493.Parent" xml:space="preserve">
+    <value>tabPage56</value>
+  </data>
+  <data name="&gt;&gt;label493.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="label494.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label494.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label494.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label494.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 68</value>
+  </data>
+  <data name="label494.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label494.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 13</value>
+  </data>
+  <data name="label494.TabIndex" type="System.Int32, mscorlib">
+    <value>95</value>
+  </data>
+  <data name="label494.Text" xml:space="preserve">
+    <value>Выравнивание</value>
+  </data>
+  <data name="&gt;&gt;label494.Name" xml:space="preserve">
+    <value>label494</value>
+  </data>
+  <data name="&gt;&gt;label494.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label494.Parent" xml:space="preserve">
+    <value>tabPage56</value>
+  </data>
+  <data name="&gt;&gt;label494.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label495.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label495.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label495.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label495.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 45</value>
+  </data>
+  <data name="label495.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label495.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
+  </data>
+  <data name="label495.TabIndex" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="label495.Text" xml:space="preserve">
+    <value>X:</value>
+  </data>
+  <data name="&gt;&gt;label495.Name" xml:space="preserve">
+    <value>label495</value>
+  </data>
+  <data name="&gt;&gt;label495.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label495.Parent" xml:space="preserve">
+    <value>tabPage56</value>
+  </data>
+  <data name="&gt;&gt;label495.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_EndCorner_Y.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_EndCorner_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 43</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_EndCorner_Y.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_EndCorner_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="numericUpDown_ActivityStepsGoal_EndCorner_Y.TabIndex" type="System.Int32, mscorlib">
+    <value>94</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityStepsGoal_EndCorner_Y.Name" xml:space="preserve">
+    <value>numericUpDown_ActivityStepsGoal_EndCorner_Y</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityStepsGoal_EndCorner_Y.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityStepsGoal_EndCorner_Y.Parent" xml:space="preserve">
+    <value>tabPage56</value>
+  </data>
+  <data name="&gt;&gt;numericUpDown_ActivityStepsGoal_EndCorner_Y.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Image.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Image.Location" type="System.Drawing.Point, System.Drawing">
+    <value>321, 42</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Image.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Image.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 21</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Image.TabIndex" type="System.Int32, mscorlib">
+    <value>83</value>
+  </data>
+  <data name="&gt;&gt;comboBox_ActivityStepsGoal_Image.Name" xml:space="preserve">
+    <value>comboBox_ActivityStepsGoal_Image</value>
+  </data>
+  <data name="&gt;&gt;comboBox_ActivityStepsGoal_Image.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox_ActivityStepsGoal_Image.Parent" xml:space="preserve">
+    <value>tabPage56</value>
+  </data>
+  <data name="&gt;&gt;comboBox_ActivityStepsGoal_Image.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="label496.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label496.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label496.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label496.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 45</value>
+  </data>
+  <data name="label496.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label496.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
+  </data>
+  <data name="label496.TabIndex" type="System.Int32, mscorlib">
+    <value>91</value>
+  </data>
+  <data name="label496.Text" xml:space="preserve">
+    <value>X:</value>
+  </data>
+  <data name="&gt;&gt;label496.Name" xml:space="preserve">
+    <value>label496</value>
+  </data>
+  <data name="&gt;&gt;label496.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label496.Parent" xml:space="preserve">
+    <value>tabPage56</value>
+  </data>
+  <data name="&gt;&gt;label496.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="label497.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label497.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label497.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label497.Location" type="System.Drawing.Point, System.Drawing">
+    <value>185, 45</value>
+  </data>
+  <data name="label497.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label497.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 13</value>
+  </data>
+  <data name="label497.TabIndex" type="System.Int32, mscorlib">
+    <value>92</value>
+  </data>
+  <data name="label497.Text" xml:space="preserve">
+    <value>Y:</value>
+  </data>
+  <data name="&gt;&gt;label497.Name" xml:space="preserve">
+    <value>label497</value>
+  </data>
+  <data name="&gt;&gt;label497.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label497.Parent" xml:space="preserve">
+    <value>tabPage56</value>
+  </data>
+  <data name="&gt;&gt;label497.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="label498.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label498.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label498.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label498.Location" type="System.Drawing.Point, System.Drawing">
+    <value>255, 86</value>
+  </data>
+  <data name="label498.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label498.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
+  </data>
+  <data name="label498.TabIndex" type="System.Int32, mscorlib">
+    <value>87</value>
+  </data>
+  <data name="label498.Text" xml:space="preserve">
+    <value>ImagesCount</value>
+  </data>
+  <data name="&gt;&gt;label498.Name" xml:space="preserve">
+    <value>label498</value>
+  </data>
+  <data name="&gt;&gt;label498.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label498.Parent" xml:space="preserve">
+    <value>tabPage56</value>
+  </data>
+  <data name="&gt;&gt;label498.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="label499.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label499.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label499.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label499.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 27</value>
+  </data>
+  <data name="label499.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label499.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 13</value>
+  </data>
+  <data name="label499.TabIndex" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="label499.Text" xml:space="preserve">
+    <value>Правый нижний угол</value>
+  </data>
+  <data name="&gt;&gt;label499.Name" xml:space="preserve">
+    <value>label499</value>
+  </data>
+  <data name="&gt;&gt;label499.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label499.Parent" xml:space="preserve">
+    <value>tabPage56</value>
+  </data>
+  <data name="&gt;&gt;label499.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="label500.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label500.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label500.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label500.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 27</value>
+  </data>
+  <data name="label500.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label500.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 13</value>
+  </data>
+  <data name="label500.TabIndex" type="System.Int32, mscorlib">
+    <value>89</value>
+  </data>
+  <data name="label500.Text" xml:space="preserve">
+    <value>Левый верхний угол</value>
+  </data>
+  <data name="&gt;&gt;label500.Name" xml:space="preserve">
+    <value>label500</value>
+  </data>
+  <data name="&gt;&gt;label500.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label500.Parent" xml:space="preserve">
+    <value>tabPage56</value>
+  </data>
+  <data name="&gt;&gt;label500.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="tabPage56.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPage56.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tabPage56.Size" type="System.Drawing.Size, System.Drawing">
+    <value>382, 159</value>
+  </data>
+  <data name="tabPage56.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="tabPage56.Text" xml:space="preserve">
+    <value>Цель шагов</value>
+  </data>
+  <data name="&gt;&gt;tabPage56.Name" xml:space="preserve">
+    <value>tabPage56</value>
+  </data>
+  <data name="&gt;&gt;tabPage56.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage56.Parent" xml:space="preserve">
+    <value>tabControl_Activity</value>
+  </data>
+  <data name="&gt;&gt;tabPage56.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="tabControl_Activity.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>

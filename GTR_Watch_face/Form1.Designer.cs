@@ -968,6 +968,26 @@
             this.label166 = new System.Windows.Forms.Label();
             this.comboBox_ActivityStar_Image = new System.Windows.Forms.ComboBox();
             this.label171 = new System.Windows.Forms.Label();
+            this.tabPage56 = new System.Windows.Forms.TabPage();
+            this.numericUpDown_ActivityStepsGoal_Spacing = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_ActivityStepsGoal_EndCorner_X = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_ActivityStepsGoal_Count = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_ActivityStepsGoal_StartCorner_Y = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_ActivityStepsGoal_StartCorner_X = new System.Windows.Forms.NumericUpDown();
+            this.checkBox_ActivityStepsGoal = new System.Windows.Forms.CheckBox();
+            this.label491 = new System.Windows.Forms.Label();
+            this.label492 = new System.Windows.Forms.Label();
+            this.comboBox_ActivityStepsGoal_Alignment = new System.Windows.Forms.ComboBox();
+            this.label493 = new System.Windows.Forms.Label();
+            this.label494 = new System.Windows.Forms.Label();
+            this.label495 = new System.Windows.Forms.Label();
+            this.numericUpDown_ActivityStepsGoal_EndCorner_Y = new System.Windows.Forms.NumericUpDown();
+            this.comboBox_ActivityStepsGoal_Image = new System.Windows.Forms.ComboBox();
+            this.label496 = new System.Windows.Forms.Label();
+            this.label497 = new System.Windows.Forms.Label();
+            this.label498 = new System.Windows.Forms.Label();
+            this.label499 = new System.Windows.Forms.Label();
+            this.label500 = new System.Windows.Forms.Label();
             this.checkBox_Activity = new System.Windows.Forms.CheckBox();
             this.button_Activity = new System.Windows.Forms.Button();
             this.panel_StepsProgress = new System.Windows.Forms.Panel();
@@ -1700,6 +1720,13 @@
             this.tabPage16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStar_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStar_X)).BeginInit();
+            this.tabPage56.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStepsGoal_Spacing)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStepsGoal_EndCorner_X)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStepsGoal_Count)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStepsGoal_StartCorner_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStepsGoal_StartCorner_X)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStepsGoal_EndCorner_Y)).BeginInit();
             this.panel_StepsProgress.SuspendLayout();
             this.tabControl6.SuspendLayout();
             this.tabPage36.SuspendLayout();
@@ -1988,6 +2015,7 @@
             // 
             resources.ApplyResources(this.label_size, "label_size");
             this.label_size.Name = "label_size";
+            this.helpProvider1.SetShowHelp(this.label_size, ((bool)(resources.GetObject("label_size.ShowHelp"))));
             // 
             // checkBox1
             // 
@@ -10056,6 +10084,7 @@
             this.tabControl_Activity.Controls.Add(this.tabPage55);
             this.tabControl_Activity.Controls.Add(this.tabPage59);
             this.tabControl_Activity.Controls.Add(this.tabPage16);
+            this.tabControl_Activity.Controls.Add(this.tabPage56);
             resources.ApplyResources(this.tabControl_Activity, "tabControl_Activity");
             this.tabControl_Activity.Name = "tabControl_Activity";
             this.tabControl_Activity.SelectedIndex = 0;
@@ -12269,6 +12298,241 @@
             resources.ApplyResources(this.label171, "label171");
             this.label171.Name = "label171";
             this.helpProvider1.SetShowHelp(this.label171, ((bool)(resources.GetObject("label171.ShowHelp"))));
+            // 
+            // tabPage56
+            // 
+            this.tabPage56.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage56.Controls.Add(this.numericUpDown_ActivityStepsGoal_Spacing);
+            this.tabPage56.Controls.Add(this.numericUpDown_ActivityStepsGoal_EndCorner_X);
+            this.tabPage56.Controls.Add(this.numericUpDown_ActivityStepsGoal_Count);
+            this.tabPage56.Controls.Add(this.numericUpDown_ActivityStepsGoal_StartCorner_Y);
+            this.tabPage56.Controls.Add(this.numericUpDown_ActivityStepsGoal_StartCorner_X);
+            this.tabPage56.Controls.Add(this.checkBox_ActivityStepsGoal);
+            this.tabPage56.Controls.Add(this.label491);
+            this.tabPage56.Controls.Add(this.label492);
+            this.tabPage56.Controls.Add(this.comboBox_ActivityStepsGoal_Alignment);
+            this.tabPage56.Controls.Add(this.label493);
+            this.tabPage56.Controls.Add(this.label494);
+            this.tabPage56.Controls.Add(this.label495);
+            this.tabPage56.Controls.Add(this.numericUpDown_ActivityStepsGoal_EndCorner_Y);
+            this.tabPage56.Controls.Add(this.comboBox_ActivityStepsGoal_Image);
+            this.tabPage56.Controls.Add(this.label496);
+            this.tabPage56.Controls.Add(this.label497);
+            this.tabPage56.Controls.Add(this.label498);
+            this.tabPage56.Controls.Add(this.label499);
+            this.tabPage56.Controls.Add(this.label500);
+            resources.ApplyResources(this.tabPage56, "tabPage56");
+            this.tabPage56.Name = "tabPage56";
+            this.helpProvider1.SetShowHelp(this.tabPage56, ((bool)(resources.GetObject("tabPage56.ShowHelp"))));
+            // 
+            // numericUpDown_ActivityStepsGoal_Spacing
+            // 
+            resources.ApplyResources(this.numericUpDown_ActivityStepsGoal_Spacing, "numericUpDown_ActivityStepsGoal_Spacing");
+            this.numericUpDown_ActivityStepsGoal_Spacing.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ActivityStepsGoal_Spacing.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ActivityStepsGoal_Spacing.Name = "numericUpDown_ActivityStepsGoal_Spacing";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityStepsGoal_Spacing, ((bool)(resources.GetObject("numericUpDown_ActivityStepsGoal_Spacing.ShowHelp"))));
+            this.numericUpDown_ActivityStepsGoal_Spacing.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // numericUpDown_ActivityStepsGoal_EndCorner_X
+            // 
+            this.numericUpDown_ActivityStepsGoal_EndCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_ActivityStepsGoal_EndCorner_X, "numericUpDown_ActivityStepsGoal_EndCorner_X");
+            this.numericUpDown_ActivityStepsGoal_EndCorner_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ActivityStepsGoal_EndCorner_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ActivityStepsGoal_EndCorner_X.Name = "numericUpDown_ActivityStepsGoal_EndCorner_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityStepsGoal_EndCorner_X, ((bool)(resources.GetObject("numericUpDown_ActivityStepsGoal_EndCorner_X.ShowHelp"))));
+            this.numericUpDown_ActivityStepsGoal_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityStepsGoal_EndCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
+            // 
+            // numericUpDown_ActivityStepsGoal_Count
+            // 
+            resources.ApplyResources(this.numericUpDown_ActivityStepsGoal_Count, "numericUpDown_ActivityStepsGoal_Count");
+            this.numericUpDown_ActivityStepsGoal_Count.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.numericUpDown_ActivityStepsGoal_Count.Name = "numericUpDown_ActivityStepsGoal_Count";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityStepsGoal_Count, ((bool)(resources.GetObject("numericUpDown_ActivityStepsGoal_Count.ShowHelp"))));
+            this.numericUpDown_ActivityStepsGoal_Count.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown_ActivityStepsGoal_Count.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // numericUpDown_ActivityStepsGoal_StartCorner_Y
+            // 
+            this.numericUpDown_ActivityStepsGoal_StartCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_ActivityStepsGoal_StartCorner_Y, "numericUpDown_ActivityStepsGoal_StartCorner_Y");
+            this.numericUpDown_ActivityStepsGoal_StartCorner_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ActivityStepsGoal_StartCorner_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ActivityStepsGoal_StartCorner_Y.Name = "numericUpDown_ActivityStepsGoal_StartCorner_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityStepsGoal_StartCorner_Y, ((bool)(resources.GetObject("numericUpDown_ActivityStepsGoal_StartCorner_Y.ShowHelp"))));
+            this.numericUpDown_ActivityStepsGoal_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityStepsGoal_StartCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
+            // 
+            // numericUpDown_ActivityStepsGoal_StartCorner_X
+            // 
+            this.numericUpDown_ActivityStepsGoal_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_ActivityStepsGoal_StartCorner_X, "numericUpDown_ActivityStepsGoal_StartCorner_X");
+            this.numericUpDown_ActivityStepsGoal_StartCorner_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ActivityStepsGoal_StartCorner_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ActivityStepsGoal_StartCorner_X.Name = "numericUpDown_ActivityStepsGoal_StartCorner_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityStepsGoal_StartCorner_X, ((bool)(resources.GetObject("numericUpDown_ActivityStepsGoal_StartCorner_X.ShowHelp"))));
+            this.numericUpDown_ActivityStepsGoal_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityStepsGoal_StartCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
+            // 
+            // checkBox_ActivityStepsGoal
+            // 
+            resources.ApplyResources(this.checkBox_ActivityStepsGoal, "checkBox_ActivityStepsGoal");
+            this.checkBox_ActivityStepsGoal.Name = "checkBox_ActivityStepsGoal";
+            this.helpProvider1.SetShowHelp(this.checkBox_ActivityStepsGoal, ((bool)(resources.GetObject("checkBox_ActivityStepsGoal.ShowHelp"))));
+            this.checkBox_ActivityStepsGoal.UseVisualStyleBackColor = true;
+            this.checkBox_ActivityStepsGoal.CheckedChanged += new System.EventHandler(this.checkBox_ActivityStepsGoal_CheckedChanged);
+            // 
+            // label491
+            // 
+            resources.ApplyResources(this.label491, "label491");
+            this.label491.Name = "label491";
+            this.helpProvider1.SetShowHelp(this.label491, ((bool)(resources.GetObject("label491.ShowHelp"))));
+            // 
+            // label492
+            // 
+            resources.ApplyResources(this.label492, "label492");
+            this.label492.Name = "label492";
+            this.helpProvider1.SetShowHelp(this.label492, ((bool)(resources.GetObject("label492.ShowHelp"))));
+            // 
+            // comboBox_ActivityStepsGoal_Alignment
+            // 
+            this.comboBox_ActivityStepsGoal_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.comboBox_ActivityStepsGoal_Alignment, "comboBox_ActivityStepsGoal_Alignment");
+            this.comboBox_ActivityStepsGoal_Alignment.FormattingEnabled = true;
+            this.comboBox_ActivityStepsGoal_Alignment.Items.AddRange(new object[] {
+            resources.GetString("comboBox_ActivityStepsGoal_Alignment.Items"),
+            resources.GetString("comboBox_ActivityStepsGoal_Alignment.Items1"),
+            resources.GetString("comboBox_ActivityStepsGoal_Alignment.Items2"),
+            resources.GetString("comboBox_ActivityStepsGoal_Alignment.Items3"),
+            resources.GetString("comboBox_ActivityStepsGoal_Alignment.Items4"),
+            resources.GetString("comboBox_ActivityStepsGoal_Alignment.Items5"),
+            resources.GetString("comboBox_ActivityStepsGoal_Alignment.Items6"),
+            resources.GetString("comboBox_ActivityStepsGoal_Alignment.Items7"),
+            resources.GetString("comboBox_ActivityStepsGoal_Alignment.Items8")});
+            this.comboBox_ActivityStepsGoal_Alignment.Name = "comboBox_ActivityStepsGoal_Alignment";
+            this.helpProvider1.SetShowHelp(this.comboBox_ActivityStepsGoal_Alignment, ((bool)(resources.GetObject("comboBox_ActivityStepsGoal_Alignment.ShowHelp"))));
+            this.comboBox_ActivityStepsGoal_Alignment.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            // 
+            // label493
+            // 
+            resources.ApplyResources(this.label493, "label493");
+            this.label493.Name = "label493";
+            this.helpProvider1.SetShowHelp(this.label493, ((bool)(resources.GetObject("label493.ShowHelp"))));
+            // 
+            // label494
+            // 
+            resources.ApplyResources(this.label494, "label494");
+            this.label494.Name = "label494";
+            this.helpProvider1.SetShowHelp(this.label494, ((bool)(resources.GetObject("label494.ShowHelp"))));
+            // 
+            // label495
+            // 
+            resources.ApplyResources(this.label495, "label495");
+            this.label495.Name = "label495";
+            this.helpProvider1.SetShowHelp(this.label495, ((bool)(resources.GetObject("label495.ShowHelp"))));
+            // 
+            // numericUpDown_ActivityStepsGoal_EndCorner_Y
+            // 
+            this.numericUpDown_ActivityStepsGoal_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_ActivityStepsGoal_EndCorner_Y, "numericUpDown_ActivityStepsGoal_EndCorner_Y");
+            this.numericUpDown_ActivityStepsGoal_EndCorner_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ActivityStepsGoal_EndCorner_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ActivityStepsGoal_EndCorner_Y.Name = "numericUpDown_ActivityStepsGoal_EndCorner_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityStepsGoal_EndCorner_Y, ((bool)(resources.GetObject("numericUpDown_ActivityStepsGoal_EndCorner_Y.ShowHelp"))));
+            this.numericUpDown_ActivityStepsGoal_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityStepsGoal_EndCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
+            // 
+            // comboBox_ActivityStepsGoal_Image
+            // 
+            this.comboBox_ActivityStepsGoal_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_ActivityStepsGoal_Image.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_ActivityStepsGoal_Image, "comboBox_ActivityStepsGoal_Image");
+            this.comboBox_ActivityStepsGoal_Image.FormattingEnabled = true;
+            this.comboBox_ActivityStepsGoal_Image.Name = "comboBox_ActivityStepsGoal_Image";
+            this.helpProvider1.SetShowHelp(this.comboBox_ActivityStepsGoal_Image, ((bool)(resources.GetObject("comboBox_ActivityStepsGoal_Image.ShowHelp"))));
+            this.comboBox_ActivityStepsGoal_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_ActivityStepsGoal_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_ActivityStepsGoal_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            // 
+            // label496
+            // 
+            resources.ApplyResources(this.label496, "label496");
+            this.label496.Name = "label496";
+            this.helpProvider1.SetShowHelp(this.label496, ((bool)(resources.GetObject("label496.ShowHelp"))));
+            // 
+            // label497
+            // 
+            resources.ApplyResources(this.label497, "label497");
+            this.label497.Name = "label497";
+            this.helpProvider1.SetShowHelp(this.label497, ((bool)(resources.GetObject("label497.ShowHelp"))));
+            // 
+            // label498
+            // 
+            resources.ApplyResources(this.label498, "label498");
+            this.label498.Name = "label498";
+            this.helpProvider1.SetShowHelp(this.label498, ((bool)(resources.GetObject("label498.ShowHelp"))));
+            // 
+            // label499
+            // 
+            resources.ApplyResources(this.label499, "label499");
+            this.label499.Name = "label499";
+            this.helpProvider1.SetShowHelp(this.label499, ((bool)(resources.GetObject("label499.ShowHelp"))));
+            // 
+            // label500
+            // 
+            resources.ApplyResources(this.label500, "label500");
+            this.label500.Name = "label500";
+            this.helpProvider1.SetShowHelp(this.label500, ((bool)(resources.GetObject("label500.ShowHelp"))));
             // 
             // checkBox_Activity
             // 
@@ -17153,6 +17417,14 @@
             this.tabPage16.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStar_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStar_X)).EndInit();
+            this.tabPage56.ResumeLayout(false);
+            this.tabPage56.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStepsGoal_Spacing)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStepsGoal_EndCorner_X)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStepsGoal_Count)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStepsGoal_StartCorner_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStepsGoal_StartCorner_X)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStepsGoal_EndCorner_Y)).EndInit();
             this.panel_StepsProgress.ResumeLayout(false);
             this.tabControl6.ResumeLayout(false);
             this.tabPage36.ResumeLayout(false);
@@ -18675,6 +18947,26 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn11;
         private System.Windows.Forms.DataGridViewCheckBoxColumn AnimationColumn12;
         private System.Windows.Forms.Label label_size;
+        private System.Windows.Forms.TabPage tabPage56;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ActivityStepsGoal_Spacing;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ActivityStepsGoal_EndCorner_X;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ActivityStepsGoal_Count;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ActivityStepsGoal_StartCorner_Y;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ActivityStepsGoal_StartCorner_X;
+        private System.Windows.Forms.CheckBox checkBox_ActivityStepsGoal;
+        private System.Windows.Forms.Label label491;
+        private System.Windows.Forms.Label label492;
+        private System.Windows.Forms.ComboBox comboBox_ActivityStepsGoal_Alignment;
+        private System.Windows.Forms.Label label493;
+        private System.Windows.Forms.Label label494;
+        private System.Windows.Forms.Label label495;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ActivityStepsGoal_EndCorner_Y;
+        private System.Windows.Forms.ComboBox comboBox_ActivityStepsGoal_Image;
+        private System.Windows.Forms.Label label496;
+        private System.Windows.Forms.Label label497;
+        private System.Windows.Forms.Label label498;
+        private System.Windows.Forms.Label label499;
+        private System.Windows.Forms.Label label500;
     }
 }
 

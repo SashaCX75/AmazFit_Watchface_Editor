@@ -45,6 +45,7 @@ namespace GTR_Watch_face
 
             comboBox_ActivityCaloriesScale_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivitySteps_Image.Items.AddRange(ListImages.ToArray());
+            comboBox_ActivityStepsGoal_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityDistance_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityDistance_Decimal.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityDistance_Suffix.Items.AddRange(ListImages.ToArray());
@@ -704,48 +705,22 @@ namespace GTR_Watch_face
                 }
                 else checkBox_ActivityCalories.Checked = false;
 
-                //if (Watch_Face.Activity.StepsGoal != null)
-                //{
-                //    checkBox_ActivityCaloriesScale.Checked = true;
-                //    numericUpDown_ActivityCaloriesScale_Center_X.Value = Watch_Face.Activity.StepsGoal.CenterX;
-                //    numericUpDown_ActivityCaloriesScale_Center_Y.Value = Watch_Face.Activity.StepsGoal.CenterY;
-                //    numericUpDown_ActivityCaloriesScale_Radius_X.Value = Watch_Face.Activity.StepsGoal.RadiusX;
-                //    numericUpDown_ActivityCaloriesScale_Radius_Y.Value = Watch_Face.Activity.StepsGoal.RadiusY;
+                if (Watch_Face.Activity.StepsGoal != null)
+                {
+                    checkBox_ActivityStepsGoal.Checked = true;
+                    numericUpDown_ActivityStepsGoal_StartCorner_X.Value = Watch_Face.Activity.StepsGoal.TopLeftX;
+                    numericUpDown_ActivityStepsGoal_StartCorner_Y.Value = Watch_Face.Activity.StepsGoal.TopLeftY;
+                    numericUpDown_ActivityStepsGoal_EndCorner_X.Value = Watch_Face.Activity.StepsGoal.BottomRightX;
+                    numericUpDown_ActivityStepsGoal_EndCorner_Y.Value = Watch_Face.Activity.StepsGoal.BottomRightY;
 
-                //    numericUpDown_ActivityCaloriesScale_StartAngle.Value = Watch_Face.Activity.StepsGoal.StartAngle;
-                //    numericUpDown_ActivityCaloriesScale_EndAngle.Value = Watch_Face.Activity.StepsGoal.EndAngle;
-                //    numericUpDown_ActivityCaloriesScale_Width.Value = Watch_Face.Activity.StepsGoal.Width;
-
-                //    Color new_color = ColorRead(Watch_Face.Activity.StepsGoal.Color);
-                //    comboBox_ActivityCaloriesScale_Color.BackColor = new_color;
-                //    colorDialog_Calories.Color = new_color;
-
-                //    switch (Watch_Face.Activity.StepsGoal.Flatness)
-                //    {
-                //        case 90:
-                //            //comboBox_Battery_Flatness.Text = "Треугольное";
-                //            comboBox_ActivityCaloriesScale_Flatness.SelectedIndex = 1;
-                //            break;
-                //        case 180:
-                //            //comboBox_Battery_Flatness.Text = "Плоское";
-                //            comboBox_ActivityCaloriesScale_Flatness.SelectedIndex = 2;
-                //            break;
-                //        default:
-                //            //comboBox_Battery_Flatness.Text = "Круглое";
-                //            comboBox_ActivityCaloriesScale_Flatness.SelectedIndex = 0;
-                //            break;
-                //    }
-
-                //    if(Watch_Face.Activity.StepsGoal.ImageIndex != null)
-                //    {
-                //        comboBoxSetText(comboBox_ActivityCaloriesScale_Image, (long)Watch_Face.Activity.StepsGoal.ImageIndex);
-                //        ColorToCoodinates(new_color, numericUpDown_ActivityCaloriesScale_ImageX,
-                //            numericUpDown_ActivityCaloriesScale_ImageY);
-                //        checkBox_ActivityCaloriesScale_Image.Checked = true;
-                //    }
-                //    else checkBox_ActivityCaloriesScale_Image.Checked = false;
-                //}
-                //else checkBox_ActivityCaloriesScale.Checked = false;
+                    //comboBox_ActivitySteps_Image.Text = Watch_Face.Activity.Steps.Step.ImageIndex.ToString();
+                    comboBoxSetText(comboBox_ActivityStepsGoal_Image, Watch_Face.Activity.StepsGoal.ImageIndex);
+                    numericUpDown_ActivityStepsGoal_Count.Value = Watch_Face.Activity.StepsGoal.ImagesCount;
+                    numericUpDown_ActivityStepsGoal_Spacing.Value = Watch_Face.Activity.StepsGoal.Spacing;
+                    AlignmentToString(comboBox_ActivityStepsGoal_Alignment, Watch_Face.Activity.StepsGoal.Alignment);
+                    //comboBox_ActivitySteps_Alignment.Text = Alignment;
+                }
+                else checkBox_ActivityStepsGoal.Checked = false;
 
                 if (Watch_Face.Activity.CaloriesGraph != null && Watch_Face.Activity.CaloriesGraph.Circle != null)
                 {
@@ -1798,53 +1773,25 @@ namespace GTR_Watch_face
                     Watch_Face.Activity.Calories.Alignment = Alignment;
                 }
 
-                //if (checkBox_ActivityCaloriesScale.Checked)
-                //{
-                //    if (Watch_Face.Activity == null) Watch_Face.Activity = new Activity();
-                //    if (Watch_Face.Activity.StepsGoal == null) Watch_Face.Activity.StepsGoal = new CircleScale();
+                if ((checkBox_ActivityStepsGoal.Checked) && (comboBox_ActivityStepsGoal_Image.SelectedIndex >= 0))
+                {
+                    if (Watch_Face.Activity == null) Watch_Face.Activity = new Activity();
+                    if (Watch_Face.Activity.StepsGoal == null) Watch_Face.Activity.StepsGoal = new Number();
 
-                //    Watch_Face.Activity.StepsGoal.CenterX = (int)numericUpDown_ActivityCaloriesScale_Center_X.Value;
-                //    Watch_Face.Activity.StepsGoal.CenterY = (int)numericUpDown_ActivityCaloriesScale_Center_Y.Value;
-                //    Watch_Face.Activity.StepsGoal.RadiusX = (int)numericUpDown_ActivityCaloriesScale_Radius_X.Value;
-                //    Watch_Face.Activity.StepsGoal.RadiusY = (int)numericUpDown_ActivityCaloriesScale_Radius_Y.Value;
+                    string www = comboBox_ActivityStepsGoal_Image.Text;
+                    Watch_Face.Activity.StepsGoal.ImageIndex = Int32.Parse(www);
+                    Watch_Face.Activity.StepsGoal.ImageIndex = Int32.Parse(comboBox_ActivityStepsGoal_Image.Text);
+                    Watch_Face.Activity.StepsGoal.ImagesCount = (int)numericUpDown_ActivityStepsGoal_Count.Value;
+                    Watch_Face.Activity.StepsGoal.TopLeftX = (int)numericUpDown_ActivityStepsGoal_StartCorner_X.Value;
+                    Watch_Face.Activity.StepsGoal.TopLeftY = (int)numericUpDown_ActivityStepsGoal_StartCorner_Y.Value;
+                    Watch_Face.Activity.StepsGoal.BottomRightX = (int)numericUpDown_ActivityStepsGoal_EndCorner_X.Value;
+                    Watch_Face.Activity.StepsGoal.BottomRightY = (int)numericUpDown_ActivityStepsGoal_EndCorner_Y.Value;
 
-                //    Watch_Face.Activity.StepsGoal.StartAngle = (int)numericUpDown_ActivityCaloriesScale_StartAngle.Value;
-                //    Watch_Face.Activity.StepsGoal.EndAngle = (int)numericUpDown_ActivityCaloriesScale_EndAngle.Value;
-                //    Watch_Face.Activity.StepsGoal.Width = (int)numericUpDown_ActivityCaloriesScale_Width.Value;
-
-                //    Color color = comboBox_ActivityCaloriesScale_Color.BackColor;
-                //    Color new_color = Color.FromArgb(0, color.R, color.G, color.B);
-                //    string colorStr = ColorTranslator.ToHtml(new_color);
-                //    colorStr = colorStr.Replace("#", "0x00");
-                //    Watch_Face.Activity.StepsGoal.Color = colorStr;
-
-                //    switch (comboBox_ActivityCaloriesScale_Flatness.SelectedIndex)
-                //    {
-                //        case 1:
-                //            Watch_Face.Activity.StepsGoal.Flatness = 90;
-                //            break;
-                //        case 2:
-                //            Watch_Face.Activity.StepsGoal.Flatness = 180;
-                //            break;
-                //        default:
-                //            Watch_Face.Activity.StepsGoal.Flatness = 0;
-                //            break;
-                //    }
-
-                //    if (checkBox_ActivityCaloriesScale_Image.Checked &&
-                //        comboBox_ActivityCaloriesScale_Image.SelectedIndex >= 0)
-                //    {
-                //        int imageX = (int)numericUpDown_ActivityCaloriesScale_ImageX.Value;
-                //        int imageY = (int)numericUpDown_ActivityCaloriesScale_ImageY.Value;
-                //        int imageIndex = comboBox_ActivityCaloriesScale_Image.SelectedIndex;
-                //        colorStr = CoodinatesToColor(imageX, imageY);
-                //        Bitmap src = new Bitmap(ListImagesFullName[imageIndex]);
-                //        Watch_Face.Activity.StepsGoal.CenterX = imageX + src.Width / 2;
-                //        Watch_Face.Activity.StepsGoal.CenterY = imageY + src.Height / 2;
-                //        Watch_Face.Activity.StepsGoal.Color = colorStr;
-                //        Watch_Face.Activity.StepsGoal.ImageIndex = imageIndex;
-                //    }
-                //}
+                    Watch_Face.Activity.StepsGoal.Spacing = (int)numericUpDown_ActivityStepsGoal_Spacing.Value;
+                    string Alignment = StringToAlignment(comboBox_ActivityStepsGoal_Alignment.SelectedIndex);
+                    Watch_Face.Activity.StepsGoal.Alignment = Alignment;
+                }
+                
                 if (checkBox_ActivityCaloriesScale.Checked)
                 {
                     if (Watch_Face.Activity == null) Watch_Face.Activity = new Activity();
@@ -3204,6 +3151,8 @@ namespace GTR_Watch_face
             comboBox_ActivityCaloriesScale_Image.Items.Clear();
             comboBox_ActivitySteps_Image.Text = "";
             comboBox_ActivitySteps_Image.Items.Clear();
+            comboBox_ActivityStepsGoal_Image.Text = "";
+            comboBox_ActivityStepsGoal_Image.Items.Clear();
             comboBox_ActivityDistance_Image.Text = "";
             comboBox_ActivityDistance_Image.Items.Clear();
             comboBox_ActivityDistance_Decimal.Text = "";

@@ -1728,11 +1728,11 @@
   <data name="checkBox_Weather_Text.Text" xml:space="preserve">
     <value>启用</value>
   </data>
-  <data name="label270.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
-  </data>
   <data name="label270.Location" type="System.Drawing.Point, System.Drawing">
     <value>288, 45</value>
+  </data>
+  <data name="label270.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 13</value>
   </data>
   <data name="label270.Text" xml:space="preserve">
     <value>间距:</value>
@@ -1797,11 +1797,11 @@
   <data name="checkBox_Weather_Day.Text" xml:space="preserve">
     <value>启用</value>
   </data>
-  <data name="label289.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
-  </data>
   <data name="label289.Location" type="System.Drawing.Point, System.Drawing">
     <value>288, 48</value>
+  </data>
+  <data name="label289.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 13</value>
   </data>
   <data name="label289.Text" xml:space="preserve">
     <value>间距:</value>
@@ -1860,11 +1860,11 @@
   <data name="checkBox_Weather_Night.Text" xml:space="preserve">
     <value>启用</value>
   </data>
-  <data name="label313.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
-  </data>
   <data name="label313.Location" type="System.Drawing.Point, System.Drawing">
     <value>288, 48</value>
+  </data>
+  <data name="label313.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 13</value>
   </data>
   <data name="label313.Text" xml:space="preserve">
     <value>间距:</value>
@@ -2898,11 +2898,11 @@
   <data name="label160.Text" xml:space="preserve">
     <value>右下角</value>
   </data>
-  <data name="label152.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
-  </data>
   <data name="label152.Location" type="System.Drawing.Point, System.Drawing">
     <value>168, 85</value>
+  </data>
+  <data name="label152.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 13</value>
   </data>
   <data name="label152.Text" xml:space="preserve">
     <value>间距:</value>
@@ -3071,6 +3071,66 @@
   </data>
   <data name="tabPage16.Text" xml:space="preserve">
     <value>目标达成</value>
+  </data>
+  <data name="checkBox_ActivityStepsGoal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 17</value>
+  </data>
+  <data name="checkBox_ActivityStepsGoal.Text" xml:space="preserve">
+    <value>启用</value>
+  </data>
+  <data name="label491.Location" type="System.Drawing.Point, System.Drawing">
+    <value>168, 85</value>
+  </data>
+  <data name="label491.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 13</value>
+  </data>
+  <data name="label491.Text" xml:space="preserve">
+    <value>间距:</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items" xml:space="preserve">
+    <value>左上方</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items1" xml:space="preserve">
+    <value>顶部中心</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items2" xml:space="preserve">
+    <value>右上方</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items3" xml:space="preserve">
+    <value>居中左</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items4" xml:space="preserve">
+    <value>中心</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items5" xml:space="preserve">
+    <value>中央右</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items6" xml:space="preserve">
+    <value>左下</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items7" xml:space="preserve">
+    <value>底部中心</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items8" xml:space="preserve">
+    <value>右下</value>
+  </data>
+  <data name="label494.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="label494.Text" xml:space="preserve">
+    <value>对齐方式</value>
+  </data>
+  <data name="label499.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 13</value>
+  </data>
+  <data name="label499.Text" xml:space="preserve">
+    <value>右下角</value>
+  </data>
+  <data name="label500.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 13</value>
+  </data>
+  <data name="label500.Text" xml:space="preserve">
+    <value>左上角</value>
   </data>
   <data name="checkBox_Activity.Text" xml:space="preserve">
     <value>激活</value>
@@ -3417,11 +3477,11 @@
   <data name="checkBox_MonthAndDayD.Text" xml:space="preserve">
     <value>启用</value>
   </data>
-  <data name="label72.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 13</value>
-  </data>
   <data name="label72.Location" type="System.Drawing.Point, System.Drawing">
     <value>25, 114</value>
+  </data>
+  <data name="label72.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 13</value>
   </data>
   <data name="label72.Text" xml:space="preserve">
     <value>间距:</value>
@@ -3480,11 +3540,11 @@
   <data name="checkBox_MonthAndDayM.Text" xml:space="preserve">
     <value>启用</value>
   </data>
-  <data name="label73.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
-  </data>
   <data name="label73.Location" type="System.Drawing.Point, System.Drawing">
     <value>25, 114</value>
+  </data>
+  <data name="label73.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 13</value>
   </data>
   <data name="label73.Text" xml:space="preserve">
     <value>间距:</value>
@@ -3564,11 +3624,11 @@
   <data name="checkBox_OneLine.Text" xml:space="preserve">
     <value>启用</value>
   </data>
-  <data name="label93.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
-  </data>
   <data name="label93.Location" type="System.Drawing.Point, System.Drawing">
     <value>25, 114</value>
+  </data>
+  <data name="label93.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 13</value>
   </data>
   <data name="label93.Text" xml:space="preserve">
     <value>间距:</value>
@@ -3660,11 +3720,11 @@
   <data name="checkBox_Year.Text" xml:space="preserve">
     <value>启用</value>
   </data>
-  <data name="label358.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
-  </data>
   <data name="label358.Location" type="System.Drawing.Point, System.Drawing">
     <value>25, 114</value>
+  </data>
+  <data name="label358.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 13</value>
   </data>
   <data name="label358.Text" xml:space="preserve">
     <value>间距:</value>
