@@ -188,7 +188,7 @@
     <value>55, 13</value>
   </data>
   <data name="label339.Text" xml:space="preserve">
-    <value>步数目标</value>
+    <value>目标步数</value>
   </data>
   <data name="label340.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -260,7 +260,7 @@
     <value>55, 13</value>
   </data>
   <data name="label331.Text" xml:space="preserve">
-    <value>步数目标</value>
+    <value>目标步数</value>
   </data>
   <data name="label332.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -332,7 +332,7 @@
     <value>55, 13</value>
   </data>
   <data name="label323.Text" xml:space="preserve">
-    <value>步数目标</value>
+    <value>目标步数</value>
   </data>
   <data name="label324.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -533,7 +533,7 @@
     <value>55, 13</value>
   </data>
   <data name="label262.Text" xml:space="preserve">
-    <value>步数目标</value>
+    <value>目标步数</value>
   </data>
   <data name="label263.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -605,7 +605,7 @@
     <value>55, 13</value>
   </data>
   <data name="label254.Text" xml:space="preserve">
-    <value>步数目标</value>
+    <value>目标步数</value>
   </data>
   <data name="label255.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -677,7 +677,7 @@
     <value>55, 13</value>
   </data>
   <data name="label246.Text" xml:space="preserve">
-    <value>步数目标</value>
+    <value>目标步数</value>
   </data>
   <data name="label247.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -749,7 +749,7 @@
     <value>55, 13</value>
   </data>
   <data name="label91.Text" xml:space="preserve">
-    <value>步数目标</value>
+    <value>目标步数</value>
   </data>
   <data name="label92.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -821,7 +821,7 @@
     <value>55, 13</value>
   </data>
   <data name="label83.Text" xml:space="preserve">
-    <value>步数目标</value>
+    <value>目标步数</value>
   </data>
   <data name="label84.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -893,7 +893,7 @@
     <value>55, 13</value>
   </data>
   <data name="label232.Text" xml:space="preserve">
-    <value>步数目标</value>
+    <value>目标步数</value>
   </data>
   <data name="label233.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -965,7 +965,7 @@
     <value>55, 13</value>
   </data>
   <data name="label224.Text" xml:space="preserve">
-    <value>步数目标</value>
+    <value>目标步数</value>
   </data>
   <data name="label225.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -1037,7 +1037,7 @@
     <value>55, 13</value>
   </data>
   <data name="label213.Text" xml:space="preserve">
-    <value>步数目标</value>
+    <value>目标步数</value>
   </data>
   <data name="label214.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -1109,7 +1109,7 @@
     <value>55, 13</value>
   </data>
   <data name="label47.Text" xml:space="preserve">
-    <value>步数目标</value>
+    <value>目标步数</value>
   </data>
   <data name="label48.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -1181,7 +1181,7 @@
     <value>55, 13</value>
   </data>
   <data name="label46.Text" xml:space="preserve">
-    <value>步数目标</value>
+    <value>目标步数</value>
   </data>
   <data name="label45.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -1531,7 +1531,7 @@
     <value>启用</value>
   </data>
   <data name="label439.Location" type="System.Drawing.Point, System.Drawing">
-    <value>100, 45</value>
+    <value>101, 45</value>
   </data>
   <data name="label439.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 13</value>
@@ -1573,7 +1573,7 @@
     <value>启用</value>
   </data>
   <data name="label437.Location" type="System.Drawing.Point, System.Drawing">
-    <value>100, 45</value>
+    <value>101, 45</value>
   </data>
   <data name="label437.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 13</value>
@@ -1615,7 +1615,7 @@
     <value>启用</value>
   </data>
   <data name="label448.Location" type="System.Drawing.Point, System.Drawing">
-    <value>100, 45</value>
+    <value>101, 45</value>
   </data>
   <data name="label448.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 13</value>
@@ -1657,7 +1657,7 @@
     <value>启用</value>
   </data>
   <data name="label454.Location" type="System.Drawing.Point, System.Drawing">
-    <value>100, 45</value>
+    <value>101, 45</value>
   </data>
   <data name="label454.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 13</value>
@@ -2293,7 +2293,7 @@
     <value>34, 13</value>
   </data>
   <data name="label202.Text" xml:space="preserve">
-    <value>宽度:</value>
+    <value>宽度5:</value>
   </data>
   <data name="label203.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 13</value>
@@ -2803,7 +2803,7 @@
     <value>结束角:</value>
   </data>
   <data name="label421.Location" type="System.Drawing.Point, System.Drawing">
-    <value>260, 26</value>
+    <value>262, 26</value>
   </data>
   <data name="label421.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 13</value>
@@ -2989,7 +2989,7 @@
     <value>结束角:</value>
   </data>
   <data name="label116.Location" type="System.Drawing.Point, System.Drawing">
-    <value>260, 26</value>
+    <value>262, 26</value>
   </data>
   <data name="label116.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 13</value>
@@ -3070,7 +3070,7 @@
     <value>坐标</value>
   </data>
   <data name="tabPage16.Text" xml:space="preserve">
-    <value>目标达成</value>
+    <value>达成目标</value>
   </data>
   <data name="checkBox_ActivityStepsGoal.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
@@ -3193,7 +3193,7 @@
     <value>颜色:</value>
   </data>
   <data name="label108.Location" type="System.Drawing.Point, System.Drawing">
-    <value>260, 26</value>
+    <value>262, 26</value>
   </data>
   <data name="label108.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 13</value>
@@ -7129,4 +7129,7 @@
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
   </data>
+  <data name="tabPage56.Text" xml:space="preserve">
+    <value>目标步数</value>
+   </data>
 </root>
