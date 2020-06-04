@@ -6797,4 +6797,7 @@ väčšie zaťaženie systému)</value>
   <data name="comboBox_ActivityStepsGoal_Alignment.Items8" xml:space="preserve">
     <value>Dole doprava</value>
   </data>
+  <data name="tabPage56.Text" xml:space="preserve">
+    <value>Cieľové kroky</value>
+  </data>
 </root>

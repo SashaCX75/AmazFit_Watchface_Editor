@@ -2026,7 +2026,8 @@ namespace GTR_Watch_face
         public void DrawNumber(Graphics graphics, int x1, int y1, int x2, int y2,
             int image_index, int spacing, int alignment, int data_number, bool BBorder)
         {
-            var Dagit = new Bitmap(ListImagesFullName[image_index]);
+            Logger.WriteLine("* DrawNumber");
+            var Digit = new Bitmap(ListImagesFullName[image_index]);
             string data_numberS = data_number.ToString();
             char[] CH = data_numberS.ToCharArray();
             int _number;
@@ -2034,6 +2035,7 @@ namespace GTR_Watch_face
             var src = new Bitmap(1, 1);
             //int DateLenght = Dagit.Width * data_numberS.Length + spacing * (data_numberS.Length - 1);
             int DateLenght = 0;
+            Logger.WriteLine("DateLenght");
             foreach (char ch in CH)
             {
                 _number = 0;
@@ -2054,7 +2056,7 @@ namespace GTR_Watch_face
             if (DateLenght < src.Width) DateLenght = src.Width;
             src.Dispose();
 
-            int DateHeight = Dagit.Height;
+            int DateHeight = Digit.Height;
 
             int PointX = 0;
             int PointY = 0;
@@ -2096,6 +2098,7 @@ namespace GTR_Watch_face
             }
             if (PointX < x1) PointX = x1;
             if (PointY < y1) PointY = y1;
+            Logger.WriteLine("DrawNumber");
             foreach (char ch in CH)
             {
                 _number = 0;
@@ -2112,10 +2115,11 @@ namespace GTR_Watch_face
                 }
 
             }
-            Dagit.Dispose();
+            Digit.Dispose();
 
             if (BBorder)
             {
+                Logger.WriteLine("DrawBorder");
                 Rectangle rect = new Rectangle(x1, y1, x2 - x1 - 1, y2 - y1 - 1);
                 using (Pen pen1 = new Pen(Color.White, 1))
                 {
@@ -2127,6 +2131,7 @@ namespace GTR_Watch_face
                     graphics.DrawRectangle(pen2, rect);
                 }
             }
+            Logger.WriteLine("* DrawNumber (end)");
         }
 
         /// <summary>Рисует число</summary>
@@ -2146,8 +2151,9 @@ namespace GTR_Watch_face
         public void DrawNumber(Graphics graphics, int x1, int y1, int x2, int y2, int image_index, int spacing,
             int alignment, double data_number, int suffix, int dec, int decCount, bool BBorder)
         {
+            Logger.WriteLine("* DrawFormatNumber");
             data_number = Math.Round(data_number, 2);
-            var Dagit = new Bitmap(ListImagesFullName[image_index]);
+            var Digit = new Bitmap(ListImagesFullName[image_index]);
             //var Delimit = new Bitmap(1, 1);
             //if (dec >= 0) Delimit = new Bitmap(ListImagesFullName[dec]);
             string decimalSeparator = Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator;
@@ -2166,6 +2172,7 @@ namespace GTR_Watch_face
             var src = new Bitmap(1, 1);
             char[] CH = data_numberS.ToCharArray();
 
+            Logger.WriteLine("DateLenght");
             foreach (char ch in CH)
             {
                 _number = 0;
@@ -2209,7 +2216,7 @@ namespace GTR_Watch_face
             //    DateLenght = Dagit.Width * data_numberS.Length + spacing * (data_numberS.Length - 1);
             //}
 
-            int DateHeight = Dagit.Height;
+            int DateHeight = Digit.Height;
 
             int PointX = 0;
             int PointY = 0;
@@ -2251,6 +2258,7 @@ namespace GTR_Watch_face
             }
             if (PointX < x1) PointX = x1;
             if (PointY < y1) PointY = y1;
+            Logger.WriteLine("DrawFormatNumber");
             foreach (char ch in CH)
             {
                 _number = 0;
@@ -2284,10 +2292,11 @@ namespace GTR_Watch_face
                 src.Dispose();
 
             }
-            Dagit.Dispose();
+            Digit.Dispose();
 
             if (BBorder)
             {
+                Logger.WriteLine("DrawBorder");
                 Rectangle rect = new Rectangle(x1, y1, x2 - x1 - 1, y2 - y1 - 1);
                 using (Pen pen1 = new Pen(Color.White, 1))
                 {
@@ -2299,6 +2308,7 @@ namespace GTR_Watch_face
                     graphics.DrawRectangle(pen2, rect);
                 }
             }
+            Logger.WriteLine("* DrawFormatNumber (end)");
         }
 
         /// <summary>Рисует погоду</summary>
@@ -2319,6 +2329,7 @@ namespace GTR_Watch_face
         public void DrawWeather(Graphics graphics, int x1, int y1, int x2, int y2, int image_index, int spacing,
             int alignment, int data_number, int minus, int degris, int error, bool ND, bool BBorder)
         {
+            Logger.WriteLine("* DrawWeatherNumber");
             //data_number = Math.Round(data_number, 2);
             var Dagit = new Bitmap(ListImagesFullName[image_index]);
             //var Delimit = new Bitmap(1, 1);
@@ -2329,6 +2340,7 @@ namespace GTR_Watch_face
             var src = new Bitmap(1, 1);
             char[] CH = data_numberS.ToCharArray();
             int i;
+            Logger.WriteLine("DateLenght");
             if (!ND)
             {
                 foreach (char ch in CH)
@@ -2423,6 +2435,7 @@ namespace GTR_Watch_face
             }
             if (PointX < x1) PointX = x1;
             if (PointY < y1) PointY = y1;
+            Logger.WriteLine("DrawWeatherNumber");
             if (!ND)
             {
                 foreach (char ch in CH)
@@ -2471,6 +2484,7 @@ namespace GTR_Watch_face
 
             if (BBorder)
             {
+                Logger.WriteLine("DrawBorder");
                 Rectangle rect = new Rectangle(x1, y1, x2 - x1 - 1, y2 - y1 - 1);
                 using (Pen pen1 = new Pen(Color.White, 1))
                 {
@@ -2482,6 +2496,7 @@ namespace GTR_Watch_face
                     graphics.DrawRectangle(pen2, rect);
                 }
             }
+            Logger.WriteLine("* DrawWeatherNumber (end)");
         }
 
 
@@ -2495,6 +2510,7 @@ namespace GTR_Watch_face
         /// <param name="angle">Угол поворота стрелки в градусах</param>
         public void DrawAnalogClock(Graphics graphics, int x1, int y1, float offsetX, float offsetY, int image_index, float angle)
         {
+            Logger.WriteLine("* DrawAnalogClock");
             //graphics.RotateTransform(angle);
             var src = new Bitmap(ListImagesFullName[image_index]);
             //graphics.DrawImage(src, new Rectangle(227 - x1, 227 - y1, src.Width, src.Height));
@@ -2509,6 +2525,7 @@ namespace GTR_Watch_face
             graphics.RotateTransform(-angle);
             graphics.TranslateTransform(-offSet_X - offsetX, -offSet_Y - offsetY);
             src.Dispose();
+            Logger.WriteLine("* DrawAnalogClock (end)");
         }
 
         /// <summary>круговая шкала поверх картинки</summary>
@@ -2525,6 +2542,7 @@ namespace GTR_Watch_face
         private void CircleOnBitmap(Graphics graphics, int x, int y, int imageIndex, int radius, float width,
             int lineCap, float StartAngle, float EndAngle, bool showCircleScaleArea)
         {
+            Logger.WriteLine("* CircleOnBitmap");
             if (EndAngle == 0) return;
             Bitmap src = new Bitmap(ListImagesFullName[imageIndex]);
             Pen pen = new Pen(Color.Black, width);
@@ -2597,6 +2615,7 @@ namespace GTR_Watch_face
 
             }
             src.Dispose();
+            Logger.WriteLine("* CircleOnBitmap (end)");
 
         }
 
@@ -2627,6 +2646,7 @@ namespace GTR_Watch_face
 
         public Bitmap FormColor(Bitmap bitmap)
         {
+            Logger.WriteLine("* FormColor");
             //int[] bgColors = { 203, 255, 240 };
             Color color = pictureBox_Preview.BackColor;
             ImageMagick.MagickImage image = new ImageMagick.MagickImage(bitmap);
@@ -2637,6 +2657,7 @@ namespace GTR_Watch_face
             image.Opaque(ImageMagick.MagickColor.FromRgb((byte)0, (byte)0, (byte)0),
                 ImageMagick.MagickColor.FromRgba((byte)0, (byte)0, (byte)0, (byte)0));
             return image.ToBitmap();
+            Logger.WriteLine("* FormColor (end)");
         }
     }
 }

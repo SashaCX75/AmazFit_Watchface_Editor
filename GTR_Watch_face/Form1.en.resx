@@ -6821,4 +6821,7 @@ more system load)</value>
   <data name="comboBox_ActivityStepsGoal_Alignment.Items8" xml:space="preserve">
     <value>Bottom right</value>
   </data>
+  <data name="tabPage56.Text" xml:space="preserve">
+    <value>Target steps</value>
+  </data>
 </root>
