@@ -47,15 +47,16 @@ namespace GTR_Watch_face
 
         public Form1(string[] args)
         {
-            //Logger.WriteLine("Form1");
-            //if (File.Exists(Application.StartupPath + "\\log.txt")) File.Delete(Application.StartupPath + @"\log.txt");
-            
+            if (File.Exists(Application.StartupPath + "\\Program log.txt")) File.Delete(Application.StartupPath + @"\Program log.txt");
+            Logger.WriteLine("* Form1");
+
 
             Program_Settings = new PROGRAM_SETTINGS();
             try
             {
                 if (File.Exists(Application.StartupPath + @"\Settings.json"))
                 {
+                    Logger.WriteLine("Read Settings");
                     Program_Settings = JsonConvert.DeserializeObject<PROGRAM_SETTINGS>
                                 (File.ReadAllText(Application.StartupPath + @"\Settings.json"), new JsonSerializerSettings
                                 {
@@ -72,6 +73,7 @@ namespace GTR_Watch_face
                     //int language = System.Globalization.CultureInfo.CurrentCulture.LCID;
                     //Program_Settings.language = "Русский";
                     Program_Settings.language = "English";
+                    Logger.WriteLine("language = " + language);
                     if (language == "ru")
                     {
                         Program_Settings.language = "Русский";
@@ -165,7 +167,15 @@ namespace GTR_Watch_face
 
             PreviewView = true;
             Settings_Load = false;
-            currentDPI = (int)Registry.GetValue("HKEY_CURRENT_USER\\Control Panel\\Desktop", "LogPixels", 96)/96f;
+            //currentDPI = (int)Registry.GetValue(@"HKEY_CURRENT_USER\Control Panel\Desktop", "LogPixels", 96) / 96f;
+            //if (getOSversion() >= 10)
+            //{
+            //    float AppliedDPI = (int)Registry.GetValue(@"HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics", "AppliedDPI", 96) / 96f;
+            //    MessageBox.Show(AppliedDPI.ToString());
+            //    currentDPI = AppliedDPI / currentDPI;
+            //    MessageBox.Show(currentDPI.ToString());
+            //}
+            currentDPI = tabControl1.Height / 601f;
             //Logger.WriteLine("Создали переменные");
 
             if (args.Length == 1)
@@ -173,20 +183,23 @@ namespace GTR_Watch_face
                 string fileName = args[0].ToString();
                 if ((File.Exists(fileName)) && (Path.GetExtension(fileName) == ".json"))
                 {
+                    Logger.WriteLine("args[0] - *.json");
                     StartFileNameJson = fileName;
                     //Logger.WriteLine("Программа запущена с аргументом: " + fileName);
                 }
                 if ((File.Exists(fileName)) && (Path.GetExtension(fileName) == ".bin"))
                 {
+                    Logger.WriteLine("args[0] - *.bin");
                     StartFileNameBin = fileName;
                     //Logger.WriteLine("Программа запущена с аргументом: " + fileName);
                 }
             }
-
+            Logger.WriteLine("* Form1 (end)");
         }
         
         private void SetLanguage()
         {
+            Logger.WriteLine("* SetLanguage");
             if (Program_Settings.language == "English")
             {
                 Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en");
@@ -237,14 +250,17 @@ namespace GTR_Watch_face
                 Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("ru");
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ru");
             }
+            Logger.WriteLine("* SetLanguage (end)");
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Logger.WriteLine("* Form1_Load ");
 #if !DEBUG
             // пробелы в имени
             if (Application.StartupPath.IndexOf(" ") != -1)
             {
+                Logger.WriteLine("пробелы в имени");
                 MessageBox.Show(Properties.FormStrings.Message_Error_SpaceInProgrammName_Text,
                     Properties.FormStrings.Message_Error_Caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
@@ -259,7 +275,7 @@ namespace GTR_Watch_face
             string subPath = Application.StartupPath + @"\main_v0.2-beta\main.exe";
             //string subPath = Application.StartupPath + @"\main\main.exe";
 #endif
-
+            Logger.WriteLine("Set textBox.Text");
             if (Program_Settings.pack_unpack_dir == null)
             {
                 Program_Settings.pack_unpack_dir = subPath;
@@ -272,6 +288,7 @@ namespace GTR_Watch_face
             }
             PreviewView = false;
             textBox_pack_unpack_dir.Text = Program_Settings.pack_unpack_dir;
+            Logger.WriteLine("Set Model");
             if (Program_Settings.Model_GTS)
             {
                 radioButton_gts.Checked = Program_Settings.Model_GTS;
@@ -303,6 +320,7 @@ namespace GTR_Watch_face
                 textBox_pack_command.Text = Program_Settings.pack_command_GTR47;
             }
             
+            Logger.WriteLine("Set checkBox");
             checkBox_border.Checked = Program_Settings.ShowBorder;
             checkBox_crop.Checked = Program_Settings.Crop;
             checkBox_Show_Shortcuts.Checked = Program_Settings.Show_Shortcuts;
@@ -313,6 +331,7 @@ namespace GTR_Watch_face
             comboBox_Year_Alignment.SelectedIndex = 0;
             
             comboBox_ActivitySteps_Alignment.SelectedIndex = 0;
+            comboBox_ActivityStepsGoal_Alignment.SelectedIndex = 0;
             comboBox_ActivityDistance_Alignment.SelectedIndex = 0;
             comboBox_ActivityPuls_Alignment.SelectedIndex = 0;
             comboBox_ActivityCalories_Alignment.SelectedIndex = 0;
@@ -334,6 +353,7 @@ namespace GTR_Watch_face
                 System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Major.ToString() + "." +
                 System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Minor.ToString();
 
+            Logger.WriteLine("Set Settings");
             Settings_Load = true;
             radioButton_Settings_AfterUnpack_Dialog.Checked = Program_Settings.Settings_AfterUnpack_Dialog;
             radioButton_Settings_AfterUnpack_DoNothing.Checked = Program_Settings.Settings_AfterUnpack_DoNothing;
@@ -358,35 +378,55 @@ namespace GTR_Watch_face
             checkBox_Shortcuts_Border.Checked = Program_Settings.Shortcuts_Border;
 
             if (Program_Settings.language.Length>1) comboBox_Language.Text = Program_Settings.language;
+            dataGridView_MotiomAnimation.RowTemplate.Height = (int)(18 * currentDPI);
 
             Settings_Load = false;
 
             SetPreferences1();
             PreviewView = true;
+            Logger.WriteLine("* Form1_Load (end)");
         }
 
         private void Form1_Shown(object sender, EventArgs e)
         {
-
-            //Logger.WriteLine("Form1_Shown");
+            Logger.WriteLine("* Form1_Shown");
             //Logger.WriteLine("Загружаем файл из значения аргумента " + StartFileNameJson);
             if ((StartFileNameJson != null) && (StartFileNameJson.Length > 0))
             {
+                Logger.WriteLine("Загружаем Json файл из значения аргумента " + StartFileNameJson);
                 LoadJsonAndImage(StartFileNameJson);
                 StartFileNameJson = "";
             }
             else if ((StartFileNameBin != null) && (StartFileNameBin.Length > 0))
             {
+                Logger.WriteLine("Загружаем bin файл из значения аргумента " + StartFileNameBin);
                 zip_unpack_bin(StartFileNameBin);
                 StartFileNameBin = "";
             }
             JSON_Modified = false;
             FormText();
             //Logger.WriteLine("Загрузили файл из значения аргумента " + StartFileNameJson);
+
+            // изменяем размер фопанели для предпросмотра если она не влазит
+            if (pictureBox_Preview.Top + pictureBox_Preview.Height > radioButton_47.Top)
+            {
+                float newHeight = radioButton_47.Top - pictureBox_Preview.Top;
+                float scale = newHeight / pictureBox_Preview.Height;
+                pictureBox_Preview.Size = new Size((int)(pictureBox_Preview.Width * scale), (int)(pictureBox_Preview.Height * scale));
+            }
+
+            //if (pictureBox_Preview.Top + pictureBox_Preview.Height > 100)
+            //{
+            //    float newHeight = 100 - pictureBox_Preview.Top;
+            //    float scale = newHeight / pictureBox_Preview.Height;
+            //    pictureBox_Preview.Size = new Size((int)(pictureBox_Preview.Width * scale), (int)(pictureBox_Preview.Height * scale));
+            //}
+            Logger.WriteLine("* Form1_Shown(end)");
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Logger.WriteLine("* FormClosing");
 #if !DEBUG
             if (JSON_Modified)
             {
@@ -416,6 +456,13 @@ namespace GTR_Watch_face
                         SaveFileDialog saveFileDialog = new SaveFileDialog();
                         saveFileDialog.InitialDirectory = FullFileDir;
                         saveFileDialog.FileName = FileName;
+                        if(FileName==null || FileName.Length == 0)
+                        {
+                            if (FullFileDir != null && FullFileDir.Length > 3)
+                            {
+                                saveFileDialog.FileName = Path.GetFileName(FullFileDir);
+                            }
+                        }
                         saveFileDialog.Filter = "Json files (*.json) | *.json";
 
                         //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
@@ -445,6 +492,7 @@ namespace GTR_Watch_face
 
         private void button_pack_unpack_Click(object sender, EventArgs e)
         {
+            Logger.WriteLine("* pack_unpack");
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = textBox_pack_unpack_dir.Text;
             //openFileDialog.InitialDirectory = @"C:\main_gtr\remake_by_kolomnych_045_ru-65473-787ef4d01c";
@@ -457,6 +505,7 @@ namespace GTR_Watch_face
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
+                Logger.WriteLine("pack_unpack_Click");
                 textBox_pack_unpack_dir.Text = openFileDialog.FileName;
 
                 Program_Settings.pack_unpack_dir = openFileDialog.FileName;
@@ -467,19 +516,24 @@ namespace GTR_Watch_face
                 });
                 File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
             }
+            Logger.WriteLine("* pack_unpack (end)");
         }
 
         private void Form1_HelpButtonClicked(object sender, CancelEventArgs e)
         {
+            Logger.WriteLine("* HelpButton");
             //FormFileExists formAnimation = new FormFileExists();
             //formAnimation.ShowDialog();
             //SendKeys.Send("{F1}");
             Help.ShowHelp(this, Application.StartupPath + Properties.FormStrings.File_ReadMy);
             e.Cancel = true;
+            Logger.WriteLine("* HelpButton (end)");
         }
+        
 
         private void button_zip_unpack_Click(object sender, EventArgs e)
         {
+            Logger.WriteLine("* zip_unpack");
             if (JSON_Modified) // сохранение если файл не сохранен
             {
                 if (FileName != null)
@@ -510,6 +564,13 @@ namespace GTR_Watch_face
                         SaveFileDialog saveFileDialog = new SaveFileDialog();
                         saveFileDialog.InitialDirectory = FullFileDir;
                         saveFileDialog.FileName = FileName;
+                        if (FileName == null || FileName.Length == 0)
+                        {
+                            if (FullFileDir != null && FullFileDir.Length > 3)
+                            {
+                                saveFileDialog.FileName = Path.GetFileName(FullFileDir);
+                            }
+                        }
                         saveFileDialog.Filter = "Json files (*.json) | *.json";
 
                         //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
@@ -549,10 +610,12 @@ namespace GTR_Watch_face
                 string fullfilename = openFileDialog.FileName;
                 zip_unpack_bin(fullfilename);
             }
+            Logger.WriteLine("* zip_unpack (end)");
         }
 
         private void zip_unpack_bin(string fullfilename)
         {
+            Logger.WriteLine("* zip_unpack_bin");
             string subPath = Application.StartupPath + @"\Watch_face\";
             if (!Directory.Exists(subPath)) Directory.CreateDirectory(subPath);
             string respackerPath = Application.StartupPath + @"\Res_PackerUnpacker\";
@@ -577,45 +640,76 @@ namespace GTR_Watch_face
             // если файл существует
             if (File.Exists(fullPath))
             {
-                FormFileExists f = new FormFileExists();
-                f.ShowDialog();
-                int dialogResult = f.Data;
-
                 string fileNameOnly = Path.GetFileNameWithoutExtension(fullPath);
                 string extension = Path.GetExtension(fullPath);
                 string path = Path.GetDirectoryName(fullPath);
                 string newFullPath = fullPath;
-                switch (dialogResult)
+                if (Program_Settings.Settings_Unpack_Dialog)
                 {
-                    case 0:
-                        return;
-                    //break;
-                    case 1:
-                        File.Copy(fullfilename, fullPath, true);
-                        newFullPath = Path.Combine(path, fileNameOnly);
-                        if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
-                        break;
-                    case 2:
-                        int count = 1;
+                    Logger.WriteLine("File.Exists");
+                    FormFileExists f = new FormFileExists();
+                    f.ShowDialog();
+                    int dialogResult = f.Data;
+                    
+                    switch (dialogResult)
+                    {
+                        case 0:
+                            return;
+                        //break;
+                        case 1:
+                            Logger.WriteLine("File.Copy");
+                            File.Copy(fullfilename, fullPath, true);
+                            newFullPath = Path.Combine(path, fileNameOnly);
+                            if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
+                            break;
+                        case 2:
+                            Logger.WriteLine("newFileName.Copy");
+                            int count = 1;
 
-                        while (File.Exists(newFullPath))
-                        {
-                            string tempFileName = string.Format("{0}({1})", fileNameOnly, count++);
-                            newFullPath = Path.Combine(path, tempFileName + extension);
-                        }
-                        File.Copy(fullfilename, newFullPath);
-                        fullPath = newFullPath;
-                        fileNameOnly = Path.GetFileNameWithoutExtension(newFullPath);
-                        path = Path.GetDirectoryName(newFullPath);
-                        newFullPath = Path.Combine(path, fileNameOnly);
-                        if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
-                        break;
+                            while (File.Exists(newFullPath))
+                            {
+                                string tempFileName = string.Format("{0}({1})", fileNameOnly, count++);
+                                newFullPath = Path.Combine(path, tempFileName + extension);
+                            }
+                            File.Copy(fullfilename, newFullPath);
+                            fullPath = newFullPath;
+                            fileNameOnly = Path.GetFileNameWithoutExtension(newFullPath);
+                            path = Path.GetDirectoryName(newFullPath);
+                            newFullPath = Path.Combine(path, fileNameOnly);
+                            if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
+                            break;
+                    }
+                }
+                else if (Program_Settings.Settings_Unpack_Save)
+                {
+                    Logger.WriteLine("newFileName.Copy");
+                    int count = 1;
+
+                    while (File.Exists(newFullPath))
+                    {
+                        string tempFileName = string.Format("{0}({1})", fileNameOnly, count++);
+                        newFullPath = Path.Combine(path, tempFileName + extension);
+                    }
+                    File.Copy(fullfilename, newFullPath);
+                    fullPath = newFullPath;
+                    fileNameOnly = Path.GetFileNameWithoutExtension(newFullPath);
+                    path = Path.GetDirectoryName(newFullPath);
+                    newFullPath = Path.Combine(path, fileNameOnly);
+                    if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
+                }
+                else if (Program_Settings.Settings_Unpack_Replace)
+                {
+                    Logger.WriteLine("File.Copy");
+                    File.Copy(fullfilename, fullPath, true);
+                    newFullPath = Path.Combine(path, fileNameOnly);
+                    if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
                 }
             }
             else File.Copy(fullfilename, fullPath);
 
             try
             {
+                Logger.WriteLine("UnzipBin");
                 ProcessStartInfo startInfo = new ProcessStartInfo();
                 startInfo.FileName = respackerPath;
                 startInfo.Arguments = fullPath;
@@ -653,6 +747,7 @@ namespace GTR_Watch_face
                                 return;
                             }
 #endif
+                        Logger.WriteLine("UnpackBin");
                         startInfo.FileName = textBox_pack_unpack_dir.Text;
                         startInfo.Arguments = textBox_unpack_command.Text + "   " + newFullName_bin;
                         using (Process exeProcess = Process.Start(startInfo))
@@ -696,10 +791,12 @@ namespace GTR_Watch_face
             {
                 // сюда писать команды при ошибке вызова 
             }
+            Logger.WriteLine("* zip_unpack_bin (end)");
         }
 
         private void button_unpack_Click(object sender, EventArgs e)
         {
+            Logger.WriteLine("* unpack");
             if (JSON_Modified) // сохранение если файл не сохранен
             {
                 if (FileName != null)
@@ -730,6 +827,13 @@ namespace GTR_Watch_face
                         SaveFileDialog saveFileDialog = new SaveFileDialog();
                         saveFileDialog.InitialDirectory = FullFileDir;
                         saveFileDialog.FileName = FileName;
+                        if (FileName == null || FileName.Length == 0)
+                        {
+                            if (FullFileDir != null && FullFileDir.Length > 3)
+                            {
+                                saveFileDialog.FileName = Path.GetFileName(FullFileDir);
+                            }
+                        }
                         saveFileDialog.Filter = "Json files (*.json) | *.json";
 
                         //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
@@ -781,6 +885,7 @@ namespace GTR_Watch_face
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
+                Logger.WriteLine("unpack_Click");
                 string fullfilename = openFileDialog.FileName;
                 string filename = Path.GetFileName(fullfilename);
                 filename = filename.Replace(" ", "_");
@@ -803,11 +908,13 @@ namespace GTR_Watch_face
                                 return;
                                 break;
                             case 1:
+                                Logger.WriteLine("File.Copy");
                                 File.Copy(fullfilename, fullPath, true);
                                 newFullPath = Path.Combine(path, fileNameOnly);
                                 if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
                                 break;
                             case 2:
+                                Logger.WriteLine("newFileName");
                                 int count = 1;
 
                                 while (File.Exists(newFullPath))
@@ -827,8 +934,10 @@ namespace GTR_Watch_face
                     //else if (radioButton_Settings_Unpack_Save.Checked)
                     else if (Program_Settings.Settings_Unpack_Save)
                     {
+                        Logger.WriteLine("newFileName");
                         int count = 1;
 
+                        Logger.WriteLine("newFileName");
                         while (File.Exists(newFullPath))
                         {
                             string tempFileName = string.Format("{0}({1})", fileNameOnly, count++);
@@ -844,6 +953,7 @@ namespace GTR_Watch_face
                     //else if (radioButton_Settings_Unpack_Replace.Checked)
                     else if (Program_Settings.Settings_Unpack_Replace)
                     {
+                        Logger.WriteLine("File.Copy");
                         File.Copy(fullfilename, fullPath, true);
                         newFullPath = Path.Combine(path, fileNameOnly);
                         if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
@@ -934,6 +1044,7 @@ namespace GTR_Watch_face
                 */
 #endif
             }
+            Logger.WriteLine("* unpack (end)");
         }
 
         private void button_pack_Click(object sender, EventArgs e)
@@ -968,6 +1079,13 @@ namespace GTR_Watch_face
                         SaveFileDialog saveFileDialog = new SaveFileDialog();
                         saveFileDialog.InitialDirectory = FullFileDir;
                         saveFileDialog.FileName = FileName;
+                        if (FileName == null || FileName.Length == 0)
+                        {
+                            if (FullFileDir != null && FullFileDir.Length > 3)
+                            {
+                                saveFileDialog.FileName = Path.GetFileName(FullFileDir);
+                            }
+                        }
                         saveFileDialog.Filter = "Json files (*.json) | *.json";
 
                         //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
@@ -1210,6 +1328,13 @@ namespace GTR_Watch_face
                         SaveFileDialog saveFileDialog = new SaveFileDialog();
                         saveFileDialog.InitialDirectory = FullFileDir;
                         saveFileDialog.FileName = FileName;
+                        if (FileName == null || FileName.Length == 0)
+                        {
+                            if (FullFileDir != null && FullFileDir.Length > 3)
+                            {
+                                saveFileDialog.FileName = Path.GetFileName(FullFileDir);
+                            }
+                        }
                         saveFileDialog.Filter = "Json files (*.json) | *.json";
 
                         //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
@@ -1376,11 +1501,13 @@ namespace GTR_Watch_face
             openFileDialog.Title = Properties.FormStrings.Dialog_Title_Image;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
+                FullFileDir = Path.GetDirectoryName(openFileDialog.FileName);
                 dataGridView_ImagesList.Rows.Clear();
                 ListImages.Clear();
                 ListImagesFullName.Clear();
                 int i;
                 int count = 0;
+                int AllFileSize = 0;
                 Image loadedImage = null;
                 List<string> ErrorImage = new List<string>();
                 List<string> FileNames = openFileDialog.FileNames.ToList();
@@ -1402,6 +1529,9 @@ namespace GTR_Watch_face
 
                             PixelFormat pf = loadedImage.PixelFormat;
                             if (pf != PixelFormat.Format32bppArgb) ErrorImage.Add(Path.GetFileName(file));
+                            int pixels = loadedImage.Width * loadedImage.Height;
+                            AllFileSize = AllFileSize + pixels * 4 + 20;
+
                             var RowNew = new DataGridViewRow();
                             DataGridViewImageCellLayout ZoomType = DataGridViewImageCellLayout.Zoom;
                             if ((loadedImage.Height < 45) && (loadedImage.Width < 110))
@@ -1445,6 +1575,7 @@ namespace GTR_Watch_face
                 JSON_read();
                 PreviewView = true;
                 PreviewImage();
+                ShowAllFileSize(AllFileSize);
             }
         }
 
@@ -1505,6 +1636,13 @@ namespace GTR_Watch_face
                         SaveFileDialog saveFileDialog = new SaveFileDialog();
                         saveFileDialog.InitialDirectory = FullFileDir;
                         saveFileDialog.FileName = FileName;
+                        if (FileName == null || FileName.Length == 0)
+                        {
+                            if (FullFileDir != null && FullFileDir.Length > 3)
+                            {
+                                saveFileDialog.FileName = Path.GetFileName(FullFileDir);
+                            }
+                        }
                         saveFileDialog.Filter = "Json files (*.json) | *.json";
 
                         //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
@@ -1558,6 +1696,7 @@ namespace GTR_Watch_face
             string text = File.ReadAllText(fullfilename);
             //richTextBox_JSON.Text = text;
             PreviewView = false;
+            int AllFileSize = 0;
             ListImages.Clear();
             ListImagesFullName.Clear();
             dataGridView_ImagesList.Rows.Clear();
@@ -1588,6 +1727,9 @@ namespace GTR_Watch_face
 
                         PixelFormat pf = loadedImage.PixelFormat;
                         if (pf != PixelFormat.Format32bppArgb) ErrorImage.Add(Path.GetFileName(file.FullName));
+                        int pixels = loadedImage.Width * loadedImage.Height;
+                        AllFileSize = AllFileSize + pixels * 4 + 20;
+
                         var RowNew = new DataGridViewRow();
                         DataGridViewImageCellLayout ZoomType = DataGridViewImageCellLayout.Zoom;
                         if ((loadedImage.Height < 45) && (loadedImage.Width < 110))
@@ -1689,11 +1831,18 @@ namespace GTR_Watch_face
             PreviewImage();
             JSON_Modified = false;
             FormText();
+            ShowAllFileSize(AllFileSize);
+        }
+
+        private void ShowAllFileSize(double sizeinbytes)
+        {
+            double AllFileSizeMB = GetFileSizeMB(sizeinbytes);
+            label_size.Text = "≈" + AllFileSizeMB.ToString() + "MB";
         }
 
         private void FixAnimation()
         {
-            if (Watch_Face.Unknown11 != null && Watch_Face.Unknown11.Unknown11_2 == null)
+            if (Watch_Face != null && Watch_Face.Unknown11 != null && Watch_Face.Unknown11.Unknown11_2 == null)
             {
                 if (Watch_Face.Unknown11.Unknown11_02_temp != null)
                 {
@@ -3204,6 +3353,31 @@ namespace GTR_Watch_face
             }
         }
 
+        private void checkBox_ActivityStepsGoal_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_ActivityStepsGoal.Checked;
+            numericUpDown_ActivityStepsGoal_StartCorner_X.Enabled = b;
+            numericUpDown_ActivityStepsGoal_StartCorner_Y.Enabled = b;
+            numericUpDown_ActivityStepsGoal_EndCorner_X.Enabled = b;
+            numericUpDown_ActivityStepsGoal_EndCorner_Y.Enabled = b;
+
+            comboBox_ActivityStepsGoal_Image.Enabled = b;
+            numericUpDown_ActivityStepsGoal_Count.Enabled = b;
+            numericUpDown_ActivityStepsGoal_Spacing.Enabled = b;
+            comboBox_ActivityStepsGoal_Alignment.Enabled = b;
+
+            label491.Enabled = b;
+            label492.Enabled = b;
+            label493.Enabled = b;
+            label494.Enabled = b;
+            label495.Enabled = b;
+            label496.Enabled = b;
+            label497.Enabled = b;
+            label498.Enabled = b;
+            label499.Enabled = b;
+            label500.Enabled = b;
+        }
+
         private void checkBox_DND_CheckedChanged(object sender, EventArgs e)
         {
             bool b = checkBox_DND.Checked;
@@ -4402,7 +4576,7 @@ namespace GTR_Watch_face
         {
             if ((formPreview == null) || (!formPreview.Visible))
             {
-                formPreview = new Form_Preview();
+                formPreview = new Form_Preview(currentDPI);
                 formPreview.Show(this);
                 //formPreview.Show();
 
@@ -5514,6 +5688,13 @@ namespace GTR_Watch_face
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.InitialDirectory = FullFileDir;
             saveFileDialog.FileName = FileName;
+            if(FileName==null || FileName.Length == 0)
+            {
+                if (FullFileDir != null && FullFileDir.Length > 3)
+                {
+                    saveFileDialog.FileName = Path.GetFileName(FullFileDir);
+                }
+            }
             saveFileDialog.Filter = "Json files (*.json) | *.json";
 
             //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
@@ -5535,6 +5716,14 @@ namespace GTR_Watch_face
 
         private void jsonWarnings(String fullfilename)
         {
+            // пробелы в имени
+            if (fullfilename.IndexOf(" ") != -1)
+            {
+                MessageBox.Show(Properties.FormStrings.Message_WarningSpaceInName_Text,
+                    Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (Watch_Face == null) return;
+
             // 3 стрелки для аналоговых часов
             if (Watch_Face.AnalogDialFace != null)
             {
@@ -5631,13 +5820,7 @@ namespace GTR_Watch_face
                     }
                 }
             }
-
-            // пробелы в имени
-            if (fullfilename.IndexOf(" ") != -1)
-            {
-                MessageBox.Show(Properties.FormStrings.Message_WarningSpaceInName_Text,
-                    Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            
         }
 
         private void checkBox_Weather_CheckedChanged(object sender, EventArgs e)
@@ -5694,8 +5877,9 @@ namespace GTR_Watch_face
 
         private void button_SavePNG_Click(object sender, EventArgs e)
         {
+            Logger.WriteLine("* SavePNG");
             SaveFileDialog saveFileDialog = new SaveFileDialog();
-            //openFileDialog.InitialDirectory = subPath;
+            saveFileDialog.InitialDirectory = FullFileDir;
             saveFileDialog.Filter = "PNG Files: (*.png)|*.png";
             saveFileDialog.FileName = "Preview.png";
             //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
@@ -5705,33 +5889,35 @@ namespace GTR_Watch_face
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
-                Bitmap mask = new Bitmap(@"Mask\mask_gtr47.png");
+                Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr47.png");
                 if (radioButton_42.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(@"Mask\mask_gtr42.png");
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr42.png");
                 }
                 if (radioButton_gts.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(@"Mask\mask_gts.png");
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts.png");
                 }
                 if (radioButton_TRex.Checked || radioButton_Verge.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(@"Mask\mask_trex.png");
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, 0);
                 if(checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
                 bitmap.Save(saveFileDialog.FileName, ImageFormat.Png);
             }
+            Logger.WriteLine("* SavePNG(end)");
         }
 
         private void button_SaveGIF_Click(object sender, EventArgs e)
         {
+            Logger.WriteLine("* SaveGIF");
             SaveFileDialog saveFileDialog = new SaveFileDialog();
-            //openFileDialog.InitialDirectory = subPath;
+            saveFileDialog.InitialDirectory = FullFileDir;
             saveFileDialog.Filter = "GIF Files: (*.gif)|*.gif";
             saveFileDialog.FileName = "Preview.gif";
             //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
@@ -5741,21 +5927,21 @@ namespace GTR_Watch_face
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
-                Bitmap mask = new Bitmap(@"Mask\mask_gtr47.png");
+                Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr47.png");
                 if (radioButton_42.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(@"Mask\mask_gtr42.png");
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr42.png");
                 }
                 if (radioButton_gts.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(@"Mask\mask_gts.png");
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts.png");
                 }
                 if (radioButton_TRex.Checked || radioButton_Verge.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(@"Mask\mask_trex.png");
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 bool save = false;
@@ -5874,6 +6060,7 @@ namespace GTR_Watch_face
 
                         if (save)
                         {
+                            Logger.WriteLine("SaveGIF SetPreferences1(" + i.ToString() + ")");
                             int WeatherSet_Temp = (int)numericUpDown_WeatherSet_Temp.Value;
                             int WeatherSet_DayTemp = (int)numericUpDown_WeatherSet_DayTemp.Value;
                             int WeatherSet_NightTemp = (int)numericUpDown_WeatherSet_NightTemp.Value;
@@ -5918,6 +6105,7 @@ namespace GTR_Watch_face
                 PreviewView = true;
                 mask.Dispose();
             }
+            Logger.WriteLine("* SaveGIF (end)");
         }
 
         public Bitmap ApplyMask(Bitmap inputImage, Bitmap mask)
@@ -5939,11 +6127,14 @@ namespace GTR_Watch_face
         // изменили модель часов
         private void radioButton_Model_Changed(object sender, EventArgs e)
         {
+            RadioButton radioButton = sender as RadioButton;
+            if (radioButton != null && !radioButton.Checked) return;
             if (radioButton_47.Checked)
             {
                 //this.Text = "GTR watch face editor";
-                pictureBox_Preview.Height = 230;
-                pictureBox_Preview.Width = 230;
+                //pictureBox_Preview.Height = 230;
+                //pictureBox_Preview.Width = 230;
+                pictureBox_Preview.Size = new Size((int)(230 * currentDPI), (int)(230 * currentDPI));
                 offSet_X = 227;
                 offSet_Y = 227;
                 
@@ -5957,8 +6148,9 @@ namespace GTR_Watch_face
             else if (radioButton_42.Checked)
             {
                 //this.Text = "GTR watch face editor";
-                pictureBox_Preview.Height = 198;
-                pictureBox_Preview.Width = 198;
+                //pictureBox_Preview.Height = 198;
+                //pictureBox_Preview.Width = 198;
+                pictureBox_Preview.Size = new Size((int)(198 * currentDPI), (int)(198 * currentDPI));
                 offSet_X = 195;
                 offSet_Y = 195;
                 
@@ -5972,8 +6164,9 @@ namespace GTR_Watch_face
             else if (radioButton_gts.Checked)
             {
                 //this.Text = "GTS watch face editor";
-                pictureBox_Preview.Height = 224;
-                pictureBox_Preview.Width = 177;
+                //pictureBox_Preview.Height = 224;
+                //pictureBox_Preview.Width = 177;
+                pictureBox_Preview.Size = new Size((int)(177 * currentDPI), (int)(224 * currentDPI));
                 offSet_X = 174;
                 offSet_Y = 221;
                 
@@ -5987,8 +6180,9 @@ namespace GTR_Watch_face
             else if (radioButton_TRex.Checked)
             {
                 //this.Text = "T-Rex watch face editor";
-                pictureBox_Preview.Height = 183;
-                pictureBox_Preview.Width = 183;
+                //pictureBox_Preview.Height = 183;
+                //pictureBox_Preview.Width = 183;
+                pictureBox_Preview.Size = new Size((int)(183 * currentDPI), (int)(183 * currentDPI));
                 offSet_X = 180;
                 offSet_Y = 180;
 
@@ -6002,8 +6196,9 @@ namespace GTR_Watch_face
             else if (radioButton_Verge.Checked)
             {
                 //this.Text = "Verge Lite watch face editor";
-                pictureBox_Preview.Height = 183;
-                pictureBox_Preview.Width = 183;
+                //pictureBox_Preview.Height = 183;
+                //pictureBox_Preview.Width = 183;
+                pictureBox_Preview.Size = new Size((int)(183 * currentDPI), (int)(183 * currentDPI));
                 offSet_X = 180;
                 offSet_Y = 180;
 
@@ -6014,6 +6209,20 @@ namespace GTR_Watch_face
                 button_pack.Enabled = true;
                 button_zip.Enabled = true;
             }
+            // изменяем размер фопанели для предпросмотра если она не влазит
+            if (pictureBox_Preview.Top + pictureBox_Preview.Height > radioButton_47.Top)
+            {
+                float newHeight = radioButton_47.Top - pictureBox_Preview.Top;
+                float scale = newHeight / pictureBox_Preview.Height;
+                pictureBox_Preview.Size = new Size((int)(pictureBox_Preview.Width * scale), (int)(pictureBox_Preview.Height * scale));
+            }
+
+            //if (pictureBox_Preview.Top + pictureBox_Preview.Height > 200)
+            //{
+            //    float newHeight = 200 - pictureBox_Preview.Top;
+            //    float scale = newHeight / pictureBox_Preview.Height;
+            //    pictureBox_Preview.Size = new Size((int)(pictureBox_Preview.Width * scale), (int)(pictureBox_Preview.Height * scale));
+            //}
             FormText();
 
             if ((formPreview != null) && (formPreview.Visible))
@@ -6622,6 +6831,18 @@ namespace GTR_Watch_face
             try
             {
                 double sizeinbytes = file.Length;
+                double sizeinkbytes = Math.Round((sizeinbytes / 1024), 2);
+                double sizeinmbytes = Math.Round((sizeinkbytes / 1024), 2);
+                double sizeingbytes = Math.Round((sizeinmbytes / 1024), 2);
+                return sizeinmbytes;
+            }
+            catch { return 0; } //перехват ошибок и возврат сообщения об ошибке
+        }
+        public double GetFileSizeMB(double sizeinbytes)
+        {
+            try
+            {
+                //double sizeinbytes = file.Length;
                 double sizeinkbytes = Math.Round((sizeinbytes / 1024), 2);
                 double sizeinmbytes = Math.Round((sizeinkbytes / 1024), 2);
                 double sizeingbytes = Math.Round((sizeinmbytes / 1024), 2);
@@ -7402,7 +7623,7 @@ namespace GTR_Watch_face
 
             if (MotiomAnimation.Count > 0 || StaticAnimation != null)
             {
-                FormAnimation formAnimation = new FormAnimation(bitmap, MotiomAnimation, StaticAnimation);
+                FormAnimation formAnimation = new FormAnimation(bitmap, MotiomAnimation, StaticAnimation, currentDPI);
                 formAnimation.Owner = this;
                 if (FormAnimation.Model_Wath.model_gtr47 != radioButton_47.Checked)
                     FormAnimation.Model_Wath.model_gtr47 = radioButton_47.Checked;
@@ -7461,7 +7682,13 @@ namespace GTR_Watch_face
                 {
                     SaveFileDialog saveFileDialog = new SaveFileDialog();
                     saveFileDialog.InitialDirectory = FullFileDir;
-                    saveFileDialog.FileName = FileName;
+                    saveFileDialog.FileName = FileName; if (FileName == null || FileName.Length == 0)
+                    {
+                        if (FullFileDir != null && FullFileDir.Length > 3)
+                        {
+                            saveFileDialog.FileName = Path.GetFileName(FullFileDir);
+                        }
+                    }
                     saveFileDialog.Filter = "Json files (*.json) | *.json";
 
                     //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
@@ -7574,7 +7801,7 @@ namespace GTR_Watch_face
             if (MouseСoordinates.Y < 0) return;
             int value = MouseСoordinates.Y - (int)numericUpDown_Shortcuts_Steps_Y.Value;
             NumericUpDown numericUpDown = sender as NumericUpDown;
-            if ((e.Y <= numericUpDown.Controls[1].Width + 1) && (value > 0))
+            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
             {
                 // Click is in text area
                 numericUpDown.Value = value;
@@ -7598,7 +7825,7 @@ namespace GTR_Watch_face
             if (MouseСoordinates.Y < 0) return;
             int value = MouseСoordinates.Y - (int)numericUpDown_Shortcuts_Puls_Y.Value;
             NumericUpDown numericUpDown = sender as NumericUpDown;
-            if ((e.Y <= numericUpDown.Controls[1].Width + 1) && (value > 0))
+            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
             {
                 // Click is in text area
                 numericUpDown.Value = value;
@@ -7622,7 +7849,7 @@ namespace GTR_Watch_face
             if (MouseСoordinates.Y < 0) return;
             int value = MouseСoordinates.Y - (int)numericUpDown_Shortcuts_Weather_Y.Value;
             NumericUpDown numericUpDown = sender as NumericUpDown;
-            if ((e.Y <= numericUpDown.Controls[1].Width + 1) && (value > 0))
+            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
             {
                 // Click is in text area
                 numericUpDown.Value = value;
@@ -7646,7 +7873,7 @@ namespace GTR_Watch_face
             if (MouseСoordinates.Y < 0) return;
             int value = MouseСoordinates.Y - (int)numericUpDown_Shortcuts_Energy_Y.Value;
             NumericUpDown numericUpDown = sender as NumericUpDown;
-            if ((e.Y <= numericUpDown.Controls[1].Width + 1) && (value > 0))
+            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
             {
                 // Click is in text area
                 numericUpDown.Value = value;
@@ -8478,6 +8705,74 @@ namespace GTR_Watch_face
             }
             #endregion
         }
+
+        #region Radius
+        private void numericUpDown_StepsProgress_Radius_X_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.X < 0) return;
+            int valueX = MouseСoordinates.X - (int)numericUpDown_StepsProgress_Center_X.Value;
+            int valueY = MouseСoordinates.Y - (int)numericUpDown_StepsProgress_Center_Y.Value;
+            int value = (int)Math.Round(Math.Sqrt(valueX * valueX + valueY * valueY));
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if (e.X <= numericUpDown.Controls[1].Width + 1)
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+
+        private void numericUpDown_ActivityPulsScale_Radius_X_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.X < 0) return;
+            int valueX = MouseСoordinates.X - (int)numericUpDown_ActivityPulsScale_Center_X.Value;
+            int valueY = MouseСoordinates.Y - (int)numericUpDown_ActivityPulsScale_Center_Y.Value;
+            int value = (int)Math.Round(Math.Sqrt(valueX * valueX + valueY * valueY));
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if (e.X <= numericUpDown.Controls[1].Width + 1)
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+
+        private void numericUpDown_ActivityCaloriesScale_Radius_X_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.X < 0) return;
+            int valueX = MouseСoordinates.X - (int)numericUpDown_ActivityCaloriesScale_Center_X.Value;
+            int valueY = MouseСoordinates.Y - (int)numericUpDown_ActivityCaloriesScale_Center_Y.Value;
+            int value = (int)Math.Round(Math.Sqrt(valueX * valueX + valueY * valueY));
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if (e.X <= numericUpDown.Controls[1].Width + 1)
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+
+        private void numericUpDown_Battery_Scale_Radius_X_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.X < 0) return;
+            int valueX = MouseСoordinates.X - (int)numericUpDown_Battery_Scale_Center_X.Value;
+            int valueY = MouseСoordinates.Y - (int)numericUpDown_Battery_Scale_Center_Y.Value;
+            int value = (int)Math.Round(Math.Sqrt(valueX * valueX + valueY * valueY));
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if (e.X <= numericUpDown.Controls[1].Width + 1)
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+        #endregion
+
+        //private int getOSversion()
+        //{
+        //    int version = 7;
+        //    RegistryKey registryKey = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows NT\CurrentVersion");
+        //    string ProductName = registryKey.GetValue("ProductName").ToString();
+        //    string[] words = ProductName.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+        //    Int32.TryParse(words[1], out version);
+        //    return version;
+        //}
     }
 }
 
@@ -8493,17 +8788,22 @@ public static class MouseСoordinates
     public static int Y = -1;
 }
 
-
-/*static class Logger
+static class Logger
 {
     //----------------------------------------------------------
     // Статический метод записи строки в файл лога без переноса
     //----------------------------------------------------------
     public static void Write(string text)
     {
-        using (StreamWriter sw = new StreamWriter(Application.StartupPath + "\\log.txt", true))
+        try
         {
-            sw.Write(text);
+            using (StreamWriter sw = new StreamWriter(Application.StartupPath + "\\Program log.txt", true))
+            {
+                //sw.Write(text);
+            }
+        }
+        catch (Exception)
+        {
         }
     }
 
@@ -8512,9 +8812,15 @@ public static class MouseСoordinates
     //---------------------------------------------------------
     public static void WriteLine(string message)
     {
-        using (StreamWriter sw = new StreamWriter(Application.StartupPath + "\\log.txt", true))
+        try
         {
-            sw.WriteLine(String.Format("{0,-23} {1}", DateTime.Now.ToString() + ":", message));
+            using (StreamWriter sw = new StreamWriter(Application.StartupPath + "\\Program log.txt", true))
+            {
+                //sw.WriteLine(String.Format("{0,-23} {1}", DateTime.Now.ToString() + ":", message));
+            }
+        }
+        catch (Exception)
+        {
         }
     }
-}*/
+}

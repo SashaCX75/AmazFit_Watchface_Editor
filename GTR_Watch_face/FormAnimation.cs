@@ -23,7 +23,8 @@ namespace GTR_Watch_face
         float scalePreview = 1.0f;
         float currentDPI; // масштаб экрана
 
-        public FormAnimation(Bitmap previewBackground,List<ClassMotiomAnimation> motiomAnimation, ClassStaticAnimation staticAnimation)
+        public FormAnimation(Bitmap previewBackground,List<ClassMotiomAnimation> motiomAnimation,
+            ClassStaticAnimation staticAnimation, float cDPI)
         {
             InitializeComponent();
             //PreviewBackground = previewBackground;
@@ -31,7 +32,9 @@ namespace GTR_Watch_face
             //pictureBox_AnimatiomPreview.Image = previewBackground;
             MotiomAnimation = motiomAnimation;
             StaticAnimation = staticAnimation;
-            currentDPI = (int)Registry.GetValue("HKEY_CURRENT_USER\\Control Panel\\Desktop", "LogPixels", 96) / 96f;
+            //currentDPI = (int)Registry.GetValue("HKEY_CURRENT_USER\\Control Panel\\Desktop", "LogPixels", 96) / 96f;
+
+            currentDPI = cDPI;
 
         }
 
@@ -72,8 +75,12 @@ namespace GTR_Watch_face
 
         private void radioButton_CheckedChanged(object sender, EventArgs e)
         {
+            RadioButton radioButton = sender as RadioButton;
+            if (radioButton != null && !radioButton.Checked) return;
+            pictureBox_AnimatiomPreview.BackgroundImageLayout = ImageLayout.Zoom;
             if (radioButton_normal.Checked)
             {
+                pictureBox_AnimatiomPreview.BackgroundImageLayout = ImageLayout.None;
                 if (Model_Wath.model_gtr47)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(456, 456);
@@ -102,22 +109,22 @@ namespace GTR_Watch_face
                 if (Model_Wath.model_gtr47)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(683, 683);
-                    this.Size = new Size(683 + 20, 683 + 100);
+                    this.Size = new Size(683 + (int)(20 * currentDPI), 683 + (int)(100 * currentDPI));
                 }
                 else if (Model_Wath.model_gtr42)
                 {
-                    pictureBox_AnimatiomPreview.Size = new Size(586, 586);
-                    this.Size = new Size(586 + 20, 586 + 100);
+                    pictureBox_AnimatiomPreview.Size = new Size(587, 587);
+                    this.Size = new Size(587 + (int)(20 * currentDPI), 587 + (int)(100 * currentDPI));
                 }
                 else if (Model_Wath.model_gts)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(524, 665);
-                    this.Size = new Size(524 + 20, 665 + 100);
+                    this.Size = new Size(524 + (int)(20 * currentDPI), 665 + (int)(100 * currentDPI));
                 }
                 else if (Model_Wath.model_TRex || Model_Wath.model_Verge)
                 {
-                    pictureBox_AnimatiomPreview.Size = new Size(541, 541);
-                    this.Size = new Size(542 + 20, 542 + 100);
+                    pictureBox_AnimatiomPreview.Size = new Size(542, 542);
+                    this.Size = new Size(542 + (int)(20 * currentDPI), 542 + (int)(100 * currentDPI));
                 }
                 scalePreview = 1.5f;
             }
@@ -127,22 +134,22 @@ namespace GTR_Watch_face
                 if (Model_Wath.model_gtr47)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(909, 909);
-                    this.Size = new Size(909 + 20, 909 + 100);
+                    this.Size = new Size(909 + (int)(20 * currentDPI), 909 + (int)(100 * currentDPI));
                 }
                 else if (Model_Wath.model_gtr42)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(781, 781);
-                    this.Size = new Size(781 + 20, 781 + 100);
+                    this.Size = new Size(781 + (int)(20 * currentDPI), 781 + (int)(100 * currentDPI));
                 }
                 else if (Model_Wath.model_gts)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(697, 885);
-                    this.Size = new Size(697 + 20, 885 + 100);
+                    this.Size = new Size(697 + (int)(20 * currentDPI), 885 + (int)(100 * currentDPI));
                 }
                 else if (Model_Wath.model_TRex || Model_Wath.model_Verge)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(721, 721);
-                    this.Size = new Size(721 + 20, 721 + 100);
+                    this.Size = new Size(721 + (int)(20 * currentDPI), 721 + (int)(100 * currentDPI));
                 }
                 scalePreview = 2f;
             }

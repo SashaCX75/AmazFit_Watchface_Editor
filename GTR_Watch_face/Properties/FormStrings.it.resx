@@ -276,4 +276,23 @@
   <data name="Message_Warning_Caption" xml:space="preserve">
     <value>Avvertimento</value>
   </data>
+  <data name="Message_ConvertingCompleted_Text" xml:space="preserve">
+    <value>Una nuova watchface è stata creata.</value>
+  </data>
+  <data name="Message_Error_SpaceInProgrammName_Text" xml:space="preserve">
+    <value>Il percorso del programma non deve contenere spazi. Si consiglia di posizionare il programma nella directory principale del disco.</value>
+  </data>
+  <data name="Message_WarningBatteryCount_Text" xml:space="preserve">
+    <value>
+Non è consigliabile utilizzare più di 10 immagini per mostrare la carica della batteria.</value>
+  </data>
+  <data name="Message_WarningConverting_Text1" xml:space="preserve">
+    <value>Cartella </value>
+  </data>
+  <data name="Message_WarningConverting_Text2" xml:space="preserve">
+    <value> esiste già. Sostituire?</value>
+  </data>
+  <data name="Message_Warning_Information" xml:space="preserve">
+    <value>Informazioni</value>
+  </data>
 </root>

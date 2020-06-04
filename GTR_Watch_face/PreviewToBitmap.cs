@@ -27,6 +27,7 @@ namespace GTR_Watch_face
             bool showShortcuts, bool showShortcutsArea, bool showShortcutsBorder, bool showAnimation, bool showCircleScaleArea, 
             int link)
         {
+            Logger.WriteLine("* PreviewToBitmap");
             var src = new Bitmap(1, 1);
             gPanel.ScaleTransform(scale, scale, MatrixOrder.Prepend);
             int i;
@@ -34,6 +35,7 @@ namespace GTR_Watch_face
             if (link == 2) goto AnimationEnd;
 
             #region Black background
+            Logger.WriteLine("PreviewToBitmap (Black background)");
             src = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr47.png");
             if (radioButton_42.Checked)
             {
@@ -56,6 +58,7 @@ namespace GTR_Watch_face
             #endregion
 
             #region Background
+            Logger.WriteLine("PreviewToBitmap (Background)");
             if (comboBox_Background.SelectedIndex >= 0)
             {
                 i = comboBox_Background.SelectedIndex;
@@ -67,6 +70,7 @@ namespace GTR_Watch_face
             if (scale == 0.5) gPanel.SmoothingMode = SmoothingMode.AntiAlias;
 
             #region Battery
+            Logger.WriteLine("PreviewToBitmap (Battery)");
             if (checkBox_Battery.Checked)
             {
                 // заряд числом
@@ -235,7 +239,7 @@ namespace GTR_Watch_face
                                     {
                                         int value = (int)Math.Ceiling(RowsCount * Watch_Face_Preview_Set.Battery / 100);
                                         //value--;
-                                        if (value < 0) value = 0;
+                                        if (value <= 0) value = 1;
                                         if (count < value)
                                         {
                                             src = new Bitmap(ListImagesFullName[i]);
@@ -254,6 +258,7 @@ namespace GTR_Watch_face
             #endregion
 
             #region Date
+            Logger.WriteLine("PreviewToBitmap (Date)");
             if (checkBox_Date.Checked)
             {
                 if ((checkBox_MonthAndDayM.Checked) && (comboBox_MonthAndDayM_Image.SelectedIndex >= 0))
@@ -705,6 +710,7 @@ namespace GTR_Watch_face
             #endregion
 
             #region Status
+            Logger.WriteLine("PreviewToBitmap (Status)");
             if (checkBox_Bluetooth.Checked)
             {
                 if (Watch_Face_Preview_Set.Status.Bluetooth)
@@ -803,6 +809,7 @@ namespace GTR_Watch_face
             #endregion
 
             #region Weather
+            Logger.WriteLine("PreviewToBitmap (Weather)");
             if (checkBox_Weather.Checked)
             {
                 if ((checkBox_Weather_Icon.Checked) && (comboBox_Weather_Icon_Image.SelectedIndex >= 0))
@@ -888,9 +895,10 @@ namespace GTR_Watch_face
             }
             #endregion
 
-            gPanel.SmoothingMode = SmoothingMode.AntiAlias;
+            //gPanel.SmoothingMode = SmoothingMode.AntiAlias;
 
             #region Activity
+            Logger.WriteLine("PreviewToBitmap (Activity)");
             if (checkBox_Activity.Checked)
             {
                 if ((checkBox_ActivitySteps.Checked) && (comboBox_ActivitySteps_Image.SelectedIndex >= 0))
@@ -1209,6 +1217,7 @@ namespace GTR_Watch_face
                     DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle);
                 }
 
+                // достижение цели
                 if ((checkBox_ActivityStar.Checked) && (comboBox_ActivityStar_Image.SelectedIndex >= 0))
                 {
                     if (Watch_Face_Preview_Set.Activity.Steps >= Watch_Face_Preview_Set.Activity.StepsGoal)
@@ -1218,10 +1227,28 @@ namespace GTR_Watch_face
                             (int)numericUpDown_ActivityStar_Y.Value, src.Width, src.Height));
                     }
                 }
+
+                // цель шагов
+                if ((checkBox_ActivityStepsGoal.Checked) && (comboBox_ActivityStepsGoal_Image.SelectedIndex >= 0))
+                {
+                    int x1 = (int)numericUpDown_ActivityStepsGoal_StartCorner_X.Value;
+                    int y1 = (int)numericUpDown_ActivityStepsGoal_StartCorner_Y.Value;
+                    int x2 = (int)numericUpDown_ActivityStepsGoal_EndCorner_X.Value;
+                    int y2 = (int)numericUpDown_ActivityStepsGoal_EndCorner_Y.Value;
+                    x2++;
+                    y2++;
+                    int image_index = comboBox_ActivityStepsGoal_Image.SelectedIndex;
+                    int spacing = (int)numericUpDown_ActivityStepsGoal_Spacing.Value;
+                    int alignment = comboBox_ActivityStepsGoal_Alignment.SelectedIndex;
+                    int data_number = Watch_Face_Preview_Set.Activity.StepsGoal;
+                    if (numericUpDown_ActivitySteps_Count.Value == 10)
+                        DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
+                }
             }
             #endregion
 
             #region StepsProgress
+            Logger.WriteLine("PreviewToBitmap (StepsProgress)");
             if (checkBox_StepsProgress.Checked)
             {
                 if (checkBox_StepsProgress_Image.Checked &&
@@ -1344,6 +1371,7 @@ namespace GTR_Watch_face
             #endregion
 
             #region Animation
+            Logger.WriteLine("PreviewToBitmap (Animation)");
             if (link == 1) goto DrawEnd;
             if (showAnimation)
             {
@@ -1409,6 +1437,7 @@ namespace GTR_Watch_face
             #endregion
 
             #region Time
+            Logger.WriteLine("PreviewToBitmap (Time)");
             if (checkBox_Time.Checked)
             {
                 if (checkBox_AmPm.Checked)
@@ -1622,6 +1651,7 @@ namespace GTR_Watch_face
             #endregion
 
             #region DaysProgress
+            Logger.WriteLine("PreviewToBitmap (DaysProgress)");
             // прогресс числа стрелкой
             if ((checkBox_ADDay_ClockHand.Checked) && (comboBox_ADDay_ClockHand_Image.SelectedIndex >= 0))
             {
@@ -1673,6 +1703,7 @@ namespace GTR_Watch_face
             #endregion
 
             #region AnalogDialFace
+            Logger.WriteLine("PreviewToBitmap (AnalogDialFace)");
             if (checkBox_AnalogClock.Checked)
             {
                 bool SecondsOffSet = false;
@@ -1772,8 +1803,9 @@ namespace GTR_Watch_face
                 }
             }
             #endregion
-           
+
             #region Shortcuts
+            Logger.WriteLine("PreviewToBitmap (Shortcuts)");
             if (showShortcuts)
             {
                 if (checkBox_Shortcuts.Checked)
@@ -1900,8 +1932,9 @@ namespace GTR_Watch_face
                 } 
             }
             #endregion
-         
+
             #region Mesh
+            Logger.WriteLine("PreviewToBitmap (Mesh)");
 
             if (WMesh)
             {
@@ -1952,6 +1985,7 @@ namespace GTR_Watch_face
 
             if (crop)
             {
+                Logger.WriteLine("PreviewToBitmap (crop)");
                 Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr47.png");
                 if (radioButton_42.Checked)
                 {
@@ -1975,6 +2009,7 @@ namespace GTR_Watch_face
             }
 
             if (link !=1 && link !=2) FormText();
+            Logger.WriteLine("* PreviewToBitmap (end)");
         }
 
         /// <summary>Рисует число</summary>
@@ -2490,6 +2525,7 @@ namespace GTR_Watch_face
         private void CircleOnBitmap(Graphics graphics, int x, int y, int imageIndex, int radius, float width,
             int lineCap, float StartAngle, float EndAngle, bool showCircleScaleArea)
         {
+            if (EndAngle == 0) return;
             Bitmap src = new Bitmap(ListImagesFullName[imageIndex]);
             Pen pen = new Pen(Color.Black, width);
 
