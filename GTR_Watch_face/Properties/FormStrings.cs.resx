@@ -294,4 +294,10 @@
   <data name="Message_Warning_Information" xml:space="preserve">
     <value>Informace</value>
   </data>
+  <data name="Message_WarningAnimationLastImage" xml:space="preserve">
+    <value>Obrázek pro animaci by neměl být poslední v seznamu obrázků.</value>
+  </data>
+  <data name="Message_WarningMonthName" xml:space="preserve">
+    <value>Zobrazení čísla měsíce nefunguje společně se zobrazením názvu měsíce.</value>
+  </data>
 </root>

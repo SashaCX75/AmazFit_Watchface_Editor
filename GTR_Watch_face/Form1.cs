@@ -1723,7 +1723,7 @@ namespace GTR_Watch_face
             DirectoryInfo Folder;
             FileInfo[] Images;
             Folder = new DirectoryInfo(FullFileDir);
-            Images = Folder.GetFiles("*.png");
+            Images = Folder.GetFiles("*.png").OrderBy(p => Path.GetFileNameWithoutExtension(p.Name)).ToArray();
             int count = 0;
             Image loadedImage = null;
             List<string> ErrorImage = new List<string>();
@@ -5848,7 +5848,34 @@ namespace GTR_Watch_face
                     }
                 }
             }
-            
+
+            // название и номер месяца
+            if (Watch_Face.Date != null && Watch_Face.Date.MonthAndDay != null && Watch_Face.Date.MonthAndDay.Separate != null)
+            {
+                if (Watch_Face.Date.MonthAndDay.Separate.MonthName != null && Watch_Face.Date.MonthAndDay.Separate.Month != null)
+                {
+                    MessageBox.Show(Properties.FormStrings.Message_WarningMonthName,
+                            Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
+            // последняя картинка для анимации
+            if (Watch_Face.Unknown11 != null && Watch_Face.Unknown11.Unknown11_1 != null)
+            {
+                bool MotiomAnimationLastImage = false;
+                foreach (MotiomAnimation MotiomAnimation in Watch_Face.Unknown11.Unknown11_1)
+                {
+                    if (MotiomAnimation.ImageIndex >= ListImages.Count-1)
+                    {
+                        MotiomAnimationLastImage = true;
+                    }
+                }
+                if (MotiomAnimationLastImage)
+                {
+                    MessageBox.Show(Properties.FormStrings.Message_WarningAnimationLastImage,
+                            Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
         }
 
         private void checkBox_Weather_CheckedChanged(object sender, EventArgs e)
@@ -7217,9 +7244,10 @@ namespace GTR_Watch_face
             //helpProvider1.SetHelpKeyword(this, "kratkaya_instruktsiya.htm");
             //SendKeys.Send("{F1}");
             //Help.ShowHelp(this, Application.StartupPath + Properties.FormStrings.File_ReadMy);
-            string helpfile = Application.StartupPath + Properties.FormStrings.File_ReadMy;
+            string help_file = Application.StartupPath + Properties.FormStrings.File_ReadMy;
+            string help_start = Properties.FormStrings.File_ReadMy_Start;
             HelpNavigator navigator = HelpNavigator.Topic;
-            Help.ShowHelp(this, helpfile, navigator, "kratkaya_instruktsiya.htm");
+            Help.ShowHelp(this, help_file, navigator, help_start);
         }
 
         private void checkBox_Shortcuts_Area_CheckedChanged(object sender, EventArgs e)

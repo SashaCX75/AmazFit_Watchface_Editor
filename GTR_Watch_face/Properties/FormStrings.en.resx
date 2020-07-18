@@ -294,4 +294,16 @@
   <data name="Message_Warning_Information" xml:space="preserve">
     <value>Information</value>
   </data>
+  <data name="File_ReadMy" xml:space="preserve">
+    <value>\readme_en.chm</value>
+  </data>
+  <data name="File_ReadMy_Start" xml:space="preserve">
+    <value>quick_guide.htm</value>
+  </data>
+  <data name="Message_WarningAnimationLastImage" xml:space="preserve">
+    <value>The image for animation should not be the last in the list of images.</value>
+  </data>
+  <data name="Message_WarningMonthName" xml:space="preserve">
+    <value>The month number display does not work together with the month name display.</value>
+  </data>
 </root>

@@ -300,4 +300,13 @@
   <data name="Message_Warning_Information" xml:space="preserve">
     <value>Информация</value>
   </data>
+  <data name="File_ReadMy_Start" xml:space="preserve">
+    <value>kratkaya_instruktsiya.htm</value>
+  </data>
+  <data name="Message_WarningAnimationLastImage" xml:space="preserve">
+    <value>Изображение для анимации не должно быть последним в списке изображений.</value>
+  </data>
+  <data name="Message_WarningMonthName" xml:space="preserve">
+    <value>Отображение номера месяца не работает вместе с отображением названия месяца.</value>
+  </data>
 </root>

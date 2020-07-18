@@ -45,7 +45,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button_pack_unpack = new System.Windows.Forms.Button();
             this.textBox_pack_unpack_dir = new System.Windows.Forms.TextBox();
-            this.label_version = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label_size = new System.Windows.Forms.Label();
@@ -1367,6 +1366,7 @@
             this.label407 = new System.Windows.Forms.Label();
             this.label_version_help = new System.Windows.Forms.Label();
             this.label406 = new System.Windows.Forms.Label();
+            this.label_version = new System.Windows.Forms.Label();
             this.colorDialog_StepsProgress = new System.Windows.Forms.ColorDialog();
             this.colorDialog_Battery = new System.Windows.Forms.ColorDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
@@ -1896,7 +1896,6 @@
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.button_pack_unpack);
             this.tabPage1.Controls.Add(this.textBox_pack_unpack_dir);
-            this.tabPage1.Controls.Add(this.label_version);
             this.tabPage1.Controls.Add(this.label1);
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
@@ -1983,12 +1982,6 @@
             this.textBox_pack_unpack_dir.Name = "textBox_pack_unpack_dir";
             this.textBox_pack_unpack_dir.ReadOnly = true;
             this.helpProvider1.SetShowHelp(this.textBox_pack_unpack_dir, ((bool)(resources.GetObject("textBox_pack_unpack_dir.ShowHelp"))));
-            // 
-            // label_version
-            // 
-            resources.ApplyResources(this.label_version, "label_version");
-            this.label_version.Name = "label_version";
-            this.helpProvider1.SetShowHelp(this.label_version, ((bool)(resources.GetObject("label_version.ShowHelp"))));
             // 
             // label1
             // 
@@ -16817,6 +16810,12 @@
             this.label406.Name = "label406";
             this.helpProvider1.SetShowHelp(this.label406, ((bool)(resources.GetObject("label406.ShowHelp"))));
             // 
+            // label_version
+            // 
+            resources.ApplyResources(this.label_version, "label_version");
+            this.label_version.Name = "label_version";
+            this.helpProvider1.SetShowHelp(this.label_version, ((bool)(resources.GetObject("label_version.ShowHelp"))));
+            // 
             // colorDialog_StepsProgress
             // 
             this.colorDialog_StepsProgress.FullOpen = true;
@@ -17010,6 +17009,7 @@
             this.Controls.Add(this.checkBox_Show_Shortcuts);
             this.Controls.Add(this.checkBox_crop);
             this.Controls.Add(this.radioButton_gts);
+            this.Controls.Add(this.label_version);
             this.Controls.Add(this.checkBox_border);
             this.Controls.Add(this.label_preview_Y);
             this.Controls.Add(this.label_preview_X);

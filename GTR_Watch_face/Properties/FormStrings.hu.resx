@@ -297,4 +297,10 @@
   <data name="Message_Warning_Information" xml:space="preserve">
     <value>Információ</value>
   </data>
+  <data name="Message_WarningAnimationLastImage" xml:space="preserve">
+    <value>Az animációhoz használt képnek nem szabad az utolsónak lennie a képek listájában.</value>
+  </data>
+  <data name="Message_WarningMonthName" xml:space="preserve">
+    <value>A hónapszám-kijelző nem működik együtt a hónap neve-kijelzéssel.</value>
+  </data>
 </root>

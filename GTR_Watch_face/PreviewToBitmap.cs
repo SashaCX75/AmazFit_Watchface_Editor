@@ -1712,6 +1712,17 @@ namespace GTR_Watch_face
 
                 if (SecondsOffSet)
                 {
+                    int offsetX_Hour = (int)numericUpDown_AnalogClock_Hour_Offset_X.Value;
+                    int offsetY_Hour = (int)numericUpDown_AnalogClock_Hour_Offset_Y.Value;
+                    int offsetX_Min = (int)numericUpDown_AnalogClock_Min_Offset_X.Value;
+                    int offsetY_Min = (int)numericUpDown_AnalogClock_Min_Offset_Y.Value;
+
+
+                    if ((offsetX_Hour!=0 || offsetY_Hour!=0) && ((offsetX_Min != 0 || offsetY_Min != 0))) SecondsOffSet = false;
+                }
+
+                if (SecondsOffSet)
+                {
                     // секунды
                     if ((checkBox_AnalogClock_Sec.Checked) && (comboBox_AnalogClock_Sec_Image.SelectedIndex >= 0))
                     {
@@ -2545,7 +2556,8 @@ namespace GTR_Watch_face
             Logger.WriteLine("* CircleOnBitmap");
             if (EndAngle == 0) return;
             Bitmap src = new Bitmap(ListImagesFullName[imageIndex]);
-            Pen pen = new Pen(Color.Black, width);
+            //Pen pen = new Pen(Color.Black, width);
+            Pen pen = new Pen(Color.FromArgb(1, 0, 0, 0), 1);
 
             switch (lineCap)
             {
@@ -2577,6 +2589,8 @@ namespace GTR_Watch_face
             gPanel.SmoothingMode = SmoothingMode.AntiAlias;
             try
             {
+                gPanel.DrawLine(pen, centrX, centrY, centrX + 1, centrY + 1);
+                pen = new Pen(Color.Black, width);
                 gPanel.DrawArc(pen, srcX, srcY, CircleWidth, CircleWidth, StartAngle, EndAngle);
                 //src = ApplyAlfaMask(src, mask);
                 src = ApplyMask(src, mask);
