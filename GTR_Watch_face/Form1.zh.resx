@@ -388,14 +388,17 @@
   <data name="numericUpDown_WeatherSet_NightTemp.Location" type="System.Drawing.Point, System.Drawing">
     <value>270, 32</value>
   </data>
+  <data name="label288.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 9</value>
+  </data>
   <data name="label288.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 13</value>
   </data>
   <data name="label288.Text" xml:space="preserve">
-    <value>天气图标</value>
+    <value>天气图标选择</value>
   </data>
   <data name="label299.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 34</value>
+    <value>218, 36</value>
   </data>
   <data name="label299.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 13</value>
@@ -416,13 +419,13 @@
     <value>晴</value>
   </data>
   <data name="comboBox_WeatherSet_Icon.Items4" xml:space="preserve">
-    <value>多云有雨</value>
-  </data>
-  <data name="comboBox_WeatherSet_Icon.Items5" xml:space="preserve">
     <value>阵雨</value>
   </data>
+  <data name="comboBox_WeatherSet_Icon.Items5" xml:space="preserve">
+    <value>阴</value>
+  </data>
   <data name="comboBox_WeatherSet_Icon.Items6" xml:space="preserve">
-    <value>多云有雪</value>
+    <value>阵雪</value>
   </data>
   <data name="comboBox_WeatherSet_Icon.Items7" xml:space="preserve">
     <value>小雨</value>
@@ -484,6 +487,9 @@
   <data name="numericUpDown_WeatherSet_DayTemp.Location" type="System.Drawing.Point, System.Drawing">
     <value>270, 6</value>
   </data>
+  <data name="checkBox_WeatherSet_Temp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 36</value>
+  </data>
   <data name="checkBox_WeatherSet_Temp.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 17</value>
   </data>
@@ -491,7 +497,7 @@
     <value>实际温度</value>
   </data>
   <data name="checkBox_WeatherSet_DayTemp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>203, 7</value>
+    <value>204, 10</value>
   </data>
   <data name="checkBox_WeatherSet_DayTemp.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 17</value>
@@ -1531,7 +1537,7 @@
     <value>启用</value>
   </data>
   <data name="label439.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 45</value>
+    <value>105, 47</value>
   </data>
   <data name="label439.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 13</value>
@@ -1540,7 +1546,7 @@
     <value>宽度:</value>
   </data>
   <data name="label440.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 71</value>
+    <value>105, 73</value>
   </data>
   <data name="label440.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 13</value>
@@ -1573,7 +1579,7 @@
     <value>启用</value>
   </data>
   <data name="label437.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 45</value>
+    <value>105, 47</value>
   </data>
   <data name="label437.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 13</value>
@@ -1582,7 +1588,7 @@
     <value>宽度:</value>
   </data>
   <data name="label441.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 71</value>
+    <value>105, 73</value>
   </data>
   <data name="label441.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 13</value>
@@ -1615,7 +1621,7 @@
     <value>启用</value>
   </data>
   <data name="label448.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 45</value>
+    <value>105, 47</value>
   </data>
   <data name="label448.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 13</value>
@@ -1624,7 +1630,7 @@
     <value>宽度:</value>
   </data>
   <data name="label449.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 71</value>
+    <value>105, 73</value>
   </data>
   <data name="label449.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 13</value>
@@ -1657,7 +1663,7 @@
     <value>启用</value>
   </data>
   <data name="label454.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 45</value>
+    <value>105, 47</value>
   </data>
   <data name="label454.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 13</value>
@@ -1666,7 +1672,7 @@
     <value>宽度:</value>
   </data>
   <data name="label455.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 71</value>
+    <value>105, 73</value>
   </data>
   <data name="label455.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 13</value>
@@ -1699,7 +1705,7 @@
     <value>快捷方式</value>
   </data>
   <data name="label286.Location" type="System.Drawing.Point, System.Drawing">
-    <value>270, 20</value>
+    <value>278, 22</value>
   </data>
   <data name="label286.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 13</value>
@@ -1921,7 +1927,7 @@
     <value>每日温度</value>
   </data>
   <data name="label287.Location" type="System.Drawing.Point, System.Drawing">
-    <value>240, 31</value>
+    <value>250, 33</value>
   </data>
   <data name="label287.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 13</value>
@@ -2293,7 +2299,7 @@
     <value>34, 13</value>
   </data>
   <data name="label202.Text" xml:space="preserve">
-    <value>宽度5:</value>
+    <value>宽度:</value>
   </data>
   <data name="label203.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 13</value>
@@ -2543,6 +2549,9 @@
   </data>
   <data name="comboBox_Activity_NDImage.Location" type="System.Drawing.Point, System.Drawing">
     <value>65, 208</value>
+  </data>
+  <data name="label403.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 213</value>
   </data>
   <data name="label403.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 13</value>
@@ -3901,10 +3910,10 @@
     <value>转化</value>
   </data>
   <data name="numericUpDown_ConvertingOutput_Custom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>425, 19</value>
+    <value>412, 17</value>
   </data>
   <data name="radioButton_ConvertingOutput_Custom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 17</value>
+    <value>100, 50</value>
   </data>
   <data name="radioButton_ConvertingOutput_Custom.Text" xml:space="preserve">
     <value>自定义大小</value>
@@ -3913,10 +3922,10 @@
     <value>目标机型</value>
   </data>
   <data name="numericUpDown_ConvertingInput_Custom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>425, 19</value>
+    <value>412, 17</value>
   </data>
   <data name="radioButton_ConvertingInput_Custom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 17</value>
+    <value>100, 50</value>
   </data>
   <data name="radioButton_ConvertingInput_Custom.Text" xml:space="preserve">
     <value>自定义大小</value>
@@ -4001,7 +4010,7 @@
     <value>97, 17</value>
   </data>
   <data name="radioButton_Settings_Pack_Dialog.Text" xml:space="preserve">
-    <value>建议一个选择</value>
+    <value>提示选择</value>
   </data>
   <data name="groupBox7.Text" xml:space="preserve">
     <value>打包项目后</value>
@@ -4022,7 +4031,7 @@
     <value>97, 17</value>
   </data>
   <data name="radioButton_Settings_Open_Dialog.Text" xml:space="preserve">
-    <value>建议一个选择</value>
+    <value>提示选择</value>
   </data>
   <data name="groupBox6.Text" xml:space="preserve">
     <value>打开项目后</value>
@@ -4043,7 +4052,7 @@
     <value>97, 17</value>
   </data>
   <data name="radioButton_Settings_AfterUnpack_Dialog.Text" xml:space="preserve">
-    <value>建议一个选择</value>
+    <value>提示选择</value>
   </data>
   <data name="groupBox5.Text" xml:space="preserve">
     <value>提取.bin之后</value>
@@ -4064,7 +4073,7 @@
     <value>97, 17</value>
   </data>
   <data name="radioButton_Settings_Unpack_Dialog.Text" xml:space="preserve">
-    <value>建议一个选择</value>
+    <value>提示选择</value>
   </data>
   <data name="groupBox1.Text" xml:space="preserve">
     <value>如果提取的文件名相同</value>
