@@ -7140,5 +7140,11 @@
   </data>
   <data name="tabPage56.Text" xml:space="preserve">
     <value>目标步数</value>
-   </data>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>背景图:</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>预览图:</value>
+  </data>
 </root>
