@@ -389,10 +389,10 @@
     <value>270, 32</value>
   </data>
   <data name="label288.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 9</value>
+    <value>3, 9</value>
   </data>
   <data name="label288.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
+    <value>40, 13</value>
   </data>
   <data name="label288.Text" xml:space="preserve">
     <value>天气图标选择</value>
@@ -488,7 +488,7 @@
     <value>270, 6</value>
   </data>
   <data name="checkBox_WeatherSet_Temp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 36</value>
+    <value>8, 36</value>
   </data>
   <data name="checkBox_WeatherSet_Temp.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 17</value>
@@ -1960,10 +1960,10 @@
     <value>6, 34</value>
   </data>
   <data name="label216.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 30</value>
+    <value>65, 35</value>
   </data>
   <data name="label216.Text" xml:space="preserve">
-    <value>中心时针(X):</value>
+    <value>中心时针X:</value>
   </data>
   <data name="checkBox_AnalogClock_Hour.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
@@ -1999,10 +1999,10 @@
     <value>6, 68</value>
   </data>
   <data name="label215.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 30</value>
+    <value>65, 35</value>
   </data>
   <data name="label215.Text" xml:space="preserve">
-    <value>中心时针(Y):</value>
+    <value>中心时针Y:</value>
   </data>
   <data name="groupBox_AnalogClock_Hour.Size" type="System.Drawing.Size, System.Drawing">
     <value>240, 135</value>
@@ -2056,19 +2056,19 @@
     <value>6, 68</value>
   </data>
   <data name="label208.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 30</value>
+    <value>65, 35</value>
   </data>
   <data name="label208.Text" xml:space="preserve">
-    <value>中心分针(Y):</value>
+    <value>中心分针Y:</value>
   </data>
   <data name="label209.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 34</value>
   </data>
   <data name="label209.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 30</value>
+    <value>65, 35</value>
   </data>
   <data name="label209.Text" xml:space="preserve">
-    <value>中心分针(X):</value>
+    <value>中心分针X:</value>
   </data>
   <data name="checkBox_AnalogClock_Min.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
@@ -2134,10 +2134,10 @@
     <value>6, 68</value>
   </data>
   <data name="label211.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 30</value>
+    <value>65, 35</value>
   </data>
   <data name="label211.Text" xml:space="preserve">
-    <value>中心秒针(Y):</value>
+    <value>中心秒针Y:</value>
   </data>
   <data name="numericUpDown_AnalogClock_Sec_X.Location" type="System.Drawing.Point, System.Drawing">
     <value>76, 41</value>
@@ -2146,10 +2146,10 @@
     <value>6, 34</value>
   </data>
   <data name="label212.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 30</value>
+    <value>65, 35</value>
   </data>
   <data name="label212.Text" xml:space="preserve">
-    <value>中心秒针(X):</value>
+    <value>中心秒针X:</value>
   </data>
   <data name="checkBox_AnalogClock_Sec.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
@@ -3910,7 +3910,7 @@
     <value>转化</value>
   </data>
   <data name="numericUpDown_ConvertingOutput_Custom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>412, 17</value>
+    <value>415, 17</value>
   </data>
   <data name="radioButton_ConvertingOutput_Custom.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 50</value>
@@ -3922,7 +3922,7 @@
     <value>目标机型</value>
   </data>
   <data name="numericUpDown_ConvertingInput_Custom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>412, 17</value>
+    <value>415, 17</value>
   </data>
   <data name="radioButton_ConvertingInput_Custom.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 50</value>
@@ -3937,7 +3937,7 @@
     <value>表盘转化</value>
   </data>
   <data name="comboBox_Animation_Preview_Speed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>241, 244</value>
+    <value>245, 244</value>
   </data>
   <data name="label483.Size" type="System.Drawing.Size, System.Drawing">
     <value>233, 26</value>
@@ -3980,7 +3980,7 @@
     <value>语言:</value>
   </data>
   <data name="numericUpDown_Gif_Speed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 213</value>
+    <value>90, 213</value>
   </data>
   <data name="label355.Size" type="System.Drawing.Size, System.Drawing">
     <value>84, 13</value>
