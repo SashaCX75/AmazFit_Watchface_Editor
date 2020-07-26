@@ -295,10 +295,7 @@
     <value>Information</value>
   </data>
   <data name="File_ReadMy" xml:space="preserve">
-    <value>\readme_en.chm</value>
-  </data>
-  <data name="File_ReadMy_Start" xml:space="preserve">
-    <value>quick_guide.htm</value>
+    <value>\Manual\readme_en.chm</value>
   </data>
   <data name="Message_WarningAnimationLastImage" xml:space="preserve">
     <value>The image for animation should not be the last in the list of images.</value>

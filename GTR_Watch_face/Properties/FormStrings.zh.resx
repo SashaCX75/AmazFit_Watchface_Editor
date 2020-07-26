@@ -196,10 +196,10 @@
     <value>去文件夹?</value>
   </data>
   <data name="Message_JsonError_Text" xml:space="preserve">
-    <value>无效的JSON文件。</value>
+    <value>无效的Json文件。</value>
   </data>
   <data name="Message_JsonReadError_Text" xml:space="preserve">
-    <value>读取JSON文件时出错。</value>
+    <value>读取Json文件时出错。</value>
   </data>
   <data name="Message_LoadPreviewStates_Caption" xml:space="preserve">
     <value>下载Preview设置</value>
@@ -214,10 +214,10 @@
     <value>打开一个解压过的项目?</value>
   </data>
   <data name="Message_PNGmissing_Text1" xml:space="preserve">
-    <value>PNG文件不正常或缺少一些文件。</value>
+    <value>png文件不正常或缺少一些文件。</value>
   </data>
   <data name="Message_PNGmissing_Text2" xml:space="preserve">
-    <value>按升序命名PNG文件。</value>
+    <value>按升序命名png文件。</value>
   </data>
   <data name="Message_Restart_Caption" xml:space="preserve">
     <value>语言重启选项</value>
@@ -293,5 +293,14 @@
   </data>
   <data name="Message_Warning_Information" xml:space="preserve">
     <value>信息</value>
+  </data>
+  <data name="File_ReadMy" xml:space="preserve">
+    <value>\Manual\readme_zh.chm</value>
+  </data>
+  <data name="Message_WarningAnimationLastImage" xml:space="preserve">
+    <value>用于动画的图像不应位于图像列表的最后。</value>
+  </data>
+  <data name="Message_WarningMonthName" xml:space="preserve">
+    <value>月分显示与月名称显示不能一起使用。</value>
   </data>
 </root>

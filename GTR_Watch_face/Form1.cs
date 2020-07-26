@@ -7245,9 +7245,10 @@ namespace GTR_Watch_face
             //SendKeys.Send("{F1}");
             //Help.ShowHelp(this, Application.StartupPath + Properties.FormStrings.File_ReadMy);
             string help_file = Application.StartupPath + Properties.FormStrings.File_ReadMy;
-            string help_start = Properties.FormStrings.File_ReadMy_Start;
+            //string help_start = Properties.FormStrings.File_ReadMy_Start;
             HelpNavigator navigator = HelpNavigator.Topic;
-            Help.ShowHelp(this, help_file, navigator, help_start);
+            //Help.ShowHelp(this, help_file, navigator, help_start);
+            Help.ShowHelp(this, help_file, navigator, "quick_guide.htm");
         }
 
         private void checkBox_Shortcuts_Area_CheckedChanged(object sender, EventArgs e)
@@ -8855,10 +8856,10 @@ static class Logger
     {
         try
         {
-            using (StreamWriter sw = new StreamWriter(Application.StartupPath + "\\Program log.txt", true))
-            {
-                //sw.Write(text);
-            }
+            //using (StreamWriter sw = new StreamWriter(Application.StartupPath + "\\Program log.txt", true))
+            //{
+            //    sw.Write(text);
+            //}
         }
         catch (Exception)
         {
@@ -8872,10 +8873,10 @@ static class Logger
     {
         try
         {
-            using (StreamWriter sw = new StreamWriter(Application.StartupPath + "\\Program log.txt", true))
-            {
-                //sw.WriteLine(String.Format("{0,-23} {1}", DateTime.Now.ToString() + ":", message));
-            }
+            //using (StreamWriter sw = new StreamWriter(Application.StartupPath + "\\Program log.txt", true))
+            //{
+            //    sw.WriteLine(String.Format("{0,-23} {1}", DateTime.Now.ToString() + ":", message));
+            //}
         }
         catch (Exception)
         {

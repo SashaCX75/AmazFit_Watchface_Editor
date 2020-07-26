@@ -124,7 +124,7 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на \readme.chm.
+        ///   Ищет локализованную строку, похожую на \Manual\readme.chm.
         /// </summary>
         public static string File_ReadMy {
             get {
