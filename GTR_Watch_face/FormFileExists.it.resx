@@ -3098,6 +3098,6 @@
     <value>Esiste già un file con lo stesso stesso nome </value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Sovrascrivi file esistente?</value>
+    <value>Vuoi sovrascrivere il  file esistente?</value>
   </data>
 </root>
