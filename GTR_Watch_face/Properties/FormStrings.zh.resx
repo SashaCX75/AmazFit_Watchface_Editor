@@ -148,7 +148,7 @@
     <value>大型文件尺寸</value>
   </data>
   <data name="Message_bigFile_Text1" xml:space="preserve">
-    <value>未压缩文件大小超过2MB。</value>
+    <value>未压缩文件大小超过1.95MB。</value>
   </data>
   <data name="Message_bigFile_Text1_gts" xml:space="preserve">
     <value>未压缩文件大小超过1.5MB。</value>
@@ -295,10 +295,7 @@
     <value>信息</value>
   </data>
   <data name="File_ReadMy" xml:space="preserve">
-    <value>\readme_zh.chm</value>
-  </data>
-  <data name="File_ReadMy_Start" xml:space="preserve">
-    <value>quick_guide.htm</value>
+    <value>\Manual\readme_zh.chm</value>
   </data>
   <data name="Message_WarningAnimationLastImage" xml:space="preserve">
     <value>用于动画的图像不应位于图像列表的最后。</value>

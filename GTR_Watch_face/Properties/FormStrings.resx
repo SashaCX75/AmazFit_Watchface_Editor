@@ -217,7 +217,7 @@
     <value>Размер несжатого файла превышает 1,5МБ.</value>
   </data>
   <data name="File_ReadMy" xml:space="preserve">
-    <value>\readme.chm</value>
+    <value>\Manual\readme.chm</value>
   </data>
   <data name="Form_Preview" xml:space="preserve">
     <value>Предпросмотр</value>
