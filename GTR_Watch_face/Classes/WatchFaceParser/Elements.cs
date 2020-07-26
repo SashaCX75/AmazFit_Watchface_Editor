@@ -31,8 +31,8 @@ namespace GTR_Watch_face
 
     public class Activity
     {
-        /// <summary>Шкала калорий</summary>
-        public CircleScale StepsGoal { get; set; }
+        /// <summary>Цель шагов</summary>
+        public Number StepsGoal { get; set; }
         /// <summary>Калории</summary>
         public Number Calories { get; set; }
         /// <summary>Пульс</summary>

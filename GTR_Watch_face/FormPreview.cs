@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,61 +14,69 @@ namespace GTR_Watch_face
     public partial class Form_Preview : Form
     {
         float scale = 1;
-        public Form_Preview()
+        float currentDPI; // масштаб экрана
+
+        public Form_Preview(float cDPI)
         {
             InitializeComponent();
+            //currentDPI = (int)Registry.GetValue("HKEY_CURRENT_USER\\Control Panel\\Desktop", "LogPixels", 96) / 96f;
+            currentDPI = cDPI;
         }
 
         public void radioButton_CheckedChanged(object sender, EventArgs e)
         {
             //Form1 f1 = this.Owner as Form1;//Получаем ссылку на первую форму
             //f1.button1.PerformClick();
+            RadioButton radioButton = sender as RadioButton;
+            if (radioButton != null && !radioButton.Checked) return;
+            pictureBox_Preview.BackgroundImageLayout = ImageLayout.Zoom;
             if (radioButton_small.Checked)
             {
                 if (Model_Wath.model_gtr47)
                 {
-                    panel_Preview.Size = new Size(230, 230);
-                    this.Size = new Size(230 + 22, 230 + 66); 
+                    pictureBox_Preview.Size = new Size(230, 230);
+                    this.Size = new Size(230 + (int)(22 * currentDPI), 230 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_gtr42)
                 {
-                    panel_Preview.Size = new Size(198, 198);
-                    this.Size = new Size(198 + 22, 198 + 66);
+                    pictureBox_Preview.Size = new Size(198, 198);
+                    this.Size = new Size(198 + (int)(22 * currentDPI), 198 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_gts)
                 {
-                    panel_Preview.Size = new Size(176, 223);
-                    this.Size = new Size(176 + 22, 223 + 66);
+                    pictureBox_Preview.Size = new Size(177, 224);
+                    this.Size = new Size(177 + (int)(22 * currentDPI), 224 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_TRex || Model_Wath.model_Verge)
                 {
-                    panel_Preview.Size = new Size(183, 183);
-                    this.Size = new Size(183 + 22, 183 + 66);
+                    pictureBox_Preview.Size = new Size(183, 183);
+                    this.Size = new Size(183 + (int)(22 * currentDPI), 183 + (int)(66 * currentDPI));
                 }
                 scale = 0.5f;
             }
 
             if (radioButton_normal.Checked)
             {
+                pictureBox_Preview.BackgroundImageLayout = ImageLayout.None;
                 if (Model_Wath.model_gtr47)
                 {
-                    panel_Preview.Size = new Size(456, 456);
-                    this.Size = new Size(456 + 22, 456 + 66);
+                    pictureBox_Preview.Size = new Size(456, 456);
+                    this.Size = new Size(456 + (int)(22 * currentDPI), 456 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_gtr42)
                 {
-                    panel_Preview.Size = new Size(392, 392);
-                    this.Size = new Size(392 + 22, 392 + 66);
+                    pictureBox_Preview.Size = new Size(392, 392);
+                    this.Size = new Size(392 + (int)(22 * currentDPI), 392 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_gts)
                 {
-                    panel_Preview.Size = new Size(350, 444);
-                    this.Size = new Size(350 + 22, 444 + 66);
+                    pictureBox_Preview.Size = new Size(350, 444);
+                    this.Size = new Size(350 + (int)(22 * currentDPI), 444 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_TRex || Model_Wath.model_Verge)
                 {
-                    panel_Preview.Size = new Size(362, 362);
-                    this.Size = new Size(362 + 22, 362 + 66);
+                    pictureBox_Preview.Size = new Size(362, 362);
+                    this.Size = new Size(362 + (int)(22 * currentDPI), 362 + (int)(66 * currentDPI));
                 }
                 scale = 1f;
             }
@@ -76,23 +85,23 @@ namespace GTR_Watch_face
             {
                 if (Model_Wath.model_gtr47)
                 {
-                    panel_Preview.Size = new Size(683, 683);
-                    this.Size = new Size(683 + 22, 683 + 66);
+                    pictureBox_Preview.Size = new Size(683, 683);
+                    this.Size = new Size(683 + (int)(22 * currentDPI), 683 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_gtr42)
                 {
-                    panel_Preview.Size = new Size(586, 586);
-                    this.Size = new Size(586 + 22, 586 + 66);
+                    pictureBox_Preview.Size = new Size(587, 587);
+                    this.Size = new Size(587 + (int)(22 * currentDPI), 587 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_gts)
                 {
-                    panel_Preview.Size = new Size(524, 665);
-                    this.Size = new Size(524 + 22, 665 + 66);
+                    pictureBox_Preview.Size = new Size(524, 665);
+                    this.Size = new Size(524 + (int)(22 * currentDPI), 665 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_TRex || Model_Wath.model_Verge)
                 {
-                    panel_Preview.Size = new Size(541, 541);
-                    this.Size = new Size(542 + 22, 542 + 66);
+                    pictureBox_Preview.Size = new Size(542, 542);
+                    this.Size = new Size(542 + (int)(22 * currentDPI), 542 + (int)(66 * currentDPI));
                 }
                 scale = 1.5f;
             }
@@ -101,23 +110,23 @@ namespace GTR_Watch_face
             {
                 if (Model_Wath.model_gtr47)
                 {
-                    panel_Preview.Size = new Size(909, 909);
-                    this.Size = new Size(909 + 22, 909 + 66);
+                    pictureBox_Preview.Size = new Size(909, 909);
+                    this.Size = new Size(909 + (int)(22 * currentDPI), 909 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_gtr42)
                 {
-                    panel_Preview.Size = new Size(781, 781);
-                    this.Size = new Size(781 + 22, 781 + 66);
+                    pictureBox_Preview.Size = new Size(781, 781);
+                    this.Size = new Size(781 + (int)(22 * currentDPI), 781 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_gts)
                 {
-                    panel_Preview.Size = new Size(697, 885);
-                    this.Size = new Size(697 + 22, 885 + 66);
+                    pictureBox_Preview.Size = new Size(697, 885);
+                    this.Size = new Size(697 + (int)(22 * currentDPI), 885 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_TRex || Model_Wath.model_Verge)
                 {
-                    panel_Preview.Size = new Size(721, 721);
-                    this.Size = new Size(721 + 22, 721 + 66);
+                    pictureBox_Preview.Size = new Size(721, 721);
+                    this.Size = new Size(721 + (int)(22 * currentDPI), 721 + (int)(66 * currentDPI));
                 }
                 scale = 2f;
             }
@@ -126,23 +135,23 @@ namespace GTR_Watch_face
             {
                 if (Model_Wath.model_gtr47)
                 {
-                    panel_Preview.Size = new Size(1135, 1135);
-                    this.Size = new Size(1135 + 22, 1135 + 66);
+                    pictureBox_Preview.Size = new Size(1136, 1136);
+                    this.Size = new Size(1136 + (int)(22 * currentDPI), 1136 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_gtr42)
                 {
-                    panel_Preview.Size = new Size(975, 975);
-                    this.Size = new Size(975 + 22, 975 + 66);
+                    pictureBox_Preview.Size = new Size(976, 976);
+                    this.Size = new Size(976 + (int)(22 * currentDPI), 976 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_gts)
                 {
-                    panel_Preview.Size = new Size(1135, 1105);
-                    this.Size = new Size(870 + 22, 1105 + 66);
+                    pictureBox_Preview.Size = new Size(871, 1106);
+                    this.Size = new Size(871 + (int)(22 * currentDPI), 1106 + (int)(66 * currentDPI));
                 }
                 else if (Model_Wath.model_TRex || Model_Wath.model_Verge)
                 {
-                    panel_Preview.Size = new Size(900, 900);
-                    this.Size = new Size(900 + 22, 900 + 66);
+                    pictureBox_Preview.Size = new Size(901, 901);
+                    this.Size = new Size(901 + (int)(22 * currentDPI), 901 + (int)(66 * currentDPI));
                 }
                 scale = 2.5f;
             }
@@ -158,7 +167,7 @@ namespace GTR_Watch_face
 
         }
 
-        private void panel_Preview_MouseMove(object sender, MouseEventArgs e)
+        private void pictureBox_Preview_MouseMove(object sender, MouseEventArgs e)
         {
             int CursorX = (int)Math.Round(e.X / scale, 0);
             int CursorY = (int)Math.Round(e.Y / scale, 0);
@@ -167,11 +176,11 @@ namespace GTR_Watch_face
                 ";  Y=" + CursorY.ToString() + "]";
         }
 
-        private void panel_Preview_MouseLeave(object sender, EventArgs e)
+        private void pictureBox_Preview_MouseLeave(object sender, EventArgs e)
         {
             this.Text = Properties.FormStrings.Form_Preview;
         }
-        private void panel_Preview_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void pictureBox_Preview_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             MouseСoordinates.X = (int)Math.Round(e.X / scale, 0);
             MouseСoordinates.Y = (int)Math.Round(e.Y / scale, 0);

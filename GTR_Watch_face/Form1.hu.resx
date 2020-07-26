@@ -117,6 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Kicsomagolás / csomagolás</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Áttekintés</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>Szerkesztés</value>
+  </data>
+  <data name="tabPageConverting.Text" xml:space="preserve">
+    <value>Konvertálás</value>
+  </data>
+  <data name="tabPage33.Text" xml:space="preserve">
+    <value>Opciók</value>
+  </data>
+  <data name="tabPage43.Text" xml:space="preserve">
+    <value>A programról</value>
+  </data>
   <data name="button_zip_unpack.Text" xml:space="preserve">
     <value>Tömörített BIN kicsomagolása</value>
   </data>
@@ -153,9 +171,6 @@
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Út a kicsomagolás / csomagolás eszközhöz</value>
-  </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>Kicsomagolás / csomagolás</value>
   </data>
   <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>81, 17</value>
@@ -1141,9 +1156,6 @@
   <data name="label4.Text" xml:space="preserve">
     <value>JSON képekkel:</value>
   </data>
-  <data name="tabPage2.Text" xml:space="preserve">
-    <value>Áttekintés</value>
-  </data>
   <data name="button_SaveJson.Text" xml:space="preserve">
     <value>JSON fálj mentése</value>
   </data>
@@ -1152,6 +1164,9 @@
   </data>
   <data name="button_ShowAnimation.Text" xml:space="preserve">
     <value>Animáció előnézete</value>
+  </data>
+  <data name="tabPage53.Text" xml:space="preserve">
+    <value>Keret animáció</value>
   </data>
   <data name="label479.Text" xml:space="preserve">
     <value>Animáció sebessége</value>
@@ -1164,6 +1179,9 @@
   </data>
   <data name="label477.Text" xml:space="preserve">
     <value>Az animációs ciklus időtartama</value>
+  </data>
+  <data name="contextMenuStrip_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 82</value>
   </data>
   <data name="toolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1230,7 +1248,7 @@
   <data name="вставитьToolStripMenuItem1.Text" xml:space="preserve">
     <value>Másolni</value>
   </data>
-  <data name="contextMenuStrip_Y.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="contextMenuStrip_X.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 82</value>
   </data>
   <data name="вставитьКоординатуХToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -1298,9 +1316,6 @@
   <data name="вставитьToolStripMenuItem.Text" xml:space="preserve">
     <value>Másolni</value>
   </data>
-  <data name="contextMenuStrip_X.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 82</value>
-  </data>
   <data name="checkBox_StaticAnimation.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
   </data>
@@ -1313,8 +1328,11 @@
   <data name="label475.Text" xml:space="preserve">
     <value>Koordináták</value>
   </data>
-  <data name="tabPage53.Text" xml:space="preserve">
-    <value>Keret animáció</value>
+  <data name="tabPage54.Text" xml:space="preserve">
+    <value>Mozgás a koordináták között</value>
+  </data>
+  <data name="groupBox_MotiomAnimation.Text" xml:space="preserve">
+    <value>A kiválasztott sor adatok módosítása</value>
   </data>
   <data name="radioButton_MotiomAnimation_EndCoordinates.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 17</value>
@@ -1327,9 +1345,6 @@
   </data>
   <data name="radioButton_MotiomAnimation_StartCoordinates.Text" xml:space="preserve">
     <value>Kezdeti koordináták</value>
-  </data>
-  <data name="groupBox_MotiomAnimation.Text" xml:space="preserve">
-    <value>A kiválasztott sor adatok módosítása</value>
   </data>
   <data name="AnimationColumn2.HeaderText" xml:space="preserve">
     <value>Kezdő koordináták (X)</value>
@@ -1352,53 +1367,53 @@
   <data name="AnimationColumn12.HeaderText" xml:space="preserve">
     <value>Pattogó animáció</value>
   </data>
+  <data name="contextMenuStrip_XY_InAnimationTable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 140</value>
+  </data>
   <data name="вставитьНачальныеКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 22</value>
+    <value>136, 26</value>
   </data>
   <data name="вставитьНачальныеКоординатыToolStripMenuItem.Text" xml:space="preserve">
     <value>Beilleszteni</value>
   </data>
   <data name="вставитьКонечныеКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 22</value>
+    <value>136, 26</value>
   </data>
   <data name="вставитьКонечныеКоординатыToolStripMenuItem.Text" xml:space="preserve">
     <value>Beilleszteni</value>
   </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 6</value>
+    <value>133, 6</value>
   </data>
   <data name="копироватьToolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 22</value>
+    <value>136, 26</value>
   </data>
   <data name="копироватьToolStripMenuItem3.Text" xml:space="preserve">
     <value>Másolni</value>
   </data>
   <data name="вставитьToolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 22</value>
+    <value>136, 26</value>
   </data>
   <data name="вставитьToolStripMenuItem3.Text" xml:space="preserve">
     <value>Beilleszteni</value>
   </data>
   <data name="удалитьСтрокуToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 22</value>
+    <value>136, 26</value>
   </data>
   <data name="удалитьСтрокуToolStripMenuItem1.Text" xml:space="preserve">
     <value>Sor törlése</value>
   </data>
-  <data name="contextMenuStrip_XY_InAnimationTable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 120</value>
-  </data>
   <data name="checkBox_MotiomAnimation.Text" xml:space="preserve">
     <value>Kijelezni</value>
-  </data>
-  <data name="tabPage54.Text" xml:space="preserve">
-    <value>Mozgás a koordináták között</value>
   </data>
   <data name="checkBox_Animation.Text" xml:space="preserve">
     <value>Aktiválni</value>
   </data>
   <data name="button_Animation.Text" xml:space="preserve">
     <value>Animáció (beta)</value>
+  </data>
+  <data name="tabPage46.Text" xml:space="preserve">
+    <value>Lépések</value>
   </data>
   <data name="checkBox_Shortcuts_Steps.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 17</value>
@@ -1439,8 +1454,8 @@
   <data name="label443.Text" xml:space="preserve">
     <value>Koordináták</value>
   </data>
-  <data name="tabPage46.Text" xml:space="preserve">
-    <value>Lépések</value>
+  <data name="tabPage47.Text" xml:space="preserve">
+    <value>Pulzus</value>
   </data>
   <data name="checkBox_Shortcuts_Puls.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 17</value>
@@ -1481,8 +1496,8 @@
   <data name="label445.Text" xml:space="preserve">
     <value>Koordináták</value>
   </data>
-  <data name="tabPage47.Text" xml:space="preserve">
-    <value>Pulzus</value>
+  <data name="tabPage48.Text" xml:space="preserve">
+    <value>Időjárás</value>
   </data>
   <data name="checkBox_Shortcuts_Weather.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 17</value>
@@ -1523,8 +1538,8 @@
   <data name="label451.Text" xml:space="preserve">
     <value>Koordináták</value>
   </data>
-  <data name="tabPage48.Text" xml:space="preserve">
-    <value>Időjárás</value>
+  <data name="tabPage49.Text" xml:space="preserve">
+    <value>Energiatakarékosság</value>
   </data>
   <data name="checkBox_Shortcuts_Energy.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 17</value>
@@ -1565,14 +1580,14 @@
   <data name="label457.Text" xml:space="preserve">
     <value>Koordináták</value>
   </data>
-  <data name="tabPage49.Text" xml:space="preserve">
-    <value>Energiatakarékosság</value>
-  </data>
   <data name="checkBox_Shortcuts.Text" xml:space="preserve">
     <value>Aktiválni</value>
   </data>
   <data name="button_Shortcuts.Text" xml:space="preserve">
     <value>Gyorsmenük</value>
+  </data>
+  <data name="groupBox_Symbols.Text" xml:space="preserve">
+    <value>Szimbólumok</value>
   </data>
   <data name="label286.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 13</value>
@@ -1598,8 +1613,8 @@
   <data name="label285.Text" xml:space="preserve">
     <value>Szimbólum "°"</value>
   </data>
-  <data name="groupBox_Symbols.Text" xml:space="preserve">
-    <value>Szimbólumok</value>
+  <data name="tabPage24.Text" xml:space="preserve">
+    <value>Jelenlegi hőmérséklet</value>
   </data>
   <data name="checkBox_Weather_Text.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
@@ -1661,8 +1676,18 @@
   <data name="label279.Text" xml:space="preserve">
     <value>Bal felső sarok</value>
   </data>
-  <data name="tabPage24.Text" xml:space="preserve">
-    <value>Jelenlegi hőmérséklet</value>
+  <data name="tabPage26.Text" xml:space="preserve">
+    <value>Hőmérséklet nap/éj</value>
+  </data>
+  <data name="label490.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 26</value>
+  </data>
+  <data name="label490.Text" xml:space="preserve">
+    <value>* Csak akkor jelenik meg, ha az aktuális hőmérsékletet 
+nem lehet megjeleníteni.</value>
+  </data>
+  <data name="tabPage27.Text" xml:space="preserve">
+    <value>Nap</value>
   </data>
   <data name="comboBox_Weather_Day_Image.Location" type="System.Drawing.Point, System.Drawing">
     <value>197, 81</value>
@@ -1745,8 +1770,8 @@
   <data name="label298.Text" xml:space="preserve">
     <value>Bal felső sarok</value>
   </data>
-  <data name="tabPage27.Text" xml:space="preserve">
-    <value>Nap</value>
+  <data name="tabPage30.Text" xml:space="preserve">
+    <value>Éjszaka</value>
   </data>
   <data name="comboBox_Weather_Night_Image.Location" type="System.Drawing.Point, System.Drawing">
     <value>197, 81</value>
@@ -1829,11 +1854,8 @@
   <data name="label322.Text" xml:space="preserve">
     <value>Bal felső sarok</value>
   </data>
-  <data name="tabPage30.Text" xml:space="preserve">
-    <value>Éjszaka</value>
-  </data>
-  <data name="tabPage26.Text" xml:space="preserve">
-    <value>Hőmérséklet nap/éj</value>
+  <data name="tabPage25.Text" xml:space="preserve">
+    <value>Ikon</value>
   </data>
   <data name="label287.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 13</value>
@@ -1847,14 +1869,20 @@
   <data name="checkBox_Weather_Icon.Text" xml:space="preserve">
     <value>Kijelezni</value>
   </data>
-  <data name="tabPage25.Text" xml:space="preserve">
-    <value>Ikon</value>
-  </data>
   <data name="checkBox_Weather.Text" xml:space="preserve">
     <value>Aktiválni</value>
   </data>
   <data name="button_Weather.Text" xml:space="preserve">
     <value>Időjárás</value>
+  </data>
+  <data name="tabPage29.Text" xml:space="preserve">
+    <value>Óra</value>
+  </data>
+  <data name="groupBox_AnalogClock_Hour.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 135</value>
+  </data>
+  <data name="groupBox_AnalogClock_Hour.Text" xml:space="preserve">
+    <value>Óramutató</value>
   </data>
   <data name="numericUpDown_AnalogClock_Hour_Offset_X.Location" type="System.Drawing.Point, System.Drawing">
     <value>195, 41</value>
@@ -1898,11 +1926,11 @@
   <data name="label215.Text" xml:space="preserve">
     <value>Óramutató központja (Y)</value>
   </data>
-  <data name="groupBox_AnalogClock_Hour.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 135</value>
+  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>255, 7</value>
   </data>
-  <data name="groupBox_AnalogClock_Hour.Text" xml:space="preserve">
-    <value>Óramutató</value>
+  <data name="groupBox4.Text" xml:space="preserve">
+    <value>Közepe képe</value>
   </data>
   <data name="checkBox_HourCenterImage.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
@@ -1910,14 +1938,14 @@
   <data name="checkBox_HourCenterImage.Text" xml:space="preserve">
     <value>Kijelezni</value>
   </data>
-  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>255, 7</value>
+  <data name="tabPage31.Text" xml:space="preserve">
+    <value>Percek</value>
   </data>
-  <data name="groupBox4.Text" xml:space="preserve">
-    <value>Közepe képe</value>
+  <data name="groupBox_AnalogClock_Min.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 135</value>
   </data>
-  <data name="tabPage29.Text" xml:space="preserve">
-    <value>Óra</value>
+  <data name="groupBox_AnalogClock_Min.Text" xml:space="preserve">
+    <value>Percmutató</value>
   </data>
   <data name="numericUpDown_AnalogClock_Min_Y.Location" type="System.Drawing.Point, System.Drawing">
     <value>90, 76</value>
@@ -1961,11 +1989,11 @@
   <data name="checkBox_AnalogClock_Min.Text" xml:space="preserve">
     <value>Kijelezni</value>
   </data>
-  <data name="groupBox_AnalogClock_Min.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 135</value>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>255, 7</value>
   </data>
-  <data name="groupBox_AnalogClock_Min.Text" xml:space="preserve">
-    <value>Percmutató</value>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>Közepe képe</value>
   </data>
   <data name="checkBox_MinCenterImage.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
@@ -1973,14 +2001,14 @@
   <data name="checkBox_MinCenterImage.Text" xml:space="preserve">
     <value>Kijelezni</value>
   </data>
-  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="tabPage32.Text" xml:space="preserve">
+    <value>Másodperc</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>255, 7</value>
   </data>
-  <data name="groupBox3.Text" xml:space="preserve">
+  <data name="groupBox2.Text" xml:space="preserve">
     <value>Közepe képe</value>
-  </data>
-  <data name="tabPage31.Text" xml:space="preserve">
-    <value>Percek</value>
   </data>
   <data name="checkBox_SecCenterImage.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
@@ -1988,11 +2016,11 @@
   <data name="checkBox_SecCenterImage.Text" xml:space="preserve">
     <value>Kijelezni</value>
   </data>
-  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>255, 7</value>
+  <data name="groupBox_AnalogClock_Sec.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 135</value>
   </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>Közepe képe</value>
+  <data name="groupBox_AnalogClock_Sec.Text" xml:space="preserve">
+    <value>Másodpercmutató</value>
   </data>
   <data name="numericUpDown_AnalogClock_Sec_Offset_Y.Location" type="System.Drawing.Point, System.Drawing">
     <value>195, 72</value>
@@ -2042,20 +2070,14 @@
   <data name="checkBox_AnalogClock_Sec.Text" xml:space="preserve">
     <value>Kijelezni</value>
   </data>
-  <data name="groupBox_AnalogClock_Sec.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 135</value>
-  </data>
-  <data name="groupBox_AnalogClock_Sec.Text" xml:space="preserve">
-    <value>Másodpercmutató</value>
-  </data>
-  <data name="tabPage32.Text" xml:space="preserve">
-    <value>Másodperc</value>
-  </data>
   <data name="checkBox_AnalogClock.Text" xml:space="preserve">
     <value>Aktiválni</value>
   </data>
   <data name="button_AnalogClock.Text" xml:space="preserve">
     <value>Analóg óra</value>
+  </data>
+  <data name="tabPage21.Text" xml:space="preserve">
+    <value>Szöveg</value>
   </data>
   <data name="checkBox_Battery_Text.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
@@ -2117,8 +2139,8 @@
   <data name="label193.Text" xml:space="preserve">
     <value>Bal felső sarok</value>
   </data>
-  <data name="tabPage21.Text" xml:space="preserve">
-    <value>Szöveg</value>
+  <data name="tabPage28.Text" xml:space="preserve">
+    <value>Ikon "%"</value>
   </data>
   <data name="checkBox_Battery_Percent.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
@@ -2132,8 +2154,8 @@
   <data name="label303.Text" xml:space="preserve">
     <value>koordináták</value>
   </data>
-  <data name="tabPage28.Text" xml:space="preserve">
-    <value>Ikon "%"</value>
+  <data name="tabPage22.Text" xml:space="preserve">
+    <value>Ikon</value>
   </data>
   <data name="checkBox_Battery_Img.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
@@ -2147,8 +2169,8 @@
   <data name="label197.Text" xml:space="preserve">
     <value>koordináták</value>
   </data>
-  <data name="tabPage22.Text" xml:space="preserve">
-    <value>Ikon</value>
+  <data name="tabPage23.Text" xml:space="preserve">
+    <value>Ábra</value>
   </data>
   <data name="comboBox_Battery_Flatness.Items" xml:space="preserve">
     <value>Lekerekített</value>
@@ -2210,8 +2232,8 @@
   <data name="checkBox_Battery_Scale.Text" xml:space="preserve">
     <value>Kijelezni</value>
   </data>
-  <data name="tabPage23.Text" xml:space="preserve">
-    <value>Ábra</value>
+  <data name="tabPage35.Text" xml:space="preserve">
+    <value>Mutató</value>
   </data>
   <data name="label374.Text" xml:space="preserve">
     <value>Végszög:</value>
@@ -2234,14 +2256,17 @@
   <data name="checkBox_Battery_ClockHand.Text" xml:space="preserve">
     <value>Kijelezni</value>
   </data>
-  <data name="tabPage35.Text" xml:space="preserve">
-    <value>Mutató</value>
+  <data name="tabPage42.Text" xml:space="preserve">
+    <value>Szegmensek</value>
   </data>
   <data name="checkBox_Battery_IconSet.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
   </data>
   <data name="checkBox_Battery_IconSet.Text" xml:space="preserve">
     <value>Kijelezni</value>
+  </data>
+  <data name="contextMenuStrip_XY_InTable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 108</value>
   </data>
   <data name="вставитьКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>204, 26</value>
@@ -2266,12 +2291,6 @@
   </data>
   <data name="удалитьСтрокуToolStripMenuItem.Text" xml:space="preserve">
     <value>Sor törlése</value>
-  </data>
-  <data name="contextMenuStrip_XY_InTable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>205, 108</value>
-  </data>
-  <data name="tabPage42.Text" xml:space="preserve">
-    <value>Szegmensek</value>
   </data>
   <data name="checkBox_Battery.Text" xml:space="preserve">
     <value>Aktiválni</value>
@@ -2303,6 +2322,9 @@
   <data name="label165.Text" xml:space="preserve">
     <value>Be:</value>
   </data>
+  <data name="tabPage18.Text" xml:space="preserve">
+    <value>Ébresztőóra</value>
+  </data>
   <data name="label169.Location" type="System.Drawing.Point, System.Drawing">
     <value>310, 32</value>
   </data>
@@ -2327,8 +2349,8 @@
   <data name="label174.Text" xml:space="preserve">
     <value>Be:</value>
   </data>
-  <data name="tabPage18.Text" xml:space="preserve">
-    <value>Ébresztőóra</value>
+  <data name="tabPage19.Text" xml:space="preserve">
+    <value>Zár</value>
   </data>
   <data name="label176.Location" type="System.Drawing.Point, System.Drawing">
     <value>310, 32</value>
@@ -2354,8 +2376,8 @@
   <data name="label178.Text" xml:space="preserve">
     <value>Be:</value>
   </data>
-  <data name="tabPage19.Text" xml:space="preserve">
-    <value>Zár</value>
+  <data name="tabPage20.Text" xml:space="preserve">
+    <value>DND</value>
   </data>
   <data name="label180.Location" type="System.Drawing.Point, System.Drawing">
     <value>310, 32</value>
@@ -2381,9 +2403,6 @@
   <data name="label182.Text" xml:space="preserve">
     <value>Be:</value>
   </data>
-  <data name="tabPage20.Text" xml:space="preserve">
-    <value>DND</value>
-  </data>
   <data name="button_Status.Text" xml:space="preserve">
     <value>Állapot</value>
   </data>
@@ -2392,6 +2411,9 @@
   </data>
   <data name="label403.Text" xml:space="preserve">
     <value>Hiba szimbóluma:</value>
+  </data>
+  <data name="tabPage12.Text" xml:space="preserve">
+    <value>Lépések</value>
   </data>
   <data name="checkBox_ActivitySteps.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
@@ -2453,8 +2475,8 @@
   <data name="label131.Text" xml:space="preserve">
     <value>Bal felső sarok</value>
   </data>
-  <data name="tabPage12.Text" xml:space="preserve">
-    <value>Lépések</value>
+  <data name="tabPage13.Text" xml:space="preserve">
+    <value>Távolság</value>
   </data>
   <data name="label173.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 13</value>
@@ -2528,8 +2550,11 @@
   <data name="label141.Text" xml:space="preserve">
     <value>Bal felső sarok</value>
   </data>
-  <data name="tabPage13.Text" xml:space="preserve">
-    <value>Távolság</value>
+  <data name="tabPage55.Text" xml:space="preserve">
+    <value>Pulzus</value>
+  </data>
+  <data name="tabPage14.Text" xml:space="preserve">
+    <value>Pulzus</value>
   </data>
   <data name="checkBox_ActivityPuls.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
@@ -2591,8 +2616,8 @@
   <data name="label145.Text" xml:space="preserve">
     <value>Sorakoztatás</value>
   </data>
-  <data name="tabPage14.Text" xml:space="preserve">
-    <value>Pulzus</value>
+  <data name="tabPage44.Text" xml:space="preserve">
+    <value>Pulzus (Ábra)</value>
   </data>
   <data name="comboBox_ActivityPulsScale_Flatness.Items" xml:space="preserve">
     <value>Lekerekített</value>
@@ -2654,8 +2679,8 @@
   <data name="label420.Text" xml:space="preserve">
     <value>Szín:</value>
   </data>
-  <data name="tabPage44.Text" xml:space="preserve">
-    <value>Pulzus (Ábra)</value>
+  <data name="tabPage51.Text" xml:space="preserve">
+    <value>Pulzus (Mutató)</value>
   </data>
   <data name="checkBox_Pulse_ClockHand.Text" xml:space="preserve">
     <value>Kijelezni</value>
@@ -2678,8 +2703,8 @@
   <data name="label469.Text" xml:space="preserve">
     <value>X tengely eltolása</value>
   </data>
-  <data name="tabPage51.Text" xml:space="preserve">
-    <value>Pulzus (Mutató)</value>
+  <data name="tabPage45.Text" xml:space="preserve">
+    <value>Pulzus (Szegmensek)</value>
   </data>
   <data name="checkBox_ActivityPuls_IconSet.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
@@ -2687,11 +2712,11 @@
   <data name="checkBox_ActivityPuls_IconSet.Text" xml:space="preserve">
     <value>Kijelezni</value>
   </data>
-  <data name="tabPage45.Text" xml:space="preserve">
-    <value>Pulzus (Szegmensek)</value>
+  <data name="tabPage59.Text" xml:space="preserve">
+    <value>Kalória</value>
   </data>
-  <data name="tabPage55.Text" xml:space="preserve">
-    <value>Pulzus</value>
+  <data name="tabPage15.Text" xml:space="preserve">
+    <value>Kalória</value>
   </data>
   <data name="checkBox_ActivityCalories.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
@@ -2753,8 +2778,8 @@
   <data name="label155.Text" xml:space="preserve">
     <value>Sorakoztatás</value>
   </data>
-  <data name="tabPage15.Text" xml:space="preserve">
-    <value>Kalória</value>
+  <data name="tabPage11.Text" xml:space="preserve">
+    <value>Kalória (Ábra)</value>
   </data>
   <data name="comboBox_ActivityCaloriesScale_Flatness.Items" xml:space="preserve">
     <value>Lekerekített</value>
@@ -2816,8 +2841,8 @@
   <data name="label115.Text" xml:space="preserve">
     <value>Szín:</value>
   </data>
-  <data name="tabPage11.Text" xml:space="preserve">
-    <value>Kalória (Ábra)</value>
+  <data name="tabPage52.Text" xml:space="preserve">
+    <value>Kalória (Mutató)</value>
   </data>
   <data name="checkBox_Calories_ClockHand.Text" xml:space="preserve">
     <value>Kijelezni</value>
@@ -2840,11 +2865,8 @@
   <data name="label462.Text" xml:space="preserve">
     <value>X tengely eltolása</value>
   </data>
-  <data name="tabPage52.Text" xml:space="preserve">
-    <value>Kalória (Mutató)</value>
-  </data>
-  <data name="tabPage59.Text" xml:space="preserve">
-    <value>Kalória</value>
+  <data name="tabPage16.Text" xml:space="preserve">
+    <value>Cél elérése</value>
   </data>
   <data name="checkBox_ActivityStar.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
@@ -2858,14 +2880,74 @@
   <data name="label171.Text" xml:space="preserve">
     <value>koordináták</value>
   </data>
-  <data name="tabPage16.Text" xml:space="preserve">
-    <value>Cél elérése</value>
+  <data name="checkBox_ActivityStepsGoal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 17</value>
+  </data>
+  <data name="checkBox_ActivityStepsGoal.Text" xml:space="preserve">
+    <value>Kijelezni</value>
+  </data>
+  <data name="label491.Location" type="System.Drawing.Point, System.Drawing">
+    <value>122, 85</value>
+  </data>
+  <data name="label491.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 13</value>
+  </data>
+  <data name="label491.Text" xml:space="preserve">
+    <value>Osztástávolság:</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items" xml:space="preserve">
+    <value>Fel balra</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items1" xml:space="preserve">
+    <value>Fel Középre</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items2" xml:space="preserve">
+    <value>Fel jobbra</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items3" xml:space="preserve">
+    <value>Középre balra</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items4" xml:space="preserve">
+    <value>Középre</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items5" xml:space="preserve">
+    <value>Középre jobbra</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items6" xml:space="preserve">
+    <value>Le balra</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items7" xml:space="preserve">
+    <value>Le középre</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items8" xml:space="preserve">
+    <value>Le jobbra</value>
+  </data>
+  <data name="label494.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
+  </data>
+  <data name="label494.Text" xml:space="preserve">
+    <value>Sorakoztatás</value>
+  </data>
+  <data name="label499.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 13</value>
+  </data>
+  <data name="label499.Text" xml:space="preserve">
+    <value>Jobb alsó sarok</value>
+  </data>
+  <data name="label500.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 13</value>
+  </data>
+  <data name="label500.Text" xml:space="preserve">
+    <value>Bal felső sarok</value>
   </data>
   <data name="checkBox_Activity.Text" xml:space="preserve">
     <value>Aktiválni</value>
   </data>
   <data name="button_Activity.Text" xml:space="preserve">
     <value>Tevékenység</value>
+  </data>
+  <data name="tabPage36.Text" xml:space="preserve">
+    <value>Ábra</value>
   </data>
   <data name="checkBox_StepsProgress.Text" xml:space="preserve">
     <value>Kijelezni</value>
@@ -2927,8 +3009,8 @@
   <data name="label108.Text" xml:space="preserve">
     <value>Szélesség:</value>
   </data>
-  <data name="tabPage36.Text" xml:space="preserve">
-    <value>Ábra</value>
+  <data name="tabPage37.Text" xml:space="preserve">
+    <value>Mutató</value>
   </data>
   <data name="checkBox_StProg_ClockHand.Text" xml:space="preserve">
     <value>Kijelezni</value>
@@ -2951,8 +3033,8 @@
   <data name="label381.Text" xml:space="preserve">
     <value>Mutató központja (X)</value>
   </data>
-  <data name="tabPage37.Text" xml:space="preserve">
-    <value>Mutató</value>
+  <data name="tabPage41.Text" xml:space="preserve">
+    <value>Szegmensek</value>
   </data>
   <data name="checkBox_SPSliced.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
@@ -2960,11 +3042,11 @@
   <data name="checkBox_SPSliced.Text" xml:space="preserve">
     <value>Kijelezni</value>
   </data>
-  <data name="tabPage41.Text" xml:space="preserve">
-    <value>Szegmensek</value>
-  </data>
   <data name="button_StepsProgress.Text" xml:space="preserve">
     <value>Lépések előrehaladása</value>
+  </data>
+  <data name="tabPage38.Text" xml:space="preserve">
+    <value>Nap</value>
   </data>
   <data name="checkBox_ADDay_ClockHand.Text" xml:space="preserve">
     <value>Kijelezni</value>
@@ -2987,8 +3069,8 @@
   <data name="label402.Text" xml:space="preserve">
     <value>Mutató központja (X)</value>
   </data>
-  <data name="tabPage38.Text" xml:space="preserve">
-    <value>Nap</value>
+  <data name="tabPage39.Text" xml:space="preserve">
+    <value>A hét napja</value>
   </data>
   <data name="label389.Text" xml:space="preserve">
     <value>Végszög:</value>
@@ -3011,8 +3093,8 @@
   <data name="checkBox_ADWeekDay_ClockHand.Text" xml:space="preserve">
     <value>Kijelezni</value>
   </data>
-  <data name="tabPage39.Text" xml:space="preserve">
-    <value>A hét napja</value>
+  <data name="tabPage40.Text" xml:space="preserve">
+    <value>Hónap</value>
   </data>
   <data name="label382.Text" xml:space="preserve">
     <value>Végszög:</value>
@@ -3035,11 +3117,14 @@
   <data name="checkBox_ADMonth_ClockHand.Text" xml:space="preserve">
     <value>Kijelezni</value>
   </data>
-  <data name="tabPage40.Text" xml:space="preserve">
-    <value>Hónap</value>
-  </data>
   <data name="button_AnalogDate.Text" xml:space="preserve">
     <value>Dátum mutatók</value>
+  </data>
+  <data name="tabPage8.Text" xml:space="preserve">
+    <value>Nap és hónap különálló blokkokban</value>
+  </data>
+  <data name="tabPage9.Text" xml:space="preserve">
+    <value>Nap</value>
   </data>
   <data name="numericUpDown_MonthAndDayD_Spacing.Location" type="System.Drawing.Point, System.Drawing">
     <value>85, 110</value>
@@ -3104,8 +3189,8 @@
   <data name="label67.Text" xml:space="preserve">
     <value>Jobb alsó sarok</value>
   </data>
-  <data name="tabPage9.Text" xml:space="preserve">
-    <value>Nap</value>
+  <data name="tabPage10.Text" xml:space="preserve">
+    <value>Hónap</value>
   </data>
   <data name="numericUpDown_MonthAndDayM_Spacing.Location" type="System.Drawing.Point, System.Drawing">
     <value>85, 110</value>
@@ -3170,7 +3255,7 @@
   <data name="label82.Text" xml:space="preserve">
     <value>Bal felsó sarok</value>
   </data>
-  <data name="tabPage10.Text" xml:space="preserve">
+  <data name="groupBox__MonthName.Text" xml:space="preserve">
     <value>Hónap</value>
   </data>
   <data name="checkBox_MonthName.Size" type="System.Drawing.Size, System.Drawing">
@@ -3179,11 +3264,8 @@
   <data name="checkBox_MonthName.Text" xml:space="preserve">
     <value>Kijelezni</value>
   </data>
-  <data name="groupBox__MonthName.Text" xml:space="preserve">
-    <value>Hónap</value>
-  </data>
-  <data name="tabPage8.Text" xml:space="preserve">
-    <value>Nap és hónap különálló blokkokban</value>
+  <data name="tabPage7.Text" xml:space="preserve">
+    <value>Dátum egy sorban</value>
   </data>
   <data name="label103.Location" type="System.Drawing.Point, System.Drawing">
     <value>140, 99</value>
@@ -3260,8 +3342,11 @@
   <data name="label102.Text" xml:space="preserve">
     <value>Bal felső sarok</value>
   </data>
-  <data name="tabPage7.Text" xml:space="preserve">
-    <value>Dátum egy sorban</value>
+  <data name="tabPage50.Text" xml:space="preserve">
+    <value>Hét napja</value>
+  </data>
+  <data name="groupBox_WeekDayProgress.Text" xml:space="preserve">
+    <value>Szegmensek</value>
   </data>
   <data name="checkBox_DOW_IconSet.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
@@ -3269,8 +3354,8 @@
   <data name="checkBox_DOW_IconSet.Text" xml:space="preserve">
     <value>Kijelezni</value>
   </data>
-  <data name="groupBox_WeekDayProgress.Text" xml:space="preserve">
-    <value>Szegmensek</value>
+  <data name="groupBox__WeekDay.Text" xml:space="preserve">
+    <value>A hét napja</value>
   </data>
   <data name="checkBox_WeekDay.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
@@ -3278,11 +3363,8 @@
   <data name="checkBox_WeekDay.Text" xml:space="preserve">
     <value>Kijelezni</value>
   </data>
-  <data name="groupBox__WeekDay.Text" xml:space="preserve">
-    <value>A hét napja</value>
-  </data>
-  <data name="tabPage50.Text" xml:space="preserve">
-    <value>Hét napja</value>
+  <data name="tabPage34.Text" xml:space="preserve">
+    <value>Év</value>
   </data>
   <data name="label357.Location" type="System.Drawing.Point, System.Drawing">
     <value>140, 99</value>
@@ -3359,9 +3441,6 @@
   <data name="label367.Text" xml:space="preserve">
     <value>Bal felső sarok</value>
   </data>
-  <data name="tabPage34.Text" xml:space="preserve">
-    <value>Év</value>
-  </data>
   <data name="checkBox_Date.Text" xml:space="preserve">
     <value>Aktiválni</value>
   </data>
@@ -3380,20 +3459,23 @@
   <data name="button_Date.Text" xml:space="preserve">
     <value>Dátum</value>
   </data>
+  <data name="groupBox_Delimiter.Text" xml:space="preserve">
+    <value>Elválasztó</value>
+  </data>
   <data name="checkBox_Delimiter.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
   </data>
   <data name="checkBox_Delimiter.Text" xml:space="preserve">
     <value>Kijelezni</value>
   </data>
-  <data name="groupBox_Delimiter.Text" xml:space="preserve">
-    <value>Elválasztó</value>
-  </data>
   <data name="checkBox_AmPm.Size" type="System.Drawing.Size, System.Drawing">
     <value>95, 17</value>
   </data>
   <data name="checkBox_AmPm.Text" xml:space="preserve">
     <value>12-H formátum</value>
+  </data>
+  <data name="tabPage4.Text" xml:space="preserve">
+    <value>Órák</value>
   </data>
   <data name="checkBox_Hours.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
@@ -3407,8 +3489,8 @@
   <data name="groupBox_Hours_Ones.Text" xml:space="preserve">
     <value>Egységek</value>
   </data>
-  <data name="tabPage4.Text" xml:space="preserve">
-    <value>Órák</value>
+  <data name="tabPage5.Text" xml:space="preserve">
+    <value>Percek</value>
   </data>
   <data name="checkBox_Minutes.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
@@ -3422,8 +3504,8 @@
   <data name="groupBox_Minutes_Ones.Text" xml:space="preserve">
     <value>Egységek</value>
   </data>
-  <data name="tabPage5.Text" xml:space="preserve">
-    <value>Percek</value>
+  <data name="tabPage6.Text" xml:space="preserve">
+    <value>Másodperc</value>
   </data>
   <data name="groupBox_Seconds_Ones.Text" xml:space="preserve">
     <value>Egységek</value>
@@ -3437,9 +3519,6 @@
   <data name="groupBox_Seconds_Tens.Text" xml:space="preserve">
     <value>Tized</value>
   </data>
-  <data name="tabPage6.Text" xml:space="preserve">
-    <value>Másodperc</value>
-  </data>
   <data name="checkBox_Time.Text" xml:space="preserve">
     <value>Aktiválni</value>
   </data>
@@ -3449,8 +3528,53 @@
   <data name="button_Background.Text" xml:space="preserve">
     <value>Háttér</value>
   </data>
-  <data name="tabPage3.Text" xml:space="preserve">
-    <value>Szerkesztés</value>
+  <data name="label489.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 13</value>
+  </data>
+  <data name="label489.Text" xml:space="preserve">
+    <value>!!! Ellenőrizze a kapott óralapot az átalakítás után !!!</value>
+  </data>
+  <data name="label488.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 13</value>
+  </data>
+  <data name="label488.Text" xml:space="preserve">
+    <value>** A konverzió átméretezi a képeket, a funkció koordinátáit, a kör sugarat és a vonalvastagságot.</value>
+  </data>
+  <data name="label487.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 13</value>
+  </data>
+  <data name="label487.Text" xml:space="preserve">
+    <value>* Egy új könyvtár jön létre a meglévő óralap könyvtára mellett.</value>
+  </data>
+  <data name="label486.Size" type="System.Drawing.Size, System.Drawing">
+    <value>319, 13</value>
+  </data>
+  <data name="label486.Text" xml:space="preserve">
+    <value>Nyissa meg a kívánt óralapot, vagy mentse el az aktuális óralapot.</value>
+  </data>
+  <data name="button_Converting.Text" xml:space="preserve">
+    <value>Konvertálni</value>
+  </data>
+  <data name="numericUpDown_ConvertingOutput_Custom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>425, 19</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Custom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 17</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Custom.Text" xml:space="preserve">
+    <value>Egyéni méret</value>
+  </data>
+  <data name="groupBox9.Text" xml:space="preserve">
+    <value>Forrásmodell</value>
+  </data>
+  <data name="numericUpDown_ConvertingInput_Custom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>425, 19</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Custom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 17</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Custom.Text" xml:space="preserve">
+    <value>Egyéni méret</value>
   </data>
   <data name="label483.Size" type="System.Drawing.Size, System.Drawing">
     <value>206, 39</value>
@@ -3459,6 +3583,9 @@
     <value>Animáció előnézete animációs sebessége 
 (nagy sebesség - simább animáció, 
 több rendszerbetöltés)</value>
+  </data>
+  <data name="groupBox8.Text" xml:space="preserve">
+    <value>A gyorsmenü terület kiemelésének típusa</value>
   </data>
   <data name="checkBox_Shortcuts_Border.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 17</value>
@@ -3471,9 +3598,6 @@ több rendszerbetöltés)</value>
   </data>
   <data name="checkBox_Shortcuts_Area.Text" xml:space="preserve">
     <value>Pöttyös mező</value>
-  </data>
-  <data name="groupBox8.Text" xml:space="preserve">
-    <value>A gyorsmenü terület kiemelésének típusa</value>
   </data>
   <data name="button_Reset.Text" xml:space="preserve">
     <value>Reszet</value>
@@ -3499,6 +3623,9 @@ több rendszerbetöltés)</value>
   <data name="label355.Text" xml:space="preserve">
     <value>A gif-animáció sebessége</value>
   </data>
+  <data name="groupBox7.Text" xml:space="preserve">
+    <value>A csomagolás után</value>
+  </data>
   <data name="radioButton_Settings_Pack_DoNotning.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 17</value>
   </data>
@@ -3523,8 +3650,8 @@ több rendszerbetöltés)</value>
   <data name="radioButton_Settings_Pack_Dialog.Text" xml:space="preserve">
     <value>Javasoljon választást</value>
   </data>
-  <data name="groupBox7.Text" xml:space="preserve">
-    <value>A csomagolás után</value>
+  <data name="groupBox6.Text" xml:space="preserve">
+    <value>A projekt megnyitása után</value>
   </data>
   <data name="radioButton_Settings_Open_DoNotning.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 17</value>
@@ -3544,8 +3671,8 @@ több rendszerbetöltés)</value>
   <data name="radioButton_Settings_Open_Dialog.Text" xml:space="preserve">
     <value>Javasoljon választást</value>
   </data>
-  <data name="groupBox6.Text" xml:space="preserve">
-    <value>A projekt megnyitása után</value>
+  <data name="groupBox5.Text" xml:space="preserve">
+    <value>A BIN kicsomagolása után</value>
   </data>
   <data name="radioButton_Settings_AfterUnpack_DoNothing.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 17</value>
@@ -3565,8 +3692,8 @@ több rendszerbetöltés)</value>
   <data name="radioButton_Settings_AfterUnpack_Dialog.Text" xml:space="preserve">
     <value>Javasoljon választást</value>
   </data>
-  <data name="groupBox5.Text" xml:space="preserve">
-    <value>A BIN kicsomagolása után</value>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Akció a kibővített fájlnevek egyeztetéséhez</value>
   </data>
   <data name="radioButton_Settings_Unpack_Replace.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 17</value>
@@ -3586,11 +3713,11 @@ több rendszerbetöltés)</value>
   <data name="radioButton_Settings_Unpack_Dialog.Text" xml:space="preserve">
     <value>Javasoljon választást</value>
   </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Akció a kibővített fájlnevek egyeztetéséhez</value>
+  <data name="linkLabel_resunpacker_qzip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 13</value>
   </data>
-  <data name="tabPage33.Text" xml:space="preserve">
-    <value>Opciók</value>
+  <data name="linkLabel_resunpacker_qzip.Text" xml:space="preserve">
+    <value>Res_PackerUnpacker (szerző dpeddi)</value>
   </data>
   <data name="label415.Size" type="System.Drawing.Size, System.Drawing">
     <value>126, 13</value>
@@ -3615,9 +3742,6 @@ több rendszerbetöltés)</value>
   </data>
   <data name="label413.Text" xml:space="preserve">
     <value>BIN fájl csomagolási / kicsomagolási eszköz:</value>
-  </data>
-  <data name="label_Res_PackerUnpacker.Text" xml:space="preserve">
-    <value>Res_PackerUnpacker (a szerző ismeretlen)</value>
   </data>
   <data name="linkLabel_py_amazfit_tools.Size" type="System.Drawing.Size, System.Drawing">
     <value>318, 13</value>
@@ -3649,9 +3773,6 @@ több rendszerbetöltés)</value>
   <data name="label406.Text" xml:space="preserve">
     <value>Verzió:</value>
   </data>
-  <data name="tabPage43.Text" xml:space="preserve">
-    <value>A programról</value>
-  </data>
   <data name="button_PreviewBig.Text" xml:space="preserve">
     <value>Nagyítás</value>
   </data>
@@ -3681,6 +3802,9 @@ több rendszerbetöltés)</value>
   </data>
   <data name="checkBox_Show_Shortcuts.Text" xml:space="preserve">
     <value>Gyorsmenük terület megjelenítése</value>
+  </data>
+  <data name="checkBox_CircleScaleImage.Text" xml:space="preserve">
+    <value>Jelölje ki a folyamatjelző sávot a fedőképpel</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -6645,5 +6769,8 @@ több rendszerbetöltés)</value>
         SlmARUpZgEVKWYBDSFZuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+D8AAPgfAADwHwAA4A8AAMAHAADA
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
+  </data>
+  <data name="tabPage56.Text" xml:space="preserve">
+    <value>Céllépések</value>
   </data>
 </root>

@@ -3082,16 +3082,13 @@
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>预览动画</value>
-  </data>
   <data name="button_AnimationReset.Text" xml:space="preserve">
-    <value>重设动画</value>
+    <value>Ripristina animazione</value>
   </data>
   <data name="button_SaveAnimation.Text" xml:space="preserve">
-    <value>保存动画</value>
+    <value>Salva animazione</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>要保存的帧数</value>
+    <value>Numero di fotogrammi da salvare</value>
   </data>
 </root>

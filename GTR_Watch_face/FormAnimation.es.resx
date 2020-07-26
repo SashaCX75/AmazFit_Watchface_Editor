@@ -117,6 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="button_AnimationReset.Text" xml:space="preserve">
+    <value>Restaurar animación</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Número de cuadros a guardar</value>
+  </data>
+  <data name="button_SaveAnimation.Text" xml:space="preserve">
+    <value>Guardar animación</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3081,17 +3090,5 @@
         SlmARUpZgEVKWYBDSFZuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+D8AAPgfAADwHwAA4A8AAMAHAADA
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>预览动画</value>
-  </data>
-  <data name="button_AnimationReset.Text" xml:space="preserve">
-    <value>重设动画</value>
-  </data>
-  <data name="button_SaveAnimation.Text" xml:space="preserve">
-    <value>保存动画</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>要保存的帧数</value>
   </data>
 </root>

@@ -288,4 +288,25 @@
   <data name="Message_Error_SpaceInProgrammName_Text" xml:space="preserve">
     <value>Путь к программе не должен содержать пробелы. Желательно поместить программу в корень диска.</value>
   </data>
+  <data name="Message_WarningConverting_Text1" xml:space="preserve">
+    <value>Каталог </value>
+  </data>
+  <data name="Message_WarningConverting_Text2" xml:space="preserve">
+    <value> уже существует. Заменить?</value>
+  </data>
+  <data name="Message_ConvertingCompleted_Text" xml:space="preserve">
+    <value>Новый циферблат создан.</value>
+  </data>
+  <data name="Message_Warning_Information" xml:space="preserve">
+    <value>Информация</value>
+  </data>
+  <data name="File_ReadMy_Start" xml:space="preserve">
+    <value>kratkaya_instruktsiya.htm</value>
+  </data>
+  <data name="Message_WarningAnimationLastImage" xml:space="preserve">
+    <value>Изображение для анимации не должно быть последним в списке изображений.</value>
+  </data>
+  <data name="Message_WarningMonthName" xml:space="preserve">
+    <value>Отображение номера месяца не работает вместе с отображением названия месяца.</value>
+  </data>
 </root>

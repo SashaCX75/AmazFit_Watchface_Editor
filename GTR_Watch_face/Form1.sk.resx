@@ -126,6 +126,9 @@
   <data name="tabPage3.Text" xml:space="preserve">
     <value>Editovať</value>
   </data>
+  <data name="tabPageConverting.Text" xml:space="preserve">
+    <value>Konvertovanie</value>
+  </data>
   <data name="tabPage33.Text" xml:space="preserve">
     <value>Voľby</value>
   </data>
@@ -1414,37 +1417,37 @@
     <value>60</value>
   </data>
   <data name="contextMenuStrip_XY_InAnimationTable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 120</value>
+    <value>225, 140</value>
   </data>
   <data name="вставитьНачальныеКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 22</value>
+    <value>224, 26</value>
   </data>
   <data name="вставитьНачальныеКоординатыToolStripMenuItem.Text" xml:space="preserve">
     <value>Vložiť počiatočné súradnice</value>
   </data>
   <data name="вставитьКонечныеКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 22</value>
+    <value>224, 26</value>
   </data>
   <data name="вставитьКонечныеКоординатыToolStripMenuItem.Text" xml:space="preserve">
     <value>Vložiť koncové súradnice</value>
   </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 6</value>
+    <value>221, 6</value>
   </data>
   <data name="копироватьToolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 22</value>
+    <value>224, 26</value>
   </data>
   <data name="копироватьToolStripMenuItem3.Text" xml:space="preserve">
     <value>Kopírovať</value>
   </data>
   <data name="вставитьToolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 22</value>
+    <value>224, 26</value>
   </data>
   <data name="вставитьToolStripMenuItem3.Text" xml:space="preserve">
     <value>Vložiť</value>
   </data>
   <data name="удалитьСтрокуToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 22</value>
+    <value>224, 26</value>
   </data>
   <data name="удалитьСтрокуToolStripMenuItem1.Text" xml:space="preserve">
     <value>Odstrániť riadok</value>
@@ -1721,6 +1724,12 @@
   </data>
   <data name="tabPage26.Text" xml:space="preserve">
     <value>Teplota deň/noc</value>
+  </data>
+  <data name="label490.Size" type="System.Drawing.Size, System.Drawing">
+    <value>284, 13</value>
+  </data>
+  <data name="label490.Text" xml:space="preserve">
+    <value>* Zobrazí sa, iba ak nie je možné zobraziť aktuálnu teplotu.</value>
   </data>
   <data name="tabPage27.Text" xml:space="preserve">
     <value>Deň</value>
@@ -2919,6 +2928,36 @@
   <data name="label171.Text" xml:space="preserve">
     <value>Súradnice</value>
   </data>
+  <data name="checkBox_ActivityStepsGoal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 17</value>
+  </data>
+  <data name="checkBox_ActivityStepsGoal.Text" xml:space="preserve">
+    <value>Zobraziť</value>
+  </data>
+  <data name="label491.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 13</value>
+  </data>
+  <data name="label491.Text" xml:space="preserve">
+    <value>Odsadenie:</value>
+  </data>
+  <data name="label494.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 13</value>
+  </data>
+  <data name="label494.Text" xml:space="preserve">
+    <value>Zarovnanie</value>
+  </data>
+  <data name="label499.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 13</value>
+  </data>
+  <data name="label499.Text" xml:space="preserve">
+    <value>Pravý dolný roh</value>
+  </data>
+  <data name="label500.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
+  </data>
+  <data name="label500.Text" xml:space="preserve">
+    <value>Ľavý horný roh</value>
+  </data>
   <data name="checkBox_Activity.Text" xml:space="preserve">
     <value>Aktivovať</value>
   </data>
@@ -3483,6 +3522,57 @@
   <data name="button_Background.Text" xml:space="preserve">
     <value>Pozadie</value>
   </data>
+  <data name="label489.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 13</value>
+  </data>
+  <data name="label489.Text" xml:space="preserve">
+    <value>!!! Po prevode skontrolujte výsledný číselník !!!</value>
+  </data>
+  <data name="label488.Size" type="System.Drawing.Size, System.Drawing">
+    <value>500, 13</value>
+  </data>
+  <data name="label488.Text" xml:space="preserve">
+    <value>** Konverziou bude vykonaná zmena veľkosti obrázkov, súradníc prvkov, polomeru kruhov, hrúbky čiar.</value>
+  </data>
+  <data name="label487.Size" type="System.Drawing.Size, System.Drawing">
+    <value>383, 13</value>
+  </data>
+  <data name="label487.Text" xml:space="preserve">
+    <value>* Pre výsledný ciferník bude popri existujúcom adresáry vytvorený adresár nový.</value>
+  </data>
+  <data name="label486.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 13</value>
+  </data>
+  <data name="label486.Text" xml:space="preserve">
+    <value>Otvorte požadovaný ciferník alebo uložte aktuálny.</value>
+  </data>
+  <data name="button_Converting.Text" xml:space="preserve">
+    <value>Konvertovať</value>
+  </data>
+  <data name="groupBox10.Text" xml:space="preserve">
+    <value>Cieľový model</value>
+  </data>
+  <data name="numericUpDown_ConvertingOutput_Custom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>440, 19</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Custom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 17</value>
+  </data>
+  <data name="radioButton_ConvertingOutput_Custom.Text" xml:space="preserve">
+    <value>Vlastná veľkosť</value>
+  </data>
+  <data name="groupBox9.Text" xml:space="preserve">
+    <value>Zdrojový model</value>
+  </data>
+  <data name="numericUpDown_ConvertingInput_Custom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>440, 19</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Custom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 17</value>
+  </data>
+  <data name="radioButton_ConvertingInput_Custom.Text" xml:space="preserve">
+    <value>Vlastná veľkosť</value>
+  </data>
   <data name="label483.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 39</value>
   </data>
@@ -3620,6 +3710,12 @@ väčšie zaťaženie systému)</value>
   <data name="radioButton_Settings_Unpack_Dialog.Text" xml:space="preserve">
     <value>Ponúknuť voľbu</value>
   </data>
+  <data name="linkLabel_resunpacker_qzip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 13</value>
+  </data>
+  <data name="linkLabel_resunpacker_qzip.Text" xml:space="preserve">
+    <value>Res_PackerUnpacker (Author dpeddi)</value>
+  </data>
   <data name="label415.Size" type="System.Drawing.Size, System.Drawing">
     <value>114, 13</value>
   </data>
@@ -3643,12 +3739,6 @@ väčšie zaťaženie systému)</value>
   </data>
   <data name="label413.Text" xml:space="preserve">
     <value>Nástroj na zabalenie/rozbalenie BIN súborov:</value>
-  </data>
-  <data name="label_Res_PackerUnpacker.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 13</value>
-  </data>
-  <data name="label_Res_PackerUnpacker.Text" xml:space="preserve">
-    <value>Res_PackerUnpacker (Author neznámy)</value>
   </data>
   <data name="linkLabel_py_amazfit_tools.Size" type="System.Drawing.Size, System.Drawing">
     <value>311, 13</value>
@@ -3712,6 +3802,9 @@ väčšie zaťaženie systému)</value>
   </data>
   <data name="checkBox_Show_Shortcuts.Text" xml:space="preserve">
     <value>Zobraziť oblasť skratiek</value>
+  </data>
+  <data name="checkBox_CircleScaleImage.Text" xml:space="preserve">
+    <value>Zvýrazniť pole pre indikátor priebehu s krycím obrázkom</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -6676,5 +6769,35 @@ väčšie zaťaženie systému)</value>
         SlmARUpZgEVKWYBDSFZuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+D8AAPgfAADwHwAA4A8AAMAHAADA
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items" xml:space="preserve">
+    <value>Hore doľava</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items1" xml:space="preserve">
+    <value>Hore na stred</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items2" xml:space="preserve">
+    <value>Hore doprava</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items3" xml:space="preserve">
+    <value>Na stred doľava</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items4" xml:space="preserve">
+    <value>Na stred</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items5" xml:space="preserve">
+    <value>Na stred doprava</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items6" xml:space="preserve">
+    <value>Dole doľava</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items7" xml:space="preserve">
+    <value>Dole na stred</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items8" xml:space="preserve">
+    <value>Dole doprava</value>
+  </data>
+  <data name="tabPage56.Text" xml:space="preserve">
+    <value>Cieľové kroky</value>
   </data>
 </root>

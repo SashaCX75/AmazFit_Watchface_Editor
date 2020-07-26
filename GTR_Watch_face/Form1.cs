@@ -47,15 +47,16 @@ namespace GTR_Watch_face
 
         public Form1(string[] args)
         {
-            //Logger.WriteLine("Form1");
-            //if (File.Exists(Application.StartupPath + "\\log.txt")) File.Delete(Application.StartupPath + @"\log.txt");
-            
+            if (File.Exists(Application.StartupPath + "\\Program log.txt")) File.Delete(Application.StartupPath + @"\Program log.txt");
+            Logger.WriteLine("* Form1");
+
 
             Program_Settings = new PROGRAM_SETTINGS();
             try
             {
                 if (File.Exists(Application.StartupPath + @"\Settings.json"))
                 {
+                    Logger.WriteLine("Read Settings");
                     Program_Settings = JsonConvert.DeserializeObject<PROGRAM_SETTINGS>
                                 (File.ReadAllText(Application.StartupPath + @"\Settings.json"), new JsonSerializerSettings
                                 {
@@ -72,6 +73,7 @@ namespace GTR_Watch_face
                     //int language = System.Globalization.CultureInfo.CurrentCulture.LCID;
                     //Program_Settings.language = "Русский";
                     Program_Settings.language = "English";
+                    Logger.WriteLine("language = " + language);
                     if (language == "ru")
                     {
                         Program_Settings.language = "Русский";
@@ -107,6 +109,10 @@ namespace GTR_Watch_face
                     if (language == "zh")
                     {
                         Program_Settings.language = "Chinese/简体中文";
+                    }
+                    if (language == "it")
+                    {
+                        Program_Settings.language = "Italian";
                     }
                 }
                 //Logger.WriteLine("Определили язык");
@@ -161,7 +167,15 @@ namespace GTR_Watch_face
 
             PreviewView = true;
             Settings_Load = false;
-            currentDPI = (int)Registry.GetValue("HKEY_CURRENT_USER\\Control Panel\\Desktop", "LogPixels", 96)/96f;
+            //currentDPI = (int)Registry.GetValue(@"HKEY_CURRENT_USER\Control Panel\Desktop", "LogPixels", 96) / 96f;
+            //if (getOSversion() >= 10)
+            //{
+            //    float AppliedDPI = (int)Registry.GetValue(@"HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics", "AppliedDPI", 96) / 96f;
+            //    MessageBox.Show(AppliedDPI.ToString());
+            //    currentDPI = AppliedDPI / currentDPI;
+            //    MessageBox.Show(currentDPI.ToString());
+            //}
+            currentDPI = tabControl1.Height / 601f;
             //Logger.WriteLine("Создали переменные");
 
             if (args.Length == 1)
@@ -169,20 +183,23 @@ namespace GTR_Watch_face
                 string fileName = args[0].ToString();
                 if ((File.Exists(fileName)) && (Path.GetExtension(fileName) == ".json"))
                 {
+                    Logger.WriteLine("args[0] - *.json");
                     StartFileNameJson = fileName;
                     //Logger.WriteLine("Программа запущена с аргументом: " + fileName);
                 }
                 if ((File.Exists(fileName)) && (Path.GetExtension(fileName) == ".bin"))
                 {
+                    Logger.WriteLine("args[0] - *.bin");
                     StartFileNameBin = fileName;
                     //Logger.WriteLine("Программа запущена с аргументом: " + fileName);
                 }
             }
-
+            Logger.WriteLine("* Form1 (end)");
         }
         
         private void SetLanguage()
         {
+            Logger.WriteLine("* SetLanguage");
             if (Program_Settings.language == "English")
             {
                 Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en");
@@ -218,24 +235,32 @@ namespace GTR_Watch_face
                 Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("fr");
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("fr");
             }
-            else if(Program_Settings.language == "Chinese/简体中文")
+            else if (Program_Settings.language == "Chinese/简体中文")
             {
                 Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("zh");
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("zh");
+            }
+            else if (Program_Settings.language == "Italian")
+            {
+                Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("it");
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("it");
             }
             else
             {
                 Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("ru");
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ru");
             }
+            Logger.WriteLine("* SetLanguage (end)");
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Logger.WriteLine("* Form1_Load ");
 #if !DEBUG
             // пробелы в имени
             if (Application.StartupPath.IndexOf(" ") != -1)
             {
+                Logger.WriteLine("пробелы в имени");
                 MessageBox.Show(Properties.FormStrings.Message_Error_SpaceInProgrammName_Text,
                     Properties.FormStrings.Message_Error_Caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
@@ -250,7 +275,7 @@ namespace GTR_Watch_face
             string subPath = Application.StartupPath + @"\main_v0.2-beta\main.exe";
             //string subPath = Application.StartupPath + @"\main\main.exe";
 #endif
-
+            Logger.WriteLine("Set textBox.Text");
             if (Program_Settings.pack_unpack_dir == null)
             {
                 Program_Settings.pack_unpack_dir = subPath;
@@ -261,7 +286,9 @@ namespace GTR_Watch_face
                 });
                 File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
             }
+            PreviewView = false;
             textBox_pack_unpack_dir.Text = Program_Settings.pack_unpack_dir;
+            Logger.WriteLine("Set Model");
             if (Program_Settings.Model_GTS)
             {
                 radioButton_gts.Checked = Program_Settings.Model_GTS;
@@ -292,17 +319,19 @@ namespace GTR_Watch_face
                 textBox_unpack_command.Text = Program_Settings.unpack_command_GTR47;
                 textBox_pack_command.Text = Program_Settings.pack_command_GTR47;
             }
-
-            PreviewView = false;
+            
+            Logger.WriteLine("Set checkBox");
             checkBox_border.Checked = Program_Settings.ShowBorder;
             checkBox_crop.Checked = Program_Settings.Crop;
             checkBox_Show_Shortcuts.Checked = Program_Settings.Show_Shortcuts;
+            checkBox_CircleScaleImage.Checked = Program_Settings.Show_CircleScale_Area;
             comboBox_MonthAndDayD_Alignment.SelectedIndex = 0;
             comboBox_MonthAndDayM_Alignment.SelectedIndex = 0;
             comboBox_OneLine_Alignment.SelectedIndex = 0;
             comboBox_Year_Alignment.SelectedIndex = 0;
             
             comboBox_ActivitySteps_Alignment.SelectedIndex = 0;
+            comboBox_ActivityStepsGoal_Alignment.SelectedIndex = 0;
             comboBox_ActivityDistance_Alignment.SelectedIndex = 0;
             comboBox_ActivityPuls_Alignment.SelectedIndex = 0;
             comboBox_ActivityCalories_Alignment.SelectedIndex = 0;
@@ -314,6 +343,8 @@ namespace GTR_Watch_face
 
             comboBox_Battery_Flatness.SelectedIndex = 0;
             comboBox_StepsProgress_Flatness.SelectedIndex = 0;
+            comboBox_ActivityPulsScale_Flatness.SelectedIndex = 0;
+            comboBox_ActivityCaloriesScale_Flatness.SelectedIndex = 0;
 
             label_version.Text = "v " +
                 System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Major.ToString() + "." +
@@ -322,6 +353,7 @@ namespace GTR_Watch_face
                 System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Major.ToString() + "." +
                 System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Minor.ToString();
 
+            Logger.WriteLine("Set Settings");
             Settings_Load = true;
             radioButton_Settings_AfterUnpack_Dialog.Checked = Program_Settings.Settings_AfterUnpack_Dialog;
             radioButton_Settings_AfterUnpack_DoNothing.Checked = Program_Settings.Settings_AfterUnpack_DoNothing;
@@ -346,35 +378,56 @@ namespace GTR_Watch_face
             checkBox_Shortcuts_Border.Checked = Program_Settings.Shortcuts_Border;
 
             if (Program_Settings.language.Length>1) comboBox_Language.Text = Program_Settings.language;
+            dataGridView_MotiomAnimation.RowTemplate.Height = (int)(18 * currentDPI);
 
             Settings_Load = false;
 
             SetPreferences1();
             PreviewView = true;
+            Logger.WriteLine("* Form1_Load (end)");
         }
 
         private void Form1_Shown(object sender, EventArgs e)
         {
-
-            //Logger.WriteLine("Form1_Shown");
+            Logger.WriteLine("* Form1_Shown");
             //Logger.WriteLine("Загружаем файл из значения аргумента " + StartFileNameJson);
             if ((StartFileNameJson != null) && (StartFileNameJson.Length > 0))
             {
+                Logger.WriteLine("Загружаем Json файл из значения аргумента " + StartFileNameJson);
                 LoadJsonAndImage(StartFileNameJson);
                 StartFileNameJson = "";
             }
             else if ((StartFileNameBin != null) && (StartFileNameBin.Length > 0))
             {
+                Logger.WriteLine("Загружаем bin файл из значения аргумента " + StartFileNameBin);
                 zip_unpack_bin(StartFileNameBin);
                 StartFileNameBin = "";
             }
             JSON_Modified = false;
             FormText();
             //Logger.WriteLine("Загрузили файл из значения аргумента " + StartFileNameJson);
+
+            // изменяем размер фопанели для предпросмотра если она не влазит
+            if (pictureBox_Preview.Top + pictureBox_Preview.Height > radioButton_47.Top)
+            {
+                float newHeight = radioButton_47.Top - pictureBox_Preview.Top;
+                float scale = newHeight / pictureBox_Preview.Height;
+                pictureBox_Preview.Size = new Size((int)(pictureBox_Preview.Width * scale), (int)(pictureBox_Preview.Height * scale));
+            }
+
+            //if (pictureBox_Preview.Top + pictureBox_Preview.Height > 100)
+            //{
+            //    float newHeight = 100 - pictureBox_Preview.Top;
+            //    float scale = newHeight / pictureBox_Preview.Height;
+            //    pictureBox_Preview.Size = new Size((int)(pictureBox_Preview.Width * scale), (int)(pictureBox_Preview.Height * scale));
+            //}
+            Logger.WriteLine("* Form1_Shown(end)");
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Logger.WriteLine("* FormClosing");
+#if !DEBUG
             if (JSON_Modified)
             {
                 if (FileName != null)
@@ -403,6 +456,13 @@ namespace GTR_Watch_face
                         SaveFileDialog saveFileDialog = new SaveFileDialog();
                         saveFileDialog.InitialDirectory = FullFileDir;
                         saveFileDialog.FileName = FileName;
+                        if(FileName==null || FileName.Length == 0)
+                        {
+                            if (FullFileDir != null && FullFileDir.Length > 3)
+                            {
+                                saveFileDialog.FileName = Path.GetFileName(FullFileDir);
+                            }
+                        }
                         saveFileDialog.Filter = "Json files (*.json) | *.json";
 
                         //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
@@ -427,10 +487,12 @@ namespace GTR_Watch_face
                     }
                 }
             }
+#endif
         }
 
         private void button_pack_unpack_Click(object sender, EventArgs e)
         {
+            Logger.WriteLine("* pack_unpack");
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = textBox_pack_unpack_dir.Text;
             //openFileDialog.InitialDirectory = @"C:\main_gtr\remake_by_kolomnych_045_ru-65473-787ef4d01c";
@@ -443,6 +505,7 @@ namespace GTR_Watch_face
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
+                Logger.WriteLine("pack_unpack_Click");
                 textBox_pack_unpack_dir.Text = openFileDialog.FileName;
 
                 Program_Settings.pack_unpack_dir = openFileDialog.FileName;
@@ -453,19 +516,24 @@ namespace GTR_Watch_face
                 });
                 File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
             }
+            Logger.WriteLine("* pack_unpack (end)");
         }
 
         private void Form1_HelpButtonClicked(object sender, CancelEventArgs e)
         {
+            Logger.WriteLine("* HelpButton");
             //FormFileExists formAnimation = new FormFileExists();
             //formAnimation.ShowDialog();
             //SendKeys.Send("{F1}");
             Help.ShowHelp(this, Application.StartupPath + Properties.FormStrings.File_ReadMy);
             e.Cancel = true;
+            Logger.WriteLine("* HelpButton (end)");
         }
+        
 
         private void button_zip_unpack_Click(object sender, EventArgs e)
         {
+            Logger.WriteLine("* zip_unpack");
             if (JSON_Modified) // сохранение если файл не сохранен
             {
                 if (FileName != null)
@@ -496,6 +564,13 @@ namespace GTR_Watch_face
                         SaveFileDialog saveFileDialog = new SaveFileDialog();
                         saveFileDialog.InitialDirectory = FullFileDir;
                         saveFileDialog.FileName = FileName;
+                        if (FileName == null || FileName.Length == 0)
+                        {
+                            if (FullFileDir != null && FullFileDir.Length > 3)
+                            {
+                                saveFileDialog.FileName = Path.GetFileName(FullFileDir);
+                            }
+                        }
                         saveFileDialog.Filter = "Json files (*.json) | *.json";
 
                         //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
@@ -535,10 +610,12 @@ namespace GTR_Watch_face
                 string fullfilename = openFileDialog.FileName;
                 zip_unpack_bin(fullfilename);
             }
+            Logger.WriteLine("* zip_unpack (end)");
         }
 
         private void zip_unpack_bin(string fullfilename)
         {
+            Logger.WriteLine("* zip_unpack_bin");
             string subPath = Application.StartupPath + @"\Watch_face\";
             if (!Directory.Exists(subPath)) Directory.CreateDirectory(subPath);
             string respackerPath = Application.StartupPath + @"\Res_PackerUnpacker\";
@@ -563,45 +640,76 @@ namespace GTR_Watch_face
             // если файл существует
             if (File.Exists(fullPath))
             {
-                FormFileExists f = new FormFileExists();
-                f.ShowDialog();
-                int dialogResult = f.Data;
-
                 string fileNameOnly = Path.GetFileNameWithoutExtension(fullPath);
                 string extension = Path.GetExtension(fullPath);
                 string path = Path.GetDirectoryName(fullPath);
                 string newFullPath = fullPath;
-                switch (dialogResult)
+                if (Program_Settings.Settings_Unpack_Dialog)
                 {
-                    case 0:
-                        return;
-                    //break;
-                    case 1:
-                        File.Copy(fullfilename, fullPath, true);
-                        newFullPath = Path.Combine(path, fileNameOnly);
-                        if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
-                        break;
-                    case 2:
-                        int count = 1;
+                    Logger.WriteLine("File.Exists");
+                    FormFileExists f = new FormFileExists();
+                    f.ShowDialog();
+                    int dialogResult = f.Data;
+                    
+                    switch (dialogResult)
+                    {
+                        case 0:
+                            return;
+                        //break;
+                        case 1:
+                            Logger.WriteLine("File.Copy");
+                            File.Copy(fullfilename, fullPath, true);
+                            newFullPath = Path.Combine(path, fileNameOnly);
+                            if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
+                            break;
+                        case 2:
+                            Logger.WriteLine("newFileName.Copy");
+                            int count = 1;
 
-                        while (File.Exists(newFullPath))
-                        {
-                            string tempFileName = string.Format("{0}({1})", fileNameOnly, count++);
-                            newFullPath = Path.Combine(path, tempFileName + extension);
-                        }
-                        File.Copy(fullfilename, newFullPath);
-                        fullPath = newFullPath;
-                        fileNameOnly = Path.GetFileNameWithoutExtension(newFullPath);
-                        path = Path.GetDirectoryName(newFullPath);
-                        newFullPath = Path.Combine(path, fileNameOnly);
-                        if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
-                        break;
+                            while (File.Exists(newFullPath))
+                            {
+                                string tempFileName = string.Format("{0}({1})", fileNameOnly, count++);
+                                newFullPath = Path.Combine(path, tempFileName + extension);
+                            }
+                            File.Copy(fullfilename, newFullPath);
+                            fullPath = newFullPath;
+                            fileNameOnly = Path.GetFileNameWithoutExtension(newFullPath);
+                            path = Path.GetDirectoryName(newFullPath);
+                            newFullPath = Path.Combine(path, fileNameOnly);
+                            if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
+                            break;
+                    }
+                }
+                else if (Program_Settings.Settings_Unpack_Save)
+                {
+                    Logger.WriteLine("newFileName.Copy");
+                    int count = 1;
+
+                    while (File.Exists(newFullPath))
+                    {
+                        string tempFileName = string.Format("{0}({1})", fileNameOnly, count++);
+                        newFullPath = Path.Combine(path, tempFileName + extension);
+                    }
+                    File.Copy(fullfilename, newFullPath);
+                    fullPath = newFullPath;
+                    fileNameOnly = Path.GetFileNameWithoutExtension(newFullPath);
+                    path = Path.GetDirectoryName(newFullPath);
+                    newFullPath = Path.Combine(path, fileNameOnly);
+                    if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
+                }
+                else if (Program_Settings.Settings_Unpack_Replace)
+                {
+                    Logger.WriteLine("File.Copy");
+                    File.Copy(fullfilename, fullPath, true);
+                    newFullPath = Path.Combine(path, fileNameOnly);
+                    if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
                 }
             }
             else File.Copy(fullfilename, fullPath);
 
             try
             {
+                Logger.WriteLine("UnzipBin");
                 ProcessStartInfo startInfo = new ProcessStartInfo();
                 startInfo.FileName = respackerPath;
                 startInfo.Arguments = fullPath;
@@ -639,6 +747,7 @@ namespace GTR_Watch_face
                                 return;
                             }
 #endif
+                        Logger.WriteLine("UnpackBin");
                         startInfo.FileName = textBox_pack_unpack_dir.Text;
                         startInfo.Arguments = textBox_unpack_command.Text + "   " + newFullName_bin;
                         using (Process exeProcess = Process.Start(startInfo))
@@ -682,10 +791,12 @@ namespace GTR_Watch_face
             {
                 // сюда писать команды при ошибке вызова 
             }
+            Logger.WriteLine("* zip_unpack_bin (end)");
         }
 
         private void button_unpack_Click(object sender, EventArgs e)
         {
+            Logger.WriteLine("* unpack");
             if (JSON_Modified) // сохранение если файл не сохранен
             {
                 if (FileName != null)
@@ -716,6 +827,13 @@ namespace GTR_Watch_face
                         SaveFileDialog saveFileDialog = new SaveFileDialog();
                         saveFileDialog.InitialDirectory = FullFileDir;
                         saveFileDialog.FileName = FileName;
+                        if (FileName == null || FileName.Length == 0)
+                        {
+                            if (FullFileDir != null && FullFileDir.Length > 3)
+                            {
+                                saveFileDialog.FileName = Path.GetFileName(FullFileDir);
+                            }
+                        }
                         saveFileDialog.Filter = "Json files (*.json) | *.json";
 
                         //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
@@ -767,6 +885,7 @@ namespace GTR_Watch_face
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
+                Logger.WriteLine("unpack_Click");
                 string fullfilename = openFileDialog.FileName;
                 string filename = Path.GetFileName(fullfilename);
                 filename = filename.Replace(" ", "_");
@@ -789,11 +908,13 @@ namespace GTR_Watch_face
                                 return;
                                 break;
                             case 1:
+                                Logger.WriteLine("File.Copy");
                                 File.Copy(fullfilename, fullPath, true);
                                 newFullPath = Path.Combine(path, fileNameOnly);
                                 if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
                                 break;
                             case 2:
+                                Logger.WriteLine("newFileName");
                                 int count = 1;
 
                                 while (File.Exists(newFullPath))
@@ -813,8 +934,9 @@ namespace GTR_Watch_face
                     //else if (radioButton_Settings_Unpack_Save.Checked)
                     else if (Program_Settings.Settings_Unpack_Save)
                     {
+                        Logger.WriteLine("newFileName");
                         int count = 1;
-
+                        
                         while (File.Exists(newFullPath))
                         {
                             string tempFileName = string.Format("{0}({1})", fileNameOnly, count++);
@@ -830,6 +952,7 @@ namespace GTR_Watch_face
                     //else if (radioButton_Settings_Unpack_Replace.Checked)
                     else if (Program_Settings.Settings_Unpack_Replace)
                     {
+                        Logger.WriteLine("File.Copy");
                         File.Copy(fullfilename, fullPath, true);
                         newFullPath = Path.Combine(path, fileNameOnly);
                         if (Directory.Exists(newFullPath)) Directory.Delete(newFullPath, true);
@@ -920,10 +1043,12 @@ namespace GTR_Watch_face
                 */
 #endif
             }
+            Logger.WriteLine("* unpack (end)");
         }
 
         private void button_pack_Click(object sender, EventArgs e)
         {
+            Logger.WriteLine("* pack");
             if (JSON_Modified) // сохранение если файл не сохранен
             {
                 if (FileName != null)
@@ -954,6 +1079,13 @@ namespace GTR_Watch_face
                         SaveFileDialog saveFileDialog = new SaveFileDialog();
                         saveFileDialog.InitialDirectory = FullFileDir;
                         saveFileDialog.FileName = FileName;
+                        if (FileName == null || FileName.Length == 0)
+                        {
+                            if (FullFileDir != null && FullFileDir.Length > 3)
+                            {
+                                saveFileDialog.FileName = Path.GetFileName(FullFileDir);
+                            }
+                        }
                         saveFileDialog.Filter = "Json files (*.json) | *.json";
 
                         //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
@@ -1006,6 +1138,7 @@ namespace GTR_Watch_face
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
+                Logger.WriteLine("pack_Click");
                 try
                 {
                     string fullfilename = openFileDialog.FileName;
@@ -1026,9 +1159,10 @@ namespace GTR_Watch_face
                     //MessageBox.Show(newFullName);
                     if (File.Exists(newFullName))
                     {
+                        Logger.WriteLine("GetFileSizeMB");
                         this.BringToFront();
                         double fileSize = (GetFileSizeMB(new FileInfo(newFullName)));
-                        if ((fileSize > 1.5) && (!radioButton_47.Checked))
+                        if ((fileSize >= 1.5) && (!radioButton_47.Checked))
                         {
                             MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_gts + Environment.NewLine + Environment.NewLine +
                             Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
@@ -1071,20 +1205,14 @@ namespace GTR_Watch_face
                 {
                     // сюда писать команды при ошибке вызова 
                 }
-
-                /*string fullfilename = openFileDialog.FileName;
-                Process _process = new Process();
-                ProcessStartInfo startInfo = new ProcessStartInfo();
-                startInfo.FileName = textBox_pack_unpack_dir.Text;
-                startInfo.Arguments = textBox_pack_command.Text + "   " + fullfilename;
-                _process.StartInfo = startInfo;
-                _process.Start();*/
             }
 #endif
+            Logger.WriteLine("* pack (end)");
         }
 
         private void button_zip_Click(object sender, EventArgs e)
         {
+            Logger.WriteLine("* zip");
             OpenFileDialog openFileDialog = new OpenFileDialog();
             //openFileDialog.Filter = "Json files (*.json) | *.json";
             openFileDialog.Filter = "Binary File (*.bin)|*.bin";
@@ -1111,6 +1239,7 @@ namespace GTR_Watch_face
 #endif
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
+                Logger.WriteLine("zip_Click");
                 string fullfilename = openFileDialog.FileName;
                 try
                 {
@@ -1129,9 +1258,10 @@ namespace GTR_Watch_face
                     //path = Path.Combine(path, fileNameOnly);
                     string newFullName_cmp = Path.Combine(path, fileNameOnly + ".bin.cmp");
                     string newFullName_bin = Path.Combine(path, fileNameOnly + "_zip.bin");
-                    File.Copy(newFullName_cmp, newFullName_bin, true);
+                    if (File.Exists(newFullName_cmp)) File.Copy(newFullName_cmp, newFullName_bin, true);
                     if (File.Exists(newFullName_bin))
                     {
+                        Logger.WriteLine("newFullName_bin");
                         File.Delete(newFullName_cmp);
                         this.BringToFront();
                         //if (radioButton_Settings_Pack_Dialog.Checked)
@@ -1161,11 +1291,13 @@ namespace GTR_Watch_face
                 {
                 }
             }
+            Logger.WriteLine("* zip (end)");
 
         }
 
         private void button_pack_zip_Click(object sender, EventArgs e)
         {
+            Logger.WriteLine("* pack_zip");
             if (JSON_Modified) // сохранение если файл не сохранен
             {
                 if (FileName != null)
@@ -1196,6 +1328,13 @@ namespace GTR_Watch_face
                         SaveFileDialog saveFileDialog = new SaveFileDialog();
                         saveFileDialog.InitialDirectory = FullFileDir;
                         saveFileDialog.FileName = FileName;
+                        if (FileName == null || FileName.Length == 0)
+                        {
+                            if (FullFileDir != null && FullFileDir.Length > 3)
+                            {
+                                saveFileDialog.FileName = Path.GetFileName(FullFileDir);
+                            }
+                        }
                         saveFileDialog.Filter = "Json files (*.json) | *.json";
 
                         //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
@@ -1248,6 +1387,7 @@ namespace GTR_Watch_face
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
+                Logger.WriteLine("* pack_zip_Click");
                 try
                 {
                     string fullfilename = openFileDialog.FileName;
@@ -1268,8 +1408,9 @@ namespace GTR_Watch_face
                     //MessageBox.Show(newFullName);
                     if (File.Exists(newFullName))
                     {
+                        Logger.WriteLine("GetFileSizeMB");
                         double fileSize = (GetFileSizeMB(new FileInfo(newFullName)));
-                        if ((fileSize > 1.5) && (!radioButton_47.Checked))
+                        if ((fileSize >= 1.5) && (!radioButton_47.Checked))
                         {
                             MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_gts + Environment.NewLine + Environment.NewLine +
                             Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
@@ -1310,9 +1451,10 @@ namespace GTR_Watch_face
                         //path = Path.Combine(path, fileNameOnly);
                         string newFullName_cmp = Path.Combine(path, fileNameOnly + ".bin.cmp");
                         string newFullName_bin = Path.Combine(path, fileNameOnly + "_zip.bin");
-                        File.Copy(newFullName_cmp, newFullName_bin, true);
+                        if (File.Exists(newFullName_cmp)) File.Copy(newFullName_cmp, newFullName_bin, true);
                         if (File.Exists(newFullName_bin))
                         {
+                            Logger.WriteLine("newFullName_bin");
                             File.Delete(newFullName_cmp);
                             this.BringToFront();
                             //if (radioButton_Settings_Pack_Dialog.Checked)
@@ -1344,16 +1486,18 @@ namespace GTR_Watch_face
                 }
             }
 #endif
+            Logger.WriteLine("* pack_zip (end)");
         }
 
         // загружаем перечень картинок
         private void button_images_Click(object sender, EventArgs e)
         {
+            Logger.WriteLine("* images (end)");
             string subPath = Application.StartupPath + @"\Watch_face\";
             if (!Directory.Exists(subPath)) Directory.CreateDirectory(subPath);
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            //openFileDialog.InitialDirectory = subPath;
+            openFileDialog.InitialDirectory = FullFileDir;
             openFileDialog.Filter = "PNG Files: (*.png)|*.png";
             //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
             ////openFileDialog1.FilterIndex = 2;
@@ -1362,10 +1506,14 @@ namespace GTR_Watch_face
             openFileDialog.Title = Properties.FormStrings.Dialog_Title_Image;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
+                Logger.WriteLine("images_Click");
+                FullFileDir = Path.GetDirectoryName(openFileDialog.FileName);
                 dataGridView_ImagesList.Rows.Clear();
                 ListImages.Clear();
                 ListImagesFullName.Clear();
                 int i;
+                int count = 0;
+                int AllFileSize = 0;
                 Image loadedImage = null;
                 List<string> ErrorImage = new List<string>();
                 List<string> FileNames = openFileDialog.FileNames.ToList();
@@ -1379,6 +1527,7 @@ namespace GTR_Watch_face
                         //string fileNameOnly = Path.GetFileName(file);
                         if (int.TryParse(fileNameOnly, out i))
                         {
+                            Logger.WriteLine("loadedImage " + fileNameOnly);
                             //Image loadedImage = Image.FromFile(file);
                             using (FileStream stream = new FileStream(file, FileMode.Open, FileAccess.Read))
                             {
@@ -1387,11 +1536,15 @@ namespace GTR_Watch_face
 
                             PixelFormat pf = loadedImage.PixelFormat;
                             if (pf != PixelFormat.Format32bppArgb) ErrorImage.Add(Path.GetFileName(file));
+                            int pixels = loadedImage.Width * loadedImage.Height;
+                            AllFileSize = AllFileSize + pixels * 4 + 20;
+
                             var RowNew = new DataGridViewRow();
                             DataGridViewImageCellLayout ZoomType = DataGridViewImageCellLayout.Zoom;
                             if ((loadedImage.Height < 45) && (loadedImage.Width < 110))
                                 ZoomType = DataGridViewImageCellLayout.Normal;
-                            RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = i.ToString() });
+                            RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = count.ToString() });
+                            //RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = i.ToString() });
                             RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = fileNameOnly });
                             //RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = file });
                             RowNew.Cells.Add(new DataGridViewImageCell()
@@ -1403,6 +1556,7 @@ namespace GTR_Watch_face
                             dataGridView_ImagesList.Rows.Add(RowNew);
                             ListImages.Add(i.ToString());
                             ListImagesFullName.Add(file);
+                            count++;
                         }
 
                     }
@@ -1416,6 +1570,7 @@ namespace GTR_Watch_face
                 //loadedImage.Dispose();
                 if (ErrorImage.Count > 0)
                 {
+                    Logger.WriteLine("ErrorImage");
                     string StringFileName = string.Join(Environment.NewLine, ErrorImage);
                     if (MessageBox.Show(Properties.FormStrings.Message_ErrorImage_Text1 + ErrorImage.Count.ToString() + "):" +
                         Environment.NewLine + StringFileName + Environment.NewLine + Environment.NewLine +
@@ -1428,13 +1583,17 @@ namespace GTR_Watch_face
                 JSON_read();
                 PreviewView = true;
                 PreviewImage();
+                ShowAllFileSize(AllFileSize);
             }
+            Logger.WriteLine("* images (end)");
         }
 
         private void FixImage(string directory, List<string> errorImage)
         {
+            Logger.WriteLine("* FixImage");
             foreach (string fileName in errorImage)
             {
+                Logger.WriteLine("FixImage " + fileName);
                 string fullFileName = Path.Combine(directory, fileName);
 
                 if (File.Exists(fullFileName))
@@ -1453,11 +1612,13 @@ namespace GTR_Watch_face
                     catch (Exception){}
                 }
             }
+            Logger.WriteLine("* FixImage (end)");
         }
 
         // загружаем JSON файл с настройками
         private void button_JSON_Click(object sender, EventArgs e)
         {
+            Logger.WriteLine("* JSON");
             if (JSON_Modified) // сохранение если файл не сохранен
             {
                 if (FileName != null)
@@ -1488,6 +1649,13 @@ namespace GTR_Watch_face
                         SaveFileDialog saveFileDialog = new SaveFileDialog();
                         saveFileDialog.InitialDirectory = FullFileDir;
                         saveFileDialog.FileName = FileName;
+                        if (FileName == null || FileName.Length == 0)
+                        {
+                            if (FullFileDir != null && FullFileDir.Length > 3)
+                            {
+                                saveFileDialog.FileName = Path.GetFileName(FullFileDir);
+                            }
+                        }
                         saveFileDialog.Filter = "Json files (*.json) | *.json";
 
                         //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
@@ -1528,19 +1696,23 @@ namespace GTR_Watch_face
             openFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
+                Logger.WriteLine("* JSON_Click");
                 //string fullfilename = openFileDialog.FileName;
                 LoadJsonAndImage(openFileDialog.FileName);
             }
+            Logger.WriteLine("* JSON (end)");
         }
 
         private void LoadJsonAndImage(string fullfilename)
         {
+            Logger.WriteLine("* LoadJsonAndImage");
             //Logger.WriteLine("LoadJsonAndImage");
             FileName = Path.GetFileName(fullfilename);
             FullFileDir = Path.GetDirectoryName(fullfilename);
             string text = File.ReadAllText(fullfilename);
             //richTextBox_JSON.Text = text;
             PreviewView = false;
+            int AllFileSize = 0;
             ListImages.Clear();
             ListImagesFullName.Clear();
             dataGridView_ImagesList.Rows.Clear();
@@ -1551,7 +1723,7 @@ namespace GTR_Watch_face
             DirectoryInfo Folder;
             FileInfo[] Images;
             Folder = new DirectoryInfo(FullFileDir);
-            Images = Folder.GetFiles("*.png");
+            Images = Folder.GetFiles("*.png").OrderBy(p => Path.GetFileNameWithoutExtension(p.Name)).ToArray();
             int count = 0;
             Image loadedImage = null;
             List<string> ErrorImage = new List<string>();
@@ -1563,6 +1735,7 @@ namespace GTR_Watch_face
                     int i;
                     if (int.TryParse(fileNameOnly, out i))
                     {
+                        Logger.WriteLine("loadedImage " + fileNameOnly);
                         //loadedImage = Image.FromFile(file.FullName);
                         using (FileStream stream = new FileStream(file.FullName, FileMode.Open, FileAccess.Read))
                         {
@@ -1571,11 +1744,15 @@ namespace GTR_Watch_face
 
                         PixelFormat pf = loadedImage.PixelFormat;
                         if (pf != PixelFormat.Format32bppArgb) ErrorImage.Add(Path.GetFileName(file.FullName));
+                        int pixels = loadedImage.Width * loadedImage.Height;
+                        AllFileSize = AllFileSize + pixels * 4 + 20;
+
                         var RowNew = new DataGridViewRow();
                         DataGridViewImageCellLayout ZoomType = DataGridViewImageCellLayout.Zoom;
                         if ((loadedImage.Height < 45) && (loadedImage.Width < 110))
                             ZoomType = DataGridViewImageCellLayout.Normal;
-                        RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = i.ToString() });
+                        RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = count.ToString() });
+                        //RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = i.ToString() });
                         RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = fileNameOnly });
                         RowNew.Cells.Add(new DataGridViewImageCell()
                         {
@@ -1610,6 +1787,7 @@ namespace GTR_Watch_face
 #endif
             if (ErrorImage.Count > 0)
             {
+                Logger.WriteLine("ErrorImage");
                 string StringFileName = string.Join(Environment.NewLine, ErrorImage);
                 if (MessageBox.Show(Properties.FormStrings.Message_ErrorImage_Text1 + ErrorImage.Count.ToString() + "):" +
                     Environment.NewLine + StringFileName + Environment.NewLine + Environment.NewLine +
@@ -1618,10 +1796,10 @@ namespace GTR_Watch_face
                     FixImage(FullFileDir, ErrorImage);
                 }
             }
-
-            //Logger.WriteLine("Не верный json формат");
+            
             try
             {
+                Logger.WriteLine("FixAnimation");
                 text = text.Replace("\"Unknown11_2\": [", "\"Unknown11_02_temp\": [");
                 //text = text.Replace("Unknown11_2", "Unknown11_02_temp");
                 Watch_Face = JsonConvert.DeserializeObject<WATCH_FACE_JSON>(text, new JsonSerializerSettings
@@ -1653,6 +1831,7 @@ namespace GTR_Watch_face
             string newFullName = Path.Combine(path, "PreviewStates.json");
             if (File.Exists(newFullName))
             {
+                Logger.WriteLine("Load PreviewStates.json");
                 if (Program_Settings.Settings_Open_Download)
                 {
                     JsonPreview_Read(newFullName); 
@@ -1671,11 +1850,22 @@ namespace GTR_Watch_face
             PreviewImage();
             JSON_Modified = false;
             FormText();
+            ShowAllFileSize(AllFileSize);
+            Logger.WriteLine("* LoadJsonAndImage (end)");
+        }
+
+        private void ShowAllFileSize(double sizeinbytes)
+        {
+            Logger.WriteLine("* ShowAllFileSize");
+            double AllFileSizeMB = GetFileSizeMB(sizeinbytes);
+            label_size.Text = "≈" + AllFileSizeMB.ToString() + "MB";
+            Logger.WriteLine("* ShowAllFileSize (end)");
         }
 
         private void FixAnimation()
         {
-            if (Watch_Face.Unknown11 != null && Watch_Face.Unknown11.Unknown11_2 == null)
+            Logger.WriteLine("* FixAnimation (end)");
+            if (Watch_Face != null && Watch_Face.Unknown11 != null && Watch_Face.Unknown11.Unknown11_2 == null)
             {
                 if (Watch_Face.Unknown11.Unknown11_02_temp != null)
                 {
@@ -1690,36 +1880,60 @@ namespace GTR_Watch_face
 
                 }
             }
+            Logger.WriteLine("* FixAnimation (end)");
         }
 
         // формируем изображение для предпросмотра
         private void PreviewImage()
         {
+            Logger.WriteLine("* PreviewImage");
             if (!PreviewView) return;
-            Graphics gPanel = panel_Preview.CreateGraphics();
-            gPanel.Clear(panel_Preview.BackColor);
+            //Graphics gPanel = panel_Preview.CreateGraphics();
+            //gPanel.Clear(panel_Preview.BackColor);
             float scale = 1.0f;
-            if (panel_Preview.Height < 300) scale = 0.5f;
+            //if (panel_Preview.Height < 300) scale = 0.5f;
+            #region BackgroundImage
+            Logger.WriteLine("BackgroundImage");
+            Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
+            if (radioButton_42.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
+            }
+            if (radioButton_gts.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
+            }
+            if (radioButton_TRex.Checked || radioButton_Verge.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
+            }
+            Graphics gPanel = Graphics.FromImage(bitmap);
+            #endregion
+
+            Logger.WriteLine("PreviewToBitmap");
             PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, 
                 checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, 
-                checkBox_Shortcuts_Border.Checked, true, 0);
+                checkBox_Shortcuts_Border.Checked, true, checkBox_CircleScaleImage.Checked, 0);
+            pictureBox_Preview.BackgroundImage = bitmap;
             gPanel.Dispose();
 
             if ((formPreview != null) && (formPreview.Visible))
             {
-                Graphics gPanelPreview = formPreview.panel_Preview.CreateGraphics();
-                gPanelPreview.Clear(panel_Preview.BackColor);
-                float scalePreview = 1.0f;
-                if (formPreview.radioButton_small.Checked) scalePreview = 0.5f;
-                if (formPreview.radioButton_large.Checked) scalePreview = 1.5f;
-                if (formPreview.radioButton_xlarge.Checked) scalePreview = 2.0f;
-                if (formPreview.radioButton_xxlarge.Checked) scalePreview = 2.5f;
-                PreviewToBitmap(gPanelPreview, scalePreview, checkBox_crop.Checked, checkBox_WebW.Checked, 
-                    checkBox_WebB.Checked, checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, 
-                    checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true, 0);
-                gPanelPreview.Dispose();
-                
+                //Graphics gPanelPreview = formPreview.panel_Preview.CreateGraphics();
+                //gPanelPreview.Clear(pictureBox_Preview.BackColor);
+                //float scalePreview = 1.0f;
+                //if (formPreview.radioButton_small.Checked) scalePreview = 0.5f;
+                //if (formPreview.radioButton_large.Checked) scalePreview = 1.5f;
+                //if (formPreview.radioButton_xlarge.Checked) scalePreview = 2.0f;
+                //if (formPreview.radioButton_xxlarge.Checked) scalePreview = 2.5f;
+                //PreviewToBitmap(gPanelPreview, scalePreview, checkBox_crop.Checked, checkBox_WebW.Checked, 
+                //    checkBox_WebB.Checked, checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, 
+                //    checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true, 0);
+                //gPanelPreview.Dispose();
+
+                formPreview.pictureBox_Preview.BackgroundImage = bitmap;
             }
+            Logger.WriteLine("* PreviewImage (end)");
         }
         
 
@@ -2420,7 +2634,7 @@ namespace GTR_Watch_face
                 panel_Status.Height = 1;
                 panel_Battery.Height = 1;
                 panel_AnalogClock.Height = 1;
-                panel_Weather.Height = (int)(230 * currentDPI);
+                panel_Weather.Height = (int)(260 * currentDPI);
                 panel_Shortcuts.Height = 1;
                 panel_Animation.Height = 1;
             }
@@ -3167,6 +3381,31 @@ namespace GTR_Watch_face
             }
         }
 
+        private void checkBox_ActivityStepsGoal_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_ActivityStepsGoal.Checked;
+            numericUpDown_ActivityStepsGoal_StartCorner_X.Enabled = b;
+            numericUpDown_ActivityStepsGoal_StartCorner_Y.Enabled = b;
+            numericUpDown_ActivityStepsGoal_EndCorner_X.Enabled = b;
+            numericUpDown_ActivityStepsGoal_EndCorner_Y.Enabled = b;
+
+            comboBox_ActivityStepsGoal_Image.Enabled = b;
+            numericUpDown_ActivityStepsGoal_Count.Enabled = b;
+            numericUpDown_ActivityStepsGoal_Spacing.Enabled = b;
+            comboBox_ActivityStepsGoal_Alignment.Enabled = b;
+
+            label491.Enabled = b;
+            label492.Enabled = b;
+            label493.Enabled = b;
+            label494.Enabled = b;
+            label495.Enabled = b;
+            label496.Enabled = b;
+            label497.Enabled = b;
+            label498.Enabled = b;
+            label499.Enabled = b;
+            label500.Enabled = b;
+        }
+
         private void checkBox_DND_CheckedChanged(object sender, EventArgs e)
         {
             bool b = checkBox_DND.Checked;
@@ -3699,7 +3938,12 @@ namespace GTR_Watch_face
         {
             bool b = checkBox_Animation.Checked;
             tabControl_Animation.Enabled = b;
-            button_ShowAnimation.Enabled = b;
+            if (checkBox_Animation.Checked)
+            {
+                if (checkBox_StaticAnimation.Checked || checkBox_MotiomAnimation.Checked) button_ShowAnimation.Enabled = true;
+                else button_ShowAnimation.Enabled = false;
+            }
+            else button_ShowAnimation.Enabled = false;
         }
 
         private void checkBox_StaticAnimation_CheckedChanged(object sender, EventArgs e)
@@ -3725,7 +3969,11 @@ namespace GTR_Watch_face
             label478.Enabled = b;
             label479.Enabled = b;
 
-            if (checkBox_StaticAnimation.Checked || checkBox_MotiomAnimation.Checked) button_ShowAnimation.Enabled = true;
+            if (checkBox_Animation.Checked)
+            {
+                if (checkBox_StaticAnimation.Checked || checkBox_MotiomAnimation.Checked) button_ShowAnimation.Enabled = true;
+                else button_ShowAnimation.Enabled = false;
+            }
             else button_ShowAnimation.Enabled = false;
         }
 
@@ -3749,7 +3997,11 @@ namespace GTR_Watch_face
             label484.Enabled = b;
             label485.Enabled = b;
 
-            if (checkBox_StaticAnimation.Checked || checkBox_MotiomAnimation.Checked) button_ShowAnimation.Enabled = true;
+            if (checkBox_Animation.Checked)
+            {
+                if (checkBox_StaticAnimation.Checked || checkBox_MotiomAnimation.Checked) button_ShowAnimation.Enabled = true;
+                else button_ShowAnimation.Enabled = false;
+            }
             else button_ShowAnimation.Enabled = false;
         }
         #endregion
@@ -3821,7 +4073,7 @@ namespace GTR_Watch_face
         private void button_Set1_Click(object sender, EventArgs e)
         {
             panel_SetWeather.Height = 1;
-            panel_Set1.Height = 125;
+            panel_Set1.Height = (int)(125 * currentDPI);
             panel_Set2.Height = 1;
             panel_Set3.Height = 1;
             panel_Set4.Height = 1;
@@ -3842,7 +4094,7 @@ namespace GTR_Watch_face
         {
             panel_SetWeather.Height = 1;
             panel_Set1.Height = 1;
-            panel_Set2.Height = 125;
+            panel_Set2.Height = (int)(125 * currentDPI);
             panel_Set3.Height = 1;
             panel_Set4.Height = 1;
             panel_Set5.Height = 1;
@@ -3862,7 +4114,7 @@ namespace GTR_Watch_face
             panel_SetWeather.Height = 1;
             panel_Set1.Height = 1;
             panel_Set2.Height = 1;
-            panel_Set3.Height = 125;
+            panel_Set3.Height = (int)(125 * currentDPI);
             panel_Set4.Height = 1;
             panel_Set5.Height = 1;
             panel_Set6.Height = 1;
@@ -3882,7 +4134,7 @@ namespace GTR_Watch_face
             panel_Set1.Height = 1;
             panel_Set2.Height = 1;
             panel_Set3.Height = 1;
-            panel_Set4.Height = 125;
+            panel_Set4.Height = (int)(125 * currentDPI);
             panel_Set5.Height = 1;
             panel_Set6.Height = 1;
             panel_Set7.Height = 1;
@@ -3902,7 +4154,7 @@ namespace GTR_Watch_face
             panel_Set2.Height = 1;
             panel_Set3.Height = 1;
             panel_Set4.Height = 1;
-            panel_Set5.Height = 125;
+            panel_Set5.Height = (int)(125 * currentDPI);
             panel_Set6.Height = 1;
             panel_Set7.Height = 1;
             panel_Set8.Height = 1;
@@ -3922,7 +4174,7 @@ namespace GTR_Watch_face
             panel_Set3.Height = 1;
             panel_Set4.Height = 1;
             panel_Set5.Height = 1;
-            panel_Set6.Height = 125;
+            panel_Set6.Height = (int)(125 * currentDPI);
             panel_Set7.Height = 1;
             panel_Set8.Height = 1;
             panel_Set9.Height = 1;
@@ -3942,7 +4194,7 @@ namespace GTR_Watch_face
             panel_Set4.Height = 1;
             panel_Set5.Height = 1;
             panel_Set6.Height = 1;
-            panel_Set7.Height = 125;
+            panel_Set7.Height = (int)(125 * currentDPI);
             panel_Set8.Height = 1;
             panel_Set9.Height = 1;
             panel_Set10.Height = 1;
@@ -3962,7 +4214,7 @@ namespace GTR_Watch_face
             panel_Set5.Height = 1;
             panel_Set6.Height = 1;
             panel_Set7.Height = 1;
-            panel_Set8.Height = 125;
+            panel_Set8.Height = (int)(125 * currentDPI);
             panel_Set9.Height = 1;
             panel_Set10.Height = 1;
             panel_Set11.Height = 1;
@@ -3982,7 +4234,7 @@ namespace GTR_Watch_face
             panel_Set6.Height = 1;
             panel_Set7.Height = 1;
             panel_Set8.Height = 1;
-            panel_Set9.Height = 125;
+            panel_Set9.Height = (int)(125 * currentDPI);
             panel_Set10.Height = 1;
             panel_Set11.Height = 1;
             panel_Set12.Height = 1;
@@ -4002,7 +4254,7 @@ namespace GTR_Watch_face
             panel_Set7.Height = 1;
             panel_Set8.Height = 1;
             panel_Set9.Height = 1;
-            panel_Set10.Height = 125;
+            panel_Set10.Height = (int)(125 * currentDPI);
             panel_Set11.Height = 1;
             panel_Set12.Height = 1;
             panel_Set13.Height = 1;
@@ -4022,7 +4274,7 @@ namespace GTR_Watch_face
             panel_Set8.Height = 1;
             panel_Set9.Height = 1;
             panel_Set10.Height = 1;
-            panel_Set11.Height = 125;
+            panel_Set11.Height = (int)(125 * currentDPI);
             panel_Set12.Height = 1;
             panel_Set13.Height = 1;
             SetPreferences11();
@@ -4042,7 +4294,7 @@ namespace GTR_Watch_face
             panel_Set9.Height = 1;
             panel_Set10.Height = 1;
             panel_Set11.Height = 1;
-            panel_Set12.Height = 125;
+            panel_Set12.Height = (int)(125 * currentDPI);
             panel_Set13.Height = 1;
             SetPreferences12();
             PreviewImage();
@@ -4062,14 +4314,14 @@ namespace GTR_Watch_face
             panel_Set10.Height = 1;
             panel_Set11.Height = 1;
             panel_Set12.Height = 1;
-            panel_Set13.Height = 125;
+            panel_Set13.Height = (int)(125 * currentDPI);
             SetPreferences13();
             PreviewImage();
         }
 
         private void button_SetWeather_Click(object sender, EventArgs e)
         {
-            panel_SetWeather.Height = 60;
+            panel_SetWeather.Height = (int)(60 * currentDPI);
             panel_Set1.Height = 1;
             panel_Set2.Height = 1;
             panel_Set3.Height = 1;
@@ -4348,11 +4600,11 @@ namespace GTR_Watch_face
         }
 
 
-        private void panel1_DoubleClick(object sender, EventArgs e)
+        private void pictureBox_Preview_DoubleClick(object sender, EventArgs e)
         {
             if ((formPreview == null) || (!formPreview.Visible))
             {
-                formPreview = new Form_Preview();
+                formPreview = new Form_Preview(currentDPI);
                 formPreview.Show(this);
                 //formPreview.Show();
 
@@ -4376,7 +4628,7 @@ namespace GTR_Watch_face
 
                 }
 
-                formPreview.panel_Preview.Resize += (object senderResize, EventArgs eResize) =>
+                formPreview.pictureBox_Preview.Resize += (object senderResize, EventArgs eResize) =>
                 {
                     if (Form_Preview.Model_Wath.model_gtr47 != radioButton_47.Checked)
                         Form_Preview.Model_Wath.model_gtr47 = radioButton_47.Checked;
@@ -4388,9 +4640,9 @@ namespace GTR_Watch_face
                         Form_Preview.Model_Wath.model_TRex = radioButton_TRex.Checked;
                     if (Form_Preview.Model_Wath.model_Verge != radioButton_Verge.Checked)
                         Form_Preview.Model_Wath.model_Verge = radioButton_Verge.Checked;
-                    Graphics gPanelPreviewResize = formPreview.panel_Preview.CreateGraphics();
-                    gPanelPreviewResize.Clear(panel_Preview.BackColor);
-                    formPreview.radioButton_CheckedChanged(sender, e);
+                    //Graphics gPanelPreviewResize = formPreview.panel_Preview.CreateGraphics();
+                    //gPanelPreviewResize.Clear(panel_Preview.BackColor);
+                    //formPreview.radioButton_CheckedChanged(sender, e);
                     float scalePreviewResize = 1.0f;
                     if (formPreview.radioButton_small.Checked) scalePreviewResize = 0.5f;
                     if (formPreview.radioButton_large.Checked) scalePreviewResize = 1.5f;
@@ -4404,29 +4656,48 @@ namespace GTR_Watch_face
                         NullValueHandling = NullValueHandling.Ignore
                     });
                     File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
+                    
+                    #region BackgroundImage 
+                    Bitmap bitmapPreviewResize = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
+                    if (radioButton_42.Checked)
+                    {
+                        bitmapPreviewResize = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
+                    }
+                    if (radioButton_gts.Checked)
+                    {
+                        bitmapPreviewResize = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
+                    }
+                    if (radioButton_TRex.Checked || radioButton_Verge.Checked)
+                    {
+                        bitmapPreviewResize = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
+                    }
+                    Graphics gPanelPreviewResize = Graphics.FromImage(bitmapPreviewResize);
+                    #endregion
 
-                    PreviewToBitmap(gPanelPreviewResize, scalePreviewResize, checkBox_crop.Checked,
+                    PreviewToBitmap(gPanelPreviewResize, 1, checkBox_crop.Checked,
                         checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked, 
-                        checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true, 0);
+                        checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true,
+                        checkBox_CircleScaleImage.Checked, 0);
+                    formPreview.pictureBox_Preview.BackgroundImage = bitmapPreviewResize;
                     gPanelPreviewResize.Dispose();
                 };
 
-                formPreview.panel_Preview.Paint += (object senderPaint, PaintEventArgs ePaint) =>
-                {
-                    //Form_Preview.Model_GTR47.model_gtr47 = radioButton_47.Checked;
-                    //Graphics gPanelPreviewPaint = formPreview.panel_Preview.CreateGraphics();
-                    //gPanelPreviewPaint.Clear(panel_Preview.BackColor);
-                    //formPreview.radioButton_CheckedChanged(sender, e);
-                    //float scalePreviewPaint = 1.0f;
-                    //if (formPreview.radioButton_small.Checked) scalePreviewPaint = 0.5f;
-                    //if (formPreview.radioButton_large.Checked) scalePreviewPaint = 1.5f;
-                    //if (formPreview.radioButton_xlarge.Checked) scalePreviewPaint = 2.0f;
-                    //if (formPreview.radioButton_xxlarge.Checked) scalePreviewPaint = 2.5f;
-                    //PreviewToBitmap(gPanelPreviewPaint, scalePreviewPaint, radioButton_47.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked);
-                    //gPanelPreviewPaint.Dispose();
-                    timer2.Enabled = false;
-                    timer2.Enabled = true;
-                };
+                //formPreview.panel_Preview.Paint += (object senderPaint, PaintEventArgs ePaint) =>
+                //{
+                //    //Form_Preview.Model_GTR47.model_gtr47 = radioButton_47.Checked;
+                //    //Graphics gPanelPreviewPaint = formPreview.panel_Preview.CreateGraphics();
+                //    //gPanelPreviewPaint.Clear(panel_Preview.BackColor);
+                //    //formPreview.radioButton_CheckedChanged(sender, e);
+                //    //float scalePreviewPaint = 1.0f;
+                //    //if (formPreview.radioButton_small.Checked) scalePreviewPaint = 0.5f;
+                //    //if (formPreview.radioButton_large.Checked) scalePreviewPaint = 1.5f;
+                //    //if (formPreview.radioButton_xlarge.Checked) scalePreviewPaint = 2.0f;
+                //    //if (formPreview.radioButton_xxlarge.Checked) scalePreviewPaint = 2.5f;
+                //    //PreviewToBitmap(gPanelPreviewPaint, scalePreviewPaint, radioButton_47.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked);
+                //    //gPanelPreviewPaint.Dispose();
+                //    timer2.Enabled = false;
+                //    timer2.Enabled = true;
+                //};
 
                 formPreview.FormClosing += (object senderClosing, FormClosingEventArgs eClosing) =>
                 {
@@ -4449,22 +4720,40 @@ namespace GTR_Watch_face
                 Form_Preview.Model_Wath.model_TRex = radioButton_TRex.Checked;
             if (Form_Preview.Model_Wath.model_Verge != radioButton_Verge.Checked)
                 Form_Preview.Model_Wath.model_Verge = radioButton_Verge.Checked;
-            Graphics gPanel = formPreview.panel_Preview.CreateGraphics();
-            gPanel.Clear(panel_Preview.BackColor);
+            //Graphics gPanel = formPreview.panel_Preview.CreateGraphics();
+            //gPanel.Clear(panel_Preview.BackColor);
             //Pen pen = new Pen(Color.Blue, 1);
             //Random rnd = new Random();
             //gPanel.DrawLine(pen, new Point(0, 0), new Point(rnd.Next(0, 450), rnd.Next(0, 450)));
             //Form_Preview.Model_GTR47.model_gtr47 = radioButton_47.Checked;
             formPreview.radioButton_CheckedChanged(sender, e);
             float scale = 1.0f;
-            if (formPreview.radioButton_small.Checked) scale = 0.5f;
-            if (formPreview.radioButton_large.Checked) scale = 1.5f;
-            if (formPreview.radioButton_xlarge.Checked) scale = 2.0f;
-            if (formPreview.radioButton_xxlarge.Checked) scale = 2.5f;
+            //if (formPreview.radioButton_small.Checked) scale = 0.5f;
+            //if (formPreview.radioButton_large.Checked) scale = 1.5f;
+            //if (formPreview.radioButton_xlarge.Checked) scale = 2.0f;
+            //if (formPreview.radioButton_xxlarge.Checked) scale = 2.5f;
+
+            #region BackgroundImage 
+            Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
+            if (radioButton_42.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
+            }
+            if (radioButton_gts.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
+            }
+            if (radioButton_TRex.Checked || radioButton_Verge.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
+            }
+            Graphics gPanel = Graphics.FromImage(bitmap);
+            #endregion
 
             PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, 
                 checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, 
-                checkBox_Shortcuts_Border.Checked, true, 0);
+                checkBox_Shortcuts_Border.Checked, true, checkBox_CircleScaleImage.Checked, 0);
+            formPreview.pictureBox_Preview.BackgroundImage = bitmap;
             gPanel.Dispose();
 
             button_PreviewBig.Enabled = false;
@@ -5427,6 +5716,13 @@ namespace GTR_Watch_face
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.InitialDirectory = FullFileDir;
             saveFileDialog.FileName = FileName;
+            if(FileName==null || FileName.Length == 0)
+            {
+                if (FullFileDir != null && FullFileDir.Length > 3)
+                {
+                    saveFileDialog.FileName = Path.GetFileName(FullFileDir);
+                }
+            }
             saveFileDialog.Filter = "Json files (*.json) | *.json";
 
             //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
@@ -5448,6 +5744,14 @@ namespace GTR_Watch_face
 
         private void jsonWarnings(String fullfilename)
         {
+            // пробелы в имени
+            if (fullfilename.IndexOf(" ") != -1)
+            {
+                MessageBox.Show(Properties.FormStrings.Message_WarningSpaceInName_Text,
+                    Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (Watch_Face == null) return;
+
             // 3 стрелки для аналоговых часов
             if (Watch_Face.AnalogDialFace != null)
             {
@@ -5533,20 +5837,44 @@ namespace GTR_Watch_face
             }
 
             // текущая температура и температура день/ночь
-            //if (Watch_Face.Weather != null && Watch_Face.Weather.Temperature != null)
-            //{
-            //    if ((Watch_Face.Weather.Temperature.Current != null) && (Watch_Face.Weather.Temperature.Today == null))
-            //    {
-            //        MessageBox.Show(Properties.FormStrings.Message_WarningTemperature_Text,
-            //        Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    }
-            //}
-
-            // пробелы в имени
-            if(fullfilename.IndexOf(" ") != -1)
+            if (Watch_Face.Weather != null && Watch_Face.Weather.Temperature != null)
             {
-                MessageBox.Show(Properties.FormStrings.Message_WarningSpaceInName_Text,
-                    Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if ((Watch_Face.Weather.Temperature.Current != null) && (Watch_Face.Weather.Temperature.Today == null))
+                {
+                    if (Watch_Face.StepsProgress != null && Watch_Face.StepsProgress.ClockHand != null)
+                    {
+                        MessageBox.Show(Properties.FormStrings.Message_WarningTemperature_Text,
+                            Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning); 
+                    }
+                }
+            }
+
+            // название и номер месяца
+            if (Watch_Face.Date != null && Watch_Face.Date.MonthAndDay != null && Watch_Face.Date.MonthAndDay.Separate != null)
+            {
+                if (Watch_Face.Date.MonthAndDay.Separate.MonthName != null && Watch_Face.Date.MonthAndDay.Separate.Month != null)
+                {
+                    MessageBox.Show(Properties.FormStrings.Message_WarningMonthName,
+                            Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
+            // последняя картинка для анимации
+            if (Watch_Face.Unknown11 != null && Watch_Face.Unknown11.Unknown11_1 != null)
+            {
+                bool MotiomAnimationLastImage = false;
+                foreach (MotiomAnimation MotiomAnimation in Watch_Face.Unknown11.Unknown11_1)
+                {
+                    if (MotiomAnimation.ImageIndex >= ListImages.Count-1)
+                    {
+                        MotiomAnimationLastImage = true;
+                    }
+                }
+                if (MotiomAnimationLastImage)
+                {
+                    MessageBox.Show(Properties.FormStrings.Message_WarningAnimationLastImage,
+                            Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
 
@@ -5594,7 +5922,7 @@ namespace GTR_Watch_face
 
         private void panel_Preview_DoubleClick(object sender, EventArgs e)
         {
-            if (panel_Preview.Height < 300) button_PreviewBig.PerformClick();
+            if (pictureBox_Preview.Height < 300) button_PreviewBig.PerformClick();
             else
             {
                 //if (radioButton_47.Checked) button_PreviewSmall.PerformClick();
@@ -5604,8 +5932,9 @@ namespace GTR_Watch_face
 
         private void button_SavePNG_Click(object sender, EventArgs e)
         {
+            Logger.WriteLine("* SavePNG");
             SaveFileDialog saveFileDialog = new SaveFileDialog();
-            //openFileDialog.InitialDirectory = subPath;
+            saveFileDialog.InitialDirectory = FullFileDir;
             saveFileDialog.Filter = "PNG Files: (*.png)|*.png";
             saveFileDialog.FileName = "Preview.png";
             //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
@@ -5615,33 +5944,35 @@ namespace GTR_Watch_face
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
-                Bitmap mask = new Bitmap(@"Mask\mask_gtr47.png");
+                Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr47.png");
                 if (radioButton_42.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(@"Mask\mask_gtr42.png");
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr42.png");
                 }
                 if (radioButton_gts.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(@"Mask\mask_gts.png");
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts.png");
                 }
                 if (radioButton_TRex.Checked || radioButton_Verge.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(@"Mask\mask_trex.png");
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
-                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, 0);
+                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, 0);
                 if(checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
                 bitmap.Save(saveFileDialog.FileName, ImageFormat.Png);
             }
+            Logger.WriteLine("* SavePNG(end)");
         }
 
         private void button_SaveGIF_Click(object sender, EventArgs e)
         {
+            Logger.WriteLine("* SaveGIF");
             SaveFileDialog saveFileDialog = new SaveFileDialog();
-            //openFileDialog.InitialDirectory = subPath;
+            saveFileDialog.InitialDirectory = FullFileDir;
             saveFileDialog.Filter = "GIF Files: (*.gif)|*.gif";
             saveFileDialog.FileName = "Preview.gif";
             //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
@@ -5651,21 +5982,21 @@ namespace GTR_Watch_face
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
-                Bitmap mask = new Bitmap(@"Mask\mask_gtr47.png");
+                Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr47.png");
                 if (radioButton_42.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(@"Mask\mask_gtr42.png");
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr42.png");
                 }
                 if (radioButton_gts.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(@"Mask\mask_gts.png");
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts.png");
                 }
                 if (radioButton_TRex.Checked || radioButton_Verge.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(@"Mask\mask_trex.png");
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 bool save = false;
@@ -5784,6 +6115,7 @@ namespace GTR_Watch_face
 
                         if (save)
                         {
+                            Logger.WriteLine("SaveGIF SetPreferences1(" + i.ToString() + ")");
                             int WeatherSet_Temp = (int)numericUpDown_WeatherSet_Temp.Value;
                             int WeatherSet_DayTemp = (int)numericUpDown_WeatherSet_DayTemp.Value;
                             int WeatherSet_NightTemp = (int)numericUpDown_WeatherSet_NightTemp.Value;
@@ -5794,7 +6126,7 @@ namespace GTR_Watch_face
                             numericUpDown_WeatherSet_NightTemp.Value = numericUpDown_WeatherSet_Temp.Value - rnd.Next(3, 10);
                             comboBox_WeatherSet_Icon.SelectedIndex = rnd.Next(0, 25);
 
-                            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, 0);
+                            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, 0);
                             if (checkBox_crop.Checked) {
                                 bitmap = ApplyMask(bitmap, mask);
                                 gPanel = Graphics.FromImage(bitmap);
@@ -5828,30 +6160,38 @@ namespace GTR_Watch_face
                 PreviewView = true;
                 mask.Dispose();
             }
+            Logger.WriteLine("* SaveGIF (end)");
         }
 
         public Bitmap ApplyMask(Bitmap inputImage, Bitmap mask)
         {
+            Logger.WriteLine("* ApplyMask");
             //ushort[] bgColors = { 203, 255, 240 };
             ImageMagick.MagickImage image = new ImageMagick.MagickImage(inputImage);
             //ImageMagick.MagickImage image = new ImageMagick.MagickImage("0.png");
             ImageMagick.MagickImage combineMask = new ImageMagick.MagickImage(mask);
 
-            image.Composite(combineMask, ImageMagick.CompositeOperator.CopyAlpha, Channels.Alpha);
+            //image.Composite(combineMask, ImageMagick.CompositeOperator.CopyAlpha, Channels.Alpha);
+            image.Composite(combineMask, ImageMagick.CompositeOperator.In, Channels.Alpha);
             //image.Settings.BackgroundColor = new ImageMagick.MagickColor(bgColors[0], bgColors[1], bgColors[2]);
             //image.Alpha(ImageMagick.AlphaOption.Remove);
             //image.Transparent(ImageMagick.MagickColor.FromRgba(0, 0, 0, 0));
 
+            Logger.WriteLine("* ApplyMask (end)");
             return image.ToBitmap();
         }
 
+        // изменили модель часов
         private void radioButton_Model_Changed(object sender, EventArgs e)
         {
+            RadioButton radioButton = sender as RadioButton;
+            if (radioButton != null && !radioButton.Checked) return;
             if (radioButton_47.Checked)
             {
                 //this.Text = "GTR watch face editor";
-                panel_Preview.Height = 230;
-                panel_Preview.Width = 230;
+                //pictureBox_Preview.Height = 230;
+                //pictureBox_Preview.Width = 230;
+                pictureBox_Preview.Size = new Size((int)(230 * currentDPI), (int)(230 * currentDPI));
                 offSet_X = 227;
                 offSet_Y = 227;
                 
@@ -5865,8 +6205,9 @@ namespace GTR_Watch_face
             else if (radioButton_42.Checked)
             {
                 //this.Text = "GTR watch face editor";
-                panel_Preview.Height = 198;
-                panel_Preview.Width = 198;
+                //pictureBox_Preview.Height = 198;
+                //pictureBox_Preview.Width = 198;
+                pictureBox_Preview.Size = new Size((int)(198 * currentDPI), (int)(198 * currentDPI));
                 offSet_X = 195;
                 offSet_Y = 195;
                 
@@ -5880,8 +6221,9 @@ namespace GTR_Watch_face
             else if (radioButton_gts.Checked)
             {
                 //this.Text = "GTS watch face editor";
-                panel_Preview.Height = 223;
-                panel_Preview.Width = 176;
+                //pictureBox_Preview.Height = 224;
+                //pictureBox_Preview.Width = 177;
+                pictureBox_Preview.Size = new Size((int)(177 * currentDPI), (int)(224 * currentDPI));
                 offSet_X = 174;
                 offSet_Y = 221;
                 
@@ -5895,8 +6237,9 @@ namespace GTR_Watch_face
             else if (radioButton_TRex.Checked)
             {
                 //this.Text = "T-Rex watch face editor";
-                panel_Preview.Height = 183;
-                panel_Preview.Width = 183;
+                //pictureBox_Preview.Height = 183;
+                //pictureBox_Preview.Width = 183;
+                pictureBox_Preview.Size = new Size((int)(183 * currentDPI), (int)(183 * currentDPI));
                 offSet_X = 180;
                 offSet_Y = 180;
 
@@ -5910,8 +6253,9 @@ namespace GTR_Watch_face
             else if (radioButton_Verge.Checked)
             {
                 //this.Text = "Verge Lite watch face editor";
-                panel_Preview.Height = 183;
-                panel_Preview.Width = 183;
+                //pictureBox_Preview.Height = 183;
+                //pictureBox_Preview.Width = 183;
+                pictureBox_Preview.Size = new Size((int)(183 * currentDPI), (int)(183 * currentDPI));
                 offSet_X = 180;
                 offSet_Y = 180;
 
@@ -5922,6 +6266,20 @@ namespace GTR_Watch_face
                 button_pack.Enabled = true;
                 button_zip.Enabled = true;
             }
+            // изменяем размер фопанели для предпросмотра если она не влазит
+            if (pictureBox_Preview.Top + pictureBox_Preview.Height > radioButton_47.Top)
+            {
+                float newHeight = radioButton_47.Top - pictureBox_Preview.Top;
+                float scale = newHeight / pictureBox_Preview.Height;
+                pictureBox_Preview.Size = new Size((int)(pictureBox_Preview.Width * scale), (int)(pictureBox_Preview.Height * scale));
+            }
+
+            //if (pictureBox_Preview.Top + pictureBox_Preview.Height > 200)
+            //{
+            //    float newHeight = 200 - pictureBox_Preview.Top;
+            //    float scale = newHeight / pictureBox_Preview.Height;
+            //    pictureBox_Preview.Size = new Size((int)(pictureBox_Preview.Width * scale), (int)(pictureBox_Preview.Height * scale));
+            //}
             FormText();
 
             if ((formPreview != null) && (formPreview.Visible))
@@ -5956,6 +6314,7 @@ namespace GTR_Watch_face
             PreviewImage();
         }
 
+        // устанавливаем заголовок окна
         private void FormText()
         {
             //throw new NotImplementedException(); FileName
@@ -5999,28 +6358,29 @@ namespace GTR_Watch_face
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            timer2.Enabled = false;
-            if ((formPreview != null) && (formPreview.Visible))
-            {
-                Form_Preview.Model_Wath.model_gtr47 = radioButton_47.Checked;
-                Form_Preview.Model_Wath.model_gtr42 = radioButton_42.Checked;
-                Form_Preview.Model_Wath.model_gts = radioButton_gts.Checked;
-                Graphics gPanelPreviewPaint = formPreview.panel_Preview.CreateGraphics();
-                gPanelPreviewPaint.Clear(panel_Preview.BackColor);
-                formPreview.radioButton_CheckedChanged(sender, e);
-                float scalePreviewPaint = 1.0f;
-                if (formPreview.radioButton_small.Checked) scalePreviewPaint = 0.5f;
-                if (formPreview.radioButton_large.Checked) scalePreviewPaint = 1.5f;
-                if (formPreview.radioButton_xlarge.Checked) scalePreviewPaint = 2.0f;
-                if (formPreview.radioButton_xxlarge.Checked) scalePreviewPaint = 2.5f;
-                PreviewToBitmap(gPanelPreviewPaint, scalePreviewPaint, checkBox_crop.Checked,
-                    checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked, 
-                    checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true, 0);
-                gPanelPreviewPaint.Dispose();
-            }
+            //timer2.Enabled = false;
+            //if ((formPreview != null) && (formPreview.Visible))
+            //{
+            //    Form_Preview.Model_Wath.model_gtr47 = radioButton_47.Checked;
+            //    Form_Preview.Model_Wath.model_gtr42 = radioButton_42.Checked;
+            //    Form_Preview.Model_Wath.model_gts = radioButton_gts.Checked;
+            //    Graphics gPanelPreviewPaint = formPreview.panel_Preview.CreateGraphics();
+            //    //gPanelPreviewPaint.Clear(panel_Preview.BackColor);
+            //    formPreview.radioButton_CheckedChanged(sender, e);
+            //    float scalePreviewPaint = 1.0f;
+            //    if (formPreview.radioButton_small.Checked) scalePreviewPaint = 0.5f;
+            //    if (formPreview.radioButton_large.Checked) scalePreviewPaint = 1.5f;
+            //    if (formPreview.radioButton_xlarge.Checked) scalePreviewPaint = 2.0f;
+            //    if (formPreview.radioButton_xxlarge.Checked) scalePreviewPaint = 2.5f;
+            //    PreviewToBitmap(gPanelPreviewPaint, scalePreviewPaint, checkBox_crop.Checked,
+            //        checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked, 
+            //        checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true, 0);
+            //    gPanelPreviewPaint.Dispose();
+            //}
         }
 
-        private void panel_Preview_MouseMove(object sender, MouseEventArgs e)
+        // координаты в заголовке при перемещении мыши
+        private void pictureBox_Preview_MouseMove(object sender, MouseEventArgs e)
         {
             int CursorX = e.X;
             int CursorY = e.Y;
@@ -6032,7 +6392,7 @@ namespace GTR_Watch_face
             label_preview_Y.Visible = true;
         }
 
-        private void panel_Preview_MouseLeave(object sender, EventArgs e)
+        private void pictureBox_Preview_MouseLeave(object sender, EventArgs e)
         {
             label_preview_X.Visible = false;
             label_preview_Y.Visible = false;
@@ -6366,6 +6726,16 @@ namespace GTR_Watch_face
             });
             File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
         }
+        private void checkBox_CircleScaleImage_CheckedChanged(object sender, EventArgs e)
+        {
+            Program_Settings.Show_CircleScale_Area = checkBox_CircleScaleImage.Checked;
+            string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+            {
+                //DefaultValueHandling = DefaultValueHandling.Ignore,
+                NullValueHandling = NullValueHandling.Ignore
+            });
+            File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
+        }
         private void textBox_unpack_command_Leave(object sender, EventArgs e)
         {
             if (radioButton_47.Checked)
@@ -6518,6 +6888,18 @@ namespace GTR_Watch_face
             try
             {
                 double sizeinbytes = file.Length;
+                double sizeinkbytes = Math.Round((sizeinbytes / 1024), 2);
+                double sizeinmbytes = Math.Round((sizeinkbytes / 1024), 2);
+                double sizeingbytes = Math.Round((sizeinmbytes / 1024), 2);
+                return sizeinmbytes;
+            }
+            catch { return 0; } //перехват ошибок и возврат сообщения об ошибке
+        }
+        public double GetFileSizeMB(double sizeinbytes)
+        {
+            try
+            {
+                //double sizeinbytes = file.Length;
                 double sizeinkbytes = Math.Round((sizeinbytes / 1024), 2);
                 double sizeinmbytes = Math.Round((sizeinkbytes / 1024), 2);
                 double sizeingbytes = Math.Round((sizeinmbytes / 1024), 2);
@@ -6851,15 +7233,21 @@ namespace GTR_Watch_face
             System.Diagnostics.Process.Start("https://github.com/amazfitbip/py_amazfit_tools/releases/tag/v0.2-beta");
         }
 
+        private void linkLabel_resunpacker_qzip_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/amazfitbip/resunpacker_qzip");
+        }
+
         private void linkLabel_help_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //helpProvider1.SetHelpNavigator(this, HelpNavigator.Topic);
             //helpProvider1.SetHelpKeyword(this, "kratkaya_instruktsiya.htm");
             //SendKeys.Send("{F1}");
             //Help.ShowHelp(this, Application.StartupPath + Properties.FormStrings.File_ReadMy);
-            string helpfile = Application.StartupPath + Properties.FormStrings.File_ReadMy;
+            string help_file = Application.StartupPath + Properties.FormStrings.File_ReadMy;
+            string help_start = Properties.FormStrings.File_ReadMy_Start;
             HelpNavigator navigator = HelpNavigator.Topic;
-            Help.ShowHelp(this, helpfile, navigator, "kratkaya_instruktsiya.htm");
+            Help.ShowHelp(this, help_file, navigator, help_start);
         }
 
         private void checkBox_Shortcuts_Area_CheckedChanged(object sender, EventArgs e)
@@ -6910,7 +7298,7 @@ namespace GTR_Watch_face
             int Animation_SpeedAnimation = (int)numericUpDown_StaticAnimation_SpeedAnimation.Value;
             int Animation_TimeAnimation = (Animation_Count * Animation_CyclesCount * Animation_SpeedAnimation) - Animation_SpeedAnimation;
             if (Animation_TimeAnimation < 0) Animation_TimeAnimation = 0;
-            if (Animation_TimeAnimation != (int)numericUpDown_StaticAnimation_TimeAnimation.Value && Animation_CyclesCount != 0)
+            if (Animation_TimeAnimation != (int)numericUpDown_StaticAnimation_TimeAnimation.Value && Animation_CyclesCount >= 0)
                 numericUpDown_StaticAnimation_TimeAnimation.Value = Animation_TimeAnimation;
         }
 
@@ -6923,7 +7311,8 @@ namespace GTR_Watch_face
             int Animation_CyclesCount = (Animation_TimeAnimation + Animation_SpeedAnimation) /
                 (Animation_SpeedAnimation * Animation_Count);
             if (Animation_CyclesCount != (Animation_TimeAnimation + Animation_SpeedAnimation) / 
-                (float)(Animation_SpeedAnimation * Animation_Count)) Animation_CyclesCount = 0;
+                (float)(Animation_SpeedAnimation * Animation_Count)) Animation_CyclesCount = -1;
+            if (Animation_TimeAnimation == 0) Animation_CyclesCount = 0;
             if (Animation_CyclesCount != (int)numericUpDown_StaticAnimation_CyclesCount.Value)
                 numericUpDown_StaticAnimation_CyclesCount.Value = Animation_CyclesCount;
 
@@ -6935,7 +7324,7 @@ namespace GTR_Watch_face
         private void numericUpDown_StaticAnimation_Count_ValueChanged(object sender, EventArgs e)
         {
             int Animation_CyclesCount = (int)numericUpDown_StaticAnimation_CyclesCount.Value;
-            if (Animation_CyclesCount != 0)
+            if (Animation_CyclesCount >= 0)
             {
                 int Animation_Count = (int)numericUpDown_StaticAnimation_Count.Value;
                 int Animation_SpeedAnimation = (int)numericUpDown_StaticAnimation_SpeedAnimation.Value;
@@ -7201,24 +7590,24 @@ namespace GTR_Watch_face
         private void button_ShowAnimation_Click(object sender, EventArgs e)
         {
             Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
-            Bitmap mask = new Bitmap(@"Mask\mask_gtr47.png");
+            Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr47.png");
             if (radioButton_42.Checked)
             {
                 bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
-                mask = new Bitmap(@"Mask\mask_gtr42.png");
+                mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr42.png");
             }
             if (radioButton_gts.Checked)
             {
                 bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
-                mask = new Bitmap(@"Mask\mask_gts.png");
+                mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts.png");
             }
             if (radioButton_TRex.Checked || radioButton_Verge.Checked)
             {
                 bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
-                mask = new Bitmap(@"Mask\mask_trex.png");
+                mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
             }
             Graphics gPanel = Graphics.FromImage(bitmap);
-            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false, 1);
+            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false, false, 1);
             if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
             Image loadedImage = null;
 
@@ -7281,7 +7670,7 @@ namespace GTR_Watch_face
                     //if (i < ListImagesFullName.Count) Images.Add(new Bitmap(ListImagesFullName[i]));
                 }
             }
-            loadedImage.Dispose();
+            if (loadedImage !=null) loadedImage.Dispose();
             if (Images.Count > 0)
             {
                 StaticAnimation = new ClassStaticAnimation(Images, (int)numericUpDown_StaticAnimation_X.Value,
@@ -7290,38 +7679,41 @@ namespace GTR_Watch_face
 
             }
 
-            FormAnimation formAnimation = new FormAnimation(bitmap, MotiomAnimation, StaticAnimation);
-            formAnimation.Owner = this;
-            if (FormAnimation.Model_Wath.model_gtr47 != radioButton_47.Checked)
-                FormAnimation.Model_Wath.model_gtr47 = radioButton_47.Checked;
-            if (FormAnimation.Model_Wath.model_gtr42 != radioButton_42.Checked)
-                FormAnimation.Model_Wath.model_gtr42 = radioButton_42.Checked;
-            if (FormAnimation.Model_Wath.model_gts != radioButton_gts.Checked)
-                FormAnimation.Model_Wath.model_gts = radioButton_gts.Checked;
-            if (FormAnimation.Model_Wath.model_TRex != radioButton_TRex.Checked)
-                FormAnimation.Model_Wath.model_TRex = radioButton_TRex.Checked;
-            if (FormAnimation.Model_Wath.model_Verge != radioButton_Verge.Checked)
-                FormAnimation.Model_Wath.model_Verge = radioButton_Verge.Checked;
-
-            switch (comboBox_Animation_Preview_Speed.SelectedIndex)
+            if (MotiomAnimation.Count > 0 || StaticAnimation != null)
             {
-                case 0:
-                    formAnimation.timer1.Interval = 20;
-                    break;
-                case 1:
-                    formAnimation.timer1.Interval = 25;
-                    break;
-                case 2:
-                    formAnimation.timer1.Interval = 33;
-                    break;
-                case 3:
-                    formAnimation.timer1.Interval = 50;
-                    break;
-                case 4:
-                    formAnimation.timer1.Interval = 100;
-                    break;
+                FormAnimation formAnimation = new FormAnimation(bitmap, MotiomAnimation, StaticAnimation, currentDPI);
+                formAnimation.Owner = this;
+                if (FormAnimation.Model_Wath.model_gtr47 != radioButton_47.Checked)
+                    FormAnimation.Model_Wath.model_gtr47 = radioButton_47.Checked;
+                if (FormAnimation.Model_Wath.model_gtr42 != radioButton_42.Checked)
+                    FormAnimation.Model_Wath.model_gtr42 = radioButton_42.Checked;
+                if (FormAnimation.Model_Wath.model_gts != radioButton_gts.Checked)
+                    FormAnimation.Model_Wath.model_gts = radioButton_gts.Checked;
+                if (FormAnimation.Model_Wath.model_TRex != radioButton_TRex.Checked)
+                    FormAnimation.Model_Wath.model_TRex = radioButton_TRex.Checked;
+                if (FormAnimation.Model_Wath.model_Verge != radioButton_Verge.Checked)
+                    FormAnimation.Model_Wath.model_Verge = radioButton_Verge.Checked;
+
+                switch (comboBox_Animation_Preview_Speed.SelectedIndex)
+                {
+                    case 0:
+                        formAnimation.timer1.Interval = 20;
+                        break;
+                    case 1:
+                        formAnimation.timer1.Interval = 25;
+                        break;
+                    case 2:
+                        formAnimation.timer1.Interval = 33;
+                        break;
+                    case 3:
+                        formAnimation.timer1.Interval = 50;
+                        break;
+                    case 4:
+                        formAnimation.timer1.Interval = 100;
+                        break;
+                }
+                formAnimation.ShowDialog(); 
             }
-            formAnimation.ShowDialog();
 
             //formAnimation.FormClosed += (object senderClosed, FormClosedEventArgs eClosed) =>
             //{
@@ -7348,7 +7740,13 @@ namespace GTR_Watch_face
                 {
                     SaveFileDialog saveFileDialog = new SaveFileDialog();
                     saveFileDialog.InitialDirectory = FullFileDir;
-                    saveFileDialog.FileName = FileName;
+                    saveFileDialog.FileName = FileName; if (FileName == null || FileName.Length == 0)
+                    {
+                        if (FullFileDir != null && FullFileDir.Length > 3)
+                        {
+                            saveFileDialog.FileName = Path.GetFileName(FullFileDir);
+                        }
+                    }
                     saveFileDialog.Filter = "Json files (*.json) | *.json";
 
                     //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
@@ -7394,6 +7792,1045 @@ namespace GTR_Watch_face
                     Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void tabControl1_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            if(e.TabPage.Name == "tabPageConverting")
+            {
+                if (radioButton_47.Checked)
+                {
+                    radioButton_ConvertingInput_GTR47.Checked = true;
+                    numericUpDown_ConvertingInput_Custom.Value = 454;
+                }
+                if (radioButton_42.Checked)
+                {
+                    radioButton_ConvertingInput_GTR42.Checked = true;
+                    numericUpDown_ConvertingInput_Custom.Value = 390;
+                }
+                if (radioButton_TRex.Checked)
+                {
+                    radioButton_ConvertingInput_TRex.Checked = true;
+                    numericUpDown_ConvertingInput_Custom.Value = 360;
+                }
+                if (radioButton_Verge.Checked)
+                {
+                    radioButton_ConvertingInput_Verge.Checked = true;
+                    numericUpDown_ConvertingInput_Custom.Value = 360;
+                }
+                numericUpDown_ConvertingInput_Custom.Enabled = radioButton_ConvertingInput_Custom.Checked;
+            }
+            if (FileName != null && FullFileDir != null)
+            {
+                button_Converting.Enabled = true;
+                label486.Visible = false;
+            }
+            else
+            {
+                button_Converting.Enabled = false;
+                label486.Visible = true;
+            }
+        }
+
+        private void radioButton_ConvertingInput_Custom_CheckedChanged(object sender, EventArgs e)
+        {
+            numericUpDown_ConvertingInput_Custom.Enabled = radioButton_ConvertingInput_Custom.Checked;
+        }
+
+        private void radioButton_ConvertingOutput_Custom_CheckedChanged(object sender, EventArgs e)
+        {
+            numericUpDown_ConvertingOutput_Custom.Enabled = radioButton_ConvertingOutput_Custom.Checked;
+        }
+
+        #region Shortcuts_Width_Height
+        private void numericUpDown_Shortcuts_Steps_Width_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.X < 0) return;
+            int value = MouseСoordinates.X - (int)numericUpDown_Shortcuts_Steps_X.Value;
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+
+        private void numericUpDown_Shortcuts_Steps_Height_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.Y < 0) return;
+            int value = MouseСoordinates.Y - (int)numericUpDown_Shortcuts_Steps_Y.Value;
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+
+        private void numericUpDown_Shortcuts_Puls_Width_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.X < 0) return;
+            int value = MouseСoordinates.X - (int)numericUpDown_Shortcuts_Puls_X.Value;
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+
+        private void numericUpDown_Shortcuts_Puls_Height_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.Y < 0) return;
+            int value = MouseСoordinates.Y - (int)numericUpDown_Shortcuts_Puls_Y.Value;
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+
+        private void numericUpDown_Shortcuts_Weather_Width_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.X < 0) return;
+            int value = MouseСoordinates.X - (int)numericUpDown_Shortcuts_Weather_X.Value;
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+
+        private void numericUpDown_Shortcuts_Weather_Height_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.Y < 0) return;
+            int value = MouseСoordinates.Y - (int)numericUpDown_Shortcuts_Weather_Y.Value;
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+
+        private void numericUpDown_Shortcuts_Energy_Width_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.X < 0) return;
+            int value = MouseСoordinates.X - (int)numericUpDown_Shortcuts_Energy_X.Value;
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+
+        private void numericUpDown_Shortcuts_Energy_Height_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.Y < 0) return;
+            int value = MouseСoordinates.Y - (int)numericUpDown_Shortcuts_Energy_Y.Value;
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if ((e.X <= numericUpDown.Controls[1].Width + 1) && (value > 0))
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+        #endregion
+
+        private void button_Converting_Click(object sender, EventArgs e)
+        {
+            if (FileName != null && FullFileDir != null)
+            {
+                if (JSON_Modified) // сохранение если файл не сохранен
+                {
+                    DialogResult dr = MessageBox.Show(Properties.FormStrings.Message_Save_JSON_Modified_Text1 +
+                            Path.GetFileNameWithoutExtension(FileName) + Properties.FormStrings.Message_Save_JSON_Modified_Text2,
+                            Properties.FormStrings.Message_Save_JSON_Modified_Caption, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                    if (dr == DialogResult.Yes)
+                    {
+                        string fullfilename = Path.Combine(FullFileDir, FileName);
+                        File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+                        JSON_Modified = false;
+                        FormText();
+                        if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
+                    }
+                    if (dr == DialogResult.Cancel)
+                    {
+                        return;
+                    }
+                }
+                
+                int DeviceId = 40;
+                string suffix = "_GTR_47";
+                float scale = 1;
+                if (radioButton_ConvertingOutput_GTR42.Checked)
+                {
+                    suffix = "_GTR_42";
+                    DeviceId = 42;
+                }
+                if (radioButton_ConvertingOutput_TRex.Checked)
+                {
+                    suffix = "_T-Rex";
+                    DeviceId = 52;
+                }
+                if (radioButton_ConvertingOutput_Verge.Checked)
+                {
+                    suffix = "_Verge_Lite";
+                    DeviceId = 32;
+                }
+                if (radioButton_ConvertingOutput_Custom.Checked)
+                {
+                    suffix = "_Custom";
+                    DeviceId = 0;
+                }
+
+                if (radioButton_ConvertingInput_GTR47.Checked)
+                {
+                    if (radioButton_ConvertingOutput_GTR47.Checked) scale = 454 / 454f;
+                    if (radioButton_ConvertingOutput_GTR42.Checked) scale = 390 / 454f;
+                    if (radioButton_ConvertingOutput_TRex.Checked) scale = 360 / 454f;
+                    if (radioButton_ConvertingOutput_Verge.Checked) scale = 360 / 454f;
+                    if (radioButton_ConvertingOutput_Custom.Checked)
+                        scale = (float)(numericUpDown_ConvertingOutput_Custom.Value / 454);
+                }
+                if (radioButton_ConvertingInput_GTR42.Checked)
+                {
+                    if (radioButton_ConvertingOutput_GTR47.Checked) scale = 454 / 390f;
+                    if (radioButton_ConvertingOutput_GTR42.Checked) scale = 390 / 390f;
+                    if (radioButton_ConvertingOutput_TRex.Checked) scale = 360 / 390f;
+                    if (radioButton_ConvertingOutput_Verge.Checked) scale = 360 / 390f;
+                    if (radioButton_ConvertingOutput_Custom.Checked)
+                        scale = (float)(numericUpDown_ConvertingOutput_Custom.Value / 390);
+                }
+                if (radioButton_ConvertingInput_TRex.Checked || radioButton_ConvertingInput_Verge.Checked)
+                {
+                    if (radioButton_ConvertingOutput_GTR47.Checked) scale = 454 / 360f;
+                    if (radioButton_ConvertingOutput_GTR42.Checked) scale = 390 / 360f;
+                    if (radioButton_ConvertingOutput_TRex.Checked) scale = 360 / 360f;
+                    if (radioButton_ConvertingOutput_Verge.Checked) scale = 360 / 360f;
+                    if (radioButton_ConvertingOutput_Custom.Checked)
+                        scale = (float)(numericUpDown_ConvertingOutput_Custom.Value / 360);
+                }
+                if (radioButton_ConvertingInput_Custom.Checked)
+                {
+                    float value = (float)numericUpDown_ConvertingInput_Custom.Value;
+                    if (radioButton_ConvertingOutput_GTR47.Checked) scale = 454 / value;
+                    if (radioButton_ConvertingOutput_GTR42.Checked) scale = 390 / value;
+                    if (radioButton_ConvertingOutput_TRex.Checked) scale = 360 / value;
+                    if (radioButton_ConvertingOutput_Verge.Checked) scale = 360 / value;
+                    if (radioButton_ConvertingOutput_Custom.Checked)
+                        scale = (float)numericUpDown_ConvertingOutput_Custom.Value / value;
+                }
+
+                string newFullDirName = FullFileDir + suffix;
+                string newDirName = Path.GetFileName(newFullDirName);
+                if (Directory.Exists(newFullDirName))
+                {
+                    //DialogResult dr = MessageBox.Show(Properties.FormStrings.Message_Save_JSON_Modified_Text1 +
+                    //    Path.GetFileNameWithoutExtension(FileName) + Properties.FormStrings.Message_Save_JSON_Modified_Text2,
+                    //    Properties.FormStrings.Message_Save_JSON_Modified_Caption, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                    DialogResult dr = MessageBox.Show(Properties.FormStrings.Message_WarningConverting_Text1
+                        + newDirName + Properties.FormStrings.Message_WarningConverting_Text2,
+                        Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (dr == DialogResult.Yes)
+                    {
+                        Directory.Delete(newFullDirName, true);
+                    }
+                    else return;
+                }
+
+                // Масштабируем изображения
+                Image loadedImage = null;
+                Directory.CreateDirectory(newFullDirName);
+                foreach (string ImageFullName in ListImagesFullName)
+                {
+                    using (FileStream stream = new FileStream(ImageFullName, FileMode.Open, FileAccess.Read))
+                    {
+                        loadedImage = Image.FromStream(stream);
+                    }
+                    string fileName = Path.GetFileName(ImageFullName);
+                    string newFullFileName = Path.Combine(newFullDirName, fileName);
+                    Bitmap bitmap = ResizeImage(loadedImage, scale);
+
+                    bitmap.Save(newFullFileName, ImageFormat.Png);
+                }
+                loadedImage = null;
+
+                JSON_Scale(scale, DeviceId);
+
+                string newFullFileNameJson = Path.Combine(newFullDirName,
+                    Path.GetFileNameWithoutExtension(FileName) + suffix + ".json");
+                string newJson = JsonConvert.SerializeObject(Watch_Face, Formatting.Indented, new JsonSerializerSettings
+                {
+                    //DefaultValueHandling = DefaultValueHandling.Ignore,
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+                File.WriteAllText(newFullFileNameJson, newJson, Encoding.UTF8);
+
+                LoadJsonAndImage(newFullFileNameJson);
+
+                MessageBox.Show(Properties.FormStrings.Message_ConvertingCompleted_Text,
+                        Properties.FormStrings.Message_Warning_Information, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show(Properties.FormStrings.Message_ConvertingCompleted_Text);
+            }
+        }
+
+        /// <summary>
+        /// Масштабирование изображения
+        /// </summary>
+        /// <param name="image">Исходное изображение</param>
+        /// <param name="scale">Масштаб</param>
+        /// <returns>The resized image.</returns>
+        public static Bitmap ResizeImage(Image image, float scale)
+        {
+            int width = (int)Math.Round(image.Width * scale);
+            int height = (int)Math.Round(image.Height * scale);
+            var destRect = new Rectangle(0, 0, width, height);
+            var destImage = new Bitmap(width, height);
+
+            destImage.SetResolution(image.HorizontalResolution, image.VerticalResolution);
+
+            using (var graphics = Graphics.FromImage(destImage))
+            {
+                graphics.CompositingMode = CompositingMode.SourceCopy;
+                graphics.CompositingQuality = CompositingQuality.HighQuality;
+                graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                graphics.SmoothingMode = SmoothingMode.HighQuality;
+                graphics.PixelOffsetMode = PixelOffsetMode.HighQuality;
+
+                using (var wrapMode = new ImageAttributes())
+                {
+                    wrapMode.SetWrapMode(WrapMode.TileFlipXY);
+                    graphics.DrawImage(image, destRect, 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, wrapMode);
+                }
+            }
+
+            return destImage;
+        }
+
+        private void JSON_Scale(float scale, int DeviceId)
+        {
+            if (Watch_Face == null) return;
+            if (DeviceId != 0)
+            {
+                if (Watch_Face.Info == null) Watch_Face.Info = new Device_Id();
+                Watch_Face.Info.DeviceId = DeviceId;
+            }
+
+            #region Time
+            if (Watch_Face.Time != null)
+            {
+                if (Watch_Face.Time.Hours != null)
+                {
+                    if (Watch_Face.Time.Hours.Tens != null)
+                    {
+                        Watch_Face.Time.Hours.Tens.X = (int)Math.Round(Watch_Face.Time.Hours.Tens.X * scale);
+                        Watch_Face.Time.Hours.Tens.Y = (int)Math.Round(Watch_Face.Time.Hours.Tens.Y * scale); 
+                    }
+
+                    if (Watch_Face.Time.Hours.Ones != null)
+                    {
+                        Watch_Face.Time.Hours.Ones.X = (int)Math.Round(Watch_Face.Time.Hours.Ones.X * scale);
+                        Watch_Face.Time.Hours.Ones.Y = (int)Math.Round(Watch_Face.Time.Hours.Ones.Y * scale); 
+                    }
+                }
+
+                if (Watch_Face.Time.Minutes != null)
+                {
+                    if (Watch_Face.Time.Minutes.Tens != null)
+                    {
+                        Watch_Face.Time.Minutes.Tens.X = (int)Math.Round(Watch_Face.Time.Minutes.Tens.X * scale);
+                        Watch_Face.Time.Minutes.Tens.Y = (int)Math.Round(Watch_Face.Time.Minutes.Tens.Y * scale); 
+                    }
+
+                    if (Watch_Face.Time.Minutes.Ones != null)
+                    {
+                        Watch_Face.Time.Minutes.Ones.X = (int)Math.Round(Watch_Face.Time.Minutes.Ones.X * scale);
+                        Watch_Face.Time.Minutes.Ones.Y = (int)Math.Round(Watch_Face.Time.Minutes.Ones.Y * scale); 
+                    }
+                }
+
+                if (Watch_Face.Time.Seconds != null)
+                {
+                    if (Watch_Face.Time.Seconds.Tens != null)
+                    {
+                        Watch_Face.Time.Seconds.Tens.X = (int)Math.Round(Watch_Face.Time.Seconds.Tens.X * scale);
+                        Watch_Face.Time.Seconds.Tens.Y = (int)Math.Round(Watch_Face.Time.Seconds.Tens.Y * scale); 
+                    }
+
+                    if (Watch_Face.Time.Seconds.Ones != null)
+                    {
+                        Watch_Face.Time.Seconds.Ones.X = (int)Math.Round(Watch_Face.Time.Seconds.Ones.X * scale);
+                        Watch_Face.Time.Seconds.Ones.Y = (int)Math.Round(Watch_Face.Time.Seconds.Ones.Y * scale); 
+                    }
+                }
+
+                if (Watch_Face.Time.Delimiter != null)
+                {
+                    Watch_Face.Time.Delimiter.X = (int)Math.Round(Watch_Face.Time.Delimiter.X * scale);
+                    Watch_Face.Time.Delimiter.Y = (int)Math.Round(Watch_Face.Time.Delimiter.Y * scale);
+                }
+
+                if (Watch_Face.Time.AmPm != null)
+                {
+                    Watch_Face.Time.AmPm.X = (int)Math.Round(Watch_Face.Time.AmPm.X * scale);
+                    Watch_Face.Time.AmPm.Y = (int)Math.Round(Watch_Face.Time.AmPm.Y * scale);
+                }
+            }
+            #endregion
+
+            #region Date
+            if (Watch_Face.Date != null)
+            {
+                if (Watch_Face.Date.WeekDay != null)
+                {
+                    Watch_Face.Date.WeekDay.X = (int)Math.Round(Watch_Face.Date.WeekDay.X * scale);
+                    Watch_Face.Date.WeekDay.Y = (int)Math.Round(Watch_Face.Date.WeekDay.Y * scale);
+                }
+
+                if ((Watch_Face.Date.WeekDayProgress != null) && (Watch_Face.Date.WeekDayProgress.Coordinates != null))
+                {
+                    foreach (Coordinates coordinates in Watch_Face.Date.WeekDayProgress.Coordinates)
+                    {
+                        coordinates.X = (int)Math.Round(coordinates.X * scale);
+                        coordinates.Y = (int)Math.Round(coordinates.Y * scale);
+                    }
+                }
+
+                if (Watch_Face.Date.MonthAndDay != null)
+                {
+                    if ((Watch_Face.Date.MonthAndDay.OneLine != null) && (Watch_Face.Date.MonthAndDay.OneLine.Number != null))
+                    {
+                        Watch_Face.Date.MonthAndDay.OneLine.Number.TopLeftX =
+                            (int)Math.Round(Watch_Face.Date.MonthAndDay.OneLine.Number.TopLeftX * scale);
+                        Watch_Face.Date.MonthAndDay.OneLine.Number.TopLeftY =
+                            (int)Math.Round(Watch_Face.Date.MonthAndDay.OneLine.Number.TopLeftY * scale);
+                        Watch_Face.Date.MonthAndDay.OneLine.Number.BottomRightX =
+                            (int)Math.Round(Watch_Face.Date.MonthAndDay.OneLine.Number.BottomRightX * scale);
+                        Watch_Face.Date.MonthAndDay.OneLine.Number.BottomRightY =
+                            (int)Math.Round(Watch_Face.Date.MonthAndDay.OneLine.Number.BottomRightY * scale);
+                    }
+
+                    if (Watch_Face.Date.MonthAndDay.Separate != null)
+                    {
+                        if (Watch_Face.Date.MonthAndDay.Separate.Day != null)
+                        {
+                            Watch_Face.Date.MonthAndDay.Separate.Day.TopLeftX =
+                                 (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Day.TopLeftX * scale);
+                            Watch_Face.Date.MonthAndDay.Separate.Day.TopLeftY =
+                                 (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Day.TopLeftY * scale);
+                            Watch_Face.Date.MonthAndDay.Separate.Day.BottomRightX =
+                                 (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Day.BottomRightX * scale);
+                            Watch_Face.Date.MonthAndDay.Separate.Day.BottomRightY =
+                                 (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Day.BottomRightY * scale);
+                        }
+
+                        if (Watch_Face.Date.MonthAndDay.Separate.Month != null)
+                        {
+                            Watch_Face.Date.MonthAndDay.Separate.Month.TopLeftX =
+                                (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Month.TopLeftX * scale);
+                            Watch_Face.Date.MonthAndDay.Separate.Month.TopLeftY =
+                                (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Month.TopLeftY * scale);
+                            Watch_Face.Date.MonthAndDay.Separate.Month.BottomRightX =
+                                (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Month.BottomRightX * scale);
+                            Watch_Face.Date.MonthAndDay.Separate.Month.BottomRightY =
+                                (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Month.BottomRightY * scale);
+                        }
+
+                        if (Watch_Face.Date.MonthAndDay.Separate.MonthName != null)
+                        {
+                            Watch_Face.Date.MonthAndDay.Separate.MonthName.X = 
+                                (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.MonthName.X * scale);
+                            Watch_Face.Date.MonthAndDay.Separate.MonthName.Y = 
+                                (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.MonthName.Y * scale);
+                        }
+                    }
+
+                }
+
+                if (Watch_Face.Date.Year != null)
+                {
+                    if ((Watch_Face.Date.Year.OneLine != null) && (Watch_Face.Date.Year.OneLine.Number != null))
+                    {
+                        Watch_Face.Date.Year.OneLine.Number.TopLeftX = (int)Math.Round(Watch_Face.Date.Year.OneLine.Number.TopLeftX * scale);
+                        Watch_Face.Date.Year.OneLine.Number.TopLeftY = (int)Math.Round(Watch_Face.Date.Year.OneLine.Number.TopLeftY * scale);
+                        Watch_Face.Date.Year.OneLine.Number.BottomRightX = (int)Math.Round(Watch_Face.Date.Year.OneLine.Number.BottomRightX * scale);
+                        Watch_Face.Date.Year.OneLine.Number.BottomRightY = (int)Math.Round(Watch_Face.Date.Year.OneLine.Number.BottomRightY * scale);
+                    }
+                }
+            }
+            #endregion
+
+            #region AnalogDate
+            if (Watch_Face.DaysProgress != null)
+            {
+                if ((Watch_Face.DaysProgress.UnknownField2 != null) && (Watch_Face.DaysProgress.UnknownField2.Image != null))
+                {
+                    Watch_Face.DaysProgress.UnknownField2.Image.X = (int)Math.Round(Watch_Face.DaysProgress.UnknownField2.Image.X * scale);
+                    Watch_Face.DaysProgress.UnknownField2.Image.Y = (int)Math.Round(Watch_Face.DaysProgress.UnknownField2.Image.Y * scale);
+                    if (Watch_Face.DaysProgress.UnknownField2.CenterOffset != null)
+                    {
+                        Watch_Face.DaysProgress.UnknownField2.CenterOffset.X =
+                            (int)Math.Round(Watch_Face.DaysProgress.UnknownField2.CenterOffset.X * scale);
+                        Watch_Face.DaysProgress.UnknownField2.CenterOffset.Y = 
+                            (int)Math.Round(Watch_Face.DaysProgress.UnknownField2.CenterOffset.Y * scale);
+
+                    }
+                }
+
+                if ((Watch_Face.DaysProgress.AnalogDOW != null) && (Watch_Face.DaysProgress.AnalogDOW.Image != null))
+                {
+                    Watch_Face.DaysProgress.AnalogDOW.Image.X = (int)Math.Round(Watch_Face.DaysProgress.AnalogDOW.Image.X * scale);
+                    Watch_Face.DaysProgress.AnalogDOW.Image.Y = (int)Math.Round(Watch_Face.DaysProgress.AnalogDOW.Image.Y * scale);
+                    if (Watch_Face.DaysProgress.AnalogDOW.CenterOffset != null)
+                    {
+                        Watch_Face.DaysProgress.AnalogDOW.CenterOffset.X =
+                            (int)Math.Round(Watch_Face.DaysProgress.AnalogDOW.CenterOffset.X * scale);
+                        Watch_Face.DaysProgress.AnalogDOW.CenterOffset.Y =
+                            (int)Math.Round(Watch_Face.DaysProgress.AnalogDOW.CenterOffset.Y * scale);
+
+                    }
+                }
+
+                if ((Watch_Face.DaysProgress.AnalogMonth != null) && (Watch_Face.DaysProgress.AnalogMonth.Image != null))
+                {
+                    Watch_Face.DaysProgress.AnalogMonth.Image.X = (int)Math.Round(Watch_Face.DaysProgress.AnalogMonth.Image.X * scale);
+                    Watch_Face.DaysProgress.AnalogMonth.Image.Y = (int)Math.Round(Watch_Face.DaysProgress.AnalogMonth.Image.Y * scale);
+                    if (Watch_Face.DaysProgress.AnalogMonth.CenterOffset != null)
+                    {
+                        Watch_Face.DaysProgress.AnalogMonth.CenterOffset.X = (int)Math.Round(Watch_Face.DaysProgress.AnalogMonth.CenterOffset.X * scale);
+                        Watch_Face.DaysProgress.AnalogMonth.CenterOffset.Y = (int)Math.Round(Watch_Face.DaysProgress.AnalogMonth.CenterOffset.Y * scale);
+                    }
+                }
+
+            }
+            #endregion
+
+            #region StepsProgress
+            if (Watch_Face.StepsProgress != null)
+            {
+                if (Watch_Face.StepsProgress.Circle != null)
+                {
+                    Watch_Face.StepsProgress.Circle.CenterX = (int)Math.Round(Watch_Face.StepsProgress.Circle.CenterX * scale);
+                    Watch_Face.StepsProgress.Circle.CenterY = (int)Math.Round(Watch_Face.StepsProgress.Circle.CenterY * scale);
+                    Watch_Face.StepsProgress.Circle.RadiusX = (int)Math.Round(Watch_Face.StepsProgress.Circle.RadiusX * scale);
+                    Watch_Face.StepsProgress.Circle.RadiusY = (int)Math.Round(Watch_Face.StepsProgress.Circle.RadiusY * scale);
+                    Watch_Face.StepsProgress.Circle.Width = (int)Math.Round(Watch_Face.StepsProgress.Circle.Width * scale);
+                    if (Watch_Face.StepsProgress.Circle.ImageIndex != null)
+                    {
+                        int x = 0;
+                        int y = 0;
+                        Color new_color = ColorRead(Watch_Face.StepsProgress.Circle.Color);
+                        ColorToCoodinates(new_color, out x, out y);
+                        x = (int)Math.Round(x * scale);
+                        y = (int)Math.Round(y * scale);
+                        string colorStr = CoodinatesToColor(x, y);
+                        Watch_Face.StepsProgress.Circle.Color = colorStr;
+                    }
+                }
+
+                if ((Watch_Face.StepsProgress.ClockHand != null) && (Watch_Face.StepsProgress.ClockHand.Image != null))
+                {
+                    Watch_Face.StepsProgress.ClockHand.Image.X = (int)Math.Round(Watch_Face.StepsProgress.ClockHand.Image.X * scale);
+                    Watch_Face.StepsProgress.ClockHand.Image.Y = (int)Math.Round(Watch_Face.StepsProgress.ClockHand.Image.Y * scale);
+                    if (Watch_Face.StepsProgress.ClockHand.CenterOffset != null)
+                    {
+                        Watch_Face.StepsProgress.ClockHand.CenterOffset.X =
+                            (int)Math.Round(Watch_Face.StepsProgress.ClockHand.CenterOffset.X * scale);
+                        Watch_Face.StepsProgress.ClockHand.CenterOffset.Y =
+                            (int)Math.Round(Watch_Face.StepsProgress.ClockHand.CenterOffset.Y * scale);
+                    }
+                }
+
+                if ((Watch_Face.StepsProgress.Sliced != null) && (Watch_Face.StepsProgress.Sliced.Coordinates != null))
+                {
+                    foreach (Coordinates coordinates in Watch_Face.StepsProgress.Sliced.Coordinates)
+                    {
+                        coordinates.X = (int)Math.Round(coordinates.X * scale);
+                        coordinates.Y = (int)Math.Round(coordinates.Y * scale);
+                    }
+                }
+            }
+            #endregion
+
+            #region Activity
+            if (Watch_Face.Activity != null)
+            {
+                if ((Watch_Face.Activity.Steps != null) && (Watch_Face.Activity.Steps.Step != null))
+                {
+                    Watch_Face.Activity.Steps.Step.TopLeftX = (int)Math.Round(Watch_Face.Activity.Steps.Step.TopLeftX * scale);
+                    Watch_Face.Activity.Steps.Step.TopLeftY = (int)Math.Round(Watch_Face.Activity.Steps.Step.TopLeftY * scale);
+                    Watch_Face.Activity.Steps.Step.BottomRightX = (int)Math.Round(Watch_Face.Activity.Steps.Step.BottomRightX * scale);
+                    Watch_Face.Activity.Steps.Step.BottomRightY = (int)Math.Round(Watch_Face.Activity.Steps.Step.BottomRightY * scale);
+                }
+
+                if ((Watch_Face.Activity.Distance != null) && (Watch_Face.Activity.Distance.Number != null))
+                {
+                    Watch_Face.Activity.Distance.Number.TopLeftX = (int)Math.Round(Watch_Face.Activity.Distance.Number.TopLeftX * scale);
+                    Watch_Face.Activity.Distance.Number.TopLeftY = (int)Math.Round(Watch_Face.Activity.Distance.Number.TopLeftY * scale);
+                    Watch_Face.Activity.Distance.Number.BottomRightX = (int)Math.Round(Watch_Face.Activity.Distance.Number.BottomRightX * scale);
+                    Watch_Face.Activity.Distance.Number.BottomRightY = (int)Math.Round(Watch_Face.Activity.Distance.Number.BottomRightY * scale);
+                }
+
+                if (Watch_Face.Activity.Pulse != null)
+                {
+                    Watch_Face.Activity.Pulse.TopLeftX = (int)Math.Round(Watch_Face.Activity.Pulse.TopLeftX * scale);
+                    Watch_Face.Activity.Pulse.TopLeftY = (int)Math.Round(Watch_Face.Activity.Pulse.TopLeftY * scale);
+                    Watch_Face.Activity.Pulse.BottomRightX = (int)Math.Round(Watch_Face.Activity.Pulse.BottomRightX * scale);
+                    Watch_Face.Activity.Pulse.BottomRightY = (int)Math.Round(Watch_Face.Activity.Pulse.BottomRightY * scale);
+                }
+
+                if (Watch_Face.Activity.PulseMeter != null)
+                {
+                    Watch_Face.Activity.PulseMeter.CenterX = (int)Math.Round(Watch_Face.Activity.PulseMeter.CenterX * scale);
+                    Watch_Face.Activity.PulseMeter.CenterY = (int)Math.Round(Watch_Face.Activity.PulseMeter.CenterY * scale);
+                    Watch_Face.Activity.PulseMeter.RadiusX = (int)Math.Round(Watch_Face.Activity.PulseMeter.RadiusX * scale);
+                    Watch_Face.Activity.PulseMeter.RadiusY = (int)Math.Round(Watch_Face.Activity.PulseMeter.RadiusY * scale);
+                    Watch_Face.Activity.PulseMeter.Width = (int)Math.Round(Watch_Face.Activity.PulseMeter.Width * scale);
+                    if (Watch_Face.Activity.PulseMeter.ImageIndex != null)
+                    {
+                        int x = 0;
+                        int y = 0;
+                        Color new_color = ColorRead(Watch_Face.Activity.PulseMeter.Color);
+                        ColorToCoodinates(new_color, out x, out y);
+                        x = (int)Math.Round(x * scale);
+                        y = (int)Math.Round(y * scale);
+                        string colorStr = CoodinatesToColor(x, y);
+                        Watch_Face.Activity.PulseMeter.Color = colorStr;
+                    }
+                }
+
+                if ((Watch_Face.Activity.PulseGraph != null) &&
+                    (Watch_Face.Activity.PulseGraph.ClockHand != null) &&
+                    (Watch_Face.Activity.PulseGraph.ClockHand.Image != null))
+                {
+                    Watch_Face.Activity.PulseGraph.ClockHand.Image.X = (int)Math.Round(Watch_Face.Activity.PulseGraph.ClockHand.Image.X * scale);
+                    Watch_Face.Activity.PulseGraph.ClockHand.Image.Y = (int)Math.Round(Watch_Face.Activity.PulseGraph.ClockHand.Image.Y * scale);
+                    if (Watch_Face.Activity.PulseGraph.ClockHand.CenterOffset != null)
+                    {
+                        Watch_Face.Activity.PulseGraph.ClockHand.CenterOffset.X =
+                            (int)Math.Round(Watch_Face.Activity.PulseGraph.ClockHand.CenterOffset.X * scale);
+                        Watch_Face.Activity.PulseGraph.ClockHand.CenterOffset.Y =
+                            (int)Math.Round(Watch_Face.Activity.PulseGraph.ClockHand.CenterOffset.Y * scale);
+                    }
+                }
+
+                if ((Watch_Face.Activity.ColouredSquares != null) &&
+                    (Watch_Face.Activity.ColouredSquares.Coordinates != null))
+                {
+                    foreach (Coordinates coordinates in Watch_Face.Activity.ColouredSquares.Coordinates)
+                    {
+                        coordinates.X = (int)Math.Round(coordinates.X * scale);
+                        coordinates.Y = (int)Math.Round(coordinates.Y * scale);
+                    }
+                }
+
+                if (Watch_Face.Activity.Calories != null)
+                {
+                    Watch_Face.Activity.Calories.TopLeftX = (int)Math.Round(Watch_Face.Activity.Calories.TopLeftX * scale);
+                    Watch_Face.Activity.Calories.TopLeftY = (int)Math.Round(Watch_Face.Activity.Calories.TopLeftY * scale);
+                    Watch_Face.Activity.Calories.BottomRightX = (int)Math.Round(Watch_Face.Activity.Calories.BottomRightX * scale);
+                    Watch_Face.Activity.Calories.BottomRightY = (int)Math.Round(Watch_Face.Activity.Calories.BottomRightY * scale);
+                }
+                
+                if (Watch_Face.Activity.CaloriesGraph != null && Watch_Face.Activity.CaloriesGraph.Circle != null)
+                {
+                    Watch_Face.Activity.CaloriesGraph.Circle.CenterX = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.Circle.CenterX * scale);
+                    Watch_Face.Activity.CaloriesGraph.Circle.CenterY = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.Circle.CenterY * scale);
+                    Watch_Face.Activity.CaloriesGraph.Circle.RadiusX = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.Circle.RadiusX * scale);
+                    Watch_Face.Activity.CaloriesGraph.Circle.RadiusY = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.Circle.RadiusY * scale);
+                    Watch_Face.Activity.CaloriesGraph.Circle.Width = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.Circle.Width * scale);
+                    if (Watch_Face.Activity.CaloriesGraph.Circle.ImageIndex != null)
+                    {
+                        int x = 0;
+                        int y = 0;
+                        Color new_color = ColorRead(Watch_Face.Activity.CaloriesGraph.Circle.Color);
+                        ColorToCoodinates(new_color, out x, out y);
+                        x = (int)Math.Round(x * scale);
+                        y = (int)Math.Round(y * scale);
+                        string colorStr = CoodinatesToColor(x, y);
+                        Watch_Face.Activity.CaloriesGraph.Circle.Color = colorStr;
+                    }
+                }
+
+                if ((Watch_Face.Activity.CaloriesGraph != null) &&
+                    (Watch_Face.Activity.CaloriesGraph.ClockHand != null) &&
+                    (Watch_Face.Activity.CaloriesGraph.ClockHand.Image != null))
+                {
+                    Watch_Face.Activity.CaloriesGraph.ClockHand.Image.X = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.ClockHand.Image.X * scale);
+                    Watch_Face.Activity.CaloriesGraph.ClockHand.Image.Y = (int)Math.Round(Watch_Face.Activity.CaloriesGraph.ClockHand.Image.Y * scale);
+                    if (Watch_Face.Activity.CaloriesGraph.ClockHand.CenterOffset != null)
+                    {
+                        Watch_Face.Activity.CaloriesGraph.ClockHand.CenterOffset.X =
+                            (int)Math.Round(Watch_Face.Activity.CaloriesGraph.ClockHand.CenterOffset.X * scale);
+                        Watch_Face.Activity.CaloriesGraph.ClockHand.CenterOffset.Y =
+                            (int)Math.Round(Watch_Face.Activity.CaloriesGraph.ClockHand.CenterOffset.Y * scale);
+                    }
+                }
+
+                if (Watch_Face.Activity.StarImage != null)
+                {
+                    Watch_Face.Activity.StarImage.X = (int)Math.Round(Watch_Face.Activity.StarImage.X * scale);
+                    Watch_Face.Activity.StarImage.Y = (int)Math.Round(Watch_Face.Activity.StarImage.Y * scale);
+                }
+            }
+            #endregion
+
+            #region Status
+            if (Watch_Face.Status != null)
+            {
+                if (Watch_Face.Status.Bluetooth != null)
+                {
+                    if (Watch_Face.Status.Bluetooth.Coordinates != null)
+                    {
+                        Watch_Face.Status.Bluetooth.Coordinates.X = (int)Math.Round(Watch_Face.Status.Bluetooth.Coordinates.X * scale);
+                        Watch_Face.Status.Bluetooth.Coordinates.Y = (int)Math.Round(Watch_Face.Status.Bluetooth.Coordinates.Y * scale);
+                    }
+                }
+
+                if (Watch_Face.Status.Alarm != null)
+                {
+                    if (Watch_Face.Status.Alarm.Coordinates != null)
+                    {
+                        Watch_Face.Status.Alarm.Coordinates.X = (int)Math.Round(Watch_Face.Status.Alarm.Coordinates.X * scale);
+                        Watch_Face.Status.Alarm.Coordinates.Y = (int)Math.Round(Watch_Face.Status.Alarm.Coordinates.Y * scale);
+                    }
+                }
+
+                if (Watch_Face.Status.Lock != null)
+                {
+                    if (Watch_Face.Status.Lock.Coordinates != null)
+                    {
+                        Watch_Face.Status.Lock.Coordinates.X = (int)Math.Round(Watch_Face.Status.Lock.Coordinates.X * scale);
+                        Watch_Face.Status.Lock.Coordinates.Y = (int)Math.Round(Watch_Face.Status.Lock.Coordinates.Y * scale);
+                    }
+                }
+
+                if (Watch_Face.Status.DoNotDisturb != null)
+                {
+                    if (Watch_Face.Status.DoNotDisturb.Coordinates != null)
+                    {
+                        Watch_Face.Status.DoNotDisturb.Coordinates.X = (int)Math.Round(Watch_Face.Status.DoNotDisturb.Coordinates.X * scale);
+                        Watch_Face.Status.DoNotDisturb.Coordinates.Y = (int)Math.Round(Watch_Face.Status.DoNotDisturb.Coordinates.Y * scale);
+                    }
+                }
+            }
+            #endregion
+
+            #region Battery
+            if (Watch_Face.Battery != null)
+            {
+                if (Watch_Face.Battery.Text != null)
+                {
+                    Watch_Face.Battery.Text.TopLeftX = (int)Math.Round(Watch_Face.Battery.Text.TopLeftX * scale);
+                    Watch_Face.Battery.Text.TopLeftY = (int)Math.Round(Watch_Face.Battery.Text.TopLeftY * scale);
+                    Watch_Face.Battery.Text.BottomRightX = (int)Math.Round(Watch_Face.Battery.Text.BottomRightX * scale);
+                    Watch_Face.Battery.Text.BottomRightY = (int)Math.Round(Watch_Face.Battery.Text.BottomRightY * scale);
+                }
+
+                if (Watch_Face.Battery.Images != null)
+                {
+                    Watch_Face.Battery.Images.X = (int)Math.Round(Watch_Face.Battery.Images.X * scale);
+                    Watch_Face.Battery.Images.Y = (int)Math.Round(Watch_Face.Battery.Images.Y * scale);
+                }
+
+                if ((Watch_Face.Battery.Unknown4 != null) && (Watch_Face.Battery.Unknown4.Image != null))
+                {
+                    Watch_Face.Battery.Unknown4.Image.X = (int)Math.Round(Watch_Face.Battery.Unknown4.Image.X * scale);
+                    Watch_Face.Battery.Unknown4.Image.Y = (int)Math.Round(Watch_Face.Battery.Unknown4.Image.Y * scale);
+                    if (Watch_Face.Battery.Unknown4.CenterOffset != null)
+                    {
+                        Watch_Face.Battery.Unknown4.CenterOffset.X =
+                             (int)Math.Round(Watch_Face.Battery.Unknown4.CenterOffset.X * scale);
+                        Watch_Face.Battery.Unknown4.CenterOffset.Y =
+                             (int)Math.Round(Watch_Face.Battery.Unknown4.CenterOffset.Y * scale);
+                    }
+                }
+
+                if (Watch_Face.Battery.Percent != null)
+                {
+                    Watch_Face.Battery.Percent.X = (int)Math.Round(Watch_Face.Battery.Percent.X * scale);
+                    Watch_Face.Battery.Percent.Y = (int)Math.Round(Watch_Face.Battery.Percent.Y * scale);
+                }
+
+                if (Watch_Face.Battery.Scale != null)
+                {
+                    Watch_Face.Battery.Scale.CenterX = (int)Math.Round(Watch_Face.Battery.Scale.CenterX * scale);
+                    Watch_Face.Battery.Scale.CenterY = (int)Math.Round(Watch_Face.Battery.Scale.CenterY * scale);
+                    Watch_Face.Battery.Scale.RadiusX = (int)Math.Round(Watch_Face.Battery.Scale.RadiusX * scale);
+                    Watch_Face.Battery.Scale.RadiusY = (int)Math.Round(Watch_Face.Battery.Scale.RadiusY * scale);
+                    Watch_Face.Battery.Scale.Width = (int)Math.Round(Watch_Face.Battery.Scale.Width * scale);
+                    if (Watch_Face.Battery.Scale.ImageIndex != null)
+                    {
+                        int x = 0;
+                        int y = 0;
+                        Color new_color = ColorRead(Watch_Face.Battery.Scale.Color);
+                        ColorToCoodinates(new_color, out x, out y);
+                        x = (int)Math.Round(x * scale);
+                        y = (int)Math.Round(y * scale);
+                        string colorStr = CoodinatesToColor(x, y);
+                        Watch_Face.Battery.Scale.Color = colorStr;
+                    }
+                }
+
+                if ((Watch_Face.Battery.Icons != null) && (Watch_Face.Battery.Icons.Coordinates != null))
+                {
+                    foreach (Coordinates coordinates in Watch_Face.Battery.Icons.Coordinates)
+                    {
+                        coordinates.X = (int)Math.Round(coordinates.X * scale);
+                        coordinates.Y = (int)Math.Round(coordinates.Y * scale);
+                    }
+                }
+            }
+            #endregion
+
+            #region AnalogDialFace
+            if (Watch_Face.AnalogDialFace != null)
+            {
+                if ((Watch_Face.AnalogDialFace.Hours != null) && (Watch_Face.AnalogDialFace.Hours.Image != null))
+                {
+                    Watch_Face.AnalogDialFace.Hours.Image.X = (int)Math.Round(Watch_Face.AnalogDialFace.Hours.Image.X * scale);
+                    Watch_Face.AnalogDialFace.Hours.Image.Y = (int)Math.Round(Watch_Face.AnalogDialFace.Hours.Image.Y * scale);
+
+                    if (Watch_Face.AnalogDialFace.Hours.CenterOffset != null)
+                    {
+                        Watch_Face.AnalogDialFace.Hours.CenterOffset.X = 
+                            (int)Math.Round(Watch_Face.AnalogDialFace.Hours.CenterOffset.X * scale);
+                        Watch_Face.AnalogDialFace.Hours.CenterOffset.Y = 
+                            (int)Math.Round(Watch_Face.AnalogDialFace.Hours.CenterOffset.Y * scale);
+                    }
+                }
+
+                if ((Watch_Face.AnalogDialFace.Minutes != null) && (Watch_Face.AnalogDialFace.Minutes.Image != null))
+                {
+                    Watch_Face.AnalogDialFace.Minutes.Image.X = (int)Math.Round(Watch_Face.AnalogDialFace.Minutes.Image.X * scale);
+                    Watch_Face.AnalogDialFace.Minutes.Image.Y = (int)Math.Round(Watch_Face.AnalogDialFace.Minutes.Image.Y * scale);
+
+                    if (Watch_Face.AnalogDialFace.Minutes.CenterOffset != null)
+                    {
+                        Watch_Face.AnalogDialFace.Minutes.CenterOffset.X =
+                             (int)Math.Round(Watch_Face.AnalogDialFace.Minutes.CenterOffset.X * scale);
+                        Watch_Face.AnalogDialFace.Minutes.CenterOffset.Y =
+                             (int)Math.Round(Watch_Face.AnalogDialFace.Minutes.CenterOffset.Y * scale);
+                    }
+                }
+
+                if ((Watch_Face.AnalogDialFace.Seconds != null) && (Watch_Face.AnalogDialFace.Seconds.Image != null))
+                {
+                    Watch_Face.AnalogDialFace.Seconds.Image.X = (int)Math.Round(Watch_Face.AnalogDialFace.Seconds.Image.X * scale);
+                    Watch_Face.AnalogDialFace.Seconds.Image.Y = (int)Math.Round(Watch_Face.AnalogDialFace.Seconds.Image.Y * scale);
+
+                    if (Watch_Face.AnalogDialFace.Seconds.CenterOffset != null)
+                    {
+                        Watch_Face.AnalogDialFace.Seconds.CenterOffset.X =
+                            (int)Math.Round(Watch_Face.AnalogDialFace.Seconds.CenterOffset.X * scale);
+                        Watch_Face.AnalogDialFace.Seconds.CenterOffset.Y =
+                            (int)Math.Round(Watch_Face.AnalogDialFace.Seconds.CenterOffset.Y * scale);
+                    }
+                }
+
+                if (Watch_Face.AnalogDialFace.HourCenterImage != null)
+                {
+                    Watch_Face.AnalogDialFace.HourCenterImage.X = (int)Math.Round(Watch_Face.AnalogDialFace.HourCenterImage.X * scale);
+                    Watch_Face.AnalogDialFace.HourCenterImage.Y = (int)Math.Round(Watch_Face.AnalogDialFace.HourCenterImage.Y * scale);
+                }
+
+                if (Watch_Face.AnalogDialFace.MinCenterImage != null)
+                {
+                    Watch_Face.AnalogDialFace.MinCenterImage.X = (int)Math.Round(Watch_Face.AnalogDialFace.MinCenterImage.X * scale);
+                    Watch_Face.AnalogDialFace.MinCenterImage.Y = (int)Math.Round(Watch_Face.AnalogDialFace.MinCenterImage.Y * scale);
+                }
+
+                if (Watch_Face.AnalogDialFace.SecCenterImage != null)
+                {
+                    Watch_Face.AnalogDialFace.SecCenterImage.X = (int)Math.Round(Watch_Face.AnalogDialFace.SecCenterImage.X * scale);
+                    Watch_Face.AnalogDialFace.SecCenterImage.Y = (int)Math.Round(Watch_Face.AnalogDialFace.SecCenterImage.Y * scale);
+                }
+            }
+            #endregion
+
+            #region Weather
+            if (Watch_Face.Weather != null)
+            {
+                if ((Watch_Face.Weather.Temperature != null) && (Watch_Face.Weather.Temperature.Current != null))
+                {
+                    Watch_Face.Weather.Temperature.Current.TopLeftX = (int)Math.Round(Watch_Face.Weather.Temperature.Current.TopLeftX * scale);
+                    Watch_Face.Weather.Temperature.Current.TopLeftY = (int)Math.Round(Watch_Face.Weather.Temperature.Current.TopLeftY * scale);
+                    Watch_Face.Weather.Temperature.Current.BottomRightX = (int)Math.Round(Watch_Face.Weather.Temperature.Current.BottomRightX * scale);
+                    Watch_Face.Weather.Temperature.Current.BottomRightY = (int)Math.Round(Watch_Face.Weather.Temperature.Current.BottomRightY * scale);
+                }
+
+                if ((Watch_Face.Weather.Temperature != null) && (Watch_Face.Weather.Temperature.Today != null))
+                {
+                    if ((Watch_Face.Weather.Temperature.Today.Separate != null) &&
+                        (Watch_Face.Weather.Temperature.Today.Separate.Day != null))
+                    {
+                        Watch_Face.Weather.Temperature.Today.Separate.Day.TopLeftX =
+                            (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Day.TopLeftX * scale);
+                        Watch_Face.Weather.Temperature.Today.Separate.Day.TopLeftY =
+                            (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Day.TopLeftY * scale);
+                        Watch_Face.Weather.Temperature.Today.Separate.Day.BottomRightX =
+                            (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Day.BottomRightX * scale);
+                        Watch_Face.Weather.Temperature.Today.Separate.Day.BottomRightY =
+                            (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Day.BottomRightY * scale);
+                    }
+
+                    if ((Watch_Face.Weather.Temperature.Today.Separate != null) &&
+                        (Watch_Face.Weather.Temperature.Today.Separate.Night != null))
+                    {
+                        Watch_Face.Weather.Temperature.Today.Separate.Night.TopLeftX =
+                            (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Night.TopLeftX * scale);
+                        Watch_Face.Weather.Temperature.Today.Separate.Night.TopLeftY =
+                            (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Night.TopLeftY * scale);
+                        Watch_Face.Weather.Temperature.Today.Separate.Night.BottomRightX =
+                            (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Night.BottomRightX * scale);
+                        Watch_Face.Weather.Temperature.Today.Separate.Night.BottomRightY =
+                            (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Night.BottomRightY * scale);
+                    }
+                }
+
+                if ((Watch_Face.Weather.Icon != null) && (Watch_Face.Weather.Icon.Images != null))
+                {
+                    Watch_Face.Weather.Icon.Images.X = (int)Math.Round(Watch_Face.Weather.Icon.Images.X * scale);
+                    Watch_Face.Weather.Icon.Images.Y = (int)Math.Round(Watch_Face.Weather.Icon.Images.Y * scale);
+                }
+            }
+            #endregion
+
+            #region Shortcuts
+            if (Watch_Face.Shortcuts != null)
+            {
+                if (Watch_Face.Shortcuts.State != null && Watch_Face.Shortcuts.State.Element != null)
+                {
+                    Watch_Face.Shortcuts.State.Element.TopLeftX = (int)Math.Round(Watch_Face.Shortcuts.State.Element.TopLeftX * scale);
+                    Watch_Face.Shortcuts.State.Element.TopLeftY = (int)Math.Round(Watch_Face.Shortcuts.State.Element.TopLeftY * scale);
+                    Watch_Face.Shortcuts.State.Element.Width = (int)Math.Round(Watch_Face.Shortcuts.State.Element.Width * scale);
+                    Watch_Face.Shortcuts.State.Element.Height = (int)Math.Round(Watch_Face.Shortcuts.State.Element.Height * scale);
+                }
+
+                if (Watch_Face.Shortcuts.Pulse != null && Watch_Face.Shortcuts.Pulse.Element != null)
+                {
+                    Watch_Face.Shortcuts.Pulse.Element.TopLeftX = (int)Math.Round(Watch_Face.Shortcuts.Pulse.Element.TopLeftX * scale);
+                    Watch_Face.Shortcuts.Pulse.Element.TopLeftY = (int)Math.Round(Watch_Face.Shortcuts.Pulse.Element.TopLeftY * scale);
+                    Watch_Face.Shortcuts.Pulse.Element.Width = (int)Math.Round(Watch_Face.Shortcuts.Pulse.Element.Width * scale);
+                    Watch_Face.Shortcuts.Pulse.Element.Height = (int)Math.Round(Watch_Face.Shortcuts.Pulse.Element.Height * scale);
+                }
+
+                if (Watch_Face.Shortcuts.Weather != null && Watch_Face.Shortcuts.Weather.Element != null)
+                {
+                    Watch_Face.Shortcuts.Weather.Element.TopLeftX = (int)Math.Round(Watch_Face.Shortcuts.Weather.Element.TopLeftX * scale);
+                    Watch_Face.Shortcuts.Weather.Element.TopLeftY = (int)Math.Round(Watch_Face.Shortcuts.Weather.Element.TopLeftY * scale);
+                    Watch_Face.Shortcuts.Weather.Element.Width = (int)Math.Round(Watch_Face.Shortcuts.Weather.Element.Width * scale);
+                    Watch_Face.Shortcuts.Weather.Element.Height = (int)Math.Round(Watch_Face.Shortcuts.Weather.Element.Height * scale);
+                }
+
+                if (Watch_Face.Shortcuts.Unknown4 != null && Watch_Face.Shortcuts.Unknown4.Element != null)
+                {
+                    Watch_Face.Shortcuts.Unknown4.Element.TopLeftX = (int)Math.Round(Watch_Face.Shortcuts.Unknown4.Element.TopLeftX * scale);
+                    Watch_Face.Shortcuts.Unknown4.Element.TopLeftY = (int)Math.Round(Watch_Face.Shortcuts.Unknown4.Element.TopLeftY * scale);
+                    Watch_Face.Shortcuts.Unknown4.Element.Width = (int)Math.Round(Watch_Face.Shortcuts.Unknown4.Element.Width * scale);
+                    Watch_Face.Shortcuts.Unknown4.Element.Height = (int)Math.Round(Watch_Face.Shortcuts.Unknown4.Element.Height * scale);
+                }
+            }
+            #endregion
+
+            #region Animation
+            if (Watch_Face.Unknown11 != null)
+            {
+                // покадровая анимация
+                if (Watch_Face.Unknown11.Unknown11_2 != null && Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1 != null)
+                {
+                    Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1.X = (int)Math.Round(Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1.X * scale);
+                    Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1.Y = (int)Math.Round(Watch_Face.Unknown11.Unknown11_2.Unknown11d2p1.Y * scale);
+                }
+
+                // перемещение между координатами
+                if (Watch_Face.Unknown11.Unknown11_1 != null)
+                {
+                    foreach (MotiomAnimation MotiomAnimation in Watch_Face.Unknown11.Unknown11_1)
+                    {
+                        if (MotiomAnimation.Unknown11d1p2 != null && MotiomAnimation.Unknown11d1p3 != null)
+                        {
+                            MotiomAnimation.Unknown11d1p2.X = (int)Math.Round(MotiomAnimation.Unknown11d1p2.X * scale);
+                            MotiomAnimation.Unknown11d1p2.Y = (int)Math.Round(MotiomAnimation.Unknown11d1p2.Y * scale);
+                            MotiomAnimation.Unknown11d1p3.X = (int)Math.Round(MotiomAnimation.Unknown11d1p3.X * scale);
+                            MotiomAnimation.Unknown11d1p3.Y = (int)Math.Round(MotiomAnimation.Unknown11d1p3.Y * scale);
+                        }
+                    }
+                }
+            }
+            #endregion
+        }
+
+        #region Radius
+        private void numericUpDown_StepsProgress_Radius_X_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.X < 0) return;
+            int valueX = MouseСoordinates.X - (int)numericUpDown_StepsProgress_Center_X.Value;
+            int valueY = MouseСoordinates.Y - (int)numericUpDown_StepsProgress_Center_Y.Value;
+            int value = (int)Math.Round(Math.Sqrt(valueX * valueX + valueY * valueY));
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if (e.X <= numericUpDown.Controls[1].Width + 1)
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+
+        private void numericUpDown_ActivityPulsScale_Radius_X_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.X < 0) return;
+            int valueX = MouseСoordinates.X - (int)numericUpDown_ActivityPulsScale_Center_X.Value;
+            int valueY = MouseСoordinates.Y - (int)numericUpDown_ActivityPulsScale_Center_Y.Value;
+            int value = (int)Math.Round(Math.Sqrt(valueX * valueX + valueY * valueY));
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if (e.X <= numericUpDown.Controls[1].Width + 1)
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+
+        private void numericUpDown_ActivityCaloriesScale_Radius_X_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.X < 0) return;
+            int valueX = MouseСoordinates.X - (int)numericUpDown_ActivityCaloriesScale_Center_X.Value;
+            int valueY = MouseСoordinates.Y - (int)numericUpDown_ActivityCaloriesScale_Center_Y.Value;
+            int value = (int)Math.Round(Math.Sqrt(valueX * valueX + valueY * valueY));
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if (e.X <= numericUpDown.Controls[1].Width + 1)
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+
+        private void numericUpDown_Battery_Scale_Radius_X_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (MouseСoordinates.X < 0) return;
+            int valueX = MouseСoordinates.X - (int)numericUpDown_Battery_Scale_Center_X.Value;
+            int valueY = MouseСoordinates.Y - (int)numericUpDown_Battery_Scale_Center_Y.Value;
+            int value = (int)Math.Round(Math.Sqrt(valueX * valueX + valueY * valueY));
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            if (e.X <= numericUpDown.Controls[1].Width + 1)
+            {
+                // Click is in text area
+                numericUpDown.Value = value;
+            }
+        }
+        #endregion
+
+        //private int getOSversion()
+        //{
+        //    int version = 7;
+        //    RegistryKey registryKey = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows NT\CurrentVersion");
+        //    string ProductName = registryKey.GetValue("ProductName").ToString();
+        //    string[] words = ProductName.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+        //    Int32.TryParse(words[1], out version);
+        //    return version;
+        //}
     }
 }
 
@@ -7409,17 +8846,22 @@ public static class MouseСoordinates
     public static int Y = -1;
 }
 
-
-/*static class Logger
+static class Logger
 {
     //----------------------------------------------------------
     // Статический метод записи строки в файл лога без переноса
     //----------------------------------------------------------
     public static void Write(string text)
     {
-        using (StreamWriter sw = new StreamWriter(Application.StartupPath + "\\log.txt", true))
+        try
         {
-            sw.Write(text);
+            using (StreamWriter sw = new StreamWriter(Application.StartupPath + "\\Program log.txt", true))
+            {
+                //sw.Write(text);
+            }
+        }
+        catch (Exception)
+        {
         }
     }
 
@@ -7428,9 +8870,15 @@ public static class MouseСoordinates
     //---------------------------------------------------------
     public static void WriteLine(string message)
     {
-        using (StreamWriter sw = new StreamWriter(Application.StartupPath + "\\log.txt", true))
+        try
         {
-            sw.WriteLine(String.Format("{0,-23} {1}", DateTime.Now.ToString() + ":", message));
+            using (StreamWriter sw = new StreamWriter(Application.StartupPath + "\\Program log.txt", true))
+            {
+                //sw.WriteLine(String.Format("{0,-23} {1}", DateTime.Now.ToString() + ":", message));
+            }
+        }
+        catch (Exception)
+        {
         }
     }
-}*/
+}

@@ -282,4 +282,22 @@
   <data name="Message_Error_SpaceInProgrammName_Text" xml:space="preserve">
     <value>Cesta k programu by neměla obsahovat mezery. Je doporučeno umístit program do kořenového adresáře disku.</value>
   </data>
+  <data name="Message_ConvertingCompleted_Text" xml:space="preserve">
+    <value>Byl vytvořen nový ciferník.</value>
+  </data>
+  <data name="Message_WarningConverting_Text1" xml:space="preserve">
+    <value>Složka </value>
+  </data>
+  <data name="Message_WarningConverting_Text2" xml:space="preserve">
+    <value> již existuje. Nahradit?</value>
+  </data>
+  <data name="Message_Warning_Information" xml:space="preserve">
+    <value>Informace</value>
+  </data>
+  <data name="Message_WarningAnimationLastImage" xml:space="preserve">
+    <value>Obrázek pro animaci by neměl být poslední v seznamu obrázků.</value>
+  </data>
+  <data name="Message_WarningMonthName" xml:space="preserve">
+    <value>Zobrazení čísla měsíce nefunguje společně se zobrazením názvu měsíce.</value>
+  </data>
 </root>

@@ -39,12 +39,13 @@ namespace GTR_Watch_face
             _endY = EndY;
             _speedAnimation = SpeedAnimation;
             _timeAnimation = TimeAnimation;
-            _bounce = Bounce;
+            if (_timeAnimation <= 10) _timeAnimation = 0;
+             _bounce = Bounce;
             _time = 0;
             _cyclesTime = SpeedAnimation;
             while (_cyclesTime < TimeAnimation)
             {
-                _cyclesTime = _cyclesTime + _cyclesTime;
+                _cyclesTime = _cyclesTime + SpeedAnimation;
             }
         }
 
@@ -127,8 +128,8 @@ namespace GTR_Watch_face
                 {
                     _newtime = _newtime - TimeCoeff * _speedAnimation;
                     double proportions = _newtime / (_speedAnimation * (1 - TimeCoeff - TimeCoeff));
-                    newX = (int)Math.Round((_endX + dX * proportions));
-                    newY = (int)Math.Round((_endY + dY * proportions));
+                    newX = (int)Math.Round(((_endX - 0.1f * dX )+ 1.2f * dX * proportions));
+                    newY = (int)Math.Round(((_endY - 0.1f * dY) + 1.2f * dY * proportions));
                 }
                 // начальный отскок
                 else
@@ -158,8 +159,8 @@ namespace GTR_Watch_face
                 {
                     _newtime = _newtime - TimeCoeff * _speedAnimation;
                     double proportions = _newtime / (_speedAnimation * (1 - TimeCoeff - TimeCoeff));
-                    newX = (int)Math.Round((_startX + dX * proportions));
-                    newY = (int)Math.Round((_startY + dY * proportions));
+                    newX = (int)Math.Round(((_startX - 0.1f * dX) + 1.2f * dX * proportions));
+                    newY = (int)Math.Round(((_startY - 0.1f * dY) + 1.2f * dY * proportions));
                 }
                 // начальный отскок
                 else

@@ -133,6 +133,15 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на kratkaya_instruktsiya.htm.
+        /// </summary>
+        public static string File_ReadMy_Start {
+            get {
+                return ResourceManager.GetString("File_ReadMy_Start", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Предпросмотр.
         /// </summary>
         public static string Form_Preview {
@@ -183,6 +192,15 @@ namespace GTR_Watch_face.Properties {
         public static string Message_bigFile_Text2 {
             get {
                 return ResourceManager.GetString("Message_bigFile_Text2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Новый циферблат создан..
+        /// </summary>
+        public static string Message_ConvertingCompleted_Text {
+            get {
+                return ResourceManager.GetString("Message_ConvertingCompleted_Text", resourceCulture);
             }
         }
         
@@ -484,6 +502,15 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Информация.
+        /// </summary>
+        public static string Message_Warning_Information {
+            get {
+                return ResourceManager.GetString("Message_Warning_Information", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Если использовать не все три стрелки в аналоговых часах, то могут возникнуть проблемы..
         /// </summary>
         public static string Message_Warning3clockHand_Text {
@@ -498,6 +525,15 @@ namespace GTR_Watch_face.Properties {
         public static string Message_WarningAnimationCoun_Text {
             get {
                 return ResourceManager.GetString("Message_WarningAnimationCoun_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Изображение для анимации не должно быть последним в списке изображений..
+        /// </summary>
+        public static string Message_WarningAnimationLastImage {
+            get {
+                return ResourceManager.GetString("Message_WarningAnimationLastImage", resourceCulture);
             }
         }
         
@@ -520,11 +556,38 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Каталог .
+        /// </summary>
+        public static string Message_WarningConverting_Text1 {
+            get {
+                return ResourceManager.GetString("Message_WarningConverting_Text1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на  уже существует. Заменить?.
+        /// </summary>
+        public static string Message_WarningConverting_Text2 {
+            get {
+                return ResourceManager.GetString("Message_WarningConverting_Text2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Не рекомендуется использовать отображение расстояния без суффикса..
         /// </summary>
         public static string Message_WarningDistanceSuffix {
             get {
                 return ResourceManager.GetString("Message_WarningDistanceSuffix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Отображение номера месяца не работает вместе с отображением названия месяца..
+        /// </summary>
+        public static string Message_WarningMonthName {
+            get {
+                return ResourceManager.GetString("Message_WarningMonthName", resourceCulture);
             }
         }
         

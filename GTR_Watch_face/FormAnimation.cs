@@ -1,4 +1,5 @@
 ﻿using ImageMagick;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,8 +21,10 @@ namespace GTR_Watch_face
         //Bitmap PreviewBackground;
         private Bitmap SrcImg;
         float scalePreview = 1.0f;
+        float currentDPI; // масштаб экрана
 
-        public FormAnimation(Bitmap previewBackground,List<ClassMotiomAnimation> motiomAnimation, ClassStaticAnimation staticAnimation)
+        public FormAnimation(Bitmap previewBackground,List<ClassMotiomAnimation> motiomAnimation,
+            ClassStaticAnimation staticAnimation, float cDPI)
         {
             InitializeComponent();
             //PreviewBackground = previewBackground;
@@ -29,7 +32,10 @@ namespace GTR_Watch_face
             //pictureBox_AnimatiomPreview.Image = previewBackground;
             MotiomAnimation = motiomAnimation;
             StaticAnimation = staticAnimation;
-            
+            //currentDPI = (int)Registry.GetValue("HKEY_CURRENT_USER\\Control Panel\\Desktop", "LogPixels", 96) / 96f;
+
+            currentDPI = cDPI;
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -60,7 +66,7 @@ namespace GTR_Watch_face
             if(StaticAnimation != null) StaticAnimation.DrawStaticAnimation(gPanel, timer1.Interval);
 
             Form1 form1 = this.Owner as Form1;//Получаем ссылку на первую форму
-            form1.PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false, 2);
+            form1.PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false, false, 2);
 
             pictureBox_AnimatiomPreview.Image = SrcImg;
 
@@ -69,27 +75,31 @@ namespace GTR_Watch_face
 
         private void radioButton_CheckedChanged(object sender, EventArgs e)
         {
+            RadioButton radioButton = sender as RadioButton;
+            if (radioButton != null && !radioButton.Checked) return;
+            pictureBox_AnimatiomPreview.BackgroundImageLayout = ImageLayout.Zoom;
             if (radioButton_normal.Checked)
             {
+                pictureBox_AnimatiomPreview.BackgroundImageLayout = ImageLayout.None;
                 if (Model_Wath.model_gtr47)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(456, 456);
-                    this.Size = new Size(456 + 20, 456 + 100);
+                    this.Size = new Size(456 + (int)(20 * currentDPI), 456 + (int)(100 * currentDPI));
                 }
                 else if (Model_Wath.model_gtr42)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(392, 392);
-                    this.Size = new Size(392 + 20, 392 + 100);
+                    this.Size = new Size(392 + (int)(20 * currentDPI), 392 + (int)(100 * currentDPI));
                 }
                 else if (Model_Wath.model_gts)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(350, 444);
-                    this.Size = new Size(350 + 20, 444 + 100);
+                    this.Size = new Size(350 + (int)(20 * currentDPI), 444 + (int)(100 * currentDPI));
                 }
                 else if (Model_Wath.model_TRex || Model_Wath.model_Verge)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(362, 362);
-                    this.Size = new Size(362 + 20, 362 + 100);
+                    this.Size = new Size(362 + (int)(20 * currentDPI), 362 + (int)(100 * currentDPI));
                 }
                 scalePreview = 1f;
             }
@@ -99,22 +109,22 @@ namespace GTR_Watch_face
                 if (Model_Wath.model_gtr47)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(683, 683);
-                    this.Size = new Size(683 + 20, 683 + 100);
+                    this.Size = new Size(683 + (int)(20 * currentDPI), 683 + (int)(100 * currentDPI));
                 }
                 else if (Model_Wath.model_gtr42)
                 {
-                    pictureBox_AnimatiomPreview.Size = new Size(586, 586);
-                    this.Size = new Size(586 + 20, 586 + 100);
+                    pictureBox_AnimatiomPreview.Size = new Size(587, 587);
+                    this.Size = new Size(587 + (int)(20 * currentDPI), 587 + (int)(100 * currentDPI));
                 }
                 else if (Model_Wath.model_gts)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(524, 665);
-                    this.Size = new Size(524 + 20, 665 + 100);
+                    this.Size = new Size(524 + (int)(20 * currentDPI), 665 + (int)(100 * currentDPI));
                 }
                 else if (Model_Wath.model_TRex || Model_Wath.model_Verge)
                 {
-                    pictureBox_AnimatiomPreview.Size = new Size(541, 541);
-                    this.Size = new Size(542 + 20, 542 + 100);
+                    pictureBox_AnimatiomPreview.Size = new Size(542, 542);
+                    this.Size = new Size(542 + (int)(20 * currentDPI), 542 + (int)(100 * currentDPI));
                 }
                 scalePreview = 1.5f;
             }
@@ -124,25 +134,27 @@ namespace GTR_Watch_face
                 if (Model_Wath.model_gtr47)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(909, 909);
-                    this.Size = new Size(909 + 20, 909 + 100);
+                    this.Size = new Size(909 + (int)(20 * currentDPI), 909 + (int)(100 * currentDPI));
                 }
                 else if (Model_Wath.model_gtr42)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(781, 781);
-                    this.Size = new Size(781 + 20, 781 + 100);
+                    this.Size = new Size(781 + (int)(20 * currentDPI), 781 + (int)(100 * currentDPI));
                 }
                 else if (Model_Wath.model_gts)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(697, 885);
-                    this.Size = new Size(697 + 20, 885 + 100);
+                    this.Size = new Size(697 + (int)(20 * currentDPI), 885 + (int)(100 * currentDPI));
                 }
                 else if (Model_Wath.model_TRex || Model_Wath.model_Verge)
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(721, 721);
-                    this.Size = new Size(721 + 20, 721 + 100);
+                    this.Size = new Size(721 + (int)(20 * currentDPI), 721 + (int)(100 * currentDPI));
                 }
                 scalePreview = 2f;
             }
+            int width = button_SaveAnimation.Left + button_SaveAnimation.Width;
+            if (this.Width < (int)(width + 20 * currentDPI)) this.Width = (int)(width + 20 * currentDPI);
         }
 
         public class Model_Wath
@@ -337,14 +349,14 @@ namespace GTR_Watch_face
                                 oldSet = set;
                             }
 
-                            form1.PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false, 1);
+                            form1.PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false, false, 1);
 
                             foreach (ClassMotiomAnimation elementMotiomAnimation in MotiomAnimation)
                             {
                                 elementMotiomAnimation.DrawMotiomAnimation(gPanel, 100);
                             }
                             if (StaticAnimation != null) StaticAnimation.DrawStaticAnimation(gPanel, 100);
-                            form1.PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false, 2);
+                            form1.PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false,false, 2);
 
                             if (form1.checkBox_crop.Checked)
                             {

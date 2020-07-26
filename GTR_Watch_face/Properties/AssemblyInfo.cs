@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
 [assembly: AssemblyTitle("GTR_Watch_face")]
-[assembly: AssemblyDescription("Графический редактор для работы с циферблатами Amazfit GTR")]
+[assembly: AssemblyDescription("Графический редактор для работы с циферблатами Amazfit")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("GTR_Watch_face")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // Можно задать все значения или принять номер сборки и номер редакции по умолчанию.
 // используя "*", как показано ниже:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("7.0.0.0")]
-[assembly: AssemblyFileVersion("7.0.0.0")]
+[assembly: AssemblyVersion("8.3.0.0")]
+[assembly: AssemblyFileVersion("8.3.0.0")]

@@ -282,4 +282,28 @@
   <data name="Message_Error_SpaceInProgrammName_Text" xml:space="preserve">
     <value>The program path should not contain spaces. It is recommended to place the program in the root directory of the disk.</value>
   </data>
+  <data name="Message_ConvertingCompleted_Text" xml:space="preserve">
+    <value>A new watch face has been created.</value>
+  </data>
+  <data name="Message_WarningConverting_Text1" xml:space="preserve">
+    <value>Directory </value>
+  </data>
+  <data name="Message_WarningConverting_Text2" xml:space="preserve">
+    <value> already exists. Replace?</value>
+  </data>
+  <data name="Message_Warning_Information" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="File_ReadMy" xml:space="preserve">
+    <value>\readme_en.chm</value>
+  </data>
+  <data name="File_ReadMy_Start" xml:space="preserve">
+    <value>quick_guide.htm</value>
+  </data>
+  <data name="Message_WarningAnimationLastImage" xml:space="preserve">
+    <value>The image for animation should not be the last in the list of images.</value>
+  </data>
+  <data name="Message_WarningMonthName" xml:space="preserve">
+    <value>The month number display does not work together with the month name display.</value>
+  </data>
 </root>

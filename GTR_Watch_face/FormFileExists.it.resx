@@ -3083,15 +3083,21 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>预览动画</value>
+    <value>File esistente</value>
   </data>
-  <data name="button_AnimationReset.Text" xml:space="preserve">
-    <value>重设动画</value>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Annulla</value>
   </data>
-  <data name="button_SaveAnimation.Text" xml:space="preserve">
-    <value>保存动画</value>
+  <data name="button2.Text" xml:space="preserve">
+    <value>Sostituisci</value>
+  </data>
+  <data name="button3.Text" xml:space="preserve">
+    <value>Salva entrambi</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>要保存的帧数</value>
+    <value>Esiste già un file con lo stesso stesso nome </value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Sovrascrivi file esistente?</value>
   </data>
 </root>
