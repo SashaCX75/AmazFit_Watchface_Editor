@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTR_Watch_face", "GTR_Watch_face\GTR_Watch_face.csproj", "{60CD7E95-9507-42E3-869F-5A677ECCE917}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmazFit_Watch_Editor", "GTR_Watch_face\AmazFit_Watch_Editor.csproj", "{60CD7E95-9507-42E3-869F-5A677ECCE917}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchFace_PackUnpack", "WatchFace_PackUnpack\WatchFace_PackUnpack.csproj", "{C7B3530A-A779-437B-A55D-8518C07B3D03}"
 EndProject

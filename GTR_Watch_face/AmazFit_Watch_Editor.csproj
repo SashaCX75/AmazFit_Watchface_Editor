@@ -7,7 +7,7 @@
     <ProjectGuid>{60CD7E95-9507-42E3-869F-5A677ECCE917}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>GTR_Watch_face</RootNamespace>
-    <AssemblyName>GTR_Watch_face</AssemblyName>
+    <AssemblyName>AmazFit_Watch_Editor</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

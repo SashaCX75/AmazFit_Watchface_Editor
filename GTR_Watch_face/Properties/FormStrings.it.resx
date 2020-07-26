@@ -294,9 +294,6 @@
   <data name="Message_Warning_Information" xml:space="preserve">
     <value>Informazione</value>
   </data>
-  <data name="File_ReadMy" xml:space="preserve">
-    <value>\readme_en.chm</value>
-  </data>
   <data name="File_ReadMy_Start" xml:space="preserve">
     <value>quick_guide.htm</value>
   </data>

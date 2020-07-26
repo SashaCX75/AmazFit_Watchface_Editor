@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("GTR_Watch_face")]
+[assembly: AssemblyTitle("AmazFit_Watch_Editor")]
 [assembly: AssemblyDescription("Графический редактор для работы с циферблатами Amazfit")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("GTR_Watch_face")]
+[assembly: AssemblyProduct("AmazFit_Watch_Editor")]
 [assembly: AssemblyCopyright("SashaCX75 ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
