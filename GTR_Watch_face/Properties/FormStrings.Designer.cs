@@ -142,6 +142,42 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на GIF файлы (*.gif)|*.gif.
+        /// </summary>
+        public static string FilteGif {
+            get {
+                return ResourceManager.GetString("FilteGif", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Бинарные файлы (*.bin)|*.bin.
+        /// </summary>
+        public static string FilterBin {
+            get {
+                return ResourceManager.GetString("FilterBin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Json файлы (*.json) | *.json.
+        /// </summary>
+        public static string FilterJson {
+            get {
+                return ResourceManager.GetString("FilterJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на PNG файлы (*.png)|*.png.
+        /// </summary>
+        public static string FilterPng {
+            get {
+                return ResourceManager.GetString("FilterPng", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Предпросмотр.
         /// </summary>
         public static string Form_Preview {

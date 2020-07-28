@@ -303,4 +303,16 @@
   <data name="Message_WarningMonthName" xml:space="preserve">
     <value>The month number display does not work together with the month name display.</value>
   </data>
+  <data name="FilteGif" xml:space="preserve">
+    <value>GIF Files: (*.gif)|*.gif</value>
+  </data>
+  <data name="FilterBin" xml:space="preserve">
+    <value>Binary File (*.bin)|*.bin</value>
+  </data>
+  <data name="FilterJson" xml:space="preserve">
+    <value>Json files (*.json) | *.json</value>
+  </data>
+  <data name="FilterPng" xml:space="preserve">
+    <value>PNG Files: (*.png)|*.png</value>
+  </data>
 </root>

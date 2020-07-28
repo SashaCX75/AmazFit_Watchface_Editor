@@ -7,7 +7,7 @@
     <ProjectGuid>{60CD7E95-9507-42E3-869F-5A677ECCE917}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>GTR_Watch_face</RootNamespace>
-    <AssemblyName>AmazFit_Watch_Editor</AssemblyName>
+    <AssemblyName>AmazFit_Watchface_Editor</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -51,8 +51,8 @@
   <PropertyGroup>
     <ApplicationIcon>watch.ico</ApplicationIcon>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release %28without puthon%29|AnyCPU'">
-    <OutputPath>bin\Release_%28without_puthon%29\</OutputPath>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release %28without python%29|AnyCPU' ">
+    <OutputPath>bin\Release_%28without_python%29\</OutputPath>
     <DefineConstants>TRACE;WithoutPuthon</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
@@ -61,15 +61,18 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug %28without puthon%29|AnyCPU'">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug %28without python%29|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\Debug_%28without_puthon%29\</OutputPath>
+    <OutputPath>bin\Debug_%28without_python%29\</OutputPath>
     <DefineConstants>TRACE;DEBUG;WithoutPuthon</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Magick.NET-Q16-AnyCPU, Version=7.14.5.0, Culture=neutral, PublicKeyToken=2004825badfa91ec, processorArchitecture=MSIL">
@@ -369,6 +372,8 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Properties\Language\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

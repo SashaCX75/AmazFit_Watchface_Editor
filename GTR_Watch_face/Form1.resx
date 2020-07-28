@@ -40041,7 +40041,7 @@
     <value>True</value>
   </data>
   <data name="comboBox_Language.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 21</value>
+    <value>110, 21</value>
   </data>
   <data name="comboBox_Language.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -40764,15 +40764,24 @@
     <value>True</value>
   </data>
   <data name="label_TranslateHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>642, 39</value>
+    <value>177, 156</value>
   </data>
   <data name="label_TranslateHelp.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
   <data name="label_TranslateHelp.Text" xml:space="preserve">
-    <value>chaadaev88 (English), kampanita (Español), maikeandre (Português), Horatius80 (Čeština, Magyar, Slovenčina),
-bigsurf05 (French), kyle208 (Chinese/简体中文), Lordalpine (French, Italian),  F481O (Italian),
-gumstic (English manual)</value>
+    <value>Čeština - Horatius80
+Chinese - kyle208
+English - chaadaev88
+Español - kampanita
+French - bigsurf05, Lordalpine
+Italian - Italian, F481O
+Magyar - Horatius80
+Português - maikeandre
+Slovenčina - Horatius80
+
+Chinese manual - kyle208 
+English manual - gumstic</value>
   </data>
   <data name="&gt;&gt;label_TranslateHelp.Name" xml:space="preserve">
     <value>label_TranslateHelp</value>
@@ -40898,7 +40907,7 @@ gumstic (English manual)</value>
     <value>NoControl</value>
   </data>
   <data name="linkLabel_help.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 290</value>
+    <value>3, 454</value>
   </data>
   <data name="linkLabel_help.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>

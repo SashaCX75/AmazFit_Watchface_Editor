@@ -309,4 +309,16 @@
   <data name="Message_WarningMonthName" xml:space="preserve">
     <value>Отображение номера месяца не работает вместе с отображением названия месяца.</value>
   </data>
+  <data name="FilteGif" xml:space="preserve">
+    <value>GIF файлы (*.gif)|*.gif</value>
+  </data>
+  <data name="FilterBin" xml:space="preserve">
+    <value>Бинарные файлы (*.bin)|*.bin</value>
+  </data>
+  <data name="FilterJson" xml:space="preserve">
+    <value>Json файлы (*.json) | *.json</value>
+  </data>
+  <data name="FilterPng" xml:space="preserve">
+    <value>PNG файлы (*.png)|*.png</value>
+  </data>
 </root>

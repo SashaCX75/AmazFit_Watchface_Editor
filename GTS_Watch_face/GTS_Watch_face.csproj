@@ -34,7 +34,7 @@
   <PropertyGroup>
     <ApplicationIcon>watch.ico</ApplicationIcon>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release %28without puthon%29|AnyCPU'">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release %28without python%29|AnyCPU' ">
     <OutputPath>bin\Release %28without puthon%29\</OutputPath>
     <DefineConstants>TRACE;WithoutPuthon</DefineConstants>
     <Optimize>true</Optimize>
@@ -44,7 +44,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug %28without puthon%29|AnyCPU'">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug %28without python%29|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\Debug %28without puthon%29\</OutputPath>
     <DefineConstants>TRACE;DEBUG;WithoutPuthon</DefineConstants>

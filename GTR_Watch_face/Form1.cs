@@ -463,10 +463,9 @@ namespace GTR_Watch_face
                                 saveFileDialog.FileName = Path.GetFileName(FullFileDir);
                             }
                         }
-                        saveFileDialog.Filter = "Json files (*.json) | *.json";
+                        saveFileDialog.Filter = Properties.FormStrings.FilterJson;
 
-                        //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
-                        ////openFileDialog1.FilterIndex = 2;
+                        //openFileDialog.Filter = "Json files (*.json) | *.json";
                         saveFileDialog.RestoreDirectory = true;
                         saveFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
                         if (saveFileDialog.ShowDialog() == DialogResult.OK)
@@ -495,10 +494,7 @@ namespace GTR_Watch_face
             Logger.WriteLine("* pack_unpack");
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = textBox_pack_unpack_dir.Text;
-            //openFileDialog.InitialDirectory = @"C:\main_gtr\remake_by_kolomnych_045_ru-65473-787ef4d01c";
-            //openFileDialog.Filter = "Json files (*.json) | *.json";
             openFileDialog.Filter = "";
-            ////openFileDialog1.FilterIndex = 2;
             openFileDialog.RestoreDirectory = true;
             openFileDialog.Multiselect = false;
             openFileDialog.Title = Properties.FormStrings.Dialog_Title_PackUnpack;
@@ -571,10 +567,9 @@ namespace GTR_Watch_face
                                 saveFileDialog.FileName = Path.GetFileName(FullFileDir);
                             }
                         }
-                        saveFileDialog.Filter = "Json files (*.json) | *.json";
-
-                        //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
-                        ////openFileDialog1.FilterIndex = 2;
+                        saveFileDialog.Filter = Properties.FormStrings.FilterJson;
+                        //saveFileDialog.Filter = "Json files (*.json) | *.json";
+                        
                         saveFileDialog.RestoreDirectory = true;
                         saveFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
                         if (saveFileDialog.ShowDialog() == DialogResult.OK)
@@ -598,9 +593,8 @@ namespace GTR_Watch_face
             }
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            //openFileDialog.Filter = "Json files (*.json) | *.json";
-            openFileDialog.Filter = "Binary File (*.bin)|*.bin";
-            ////openFileDialog1.FilterIndex = 2;
+            //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
+            openFileDialog.Filter = Properties.FormStrings.FilterBin;
             openFileDialog.RestoreDirectory = true;
             openFileDialog.Multiselect = false;
             openFileDialog.Title = Properties.FormStrings.Dialog_Title_Unpack;
@@ -834,10 +828,9 @@ namespace GTR_Watch_face
                                 saveFileDialog.FileName = Path.GetFileName(FullFileDir);
                             }
                         }
-                        saveFileDialog.Filter = "Json files (*.json) | *.json";
-
-                        //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
-                        ////openFileDialog1.FilterIndex = 2;
+                        saveFileDialog.Filter = Properties.FormStrings.FilterJson;
+                        //saveFileDialog.Filter = "Json files (*.json) | *.json";
+                        
                         saveFileDialog.RestoreDirectory = true;
                         saveFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
                         if (saveFileDialog.ShowDialog() == DialogResult.OK)
@@ -864,9 +857,8 @@ namespace GTR_Watch_face
             if (!Directory.Exists(subPath)) Directory.CreateDirectory(subPath);
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            //openFileDialog.Filter = "Json files (*.json) | *.json";
-            openFileDialog.Filter = "Binary File (*.bin)|*.bin";
-            ////openFileDialog1.FilterIndex = 2;
+            //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
+            openFileDialog.Filter = Properties.FormStrings.FilterBin;
             openFileDialog.RestoreDirectory = true;
             openFileDialog.Multiselect = false;
             openFileDialog.Title = Properties.FormStrings.Dialog_Title_Unpack;
@@ -1086,10 +1078,9 @@ namespace GTR_Watch_face
                                 saveFileDialog.FileName = Path.GetFileName(FullFileDir);
                             }
                         }
-                        saveFileDialog.Filter = "Json files (*.json) | *.json";
-
-                        //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
-                        ////openFileDialog1.FilterIndex = 2;
+                        saveFileDialog.Filter = Properties.FormStrings.FilterJson;
+                        //saveFileDialog.Filter = "Json files (*.json) | *.json";
+                        
                         saveFileDialog.RestoreDirectory = true;
                         saveFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
                         if (saveFileDialog.ShowDialog() == DialogResult.OK)
@@ -1118,9 +1109,8 @@ namespace GTR_Watch_face
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = FullFileDir;
             openFileDialog.FileName = FileName;
-            openFileDialog.Filter = "Json files (*.json) | *.json";
-            //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
-            ////openFileDialog1.FilterIndex = 2;
+            openFileDialog.Filter = Properties.FormStrings.FilterJson;
+            //openFileDialog.Filter = "Json files (*.json) | *.json";
             openFileDialog.RestoreDirectory = true;
             openFileDialog.Multiselect = false;
             openFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
@@ -1214,10 +1204,9 @@ namespace GTR_Watch_face
         {
             Logger.WriteLine("* zip");
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            //openFileDialog.Filter = "Json files (*.json) | *.json";
-            openFileDialog.Filter = "Binary File (*.bin)|*.bin";
+            //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
+            openFileDialog.Filter = Properties.FormStrings.FilterBin;
             openFileDialog.FileName = Path.GetFileNameWithoutExtension(FileName) + "_packed";
-            ////openFileDialog1.FilterIndex = 2;
             openFileDialog.RestoreDirectory = true;
             openFileDialog.InitialDirectory = FullFileDir;
             openFileDialog.Multiselect = false;
@@ -1335,10 +1324,9 @@ namespace GTR_Watch_face
                                 saveFileDialog.FileName = Path.GetFileName(FullFileDir);
                             }
                         }
-                        saveFileDialog.Filter = "Json files (*.json) | *.json";
+                        saveFileDialog.Filter = Properties.FormStrings.FilterJson;
 
-                        //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
-                        ////openFileDialog1.FilterIndex = 2;
+                        //openFileDialog.Filter = "Json files (*.json) | *.json";
                         saveFileDialog.RestoreDirectory = true;
                         saveFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
                         if (saveFileDialog.ShowDialog() == DialogResult.OK)
@@ -1367,9 +1355,8 @@ namespace GTR_Watch_face
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = FullFileDir;
             openFileDialog.FileName = FileName;
-            openFileDialog.Filter = "Json files (*.json) | *.json";
-            //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
-            ////openFileDialog1.FilterIndex = 2;
+            openFileDialog.Filter = Properties.FormStrings.FilterJson;
+            //openFileDialog.Filter = "Json files (*.json) | *.json";
             openFileDialog.RestoreDirectory = true;
             openFileDialog.Multiselect = false;
             openFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
@@ -1498,9 +1485,8 @@ namespace GTR_Watch_face
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = FullFileDir;
-            openFileDialog.Filter = "PNG Files: (*.png)|*.png";
-            //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
-            ////openFileDialog1.FilterIndex = 2;
+            openFileDialog.Filter = Properties.FormStrings.FilterPng;
+            //openFileDialog.Filter = "PNG Files: (*.png)|*.png";
             openFileDialog.RestoreDirectory = true;
             openFileDialog.Multiselect = true;
             openFileDialog.Title = Properties.FormStrings.Dialog_Title_Image;
@@ -1656,10 +1642,9 @@ namespace GTR_Watch_face
                                 saveFileDialog.FileName = Path.GetFileName(FullFileDir);
                             }
                         }
-                        saveFileDialog.Filter = "Json files (*.json) | *.json";
+                        saveFileDialog.Filter = Properties.FormStrings.FilterJson;
 
-                        //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
-                        ////openFileDialog1.FilterIndex = 2;
+                        //openFileDialog.Filter = "Json files (*.json) | *.json";
                         saveFileDialog.RestoreDirectory = true;
                         saveFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
                         if (saveFileDialog.ShowDialog() == DialogResult.OK)
@@ -1688,9 +1673,8 @@ namespace GTR_Watch_face
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = FullFileDir;
             openFileDialog.FileName = FileName;
-            openFileDialog.Filter = "Json files (*.json) | *.json";
-            //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
-            ////openFileDialog1.FilterIndex = 2;
+            openFileDialog.Filter = Properties.FormStrings.FilterJson;
+            //openFileDialog.Filter = "Json files (*.json) | *.json";
             openFileDialog.RestoreDirectory = true;
             openFileDialog.Multiselect = false;
             openFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
@@ -4767,10 +4751,9 @@ namespace GTR_Watch_face
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = FullFileDir;
-            openFileDialog.Filter = "Json files (*.json) | *.json";
+            openFileDialog.Filter = Properties.FormStrings.FilterJson;
             openFileDialog.FileName = "PreviewStates.json";
-            //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
-            ////openFileDialog1.FilterIndex = 2;
+            //openFileDialog.Filter = "Json files (*.json) | *.json";
             openFileDialog.RestoreDirectory = true;
             openFileDialog.Multiselect = false;
             openFileDialog.Title = Properties.FormStrings.Dialog_Title_PreviewStates;
@@ -5413,10 +5396,9 @@ namespace GTR_Watch_face
 
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             //openFileDialog.InitialDirectory = subPath;
-            saveFileDialog.Filter = "Json files (*.json) | *.json";
+            saveFileDialog.Filter = Properties.FormStrings.FilterJson;
             saveFileDialog.FileName = "PreviewStates.json";
-            //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
-            ////openFileDialog1.FilterIndex = 2;
+            //openFileDialog.Filter = "Json files (*.json) | *.json";
             saveFileDialog.RestoreDirectory = true;
             saveFileDialog.Title = Properties.FormStrings.Dialog_Title_PreviewStates;
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
@@ -5723,10 +5705,9 @@ namespace GTR_Watch_face
                     saveFileDialog.FileName = Path.GetFileName(FullFileDir);
                 }
             }
-            saveFileDialog.Filter = "Json files (*.json) | *.json";
+            saveFileDialog.Filter = Properties.FormStrings.FilterJson;
 
-            //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
-            ////openFileDialog1.FilterIndex = 2;
+            //openFileDialog.Filter = "Json files (*.json) | *.json";
             saveFileDialog.RestoreDirectory = true;
             saveFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
@@ -5935,10 +5916,9 @@ namespace GTR_Watch_face
             Logger.WriteLine("* SavePNG");
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.InitialDirectory = FullFileDir;
-            saveFileDialog.Filter = "PNG Files: (*.png)|*.png";
+            saveFileDialog.Filter = Properties.FormStrings.FilterPng;
             saveFileDialog.FileName = "Preview.png";
-            //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
-            ////openFileDialog1.FilterIndex = 2;
+            //openFileDialog.Filter = "PNG Files: (*.png)|*.png";
             saveFileDialog.RestoreDirectory = true;
             saveFileDialog.Title = Properties.FormStrings.Dialog_Title_SavePNG;
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
@@ -5973,10 +5953,9 @@ namespace GTR_Watch_face
             Logger.WriteLine("* SaveGIF");
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.InitialDirectory = FullFileDir;
-            saveFileDialog.Filter = "GIF Files: (*.gif)|*.gif";
+            saveFileDialog.Filter = Properties.FormStrings.FilteGif;
             saveFileDialog.FileName = "Preview.gif";
-            //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
-            ////openFileDialog1.FilterIndex = 2;
+            //openFileDialog.Filter = "GIF Files: (*.gif)|*.gif";
             saveFileDialog.RestoreDirectory = true;
             saveFileDialog.Title = Properties.FormStrings.Dialog_Title_SaveGIF;
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
@@ -7748,10 +7727,9 @@ namespace GTR_Watch_face
                             saveFileDialog.FileName = Path.GetFileName(FullFileDir);
                         }
                     }
-                    saveFileDialog.Filter = "Json files (*.json) | *.json";
+                    saveFileDialog.Filter = Properties.FormStrings.FilterJson;
 
-                    //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
-                    ////openFileDialog1.FilterIndex = 2;
+                    //openFileDialog.Filter = "Json files (*.json) | *.json";
                     saveFileDialog.RestoreDirectory = true;
                     saveFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
                     if (saveFileDialog.ShowDialog() == DialogResult.OK)
