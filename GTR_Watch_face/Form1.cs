@@ -5953,7 +5953,7 @@ namespace GTR_Watch_face
             Logger.WriteLine("* SaveGIF");
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.InitialDirectory = FullFileDir;
-            saveFileDialog.Filter = Properties.FormStrings.FilteGif;
+            saveFileDialog.Filter = Properties.FormStrings.FilterGif;
             saveFileDialog.FileName = "Preview.gif";
             //openFileDialog.Filter = "GIF Files: (*.gif)|*.gif";
             saveFileDialog.RestoreDirectory = true;

@@ -133,20 +133,11 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на kratkaya_instruktsiya.htm.
+        ///   Ищет локализованную строку, похожую на quick_guide.htm.
         /// </summary>
         public static string File_ReadMy_Start {
             get {
                 return ResourceManager.GetString("File_ReadMy_Start", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на GIF файлы (*.gif)|*.gif.
-        /// </summary>
-        public static string FilteGif {
-            get {
-                return ResourceManager.GetString("FilteGif", resourceCulture);
             }
         }
         
@@ -156,6 +147,15 @@ namespace GTR_Watch_face.Properties {
         public static string FilterBin {
             get {
                 return ResourceManager.GetString("FilterBin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на GIF файлы (*.gif)|*.gif.
+        /// </summary>
+        public static string FilterGif {
+            get {
+                return ResourceManager.GetString("FilterGif", resourceCulture);
             }
         }
         

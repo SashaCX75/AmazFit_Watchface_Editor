@@ -301,7 +301,7 @@
     <value>Информация</value>
   </data>
   <data name="File_ReadMy_Start" xml:space="preserve">
-    <value>kratkaya_instruktsiya.htm</value>
+    <value>quick_guide.htm</value>
   </data>
   <data name="Message_WarningAnimationLastImage" xml:space="preserve">
     <value>Изображение для анимации не должно быть последним в списке изображений.</value>
@@ -309,7 +309,7 @@
   <data name="Message_WarningMonthName" xml:space="preserve">
     <value>Отображение номера месяца не работает вместе с отображением названия месяца.</value>
   </data>
-  <data name="FilteGif" xml:space="preserve">
+  <data name="FilterGif" xml:space="preserve">
     <value>GIF файлы (*.gif)|*.gif</value>
   </data>
   <data name="FilterBin" xml:space="preserve">
