@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -1678,7 +1678,7 @@
     <value>123, 13</value>
   </data>
   <data name="label278.Text" xml:space="preserve">
-    <value>Angolo in basso a destra</value>
+    <value>Angolo inferiore destro</value>
   </data>
   <data name="label279.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 13</value>
@@ -1750,7 +1750,7 @@
     <value>123, 13</value>
   </data>
   <data name="label297.Text" xml:space="preserve">
-    <value>Angolo in basso a destra</value>
+    <value>Angolo inferiore destro</value>
   </data>
   <data name="label298.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 13</value>
@@ -1813,7 +1813,7 @@
     <value>123, 13</value>
   </data>
   <data name="label321.Text" xml:space="preserve">
-    <value>Angolo in basso a destra</value>
+    <value>Angolo inferiore destro</value>
   </data>
   <data name="label322.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 13</value>
@@ -2002,7 +2002,7 @@
     <value>123, 13</value>
   </data>
   <data name="label192.Text" xml:space="preserve">
-    <value>Angolo in basso a destra</value>
+    <value>Angolo inferiore destro</value>
   </data>
   <data name="label193.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 13</value>
@@ -2326,7 +2326,7 @@
     <value>123, 13</value>
   </data>
   <data name="label130.Text" xml:space="preserve">
-    <value>Angolo in basso a destra</value>
+    <value>Angolo inferiore destro</value>
   </data>
   <data name="label131.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 13</value>
@@ -2407,7 +2407,7 @@
     <value>123, 13</value>
   </data>
   <data name="label140.Text" xml:space="preserve">
-    <value>Angolo in basso a destra</value>
+    <value>Angolo inferiore destro</value>
   </data>
   <data name="label141.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 13</value>
@@ -2437,7 +2437,7 @@
     <value>123, 13</value>
   </data>
   <data name="label150.Text" xml:space="preserve">
-    <value>Angolo in basso a destra</value>
+    <value>Angolo inferiore destro</value>
   </data>
   <data name="label142.Location" type="System.Drawing.Point, System.Drawing">
     <value>144, 85</value>
@@ -2590,7 +2590,7 @@
     <value>123, 13</value>
   </data>
   <data name="label160.Text" xml:space="preserve">
-    <value>Angolo in basso a destra</value>
+    <value>Angolo inferiore destro</value>
   </data>
   <data name="label152.Location" type="System.Drawing.Point, System.Drawing">
     <value>144, 85</value>
@@ -2782,7 +2782,7 @@
     <value>123, 13</value>
   </data>
   <data name="label499.Text" xml:space="preserve">
-    <value>Angolo in basso a destra</value>
+    <value>Angolo inferiore destro</value>
   </data>
   <data name="label500.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 13</value>
@@ -3019,7 +3019,7 @@
     <value>123, 13</value>
   </data>
   <data name="label68.Text" xml:space="preserve">
-    <value>Angolo in basso a destra</value>
+    <value>Angolo inferiore destro</value>
   </data>
   <data name="label67.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 13</value>
@@ -3082,7 +3082,7 @@
     <value>123, 13</value>
   </data>
   <data name="label81.Text" xml:space="preserve">
-    <value>Angolo in basso a destra</value>
+    <value>Angolo inferiore destro</value>
   </data>
   <data name="label82.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 13</value>
@@ -3250,7 +3250,7 @@
     <value>123, 13</value>
   </data>
   <data name="label366.Text" xml:space="preserve">
-    <value>Angolo in basso a destra</value>
+    <value>Angolo inferiore destro</value>
   </data>
   <data name="label367.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 13</value>
