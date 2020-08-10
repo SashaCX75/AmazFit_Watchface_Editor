@@ -261,6 +261,15 @@ namespace GTR_Watch_face
             Logger.WriteLine("PreviewToBitmap (Date)");
             if (checkBox_Date.Checked)
             {
+                if ((checkBox_MonthName.Checked) && (comboBox_MonthName_Image.SelectedIndex >= 0))
+                {
+                    i = comboBox_MonthName_Image.SelectedIndex + Watch_Face_Preview_Set.Date.Month - 1;
+                    src = new Bitmap(ListImagesFullName[i]);
+                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_MonthName_X.Value,
+                        (int)numericUpDown_MonthName_Y.Value, src.Width, src.Height));
+                    src.Dispose();
+                }
+
                 if ((checkBox_MonthAndDayM.Checked) && (comboBox_MonthAndDayM_Image.SelectedIndex >= 0))
                 {
                     int x1 = (int)numericUpDown_MonthAndDayM_StartCorner_X.Value;
@@ -425,15 +434,6 @@ namespace GTR_Watch_face
                             gPanel.DrawRectangle(pen2, rect);
                         }
                     }
-                }
-
-                if ((checkBox_MonthName.Checked) && (comboBox_MonthName_Image.SelectedIndex >= 0))
-                {
-                    i = comboBox_MonthName_Image.SelectedIndex + Watch_Face_Preview_Set.Date.Month - 1;
-                    src = new Bitmap(ListImagesFullName[i]);
-                    gPanel.DrawImage(src, new Rectangle((int)numericUpDown_MonthName_X.Value,
-                        (int)numericUpDown_MonthName_Y.Value, src.Width, src.Height));
-                    src.Dispose();
                 }
 
                 if ((checkBox_OneLine.Checked) && (comboBox_OneLine_Image.SelectedIndex >= 0))
