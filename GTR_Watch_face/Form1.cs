@@ -7617,7 +7617,8 @@ namespace GTR_Watch_face
                         {
                             if (row.Cells[7].Value != null) Int32.TryParse(row.Cells[7].Value.ToString(), out TimeAnimation);
                             if (row.Cells[11].Value != null) Boolean.TryParse(row.Cells[11].Value.ToString(), out Bounce_b);
-                            using (FileStream stream = new FileStream(ListImagesFullName[ImageIndex], FileMode.Open, FileAccess.Read))
+                            using (FileStream stream = new FileStream(ListImagesFullName[ImageIndex], FileMode.Open, 
+                                FileAccess.Read, FileShare.ReadWrite))
                             {
                                 loadedImage = Image.FromStream(stream);
                             }
@@ -7642,7 +7643,8 @@ namespace GTR_Watch_face
                 for (int i = comboBox_StaticAnimation_Image.SelectedIndex;
                     i < (comboBox_StaticAnimation_Image.SelectedIndex + (int)numericUpDown_StaticAnimation_Count.Value); i++)
                 {
-                    using (FileStream stream = new FileStream(ListImagesFullName[i], FileMode.Open, FileAccess.Read))
+                    using (FileStream stream = new FileStream(ListImagesFullName[i], FileMode.Open, 
+                        FileAccess.Read, FileShare.ReadWrite))
                     {
                         loadedImage = Image.FromStream(stream);
                     }

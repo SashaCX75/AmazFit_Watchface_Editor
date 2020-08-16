@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.IO;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -36,25 +37,30 @@ namespace GTR_Watch_face
 
             #region Black background
             Logger.WriteLine("PreviewToBitmap (Black background)");
-            src = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr47.png");
+            //src = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr47.png");
+            src = OpenFileStream(Application.StartupPath + @"\Mask\mask_gtr47.png");
             if (radioButton_42.Checked)
             {
-                src = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr42.png");
+                //src = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr42.png");
+                src = OpenFileStream(Application.StartupPath + @"\Mask\mask_gtr42.png");
             }
             if (radioButton_gts.Checked)
             {
-                src = new Bitmap(Application.StartupPath + @"\Mask\mask_gts.png");
+                //src = new Bitmap(Application.StartupPath + @"\Mask\mask_gts.png");
+                src = OpenFileStream(Application.StartupPath + @"\Mask\mask_gts.png");
             }
             if (radioButton_TRex.Checked)
             {
-                src = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
+                //src = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
+                src = OpenFileStream(Application.StartupPath + @"\Mask\mask_trex.png");
             }
             if (radioButton_Verge.Checked)
             {
-                src = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
+                //src = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
+                src = OpenFileStream(Application.StartupPath + @"\Mask\mask_trex.png");
             }
             gPanel.DrawImage(src, new Rectangle(0, 0, src.Width, src.Height));
-            src.Dispose();
+            //src.Dispose();
             #endregion
 
             #region Background
@@ -62,9 +68,10 @@ namespace GTR_Watch_face
             if (comboBox_Background.SelectedIndex >= 0)
             {
                 i = comboBox_Background.SelectedIndex;
-                src = new Bitmap(ListImagesFullName[i]);
+                //src = new Bitmap(ListImagesFullName[i]);
+                src = OpenFileStream(ListImagesFullName[i]);
                 gPanel.DrawImage(src, new Rectangle(0, 0, src.Width, src.Height));
-                src.Dispose();
+                //src.Dispose();
             }
             #endregion
             if (scale == 0.5) gPanel.SmoothingMode = SmoothingMode.AntiAlias;
@@ -108,10 +115,11 @@ namespace GTR_Watch_face
                     if (offSet >= count) offSet = (int)(count - 1);
                     //int offSet = (int)Math.Round(count * Watch_Face_Preview_Set.Battery / 100f, 0);
                     i = comboBox_Battery_Img_Image.SelectedIndex + offSet;
-                    src = new Bitmap(ListImagesFullName[i]);
+                    //src = new Bitmap(ListImagesFullName[i]);
+                    src = OpenFileStream(ListImagesFullName[i]);
                     gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Battery_Img_X.Value,
                         (int)numericUpDown_Battery_Img_Y.Value, src.Width, src.Height));
-                    src.Dispose();
+                    //src.Dispose();
                 }
 
                 // значек процентов
@@ -121,10 +129,11 @@ namespace GTR_Watch_face
                 {
                     if ((checkBox_Battery_Text.Checked) && (comboBox_Battery_Text_Image.SelectedIndex >= 0))
                     {
-                        src = new Bitmap(ListImagesFullName[comboBox_Battery_Percent_Image.SelectedIndex]);
+                        //src = new Bitmap(ListImagesFullName[comboBox_Battery_Percent_Image.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[comboBox_Battery_Percent_Image.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Battery_Percent_X.Value,
                             (int)numericUpDown_Battery_Percent_Y.Value, src.Width, src.Height));
-                        src.Dispose(); 
+                        //src.Dispose();
                     }
                 }
 
@@ -242,10 +251,11 @@ namespace GTR_Watch_face
                                         if (value <= 0) value = 1;
                                         if (count < value)
                                         {
-                                            src = new Bitmap(ListImagesFullName[i]);
+                                            //src = new Bitmap(ListImagesFullName[i]);
+                                            src = OpenFileStream(ListImagesFullName[i]);
                                             gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
                                             //count++;
-                                            src.Dispose();
+                                            //src.Dispose();
                                         }
                                     }
                                 }
@@ -264,10 +274,11 @@ namespace GTR_Watch_face
                 if ((checkBox_MonthName.Checked) && (comboBox_MonthName_Image.SelectedIndex >= 0))
                 {
                     i = comboBox_MonthName_Image.SelectedIndex + Watch_Face_Preview_Set.Date.Month - 1;
-                    src = new Bitmap(ListImagesFullName[i]);
+                    //src = new Bitmap(ListImagesFullName[i]);
+                    src = OpenFileStream(ListImagesFullName[i]);
                     gPanel.DrawImage(src, new Rectangle((int)numericUpDown_MonthName_X.Value,
                         (int)numericUpDown_MonthName_Y.Value, src.Width, src.Height));
-                    src.Dispose();
+                    //src.Dispose();
                 }
 
                 if ((checkBox_MonthAndDayM.Checked) && (comboBox_MonthAndDayM_Image.SelectedIndex >= 0))
@@ -276,7 +287,8 @@ namespace GTR_Watch_face
                     int y1 = (int)numericUpDown_MonthAndDayM_StartCorner_Y.Value;
                     int x2 = (int)numericUpDown_MonthAndDayM_EndCorner_X.Value + 1;
                     int y2 = (int)numericUpDown_MonthAndDayM_EndCorner_Y.Value + 1;
-                    var Dagit = new Bitmap(ListImagesFullName[comboBox_MonthAndDayM_Image.SelectedIndex]);
+                    //var Dagit = new Bitmap(ListImagesFullName[comboBox_MonthAndDayM_Image.SelectedIndex]);
+                    Bitmap Dagit = OpenFileStream(ListImagesFullName[comboBox_MonthAndDayM_Image.SelectedIndex]);
                     int DateLenght = Dagit.Width;
                     int DateHeight = Dagit.Height;
                     if ((checkBox_TwoDigitsMonth.Checked) || (Watch_Face_Preview_TwoDigits.Date.Month.Tens > 0))
@@ -327,16 +339,18 @@ namespace GTR_Watch_face
                     if ((checkBox_TwoDigitsMonth.Checked) || (Watch_Face_Preview_TwoDigits.Date.Month.Tens > 0))
                     {
                         i = comboBox_MonthAndDayM_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Date.Month.Tens;
-                        src = new Bitmap(ListImagesFullName[i]);
+                        //src = new Bitmap(ListImagesFullName[i]);
+                        src = OpenFileStream(ListImagesFullName[i]);
                         gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                         PointX = PointX + Dagit.Width + (int)numericUpDown_MonthAndDayM_Spacing.Value;
-                        src.Dispose();
+                        //src.Dispose();
                     }
                     i = comboBox_MonthAndDayM_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Date.Month.Ones;
-                    src = new Bitmap(ListImagesFullName[i]);
+                    //src = new Bitmap(ListImagesFullName[i]);
+                    src = OpenFileStream(ListImagesFullName[i]);
                     gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                    src.Dispose();
-                    Dagit.Dispose();
+                    //src.Dispose();
+                    //Dagit.Dispose();
 
                     if (BBorder)
                     {
@@ -359,7 +373,8 @@ namespace GTR_Watch_face
                     int y1 = (int)numericUpDown_MonthAndDayD_StartCorner_Y.Value;
                     int x2 = (int)numericUpDown_MonthAndDayD_EndCorner_X.Value + 1;
                     int y2 = (int)numericUpDown_MonthAndDayD_EndCorner_Y.Value + 1;
-                    var Dagit = new Bitmap(ListImagesFullName[comboBox_MonthAndDayD_Image.SelectedIndex]);
+                    //var Dagit = new Bitmap(ListImagesFullName[comboBox_MonthAndDayD_Image.SelectedIndex]);
+                    Bitmap Dagit = OpenFileStream(ListImagesFullName[comboBox_MonthAndDayD_Image.SelectedIndex]);
                     int DateLenght = Dagit.Width;
                     int DateHeight = Dagit.Height;
                     if ((checkBox_TwoDigitsDay.Checked) || (Watch_Face_Preview_TwoDigits.Date.Day.Tens > 0))
@@ -410,16 +425,18 @@ namespace GTR_Watch_face
                     if ((checkBox_TwoDigitsDay.Checked) || (Watch_Face_Preview_TwoDigits.Date.Day.Tens > 0))
                     {
                         i = comboBox_MonthAndDayD_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Date.Day.Tens;
-                        src = new Bitmap(ListImagesFullName[i]);
+                        //src = new Bitmap(ListImagesFullName[i]);
+                        src = OpenFileStream(ListImagesFullName[i]);
                         gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                         PointX = PointX + Dagit.Width + (int)numericUpDown_MonthAndDayD_Spacing.Value;
-                        src.Dispose();
+                        //src.Dispose();
                     }
                     i = comboBox_MonthAndDayD_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Date.Day.Ones;
-                    src = new Bitmap(ListImagesFullName[i]);
+                    //src = new Bitmap(ListImagesFullName[i]);
+                    src = OpenFileStream(ListImagesFullName[i]);
                     gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                    src.Dispose();
-                    Dagit.Dispose();
+                    //src.Dispose();
+                    //Dagit.Dispose();
 
                     if (BBorder)
                     {
@@ -442,10 +459,12 @@ namespace GTR_Watch_face
                     int y1 = (int)numericUpDown_OneLine_StartCorner_Y.Value;
                     int x2 = (int)numericUpDown_OneLine_EndCorner_X.Value + 1;
                     int y2 = (int)numericUpDown_OneLine_EndCorner_Y.Value + 1;
-                    var Dagit = new Bitmap(ListImagesFullName[comboBox_OneLine_Image.SelectedIndex]);
-                    var Delimit = new Bitmap(1, 1);
+                    //var Dagit = new Bitmap(ListImagesFullName[comboBox_OneLine_Image.SelectedIndex]);
+                    Bitmap Dagit = OpenFileStream(ListImagesFullName[comboBox_OneLine_Image.SelectedIndex]);
+                    Bitmap Delimit = new Bitmap(1, 1);
                     if (comboBox_OneLine_Delimiter.SelectedIndex >= 0)
-                        Delimit = new Bitmap(ListImagesFullName[comboBox_OneLine_Delimiter.SelectedIndex]);
+                        //Delimit = new Bitmap(ListImagesFullName[comboBox_OneLine_Delimiter.SelectedIndex]);
+                        Delimit = OpenFileStream(ListImagesFullName[comboBox_OneLine_Delimiter.SelectedIndex]);
                     int DelimitW = Delimit.Width;
                     if (comboBox_OneLine_Delimiter.SelectedIndex < 0) DelimitW = 0;
 
@@ -502,24 +521,27 @@ namespace GTR_Watch_face
                     if ((checkBox_TwoDigitsMonth.Checked) || (Watch_Face_Preview_TwoDigits.Date.Month.Tens > 0))
                     {
                         i = comboBox_OneLine_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Date.Month.Tens;
-                        src = new Bitmap(ListImagesFullName[i]);
+                        //src = new Bitmap(ListImagesFullName[i]);
+                        src = OpenFileStream(ListImagesFullName[i]);
                         gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                         PointX = PointX + Dagit.Width + (int)numericUpDown_OneLine_Spacing.Value;
-                        src.Dispose();
+                        //src.Dispose();
                     }
                     i = comboBox_OneLine_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Date.Month.Ones;
-                    src = new Bitmap(ListImagesFullName[i]);
+                    //src = new Bitmap(ListImagesFullName[i]);
+                    src = OpenFileStream(ListImagesFullName[i]);
                     gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                     PointX = PointX + Dagit.Width + (int)numericUpDown_OneLine_Spacing.Value;
-                    src.Dispose();
+                    //src.Dispose();
 
                     if (comboBox_OneLine_Delimiter.SelectedIndex >= 0)
                     {
                         i = comboBox_OneLine_Delimiter.SelectedIndex;
-                        src = new Bitmap(ListImagesFullName[i]);
+                        //src = new Bitmap(ListImagesFullName[i]);
+                        src = OpenFileStream(ListImagesFullName[i]);
                         gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                         PointX = PointX + DelimitW + (int)numericUpDown_OneLine_Spacing.Value;
-                        src.Dispose();
+                        //src.Dispose();
                     }
 
                     if ((checkBox_TwoDigitsDay.Checked) || (Watch_Face_Preview_TwoDigits.Date.Day.Tens > 0))
@@ -530,11 +552,12 @@ namespace GTR_Watch_face
                         PointX = PointX + Dagit.Width + (int)numericUpDown_OneLine_Spacing.Value;
                     }
                     i = comboBox_OneLine_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Date.Day.Ones;
-                    src = new Bitmap(ListImagesFullName[i]);
+                    //src = new Bitmap(ListImagesFullName[i]);
+                    src = OpenFileStream(ListImagesFullName[i]);
                     gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                    src.Dispose();
-                    Dagit.Dispose();
-                    Delimit.Dispose();
+                    //src.Dispose();
+                    //Dagit.Dispose();
+                    //Delimit.Dispose();
 
                     if (BBorder)
                     {
@@ -554,10 +577,11 @@ namespace GTR_Watch_face
                 if ((checkBox_WeekDay.Checked) && (comboBox_WeekDay_Image.SelectedIndex >= 0))
                 {
                     i = comboBox_WeekDay_Image.SelectedIndex + Watch_Face_Preview_Set.Date.WeekDay - 1;
-                    src = new Bitmap(ListImagesFullName[i]);
+                    //src = new Bitmap(ListImagesFullName[i]);
+                    src = OpenFileStream(ListImagesFullName[i]);
                     gPanel.DrawImage(src, new Rectangle((int)numericUpDown_WeekDay_X.Value,
                         (int)numericUpDown_WeekDay_Y.Value, src.Width, src.Height));
-                    src.Dispose();
+                    //src.Dispose();
                 }
 
                 // набор иконок
@@ -585,10 +609,11 @@ namespace GTR_Watch_face
                                         value--;
                                         if (count == value)
                                         {
-                                            src = new Bitmap(ListImagesFullName[i]);
+                                            //src = new Bitmap(ListImagesFullName[i]);
+                                            src = OpenFileStream(ListImagesFullName[i]);
                                             gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
                                             //count++;
-                                            src.Dispose();
+                                            //src.Dispose();
                                         }
                                     }
                                 }
@@ -657,36 +682,41 @@ namespace GTR_Watch_face
                     if (PointY < y1) PointY = y1;
                     
                     i = comboBox_Year_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Year.Thousands;
-                    src = new Bitmap(ListImagesFullName[i]);
+                    //src = new Bitmap(ListImagesFullName[i]);
+                    src = OpenFileStream(ListImagesFullName[i]);
                     gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                     PointX = PointX + Dagit.Width + (int)numericUpDown_Year_Spacing.Value;
-                    src.Dispose();
+                    //src.Dispose();
 
                     i = comboBox_Year_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Year.Hundreds;
-                    src = new Bitmap(ListImagesFullName[i]);
+                    //src = new Bitmap(ListImagesFullName[i]);
+                    src = OpenFileStream(ListImagesFullName[i]);
                     gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                     PointX = PointX + Dagit.Width + (int)numericUpDown_Year_Spacing.Value;
-                    src.Dispose();
+                    //src.Dispose();
 
                     i = comboBox_Year_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Year.Tens;
-                    src = new Bitmap(ListImagesFullName[i]);
+                    //src = new Bitmap(ListImagesFullName[i]);
+                    src = OpenFileStream(ListImagesFullName[i]);
                     gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                     PointX = PointX + Dagit.Width + (int)numericUpDown_Year_Spacing.Value;
-                    src.Dispose();
+                    //src.Dispose();
 
                     i = comboBox_Year_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Year.Ones;
-                    src = new Bitmap(ListImagesFullName[i]);
+                    //src = new Bitmap(ListImagesFullName[i]);
+                    src = OpenFileStream(ListImagesFullName[i]);
                     gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                     PointX = PointX + Dagit.Width + (int)numericUpDown_Year_Spacing.Value;
-                    src.Dispose();
+                    //src.Dispose();
 
                     if (comboBox_Year_Delimiter.SelectedIndex >= 0)
                     {
                         i = comboBox_Year_Delimiter.SelectedIndex;
-                        src = new Bitmap(ListImagesFullName[i]);
+                        //src = new Bitmap(ListImagesFullName[i]);
+                        src = OpenFileStream(ListImagesFullName[i]);
                         gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                         PointX = PointX + DelimitW + (int)numericUpDown_Year_Spacing.Value;
-                        src.Dispose();
+                        //src.Dispose();
                     }
                     
                     Dagit.Dispose();
@@ -717,20 +747,22 @@ namespace GTR_Watch_face
                 {
                     if (comboBox_Bluetooth_On.SelectedIndex >= 0)
                     {
-                        src = new Bitmap(ListImagesFullName[comboBox_Bluetooth_On.SelectedIndex]);
+                        //src = new Bitmap(ListImagesFullName[comboBox_Bluetooth_On.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[comboBox_Bluetooth_On.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Bluetooth_X.Value,
                             (int)numericUpDown_Bluetooth_Y.Value, src.Width, src.Height));
-                        src.Dispose();
+                        //src.Dispose();
                     }
                 }
                 else
                 {
                     if (comboBox_Bluetooth_Off.SelectedIndex >= 0)
                     {
-                        src = new Bitmap(ListImagesFullName[comboBox_Bluetooth_Off.SelectedIndex]);
+                        //src = new Bitmap(ListImagesFullName[comboBox_Bluetooth_Off.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[comboBox_Bluetooth_Off.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Bluetooth_X.Value,
                             (int)numericUpDown_Bluetooth_Y.Value, src.Width, src.Height));
-                        src.Dispose();
+                        //src.Dispose();
                     }
                 }
             }
@@ -741,20 +773,22 @@ namespace GTR_Watch_face
                 {
                     if (comboBox_Alarm_On.SelectedIndex >= 0)
                     {
-                        src = new Bitmap(ListImagesFullName[comboBox_Alarm_On.SelectedIndex]);
+                        //src = new Bitmap(ListImagesFullName[comboBox_Alarm_On.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[comboBox_Alarm_On.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Alarm_X.Value,
                             (int)numericUpDown_Alarm_Y.Value, src.Width, src.Height));
-                        src.Dispose();
+                        //src.Dispose();
                     }
                 }
                 else
                 {
                     if (comboBox_Alarm_Off.SelectedIndex >= 0)
                     {
-                        src = new Bitmap(ListImagesFullName[comboBox_Alarm_Off.SelectedIndex]);
+                        //src = new Bitmap(ListImagesFullName[comboBox_Alarm_Off.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[comboBox_Alarm_Off.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Alarm_X.Value,
                             (int)numericUpDown_Alarm_Y.Value, src.Width, src.Height));
-                        src.Dispose();
+                        //src.Dispose();
                     }
                 }
             }
@@ -765,20 +799,22 @@ namespace GTR_Watch_face
                 {
                     if (comboBox_Lock_On.SelectedIndex >= 0)
                     {
-                        src = new Bitmap(ListImagesFullName[comboBox_Lock_On.SelectedIndex]);
+                        //src = new Bitmap(ListImagesFullName[comboBox_Lock_On.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[comboBox_Lock_On.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Lock_X.Value,
                             (int)numericUpDown_Lock_Y.Value, src.Width, src.Height));
-                        src.Dispose();
+                        //src.Dispose();
                     }
                 }
                 else
                 {
                     if (comboBox_Lock_Off.SelectedIndex >= 0)
                     {
-                        src = new Bitmap(ListImagesFullName[comboBox_Lock_Off.SelectedIndex]);
+                        //src = new Bitmap(ListImagesFullName[comboBox_Lock_Off.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[comboBox_Lock_Off.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Lock_X.Value,
                             (int)numericUpDown_Lock_Y.Value, src.Width, src.Height));
-                        src.Dispose();
+                        //src.Dispose();
                     }
                 }
             }
@@ -789,20 +825,22 @@ namespace GTR_Watch_face
                 {
                     if (comboBox_DND_On.SelectedIndex >= 0)
                     {
-                        src = new Bitmap(ListImagesFullName[comboBox_DND_On.SelectedIndex]);
+                        //src = new Bitmap(ListImagesFullName[comboBox_DND_On.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[comboBox_DND_On.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_DND_X.Value,
                             (int)numericUpDown_DND_Y.Value, src.Width, src.Height));
-                        src.Dispose();
+                        //src.Dispose();
                     }
                 }
                 else
                 {
                     if (comboBox_DND_Off.SelectedIndex >= 0)
                     {
-                        src = new Bitmap(ListImagesFullName[comboBox_DND_Off.SelectedIndex]);
+                        //src = new Bitmap(ListImagesFullName[comboBox_DND_Off.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[comboBox_DND_Off.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_DND_X.Value,
                             (int)numericUpDown_DND_Y.Value, src.Width, src.Height));
-                        src.Dispose();
+                        //src.Dispose();
                     }
                 }
             }
@@ -817,19 +855,21 @@ namespace GTR_Watch_face
                     if (comboBox_WeatherSet_Icon.SelectedIndex >= 0)
                     {
                         i = comboBox_Weather_Icon_Image.SelectedIndex + comboBox_WeatherSet_Icon.SelectedIndex;
-                        src = new Bitmap(ListImagesFullName[i]);
+                        //src = new Bitmap(ListImagesFullName[i]);
+                        src = OpenFileStream(ListImagesFullName[i]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Weather_Icon_X.Value,
                             (int)numericUpDown_Weather_Icon_Y.Value, src.Width, src.Height));
-                        src.Dispose();
+                        //src.Dispose();
                     }
                     else
                     {
                         if (comboBox_Weather_Icon_NDImage.SelectedIndex >= 0)
                         {
-                            src = new Bitmap(ListImagesFullName[comboBox_Weather_Icon_NDImage.SelectedIndex]);
+                            //src = new Bitmap(ListImagesFullName[comboBox_Weather_Icon_NDImage.SelectedIndex]);
+                            src = OpenFileStream(ListImagesFullName[comboBox_Weather_Icon_NDImage.SelectedIndex]);
                             gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Weather_Icon_X.Value,
                                 (int)numericUpDown_Weather_Icon_Y.Value, src.Width, src.Height));
-                            src.Dispose();
+                            //src.Dispose();
                         }
                     }
                 }
@@ -989,9 +1029,10 @@ namespace GTR_Watch_face
                                 i = comboBox_ActivityPuls_IconSet_Image.SelectedIndex + value;
                                 if (i < ListImagesFullName.Count)
                                 {
-                                    src = new Bitmap(ListImagesFullName[i]);
+                                    //src = new Bitmap(ListImagesFullName[i]);
+                                    src = OpenFileStream(ListImagesFullName[i]);
                                     gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
-                                    src.Dispose();
+                                    //src.Dispose();
                                 }
                             }
                         }
@@ -1222,9 +1263,11 @@ namespace GTR_Watch_face
                 {
                     if (Watch_Face_Preview_Set.Activity.Steps >= Watch_Face_Preview_Set.Activity.StepsGoal)
                     {
-                        src = new Bitmap(ListImagesFullName[comboBox_ActivityStar_Image.SelectedIndex]);
+                        //src = new Bitmap(ListImagesFullName[comboBox_ActivityStar_Image.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[comboBox_ActivityStar_Image.SelectedIndex]);
                         gPanel.DrawImage(src, new Rectangle((int)numericUpDown_ActivityStar_X.Value,
                             (int)numericUpDown_ActivityStar_Y.Value, src.Width, src.Height));
+                        //src.Dispose();
                     }
                 }
 
@@ -1357,10 +1400,11 @@ namespace GTR_Watch_face
                                         Watch_Face_Preview_Set.Activity.StepsGoal;
                                     if (count < value)
                                     {
-                                        src = new Bitmap(ListImagesFullName[i]);
+                                        //src = new Bitmap(ListImagesFullName[i]);
+                                        src = OpenFileStream(ListImagesFullName[i]);
                                         gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
                                         //count++;
-                                        src.Dispose();
+                                        //src.Dispose();
                                     }
                                 }
                             }
@@ -1409,9 +1453,10 @@ namespace GTR_Watch_face
                                     i = ImageIndex;
                                     if (i < ListImagesFullName.Count)
                                     {
-                                        src = new Bitmap(ListImagesFullName[i]);
+                                        //src = new Bitmap(ListImagesFullName[i]);
+                                        src = OpenFileStream(ListImagesFullName[i]);
                                         gPanel.DrawImage(src, new Rectangle(Coordinates_X, Coordinates_Y, src.Width, src.Height));
-                                        src.Dispose();
+                                        //src.Dispose();
                                     }
                                 }
                             }
@@ -1424,10 +1469,11 @@ namespace GTR_Watch_face
                         i = comboBox_StaticAnimation_Image.SelectedIndex;
                         if (i < ListImagesFullName.Count)
                         {
-                            src = new Bitmap(ListImagesFullName[i]);
+                            //src = new Bitmap(ListImagesFullName[i]);
+                            src = OpenFileStream(ListImagesFullName[i]);
                             gPanel.DrawImage(src, new Rectangle((int)numericUpDown_StaticAnimation_X.Value,
                                 (int)numericUpDown_StaticAnimation_Y.Value, src.Width, src.Height));
-                            src.Dispose();
+                            //src.Dispose();
                         }
                     }
 
@@ -1449,10 +1495,11 @@ namespace GTR_Watch_face
                             i = comboBox_Hours_Tens_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.TimePm.Hours.Tens;
                             if (i < ListImagesFullName.Count)
                             {
-                                src = new Bitmap(ListImagesFullName[i]);
+                                //src = new Bitmap(ListImagesFullName[i]);
+                                src = OpenFileStream(ListImagesFullName[i]);
                                 gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Hours_Tens_X.Value,
                                     (int)numericUpDown_Hours_Tens_Y.Value, src.Width, src.Height));
-                                src.Dispose();
+                                //src.Dispose();
                             }
                         }
                         if (comboBox_Hours_Ones_Image.SelectedIndex >= 0)
@@ -1460,10 +1507,11 @@ namespace GTR_Watch_face
                             i = comboBox_Hours_Ones_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.TimePm.Hours.Ones;
                             if (i < ListImagesFullName.Count)
                             {
-                                src = new Bitmap(ListImagesFullName[i]);
+                                //src = new Bitmap(ListImagesFullName[i]);
+                                src = OpenFileStream(ListImagesFullName[i]);
                                 gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Hours_Ones_X.Value,
                                     (int)numericUpDown_Hours_Ones_Y.Value, src.Width, src.Height));
-                                src.Dispose();
+                                //src.Dispose();
                             }
                         }
                     }
@@ -1475,10 +1523,11 @@ namespace GTR_Watch_face
                             i = comboBox_Min_Tens_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.TimePm.Minutes.Tens;
                             if (i < ListImagesFullName.Count)
                             {
-                                src = new Bitmap(ListImagesFullName[i]);
+                                //src = new Bitmap(ListImagesFullName[i]);
+                                src = OpenFileStream(ListImagesFullName[i]);
                                 gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Min_Tens_X.Value,
                                     (int)numericUpDown_Min_Tens_Y.Value, src.Width, src.Height));
-                                src.Dispose();
+                                //src.Dispose();
                             }
                         }
                         if (comboBox_Min_Ones_Image.SelectedIndex >= 0)
@@ -1486,10 +1535,11 @@ namespace GTR_Watch_face
                             i = comboBox_Min_Ones_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.TimePm.Minutes.Ones;
                             if (i < ListImagesFullName.Count)
                             {
-                                src = new Bitmap(ListImagesFullName[i]);
+                                //src = new Bitmap(ListImagesFullName[i]);
+                                src = OpenFileStream(ListImagesFullName[i]);
                                 gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Min_Ones_X.Value,
                                     (int)numericUpDown_Min_Ones_Y.Value, src.Width, src.Height));
-                                src.Dispose();
+                                //src.Dispose();
                             }
                         }
                     }
@@ -1501,10 +1551,11 @@ namespace GTR_Watch_face
                             i = comboBox_Sec_Tens_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.TimePm.Seconds.Tens;
                             if (i < ListImagesFullName.Count)
                             {
-                                src = new Bitmap(ListImagesFullName[i]);
+                                //src = new Bitmap(ListImagesFullName[i]);
+                                src = OpenFileStream(ListImagesFullName[i]);
                                 gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Sec_Tens_X.Value,
                                     (int)numericUpDown_Sec_Tens_Y.Value, src.Width, src.Height));
-                                src.Dispose();
+                                //src.Dispose();
                             }
                         }
                         if (comboBox_Sec_Ones_Image.SelectedIndex >= 0)
@@ -1512,10 +1563,11 @@ namespace GTR_Watch_face
                             i = comboBox_Sec_Ones_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.TimePm.Seconds.Ones;
                             if (i < ListImagesFullName.Count)
                             {
-                                src = new Bitmap(ListImagesFullName[i]);
+                                //src = new Bitmap(ListImagesFullName[i]);
+                                src = OpenFileStream(ListImagesFullName[i]);
                                 gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Sec_Ones_X.Value,
                                     (int)numericUpDown_Sec_Ones_Y.Value, src.Width, src.Height));
-                                src.Dispose();
+                                //src.Dispose();
                             }
                         }
                     }
@@ -1525,10 +1577,11 @@ namespace GTR_Watch_face
                         if (comboBox_Image_Pm.SelectedIndex >= 0)
                         {
                             i = comboBox_Image_Pm.SelectedIndex;
-                            src = new Bitmap(ListImagesFullName[i]);
+                            //src = new Bitmap(ListImagesFullName[i]);
+                            src = OpenFileStream(ListImagesFullName[i]);
                             gPanel.DrawImage(src, new Rectangle((int)numericUpDown_AmPm_X.Value,
                                 (int)numericUpDown_AmPm_Y.Value, src.Width, src.Height));
-                            src.Dispose();
+                            //src.Dispose();
                         }
                     }
                     else
@@ -1536,10 +1589,11 @@ namespace GTR_Watch_face
                         if (comboBox_Image_Am.SelectedIndex >= 0)
                         {
                             i = comboBox_Image_Am.SelectedIndex;
-                            src = new Bitmap(ListImagesFullName[i]);
+                            //src = new Bitmap(ListImagesFullName[i]);
+                            src = OpenFileStream(ListImagesFullName[i]);
                             gPanel.DrawImage(src, new Rectangle((int)numericUpDown_AmPm_X.Value,
                                 (int)numericUpDown_AmPm_Y.Value, src.Width, src.Height));
-                            src.Dispose();
+                            //src.Dispose();
                         }
                     }
 
@@ -1548,10 +1602,11 @@ namespace GTR_Watch_face
                         if (comboBox_Delimiter_Image.SelectedIndex >= 0)
                         {
                             i = comboBox_Delimiter_Image.SelectedIndex;
-                            src = new Bitmap(ListImagesFullName[i]);
+                            //src = new Bitmap(ListImagesFullName[i]);
+                            src = OpenFileStream(ListImagesFullName[i]);
                             gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Delimiter_X.Value,
                                 (int)numericUpDown_Delimiter_Y.Value, src.Width, src.Height));
-                            src.Dispose();
+                            //src.Dispose();
                         }
                     }
                 }
@@ -1564,10 +1619,11 @@ namespace GTR_Watch_face
                             i = comboBox_Hours_Tens_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Time.Hours.Tens;
                             if (i < ListImagesFullName.Count)
                             {
-                                src = new Bitmap(ListImagesFullName[i]);
+                                //src = new Bitmap(ListImagesFullName[i]);
+                                src = OpenFileStream(ListImagesFullName[i]);
                                 gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Hours_Tens_X.Value,
                                     (int)numericUpDown_Hours_Tens_Y.Value, src.Width, src.Height));
-                                src.Dispose();
+                                //src.Dispose();
                             }
                         }
                         if (comboBox_Hours_Ones_Image.SelectedIndex >= 0)
@@ -1575,10 +1631,11 @@ namespace GTR_Watch_face
                             i = comboBox_Hours_Ones_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Time.Hours.Ones;
                             if (i < ListImagesFullName.Count)
                             {
-                                src = new Bitmap(ListImagesFullName[i]);
+                                //src = new Bitmap(ListImagesFullName[i]);
+                                src = OpenFileStream(ListImagesFullName[i]);
                                 gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Hours_Ones_X.Value,
                                     (int)numericUpDown_Hours_Ones_Y.Value, src.Width, src.Height));
-                                src.Dispose();
+                                //src.Dispose();
                             }
                         }
                     }
@@ -1590,10 +1647,11 @@ namespace GTR_Watch_face
                             i = comboBox_Min_Tens_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Time.Minutes.Tens;
                             if (i < ListImagesFullName.Count)
                             {
-                                src = new Bitmap(ListImagesFullName[i]);
+                                //src = new Bitmap(ListImagesFullName[i]);
+                                src = OpenFileStream(ListImagesFullName[i]);
                                 gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Min_Tens_X.Value,
                                     (int)numericUpDown_Min_Tens_Y.Value, src.Width, src.Height));
-                                src.Dispose();
+                                //src.Dispose();
                             }
                         }
                         if (comboBox_Min_Ones_Image.SelectedIndex >= 0)
@@ -1601,10 +1659,11 @@ namespace GTR_Watch_face
                             i = comboBox_Min_Ones_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Time.Minutes.Ones;
                             if (i < ListImagesFullName.Count)
                             {
-                                src = new Bitmap(ListImagesFullName[i]);
+                                //src = new Bitmap(ListImagesFullName[i]);
+                                src = OpenFileStream(ListImagesFullName[i]);
                                 gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Min_Ones_X.Value,
                                     (int)numericUpDown_Min_Ones_Y.Value, src.Width, src.Height));
-                                src.Dispose();
+                                //src.Dispose();
                             }
                         }
                     }
@@ -1616,10 +1675,11 @@ namespace GTR_Watch_face
                             i = comboBox_Sec_Tens_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Time.Seconds.Tens;
                             if (i < ListImagesFullName.Count)
                             {
-                                src = new Bitmap(ListImagesFullName[i]);
+                                //src = new Bitmap(ListImagesFullName[i]);
+                                src = OpenFileStream(ListImagesFullName[i]);
                                 gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Sec_Tens_X.Value,
                                     (int)numericUpDown_Sec_Tens_Y.Value, src.Width, src.Height));
-                                src.Dispose();
+                                //src.Dispose();
                             }
                         }
                         if (comboBox_Sec_Ones_Image.SelectedIndex >= 0)
@@ -1627,10 +1687,11 @@ namespace GTR_Watch_face
                             i = comboBox_Sec_Ones_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Time.Seconds.Ones;
                             if (i < ListImagesFullName.Count)
                             {
-                                src = new Bitmap(ListImagesFullName[i]);
+                                //src = new Bitmap(ListImagesFullName[i]);
+                                src = OpenFileStream(ListImagesFullName[i]);
                                 gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Sec_Ones_X.Value,
                                     (int)numericUpDown_Sec_Ones_Y.Value, src.Width, src.Height));
-                                src.Dispose();
+                                //src.Dispose();
                             }
                         }
                     }
@@ -1640,10 +1701,11 @@ namespace GTR_Watch_face
                         if (comboBox_Delimiter_Image.SelectedIndex >= 0)
                         {
                             i = comboBox_Delimiter_Image.SelectedIndex;
-                            src = new Bitmap(ListImagesFullName[i]);
+                            //src = new Bitmap(ListImagesFullName[i]);
+                            src = OpenFileStream(ListImagesFullName[i]);
                             gPanel.DrawImage(src, new Rectangle((int)numericUpDown_Delimiter_X.Value,
                                 (int)numericUpDown_Delimiter_Y.Value, src.Width, src.Height));
-                            src.Dispose();
+                            //src.Dispose();
                         }
                     }
                 }
@@ -1757,10 +1819,11 @@ namespace GTR_Watch_face
                 }
                 if ((checkBox_HourCenterImage.Checked) && (comboBox_HourCenterImage_Image.SelectedIndex >= 0))
                 {
-                    src = new Bitmap(ListImagesFullName[comboBox_HourCenterImage_Image.SelectedIndex]);
+                    //src = new Bitmap(ListImagesFullName[comboBox_HourCenterImage_Image.SelectedIndex]);
+                    src = OpenFileStream(ListImagesFullName[comboBox_HourCenterImage_Image.SelectedIndex]);
                     gPanel.DrawImage(src, new Rectangle((int)numericUpDown_HourCenterImage_X.Value,
                         (int)numericUpDown_HourCenterImage_Y.Value, src.Width, src.Height));
-                    src.Dispose();
+                    //src.Dispose();
                 }
 
                 // минуты
@@ -1780,10 +1843,11 @@ namespace GTR_Watch_face
                 }
                 if ((checkBox_MinCenterImage.Checked) && (comboBox_MinCenterImage_Image.SelectedIndex >= 0))
                 {
-                    src = new Bitmap(ListImagesFullName[comboBox_MinCenterImage_Image.SelectedIndex]);
+                    //src = new Bitmap(ListImagesFullName[comboBox_MinCenterImage_Image.SelectedIndex]);
+                    src = OpenFileStream(ListImagesFullName[comboBox_MinCenterImage_Image.SelectedIndex]);
                     gPanel.DrawImage(src, new Rectangle((int)numericUpDown_MinCenterImage_X.Value,
                         (int)numericUpDown_MinCenterImage_Y.Value, src.Width, src.Height));
-                    src.Dispose();
+                    //src.Dispose();
                 }
 
                 // секунды
@@ -1807,10 +1871,11 @@ namespace GTR_Watch_face
                 }
                 if ((checkBox_SecCenterImage.Checked) && (comboBox_SecCenterImage_Image.SelectedIndex >= 0))
                 {
-                    src = new Bitmap(ListImagesFullName[comboBox_SecCenterImage_Image.SelectedIndex]);
+                    //src = new Bitmap(ListImagesFullName[comboBox_SecCenterImage_Image.SelectedIndex]);
+                    src = OpenFileStream(ListImagesFullName[comboBox_SecCenterImage_Image.SelectedIndex]);
                     gPanel.DrawImage(src, new Rectangle((int)numericUpDown_SecCenterImage_X.Value,
                         (int)numericUpDown_SecCenterImage_Y.Value, src.Width, src.Height));
-                    src.Dispose();
+                    //src.Dispose();
                 }
             }
             #endregion
@@ -2055,17 +2120,19 @@ namespace GTR_Watch_face
                     i = image_index + _number;
                     if (i < ListImagesFullName.Count)
                     {
-                        src = new Bitmap(ListImagesFullName[i]);
+                        //src = new Bitmap(ListImagesFullName[i]);
+                        src = OpenFileStream(ListImagesFullName[i]);
                         DateLenght = DateLenght + src.Width + spacing;
-                        src.Dispose();
+                        //src.Dispose();
                     }
                 }
 
             }
             DateLenght = DateLenght - spacing;
-            src = new Bitmap(ListImagesFullName[image_index]);
+            //src = new Bitmap(ListImagesFullName[image_index]);
+            src = OpenFileStream(ListImagesFullName[image_index]);
             if (DateLenght < src.Width) DateLenght = src.Width;
-            src.Dispose();
+            //src.Dispose();
 
             int DateHeight = Digit.Height;
 
@@ -2118,14 +2185,16 @@ namespace GTR_Watch_face
                     i = image_index + _number;
                     if (i < ListImagesFullName.Count)
                     {
-                        src = new Bitmap(ListImagesFullName[i]);
+                        //src = new Bitmap(ListImagesFullName[i]);
+                        src = OpenFileStream(ListImagesFullName[i]);
                         graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                         PointX = PointX + src.Width + spacing;
-                        src.Dispose();
+                        //src.Dispose();
                     }
                 }
 
             }
+            src.Dispose();
             Digit.Dispose();
 
             if (BBorder)
@@ -2192,32 +2261,36 @@ namespace GTR_Watch_face
                     i = image_index + _number;
                     if (i < ListImagesFullName.Count)
                     {
-                        src = new Bitmap(ListImagesFullName[i]);
+                        //src = new Bitmap(ListImagesFullName[i]);
+                        src = OpenFileStream(ListImagesFullName[i]);
                         DateLenght = DateLenght + src.Width + spacing;
-                        src.Dispose();
+                        //src.Dispose();
                     }
                 }
                 else
                 {
                     if (dec >= 0)
                     {
-                        src = new Bitmap(ListImagesFullName[dec]);
+                        //src = new Bitmap(ListImagesFullName[dec]);
+                        src = OpenFileStream(ListImagesFullName[dec]);
                         DateLenght = DateLenght + src.Width + spacing;
-                        src.Dispose();
+                        //src.Dispose();
                     }
                 }
 
             }
             if (suffix >= 0)
             {
-                src = new Bitmap(ListImagesFullName[suffix]);
+                //src = new Bitmap(ListImagesFullName[suffix]);
+                src = OpenFileStream(ListImagesFullName[suffix]);
                 DateLenght = DateLenght + src.Width + spacing;
-                src.Dispose();
+                //src.Dispose();
             }
             DateLenght = DateLenght - spacing;
-            src = new Bitmap(ListImagesFullName[image_index]);
+            //src = new Bitmap(ListImagesFullName[image_index]);
+            src = OpenFileStream(ListImagesFullName[image_index]);
             if (DateLenght < src.Width) DateLenght = src.Width;
-            src.Dispose();
+            //src.Dispose();
             //if ((data_number != (int)data_number) && (dec >= 0))
             //{
             //    DateLenght = Dagit.Width * (data_numberS.Length - 1) + spacing * (data_numberS.Length - 2);
@@ -2278,31 +2351,35 @@ namespace GTR_Watch_face
                     i = image_index + _number;
                     if (i < ListImagesFullName.Count)
                     {
-                        src = new Bitmap(ListImagesFullName[i]);
+                        //src = new Bitmap(ListImagesFullName[i]);
+                        src = OpenFileStream(ListImagesFullName[i]);
                         graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                         PointX = PointX + src.Width + spacing;
-                        src.Dispose();
+                        //src.Dispose();
                     }
                 }
                 else
                 {
                     if (dec >= 0)
                     {
-                        src = new Bitmap(ListImagesFullName[dec]);
+                        //src = new Bitmap(ListImagesFullName[dec]);
+                        src = OpenFileStream(ListImagesFullName[dec]);
                         graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                         PointX = PointX + src.Width + spacing;
-                        src.Dispose();
+                        //src.Dispose();
                     }
                 }
 
             }
             if (suffix >= 0)
             {
-                src = new Bitmap(ListImagesFullName[suffix]);
+                //src = new Bitmap(ListImagesFullName[suffix]);
+                src = OpenFileStream(ListImagesFullName[suffix]);
                 graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                src.Dispose();
+                //src.Dispose();
 
             }
+            src.Dispose();
             Digit.Dispose();
 
             if (BBorder)
@@ -2362,27 +2439,30 @@ namespace GTR_Watch_face
                         i = image_index + _number;
                         if (i < ListImagesFullName.Count)
                         {
-                            src = new Bitmap(ListImagesFullName[i]);
+                            //src = new Bitmap(ListImagesFullName[i]);
+                            src = OpenFileStream(ListImagesFullName[i]);
                             DateLenght = DateLenght + src.Width + spacing;
-                            src.Dispose();
+                            //src.Dispose();
                         }
                     }
                     else
                     {
                         if (minus >= 0)
                         {
-                            src = new Bitmap(ListImagesFullName[minus]);
+                            //src = new Bitmap(ListImagesFullName[minus]);
+                            src = OpenFileStream(ListImagesFullName[minus]);
                             DateLenght = DateLenght + src.Width + spacing;
-                            src.Dispose();
+                            //src.Dispose();
                         }
                     }
 
                 }
                 if (degris >= 0)
                 {
-                    src = new Bitmap(ListImagesFullName[degris]);
+                    //src = new Bitmap(ListImagesFullName[degris]);
+                    src = OpenFileStream(ListImagesFullName[degris]);
                     DateLenght = DateLenght + src.Width + spacing;
-                    src.Dispose();
+                    //src.Dispose();
                 }
                 DateLenght = DateLenght - spacing;
             }
@@ -2390,9 +2470,10 @@ namespace GTR_Watch_face
             {
                 if (error >= 0)
                 {
-                    src = new Bitmap(ListImagesFullName[error]);
+                    //src = new Bitmap(ListImagesFullName[error]);
+                    src = OpenFileStream(ListImagesFullName[error]);
                     DateLenght = DateLenght + src.Width;
-                    src.Dispose();
+                    //src.Dispose();
                 }
             }
             //if ((data_number != (int)data_number) && (dec >= 0))
@@ -2457,40 +2538,45 @@ namespace GTR_Watch_face
                         i = image_index + _number;
                         if (i < ListImagesFullName.Count)
                         {
-                            src = new Bitmap(ListImagesFullName[i]);
+                            //src = new Bitmap(ListImagesFullName[i]);
+                            src = OpenFileStream(ListImagesFullName[i]);
                             graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                             PointX = PointX + src.Width + spacing;
-                            src.Dispose();
+                            //src.Dispose();
                         }
                     }
                     else
                     {
                         if (minus >= 0)
                         {
-                            src = new Bitmap(ListImagesFullName[minus]);
+                            //src = new Bitmap(ListImagesFullName[minus]);
+                            src = OpenFileStream(ListImagesFullName[minus]);
                             graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
                             PointX = PointX + src.Width + spacing;
-                            src.Dispose();
+                            //src.Dispose();
                         }
                     }
 
                 }
                 if (degris >= 0)
                 {
-                    src = new Bitmap(ListImagesFullName[degris]);
+                    //src = new Bitmap(ListImagesFullName[degris]);
+                    src = OpenFileStream(ListImagesFullName[degris]);
                     graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                    src.Dispose();
+                    //src.Dispose();
                 }
             }
             else
             {
                 if (error >= 0)
                 {
-                    src = new Bitmap(ListImagesFullName[error]);
+                    //src = new Bitmap(ListImagesFullName[error]);
+                    src = OpenFileStream(ListImagesFullName[error]);
                     graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                    src.Dispose();
+                    //src.Dispose();
                 }
             }
+            src.Dispose();
             Dagit.Dispose();
 
             if (BBorder)
@@ -2523,7 +2609,8 @@ namespace GTR_Watch_face
         {
             Logger.WriteLine("* DrawAnalogClock");
             //graphics.RotateTransform(angle);
-            var src = new Bitmap(ListImagesFullName[image_index]);
+            //var src = new Bitmap(ListImagesFullName[image_index]);
+            Bitmap src = OpenFileStream(ListImagesFullName[image_index]);
             //graphics.DrawImage(src, new Rectangle(227 - x1, 227 - y1, src.Width, src.Height));
             //if (!model_gtr47)
             //{
@@ -2555,7 +2642,8 @@ namespace GTR_Watch_face
         {
             Logger.WriteLine("* CircleOnBitmap");
             if (EndAngle == 0) return;
-            Bitmap src = new Bitmap(ListImagesFullName[imageIndex]);
+            //Bitmap src = new Bitmap(ListImagesFullName[imageIndex]);
+            Bitmap src = OpenFileStream(ListImagesFullName[imageIndex]);
             //Pen pen = new Pen(Color.Black, width);
             Pen pen = new Pen(Color.FromArgb(1, 0, 0, 0), 1);
 
@@ -2596,7 +2684,7 @@ namespace GTR_Watch_face
                 src = ApplyMask(src, mask);
                 //src = mask;
                 graphics.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
-                src.Dispose();
+                //src.Dispose();
                 mask.Dispose();
 
                 if (showCircleScaleArea)
@@ -2672,6 +2760,16 @@ namespace GTR_Watch_face
                 ImageMagick.MagickColor.FromRgba((byte)0, (byte)0, (byte)0, (byte)0));
             return image.ToBitmap();
             Logger.WriteLine("* FormColor (end)");
+        }
+
+        public Bitmap OpenFileStream (string path)
+        {
+            Bitmap src = null;
+            using (FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+            {
+                src = new Bitmap(Image.FromStream(stream));
+            }
+            return src;
         }
     }
 }
