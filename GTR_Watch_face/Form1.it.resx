@@ -1624,7 +1624,7 @@
     <value>Il simbolo "°":</value>
   </data>
   <data name="tabPage24.Text" xml:space="preserve">
-    <value>Meteo attuale</value>
+    <value>Temperatura attuale</value>
   </data>
   <data name="checkBox_Weather_Text.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>

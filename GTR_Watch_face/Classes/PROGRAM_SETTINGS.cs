@@ -45,8 +45,8 @@
         public string pack_command_GTS = "--gts --file";
         public string unpack_command_TRex = "--trex --file";
         public string pack_command_TRex = "--trex --file";
-        public string unpack_command_Verge = "--file";
-        public string pack_command_Verge = "--file";
+        public string unpack_command_Verge = "--vergelite --file";
+        public string pack_command_Verge = "--vergelite --file";
 
         public string language { get; set; }
     }

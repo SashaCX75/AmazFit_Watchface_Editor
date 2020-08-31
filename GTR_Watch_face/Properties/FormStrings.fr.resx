@@ -147,11 +147,14 @@
   <data name="Message_bigFile_Caption" xml:space="preserve">
     <value>Grande taille de fichier</value>
   </data>
-  <data name="Message_bigFile_Text1" xml:space="preserve">
+  <data name="Message_bigFile_Text1_gtr47" xml:space="preserve">
     <value>La taille du fichier non compressé dépasse 1,95 Mo.</value>
   </data>
   <data name="Message_bigFile_Text1_gts" xml:space="preserve">
     <value>La taille du fichier non compressé dépasse 1,5 Mo.</value>
+  </data>
+  <data name="Message_bigFile_Text1_trex" xml:space="preserve">
+    <value>La taille du fichier non compressé dépasse 5,5 Mo.</value>
   </data>
   <data name="Message_bigFile_Text2" xml:space="preserve">
     <value>Le cadran peut ne pas fonctionner.</value>

@@ -6,8 +6,8 @@
         public long Y { get; set; }
         public long ImageIndexAMCN { get; set; }
         public long ImageIndexPMCN { get; set; }
-        public long ImageIndexAMEN { get; set; }
-        public long ImageIndexPMEN { get; set; }
+        public long? ImageIndexAMEN { get; set; }
+        public long? ImageIndexPMEN { get; set; }
     }
 
     public class TwoDigits

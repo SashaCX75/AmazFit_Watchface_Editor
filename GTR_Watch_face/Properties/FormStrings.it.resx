@@ -147,7 +147,7 @@
   <data name="Message_bigFile_Caption" xml:space="preserve">
     <value>Dimensione file eccessiva</value>
   </data>
-  <data name="Message_bigFile_Text1" xml:space="preserve">
+  <data name="Message_bigFile_Text1_gtr47" xml:space="preserve">
     <value>Attenzione! Il file decompresso è maggiore di 1.95MB.</value>
   </data>
   <data name="Message_bigFile_Text1_gts" xml:space="preserve">
@@ -317,5 +317,8 @@
   </data>
   <data name="FilterPng" xml:space="preserve">
     <value>File PNG (*.png)|*.png</value>
+  </data>
+  <data name="Message_bigFile_Text1_trex" xml:space="preserve">
+    <value>Attenzione! Il file decompresso è maggiore di 5.5MB.</value>
   </data>
 </root>

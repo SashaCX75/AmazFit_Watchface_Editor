@@ -1702,7 +1702,7 @@
     <value>Esquina superior izquierda</value>
   </data>
   <data name="tabPage24.Text" xml:space="preserve">
-    <value>Clima actual</value>
+    <value>Temperatura actual</value>
   </data>
   <data name="label490.Size" type="System.Drawing.Size, System.Drawing">
     <value>198, 26</value>

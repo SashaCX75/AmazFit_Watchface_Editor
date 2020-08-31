@@ -117,22 +117,6 @@ namespace GTR_Watch_face
                 }
                 //Logger.WriteLine("Определили язык");
                 SetLanguage();
-                //if (Program_Settings.language == "English")
-                //{
-                //    Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en");
-                //    Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
-                //}
-                //else if(Program_Settings.language == "Español")
-                //{
-                //    Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("es");
-                //    Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("es");
-                //}
-                //else
-                //{
-                //    Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("ru");
-                //    Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ru");
-                //}
-                //Logger.WriteLine("Применили язык");
             }
             catch (Exception)
             {
@@ -1152,15 +1136,25 @@ namespace GTR_Watch_face
                         Logger.WriteLine("GetFileSizeMB");
                         this.BringToFront();
                         double fileSize = (GetFileSizeMB(new FileInfo(newFullName)));
-                        if ((fileSize >= 1.5) && (!radioButton_47.Checked))
+                        Logger.WriteLine("fileSize = " + fileSize.ToString());
+                        if ((fileSize >= 5.5) && (radioButton_TRex.Checked))
+                        {
+                            MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_trex + Environment.NewLine + Environment.NewLine +
+                            Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        if ((fileSize >= 1.5) && (radioButton_42.Checked || radioButton_gts.Checked || radioButton_Verge.Checked))
                         {
                             MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_gts + Environment.NewLine + Environment.NewLine +
                             Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        else if (fileSize > 1.95) MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1 + Environment.NewLine + Environment.NewLine +
-                        Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if ((fileSize >= 1.95) && (radioButton_47.Checked))
+                        {
+                            MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_gtr47 + Environment.NewLine + Environment.NewLine +
+                            Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
 
                         //if (radioButton_Settings_Pack_Dialog.Checked)
                         if (Program_Settings.Settings_Pack_Dialog)
@@ -1397,15 +1391,25 @@ namespace GTR_Watch_face
                     {
                         Logger.WriteLine("GetFileSizeMB");
                         double fileSize = (GetFileSizeMB(new FileInfo(newFullName)));
-                        if ((fileSize >= 1.5) && (!radioButton_47.Checked))
+                        Logger.WriteLine("fileSize = " + fileSize.ToString());
+                        if ((fileSize >= 5.5) && (radioButton_TRex.Checked))
+                        {
+                            MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_trex + Environment.NewLine + Environment.NewLine +
+                            Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        if ((fileSize >= 1.5) && (radioButton_42.Checked || radioButton_gts.Checked || radioButton_Verge.Checked))
                         {
                             MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_gts + Environment.NewLine + Environment.NewLine +
                             Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        else if (fileSize > 1.95) MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1 + Environment.NewLine + Environment.NewLine +
-                        Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if ((fileSize >= 1.95) && (radioButton_47.Checked))
+                        {
+                            MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_gtr47 + Environment.NewLine + Environment.NewLine +
+                            Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
 
                         //MessageBox.Show(fileSize.ToString());
                         //MessageBox.Show(GetFileSize(new FileInfo(newFullName)));
@@ -8339,6 +8343,14 @@ namespace GTR_Watch_face
             #region Activity
             if (Watch_Face.Activity != null)
             {
+                if ((Watch_Face.Activity.StepsGoal != null))
+                {
+                    Watch_Face.Activity.StepsGoal.TopLeftX = (int)Math.Round(Watch_Face.Activity.StepsGoal.TopLeftX * scale);
+                    Watch_Face.Activity.StepsGoal.TopLeftY = (int)Math.Round(Watch_Face.Activity.StepsGoal.TopLeftY * scale);
+                    Watch_Face.Activity.StepsGoal.BottomRightX = (int)Math.Round(Watch_Face.Activity.StepsGoal.BottomRightX * scale);
+                    Watch_Face.Activity.StepsGoal.BottomRightY = (int)Math.Round(Watch_Face.Activity.StepsGoal.BottomRightY * scale);
+                }
+
                 if ((Watch_Face.Activity.Steps != null) && (Watch_Face.Activity.Steps.Step != null))
                 {
                     Watch_Face.Activity.Steps.Step.TopLeftX = (int)Math.Round(Watch_Face.Activity.Steps.Step.TopLeftX * scale);

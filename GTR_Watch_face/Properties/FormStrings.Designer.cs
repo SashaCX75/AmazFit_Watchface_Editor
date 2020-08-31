@@ -19,7 +19,7 @@ namespace GTR_Watch_face.Properties {
     // с помощью такого средства, как ResGen или Visual Studio.
     // Чтобы добавить или удалить член, измените файл .ResX и снова запустите ResGen
     // с параметром /str или перестройте свой проект VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class FormStrings {
@@ -207,9 +207,9 @@ namespace GTR_Watch_face.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на Размер несжатого файла превышает 1,95МБ..
         /// </summary>
-        public static string Message_bigFile_Text1 {
+        public static string Message_bigFile_Text1_gtr47 {
             get {
-                return ResourceManager.GetString("Message_bigFile_Text1", resourceCulture);
+                return ResourceManager.GetString("Message_bigFile_Text1_gtr47", resourceCulture);
             }
         }
         
@@ -219,6 +219,15 @@ namespace GTR_Watch_face.Properties {
         public static string Message_bigFile_Text1_gts {
             get {
                 return ResourceManager.GetString("Message_bigFile_Text1_gts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Размер несжатого файла превышает 5,5МБ..
+        /// </summary>
+        public static string Message_bigFile_Text1_trex {
+            get {
+                return ResourceManager.GetString("Message_bigFile_Text1_trex", resourceCulture);
             }
         }
         

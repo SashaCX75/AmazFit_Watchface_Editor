@@ -199,15 +199,15 @@ namespace GTR_Watch_face
                     if (Watch_Face.Time.AmPm.ImageIndexAMCN > 0)
                         //comboBox_Image_Am.Text = Watch_Face.Time.AmPm.ImageIndexAMCN.ToString();
                         comboBoxSetText(comboBox_Image_Am, Watch_Face.Time.AmPm.ImageIndexAMCN);
-                    if (Watch_Face.Time.AmPm.ImageIndexAMEN > 0)
+                    if (Watch_Face.Time.AmPm.ImageIndexAMEN != null && Watch_Face.Time.AmPm.ImageIndexAMEN > 0)
                         //comboBox_Image_Am.Text = Watch_Face.Time.AmPm.ImageIndexAMEN.ToString();
-                        comboBoxSetText(comboBox_Image_Am, Watch_Face.Time.AmPm.ImageIndexAMEN);
+                        comboBoxSetText(comboBox_Image_Am, (long)Watch_Face.Time.AmPm.ImageIndexAMEN);
                     if (Watch_Face.Time.AmPm.ImageIndexPMCN > 0)
                         //comboBox_Image_Pm.Text = Watch_Face.Time.AmPm.ImageIndexPMCN.ToString();
                         comboBoxSetText(comboBox_Image_Pm, Watch_Face.Time.AmPm.ImageIndexPMCN);
-                    if (Watch_Face.Time.AmPm.ImageIndexPMEN > 0)
+                    if (Watch_Face.Time.AmPm.ImageIndexPMEN != null && Watch_Face.Time.AmPm.ImageIndexPMEN > 0)
                         //comboBox_Image_Pm.Text = Watch_Face.Time.AmPm.ImageIndexPMEN.ToString();
-                        comboBoxSetText(comboBox_Image_Pm, Watch_Face.Time.AmPm.ImageIndexPMEN);
+                        comboBoxSetText(comboBox_Image_Pm, (long)Watch_Face.Time.AmPm.ImageIndexPMEN);
                 }
                 else checkBox_AmPm.Checked = false;
             }
@@ -541,7 +541,24 @@ namespace GTR_Watch_face
             if (Watch_Face.Activity != null)
             {
                 checkBox_Activity.Checked = true;
-                
+
+                if (Watch_Face.Activity.StepsGoal != null)
+                {
+                    checkBox_ActivityStepsGoal.Checked = true;
+                    numericUpDown_ActivityStepsGoal_StartCorner_X.Value = Watch_Face.Activity.StepsGoal.TopLeftX;
+                    numericUpDown_ActivityStepsGoal_StartCorner_Y.Value = Watch_Face.Activity.StepsGoal.TopLeftY;
+                    numericUpDown_ActivityStepsGoal_EndCorner_X.Value = Watch_Face.Activity.StepsGoal.BottomRightX;
+                    numericUpDown_ActivityStepsGoal_EndCorner_Y.Value = Watch_Face.Activity.StepsGoal.BottomRightY;
+
+                    //comboBox_ActivitySteps_Image.Text = Watch_Face.Activity.Steps.Step.ImageIndex.ToString();
+                    comboBoxSetText(comboBox_ActivityStepsGoal_Image, Watch_Face.Activity.StepsGoal.ImageIndex);
+                    numericUpDown_ActivityStepsGoal_Count.Value = Watch_Face.Activity.StepsGoal.ImagesCount;
+                    numericUpDown_ActivityStepsGoal_Spacing.Value = Watch_Face.Activity.StepsGoal.Spacing;
+                    AlignmentToString(comboBox_ActivityStepsGoal_Alignment, Watch_Face.Activity.StepsGoal.Alignment);
+                    //comboBox_ActivitySteps_Alignment.Text = Alignment;
+                }
+                else checkBox_ActivityStepsGoal.Checked = false;
+
                 if ((Watch_Face.Activity.Steps != null) && (Watch_Face.Activity.Steps.Step != null))
                 {
                     checkBox_ActivitySteps.Checked = true;
@@ -704,23 +721,6 @@ namespace GTR_Watch_face
                     //comboBox_ActivityCalories_Alignment.Text = Alignment;
                 }
                 else checkBox_ActivityCalories.Checked = false;
-
-                if (Watch_Face.Activity.StepsGoal != null)
-                {
-                    checkBox_ActivityStepsGoal.Checked = true;
-                    numericUpDown_ActivityStepsGoal_StartCorner_X.Value = Watch_Face.Activity.StepsGoal.TopLeftX;
-                    numericUpDown_ActivityStepsGoal_StartCorner_Y.Value = Watch_Face.Activity.StepsGoal.TopLeftY;
-                    numericUpDown_ActivityStepsGoal_EndCorner_X.Value = Watch_Face.Activity.StepsGoal.BottomRightX;
-                    numericUpDown_ActivityStepsGoal_EndCorner_Y.Value = Watch_Face.Activity.StepsGoal.BottomRightY;
-
-                    //comboBox_ActivitySteps_Image.Text = Watch_Face.Activity.Steps.Step.ImageIndex.ToString();
-                    comboBoxSetText(comboBox_ActivityStepsGoal_Image, Watch_Face.Activity.StepsGoal.ImageIndex);
-                    numericUpDown_ActivityStepsGoal_Count.Value = Watch_Face.Activity.StepsGoal.ImagesCount;
-                    numericUpDown_ActivityStepsGoal_Spacing.Value = Watch_Face.Activity.StepsGoal.Spacing;
-                    AlignmentToString(comboBox_ActivityStepsGoal_Alignment, Watch_Face.Activity.StepsGoal.Alignment);
-                    //comboBox_ActivitySteps_Alignment.Text = Alignment;
-                }
-                else checkBox_ActivityStepsGoal.Checked = false;
 
                 if (Watch_Face.Activity.CaloriesGraph != null && Watch_Face.Activity.CaloriesGraph.Circle != null)
                 {
@@ -1548,9 +1548,9 @@ namespace GTR_Watch_face
                     if (Watch_Face.Time.AmPm == null) Watch_Face.Time.AmPm = new AmPm();
 
                     Watch_Face.Time.AmPm.ImageIndexAMCN = Int32.Parse(comboBox_Image_Am.Text);
-                    Watch_Face.Time.AmPm.ImageIndexAMEN = Int32.Parse(comboBox_Image_Am.Text);
+                    //Watch_Face.Time.AmPm.ImageIndexAMEN = Int32.Parse(comboBox_Image_Am.Text);
                     Watch_Face.Time.AmPm.ImageIndexPMCN = Int32.Parse(comboBox_Image_Pm.Text);
-                    Watch_Face.Time.AmPm.ImageIndexPMEN = Int32.Parse(comboBox_Image_Pm.Text);
+                    //Watch_Face.Time.AmPm.ImageIndexPMEN = Int32.Parse(comboBox_Image_Pm.Text);
                     Watch_Face.Time.AmPm.X = (int)numericUpDown_AmPm_X.Value;
                     Watch_Face.Time.AmPm.Y = (int)numericUpDown_AmPm_Y.Value;
                 }
@@ -3350,8 +3350,8 @@ namespace GTR_Watch_face
                     offSet_X = 180;
                     offSet_Y = 180;
 
-                    textBox_unpack_command.Text = Program_Settings.unpack_command_TRex;
-                    textBox_pack_command.Text = Program_Settings.pack_command_TRex;
+                    textBox_unpack_command.Text = Program_Settings.unpack_command_Verge;
+                    textBox_pack_command.Text = Program_Settings.pack_command_Verge;
 
                     button_unpack.Enabled = true;
                     button_pack.Enabled = true;

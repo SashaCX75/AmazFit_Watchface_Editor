@@ -147,7 +147,7 @@
   <data name="Message_bigFile_Caption" xml:space="preserve">
     <value>Túl nagy fájl</value>
   </data>
-  <data name="Message_bigFile_Text1" xml:space="preserve">
+  <data name="Message_bigFile_Text1_gtr47" xml:space="preserve">
     <value>A nem tömörítet fájl mérete meghaladta az 1,95 MB-ot</value>
   </data>
   <data name="Message_bigFile_Text1_gts" xml:space="preserve">
@@ -302,5 +302,8 @@
   </data>
   <data name="Message_WarningMonthName" xml:space="preserve">
     <value>A hónapszám-kijelző nem működik együtt a hónap neve-kijelzéssel.</value>
+  </data>
+  <data name="Message_bigFile_Text1_trex" xml:space="preserve">
+    <value>A nem tömörítet fájl mérete meghaladta az 5,5 MB-ot</value>
   </data>
 </root>

@@ -120,7 +120,7 @@
   <data name="Message_bigFile_Caption" xml:space="preserve">
     <value>Большой размер файла</value>
   </data>
-  <data name="Message_bigFile_Text1" xml:space="preserve">
+  <data name="Message_bigFile_Text1_gtr47" xml:space="preserve">
     <value>Размер несжатого файла превышает 1,95МБ.</value>
   </data>
   <data name="Message_bigFile_Text2" xml:space="preserve">
@@ -320,5 +320,8 @@
   </data>
   <data name="FilterPng" xml:space="preserve">
     <value>PNG файлы (*.png)|*.png</value>
+  </data>
+  <data name="Message_bigFile_Text1_trex" xml:space="preserve">
+    <value>Размер несжатого файла превышает 5,5МБ.</value>
   </data>
 </root>

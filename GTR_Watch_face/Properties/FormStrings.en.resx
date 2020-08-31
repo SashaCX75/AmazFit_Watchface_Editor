@@ -147,7 +147,7 @@
   <data name="Message_bigFile_Caption" xml:space="preserve">
     <value>Large file size</value>
   </data>
-  <data name="Message_bigFile_Text1" xml:space="preserve">
+  <data name="Message_bigFile_Text1_gtr47" xml:space="preserve">
     <value>Uncompressed file size exceeds 1.95MB.</value>
   </data>
   <data name="Message_bigFile_Text1_gts" xml:space="preserve">
@@ -317,5 +317,8 @@
   </data>
   <data name="File_ReadMy_Start" xml:space="preserve">
     <value>quick_guide.htm</value>
+  </data>
+  <data name="Message_bigFile_Text1_trex" xml:space="preserve">
+    <value>Uncompressed file size exceeds 5.5MB.</value>
   </data>
 </root>

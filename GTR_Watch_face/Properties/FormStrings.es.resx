@@ -147,7 +147,7 @@
   <data name="Message_bigFile_Caption" xml:space="preserve">
     <value>Tamaño de archivo grande</value>
   </data>
-  <data name="Message_bigFile_Text1" xml:space="preserve">
+  <data name="Message_bigFile_Text1_gtr47" xml:space="preserve">
     <value>El tamaño del archivo sin comprimir supera los 1,95 MB.</value>
   </data>
   <data name="Message_bigFile_Text1_gts" xml:space="preserve">
@@ -293,5 +293,8 @@
   </data>
   <data name="Message_Warning_Information" xml:space="preserve">
     <value>Información</value>
+  </data>
+  <data name="Message_bigFile_Text1_trex" xml:space="preserve">
+    <value>El tamaño del archivo sin comprimir supera los 5,5 MB.</value>
   </data>
 </root>

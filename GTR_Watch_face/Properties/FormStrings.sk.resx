@@ -147,7 +147,7 @@
   <data name="Message_bigFile_Caption" xml:space="preserve">
     <value>Príliš veľký súbor</value>
   </data>
-  <data name="Message_bigFile_Text1" xml:space="preserve">
+  <data name="Message_bigFile_Text1_gtr47" xml:space="preserve">
     <value>Veľkosť nekomprimovaného súboru presiahla 1.95MB</value>
   </data>
   <data name="Message_bigFile_Text1_gts" xml:space="preserve">
@@ -299,5 +299,8 @@
   </data>
   <data name="Message_WarningMonthName" xml:space="preserve">
     <value>Zobrazenie čísla mesiaca nefunguje spolu so zobrazením názvu mesiaca.</value>
+  </data>
+  <data name="Message_bigFile_Text1_trex" xml:space="preserve">
+    <value>Veľkosť nekomprimovaného súboru presiahla 5.5MB</value>
   </data>
 </root>
