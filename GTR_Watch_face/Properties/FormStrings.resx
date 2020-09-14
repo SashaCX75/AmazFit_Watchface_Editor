@@ -324,4 +324,7 @@
   <data name="Message_bigFile_Text1_trex" xml:space="preserve">
     <value>Размер несжатого файла превышает 5,5МБ.</value>
   </data>
+  <data name="Message_WarningPulseIconCount_Text" xml:space="preserve">
+    <value>Рекомендуется для отображения пульса использовать 6 сегментов.</value>
+  </data>
 </root>

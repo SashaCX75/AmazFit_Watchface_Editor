@@ -5744,7 +5744,7 @@ namespace GTR_Watch_face
                 if ((Watch_Face.AnalogDialFace.Hours != null) && (Watch_Face.AnalogDialFace.Hours.Image != null)) i++;
                 if ((Watch_Face.AnalogDialFace.Minutes != null) && (Watch_Face.AnalogDialFace.Minutes.Image != null)) i++;
                 if ((Watch_Face.AnalogDialFace.Seconds != null) && (Watch_Face.AnalogDialFace.Seconds.Image != null)) i++;
-                if (i < 3) MessageBox.Show(Properties.FormStrings.Message_Warning3clockHand_Text, 
+                if (i < 3 && i > 0) MessageBox.Show(Properties.FormStrings.Message_Warning3clockHand_Text, 
                     Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
@@ -5814,9 +5814,21 @@ namespace GTR_Watch_face
             // индикатор и сегменты для прогресса шагов
             if (Watch_Face.StepsProgress != null)
             {
-                if ((Watch_Face.StepsProgress.ClockHand != null) && (Watch_Face.StepsProgress.Sliced != null))
+                if ((Watch_Face.StepsProgress.ClockHand != null && Watch_Face.StepsProgress.ClockHand.Image != null) 
+                    && (Watch_Face.StepsProgress.Sliced != null))
                 {
                     MessageBox.Show(Properties.FormStrings.Message_WarningBatterySegment_Text,
+                    Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
+            // количество сегментов для ЧСС
+            if ((Watch_Face.Activity != null) && (Watch_Face.Activity.ColouredSquares != null))
+            {
+                if ((Watch_Face.Activity.ColouredSquares.Coordinates != null) && 
+                    (Watch_Face.Activity.ColouredSquares.Coordinates.Length != 6))
+                {
+                    MessageBox.Show(Properties.FormStrings.Message_WarningPulseIconCount_Text,
                     Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }

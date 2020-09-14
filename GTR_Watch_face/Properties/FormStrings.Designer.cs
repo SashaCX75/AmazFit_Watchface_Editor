@@ -655,6 +655,15 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Рекомендуется для отображения пульса использовать 6 сегментов..
+        /// </summary>
+        public static string Message_WarningPulseIconCount_Text {
+            get {
+                return ResourceManager.GetString("Message_WarningPulseIconCount_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Имя файла и путь к нему не должны содержать пробелов..
         /// </summary>
         public static string Message_WarningSpaceInName_Text {

@@ -74,7 +74,8 @@ namespace GTR_Watch_face
                 //src.Dispose();
             }
             #endregion
-            if (scale == 0.5) gPanel.SmoothingMode = SmoothingMode.AntiAlias;
+            //if (scale == 0.5) gPanel.SmoothingMode = SmoothingMode.AntiAlias;
+            gPanel.SmoothingMode = SmoothingMode.AntiAlias;
 
             #region Battery
             Logger.WriteLine("PreviewToBitmap (Battery)");
