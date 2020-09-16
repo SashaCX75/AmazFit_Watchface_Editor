@@ -655,6 +655,24 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Размеры изображения для Preview отличаются от стандартных..
+        /// </summary>
+        public static string Message_WarningPreview_Text1 {
+            get {
+                return ResourceManager.GetString("Message_WarningPreview_Text1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Использовать существующие размеры?.
+        /// </summary>
+        public static string Message_WarningPreview_Text2 {
+            get {
+                return ResourceManager.GetString("Message_WarningPreview_Text2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Рекомендуется для отображения пульса использовать 6 сегментов..
         /// </summary>
         public static string Message_WarningPulseIconCount_Text {

@@ -1839,6 +1839,23 @@ namespace GTR_Watch_face
             JSON_Modified = false;
             FormText();
             ShowAllFileSize(AllFileSize);
+            if (comboBox_Preview.SelectedIndex >= 0)
+            {
+                button_RefreshPreview.Enabled = true;
+                button_CreatePreview.Enabled = false;
+            }
+            else
+            {
+                button_RefreshPreview.Enabled = false;
+                if (FileName != null && FullFileDir != null)
+                {
+                    button_CreatePreview.Enabled = true;
+                }
+                else
+                {
+                    button_CreatePreview.Enabled = false;
+                }
+            }
             Logger.WriteLine("* LoadJsonAndImage (end)");
         }
 
@@ -3997,22 +4014,43 @@ namespace GTR_Watch_face
         private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox comboBox = (ComboBox)(sender);
-            int i = 0;
-            if(Int32.TryParse(comboBox.Text, out i))
-            {
-                try
-                {
-                    using (FileStream stream = new FileStream(ListImagesFullName[comboBox.SelectedIndex], FileMode.Open, FileAccess.Read))
-                    {
-                        pictureBox1.Image = Image.FromStream(stream);
-                        timer1.Enabled = true;
-                    }
-                }
-                catch { }
-            }
+            //int i = 0;
+            //if(Int32.TryParse(comboBox.Text, out i))
+            //{
+                //try
+                //{
+                //    using (FileStream stream = new FileStream(ListImagesFullName[comboBox.SelectedIndex], FileMode.Open, FileAccess.Read))
+                //    {
+                //        pictureBox1.Image = Image.FromStream(stream);
+                //        timer1.Enabled = true;
+                //    }
+                //}
+                //catch { }
+            //}
             //pictureBox1.Image = null;
             JSON_write();
             PreviewImage();
+
+            if (comboBox.Name == "comboBox_Preview")
+            {
+                if (comboBox.SelectedIndex >= 0)
+                {
+                    button_RefreshPreview.Enabled = true;
+                    button_CreatePreview.Enabled = false;
+                }
+                else
+                {
+                    button_RefreshPreview.Enabled = false;
+                    if (FileName != null && FullFileDir != null)
+                    {
+                        button_CreatePreview.Enabled = true;
+                    }
+                    else
+                    {
+                        button_CreatePreview.Enabled = false;
+                    }
+                }
+            }
         }
 
         private void checkBox_Delimiter_CheckedChanged(object sender, EventArgs e)
@@ -5912,9 +5950,9 @@ namespace GTR_Watch_face
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            timer1.Enabled = false;
-            //pictureBox1.Image.Save(@"C:\test.png");
-            pictureBox1.Image = null;
+            //timer1.Enabled = false;
+            ////pictureBox1.Image.Save(@"C:\test.png");
+            //pictureBox1.Image = null;
         }
 
         private void panel_Preview_DoubleClick(object sender, EventArgs e)
@@ -8825,7 +8863,234 @@ namespace GTR_Watch_face
                 numericUpDown.Value = value;
             }
         }
+
         #endregion
+        
+        private void button_RefreshPreview_Click(object sender, EventArgs e)
+        {
+            if (comboBox_Preview.SelectedIndex >= 0)
+            {
+                Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
+                Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr47.png");
+                int PreviewHeight = 266;
+                if (radioButton_42.Checked)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr42.png");
+                }
+                if (radioButton_gts.Checked)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts.png");
+                    PreviewHeight = 304;
+                }
+                if (radioButton_TRex.Checked || radioButton_Verge.Checked)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
+                    PreviewHeight = 210;
+                }
+                Graphics gPanel = Graphics.FromImage(bitmap);
+                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, 0);
+                if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
+
+
+                int i = comboBox_Preview.SelectedIndex;
+                Image loadedImage = null;
+                using (FileStream stream = new FileStream(ListImagesFullName[i], FileMode.Open, FileAccess.Read))
+                {
+                    loadedImage = Image.FromStream(stream);
+                }
+                float scale = (float)PreviewHeight / bitmap.Height;
+                if (loadedImage.Height != PreviewHeight)
+                {
+                    DialogResult ResultDialog = MessageBox.Show(Properties.FormStrings.Message_WarningPreview_Text1 +
+                        Environment.NewLine + Properties.FormStrings.Message_WarningPreview_Text2,
+                        Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (ResultDialog == DialogResult.Yes) scale = (float)loadedImage.Height / bitmap.Height;
+                }
+                int pixelsOld = loadedImage.Width * loadedImage.Height;
+                pixelsOld = pixelsOld * 4 + 20;
+                bitmap = ResizeImage(bitmap, scale);
+                bitmap.Save(ListImagesFullName[i], ImageFormat.Png);
+                string s = label_size.Text;
+                //s = s.Trim(new char[] { '≈', 'M' });
+                s = s.Replace("≈", "");
+                s = s.Replace("MB", "");
+                float pixels = float.Parse(s) * 1024 * 1024;
+                int pixelsNew = bitmap.Width * bitmap.Height;
+                pixelsNew = pixelsNew * 4 + 20;
+                pixels = pixels - pixelsOld + pixelsNew;
+                ShowAllFileSize(pixels);
+                bitmap.Dispose();
+                loadedImage.Dispose();
+
+            }
+        }
+
+        private void button_CreatePreview_Click(object sender, EventArgs e)
+        {
+            if (comboBox_Preview.SelectedIndex >= 0) return;
+            if (FileName != null && FullFileDir != null) // проект уже сохранен
+            {
+                // формируем картинку для предпросмотра
+                Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
+                Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr47.png");
+                int PreviewHeight = 266;
+                if (radioButton_42.Checked)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr42.png");
+                }
+                if (radioButton_gts.Checked)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts.png");
+                    PreviewHeight = 304;
+                }
+                if (radioButton_TRex.Checked || radioButton_Verge.Checked)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
+                    PreviewHeight = 210;
+                }
+                Graphics gPanel = Graphics.FromImage(bitmap);
+                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, 0);
+                if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
+                float scale = (float)PreviewHeight / bitmap.Height;
+                bitmap = ResizeImage(bitmap, scale);
+                //bitmap.Save(ListImagesFullName[i], ImageFormat.Png);
+
+                string s = label_size.Text;
+                //s = s.Trim(new char[] { '≈', 'M' });
+                s = s.Replace("≈", "");
+                s = s.Replace("MB", "");
+                float pixels = float.Parse(s) * 1024 * 1024;
+                int pixelsNew = bitmap.Width * bitmap.Height;
+                pixelsNew = pixelsNew * 4 + 20;
+                pixels = pixels + pixelsNew;
+                ShowAllFileSize(pixels);
+                //bitmap.Dispose();
+
+                // определяем имя файла для сохранения и сохраняем файл
+                if (ListImages[1] == "1"|| ListImages[0] == "1") // файл 0001.png есть
+                {
+                    int i = Int32.Parse(ListImages[ListImages.Count - 1]) + 1;
+                    string NamePreview = i.ToString() + ".png";
+                    string PathPreview = Path.Combine(FullFileDir, NamePreview);
+                    while (PathPreview.Length < ListImagesFullName[0].Length)
+                    {
+                        NamePreview = "0" + NamePreview;
+                        PathPreview = Path.Combine(FullFileDir, NamePreview);
+                    }
+                    bitmap.Save(PathPreview, ImageFormat.Png);
+                    string fileNameOnly = Path.GetFileNameWithoutExtension(PathPreview);
+                    i = Int32.Parse(fileNameOnly);
+
+                    PreviewView = false;
+                    ListImages.Add(i.ToString());
+                    ListImagesFullName.Add(PathPreview);
+
+                    // добавляем строки в таблицу
+                    //Image PreviewImage = Image.FromHbitmap(bitmap.GetHbitmap());
+                    Image PreviewImage = null;
+                    using (FileStream stream = new FileStream(PathPreview, FileMode.Open, FileAccess.Read))
+                    {
+                        PreviewImage = Image.FromStream(stream);
+                    }
+                    var RowNew = new DataGridViewRow();
+                    DataGridViewImageCellLayout ZoomType = DataGridViewImageCellLayout.Zoom;
+                    if ((bitmap.Height < 45) && (bitmap.Width < 110))
+                        ZoomType = DataGridViewImageCellLayout.Normal;
+                    RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = i.ToString() });
+                    RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = fileNameOnly });
+                    RowNew.Cells.Add(new DataGridViewImageCell()
+                    {
+                        Value = PreviewImage,
+                        ImageLayout = ZoomType
+                    });
+                    RowNew.Height = 45;
+                    dataGridView_ImagesList.Rows.Add(RowNew);
+
+                    if (Watch_Face.Background == null) Watch_Face.Background = new Background();
+                    Watch_Face.Background.Preview = new ImageW();
+                    Watch_Face.Background.Preview.ImageIndex = i;
+                    JSON_read();
+                    richTextBox_JSON.Text = JsonConvert.SerializeObject(Watch_Face, Formatting.Indented, new JsonSerializerSettings
+                    {
+                        //DefaultValueHandling = DefaultValueHandling.Ignore,
+                        NullValueHandling = NullValueHandling.Ignore
+                    });
+                    PreviewView = true;
+                    JSON_Modified = true;
+                    FormText();
+                }
+                else // файла 0001.png нет
+                {
+                    string NamePreview = "1.png";
+                    string PathPreview = Path.Combine(FullFileDir, NamePreview);
+                    while (PathPreview.Length < ListImagesFullName[0].Length)
+                    {
+                        NamePreview = "0" + NamePreview;
+                        PathPreview = Path.Combine(FullFileDir, NamePreview);
+                    }
+                    bitmap.Save(PathPreview, ImageFormat.Png);
+
+                    PreviewView = false;
+                    int index = 0;
+                    if (ListImages[0] == "0") // файл 0000.png есть
+                    {
+                        index = 1;
+                    }
+
+                    ListImages.Insert(index, "1");
+                    ListImagesFullName.Insert(index, PathPreview);
+
+                    // добавляем строки в таблицу
+                    string fileNameOnly = Path.GetFileNameWithoutExtension(PathPreview);
+                    Image PreviewImage = null;
+                    using (FileStream stream = new FileStream(PathPreview, FileMode.Open, FileAccess.Read))
+                    {
+                        PreviewImage = Image.FromStream(stream);
+                    }
+                    var RowNew = new DataGridViewRow();
+                    DataGridViewImageCellLayout ZoomType = DataGridViewImageCellLayout.Zoom;
+                    if ((bitmap.Height < 45) && (bitmap.Width < 110))
+                        ZoomType = DataGridViewImageCellLayout.Normal;
+                    RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = index.ToString() });
+                    //RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = index.ToString() + "*" });
+                    RowNew.Cells.Add(new DataGridViewTextBoxCell() { Value = fileNameOnly });
+                    RowNew.Cells.Add(new DataGridViewImageCell()
+                    {
+                        Value = PreviewImage,
+                        ImageLayout = ZoomType
+                    });
+                    RowNew.Height = 45;
+                    dataGridView_ImagesList.Rows.Insert(index, RowNew);
+                    for (int i = index+1; i < dataGridView_ImagesList.Rows.Count; i++)
+                    {
+                        string OldValue = dataGridView_ImagesList[0, i].Value.ToString();
+                        dataGridView_ImagesList[0, i].Value = Int32.Parse(OldValue)+1;
+                    }
+
+                    if (Watch_Face.Background == null) Watch_Face.Background = new Background();
+                    Watch_Face.Background.Preview = new ImageW();
+                    Watch_Face.Background.Preview.ImageIndex = 1;
+                    JSON_read(); richTextBox_JSON.Text = JsonConvert.SerializeObject(Watch_Face, Formatting.Indented, new JsonSerializerSettings
+                    {
+                        //DefaultValueHandling = DefaultValueHandling.Ignore,
+                        NullValueHandling = NullValueHandling.Ignore
+                    });
+                    PreviewView = true;
+                    JSON_Modified = true;
+                    FormText();
+                }
+
+                bitmap.Dispose();
+
+            }
+
+        }
 
         //private int getOSversion()
         //{
