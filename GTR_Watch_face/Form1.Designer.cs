@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button_zip_unpack = new System.Windows.Forms.Button();
@@ -1384,7 +1384,6 @@
             this.checkBox_border = new System.Windows.Forms.CheckBox();
             this.radioButton_gts = new System.Windows.Forms.RadioButton();
             this.checkBox_crop = new System.Windows.Forms.CheckBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.checkBox_Show_Shortcuts = new System.Windows.Forms.CheckBox();
             this.radioButton_TRex = new System.Windows.Forms.RadioButton();
             this.radioButton_Verge = new System.Windows.Forms.RadioButton();
@@ -1393,6 +1392,8 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.colorDialog_Pulse = new System.Windows.Forms.ColorDialog();
             this.colorDialog_Calories = new System.Windows.Forms.ColorDialog();
+            this.button_RefreshPreview = new System.Windows.Forms.Button();
+            this.button_CreatePreview = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -1864,7 +1865,6 @@
             this.groupBox1.SuspendLayout();
             this.tabPage43.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Preview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -5345,8 +5345,8 @@
             // Number
             // 
             this.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Number.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Number.DefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.Number, "Number");
             this.Number.Name = "Number";
             this.Number.ReadOnly = true;
@@ -5941,14 +5941,14 @@
             // 
             // dataGridView_MotiomAnimation
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_MotiomAnimation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_MotiomAnimation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_MotiomAnimation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_MotiomAnimation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.AnimationColumn1,
@@ -16931,13 +16931,6 @@
             this.checkBox_crop.CheckedChanged += new System.EventHandler(this.checkBox_crop_CheckedChanged);
             this.checkBox_crop.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
             // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.helpProvider1.SetShowHelp(this.pictureBox1, ((bool)(resources.GetObject("pictureBox1.ShowHelp"))));
-            this.pictureBox1.TabStop = false;
-            // 
             // checkBox_Show_Shortcuts
             // 
             this.checkBox_Show_Shortcuts.Checked = true;
@@ -16998,10 +16991,26 @@
             // 
             this.colorDialog_Calories.FullOpen = true;
             // 
+            // button_RefreshPreview
+            // 
+            resources.ApplyResources(this.button_RefreshPreview, "button_RefreshPreview");
+            this.button_RefreshPreview.Name = "button_RefreshPreview";
+            this.button_RefreshPreview.UseVisualStyleBackColor = true;
+            this.button_RefreshPreview.Click += new System.EventHandler(this.button_RefreshPreview_Click);
+            // 
+            // button_CreatePreview
+            // 
+            resources.ApplyResources(this.button_CreatePreview, "button_CreatePreview");
+            this.button_CreatePreview.Name = "button_CreatePreview";
+            this.button_CreatePreview.UseVisualStyleBackColor = true;
+            this.button_CreatePreview.Click += new System.EventHandler(this.button_CreatePreview_Click);
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button_CreatePreview);
+            this.Controls.Add(this.button_RefreshPreview);
             this.Controls.Add(this.checkBox_CircleScaleImage);
             this.Controls.Add(this.pictureBox_Preview);
             this.Controls.Add(this.radioButton_Verge);
@@ -17017,7 +17026,6 @@
             this.Controls.Add(this.radioButton_47);
             this.Controls.Add(this.button_SaveGIF);
             this.Controls.Add(this.button_SavePNG);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.checkBox_WebB);
             this.Controls.Add(this.checkBox_WebW);
             this.Controls.Add(this.button_PreviewBig);
@@ -17598,7 +17606,6 @@
             this.tabPage43.ResumeLayout(false);
             this.tabPage43.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Preview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -18359,7 +18366,6 @@
         private System.Windows.Forms.Label label301;
         private System.Windows.Forms.Label label302;
         private System.Windows.Forms.Label label303;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button_SavePNG;
         private System.Windows.Forms.Button button_SaveGIF;
@@ -18967,6 +18973,8 @@
         private System.Windows.Forms.Label label498;
         private System.Windows.Forms.Label label499;
         private System.Windows.Forms.Label label500;
+        private System.Windows.Forms.Button button_RefreshPreview;
+        private System.Windows.Forms.Button button_CreatePreview;
     }
 }
 
