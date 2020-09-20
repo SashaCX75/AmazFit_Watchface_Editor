@@ -117,47 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Dialog_Title_Image" xml:space="preserve">
-    <value>选择文件</value>
-  </data>
-  <data name="Dialog_Title_Pack" xml:space="preserve">
-    <value>选择设置文件</value>
-  </data>
-  <data name="Dialog_Title_PackUnpack" xml:space="preserve">
-    <value>打包程序文件的路径</value>
-  </data>
-  <data name="Dialog_Title_PreviewStates" xml:space="preserve">
-    <value>选择预览设置文件</value>
-  </data>
-  <data name="Dialog_Title_SaveGIF" xml:space="preserve">
-    <value>保存动画预览</value>
-  </data>
-  <data name="Dialog_Title_SavePNG" xml:space="preserve">
-    <value>保存预览</value>
-  </data>
-  <data name="Dialog_Title_Unpack" xml:space="preserve">
-    <value>选择一个表盘文件</value>
-  </data>
-  <data name="Form_Preview" xml:space="preserve">
-    <value>预览</value>
-  </data>
-  <data name="Form_PreviewX" xml:space="preserve">
-    <value>预览  [X =</value>
-  </data>
   <data name="Message_bigFile_Caption" xml:space="preserve">
     <value>大型文件尺寸</value>
   </data>
   <data name="Message_bigFile_Text1_gtr47" xml:space="preserve">
     <value>未压缩文件大小超过1.95MB。</value>
   </data>
-  <data name="Message_bigFile_Text1_gts" xml:space="preserve">
-    <value>未压缩文件大小超过1.5MB。</value>
-  </data>
   <data name="Message_bigFile_Text2" xml:space="preserve">
     <value>dial文件可能不工作。</value>
-  </data>
-  <data name="Message_CopyCoord" xml:space="preserve">
-    <value>复制坐标</value>
   </data>
   <data name="Message_Error_Caption" xml:space="preserve">
     <value>错误</value>
@@ -234,9 +201,6 @@
   <data name="Message_Warning3clockHand_Text" xml:space="preserve">
     <value>如果在模拟表中不使用所有三个指针，可能会出现问题。</value>
   </data>
-  <data name="Message_WarningDistanceSuffix" xml:space="preserve">
-    <value>不建议使用不带后缀的距离显示。</value>
-  </data>
   <data name="Message_WarningOnlyMin_Text" xml:space="preserve">
     <value>不建议使用分钟而不使用小时来显示时间。</value>
   </data>
@@ -248,6 +212,45 @@
   </data>
   <data name="Message_Warning_Caption" xml:space="preserve">
     <value>警告</value>
+  </data>
+  <data name="Message_bigFile_Text1_gts" xml:space="preserve">
+    <value>未压缩文件大小超过1.5MB。</value>
+  </data>
+  <data name="File_ReadMy" xml:space="preserve">
+    <value>\Manual\readme_zh.chm</value>
+  </data>
+  <data name="Form_Preview" xml:space="preserve">
+    <value>预览</value>
+  </data>
+  <data name="Form_PreviewX" xml:space="preserve">
+    <value>预览  [X =</value>
+  </data>
+  <data name="Message_CopyCoord" xml:space="preserve">
+    <value>复制坐标</value>
+  </data>
+  <data name="Dialog_Title_Image" xml:space="preserve">
+    <value>选择文件</value>
+  </data>
+  <data name="Dialog_Title_Pack" xml:space="preserve">
+    <value>选择设置文件</value>
+  </data>
+  <data name="Dialog_Title_PackUnpack" xml:space="preserve">
+    <value>打包程序文件的路径</value>
+  </data>
+  <data name="Dialog_Title_PreviewStates" xml:space="preserve">
+    <value>选择预览设置文件</value>
+  </data>
+  <data name="Dialog_Title_SaveGIF" xml:space="preserve">
+    <value>保存动画预览</value>
+  </data>
+  <data name="Dialog_Title_SavePNG" xml:space="preserve">
+    <value>保存预览</value>
+  </data>
+  <data name="Dialog_Title_Unpack" xml:space="preserve">
+    <value>选择一个表盘文件</value>
+  </data>
+  <data name="Message_WarningDistanceSuffix" xml:space="preserve">
+    <value>不建议使用不带后缀的距离显示。</value>
   </data>
   <data name="Message_ErrorImage_Text1" xml:space="preserve">
     <value>某些图像可能会导致错误(</value>
@@ -261,11 +264,11 @@
   <data name="Message_Save_JSON_Modified_Text1" xml:space="preserve">
     <value>你想保存改过的项目吗？</value>
   </data>
+  <data name="Message_Save_JSON_Modified_Text2" xml:space="preserve">
+    <value>？</value>
+  </data>
   <data name="Message_Save_new_JSON" xml:space="preserve">
     <value>当前项目尚未保存。你想保存它吗？</value>
-  </data>
-  <data name="Message_WarningAnimationCoun_Text" xml:space="preserve">
-    <value>动画的元素数量不能超过4个。</value>
   </data>
   <data name="Message_WarningBatterySegment_Text" xml:space="preserve">
     <value>建议不要对相同类型的值同时使用段和指标。这可能会引起故障！</value>
@@ -276,14 +279,14 @@
   <data name="Message_WarningTemperature_Text" xml:space="preserve">
     <value>如果不显示日间和夜间的温度，实时温度显示可能无法工作。</value>
   </data>
+  <data name="Message_WarningAnimationCoun_Text" xml:space="preserve">
+    <value>动画的元素数量不能超过4个。</value>
+  </data>
   <data name="Message_WarningBatteryCount_Text" xml:space="preserve">
     <value>不建议使用超过10个图像来显示电池电量。</value>
   </data>
   <data name="Message_Error_SpaceInProgrammName_Text" xml:space="preserve">
     <value>程序路径不应包含空格。建议将程序放在磁盘的根目录中。</value>
-  </data>
-  <data name="Message_ConvertingCompleted_Text" xml:space="preserve">
-    <value>一个新的表盘已经被创建。</value>
   </data>
   <data name="Message_WarningConverting_Text1" xml:space="preserve">
     <value>目录</value>
@@ -291,20 +294,20 @@
   <data name="Message_WarningConverting_Text2" xml:space="preserve">
     <value> 已经存在，是否替换？</value>
   </data>
+  <data name="Message_ConvertingCompleted_Text" xml:space="preserve">
+    <value>一个新的表盘已经被创建。</value>
+  </data>
   <data name="Message_Warning_Information" xml:space="preserve">
     <value>信息</value>
   </data>
-  <data name="File_ReadMy" xml:space="preserve">
-    <value>\Manual\readme_zh.chm</value>
+  <data name="File_ReadMy_Start" xml:space="preserve">
+    <value>quick_guide.htm</value>
   </data>
   <data name="Message_WarningAnimationLastImage" xml:space="preserve">
     <value>用于动画的图像不应位于图像列表的最后。</value>
   </data>
   <data name="Message_WarningMonthName" xml:space="preserve">
     <value>月分显示与月名称显示不能一起使用。</value>
-  </data>
-  <data name="Message_Save_JSON_Modified_Text2" xml:space="preserve">
-    <value>？</value>
   </data>
   <data name="FilterGif" xml:space="preserve">
     <value>GIF文件 (*.gif)|*.gif</value>
@@ -320,5 +323,14 @@
   </data>
   <data name="Message_bigFile_Text1_trex" xml:space="preserve">
     <value>未压缩文件大小超过5.5MB。</value>
+  </data>
+  <data name="Message_WarningPulseIconCount_Text" xml:space="preserve">
+    <value>建议使用6段显示心率。</value>
+  </data>
+  <data name="Message_WarningPreview_Text1" xml:space="preserve">
+    <value>预览的图像尺寸与标准图像不同。</value>
+  </data>
+  <data name="Message_WarningPreview_Text2" xml:space="preserve">
+    <value>使用现有尺寸？</value>
   </data>
 </root>
