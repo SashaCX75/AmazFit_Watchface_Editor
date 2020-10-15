@@ -18657,4 +18657,10 @@ more system load)</value>
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
   </data>
+  <data name="button_RefreshPreview.Text" xml:space="preserve">
+    <value>Refresh Preview</value>
+  </data>
+  <data name="button_CreatePreview.Text" xml:space="preserve">
+    <value>Create a preview</value>
+  </data>
 </root>
