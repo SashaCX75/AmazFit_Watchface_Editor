@@ -41878,9 +41878,6 @@ English manual - gumstic</value>
   <metadata name="colorDialog_Calories.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>512, 56</value>
   </metadata>
-  <data name="button_RefreshPreview.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="button_RefreshPreview.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 583</value>
   </data>
@@ -41892,6 +41889,9 @@ English manual - gumstic</value>
   </data>
   <data name="button_RefreshPreview.Text" xml:space="preserve">
     <value>Обновить Preview</value>
+  </data>
+  <data name="button_RefreshPreview.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;button_RefreshPreview.Name" xml:space="preserve">
     <value>button_RefreshPreview</value>
@@ -41905,9 +41905,6 @@ English manual - gumstic</value>
   <data name="&gt;&gt;button_RefreshPreview.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="button_CreatePreview.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="button_CreatePreview.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 554</value>
   </data>
@@ -41919,6 +41916,9 @@ English manual - gumstic</value>
   </data>
   <data name="button_CreatePreview.Text" xml:space="preserve">
     <value>Создать Preview</value>
+  </data>
+  <data name="button_CreatePreview.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;button_CreatePreview.Name" xml:space="preserve">
     <value>button_CreatePreview</value>

@@ -565,6 +565,15 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Желательно указано изображение для символа ошибки при отсутствии данных активностей..
+        /// </summary>
+        public static string Message_WarningActivityError {
+            get {
+                return ResourceManager.GetString("Message_WarningActivityError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Количество элементов для анимации не может быть больше 4..
         /// </summary>
         public static string Message_WarningAnimationCoun_Text {
@@ -705,6 +714,15 @@ namespace GTR_Watch_face.Properties {
         public static string Message_WarningTensOnes_Text {
             get {
                 return ResourceManager.GetString("Message_WarningTensOnes_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Возможно неверно указано изображение для символа ошибки при отсутствии данных текущей температуры..
+        /// </summary>
+        public static string Message_WarningWeatherError {
+            get {
+                return ResourceManager.GetString("Message_WarningWeatherError", resourceCulture);
             }
         }
     }

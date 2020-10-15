@@ -405,6 +405,7 @@ namespace GTR_Watch_face
             //    float scale = newHeight / pictureBox_Preview.Height;
             //    pictureBox_Preview.Size = new Size((int)(pictureBox_Preview.Width * scale), (int)(pictureBox_Preview.Height * scale));
             //}
+            button_CreatePreview.Location= new Point(5, 583);
             Logger.WriteLine("* Form1_Shown(end)");
         }
 
@@ -422,7 +423,7 @@ namespace GTR_Watch_face
                     if (dr == DialogResult.Yes)
                     {
                         string fullfilename = Path.Combine(FullFileDir, FileName);
-                        File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+                        save_JSON_File(fullfilename, richTextBox_JSON.Text);
                         if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
                     }
                     if (dr == DialogResult.Cancel)
@@ -455,7 +456,7 @@ namespace GTR_Watch_face
                         if (saveFileDialog.ShowDialog() == DialogResult.OK)
                         {
                             string fullfilename = saveFileDialog.FileName;
-                            File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+                            save_JSON_File(fullfilename, richTextBox_JSON.Text);
 
                             FileName = Path.GetFileName(fullfilename);
                             FullFileDir = Path.GetDirectoryName(fullfilename);
@@ -524,7 +525,7 @@ namespace GTR_Watch_face
                     if (dr == DialogResult.Yes)
                     {
                         string fullfilename = Path.Combine(FullFileDir, FileName);
-                        File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+                        save_JSON_File(fullfilename, richTextBox_JSON.Text);
                         JSON_Modified = false;
                         FormText();
                         if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
@@ -559,7 +560,7 @@ namespace GTR_Watch_face
                         if (saveFileDialog.ShowDialog() == DialogResult.OK)
                         {
                             string fullfilename = saveFileDialog.FileName;
-                            File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+                            save_JSON_File(fullfilename, richTextBox_JSON.Text);
 
                             FileName = Path.GetFileName(fullfilename);
                             FullFileDir = Path.GetDirectoryName(fullfilename);
@@ -760,7 +761,7 @@ namespace GTR_Watch_face
                         }
                         else if (Program_Settings.Settings_AfterUnpack_Download)
                         {
-                            LoadJsonAndImage(newFullName);
+                            if (File.Exists(newFullName)) LoadJsonAndImage(newFullName);
                         }
                     }
                 }
@@ -785,7 +786,7 @@ namespace GTR_Watch_face
                     if (dr == DialogResult.Yes)
                     {
                         string fullfilename = Path.Combine(FullFileDir, FileName);
-                        File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+                        save_JSON_File(fullfilename, richTextBox_JSON.Text);
                         JSON_Modified = false;
                         FormText();
                         if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
@@ -820,7 +821,7 @@ namespace GTR_Watch_face
                         if (saveFileDialog.ShowDialog() == DialogResult.OK)
                         {
                             string fullfilename = saveFileDialog.FileName;
-                            File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+                            save_JSON_File(fullfilename, richTextBox_JSON.Text);
 
                             FileName = Path.GetFileName(fullfilename);
                             FullFileDir = Path.GetDirectoryName(fullfilename);
@@ -1035,7 +1036,7 @@ namespace GTR_Watch_face
                     if (dr == DialogResult.Yes)
                     {
                         string fullfilename = Path.Combine(FullFileDir, FileName);
-                        File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+                        save_JSON_File(fullfilename, richTextBox_JSON.Text);
                         JSON_Modified = false;
                         FormText();
                         if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
@@ -1070,7 +1071,7 @@ namespace GTR_Watch_face
                         if (saveFileDialog.ShowDialog() == DialogResult.OK)
                         {
                             string fullfilename = saveFileDialog.FileName;
-                            File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+                            save_JSON_File(fullfilename, richTextBox_JSON.Text);
 
                             FileName = Path.GetFileName(fullfilename);
                             FullFileDir = Path.GetDirectoryName(fullfilename);
@@ -1291,7 +1292,7 @@ namespace GTR_Watch_face
                     if (dr == DialogResult.Yes)
                     {
                         string fullfilename = Path.Combine(FullFileDir, FileName);
-                        File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+                        save_JSON_File(fullfilename, richTextBox_JSON.Text);
                         JSON_Modified = false;
                         FormText();
                         if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
@@ -1326,7 +1327,7 @@ namespace GTR_Watch_face
                         if (saveFileDialog.ShowDialog() == DialogResult.OK)
                         {
                             string fullfilename = saveFileDialog.FileName;
-                            File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+                            save_JSON_File(fullfilename, richTextBox_JSON.Text);
 
                             FileName = Path.GetFileName(fullfilename);
                             FullFileDir = Path.GetDirectoryName(fullfilename);
@@ -1619,7 +1620,7 @@ namespace GTR_Watch_face
                     if (dr == DialogResult.Yes)
                     {
                         string fullfilename = Path.Combine(FullFileDir, FileName);
-                        File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+                        save_JSON_File(fullfilename, richTextBox_JSON.Text);
                         JSON_Modified = false;
                         FormText();
                         if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
@@ -1654,7 +1655,7 @@ namespace GTR_Watch_face
                         if (saveFileDialog.ShowDialog() == DialogResult.OK)
                         {
                             string fullfilename = saveFileDialog.FileName;
-                            File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+                            save_JSON_File(fullfilename, richTextBox_JSON.Text);
 
                             FileName = Path.GetFileName(fullfilename);
                             FullFileDir = Path.GetDirectoryName(fullfilename);
@@ -1841,19 +1842,24 @@ namespace GTR_Watch_face
             ShowAllFileSize(AllFileSize);
             if (comboBox_Preview.SelectedIndex >= 0)
             {
-                button_RefreshPreview.Enabled = true;
-                button_CreatePreview.Enabled = false;
+                //button_RefreshPreview.Enabled = true;
+                //button_CreatePreview.Enabled = false;
+                button_RefreshPreview.Visible = true;
+                button_CreatePreview.Visible = false;
             }
             else
             {
-                button_RefreshPreview.Enabled = false;
+                //button_RefreshPreview.Enabled = false;
+                button_RefreshPreview.Visible = false;
                 if (FileName != null && FullFileDir != null)
                 {
-                    button_CreatePreview.Enabled = true;
+                    //button_CreatePreview.Enabled = true;
+                    button_CreatePreview.Visible = true;
                 }
                 else
                 {
-                    button_CreatePreview.Enabled = false;
+                    //button_CreatePreview.Enabled = false;
+                    button_CreatePreview.Visible = false;
                 }
             }
             Logger.WriteLine("* LoadJsonAndImage (end)");
@@ -4033,21 +4039,28 @@ namespace GTR_Watch_face
 
             if (comboBox.Name == "comboBox_Preview")
             {
+
                 if (comboBox.SelectedIndex >= 0)
                 {
-                    button_RefreshPreview.Enabled = true;
-                    button_CreatePreview.Enabled = false;
+                    if (FileName == null || FullFileDir == null) return;
+                    //button_RefreshPreview.Enabled = true;
+                    //button_CreatePreview.Enabled = false;
+                    button_RefreshPreview.Visible = true;
+                    button_CreatePreview.Visible = false;
                 }
                 else
                 {
-                    button_RefreshPreview.Enabled = false;
+                    //button_RefreshPreview.Enabled = false;
+                    button_RefreshPreview.Visible = false;
                     if (FileName != null && FullFileDir != null)
                     {
-                        button_CreatePreview.Enabled = true;
+                        //button_CreatePreview.Enabled = true;
+                        button_CreatePreview.Visible = true;
                     }
                     else
                     {
-                        button_CreatePreview.Enabled = false;
+                        //button_CreatePreview.Enabled = false;
+                        button_CreatePreview.Visible = false;
                     }
                 }
             }
@@ -5755,7 +5768,7 @@ namespace GTR_Watch_face
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string fullfilename = saveFileDialog.FileName;
-                File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+                save_JSON_File(fullfilename, richTextBox_JSON.Text);
 
                 FileName = Path.GetFileName(fullfilename);
                 FullFileDir = Path.GetDirectoryName(fullfilename);
@@ -5911,6 +5924,27 @@ namespace GTR_Watch_face
                             Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
+
+            // отсутствует символ ошибки для текещей температуры
+            if (Watch_Face.Weather != null && Watch_Face.Weather.Temperature != null 
+                && Watch_Face.Weather.Temperature.Symbols != null)
+            {
+                if (Watch_Face.Weather.Temperature.Symbols.NoDataImageIndex == 0)
+                {
+                    MessageBox.Show(Properties.FormStrings.Message_WarningWeatherError,
+                            Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
+            // отсутствует символ ошибки для активностей
+            //if (Watch_Face.Activity != null)
+            //{
+            //    if (Watch_Face.Activity.NoDataImageIndex == null)
+            //    {
+            //        MessageBox.Show(Properties.FormStrings.Message_WarningActivityError,
+            //                Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    }
+            //}
         }
 
         private void checkBox_Weather_CheckedChanged(object sender, EventArgs e)
@@ -6718,7 +6752,6 @@ namespace GTR_Watch_face
                 NullValueHandling = NullValueHandling.Ignore
             });
             File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
-            //File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
         }
         private void numericUpDown_Gif_Speed_ValueChanged(object sender, EventArgs e)
         {
@@ -7766,7 +7799,10 @@ namespace GTR_Watch_face
                 if (FileName != null)
                 {
                     string fullfilename = Path.Combine(FullFileDir, FileName);
-                    if(File.Exists(fullfilename)) File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+                    if (File.Exists(fullfilename))
+                    {
+                        save_JSON_File(fullfilename, richTextBox_JSON.Text);
+                    };
 
                     JSON_Modified = false;
                     FormText();
@@ -7791,7 +7827,7 @@ namespace GTR_Watch_face
                     if (saveFileDialog.ShowDialog() == DialogResult.OK)
                     {
                         string fullfilename = saveFileDialog.FileName;
-                        File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+                        save_JSON_File(fullfilename, richTextBox_JSON.Text);
 
                         FileName = Path.GetFileName(fullfilename);
                         FullFileDir = Path.GetDirectoryName(fullfilename);
@@ -7816,7 +7852,6 @@ namespace GTR_Watch_face
                 NullValueHandling = NullValueHandling.Ignore
             });
             File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
-            //File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
         }
 
         private void dataGridView_MotiomAnimation_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
@@ -7986,7 +8021,7 @@ namespace GTR_Watch_face
                     if (dr == DialogResult.Yes)
                     {
                         string fullfilename = Path.Combine(FullFileDir, FileName);
-                        File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+                        save_JSON_File(fullfilename, richTextBox_JSON.Text);
                         JSON_Modified = false;
                         FormText();
                         if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
@@ -8868,6 +8903,7 @@ namespace GTR_Watch_face
         
         private void button_RefreshPreview_Click(object sender, EventArgs e)
         {
+            if (FileName == null || FullFileDir == null) return;
             if (comboBox_Preview.SelectedIndex >= 0)
             {
                 Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
@@ -9090,6 +9126,13 @@ namespace GTR_Watch_face
 
             }
 
+        }
+
+        private void save_JSON_File(String fullfilename, String saveString)
+        {
+            saveString = saveString.Replace("\r", "");
+            saveString = saveString.Replace("\n", Environment.NewLine);
+            File.WriteAllText(fullfilename, saveString, Encoding.UTF8);
         }
 
         //private int getOSversion()
