@@ -333,4 +333,10 @@
   <data name="Message_WarningPreview_Text2" xml:space="preserve">
     <value>Использовать существующие размеры?</value>
   </data>
+  <data name="Message_WarningActivityError" xml:space="preserve">
+    <value>Желательно указано изображение для символа ошибки при отсутствии данных активностей.</value>
+  </data>
+  <data name="Message_WarningWeatherError" xml:space="preserve">
+    <value>Возможно неверно указано изображение для символа ошибки при отсутствии данных текущей температуры.</value>
+  </data>
 </root>
