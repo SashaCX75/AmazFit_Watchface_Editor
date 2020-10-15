@@ -6853,4 +6853,13 @@ GUI lingua ungherese - Horatius80
 Manuale lingua cinese - kyle208 
 Manuale lingua inglese - gumstic</value>
   </data>
+  <data name="AnimationColumn6.HeaderText" xml:space="preserve">
+    <value>Indice immagini</value>
+  </data>
+  <data name="button_RefreshPreview.Text" xml:space="preserve">
+    <value>Aggiorna anteprima</value>
+  </data>
+  <data name="button_CreatePreview.Text" xml:space="preserve">
+    <value>Crea anteprima</value>
+  </data>
 </root>
