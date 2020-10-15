@@ -3091,7 +3091,4 @@
   <data name="label1.Text" xml:space="preserve">
     <value>Numero di fotogrammi da salvare</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Anteprima animazione</value>
-  </data>
 </root>
