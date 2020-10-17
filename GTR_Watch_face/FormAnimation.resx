@@ -129,6 +129,7 @@
   </data>
   <data name="radioButton_xlarge.Text" xml:space="preserve">
     <value>x2</value>
+    <comment>Don't translate!</comment>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pictureBox_AnimatiomPreview.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
@@ -299,6 +300,7 @@
   </data>
   <data name="radioButton_normal.Text" xml:space="preserve">
     <value>x1</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;progressBar_SaveAnimation.Parent" xml:space="preserve">
     <value>$this</value>
@@ -3278,6 +3280,7 @@
   </data>
   <data name="radioButton_large.Text" xml:space="preserve">
     <value>x1,5</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="button_SaveAnimation.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 23</value>

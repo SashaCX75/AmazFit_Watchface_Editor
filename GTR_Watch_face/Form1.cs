@@ -224,7 +224,7 @@ namespace GTR_Watch_face
                 Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("zh");
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("zh");
             }
-            else if (Program_Settings.language == "Italian")
+            else if (Program_Settings.language == "Italian" || Program_Settings.language == "Italiano")
             {
                 Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("it");
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("it");
