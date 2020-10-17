@@ -160,7 +160,7 @@
     <value>Souřadnice byly zkopírovány</value>
   </data>
   <data name="Message_Error_Caption" xml:space="preserve">
-    <value>chyba</value>
+    <value>Chyba</value>
   </data>
   <data name="Message_error_Image_Text1" xml:space="preserve">
     <value>Nelze otevřít obrázek:</value>
