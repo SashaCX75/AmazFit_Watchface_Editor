@@ -536,6 +536,7 @@
   </data>
   <data name="radioButton_ConvertingInput_TRex.Text" xml:space="preserve">
     <value>T-Rex</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="comboBox_AnalogClock_Sec_Image.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -671,6 +672,7 @@
   </data>
   <data name="label306.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="dataGridView_SPSliced.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -755,6 +757,7 @@
   </data>
   <data name="label276.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label439.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -896,6 +899,7 @@
   </data>
   <data name="label290.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label63.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -3602,6 +3606,7 @@
   </data>
   <data name="label426.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="numericUpDown_Goal_Set12.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -5105,6 +5110,7 @@
   </data>
   <data name="label94.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="numericUpDown_Battery_ClockHand_EndAngle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -5156,6 +5162,7 @@
   </data>
   <data name="comboBox_Animation_Preview_Speed.Items4" xml:space="preserve">
     <value>10</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label262.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -5852,6 +5859,7 @@
   </data>
   <data name="label175.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label360.TabIndex" type="System.Int32, mscorlib">
     <value>65</value>
@@ -6443,6 +6451,7 @@
   </data>
   <data name="radioButton_ConvertingInput_GTR42.Text" xml:space="preserve">
     <value>GTR (42)</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;label334.ZOrder" xml:space="preserve">
     <value>11</value>
@@ -6536,6 +6545,7 @@
   </data>
   <data name="label_preview_Y.Text" xml:space="preserve">
     <value>Y=</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;AnimationColumn2.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -6854,6 +6864,7 @@
   </data>
   <data name="label447.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="checkBox_Alarm_Set7.Location" type="System.Drawing.Point, System.Drawing">
     <value>92, 96</value>
@@ -6944,6 +6955,7 @@
   </data>
   <data name="ValueX.HeaderText" xml:space="preserve">
     <value>X</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="comboBox_Image_Pm.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -7412,6 +7424,7 @@
   </data>
   <data name="label147.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label84.Text" xml:space="preserve">
     <value>Шаги</value>
@@ -7730,6 +7743,7 @@
   </data>
   <data name="comboBox_Language.Items3" xml:space="preserve">
     <value>Português</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label68.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -7814,6 +7828,7 @@
   </data>
   <data name="label157.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="numericUpDown_StepsProgress_Radius_Y.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -8621,9 +8636,11 @@
   </data>
   <data name="comboBox_Language.Items4" xml:space="preserve">
     <value>Slovenčina</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="comboBox_Animation_Preview_Speed.Items2" xml:space="preserve">
     <value>30</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label275.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -9165,6 +9182,7 @@
   </data>
   <data name="label416.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label190.TabIndex" type="System.Int32, mscorlib">
     <value>73</value>
@@ -9180,6 +9198,7 @@
   </data>
   <data name="label474.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="numericUpDown_Distance_Set6.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -9195,6 +9214,7 @@
   </data>
   <data name="label314.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label253.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -9876,6 +9896,7 @@
   </data>
   <data name="label99.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="numericUpDown_Battery_Scale_StartAngle.Location" type="System.Drawing.Point, System.Drawing">
     <value>65, 77</value>
@@ -9921,6 +9942,7 @@
   </data>
   <data name="label432.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label432.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -10031,6 +10053,7 @@
   </data>
   <data name="label300.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;checkBox_Weather_Text.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -10157,6 +10180,7 @@
   </data>
   <data name="AnimationColumn1.HeaderText" xml:space="preserve">
     <value>Unknown1</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label194.Location" type="System.Drawing.Point, System.Drawing">
     <value>64, 45</value>
@@ -10313,6 +10337,7 @@
   </data>
   <data name="radioButton_ConvertingOutput_Verge.Text" xml:space="preserve">
     <value>Verge Lite</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label247.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -10700,6 +10725,7 @@
   </data>
   <data name="label283.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label143.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -10718,6 +10744,7 @@
   </data>
   <data name="label_version.Text" xml:space="preserve">
     <value>v 0.0</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label13.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -10835,6 +10862,7 @@
   </data>
   <data name="comboBox_Preview.Items2" xml:space="preserve">
     <value>825</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label27.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -11387,6 +11415,7 @@
   </data>
   <data name="radioButton_ConvertingInput_Verge.Text" xml:space="preserve">
     <value>Verge Lite</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label99.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -11687,6 +11716,7 @@
   </data>
   <data name="label428.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="numericUpDown_Battery_Scale_StartAngle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -12116,6 +12146,7 @@
   </data>
   <data name="label98.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label188.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -12203,6 +12234,7 @@
   </data>
   <data name="label148.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label269.Text" xml:space="preserve">
     <value>Дата</value>
@@ -12458,6 +12490,7 @@
   </data>
   <data name="richTextBox_JSON.Text" xml:space="preserve">
     <value />
+    <comment>Don't translate!</comment>
   </data>
   <data name="label85.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -12695,6 +12728,7 @@
   </data>
   <data name="label363.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="checkBox_Shortcuts_Border.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -12713,6 +12747,7 @@
   </data>
   <data name="label77.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="groupBox_Minutes_Tens.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 123</value>
@@ -13302,6 +13337,7 @@
   </data>
   <data name="label271.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label193.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -13551,6 +13587,7 @@
   </data>
   <data name="label19.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;label54.Parent" xml:space="preserve">
     <value>panel_Set2</value>
@@ -13569,9 +13606,11 @@
   </data>
   <data name="comboBox_Language.Items9" xml:space="preserve">
     <value>Italiano</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label162.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="groupBox_MotiomAnimation.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -13608,6 +13647,7 @@
   </data>
   <data name="label318.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label329.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 13</value>
@@ -13683,6 +13723,7 @@
   </data>
   <data name="label_preview_X.Text" xml:space="preserve">
     <value>X=</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label147.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -14061,6 +14102,7 @@
   </data>
   <data name="label274.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="checkBox_MonthName.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 20</value>
@@ -14421,6 +14463,7 @@
   </data>
   <data name="label21.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label356.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -14466,6 +14509,7 @@
   </data>
   <data name="label179.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="numericUpDown_MonthAndDayM_Count.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -14571,6 +14615,7 @@
   </data>
   <data name="label15.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label272.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 13</value>
@@ -14748,6 +14793,7 @@
   </data>
   <data name="label127.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="tabControl_Shortcuts.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -15282,6 +15328,7 @@
   </data>
   <data name="radioButton_ConvertingOutput_GTR47.Text" xml:space="preserve">
     <value>GTR (47)</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;label77.Name" xml:space="preserve">
     <value>label77</value>
@@ -15324,6 +15371,7 @@
   </data>
   <data name="label31.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label246.Text" xml:space="preserve">
     <value>Цель щагов</value>
@@ -15659,6 +15707,7 @@
   </data>
   <data name="label293.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="numericUpDown_Steps_Set7.Location" type="System.Drawing.Point, System.Drawing">
     <value>179, 64</value>
@@ -15701,6 +15750,7 @@
   </data>
   <data name="label13.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;dataGridView_Battery_IconSet.Name" xml:space="preserve">
     <value>dataGridView_Battery_IconSet</value>
@@ -15944,6 +15994,7 @@
   </data>
   <data name="comboBox_Preview.Items1" xml:space="preserve">
     <value>52</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="checkBox_MinCenterImage.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -15953,6 +16004,7 @@
   </data>
   <data name="label408.Text" xml:space="preserve">
     <value>SashaCX75</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="checkBox_Lock_Set1.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 18</value>
@@ -16088,6 +16140,7 @@
   </data>
   <data name="label485.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="comboBox_MotiomAnimation_Image.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -16412,6 +16465,7 @@
   </data>
   <data name="label429.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label292.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -16496,6 +16550,7 @@
   </data>
   <data name="label295.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label60.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -17018,6 +17073,7 @@
   </data>
   <data name="label281.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label378.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -17300,6 +17356,7 @@
   </data>
   <data name="label167.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="numericUpDown_Calories_Set7.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -22526,6 +22583,7 @@
   </data>
   <data name="label62.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;label416.ZOrder" xml:space="preserve">
     <value>14</value>
@@ -22796,6 +22854,7 @@
   </data>
   <data name="textBox_pack_command.Text" xml:space="preserve">
     <value>--gtr 47 --file</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="panel_Set8.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 191</value>
@@ -23591,6 +23650,7 @@
   </data>
   <data name="label166.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="panel_Background.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -23759,6 +23819,7 @@
   </data>
   <data name="label177.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="checkBox_Alarm_Set8.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>System</value>
@@ -23891,6 +23952,7 @@
   </data>
   <data name="label133.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="numericUpDown_Battery_Text_Count.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -23924,6 +23986,7 @@
   </data>
   <data name="label495.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;checkBox_Battery_Scale_Image.Name" xml:space="preserve">
     <value>checkBox_Battery_Scale_Image</value>
@@ -23996,6 +24059,7 @@
   </data>
   <data name="label305.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;tabPage31.Name" xml:space="preserve">
     <value>tabPage31</value>
@@ -24101,6 +24165,7 @@
   </data>
   <data name="label275.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="check_BoxBluetooth_Set2.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -24707,6 +24772,7 @@
   </data>
   <data name="label453.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;AnimationColumn8.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -24743,6 +24809,7 @@
   </data>
   <data name="label481.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="checkBox_WeekDay.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -24776,6 +24843,7 @@
   </data>
   <data name="radioButton_TRex.Text" xml:space="preserve">
     <value>T-Rex</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label498.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 13</value>
@@ -25130,6 +25198,7 @@
   </data>
   <data name="AnimationColumn10.HeaderText" xml:space="preserve">
     <value>Unknown6</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label60.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -25166,6 +25235,7 @@
   </data>
   <data name="label23.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label179.Location" type="System.Drawing.Point, System.Drawing">
     <value>75, 32</value>
@@ -25493,6 +25563,7 @@
   </data>
   <data name="dataGridViewTextBoxColumn6.HeaderText" xml:space="preserve">
     <value>Y</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label461.Text" xml:space="preserve">
     <value>Смещение по Y</value>
@@ -25748,6 +25819,7 @@
   </data>
   <data name="label29.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;label144.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -25826,6 +25898,7 @@
   </data>
   <data name="label97.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label220.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -26015,6 +26088,7 @@
   </data>
   <data name="label359.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="numericUpDown_Distance_Set9.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -26075,6 +26149,7 @@
   </data>
   <data name="label33.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="numericUpDown_SecCenterImage_X.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -26123,6 +26198,7 @@
   </data>
   <data name="label64.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label265.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -26303,6 +26379,7 @@
   </data>
   <data name="dataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
     <value>Y</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;label445.Name" xml:space="preserve">
     <value>label445</value>
@@ -26648,6 +26725,7 @@
   </data>
   <data name="label39.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label279.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -26756,6 +26834,7 @@
   </data>
   <data name="label25.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="radioButton_MotiomAnimation_StartCoordinates.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -26978,6 +27057,7 @@
   </data>
   <data name="label143.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="numericUpDown_Battery_Set5.Location" type="System.Drawing.Point, System.Drawing">
     <value>214, 20</value>
@@ -27014,6 +27094,7 @@
   </data>
   <data name="label74.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;numericUpDown_ActivityPulsScale_ImageY.Parent" xml:space="preserve">
     <value>tabPage44</value>
@@ -27245,6 +27326,7 @@
   </data>
   <data name="label446.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="tabControl_Date.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -27257,6 +27339,7 @@
   </data>
   <data name="label123.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;panel_Set1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -27647,6 +27730,7 @@
   </data>
   <data name="label35.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;label44.Parent" xml:space="preserve">
     <value>panel_Set1</value>
@@ -28211,6 +28295,7 @@
   </data>
   <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
     <value>Y</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;panel_Status.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -28520,6 +28605,7 @@
   </data>
   <data name="label430.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label175.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -29072,6 +29158,7 @@
   </data>
   <data name="label156.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="checkBox_Shortcuts_Border.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -29465,6 +29552,7 @@
   </data>
   <data name="label17.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="numericUpDown_MinCenterImage_X.Location" type="System.Drawing.Point, System.Drawing">
     <value>65, 41</value>
@@ -29756,6 +29844,7 @@
   </data>
   <data name="label_version_help.Text" xml:space="preserve">
     <value>0.0</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="checkBox_JsonWarnings.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -29768,6 +29857,7 @@
   </data>
   <data name="comboBox_Language.Items6" xml:space="preserve">
     <value>Magyar</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;tabControl_Date.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -30170,6 +30260,7 @@
   </data>
   <data name="radioButton_ConvertingInput_GTR47.Text" xml:space="preserve">
     <value>GTR (47)</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="tabControl_Activity.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -31253,6 +31344,7 @@
   </data>
   <data name="label194.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label359.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -31748,6 +31840,7 @@
   </data>
   <data name="label196.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="numericUpDown_Sec_Ones_Count.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -31925,6 +32018,7 @@
   </data>
   <data name="label438.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;numericUpDown_WeatherSet_Temp.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -32275,6 +32369,7 @@
   </data>
   <data name="AnimationColumn9.HeaderText" xml:space="preserve">
     <value>Unknown5</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label304.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -32380,6 +32475,7 @@
   </data>
   <data name="label309.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label387.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -32470,6 +32566,7 @@
   </data>
   <data name="radioButton_42.Text" xml:space="preserve">
     <value>GTR (42)</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="numericUpDown_MonthName_Y.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -32989,6 +33086,7 @@
   </data>
   <data name="comboBox_Language.Items7" xml:space="preserve">
     <value>French</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label42.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -33124,6 +33222,7 @@
   </data>
   <data name="label78.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;check_BoxBluetooth_Set5.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -34783,6 +34882,7 @@
   </data>
   <data name="label126.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;radioButton_TRex.Parent" xml:space="preserve">
     <value>$this</value>
@@ -34924,6 +35024,7 @@
   </data>
   <data name="label137.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="groupBox7.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -35536,6 +35637,7 @@
   </data>
   <data name="label482.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label331.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -35596,6 +35698,7 @@
   </data>
   <data name="comboBox_Animation_Preview_Speed.Items3" xml:space="preserve">
     <value>20</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="comboBox_Hours_Tens_Image.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -35931,6 +36034,7 @@
   </data>
   <data name="label66.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="numericUpDown_Battery_ClockHand_StartAngle.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -36378,6 +36482,7 @@
   </data>
   <data name="textBox_unpack_command.Text" xml:space="preserve">
     <value>--gtr 47 --file</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label466.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -36762,6 +36867,7 @@
   </data>
   <data name="radioButton_ConvertingOutput_TRex.Text" xml:space="preserve">
     <value>T-Rex</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="linkLabel_help.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
@@ -37254,6 +37360,7 @@
   </data>
   <data name="label319.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label312.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -37557,6 +37664,7 @@
   </data>
   <data name="label188.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="checkBox_Weather_Night.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -37653,6 +37761,7 @@
   </data>
   <data name="label55.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label276.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -37847,6 +37956,7 @@ English manual - gumstic</value>
   </data>
   <data name="ValueY.HeaderText" xml:space="preserve">
     <value>Y</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;numericUpDown_ADWeekDay_ClockHand_StartAngle.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -37976,6 +38086,7 @@ English manual - gumstic</value>
   </data>
   <data name="dataGridViewTextBoxColumn5.HeaderText" xml:space="preserve">
     <value>X</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="tabPage37.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -38681,6 +38792,7 @@ English manual - gumstic</value>
   </data>
   <data name="label311.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label218.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 48</value>
@@ -39203,6 +39315,7 @@ English manual - gumstic</value>
   </data>
   <data name="label434.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label115.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -40394,6 +40507,7 @@ English manual - gumstic</value>
   </data>
   <data name="comboBox_Background.Items" xml:space="preserve">
     <value>421</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label217.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
@@ -40547,6 +40661,7 @@ English manual - gumstic</value>
   </data>
   <data name="label37.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="comboBox_MonthAndDayM_Alignment.Items4" xml:space="preserve">
     <value>Середина по центру</value>
@@ -40718,6 +40833,7 @@ English manual - gumstic</value>
   </data>
   <data name="label436.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="numericUpDown_Weather_Text_EndCorner_X.Location" type="System.Drawing.Point, System.Drawing">
     <value>135, 43</value>
@@ -41339,6 +41455,7 @@ English manual - gumstic</value>
   </data>
   <data name="radioButton_ConvertingOutput_GTR42.Text" xml:space="preserve">
     <value>GTR (42)</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label424.Text" xml:space="preserve">
     <value>Центр (Y):</value>
@@ -41651,6 +41768,7 @@ English manual - gumstic</value>
   </data>
   <data name="label146.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;label307.Parent" xml:space="preserve">
     <value>groupBox3</value>
@@ -41699,6 +41817,7 @@ English manual - gumstic</value>
   </data>
   <data name="label427.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="checkBox_MinCenterImage.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -41822,6 +41941,7 @@ English manual - gumstic</value>
   </data>
   <data name="label452.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;groupBox7.ZOrder" xml:space="preserve">
     <value>9</value>
@@ -43097,6 +43217,7 @@ English manual - gumstic</value>
   </data>
   <data name="label8.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="comboBox_MonthAndDayD_Image.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -43142,6 +43263,7 @@ English manual - gumstic</value>
   </data>
   <data name="comboBox_Preview.Items" xml:space="preserve">
     <value>414</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label437.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
@@ -43238,6 +43360,7 @@ English manual - gumstic</value>
   </data>
   <data name="radioButton_Verge.Text" xml:space="preserve">
     <value>Verge Lite</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="checkBox_Lock_Set5.Location" type="System.Drawing.Point, System.Drawing">
     <value>179, 96</value>
@@ -43409,6 +43532,7 @@ English manual - gumstic</value>
   </data>
   <data name="comboBox_Language.Items" xml:space="preserve">
     <value>Русский</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label314.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -43634,6 +43758,7 @@ English manual - gumstic</value>
   </data>
   <data name="comboBox_Language.Items8" xml:space="preserve">
     <value>Chinese/简体中文</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="numericUpDown_StaticAnimation_Pause.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -43706,6 +43831,7 @@ English manual - gumstic</value>
   </data>
   <data name="dataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
     <value>X</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;checkBox_Lock_Set7.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -43766,6 +43892,7 @@ English manual - gumstic</value>
   </data>
   <data name="label317.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="numericUpDown_Pulse_ClockHand_EndAngle.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>
@@ -44843,6 +44970,7 @@ English manual - gumstic</value>
   </data>
   <data name="label492.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="radioButton_Settings_AfterUnpack_Download.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -44963,6 +45091,7 @@ English manual - gumstic</value>
   </data>
   <data name="label190.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="comboBox_HourCenterImage_Image.Location" type="System.Drawing.Point, System.Drawing">
     <value>65, 93</value>
@@ -45236,6 +45365,7 @@ English manual - gumstic</value>
   </data>
   <data name="AnimationColumn11.HeaderText" xml:space="preserve">
     <value>Unknown7</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label181.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -45263,6 +45393,7 @@ English manual - gumstic</value>
   </data>
   <data name="comboBox_Language.Items1" xml:space="preserve">
     <value>English</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;numericUpDown_ActivityDistance_EndCorner_X.Name" xml:space="preserve">
     <value>numericUpDown_ActivityDistance_EndCorner_X</value>
@@ -46280,6 +46411,7 @@ English manual - gumstic</value>
   </data>
   <data name="comboBox_Language.Items2" xml:space="preserve">
     <value>Español</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="numericUpDown_MonthAndDayM_Spacing.Location" type="System.Drawing.Point, System.Drawing">
     <value>59, 110</value>
@@ -46331,6 +46463,7 @@ English manual - gumstic</value>
   </data>
   <data name="helpProvider1.HelpNamespace" xml:space="preserve">
     <value>C:\Users\Администратор\Documents\readme.chm</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="panel_Set13.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -46808,6 +46941,7 @@ English manual - gumstic</value>
   </data>
   <data name="label294.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;NameFile.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -47342,6 +47476,7 @@ English manual - gumstic</value>
   </data>
   <data name="comboBox_Background.Items1" xml:space="preserve">
     <value>42</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="panel_SetWeather.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 542</value>
@@ -47387,6 +47522,7 @@ English manual - gumstic</value>
   </data>
   <data name="label128.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="checkBox_CircleScaleImage.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -47663,6 +47799,7 @@ English manual - gumstic</value>
   </data>
   <data name="label185.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label240.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 48</value>
@@ -47990,6 +48127,7 @@ English manual - gumstic</value>
   </data>
   <data name="label27.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label335.Location" type="System.Drawing.Point, System.Drawing">
     <value>273, 4</value>
@@ -48059,6 +48197,7 @@ English manual - gumstic</value>
   </data>
   <data name="label435.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;tabPage5.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -48188,6 +48327,7 @@ English manual - gumstic</value>
   </data>
   <data name="label364.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;label242.Parent" xml:space="preserve">
     <value>panel_Set7</value>
@@ -48491,9 +48631,11 @@ English manual - gumstic</value>
   </data>
   <data name="label433.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label60.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="numericUpDown_Weather_Day_Spacing.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -48602,6 +48744,7 @@ English manual - gumstic</value>
   </data>
   <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
     <value>X</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="numericUpDown_AmPm_X.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -49198,6 +49341,7 @@ English manual - gumstic</value>
   </data>
   <data name="comboBox_Animation_Preview_Speed.Items1" xml:space="preserve">
     <value>40</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;label172.Name" xml:space="preserve">
     <value>label172</value>
@@ -49291,6 +49435,7 @@ English manual - gumstic</value>
   </data>
   <data name="label138.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;tabPage40.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -49492,6 +49637,7 @@ English manual - gumstic</value>
   </data>
   <data name="label70.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label_version.Location" type="System.Drawing.Point, System.Drawing">
     <value>902, 10</value>
@@ -49678,6 +49824,7 @@ English manual - gumstic</value>
   </data>
   <data name="label9.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label193.Text" xml:space="preserve">
     <value>Левый верхний угол</value>
@@ -50292,6 +50439,7 @@ English manual - gumstic</value>
   </data>
   <data name="label158.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="checkBox_Shortcuts_Steps.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -50418,6 +50566,7 @@ English manual - gumstic</value>
   </data>
   <data name="label57.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="numericUpDown_Steps_Set9.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -50433,6 +50582,7 @@ English manual - gumstic</value>
   </data>
   <data name="comboBox_Language.Items5" xml:space="preserve">
     <value>Čeština</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;label280.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -50442,6 +50592,7 @@ English manual - gumstic</value>
   </data>
   <data name="label312.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="groupBox_AnalogClock_Hour.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 7</value>
@@ -51024,6 +51175,7 @@ English manual - gumstic</value>
   </data>
   <data name="label170.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;label226.ZOrder" xml:space="preserve">
     <value>9</value>
@@ -51282,6 +51434,7 @@ English manual - gumstic</value>
   </data>
   <data name="label484.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;radioButton_ConvertingInput_Custom.Parent" xml:space="preserve">
     <value>groupBox9</value>
@@ -51591,6 +51744,7 @@ English manual - gumstic</value>
   </data>
   <data name="label497.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;label499.Name" xml:space="preserve">
     <value>label499</value>
@@ -51648,6 +51802,7 @@ English manual - gumstic</value>
   </data>
   <data name="label183.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;dateTimePicker_Date_Set8.ZOrder" xml:space="preserve">
     <value>16</value>
@@ -51681,6 +51836,7 @@ English manual - gumstic</value>
   </data>
   <data name="label_size.Text" xml:space="preserve">
     <value>≈0MB</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;tabPage3.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -52500,6 +52656,7 @@ English manual - gumstic</value>
   </data>
   <data name="label189.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="radioButton_Settings_AfterUnpack_DoNothing.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
@@ -52533,6 +52690,7 @@ English manual - gumstic</value>
   </data>
   <data name="label163.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;label294.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -52794,6 +52952,7 @@ English manual - gumstic</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>GTR watch face editor</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label141.TabIndex" type="System.Int32, mscorlib">
     <value>70</value>
@@ -53451,6 +53610,7 @@ English manual - gumstic</value>
   </data>
   <data name="label136.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Команда для распаковки циферблата</value>
@@ -53664,6 +53824,7 @@ English manual - gumstic</value>
   </data>
   <data name="label496.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label305.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -53994,6 +54155,7 @@ English manual - gumstic</value>
   </data>
   <data name="comboBox_Background.Items2" xml:space="preserve">
     <value>42</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;label258.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -54057,6 +54219,7 @@ English manual - gumstic</value>
   </data>
   <data name="label153.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="dateTimePicker_Time_Set7.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 20</value>
@@ -54084,6 +54247,7 @@ English manual - gumstic</value>
   </data>
   <data name="label181.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="checkBox_Shortcuts_Border.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -54522,6 +54686,7 @@ English manual - gumstic</value>
   </data>
   <data name="comboBox_Animation_Preview_Speed.Items" xml:space="preserve">
     <value>50</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="checkBox1.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -54843,6 +55008,7 @@ English manual - gumstic</value>
   </data>
   <data name="radioButton_gts.Text" xml:space="preserve">
     <value>GTS</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="label327.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -55302,6 +55468,7 @@ English manual - gumstic</value>
   </data>
   <data name="radioButton_47.Text" xml:space="preserve">
     <value>GTR (47)</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="numericUpDown_Battery_Set7.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -55386,6 +55553,7 @@ English manual - gumstic</value>
   </data>
   <data name="label69.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;panel_Animation.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -55461,6 +55629,7 @@ English manual - gumstic</value>
   </data>
   <data name="label431.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="numericUpDown_Sec_Tens_Y.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -55623,6 +55792,7 @@ English manual - gumstic</value>
   </data>
   <data name="label308.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;numericUpDown_ActivitySteps_StartCorner_X.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -56145,6 +56315,7 @@ English manual - gumstic</value>
   </data>
   <data name="label362.Text" xml:space="preserve">
     <value>X:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;button_zip.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -56349,6 +56520,7 @@ English manual - gumstic</value>
   </data>
   <data name="label79.Text" xml:space="preserve">
     <value>Y:</value>
+    <comment>Don't translate!</comment>
   </data>
   <data name="&gt;&gt;checkBox_Activity.ZOrder" xml:space="preserve">
     <value>3</value>
