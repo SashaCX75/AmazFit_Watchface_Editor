@@ -8281,6 +8281,8 @@ namespace GTR_Watch_face
                             (int)Math.Round(Watch_Face.Date.MonthAndDay.OneLine.Number.BottomRightX * scale);
                         Watch_Face.Date.MonthAndDay.OneLine.Number.BottomRightY =
                             (int)Math.Round(Watch_Face.Date.MonthAndDay.OneLine.Number.BottomRightY * scale);
+                        Watch_Face.Date.MonthAndDay.OneLine.Number.Spacing =
+                            (int)Math.Round(Watch_Face.Date.MonthAndDay.OneLine.Number.Spacing * scale);
                     }
 
                     if (Watch_Face.Date.MonthAndDay.Separate != null)
@@ -8295,6 +8297,8 @@ namespace GTR_Watch_face
                                  (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Day.BottomRightX * scale);
                             Watch_Face.Date.MonthAndDay.Separate.Day.BottomRightY =
                                  (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Day.BottomRightY * scale);
+                            Watch_Face.Date.MonthAndDay.Separate.Day.Spacing =
+                                 (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Day.Spacing * scale);
                         }
 
                         if (Watch_Face.Date.MonthAndDay.Separate.Month != null)
@@ -8307,6 +8311,8 @@ namespace GTR_Watch_face
                                 (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Month.BottomRightX * scale);
                             Watch_Face.Date.MonthAndDay.Separate.Month.BottomRightY =
                                 (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Month.BottomRightY * scale);
+                            Watch_Face.Date.MonthAndDay.Separate.Month.Spacing =
+                                (int)Math.Round(Watch_Face.Date.MonthAndDay.Separate.Month.Spacing * scale);
                         }
 
                         if (Watch_Face.Date.MonthAndDay.Separate.MonthName != null)
@@ -8328,6 +8334,7 @@ namespace GTR_Watch_face
                         Watch_Face.Date.Year.OneLine.Number.TopLeftY = (int)Math.Round(Watch_Face.Date.Year.OneLine.Number.TopLeftY * scale);
                         Watch_Face.Date.Year.OneLine.Number.BottomRightX = (int)Math.Round(Watch_Face.Date.Year.OneLine.Number.BottomRightX * scale);
                         Watch_Face.Date.Year.OneLine.Number.BottomRightY = (int)Math.Round(Watch_Face.Date.Year.OneLine.Number.BottomRightY * scale);
+                        Watch_Face.Date.Year.OneLine.Number.Spacing = (int)Math.Round(Watch_Face.Date.Year.OneLine.Number.Spacing * scale);
                     }
                 }
             }
@@ -8434,6 +8441,7 @@ namespace GTR_Watch_face
                     Watch_Face.Activity.StepsGoal.TopLeftY = (int)Math.Round(Watch_Face.Activity.StepsGoal.TopLeftY * scale);
                     Watch_Face.Activity.StepsGoal.BottomRightX = (int)Math.Round(Watch_Face.Activity.StepsGoal.BottomRightX * scale);
                     Watch_Face.Activity.StepsGoal.BottomRightY = (int)Math.Round(Watch_Face.Activity.StepsGoal.BottomRightY * scale);
+                    Watch_Face.Activity.StepsGoal.Spacing = (int)Math.Round(Watch_Face.Activity.StepsGoal.Spacing * scale);
                 }
 
                 if ((Watch_Face.Activity.Steps != null) && (Watch_Face.Activity.Steps.Step != null))
@@ -8442,6 +8450,7 @@ namespace GTR_Watch_face
                     Watch_Face.Activity.Steps.Step.TopLeftY = (int)Math.Round(Watch_Face.Activity.Steps.Step.TopLeftY * scale);
                     Watch_Face.Activity.Steps.Step.BottomRightX = (int)Math.Round(Watch_Face.Activity.Steps.Step.BottomRightX * scale);
                     Watch_Face.Activity.Steps.Step.BottomRightY = (int)Math.Round(Watch_Face.Activity.Steps.Step.BottomRightY * scale);
+                    Watch_Face.Activity.Steps.Step.Spacing = (int)Math.Round(Watch_Face.Activity.Steps.Step.Spacing * scale);
                 }
 
                 if ((Watch_Face.Activity.Distance != null) && (Watch_Face.Activity.Distance.Number != null))
@@ -8450,6 +8459,7 @@ namespace GTR_Watch_face
                     Watch_Face.Activity.Distance.Number.TopLeftY = (int)Math.Round(Watch_Face.Activity.Distance.Number.TopLeftY * scale);
                     Watch_Face.Activity.Distance.Number.BottomRightX = (int)Math.Round(Watch_Face.Activity.Distance.Number.BottomRightX * scale);
                     Watch_Face.Activity.Distance.Number.BottomRightY = (int)Math.Round(Watch_Face.Activity.Distance.Number.BottomRightY * scale);
+                    Watch_Face.Activity.Distance.Number.Spacing = (int)Math.Round(Watch_Face.Activity.Distance.Number.Spacing * scale);
                 }
 
                 if (Watch_Face.Activity.Pulse != null)
@@ -8458,6 +8468,7 @@ namespace GTR_Watch_face
                     Watch_Face.Activity.Pulse.TopLeftY = (int)Math.Round(Watch_Face.Activity.Pulse.TopLeftY * scale);
                     Watch_Face.Activity.Pulse.BottomRightX = (int)Math.Round(Watch_Face.Activity.Pulse.BottomRightX * scale);
                     Watch_Face.Activity.Pulse.BottomRightY = (int)Math.Round(Watch_Face.Activity.Pulse.BottomRightY * scale);
+                    Watch_Face.Activity.Pulse.Spacing = (int)Math.Round(Watch_Face.Activity.Pulse.Spacing * scale);
                 }
 
                 if (Watch_Face.Activity.PulseMeter != null)
@@ -8511,6 +8522,7 @@ namespace GTR_Watch_face
                     Watch_Face.Activity.Calories.TopLeftY = (int)Math.Round(Watch_Face.Activity.Calories.TopLeftY * scale);
                     Watch_Face.Activity.Calories.BottomRightX = (int)Math.Round(Watch_Face.Activity.Calories.BottomRightX * scale);
                     Watch_Face.Activity.Calories.BottomRightY = (int)Math.Round(Watch_Face.Activity.Calories.BottomRightY * scale);
+                    Watch_Face.Activity.Calories.Spacing = (int)Math.Round(Watch_Face.Activity.Calories.Spacing * scale);
                 }
                 
                 if (Watch_Face.Activity.CaloriesGraph != null && Watch_Face.Activity.CaloriesGraph.Circle != null)
@@ -8606,6 +8618,7 @@ namespace GTR_Watch_face
                     Watch_Face.Battery.Text.TopLeftY = (int)Math.Round(Watch_Face.Battery.Text.TopLeftY * scale);
                     Watch_Face.Battery.Text.BottomRightX = (int)Math.Round(Watch_Face.Battery.Text.BottomRightX * scale);
                     Watch_Face.Battery.Text.BottomRightY = (int)Math.Round(Watch_Face.Battery.Text.BottomRightY * scale);
+                    Watch_Face.Battery.Text.Spacing = (int)Math.Round(Watch_Face.Battery.Text.Spacing * scale);
                 }
 
                 if (Watch_Face.Battery.Images != null)
@@ -8738,6 +8751,7 @@ namespace GTR_Watch_face
                     Watch_Face.Weather.Temperature.Current.TopLeftY = (int)Math.Round(Watch_Face.Weather.Temperature.Current.TopLeftY * scale);
                     Watch_Face.Weather.Temperature.Current.BottomRightX = (int)Math.Round(Watch_Face.Weather.Temperature.Current.BottomRightX * scale);
                     Watch_Face.Weather.Temperature.Current.BottomRightY = (int)Math.Round(Watch_Face.Weather.Temperature.Current.BottomRightY * scale);
+                    Watch_Face.Weather.Temperature.Current.Spacing = (int)Math.Round(Watch_Face.Weather.Temperature.Current.Spacing * scale);
                 }
 
                 if ((Watch_Face.Weather.Temperature != null) && (Watch_Face.Weather.Temperature.Today != null))
@@ -8753,6 +8767,8 @@ namespace GTR_Watch_face
                             (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Day.BottomRightX * scale);
                         Watch_Face.Weather.Temperature.Today.Separate.Day.BottomRightY =
                             (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Day.BottomRightY * scale);
+                        Watch_Face.Weather.Temperature.Today.Separate.Day.Spacing =
+                            (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Day.Spacing * scale);
                     }
 
                     if ((Watch_Face.Weather.Temperature.Today.Separate != null) &&
@@ -8766,6 +8782,8 @@ namespace GTR_Watch_face
                             (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Night.BottomRightX * scale);
                         Watch_Face.Weather.Temperature.Today.Separate.Night.BottomRightY =
                             (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Night.BottomRightY * scale);
+                        Watch_Face.Weather.Temperature.Today.Separate.Night.Spacing =
+                            (int)Math.Round(Watch_Face.Weather.Temperature.Today.Separate.Night.Spacing * scale);
                     }
                 }
 
