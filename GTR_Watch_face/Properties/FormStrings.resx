@@ -339,4 +339,7 @@
   <data name="Message_WarningWeatherError" xml:space="preserve">
     <value>Возможно неверно указано изображение для символа ошибки при отсутствии данных текущей температуры.</value>
   </data>
+  <data name="Message_WarningDateOnelineAndSeparate" xml:space="preserve">
+    <value>Отображение даты отдельными блоками не работает вместе с отображением даты в одну линию</value>
+  </data>
 </root>

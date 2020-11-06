@@ -628,6 +628,15 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Отображение даты отдельными блоками не работает вместе с отображением даты в одну линию.
+        /// </summary>
+        public static string Message_WarningDateOnelineAndSeparate {
+            get {
+                return ResourceManager.GetString("Message_WarningDateOnelineAndSeparate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Не рекомендуется использовать отображение расстояния без суффикса..
         /// </summary>
         public static string Message_WarningDistanceSuffix {
