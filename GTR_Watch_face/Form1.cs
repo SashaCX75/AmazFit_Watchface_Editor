@@ -5852,10 +5852,21 @@ namespace GTR_Watch_face
                 }
             }
 
-            // кооличество картинок для батареи
+            // количество картинок для батареи
             if (Watch_Face.Battery != null)
             {
                 if ((Watch_Face.Battery.Images != null) && (Watch_Face.Battery.Images.ImagesCount > 10))
+                {
+                    MessageBox.Show(Properties.FormStrings.Message_WarningBatteryCount_Text,
+                    Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
+            // количество сегментов для батареи
+            if (Watch_Face.Battery != null)
+            {
+                if ((Watch_Face.Battery.Icons != null) && (Watch_Face.Battery.Icons.Coordinates != null) &&
+                    (Watch_Face.Battery.Icons.Coordinates.Length > 10))
                 {
                     MessageBox.Show(Properties.FormStrings.Message_WarningBatteryCount_Text,
                     Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -5903,6 +5914,16 @@ namespace GTR_Watch_face
                 if (Watch_Face.Date.MonthAndDay.Separate.MonthName != null && Watch_Face.Date.MonthAndDay.Separate.Month != null)
                 {
                     MessageBox.Show(Properties.FormStrings.Message_WarningMonthName,
+                            Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
+            // дата в одну линию и отдельными блоками
+            if (Watch_Face.Date != null && Watch_Face.Date.MonthAndDay != null)
+            {
+                if (Watch_Face.Date.MonthAndDay.Separate != null && Watch_Face.Date.MonthAndDay.OneLine != null)
+                {
+                    MessageBox.Show(Properties.FormStrings.Message_WarningDateOnelineAndSeparate,
                             Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }

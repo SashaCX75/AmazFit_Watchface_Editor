@@ -272,6 +272,7 @@ namespace GTR_Watch_face
             Logger.WriteLine("PreviewToBitmap (Date)");
             if (checkBox_Date.Checked)
             {
+                // название месяца
                 if ((checkBox_MonthName.Checked) && (comboBox_MonthName_Image.SelectedIndex >= 0))
                 {
                     i = comboBox_MonthName_Image.SelectedIndex + Watch_Face_Preview_Set.Date.Month - 1;
@@ -282,299 +283,67 @@ namespace GTR_Watch_face
                     //src.Dispose();
                 }
 
+                // месяц
                 if ((checkBox_MonthAndDayM.Checked) && (comboBox_MonthAndDayM_Image.SelectedIndex >= 0))
                 {
                     int x1 = (int)numericUpDown_MonthAndDayM_StartCorner_X.Value;
                     int y1 = (int)numericUpDown_MonthAndDayM_StartCorner_Y.Value;
                     int x2 = (int)numericUpDown_MonthAndDayM_EndCorner_X.Value + 1;
                     int y2 = (int)numericUpDown_MonthAndDayM_EndCorner_Y.Value + 1;
-                    //var Dagit = new Bitmap(ListImagesFullName[comboBox_MonthAndDayM_Image.SelectedIndex]);
-                    Bitmap Dagit = OpenFileStream(ListImagesFullName[comboBox_MonthAndDayM_Image.SelectedIndex]);
-                    int DateLenght = Dagit.Width;
-                    int DateHeight = Dagit.Height;
-                    if ((checkBox_TwoDigitsMonth.Checked) || (Watch_Face_Preview_TwoDigits.Date.Month.Tens > 0))
-                        DateLenght = DateLenght + Dagit.Width + (int)numericUpDown_MonthAndDayM_Spacing.Value;
-                    if (DateLenght < Dagit.Width) DateLenght = Dagit.Width;
+                    x2++;
+                    y2++;
+                    int image_index = comboBox_MonthAndDayM_Image.SelectedIndex;
+                    int spacing = (int)numericUpDown_MonthAndDayM_Spacing.Value;
+                    int alignment = comboBox_MonthAndDayM_Alignment.SelectedIndex;
+                    int data_number = Watch_Face_Preview_Set.Date.Month;
 
-                    int PointX = 0;
-                    int PointY = 0;
-                    switch (comboBox_MonthAndDayM_Alignment.SelectedIndex)
-                    {
-                        case 0:
-                        case 1:
-                        case 2:
-                            PointY = y1;
-                            break;
-                        case 3:
-                        case 4:
-                        case 5:
-                            PointY = (y1 + y2) / 2 - DateHeight / 2;
-                            break;
-                        case 6:
-                        case 7:
-                        case 8:
-                            PointY = y2 - DateHeight;
-                            break;
-                    }
-                    switch (comboBox_MonthAndDayM_Alignment.SelectedIndex)
-                    {
-                        case 0:
-                        case 3:
-                        case 6:
-                            PointX = x1;
-                            break;
-                        case 1:
-                        case 4:
-                        case 7:
-                            PointX = (x1 + x2) / 2 - DateLenght / 2;
-                            break;
-                        case 2:
-                        case 5:
-                        case 8:
-                            PointX = x2 - DateLenght;
-                            break;
-                    }
-                    if (PointX < x1) PointX = x1;
-                    if (PointY < y1) PointY = y1;
-
-                    if ((checkBox_TwoDigitsMonth.Checked) || (Watch_Face_Preview_TwoDigits.Date.Month.Tens > 0))
-                    {
-                        i = comboBox_MonthAndDayM_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Date.Month.Tens;
-                        //src = new Bitmap(ListImagesFullName[i]);
-                        src = OpenFileStream(ListImagesFullName[i]);
-                        gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                        PointX = PointX + Dagit.Width + (int)numericUpDown_MonthAndDayM_Spacing.Value;
-                        //src.Dispose();
-                    }
-                    i = comboBox_MonthAndDayM_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Date.Month.Ones;
-                    //src = new Bitmap(ListImagesFullName[i]);
-                    src = OpenFileStream(ListImagesFullName[i]);
-                    gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                    //src.Dispose();
-                    //Dagit.Dispose();
-
-                    if (BBorder)
-                    {
-                        Rectangle rect = new Rectangle(x1, y1, x2 - x1 - 1, y2 - y1 - 1);
-                        using (Pen pen1 = new Pen(Color.White, 1))
-                        {
-                            gPanel.DrawRectangle(pen1, rect);
-                        }
-                        using (Pen pen2 = new Pen(Color.Black, 1))
-                        {
-                            pen2.DashStyle = DashStyle.Dot;
-                            gPanel.DrawRectangle(pen2, rect);
-                        }
-                    }
+                    if (numericUpDown_MonthAndDayM_Count.Value == 10)
+                        DrawNumberDate(gPanel, x1, y1, x2, y2, image_index, spacing, alignment,
+                            data_number, BBorder, checkBox_TwoDigitsMonth.Checked);
                 }
 
+                // число
                 if ((checkBox_MonthAndDayD.Checked) && (comboBox_MonthAndDayD_Image.SelectedIndex >= 0))
                 {
                     int x1 = (int)numericUpDown_MonthAndDayD_StartCorner_X.Value;
                     int y1 = (int)numericUpDown_MonthAndDayD_StartCorner_Y.Value;
                     int x2 = (int)numericUpDown_MonthAndDayD_EndCorner_X.Value + 1;
                     int y2 = (int)numericUpDown_MonthAndDayD_EndCorner_Y.Value + 1;
-                    //var Dagit = new Bitmap(ListImagesFullName[comboBox_MonthAndDayD_Image.SelectedIndex]);
-                    Bitmap Dagit = OpenFileStream(ListImagesFullName[comboBox_MonthAndDayD_Image.SelectedIndex]);
-                    int DateLenght = Dagit.Width;
-                    int DateHeight = Dagit.Height;
-                    if ((checkBox_TwoDigitsDay.Checked) || (Watch_Face_Preview_TwoDigits.Date.Day.Tens > 0))
-                        DateLenght = DateLenght + Dagit.Width + (int)numericUpDown_MonthAndDayD_Spacing.Value;
-                    if (DateLenght < Dagit.Width) DateLenght = Dagit.Width;
+                    x2++;
+                    y2++;
+                    int image_index = comboBox_MonthAndDayD_Image.SelectedIndex;
+                    int spacing = (int)numericUpDown_MonthAndDayD_Spacing.Value;
+                    int alignment = comboBox_MonthAndDayD_Alignment.SelectedIndex;
+                    int data_number = Watch_Face_Preview_Set.Date.Day;
 
-                    int PointX = 0;
-                    int PointY = 0;
-                    switch (comboBox_MonthAndDayD_Alignment.SelectedIndex)
-                    {
-                        case 0:
-                        case 1:
-                        case 2:
-                            PointY = y1;
-                            break;
-                        case 3:
-                        case 4:
-                        case 5:
-                            PointY = (y1 + y2) / 2 - DateHeight / 2;
-                            break;
-                        case 6:
-                        case 7:
-                        case 8:
-                            PointY = y2 - DateHeight;
-                            break;
-                    }
-                    switch (comboBox_MonthAndDayD_Alignment.SelectedIndex)
-                    {
-                        case 0:
-                        case 3:
-                        case 6:
-                            PointX = x1;
-                            break;
-                        case 1:
-                        case 4:
-                        case 7:
-                            PointX = (x1 + x2) / 2 - DateLenght / 2;
-                            break;
-                        case 2:
-                        case 5:
-                        case 8:
-                            PointX = x2 - DateLenght;
-                            break;
-                    }
-                    if (PointX < x1) PointX = x1;
-                    if (PointY < y1) PointY = y1;
-
-                    if ((checkBox_TwoDigitsDay.Checked) || (Watch_Face_Preview_TwoDigits.Date.Day.Tens > 0))
-                    {
-                        i = comboBox_MonthAndDayD_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Date.Day.Tens;
-                        //src = new Bitmap(ListImagesFullName[i]);
-                        src = OpenFileStream(ListImagesFullName[i]);
-                        gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                        PointX = PointX + Dagit.Width + (int)numericUpDown_MonthAndDayD_Spacing.Value;
-                        //src.Dispose();
-                    }
-                    i = comboBox_MonthAndDayD_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Date.Day.Ones;
-                    //src = new Bitmap(ListImagesFullName[i]);
-                    src = OpenFileStream(ListImagesFullName[i]);
-                    gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                    //src.Dispose();
-                    //Dagit.Dispose();
-
-                    if (BBorder)
-                    {
-                        Rectangle rect = new Rectangle(x1, y1, x2 - x1 - 1, y2 - y1 - 1);
-                        using (Pen pen1 = new Pen(Color.White, 1))
-                        {
-                            gPanel.DrawRectangle(pen1, rect);
-                        }
-                        using (Pen pen2 = new Pen(Color.Black, 1))
-                        {
-                            pen2.DashStyle = DashStyle.Dot;
-                            gPanel.DrawRectangle(pen2, rect);
-                        }
-                    }
+                    if (numericUpDown_MonthAndDayD_Count.Value == 10)
+                        DrawNumberDate(gPanel, x1, y1, x2, y2, image_index,spacing, alignment,
+                            data_number, BBorder, checkBox_TwoDigitsDay.Checked);
                 }
 
+                // дата в одну линию
                 if ((checkBox_OneLine.Checked) && (comboBox_OneLine_Image.SelectedIndex >= 0))
                 {
                     int x1 = (int)numericUpDown_OneLine_StartCorner_X.Value;
                     int y1 = (int)numericUpDown_OneLine_StartCorner_Y.Value;
                     int x2 = (int)numericUpDown_OneLine_EndCorner_X.Value + 1;
                     int y2 = (int)numericUpDown_OneLine_EndCorner_Y.Value + 1;
-                    //var Dagit = new Bitmap(ListImagesFullName[comboBox_OneLine_Image.SelectedIndex]);
-                    Bitmap Dagit = OpenFileStream(ListImagesFullName[comboBox_OneLine_Image.SelectedIndex]);
-                    Bitmap Delimit = new Bitmap(1, 1);
-                    if (comboBox_OneLine_Delimiter.SelectedIndex >= 0)
-                        //Delimit = new Bitmap(ListImagesFullName[comboBox_OneLine_Delimiter.SelectedIndex]);
-                        Delimit = OpenFileStream(ListImagesFullName[comboBox_OneLine_Delimiter.SelectedIndex]);
-                    int DelimitW = Delimit.Width;
-                    if (comboBox_OneLine_Delimiter.SelectedIndex < 0) DelimitW = 0;
+                    x2++;
+                    y2++;
+                    int image_index = comboBox_OneLine_Image.SelectedIndex;
+                    int spacing = (int)numericUpDown_OneLine_Spacing.Value;
+                    int alignment = comboBox_OneLine_Alignment.SelectedIndex;
+                    int delimeter = comboBox_OneLine_Delimiter.SelectedIndex;
+                    int month_value = Watch_Face_Preview_Set.Date.Month;
+                    int day_value = Watch_Face_Preview_Set.Date.Day;
 
-                    int DateLenght = Dagit.Width * 4 + (int)numericUpDown_OneLine_Spacing.Value * 4 + DelimitW;
-                    int DateHeight = Dagit.Height;
-                    if (comboBox_OneLine_Delimiter.SelectedIndex < 0) DateLenght = DateLenght - DelimitW;
-                    if ((!checkBox_TwoDigitsMonth.Checked) && (Watch_Face_Preview_TwoDigits.Date.Month.Tens == 0))
-                        DateLenght = DateLenght - Dagit.Width - (int)numericUpDown_OneLine_Spacing.Value;
-                    if ((!checkBox_TwoDigitsDay.Checked) && (Watch_Face_Preview_TwoDigits.Date.Day.Tens == 0))
-                        DateLenght = DateLenght - Dagit.Width - (int)numericUpDown_OneLine_Spacing.Value;
-                    if (DateLenght < Dagit.Width) DateLenght = Dagit.Width;
-
-                    int PointX = 0;
-                    int PointY = 0;
-                    switch (comboBox_OneLine_Alignment.SelectedIndex)
-                    {
-                        case 0:
-                        case 1:
-                        case 2:
-                            PointY = y1;
-                            break;
-                        case 3:
-                        case 4:
-                        case 5:
-                            PointY = (y1 + y2) / 2 - DateHeight / 2;
-                            break;
-                        case 6:
-                        case 7:
-                        case 8:
-                            PointY = y2 - DateHeight;
-                            break;
-                    }
-                    switch (comboBox_OneLine_Alignment.SelectedIndex)
-                    {
-                        case 0:
-                        case 3:
-                        case 6:
-                            PointX = x1;
-                            break;
-                        case 1:
-                        case 4:
-                        case 7:
-                            PointX = (x1 + x2) / 2 - DateLenght / 2;
-                            break;
-                        case 2:
-                        case 5:
-                        case 8:
-                            PointX = x2 - DateLenght;
-                            break;
-                    }
-                    if (PointX < x1) PointX = x1;
-                    if (PointY < y1) PointY = y1;
-
-                    if ((checkBox_TwoDigitsMonth.Checked) || (Watch_Face_Preview_TwoDigits.Date.Month.Tens > 0))
-                    {
-                        i = comboBox_OneLine_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Date.Month.Tens;
-                        //src = new Bitmap(ListImagesFullName[i]);
-                        src = OpenFileStream(ListImagesFullName[i]);
-                        gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                        PointX = PointX + Dagit.Width + (int)numericUpDown_OneLine_Spacing.Value;
-                        //src.Dispose();
-                    }
-                    i = comboBox_OneLine_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Date.Month.Ones;
-                    //src = new Bitmap(ListImagesFullName[i]);
-                    src = OpenFileStream(ListImagesFullName[i]);
-                    gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                    PointX = PointX + Dagit.Width + (int)numericUpDown_OneLine_Spacing.Value;
-                    //src.Dispose();
-
-                    if (comboBox_OneLine_Delimiter.SelectedIndex >= 0)
-                    {
-                        i = comboBox_OneLine_Delimiter.SelectedIndex;
-                        //src = new Bitmap(ListImagesFullName[i]);
-                        src = OpenFileStream(ListImagesFullName[i]);
-                        gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                        PointX = PointX + DelimitW + (int)numericUpDown_OneLine_Spacing.Value;
-                        //src.Dispose();
-                    }
-
-                    if ((checkBox_TwoDigitsDay.Checked) || (Watch_Face_Preview_TwoDigits.Date.Day.Tens > 0))
-                    {
-                        i = comboBox_OneLine_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Date.Day.Tens;
-                        src = new Bitmap(ListImagesFullName[i]);
-                        gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                        PointX = PointX + Dagit.Width + (int)numericUpDown_OneLine_Spacing.Value;
-                    }
-                    i = comboBox_OneLine_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Date.Day.Ones;
-                    //src = new Bitmap(ListImagesFullName[i]);
-                    src = OpenFileStream(ListImagesFullName[i]);
-                    gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                    //src.Dispose();
-                    //Dagit.Dispose();
-                    //Delimit.Dispose();
-
-                    if (BBorder)
-                    {
-                        Rectangle rect = new Rectangle(x1, y1, x2 - x1 - 1, y2 - y1 - 1);
-                        using (Pen pen1 = new Pen(Color.White, 1))
-                        {
-                            gPanel.DrawRectangle(pen1, rect);
-                        }
-                        using (Pen pen2 = new Pen(Color.Black, 1))
-                        {
-                            pen2.DashStyle = DashStyle.Dot;
-                            gPanel.DrawRectangle(pen2, rect);
-                        }
-                    }
+                    if (numericUpDown_OneLine_Count.Value == 10)
+                        DrawDateOneLine(gPanel, x1, y1, x2, y2, image_index, spacing, alignment,
+                            month_value, day_value, delimeter,BBorder, 
+                            checkBox_TwoDigitsMonth.Checked, checkBox_TwoDigitsDay.Checked);
                 }
 
+                // день недели
                 if ((checkBox_WeekDay.Checked) && (comboBox_WeekDay_Image.SelectedIndex >= 0))
                 {
                     i = comboBox_WeekDay_Image.SelectedIndex + Watch_Face_Preview_Set.Date.WeekDay - 1;
@@ -585,7 +354,7 @@ namespace GTR_Watch_face
                     //src.Dispose();
                 }
 
-                // набор иконок
+                // день недели сегментами
                 if (checkBox_DOW_IconSet.Checked)
                 {
                     if ((comboBox_DOW_IconSet_Image.SelectedIndex >= 0) && (dataGridView_DOW_IconSet.Rows.Count > 0))
@@ -623,119 +392,24 @@ namespace GTR_Watch_face
                     }
                 }
 
+                // год
                 if ((checkBox_Year.Checked) && (comboBox_Year_Image.SelectedIndex >= 0))
                 {
                     int x1 = (int)numericUpDown_Year_StartCorner_X.Value;
                     int y1 = (int)numericUpDown_Year_StartCorner_Y.Value;
                     int x2 = (int)numericUpDown_Year_EndCorner_X.Value + 1;
                     int y2 = (int)numericUpDown_Year_EndCorner_Y.Value + 1;
-                    var Dagit = new Bitmap(ListImagesFullName[comboBox_Year_Image.SelectedIndex]);
-                    var Delimit = new Bitmap(1, 1);
-                    if (comboBox_Year_Delimiter.SelectedIndex >= 0)
-                        Delimit = new Bitmap(ListImagesFullName[comboBox_Year_Delimiter.SelectedIndex]);
-                    int DelimitW = Delimit.Width;
-                    if (comboBox_Year_Delimiter.SelectedIndex < 0) DelimitW = 0;
 
-                    int DateLenght = Dagit.Width * 4 + (int)numericUpDown_Year_Spacing.Value * 4 + DelimitW;
-                    int DateHeight = Dagit.Height;
-                    if (comboBox_Year_Delimiter.SelectedIndex < 0) DateLenght = DateLenght - DelimitW;
-                    if (DateLenght < Dagit.Width) DateLenght = Dagit.Width;
+                    x2++;
+                    y2++;
+                    int image_index = comboBox_Year_Image.SelectedIndex;
+                    int spacing = (int)numericUpDown_Year_Spacing.Value;
+                    int alignment = comboBox_Year_Alignment.SelectedIndex;
+                    int data_number = Watch_Face_Preview_Set.Date.Year;
+                    int delimiter = comboBox_Year_Delimiter.SelectedIndex;
+                    if (numericUpDown_Year_Count.Value == 10)
+                        DrawYear(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, delimiter, BBorder);
 
-                    int PointX = 0;
-                    int PointY = 0;
-                    switch (comboBox_Year_Alignment.SelectedIndex)
-                    {
-                        case 0:
-                        case 1:
-                        case 2:
-                            PointY = y1;
-                            break;
-                        case 3:
-                        case 4:
-                        case 5:
-                            PointY = (y1 + y2) / 2 - DateHeight / 2;
-                            break;
-                        case 6:
-                        case 7:
-                        case 8:
-                            PointY = y2 - DateHeight;
-                            break;
-                    }
-                    switch (comboBox_Year_Alignment.SelectedIndex)
-                    {
-                        case 0:
-                        case 3:
-                        case 6:
-                            PointX = x1;
-                            break;
-                        case 1:
-                        case 4:
-                        case 7:
-                            PointX = (x1 + x2) / 2 - DateLenght / 2;
-                            break;
-                        case 2:
-                        case 5:
-                        case 8:
-                            PointX = x2 - DateLenght;
-                            break;
-                    }
-                    if (PointX < x1) PointX = x1;
-                    if (PointY < y1) PointY = y1;
-                    
-                    i = comboBox_Year_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Year.Thousands;
-                    //src = new Bitmap(ListImagesFullName[i]);
-                    src = OpenFileStream(ListImagesFullName[i]);
-                    gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                    PointX = PointX + Dagit.Width + (int)numericUpDown_Year_Spacing.Value;
-                    //src.Dispose();
-
-                    i = comboBox_Year_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Year.Hundreds;
-                    //src = new Bitmap(ListImagesFullName[i]);
-                    src = OpenFileStream(ListImagesFullName[i]);
-                    gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                    PointX = PointX + Dagit.Width + (int)numericUpDown_Year_Spacing.Value;
-                    //src.Dispose();
-
-                    i = comboBox_Year_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Year.Tens;
-                    //src = new Bitmap(ListImagesFullName[i]);
-                    src = OpenFileStream(ListImagesFullName[i]);
-                    gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                    PointX = PointX + Dagit.Width + (int)numericUpDown_Year_Spacing.Value;
-                    //src.Dispose();
-
-                    i = comboBox_Year_Image.SelectedIndex + Watch_Face_Preview_TwoDigits.Year.Ones;
-                    //src = new Bitmap(ListImagesFullName[i]);
-                    src = OpenFileStream(ListImagesFullName[i]);
-                    gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                    PointX = PointX + Dagit.Width + (int)numericUpDown_Year_Spacing.Value;
-                    //src.Dispose();
-
-                    if (comboBox_Year_Delimiter.SelectedIndex >= 0)
-                    {
-                        i = comboBox_Year_Delimiter.SelectedIndex;
-                        //src = new Bitmap(ListImagesFullName[i]);
-                        src = OpenFileStream(ListImagesFullName[i]);
-                        gPanel.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
-                        PointX = PointX + DelimitW + (int)numericUpDown_Year_Spacing.Value;
-                        //src.Dispose();
-                    }
-                    
-                    Dagit.Dispose();
-                    Delimit.Dispose();
-
-                    if (BBorder)
-                    {
-                        Rectangle rect = new Rectangle(x1, y1, x2 - x1 - 1, y2 - y1 - 1);
-                        using (Pen pen1 = new Pen(Color.White, 1))
-                        {
-                            gPanel.DrawRectangle(pen1, rect);
-                        }
-                        using (Pen pen2 = new Pen(Color.Black, 1))
-                        {
-                            pen2.DashStyle = DashStyle.Dot;
-                            gPanel.DrawRectangle(pen2, rect);
-                        }
-                    }
                 }
             }
             #endregion
@@ -1119,7 +793,7 @@ namespace GTR_Watch_face
                     int alignment = comboBox_ActivityPuls_Alignment.SelectedIndex;
                     int data_number = Watch_Face_Preview_Set.Activity.Pulse;
                     if (numericUpDown_ActivityPuls_Count.Value == 10)
-                        DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
+                        DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment,data_number, BBorder);
                 }
 
                 // пульс набор иконок
@@ -2394,6 +2068,432 @@ namespace GTR_Watch_face
             Logger.WriteLine("* DrawFormatNumber (end)");
         }
 
+        /// <summary>Рисует год</summary>
+        /// <param name="graphics">Поверхность для рисования</param>
+        /// <param name="x1">TopLeftX</param>
+        /// <param name="y1">TopLefty</param>
+        /// <param name="x2">BottomRightX</param>
+        /// <param name="y2">BottomRightY</param>
+        /// <param name="image_index">Номер изображения</param>
+        /// <param name="spacing">Величина отступа</param>
+        /// <param name="alignment">Новер выравнивания</param>
+        /// <param name="data_number">Отображаемая величина</param>
+        /// <param name="delimiter">Номер изображения разделителя</param>
+        /// <param name="BBorder">Рисовать рамку по координатам, вокруг элементов с выравниванием</param>
+        public void DrawYear(Graphics graphics, int x1, int y1, int x2, int y2, int image_index, int spacing,
+            int alignment, int data_number, int delimiter, bool BBorder)
+        {
+            Logger.WriteLine("* DrawYear");
+            var Digit = new Bitmap(ListImagesFullName[image_index]);
+            //var Delimit = new Bitmap(1, 1);
+            //if (dec >= 0) Delimit = new Bitmap(ListImagesFullName[dec]);
+            string decimalSeparator = Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator;
+            string data_numberS = data_number.ToString();
+            int DateLenght = 0;
+            int _number;
+            int i;
+            var src = new Bitmap(1, 1);
+            char[] CH = data_numberS.ToCharArray();
+
+            Logger.WriteLine("DateLenght");
+            foreach (char ch in CH)
+            {
+                _number = 0;
+                if (int.TryParse(ch.ToString(), out _number))
+                {
+                    i = image_index + _number;
+                    if (i < ListImagesFullName.Count)
+                    {
+                        //src = new Bitmap(ListImagesFullName[i]);
+                        src = OpenFileStream(ListImagesFullName[i]);
+                        DateLenght = DateLenght + src.Width + spacing;
+                        //src.Dispose();
+                    }
+                }
+            }
+            if (delimiter >= 0)
+            {
+                //src = new Bitmap(ListImagesFullName[suffix]);
+                src = OpenFileStream(ListImagesFullName[delimiter]);
+                DateLenght = DateLenght + src.Width + spacing;
+                //src.Dispose();
+            }
+            DateLenght = DateLenght - spacing;
+            //src = new Bitmap(ListImagesFullName[image_index]);
+            src = OpenFileStream(ListImagesFullName[image_index]);
+            if (DateLenght < src.Width) DateLenght = src.Width;
+            //src.Dispose();
+            //if ((data_number != (int)data_number) && (dec >= 0))
+            //{
+            //    DateLenght = Dagit.Width * (data_numberS.Length - 1) + spacing * (data_numberS.Length - 2);
+            //}
+            //else
+            //{
+            //    DateLenght = Dagit.Width * data_numberS.Length + spacing * (data_numberS.Length - 1);
+            //}
+
+            int DateHeight = Digit.Height;
+
+            int PointX = 0;
+            int PointY = 0;
+            switch (alignment)
+            {
+                case 0:
+                case 1:
+                case 2:
+                    PointY = y1;
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    PointY = (y1 + y2) / 2 - DateHeight / 2;
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                    PointY = y2 - DateHeight;
+                    break;
+            }
+            switch (alignment)
+            {
+                case 0:
+                case 3:
+                case 6:
+                    PointX = x1;
+                    break;
+                case 1:
+                case 4:
+                case 7:
+                    PointX = (x1 + x2) / 2 - DateLenght / 2;
+                    break;
+                case 2:
+                case 5:
+                case 8:
+                    PointX = x2 - DateLenght;
+                    break;
+            }
+            if (PointX < x1) PointX = x1;
+            if (PointY < y1) PointY = y1;
+            Logger.WriteLine("DrawYear");
+            foreach (char ch in CH)
+            {
+                _number = 0;
+                if (int.TryParse(ch.ToString(), out _number))
+                {
+                    i = image_index + _number;
+                    if (i < ListImagesFullName.Count)
+                    {
+                        //src = new Bitmap(ListImagesFullName[i]);
+                        src = OpenFileStream(ListImagesFullName[i]);
+                        graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                        PointX = PointX + src.Width + spacing;
+                        //src.Dispose();
+                    }
+                }
+            }
+            if (delimiter >= 0)
+            {
+                //src = new Bitmap(ListImagesFullName[suffix]);
+                src = OpenFileStream(ListImagesFullName[delimiter]);
+                graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                //src.Dispose();
+
+            }
+            src.Dispose();
+            Digit.Dispose();
+
+            if (BBorder)
+            {
+                Logger.WriteLine("DrawBorder");
+                Rectangle rect = new Rectangle(x1, y1, x2 - x1 - 1, y2 - y1 - 1);
+                using (Pen pen1 = new Pen(Color.White, 1))
+                {
+                    graphics.DrawRectangle(pen1, rect);
+                }
+                using (Pen pen2 = new Pen(Color.Black, 1))
+                {
+                    pen2.DashStyle = DashStyle.Dot;
+                    graphics.DrawRectangle(pen2, rect);
+                }
+            }
+            Logger.WriteLine("* DrawYear (end)");
+        }
+
+        /// <summary>Рисует дату одной линией</summary>
+        /// <param name="graphics">Поверхность для рисования</param>
+        /// <param name="x1">TopLeftX</param>
+        /// <param name="y1">TopLefty</param>
+        /// <param name="x2">BottomRightX</param>
+        /// <param name="y2">BottomRightY</param>
+        /// <param name="image_index">Номер изображения</param>
+        /// <param name="spacing">Величина отступа</param>
+        /// <param name="alignment">Новер выравнивания</param>
+        /// <param name="month_value">Номер месяца</param>
+        /// <param name="day_value">Дата</param>
+        /// <param name="delimiter">Номер изображения разделителя</param>
+        /// <param name="BBorder">Рисовать рамку по координатам, вокруг элементов с выравниванием</param>
+        /// <param name="TwoDigitsMonts">Две цифры в месяце</param>
+        /// <param name="TwoDigitsDay">Две цифры в дате</param>
+        public void DrawDateOneLine(Graphics graphics, int x1, int y1, int x2, int y2, int image_index, int spacing,
+            int alignment, int month_value, int day_value, int delimiter, bool BBorder, bool TwoDigitsMonts, bool TwoDigitsDay)
+        {
+            Logger.WriteLine("* DrawDateOneLine");
+            var Digit = new Bitmap(ListImagesFullName[image_index]);
+            string month_valueS = month_value.ToString();
+            if (TwoDigitsMonts && month_valueS.Length < 2) month_valueS = "0" + month_valueS;
+            string day_valueS = day_value.ToString();
+            if (TwoDigitsDay && day_valueS.Length < 2) day_valueS = "0" + day_valueS;
+
+            int DateLenght = 0;
+            int _number;
+            int i;
+            var src = new Bitmap(1, 1);
+            String data_numberS = month_valueS + "." + day_valueS;
+            char[] CH = data_numberS.ToCharArray();
+
+            Logger.WriteLine("DateLenght");
+            foreach (char ch in CH)
+            {
+                _number = 0;
+                if (int.TryParse(ch.ToString(), out _number))
+                {
+                    i = image_index + _number;
+                    if (i < ListImagesFullName.Count)
+                    {
+                        src = OpenFileStream(ListImagesFullName[i]);
+                        DateLenght = DateLenght + src.Width + spacing;
+                    }
+                }
+                else
+                {
+                    if (delimiter >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[delimiter]);
+                        DateLenght = DateLenght + src.Width + spacing;
+                    }
+                }
+
+            }
+            DateLenght = DateLenght - spacing;
+            src = OpenFileStream(ListImagesFullName[image_index]);
+            if (DateLenght < src.Width) DateLenght = src.Width;
+
+            int DateHeight = Digit.Height;
+
+            int PointX = 0;
+            int PointY = 0;
+            switch (alignment)
+            {
+                case 0:
+                case 1:
+                case 2:
+                    PointY = y1;
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    PointY = (y1 + y2) / 2 - DateHeight / 2;
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                    PointY = y2 - DateHeight;
+                    break;
+            }
+            switch (alignment)
+            {
+                case 0:
+                case 3:
+                case 6:
+                    PointX = x1;
+                    break;
+                case 1:
+                case 4:
+                case 7:
+                    PointX = (x1 + x2) / 2 - DateLenght / 2;
+                    break;
+                case 2:
+                case 5:
+                case 8:
+                    PointX = x2 - DateLenght;
+                    break;
+            }
+            if (PointX < x1) PointX = x1;
+            if (PointY < y1) PointY = y1;
+            Logger.WriteLine("DrawDateOneLine");
+            foreach (char ch in CH)
+            {
+                _number = 0;
+                if (int.TryParse(ch.ToString(), out _number))
+                {
+                    i = image_index + _number;
+                    if (i < ListImagesFullName.Count)
+                    {
+                        src = OpenFileStream(ListImagesFullName[i]);
+                        graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                        PointX = PointX + src.Width + spacing;
+                    }
+                }
+                else
+                {
+                    if (delimiter >= 0)
+                    {
+                        src = OpenFileStream(ListImagesFullName[delimiter]);
+                        graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                        PointX = PointX + src.Width + spacing;
+                    }
+                }
+
+            }
+            src.Dispose();
+            Digit.Dispose();
+
+            if (BBorder)
+            {
+                Logger.WriteLine("DrawBorder");
+                Rectangle rect = new Rectangle(x1, y1, x2 - x1 - 1, y2 - y1 - 1);
+                using (Pen pen1 = new Pen(Color.White, 1))
+                {
+                    graphics.DrawRectangle(pen1, rect);
+                }
+                using (Pen pen2 = new Pen(Color.Black, 1))
+                {
+                    pen2.DashStyle = DashStyle.Dot;
+                    graphics.DrawRectangle(pen2, rect);
+                }
+            }
+            Logger.WriteLine("* DrawDateOneLine (end)");
+        }
+
+        /// <summary>Рисует число или дату</summary>
+        /// <param name="graphics">Поверхность для рисования</param>
+        /// <param name="x1">TopLeftX</param>
+        /// <param name="y1">TopLefty</param>
+        /// <param name="x2">BottomRightX</param>
+        /// <param name="y2">BottomRightY</param>
+        /// <param name="image_index">Номер изображения</param>
+        /// <param name="spacing">Величина отступа</param>
+        /// <param name="alignment">Новер выравнивания</param>
+        /// <param name="data_number">Единици в дате</param>
+        /// <param name="second_data_number">Десятки в дате</param>
+        /// <param name="BBorder">Рисовать рамку по координатам, вокруг элементов с выравниванием</param>
+        /// <param name="TwoDigits">Две цифры в дате</param>
+        public void DrawNumberDate(Graphics graphics, int x1, int y1, int x2, int y2,int image_index, 
+            int spacing, int alignment, int data_number, bool BBorder, bool TwoDigits)
+        {
+            Logger.WriteLine("* DrawNumberDate");
+            var Digit = new Bitmap(ListImagesFullName[image_index]);
+            string data_numberS = data_number.ToString();
+            if (TwoDigits && data_numberS.Length < 2) data_numberS = "0" + data_numberS;
+            char[] CH = data_numberS.ToCharArray();
+            int _number;
+            int i;
+            var src = new Bitmap(1, 1);
+            //int DateLenght = Dagit.Width * data_numberS.Length + spacing * (data_numberS.Length - 1);
+            int DateLenght = 0;
+            Logger.WriteLine("DateLenght");
+            foreach (char ch in CH)
+            {
+                _number = 0;
+                if (int.TryParse(ch.ToString(), out _number))
+                {
+                    i = image_index + _number;
+                    if (i < ListImagesFullName.Count)
+                    {
+                        //src = new Bitmap(ListImagesFullName[i]);
+                        src = OpenFileStream(ListImagesFullName[i]);
+                        DateLenght = DateLenght + src.Width + spacing;
+                        //src.Dispose();
+                    }
+                }
+
+            }
+            DateLenght = DateLenght - spacing;
+            //src = new Bitmap(ListImagesFullName[image_index]);
+            src = OpenFileStream(ListImagesFullName[image_index]);
+            if (DateLenght < src.Width) DateLenght = src.Width;
+            //src.Dispose();
+
+            int DateHeight = Digit.Height;
+
+            int PointX = 0;
+            int PointY = 0;
+            switch (alignment)
+            {
+                case 0:
+                case 1:
+                case 2:
+                    PointY = y1;
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    PointY = (y1 + y2) / 2 - DateHeight / 2;
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                    PointY = y2 - DateHeight;
+                    break;
+            }
+            switch (alignment)
+            {
+                case 0:
+                case 3:
+                case 6:
+                    PointX = x1;
+                    break;
+                case 1:
+                case 4:
+                case 7:
+                    PointX = (x1 + x2) / 2 - DateLenght / 2;
+                    break;
+                case 2:
+                case 5:
+                case 8:
+                    PointX = x2 - DateLenght;
+                    break;
+            }
+            if (PointX < x1) PointX = x1;
+            if (PointY < y1) PointY = y1;
+            Logger.WriteLine("DrawNumberDate");
+            foreach (char ch in CH)
+            {
+                _number = 0;
+                if (int.TryParse(ch.ToString(), out _number))
+                {
+                    i = image_index + _number;
+                    if (i < ListImagesFullName.Count)
+                    {
+                        //src = new Bitmap(ListImagesFullName[i]);
+                        src = OpenFileStream(ListImagesFullName[i]);
+                        graphics.DrawImage(src, new Rectangle(PointX, PointY, src.Width, src.Height));
+                        PointX = PointX + src.Width + spacing;
+                        //src.Dispose();
+                    }
+                }
+
+            }
+            src.Dispose();
+            Digit.Dispose();
+
+            if (BBorder)
+            {
+                Logger.WriteLine("DrawBorder");
+                Rectangle rect = new Rectangle(x1, y1, x2 - x1 - 1, y2 - y1 - 1);
+                using (Pen pen1 = new Pen(Color.White, 1))
+                {
+                    graphics.DrawRectangle(pen1, rect);
+                }
+                using (Pen pen2 = new Pen(Color.Black, 1))
+                {
+                    pen2.DashStyle = DashStyle.Dot;
+                    graphics.DrawRectangle(pen2, rect);
+                }
+            }
+            Logger.WriteLine("* DrawNumberDate (end)");
+        }
+
         /// <summary>Рисует погоду</summary>
         /// <param name="graphics">Поверхность для рисования</param>
         /// <param name="x1">TopLeftX</param>
@@ -2639,8 +2739,8 @@ namespace GTR_Watch_face
             if (EndAngle == 0) return;
             //Bitmap src = new Bitmap(ListImagesFullName[imageIndex]);
             Bitmap src = OpenFileStream(ListImagesFullName[imageIndex]);
-            //Pen pen = new Pen(Color.Black, width);
-            Pen pen = new Pen(Color.FromArgb(1, 0, 0, 0), 1);
+            Pen pen = new Pen(Color.Black, width);
+            //Pen pen = new Pen(Color.FromArgb(1, 0, 0, 0), 1);
 
             switch (lineCap)
             {
@@ -2672,8 +2772,10 @@ namespace GTR_Watch_face
             gPanel.SmoothingMode = SmoothingMode.AntiAlias;
             try
             {
-                gPanel.DrawLine(pen, centrX, centrY, centrX + 1, centrY + 1);
-                pen = new Pen(Color.Black, width);
+                //gPanel.DrawLine(pen, centrX, centrY, centrX + 1, centrY + 1);
+                //pen = new Pen(Color.Black, width);
+                //pen.Width = width;
+                //pen.Color = Color.Black;
                 gPanel.DrawArc(pen, srcX, srcY, CircleWidth, CircleWidth, StartAngle, EndAngle);
                 //src = ApplyAlfaMask(src, mask);
                 src = ApplyMask(src, mask);
@@ -2701,7 +2803,6 @@ namespace GTR_Watch_face
                     }
                     using (Pen pen2 = new Pen(Color.Black, 1))
                     {
-                        pen2.DashStyle = DashStyle.Dot;
                         graphics.DrawArc(pen2, x+srcX + w2, y+srcY + w2, CircleWidth - width, CircleWidth - width, StartAngle, EndAngle);
                         graphics.DrawArc(pen2, x+srcX - w2, y+srcY - w2, CircleWidth + width, CircleWidth + width, StartAngle, EndAngle);
                     } 
