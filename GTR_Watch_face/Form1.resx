@@ -23125,7 +23125,7 @@
     <value>True</value>
   </data>
   <data name="tabPage12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 159</value>
+    <value>382, 159</value>
   </data>
   <data name="tabPage12.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -24592,7 +24592,7 @@
     <value>True</value>
   </data>
   <data name="tabPage14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>357, 134</value>
+    <value>374, 134</value>
   </data>
   <data name="tabPage14.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -41276,7 +41276,7 @@ English manual - gumstic</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>25</value>
   </data>
   <data name="label_version.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -41315,7 +41315,7 @@ English manual - gumstic</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label_version.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <metadata name="colorDialog_StepsProgress.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -41354,7 +41354,7 @@ English manual - gumstic</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button_PreviewBig.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>24</value>
   </data>
   <data name="checkBox_WebW.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -41387,7 +41387,7 @@ English manual - gumstic</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBox_WebW.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>23</value>
   </data>
   <data name="checkBox_WebB.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -41420,7 +41420,7 @@ English manual - gumstic</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBox_WebB.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>22</value>
   </data>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>395, 17</value>
@@ -41453,7 +41453,7 @@ English manual - gumstic</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button_SavePNG.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="button_SaveGIF.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -41483,7 +41483,7 @@ English manual - gumstic</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button_SaveGIF.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="radioButton_47.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -41516,7 +41516,7 @@ English manual - gumstic</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;radioButton_47.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="radioButton_42.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -41549,7 +41549,7 @@ English manual - gumstic</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;radioButton_42.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="label_preview_X.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -41585,7 +41585,7 @@ English manual - gumstic</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label_preview_X.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="label_preview_Y.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -41621,7 +41621,7 @@ English manual - gumstic</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label_preview_Y.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="checkBox_border.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -41651,7 +41651,7 @@ English manual - gumstic</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBox_border.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="radioButton_gts.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -41684,7 +41684,7 @@ English manual - gumstic</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;radioButton_gts.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="checkBox_crop.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -41714,7 +41714,7 @@ English manual - gumstic</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBox_crop.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="checkBox_Show_Shortcuts.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -41744,7 +41744,7 @@ English manual - gumstic</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBox_Show_Shortcuts.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="radioButton_TRex.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -41777,7 +41777,7 @@ English manual - gumstic</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;radioButton_TRex.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="radioButton_Verge.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -41810,7 +41810,7 @@ English manual - gumstic</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;radioButton_Verge.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="pictureBox_Preview.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Zoom</value>
@@ -41837,7 +41837,7 @@ English manual - gumstic</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox_Preview.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="checkBox_CircleScaleImage.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -41867,7 +41867,7 @@ English manual - gumstic</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkBox_CircleScaleImage.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="button_RefreshPreview.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 583</value>
@@ -41897,7 +41897,7 @@ English manual - gumstic</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button_RefreshPreview.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="button_CreatePreview.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 554</value>
@@ -41927,7 +41927,7 @@ English manual - gumstic</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button_CreatePreview.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <metadata name="timer2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>609, 17</value>
@@ -41938,6 +41938,39 @@ English manual - gumstic</value>
   <metadata name="colorDialog_Calories.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>512, 56</value>
   </metadata>
+  <data name="radioButton_AmazfitX.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_AmazfitX.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton_AmazfitX.Location" type="System.Drawing.Point, System.Drawing">
+    <value>155, 263</value>
+  </data>
+  <data name="radioButton_AmazfitX.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton_AmazfitX.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 17</value>
+  </data>
+  <data name="radioButton_AmazfitX.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="radioButton_AmazfitX.Text" xml:space="preserve">
+    <value>AmazfitX</value>
+  </data>
+  <data name="&gt;&gt;radioButton_AmazfitX.Name" xml:space="preserve">
+    <value>radioButton_AmazfitX</value>
+  </data>
+  <data name="&gt;&gt;radioButton_AmazfitX.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton_AmazfitX.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;radioButton_AmazfitX.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

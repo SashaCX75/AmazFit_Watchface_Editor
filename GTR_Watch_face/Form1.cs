@@ -285,6 +285,12 @@ namespace GTR_Watch_face
                 textBox_unpack_command.Text = Program_Settings.unpack_command_TRex;
                 textBox_pack_command.Text = Program_Settings.pack_command_TRex;
             }
+            else if (Program_Settings.Model_AmazfitX)
+            {
+                radioButton_AmazfitX.Checked = Program_Settings.Model_AmazfitX;
+                textBox_unpack_command.Text = Program_Settings.unpack_command_AmazfitX;
+                textBox_pack_command.Text = Program_Settings.pack_command_AmazfitX;
+            }
             else if (Program_Settings.Model_Verge)
             {
                 radioButton_Verge.Checked = Program_Settings.Model_Verge;
@@ -299,7 +305,7 @@ namespace GTR_Watch_face
             }
             else
             {
-                radioButton_47.Checked = Program_Settings.Model_GTR47;
+                radioButton_47.Checked = true;
                 textBox_unpack_command.Text = Program_Settings.unpack_command_GTR47;
                 textBox_pack_command.Text = Program_Settings.pack_command_GTR47;
             }
@@ -1150,7 +1156,7 @@ namespace GTR_Watch_face
                             Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        if ((fileSize >= 1.95) && (radioButton_47.Checked))
+                        if ((fileSize >= 1.95) && (radioButton_47.Checked || radioButton_AmazfitX.Checked))
                         {
                             MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_gtr47 + Environment.NewLine + Environment.NewLine +
                             Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
@@ -1405,7 +1411,7 @@ namespace GTR_Watch_face
                             Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        if ((fileSize >= 1.95) && (radioButton_47.Checked))
+                        if ((fileSize >= 1.95) && (radioButton_47.Checked || radioButton_AmazfitX.Checked))
                         {
                             MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_gtr47 + Environment.NewLine + Environment.NewLine +
                             Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
@@ -1917,6 +1923,10 @@ namespace GTR_Watch_face
             if (radioButton_TRex.Checked || radioButton_Verge.Checked)
             {
                 bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
+            }
+            if (radioButton_AmazfitX.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(206), Convert.ToInt32(640), PixelFormat.Format32bppArgb);
             }
             Graphics gPanel = Graphics.FromImage(bitmap);
             #endregion
@@ -4677,6 +4687,8 @@ namespace GTR_Watch_face
                         Form_Preview.Model_Wath.model_gts = radioButton_gts.Checked;
                     if (Form_Preview.Model_Wath.model_TRex != radioButton_TRex.Checked)
                         Form_Preview.Model_Wath.model_TRex = radioButton_TRex.Checked;
+                    if (Form_Preview.Model_Wath.model_AmazfitX != radioButton_AmazfitX.Checked)
+                        Form_Preview.Model_Wath.model_AmazfitX = radioButton_AmazfitX.Checked;
                     if (Form_Preview.Model_Wath.model_Verge != radioButton_Verge.Checked)
                         Form_Preview.Model_Wath.model_Verge = radioButton_Verge.Checked;
                     //Graphics gPanelPreviewResize = formPreview.panel_Preview.CreateGraphics();
@@ -4709,6 +4721,10 @@ namespace GTR_Watch_face
                     if (radioButton_TRex.Checked || radioButton_Verge.Checked)
                     {
                         bitmapPreviewResize = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
+                    }
+                    if (radioButton_AmazfitX.Checked)
+                    {
+                        bitmapPreviewResize = new Bitmap(Convert.ToInt32(206), Convert.ToInt32(640), PixelFormat.Format32bppArgb);
                     }
                     Graphics gPanelPreviewResize = Graphics.FromImage(bitmapPreviewResize);
                     #endregion
@@ -4757,6 +4773,8 @@ namespace GTR_Watch_face
                 Form_Preview.Model_Wath.model_gts = radioButton_gts.Checked;
             if (Form_Preview.Model_Wath.model_TRex != radioButton_TRex.Checked)
                 Form_Preview.Model_Wath.model_TRex = radioButton_TRex.Checked;
+            if (Form_Preview.Model_Wath.model_AmazfitX != radioButton_AmazfitX.Checked)
+                Form_Preview.Model_Wath.model_AmazfitX = radioButton_AmazfitX.Checked;
             if (Form_Preview.Model_Wath.model_Verge != radioButton_Verge.Checked)
                 Form_Preview.Model_Wath.model_Verge = radioButton_Verge.Checked;
             //Graphics gPanel = formPreview.panel_Preview.CreateGraphics();
@@ -4785,6 +4803,10 @@ namespace GTR_Watch_face
             if (radioButton_TRex.Checked || radioButton_Verge.Checked)
             {
                 bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
+            }
+            if (radioButton_AmazfitX.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(206), Convert.ToInt32(640), PixelFormat.Format32bppArgb);
             }
             Graphics gPanel = Graphics.FromImage(bitmap);
             #endregion
@@ -6049,6 +6071,11 @@ namespace GTR_Watch_face
                     bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
                 }
+                if (radioButton_AmazfitX.Checked)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(206), Convert.ToInt32(640), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_amazfitx.png");
+                }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, 0);
                 if(checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
@@ -6085,6 +6112,11 @@ namespace GTR_Watch_face
                 {
                     bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
+                }
+                if (radioButton_AmazfitX.Checked)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(206), Convert.ToInt32(640), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_amazfitx.png");
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 bool save = false;
@@ -6338,6 +6370,22 @@ namespace GTR_Watch_face
                 button_pack.Enabled = true;
                 button_zip.Enabled = true;
             }
+            else if (radioButton_AmazfitX.Checked)
+            {
+                //this.Text = "T-Rex watch face editor";
+                //pictureBox_Preview.Height = 183;
+                //pictureBox_Preview.Width = 183;
+                pictureBox_Preview.Size = new Size((int)(106 * currentDPI), (int)(323 * currentDPI));
+                offSet_X = 103;
+                offSet_Y = 320;
+
+                textBox_unpack_command.Text = Program_Settings.unpack_command_AmazfitX;
+                textBox_pack_command.Text = Program_Settings.pack_command_AmazfitX;
+
+                button_unpack.Enabled = true;
+                button_pack.Enabled = true;
+                button_zip.Enabled = true;
+            }
             else if (radioButton_Verge.Checked)
             {
                 //this.Text = "Verge Lite watch face editor";
@@ -6380,6 +6428,8 @@ namespace GTR_Watch_face
                     Form_Preview.Model_Wath.model_gts = radioButton_gts.Checked;
                 if (Form_Preview.Model_Wath.model_TRex != radioButton_TRex.Checked)
                     Form_Preview.Model_Wath.model_TRex = radioButton_TRex.Checked;
+                if (Form_Preview.Model_Wath.model_AmazfitX != radioButton_AmazfitX.Checked)
+                    Form_Preview.Model_Wath.model_AmazfitX = radioButton_AmazfitX.Checked;
                 if (Form_Preview.Model_Wath.model_Verge != radioButton_Verge.Checked)
                     Form_Preview.Model_Wath.model_Verge = radioButton_Verge.Checked;
                 formPreview.radioButton_CheckedChanged(sender, e);
@@ -6389,6 +6439,7 @@ namespace GTR_Watch_face
             Program_Settings.Model_GTR42 = radioButton_42.Checked;
             Program_Settings.Model_GTS = radioButton_gts.Checked;
             Program_Settings.Model_TRex = radioButton_TRex.Checked;
+            Program_Settings.Model_AmazfitX = radioButton_AmazfitX.Checked;
             Program_Settings.Model_Verge = radioButton_Verge.Checked;
             string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
             {
@@ -6427,6 +6478,10 @@ namespace GTR_Watch_face
             else if (radioButton_TRex.Checked)
             {
                 FormName = "T-Rex watch face editor";
+            }
+            else if (radioButton_AmazfitX.Checked)
+            {
+                FormName = "AmazfitX watch face editor";
             }
             else if (radioButton_Verge.Checked)
             {
@@ -6844,6 +6899,11 @@ namespace GTR_Watch_face
             {
                 Program_Settings.unpack_command_TRex = textBox_unpack_command.Text;
                 Program_Settings.pack_command_TRex = textBox_pack_command.Text;
+            }
+            else if (radioButton_AmazfitX.Checked)
+            {
+                Program_Settings.unpack_command_AmazfitX = textBox_unpack_command.Text;
+                Program_Settings.pack_command_AmazfitX = textBox_pack_command.Text;
             }
             else if (radioButton_Verge.Checked)
             {
@@ -7694,6 +7754,11 @@ namespace GTR_Watch_face
                 bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
                 mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
             }
+            if (radioButton_AmazfitX.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(206), Convert.ToInt32(640), PixelFormat.Format32bppArgb);
+                mask = new Bitmap(Application.StartupPath + @"\Mask\mask_amazfitx.png");
+            }
             Graphics gPanel = Graphics.FromImage(bitmap);
             PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false, false, 1);
             if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
@@ -7781,6 +7846,8 @@ namespace GTR_Watch_face
                     FormAnimation.Model_Wath.model_gts = radioButton_gts.Checked;
                 if (FormAnimation.Model_Wath.model_TRex != radioButton_TRex.Checked)
                     FormAnimation.Model_Wath.model_TRex = radioButton_TRex.Checked;
+                if (FormAnimation.Model_Wath.model_AmazfitX != radioButton_AmazfitX.Checked)
+                    FormAnimation.Model_Wath.model_AmazfitX = radioButton_AmazfitX.Checked;
                 if (FormAnimation.Model_Wath.model_Verge != radioButton_Verge.Checked)
                     FormAnimation.Model_Wath.model_Verge = radioButton_Verge.Checked;
 
@@ -8965,6 +9032,12 @@ namespace GTR_Watch_face
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
                     PreviewHeight = 210;
                 }
+                if (radioButton_AmazfitX.Checked)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(206), Convert.ToInt32(640), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_amazfitx.png");
+                    PreviewHeight = 210;
+                }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, 0);
                 if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
@@ -9027,6 +9100,12 @@ namespace GTR_Watch_face
                 {
                     bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
+                    PreviewHeight = 210;
+                }
+                if (radioButton_AmazfitX.Checked)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(206), Convert.ToInt32(640), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_amazfitx.png");
                     PreviewHeight = 210;
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
