@@ -1453,6 +1453,11 @@ namespace GTR_Watch_face
                 Watch_Face.Info = new Device_Id();
                 Watch_Face.Info.DeviceId = 32;
             }
+            if (radioButton_AmazfitX.Checked)
+            {
+                Watch_Face.Info = new Device_Id();
+                Watch_Face.Info.DeviceId = 53;
+            }
 
             if ((comboBox_Background.SelectedIndex >= 0) || (comboBox_Preview.SelectedIndex >= 0))
             {
@@ -3270,6 +3275,9 @@ namespace GTR_Watch_face
                     case 52:
                         radioButton_TRex.Checked = true;
                         break;
+                    case 53:
+                        radioButton_AmazfitX.Checked = true;
+                        break;
                     case 32:
                         radioButton_Verge.Checked = true;
                         break;
@@ -3364,6 +3372,7 @@ namespace GTR_Watch_face
                     Form_Preview.Model_Wath.model_gtr42 = radioButton_42.Checked;
                     Form_Preview.Model_Wath.model_gts = radioButton_gts.Checked;
                     Form_Preview.Model_Wath.model_TRex = radioButton_TRex.Checked;
+                    Form_Preview.Model_Wath.model_AmazfitX = radioButton_TRex.Checked;
                     Form_Preview.Model_Wath.model_Verge = radioButton_Verge.Checked;
                 }
 

@@ -101,6 +101,11 @@ namespace GTR_Watch_face
                     pictureBox_AnimatiomPreview.Size = new Size(362, 362);
                     this.Size = new Size(362 + (int)(20 * currentDPI), 362 + (int)(100 * currentDPI));
                 }
+                else if (Model_Wath.model_AmazfitX)
+                {
+                    pictureBox_AnimatiomPreview.Size = new Size(208, 642);
+                    this.Size = new Size(209 + (int)(20 * currentDPI), 642 + (int)(100 * currentDPI));
+                }
                 scalePreview = 1f;
             }
 
@@ -125,6 +130,11 @@ namespace GTR_Watch_face
                 {
                     pictureBox_AnimatiomPreview.Size = new Size(542, 542);
                     this.Size = new Size(542 + (int)(20 * currentDPI), 542 + (int)(100 * currentDPI));
+                }
+                else if (Model_Wath.model_AmazfitX)
+                {
+                    pictureBox_AnimatiomPreview.Size = new Size(311, 963);
+                    this.Size = new Size(311 + (int)(20 * currentDPI), 963 + (int)(100 * currentDPI));
                 }
                 scalePreview = 1.5f;
             }
@@ -151,6 +161,11 @@ namespace GTR_Watch_face
                     pictureBox_AnimatiomPreview.Size = new Size(721, 721);
                     this.Size = new Size(721 + (int)(20 * currentDPI), 721 + (int)(100 * currentDPI));
                 }
+                else if (Model_Wath.model_AmazfitX)
+                {
+                    pictureBox_AnimatiomPreview.Size = new Size(414, 1282);
+                    this.Size = new Size(414 + (int)(20 * currentDPI), 1282 + (int)(100 * currentDPI));
+                }
                 scalePreview = 2f;
             }
             int width = button_SaveAnimation.Left + button_SaveAnimation.Width;
@@ -163,6 +178,7 @@ namespace GTR_Watch_face
             public static bool model_gtr42 { get; set; }
             public static bool model_gts { get; set; }
             public static bool model_TRex { get; set; }
+            public static bool model_AmazfitX { get; set; }
             public static bool model_Verge { get; set; }
 
         }
@@ -195,6 +211,11 @@ namespace GTR_Watch_face
                 {
                     bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
+                }
+                if (Model_Wath.model_AmazfitX)
+                {
+                    bitmap = new Bitmap(Convert.ToInt32(206), Convert.ToInt32(640), PixelFormat.Format32bppArgb);
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_Amazfitx.png");
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 bool save = false;

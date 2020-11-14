@@ -52,6 +52,11 @@ namespace GTR_Watch_face
                     pictureBox_Preview.Size = new Size(183, 183);
                     this.Size = new Size(183 + (int)(22 * currentDPI), 183 + (int)(66 * currentDPI));
                 }
+                else if (Model_Wath.model_AmazfitX)
+                {
+                    pictureBox_Preview.Size = new Size(106, 323);
+                    this.Size = new Size(106 + (int)(22 * currentDPI), 323 + (int)(66 * currentDPI));
+                }
                 scale = 0.5f;
             }
 
@@ -78,6 +83,11 @@ namespace GTR_Watch_face
                     pictureBox_Preview.Size = new Size(362, 362);
                     this.Size = new Size(362 + (int)(22 * currentDPI), 362 + (int)(66 * currentDPI));
                 }
+                else if (Model_Wath.model_AmazfitX)
+                {
+                    pictureBox_Preview.Size = new Size(209, 643);
+                    this.Size = new Size(209 + (int)(22 * currentDPI), 643 + (int)(66 * currentDPI));
+                }
                 scale = 1f;
             }
 
@@ -102,6 +112,11 @@ namespace GTR_Watch_face
                 {
                     pictureBox_Preview.Size = new Size(542, 542);
                     this.Size = new Size(542 + (int)(22 * currentDPI), 542 + (int)(66 * currentDPI));
+                }
+                else if (Model_Wath.model_AmazfitX)
+                {
+                    pictureBox_Preview.Size = new Size(312, 963);
+                    this.Size = new Size(312 + (int)(22 * currentDPI), 963 + (int)(66 * currentDPI));
                 }
                 scale = 1.5f;
             }
@@ -128,6 +143,11 @@ namespace GTR_Watch_face
                     pictureBox_Preview.Size = new Size(721, 721);
                     this.Size = new Size(721 + (int)(22 * currentDPI), 721 + (int)(66 * currentDPI));
                 }
+                else if (Model_Wath.model_AmazfitX)
+                {
+                    pictureBox_Preview.Size = new Size(414, 1282);
+                    this.Size = new Size(414 + (int)(22 * currentDPI), 1282 + (int)(66 * currentDPI));
+                }
                 scale = 2f;
             }
 
@@ -153,6 +173,11 @@ namespace GTR_Watch_face
                     pictureBox_Preview.Size = new Size(901, 901);
                     this.Size = new Size(901 + (int)(22 * currentDPI), 901 + (int)(66 * currentDPI));
                 }
+                else if (Model_Wath.model_AmazfitX)
+                {
+                    pictureBox_Preview.Size = new Size(517, 1602);
+                    this.Size = new Size(517 + (int)(22 * currentDPI), 1602 + (int)(66 * currentDPI));
+                }
                 scale = 2.5f;
             }
         }
@@ -163,6 +188,7 @@ namespace GTR_Watch_face
             public static bool model_gtr42 { get; set; }
             public static bool model_gts { get; set; }
             public static bool model_TRex { get; set; }
+            public static bool model_AmazfitX { get; set; }
             public static bool model_Verge { get; set; }
 
         }

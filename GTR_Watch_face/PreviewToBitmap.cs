@@ -37,26 +37,25 @@ namespace GTR_Watch_face
 
             #region Black background
             Logger.WriteLine("PreviewToBitmap (Black background)");
-            //src = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr47.png");
             src = OpenFileStream(Application.StartupPath + @"\Mask\mask_gtr47.png");
             if (radioButton_42.Checked)
             {
-                //src = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr42.png");
                 src = OpenFileStream(Application.StartupPath + @"\Mask\mask_gtr42.png");
             }
             if (radioButton_gts.Checked)
             {
-                //src = new Bitmap(Application.StartupPath + @"\Mask\mask_gts.png");
                 src = OpenFileStream(Application.StartupPath + @"\Mask\mask_gts.png");
             }
             if (radioButton_TRex.Checked)
             {
-                //src = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
                 src = OpenFileStream(Application.StartupPath + @"\Mask\mask_trex.png");
+            }
+            if (radioButton_AmazfitX.Checked)
+            {
+                src = OpenFileStream(Application.StartupPath + @"\Mask\mask_amazfitx.png");
             }
             if (radioButton_Verge.Checked)
             {
-                //src = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
                 src = OpenFileStream(Application.StartupPath + @"\Mask\mask_trex.png");
             }
             gPanel.DrawImage(src, new Rectangle(0, 0, src.Width, src.Height));
@@ -1743,6 +1742,10 @@ namespace GTR_Watch_face
                 if (radioButton_TRex.Checked)
                 {
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
+                }
+                if (radioButton_AmazfitX.Checked)
+                {
+                    mask = new Bitmap(Application.StartupPath + @"\Mask\mask_amazfitx.png");
                 }
                 if (radioButton_Verge.Checked)
                 {

@@ -1394,6 +1394,7 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.colorDialog_Pulse = new System.Windows.Forms.ColorDialog();
             this.colorDialog_Calories = new System.Windows.Forms.ColorDialog();
+            this.radioButton_AmazfitX = new System.Windows.Forms.RadioButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -17007,10 +17008,19 @@
             // 
             this.colorDialog_Calories.FullOpen = true;
             // 
+            // radioButton_AmazfitX
+            // 
+            resources.ApplyResources(this.radioButton_AmazfitX, "radioButton_AmazfitX");
+            this.radioButton_AmazfitX.Name = "radioButton_AmazfitX";
+            this.helpProvider1.SetShowHelp(this.radioButton_AmazfitX, ((bool)(resources.GetObject("radioButton_AmazfitX.ShowHelp"))));
+            this.radioButton_AmazfitX.UseVisualStyleBackColor = true;
+            this.radioButton_AmazfitX.CheckedChanged += new System.EventHandler(this.radioButton_Model_Changed);
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.radioButton_AmazfitX);
             this.Controls.Add(this.button_CreatePreview);
             this.Controls.Add(this.button_RefreshPreview);
             this.Controls.Add(this.checkBox_CircleScaleImage);
@@ -18977,6 +18987,7 @@
         private System.Windows.Forms.Label label500;
         private System.Windows.Forms.Button button_RefreshPreview;
         private System.Windows.Forms.Button button_CreatePreview;
+        private System.Windows.Forms.RadioButton radioButton_AmazfitX;
     }
 }
 
