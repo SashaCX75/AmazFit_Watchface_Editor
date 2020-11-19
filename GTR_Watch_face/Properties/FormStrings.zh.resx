@@ -217,7 +217,7 @@
     <value>未压缩文件大小超过1.5MB。</value>
   </data>
   <data name="File_ReadMy" xml:space="preserve">
-    <value>\Manual\readme_zh.chm</value>
+    <value>\Manual\readme.chm</value>
   </data>
   <data name="Form_Preview" xml:space="preserve">
     <value>预览</value>
@@ -332,5 +332,14 @@
   </data>
   <data name="Message_WarningPreview_Text2" xml:space="preserve">
     <value>使用现有尺寸？</value>
+  </data>
+  <data name="Message_WarningActivityError" xml:space="preserve">
+    <value>在没有活动数据的情况下，为错误符号指定图像。</value>
+  </data>
+  <data name="Message_WarningWeatherError" xml:space="preserve">
+    <value>如果没有当前温度数据，则可能错误地指定错误符号的图像。</value>
+  </data>
+  <data name="Message_WarningDateOnelineAndSeparate" xml:space="preserve">
+    <value>单独的日/月不能与单行日期显示一起使用</value>
   </data>
 </root>
