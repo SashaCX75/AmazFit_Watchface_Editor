@@ -1150,13 +1150,14 @@ namespace GTR_Watch_face
                             Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        if ((fileSize >= 1.5) && (radioButton_42.Checked || radioButton_gts.Checked || radioButton_Verge.Checked))
+                        if ((fileSize >= 1.5) && (radioButton_42.Checked || radioButton_gts.Checked 
+                            || radioButton_Verge.Checked || radioButton_AmazfitX.Checked))
                         {
                             MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_gts + Environment.NewLine + Environment.NewLine +
                             Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        if ((fileSize >= 1.95) && (radioButton_47.Checked || radioButton_AmazfitX.Checked))
+                        if ((fileSize >= 1.95) && (radioButton_47.Checked))
                         {
                             MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_gtr47 + Environment.NewLine + Environment.NewLine +
                             Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
@@ -1405,13 +1406,14 @@ namespace GTR_Watch_face
                             Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        if ((fileSize >= 1.5) && (radioButton_42.Checked || radioButton_gts.Checked || radioButton_Verge.Checked))
+                        if ((fileSize >= 1.5) && (radioButton_42.Checked || radioButton_gts.Checked 
+                            || radioButton_Verge.Checked || radioButton_AmazfitX.Checked))
                         {
                             MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_gts + Environment.NewLine + Environment.NewLine +
                             Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        if ((fileSize >= 1.95) && (radioButton_47.Checked || radioButton_AmazfitX.Checked))
+                        if ((fileSize >= 1.95) && (radioButton_47.Checked))
                         {
                             MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_gtr47 + Environment.NewLine + Environment.NewLine +
                             Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
@@ -7816,13 +7818,21 @@ namespace GTR_Watch_face
                 for (int i = comboBox_StaticAnimation_Image.SelectedIndex;
                     i < (comboBox_StaticAnimation_Image.SelectedIndex + (int)numericUpDown_StaticAnimation_Count.Value); i++)
                 {
-                    using (FileStream stream = new FileStream(ListImagesFullName[i], FileMode.Open, 
-                        FileAccess.Read, FileShare.ReadWrite))
+                    //using (FileStream stream = new FileStream(ListImagesFullName[i], FileMode.Open, 
+                    //    FileAccess.Read, FileShare.ReadWrite))
+                    //{
+                    //    loadedImage = Image.FromStream(stream);
+                    //}
+                    //if (i < ListImagesFullName.Count) Images.Add(new Bitmap(loadedImage));
+                    if (i < ListImagesFullName.Count)
                     {
-                        loadedImage = Image.FromStream(stream);
+                        using (FileStream stream = new FileStream(ListImagesFullName[i], FileMode.Open,
+                        FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            loadedImage = Image.FromStream(stream);
+                        }
+                        Images.Add(new Bitmap(loadedImage));
                     }
-                    if (i < ListImagesFullName.Count) Images.Add(new Bitmap(loadedImage));
-                    //if (i < ListImagesFullName.Count) Images.Add(new Bitmap(ListImagesFullName[i]));
                 }
             }
             if (loadedImage !=null) loadedImage.Dispose();
