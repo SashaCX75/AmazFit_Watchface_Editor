@@ -611,6 +611,28 @@ namespace GTR_Watch_face
 
             //gPanel.SmoothingMode = SmoothingMode.AntiAlias;
 
+            #region ActivitySteps
+            if (checkBox_Activity.Checked)
+            {
+                // число шагов
+                if ((checkBox_ActivitySteps.Checked) && (comboBox_ActivitySteps_Image.SelectedIndex >= 0))
+                {
+                    int x1 = (int)numericUpDown_ActivitySteps_StartCorner_X.Value;
+                    int y1 = (int)numericUpDown_ActivitySteps_StartCorner_Y.Value;
+                    int x2 = (int)numericUpDown_ActivitySteps_EndCorner_X.Value;
+                    int y2 = (int)numericUpDown_ActivitySteps_EndCorner_Y.Value;
+                    x2++;
+                    y2++;
+                    int image_index = comboBox_ActivitySteps_Image.SelectedIndex;
+                    int spacing = (int)numericUpDown_ActivitySteps_Spacing.Value;
+                    int alignment = comboBox_ActivitySteps_Alignment.SelectedIndex;
+                    int data_number = Watch_Face_Preview_Set.Activity.Steps;
+                    if (numericUpDown_ActivitySteps_Count.Value == 10)
+                        DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
+                }
+            }
+            #endregion
+
             #region StepsProgress
             Logger.WriteLine("PreviewToBitmap (StepsProgress)");
             // прогресс шагов круговой прогресс
@@ -741,22 +763,22 @@ namespace GTR_Watch_face
             Logger.WriteLine("PreviewToBitmap (Activity)");
             if (checkBox_Activity.Checked)
             {
-                // прогресс шагов
-                if ((checkBox_ActivitySteps.Checked) && (comboBox_ActivitySteps_Image.SelectedIndex >= 0))
-                {
-                    int x1 = (int)numericUpDown_ActivitySteps_StartCorner_X.Value;
-                    int y1 = (int)numericUpDown_ActivitySteps_StartCorner_Y.Value;
-                    int x2 = (int)numericUpDown_ActivitySteps_EndCorner_X.Value;
-                    int y2 = (int)numericUpDown_ActivitySteps_EndCorner_Y.Value;
-                    x2++;
-                    y2++;
-                    int image_index = comboBox_ActivitySteps_Image.SelectedIndex;
-                    int spacing = (int)numericUpDown_ActivitySteps_Spacing.Value;
-                    int alignment = comboBox_ActivitySteps_Alignment.SelectedIndex;
-                    int data_number = Watch_Face_Preview_Set.Activity.Steps;
-                    if (numericUpDown_ActivitySteps_Count.Value == 10)
-                        DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
-                }
+                //// прогресс шагов
+                //if ((checkBox_ActivitySteps.Checked) && (comboBox_ActivitySteps_Image.SelectedIndex >= 0))
+                //{
+                //    int x1 = (int)numericUpDown_ActivitySteps_StartCorner_X.Value;
+                //    int y1 = (int)numericUpDown_ActivitySteps_StartCorner_Y.Value;
+                //    int x2 = (int)numericUpDown_ActivitySteps_EndCorner_X.Value;
+                //    int y2 = (int)numericUpDown_ActivitySteps_EndCorner_Y.Value;
+                //    x2++;
+                //    y2++;
+                //    int image_index = comboBox_ActivitySteps_Image.SelectedIndex;
+                //    int spacing = (int)numericUpDown_ActivitySteps_Spacing.Value;
+                //    int alignment = comboBox_ActivitySteps_Alignment.SelectedIndex;
+                //    int data_number = Watch_Face_Preview_Set.Activity.Steps;
+                //    if (numericUpDown_ActivitySteps_Count.Value == 10)
+                //        DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
+                //}
 
                 // пройденный путь
                 if ((checkBox_ActivityDistance.Checked) && (comboBox_ActivityDistance_Image.SelectedIndex >= 0))
@@ -823,32 +845,6 @@ namespace GTR_Watch_face
                                 }
                             }
                         }
-
-
-                        //for (int count = 0; count < dataGridView_ActivityPuls_IconSet.Rows.Count; count++)
-                        //{
-                        //    if ((dataGridView_ActivityPuls_IconSet.Rows[count].Cells[0].Value != null) &&
-                        //        (dataGridView_ActivityPuls_IconSet.Rows[count].Cells[1].Value != null))
-                        //    {
-                        //        if (Int32.TryParse(dataGridView_ActivityPuls_IconSet.Rows[count].Cells[0].Value.ToString(), out x) &&
-                        //            Int32.TryParse(dataGridView_ActivityPuls_IconSet.Rows[count].Cells[1].Value.ToString(), out y))
-                        //        {
-                        //            i = comboBox_ActivityPuls_IconSet_Image.SelectedIndex + count;
-                        //            if (i < ListImagesFullName.Count)
-                        //            {
-                        //                int value = (dataGridView_ActivityPuls_IconSet.Rows.Count - 1) * Watch_Face_Preview_Set.Activity.Pulse / 200;
-                        //                value++;
-                        //                if (count < value)
-                        //                {
-                        //                    src = new Bitmap(ListImagesFullName[i]);
-                        //                    gPanel.DrawImage(src, new Rectangle(x, y, src.Width, src.Height));
-                        //                    //count++;
-                        //                    src.Dispose();
-                        //                }
-                        //            }
-                        //        }
-                        //    }
-                        //}
                     }
                 }
 

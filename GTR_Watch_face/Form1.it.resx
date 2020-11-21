@@ -1956,11 +1956,29 @@
   <data name="label287.Text" xml:space="preserve">
     <value>Simbolo di errore:</value>
   </data>
+  <data name="numericUpDown_Weather_Icon_Count.Location" type="System.Drawing.Point, System.Drawing">
+    <value>153, 55</value>
+  </data>
+  <data name="label280.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 57</value>
+  </data>
   <data name="checkBox_Weather_Icon.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>
   </data>
   <data name="checkBox_Weather_Icon.Text" xml:space="preserve">
     <value>Visualizza </value>
+  </data>
+  <data name="comboBox_Weather_Icon_Image.Location" type="System.Drawing.Point, System.Drawing">
+    <value>153, 28</value>
+  </data>
+  <data name="label282.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 31</value>
+  </data>
+  <data name="label282.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 13</value>
+  </data>
+  <data name="label282.Text" xml:space="preserve">
+    <value>Indice immagini:</value>
   </data>
   <data name="checkBox_Weather.Text" xml:space="preserve">
     <value>Attiva </value>
@@ -7494,8 +7512,5 @@ Manuale lingua inglese - gumstic</value>
         SlmARUpZgEVKWYBDSFZuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+D8AAPgfAADwHwAA4A8AAMAHAADA
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
-  </data>
-  <data name="label282.Text" xml:space="preserve">
-    <value>Indice immagini:</value>
   </data>
 </root>
