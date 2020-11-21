@@ -9053,7 +9053,7 @@ namespace GTR_Watch_face
                 {
                     bitmap = new Bitmap(Convert.ToInt32(206), Convert.ToInt32(640), PixelFormat.Format32bppArgb);
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_amazfitx.png");
-                    PreviewHeight = 210;
+                    PreviewHeight = 472;
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, 0);
@@ -9123,7 +9123,7 @@ namespace GTR_Watch_face
                 {
                     bitmap = new Bitmap(Convert.ToInt32(206), Convert.ToInt32(640), PixelFormat.Format32bppArgb);
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_amazfitx.png");
-                    PreviewHeight = 210;
+                    PreviewHeight = 472;
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, false, 0);
