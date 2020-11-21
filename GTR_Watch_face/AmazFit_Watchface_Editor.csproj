@@ -52,7 +52,7 @@
     <ApplicationIcon>watch.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release %28without python%29|AnyCPU' ">
-    <OutputPath>bin\Release_%28without_python%29\</OutputPath>
+    <OutputPath>bin\Release_%28without_python%29_AmazfitX\</OutputPath>
     <DefineConstants>TRACE;WithoutPuthon</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>

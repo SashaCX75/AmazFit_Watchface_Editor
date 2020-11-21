@@ -4115,7 +4115,7 @@
     <value>304, 13</value>
   </data>
   <data name="linkLabel_py_amazfit_tools.Text" xml:space="preserve">
-    <value>py_amazfit_tools v0.2-beta[ 作者amazfitbip(dpeddi) ]</value>
+    <value>py_amazfit_tools [ 作者Sigura ]</value>
   </data>
   <data name="label410.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 13</value>
@@ -4180,9 +4180,6 @@
   <data name="вставитьКонечныеКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>260, 26</value>
   </data>
-  <data name="вставитьКонечныеКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 26</value>
-  </data>
   <data name="вставитьКонечныеКоординатыToolStripMenuItem.Text" xml:space="preserve">
     <value>插入终点坐标</value>
   </data>
@@ -4204,7 +4201,6 @@
   <data name="вставитьToolStripMenuItem3.Text" xml:space="preserve">
     <value>粘贴</value>
   </data>
-
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAkAAAAAAAEAIABZPQAAlgAAAICAAAABACAAKAgBAO89AABgYAAAAQAgAKiUAAAXRgEASEgAAAEA

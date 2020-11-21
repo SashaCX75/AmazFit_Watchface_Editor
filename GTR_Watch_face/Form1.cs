@@ -256,7 +256,8 @@ namespace GTR_Watch_face
 #if Puthon
             string subPath = Application.StartupPath + @"\py_amazfit_tools_beta\main.py";
 #else
-            string subPath = Application.StartupPath + @"\main_v0.2-beta\main.exe";
+            string subPath = Application.StartupPath + @"\main_AmazfitX_v1.0_beta\main.exe";
+            //string subPath = Application.StartupPath + @"\main_v0.2-beta\main.exe";
             //string subPath = Application.StartupPath + @"\main\main.exe";
 #endif
             Logger.WriteLine("Set textBox.Text");
@@ -6323,6 +6324,7 @@ namespace GTR_Watch_face
                 button_unpack.Enabled = true;
                 button_pack.Enabled = true;
                 button_zip.Enabled = true;
+                button_pack_zip.Enabled = true;
             }
             else if (radioButton_42.Checked)
             {
@@ -6339,6 +6341,7 @@ namespace GTR_Watch_face
                 button_unpack.Enabled = true;
                 button_pack.Enabled = true;
                 button_zip.Enabled = true;
+                button_pack_zip.Enabled = true;
             }
             else if (radioButton_gts.Checked)
             {
@@ -6355,6 +6358,7 @@ namespace GTR_Watch_face
                 button_unpack.Enabled = false;
                 button_pack.Enabled = false;
                 button_zip.Enabled = false;
+                button_pack_zip.Enabled = true;
             }
             else if (radioButton_TRex.Checked)
             {
@@ -6371,6 +6375,7 @@ namespace GTR_Watch_face
                 button_unpack.Enabled = true;
                 button_pack.Enabled = true;
                 button_zip.Enabled = true;
+                button_pack_zip.Enabled = true;
             }
             else if (radioButton_AmazfitX.Checked)
             {
@@ -6387,6 +6392,7 @@ namespace GTR_Watch_face
                 button_unpack.Enabled = true;
                 button_pack.Enabled = true;
                 button_zip.Enabled = true;
+                button_pack_zip.Enabled = false;
             }
             else if (radioButton_Verge.Checked)
             {
@@ -6403,6 +6409,7 @@ namespace GTR_Watch_face
                 button_unpack.Enabled = true;
                 button_pack.Enabled = true;
                 button_zip.Enabled = true;
+                button_pack_zip.Enabled = true;
             }
             // изменяем размер фопанели для предпросмотра если она не влазит
             if (pictureBox_Preview.Top + pictureBox_Preview.Height > radioButton_47.Top)
@@ -6483,7 +6490,7 @@ namespace GTR_Watch_face
             }
             else if (radioButton_AmazfitX.Checked)
             {
-                FormName = "AmazfitX watch face editor";
+                FormName = "Amazfit X watch face editor";
             }
             else if (radioButton_Verge.Checked)
             {
@@ -7379,7 +7386,7 @@ namespace GTR_Watch_face
 
         private void linkLabel_py_amazfit_tools_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/amazfitbip/py_amazfit_tools/releases/tag/v0.2-beta");
+            System.Diagnostics.Process.Start("https://github.com/Sigura/py_amazfit_tools/tree/AmazfitX");
         }
 
         private void linkLabel_resunpacker_qzip_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
