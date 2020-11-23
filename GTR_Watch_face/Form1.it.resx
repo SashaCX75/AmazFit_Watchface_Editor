@@ -127,7 +127,7 @@
     <value>Modifica</value>
   </data>
   <data name="tabPageConverting.Text" xml:space="preserve">
-    <value>Conversione</value>
+    <value>Converti</value>
   </data>
   <data name="tabPage33.Text" xml:space="preserve">
     <value>Impostazioni</value>
@@ -136,19 +136,19 @@
     <value>Informazioni sul programma</value>
   </data>
   <data name="button_zip_unpack.Text" xml:space="preserve">
-    <value>Decompri .bin</value>
+    <value>Decomprimi file  .bin</value>
   </data>
   <data name="button_pack_zip.Text" xml:space="preserve">
-    <value>Compila e comprimi .bin</value>
+    <value>Compila e comprimi file .bin</value>
   </data>
   <data name="button_zip.Text" xml:space="preserve">
-    <value>Comprimi .bin</value>
+    <value>Comprimi file .bin</value>
   </data>
   <data name="button_unpack.Text" xml:space="preserve">
-    <value>Decompila .bin</value>
+    <value>Decompila file .bin</value>
   </data>
   <data name="button_pack.Text" xml:space="preserve">
-    <value>Compila .bin</value>
+    <value>Compila file .bin</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
