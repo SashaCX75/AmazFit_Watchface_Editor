@@ -630,6 +630,19 @@ namespace GTR_Watch_face
                     if (numericUpDown_ActivitySteps_Count.Value == 10)
                         DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
                 }
+
+                // достижение цели
+                if ((checkBox_ActivityStar.Checked) && (comboBox_ActivityStar_Image.SelectedIndex >= 0))
+                {
+                    if (Watch_Face_Preview_Set.Activity.Steps >= Watch_Face_Preview_Set.Activity.StepsGoal)
+                    {
+                        //src = new Bitmap(ListImagesFullName[comboBox_ActivityStar_Image.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[comboBox_ActivityStar_Image.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_ActivityStar_X.Value,
+                            (int)numericUpDown_ActivityStar_Y.Value, src.Width, src.Height));
+                        //src.Dispose();
+                    }
+                }
             }
             #endregion
 
@@ -793,7 +806,7 @@ namespace GTR_Watch_face
                     int spacing = (int)numericUpDown_ActivityDistance_Spacing.Value;
                     int alignment = comboBox_ActivityDistance_Alignment.SelectedIndex;
                     double data_number = Watch_Face_Preview_Set.Activity.Distance / 1000f;
-                    int suffix = comboBox_ActivityDistance_Suffix.SelectedIndex;
+                    int suffix = comboBox_ActivityDistance_Suffix_km.SelectedIndex;
                     int dec = comboBox_ActivityDistance_Decimal.SelectedIndex;
                     if (numericUpDown_ActivityDistance_Count.Value == 10)
                         DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, 
@@ -1042,18 +1055,18 @@ namespace GTR_Watch_face
                     DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle);
                 }
 
-                // достижение цели
-                if ((checkBox_ActivityStar.Checked) && (comboBox_ActivityStar_Image.SelectedIndex >= 0))
-                {
-                    if (Watch_Face_Preview_Set.Activity.Steps >= Watch_Face_Preview_Set.Activity.StepsGoal)
-                    {
-                        //src = new Bitmap(ListImagesFullName[comboBox_ActivityStar_Image.SelectedIndex]);
-                        src = OpenFileStream(ListImagesFullName[comboBox_ActivityStar_Image.SelectedIndex]);
-                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_ActivityStar_X.Value,
-                            (int)numericUpDown_ActivityStar_Y.Value, src.Width, src.Height));
-                        //src.Dispose();
-                    }
-                }
+                //// достижение цели
+                //if ((checkBox_ActivityStar.Checked) && (comboBox_ActivityStar_Image.SelectedIndex >= 0))
+                //{
+                //    if (Watch_Face_Preview_Set.Activity.Steps >= Watch_Face_Preview_Set.Activity.StepsGoal)
+                //    {
+                //        //src = new Bitmap(ListImagesFullName[comboBox_ActivityStar_Image.SelectedIndex]);
+                //        src = OpenFileStream(ListImagesFullName[comboBox_ActivityStar_Image.SelectedIndex]);
+                //        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_ActivityStar_X.Value,
+                //            (int)numericUpDown_ActivityStar_Y.Value, src.Width, src.Height));
+                //        //src.Dispose();
+                //    }
+                //}
 
                 // цель шагов
                 if ((checkBox_ActivityStepsGoal.Checked) && (comboBox_ActivityStepsGoal_Image.SelectedIndex >= 0))
@@ -1444,7 +1457,7 @@ namespace GTR_Watch_face
                     int offsetY_Min = (int)numericUpDown_AnalogClock_Min_Offset_Y.Value;
 
 
-                    //if ((offsetX_Hour!=0 || offsetY_Hour!=0) && ((offsetX_Min != 0 || offsetY_Min != 0))) AnalogClockOffSet = false;
+                    if ((offsetX_Hour != 0 || offsetY_Hour != 0) && ((offsetX_Min != 0 || offsetY_Min != 0))) AnalogClockOffSet = false;
                 }
 
                 if (AnalogClockOffSet)

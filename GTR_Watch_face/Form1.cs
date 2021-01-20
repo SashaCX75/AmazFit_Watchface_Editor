@@ -1703,7 +1703,6 @@ namespace GTR_Watch_face
         private void LoadJsonAndImage(string fullfilename)
         {
             Logger.WriteLine("* LoadJsonAndImage");
-            //Logger.WriteLine("LoadJsonAndImage");
             FileName = Path.GetFileName(fullfilename);
             FullFileDir = Path.GetDirectoryName(fullfilename);
             string text = File.ReadAllText(fullfilename);
@@ -1715,7 +1714,7 @@ namespace GTR_Watch_face
             dataGridView_ImagesList.Rows.Clear();
             dataGridView_Battery_IconSet.Rows.Clear();
             dataGridView_SPSliced.Rows.Clear();
-            //Logger.WriteLine("Прочитали текст из json файла " + fullfilename);
+            Logger.WriteLine("Прочитали текст из json файла " + fullfilename);
 
             DirectoryInfo Folder;
             FileInfo[] Images;
@@ -2573,7 +2572,7 @@ namespace GTR_Watch_face
                 panel_Date.Height = 1;
                 panel_AnalogDate.Height = 1;
                 panel_StepsProgress.Height = 1;
-                panel_Activity.Height = (int)(235 * currentDPI);
+                panel_Activity.Height = (int)(240 * currentDPI);
                 panel_Status.Height = 1;
                 panel_Battery.Height = 1;
                 panel_AnalogClock.Height = 1;
@@ -3103,7 +3102,8 @@ namespace GTR_Watch_face
             numericUpDown_ActivityDistance_Count.Enabled = b;
             numericUpDown_ActivityDistance_Spacing.Enabled = b;
             comboBox_ActivityDistance_Alignment.Enabled = b;
-            comboBox_ActivityDistance_Suffix.Enabled = b;
+            comboBox_ActivityDistance_Suffix_km.Enabled = b;
+            comboBox_ActivityDistance_Suffix_ml.Enabled = b;
             comboBox_ActivityDistance_Decimal.Enabled = b;
 
             label132.Enabled = b;
@@ -3118,6 +3118,7 @@ namespace GTR_Watch_face
             label141.Enabled = b;
             label172.Enabled = b;
             label173.Enabled = b;
+            label501.Enabled = b;
         }
 
         private void checkBox_ActivityPuls_CheckedChanged(object sender, EventArgs e)
@@ -5924,7 +5925,7 @@ namespace GTR_Watch_face
             {
                 if ((Watch_Face.Weather.Temperature.Current != null) && (Watch_Face.Weather.Temperature.Today == null))
                 {
-                    if (Watch_Face.StepsProgress != null && Watch_Face.StepsProgress.ClockHand != null)
+                    //if (Watch_Face.StepsProgress != null && Watch_Face.StepsProgress.ClockHand != null)
                     {
                         MessageBox.Show(Properties.FormStrings.Message_WarningTemperature_Text,
                             Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning); 

@@ -7669,6 +7669,15 @@
   <data name="tabPage22.Text" xml:space="preserve">
     <value>Icon</value>
   </data>
+  <data name="comboBox_Battery_Scale_Image.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="comboBox_Battery_Scale_Image.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>AssociateIndex</value>
+  </data>
+  <data name="comboBox_Battery_Scale_Image.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="numericUpDown_Battery_Scale_ImageY.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -7712,15 +7721,6 @@
     <value>AssociateIndex</value>
   </data>
   <data name="checkBox_Battery_Scale_Image.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="comboBox_Battery_Scale_Image.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="comboBox_Battery_Scale_Image.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="comboBox_Battery_Scale_Image.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="comboBox_Battery_Flatness.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
@@ -8797,6 +8797,15 @@
   <data name="label403.Text" xml:space="preserve">
     <value>Error symbol:</value>
   </data>
+  <data name="comboBox_ActivitySteps_Image.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="comboBox_ActivitySteps_Image.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>AssociateIndex</value>
+  </data>
+  <data name="comboBox_ActivitySteps_Image.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="numericUpDown_ActivitySteps_Spacing.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -8962,15 +8971,6 @@
   <data name="numericUpDown_ActivitySteps_EndCorner_Y.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="comboBox_ActivitySteps_Image.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="comboBox_ActivitySteps_Image.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="comboBox_ActivitySteps_Image.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="label127.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -9040,6 +9040,42 @@
   <data name="tabPage12.Text" xml:space="preserve">
     <value>Steps</value>
   </data>
+  <data name="comboBox_ActivityDistance_Suffix_ml.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="comboBox_ActivityDistance_Suffix_ml.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>AssociateIndex</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Suffix_ml.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="label501.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="label501.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>AssociateIndex</value>
+  </data>
+  <data name="label501.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="label501.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 144</value>
+  </data>
+  <data name="label501.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="label501.Text" xml:space="preserve">
+    <value>Suffix (ml):</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Image.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="comboBox_ActivityDistance_Image.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>AssociateIndex</value>
+  </data>
+  <data name="comboBox_ActivityDistance_Image.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="comboBox_ActivityDistance_Decimal.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -9058,13 +9094,13 @@
   <data name="numericUpDown_ActivityDistance_Spacing.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="comboBox_ActivityDistance_Suffix.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="comboBox_ActivityDistance_Suffix_km.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="comboBox_ActivityDistance_Suffix.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+  <data name="comboBox_ActivityDistance_Suffix_km.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
     <value>AssociateIndex</value>
   </data>
-  <data name="comboBox_ActivityDistance_Suffix.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="comboBox_ActivityDistance_Suffix_km.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="label173.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
@@ -9095,13 +9131,13 @@
     <value />
   </data>
   <data name="label172.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 117</value>
+    <value>15, 117</value>
   </data>
   <data name="label172.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 13</value>
+    <value>59, 13</value>
   </data>
   <data name="label172.Text" xml:space="preserve">
-    <value>Suffix:</value>
+    <value>Suffix (km):</value>
   </data>
   <data name="numericUpDown_ActivityDistance_EndCorner_X.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -9257,15 +9293,6 @@
     <value>AssociateIndex</value>
   </data>
   <data name="numericUpDown_ActivityDistance_EndCorner_Y.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="comboBox_ActivityDistance_Image.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="comboBox_ActivityDistance_Image.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="comboBox_ActivityDistance_Image.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="label137.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
@@ -10837,6 +10864,15 @@
   <data name="tabPage59.Text" xml:space="preserve">
     <value>Calories</value>
   </data>
+  <data name="comboBox_ActivityStar_Image.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="comboBox_ActivityStar_Image.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>AssociateIndex</value>
+  </data>
+  <data name="comboBox_ActivityStar_Image.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="numericUpDown_ActivityStar_Y.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -10897,15 +10933,6 @@
   <data name="label166.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="comboBox_ActivityStar_Image.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="comboBox_ActivityStar_Image.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="comboBox_ActivityStar_Image.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="label171.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -10932,6 +10959,15 @@
   </data>
   <data name="tabPage16.Text" xml:space="preserve">
     <value>Goal achievement</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Image.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Image.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>AssociateIndex</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Image.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="numericUpDown_ActivityStepsGoal_Spacing.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -11093,15 +11129,6 @@
     <value>AssociateIndex</value>
   </data>
   <data name="numericUpDown_ActivityStepsGoal_EndCorner_Y.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="comboBox_ActivityStepsGoal_Image.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="comboBox_ActivityStepsGoal_Image.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="comboBox_ActivityStepsGoal_Image.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="label496.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
@@ -12364,6 +12391,15 @@
   <data name="button_AnalogDate.Text" xml:space="preserve">
     <value>Days Progress</value>
   </data>
+  <data name="comboBox_MonthAndDayD_Image.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="comboBox_MonthAndDayD_Image.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>AssociateIndex</value>
+  </data>
+  <data name="comboBox_MonthAndDayD_Image.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="numericUpDown_MonthAndDayD_EndCorner_X.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -12526,15 +12562,6 @@
   <data name="numericUpDown_MonthAndDayD_EndCorner_Y.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="comboBox_MonthAndDayD_Image.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="comboBox_MonthAndDayD_Image.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="comboBox_MonthAndDayD_Image.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="label69.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -12603,6 +12630,15 @@
   </data>
   <data name="tabPage9.Text" xml:space="preserve">
     <value>Day</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Image.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="comboBox_MonthAndDayM_Image.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>AssociateIndex</value>
+  </data>
+  <data name="comboBox_MonthAndDayM_Image.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="numericUpDown_MonthAndDayM_Count.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -12755,15 +12791,6 @@
     <value>AssociateIndex</value>
   </data>
   <data name="numericUpDown_MonthAndDayM_EndCorner_Y.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="comboBox_MonthAndDayM_Image.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="comboBox_MonthAndDayM_Image.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="comboBox_MonthAndDayM_Image.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="numericUpDown_MonthAndDayM_EndCorner_X.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
@@ -12964,6 +12991,15 @@
   <data name="tabPage8.Text" xml:space="preserve">
     <value>Day and month in separated blocks</value>
   </data>
+  <data name="comboBox_OneLine_Image.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="comboBox_OneLine_Image.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>AssociateIndex</value>
+  </data>
+  <data name="comboBox_OneLine_Image.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="comboBox_OneLine_Delimiter.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -13154,15 +13190,6 @@
     <value>AssociateIndex</value>
   </data>
   <data name="numericUpDown_OneLine_EndCorner_Y.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="comboBox_OneLine_Image.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="comboBox_OneLine_Image.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="comboBox_OneLine_Image.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="label98.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
@@ -13399,6 +13426,15 @@
   <data name="tabPage50.Text" xml:space="preserve">
     <value>Day of week</value>
   </data>
+  <data name="comboBox_Year_Image.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="comboBox_Year_Image.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>AssociateIndex</value>
+  </data>
+  <data name="comboBox_Year_Image.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="comboBox_Year_Delimiter.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -13589,15 +13625,6 @@
     <value>AssociateIndex</value>
   </data>
   <data name="numericUpDown_Year_EndCorner_Y.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="comboBox_Year_Image.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="comboBox_Year_Image.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="comboBox_Year_Image.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="label363.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
@@ -15627,15 +15654,6 @@ more system load)</value>
   <data name="checkBox_crop.Text" xml:space="preserve">
     <value>Crop image to fit the screen (may work slowly)</value>
   </data>
-  <data name="pictureBox1.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="pictureBox1.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
-    <value>AssociateIndex</value>
-  </data>
-  <data name="pictureBox1.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="checkBox_Show_Shortcuts.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -15686,6 +15704,39 @@ more system load)</value>
   </data>
   <data name="checkBox_CircleScaleImage.Text" xml:space="preserve">
     <value>Highlight field for progress bar with covering image</value>
+  </data>
+  <data name="button_RefreshPreview.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="button_RefreshPreview.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>AssociateIndex</value>
+  </data>
+  <data name="button_RefreshPreview.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="button_RefreshPreview.Text" xml:space="preserve">
+    <value>Refresh Preview</value>
+  </data>
+  <data name="button_CreatePreview.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="button_CreatePreview.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>AssociateIndex</value>
+  </data>
+  <data name="button_CreatePreview.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="button_CreatePreview.Text" xml:space="preserve">
+    <value>Create a preview</value>
+  </data>
+  <data name="radioButton_AmazfitX.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="radioButton_AmazfitX.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>AssociateIndex</value>
+  </data>
+  <data name="radioButton_AmazfitX.HelpString" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="$this.HelpKeyword" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -18656,11 +18707,5 @@ more system load)</value>
         SlmARUpZgEVKWYBDSFZuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+D8AAPgfAADwHwAA4A8AAMAHAADA
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
-  </data>
-  <data name="button_RefreshPreview.Text" xml:space="preserve">
-    <value>Refresh Preview</value>
-  </data>
-  <data name="button_CreatePreview.Text" xml:space="preserve">
-    <value>Create a preview</value>
   </data>
 </root>

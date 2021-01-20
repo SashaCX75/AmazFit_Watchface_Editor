@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button_zip_unpack = new System.Windows.Forms.Button();
@@ -800,10 +800,12 @@
             this.label130 = new System.Windows.Forms.Label();
             this.label131 = new System.Windows.Forms.Label();
             this.tabPage13 = new System.Windows.Forms.TabPage();
+            this.comboBox_ActivityDistance_Suffix_ml = new System.Windows.Forms.ComboBox();
+            this.label501 = new System.Windows.Forms.Label();
             this.comboBox_ActivityDistance_Image = new System.Windows.Forms.ComboBox();
             this.comboBox_ActivityDistance_Decimal = new System.Windows.Forms.ComboBox();
             this.numericUpDown_ActivityDistance_Spacing = new System.Windows.Forms.NumericUpDown();
-            this.comboBox_ActivityDistance_Suffix = new System.Windows.Forms.ComboBox();
+            this.comboBox_ActivityDistance_Suffix_km = new System.Windows.Forms.ComboBox();
             this.label173 = new System.Windows.Forms.Label();
             this.label172 = new System.Windows.Forms.Label();
             this.numericUpDown_ActivityDistance_EndCorner_X = new System.Windows.Forms.NumericUpDown();
@@ -5346,8 +5348,8 @@
             // Number
             // 
             this.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Number.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Number.DefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.Number, "Number");
             this.Number.Name = "Number";
             this.Number.ReadOnly = true;
@@ -5942,14 +5944,14 @@
             // 
             // dataGridView_MotiomAnimation
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_MotiomAnimation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_MotiomAnimation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_MotiomAnimation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_MotiomAnimation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.AnimationColumn1,
@@ -10325,10 +10327,12 @@
             // tabPage13
             // 
             this.tabPage13.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage13.Controls.Add(this.comboBox_ActivityDistance_Suffix_ml);
+            this.tabPage13.Controls.Add(this.label501);
             this.tabPage13.Controls.Add(this.comboBox_ActivityDistance_Image);
             this.tabPage13.Controls.Add(this.comboBox_ActivityDistance_Decimal);
             this.tabPage13.Controls.Add(this.numericUpDown_ActivityDistance_Spacing);
-            this.tabPage13.Controls.Add(this.comboBox_ActivityDistance_Suffix);
+            this.tabPage13.Controls.Add(this.comboBox_ActivityDistance_Suffix_km);
             this.tabPage13.Controls.Add(this.label173);
             this.tabPage13.Controls.Add(this.label172);
             this.tabPage13.Controls.Add(this.numericUpDown_ActivityDistance_EndCorner_X);
@@ -10351,6 +10355,26 @@
             resources.ApplyResources(this.tabPage13, "tabPage13");
             this.tabPage13.Name = "tabPage13";
             this.helpProvider1.SetShowHelp(this.tabPage13, ((bool)(resources.GetObject("tabPage13.ShowHelp"))));
+            // 
+            // comboBox_ActivityDistance_Suffix_ml
+            // 
+            this.comboBox_ActivityDistance_Suffix_ml.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_ActivityDistance_Suffix_ml.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_ActivityDistance_Suffix_ml, "comboBox_ActivityDistance_Suffix_ml");
+            this.comboBox_ActivityDistance_Suffix_ml.FormattingEnabled = true;
+            this.comboBox_ActivityDistance_Suffix_ml.Name = "comboBox_ActivityDistance_Suffix_ml";
+            this.helpProvider1.SetShowHelp(this.comboBox_ActivityDistance_Suffix_ml, ((bool)(resources.GetObject("comboBox_ActivityDistance_Suffix_ml.ShowHelp"))));
+            this.comboBox_ActivityDistance_Suffix_ml.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_ActivityDistance_Suffix_ml.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_ActivityDistance_Suffix_ml.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_ActivityDistance_Suffix_ml.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_ActivityDistance_Suffix_ml.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // label501
+            // 
+            resources.ApplyResources(this.label501, "label501");
+            this.label501.Name = "label501";
+            this.helpProvider1.SetShowHelp(this.label501, ((bool)(resources.GetObject("label501.ShowHelp"))));
             // 
             // comboBox_ActivityDistance_Image
             // 
@@ -10397,19 +10421,19 @@
             this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityDistance_Spacing, ((bool)(resources.GetObject("numericUpDown_ActivityDistance_Spacing.ShowHelp"))));
             this.numericUpDown_ActivityDistance_Spacing.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // comboBox_ActivityDistance_Suffix
+            // comboBox_ActivityDistance_Suffix_km
             // 
-            this.comboBox_ActivityDistance_Suffix.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_ActivityDistance_Suffix.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_ActivityDistance_Suffix, "comboBox_ActivityDistance_Suffix");
-            this.comboBox_ActivityDistance_Suffix.FormattingEnabled = true;
-            this.comboBox_ActivityDistance_Suffix.Name = "comboBox_ActivityDistance_Suffix";
-            this.helpProvider1.SetShowHelp(this.comboBox_ActivityDistance_Suffix, ((bool)(resources.GetObject("comboBox_ActivityDistance_Suffix.ShowHelp"))));
-            this.comboBox_ActivityDistance_Suffix.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_ActivityDistance_Suffix.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_ActivityDistance_Suffix.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_ActivityDistance_Suffix.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_ActivityDistance_Suffix.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            this.comboBox_ActivityDistance_Suffix_km.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_ActivityDistance_Suffix_km.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_ActivityDistance_Suffix_km, "comboBox_ActivityDistance_Suffix_km");
+            this.comboBox_ActivityDistance_Suffix_km.FormattingEnabled = true;
+            this.comboBox_ActivityDistance_Suffix_km.Name = "comboBox_ActivityDistance_Suffix_km";
+            this.helpProvider1.SetShowHelp(this.comboBox_ActivityDistance_Suffix_km, ((bool)(resources.GetObject("comboBox_ActivityDistance_Suffix_km.ShowHelp"))));
+            this.comboBox_ActivityDistance_Suffix_km.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_ActivityDistance_Suffix_km.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_ActivityDistance_Suffix_km.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_ActivityDistance_Suffix_km.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_ActivityDistance_Suffix_km.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label173
             // 
@@ -17981,7 +18005,7 @@
         private System.Windows.Forms.Label label173;
         private System.Windows.Forms.ComboBox comboBox_ActivityDistance_Decimal;
         private System.Windows.Forms.Label label172;
-        private System.Windows.Forms.ComboBox comboBox_ActivityDistance_Suffix;
+        private System.Windows.Forms.ComboBox comboBox_ActivityDistance_Suffix_km;
         private System.Windows.Forms.Panel panel_Status;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage17;
@@ -18988,6 +19012,8 @@
         private System.Windows.Forms.Button button_RefreshPreview;
         private System.Windows.Forms.Button button_CreatePreview;
         private System.Windows.Forms.RadioButton radioButton_AmazfitX;
+        private System.Windows.Forms.ComboBox comboBox_ActivityDistance_Suffix_ml;
+        private System.Windows.Forms.Label label501;
     }
 }
 

@@ -2499,6 +2499,15 @@
   <data name="tabPage13.Text" xml:space="preserve">
     <value>Vzdálenost</value>
   </data>
+  <data name="label501.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 144</value>
+  </data>
+  <data name="label501.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 13</value>
+  </data>
+  <data name="label501.Text" xml:space="preserve">
+    <value>Přípona (ml):</value>
+  </data>
   <data name="label173.Location" type="System.Drawing.Point, System.Drawing">
     <value>195, 117</value>
   </data>
@@ -2509,13 +2518,13 @@
     <value>Oddělovač:</value>
   </data>
   <data name="label172.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 117</value>
+    <value>8, 117</value>
   </data>
   <data name="label172.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 13</value>
+    <value>72, 13</value>
   </data>
   <data name="label172.Text" xml:space="preserve">
-    <value>Přípona:</value>
+    <value>Přípona (km):</value>
   </data>
   <data name="checkBox_ActivityDistance.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
@@ -2912,6 +2921,9 @@
   </data>
   <data name="label171.Text" xml:space="preserve">
     <value>Souřadnice</value>
+  </data>
+  <data name="tabPage56.Text" xml:space="preserve">
+    <value>Cílové kroky</value>
   </data>
   <data name="checkBox_ActivityStepsGoal.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
@@ -6799,8 +6811,5 @@ větší zatížení systému)</value>
         SlmARUpZgEVKWYBDSFZuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+D8AAPgfAADwHwAA4A8AAMAHAADA
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
-  </data>
-  <data name="tabPage56.Text" xml:space="preserve">
-    <value>Cílové kroky</value>
   </data>
 </root>

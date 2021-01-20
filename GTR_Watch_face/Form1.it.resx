@@ -117,24 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>Decompila/ricompila</value>
-  </data>
-  <data name="tabPage2.Text" xml:space="preserve">
-    <value>Parametri di prova</value>
-  </data>
-  <data name="tabPage3.Text" xml:space="preserve">
-    <value>Modifica</value>
-  </data>
-  <data name="tabPageConverting.Text" xml:space="preserve">
-    <value>Converti</value>
-  </data>
-  <data name="tabPage33.Text" xml:space="preserve">
-    <value>Impostazioni</value>
-  </data>
-  <data name="tabPage43.Text" xml:space="preserve">
-    <value>Informazioni sul programma</value>
-  </data>
   <data name="button_zip_unpack.Text" xml:space="preserve">
     <value>Decomprimi file  .bin</value>
   </data>
@@ -171,6 +153,9 @@
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Percorso file compilatore</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Decompila/ricompila</value>
   </data>
   <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 17</value>
@@ -1199,6 +1184,9 @@
   <data name="label4.Text" xml:space="preserve">
     <value>JSON con immagini:</value>
   </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Parametri di prova</value>
+  </data>
   <data name="button_SaveJson.Text" xml:space="preserve">
     <value>Salva JSON</value>
   </data>
@@ -1207,9 +1195,6 @@
   </data>
   <data name="button_ShowAnimation.Text" xml:space="preserve">
     <value>Anteprima animazione</value>
-  </data>
-  <data name="tabPage53.Text" xml:space="preserve">
-    <value>Animazione cornice</value>
   </data>
   <data name="label479.Text" xml:space="preserve">
     <value>Velocità animazione</value>
@@ -1222,9 +1207,6 @@
   </data>
   <data name="label477.Text" xml:space="preserve">
     <value>Durata ciclo di animazione</value>
-  </data>
-  <data name="contextMenuStrip_Y.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 82</value>
   </data>
   <data name="toolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1291,7 +1273,7 @@
   <data name="вставитьToolStripMenuItem1.Text" xml:space="preserve">
     <value>Incolla</value>
   </data>
-  <data name="contextMenuStrip_X.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="contextMenuStrip_Y.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 82</value>
   </data>
   <data name="вставитьКоординатуХToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -1359,6 +1341,9 @@
   <data name="вставитьToolStripMenuItem.Text" xml:space="preserve">
     <value>Incolla</value>
   </data>
+  <data name="contextMenuStrip_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 82</value>
+  </data>
   <data name="checkBox_StaticAnimation.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 17</value>
   </data>
@@ -1371,11 +1356,8 @@
   <data name="label475.Text" xml:space="preserve">
     <value>Coordinate</value>
   </data>
-  <data name="tabPage54.Text" xml:space="preserve">
-    <value>Spostamento tra le coordinate</value>
-  </data>
-  <data name="groupBox_MotiomAnimation.Text" xml:space="preserve">
-    <value>Modifica dati nella riga selezionata</value>
+  <data name="tabPage53.Text" xml:space="preserve">
+    <value>Animazione cornice</value>
   </data>
   <data name="radioButton_MotiomAnimation_EndCoordinates.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 17</value>
@@ -1394,6 +1376,9 @@
   </data>
   <data name="radioButton_MotiomAnimation_StartCoordinates.Text" xml:space="preserve">
     <value>Coordinate inizlali</value>
+  </data>
+  <data name="groupBox_MotiomAnimation.Text" xml:space="preserve">
+    <value>Modifica dati nella riga selezionata</value>
   </data>
   <data name="AnimationColumn2.HeaderText" xml:space="preserve">
     <value>Coordinate iniziali (X)</value>
@@ -1418,9 +1403,6 @@
   </data>
   <data name="AnimationColumn12.HeaderText" xml:space="preserve">
     <value>Rimbalzo</value>
-  </data>
-  <data name="contextMenuStrip_XY_InAnimationTable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 140</value>
   </data>
   <data name="вставитьНачальныеКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>209, 26</value>
@@ -1455,17 +1437,20 @@
   <data name="удалитьСтрокуToolStripMenuItem1.Text" xml:space="preserve">
     <value>Elimina riga</value>
   </data>
+  <data name="contextMenuStrip_XY_InAnimationTable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 140</value>
+  </data>
   <data name="checkBox_MotiomAnimation.Text" xml:space="preserve">
     <value>Visualizza</value>
+  </data>
+  <data name="tabPage54.Text" xml:space="preserve">
+    <value>Spostamento tra le coordinate</value>
   </data>
   <data name="checkBox_Animation.Text" xml:space="preserve">
     <value>Attiva </value>
   </data>
   <data name="button_Animation.Text" xml:space="preserve">
     <value>Animazione - beta</value>
-  </data>
-  <data name="tabPage46.Text" xml:space="preserve">
-    <value>Passi</value>
   </data>
   <data name="checkBox_Shortcuts_Steps.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 17</value>
@@ -1500,8 +1485,8 @@
   <data name="label443.Text" xml:space="preserve">
     <value>Coordinate</value>
   </data>
-  <data name="tabPage47.Text" xml:space="preserve">
-    <value>Battiti</value>
+  <data name="tabPage46.Text" xml:space="preserve">
+    <value>Passi</value>
   </data>
   <data name="checkBox_Shortcuts_Puls.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 17</value>
@@ -1536,8 +1521,8 @@
   <data name="label445.Text" xml:space="preserve">
     <value>Coordinate</value>
   </data>
-  <data name="tabPage48.Text" xml:space="preserve">
-    <value>Meteo</value>
+  <data name="tabPage47.Text" xml:space="preserve">
+    <value>Battiti</value>
   </data>
   <data name="checkBox_Shortcuts_Weather.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
@@ -1572,8 +1557,8 @@
   <data name="label451.Text" xml:space="preserve">
     <value>Coordinate</value>
   </data>
-  <data name="tabPage49.Text" xml:space="preserve">
-    <value>Risparmio energia</value>
+  <data name="tabPage48.Text" xml:space="preserve">
+    <value>Meteo</value>
   </data>
   <data name="checkBox_Shortcuts_Energy.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 17</value>
@@ -1608,14 +1593,14 @@
   <data name="label457.Text" xml:space="preserve">
     <value>Coordinate</value>
   </data>
+  <data name="tabPage49.Text" xml:space="preserve">
+    <value>Risparmio energia</value>
+  </data>
   <data name="checkBox_Shortcuts.Text" xml:space="preserve">
     <value>Attiva </value>
   </data>
   <data name="button_Shortcuts.Text" xml:space="preserve">
     <value>Scorciatoie</value>
-  </data>
-  <data name="groupBox_Symbols.Text" xml:space="preserve">
-    <value>Simboli</value>
   </data>
   <data name="label286.Location" type="System.Drawing.Point, System.Drawing">
     <value>259, 20</value>
@@ -1644,8 +1629,8 @@
   <data name="label285.Text" xml:space="preserve">
     <value>Il simbolo "°":</value>
   </data>
-  <data name="tabPage24.Text" xml:space="preserve">
-    <value>Temperatura attuale</value>
+  <data name="groupBox_Symbols.Text" xml:space="preserve">
+    <value>Simboli</value>
   </data>
   <data name="comboBox_Weather_Text_Image.Location" type="System.Drawing.Point, System.Drawing">
     <value>202, 82</value>
@@ -1740,17 +1725,14 @@
   <data name="label279.Text" xml:space="preserve">
     <value>Angolo superiore sinistro</value>
   </data>
-  <data name="tabPage26.Text" xml:space="preserve">
-    <value>Temperatura</value>
+  <data name="tabPage24.Text" xml:space="preserve">
+    <value>Temperatura attuale</value>
   </data>
   <data name="label490.Size" type="System.Drawing.Size, System.Drawing">
     <value>311, 13</value>
   </data>
   <data name="label490.Text" xml:space="preserve">
     <value>* Visualizza solo se impossibile visualizzare la temperatura attuale</value>
-  </data>
-  <data name="tabPage27.Text" xml:space="preserve">
-    <value>Giorno</value>
   </data>
   <data name="comboBox_Weather_Day_Image.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 81</value>
@@ -1848,8 +1830,8 @@
   <data name="label298.Text" xml:space="preserve">
     <value>Angolo superiore sinistro</value>
   </data>
-  <data name="tabPage30.Text" xml:space="preserve">
-    <value>Notte</value>
+  <data name="tabPage27.Text" xml:space="preserve">
+    <value>Giorno</value>
   </data>
   <data name="comboBox_Weather_Night_Image.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 81</value>
@@ -1947,8 +1929,11 @@
   <data name="label322.Text" xml:space="preserve">
     <value>Angolo superiore sinistro</value>
   </data>
-  <data name="tabPage25.Text" xml:space="preserve">
-    <value>Icona</value>
+  <data name="tabPage30.Text" xml:space="preserve">
+    <value>Notte</value>
+  </data>
+  <data name="tabPage26.Text" xml:space="preserve">
+    <value>Temperatura</value>
   </data>
   <data name="label287.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 13</value>
@@ -1980,17 +1965,14 @@
   <data name="label282.Text" xml:space="preserve">
     <value>Indice immagini:</value>
   </data>
+  <data name="tabPage25.Text" xml:space="preserve">
+    <value>Icona</value>
+  </data>
   <data name="checkBox_Weather.Text" xml:space="preserve">
     <value>Attiva </value>
   </data>
   <data name="button_Weather.Text" xml:space="preserve">
     <value>Meteo</value>
-  </data>
-  <data name="tabPage29.Text" xml:space="preserve">
-    <value>Orologio</value>
-  </data>
-  <data name="groupBox_AnalogClock_Hour.Text" xml:space="preserve">
-    <value>Lancetta delle ore</value>
   </data>
   <data name="label216.Text" xml:space="preserve">
     <value>Lancetta delle ore centrale (X)</value>
@@ -2025,8 +2007,8 @@
   <data name="label215.Text" xml:space="preserve">
     <value>Lancetta delle ore centrale (Y)</value>
   </data>
-  <data name="groupBox4.Text" xml:space="preserve">
-    <value>Centro immagine</value>
+  <data name="groupBox_AnalogClock_Hour.Text" xml:space="preserve">
+    <value>Lancetta delle ore</value>
   </data>
   <data name="label310.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2049,11 +2031,11 @@
   <data name="checkBox_HourCenterImage.Text" xml:space="preserve">
     <value>Visualizza </value>
   </data>
-  <data name="tabPage31.Text" xml:space="preserve">
-    <value>Minuti</value>
+  <data name="groupBox4.Text" xml:space="preserve">
+    <value>Centro immagine</value>
   </data>
-  <data name="groupBox_AnalogClock_Min.Text" xml:space="preserve">
-    <value>Lancetta dei minuti</value>
+  <data name="tabPage29.Text" xml:space="preserve">
+    <value>Orologio</value>
   </data>
   <data name="label351.Text" xml:space="preserve">
     <value>Asse Y offset</value>
@@ -2088,8 +2070,8 @@
   <data name="checkBox_AnalogClock_Min.Text" xml:space="preserve">
     <value>Visualizza </value>
   </data>
-  <data name="groupBox3.Text" xml:space="preserve">
-    <value>Centro Immagine</value>
+  <data name="groupBox_AnalogClock_Min.Text" xml:space="preserve">
+    <value>Lancetta dei minuti</value>
   </data>
   <data name="label307.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2112,11 +2094,11 @@
   <data name="checkBox_MinCenterImage.Text" xml:space="preserve">
     <value>Visualizza </value>
   </data>
-  <data name="tabPage32.Text" xml:space="preserve">
-    <value>Secondi</value>
-  </data>
-  <data name="groupBox2.Text" xml:space="preserve">
+  <data name="groupBox3.Text" xml:space="preserve">
     <value>Centro Immagine</value>
+  </data>
+  <data name="tabPage31.Text" xml:space="preserve">
+    <value>Minuti</value>
   </data>
   <data name="label304.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2139,8 +2121,8 @@
   <data name="checkBox_SecCenterImage.Text" xml:space="preserve">
     <value>Visualizza </value>
   </data>
-  <data name="groupBox_AnalogClock_Sec.Text" xml:space="preserve">
-    <value>Lancetta dei secondi </value>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Centro Immagine</value>
   </data>
   <data name="label353.Text" xml:space="preserve">
     <value>Asse Y offset</value>
@@ -2175,14 +2157,17 @@
   <data name="checkBox_AnalogClock_Sec.Text" xml:space="preserve">
     <value>Visualizza </value>
   </data>
+  <data name="groupBox_AnalogClock_Sec.Text" xml:space="preserve">
+    <value>Lancetta dei secondi </value>
+  </data>
+  <data name="tabPage32.Text" xml:space="preserve">
+    <value>Secondi</value>
+  </data>
   <data name="checkBox_AnalogClock.Text" xml:space="preserve">
     <value>Attiva </value>
   </data>
   <data name="button_AnalogClock.Text" xml:space="preserve">
     <value>Orologio analogico</value>
-  </data>
-  <data name="tabPage21.Text" xml:space="preserve">
-    <value>Testo</value>
   </data>
   <data name="checkBox_Battery_Text.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>
@@ -2262,8 +2247,8 @@
   <data name="label193.Text" xml:space="preserve">
     <value>Angolo superiore sinistro</value>
   </data>
-  <data name="tabPage28.Text" xml:space="preserve">
-    <value>Icona "%"</value>
+  <data name="tabPage21.Text" xml:space="preserve">
+    <value>Testo</value>
   </data>
   <data name="checkBox_Battery_Percent.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>
@@ -2286,8 +2271,8 @@
   <data name="label303.Text" xml:space="preserve">
     <value>Coordinate</value>
   </data>
-  <data name="tabPage22.Text" xml:space="preserve">
-    <value>Icona</value>
+  <data name="tabPage28.Text" xml:space="preserve">
+    <value>Icona "%"</value>
   </data>
   <data name="label198.Location" type="System.Drawing.Point, System.Drawing">
     <value>267, 46</value>
@@ -2319,8 +2304,8 @@
   <data name="label197.Text" xml:space="preserve">
     <value>Coordinate</value>
   </data>
-  <data name="tabPage23.Text" xml:space="preserve">
-    <value>Barra avanzamento</value>
+  <data name="tabPage22.Text" xml:space="preserve">
+    <value>Icona</value>
   </data>
   <data name="checkBox_Battery_Scale_Image.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2382,8 +2367,8 @@
   <data name="checkBox_Battery_Scale.Text" xml:space="preserve">
     <value>Visualizza </value>
   </data>
-  <data name="tabPage35.Text" xml:space="preserve">
-    <value>Indicatore</value>
+  <data name="tabPage23.Text" xml:space="preserve">
+    <value>Barra avanzamento</value>
   </data>
   <data name="label374.Text" xml:space="preserve">
     <value>Angolo finale</value>
@@ -2421,8 +2406,8 @@
   <data name="checkBox_Battery_ClockHand.Text" xml:space="preserve">
     <value>Visualizza </value>
   </data>
-  <data name="tabPage42.Text" xml:space="preserve">
-    <value>Segmenti</value>
+  <data name="tabPage35.Text" xml:space="preserve">
+    <value>Indicatore</value>
   </data>
   <data name="checkBox_Battery_IconSet.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>
@@ -2444,9 +2429,6 @@
   </data>
   <data name="label405.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
-  </data>
-  <data name="contextMenuStrip_XY_InTable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 108</value>
   </data>
   <data name="вставитьКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>173, 26</value>
@@ -2471,6 +2453,12 @@
   </data>
   <data name="удалитьСтрокуToolStripMenuItem.Text" xml:space="preserve">
     <value>Elimina riga</value>
+  </data>
+  <data name="contextMenuStrip_XY_InTable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 108</value>
+  </data>
+  <data name="tabPage42.Text" xml:space="preserve">
+    <value>Segmenti</value>
   </data>
   <data name="checkBox_Battery.Text" xml:space="preserve">
     <value>Attiva </value>
@@ -2502,9 +2490,6 @@
   <data name="label165.Text" xml:space="preserve">
     <value>ON:</value>
   </data>
-  <data name="tabPage18.Text" xml:space="preserve">
-    <value>Sveglia</value>
-  </data>
   <data name="label169.Location" type="System.Drawing.Point, System.Drawing">
     <value>303, 32</value>
   </data>
@@ -2529,8 +2514,8 @@
   <data name="label174.Text" xml:space="preserve">
     <value>ON:</value>
   </data>
-  <data name="tabPage19.Text" xml:space="preserve">
-    <value>Blocco</value>
+  <data name="tabPage18.Text" xml:space="preserve">
+    <value>Sveglia</value>
   </data>
   <data name="label176.Location" type="System.Drawing.Point, System.Drawing">
     <value>303, 32</value>
@@ -2556,8 +2541,8 @@
   <data name="label178.Text" xml:space="preserve">
     <value>ON:</value>
   </data>
-  <data name="tabPage20.Text" xml:space="preserve">
-    <value>DND</value>
+  <data name="tabPage19.Text" xml:space="preserve">
+    <value>Blocco</value>
   </data>
   <data name="label180.Location" type="System.Drawing.Point, System.Drawing">
     <value>303, 32</value>
@@ -2583,6 +2568,9 @@
   <data name="label182.Text" xml:space="preserve">
     <value>ON:</value>
   </data>
+  <data name="tabPage20.Text" xml:space="preserve">
+    <value>DND</value>
+  </data>
   <data name="button_Status.Text" xml:space="preserve">
     <value>Stato</value>
   </data>
@@ -2591,9 +2579,6 @@
   </data>
   <data name="label403.Text" xml:space="preserve">
     <value>Simbolo di errore:</value>
-  </data>
-  <data name="tabPage12.Text" xml:space="preserve">
-    <value>Passi</value>
   </data>
   <data name="checkBox_ActivitySteps.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>
@@ -2673,8 +2658,17 @@
   <data name="label131.Text" xml:space="preserve">
     <value>Angolo superiore sinistro</value>
   </data>
-  <data name="tabPage13.Text" xml:space="preserve">
-    <value>Distanza</value>
+  <data name="tabPage12.Text" xml:space="preserve">
+    <value>Passi</value>
+  </data>
+  <data name="label501.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 144</value>
+  </data>
+  <data name="label501.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 13</value>
+  </data>
+  <data name="label501.Text" xml:space="preserve">
+    <value>Suffisso (ml):</value>
   </data>
   <data name="label173.Location" type="System.Drawing.Point, System.Drawing">
     <value>200, 117</value>
@@ -2686,13 +2680,13 @@
     <value>Separatore</value>
   </data>
   <data name="label172.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 117</value>
+    <value>10, 117</value>
   </data>
   <data name="label172.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 13</value>
+    <value>70, 13</value>
   </data>
   <data name="label172.Text" xml:space="preserve">
-    <value>Suffisso:</value>
+    <value>Suffisso (km):</value>
   </data>
   <data name="checkBox_ActivityDistance.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>
@@ -2772,11 +2766,8 @@
   <data name="label141.Text" xml:space="preserve">
     <value>Angolo superiore sinistro</value>
   </data>
-  <data name="tabPage55.Text" xml:space="preserve">
-    <value>Battiti</value>
-  </data>
-  <data name="tabPage14.Text" xml:space="preserve">
-    <value>Battiti</value>
+  <data name="tabPage13.Text" xml:space="preserve">
+    <value>Distanza</value>
   </data>
   <data name="checkBox_ActivityPuls.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>
@@ -2856,8 +2847,8 @@
   <data name="label145.Text" xml:space="preserve">
     <value>Allineamento</value>
   </data>
-  <data name="tabPage44.Text" xml:space="preserve">
-    <value>Battiti (barra avanzamento)</value>
+  <data name="tabPage14.Text" xml:space="preserve">
+    <value>Battiti</value>
   </data>
   <data name="comboBox_ActivityPulsScale_Flatness.Items" xml:space="preserve">
     <value>Tonda</value>
@@ -2925,8 +2916,8 @@
   <data name="label420.Text" xml:space="preserve">
     <value>Colore:</value>
   </data>
-  <data name="tabPage51.Text" xml:space="preserve">
-    <value>Battiti (indicatore)</value>
+  <data name="tabPage44.Text" xml:space="preserve">
+    <value>Battiti (barra avanzamento)</value>
   </data>
   <data name="checkBox_Pulse_ClockHand.Text" xml:space="preserve">
     <value>Visualizza </value>
@@ -2976,8 +2967,8 @@
   <data name="label469.Text" xml:space="preserve">
     <value>Asse X offset </value>
   </data>
-  <data name="tabPage45.Text" xml:space="preserve">
-    <value>Battiti (segmenti)</value>
+  <data name="tabPage51.Text" xml:space="preserve">
+    <value>Battiti (indicatore)</value>
   </data>
   <data name="checkBox_ActivityPuls_IconSet.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>
@@ -3000,11 +2991,11 @@
   <data name="label121.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
-  <data name="tabPage59.Text" xml:space="preserve">
-    <value>Calorie</value>
+  <data name="tabPage45.Text" xml:space="preserve">
+    <value>Battiti (segmenti)</value>
   </data>
-  <data name="tabPage15.Text" xml:space="preserve">
-    <value>Calorie</value>
+  <data name="tabPage55.Text" xml:space="preserve">
+    <value>Battiti</value>
   </data>
   <data name="checkBox_ActivityCalories.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>
@@ -3084,8 +3075,8 @@
   <data name="label155.Text" xml:space="preserve">
     <value>Allineamento</value>
   </data>
-  <data name="tabPage11.Text" xml:space="preserve">
-    <value>Calorie (barra di avanzamento)</value>
+  <data name="tabPage15.Text" xml:space="preserve">
+    <value>Calorie</value>
   </data>
   <data name="comboBox_ActivityCaloriesScale_Flatness.Items" xml:space="preserve">
     <value>Tonda</value>
@@ -3153,8 +3144,8 @@
   <data name="label115.Text" xml:space="preserve">
     <value>Colore:</value>
   </data>
-  <data name="tabPage52.Text" xml:space="preserve">
-    <value>Calorie (indicatore)</value>
+  <data name="tabPage11.Text" xml:space="preserve">
+    <value>Calorie (barra di avanzamento)</value>
   </data>
   <data name="checkBox_Calories_ClockHand.Text" xml:space="preserve">
     <value>Visualizza </value>
@@ -3204,8 +3195,11 @@
   <data name="label462.Text" xml:space="preserve">
     <value>Asse X offset </value>
   </data>
-  <data name="tabPage16.Text" xml:space="preserve">
-    <value>Obiettivo raggiunto</value>
+  <data name="tabPage52.Text" xml:space="preserve">
+    <value>Calorie (indicatore)</value>
+  </data>
+  <data name="tabPage59.Text" xml:space="preserve">
+    <value>Calorie</value>
   </data>
   <data name="checkBox_ActivityStar.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>
@@ -3228,8 +3222,8 @@
   <data name="label171.Text" xml:space="preserve">
     <value>Coordinate</value>
   </data>
-  <data name="tabPage56.Text" xml:space="preserve">
-    <value>Obiettiovo passi</value>
+  <data name="tabPage16.Text" xml:space="preserve">
+    <value>Obiettivo raggiunto</value>
   </data>
   <data name="checkBox_ActivityStepsGoal.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>
@@ -3309,14 +3303,14 @@
   <data name="label500.Text" xml:space="preserve">
     <value>Angolo superiore sinistro</value>
   </data>
+  <data name="tabPage56.Text" xml:space="preserve">
+    <value>Obiettiovo passi</value>
+  </data>
   <data name="checkBox_Activity.Text" xml:space="preserve">
     <value>Attiva </value>
   </data>
   <data name="button_Activity.Text" xml:space="preserve">
     <value>Attività</value>
-  </data>
-  <data name="tabPage36.Text" xml:space="preserve">
-    <value>Barra avanzamento</value>
   </data>
   <data name="checkBox_StepsProgress_Image.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -3381,8 +3375,8 @@
   <data name="label108.Text" xml:space="preserve">
     <value>Larghezza:</value>
   </data>
-  <data name="tabPage37.Text" xml:space="preserve">
-    <value>Indicatore</value>
+  <data name="tabPage36.Text" xml:space="preserve">
+    <value>Barra avanzamento</value>
   </data>
   <data name="checkBox_StProg_ClockHand.Text" xml:space="preserve">
     <value>Visualizza </value>
@@ -3420,8 +3414,8 @@
   <data name="label381.Text" xml:space="preserve">
     <value>Centro freccia (X)</value>
   </data>
-  <data name="tabPage41.Text" xml:space="preserve">
-    <value>Segmenti</value>
+  <data name="tabPage37.Text" xml:space="preserve">
+    <value>Indicatore</value>
   </data>
   <data name="checkBox_SPSliced.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>
@@ -3444,11 +3438,11 @@
   <data name="label404.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
+  <data name="tabPage41.Text" xml:space="preserve">
+    <value>Segmenti</value>
+  </data>
   <data name="button_StepsProgress.Text" xml:space="preserve">
     <value>Progresso passi</value>
-  </data>
-  <data name="tabPage38.Text" xml:space="preserve">
-    <value>Giorno</value>
   </data>
   <data name="checkBox_ADDay_ClockHand.Text" xml:space="preserve">
     <value>Visualizza </value>
@@ -3486,8 +3480,8 @@
   <data name="label402.Text" xml:space="preserve">
     <value>Centro freccia (X)</value>
   </data>
-  <data name="tabPage39.Text" xml:space="preserve">
-    <value>Giorno della settimana</value>
+  <data name="tabPage38.Text" xml:space="preserve">
+    <value>Giorno</value>
   </data>
   <data name="label389.Text" xml:space="preserve">
     <value>Angolo finale</value>
@@ -3525,8 +3519,8 @@
   <data name="checkBox_ADWeekDay_ClockHand.Text" xml:space="preserve">
     <value>Visualizza </value>
   </data>
-  <data name="tabPage40.Text" xml:space="preserve">
-    <value>Mese</value>
+  <data name="tabPage39.Text" xml:space="preserve">
+    <value>Giorno della settimana</value>
   </data>
   <data name="label382.Text" xml:space="preserve">
     <value>Angolo finale</value>
@@ -3564,14 +3558,11 @@
   <data name="checkBox_ADMonth_ClockHand.Text" xml:space="preserve">
     <value>Visualizza </value>
   </data>
+  <data name="tabPage40.Text" xml:space="preserve">
+    <value>Mese</value>
+  </data>
   <data name="button_AnalogDate.Text" xml:space="preserve">
     <value>Progresso giorni</value>
-  </data>
-  <data name="tabPage8.Text" xml:space="preserve">
-    <value>Giorno e mese in blocchi separati</value>
-  </data>
-  <data name="tabPage9.Text" xml:space="preserve">
-    <value>Giorno</value>
   </data>
   <data name="checkBox_MonthAndDayD.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>
@@ -3651,8 +3642,8 @@
   <data name="label67.Text" xml:space="preserve">
     <value>Angolo superiore sinistro</value>
   </data>
-  <data name="tabPage10.Text" xml:space="preserve">
-    <value>Mese</value>
+  <data name="tabPage9.Text" xml:space="preserve">
+    <value>Giorno</value>
   </data>
   <data name="checkBox_MonthAndDayM.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>
@@ -3732,7 +3723,7 @@
   <data name="label82.Text" xml:space="preserve">
     <value>Angolo superiore sinistro</value>
   </data>
-  <data name="groupBox__MonthName.Text" xml:space="preserve">
+  <data name="tabPage10.Text" xml:space="preserve">
     <value>Mese</value>
   </data>
   <data name="label59.Location" type="System.Drawing.Point, System.Drawing">
@@ -3759,8 +3750,11 @@
   <data name="label61.Text" xml:space="preserve">
     <value>Indice immagini</value>
   </data>
-  <data name="tabPage7.Text" xml:space="preserve">
-    <value>Data su riga singola</value>
+  <data name="groupBox__MonthName.Text" xml:space="preserve">
+    <value>Mese</value>
+  </data>
+  <data name="tabPage8.Text" xml:space="preserve">
+    <value>Giorno e mese in blocchi separati</value>
   </data>
   <data name="label103.Location" type="System.Drawing.Point, System.Drawing">
     <value>136, 99</value>
@@ -3849,11 +3843,8 @@
   <data name="label102.Text" xml:space="preserve">
     <value>Angolo superiore sinistro</value>
   </data>
-  <data name="tabPage50.Text" xml:space="preserve">
-    <value>Giorno della settimana</value>
-  </data>
-  <data name="groupBox_WeekDayProgress.Text" xml:space="preserve">
-    <value>Segmenti</value>
+  <data name="tabPage7.Text" xml:space="preserve">
+    <value>Data su riga singola</value>
   </data>
   <data name="checkBox_DOW_IconSet.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>
@@ -3867,8 +3858,8 @@
   <data name="label460.Text" xml:space="preserve">
     <value>Indice immagini:</value>
   </data>
-  <data name="groupBox__WeekDay.Text" xml:space="preserve">
-    <value>Giorno della settimana</value>
+  <data name="groupBox_WeekDayProgress.Text" xml:space="preserve">
+    <value>Segmenti</value>
   </data>
   <data name="checkBox_WeekDay.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>
@@ -3885,8 +3876,11 @@
   <data name="label56.Text" xml:space="preserve">
     <value>Indice immagini</value>
   </data>
-  <data name="tabPage34.Text" xml:space="preserve">
-    <value>Anno</value>
+  <data name="groupBox__WeekDay.Text" xml:space="preserve">
+    <value>Giorno della settimana</value>
+  </data>
+  <data name="tabPage50.Text" xml:space="preserve">
+    <value>Giorno della settimana</value>
   </data>
   <data name="label357.Location" type="System.Drawing.Point, System.Drawing">
     <value>136, 99</value>
@@ -3975,6 +3969,9 @@
   <data name="label367.Text" xml:space="preserve">
     <value>Angolo superiore sinistro</value>
   </data>
+  <data name="tabPage34.Text" xml:space="preserve">
+    <value>Anno</value>
+  </data>
   <data name="checkBox_Date.Text" xml:space="preserve">
     <value>Attiva </value>
   </data>
@@ -3992,15 +3989,6 @@
   </data>
   <data name="button_Date.Text" xml:space="preserve">
     <value>Data</value>
-  </data>
-  <data name="groupBox_Delimiter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 201</value>
-  </data>
-  <data name="groupBox_Delimiter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 123</value>
-  </data>
-  <data name="groupBox_Delimiter.Text" xml:space="preserve">
-    <value>Separatore</value>
   </data>
   <data name="checkBox_Delimiter.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>
@@ -4023,8 +4011,14 @@
   <data name="label39.Location" type="System.Drawing.Point, System.Drawing">
     <value>82, 47</value>
   </data>
-  <data name="groupBox_AmPm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 123</value>
+  <data name="groupBox_Delimiter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>170, 201</value>
+  </data>
+  <data name="groupBox_Delimiter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 123</value>
+  </data>
+  <data name="groupBox_Delimiter.Text" xml:space="preserve">
+    <value>Separatore</value>
   </data>
   <data name="comboBox_Image_Pm.Location" type="System.Drawing.Point, System.Drawing">
     <value>102, 98</value>
@@ -4056,17 +4050,14 @@
   <data name="label35.Location" type="System.Drawing.Point, System.Drawing">
     <value>85, 47</value>
   </data>
-  <data name="tabPage4.Text" xml:space="preserve">
-    <value>Ore</value>
+  <data name="groupBox_AmPm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 123</value>
   </data>
   <data name="checkBox_Hours.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>
   </data>
   <data name="checkBox_Hours.Text" xml:space="preserve">
     <value>Visualizza </value>
-  </data>
-  <data name="groupBox_Hours_Tens.Text" xml:space="preserve">
-    <value>Decine</value>
   </data>
   <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 13</value>
@@ -4089,8 +4080,8 @@
   <data name="label10.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
-  <data name="groupBox_Hours_Ones.Text" xml:space="preserve">
-    <value>Unità</value>
+  <data name="groupBox_Hours_Tens.Text" xml:space="preserve">
+    <value>Decine</value>
   </data>
   <data name="label28.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 13</value>
@@ -4113,17 +4104,17 @@
   <data name="label30.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
-  <data name="tabPage5.Text" xml:space="preserve">
-    <value>Minuti</value>
+  <data name="groupBox_Hours_Ones.Text" xml:space="preserve">
+    <value>Unità</value>
+  </data>
+  <data name="tabPage4.Text" xml:space="preserve">
+    <value>Ore</value>
   </data>
   <data name="checkBox_Minutes.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>
   </data>
   <data name="checkBox_Minutes.Text" xml:space="preserve">
     <value>Visualizza </value>
-  </data>
-  <data name="groupBox_Minutes_Tens.Text" xml:space="preserve">
-    <value>Decine</value>
   </data>
   <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 13</value>
@@ -4146,8 +4137,8 @@
   <data name="label14.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
-  <data name="groupBox_Minutes_Ones.Text" xml:space="preserve">
-    <value>Unità</value>
+  <data name="groupBox_Minutes_Tens.Text" xml:space="preserve">
+    <value>Decine</value>
   </data>
   <data name="label24.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 13</value>
@@ -4170,11 +4161,11 @@
   <data name="label26.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
-  <data name="tabPage6.Text" xml:space="preserve">
-    <value>Secondi</value>
-  </data>
-  <data name="groupBox_Seconds_Ones.Text" xml:space="preserve">
+  <data name="groupBox_Minutes_Ones.Text" xml:space="preserve">
     <value>Unità</value>
+  </data>
+  <data name="tabPage5.Text" xml:space="preserve">
+    <value>Minuti</value>
   </data>
   <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 13</value>
@@ -4197,14 +4188,14 @@
   <data name="label22.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
+  <data name="groupBox_Seconds_Ones.Text" xml:space="preserve">
+    <value>Unità</value>
+  </data>
   <data name="checkBox_Seconds.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>
   </data>
   <data name="checkBox_Seconds.Text" xml:space="preserve">
     <value>Visualizza </value>
-  </data>
-  <data name="groupBox_Seconds_Tens.Text" xml:space="preserve">
-    <value>Decine</value>
   </data>
   <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 13</value>
@@ -4226,6 +4217,12 @@
   </data>
   <data name="label18.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
+  </data>
+  <data name="groupBox_Seconds_Tens.Text" xml:space="preserve">
+    <value>Decine</value>
+  </data>
+  <data name="tabPage6.Text" xml:space="preserve">
+    <value>Secondi</value>
   </data>
   <data name="checkBox_Time.Text" xml:space="preserve">
     <value>Attiva </value>
@@ -4254,6 +4251,9 @@
   <data name="button_Background.Text" xml:space="preserve">
     <value>Sfondo</value>
   </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>Modifica</value>
+  </data>
   <data name="label489.Size" type="System.Drawing.Size, System.Drawing">
     <value>235, 13</value>
   </data>
@@ -4281,23 +4281,26 @@
   <data name="button_Converting.Text" xml:space="preserve">
     <value>Converti</value>
   </data>
-  <data name="groupBox10.Text" xml:space="preserve">
-    <value>Modello destinazione</value>
-  </data>
   <data name="radioButton_ConvertingOutput_Custom.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 17</value>
   </data>
   <data name="radioButton_ConvertingOutput_Custom.Text" xml:space="preserve">
     <value>Dimensione personalizzata</value>
   </data>
-  <data name="groupBox9.Text" xml:space="preserve">
-    <value>Modello sorgente</value>
+  <data name="groupBox10.Text" xml:space="preserve">
+    <value>Modello destinazione</value>
   </data>
   <data name="radioButton_ConvertingInput_Custom.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 17</value>
   </data>
   <data name="radioButton_ConvertingInput_Custom.Text" xml:space="preserve">
     <value>Dimensione personalizzata</value>
+  </data>
+  <data name="groupBox9.Text" xml:space="preserve">
+    <value>Modello sorgente</value>
+  </data>
+  <data name="tabPageConverting.Text" xml:space="preserve">
+    <value>Converti</value>
   </data>
   <data name="label483.Size" type="System.Drawing.Size, System.Drawing">
     <value>204, 39</value>
@@ -4306,9 +4309,6 @@
     <value>Velocità di animazione durante l'anteprima
 (alta velocità - animazione più fluida, 
 carico maggiore del sistema)</value>
-  </data>
-  <data name="groupBox8.Text" xml:space="preserve">
-    <value>Evidenza zona scorciatoia</value>
   </data>
   <data name="checkBox_Shortcuts_Border.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 17</value>
@@ -4321,6 +4321,9 @@ carico maggiore del sistema)</value>
   </data>
   <data name="checkBox_Shortcuts_Area.Text" xml:space="preserve">
     <value>Area tratteggiata</value>
+  </data>
+  <data name="groupBox8.Text" xml:space="preserve">
+    <value>Evidenza zona scorciatoia</value>
   </data>
   <data name="button_Reset.Text" xml:space="preserve">
     <value>Ripristina</value>
@@ -4346,9 +4349,6 @@ carico maggiore del sistema)</value>
   <data name="label355.Text" xml:space="preserve">
     <value>Velocità animazione GIF</value>
   </data>
-  <data name="groupBox7.Text" xml:space="preserve">
-    <value>Dopo la compilazione del progetto</value>
-  </data>
   <data name="radioButton_Settings_Pack_DoNotning.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 17</value>
   </data>
@@ -4373,8 +4373,8 @@ carico maggiore del sistema)</value>
   <data name="radioButton_Settings_Pack_Dialog.Text" xml:space="preserve">
     <value>Suggerisci una scelta</value>
   </data>
-  <data name="groupBox6.Text" xml:space="preserve">
-    <value>Dopo aver aperto il progetto</value>
+  <data name="groupBox7.Text" xml:space="preserve">
+    <value>Dopo la compilazione del progetto</value>
   </data>
   <data name="radioButton_Settings_Open_DoNotning.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 17</value>
@@ -4394,8 +4394,8 @@ carico maggiore del sistema)</value>
   <data name="radioButton_Settings_Open_Dialog.Text" xml:space="preserve">
     <value>Suggerisci una scelta</value>
   </data>
-  <data name="groupBox5.Text" xml:space="preserve">
-    <value>Dopo l'estrazione del .bin</value>
+  <data name="groupBox6.Text" xml:space="preserve">
+    <value>Dopo aver aperto il progetto</value>
   </data>
   <data name="radioButton_Settings_AfterUnpack_DoNothing.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 17</value>
@@ -4415,8 +4415,8 @@ carico maggiore del sistema)</value>
   <data name="radioButton_Settings_AfterUnpack_Dialog.Text" xml:space="preserve">
     <value>Suggerisci una scelta</value>
   </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Se i nomi dei file estratti sono uguali</value>
+  <data name="groupBox5.Text" xml:space="preserve">
+    <value>Dopo l'estrazione del .bin</value>
   </data>
   <data name="radioButton_Settings_Unpack_Replace.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 17</value>
@@ -4435,6 +4435,12 @@ carico maggiore del sistema)</value>
   </data>
   <data name="radioButton_Settings_Unpack_Dialog.Text" xml:space="preserve">
     <value>Suggerisci una scelta</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Se i nomi dei file estratti sono uguali</value>
+  </data>
+  <data name="tabPage33.Text" xml:space="preserve">
+    <value>Impostazioni</value>
   </data>
   <data name="linkLabel_resunpacker_qzip.Size" type="System.Drawing.Size, System.Drawing">
     <value>221, 13</value>
@@ -4509,6 +4515,9 @@ Manuale lingua inglese - gumstic</value>
   </data>
   <data name="label406.Text" xml:space="preserve">
     <value>Versione:</value>
+  </data>
+  <data name="tabPage43.Text" xml:space="preserve">
+    <value>Informazioni sul programma</value>
   </data>
   <data name="button_PreviewBig.Text" xml:space="preserve">
     <value>Ingrandisci</value>
@@ -7512,8 +7521,5 @@ Manuale lingua inglese - gumstic</value>
         SlmARUpZgEVKWYBDSFZuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+D8AAPgfAADwHwAA4A8AAMAHAADA
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
-  </data>
-  <data name="label282.Text" xml:space="preserve">
-    <value>Indice immagini:</value>
   </data>
 </root>
