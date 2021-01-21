@@ -2922,6 +2922,7 @@ namespace GTR_Watch_face
                 //DefaultValueHandling = DefaultValueHandling.Ignore,
                 NullValueHandling = NullValueHandling.Ignore
             });
+            JsonToTree(richTextBox_JSON.Text);
             JSON_Modified = true;
         }
 

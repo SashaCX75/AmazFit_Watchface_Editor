@@ -359,6 +359,9 @@
             this.button_JSON = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.richTextBox_JSON = new System.Windows.Forms.RichTextBox();
+            this.treeView_Json = new System.Windows.Forms.TreeView();
             this.button_SaveJson = new System.Windows.Forms.Button();
             this.button_TextToJson = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -1302,7 +1305,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button_Background = new System.Windows.Forms.Button();
-            this.richTextBox_JSON = new System.Windows.Forms.RichTextBox();
             this.tabPageConverting = new System.Windows.Forms.TabPage();
             this.label489 = new System.Windows.Forms.Label();
             this.label488 = new System.Windows.Forms.Label();
@@ -1324,6 +1326,10 @@
             this.radioButton_ConvertingInput_GTR42 = new System.Windows.Forms.RadioButton();
             this.radioButton_ConvertingInput_GTR47 = new System.Windows.Forms.RadioButton();
             this.tabPage33 = new System.Windows.Forms.TabPage();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.checkBox_DoNotShowMaxMinTemp = new System.Windows.Forms.CheckBox();
+            this.checkBox_ShowIn12hourFormat = new System.Windows.Forms.CheckBox();
+            this.checkBox_ShowMiles = new System.Windows.Forms.CheckBox();
             this.comboBox_Animation_Preview_Speed = new System.Windows.Forms.ComboBox();
             this.label483 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -1499,6 +1505,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_Set1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ImagesList)).BeginInit();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel_Animation.SuspendLayout();
             this.tabControl_Animation.SuspendLayout();
@@ -1860,6 +1870,7 @@
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ConvertingInput_Custom)).BeginInit();
             this.tabPage33.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Gif_Speed)).BeginInit();
             this.groupBox7.SuspendLayout();
@@ -5399,13 +5410,39 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage3.Controls.Add(this.splitContainer1);
             this.tabPage3.Controls.Add(this.button_SaveJson);
             this.tabPage3.Controls.Add(this.button_TextToJson);
             this.tabPage3.Controls.Add(this.panel2);
-            this.tabPage3.Controls.Add(this.richTextBox_JSON);
             resources.ApplyResources(this.tabPage3, "tabPage3");
             this.tabPage3.Name = "tabPage3";
             this.helpProvider1.SetShowHelp(this.tabPage3, ((bool)(resources.GetObject("tabPage3.ShowHelp"))));
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.splitContainer1, "splitContainer1");
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.richTextBox_JSON);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.treeView_Json);
+            this.splitContainer1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitContainer1_SplitterMoved);
+            // 
+            // richTextBox_JSON
+            // 
+            resources.ApplyResources(this.richTextBox_JSON, "richTextBox_JSON");
+            this.richTextBox_JSON.Name = "richTextBox_JSON";
+            this.helpProvider1.SetShowHelp(this.richTextBox_JSON, ((bool)(resources.GetObject("richTextBox_JSON.ShowHelp"))));
+            // 
+            // treeView_Json
+            // 
+            resources.ApplyResources(this.treeView_Json, "treeView_Json");
+            this.treeView_Json.Name = "treeView_Json";
             // 
             // button_SaveJson
             // 
@@ -16208,12 +16245,6 @@
             this.button_Background.UseVisualStyleBackColor = true;
             this.button_Background.Click += new System.EventHandler(this.button_Background_Click);
             // 
-            // richTextBox_JSON
-            // 
-            resources.ApplyResources(this.richTextBox_JSON, "richTextBox_JSON");
-            this.richTextBox_JSON.Name = "richTextBox_JSON";
-            this.helpProvider1.SetShowHelp(this.richTextBox_JSON, ((bool)(resources.GetObject("richTextBox_JSON.ShowHelp"))));
-            // 
             // tabPageConverting
             // 
             this.tabPageConverting.BackColor = System.Drawing.SystemColors.Control;
@@ -16409,6 +16440,7 @@
             // tabPage33
             // 
             this.tabPage33.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage33.Controls.Add(this.groupBox11);
             this.tabPage33.Controls.Add(this.comboBox_Animation_Preview_Speed);
             this.tabPage33.Controls.Add(this.label483);
             this.tabPage33.Controls.Add(this.groupBox8);
@@ -16425,6 +16457,47 @@
             resources.ApplyResources(this.tabPage33, "tabPage33");
             this.tabPage33.Name = "tabPage33";
             this.helpProvider1.SetShowHelp(this.tabPage33, ((bool)(resources.GetObject("tabPage33.ShowHelp"))));
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.checkBox_DoNotShowMaxMinTemp);
+            this.groupBox11.Controls.Add(this.checkBox_ShowIn12hourFormat);
+            this.groupBox11.Controls.Add(this.checkBox_ShowMiles);
+            resources.ApplyResources(this.groupBox11, "groupBox11");
+            this.groupBox11.Name = "groupBox11";
+            this.helpProvider1.SetShowHelp(this.groupBox11, ((bool)(resources.GetObject("groupBox11.ShowHelp"))));
+            this.groupBox11.TabStop = false;
+            // 
+            // checkBox_DoNotShowMaxMinTemp
+            // 
+            resources.ApplyResources(this.checkBox_DoNotShowMaxMinTemp, "checkBox_DoNotShowMaxMinTemp");
+            this.checkBox_DoNotShowMaxMinTemp.Name = "checkBox_DoNotShowMaxMinTemp";
+            this.helpProvider1.SetShowHelp(this.checkBox_DoNotShowMaxMinTemp, ((bool)(resources.GetObject("checkBox_DoNotShowMaxMinTemp.ShowHelp"))));
+            this.checkBox_DoNotShowMaxMinTemp.UseVisualStyleBackColor = true;
+            this.checkBox_DoNotShowMaxMinTemp.CheckedChanged += new System.EventHandler(this.checkBox_ShowMiles_CheckedChanged);
+            this.checkBox_DoNotShowMaxMinTemp.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
+            // 
+            // checkBox_ShowIn12hourFormat
+            // 
+            resources.ApplyResources(this.checkBox_ShowIn12hourFormat, "checkBox_ShowIn12hourFormat");
+            this.checkBox_ShowIn12hourFormat.Checked = true;
+            this.checkBox_ShowIn12hourFormat.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_ShowIn12hourFormat.Name = "checkBox_ShowIn12hourFormat";
+            this.helpProvider1.SetShowHelp(this.checkBox_ShowIn12hourFormat, ((bool)(resources.GetObject("checkBox_ShowIn12hourFormat.ShowHelp"))));
+            this.checkBox_ShowIn12hourFormat.UseVisualStyleBackColor = true;
+            this.checkBox_ShowIn12hourFormat.CheckedChanged += new System.EventHandler(this.checkBox_ShowMiles_CheckedChanged);
+            this.checkBox_ShowIn12hourFormat.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
+            // 
+            // checkBox_ShowMiles
+            // 
+            resources.ApplyResources(this.checkBox_ShowMiles, "checkBox_ShowMiles");
+            this.checkBox_ShowMiles.Checked = true;
+            this.checkBox_ShowMiles.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_ShowMiles.Name = "checkBox_ShowMiles";
+            this.helpProvider1.SetShowHelp(this.checkBox_ShowMiles, ((bool)(resources.GetObject("checkBox_ShowMiles.ShowHelp"))));
+            this.checkBox_ShowMiles.UseVisualStyleBackColor = true;
+            this.checkBox_ShowMiles.CheckedChanged += new System.EventHandler(this.checkBox_ShowMiles_CheckedChanged);
+            this.checkBox_ShowMiles.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
             // 
             // comboBox_Animation_Preview_Speed
             // 
@@ -17196,6 +17269,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_Set1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ImagesList)).EndInit();
             this.tabPage3.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel_Animation.ResumeLayout(false);
             this.tabControl_Animation.ResumeLayout(false);
@@ -17628,6 +17705,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ConvertingInput_Custom)).EndInit();
             this.tabPage33.ResumeLayout(false);
             this.tabPage33.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Gif_Speed)).EndInit();
@@ -19014,6 +19093,12 @@
         private System.Windows.Forms.RadioButton radioButton_AmazfitX;
         private System.Windows.Forms.ComboBox comboBox_ActivityDistance_Suffix_ml;
         private System.Windows.Forms.Label label501;
+        private System.Windows.Forms.TreeView treeView_Json;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.CheckBox checkBox_DoNotShowMaxMinTemp;
+        private System.Windows.Forms.CheckBox checkBox_ShowIn12hourFormat;
+        private System.Windows.Forms.CheckBox checkBox_ShowMiles;
     }
 }
 
