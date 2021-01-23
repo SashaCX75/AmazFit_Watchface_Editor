@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
 	<!-- 
     Microsoft ResX Schema 
@@ -3100,10 +3100,4 @@
 	<data name="label2.Text" xml:space="preserve">
     <value>Vuoi sovrascrivere il file esistente?</value>
   </data>
-	<data name="button_SaveAnimation.Text" xml:space="preserve">
-		<value>Salva animazione</value>
-	</data>
-	<data name="button_AnimationReset.Text" xml:space="preserve">
-		<value>Reimposta animazione</value>
-	</data>
 </root>
