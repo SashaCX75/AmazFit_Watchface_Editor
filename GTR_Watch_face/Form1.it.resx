@@ -4416,7 +4416,7 @@ carico maggiore del sistema)</value>
     <value>Suggerisci una scelta</value>
   </data>
 	<data name="groupBox5.Text" xml:space="preserve">
-    <value>Dopo l'estrazione del .bin</value>
+    <value>Dopo l'estrazione del file .bin</value>
   </data>
 	<data name="radioButton_Settings_Unpack_Replace.Size" type="System.Drawing.Size, System.Drawing">
 		<value>72, 17</value>
@@ -7551,5 +7551,8 @@ Manuale lingua inglese - gumstic</value>
 	</data>
 	<data name="checkBox_ShowMiles.Text" xml:space="preserve">
 		<value>Se possibile visualizza la distanza in miglia</value>
+	</data>
+	<data name="groupBox11.Text" xml:space="preserve">
+		<value>Visualizzazione elementi</value>
 	</data>
 </root>
