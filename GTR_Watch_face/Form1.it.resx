@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
 	<!-- 
     Microsoft ResX Schema 
@@ -1369,7 +1369,7 @@
 		<value>79, 13</value>
 	</data>
 	<data name="label480.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="radioButton_MotiomAnimation_StartCoordinates.Size" type="System.Drawing.Size, System.Drawing">
 		<value>106, 17</value>
@@ -1393,7 +1393,7 @@
     <value>Coordinate finali (Y)</value>
   </data>
 	<data name="AnimationColumn6.HeaderText" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="AnimationColumn7.HeaderText" xml:space="preserve">
     <value>Velocità animazione</value>
@@ -1684,7 +1684,7 @@
 		<value>79, 13</value>
 	</data>
 	<data name="label272.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label273.Size" type="System.Drawing.Size, System.Drawing">
 		<value>67, 13</value>
@@ -1789,7 +1789,7 @@
 		<value>79, 13</value>
 	</data>
 	<data name="label291.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label292.Size" type="System.Drawing.Size, System.Drawing">
 		<value>67, 13</value>
@@ -1888,7 +1888,7 @@
 		<value>79, 13</value>
 	</data>
 	<data name="label315.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label316.Size" type="System.Drawing.Size, System.Drawing">
 		<value>67, 13</value>
@@ -1999,7 +1999,7 @@
 		<value>64, 26</value>
 	</data>
 	<data name="label217.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label217.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
 		<value>MiddleRight</value>
@@ -2020,7 +2020,7 @@
 		<value>60, 26</value>
 	</data>
 	<data name="label310.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label310.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
 		<value>MiddleRight</value>
@@ -2053,7 +2053,7 @@
 		<value>64, 26</value>
 	</data>
 	<data name="label207.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label207.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
 		<value>MiddleRight</value>
@@ -2083,7 +2083,7 @@
 		<value>60, 26</value>
 	</data>
 	<data name="label307.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label307.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
 		<value>MiddleRight</value>
@@ -2110,7 +2110,7 @@
 		<value>60, 26</value>
 	</data>
 	<data name="label304.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label304.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
 		<value>MiddleRight</value>
@@ -2140,7 +2140,7 @@
 		<value>64, 26</value>
 	</data>
 	<data name="label210.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label210.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
 		<value>MiddleRight</value>
@@ -2218,7 +2218,7 @@
 		<value>79, 13</value>
 	</data>
 	<data name="label186.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label187.Size" type="System.Drawing.Size, System.Drawing">
 		<value>67, 13</value>
@@ -2263,7 +2263,7 @@
 		<value>79, 13</value>
 	</data>
 	<data name="label301.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label303.Size" type="System.Drawing.Size, System.Drawing">
 		<value>58, 13</value>
@@ -2296,7 +2296,7 @@
 		<value>79, 13</value>
 	</data>
 	<data name="label195.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label197.Size" type="System.Drawing.Size, System.Drawing">
 		<value>58, 13</value>
@@ -2317,7 +2317,7 @@
 		<value>84, 31</value>
 	</data>
 	<data name="checkBox_Battery_Scale_Image.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="comboBox_Battery_Flatness.Items" xml:space="preserve">
     <value>Tonda</value>
@@ -2392,7 +2392,7 @@
 		<value>56, 33</value>
 	</data>
 	<data name="label370.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label370.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
 		<value>MiddleRight</value>
@@ -2425,7 +2425,7 @@
 		<value>64, 28</value>
 	</data>
 	<data name="label405.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label405.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
 		<value>MiddleRight</value>
@@ -2629,7 +2629,7 @@
 		<value>79, 13</value>
 	</data>
 	<data name="label124.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label125.Size" type="System.Drawing.Size, System.Drawing">
 		<value>67, 13</value>
@@ -2737,7 +2737,7 @@
 		<value>79, 13</value>
 	</data>
 	<data name="label134.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label135.Size" type="System.Drawing.Size, System.Drawing">
 		<value>67, 13</value>
@@ -2839,7 +2839,7 @@
 		<value>79, 13</value>
 	</data>
 	<data name="label144.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label145.Size" type="System.Drawing.Size, System.Drawing">
 		<value>67, 13</value>
@@ -2878,7 +2878,7 @@
 		<value>84, 33</value>
 	</data>
 	<data name="checkBox_ActivityPulsScale_Image.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label423.Size" type="System.Drawing.Size, System.Drawing">
 		<value>60, 13</value>
@@ -2959,7 +2959,7 @@
 		<value>55, 32</value>
 	</data>
 	<data name="label470.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label470.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
 		<value>MiddleRight</value>
@@ -2986,7 +2986,7 @@
 		<value>66, 28</value>
 	</data>
 	<data name="label121.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label121.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
 		<value>MiddleRight</value>
@@ -3067,7 +3067,7 @@
 		<value>79, 13</value>
 	</data>
 	<data name="label154.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label155.Size" type="System.Drawing.Size, System.Drawing">
 		<value>67, 13</value>
@@ -3106,7 +3106,7 @@
 		<value>84, 33</value>
 	</data>
 	<data name="checkBox_ActivityCaloriesScale_Image.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label118.Size" type="System.Drawing.Size, System.Drawing">
 		<value>60, 13</value>
@@ -3187,7 +3187,7 @@
 		<value>55, 32</value>
 	</data>
 	<data name="label463.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label463.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
 		<value>MiddleRight</value>
@@ -3214,7 +3214,7 @@
 		<value>79, 13</value>
 	</data>
 	<data name="label164.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label171.Size" type="System.Drawing.Size, System.Drawing">
 		<value>58, 13</value>
@@ -3274,7 +3274,7 @@
 		<value>79, 13</value>
 	</data>
 	<data name="label493.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label494.Size" type="System.Drawing.Size, System.Drawing">
 		<value>67, 13</value>
@@ -3322,7 +3322,7 @@
 		<value>71, 32</value>
 	</data>
 	<data name="checkBox_StepsProgress_Image.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="checkBox_StepsProgress.Text" xml:space="preserve">
     <value>Visualizza </value>
@@ -3403,7 +3403,7 @@
 		<value>54, 26</value>
 	</data>
 	<data name="label379.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label379.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
 		<value>MiddleRight</value>
@@ -3433,7 +3433,7 @@
 		<value>54, 26</value>
 	</data>
 	<data name="label404.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label404.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
 		<value>MiddleRight</value>
@@ -3469,7 +3469,7 @@
 		<value>53, 26</value>
 	</data>
 	<data name="label400.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label400.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
 		<value>MiddleRight</value>
@@ -3505,7 +3505,7 @@
 		<value>53, 26</value>
 	</data>
 	<data name="label393.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label393.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
 		<value>MiddleRight</value>
@@ -3544,7 +3544,7 @@
 		<value>53, 26</value>
 	</data>
 	<data name="label386.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label386.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
 		<value>MiddleRight</value>
@@ -3613,7 +3613,7 @@
 		<value>79, 13</value>
 	</data>
 	<data name="label65.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label71.Size" type="System.Drawing.Size, System.Drawing">
 		<value>67, 13</value>
@@ -3694,7 +3694,7 @@
 		<value>79, 13</value>
 	</data>
 	<data name="label75.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label76.Size" type="System.Drawing.Size, System.Drawing">
 		<value>67, 13</value>
@@ -3748,7 +3748,7 @@
 		<value>79, 13</value>
 	</data>
 	<data name="label61.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="groupBox__MonthName.Text" xml:space="preserve">
     <value>Mese</value>
@@ -3814,7 +3814,7 @@
 		<value>79, 13</value>
 	</data>
 	<data name="label95.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label96.Size" type="System.Drawing.Size, System.Drawing">
 		<value>67, 13</value>
@@ -3874,7 +3874,7 @@
 		<value>79, 13</value>
 	</data>
 	<data name="label56.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="groupBox__WeekDay.Text" xml:space="preserve">
     <value>Giorno della settimana</value>
@@ -3940,7 +3940,7 @@
 		<value>79, 13</value>
 	</data>
 	<data name="label360.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label361.Size" type="System.Drawing.Size, System.Drawing">
 		<value>67, 13</value>
@@ -4075,7 +4075,7 @@
 		<value>54, 26</value>
 	</data>
 	<data name="label10.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label10.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
 		<value>MiddleRight</value>
@@ -4099,7 +4099,7 @@
 		<value>54, 26</value>
 	</data>
 	<data name="label30.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label30.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
 		<value>MiddleRight</value>
@@ -4132,7 +4132,7 @@
 		<value>54, 26</value>
 	</data>
 	<data name="label14.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label14.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
 		<value>MiddleRight</value>
@@ -4156,7 +4156,7 @@
 		<value>54, 26</value>
 	</data>
 	<data name="label26.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label26.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
 		<value>MiddleRight</value>
@@ -4183,7 +4183,7 @@
 		<value>54, 26</value>
 	</data>
 	<data name="label22.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label22.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
 		<value>MiddleRight</value>
@@ -4213,7 +4213,7 @@
 		<value>54, 26</value>
 	</data>
 	<data name="label18.Text" xml:space="preserve">
-    <value>Indice immagini</value>
+    <value>Indice immagini:</value>
   </data>
 	<data name="label18.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
 		<value>MiddleRight</value>
@@ -7542,5 +7542,14 @@ Manuale lingua inglese - gumstic</value>
 	</data>
 	<data name="label58.Text" xml:space="preserve">
 		<value>N. immagini:</value>
+	</data>
+	<data name="checkBox_DoNotShowMaxMinTemp.Text" xml:space="preserve">
+		<value>Non visualizzare temperatura massima/minima durante visualizzazione temperatura attuale</value>
+	</data>
+	<data name="checkBox_ShowIn12hourFormat.Text" xml:space="preserve">
+		<value>Se possibile visualizza l'ora nel formato 12 ore</value>
+	</data>
+	<data name="checkBox_ShowMiles.Text" xml:space="preserve">
+		<value>Se possibile visualizza la distanza in miglia</value>
 	</data>
 </root>
