@@ -4664,8 +4664,8 @@ carico maggiore del sistema)</value>
   <data name="radioButton_Settings_AfterUnpack_Dialog.Text" xml:space="preserve">
     <value>Suggerisci una scelta</value>
   </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Se i nomi dei file estratti sono uguali</value>
+	<data name="groupBox5.Text" xml:space="preserve">
+    <value>Dopo l'estrazione del file .bin</value>
   </data>
   <data name="radioButton_Settings_Unpack_Replace.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 17</value>
@@ -7761,5 +7761,38 @@ Manuale lingua inglese - gumstic</value>
         SlmARUpZgEVKWYBDSFZuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+D8AAPgfAADwHwAA4A8AAMAHAADA
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
-  </data>
+	</data>
+	<data name="label411.Text" xml:space="preserve">
+		<value>N. immagini:</value>
+	</data>
+	<data name="label473.Text" xml:space="preserve">
+		<value>Indice immagini:</value>
+	</data>
+	<data name="AnimationColumn1.HeaderText" xml:space="preserve">
+		<value>Sconosciuto1</value>
+	</data>
+	<data name="AnimationColumn9.HeaderText" xml:space="preserve">
+		<value>Sconosciuto5</value>
+	</data>
+	<data name="AnimationColumn10.HeaderText" xml:space="preserve">
+		<value>Sconosciuto6</value>
+	</data>
+	<data name="AnimationColumn11.HeaderText" xml:space="preserve">
+		<value>Sconosciuto7</value>
+	</data>
+	<data name="label58.Text" xml:space="preserve">
+		<value>N. immagini:</value>
+	</data>
+	<data name="checkBox_DoNotShowMaxMinTemp.Text" xml:space="preserve">
+		<value>Non visualizzare temperatura massima/minima durante visualizzazione temperatura attuale</value>
+	</data>
+	<data name="checkBox_ShowIn12hourFormat.Text" xml:space="preserve">
+		<value>Se possibile visualizza l'ora nel formato 12 ore</value>
+	</data>
+	<data name="checkBox_ShowMiles.Text" xml:space="preserve">
+		<value>Se possibile visualizza la distanza in miglia</value>
+	</data>
+	<data name="groupBox11.Text" xml:space="preserve">
+		<value>Visualizzazione elementi</value>
+	</data>
 </root>
