@@ -548,6 +548,7 @@ namespace GTR_Watch_face
                     }
                 }
 
+                bool Show_Weather_Day_Night = true;
                 if ((checkBox_Weather_Text.Checked) && (comboBox_Weather_Text_Image.SelectedIndex >= 0))
                 {
                     int x1 = (int)numericUpDown_Weather_Text_StartCorner_X.Value;
@@ -563,10 +564,11 @@ namespace GTR_Watch_face
                     int error = comboBox_Weather_Text_NDImage.SelectedIndex;
                     bool ND = !checkBox_WeatherSet_Temp.Checked;
                     DrawWeather(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, minus, degris, error, ND, BBorder);
-                    
+                    if(Program_Settings.DoNotShowMaxMinTemp) Show_Weather_Day_Night = false;
                 }
 
-                if ((checkBox_Weather_Day.Checked) && (comboBox_Weather_Day_Image.SelectedIndex >= 0))
+                if ((checkBox_Weather_Day.Checked) && (comboBox_Weather_Day_Image.SelectedIndex >= 0) 
+                    && Show_Weather_Day_Night)
                 {
                     int x1 = (int)numericUpDown_Weather_Day_StartCorner_X.Value;
                     int y1 = (int)numericUpDown_Weather_Day_StartCorner_Y.Value;
@@ -586,7 +588,8 @@ namespace GTR_Watch_face
                         minus, degris, error, ND, BBorder);
 
                 }
-                if ((checkBox_Weather_Night.Checked) && (comboBox_Weather_Night_Image.SelectedIndex >= 0))
+                if ((checkBox_Weather_Night.Checked) && (comboBox_Weather_Night_Image.SelectedIndex >= 0)
+                    && Show_Weather_Day_Night)
                 {
                     int x1 = (int)numericUpDown_Weather_Night_StartCorner_X.Value;
                     int y1 = (int)numericUpDown_Weather_Night_StartCorner_Y.Value;
@@ -629,6 +632,19 @@ namespace GTR_Watch_face
                     int data_number = Watch_Face_Preview_Set.Activity.Steps;
                     if (numericUpDown_ActivitySteps_Count.Value == 10)
                         DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, BBorder);
+                }
+
+                // достижение цели
+                if ((checkBox_ActivityStar.Checked) && (comboBox_ActivityStar_Image.SelectedIndex >= 0))
+                {
+                    if (Watch_Face_Preview_Set.Activity.Steps >= Watch_Face_Preview_Set.Activity.StepsGoal)
+                    {
+                        //src = new Bitmap(ListImagesFullName[comboBox_ActivityStar_Image.SelectedIndex]);
+                        src = OpenFileStream(ListImagesFullName[comboBox_ActivityStar_Image.SelectedIndex]);
+                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_ActivityStar_X.Value,
+                            (int)numericUpDown_ActivityStar_Y.Value, src.Width, src.Height));
+                        //src.Dispose();
+                    }
                 }
             }
             #endregion
@@ -793,7 +809,9 @@ namespace GTR_Watch_face
                     int spacing = (int)numericUpDown_ActivityDistance_Spacing.Value;
                     int alignment = comboBox_ActivityDistance_Alignment.SelectedIndex;
                     double data_number = Watch_Face_Preview_Set.Activity.Distance / 1000f;
-                    int suffix = comboBox_ActivityDistance_Suffix.SelectedIndex;
+                    int suffix = comboBox_ActivityDistance_Suffix_km.SelectedIndex;
+                    if (Program_Settings.ShowMiles && comboBox_ActivityDistance_Suffix_ml.SelectedIndex >= 0)
+                        suffix = comboBox_ActivityDistance_Suffix_ml.SelectedIndex;
                     int dec = comboBox_ActivityDistance_Decimal.SelectedIndex;
                     if (numericUpDown_ActivityDistance_Count.Value == 10)
                         DrawNumber(gPanel, x1, y1, x2, y2, image_index, spacing, alignment, data_number, 
@@ -1042,18 +1060,18 @@ namespace GTR_Watch_face
                     DrawAnalogClock(gPanel, x1, y1, offsetX, offsetY, image_index, angle);
                 }
 
-                // достижение цели
-                if ((checkBox_ActivityStar.Checked) && (comboBox_ActivityStar_Image.SelectedIndex >= 0))
-                {
-                    if (Watch_Face_Preview_Set.Activity.Steps >= Watch_Face_Preview_Set.Activity.StepsGoal)
-                    {
-                        //src = new Bitmap(ListImagesFullName[comboBox_ActivityStar_Image.SelectedIndex]);
-                        src = OpenFileStream(ListImagesFullName[comboBox_ActivityStar_Image.SelectedIndex]);
-                        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_ActivityStar_X.Value,
-                            (int)numericUpDown_ActivityStar_Y.Value, src.Width, src.Height));
-                        //src.Dispose();
-                    }
-                }
+                //// достижение цели
+                //if ((checkBox_ActivityStar.Checked) && (comboBox_ActivityStar_Image.SelectedIndex >= 0))
+                //{
+                //    if (Watch_Face_Preview_Set.Activity.Steps >= Watch_Face_Preview_Set.Activity.StepsGoal)
+                //    {
+                //        //src = new Bitmap(ListImagesFullName[comboBox_ActivityStar_Image.SelectedIndex]);
+                //        src = OpenFileStream(ListImagesFullName[comboBox_ActivityStar_Image.SelectedIndex]);
+                //        gPanel.DrawImage(src, new Rectangle((int)numericUpDown_ActivityStar_X.Value,
+                //            (int)numericUpDown_ActivityStar_Y.Value, src.Width, src.Height));
+                //        //src.Dispose();
+                //    }
+                //}
 
                 // цель шагов
                 if ((checkBox_ActivityStepsGoal.Checked) && (comboBox_ActivityStepsGoal_Image.SelectedIndex >= 0))
@@ -1146,7 +1164,7 @@ namespace GTR_Watch_face
             Logger.WriteLine("PreviewToBitmap (Time)");
             if (checkBox_Time.Checked)
             {
-                if (checkBox_AmPm.Checked)
+                if (checkBox_AmPm.Checked && Program_Settings.ShowIn12hourFormat)
                 {
                     if (checkBox_Hours.Checked)
                     {
@@ -1444,7 +1462,7 @@ namespace GTR_Watch_face
                     int offsetY_Min = (int)numericUpDown_AnalogClock_Min_Offset_Y.Value;
 
 
-                    //if ((offsetX_Hour!=0 || offsetY_Hour!=0) && ((offsetX_Min != 0 || offsetY_Min != 0))) AnalogClockOffSet = false;
+                    if ((offsetX_Hour != 0 || offsetY_Hour != 0) && ((offsetX_Min != 0 || offsetY_Min != 0))) AnalogClockOffSet = false;
                 }
 
                 if (AnalogClockOffSet)

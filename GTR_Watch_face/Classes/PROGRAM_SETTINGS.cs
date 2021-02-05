@@ -37,6 +37,10 @@
         public float Gif_Speed = 1f;
         public int Animation_Preview_Speed = 4;
 
+        public bool ShowMiles = true;
+        public bool ShowIn12hourFormat = true;
+        public bool DoNotShowMaxMinTemp = false;
+
         public string pack_unpack_dir { get; set; }
         public string unpack_command_GTR47 = "--gtr 47 --file";
         public string pack_command_GTR47 = "--gtr 47 --file";
@@ -52,5 +56,7 @@
         public string pack_command_Verge = "--vergelite --file";
 
         public string language { get; set; }
+
+        public int Splitter_Pos = 0;
     }
 }

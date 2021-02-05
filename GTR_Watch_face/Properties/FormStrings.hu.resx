@@ -306,4 +306,34 @@
   <data name="Message_bigFile_Text1_trex" xml:space="preserve">
     <value>A nem tömörítet fájl mérete meghaladta az 5,5 MB-ot</value>
   </data>
+  <data name="FilterBin" xml:space="preserve">
+    <value>Bináris fájl (* .bin) | * .bin</value>
+  </data>
+  <data name="FilterGif" xml:space="preserve">
+    <value>GIF fájlok (* .gif) | * .gif</value>
+  </data>
+  <data name="FilterJson" xml:space="preserve">
+    <value>Json fájlok (* .json) | * .json</value>
+  </data>
+  <data name="FilterPng" xml:space="preserve">
+    <value>PNG fájlok (* .png) | * .png </value>
+  </data>
+  <data name="Message_WarningActivityError" xml:space="preserve">
+    <value>Kívánatos képet adni a hibaszimbólumra az aktivitási adatok hiánya esetén.</value>
+  </data>
+  <data name="Message_WarningDateOnelineAndSeparate" xml:space="preserve">
+    <value>A külön blokkokban megjelenített dátum nem működik együtt az egy sorban megjelenített dátummal</value>
+  </data>
+  <data name="Message_WarningPreview_Text1" xml:space="preserve">
+    <value>Az Előnézet képmérete eltér a szokásos mérettől.</value>
+  </data>
+  <data name="Message_WarningPreview_Text2" xml:space="preserve">
+    <value>Használja a meglévő dimenziókat?</value>
+  </data>
+  <data name="Message_WarningPulseIconCount_Text" xml:space="preserve">
+    <value>A pulzus megjelenítéséhez 6 szegmens használata ajánlott.</value>
+  </data>
+  <data name="Message_WarningWeatherError" xml:space="preserve">
+    <value>Előfordulhat, hogy a hibaszimbólum képe helytelenül van megadva, ha nincs aktuális hőmérsékleti adat.</value>
+  </data>
 </root>

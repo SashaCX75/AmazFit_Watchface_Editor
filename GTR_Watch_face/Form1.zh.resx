@@ -392,7 +392,7 @@
     <value>3, 9</value>
   </data>
   <data name="label288.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 13</value>
+    <value>79, 13</value>
   </data>
   <data name="label288.Text" xml:space="preserve">
     <value>天气图标选择</value>
@@ -1518,6 +1518,42 @@
   <data name="AnimationColumn12.Width" type="System.Int32, mscorlib">
     <value>65</value>
   </data>
+  <data name="вставитьНачальныеКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 26</value>
+  </data>
+  <data name="вставитьНачальныеКоординатыToolStripMenuItem.Text" xml:space="preserve">
+    <value>插入起始坐标</value>
+  </data>
+  <data name="вставитьКонечныеКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 26</value>
+  </data>
+  <data name="вставитьКонечныеКоординатыToolStripMenuItem.Text" xml:space="preserve">
+    <value>插入终点坐标</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 6</value>
+  </data>
+  <data name="копироватьToolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 26</value>
+  </data>
+  <data name="копироватьToolStripMenuItem3.Text" xml:space="preserve">
+    <value>复制</value>
+  </data>
+  <data name="вставитьToolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 26</value>
+  </data>
+  <data name="вставитьToolStripMenuItem3.Text" xml:space="preserve">
+    <value>粘贴</value>
+  </data>
+  <data name="удалитьСтрокуToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 26</value>
+  </data>
+  <data name="удалитьСтрокуToolStripMenuItem1.Text" xml:space="preserve">
+    <value>删除行</value>
+  </data>
+  <data name="contextMenuStrip_XY_InAnimationTable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 140</value>
+  </data>
   <data name="checkBox_MotiomAnimation.Text" xml:space="preserve">
     <value>启用</value>
   </data>
@@ -2622,6 +2658,15 @@
   <data name="tabPage12.Text" xml:space="preserve">
     <value>步数</value>
   </data>
+  <data name="label501.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 144</value>
+  </data>
+  <data name="label501.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="label501.Text" xml:space="preserve">
+    <value>后缀 (ml):</value>
+  </data>
   <data name="label173.Location" type="System.Drawing.Point, System.Drawing">
     <value>215, 120</value>
   </data>
@@ -2632,13 +2677,13 @@
     <value>分隔符:</value>
   </data>
   <data name="label172.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 117</value>
+    <value>20, 117</value>
   </data>
   <data name="label172.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
+    <value>57, 13</value>
   </data>
   <data name="label172.Text" xml:space="preserve">
-    <value>后缀:</value>
+    <value>后缀 (km):</value>
   </data>
   <data name="checkBox_ActivityDistance.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
@@ -3140,6 +3185,9 @@
   </data>
   <data name="label500.Text" xml:space="preserve">
     <value>左上角</value>
+  </data>
+  <data name="tabPage56.Text" xml:space="preserve">
+    <value>目标步数</value>
   </data>
   <data name="checkBox_Activity.Text" xml:space="preserve">
     <value>激活</value>
@@ -3876,6 +3924,18 @@
   <data name="button_Time.Text" xml:space="preserve">
     <value>时间</value>
   </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 13</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>预览图:</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 13</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>背景图:</value>
+  </data>
   <data name="button_Background.Text" xml:space="preserve">
     <value>背景</value>
   </data>
@@ -3913,7 +3973,7 @@
     <value>415, 17</value>
   </data>
   <data name="radioButton_ConvertingOutput_Custom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 50</value>
+    <value>85, 17</value>
   </data>
   <data name="radioButton_ConvertingOutput_Custom.Text" xml:space="preserve">
     <value>自定义大小</value>
@@ -3925,7 +3985,7 @@
     <value>415, 17</value>
   </data>
   <data name="radioButton_ConvertingInput_Custom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 50</value>
+    <value>85, 17</value>
   </data>
   <data name="radioButton_ConvertingInput_Custom.Text" xml:space="preserve">
     <value>自定义大小</value>
@@ -4007,7 +4067,7 @@
     <value>打开已创建的.bin</value>
   </data>
   <data name="radioButton_Settings_Pack_Dialog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 17</value>
+    <value>73, 17</value>
   </data>
   <data name="radioButton_Settings_Pack_Dialog.Text" xml:space="preserve">
     <value>提示选择</value>
@@ -4028,7 +4088,7 @@
     <value>加载PreviewStates.json（如果存在）</value>
   </data>
   <data name="radioButton_Settings_Open_Dialog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 17</value>
+    <value>73, 17</value>
   </data>
   <data name="radioButton_Settings_Open_Dialog.Text" xml:space="preserve">
     <value>提示选择</value>
@@ -4049,7 +4109,7 @@
     <value>加载未打包的项目</value>
   </data>
   <data name="radioButton_Settings_AfterUnpack_Dialog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 17</value>
+    <value>73, 17</value>
   </data>
   <data name="radioButton_Settings_AfterUnpack_Dialog.Text" xml:space="preserve">
     <value>提示选择</value>
@@ -4070,7 +4130,7 @@
     <value>同时保存</value>
   </data>
   <data name="radioButton_Settings_Unpack_Dialog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 17</value>
+    <value>73, 17</value>
   </data>
   <data name="radioButton_Settings_Unpack_Dialog.Text" xml:space="preserve">
     <value>提示选择</value>
@@ -4174,37 +4234,12 @@
   <data name="checkBox_CircleScaleImage.Text" xml:space="preserve">
     <value>带有覆盖图像的进度条的突出显示字段</value>
   </data>
-  <data name="вставитьНачальныеКоординатыToolStripMenuItem.Text" xml:space="preserve">
-    <value>插入起始坐标</value>
+  <data name="button_RefreshPreview.Text" xml:space="preserve">
+    <value>刷新预览</value>
   </data>
-  <data name="вставитьКонечныеКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 26</value>
+  <data name="button_CreatePreview.Text" xml:space="preserve">
+    <value>创建预览</value>
   </data>
-  <data name="вставитьКонечныеКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 26</value>
-  </data>
-  <data name="вставитьКонечныеКоординатыToolStripMenuItem.Text" xml:space="preserve">
-    <value>插入终点坐标</value>
-  </data>
-  <data name="удалитьСтрокуToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 26</value>
-  </data>
-  <data name="удалитьСтрокуToolStripMenuItem1.Text" xml:space="preserve">
-    <value>删除行</value>
-  </data>
-  <data name="копироватьToolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 26</value>
-  </data>
-  <data name="копироватьToolStripMenuItem3.Text" xml:space="preserve">
-    <value>复制</value>
-  </data>
-  <data name="вставитьToolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 26</value>
-  </data>
-  <data name="вставитьToolStripMenuItem3.Text" xml:space="preserve">
-    <value>粘贴</value>
-  </data>
-
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAkAAAAAAAEAIABZPQAAlgAAAICAAAABACAAKAgBAO89AABgYAAAAQAgAKiUAAAXRgEASEgAAAEA
@@ -7168,20 +7203,5 @@
         SlmARUpZgEVKWYBDSFZuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+D8AAPgfAADwHwAA4A8AAMAHAADA
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
-  </data>
-  <data name="tabPage56.Text" xml:space="preserve">
-    <value>目标步数</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>背景图:</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>预览图:</value>
-  </data>
-  <data name="button_CreatePreview.Text" xml:space="preserve">
-    <value>创建预览</value>
-  </data>
-  <data name="button_RefreshPreview.Text" xml:space="preserve">
-    <value>刷新预览</value>
   </data>
 </root>
