@@ -30,8 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.richTextBox_JSON = new System.Windows.Forms.RichTextBox();
+            this.treeView_Json = new System.Windows.Forms.TreeView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button_zip_unpack = new System.Windows.Forms.Button();
@@ -359,9 +362,6 @@
             this.button_JSON = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.richTextBox_JSON = new System.Windows.Forms.RichTextBox();
-            this.treeView_Json = new System.Windows.Forms.TreeView();
             this.button_SaveJson = new System.Windows.Forms.Button();
             this.button_TextToJson = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -1403,6 +1403,10 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.colorDialog_Pulse = new System.Windows.Forms.ColorDialog();
             this.colorDialog_Calories = new System.Windows.Forms.ColorDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -1505,10 +1509,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_Set1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ImagesList)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel_Animation.SuspendLayout();
             this.tabControl_Animation.SuspendLayout();
@@ -1881,6 +1881,53 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Preview)).BeginInit();
             this.SuspendLayout();
+            // 
+            // splitContainer1
+            // 
+            resources.ApplyResources(this.splitContainer1, "splitContainer1");
+            this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.helpProvider1.SetHelpKeyword(this.splitContainer1, resources.GetString("splitContainer1.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.splitContainer1, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("splitContainer1.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.splitContainer1, resources.GetString("splitContainer1.HelpString"));
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            resources.ApplyResources(this.splitContainer1.Panel1, "splitContainer1.Panel1");
+            this.splitContainer1.Panel1.Controls.Add(this.richTextBox_JSON);
+            this.helpProvider1.SetHelpKeyword(this.splitContainer1.Panel1, resources.GetString("splitContainer1.Panel1.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.splitContainer1.Panel1, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("splitContainer1.Panel1.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.splitContainer1.Panel1, resources.GetString("splitContainer1.Panel1.HelpString"));
+            this.helpProvider1.SetShowHelp(this.splitContainer1.Panel1, ((bool)(resources.GetObject("splitContainer1.Panel1.ShowHelp"))));
+            // 
+            // splitContainer1.Panel2
+            // 
+            resources.ApplyResources(this.splitContainer1.Panel2, "splitContainer1.Panel2");
+            this.splitContainer1.Panel2.Controls.Add(this.treeView_Json);
+            this.helpProvider1.SetHelpKeyword(this.splitContainer1.Panel2, resources.GetString("splitContainer1.Panel2.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.splitContainer1.Panel2, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("splitContainer1.Panel2.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.splitContainer1.Panel2, resources.GetString("splitContainer1.Panel2.HelpString"));
+            this.helpProvider1.SetShowHelp(this.splitContainer1.Panel2, ((bool)(resources.GetObject("splitContainer1.Panel2.ShowHelp"))));
+            this.helpProvider1.SetShowHelp(this.splitContainer1, ((bool)(resources.GetObject("splitContainer1.ShowHelp"))));
+            this.splitContainer1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitContainer1_SplitterMoved);
+            // 
+            // richTextBox_JSON
+            // 
+            resources.ApplyResources(this.richTextBox_JSON, "richTextBox_JSON");
+            this.helpProvider1.SetHelpKeyword(this.richTextBox_JSON, resources.GetString("richTextBox_JSON.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.richTextBox_JSON, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("richTextBox_JSON.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.richTextBox_JSON, resources.GetString("richTextBox_JSON.HelpString"));
+            this.richTextBox_JSON.Name = "richTextBox_JSON";
+            this.helpProvider1.SetShowHelp(this.richTextBox_JSON, ((bool)(resources.GetObject("richTextBox_JSON.ShowHelp"))));
+            // 
+            // treeView_Json
+            // 
+            resources.ApplyResources(this.treeView_Json, "treeView_Json");
+            this.helpProvider1.SetHelpKeyword(this.treeView_Json, resources.GetString("treeView_Json.HelpKeyword"));
+            this.helpProvider1.SetHelpNavigator(this.treeView_Json, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("treeView_Json.HelpNavigator"))));
+            this.helpProvider1.SetHelpString(this.treeView_Json, resources.GetString("treeView_Json.HelpString"));
+            this.treeView_Json.Name = "treeView_Json";
+            this.helpProvider1.SetShowHelp(this.treeView_Json, ((bool)(resources.GetObject("treeView_Json.ShowHelp"))));
             // 
             // tabControl1
             // 
@@ -6316,8 +6363,8 @@
             // Number
             // 
             this.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Number.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Number.DefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.Number, "Number");
             this.Number.Name = "Number";
             this.Number.ReadOnly = true;
@@ -6389,49 +6436,6 @@
             this.helpProvider1.SetHelpString(this.tabPage3, resources.GetString("tabPage3.HelpString"));
             this.tabPage3.Name = "tabPage3";
             this.helpProvider1.SetShowHelp(this.tabPage3, ((bool)(resources.GetObject("tabPage3.ShowHelp"))));
-            // 
-            // splitContainer1
-            // 
-            resources.ApplyResources(this.splitContainer1, "splitContainer1");
-            this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.helpProvider1.SetHelpKeyword(this.splitContainer1, resources.GetString("splitContainer1.HelpKeyword"));
-            this.helpProvider1.SetHelpNavigator(this.splitContainer1, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("splitContainer1.HelpNavigator"))));
-            this.helpProvider1.SetHelpString(this.splitContainer1, resources.GetString("splitContainer1.HelpString"));
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            resources.ApplyResources(this.splitContainer1.Panel1, "splitContainer1.Panel1");
-            this.splitContainer1.Panel1.Controls.Add(this.richTextBox_JSON);
-            this.helpProvider1.SetHelpKeyword(this.splitContainer1.Panel1, resources.GetString("splitContainer1.Panel1.HelpKeyword"));
-            this.helpProvider1.SetHelpNavigator(this.splitContainer1.Panel1, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("splitContainer1.Panel1.HelpNavigator"))));
-            this.helpProvider1.SetHelpString(this.splitContainer1.Panel1, resources.GetString("splitContainer1.Panel1.HelpString"));
-            // 
-            // splitContainer1.Panel2
-            // 
-            resources.ApplyResources(this.splitContainer1.Panel2, "splitContainer1.Panel2");
-            this.splitContainer1.Panel2.Controls.Add(this.treeView_Json);
-            this.helpProvider1.SetHelpKeyword(this.splitContainer1.Panel2, resources.GetString("splitContainer1.Panel2.HelpKeyword"));
-            this.helpProvider1.SetHelpNavigator(this.splitContainer1.Panel2, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("splitContainer1.Panel2.HelpNavigator"))));
-            this.helpProvider1.SetHelpString(this.splitContainer1.Panel2, resources.GetString("splitContainer1.Panel2.HelpString"));
-            this.splitContainer1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitContainer1_SplitterMoved);
-            // 
-            // richTextBox_JSON
-            // 
-            resources.ApplyResources(this.richTextBox_JSON, "richTextBox_JSON");
-            this.helpProvider1.SetHelpKeyword(this.richTextBox_JSON, resources.GetString("richTextBox_JSON.HelpKeyword"));
-            this.helpProvider1.SetHelpNavigator(this.richTextBox_JSON, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("richTextBox_JSON.HelpNavigator"))));
-            this.helpProvider1.SetHelpString(this.richTextBox_JSON, resources.GetString("richTextBox_JSON.HelpString"));
-            this.richTextBox_JSON.Name = "richTextBox_JSON";
-            this.helpProvider1.SetShowHelp(this.richTextBox_JSON, ((bool)(resources.GetObject("richTextBox_JSON.ShowHelp"))));
-            // 
-            // treeView_Json
-            // 
-            resources.ApplyResources(this.treeView_Json, "treeView_Json");
-            this.helpProvider1.SetHelpKeyword(this.treeView_Json, resources.GetString("treeView_Json.HelpKeyword"));
-            this.helpProvider1.SetHelpNavigator(this.treeView_Json, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("treeView_Json.HelpNavigator"))));
-            this.helpProvider1.SetHelpString(this.treeView_Json, resources.GetString("treeView_Json.HelpString"));
-            this.treeView_Json.Name = "treeView_Json";
             // 
             // button_SaveJson
             // 
@@ -7094,14 +7098,14 @@
             // dataGridView_MotiomAnimation
             // 
             resources.ApplyResources(this.dataGridView_MotiomAnimation, "dataGridView_MotiomAnimation");
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_MotiomAnimation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_MotiomAnimation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_MotiomAnimation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_MotiomAnimation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.AnimationColumn1,
@@ -20243,6 +20247,7 @@
             this.groupBox11.Name = "groupBox11";
             this.helpProvider1.SetShowHelp(this.groupBox11, ((bool)(resources.GetObject("groupBox11.ShowHelp"))));
             this.groupBox11.TabStop = false;
+            this.groupBox11.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
             // 
             // checkBox_DoNotShowMaxMinTemp
             // 
@@ -21137,6 +21142,10 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Shown += new System.EventHandler(this.Form1_Shown);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -21255,10 +21264,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_Set1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ImagesList)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel_Animation.ResumeLayout(false);
             this.tabControl_Animation.ResumeLayout(false);
@@ -21411,6 +21416,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_Scale_Center_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_Scale_Center_X)).EndInit();
             this.tabPage35.ResumeLayout(false);
+            this.tabPage35.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_EndAngle)).EndInit();
@@ -21480,6 +21486,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_ImageY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_ImageX)).EndInit();
             this.tabPage51.ResumeLayout(false);
+            this.tabPage51.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_EndAngle)).EndInit();
@@ -21511,6 +21518,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_ImageY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_ImageX)).EndInit();
             this.tabPage52.ResumeLayout(false);
+            this.tabPage52.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_Offset_Y)).EndInit();
@@ -21543,6 +21551,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_StartAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_Width)).EndInit();
             this.tabPage37.ResumeLayout(false);
+            this.tabPage37.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_EndAngle)).EndInit();
@@ -21555,6 +21564,7 @@
             this.panel_AnalogDate.ResumeLayout(false);
             this.tabControl7.ResumeLayout(false);
             this.tabPage38.ResumeLayout(false);
+            this.tabPage38.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_EndAngle)).EndInit();
@@ -21562,6 +21572,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_Offset_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_Offset_X)).EndInit();
             this.tabPage39.ResumeLayout(false);
+            this.tabPage39.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_EndAngle)).EndInit();
@@ -21569,6 +21580,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_Offset_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_Offset_X)).EndInit();
             this.tabPage40.ResumeLayout(false);
+            this.tabPage40.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_EndAngle)).EndInit();

@@ -6785,4 +6785,25 @@ több rendszerbetöltés)</value>
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
   </data>
+  <data name="button_CreatePreview.Text" xml:space="preserve">
+    <value>Hozzon létre előnézetet</value>
+  </data>
+  <data name="button_RefreshPreview.Text" xml:space="preserve">
+    <value>Előnézet frissítése</value>
+  </data>
+  <data name="checkBox_DoNotShowMaxMinTemp.Text" xml:space="preserve">
+    <value>Az aktuális hőmérséklet kijelzésekor ne jelenítse meg a maximális / minimális hőmérsékletet</value>
+  </data>
+  <data name="checkBox_ShowIn12hourFormat.Text" xml:space="preserve">
+    <value>Ha lehetséges, 12 órás formátumban jeleníti meg az időt</value>
+  </data>
+  <data name="checkBox_ShowMiles.Text" xml:space="preserve">
+    <value>Ha lehetséges, mérföldben jeleníti meg a távolságot</value>
+  </data>
+  <data name="groupBox11.Text" xml:space="preserve">
+    <value>Tételek megjelenítése</value>
+  </data>
+  <data name="groupBox10.Text" xml:space="preserve">
+    <value>Célmodell</value>
+  </data>
 </root>

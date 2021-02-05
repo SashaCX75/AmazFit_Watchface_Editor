@@ -6812,4 +6812,25 @@ větší zatížení systému)</value>
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
   </data>
+  <data name="button_CreatePreview.Text" xml:space="preserve">
+    <value>Vytvořit náhled</value>
+  </data>
+  <data name="button_RefreshPreview.Text" xml:space="preserve">
+    <value>Obnovit náhled</value>
+  </data>
+  <data name="checkBox_DoNotShowMaxMinTemp.Text" xml:space="preserve">
+    <value>Při zobrazení aktuální teploty nezobrazujte maximální / minimální teplotu</value>
+  </data>
+  <data name="checkBox_ShowIn12hourFormat.Text" xml:space="preserve">
+    <value>Pokud je to možné, čas se zobrazuje ve 12hodinovém formátu</value>
+  </data>
+  <data name="checkBox_ShowMiles.Text" xml:space="preserve">
+    <value>Pokud je to možné, vzdálenost se zobrazuje v mílích</value>
+  </data>
+  <data name="groupBox10.Text1" xml:space="preserve">
+    <value>Cílový model</value>
+  </data>
+  <data name="groupBox11.Text" xml:space="preserve">
+    <value>Zobrazuji položky</value>
+  </data>
 </root>
