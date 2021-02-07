@@ -3094,4 +3094,13 @@
   <data name="label1.Text" xml:space="preserve">
     <value>要保存的帧数</value>
   </data>
+  <data name="radioButton_large.Text" xml:space="preserve">
+    <value>1.5倍</value>
+  </data>
+  <data name="radioButton_normal.Text" xml:space="preserve">
+    <value>1倍</value>
+  </data>
+  <data name="radioButton_xlarge.Text" xml:space="preserve">
+    <value>2倍</value>
+  </data>
 </root>
