@@ -48,7 +48,8 @@ namespace GTR_Watch_face
             comboBox_ActivityStepsGoal_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityDistance_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityDistance_Decimal.Items.AddRange(ListImages.ToArray());
-            comboBox_ActivityDistance_Suffix.Items.AddRange(ListImages.ToArray());
+            comboBox_ActivityDistance_Suffix_km.Items.AddRange(ListImages.ToArray());
+            comboBox_ActivityDistance_Suffix_ml.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityPulsScale_Image.Items.AddRange(ListImages.ToArray());
             comboBox_Pulse_ClockHand_Image.Items.AddRange(ListImages.ToArray());
             comboBox_ActivityPuls_Image.Items.AddRange(ListImages.ToArray());
@@ -593,9 +594,14 @@ namespace GTR_Watch_face
 
                     //comboBox_ActivityDistance_Suffix.Text = Watch_Face.Activity.Distance.SuffixImageIndex.ToString();
                     if (Watch_Face.Activity.Distance.SuffixImageIndex != null)
-                        comboBoxSetText(comboBox_ActivityDistance_Suffix, (long)Watch_Face.Activity.Distance.SuffixImageIndex);
-                    //comboBox_ActivityDistance_Decimal.Text = Watch_Face.Activity.Distance.DecimalPointImageIndex.ToString();
-                    if (Watch_Face.Activity.Distance.DecimalPointImageIndex != null)
+                        comboBoxSetText(comboBox_ActivityDistance_Suffix_km, (long)Watch_Face.Activity.Distance.SuffixImageIndex);
+                    if (Watch_Face.Activity.Distance.Color != null)
+                    {
+                        Color new_color = ColorRead(Watch_Face.Activity.Distance.Color);
+                        comboBoxSetText(comboBox_ActivityDistance_Suffix_ml, new_color.B);
+                    }
+                        //comboBox_ActivityDistance_Decimal.Text = Watch_Face.Activity.Distance.DecimalPointImageIndex.ToString();
+                        if (Watch_Face.Activity.Distance.DecimalPointImageIndex != null)
                         comboBoxSetText(comboBox_ActivityDistance_Decimal, (long)Watch_Face.Activity.Distance.DecimalPointImageIndex);
                 }
                 else checkBox_ActivityDistance.Checked = false;
@@ -1609,9 +1615,19 @@ namespace GTR_Watch_face
                     string Alignment = StringToAlignment(comboBox_ActivityDistance_Alignment.SelectedIndex);
                     Watch_Face.Activity.Distance.Number.Alignment = Alignment;
 
-                    if ((comboBox_ActivityDistance_Suffix.SelectedIndex >= 0) &&
-                        (comboBox_ActivityDistance_Suffix.Text.Length > 0))
-                        Watch_Face.Activity.Distance.SuffixImageIndex = Int32.Parse(comboBox_ActivityDistance_Suffix.Text);
+                    if ((comboBox_ActivityDistance_Suffix_km.SelectedIndex >= 0) &&
+                        (comboBox_ActivityDistance_Suffix_km.Text.Length > 0))
+                        Watch_Face.Activity.Distance.SuffixImageIndex = Int32.Parse(comboBox_ActivityDistance_Suffix_km.Text);
+
+                    if ((comboBox_ActivityDistance_Suffix_ml.SelectedIndex >= 0) &&
+                        (comboBox_ActivityDistance_Suffix_ml.Text.Length > 0))
+                    {
+                        Color new_color = Color.FromArgb(0, 0, 0, Int32.Parse(comboBox_ActivityDistance_Suffix_ml.Text));
+                        string colorStr = ColorTranslator.ToHtml(new_color);
+                        colorStr = colorStr.Replace("#", "0x00");
+                        Watch_Face.Activity.Distance.Color = colorStr;
+                    }
+
                     if ((comboBox_ActivityDistance_Decimal.SelectedIndex >= 0) &&
                         (comboBox_ActivityDistance_Decimal.Text.Length > 0))
                         Watch_Face.Activity.Distance.DecimalPointImageIndex = Int32.Parse(comboBox_ActivityDistance_Decimal.Text);
@@ -2906,6 +2922,7 @@ namespace GTR_Watch_face
                 //DefaultValueHandling = DefaultValueHandling.Ignore,
                 NullValueHandling = NullValueHandling.Ignore
             });
+            JsonToTree(richTextBox_JSON.Text);
             JSON_Modified = true;
         }
 
@@ -3162,8 +3179,10 @@ namespace GTR_Watch_face
             comboBox_ActivityDistance_Image.Items.Clear();
             comboBox_ActivityDistance_Decimal.Text = "";
             comboBox_ActivityDistance_Decimal.Items.Clear();
-            comboBox_ActivityDistance_Suffix.Text = "";
-            comboBox_ActivityDistance_Suffix.Items.Clear();
+            comboBox_ActivityDistance_Suffix_km.Text = "";
+            comboBox_ActivityDistance_Suffix_km.Items.Clear();
+            comboBox_ActivityDistance_Suffix_ml.Text = "";
+            comboBox_ActivityDistance_Suffix_ml.Items.Clear();
             comboBox_ActivityPuls_Image.Text = "";
             comboBox_ActivityPuls_Image.Items.Clear();
             comboBox_ActivityPulsScale_Image.Text = "";

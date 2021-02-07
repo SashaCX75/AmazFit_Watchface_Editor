@@ -3083,7 +3083,7 @@
 </value>
   </data>
   <data name="button_AnimationReset.Text" xml:space="preserve">
-    <value>Ripristina animazione</value>
+    <value>Reimposta animazione</value>
   </data>
   <data name="button_SaveAnimation.Text" xml:space="preserve">
     <value>Salva animazione</value>

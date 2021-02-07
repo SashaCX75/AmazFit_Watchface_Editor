@@ -2576,17 +2576,29 @@ temperatura actual</value>
   <data name="tabPage12.Text" xml:space="preserve">
     <value>Pasos</value>
   </data>
+  <data name="label501.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 144</value>
+  </data>
+  <data name="label501.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="label501.Text" xml:space="preserve">
+    <value>Sufijo (ml):</value>
+  </data>
   <data name="label173.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 13</value>
   </data>
   <data name="label173.Text" xml:space="preserve">
     <value>Separador:</value>
   </data>
+  <data name="label172.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 117</value>
+  </data>
   <data name="label172.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 13</value>
+    <value>59, 13</value>
   </data>
   <data name="label172.Text" xml:space="preserve">
-    <value>Sufijo:</value>
+    <value>Sufijo (km):</value>
   </data>
   <data name="checkBox_ActivityDistance.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 17</value>
@@ -3019,6 +3031,33 @@ temperatura actual</value>
   </data>
   <data name="label491.Text" xml:space="preserve">
     <value>Espaciado:</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items" xml:space="preserve">
+    <value>Arriba izquierda</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items1" xml:space="preserve">
+    <value>Arriba centro</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items2" xml:space="preserve">
+    <value>Arriba derecha</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items3" xml:space="preserve">
+    <value>Centro izquierda</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items4" xml:space="preserve">
+    <value>Centro</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items5" xml:space="preserve">
+    <value>Centro derecha</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items6" xml:space="preserve">
+    <value>Abajo izquierda</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items7" xml:space="preserve">
+    <value>Abajo centro</value>
+  </data>
+  <data name="comboBox_ActivityStepsGoal_Alignment.Items8" xml:space="preserve">
+    <value>Abajo derecha</value>
   </data>
   <data name="label494.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 13</value>
@@ -6996,32 +7035,5 @@ más carga del sistema)</value>
         SlmARUpZgEVKWYBDSFZuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+D8AAPgfAADwHwAA4A8AAMAHAADA
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
-  </data>
-  <data name="comboBox_ActivityStepsGoal_Alignment.Items" xml:space="preserve">
-    <value>Arriba izquierda</value>
-  </data>
-  <data name="comboBox_ActivityStepsGoal_Alignment.Items1" xml:space="preserve">
-    <value>Arriba centro</value>
-  </data>
-  <data name="comboBox_ActivityStepsGoal_Alignment.Items2" xml:space="preserve">
-    <value>Arriba derecha</value>
-  </data>
-  <data name="comboBox_ActivityStepsGoal_Alignment.Items3" xml:space="preserve">
-    <value>Centro izquierda</value>
-  </data>
-  <data name="comboBox_ActivityStepsGoal_Alignment.Items4" xml:space="preserve">
-    <value>Centro</value>
-  </data>
-  <data name="comboBox_ActivityStepsGoal_Alignment.Items5" xml:space="preserve">
-    <value>Centro derecha</value>
-  </data>
-  <data name="comboBox_ActivityStepsGoal_Alignment.Items6" xml:space="preserve">
-    <value>Abajo izquierda</value>
-  </data>
-  <data name="comboBox_ActivityStepsGoal_Alignment.Items7" xml:space="preserve">
-    <value>Abajo centro</value>
-  </data>
-  <data name="comboBox_ActivityStepsGoal_Alignment.Items8" xml:space="preserve">
-    <value>Abajo derecha</value>
   </data>
 </root>

@@ -321,4 +321,22 @@
   <data name="Message_bigFile_Text1_trex" xml:space="preserve">
     <value>Uncompressed file size exceeds 5.5MB.</value>
   </data>
+  <data name="Message_WarningActivityError" xml:space="preserve">
+    <value>It is desirable to indicate an image for the error symbol in case of the activities data absence.</value>
+  </data>
+  <data name="Message_WarningDateOnelineAndSeparate" xml:space="preserve">
+    <value>Date displayed in separate blocks does not work together with date displayed in one line</value>
+  </data>
+  <data name="Message_WarningPreview_Text1" xml:space="preserve">
+    <value>Image sizes for Preview differ from standard ones.</value>
+  </data>
+  <data name="Message_WarningPreview_Text2" xml:space="preserve">
+    <value>Use existing dimensions?</value>
+  </data>
+  <data name="Message_WarningPulseIconCount_Text" xml:space="preserve">
+    <value>It is recommended to use 6 segments to display the heart rate.</value>
+  </data>
+  <data name="Message_WarningWeatherError" xml:space="preserve">
+    <value>The image for the error symbol may be incorrectly specified if there is no current temperature data.</value>
+  </data>
 </root>

@@ -303,4 +303,34 @@
   <data name="Message_bigFile_Text1_trex" xml:space="preserve">
     <value>Velikost nekomprimovaného souboru přesáhla 5.5MB</value>
   </data>
+  <data name="FilterBin" xml:space="preserve">
+    <value>Binární soubor(*.bin)|*.bin</value>
+  </data>
+  <data name="FilterGif" xml:space="preserve">
+    <value>Soubory GIF (*.gif)|*.gif</value>
+  </data>
+  <data name="FilterJson" xml:space="preserve">
+    <value>Soubor Json (*.json) | *.json</value>
+  </data>
+  <data name="FilterPng" xml:space="preserve">
+    <value>Soubory PNG (*.png)|*.png</value>
+  </data>
+  <data name="Message_WarningActivityError" xml:space="preserve">
+    <value>Je žádoucí definovat obrázek pro symbol chyby pro případ absence dat aktivit.</value>
+  </data>
+  <data name="Message_WarningDateOnelineAndSeparate" xml:space="preserve">
+    <value>Zobrazení data v samostatných blocích nefunguje společně se zobrazením data v jednom řádku</value>
+  </data>
+  <data name="Message_WarningPreview_Text1" xml:space="preserve">
+    <value>Velikosti obrázků pro Preview se od standardních liší.</value>
+  </data>
+  <data name="Message_WarningPreview_Text2" xml:space="preserve">
+    <value>Použít existující dimenze?</value>
+  </data>
+  <data name="Message_WarningPulseIconCount_Text" xml:space="preserve">
+    <value>K zobrazení srdeční frekvence se doporučuje použít 6 segmentů.</value>
+  </data>
+  <data name="Message_WarningWeatherError" xml:space="preserve">
+    <value>Obrázek se symbolem chyby může být nesprávně zadán, pokud nejsou k dispozici aktuální údaje o teplotě.</value>
+  </data>
 </root>

@@ -367,8 +367,15 @@ namespace GTR_Watch_face
             checkBox_Shortcuts_Area.Checked = Program_Settings.Shortcuts_Area;
             checkBox_Shortcuts_Border.Checked = Program_Settings.Shortcuts_Border;
 
+            checkBox_ShowMiles.Checked = Program_Settings.ShowMiles;
+            checkBox_ShowIn12hourFormat.Checked = Program_Settings.ShowIn12hourFormat;
+            checkBox_DoNotShowMaxMinTemp.Checked = Program_Settings.DoNotShowMaxMinTemp;
+
             if (Program_Settings.language.Length>1) comboBox_Language.Text = Program_Settings.language;
             dataGridView_MotiomAnimation.RowTemplate.Height = (int)(18 * currentDPI);
+
+            if (Program_Settings.Splitter_Pos > 0 ) 
+                splitContainer1.SplitterDistance = Program_Settings.Splitter_Pos;
 
             Settings_Load = false;
 
@@ -1150,13 +1157,14 @@ namespace GTR_Watch_face
                             Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        if ((fileSize >= 1.5) && (radioButton_42.Checked || radioButton_gts.Checked || radioButton_Verge.Checked))
+                        if ((fileSize >= 1.5) && (radioButton_42.Checked || radioButton_gts.Checked 
+                            || radioButton_Verge.Checked || radioButton_AmazfitX.Checked))
                         {
                             MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_gts + Environment.NewLine + Environment.NewLine +
                             Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        if ((fileSize >= 1.95) && (radioButton_47.Checked || radioButton_AmazfitX.Checked))
+                        if ((fileSize >= 1.95) && (radioButton_47.Checked))
                         {
                             MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_gtr47 + Environment.NewLine + Environment.NewLine +
                             Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
@@ -1405,13 +1413,14 @@ namespace GTR_Watch_face
                             Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        if ((fileSize >= 1.5) && (radioButton_42.Checked || radioButton_gts.Checked || radioButton_Verge.Checked))
+                        if ((fileSize >= 1.5) && (radioButton_42.Checked || radioButton_gts.Checked 
+                            || radioButton_Verge.Checked || radioButton_AmazfitX.Checked))
                         {
                             MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_gts + Environment.NewLine + Environment.NewLine +
                             Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        if ((fileSize >= 1.95) && (radioButton_47.Checked || radioButton_AmazfitX.Checked))
+                        if ((fileSize >= 1.95) && (radioButton_47.Checked))
                         {
                             MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_gtr47 + Environment.NewLine + Environment.NewLine +
                             Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
@@ -1701,7 +1710,6 @@ namespace GTR_Watch_face
         private void LoadJsonAndImage(string fullfilename)
         {
             Logger.WriteLine("* LoadJsonAndImage");
-            //Logger.WriteLine("LoadJsonAndImage");
             FileName = Path.GetFileName(fullfilename);
             FullFileDir = Path.GetDirectoryName(fullfilename);
             string text = File.ReadAllText(fullfilename);
@@ -1713,7 +1721,7 @@ namespace GTR_Watch_face
             dataGridView_ImagesList.Rows.Clear();
             dataGridView_Battery_IconSet.Rows.Clear();
             dataGridView_SPSliced.Rows.Clear();
-            //Logger.WriteLine("Прочитали текст из json файла " + fullfilename);
+            Logger.WriteLine("Прочитали текст из json файла " + fullfilename);
 
             DirectoryInfo Folder;
             FileInfo[] Images;
@@ -1816,9 +1824,10 @@ namespace GTR_Watch_face
                 //DefaultValueHandling = DefaultValueHandling.Ignore,
                 NullValueHandling = NullValueHandling.Ignore
             });
+            JsonToTree(richTextBox_JSON.Text);
 
-            
-            
+
+
             JSON_read();
             //Logger.WriteLine("Установили значения в соответствии с json файлом");
 
@@ -2571,7 +2580,7 @@ namespace GTR_Watch_face
                 panel_Date.Height = 1;
                 panel_AnalogDate.Height = 1;
                 panel_StepsProgress.Height = 1;
-                panel_Activity.Height = (int)(235 * currentDPI);
+                panel_Activity.Height = (int)(240 * currentDPI);
                 panel_Status.Height = 1;
                 panel_Battery.Height = 1;
                 panel_AnalogClock.Height = 1;
@@ -3101,7 +3110,8 @@ namespace GTR_Watch_face
             numericUpDown_ActivityDistance_Count.Enabled = b;
             numericUpDown_ActivityDistance_Spacing.Enabled = b;
             comboBox_ActivityDistance_Alignment.Enabled = b;
-            comboBox_ActivityDistance_Suffix.Enabled = b;
+            comboBox_ActivityDistance_Suffix_km.Enabled = b;
+            comboBox_ActivityDistance_Suffix_ml.Enabled = b;
             comboBox_ActivityDistance_Decimal.Enabled = b;
 
             label132.Enabled = b;
@@ -3116,6 +3126,7 @@ namespace GTR_Watch_face
             label141.Enabled = b;
             label172.Enabled = b;
             label173.Enabled = b;
+            label501.Enabled = b;
         }
 
         private void checkBox_ActivityPuls_CheckedChanged(object sender, EventArgs e)
@@ -5764,6 +5775,7 @@ namespace GTR_Watch_face
                 //DefaultValueHandling = DefaultValueHandling.Ignore,
                 NullValueHandling = NullValueHandling.Ignore
             });
+            JsonToTree(richTextBox_JSON.Text);
             PreviewView = false;
             JSON_read();
             PreviewView = true;
@@ -5922,7 +5934,7 @@ namespace GTR_Watch_face
             {
                 if ((Watch_Face.Weather.Temperature.Current != null) && (Watch_Face.Weather.Temperature.Today == null))
                 {
-                    if (Watch_Face.StepsProgress != null && Watch_Face.StepsProgress.ClockHand != null)
+                    //if (Watch_Face.StepsProgress != null && Watch_Face.StepsProgress.ClockHand != null)
                     {
                         MessageBox.Show(Properties.FormStrings.Message_WarningTemperature_Text,
                             Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning); 
@@ -7400,8 +7412,24 @@ namespace GTR_Watch_face
 
         private void checkBox_Shortcuts_Area_CheckedChanged(object sender, EventArgs e)
         {
+            if (Settings_Load) return;
             Program_Settings.Shortcuts_Area = checkBox_Shortcuts_Area.Checked;
             Program_Settings.Shortcuts_Border = checkBox_Shortcuts_Border.Checked;
+
+            string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+            {
+                //DefaultValueHandling = DefaultValueHandling.Ignore,
+                NullValueHandling = NullValueHandling.Ignore
+            });
+            File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
+        }
+
+        private void checkBox_ShowMiles_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Settings_Load) return;
+            Program_Settings.ShowMiles = checkBox_ShowMiles.Checked;
+            Program_Settings.ShowIn12hourFormat = checkBox_ShowIn12hourFormat.Checked;
+            Program_Settings.DoNotShowMaxMinTemp = checkBox_DoNotShowMaxMinTemp.Checked;
 
             string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
             {
@@ -7816,13 +7844,21 @@ namespace GTR_Watch_face
                 for (int i = comboBox_StaticAnimation_Image.SelectedIndex;
                     i < (comboBox_StaticAnimation_Image.SelectedIndex + (int)numericUpDown_StaticAnimation_Count.Value); i++)
                 {
-                    using (FileStream stream = new FileStream(ListImagesFullName[i], FileMode.Open, 
-                        FileAccess.Read, FileShare.ReadWrite))
+                    //using (FileStream stream = new FileStream(ListImagesFullName[i], FileMode.Open, 
+                    //    FileAccess.Read, FileShare.ReadWrite))
+                    //{
+                    //    loadedImage = Image.FromStream(stream);
+                    //}
+                    //if (i < ListImagesFullName.Count) Images.Add(new Bitmap(loadedImage));
+                    if (i < ListImagesFullName.Count)
                     {
-                        loadedImage = Image.FromStream(stream);
+                        using (FileStream stream = new FileStream(ListImagesFullName[i], FileMode.Open,
+                        FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            loadedImage = Image.FromStream(stream);
+                        }
+                        Images.Add(new Bitmap(loadedImage));
                     }
-                    if (i < ListImagesFullName.Count) Images.Add(new Bitmap(loadedImage));
-                    //if (i < ListImagesFullName.Count) Images.Add(new Bitmap(ListImagesFullName[i]));
                 }
             }
             if (loadedImage !=null) loadedImage.Dispose();
@@ -9175,6 +9211,7 @@ namespace GTR_Watch_face
                         //DefaultValueHandling = DefaultValueHandling.Ignore,
                         NullValueHandling = NullValueHandling.Ignore
                     });
+                    JsonToTree(richTextBox_JSON.Text);
                     PreviewView = true;
                     JSON_Modified = true;
                     FormText();
@@ -9230,11 +9267,13 @@ namespace GTR_Watch_face
                     if (Watch_Face.Background == null) Watch_Face.Background = new Background();
                     Watch_Face.Background.Preview = new ImageW();
                     Watch_Face.Background.Preview.ImageIndex = 1;
-                    JSON_read(); richTextBox_JSON.Text = JsonConvert.SerializeObject(Watch_Face, Formatting.Indented, new JsonSerializerSettings
+                    JSON_read(); 
+                    richTextBox_JSON.Text = JsonConvert.SerializeObject(Watch_Face, Formatting.Indented, new JsonSerializerSettings
                     {
                         //DefaultValueHandling = DefaultValueHandling.Ignore,
                         NullValueHandling = NullValueHandling.Ignore
                     });
+                    JsonToTree(richTextBox_JSON.Text);
                     PreviewView = true;
                     JSON_Modified = true;
                     FormText();
@@ -9246,12 +9285,100 @@ namespace GTR_Watch_face
 
         }
 
+        private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+            Program_Settings.Splitter_Pos = e.SplitY;
+            string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+            {
+                //DefaultValueHandling = DefaultValueHandling.Ignore,
+                NullValueHandling = NullValueHandling.Ignore
+            });
+            File.WriteAllText("Settings.json", JSON_String, Encoding.UTF8);
+        }
+
         private void save_JSON_File(String fullfilename, String saveString)
         {
             saveString = saveString.Replace("\r", "");
             saveString = saveString.Replace("\n", Environment.NewLine);
             File.WriteAllText(fullfilename, saveString, Encoding.UTF8);
         }
+
+        #region JsonToTree
+        private void JsonToTree(string stringJson)
+        {
+            var savedExpansionState = treeView_Json.Nodes.GetExpansionState();
+            string treeName = "*";
+            if (FileName != null && FileName.Length > 0) treeName = FileName;
+            using (var jsonReader = new JsonTextReader(new StringReader(stringJson)))
+            {
+                var root = JToken.Load(jsonReader);
+                DisplayTreeView(root, Path.GetFileNameWithoutExtension(treeName));
+            }
+
+            treeView_Json.Nodes.SetExpansionState(savedExpansionState);
+            if(savedExpansionState.Count == 0)
+            {
+                treeView_Json.CollapseAll();
+                if (treeView_Json.TopNode != null) treeView_Json.TopNode.Expand();
+            };
+
+        }
+        private void DisplayTreeView(JToken root, string rootName)
+        {
+            treeView_Json.BeginUpdate();
+            try
+            {
+                treeView_Json.Nodes.Clear();
+                var tNode = treeView_Json.Nodes[treeView_Json.Nodes.Add(new TreeNode(rootName))];
+                tNode.Tag = root;
+
+                AddNode(root, tNode);
+
+                //treeView_Json.ExpandAll();
+            }
+            finally
+            {
+                treeView_Json.EndUpdate();
+            }
+        }
+
+        private void AddNode(JToken token, TreeNode inTreeNode)
+        {
+            if (token == null)
+                return;
+            if (token is JValue)
+            {
+                var childNode = inTreeNode.Nodes[inTreeNode.Nodes.Add(new TreeNode(token.ToString()))];
+                childNode.Tag = token;
+            }
+            else if (token is JObject)
+            {
+                var obj = (JObject)token;
+                foreach (var property in obj.Properties())
+                {
+                    var childNode = inTreeNode.Nodes[inTreeNode.Nodes.Add(new TreeNode(property.Name))];
+                    childNode.Tag = property;
+                    AddNode(property.Value, childNode);
+                }
+            }
+            else if (token is JArray)
+            {
+                var array = (JArray)token;
+                for (int i = 0; i < array.Count; i++)
+                {
+                    var childNode = inTreeNode.Nodes[inTreeNode.Nodes.Add(new TreeNode(i.ToString()))];
+                    childNode.Tag = array[i];
+                    AddNode(array[i], childNode);
+                }
+            }
+            else
+            {
+                Console.WriteLine(string.Format("{0} not implemented", token.Type)); // JConstructor, JRaw
+            }
+
+        }
+
+        #endregion
 
         //private int getOSversion()
         //{
@@ -9265,8 +9392,39 @@ namespace GTR_Watch_face
     }
 }
 
+// нужен для запоминания узлов дерева
+public static class TreeViewExtensions
+{
+    public static List<string> GetExpansionState(this TreeNodeCollection nodes)
+    {
+        return nodes.Descendants()
+                    .Where(n => n.IsExpanded)
+                    .Select(n => n.FullPath)
+                    .ToList();
+    }
 
+    public static void SetExpansionState(this TreeNodeCollection nodes, List<string> savedExpansionState)
+    {
+        foreach (var node in nodes.Descendants()
+                                  .Where(n => savedExpansionState.Contains(n.FullPath)))
+        {
+            node.Expand();
+        }
+    }
 
+    public static IEnumerable<TreeNode> Descendants(this TreeNodeCollection c)
+    {
+        foreach (var node in c.OfType<TreeNode>())
+        {
+            yield return node;
+
+            foreach (var child in node.Nodes.Descendants())
+            {
+                yield return child;
+            }
+        }
+    }
+}
 
 
 public static class MouseСoordinates
