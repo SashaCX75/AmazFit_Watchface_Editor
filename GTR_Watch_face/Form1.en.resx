@@ -6839,4 +6839,16 @@ more system load)</value>
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
   </data>
+  <data name="checkBox_DoNotShowMaxMinTemp.Text" xml:space="preserve">
+    <value>Do not display maximum / minimum temperature when displaying current temperature</value>
+  </data>
+  <data name="checkBox_ShowIn12hourFormat.Text" xml:space="preserve">
+    <value>If possible, display time in 12-hour format</value>
+  </data>
+  <data name="checkBox_ShowMiles.Text" xml:space="preserve">
+    <value>Display distance in miles if possible</value>
+  </data>
+  <data name="groupBox11.Text" xml:space="preserve">
+    <value>Displaying items</value>
+  </data>
 </root>

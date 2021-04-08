@@ -15,4 +15,13 @@
         public ImageSet Tens { get; set; }
         public ImageSet Ones { get; set; }
     }
+
+    public class AmPmIcon
+    {
+        public Coordinates Coordinates { get; set; }
+        public long AmImageIndex { get; set; }
+        public long PmImageIndex { get; set; }
+        public long? ImageIndex4 { get; set; }
+        public long? ImageIndex5 { get; set; }
+    }
 }

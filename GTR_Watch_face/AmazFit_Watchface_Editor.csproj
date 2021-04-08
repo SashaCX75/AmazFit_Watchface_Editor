@@ -365,6 +365,27 @@
     <None Include="Resources\Files_Copy_File_icon.png" />
     <None Include="Resources\Files_Clipboard_icon.png" />
     <None Include="Resources\Amazfit_GTR_47mm.png" />
+    <Content Include="Mask\mask_amazfitx.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mask\mask_gtr42.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mask\mask_gtr47.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mask\mask_gts.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mask\mask_trex.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\GTR2_Packer.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\main.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="watch.ico" />
   </ItemGroup>
   <ItemGroup>

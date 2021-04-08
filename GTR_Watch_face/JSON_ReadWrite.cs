@@ -192,23 +192,23 @@ namespace GTR_Watch_face
                 }
                 else checkBox_Delimiter.Checked = false;
 
-                if (Watch_Face.Time.AmPm != null)
+                if (Watch_Face.Time.AmPmIcon != null)
                 {
                     checkBox_AmPm.Checked = true;
-                    numericUpDown_AmPm_X.Value = Watch_Face.Time.AmPm.X;
-                    numericUpDown_AmPm_Y.Value = Watch_Face.Time.AmPm.Y;
-                    if (Watch_Face.Time.AmPm.ImageIndexAMCN > 0)
+                    numericUpDown_AmPm_X.Value = Watch_Face.Time.AmPmIcon.Coordinates.X;
+                    numericUpDown_AmPm_Y.Value = Watch_Face.Time.AmPmIcon.Coordinates.Y;
+                    if (Watch_Face.Time.AmPmIcon.AmImageIndex > 0)
                         //comboBox_Image_Am.Text = Watch_Face.Time.AmPm.ImageIndexAMCN.ToString();
-                        comboBoxSetText(comboBox_Image_Am, Watch_Face.Time.AmPm.ImageIndexAMCN);
-                    if (Watch_Face.Time.AmPm.ImageIndexAMEN != null && Watch_Face.Time.AmPm.ImageIndexAMEN > 0)
+                        comboBoxSetText(comboBox_Image_Am, Watch_Face.Time.AmPmIcon.AmImageIndex);
+                    if (Watch_Face.Time.AmPmIcon.ImageIndex4 != null && Watch_Face.Time.AmPmIcon.ImageIndex4 > 0)
                         //comboBox_Image_Am.Text = Watch_Face.Time.AmPm.ImageIndexAMEN.ToString();
-                        comboBoxSetText(comboBox_Image_Am, (long)Watch_Face.Time.AmPm.ImageIndexAMEN);
-                    if (Watch_Face.Time.AmPm.ImageIndexPMCN > 0)
+                        comboBoxSetText(comboBox_Image_Am, (long)Watch_Face.Time.AmPmIcon.ImageIndex4);
+                    if (Watch_Face.Time.AmPmIcon.PmImageIndex > 0)
                         //comboBox_Image_Pm.Text = Watch_Face.Time.AmPm.ImageIndexPMCN.ToString();
-                        comboBoxSetText(comboBox_Image_Pm, Watch_Face.Time.AmPm.ImageIndexPMCN);
-                    if (Watch_Face.Time.AmPm.ImageIndexPMEN != null && Watch_Face.Time.AmPm.ImageIndexPMEN > 0)
+                        comboBoxSetText(comboBox_Image_Pm, Watch_Face.Time.AmPmIcon.PmImageIndex);
+                    if (Watch_Face.Time.AmPmIcon.ImageIndex5 != null && Watch_Face.Time.AmPmIcon.ImageIndex5 > 0)
                         //comboBox_Image_Pm.Text = Watch_Face.Time.AmPm.ImageIndexPMEN.ToString();
-                        comboBoxSetText(comboBox_Image_Pm, (long)Watch_Face.Time.AmPm.ImageIndexPMEN);
+                        comboBoxSetText(comboBox_Image_Pm, (long)Watch_Face.Time.AmPmIcon.ImageIndex5);
                 }
                 else checkBox_AmPm.Checked = false;
             }
@@ -966,35 +966,35 @@ namespace GTR_Watch_face
                 }
                 else checkBox_Battery_ClockHand.Checked = false;
 
-                if (Watch_Face.Battery.Percent != null)
+                if (Watch_Face.Battery.Unknown5 != null)
                 {
                     checkBox_Battery_Percent.Checked = true;
-                    numericUpDown_Battery_Percent_X.Value = Watch_Face.Battery.Percent.X;
-                    numericUpDown_Battery_Percent_Y.Value = Watch_Face.Battery.Percent.Y;
+                    numericUpDown_Battery_Percent_X.Value = Watch_Face.Battery.Unknown5.X;
+                    numericUpDown_Battery_Percent_Y.Value = Watch_Face.Battery.Unknown5.Y;
                     //comboBox_Battery_Percent_Image.Text = Watch_Face.Battery.Percent.ImageIndex.ToString();
-                    comboBoxSetText(comboBox_Battery_Percent_Image, Watch_Face.Battery.Percent.ImageIndex);
+                    comboBoxSetText(comboBox_Battery_Percent_Image, Watch_Face.Battery.Unknown5.ImageIndex);
                 }
                 else checkBox_Battery_Percent.Checked = false;
 
-                if (Watch_Face.Battery.Scale != null)
+                if (Watch_Face.Battery.Unknown6 != null)
                 {
                     checkBox_Battery_Scale.Checked = true;
-                    numericUpDown_Battery_Scale_Center_X.Value = Watch_Face.Battery.Scale.CenterX;
-                    numericUpDown_Battery_Scale_Center_Y.Value = Watch_Face.Battery.Scale.CenterY;
-                    numericUpDown_Battery_Scale_Radius_X.Value = Watch_Face.Battery.Scale.RadiusX;
-                    numericUpDown_Battery_Scale_Radius_Y.Value = Watch_Face.Battery.Scale.RadiusY;
-                    if (Watch_Face.Battery.Scale.RadiusY == 0)
-                        numericUpDown_Battery_Scale_Radius_Y.Value = Watch_Face.Battery.Scale.RadiusX;
+                    numericUpDown_Battery_Scale_Center_X.Value = Watch_Face.Battery.Unknown6.CenterX;
+                    numericUpDown_Battery_Scale_Center_Y.Value = Watch_Face.Battery.Unknown6.CenterY;
+                    numericUpDown_Battery_Scale_Radius_X.Value = Watch_Face.Battery.Unknown6.RadiusX;
+                    numericUpDown_Battery_Scale_Radius_Y.Value = Watch_Face.Battery.Unknown6.RadiusY;
+                    if (Watch_Face.Battery.Unknown6.RadiusY == 0)
+                        numericUpDown_Battery_Scale_Radius_Y.Value = Watch_Face.Battery.Unknown6.RadiusX;
 
-                    numericUpDown_Battery_Scale_StartAngle.Value = Watch_Face.Battery.Scale.StartAngle;
-                    numericUpDown_Battery_Scale_EndAngle.Value = Watch_Face.Battery.Scale.EndAngle;
-                    numericUpDown_Battery_Scale_Width.Value = Watch_Face.Battery.Scale.Width;
+                    numericUpDown_Battery_Scale_StartAngle.Value = Watch_Face.Battery.Unknown6.StartAngle;
+                    numericUpDown_Battery_Scale_EndAngle.Value = Watch_Face.Battery.Unknown6.EndAngle;
+                    numericUpDown_Battery_Scale_Width.Value = Watch_Face.Battery.Unknown6.Width;
                     
-                    Color new_color = ColorRead(Watch_Face.Battery.Scale.Color);
+                    Color new_color = ColorRead(Watch_Face.Battery.Unknown6.Color);
                     comboBox_Battery_Scale_Color.BackColor = new_color;
                     colorDialog_Battery.Color = new_color;
 
-                    switch (Watch_Face.Battery.Scale.Flatness)
+                    switch (Watch_Face.Battery.Unknown6.Flatness)
                     {
                         case 90:
                             //comboBox_Battery_Flatness.Text = "Треугольное";
@@ -1010,9 +1010,9 @@ namespace GTR_Watch_face
                             break;
                     }
 
-                    if (Watch_Face.Battery.Scale.ImageIndex != null)
+                    if (Watch_Face.Battery.Unknown6.ImageIndex != null)
                     {
-                        comboBoxSetText(comboBox_Battery_Scale_Image, (long)Watch_Face.Battery.Scale.ImageIndex);
+                        comboBoxSetText(comboBox_Battery_Scale_Image, (long)Watch_Face.Battery.Unknown6.ImageIndex);
                         int x = 0;
                         int y = 0;
                         ColorToCoodinates(new_color, out x, out y);
@@ -1299,13 +1299,13 @@ namespace GTR_Watch_face
                 }
                 else checkBox_Shortcuts_Weather.Checked = false;
 
-                if (Watch_Face.Shortcuts.Unknown4 != null && Watch_Face.Shortcuts.Unknown4.Element != null)
+                if (Watch_Face.Shortcuts.EnergySaving != null && Watch_Face.Shortcuts.EnergySaving.Element != null)
                 {
                     checkBox_Shortcuts_Energy.Checked = true;
-                    numericUpDown_Shortcuts_Energy_X.Value = Watch_Face.Shortcuts.Unknown4.Element.TopLeftX;
-                    numericUpDown_Shortcuts_Energy_Y.Value = Watch_Face.Shortcuts.Unknown4.Element.TopLeftY;
-                    numericUpDown_Shortcuts_Energy_Width.Value = Watch_Face.Shortcuts.Unknown4.Element.Width;
-                    numericUpDown_Shortcuts_Energy_Height.Value = Watch_Face.Shortcuts.Unknown4.Element.Height;
+                    numericUpDown_Shortcuts_Energy_X.Value = Watch_Face.Shortcuts.EnergySaving.Element.TopLeftX;
+                    numericUpDown_Shortcuts_Energy_Y.Value = Watch_Face.Shortcuts.EnergySaving.Element.TopLeftY;
+                    numericUpDown_Shortcuts_Energy_Width.Value = Watch_Face.Shortcuts.EnergySaving.Element.Width;
+                    numericUpDown_Shortcuts_Energy_Height.Value = Watch_Face.Shortcuts.EnergySaving.Element.Height;
                 }
                 else checkBox_Shortcuts_Energy.Checked = false;
             }
@@ -1437,22 +1437,22 @@ namespace GTR_Watch_face
             if (radioButton_47.Checked)
             {
                 Watch_Face.Info = new Device_Id();
-                Watch_Face.Info.DeviceId = 40;
+                Watch_Face.Info.DeviceId = 59;
             }
             if (radioButton_42.Checked)
             {
                 Watch_Face.Info = new Device_Id();
-                Watch_Face.Info.DeviceId = 42;
+                Watch_Face.Info.DeviceId = 64;
             }
             if (radioButton_gts.Checked)
             {
                 Watch_Face.Info = new Device_Id();
-                Watch_Face.Info.DeviceId = 46;
+                Watch_Face.Info.DeviceId = 65;
             }
             if (radioButton_TRex.Checked)
             {
                 Watch_Face.Info = new Device_Id();
-                Watch_Face.Info.DeviceId = 52;
+                Watch_Face.Info.DeviceId = 83;
             }
             if (radioButton_Verge.Checked)
             {
@@ -1556,14 +1556,16 @@ namespace GTR_Watch_face
                     (comboBox_Image_Pm.SelectedIndex >= 0))
                 {
                     if (Watch_Face.Time == null) Watch_Face.Time = new TimeW();
-                    if (Watch_Face.Time.AmPm == null) Watch_Face.Time.AmPm = new AmPm();
+                    if (Watch_Face.Time.AmPmIcon == null) Watch_Face.Time.AmPmIcon = new AmPmIcon();
+                    if (Watch_Face.Time.AmPmIcon.Coordinates == null)
+                        Watch_Face.Time.AmPmIcon.Coordinates = new Coordinates();
 
-                    Watch_Face.Time.AmPm.ImageIndexAMCN = Int32.Parse(comboBox_Image_Am.Text);
+                    Watch_Face.Time.AmPmIcon.AmImageIndex = Int32.Parse(comboBox_Image_Am.Text);
                     //Watch_Face.Time.AmPm.ImageIndexAMEN = Int32.Parse(comboBox_Image_Am.Text);
-                    Watch_Face.Time.AmPm.ImageIndexPMCN = Int32.Parse(comboBox_Image_Pm.Text);
+                    Watch_Face.Time.AmPmIcon.PmImageIndex = Int32.Parse(comboBox_Image_Pm.Text);
                     //Watch_Face.Time.AmPm.ImageIndexPMEN = Int32.Parse(comboBox_Image_Pm.Text);
-                    Watch_Face.Time.AmPm.X = (int)numericUpDown_AmPm_X.Value;
-                    Watch_Face.Time.AmPm.Y = (int)numericUpDown_AmPm_Y.Value;
+                    Watch_Face.Time.AmPmIcon.Coordinates.X = (int)numericUpDown_AmPm_X.Value;
+                    Watch_Face.Time.AmPmIcon.Coordinates.Y = (int)numericUpDown_AmPm_Y.Value;
                 }
 
                 if ((checkBox_Delimiter.Checked) && (comboBox_Delimiter_Image.SelectedIndex >= 0))
@@ -2409,32 +2411,32 @@ namespace GTR_Watch_face
                 if ((checkBox_Battery_Percent.Checked) && (comboBox_Battery_Percent_Image.SelectedIndex >= 0))
                 {
                     if (Watch_Face.Battery == null) Watch_Face.Battery = new Battery();
-                    if (Watch_Face.Battery.Percent == null) Watch_Face.Battery.Percent = new ImageW();
+                    if (Watch_Face.Battery.Unknown5 == null) Watch_Face.Battery.Unknown5 = new ImageW();
 
-                    Watch_Face.Battery.Percent.ImageIndex = Int32.Parse(comboBox_Battery_Percent_Image.Text);
-                    Watch_Face.Battery.Percent.X = (int)numericUpDown_Battery_Percent_X.Value;
-                    Watch_Face.Battery.Percent.Y = (int)numericUpDown_Battery_Percent_Y.Value;
+                    Watch_Face.Battery.Unknown5.ImageIndex = Int32.Parse(comboBox_Battery_Percent_Image.Text);
+                    Watch_Face.Battery.Unknown5.X = (int)numericUpDown_Battery_Percent_X.Value;
+                    Watch_Face.Battery.Unknown5.Y = (int)numericUpDown_Battery_Percent_Y.Value;
                 }
 
                 if (checkBox_Battery_Scale.Checked)
                 {
                     if (Watch_Face.Battery == null) Watch_Face.Battery = new Battery();
-                    if (Watch_Face.Battery.Scale == null) Watch_Face.Battery.Scale = new CircleScale();
+                    if (Watch_Face.Battery.Unknown6 == null) Watch_Face.Battery.Unknown6 = new CircleScale();
 
-                    Watch_Face.Battery.Scale.CenterX = (int)numericUpDown_Battery_Scale_Center_X.Value;
-                    Watch_Face.Battery.Scale.CenterY = (int)numericUpDown_Battery_Scale_Center_Y.Value;
-                    Watch_Face.Battery.Scale.RadiusX = (int)numericUpDown_Battery_Scale_Radius_X.Value;
-                    Watch_Face.Battery.Scale.RadiusY = (int)numericUpDown_Battery_Scale_Radius_Y.Value;
+                    Watch_Face.Battery.Unknown6.CenterX = (int)numericUpDown_Battery_Scale_Center_X.Value;
+                    Watch_Face.Battery.Unknown6.CenterY = (int)numericUpDown_Battery_Scale_Center_Y.Value;
+                    Watch_Face.Battery.Unknown6.RadiusX = (int)numericUpDown_Battery_Scale_Radius_X.Value;
+                    Watch_Face.Battery.Unknown6.RadiusY = (int)numericUpDown_Battery_Scale_Radius_Y.Value;
 
-                    Watch_Face.Battery.Scale.StartAngle = (int)numericUpDown_Battery_Scale_StartAngle.Value;
-                    Watch_Face.Battery.Scale.EndAngle = (int)numericUpDown_Battery_Scale_EndAngle.Value;
-                    Watch_Face.Battery.Scale.Width = (int)numericUpDown_Battery_Scale_Width.Value;
+                    Watch_Face.Battery.Unknown6.StartAngle = (int)numericUpDown_Battery_Scale_StartAngle.Value;
+                    Watch_Face.Battery.Unknown6.EndAngle = (int)numericUpDown_Battery_Scale_EndAngle.Value;
+                    Watch_Face.Battery.Unknown6.Width = (int)numericUpDown_Battery_Scale_Width.Value;
 
                     Color color = comboBox_Battery_Scale_Color.BackColor;
                     Color new_color = Color.FromArgb(0, color.R, color.G, color.B);
                     string colorStr = ColorTranslator.ToHtml(new_color);
                     colorStr = colorStr.Replace("#", "0x00");
-                    Watch_Face.Battery.Scale.Color = colorStr;
+                    Watch_Face.Battery.Unknown6.Color = colorStr;
 
                     //switch (comboBox_Battery_Flatness.Text)
                     //{
@@ -2451,13 +2453,13 @@ namespace GTR_Watch_face
                     switch (comboBox_Battery_Flatness.SelectedIndex)
                     {
                         case 1:
-                            Watch_Face.Battery.Scale.Flatness = 90;
+                            Watch_Face.Battery.Unknown6.Flatness = 90;
                             break;
                         case 2:
-                            Watch_Face.Battery.Scale.Flatness = 180;
+                            Watch_Face.Battery.Unknown6.Flatness = 180;
                             break;
                         default:
-                            Watch_Face.Battery.Scale.Flatness = 0;
+                            Watch_Face.Battery.Unknown6.Flatness = 0;
                             break;
                     }
 
@@ -2469,10 +2471,10 @@ namespace GTR_Watch_face
                         int imageIndex = comboBox_Battery_Scale_Image.SelectedIndex;
                         colorStr = CoodinatesToColor(imageX, imageY);
                         Bitmap src = new Bitmap(ListImagesFullName[imageIndex]);
-                        Watch_Face.Battery.Scale.CenterX = imageX + src.Width / 2;
-                        Watch_Face.Battery.Scale.CenterY = imageY + src.Height / 2;
-                        Watch_Face.Battery.Scale.Color = colorStr;
-                        Watch_Face.Battery.Scale.ImageIndex = imageIndex;
+                        Watch_Face.Battery.Unknown6.CenterX = imageX + src.Width / 2;
+                        Watch_Face.Battery.Unknown6.CenterY = imageY + src.Height / 2;
+                        Watch_Face.Battery.Unknown6.Color = colorStr;
+                        Watch_Face.Battery.Unknown6.ImageIndex = imageIndex;
                     }
                 }
 
@@ -2810,12 +2812,12 @@ namespace GTR_Watch_face
                 if (checkBox_Shortcuts_Energy.Checked)
                 {
                     if (Watch_Face.Shortcuts == null) Watch_Face.Shortcuts = new Shortcuts();
-                    if (Watch_Face.Shortcuts.Unknown4 == null) Watch_Face.Shortcuts.Unknown4 = new Shortcut();
-                    Watch_Face.Shortcuts.Unknown4.Element = new Element();
-                    Watch_Face.Shortcuts.Unknown4.Element.TopLeftX = (int)numericUpDown_Shortcuts_Energy_X.Value;
-                    Watch_Face.Shortcuts.Unknown4.Element.TopLeftY = (int)numericUpDown_Shortcuts_Energy_Y.Value;
-                    Watch_Face.Shortcuts.Unknown4.Element.Width = (int)numericUpDown_Shortcuts_Energy_Width.Value;
-                    Watch_Face.Shortcuts.Unknown4.Element.Height = (int)numericUpDown_Shortcuts_Energy_Height.Value;
+                    if (Watch_Face.Shortcuts.EnergySaving == null) Watch_Face.Shortcuts.EnergySaving = new Shortcut();
+                    Watch_Face.Shortcuts.EnergySaving.Element = new Element();
+                    Watch_Face.Shortcuts.EnergySaving.Element.TopLeftX = (int)numericUpDown_Shortcuts_Energy_X.Value;
+                    Watch_Face.Shortcuts.EnergySaving.Element.TopLeftY = (int)numericUpDown_Shortcuts_Energy_Y.Value;
+                    Watch_Face.Shortcuts.EnergySaving.Element.Width = (int)numericUpDown_Shortcuts_Energy_Width.Value;
+                    Watch_Face.Shortcuts.EnergySaving.Element.Height = (int)numericUpDown_Shortcuts_Energy_Height.Value;
                 }
             }
             
@@ -3282,16 +3284,16 @@ namespace GTR_Watch_face
             {
                 switch (Watch_Face.Info.DeviceId)
                 {
-                    case 40:
+                    case 59:
                         radioButton_47.Checked = true;
                         break;
-                    case 42:
-                        radioButton_42.Checked = true;
+                    case 64:
+                        radioButton_47.Checked = true;
                         break;
-                    case 46:
+                    case 65:
                         radioButton_gts.Checked = true;
                         break;
-                    case 52:
+                    case 83:
                         radioButton_TRex.Checked = true;
                         break;
                     case 53:

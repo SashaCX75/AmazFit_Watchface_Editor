@@ -240,23 +240,14 @@ namespace GTR_Watch_face
         private void Form1_Load(object sender, EventArgs e)
         {
             Logger.WriteLine("* Form1_Load ");
-#if !DEBUG
-            // пробелы в имени
-            if (Application.StartupPath.IndexOf(" ") != -1)
-            {
-                Logger.WriteLine("пробелы в имени");
-                MessageBox.Show(Properties.FormStrings.Message_Error_SpaceInProgrammName_Text,
-                    Properties.FormStrings.Message_Error_Caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.Close();
-            }
-#endif
+
 
             //Logger.WriteLine("Form1_Load");
             helpProvider1.HelpNamespace = Application.StartupPath + Properties.FormStrings.File_ReadMy;
 #if Puthon
             string subPath = Application.StartupPath + @"\py_amazfit_tools_beta\main.py";
 #else
-            string subPath = Application.StartupPath + @"\main_v0.2-beta\main.exe";
+            string subPath = Application.StartupPath + @"\Tools\main.exe";
             //string subPath = Application.StartupPath + @"\main\main.exe";
 #endif
             Logger.WriteLine("Set textBox.Text");
@@ -610,9 +601,9 @@ namespace GTR_Watch_face
             Logger.WriteLine("* zip_unpack_bin");
             string subPath = Application.StartupPath + @"\Watch_face\";
             if (!Directory.Exists(subPath)) Directory.CreateDirectory(subPath);
-            string respackerPath = Application.StartupPath + @"\Res_PackerUnpacker\";
-            if (Is64Bit()) respackerPath = respackerPath + @"x64\resunpacker.exe";
-            else respackerPath = respackerPath + @"x86\resunpacker.exe";
+            string respackerPath = Application.StartupPath + @"\Tools\GTR2_Packer.exe";
+            //if (Is64Bit()) respackerPath = respackerPath + @"x64\resunpacker.exe";
+            //else respackerPath = respackerPath + @"x86\resunpacker.exe";
 
 #if !DEBUG
             if (!File.Exists(respackerPath))
@@ -704,7 +695,7 @@ namespace GTR_Watch_face
                 Logger.WriteLine("UnzipBin");
                 ProcessStartInfo startInfo = new ProcessStartInfo();
                 startInfo.FileName = respackerPath;
-                startInfo.Arguments = fullPath;
+                startInfo.Arguments = "-unc2" + " \"" + fullPath + "\"";
                 using (Process exeProcess = Process.Start(startInfo))
                 {
                     exeProcess.WaitForExit();//ждем 
@@ -716,7 +707,8 @@ namespace GTR_Watch_face
                 //string extension = Path.GetExtension(fullPath);
                 string path = Path.GetDirectoryName(fullPath);
                 //path = Path.Combine(path, fileNameOnly);
-                string newFullName_unp = Path.Combine(path, fileNameOnly + ".bin.unp");
+                string newFullName_unp = Path.Combine(path, fileNameOnly + ".bin.unc");
+                //string newFullName_unp = Path.Combine(path, fileNameOnly + ".bin.unp");
                 //string newFullName_bin = Path.Combine(path, fileNameOnly + ".unp.bin");
                 string newFullName_bin = Path.Combine(path, fileNameOnly + ".bin");
 
@@ -741,7 +733,7 @@ namespace GTR_Watch_face
 #endif
                         Logger.WriteLine("UnpackBin");
                         startInfo.FileName = textBox_pack_unpack_dir.Text;
-                        startInfo.Arguments = textBox_unpack_command.Text + "   " + newFullName_bin;
+                        startInfo.Arguments = textBox_unpack_command.Text + " \"" + newFullName_bin + "\"";
                         using (Process exeProcess = Process.Start(startInfo))
                         {
                             exeProcess.WaitForExit();//ждем 
@@ -1370,7 +1362,7 @@ namespace GTR_Watch_face
             openFileDialog.Multiselect = false;
             openFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
 
-#if !DEBUG
+
             if (!File.Exists(textBox_pack_unpack_dir.Text))
             {
                 MessageBox.Show(Properties.FormStrings.Message_error_pack_unpack_dir_Text1 +
@@ -1389,7 +1381,7 @@ namespace GTR_Watch_face
                     string fullfilename = openFileDialog.FileName;
                     ProcessStartInfo startInfo = new ProcessStartInfo();
                     startInfo.FileName = textBox_pack_unpack_dir.Text;
-                    startInfo.Arguments = textBox_pack_command.Text + "   " + fullfilename;
+                    startInfo.Arguments = textBox_pack_command.Text + " \"" + fullfilename + "\"";
                     using (Process exeProcess = Process.Start(startInfo))
                     {
                         exeProcess.WaitForExit();//ждем 
@@ -1404,34 +1396,34 @@ namespace GTR_Watch_face
                     //MessageBox.Show(newFullName);
                     if (File.Exists(newFullName))
                     {
-                        Logger.WriteLine("GetFileSizeMB");
-                        double fileSize = (GetFileSizeMB(new FileInfo(newFullName)));
-                        Logger.WriteLine("fileSize = " + fileSize.ToString());
-                        if ((fileSize >= 5.5) && (radioButton_TRex.Checked))
-                        {
-                            MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_trex + Environment.NewLine + Environment.NewLine +
-                            Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        if ((fileSize >= 1.5) && (radioButton_42.Checked || radioButton_gts.Checked 
-                            || radioButton_Verge.Checked || radioButton_AmazfitX.Checked))
-                        {
-                            MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_gts + Environment.NewLine + Environment.NewLine +
-                            Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        if ((fileSize >= 1.95) && (radioButton_47.Checked))
-                        {
-                            MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_gtr47 + Environment.NewLine + Environment.NewLine +
-                            Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+                        //Logger.WriteLine("GetFileSizeMB");
+                        //double fileSize = (GetFileSizeMB(new FileInfo(newFullName)));
+                        //Logger.WriteLine("fileSize = " + fileSize.ToString());
+                        //if ((fileSize >= 5.5) && (radioButton_TRex.Checked))
+                        //{
+                        //    MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_trex + Environment.NewLine + Environment.NewLine +
+                        //    Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
+                        //    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //}
+                        //if ((fileSize >= 1.5) && (radioButton_42.Checked || radioButton_gts.Checked 
+                        //    || radioButton_Verge.Checked || radioButton_AmazfitX.Checked))
+                        //{
+                        //    MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_gts + Environment.NewLine + Environment.NewLine +
+                        //    Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
+                        //    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //}
+                        //if ((fileSize >= 1.95) && (radioButton_47.Checked))
+                        //{
+                        //    MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_gtr47 + Environment.NewLine + Environment.NewLine +
+                        //    Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
+                        //    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //}
 
                         //MessageBox.Show(fileSize.ToString());
                         //MessageBox.Show(GetFileSize(new FileInfo(newFullName)));
-                        string respackerPath = Application.StartupPath + @"\Res_PackerUnpacker\";
-                        if (Is64Bit()) respackerPath = respackerPath + @"x64\respacker.exe";
-                        else respackerPath = respackerPath + @"x86\respacker.exe";
+                        string respackerPath = Application.StartupPath + @"\Tools\GTR2_Packer.exe";
+                        //if (Is64Bit()) respackerPath = respackerPath + @"x64\respacker.exe";
+                        //else respackerPath = respackerPath + @"x86\respacker.exe";
 
                         if (!File.Exists(respackerPath))
                         {
@@ -1445,7 +1437,7 @@ namespace GTR_Watch_face
 
                         startInfo = new ProcessStartInfo();
                         startInfo.FileName = respackerPath;
-                        startInfo.Arguments = newFullName;
+                        startInfo.Arguments = "-cmp2" + " \"" + newFullName + "\"";
                         using (Process exeProcess = Process.Start(startInfo))
                         {
                             exeProcess.WaitForExit();//ждем 
@@ -1457,11 +1449,23 @@ namespace GTR_Watch_face
                         path = Path.GetDirectoryName(newFullName);
                         //path = Path.Combine(path, fileNameOnly);
                         string newFullName_cmp = Path.Combine(path, fileNameOnly + ".bin.cmp");
-                        string newFullName_bin = Path.Combine(path, fileNameOnly + "_zip.bin");
+                        string newFullName_bin = Path.Combine(path, fileNameOnly + ".bin");
                         if (File.Exists(newFullName_cmp)) File.Copy(newFullName_cmp, newFullName_bin, true);
                         if (File.Exists(newFullName_bin))
                         {
                             Logger.WriteLine("newFullName_bin");
+                            using (FileStream fileStream = File.OpenWrite(newFullName_bin))
+                            {
+                                Random rnd = new Random();
+                                int rndID = rnd.Next(1000, 65530);
+                                byte[] arr = BitConverter.GetBytes(rndID);
+                                fileStream.Position = 18;
+                                fileStream.WriteByte(arr[0]);
+                                fileStream.WriteByte(arr[1]);
+                                fileStream.WriteByte(arr[2]);
+                                fileStream.WriteByte(arr[3]);
+                                fileStream.Flush();
+                            }
                             File.Delete(newFullName_cmp);
                             this.BringToFront();
                             //if (radioButton_Settings_Pack_Dialog.Checked)
@@ -1492,7 +1496,7 @@ namespace GTR_Watch_face
                     // сюда писать команды при ошибке вызова 
                 }
             }
-#endif
+
             Logger.WriteLine("* pack_zip (end)");
         }
 
@@ -8367,10 +8371,10 @@ namespace GTR_Watch_face
                     Watch_Face.Time.Delimiter.Y = (int)Math.Round(Watch_Face.Time.Delimiter.Y * scale);
                 }
 
-                if (Watch_Face.Time.AmPm != null)
+                if (Watch_Face.Time.AmPmIcon != null)
                 {
-                    Watch_Face.Time.AmPm.X = (int)Math.Round(Watch_Face.Time.AmPm.X * scale);
-                    Watch_Face.Time.AmPm.Y = (int)Math.Round(Watch_Face.Time.AmPm.Y * scale);
+                    Watch_Face.Time.AmPmIcon.Coordinates.X = (int)Math.Round(Watch_Face.Time.AmPmIcon.Coordinates.X * scale);
+                    Watch_Face.Time.AmPmIcon.Coordinates.Y = (int)Math.Round(Watch_Face.Time.AmPmIcon.Coordinates.Y * scale);
                 }
             }
             #endregion
@@ -8764,29 +8768,29 @@ namespace GTR_Watch_face
                     }
                 }
 
-                if (Watch_Face.Battery.Percent != null)
+                if (Watch_Face.Battery.Unknown5 != null)
                 {
-                    Watch_Face.Battery.Percent.X = (int)Math.Round(Watch_Face.Battery.Percent.X * scale);
-                    Watch_Face.Battery.Percent.Y = (int)Math.Round(Watch_Face.Battery.Percent.Y * scale);
+                    Watch_Face.Battery.Unknown5.X = (int)Math.Round(Watch_Face.Battery.Unknown5.X * scale);
+                    Watch_Face.Battery.Unknown5.Y = (int)Math.Round(Watch_Face.Battery.Unknown5.Y * scale);
                 }
 
-                if (Watch_Face.Battery.Scale != null)
+                if (Watch_Face.Battery.Unknown6 != null)
                 {
-                    Watch_Face.Battery.Scale.CenterX = (int)Math.Round(Watch_Face.Battery.Scale.CenterX * scale);
-                    Watch_Face.Battery.Scale.CenterY = (int)Math.Round(Watch_Face.Battery.Scale.CenterY * scale);
-                    Watch_Face.Battery.Scale.RadiusX = (int)Math.Round(Watch_Face.Battery.Scale.RadiusX * scale);
-                    Watch_Face.Battery.Scale.RadiusY = (int)Math.Round(Watch_Face.Battery.Scale.RadiusY * scale);
-                    Watch_Face.Battery.Scale.Width = (int)Math.Round(Watch_Face.Battery.Scale.Width * scale);
-                    if (Watch_Face.Battery.Scale.ImageIndex != null)
+                    Watch_Face.Battery.Unknown6.CenterX = (int)Math.Round(Watch_Face.Battery.Unknown6.CenterX * scale);
+                    Watch_Face.Battery.Unknown6.CenterY = (int)Math.Round(Watch_Face.Battery.Unknown6.CenterY * scale);
+                    Watch_Face.Battery.Unknown6.RadiusX = (int)Math.Round(Watch_Face.Battery.Unknown6.RadiusX * scale);
+                    Watch_Face.Battery.Unknown6.RadiusY = (int)Math.Round(Watch_Face.Battery.Unknown6.RadiusY * scale);
+                    Watch_Face.Battery.Unknown6.Width = (int)Math.Round(Watch_Face.Battery.Unknown6.Width * scale);
+                    if (Watch_Face.Battery.Unknown6.ImageIndex != null)
                     {
                         int x = 0;
                         int y = 0;
-                        Color new_color = ColorRead(Watch_Face.Battery.Scale.Color);
+                        Color new_color = ColorRead(Watch_Face.Battery.Unknown6.Color);
                         ColorToCoodinates(new_color, out x, out y);
                         x = (int)Math.Round(x * scale);
                         y = (int)Math.Round(y * scale);
                         string colorStr = CoodinatesToColor(x, y);
-                        Watch_Face.Battery.Scale.Color = colorStr;
+                        Watch_Face.Battery.Unknown6.Color = colorStr;
                     }
                 }
 
@@ -8946,12 +8950,12 @@ namespace GTR_Watch_face
                     Watch_Face.Shortcuts.Weather.Element.Height = (int)Math.Round(Watch_Face.Shortcuts.Weather.Element.Height * scale);
                 }
 
-                if (Watch_Face.Shortcuts.Unknown4 != null && Watch_Face.Shortcuts.Unknown4.Element != null)
+                if (Watch_Face.Shortcuts.EnergySaving != null && Watch_Face.Shortcuts.EnergySaving.Element != null)
                 {
-                    Watch_Face.Shortcuts.Unknown4.Element.TopLeftX = (int)Math.Round(Watch_Face.Shortcuts.Unknown4.Element.TopLeftX * scale);
-                    Watch_Face.Shortcuts.Unknown4.Element.TopLeftY = (int)Math.Round(Watch_Face.Shortcuts.Unknown4.Element.TopLeftY * scale);
-                    Watch_Face.Shortcuts.Unknown4.Element.Width = (int)Math.Round(Watch_Face.Shortcuts.Unknown4.Element.Width * scale);
-                    Watch_Face.Shortcuts.Unknown4.Element.Height = (int)Math.Round(Watch_Face.Shortcuts.Unknown4.Element.Height * scale);
+                    Watch_Face.Shortcuts.EnergySaving.Element.TopLeftX = (int)Math.Round(Watch_Face.Shortcuts.EnergySaving.Element.TopLeftX * scale);
+                    Watch_Face.Shortcuts.EnergySaving.Element.TopLeftY = (int)Math.Round(Watch_Face.Shortcuts.EnergySaving.Element.TopLeftY * scale);
+                    Watch_Face.Shortcuts.EnergySaving.Element.Width = (int)Math.Round(Watch_Face.Shortcuts.EnergySaving.Element.Width * scale);
+                    Watch_Face.Shortcuts.EnergySaving.Element.Height = (int)Math.Round(Watch_Face.Shortcuts.EnergySaving.Element.Height * scale);
                 }
             }
             #endregion
@@ -9050,7 +9054,7 @@ namespace GTR_Watch_face
             {
                 Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
                 Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr47.png");
-                int PreviewHeight = 266;
+                int PreviewHeight = 306;
                 if (radioButton_42.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
@@ -9060,13 +9064,13 @@ namespace GTR_Watch_face
                 {
                     bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts.png");
-                    PreviewHeight = 304;
+                    PreviewHeight = 323;
                 }
                 if (radioButton_TRex.Checked || radioButton_Verge.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
-                    PreviewHeight = 210;
+                    PreviewHeight = 220;
                 }
                 if (radioButton_AmazfitX.Checked)
                 {
@@ -9090,7 +9094,8 @@ namespace GTR_Watch_face
                 {
                     DialogResult ResultDialog = MessageBox.Show(Properties.FormStrings.Message_WarningPreview_Text1 +
                         Environment.NewLine + Properties.FormStrings.Message_WarningPreview_Text2,
-                        Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.YesNo, MessageBoxIcon.Warning, 
+                        MessageBoxDefaultButton.Button2);
                     if (ResultDialog == DialogResult.Yes) scale = (float)loadedImage.Height / bitmap.Height;
                 }
                 int pixelsOld = loadedImage.Width * loadedImage.Height;
@@ -9120,7 +9125,7 @@ namespace GTR_Watch_face
                 // формируем картинку для предпросмотра
                 Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
                 Bitmap mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gtr47.png");
-                int PreviewHeight = 266;
+                int PreviewHeight = 306;
                 if (radioButton_42.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
@@ -9130,13 +9135,13 @@ namespace GTR_Watch_face
                 {
                     bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_gts.png");
-                    PreviewHeight = 304;
+                    PreviewHeight = 323;
                 }
                 if (radioButton_TRex.Checked || radioButton_Verge.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
                     mask = new Bitmap(Application.StartupPath + @"\Mask\mask_trex.png");
-                    PreviewHeight = 210;
+                    PreviewHeight = 220;
                 }
                 if (radioButton_AmazfitX.Checked)
                 {
@@ -9356,9 +9361,19 @@ namespace GTR_Watch_face
                 var obj = (JObject)token;
                 foreach (var property in obj.Properties())
                 {
-                    var childNode = inTreeNode.Nodes[inTreeNode.Nodes.Add(new TreeNode(property.Name))];
-                    childNode.Tag = property;
-                    AddNode(property.Value, childNode);
+                    //var childNode = inTreeNode.Nodes[inTreeNode.Nodes.Add(new TreeNode(property.Name + "*+*"))];
+                    //childNode.Tag = property;
+                    if (property.Value is JValue)
+                    {
+                        var childNode = inTreeNode.Nodes[inTreeNode.Nodes.Add(new TreeNode(property.Name + ":" + property.Value.ToString()))];
+                        childNode.Tag = property;
+                    }
+                    else
+                    {
+                        var childNode = inTreeNode.Nodes[inTreeNode.Nodes.Add(new TreeNode(property.Name))];
+                        childNode.Tag = property;
+                        AddNode(property.Value, childNode);
+                    }
                 }
             }
             else if (token is JArray)

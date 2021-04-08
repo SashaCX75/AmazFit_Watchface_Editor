@@ -21,8 +21,10 @@ namespace GTR_Watch_face
         public TwoDigits Minutes { get; set; }
         /// <summary>Секунды</summary>
         public TwoDigits Seconds { get; set; }
-        /// <summary>Значок AmPm</summary>
-        public AmPm AmPm { get; set; }
+        ///// <summary>Значок AmPm</summary>
+        //public AmPm AmPm { get; set; }
+
+        public AmPmIcon AmPmIcon { get; set; }
         public long? DrawingOrder { get; set; }
         public long? Unknown9 { get; set; }
         /// <summary>Разделитель</summary>
@@ -100,7 +102,14 @@ namespace GTR_Watch_face
         /// <summary>Погода</summary>
         public Shortcut Weather { get; set; }
         /// <summary>Энергосбережение</summary>
-        public Shortcut Unknown4 { get; set; }
+        public Shortcut EnergySaving { get; set; }
+
+        // For compatibility with "Unknown3" JSON attribute
+        [JsonProperty("Unknown4")]
+        private Shortcut Unknown4
+        {
+            set { EnergySaving = value; }
+        }
     }
 
     public class StepsProgress
@@ -137,10 +146,27 @@ namespace GTR_Watch_face
         public IconSet Icons { get; set; }
         /// <summary>Стрелочный индикатор</summary>
         public ClockHand Unknown4 { get; set; }
-        /// <summary>Иконка %</summary>
-        public ImageW Percent { get; set; }
+        ///// <summary>Иконка %</summary>
+        //public ImageW Percent { get; set; }
         /// <summary>Процент заряда в виде шкалы прогрессы</summary>
-        public CircleScale Scale { get; set; }
+        //public CircleScale Scale { get; set; }
+
+        public CircleScale Unknown6 { get; set; }
+        public ImageW Unknown5 { get; set; }
+
+        // For compatibility with "Scale" JSON attribute
+        [JsonProperty("Scale")]
+        private CircleScale Scale
+        {
+            set { Unknown6 = value; }
+        }
+
+        // For compatibility with "Scale" JSON attribute
+        [JsonProperty("Percent")]
+        private ImageW Percent
+        {
+            set { Unknown5 = value; }
+        }
     }
 
     public class Analogdialface

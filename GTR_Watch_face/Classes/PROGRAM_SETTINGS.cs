@@ -42,14 +42,14 @@
         public bool DoNotShowMaxMinTemp = false;
 
         public string pack_unpack_dir { get; set; }
-        public string unpack_command_GTR47 = "--gtr 47 --file";
-        public string pack_command_GTR47 = "--gtr 47 --file";
-        public string unpack_command_GTR42 = "--gtr 42 --file";
-        public string pack_command_GTR42 = "--gtr 42 --file";
-        public string unpack_command_GTS = "--gts --file";
-        public string pack_command_GTS = "--gts --file";
-        public string unpack_command_TRex = "--trex --file";
-        public string pack_command_TRex = "--trex --file";
+        public string unpack_command_GTR47 = "--gtr2 47 --file";
+        public string pack_command_GTR47 = "--gtr2 47 --oldformat --file";
+        public string unpack_command_GTR42 = "--gtr2 42 --file";
+        public string pack_command_GTR42 = "--gtr2 42 --oldformat --file";
+        public string unpack_command_GTS = "--gts2 --file";
+        public string pack_command_GTS = "--gts2 --oldformat --file";
+        public string unpack_command_TRex = "--trex2 --file";
+        public string pack_command_TRex = "--trex2 --oldformat --file";
         public string unpack_command_AmazfitX = "--amazfitx --file";
         public string pack_command_AmazfitX = "--amazfitx --file";
         public string unpack_command_Verge = "--vergelite --file";
