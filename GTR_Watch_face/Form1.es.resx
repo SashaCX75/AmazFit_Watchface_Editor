@@ -118,14 +118,20 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 23</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Desempaquetar bin comprimido (GTR/GTS)</value>
+  </data>
   <data name="button_zip_unpack.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 23</value>
+    <value>250, 23</value>
   </data>
   <data name="button_zip_unpack.Text" xml:space="preserve">
-    <value>Desempaquetar bin comprimido</value>
+    <value>Desempaquetar bin comprimido (GTR2/GTS2)</value>
   </data>
   <data name="button_pack_zip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 23</value>
+    <value>250, 23</value>
   </data>
   <data name="button_pack_zip.Text" xml:space="preserve">
     <value>Empaquetar y comprimir el bin</value>

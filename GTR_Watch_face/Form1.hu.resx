@@ -117,8 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Tömörített BIN kicsomagolása (GTR/GTS)</value>
+  </data>
   <data name="button_zip_unpack.Text" xml:space="preserve">
-    <value>Tömörített BIN kicsomagolása</value>
+    <value>Tömörített BIN kicsomagolása (GTR2/GTS2)</value>
   </data>
   <data name="button_pack_zip.Text" xml:space="preserve">
     <value>BIN csomagolása és tömörítése</value>
@@ -3570,6 +3573,9 @@ nem lehet megjeleníteni.</value>
   <data name="radioButton_ConvertingOutput_Custom.Text" xml:space="preserve">
     <value>Egyéni méret</value>
   </data>
+  <data name="groupBox10.Text" xml:space="preserve">
+    <value>Célmodell</value>
+  </data>
   <data name="numericUpDown_ConvertingInput_Custom.Location" type="System.Drawing.Point, System.Drawing">
     <value>425, 19</value>
   </data>
@@ -3584,6 +3590,24 @@ nem lehet megjeleníteni.</value>
   </data>
   <data name="tabPageConverting.Text" xml:space="preserve">
     <value>Konvertálás</value>
+  </data>
+  <data name="checkBox_DoNotShowMaxMinTemp.Text" xml:space="preserve">
+    <value>Az aktuális hőmérséklet kijelzésekor ne jelenítse meg a maximális / minimális hőmérsékletet</value>
+  </data>
+  <data name="checkBox_ShowIn12hourFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>290, 17</value>
+  </data>
+  <data name="checkBox_ShowIn12hourFormat.Text" xml:space="preserve">
+    <value>Ha lehetséges, 12 órás formátumban jeleníti meg az időt</value>
+  </data>
+  <data name="checkBox_ShowMiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 17</value>
+  </data>
+  <data name="checkBox_ShowMiles.Text" xml:space="preserve">
+    <value>Ha lehetséges, mérföldben jeleníti meg a távolságot</value>
+  </data>
+  <data name="groupBox11.Text" xml:space="preserve">
+    <value>Tételek megjelenítése</value>
   </data>
   <data name="label483.Size" type="System.Drawing.Size, System.Drawing">
     <value>206, 39</value>
@@ -3820,6 +3844,12 @@ több rendszerbetöltés)</value>
   </data>
   <data name="checkBox_CircleScaleImage.Text" xml:space="preserve">
     <value>Jelölje ki a folyamatjelző sávot a fedőképpel</value>
+  </data>
+  <data name="button_RefreshPreview.Text" xml:space="preserve">
+    <value>Előnézet frissítése</value>
+  </data>
+  <data name="button_CreatePreview.Text" xml:space="preserve">
+    <value>Hozzon létre előnézetet</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -6784,26 +6814,5 @@ több rendszerbetöltés)</value>
         SlmARUpZgEVKWYBDSFZuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+D8AAPgfAADwHwAA4A8AAMAHAADA
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
-  </data>
-  <data name="button_CreatePreview.Text" xml:space="preserve">
-    <value>Hozzon létre előnézetet</value>
-  </data>
-  <data name="button_RefreshPreview.Text" xml:space="preserve">
-    <value>Előnézet frissítése</value>
-  </data>
-  <data name="checkBox_DoNotShowMaxMinTemp.Text" xml:space="preserve">
-    <value>Az aktuális hőmérséklet kijelzésekor ne jelenítse meg a maximális / minimális hőmérsékletet</value>
-  </data>
-  <data name="checkBox_ShowIn12hourFormat.Text" xml:space="preserve">
-    <value>Ha lehetséges, 12 órás formátumban jeleníti meg az időt</value>
-  </data>
-  <data name="checkBox_ShowMiles.Text" xml:space="preserve">
-    <value>Ha lehetséges, mérföldben jeleníti meg a távolságot</value>
-  </data>
-  <data name="groupBox11.Text" xml:space="preserve">
-    <value>Tételek megjelenítése</value>
-  </data>
-  <data name="groupBox10.Text" xml:space="preserve">
-    <value>Célmodell</value>
   </data>
 </root>

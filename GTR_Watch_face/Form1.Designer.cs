@@ -37,6 +37,7 @@
             this.treeView_Json = new System.Windows.Forms.TreeView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.button_zip_unpack = new System.Windows.Forms.Button();
             this.button_pack_zip = new System.Windows.Forms.Button();
             this.button_zip = new System.Windows.Forms.Button();
@@ -1929,6 +1930,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.button_zip_unpack);
             this.tabPage1.Controls.Add(this.button_pack_zip);
             this.tabPage1.Controls.Add(this.button_zip);
@@ -1944,6 +1946,14 @@
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.helpProvider1.SetShowHelp(this.tabPage1, ((bool)(resources.GetObject("tabPage1.ShowHelp"))));
+            // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.helpProvider1.SetShowHelp(this.button1, ((bool)(resources.GetObject("button1.ShowHelp"))));
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button_zip_unpack
             // 
@@ -19104,6 +19114,7 @@
         private System.Windows.Forms.CheckBox checkBox_DoNotShowMaxMinTemp;
         private System.Windows.Forms.CheckBox checkBox_ShowIn12hourFormat;
         private System.Windows.Forms.CheckBox checkBox_ShowMiles;
+        private System.Windows.Forms.Button button1;
     }
 }
 

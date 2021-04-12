@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Rozbaliť/zabaliť</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Rozbaliť komprimovaný BIN (GTR/GTS)</value>
+  </data>
   <data name="button_zip_unpack.Text" xml:space="preserve">
-    <value>Rozbaliť komprimovaný BIN</value>
+    <value>Rozbaliť komprimovaný BIN (GTR2/GTS2)</value>
   </data>
   <data name="button_pack_zip.Text" xml:space="preserve">
     <value>Zabaliť a komprimovať BIN</value>
@@ -154,8 +160,8 @@
   <data name="label1.Text" xml:space="preserve">
     <value>Cesta k nástroju na vybalenie / zabalenie</value>
   </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>Rozbaliť/zabaliť</value>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Prehľad</value>
   </data>
   <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 17</value>
@@ -1174,8 +1180,8 @@
   <data name="label4.Text" xml:space="preserve">
     <value>JSON s obrázkami:</value>
   </data>
-  <data name="tabPage2.Text" xml:space="preserve">
-    <value>Prehľad</value>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>Editovať</value>
   </data>
   <data name="button_SaveJson.Text" xml:space="preserve">
     <value>Uložit JSON súbor </value>
@@ -1185,6 +1191,9 @@
   </data>
   <data name="button_ShowAnimation.Text" xml:space="preserve">
     <value>Náhľad animácie</value>
+  </data>
+  <data name="tabPage53.Text" xml:space="preserve">
+    <value>Snímková animácia</value>
   </data>
   <data name="label479.Text" xml:space="preserve">
     <value>Rýchlosť animácie</value>
@@ -1197,6 +1206,9 @@
   </data>
   <data name="label477.Text" xml:space="preserve">
     <value>Trvanie animačného cyklu</value>
+  </data>
+  <data name="contextMenuStrip_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 82</value>
   </data>
   <data name="toolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1263,7 +1275,7 @@
   <data name="вставитьToolStripMenuItem1.Text" xml:space="preserve">
     <value>Vložiť</value>
   </data>
-  <data name="contextMenuStrip_Y.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="contextMenuStrip_X.Size" type="System.Drawing.Size, System.Drawing">
     <value>173, 82</value>
   </data>
   <data name="вставитьКоординатуХToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -1331,9 +1343,6 @@
   <data name="вставитьToolStripMenuItem.Text" xml:space="preserve">
     <value>Vložiť</value>
   </data>
-  <data name="contextMenuStrip_X.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 82</value>
-  </data>
   <data name="checkBox_StaticAnimation.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
   </data>
@@ -1346,8 +1355,11 @@
   <data name="label475.Text" xml:space="preserve">
     <value>Súradnice</value>
   </data>
-  <data name="tabPage53.Text" xml:space="preserve">
-    <value>Snímková animácia</value>
+  <data name="tabPage54.Text" xml:space="preserve">
+    <value>Pohyb medzi súradnicami</value>
+  </data>
+  <data name="groupBox_MotiomAnimation.Text" xml:space="preserve">
+    <value>Upraviť údaje vo vybranom riadku</value>
   </data>
   <data name="radioButton_MotiomAnimation_EndCoordinates.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 17</value>
@@ -1360,9 +1372,6 @@
   </data>
   <data name="radioButton_MotiomAnimation_StartCoordinates.Text" xml:space="preserve">
     <value>Počiatočné súradnice</value>
-  </data>
-  <data name="groupBox_MotiomAnimation.Text" xml:space="preserve">
-    <value>Upraviť údaje vo vybranom riadku</value>
   </data>
   <data name="AnimationColumn2.HeaderText" xml:space="preserve">
     <value>Počiatočné súradnice (X)</value>
@@ -1401,6 +1410,9 @@
   <data name="AnimationColumn12.Width" type="System.Int32, mscorlib">
     <value>60</value>
   </data>
+  <data name="contextMenuStrip_XY_InAnimationTable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 140</value>
+  </data>
   <data name="вставитьНачальныеКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 26</value>
   </data>
@@ -1434,20 +1446,17 @@
   <data name="удалитьСтрокуToolStripMenuItem1.Text" xml:space="preserve">
     <value>Odstrániť riadok</value>
   </data>
-  <data name="contextMenuStrip_XY_InAnimationTable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 140</value>
-  </data>
   <data name="checkBox_MotiomAnimation.Text" xml:space="preserve">
     <value>Zobraziť</value>
-  </data>
-  <data name="tabPage54.Text" xml:space="preserve">
-    <value>Pohyb medzi súradnicami</value>
   </data>
   <data name="checkBox_Animation.Text" xml:space="preserve">
     <value>Aktivovať</value>
   </data>
   <data name="button_Animation.Text" xml:space="preserve">
     <value>Animácia (beta)</value>
+  </data>
+  <data name="tabPage46.Text" xml:space="preserve">
+    <value>Kroky</value>
   </data>
   <data name="checkBox_Shortcuts_Steps.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 17</value>
@@ -1488,8 +1497,8 @@
   <data name="label443.Text" xml:space="preserve">
     <value>Súradnice</value>
   </data>
-  <data name="tabPage46.Text" xml:space="preserve">
-    <value>Kroky</value>
+  <data name="tabPage47.Text" xml:space="preserve">
+    <value>Pulz</value>
   </data>
   <data name="checkBox_Shortcuts_Puls.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 17</value>
@@ -1530,8 +1539,8 @@
   <data name="label445.Text" xml:space="preserve">
     <value>Súradnice</value>
   </data>
-  <data name="tabPage47.Text" xml:space="preserve">
-    <value>Pulz</value>
+  <data name="tabPage48.Text" xml:space="preserve">
+    <value>Počasie</value>
   </data>
   <data name="checkBox_Shortcuts_Weather.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 17</value>
@@ -1572,8 +1581,8 @@
   <data name="label451.Text" xml:space="preserve">
     <value>Súradnice</value>
   </data>
-  <data name="tabPage48.Text" xml:space="preserve">
-    <value>Počasie</value>
+  <data name="tabPage49.Text" xml:space="preserve">
+    <value>Úspora energie</value>
   </data>
   <data name="checkBox_Shortcuts_Energy.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 17</value>
@@ -1614,14 +1623,14 @@
   <data name="label457.Text" xml:space="preserve">
     <value>Súradnice</value>
   </data>
-  <data name="tabPage49.Text" xml:space="preserve">
-    <value>Úspora energie</value>
-  </data>
   <data name="checkBox_Shortcuts.Text" xml:space="preserve">
     <value>Aktivovať</value>
   </data>
   <data name="button_Shortcuts.Text" xml:space="preserve">
     <value>Skratky</value>
+  </data>
+  <data name="groupBox_Symbols.Text" xml:space="preserve">
+    <value>Symboly</value>
   </data>
   <data name="label286.Location" type="System.Drawing.Point, System.Drawing">
     <value>260, 20</value>
@@ -1644,8 +1653,8 @@
   <data name="label285.Text" xml:space="preserve">
     <value>Symbol "°":</value>
   </data>
-  <data name="groupBox_Symbols.Text" xml:space="preserve">
-    <value>Symboly</value>
+  <data name="tabPage24.Text" xml:space="preserve">
+    <value>Aktuálna teplota</value>
   </data>
   <data name="checkBox_Weather_Text.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
@@ -1707,14 +1716,17 @@
   <data name="label279.Text" xml:space="preserve">
     <value>Ľavý horný roh</value>
   </data>
-  <data name="tabPage24.Text" xml:space="preserve">
-    <value>Aktuálna teplota</value>
+  <data name="tabPage26.Text" xml:space="preserve">
+    <value>Teplota deň/noc</value>
   </data>
   <data name="label490.Size" type="System.Drawing.Size, System.Drawing">
     <value>284, 13</value>
   </data>
   <data name="label490.Text" xml:space="preserve">
     <value>* Zobrazí sa, iba ak nie je možné zobraziť aktuálnu teplotu.</value>
+  </data>
+  <data name="tabPage27.Text" xml:space="preserve">
+    <value>Deň</value>
   </data>
   <data name="checkBox_Weather_Day.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
@@ -1776,8 +1788,8 @@
   <data name="label298.Text" xml:space="preserve">
     <value>Ľavý horný roh</value>
   </data>
-  <data name="tabPage27.Text" xml:space="preserve">
-    <value>Deň</value>
+  <data name="tabPage30.Text" xml:space="preserve">
+    <value>Noc</value>
   </data>
   <data name="checkBox_Weather_Night.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
@@ -1839,11 +1851,8 @@
   <data name="label322.Text" xml:space="preserve">
     <value>Ľavý horný roh</value>
   </data>
-  <data name="tabPage30.Text" xml:space="preserve">
-    <value>Noc</value>
-  </data>
-  <data name="tabPage26.Text" xml:space="preserve">
-    <value>Teplota deň/noc</value>
+  <data name="tabPage25.Text" xml:space="preserve">
+    <value>Ikona</value>
   </data>
   <data name="label287.Location" type="System.Drawing.Point, System.Drawing">
     <value>230, 31</value>
@@ -1860,14 +1869,20 @@
   <data name="checkBox_Weather_Icon.Text" xml:space="preserve">
     <value>Zobraziť</value>
   </data>
-  <data name="tabPage25.Text" xml:space="preserve">
-    <value>Ikona</value>
-  </data>
   <data name="checkBox_Weather.Text" xml:space="preserve">
     <value>Aktivovať</value>
   </data>
   <data name="button_Weather.Text" xml:space="preserve">
     <value>Počasie</value>
+  </data>
+  <data name="tabPage29.Text" xml:space="preserve">
+    <value>Hodiny</value>
+  </data>
+  <data name="groupBox_AnalogClock_Hour.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 135</value>
+  </data>
+  <data name="groupBox_AnalogClock_Hour.Text" xml:space="preserve">
+    <value>Hodinová ručička</value>
   </data>
   <data name="numericUpDown_AnalogClock_Hour_Offset_X.Location" type="System.Drawing.Point, System.Drawing">
     <value>201, 41</value>
@@ -1929,11 +1944,11 @@
   <data name="label215.Text" xml:space="preserve">
     <value>Stred hodinovej ručičky (Y)</value>
   </data>
-  <data name="groupBox_AnalogClock_Hour.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 135</value>
+  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>260, 7</value>
   </data>
-  <data name="groupBox_AnalogClock_Hour.Text" xml:space="preserve">
-    <value>Hodinová ručička</value>
+  <data name="groupBox4.Text" xml:space="preserve">
+    <value>Obrázok stredu</value>
   </data>
   <data name="checkBox_HourCenterImage.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
@@ -1941,14 +1956,14 @@
   <data name="checkBox_HourCenterImage.Text" xml:space="preserve">
     <value>Zobraziť</value>
   </data>
-  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>260, 7</value>
+  <data name="tabPage31.Text" xml:space="preserve">
+    <value>Minúty</value>
   </data>
-  <data name="groupBox4.Text" xml:space="preserve">
-    <value>Obrázok stredu</value>
+  <data name="groupBox_AnalogClock_Min.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 135</value>
   </data>
-  <data name="tabPage29.Text" xml:space="preserve">
-    <value>Hodiny</value>
+  <data name="groupBox_AnalogClock_Min.Text" xml:space="preserve">
+    <value>Minutová ručička</value>
   </data>
   <data name="numericUpDown_AnalogClock_Min_Y.Location" type="System.Drawing.Point, System.Drawing">
     <value>89, 76</value>
@@ -2004,11 +2019,11 @@
   <data name="checkBox_AnalogClock_Min.Text" xml:space="preserve">
     <value>Zobraziť</value>
   </data>
-  <data name="groupBox_AnalogClock_Min.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 135</value>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>260, 7</value>
   </data>
-  <data name="groupBox_AnalogClock_Min.Text" xml:space="preserve">
-    <value>Minutová ručička</value>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>Obrázok stredu</value>
   </data>
   <data name="checkBox_MinCenterImage.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
@@ -2016,14 +2031,14 @@
   <data name="checkBox_MinCenterImage.Text" xml:space="preserve">
     <value>Zobraziť</value>
   </data>
-  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="tabPage32.Text" xml:space="preserve">
+    <value>Sekundy</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>260, 7</value>
   </data>
-  <data name="groupBox3.Text" xml:space="preserve">
+  <data name="groupBox2.Text" xml:space="preserve">
     <value>Obrázok stredu</value>
-  </data>
-  <data name="tabPage31.Text" xml:space="preserve">
-    <value>Minúty</value>
   </data>
   <data name="checkBox_SecCenterImage.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
@@ -2031,11 +2046,11 @@
   <data name="checkBox_SecCenterImage.Text" xml:space="preserve">
     <value>Zobraziť</value>
   </data>
-  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>260, 7</value>
+  <data name="groupBox_AnalogClock_Sec.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 135</value>
   </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>Obrázok stredu</value>
+  <data name="groupBox_AnalogClock_Sec.Text" xml:space="preserve">
+    <value>Sekundová ručička</value>
   </data>
   <data name="numericUpDown_AnalogClock_Sec_Offset_Y.Location" type="System.Drawing.Point, System.Drawing">
     <value>201, 72</value>
@@ -2091,20 +2106,14 @@
   <data name="checkBox_AnalogClock_Sec.Text" xml:space="preserve">
     <value>Zobraziť</value>
   </data>
-  <data name="groupBox_AnalogClock_Sec.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 135</value>
-  </data>
-  <data name="groupBox_AnalogClock_Sec.Text" xml:space="preserve">
-    <value>Sekundová ručička</value>
-  </data>
-  <data name="tabPage32.Text" xml:space="preserve">
-    <value>Sekundy</value>
-  </data>
   <data name="checkBox_AnalogClock.Text" xml:space="preserve">
     <value>Aktivovať</value>
   </data>
   <data name="button_AnalogClock.Text" xml:space="preserve">
     <value>Analogové hodiny</value>
+  </data>
+  <data name="tabPage21.Text" xml:space="preserve">
+    <value>Text</value>
   </data>
   <data name="checkBox_Battery_Text.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
@@ -2166,8 +2175,8 @@
   <data name="label193.Text" xml:space="preserve">
     <value>Ľavý horný roh</value>
   </data>
-  <data name="tabPage21.Text" xml:space="preserve">
-    <value>Text</value>
+  <data name="tabPage28.Text" xml:space="preserve">
+    <value>Ikona "%"</value>
   </data>
   <data name="checkBox_Battery_Percent.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
@@ -2181,8 +2190,8 @@
   <data name="label303.Text" xml:space="preserve">
     <value>Súradnice</value>
   </data>
-  <data name="tabPage28.Text" xml:space="preserve">
-    <value>Ikona "%"</value>
+  <data name="tabPage22.Text" xml:space="preserve">
+    <value>Ikona</value>
   </data>
   <data name="checkBox_Battery_Img.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
@@ -2196,8 +2205,8 @@
   <data name="label197.Text" xml:space="preserve">
     <value>Súradnice</value>
   </data>
-  <data name="tabPage22.Text" xml:space="preserve">
-    <value>Ikona</value>
+  <data name="tabPage23.Text" xml:space="preserve">
+    <value>Graf</value>
   </data>
   <data name="comboBox_Battery_Flatness.Items" xml:space="preserve">
     <value>Zaoblené</value>
@@ -2259,8 +2268,8 @@
   <data name="checkBox_Battery_Scale.Text" xml:space="preserve">
     <value>Zobraziť</value>
   </data>
-  <data name="tabPage23.Text" xml:space="preserve">
-    <value>Graf</value>
+  <data name="tabPage35.Text" xml:space="preserve">
+    <value>Ukazateľ</value>
   </data>
   <data name="label374.Text" xml:space="preserve">
     <value>Konečný úhol:</value>
@@ -2283,14 +2292,17 @@
   <data name="checkBox_Battery_ClockHand.Text" xml:space="preserve">
     <value>Zobraziť</value>
   </data>
-  <data name="tabPage35.Text" xml:space="preserve">
-    <value>Ukazateľ</value>
+  <data name="tabPage42.Text" xml:space="preserve">
+    <value>Segmenty</value>
   </data>
   <data name="checkBox_Battery_IconSet.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
   </data>
   <data name="checkBox_Battery_IconSet.Text" xml:space="preserve">
     <value>Zobraziť</value>
+  </data>
+  <data name="contextMenuStrip_XY_InTable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 108</value>
   </data>
   <data name="вставитьКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>162, 26</value>
@@ -2315,12 +2327,6 @@
   </data>
   <data name="удалитьСтрокуToolStripMenuItem.Text" xml:space="preserve">
     <value>Zmazať riadok</value>
-  </data>
-  <data name="contextMenuStrip_XY_InTable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 108</value>
-  </data>
-  <data name="tabPage42.Text" xml:space="preserve">
-    <value>Segmenty</value>
   </data>
   <data name="checkBox_Battery.Text" xml:space="preserve">
     <value>Aktivovať</value>
@@ -2352,6 +2358,9 @@
   <data name="label165.Text" xml:space="preserve">
     <value>Zapnutý:</value>
   </data>
+  <data name="tabPage18.Text" xml:space="preserve">
+    <value>Budík</value>
+  </data>
   <data name="label169.Location" type="System.Drawing.Point, System.Drawing">
     <value>285, 32</value>
   </data>
@@ -2376,8 +2385,8 @@
   <data name="label174.Text" xml:space="preserve">
     <value>Zapnutý:</value>
   </data>
-  <data name="tabPage18.Text" xml:space="preserve">
-    <value>Budík</value>
+  <data name="tabPage19.Text" xml:space="preserve">
+    <value>Zámok</value>
   </data>
   <data name="label176.Location" type="System.Drawing.Point, System.Drawing">
     <value>285, 32</value>
@@ -2403,8 +2412,8 @@
   <data name="label178.Text" xml:space="preserve">
     <value>Zapnutý:</value>
   </data>
-  <data name="tabPage19.Text" xml:space="preserve">
-    <value>Zámok</value>
+  <data name="tabPage20.Text" xml:space="preserve">
+    <value>Nerušiť (DND)</value>
   </data>
   <data name="label180.Location" type="System.Drawing.Point, System.Drawing">
     <value>285, 32</value>
@@ -2430,9 +2439,6 @@
   <data name="label182.Text" xml:space="preserve">
     <value>Zapnutý:</value>
   </data>
-  <data name="tabPage20.Text" xml:space="preserve">
-    <value>Nerušiť (DND)</value>
-  </data>
   <data name="button_Status.Text" xml:space="preserve">
     <value>Stav</value>
   </data>
@@ -2441,6 +2447,9 @@
   </data>
   <data name="label403.Text" xml:space="preserve">
     <value>Symbol chyby:</value>
+  </data>
+  <data name="tabPage12.Text" xml:space="preserve">
+    <value>Kroky</value>
   </data>
   <data name="checkBox_ActivitySteps.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
@@ -2502,8 +2511,8 @@
   <data name="label131.Text" xml:space="preserve">
     <value>Ľavý horný roh</value>
   </data>
-  <data name="tabPage12.Text" xml:space="preserve">
-    <value>Kroky</value>
+  <data name="tabPage13.Text" xml:space="preserve">
+    <value>Vzdialenosť</value>
   </data>
   <data name="label501.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 144</value>
@@ -2592,8 +2601,11 @@
   <data name="label141.Text" xml:space="preserve">
     <value>Ľavý horný roh</value>
   </data>
-  <data name="tabPage13.Text" xml:space="preserve">
-    <value>Vzdialenosť</value>
+  <data name="tabPage55.Text" xml:space="preserve">
+    <value>Pulz</value>
+  </data>
+  <data name="tabPage14.Text" xml:space="preserve">
+    <value>Pulz</value>
   </data>
   <data name="checkBox_ActivityPuls.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
@@ -2655,8 +2667,8 @@
   <data name="label145.Text" xml:space="preserve">
     <value>Zarovnanie</value>
   </data>
-  <data name="tabPage14.Text" xml:space="preserve">
-    <value>Pulz</value>
+  <data name="tabPage44.Text" xml:space="preserve">
+    <value>Pulz (Graf)</value>
   </data>
   <data name="comboBox_ActivityPulsScale_Flatness.Items" xml:space="preserve">
     <value>Zaoblené</value>
@@ -2718,8 +2730,8 @@
   <data name="label420.Text" xml:space="preserve">
     <value>Farba:</value>
   </data>
-  <data name="tabPage44.Text" xml:space="preserve">
-    <value>Pulz (Graf)</value>
+  <data name="tabPage51.Text" xml:space="preserve">
+    <value>Pulz (Ukazateľ)</value>
   </data>
   <data name="checkBox_Pulse_ClockHand.Text" xml:space="preserve">
     <value>Zobraziť</value>
@@ -2742,8 +2754,8 @@
   <data name="label469.Text" xml:space="preserve">
     <value>Osový posun X</value>
   </data>
-  <data name="tabPage51.Text" xml:space="preserve">
-    <value>Pulz (Ukazateľ)</value>
+  <data name="tabPage45.Text" xml:space="preserve">
+    <value>Pulz (Segmenty)</value>
   </data>
   <data name="checkBox_ActivityPuls_IconSet.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
@@ -2751,11 +2763,11 @@
   <data name="checkBox_ActivityPuls_IconSet.Text" xml:space="preserve">
     <value>Zobraziť</value>
   </data>
-  <data name="tabPage45.Text" xml:space="preserve">
-    <value>Pulz (Segmenty)</value>
+  <data name="tabPage59.Text" xml:space="preserve">
+    <value>Kalórie</value>
   </data>
-  <data name="tabPage55.Text" xml:space="preserve">
-    <value>Pulz</value>
+  <data name="tabPage15.Text" xml:space="preserve">
+    <value>Kalórie</value>
   </data>
   <data name="checkBox_ActivityCalories.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
@@ -2817,8 +2829,8 @@
   <data name="label155.Text" xml:space="preserve">
     <value>Zarovnanie</value>
   </data>
-  <data name="tabPage15.Text" xml:space="preserve">
-    <value>Kalórie</value>
+  <data name="tabPage11.Text" xml:space="preserve">
+    <value>Kalórie (Graf)</value>
   </data>
   <data name="comboBox_ActivityCaloriesScale_Flatness.Items" xml:space="preserve">
     <value>Zaoblené</value>
@@ -2883,8 +2895,8 @@
   <data name="label115.Text" xml:space="preserve">
     <value>Farba:</value>
   </data>
-  <data name="tabPage11.Text" xml:space="preserve">
-    <value>Kalórie (Graf)</value>
+  <data name="tabPage52.Text" xml:space="preserve">
+    <value>Kalórie (Ukazateľ)</value>
   </data>
   <data name="checkBox_Calories_ClockHand.Text" xml:space="preserve">
     <value>Zobraziť</value>
@@ -2907,11 +2919,8 @@
   <data name="label462.Text" xml:space="preserve">
     <value>Osový posun X</value>
   </data>
-  <data name="tabPage52.Text" xml:space="preserve">
-    <value>Kalórie (Ukazateľ)</value>
-  </data>
-  <data name="tabPage59.Text" xml:space="preserve">
-    <value>Kalórie</value>
+  <data name="tabPage16.Text" xml:space="preserve">
+    <value>Dosiahnutie cieľa</value>
   </data>
   <data name="checkBox_ActivityStar.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
@@ -2925,8 +2934,8 @@
   <data name="label171.Text" xml:space="preserve">
     <value>Súradnice</value>
   </data>
-  <data name="tabPage16.Text" xml:space="preserve">
-    <value>Dosiahnutie cieľa</value>
+  <data name="tabPage56.Text" xml:space="preserve">
+    <value>Cieľové kroky</value>
   </data>
   <data name="checkBox_ActivityStepsGoal.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
@@ -2985,14 +2994,14 @@
   <data name="label500.Text" xml:space="preserve">
     <value>Ľavý horný roh</value>
   </data>
-  <data name="tabPage56.Text" xml:space="preserve">
-    <value>Cieľové kroky</value>
-  </data>
   <data name="checkBox_Activity.Text" xml:space="preserve">
     <value>Aktivovať</value>
   </data>
   <data name="button_Activity.Text" xml:space="preserve">
     <value>Aktivity</value>
+  </data>
+  <data name="tabPage36.Text" xml:space="preserve">
+    <value>Graf</value>
   </data>
   <data name="checkBox_StepsProgress.Text" xml:space="preserve">
     <value>Zobraziť</value>
@@ -3054,8 +3063,8 @@
   <data name="label108.Text" xml:space="preserve">
     <value>Šírka:</value>
   </data>
-  <data name="tabPage36.Text" xml:space="preserve">
-    <value>Graf</value>
+  <data name="tabPage37.Text" xml:space="preserve">
+    <value>Ukazateľ</value>
   </data>
   <data name="checkBox_StProg_ClockHand.Text" xml:space="preserve">
     <value>Zobraziť</value>
@@ -3078,8 +3087,8 @@
   <data name="label381.Text" xml:space="preserve">
     <value>Stred šípky (X)</value>
   </data>
-  <data name="tabPage37.Text" xml:space="preserve">
-    <value>Ukazateľ</value>
+  <data name="tabPage41.Text" xml:space="preserve">
+    <value>Segmenty</value>
   </data>
   <data name="checkBox_SPSliced.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
@@ -3087,11 +3096,11 @@
   <data name="checkBox_SPSliced.Text" xml:space="preserve">
     <value>Zobraziť</value>
   </data>
-  <data name="tabPage41.Text" xml:space="preserve">
-    <value>Segmenty</value>
-  </data>
   <data name="button_StepsProgress.Text" xml:space="preserve">
     <value>Priebeh krokov</value>
+  </data>
+  <data name="tabPage38.Text" xml:space="preserve">
+    <value>Deň</value>
   </data>
   <data name="checkBox_ADDay_ClockHand.Text" xml:space="preserve">
     <value>Zobraziť</value>
@@ -3114,8 +3123,8 @@
   <data name="label402.Text" xml:space="preserve">
     <value>Stred šípky (X)</value>
   </data>
-  <data name="tabPage38.Text" xml:space="preserve">
-    <value>Deň</value>
+  <data name="tabPage39.Text" xml:space="preserve">
+    <value>Deň v týždni</value>
   </data>
   <data name="label389.Text" xml:space="preserve">
     <value>Konečný úhol:</value>
@@ -3138,8 +3147,8 @@
   <data name="checkBox_ADWeekDay_ClockHand.Text" xml:space="preserve">
     <value>Zobraziť</value>
   </data>
-  <data name="tabPage39.Text" xml:space="preserve">
-    <value>Deň v týždni</value>
+  <data name="tabPage40.Text" xml:space="preserve">
+    <value>Mesiac</value>
   </data>
   <data name="label382.Text" xml:space="preserve">
     <value>Konečný úhol:</value>
@@ -3162,11 +3171,14 @@
   <data name="checkBox_ADMonth_ClockHand.Text" xml:space="preserve">
     <value>Zobraziť</value>
   </data>
-  <data name="tabPage40.Text" xml:space="preserve">
-    <value>Mesiac</value>
-  </data>
   <data name="button_AnalogDate.Text" xml:space="preserve">
     <value>Ukazatele dátumu</value>
+  </data>
+  <data name="tabPage8.Text" xml:space="preserve">
+    <value>Deň a mesiac separátne</value>
+  </data>
+  <data name="tabPage9.Text" xml:space="preserve">
+    <value>Deň</value>
   </data>
   <data name="checkBox_MonthAndDayD.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
@@ -3228,8 +3240,8 @@
   <data name="label67.Text" xml:space="preserve">
     <value>Ľavý horný roh</value>
   </data>
-  <data name="tabPage9.Text" xml:space="preserve">
-    <value>Deň</value>
+  <data name="tabPage10.Text" xml:space="preserve">
+    <value>Mesiac</value>
   </data>
   <data name="checkBox_MonthAndDayM.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
@@ -3291,7 +3303,7 @@
   <data name="label82.Text" xml:space="preserve">
     <value>Ľavý horný roh</value>
   </data>
-  <data name="tabPage10.Text" xml:space="preserve">
+  <data name="groupBox__MonthName.Text" xml:space="preserve">
     <value>Mesiac</value>
   </data>
   <data name="checkBox_MonthName.Size" type="System.Drawing.Size, System.Drawing">
@@ -3300,11 +3312,8 @@
   <data name="checkBox_MonthName.Text" xml:space="preserve">
     <value>Zobraziť</value>
   </data>
-  <data name="groupBox__MonthName.Text" xml:space="preserve">
-    <value>Mesiac</value>
-  </data>
-  <data name="tabPage8.Text" xml:space="preserve">
-    <value>Deň a mesiac separátne</value>
+  <data name="tabPage7.Text" xml:space="preserve">
+    <value>Dátum v jednej rade</value>
   </data>
   <data name="label103.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 13</value>
@@ -3372,8 +3381,11 @@
   <data name="label102.Text" xml:space="preserve">
     <value>Ľavý horný roh</value>
   </data>
-  <data name="tabPage7.Text" xml:space="preserve">
-    <value>Dátum v jednej rade</value>
+  <data name="tabPage50.Text" xml:space="preserve">
+    <value>Deň v týždni</value>
+  </data>
+  <data name="groupBox_WeekDayProgress.Text" xml:space="preserve">
+    <value>Segmenty</value>
   </data>
   <data name="checkBox_DOW_IconSet.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
@@ -3381,8 +3393,8 @@
   <data name="checkBox_DOW_IconSet.Text" xml:space="preserve">
     <value>Zobraziť</value>
   </data>
-  <data name="groupBox_WeekDayProgress.Text" xml:space="preserve">
-    <value>Segmenty</value>
+  <data name="groupBox__WeekDay.Text" xml:space="preserve">
+    <value>Deň v týždni</value>
   </data>
   <data name="checkBox_WeekDay.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
@@ -3390,11 +3402,8 @@
   <data name="checkBox_WeekDay.Text" xml:space="preserve">
     <value>Zobraziť</value>
   </data>
-  <data name="groupBox__WeekDay.Text" xml:space="preserve">
-    <value>Deň v týždni</value>
-  </data>
-  <data name="tabPage50.Text" xml:space="preserve">
-    <value>Deň v týždni</value>
+  <data name="tabPage34.Text" xml:space="preserve">
+    <value>Rok</value>
   </data>
   <data name="label357.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 13</value>
@@ -3462,9 +3471,6 @@
   <data name="label367.Text" xml:space="preserve">
     <value>Ľavý horný roh</value>
   </data>
-  <data name="tabPage34.Text" xml:space="preserve">
-    <value>Rok</value>
-  </data>
   <data name="checkBox_Date.Text" xml:space="preserve">
     <value>Aktivovať</value>
   </data>
@@ -3483,20 +3489,23 @@
   <data name="button_Date.Text" xml:space="preserve">
     <value>Dátum</value>
   </data>
+  <data name="groupBox_Delimiter.Text" xml:space="preserve">
+    <value>Oddelovač</value>
+  </data>
   <data name="checkBox_Delimiter.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
   </data>
   <data name="checkBox_Delimiter.Text" xml:space="preserve">
     <value>Zobraziť</value>
   </data>
-  <data name="groupBox_Delimiter.Text" xml:space="preserve">
-    <value>Oddelovač</value>
-  </data>
   <data name="checkBox_AmPm.Size" type="System.Drawing.Size, System.Drawing">
     <value>81, 17</value>
   </data>
   <data name="checkBox_AmPm.Text" xml:space="preserve">
     <value>12-H formát</value>
+  </data>
+  <data name="tabPage4.Text" xml:space="preserve">
+    <value>Hodiny</value>
   </data>
   <data name="checkBox_Hours.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
@@ -3510,8 +3519,8 @@
   <data name="groupBox_Hours_Ones.Text" xml:space="preserve">
     <value>Jednotky</value>
   </data>
-  <data name="tabPage4.Text" xml:space="preserve">
-    <value>Hodiny</value>
+  <data name="tabPage5.Text" xml:space="preserve">
+    <value>Minúty</value>
   </data>
   <data name="checkBox_Minutes.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
@@ -3525,8 +3534,8 @@
   <data name="groupBox_Minutes_Ones.Text" xml:space="preserve">
     <value>Jednotky</value>
   </data>
-  <data name="tabPage5.Text" xml:space="preserve">
-    <value>Minúty</value>
+  <data name="tabPage6.Text" xml:space="preserve">
+    <value>Sekundy</value>
   </data>
   <data name="groupBox_Seconds_Ones.Text" xml:space="preserve">
     <value>Jednotky</value>
@@ -3540,9 +3549,6 @@
   <data name="groupBox_Seconds_Tens.Text" xml:space="preserve">
     <value>Desiatky</value>
   </data>
-  <data name="tabPage6.Text" xml:space="preserve">
-    <value>Sekundy</value>
-  </data>
   <data name="checkBox_Time.Text" xml:space="preserve">
     <value>Aktivovať</value>
   </data>
@@ -3552,8 +3558,8 @@
   <data name="button_Background.Text" xml:space="preserve">
     <value>Pozadie</value>
   </data>
-  <data name="tabPage3.Text" xml:space="preserve">
-    <value>Editovať</value>
+  <data name="tabPageConverting.Text" xml:space="preserve">
+    <value>Konvertovanie</value>
   </data>
   <data name="label489.Size" type="System.Drawing.Size, System.Drawing">
     <value>229, 13</value>
@@ -3582,6 +3588,9 @@
   <data name="button_Converting.Text" xml:space="preserve">
     <value>Konvertovať</value>
   </data>
+  <data name="groupBox10.Text" xml:space="preserve">
+    <value>Cieľový model</value>
+  </data>
   <data name="numericUpDown_ConvertingOutput_Custom.Location" type="System.Drawing.Point, System.Drawing">
     <value>440, 19</value>
   </data>
@@ -3591,8 +3600,8 @@
   <data name="radioButton_ConvertingOutput_Custom.Text" xml:space="preserve">
     <value>Vlastná veľkosť</value>
   </data>
-  <data name="groupBox10.Text" xml:space="preserve">
-    <value>Cieľový model</value>
+  <data name="groupBox9.Text" xml:space="preserve">
+    <value>Zdrojový model</value>
   </data>
   <data name="numericUpDown_ConvertingInput_Custom.Location" type="System.Drawing.Point, System.Drawing">
     <value>440, 19</value>
@@ -3603,11 +3612,26 @@
   <data name="radioButton_ConvertingInput_Custom.Text" xml:space="preserve">
     <value>Vlastná veľkosť</value>
   </data>
-  <data name="groupBox9.Text" xml:space="preserve">
-    <value>Zdrojový model</value>
+  <data name="tabPage33.Text" xml:space="preserve">
+    <value>Voľby</value>
   </data>
-  <data name="tabPageConverting.Text" xml:space="preserve">
-    <value>Konvertovanie</value>
+  <data name="groupBox11.Text" xml:space="preserve">
+    <value>Zobrazujú sa položky</value>
+  </data>
+  <data name="checkBox_DoNotShowMaxMinTemp.Text" xml:space="preserve">
+    <value>Pri zobrazení aktuálnej teploty nezobrazujte maximálnu / minimálnu teplotu</value>
+  </data>
+  <data name="checkBox_ShowIn12hourFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>298, 17</value>
+  </data>
+  <data name="checkBox_ShowIn12hourFormat.Text" xml:space="preserve">
+    <value>Ak je to možné, čas sa zobrazuje v 12-hodinovom formáte</value>
+  </data>
+  <data name="checkBox_ShowMiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 17</value>
+  </data>
+  <data name="checkBox_ShowMiles.Text" xml:space="preserve">
+    <value>Ak je to možné, vzdialenosť sa zobrazuje v míľach</value>
   </data>
   <data name="label483.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 39</value>
@@ -3616,6 +3640,9 @@
     <value>Rýchlosť animácie náhľadu animácie
 (vysoká rýchlosť - plynulejšia animácia, 
 väčšie zaťaženie systému)</value>
+  </data>
+  <data name="groupBox8.Text" xml:space="preserve">
+    <value>Typ zvýraznenia oblasti skratiek</value>
   </data>
   <data name="checkBox_Shortcuts_Border.Size" type="System.Drawing.Size, System.Drawing">
     <value>105, 17</value>
@@ -3628,9 +3655,6 @@ väčšie zaťaženie systému)</value>
   </data>
   <data name="checkBox_Shortcuts_Area.Text" xml:space="preserve">
     <value>Bodkované pole</value>
-  </data>
-  <data name="groupBox8.Text" xml:space="preserve">
-    <value>Typ zvýraznenia oblasti skratiek</value>
   </data>
   <data name="button_Reset.Text" xml:space="preserve">
     <value>Reset nastavenia</value>
@@ -3656,6 +3680,9 @@ väčšie zaťaženie systému)</value>
   <data name="label355.Text" xml:space="preserve">
     <value>Rýchlosť animácie GIF</value>
   </data>
+  <data name="groupBox7.Text" xml:space="preserve">
+    <value>Po zabalení projektu</value>
+  </data>
   <data name="radioButton_Settings_Pack_DoNotning.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 17</value>
   </data>
@@ -3680,8 +3707,8 @@ väčšie zaťaženie systému)</value>
   <data name="radioButton_Settings_Pack_Dialog.Text" xml:space="preserve">
     <value>Ponúknuť voľbu</value>
   </data>
-  <data name="groupBox7.Text" xml:space="preserve">
-    <value>Po zabalení projektu</value>
+  <data name="groupBox6.Text" xml:space="preserve">
+    <value>Po otvorení projektu</value>
   </data>
   <data name="radioButton_Settings_Open_DoNotning.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 17</value>
@@ -3701,8 +3728,8 @@ väčšie zaťaženie systému)</value>
   <data name="radioButton_Settings_Open_Dialog.Text" xml:space="preserve">
     <value>Ponúknuť voľbu</value>
   </data>
-  <data name="groupBox6.Text" xml:space="preserve">
-    <value>Po otvorení projektu</value>
+  <data name="groupBox5.Text" xml:space="preserve">
+    <value>Po rozbalení BIN</value>
   </data>
   <data name="radioButton_Settings_AfterUnpack_DoNothing.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 17</value>
@@ -3722,8 +3749,8 @@ väčšie zaťaženie systému)</value>
   <data name="radioButton_Settings_AfterUnpack_Dialog.Text" xml:space="preserve">
     <value>Ponúknuť voľbu</value>
   </data>
-  <data name="groupBox5.Text" xml:space="preserve">
-    <value>Po rozbalení BIN</value>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Akcia pri zhodných názvoch rozbalených súborov</value>
   </data>
   <data name="radioButton_Settings_Unpack_Replace.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 17</value>
@@ -3743,11 +3770,8 @@ väčšie zaťaženie systému)</value>
   <data name="radioButton_Settings_Unpack_Dialog.Text" xml:space="preserve">
     <value>Ponúknuť voľbu</value>
   </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Akcia pri zhodných názvoch rozbalených súborov</value>
-  </data>
-  <data name="tabPage33.Text" xml:space="preserve">
-    <value>Voľby</value>
+  <data name="tabPage43.Text" xml:space="preserve">
+    <value>O programe</value>
   </data>
   <data name="linkLabel_resunpacker_qzip.Size" type="System.Drawing.Size, System.Drawing">
     <value>222, 13</value>
@@ -3812,9 +3836,6 @@ väčšie zaťaženie systému)</value>
   <data name="label406.Text" xml:space="preserve">
     <value>Verzia:</value>
   </data>
-  <data name="tabPage43.Text" xml:space="preserve">
-    <value>O programe</value>
-  </data>
   <data name="button_PreviewBig.Text" xml:space="preserve">
     <value>Zväčšiť</value>
   </data>
@@ -3847,6 +3868,12 @@ väčšie zaťaženie systému)</value>
   </data>
   <data name="checkBox_CircleScaleImage.Text" xml:space="preserve">
     <value>Zvýrazniť pole pre indikátor priebehu s krycím obrázkom</value>
+  </data>
+  <data name="button_RefreshPreview.Text" xml:space="preserve">
+    <value>Obnoviť náhľad</value>
+  </data>
+  <data name="button_CreatePreview.Text" xml:space="preserve">
+    <value>Vytvoriť náhľad</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -6811,23 +6838,5 @@ väčšie zaťaženie systému)</value>
         SlmARUpZgEVKWYBDSFZuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+D8AAPgfAADwHwAA4A8AAMAHAADA
         AwAAgAMAAIABAACAAQAAgAMAAMADAADABwAA4A8AAPAfAAD4HwAA+D8AAA==
 </value>
-  </data>
-  <data name="button_CreatePreview.Text" xml:space="preserve">
-    <value>Vytvoriť náhľad</value>
-  </data>
-  <data name="button_RefreshPreview.Text" xml:space="preserve">
-    <value>Obnoviť náhľad</value>
-  </data>
-  <data name="checkBox_DoNotShowMaxMinTemp.Text" xml:space="preserve">
-    <value>Pri zobrazení aktuálnej teploty nezobrazujte maximálnu / minimálnu teplotu</value>
-  </data>
-  <data name="checkBox_ShowIn12hourFormat.Text" xml:space="preserve">
-    <value>Ak je to možné, čas sa zobrazuje v 12-hodinovom formáte</value>
-  </data>
-  <data name="checkBox_ShowMiles.Text" xml:space="preserve">
-    <value>Ak je to možné, vzdialenosť sa zobrazuje v míľach</value>
-  </data>
-  <data name="groupBox11.Text" xml:space="preserve">
-    <value>Zobrazujú sa položky</value>
   </data>
 </root>

@@ -243,6 +243,36 @@
   <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 167</value>
+  </data>
+  <data name="button1.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 23</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Распаковать сжатый bin (GTR/GTS)</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="button_zip_unpack.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -253,13 +283,13 @@
     <value>True</value>
   </data>
   <data name="button_zip_unpack.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 23</value>
+    <value>230, 23</value>
   </data>
   <data name="button_zip_unpack.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
   <data name="button_zip_unpack.Text" xml:space="preserve">
-    <value>Распаковать сжатый bin</value>
+    <value>Распаковать сжатый bin (GTR2/GTS2)</value>
   </data>
   <data name="&gt;&gt;button_zip_unpack.Name" xml:space="preserve">
     <value>button_zip_unpack</value>
@@ -271,19 +301,19 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;button_zip_unpack.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="button_pack_zip.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="button_pack_zip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 167</value>
+    <value>10, 196</value>
   </data>
   <data name="button_pack_zip.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="button_pack_zip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 23</value>
+    <value>230, 23</value>
   </data>
   <data name="button_pack_zip.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -301,13 +331,13 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;button_pack_zip.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="button_zip.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="button_zip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 255</value>
+    <value>10, 400</value>
   </data>
   <data name="button_zip.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -334,13 +364,13 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;button_zip.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="button_unpack.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="button_unpack.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 197</value>
+    <value>10, 342</value>
   </data>
   <data name="button_unpack.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -367,13 +397,13 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;button_unpack.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="button_pack.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="button_pack.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 226</value>
+    <value>10, 371</value>
   </data>
   <data name="button_pack.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -400,7 +430,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;button_pack.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="textBox_pack_command.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 112</value>
@@ -427,7 +457,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;textBox_pack_command.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -460,7 +490,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="textBox_unpack_command.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 68</value>
@@ -487,7 +517,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;textBox_unpack_command.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -520,7 +550,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="button_pack_unpack.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -550,7 +580,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;button_pack_unpack.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="textBox_pack_unpack_dir.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 24</value>
@@ -574,7 +604,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;textBox_pack_unpack_dir.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -607,7 +637,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -35924,6 +35954,9 @@
   </data>
   <data name="checkBox_Year.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="checkBox_Year.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="checkBox_Year.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>

@@ -596,7 +596,7 @@ namespace GTR_Watch_face
             Logger.WriteLine("* zip_unpack (end)");
         }
 
-        private void zip_unpack_bin(string fullfilename)
+        private void zip_unpack_bin(string fullfilename, int model=0)
         {
             Logger.WriteLine("* zip_unpack_bin");
             string subPath = Application.StartupPath + @"\Watch_face\";
@@ -696,6 +696,7 @@ namespace GTR_Watch_face
                 ProcessStartInfo startInfo = new ProcessStartInfo();
                 startInfo.FileName = respackerPath;
                 startInfo.Arguments = "-unc2" + " \"" + fullPath + "\"";
+                if (model != 0) startInfo.Arguments = "-unc" + " \"" + fullPath + "\"";
                 using (Process exeProcess = Process.Start(startInfo))
                 {
                     exeProcess.WaitForExit();//ждем 
@@ -734,6 +735,7 @@ namespace GTR_Watch_face
                         Logger.WriteLine("UnpackBin");
                         startInfo.FileName = textBox_pack_unpack_dir.Text;
                         startInfo.Arguments = textBox_unpack_command.Text + " \"" + newFullName_bin + "\"";
+                        if (model != 0) startInfo.Arguments = "--gtr 47 --file" + " \"" + newFullName_bin + "\"";
                         using (Process exeProcess = Process.Start(startInfo))
                         {
                             exeProcess.WaitForExit();//ждем 
@@ -9391,6 +9393,86 @@ namespace GTR_Watch_face
                 Console.WriteLine(string.Format("{0} not implemented", token.Type)); // JConstructor, JRaw
             }
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Logger.WriteLine("* zip_unpack 47");
+            if (JSON_Modified) // сохранение если файл не сохранен
+            {
+                if (FileName != null)
+                {
+                    DialogResult dr = MessageBox.Show(Properties.FormStrings.Message_Save_JSON_Modified_Text1 +
+                        Path.GetFileNameWithoutExtension(FileName) + Properties.FormStrings.Message_Save_JSON_Modified_Text2,
+                        Properties.FormStrings.Message_Save_JSON_Modified_Caption, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                    if (dr == DialogResult.Yes)
+                    {
+                        string fullfilename = Path.Combine(FullFileDir, FileName);
+                        save_JSON_File(fullfilename, richTextBox_JSON.Text);
+                        JSON_Modified = false;
+                        FormText();
+                        if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
+                    }
+                    if (dr == DialogResult.Cancel)
+                    {
+                        return;
+                    }
+                }
+                else
+                {
+                    DialogResult dr = MessageBox.Show(Properties.FormStrings.Message_Save_new_JSON,
+                        Properties.FormStrings.Message_Save_JSON_Modified_Caption,
+                        MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                    if (dr == DialogResult.Yes)
+                    {
+                        SaveFileDialog saveFileDialog = new SaveFileDialog();
+                        saveFileDialog.InitialDirectory = FullFileDir;
+                        saveFileDialog.FileName = FileName;
+                        if (FileName == null || FileName.Length == 0)
+                        {
+                            if (FullFileDir != null && FullFileDir.Length > 3)
+                            {
+                                saveFileDialog.FileName = Path.GetFileName(FullFileDir);
+                            }
+                        }
+                        saveFileDialog.Filter = Properties.FormStrings.FilterJson;
+                        //saveFileDialog.Filter = "Json files (*.json) | *.json";
+
+                        saveFileDialog.RestoreDirectory = true;
+                        saveFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
+                        if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                        {
+                            string fullfilename = saveFileDialog.FileName;
+                            save_JSON_File(fullfilename, richTextBox_JSON.Text);
+
+                            FileName = Path.GetFileName(fullfilename);
+                            FullFileDir = Path.GetDirectoryName(fullfilename);
+                            JSON_Modified = false;
+                            FormText();
+                            if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
+                        }
+                        else return;
+                    }
+                    if (dr == DialogResult.Cancel)
+                    {
+                        return;
+                    }
+                }
+            }
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
+            openFileDialog.Filter = Properties.FormStrings.FilterBin;
+            openFileDialog.RestoreDirectory = true;
+            openFileDialog.Multiselect = false;
+            openFileDialog.Title = Properties.FormStrings.Dialog_Title_Unpack;
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string fullfilename = openFileDialog.FileName;
+                zip_unpack_bin(fullfilename, 47);
+            }
+            Logger.WriteLine("* zip_unpack 47 (end)");
         }
 
         #endregion

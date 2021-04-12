@@ -3044,6 +3044,7 @@ namespace GTR_Watch_face
 
         private Color ColorRead(string color)
         {
+            if (color == null) return Color.Black;
             if(color.Length==18)  color = color.Remove(2, 8);
             Color old_color = ColorTranslator.FromHtml(color);
             Color new_color = Color.FromArgb(255, old_color.R, old_color.G, old_color.B);
@@ -3284,14 +3285,26 @@ namespace GTR_Watch_face
             {
                 switch (Watch_Face.Info.DeviceId)
                 {
+                    case 40:
+                        radioButton_47.Checked = true;
+                        break;
                     case 59:
                         radioButton_47.Checked = true;
                         break;
                     case 64:
                         radioButton_47.Checked = true;
                         break;
+                    case 42:
+                        radioButton_42.Checked = true;
+                        break;
+                    case 46:
+                        radioButton_gts.Checked = true;
+                        break;
                     case 65:
                         radioButton_gts.Checked = true;
+                        break;
+                    case 52:
+                        radioButton_TRex.Checked = true;
                         break;
                     case 83:
                         radioButton_TRex.Checked = true;

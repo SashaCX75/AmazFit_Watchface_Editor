@@ -117,8 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="button1.Text" xml:space="preserve">
+    <value>解包(压缩的bin) (GTR/GTS)</value>
+  </data>
   <data name="button_zip_unpack.Text" xml:space="preserve">
-    <value>解包(压缩的bin)</value>
+    <value>解包(压缩的bin) (GTR2/GTS2)</value>
   </data>
   <data name="button_pack_zip.Text" xml:space="preserve">
     <value>打包(压缩的bin)</value>
@@ -1309,6 +1312,12 @@
   <data name="label477.Text" xml:space="preserve">
     <value>动画周期:</value>
   </data>
+  <data name="label411.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label411.Text" xml:space="preserve">
+    <value>图片数量:</value>
+  </data>
   <data name="toolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAfxJREFUOE9j
@@ -1451,6 +1460,12 @@
   <data name="checkBox_StaticAnimation.Text" xml:space="preserve">
     <value>启用</value>
   </data>
+  <data name="label473.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label473.Text" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="label475.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
   </data>
@@ -1466,6 +1481,12 @@
   <data name="radioButton_MotiomAnimation_EndCoordinates.Text" xml:space="preserve">
     <value>终点坐标</value>
   </data>
+  <data name="label480.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label480.Text" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="radioButton_MotiomAnimation_StartCoordinates.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 17</value>
   </data>
@@ -1474,6 +1495,9 @@
   </data>
   <data name="groupBox_MotiomAnimation.Text" xml:space="preserve">
     <value>编辑所选行中的数据</value>
+  </data>
+  <data name="AnimationColumn1.HeaderText" xml:space="preserve">
+    <value>未知1</value>
   </data>
   <data name="AnimationColumn2.HeaderText" xml:space="preserve">
     <value>起始坐标(X):</value>
@@ -1500,6 +1524,9 @@
   <data name="AnimationColumn5.Width" type="System.Int32, mscorlib">
     <value>80</value>
   </data>
+  <data name="AnimationColumn6.HeaderText" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="AnimationColumn7.HeaderText" xml:space="preserve">
     <value>动画速度</value>
   </data>
@@ -1511,6 +1538,15 @@
   </data>
   <data name="AnimationColumn8.Width" type="System.Int32, mscorlib">
     <value>65</value>
+  </data>
+  <data name="AnimationColumn9.HeaderText" xml:space="preserve">
+    <value>未知5</value>
+  </data>
+  <data name="AnimationColumn10.HeaderText" xml:space="preserve">
+    <value>未知6</value>
+  </data>
+  <data name="AnimationColumn11.HeaderText" xml:space="preserve">
+    <value>未知7</value>
   </data>
   <data name="AnimationColumn12.HeaderText" xml:space="preserve">
     <value>弹跳动画</value>
@@ -1806,11 +1842,23 @@
   <data name="comboBox_Weather_Text_Alignment.Items8" xml:space="preserve">
     <value>右下</value>
   </data>
+  <data name="label272.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label272.Text" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="label273.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 13</value>
   </data>
   <data name="label273.Text" xml:space="preserve">
     <value>对齐方式</value>
+  </data>
+  <data name="label277.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label277.Text" xml:space="preserve">
+    <value>图片数量:</value>
   </data>
   <data name="label278.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 13</value>
@@ -1875,11 +1923,23 @@
   <data name="comboBox_Weather_Day_Alignment.Items8" xml:space="preserve">
     <value>右下</value>
   </data>
+  <data name="label291.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label291.Text" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="label292.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 13</value>
   </data>
   <data name="label292.Text" xml:space="preserve">
     <value>对齐方式</value>
+  </data>
+  <data name="label296.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label296.Text" xml:space="preserve">
+    <value>图片数量:</value>
   </data>
   <data name="label297.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 13</value>
@@ -1938,11 +1998,23 @@
   <data name="comboBox_Weather_Night_Alignment.Items8" xml:space="preserve">
     <value>右下</value>
   </data>
+  <data name="label315.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label315.Text" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="label316.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 13</value>
   </data>
   <data name="label316.Text" xml:space="preserve">
     <value>对齐方式</value>
+  </data>
+  <data name="label320.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label320.Text" xml:space="preserve">
+    <value>图片数量:</value>
   </data>
   <data name="label321.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 13</value>
@@ -1971,11 +2043,23 @@
   <data name="label287.Text" xml:space="preserve">
     <value>错误符号:</value>
   </data>
+  <data name="label280.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label280.Text" xml:space="preserve">
+    <value>图片数量:</value>
+  </data>
   <data name="checkBox_Weather_Icon.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
   </data>
   <data name="checkBox_Weather_Icon.Text" xml:space="preserve">
     <value>启用</value>
+  </data>
+  <data name="label282.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label282.Text" xml:space="preserve">
+    <value>图片索引:</value>
   </data>
   <data name="tabPage25.Text" xml:space="preserve">
     <value>天气图标</value>
@@ -2028,6 +2112,12 @@
   <data name="label350.Text" xml:space="preserve">
     <value>轴偏移X:</value>
   </data>
+  <data name="label217.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label217.Text" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="numericUpDown_AnalogClock_Hour_Y.Location" type="System.Drawing.Point, System.Drawing">
     <value>76, 76</value>
   </data>
@@ -2045,6 +2135,12 @@
   </data>
   <data name="groupBox_AnalogClock_Hour.Text" xml:space="preserve">
     <value>时针</value>
+  </data>
+  <data name="label310.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label310.Text" xml:space="preserve">
+    <value>图片索引:</value>
   </data>
   <data name="checkBox_HourCenterImage.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
@@ -2088,6 +2184,12 @@
   <data name="label352.Text" xml:space="preserve">
     <value>轴偏移X:</value>
   </data>
+  <data name="label207.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label207.Text" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="label208.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 68</value>
   </data>
@@ -2118,6 +2220,12 @@
   <data name="groupBox_AnalogClock_Min.Text" xml:space="preserve">
     <value>分针</value>
   </data>
+  <data name="label307.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label307.Text" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="checkBox_MinCenterImage.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
   </data>
@@ -2129,6 +2237,12 @@
   </data>
   <data name="tabPage31.Text" xml:space="preserve">
     <value>分钟</value>
+  </data>
+  <data name="label304.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label304.Text" xml:space="preserve">
+    <value>图片索引:</value>
   </data>
   <data name="checkBox_SecCenterImage.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
@@ -2162,6 +2276,12 @@
   </data>
   <data name="label354.Text" xml:space="preserve">
     <value>轴偏移X:</value>
+  </data>
+  <data name="label210.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label210.Text" xml:space="preserve">
+    <value>图片索引:</value>
   </data>
   <data name="numericUpDown_AnalogClock_Sec_Y.Location" type="System.Drawing.Point, System.Drawing">
     <value>76, 76</value>
@@ -2250,11 +2370,23 @@
   <data name="comboBox_Battery_Text_Alignment.Items8" xml:space="preserve">
     <value>右下</value>
   </data>
+  <data name="label186.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label186.Text" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="label187.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 13</value>
   </data>
   <data name="label187.Text" xml:space="preserve">
     <value>对齐方式</value>
+  </data>
+  <data name="label191.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label191.Text" xml:space="preserve">
+    <value>图片数量:</value>
   </data>
   <data name="label192.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 13</value>
@@ -2277,6 +2409,12 @@
   <data name="checkBox_Battery_Percent.Text" xml:space="preserve">
     <value>启用</value>
   </data>
+  <data name="label301.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label301.Text" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="label303.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
   </data>
@@ -2286,11 +2424,23 @@
   <data name="tabPage28.Text" xml:space="preserve">
     <value>图标 "%"</value>
   </data>
+  <data name="label198.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label198.Text" xml:space="preserve">
+    <value>图片数量:</value>
+  </data>
   <data name="checkBox_Battery_Img.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
   </data>
   <data name="checkBox_Battery_Img.Text" xml:space="preserve">
     <value>启用</value>
+  </data>
+  <data name="label195.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label195.Text" xml:space="preserve">
+    <value>图片索引:</value>
   </data>
   <data name="label197.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -2300,6 +2450,12 @@
   </data>
   <data name="tabPage22.Text" xml:space="preserve">
     <value>图标</value>
+  </data>
+  <data name="checkBox_Battery_Scale_Image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 17</value>
+  </data>
+  <data name="checkBox_Battery_Scale_Image.Text" xml:space="preserve">
+    <value>图片索引:</value>
   </data>
   <data name="comboBox_Battery_Flatness.Items" xml:space="preserve">
     <value>圆</value>
@@ -2406,6 +2562,12 @@
   <data name="comboBox_Battery_ClockHand_Image.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 93</value>
   </data>
+  <data name="label370.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label370.Text" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="label371.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 57</value>
   </data>
@@ -2435,6 +2597,12 @@
   </data>
   <data name="checkBox_Battery_IconSet.Text" xml:space="preserve">
     <value>启用</value>
+  </data>
+  <data name="label405.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label405.Text" xml:space="preserve">
+    <value>图片索引:</value>
   </data>
   <data name="вставитьКоординатыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>126, 26</value>
@@ -2637,11 +2805,23 @@
   <data name="comboBox_ActivitySteps_Alignment.Items8" xml:space="preserve">
     <value>右下</value>
   </data>
+  <data name="label124.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label124.Text" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="label125.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 13</value>
   </data>
   <data name="label125.Text" xml:space="preserve">
     <value>对齐方式</value>
+  </data>
+  <data name="label129.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label129.Text" xml:space="preserve">
+    <value>图片数量:</value>
   </data>
   <data name="label130.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 13</value>
@@ -2727,11 +2907,23 @@
   <data name="comboBox_ActivityDistance_Alignment.Items8" xml:space="preserve">
     <value>右下</value>
   </data>
+  <data name="label134.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label134.Text" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="label135.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 13</value>
   </data>
   <data name="label135.Text" xml:space="preserve">
     <value>对齐方式</value>
+  </data>
+  <data name="label139.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label139.Text" xml:space="preserve">
+    <value>图片数量:</value>
   </data>
   <data name="label140.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 13</value>
@@ -2765,6 +2957,12 @@
   </data>
   <data name="label150.Text" xml:space="preserve">
     <value>右下角</value>
+  </data>
+  <data name="label149.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label149.Text" xml:space="preserve">
+    <value>图片数量:</value>
   </data>
   <data name="label142.Location" type="System.Drawing.Point, System.Drawing">
     <value>168, 85</value>
@@ -2802,6 +3000,12 @@
   <data name="comboBox_ActivityPuls_Alignment.Items8" xml:space="preserve">
     <value>右下</value>
   </data>
+  <data name="label144.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label144.Text" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="label145.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 13</value>
   </data>
@@ -2834,6 +3038,12 @@
   </data>
   <data name="label424.Text" xml:space="preserve">
     <value>中心(Y):</value>
+  </data>
+  <data name="checkBox_ActivityPulsScale_Image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 17</value>
+  </data>
+  <data name="checkBox_ActivityPulsScale_Image.Text" xml:space="preserve">
+    <value>图片索引:</value>
   </data>
   <data name="label423.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 13</value>
@@ -2916,6 +3126,12 @@
   <data name="label468.Text" xml:space="preserve">
     <value>轴偏移Y:</value>
   </data>
+  <data name="label470.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label470.Text" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="label469.Text" xml:space="preserve">
     <value>轴偏移X:</value>
   </data>
@@ -2927,6 +3143,12 @@
   </data>
   <data name="checkBox_ActivityPuls_IconSet.Text" xml:space="preserve">
     <value>启用</value>
+  </data>
+  <data name="label121.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label121.Text" xml:space="preserve">
+    <value>图片索引:</value>
   </data>
   <data name="tabPage45.Text" xml:space="preserve">
     <value>心率(段)</value>
@@ -2951,6 +3173,12 @@
   </data>
   <data name="label160.Text" xml:space="preserve">
     <value>右下角</value>
+  </data>
+  <data name="label159.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label159.Text" xml:space="preserve">
+    <value>图片数量:</value>
   </data>
   <data name="label152.Location" type="System.Drawing.Point, System.Drawing">
     <value>168, 85</value>
@@ -2988,6 +3216,12 @@
   <data name="comboBox_ActivityCalories_Alignment.Items8" xml:space="preserve">
     <value>右下</value>
   </data>
+  <data name="label154.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label154.Text" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="label155.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 13</value>
   </data>
@@ -3020,6 +3254,12 @@
   </data>
   <data name="label119.Text" xml:space="preserve">
     <value>中心(Y):</value>
+  </data>
+  <data name="checkBox_ActivityCaloriesScale_Image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 17</value>
+  </data>
+  <data name="checkBox_ActivityCaloriesScale_Image.Text" xml:space="preserve">
+    <value>图片索引:</value>
   </data>
   <data name="label118.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 13</value>
@@ -3102,6 +3342,12 @@
   <data name="label461.Text" xml:space="preserve">
     <value>轴偏移Y:</value>
   </data>
+  <data name="label463.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label463.Text" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="label462.Text" xml:space="preserve">
     <value>轴偏移X:</value>
   </data>
@@ -3116,6 +3362,12 @@
   </data>
   <data name="checkBox_ActivityStar.Text" xml:space="preserve">
     <value>启用</value>
+  </data>
+  <data name="label164.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label164.Text" xml:space="preserve">
+    <value>图片索引:</value>
   </data>
   <data name="label171.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -3168,11 +3420,23 @@
   <data name="comboBox_ActivityStepsGoal_Alignment.Items8" xml:space="preserve">
     <value>右下</value>
   </data>
+  <data name="label493.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label493.Text" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="label494.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 13</value>
   </data>
   <data name="label494.Text" xml:space="preserve">
     <value>对齐方式</value>
+  </data>
+  <data name="label498.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label498.Text" xml:space="preserve">
+    <value>图片数量:</value>
   </data>
   <data name="label499.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 13</value>
@@ -3194,6 +3458,12 @@
   </data>
   <data name="button_Activity.Text" xml:space="preserve">
     <value>活动</value>
+  </data>
+  <data name="checkBox_StepsProgress_Image.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 17</value>
+  </data>
+  <data name="checkBox_StepsProgress_Image.Text" xml:space="preserve">
+    <value>图片索引:</value>
   </data>
   <data name="checkBox_StepsProgress.Text" xml:space="preserve">
     <value>启用</value>
@@ -3303,6 +3573,12 @@
   <data name="comboBox_StProg_ClockHand_Image.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 93</value>
   </data>
+  <data name="label379.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label379.Text" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="label380.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 57</value>
   </data>
@@ -3329,6 +3605,12 @@
   </data>
   <data name="checkBox_SPSliced.Text" xml:space="preserve">
     <value>启用</value>
+  </data>
+  <data name="label404.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label404.Text" xml:space="preserve">
+    <value>图片索引:</value>
   </data>
   <data name="tabPage41.Text" xml:space="preserve">
     <value>区隔</value>
@@ -3377,6 +3659,12 @@
   </data>
   <data name="comboBox_ADDay_ClockHand_Image.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 93</value>
+  </data>
+  <data name="label400.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label400.Text" xml:space="preserve">
+    <value>图片索引:</value>
   </data>
   <data name="label401.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 57</value>
@@ -3437,6 +3725,12 @@
   </data>
   <data name="comboBox_ADWeekDay_ClockHand_Image.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 93</value>
+  </data>
+  <data name="label393.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label393.Text" xml:space="preserve">
+    <value>图片索引:</value>
   </data>
   <data name="label394.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 57</value>
@@ -3500,6 +3794,12 @@
   </data>
   <data name="comboBox_ADMonth_ClockHand_Image.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 93</value>
+  </data>
+  <data name="label386.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label386.Text" xml:space="preserve">
+    <value>图片索引:</value>
   </data>
   <data name="label387.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 57</value>
@@ -3570,11 +3870,23 @@
   <data name="comboBox_MonthAndDayD_Alignment.Items8" xml:space="preserve">
     <value>右下</value>
   </data>
+  <data name="label65.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label65.Text" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="label71.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 13</value>
   </data>
   <data name="label71.Text" xml:space="preserve">
     <value>对齐方式</value>
+  </data>
+  <data name="label63.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label63.Text" xml:space="preserve">
+    <value>图片数量:</value>
   </data>
   <data name="label68.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 13</value>
@@ -3633,11 +3945,23 @@
   <data name="comboBox_MonthAndDayM_Alignment.Items8" xml:space="preserve">
     <value>右下</value>
   </data>
+  <data name="label75.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label75.Text" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="label76.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 13</value>
   </data>
   <data name="label76.Text" xml:space="preserve">
     <value>对齐方式</value>
+  </data>
+  <data name="label80.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label80.Text" xml:space="preserve">
+    <value>图片数量:</value>
   </data>
   <data name="label81.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 13</value>
@@ -3654,11 +3978,23 @@
   <data name="tabPage10.Text" xml:space="preserve">
     <value>月份</value>
   </data>
+  <data name="label59.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label59.Text" xml:space="preserve">
+    <value>图片数量:</value>
+  </data>
   <data name="checkBox_MonthName.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
   </data>
   <data name="checkBox_MonthName.Text" xml:space="preserve">
     <value>启用</value>
+  </data>
+  <data name="label61.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label61.Text" xml:space="preserve">
+    <value>图片索引:</value>
   </data>
   <data name="groupBox__MonthName.Text" xml:space="preserve">
     <value>月份</value>
@@ -3720,11 +4056,23 @@
   <data name="label95.Location" type="System.Drawing.Point, System.Drawing">
     <value>137, 72</value>
   </data>
+  <data name="label95.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label95.Text" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="label96.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 13</value>
   </data>
   <data name="label96.Text" xml:space="preserve">
     <value>对齐方式</value>
+  </data>
+  <data name="label100.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label100.Text" xml:space="preserve">
+    <value>图片数量:</value>
   </data>
   <data name="label101.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 13</value>
@@ -3747,14 +4095,32 @@
   <data name="checkBox_DOW_IconSet.Text" xml:space="preserve">
     <value>启用</value>
   </data>
+  <data name="label460.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label460.Text" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="groupBox_WeekDayProgress.Text" xml:space="preserve">
     <value>区隔</value>
+  </data>
+  <data name="label58.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label58.Text" xml:space="preserve">
+    <value>图片数量:</value>
   </data>
   <data name="checkBox_WeekDay.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
   </data>
   <data name="checkBox_WeekDay.Text" xml:space="preserve">
     <value>启用</value>
+  </data>
+  <data name="label56.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label56.Text" xml:space="preserve">
+    <value>图片索引:</value>
   </data>
   <data name="groupBox__WeekDay.Text" xml:space="preserve">
     <value>星期</value>
@@ -3816,11 +4182,23 @@
   <data name="label360.Location" type="System.Drawing.Point, System.Drawing">
     <value>137, 72</value>
   </data>
+  <data name="label360.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label360.Text" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="label361.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 13</value>
   </data>
   <data name="label361.Text" xml:space="preserve">
     <value>对齐方式</value>
+  </data>
+  <data name="label365.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label365.Text" xml:space="preserve">
+    <value>图片数量:</value>
   </data>
   <data name="label366.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 13</value>
@@ -3861,6 +4239,12 @@
   <data name="checkBox_Delimiter.Text" xml:space="preserve">
     <value>启用</value>
   </data>
+  <data name="label38.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label38.Text" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="groupBox_Delimiter.Text" xml:space="preserve">
     <value>分隔符</value>
   </data>
@@ -3869,6 +4253,18 @@
   </data>
   <data name="checkBox_AmPm.Text" xml:space="preserve">
     <value>12小时制</value>
+  </data>
+  <data name="label32.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label32.Text" xml:space="preserve">
+    <value>下午图片:</value>
+  </data>
+  <data name="label34.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label34.Text" xml:space="preserve">
+    <value>上午图片:</value>
   </data>
   <data name="groupBox_AmPm.Text" xml:space="preserve">
     <value>12/24制式</value>
@@ -3879,8 +4275,32 @@
   <data name="checkBox_Hours.Text" xml:space="preserve">
     <value>启用</value>
   </data>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>图片数量:</value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="groupBox_Hours_Tens.Text" xml:space="preserve">
     <value>十位</value>
+  </data>
+  <data name="label28.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label28.Text" xml:space="preserve">
+    <value>图片数量:</value>
+  </data>
+  <data name="label30.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label30.Text" xml:space="preserve">
+    <value>图片索引:</value>
   </data>
   <data name="groupBox_Hours_Ones.Text" xml:space="preserve">
     <value>个位</value>
@@ -3894,14 +4314,50 @@
   <data name="checkBox_Minutes.Text" xml:space="preserve">
     <value>启用</value>
   </data>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>图片数量:</value>
+  </data>
+  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>图片索引:</value>
+  </data>
   <data name="groupBox_Minutes_Tens.Text" xml:space="preserve">
     <value>十位</value>
+  </data>
+  <data name="label24.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label24.Text" xml:space="preserve">
+    <value>图片数量:</value>
+  </data>
+  <data name="label26.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label26.Text" xml:space="preserve">
+    <value>图片索引:</value>
   </data>
   <data name="groupBox_Minutes_Ones.Text" xml:space="preserve">
     <value>个位</value>
   </data>
   <data name="tabPage5.Text" xml:space="preserve">
     <value>分钟</value>
+  </data>
+  <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label20.Text" xml:space="preserve">
+    <value>图片数量:</value>
+  </data>
+  <data name="label22.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label22.Text" xml:space="preserve">
+    <value>图片索引:</value>
   </data>
   <data name="groupBox_Seconds_Ones.Text" xml:space="preserve">
     <value>个位</value>
@@ -3911,6 +4367,18 @@
   </data>
   <data name="checkBox_Seconds.Text" xml:space="preserve">
     <value>启用</value>
+  </data>
+  <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>图片数量:</value>
+  </data>
+  <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>图片索引:</value>
   </data>
   <data name="groupBox_Seconds_Tens.Text" xml:space="preserve">
     <value>十位</value>
@@ -3996,6 +4464,24 @@
   <data name="tabPageConverting.Text" xml:space="preserve">
     <value>表盘转化</value>
   </data>
+  <data name="checkBox_DoNotShowMaxMinTemp.Text" xml:space="preserve">
+    <value>显示当前温度时不显示最高/最低温度</value>
+  </data>
+  <data name="checkBox_ShowIn12hourFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 17</value>
+  </data>
+  <data name="checkBox_ShowIn12hourFormat.Text" xml:space="preserve">
+    <value>如果可能，以12小时格式显示时间</value>
+  </data>
+  <data name="checkBox_ShowMiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 17</value>
+  </data>
+  <data name="checkBox_ShowMiles.Text" xml:space="preserve">
+    <value>如果可能，以英里为单位显示距离</value>
+  </data>
+  <data name="groupBox11.Text" xml:space="preserve">
+    <value>显示项目</value>
+  </data>
   <data name="comboBox_Animation_Preview_Speed.Location" type="System.Drawing.Point, System.Drawing">
     <value>245, 244</value>
   </data>
@@ -4029,6 +4515,33 @@
   </data>
   <data name="checkBox_JsonWarnings.Text" xml:space="preserve">
     <value>保存Json文件时显示警告</value>
+  </data>
+  <data name="comboBox_Language.Items" xml:space="preserve">
+    <value>俄语</value>
+  </data>
+  <data name="comboBox_Language.Items1" xml:space="preserve">
+    <value>英语</value>
+  </data>
+  <data name="comboBox_Language.Items2" xml:space="preserve">
+    <value>西班牙语</value>
+  </data>
+  <data name="comboBox_Language.Items3" xml:space="preserve">
+    <value>葡萄牙语</value>
+  </data>
+  <data name="comboBox_Language.Items4" xml:space="preserve">
+    <value>斯洛伐克语</value>
+  </data>
+  <data name="comboBox_Language.Items5" xml:space="preserve">
+    <value>捷克语</value>
+  </data>
+  <data name="comboBox_Language.Items6" xml:space="preserve">
+    <value>匈牙利语</value>
+  </data>
+  <data name="comboBox_Language.Items7" xml:space="preserve">
+    <value>法语</value>
+  </data>
+  <data name="comboBox_Language.Items9" xml:space="preserve">
+    <value>意大利语</value>
   </data>
   <data name="comboBox_Language.Location" type="System.Drawing.Point, System.Drawing">
     <value>40, 306</value>
@@ -4146,6 +4659,23 @@
   </data>
   <data name="linkLabel_resunpacker_qzip.Text" xml:space="preserve">
     <value>Res_PackerUnpacker [ 作者 dpeddi ]</value>
+  </data>
+  <data name="label_TranslateHelp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 156</value>
+  </data>
+  <data name="label_TranslateHelp.Text" xml:space="preserve">
+    <value>捷克文 -  Horatius80
+中文-kyle208
+英语 -  chaadaev88
+西班牙语 -  kampanita
+法语 -  bigsurf05，Lordalpine
+意大利语-Bovirus，F481O，Lordalpine
+匈牙利 -  Horatius80
+葡萄牙语 -  maikeandre
+斯洛伐克语 -  Horatius80
+
+中文手册 - kyle208
+英语手册 -  gumstic</value>
   </data>
   <data name="label415.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 13</value>
@@ -7206,298 +7736,5 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>表盘编辑器</value>
-  </data>
-  <data name="checkBox_DoNotShowMaxMinTemp.Text" xml:space="preserve">
-    <value>显示当前温度时不显示最高/最低温度</value>
-  </data>
-  <data name="checkBox_ShowIn12hourFormat.Text" xml:space="preserve">
-    <value>如果可能，以12小时格式显示时间</value>
-  </data>
-  <data name="checkBox_ShowMiles.Text" xml:space="preserve">
-    <value>如果可能，以英里为单位显示距离</value>
-  </data>
-  <data name="groupBox11.Text" xml:space="preserve">
-    <value>显示项目</value>
-  </data>
-  <data name="label_TranslateHelp.Text" xml:space="preserve">
-    <value>捷克文 -  Horatius80
-中文-kyle208
-英语 -  chaadaev88
-西班牙语 -  kampanita
-法语 -  bigsurf05，Lordalpine
-意大利语-Bovirus，F481O，Lordalpine
-匈牙利 -  Horatius80
-葡萄牙语 -  maikeandre
-斯洛伐克语 -  Horatius80
-
-中文手册 - kyle208
-英语手册 -  gumstic</value>
-  </data>
-  <data name="AnimationColumn1.HeaderText" xml:space="preserve">
-    <value>未知1</value>
-  </data>
-  <data name="AnimationColumn10.HeaderText" xml:space="preserve">
-    <value>未知6</value>
-  </data>
-  <data name="AnimationColumn11.HeaderText" xml:space="preserve">
-    <value>未知7</value>
-  </data>
-  <data name="AnimationColumn6.HeaderText" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="AnimationColumn9.HeaderText" xml:space="preserve">
-    <value>未知5</value>
-  </data>
-  <data name="checkBox_ActivityCaloriesScale_Image.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="checkBox_ActivityPulsScale_Image.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="checkBox_Battery_Scale_Image.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="checkBox_StepsProgress_Image.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="comboBox_Language.Items" xml:space="preserve">
-    <value>俄语</value>
-  </data>
-  <data name="comboBox_Language.Items1" xml:space="preserve">
-    <value>英语</value>
-  </data>
-  <data name="comboBox_Language.Items2" xml:space="preserve">
-    <value>西班牙语</value>
-  </data>
-  <data name="comboBox_Language.Items3" xml:space="preserve">
-    <value>葡萄牙语</value>
-  </data>
-  <data name="comboBox_Language.Items4" xml:space="preserve">
-    <value>斯洛伐克语</value>
-  </data>
-  <data name="comboBox_Language.Items5" xml:space="preserve">
-    <value>捷克语</value>
-  </data>
-  <data name="comboBox_Language.Items6" xml:space="preserve">
-    <value>匈牙利语</value>
-  </data>
-  <data name="comboBox_Language.Items7" xml:space="preserve">
-    <value>法语</value>
-  </data>
-  <data name="comboBox_Language.Items9" xml:space="preserve">
-    <value>意大利语</value>
-  </data>
-  <data name="label10.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label100.Text" xml:space="preserve">
-    <value>图片数量:</value>
-  </data>
-  <data name="label11.Text" xml:space="preserve">
-    <value>图片数量:</value>
-  </data>
-  <data name="label12.Text" xml:space="preserve">
-    <value>图片数量:</value>
-  </data>
-  <data name="label121.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label124.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label129.Text" xml:space="preserve">
-    <value>图片数量:</value>
-  </data>
-  <data name="label134.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label139.Text" xml:space="preserve">
-    <value>图片数量:</value>
-  </data>
-  <data name="label14.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label144.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label149.Text" xml:space="preserve">
-    <value>图片数量:</value>
-  </data>
-  <data name="label154.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label159.Text" xml:space="preserve">
-    <value>图片数量:</value>
-  </data>
-  <data name="label16.Text" xml:space="preserve">
-    <value>图片数量:</value>
-  </data>
-  <data name="label164.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label18.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label186.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label191.Text" xml:space="preserve">
-    <value>图片数量:</value>
-  </data>
-  <data name="label195.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label198.Text" xml:space="preserve">
-    <value>图片数量:</value>
-  </data>
-  <data name="label20.Text" xml:space="preserve">
-    <value>图片数量:</value>
-  </data>
-  <data name="label207.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label210.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label217.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label22.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label24.Text" xml:space="preserve">
-    <value>图片数量:</value>
-  </data>
-  <data name="label26.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label272.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label277.Text" xml:space="preserve">
-    <value>图片数量:</value>
-  </data>
-  <data name="label28.Text" xml:space="preserve">
-    <value>图片数量:</value>
-  </data>
-  <data name="label280.Text" xml:space="preserve">
-    <value>图片数量:</value>
-  </data>
-  <data name="label282.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label291.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label296.Text" xml:space="preserve">
-    <value>图片数量:</value>
-  </data>
-  <data name="label30.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label301.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label304.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label307.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label310.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label315.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label32.Text" xml:space="preserve">
-    <value>下午图片:</value>
-  </data>
-  <data name="label320.Text" xml:space="preserve">
-    <value>图片数量:</value>
-  </data>
-  <data name="label34.Text" xml:space="preserve">
-    <value>上午图片:</value>
-  </data>
-  <data name="label360.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label365.Text" xml:space="preserve">
-    <value>图片数量:</value>
-  </data>
-  <data name="label370.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label379.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label38.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label386.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label393.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label400.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label404.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label405.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label411.Text" xml:space="preserve">
-    <value>图片数量:</value>
-  </data>
-  <data name="label460.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label463.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label470.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label473.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label480.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label493.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label498.Text" xml:space="preserve">
-    <value>图片数量:</value>
-  </data>
-  <data name="label56.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label58.Text" xml:space="preserve">
-    <value>图片数量:</value>
-  </data>
-  <data name="label59.Text" xml:space="preserve">
-    <value>图片数量:</value>
-  </data>
-  <data name="label61.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label63.Text" xml:space="preserve">
-    <value>图片数量:</value>
-  </data>
-  <data name="label65.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label75.Text" xml:space="preserve">
-    <value>图片索引:</value>
-  </data>
-  <data name="label80.Text" xml:space="preserve">
-    <value>图片数量:</value>
-  </data>
-  <data name="label95.Text" xml:space="preserve">
-    <value>图片索引:</value>
   </data>
 </root>
