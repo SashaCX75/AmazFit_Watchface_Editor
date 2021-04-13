@@ -48,8 +48,8 @@
         public string pack_command_GTR42 = "--gtr2 42 --oldformat --file";
         public string unpack_command_GTS = "--gts2 --file";
         public string pack_command_GTS = "--gts2 --oldformat --file";
-        public string unpack_command_TRex = "--trex2 --file";
-        public string pack_command_TRex = "--trex2 --oldformat --file";
+        public string unpack_command_TRex = "--trexpro --file";
+        public string pack_command_TRex = "--trexpro --oldformat --file";
         public string unpack_command_AmazfitX = "--amazfitx --file";
         public string pack_command_AmazfitX = "--amazfitx --file";
         public string unpack_command_Verge = "--vergelite --file";
