@@ -966,35 +966,35 @@ namespace GTR_Watch_face
                 }
                 else checkBox_Battery_ClockHand.Checked = false;
 
-                if (Watch_Face.Battery.Unknown5 != null)
+                if (Watch_Face.Battery.PercentImage != null)
                 {
                     checkBox_Battery_Percent.Checked = true;
-                    numericUpDown_Battery_Percent_X.Value = Watch_Face.Battery.Unknown5.X;
-                    numericUpDown_Battery_Percent_Y.Value = Watch_Face.Battery.Unknown5.Y;
+                    numericUpDown_Battery_Percent_X.Value = Watch_Face.Battery.PercentImage.X;
+                    numericUpDown_Battery_Percent_Y.Value = Watch_Face.Battery.PercentImage.Y;
                     //comboBox_Battery_Percent_Image.Text = Watch_Face.Battery.Percent.ImageIndex.ToString();
-                    comboBoxSetText(comboBox_Battery_Percent_Image, Watch_Face.Battery.Unknown5.ImageIndex);
+                    comboBoxSetText(comboBox_Battery_Percent_Image, Watch_Face.Battery.PercentImage.ImageIndex);
                 }
                 else checkBox_Battery_Percent.Checked = false;
 
-                if (Watch_Face.Battery.Unknown6 != null)
+                if (Watch_Face.Battery.CircleScale != null)
                 {
                     checkBox_Battery_Scale.Checked = true;
-                    numericUpDown_Battery_Scale_Center_X.Value = Watch_Face.Battery.Unknown6.CenterX;
-                    numericUpDown_Battery_Scale_Center_Y.Value = Watch_Face.Battery.Unknown6.CenterY;
-                    numericUpDown_Battery_Scale_Radius_X.Value = Watch_Face.Battery.Unknown6.RadiusX;
-                    numericUpDown_Battery_Scale_Radius_Y.Value = Watch_Face.Battery.Unknown6.RadiusY;
-                    if (Watch_Face.Battery.Unknown6.RadiusY == 0)
-                        numericUpDown_Battery_Scale_Radius_Y.Value = Watch_Face.Battery.Unknown6.RadiusX;
+                    numericUpDown_Battery_Scale_Center_X.Value = Watch_Face.Battery.CircleScale.CenterX;
+                    numericUpDown_Battery_Scale_Center_Y.Value = Watch_Face.Battery.CircleScale.CenterY;
+                    numericUpDown_Battery_Scale_Radius_X.Value = Watch_Face.Battery.CircleScale.RadiusX;
+                    numericUpDown_Battery_Scale_Radius_Y.Value = Watch_Face.Battery.CircleScale.RadiusY;
+                    if (Watch_Face.Battery.CircleScale.RadiusY == 0)
+                        numericUpDown_Battery_Scale_Radius_Y.Value = Watch_Face.Battery.CircleScale.RadiusX;
 
-                    numericUpDown_Battery_Scale_StartAngle.Value = Watch_Face.Battery.Unknown6.StartAngle;
-                    numericUpDown_Battery_Scale_EndAngle.Value = Watch_Face.Battery.Unknown6.EndAngle;
-                    numericUpDown_Battery_Scale_Width.Value = Watch_Face.Battery.Unknown6.Width;
+                    numericUpDown_Battery_Scale_StartAngle.Value = Watch_Face.Battery.CircleScale.StartAngle;
+                    numericUpDown_Battery_Scale_EndAngle.Value = Watch_Face.Battery.CircleScale.EndAngle;
+                    numericUpDown_Battery_Scale_Width.Value = Watch_Face.Battery.CircleScale.Width;
                     
-                    Color new_color = ColorRead(Watch_Face.Battery.Unknown6.Color);
+                    Color new_color = ColorRead(Watch_Face.Battery.CircleScale.Color);
                     comboBox_Battery_Scale_Color.BackColor = new_color;
                     colorDialog_Battery.Color = new_color;
 
-                    switch (Watch_Face.Battery.Unknown6.Flatness)
+                    switch (Watch_Face.Battery.CircleScale.Flatness)
                     {
                         case 90:
                             //comboBox_Battery_Flatness.Text = "Треугольное";
@@ -1010,9 +1010,9 @@ namespace GTR_Watch_face
                             break;
                     }
 
-                    if (Watch_Face.Battery.Unknown6.ImageIndex != null)
+                    if (Watch_Face.Battery.CircleScale.ImageIndex != null)
                     {
-                        comboBoxSetText(comboBox_Battery_Scale_Image, (long)Watch_Face.Battery.Unknown6.ImageIndex);
+                        comboBoxSetText(comboBox_Battery_Scale_Image, (long)Watch_Face.Battery.CircleScale.ImageIndex);
                         int x = 0;
                         int y = 0;
                         ColorToCoodinates(new_color, out x, out y);
@@ -2411,32 +2411,32 @@ namespace GTR_Watch_face
                 if ((checkBox_Battery_Percent.Checked) && (comboBox_Battery_Percent_Image.SelectedIndex >= 0))
                 {
                     if (Watch_Face.Battery == null) Watch_Face.Battery = new Battery();
-                    if (Watch_Face.Battery.Unknown5 == null) Watch_Face.Battery.Unknown5 = new ImageW();
+                    if (Watch_Face.Battery.PercentImage == null) Watch_Face.Battery.PercentImage = new ImageW();
 
-                    Watch_Face.Battery.Unknown5.ImageIndex = Int32.Parse(comboBox_Battery_Percent_Image.Text);
-                    Watch_Face.Battery.Unknown5.X = (int)numericUpDown_Battery_Percent_X.Value;
-                    Watch_Face.Battery.Unknown5.Y = (int)numericUpDown_Battery_Percent_Y.Value;
+                    Watch_Face.Battery.PercentImage.ImageIndex = Int32.Parse(comboBox_Battery_Percent_Image.Text);
+                    Watch_Face.Battery.PercentImage.X = (int)numericUpDown_Battery_Percent_X.Value;
+                    Watch_Face.Battery.PercentImage.Y = (int)numericUpDown_Battery_Percent_Y.Value;
                 }
 
                 if (checkBox_Battery_Scale.Checked)
                 {
                     if (Watch_Face.Battery == null) Watch_Face.Battery = new Battery();
-                    if (Watch_Face.Battery.Unknown6 == null) Watch_Face.Battery.Unknown6 = new CircleScale();
+                    if (Watch_Face.Battery.CircleScale == null) Watch_Face.Battery.CircleScale = new CircleScale();
 
-                    Watch_Face.Battery.Unknown6.CenterX = (int)numericUpDown_Battery_Scale_Center_X.Value;
-                    Watch_Face.Battery.Unknown6.CenterY = (int)numericUpDown_Battery_Scale_Center_Y.Value;
-                    Watch_Face.Battery.Unknown6.RadiusX = (int)numericUpDown_Battery_Scale_Radius_X.Value;
-                    Watch_Face.Battery.Unknown6.RadiusY = (int)numericUpDown_Battery_Scale_Radius_Y.Value;
+                    Watch_Face.Battery.CircleScale.CenterX = (int)numericUpDown_Battery_Scale_Center_X.Value;
+                    Watch_Face.Battery.CircleScale.CenterY = (int)numericUpDown_Battery_Scale_Center_Y.Value;
+                    Watch_Face.Battery.CircleScale.RadiusX = (int)numericUpDown_Battery_Scale_Radius_X.Value;
+                    Watch_Face.Battery.CircleScale.RadiusY = (int)numericUpDown_Battery_Scale_Radius_Y.Value;
 
-                    Watch_Face.Battery.Unknown6.StartAngle = (int)numericUpDown_Battery_Scale_StartAngle.Value;
-                    Watch_Face.Battery.Unknown6.EndAngle = (int)numericUpDown_Battery_Scale_EndAngle.Value;
-                    Watch_Face.Battery.Unknown6.Width = (int)numericUpDown_Battery_Scale_Width.Value;
+                    Watch_Face.Battery.CircleScale.StartAngle = (int)numericUpDown_Battery_Scale_StartAngle.Value;
+                    Watch_Face.Battery.CircleScale.EndAngle = (int)numericUpDown_Battery_Scale_EndAngle.Value;
+                    Watch_Face.Battery.CircleScale.Width = (int)numericUpDown_Battery_Scale_Width.Value;
 
                     Color color = comboBox_Battery_Scale_Color.BackColor;
                     Color new_color = Color.FromArgb(0, color.R, color.G, color.B);
                     string colorStr = ColorTranslator.ToHtml(new_color);
                     colorStr = colorStr.Replace("#", "0x00");
-                    Watch_Face.Battery.Unknown6.Color = colorStr;
+                    Watch_Face.Battery.CircleScale.Color = colorStr;
 
                     //switch (comboBox_Battery_Flatness.Text)
                     //{
@@ -2453,13 +2453,13 @@ namespace GTR_Watch_face
                     switch (comboBox_Battery_Flatness.SelectedIndex)
                     {
                         case 1:
-                            Watch_Face.Battery.Unknown6.Flatness = 90;
+                            Watch_Face.Battery.CircleScale.Flatness = 90;
                             break;
                         case 2:
-                            Watch_Face.Battery.Unknown6.Flatness = 180;
+                            Watch_Face.Battery.CircleScale.Flatness = 180;
                             break;
                         default:
-                            Watch_Face.Battery.Unknown6.Flatness = 0;
+                            Watch_Face.Battery.CircleScale.Flatness = 0;
                             break;
                     }
 
@@ -2471,10 +2471,10 @@ namespace GTR_Watch_face
                         int imageIndex = comboBox_Battery_Scale_Image.SelectedIndex;
                         colorStr = CoodinatesToColor(imageX, imageY);
                         Bitmap src = new Bitmap(ListImagesFullName[imageIndex]);
-                        Watch_Face.Battery.Unknown6.CenterX = imageX + src.Width / 2;
-                        Watch_Face.Battery.Unknown6.CenterY = imageY + src.Height / 2;
-                        Watch_Face.Battery.Unknown6.Color = colorStr;
-                        Watch_Face.Battery.Unknown6.ImageIndex = imageIndex;
+                        Watch_Face.Battery.CircleScale.CenterX = imageX + src.Width / 2;
+                        Watch_Face.Battery.CircleScale.CenterY = imageY + src.Height / 2;
+                        Watch_Face.Battery.CircleScale.Color = colorStr;
+                        Watch_Face.Battery.CircleScale.ImageIndex = imageIndex;
                     }
                 }
 

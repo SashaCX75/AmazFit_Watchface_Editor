@@ -8770,29 +8770,29 @@ namespace GTR_Watch_face
                     }
                 }
 
-                if (Watch_Face.Battery.Unknown5 != null)
+                if (Watch_Face.Battery.PercentImage != null)
                 {
-                    Watch_Face.Battery.Unknown5.X = (int)Math.Round(Watch_Face.Battery.Unknown5.X * scale);
-                    Watch_Face.Battery.Unknown5.Y = (int)Math.Round(Watch_Face.Battery.Unknown5.Y * scale);
+                    Watch_Face.Battery.PercentImage.X = (int)Math.Round(Watch_Face.Battery.PercentImage.X * scale);
+                    Watch_Face.Battery.PercentImage.Y = (int)Math.Round(Watch_Face.Battery.PercentImage.Y * scale);
                 }
 
-                if (Watch_Face.Battery.Unknown6 != null)
+                if (Watch_Face.Battery.CircleScale != null)
                 {
-                    Watch_Face.Battery.Unknown6.CenterX = (int)Math.Round(Watch_Face.Battery.Unknown6.CenterX * scale);
-                    Watch_Face.Battery.Unknown6.CenterY = (int)Math.Round(Watch_Face.Battery.Unknown6.CenterY * scale);
-                    Watch_Face.Battery.Unknown6.RadiusX = (int)Math.Round(Watch_Face.Battery.Unknown6.RadiusX * scale);
-                    Watch_Face.Battery.Unknown6.RadiusY = (int)Math.Round(Watch_Face.Battery.Unknown6.RadiusY * scale);
-                    Watch_Face.Battery.Unknown6.Width = (int)Math.Round(Watch_Face.Battery.Unknown6.Width * scale);
-                    if (Watch_Face.Battery.Unknown6.ImageIndex != null)
+                    Watch_Face.Battery.CircleScale.CenterX = (int)Math.Round(Watch_Face.Battery.CircleScale.CenterX * scale);
+                    Watch_Face.Battery.CircleScale.CenterY = (int)Math.Round(Watch_Face.Battery.CircleScale.CenterY * scale);
+                    Watch_Face.Battery.CircleScale.RadiusX = (int)Math.Round(Watch_Face.Battery.CircleScale.RadiusX * scale);
+                    Watch_Face.Battery.CircleScale.RadiusY = (int)Math.Round(Watch_Face.Battery.CircleScale.RadiusY * scale);
+                    Watch_Face.Battery.CircleScale.Width = (int)Math.Round(Watch_Face.Battery.CircleScale.Width * scale);
+                    if (Watch_Face.Battery.CircleScale.ImageIndex != null)
                     {
                         int x = 0;
                         int y = 0;
-                        Color new_color = ColorRead(Watch_Face.Battery.Unknown6.Color);
+                        Color new_color = ColorRead(Watch_Face.Battery.CircleScale.Color);
                         ColorToCoodinates(new_color, out x, out y);
                         x = (int)Math.Round(x * scale);
                         y = (int)Math.Round(y * scale);
                         string colorStr = CoodinatesToColor(x, y);
-                        Watch_Face.Battery.Unknown6.Color = colorStr;
+                        Watch_Face.Battery.CircleScale.Color = colorStr;
                     }
                 }
 

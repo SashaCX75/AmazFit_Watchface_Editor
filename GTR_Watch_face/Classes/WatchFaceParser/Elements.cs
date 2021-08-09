@@ -151,21 +151,21 @@ namespace GTR_Watch_face
         /// <summary>Процент заряда в виде шкалы прогрессы</summary>
         //public CircleScale Scale { get; set; }
 
-        public CircleScale Unknown6 { get; set; }
-        public ImageW Unknown5 { get; set; }
+        public CircleScale CircleScale { get; set; }
+        public ImageW PercentImage { get; set; }
 
-        // For compatibility with "Scale" JSON attribute
-        [JsonProperty("Scale")]
-        private CircleScale Scale
+        // For compatibility with "Unknown6" JSON attribute
+        [JsonProperty("Unknown6")]
+        private CircleScale Unknown6
         {
-            set { Unknown6 = value; }
+            set { CircleScale = value; }
         }
 
         // For compatibility with "Scale" JSON attribute
-        [JsonProperty("Percent")]
-        private ImageW Percent
+        [JsonProperty("Unknown5")]
+        private ImageW Unknown5
         {
-            set { Unknown5 = value; }
+            set { PercentImage = value; }
         }
     }
 
